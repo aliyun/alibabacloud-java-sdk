@@ -4,24 +4,40 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
+    @NameInMap("AutoSnapshotPolicies")
+    public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPolicies autoSnapshotPolicies;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("AutoSnapshotPolicies")
-    public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPolicies autoSnapshotPolicies;
 
     public static DescribeAutoSnapshotPolicyExResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutoSnapshotPolicyExResponseBody self = new DescribeAutoSnapshotPolicyExResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAutoSnapshotPolicyExResponseBody setAutoSnapshotPolicies(DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPolicies autoSnapshotPolicies) {
+        this.autoSnapshotPolicies = autoSnapshotPolicies;
+        return this;
+    }
+    public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPolicies getAutoSnapshotPolicies() {
+        return this.autoSnapshotPolicies;
+    }
+
+    public DescribeAutoSnapshotPolicyExResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeAutoSnapshotPolicyExResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeAutoSnapshotPolicyExResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeAutoSnapshotPolicyExResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,32 +64,16 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeAutoSnapshotPolicyExResponseBody setAutoSnapshotPolicies(DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPolicies autoSnapshotPolicies) {
-        this.autoSnapshotPolicies = autoSnapshotPolicies;
-        return this;
-    }
-    public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPolicies getAutoSnapshotPolicies() {
-        return this.autoSnapshotPolicies;
-    }
-
     public static class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag self = new DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag setTagKey(String tagKey) {
@@ -90,6 +82,14 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }
@@ -114,32 +114,17 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy extends TeaModel {
-        @NameInMap("TimePoints")
-        public String timePoints;
-
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AutoSnapshotPolicyId")
+        public String autoSnapshotPolicyId;
 
         @NameInMap("AutoSnapshotPolicyName")
         public String autoSnapshotPolicyName;
 
-        @NameInMap("TargetCopyRegions")
-        public String targetCopyRegions;
-
         @NameInMap("CopiedSnapshotsRetentionDays")
         public Integer copiedSnapshotsRetentionDays;
 
-        @NameInMap("AutoSnapshotPolicyId")
-        public String autoSnapshotPolicyId;
-
-        @NameInMap("RetentionDays")
-        public Integer retentionDays;
-
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("DiskNums")
         public Integer diskNums;
@@ -147,66 +132,36 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         @NameInMap("EnableCrossRegionCopy")
         public Boolean enableCrossRegionCopy;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("RepeatWeekdays")
         public String repeatWeekdays;
 
-        @NameInMap("VolumeNums")
-        public Integer volumeNums;
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("RetentionDays")
+        public Integer retentionDays;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("Tags")
         public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTags tags;
 
+        @NameInMap("TargetCopyRegions")
+        public String targetCopyRegions;
+
+        @NameInMap("TimePoints")
+        public String timePoints;
+
+        @NameInMap("VolumeNums")
+        public Integer volumeNums;
+
         public static DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy build(java.util.Map<String, ?> map) throws Exception {
             DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy self = new DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setTimePoints(String timePoints) {
-            this.timePoints = timePoints;
-            return this;
-        }
-        public String getTimePoints() {
-            return this.timePoints;
-        }
-
-        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setAutoSnapshotPolicyName(String autoSnapshotPolicyName) {
-            this.autoSnapshotPolicyName = autoSnapshotPolicyName;
-            return this;
-        }
-        public String getAutoSnapshotPolicyName() {
-            return this.autoSnapshotPolicyName;
-        }
-
-        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setTargetCopyRegions(String targetCopyRegions) {
-            this.targetCopyRegions = targetCopyRegions;
-            return this;
-        }
-        public String getTargetCopyRegions() {
-            return this.targetCopyRegions;
-        }
-
-        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setCopiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
-            this.copiedSnapshotsRetentionDays = copiedSnapshotsRetentionDays;
-            return this;
-        }
-        public Integer getCopiedSnapshotsRetentionDays() {
-            return this.copiedSnapshotsRetentionDays;
         }
 
         public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
@@ -217,20 +172,28 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             return this.autoSnapshotPolicyId;
         }
 
-        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setRetentionDays(Integer retentionDays) {
-            this.retentionDays = retentionDays;
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setAutoSnapshotPolicyName(String autoSnapshotPolicyName) {
+            this.autoSnapshotPolicyName = autoSnapshotPolicyName;
             return this;
         }
-        public Integer getRetentionDays() {
-            return this.retentionDays;
+        public String getAutoSnapshotPolicyName() {
+            return this.autoSnapshotPolicyName;
         }
 
-        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setCopiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
+            this.copiedSnapshotsRetentionDays = copiedSnapshotsRetentionDays;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public Integer getCopiedSnapshotsRetentionDays() {
+            return this.copiedSnapshotsRetentionDays;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setDiskNums(Integer diskNums) {
@@ -249,6 +212,14 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             return this.enableCrossRegionCopy;
         }
 
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setRepeatWeekdays(String repeatWeekdays) {
             this.repeatWeekdays = repeatWeekdays;
             return this;
@@ -257,12 +228,28 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             return this.repeatWeekdays;
         }
 
-        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setVolumeNums(Integer volumeNums) {
-            this.volumeNums = volumeNums;
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
-        public Integer getVolumeNums() {
-            return this.volumeNums;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setRetentionDays(Integer retentionDays) {
+            this.retentionDays = retentionDays;
+            return this;
+        }
+        public Integer getRetentionDays() {
+            return this.retentionDays;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setTags(DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTags tags) {
@@ -271,6 +258,30 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
         public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTags getTags() {
             return this.tags;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setTargetCopyRegions(String targetCopyRegions) {
+            this.targetCopyRegions = targetCopyRegions;
+            return this;
+        }
+        public String getTargetCopyRegions() {
+            return this.targetCopyRegions;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setTimePoints(String timePoints) {
+            this.timePoints = timePoints;
+            return this;
+        }
+        public String getTimePoints() {
+            return this.timePoints;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setVolumeNums(Integer volumeNums) {
+            this.volumeNums = volumeNums;
+            return this;
+        }
+        public Integer getVolumeNums() {
+            return this.volumeNums;
         }
 
     }

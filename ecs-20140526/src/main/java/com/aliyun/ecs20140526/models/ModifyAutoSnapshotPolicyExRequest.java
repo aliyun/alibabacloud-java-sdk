@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
+    @NameInMap("CopiedSnapshotsRetentionDays")
+    public Integer copiedSnapshotsRetentionDays;
+
+    @NameInMap("EnableCrossRegionCopy")
+    public Boolean enableCrossRegionCopy;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,8 +19,8 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("regionId")
-    public String regionId;
+    @NameInMap("TargetCopyRegions")
+    public String targetCopyRegions;
 
     @NameInMap("autoSnapshotPolicyId")
     public String autoSnapshotPolicyId;
@@ -22,8 +28,8 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     @NameInMap("autoSnapshotPolicyName")
     public String autoSnapshotPolicyName;
 
-    @NameInMap("timePoints")
-    public String timePoints;
+    @NameInMap("regionId")
+    public String regionId;
 
     @NameInMap("repeatWeekdays")
     public String repeatWeekdays;
@@ -31,18 +37,28 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     @NameInMap("retentionDays")
     public Integer retentionDays;
 
-    @NameInMap("EnableCrossRegionCopy")
-    public Boolean enableCrossRegionCopy;
-
-    @NameInMap("TargetCopyRegions")
-    public String targetCopyRegions;
-
-    @NameInMap("CopiedSnapshotsRetentionDays")
-    public Integer copiedSnapshotsRetentionDays;
+    @NameInMap("timePoints")
+    public String timePoints;
 
     public static ModifyAutoSnapshotPolicyExRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAutoSnapshotPolicyExRequest self = new ModifyAutoSnapshotPolicyExRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyAutoSnapshotPolicyExRequest setCopiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
+        this.copiedSnapshotsRetentionDays = copiedSnapshotsRetentionDays;
+        return this;
+    }
+    public Integer getCopiedSnapshotsRetentionDays() {
+        return this.copiedSnapshotsRetentionDays;
+    }
+
+    public ModifyAutoSnapshotPolicyExRequest setEnableCrossRegionCopy(Boolean enableCrossRegionCopy) {
+        this.enableCrossRegionCopy = enableCrossRegionCopy;
+        return this;
+    }
+    public Boolean getEnableCrossRegionCopy() {
+        return this.enableCrossRegionCopy;
     }
 
     public ModifyAutoSnapshotPolicyExRequest setOwnerId(Long ownerId) {
@@ -69,12 +85,12 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyAutoSnapshotPolicyExRequest setTargetCopyRegions(String targetCopyRegions) {
+        this.targetCopyRegions = targetCopyRegions;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getTargetCopyRegions() {
+        return this.targetCopyRegions;
     }
 
     public ModifyAutoSnapshotPolicyExRequest setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
@@ -93,12 +109,12 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         return this.autoSnapshotPolicyName;
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setTimePoints(String timePoints) {
-        this.timePoints = timePoints;
+    public ModifyAutoSnapshotPolicyExRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getTimePoints() {
-        return this.timePoints;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyAutoSnapshotPolicyExRequest setRepeatWeekdays(String repeatWeekdays) {
@@ -117,28 +133,12 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         return this.retentionDays;
     }
 
-    public ModifyAutoSnapshotPolicyExRequest setEnableCrossRegionCopy(Boolean enableCrossRegionCopy) {
-        this.enableCrossRegionCopy = enableCrossRegionCopy;
+    public ModifyAutoSnapshotPolicyExRequest setTimePoints(String timePoints) {
+        this.timePoints = timePoints;
         return this;
     }
-    public Boolean getEnableCrossRegionCopy() {
-        return this.enableCrossRegionCopy;
-    }
-
-    public ModifyAutoSnapshotPolicyExRequest setTargetCopyRegions(String targetCopyRegions) {
-        this.targetCopyRegions = targetCopyRegions;
-        return this;
-    }
-    public String getTargetCopyRegions() {
-        return this.targetCopyRegions;
-    }
-
-    public ModifyAutoSnapshotPolicyExRequest setCopiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
-        this.copiedSnapshotsRetentionDays = copiedSnapshotsRetentionDays;
-        return this;
-    }
-    public Integer getCopiedSnapshotsRetentionDays() {
-        return this.copiedSnapshotsRetentionDays;
+    public String getTimePoints() {
+        return this.timePoints;
     }
 
 }

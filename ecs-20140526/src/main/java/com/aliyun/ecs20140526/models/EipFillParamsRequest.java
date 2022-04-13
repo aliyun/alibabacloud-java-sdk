@@ -4,8 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class EipFillParamsRequest extends TeaModel {
-    @NameInMap("data")
-    public String data;
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,26 +19,31 @@ public class EipFillParamsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("UserCidr")
     public String userCidr;
+
+    @NameInMap("data")
+    public String data;
 
     public static EipFillParamsRequest build(java.util.Map<String, ?> map) throws Exception {
         EipFillParamsRequest self = new EipFillParamsRequest();
         return TeaModel.build(map, self);
     }
 
-    public EipFillParamsRequest setData(String data) {
-        this.data = data;
+    public EipFillParamsRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public EipFillParamsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public EipFillParamsRequest setOwnerId(Long ownerId) {
@@ -62,28 +70,20 @@ public class EipFillParamsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public EipFillParamsRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public EipFillParamsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
     public EipFillParamsRequest setUserCidr(String userCidr) {
         this.userCidr = userCidr;
         return this;
     }
     public String getUserCidr() {
         return this.userCidr;
+    }
+
+    public EipFillParamsRequest setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
 }

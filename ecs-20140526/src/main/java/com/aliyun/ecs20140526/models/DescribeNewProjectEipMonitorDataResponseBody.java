@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("EipMonitorDatas")
     public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas eipMonitorDatas;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeNewProjectEipMonitorDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNewProjectEipMonitorDataResponseBody self = new DescribeNewProjectEipMonitorDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeNewProjectEipMonitorDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeNewProjectEipMonitorDataResponseBody setEipMonitorDatas(DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas eipMonitorDatas) {
@@ -31,44 +23,36 @@ public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
         return this.eipMonitorDatas;
     }
 
+    public DescribeNewProjectEipMonitorDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData extends TeaModel {
-        @NameInMap("EipTX")
-        public Integer eipTX;
-
-        @NameInMap("EipPackets")
-        public Integer eipPackets;
-
         @NameInMap("EipBandwidth")
         public Integer eipBandwidth;
-
-        @NameInMap("TimeStamp")
-        public String timeStamp;
 
         @NameInMap("EipFlow")
         public Integer eipFlow;
 
+        @NameInMap("EipPackets")
+        public Integer eipPackets;
+
         @NameInMap("EipRX")
         public Integer eipRX;
+
+        @NameInMap("EipTX")
+        public Integer eipTX;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         public static DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData build(java.util.Map<String, ?> map) throws Exception {
             DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData self = new DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipTX(Integer eipTX) {
-            this.eipTX = eipTX;
-            return this;
-        }
-        public Integer getEipTX() {
-            return this.eipTX;
-        }
-
-        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipPackets(Integer eipPackets) {
-            this.eipPackets = eipPackets;
-            return this;
-        }
-        public Integer getEipPackets() {
-            return this.eipPackets;
         }
 
         public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipBandwidth(Integer eipBandwidth) {
@@ -79,14 +63,6 @@ public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
             return this.eipBandwidth;
         }
 
-        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
-        }
-
         public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipFlow(Integer eipFlow) {
             this.eipFlow = eipFlow;
             return this;
@@ -95,12 +71,36 @@ public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
             return this.eipFlow;
         }
 
+        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipPackets(Integer eipPackets) {
+            this.eipPackets = eipPackets;
+            return this;
+        }
+        public Integer getEipPackets() {
+            return this.eipPackets;
+        }
+
         public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipRX(Integer eipRX) {
             this.eipRX = eipRX;
             return this;
         }
         public Integer getEipRX() {
             return this.eipRX;
+        }
+
+        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipTX(Integer eipTX) {
+            this.eipTX = eipTX;
+            return this;
+        }
+        public Integer getEipTX() {
+            return this.eipTX;
+        }
+
+        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

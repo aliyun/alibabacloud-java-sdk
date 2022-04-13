@@ -4,8 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageFromFamilyRequest extends TeaModel {
+    @NameInMap("ImageFamily")
+    public String imageFamily;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +22,25 @@ public class DescribeImageFromFamilyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ImageFamily")
-    public String imageFamily;
-
     public static DescribeImageFromFamilyRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageFromFamilyRequest self = new DescribeImageFromFamilyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeImageFromFamilyRequest setImageFamily(String imageFamily) {
+        this.imageFamily = imageFamily;
+        return this;
+    }
+    public String getImageFamily() {
+        return this.imageFamily;
+    }
+
+    public DescribeImageFromFamilyRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeImageFromFamilyRequest setOwnerId(Long ownerId) {
@@ -33,6 +49,14 @@ public class DescribeImageFromFamilyRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeImageFromFamilyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeImageFromFamilyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,30 +73,6 @@ public class DescribeImageFromFamilyRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeImageFromFamilyRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeImageFromFamilyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeImageFromFamilyRequest setImageFamily(String imageFamily) {
-        this.imageFamily = imageFamily;
-        return this;
-    }
-    public String getImageFamily() {
-        return this.imageFamily;
     }
 
 }

@@ -4,23 +4,32 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDemandsRequest extends TeaModel {
-    @NameInMap("Tag")
-    public java.util.List<DescribeDemandsRequestTag> tag;
+    @NameInMap("DemandId")
+    public String demandId;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("DemandStatus")
+    public java.util.List<String> demandStatus;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("DemandType")
+    public String demandType;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    @NameInMap("InstanceChargeType")
+    public String instanceChargeType;
+
+    @NameInMap("InstanceType")
+    public String instanceType;
+
+    @NameInMap("InstanceTypeFamily")
+    public String instanceTypeFamily;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -28,65 +37,80 @@ public class DescribeDemandsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("DryRun")
-    public Boolean dryRun;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("DemandStatus")
-    public java.util.List<String> demandStatus;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeDemandsRequestTag> tag;
 
     @NameInMap("ZoneId")
     public String zoneId;
-
-    @NameInMap("DemandId")
-    public String demandId;
-
-    @NameInMap("InstanceTypeFamily")
-    public String instanceTypeFamily;
-
-    @NameInMap("InstanceType")
-    public String instanceType;
-
-    @NameInMap("InstanceChargeType")
-    public String instanceChargeType;
-
-    @NameInMap("DemandType")
-    public String demandType;
 
     public static DescribeDemandsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDemandsRequest self = new DescribeDemandsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDemandsRequest setTag(java.util.List<DescribeDemandsRequestTag> tag) {
-        this.tag = tag;
+    public DescribeDemandsRequest setDemandId(String demandId) {
+        this.demandId = demandId;
         return this;
     }
-    public java.util.List<DescribeDemandsRequestTag> getTag() {
-        return this.tag;
+    public String getDemandId() {
+        return this.demandId;
     }
 
-    public DescribeDemandsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeDemandsRequest setDemandStatus(java.util.List<String> demandStatus) {
+        this.demandStatus = demandStatus;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public java.util.List<String> getDemandStatus() {
+        return this.demandStatus;
     }
 
-    public DescribeDemandsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public DescribeDemandsRequest setDemandType(String demandType) {
+        this.demandType = demandType;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public String getDemandType() {
+        return this.demandType;
     }
 
-    public DescribeDemandsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public DescribeDemandsRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public DescribeDemandsRequest setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
+        return this;
+    }
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
+    }
+
+    public DescribeDemandsRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public DescribeDemandsRequest setInstanceTypeFamily(String instanceTypeFamily) {
+        this.instanceTypeFamily = instanceTypeFamily;
+        return this;
+    }
+    public String getInstanceTypeFamily() {
+        return this.instanceTypeFamily;
     }
 
     public DescribeDemandsRequest setOwnerAccount(String ownerAccount) {
@@ -97,12 +121,12 @@ public class DescribeDemandsRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeDemandsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeDemandsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeDemandsRequest setPageNumber(Integer pageNumber) {
@@ -121,20 +145,36 @@ public class DescribeDemandsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDemandsRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
+    public DescribeDemandsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public DescribeDemandsRequest setDemandStatus(java.util.List<String> demandStatus) {
-        this.demandStatus = demandStatus;
+    public DescribeDemandsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public java.util.List<String> getDemandStatus() {
-        return this.demandStatus;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeDemandsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeDemandsRequest setTag(java.util.List<DescribeDemandsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDemandsRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeDemandsRequest setZoneId(String zoneId) {
@@ -143,46 +183,6 @@ public class DescribeDemandsRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
-    }
-
-    public DescribeDemandsRequest setDemandId(String demandId) {
-        this.demandId = demandId;
-        return this;
-    }
-    public String getDemandId() {
-        return this.demandId;
-    }
-
-    public DescribeDemandsRequest setInstanceTypeFamily(String instanceTypeFamily) {
-        this.instanceTypeFamily = instanceTypeFamily;
-        return this;
-    }
-    public String getInstanceTypeFamily() {
-        return this.instanceTypeFamily;
-    }
-
-    public DescribeDemandsRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
-    }
-
-    public DescribeDemandsRequest setInstanceChargeType(String instanceChargeType) {
-        this.instanceChargeType = instanceChargeType;
-        return this;
-    }
-    public String getInstanceChargeType() {
-        return this.instanceChargeType;
-    }
-
-    public DescribeDemandsRequest setDemandType(String demandType) {
-        this.demandType = demandType;
-        return this;
-    }
-    public String getDemandType() {
-        return this.demandType;
     }
 
     public static class DescribeDemandsRequestTag extends TeaModel {

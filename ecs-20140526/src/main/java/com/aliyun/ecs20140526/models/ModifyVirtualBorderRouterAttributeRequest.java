@@ -4,20 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("VbrId")
-    public String vbrId;
-
-    @NameInMap("VlanId")
-    public Integer vlanId;
-
     @NameInMap("CircuitCode")
     public String circuitCode;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("LocalGatewayIp")
     public String localGatewayIp;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PeerGatewayIp")
     public String peerGatewayIp;
@@ -25,14 +31,8 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     @NameInMap("PeeringSubnetMask")
     public String peeringSubnetMask;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -40,42 +40,18 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("UserCidr")
     public String userCidr;
+
+    @NameInMap("VbrId")
+    public String vbrId;
+
+    @NameInMap("VlanId")
+    public Integer vlanId;
 
     public static ModifyVirtualBorderRouterAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyVirtualBorderRouterAttributeRequest self = new ModifyVirtualBorderRouterAttributeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyVirtualBorderRouterAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyVirtualBorderRouterAttributeRequest setVbrId(String vbrId) {
-        this.vbrId = vbrId;
-        return this;
-    }
-    public String getVbrId() {
-        return this.vbrId;
-    }
-
-    public ModifyVirtualBorderRouterAttributeRequest setVlanId(Integer vlanId) {
-        this.vlanId = vlanId;
-        return this;
-    }
-    public Integer getVlanId() {
-        return this.vlanId;
     }
 
     public ModifyVirtualBorderRouterAttributeRequest setCircuitCode(String circuitCode) {
@@ -86,12 +62,52 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
         return this.circuitCode;
     }
 
+    public ModifyVirtualBorderRouterAttributeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyVirtualBorderRouterAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
     public ModifyVirtualBorderRouterAttributeRequest setLocalGatewayIp(String localGatewayIp) {
         this.localGatewayIp = localGatewayIp;
         return this;
     }
     public String getLocalGatewayIp() {
         return this.localGatewayIp;
+    }
+
+    public ModifyVirtualBorderRouterAttributeRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ModifyVirtualBorderRouterAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyVirtualBorderRouterAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyVirtualBorderRouterAttributeRequest setPeerGatewayIp(String peerGatewayIp) {
@@ -110,28 +126,12 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
         return this.peeringSubnetMask;
     }
 
-    public ModifyVirtualBorderRouterAttributeRequest setDescription(String description) {
-        this.description = description;
+    public ModifyVirtualBorderRouterAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ModifyVirtualBorderRouterAttributeRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public ModifyVirtualBorderRouterAttributeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyVirtualBorderRouterAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -150,28 +150,28 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyVirtualBorderRouterAttributeRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public ModifyVirtualBorderRouterAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
     public ModifyVirtualBorderRouterAttributeRequest setUserCidr(String userCidr) {
         this.userCidr = userCidr;
         return this;
     }
     public String getUserCidr() {
         return this.userCidr;
+    }
+
+    public ModifyVirtualBorderRouterAttributeRequest setVbrId(String vbrId) {
+        this.vbrId = vbrId;
+        return this;
+    }
+    public String getVbrId() {
+        return this.vbrId;
+    }
+
+    public ModifyVirtualBorderRouterAttributeRequest setVlanId(Integer vlanId) {
+        this.vlanId = vlanId;
+        return this;
+    }
+    public Integer getVlanId() {
+        return this.vlanId;
     }
 
 }

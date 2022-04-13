@@ -4,20 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountAttributesRequest extends TeaModel {
+    @NameInMap("AttributeName")
+    public java.util.List<String> attributeName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("AttributeName")
-    public java.util.List<String> attributeName;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("ZoneId")
     public String zoneId;
@@ -27,12 +27,28 @@ public class DescribeAccountAttributesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeAccountAttributesRequest setAttributeName(java.util.List<String> attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
+    public java.util.List<String> getAttributeName() {
+        return this.attributeName;
+    }
+
     public DescribeAccountAttributesRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeAccountAttributesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeAccountAttributesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,22 +65,6 @@ public class DescribeAccountAttributesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeAccountAttributesRequest setAttributeName(java.util.List<String> attributeName) {
-        this.attributeName = attributeName;
-        return this;
-    }
-    public java.util.List<String> getAttributeName() {
-        return this.attributeName;
-    }
-
-    public DescribeAccountAttributesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeAccountAttributesRequest setZoneId(String zoneId) {

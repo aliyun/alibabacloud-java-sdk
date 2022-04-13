@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AllocateDedicatedHostsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DedicatedHostIdSets")
     public AllocateDedicatedHostsResponseBodyDedicatedHostIdSets dedicatedHostIdSets;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AllocateDedicatedHostsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AllocateDedicatedHostsResponseBody self = new AllocateDedicatedHostsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AllocateDedicatedHostsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AllocateDedicatedHostsResponseBody setDedicatedHostIdSets(AllocateDedicatedHostsResponseBodyDedicatedHostIdSets dedicatedHostIdSets) {
@@ -29,6 +21,14 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
     }
     public AllocateDedicatedHostsResponseBodyDedicatedHostIdSets getDedicatedHostIdSets() {
         return this.dedicatedHostIdSets;
+    }
+
+    public AllocateDedicatedHostsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class AllocateDedicatedHostsResponseBodyDedicatedHostIdSets extends TeaModel {

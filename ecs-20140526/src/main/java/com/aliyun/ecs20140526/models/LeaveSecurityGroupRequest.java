@@ -4,8 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class LeaveSecurityGroupRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("NetworkInterfaceId")
+    public String networkInterfaceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,21 +28,33 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("NetworkInterfaceId")
-    public String networkInterfaceId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static LeaveSecurityGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         LeaveSecurityGroupRequest self = new LeaveSecurityGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public LeaveSecurityGroupRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public LeaveSecurityGroupRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    public LeaveSecurityGroupRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public LeaveSecurityGroupRequest setOwnerId(Long ownerId) {
@@ -39,6 +63,14 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public LeaveSecurityGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public LeaveSecurityGroupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -63,38 +95,6 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
-    }
-
-    public LeaveSecurityGroupRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public LeaveSecurityGroupRequest setNetworkInterfaceId(String networkInterfaceId) {
-        this.networkInterfaceId = networkInterfaceId;
-        return this;
-    }
-    public String getNetworkInterfaceId() {
-        return this.networkInterfaceId;
-    }
-
-    public LeaveSecurityGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public LeaveSecurityGroupRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

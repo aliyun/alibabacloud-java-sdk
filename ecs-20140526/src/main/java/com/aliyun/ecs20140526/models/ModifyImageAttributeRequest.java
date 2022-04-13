@@ -4,17 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyImageAttributeRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("BootMode")
+    public String bootMode;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("Description")
+    public String description;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ImageFamily")
+    public String imageFamily;
 
     @NameInMap("ImageId")
     public String imageId;
@@ -22,59 +19,54 @@ public class ModifyImageAttributeRequest extends TeaModel {
     @NameInMap("ImageName")
     public String imageName;
 
-    @NameInMap("Status")
-    public String status;
-
-    @NameInMap("ImageFamily")
-    public String imageFamily;
-
-    @NameInMap("BootMode")
-    public String bootMode;
-
     @NameInMap("LicenseType")
     public String licenseType;
 
-    @NameInMap("Description")
-    public String description;
-
     @NameInMap("OwnerAccount")
     public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("Status")
+    public String status;
 
     public static ModifyImageAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyImageAttributeRequest self = new ModifyImageAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyImageAttributeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyImageAttributeRequest setBootMode(String bootMode) {
+        this.bootMode = bootMode;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getBootMode() {
+        return this.bootMode;
     }
 
-    public ModifyImageAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public ModifyImageAttributeRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public String getDescription() {
+        return this.description;
     }
 
-    public ModifyImageAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public ModifyImageAttributeRequest setImageFamily(String imageFamily) {
+        this.imageFamily = imageFamily;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ModifyImageAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getImageFamily() {
+        return this.imageFamily;
     }
 
     public ModifyImageAttributeRequest setImageId(String imageId) {
@@ -93,30 +85,6 @@ public class ModifyImageAttributeRequest extends TeaModel {
         return this.imageName;
     }
 
-    public ModifyImageAttributeRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public ModifyImageAttributeRequest setImageFamily(String imageFamily) {
-        this.imageFamily = imageFamily;
-        return this;
-    }
-    public String getImageFamily() {
-        return this.imageFamily;
-    }
-
-    public ModifyImageAttributeRequest setBootMode(String bootMode) {
-        this.bootMode = bootMode;
-        return this;
-    }
-    public String getBootMode() {
-        return this.bootMode;
-    }
-
     public ModifyImageAttributeRequest setLicenseType(String licenseType) {
         this.licenseType = licenseType;
         return this;
@@ -125,20 +93,52 @@ public class ModifyImageAttributeRequest extends TeaModel {
         return this.licenseType;
     }
 
-    public ModifyImageAttributeRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
     public ModifyImageAttributeRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public ModifyImageAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyImageAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyImageAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyImageAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyImageAttributeRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

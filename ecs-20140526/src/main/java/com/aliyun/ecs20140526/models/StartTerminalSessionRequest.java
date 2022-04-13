@@ -4,8 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartTerminalSessionRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PortNumber")
+    public Integer portNumber;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +25,25 @@ public class StartTerminalSessionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
-
     public static StartTerminalSessionRequest build(java.util.Map<String, ?> map) throws Exception {
         StartTerminalSessionRequest self = new StartTerminalSessionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartTerminalSessionRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
+    public StartTerminalSessionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public StartTerminalSessionRequest setOwnerId(Long ownerId) {
@@ -33,6 +52,22 @@ public class StartTerminalSessionRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public StartTerminalSessionRequest setPortNumber(Integer portNumber) {
+        this.portNumber = portNumber;
+        return this;
+    }
+    public Integer getPortNumber() {
+        return this.portNumber;
+    }
+
+    public StartTerminalSessionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public StartTerminalSessionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,30 +84,6 @@ public class StartTerminalSessionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public StartTerminalSessionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public StartTerminalSessionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public StartTerminalSessionRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
 }

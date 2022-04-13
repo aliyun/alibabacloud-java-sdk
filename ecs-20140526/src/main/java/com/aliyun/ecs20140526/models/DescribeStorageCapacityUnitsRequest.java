@@ -4,20 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeStorageCapacityUnitsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AllocationType")
+    public String allocationType;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("Capacity")
+    public Integer capacity;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -25,20 +25,20 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("Capacity")
-    public Integer capacity;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("AllocationType")
-    public String allocationType;
-
-    @NameInMap("StorageCapacityUnitId")
-    public java.util.List<String> storageCapacityUnitId;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("Status")
     public java.util.List<String> status;
+
+    @NameInMap("StorageCapacityUnitId")
+    public java.util.List<String> storageCapacityUnitId;
 
     @NameInMap("Tag")
     public java.util.List<DescribeStorageCapacityUnitsRequestTag> tag;
@@ -48,28 +48,28 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeStorageCapacityUnitsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeStorageCapacityUnitsRequest setAllocationType(String allocationType) {
+        this.allocationType = allocationType;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAllocationType() {
+        return this.allocationType;
     }
 
-    public DescribeStorageCapacityUnitsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public DescribeStorageCapacityUnitsRequest setCapacity(Integer capacity) {
+        this.capacity = capacity;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public Integer getCapacity() {
+        return this.capacity;
     }
 
-    public DescribeStorageCapacityUnitsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public DescribeStorageCapacityUnitsRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getName() {
+        return this.name;
     }
 
     public DescribeStorageCapacityUnitsRequest setOwnerAccount(String ownerAccount) {
@@ -80,12 +80,12 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeStorageCapacityUnitsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeStorageCapacityUnitsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeStorageCapacityUnitsRequest setPageNumber(Integer pageNumber) {
@@ -104,36 +104,28 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeStorageCapacityUnitsRequest setName(String name) {
-        this.name = name;
+    public DescribeStorageCapacityUnitsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public DescribeStorageCapacityUnitsRequest setCapacity(Integer capacity) {
-        this.capacity = capacity;
+    public DescribeStorageCapacityUnitsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public Integer getCapacity() {
-        return this.capacity;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public DescribeStorageCapacityUnitsRequest setAllocationType(String allocationType) {
-        this.allocationType = allocationType;
+    public DescribeStorageCapacityUnitsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getAllocationType() {
-        return this.allocationType;
-    }
-
-    public DescribeStorageCapacityUnitsRequest setStorageCapacityUnitId(java.util.List<String> storageCapacityUnitId) {
-        this.storageCapacityUnitId = storageCapacityUnitId;
-        return this;
-    }
-    public java.util.List<String> getStorageCapacityUnitId() {
-        return this.storageCapacityUnitId;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeStorageCapacityUnitsRequest setStatus(java.util.List<String> status) {
@@ -142,6 +134,14 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     }
     public java.util.List<String> getStatus() {
         return this.status;
+    }
+
+    public DescribeStorageCapacityUnitsRequest setStorageCapacityUnitId(java.util.List<String> storageCapacityUnitId) {
+        this.storageCapacityUnitId = storageCapacityUnitId;
+        return this;
+    }
+    public java.util.List<String> getStorageCapacityUnitId() {
+        return this.storageCapacityUnitId;
     }
 
     public DescribeStorageCapacityUnitsRequest setTag(java.util.List<DescribeStorageCapacityUnitsRequestTag> tag) {

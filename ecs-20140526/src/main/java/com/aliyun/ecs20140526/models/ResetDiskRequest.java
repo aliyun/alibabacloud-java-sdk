@@ -4,6 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ResetDiskRequest extends TeaModel {
+    @NameInMap("DiskId")
+    public String diskId;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +22,36 @@ public class ResetDiskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DiskId")
-    public String diskId;
-
     @NameInMap("SnapshotId")
     public String snapshotId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static ResetDiskRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetDiskRequest self = new ResetDiskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ResetDiskRequest setDiskId(String diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public String getDiskId() {
+        return this.diskId;
+    }
+
+    public ResetDiskRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public ResetDiskRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ResetDiskRequest setOwnerId(Long ownerId) {
@@ -51,28 +78,12 @@ public class ResetDiskRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ResetDiskRequest setDiskId(String diskId) {
-        this.diskId = diskId;
-        return this;
-    }
-    public String getDiskId() {
-        return this.diskId;
-    }
-
     public ResetDiskRequest setSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     public String getSnapshotId() {
         return this.snapshotId;
-    }
-
-    public ResetDiskRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

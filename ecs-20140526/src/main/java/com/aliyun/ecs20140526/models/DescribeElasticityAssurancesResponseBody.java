@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticityAssurancesResponseBody extends TeaModel {
+    @NameInMap("ElasticityAssuranceSet")
+    public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSet elasticityAssuranceSet;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -13,15 +19,25 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    @NameInMap("ElasticityAssuranceSet")
-    public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSet elasticityAssuranceSet;
-
     public static DescribeElasticityAssurancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeElasticityAssurancesResponseBody self = new DescribeElasticityAssurancesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeElasticityAssurancesResponseBody setElasticityAssuranceSet(DescribeElasticityAssurancesResponseBodyElasticityAssuranceSet elasticityAssuranceSet) {
+        this.elasticityAssuranceSet = elasticityAssuranceSet;
+        return this;
+    }
+    public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSet getElasticityAssuranceSet() {
+        return this.elasticityAssuranceSet;
+    }
+
+    public DescribeElasticityAssurancesResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public DescribeElasticityAssurancesResponseBody setNextToken(String nextToken) {
@@ -48,46 +64,30 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeElasticityAssurancesResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public DescribeElasticityAssurancesResponseBody setElasticityAssuranceSet(DescribeElasticityAssurancesResponseBodyElasticityAssuranceSet elasticityAssuranceSet) {
-        this.elasticityAssuranceSet = elasticityAssuranceSet;
-        return this;
-    }
-    public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSet getElasticityAssuranceSet() {
-        return this.elasticityAssuranceSet;
-    }
-
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource extends TeaModel {
-        @NameInMap("UsedAmount")
-        public Integer usedAmount;
+        @NameInMap("InstanceType")
+        public String instanceType;
 
         @NameInMap("TotalAmount")
         public Integer totalAmount;
 
+        @NameInMap("UsedAmount")
+        public Integer usedAmount;
+
         @NameInMap("zoneId")
         public String zoneId;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
 
         public static DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource self = new DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource();
             return TeaModel.build(map, self);
         }
 
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource setUsedAmount(Integer usedAmount) {
-            this.usedAmount = usedAmount;
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
             return this;
         }
-        public Integer getUsedAmount() {
-            return this.usedAmount;
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource setTotalAmount(Integer totalAmount) {
@@ -98,20 +98,20 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             return this.totalAmount;
         }
 
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource setUsedAmount(Integer usedAmount) {
+            this.usedAmount = usedAmount;
+            return this;
+        }
+        public Integer getUsedAmount() {
+            return this.usedAmount;
+        }
+
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
         public String getZoneId() {
             return this.zoneId;
-        }
-
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
         }
 
     }
@@ -136,23 +136,15 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTagsTag extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTagsTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTagsTag self = new DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTagsTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTagsTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTagsTag setTagKey(String tagKey) {
@@ -161,6 +153,14 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }
@@ -185,20 +185,26 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AllocatedResources")
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResources allocatedResources;
 
-        @NameInMap("PrivatePoolOptionsMatchCriteria")
-        public String privatePoolOptionsMatchCriteria;
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("InstanceChargeType")
+        public String instanceChargeType;
+
+        @NameInMap("LatestStartTime")
+        public String latestStartTime;
 
         @NameInMap("PrivatePoolOptionsId")
         public String privatePoolOptionsId;
 
-        @NameInMap("UsedAssuranceTimes")
-        public Integer usedAssuranceTimes;
-
-        @NameInMap("LatestStartTime")
-        public String latestStartTime;
+        @NameInMap("PrivatePoolOptionsMatchCriteria")
+        public String privatePoolOptionsMatchCriteria;
 
         @NameInMap("PrivatePoolOptionsName")
         public String privatePoolOptionsName;
@@ -206,46 +212,70 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        @NameInMap("EndTime")
-        public String endTime;
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("StartTime")
         public String startTime;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("StartTimeType")
+        public String startTimeType;
 
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Tags")
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTags tags;
 
         @NameInMap("TotalAssuranceTimes")
         public String totalAssuranceTimes;
 
-        @NameInMap("AllocatedResources")
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResources allocatedResources;
-
-        @NameInMap("Tags")
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTags tags;
+        @NameInMap("UsedAssuranceTimes")
+        public Integer usedAssuranceTimes;
 
         public static DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem self = new DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem();
             return TeaModel.build(map, self);
         }
 
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setStatus(String status) {
-            this.status = status;
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setAllocatedResources(DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResources allocatedResources) {
+            this.allocatedResources = allocatedResources;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResources getAllocatedResources() {
+            return this.allocatedResources;
         }
 
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setPrivatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
-            this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getPrivatePoolOptionsMatchCriteria() {
-            return this.privatePoolOptionsMatchCriteria;
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setInstanceChargeType(String instanceChargeType) {
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setLatestStartTime(String latestStartTime) {
+            this.latestStartTime = latestStartTime;
+            return this;
+        }
+        public String getLatestStartTime() {
+            return this.latestStartTime;
         }
 
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setPrivatePoolOptionsId(String privatePoolOptionsId) {
@@ -256,20 +286,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             return this.privatePoolOptionsId;
         }
 
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setUsedAssuranceTimes(Integer usedAssuranceTimes) {
-            this.usedAssuranceTimes = usedAssuranceTimes;
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setPrivatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
+            this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
             return this;
         }
-        public Integer getUsedAssuranceTimes() {
-            return this.usedAssuranceTimes;
-        }
-
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setLatestStartTime(String latestStartTime) {
-            this.latestStartTime = latestStartTime;
-            return this;
-        }
-        public String getLatestStartTime() {
-            return this.latestStartTime;
+        public String getPrivatePoolOptionsMatchCriteria() {
+            return this.privatePoolOptionsMatchCriteria;
         }
 
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setPrivatePoolOptionsName(String privatePoolOptionsName) {
@@ -288,12 +310,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setEndTime(String endTime) {
-            this.endTime = endTime;
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
-        public String getEndTime() {
-            return this.endTime;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setStartTime(String startTime) {
@@ -304,20 +326,28 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setDescription(String description) {
-            this.description = description;
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setStartTimeType(String startTimeType) {
+            this.startTimeType = startTimeType;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getStartTimeType() {
+            return this.startTimeType;
         }
 
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setTags(DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTags getTags() {
+            return this.tags;
         }
 
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setTotalAssuranceTimes(String totalAssuranceTimes) {
@@ -328,20 +358,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             return this.totalAssuranceTimes;
         }
 
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setAllocatedResources(DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResources allocatedResources) {
-            this.allocatedResources = allocatedResources;
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setUsedAssuranceTimes(Integer usedAssuranceTimes) {
+            this.usedAssuranceTimes = usedAssuranceTimes;
             return this;
         }
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResources getAllocatedResources() {
-            return this.allocatedResources;
-        }
-
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setTags(DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTags getTags() {
-            return this.tags;
+        public Integer getUsedAssuranceTimes() {
+            return this.usedAssuranceTimes;
         }
 
     }

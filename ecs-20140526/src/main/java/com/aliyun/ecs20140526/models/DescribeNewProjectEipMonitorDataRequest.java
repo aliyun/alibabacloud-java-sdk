@@ -4,8 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNewProjectEipMonitorDataRequest extends TeaModel {
+    @NameInMap("AllocationId")
+    public String allocationId;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Period")
+    public Integer period;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,27 +28,36 @@ public class DescribeNewProjectEipMonitorDataRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("AllocationId")
-    public String allocationId;
-
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("Period")
-    public Integer period;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static DescribeNewProjectEipMonitorDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNewProjectEipMonitorDataRequest self = new DescribeNewProjectEipMonitorDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeNewProjectEipMonitorDataRequest setAllocationId(String allocationId) {
+        this.allocationId = allocationId;
+        return this;
+    }
+    public String getAllocationId() {
+        return this.allocationId;
+    }
+
+    public DescribeNewProjectEipMonitorDataRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeNewProjectEipMonitorDataRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeNewProjectEipMonitorDataRequest setOwnerId(Long ownerId) {
@@ -42,6 +66,22 @@ public class DescribeNewProjectEipMonitorDataRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeNewProjectEipMonitorDataRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public DescribeNewProjectEipMonitorDataRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeNewProjectEipMonitorDataRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -60,52 +100,12 @@ public class DescribeNewProjectEipMonitorDataRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeNewProjectEipMonitorDataRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeNewProjectEipMonitorDataRequest setAllocationId(String allocationId) {
-        this.allocationId = allocationId;
-        return this;
-    }
-    public String getAllocationId() {
-        return this.allocationId;
-    }
-
     public DescribeNewProjectEipMonitorDataRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeNewProjectEipMonitorDataRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeNewProjectEipMonitorDataRequest setPeriod(Integer period) {
-        this.period = period;
-        return this;
-    }
-    public Integer getPeriod() {
-        return this.period;
-    }
-
-    public DescribeNewProjectEipMonitorDataRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

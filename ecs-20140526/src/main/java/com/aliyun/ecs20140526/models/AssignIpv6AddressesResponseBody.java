@@ -4,26 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AssignIpv6AddressesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Ipv6Sets")
+    public AssignIpv6AddressesResponseBodyIpv6Sets ipv6Sets;
 
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
-    @NameInMap("Ipv6Sets")
-    public AssignIpv6AddressesResponseBodyIpv6Sets ipv6Sets;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AssignIpv6AddressesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AssignIpv6AddressesResponseBody self = new AssignIpv6AddressesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AssignIpv6AddressesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AssignIpv6AddressesResponseBody setIpv6Sets(AssignIpv6AddressesResponseBodyIpv6Sets ipv6Sets) {
+        this.ipv6Sets = ipv6Sets;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public AssignIpv6AddressesResponseBodyIpv6Sets getIpv6Sets() {
+        return this.ipv6Sets;
     }
 
     public AssignIpv6AddressesResponseBody setNetworkInterfaceId(String networkInterfaceId) {
@@ -34,12 +34,12 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         return this.networkInterfaceId;
     }
 
-    public AssignIpv6AddressesResponseBody setIpv6Sets(AssignIpv6AddressesResponseBodyIpv6Sets ipv6Sets) {
-        this.ipv6Sets = ipv6Sets;
+    public AssignIpv6AddressesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public AssignIpv6AddressesResponseBodyIpv6Sets getIpv6Sets() {
-        return this.ipv6Sets;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class AssignIpv6AddressesResponseBodyIpv6Sets extends TeaModel {

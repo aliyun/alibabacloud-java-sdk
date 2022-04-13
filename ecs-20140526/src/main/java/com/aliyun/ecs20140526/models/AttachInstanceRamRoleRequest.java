@@ -4,8 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AttachInstanceRamRoleRequest extends TeaModel {
+    @NameInMap("InstanceIds")
+    public String instanceIds;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Policy")
+    public String policy;
+
+    @NameInMap("RamRoleName")
+    public String ramRoleName;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +25,17 @@ public class AttachInstanceRamRoleRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("RamRoleName")
-    public String ramRoleName;
-
-    @NameInMap("InstanceIds")
-    public String instanceIds;
-
-    @NameInMap("Policy")
-    public String policy;
-
     public static AttachInstanceRamRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachInstanceRamRoleRequest self = new AttachInstanceRamRoleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AttachInstanceRamRoleRequest setInstanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public String getInstanceIds() {
+        return this.instanceIds;
     }
 
     public AttachInstanceRamRoleRequest setOwnerId(Long ownerId) {
@@ -36,6 +44,30 @@ public class AttachInstanceRamRoleRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public AttachInstanceRamRoleRequest setPolicy(String policy) {
+        this.policy = policy;
+        return this;
+    }
+    public String getPolicy() {
+        return this.policy;
+    }
+
+    public AttachInstanceRamRoleRequest setRamRoleName(String ramRoleName) {
+        this.ramRoleName = ramRoleName;
+        return this;
+    }
+    public String getRamRoleName() {
+        return this.ramRoleName;
+    }
+
+    public AttachInstanceRamRoleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public AttachInstanceRamRoleRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -52,38 +84,6 @@ public class AttachInstanceRamRoleRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public AttachInstanceRamRoleRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public AttachInstanceRamRoleRequest setRamRoleName(String ramRoleName) {
-        this.ramRoleName = ramRoleName;
-        return this;
-    }
-    public String getRamRoleName() {
-        return this.ramRoleName;
-    }
-
-    public AttachInstanceRamRoleRequest setInstanceIds(String instanceIds) {
-        this.instanceIds = instanceIds;
-        return this;
-    }
-    public String getInstanceIds() {
-        return this.instanceIds;
-    }
-
-    public AttachInstanceRamRoleRequest setPolicy(String policy) {
-        this.policy = policy;
-        return this;
-    }
-    public String getPolicy() {
-        return this.policy;
     }
 
 }

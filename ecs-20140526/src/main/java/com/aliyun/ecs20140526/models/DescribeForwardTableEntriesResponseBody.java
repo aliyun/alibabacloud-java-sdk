@@ -4,24 +4,40 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeForwardTableEntriesResponseBody extends TeaModel {
+    @NameInMap("ForwardTableEntries")
+    public DescribeForwardTableEntriesResponseBodyForwardTableEntries forwardTableEntries;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("ForwardTableEntries")
-    public DescribeForwardTableEntriesResponseBodyForwardTableEntries forwardTableEntries;
 
     public static DescribeForwardTableEntriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeForwardTableEntriesResponseBody self = new DescribeForwardTableEntriesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeForwardTableEntriesResponseBody setForwardTableEntries(DescribeForwardTableEntriesResponseBodyForwardTableEntries forwardTableEntries) {
+        this.forwardTableEntries = forwardTableEntries;
+        return this;
+    }
+    public DescribeForwardTableEntriesResponseBodyForwardTableEntries getForwardTableEntries() {
+        return this.forwardTableEntries;
+    }
+
+    public DescribeForwardTableEntriesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeForwardTableEntriesResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeForwardTableEntriesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeForwardTableEntriesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,20 +64,18 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeForwardTableEntriesResponseBody setForwardTableEntries(DescribeForwardTableEntriesResponseBodyForwardTableEntries forwardTableEntries) {
-        this.forwardTableEntries = forwardTableEntries;
-        return this;
-    }
-    public DescribeForwardTableEntriesResponseBodyForwardTableEntries getForwardTableEntries() {
-        return this.forwardTableEntries;
-    }
-
     public static class DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("ExternalIp")
+        public String externalIp;
+
+        @NameInMap("ExternalPort")
+        public String externalPort;
 
         @NameInMap("ForwardEntryId")
         public String forwardEntryId;
+
+        @NameInMap("ForwardTableId")
+        public String forwardTableId;
 
         @NameInMap("InternalIp")
         public String internalIp;
@@ -77,29 +83,31 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         @NameInMap("InternalPort")
         public String internalPort;
 
-        @NameInMap("ForwardTableId")
-        public String forwardTableId;
-
-        @NameInMap("ExternalPort")
-        public String externalPort;
-
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
-        @NameInMap("ExternalIp")
-        public String externalIp;
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry build(java.util.Map<String, ?> map) throws Exception {
             DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry self = new DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry();
             return TeaModel.build(map, self);
         }
 
-        public DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry setStatus(String status) {
-            this.status = status;
+        public DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry setExternalIp(String externalIp) {
+            this.externalIp = externalIp;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getExternalIp() {
+            return this.externalIp;
+        }
+
+        public DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry setExternalPort(String externalPort) {
+            this.externalPort = externalPort;
+            return this;
+        }
+        public String getExternalPort() {
+            return this.externalPort;
         }
 
         public DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry setForwardEntryId(String forwardEntryId) {
@@ -108,6 +116,14 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
         public String getForwardEntryId() {
             return this.forwardEntryId;
+        }
+
+        public DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry setForwardTableId(String forwardTableId) {
+            this.forwardTableId = forwardTableId;
+            return this;
+        }
+        public String getForwardTableId() {
+            return this.forwardTableId;
         }
 
         public DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry setInternalIp(String internalIp) {
@@ -126,22 +142,6 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             return this.internalPort;
         }
 
-        public DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry setForwardTableId(String forwardTableId) {
-            this.forwardTableId = forwardTableId;
-            return this;
-        }
-        public String getForwardTableId() {
-            return this.forwardTableId;
-        }
-
-        public DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry setExternalPort(String externalPort) {
-            this.externalPort = externalPort;
-            return this;
-        }
-        public String getExternalPort() {
-            return this.externalPort;
-        }
-
         public DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry setIpProtocol(String ipProtocol) {
             this.ipProtocol = ipProtocol;
             return this;
@@ -150,12 +150,12 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             return this.ipProtocol;
         }
 
-        public DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry setExternalIp(String externalIp) {
-            this.externalIp = externalIp;
+        public DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getExternalIp() {
-            return this.externalIp;
+        public String getStatus() {
+            return this.status;
         }
 
     }

@@ -32,23 +32,15 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup extends TeaModel {
-        @NameInMap("SecurityGroupId")
-        public String securityGroupId;
-
         @NameInMap("AliUid")
         public String aliUid;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
 
         public static DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup self = new DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup setSecurityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
         }
 
         public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup setAliUid(String aliUid) {
@@ -57,6 +49,14 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         }
         public String getAliUid() {
             return this.aliUid;
+        }
+
+        public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
     }
@@ -81,23 +81,15 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference extends TeaModel {
-        @NameInMap("SecurityGroupId")
-        public String securityGroupId;
-
         @NameInMap("ReferencingSecurityGroups")
         public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups referencingSecurityGroups;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
 
         public static DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference self = new DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference setSecurityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
         }
 
         public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference setReferencingSecurityGroups(DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups referencingSecurityGroups) {
@@ -106,6 +98,14 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         }
         public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups getReferencingSecurityGroups() {
             return this.referencingSecurityGroups;
+        }
+
+        public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
     }

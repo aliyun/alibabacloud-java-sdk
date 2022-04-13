@@ -7,11 +7,11 @@ public class CreateDiskResponseBody extends TeaModel {
     @NameInMap("DiskId")
     public String diskId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OrderId")
     public String orderId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateDiskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDiskResponseBody self = new CreateDiskResponseBody();
@@ -26,20 +26,20 @@ public class CreateDiskResponseBody extends TeaModel {
         return this.diskId;
     }
 
-    public CreateDiskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateDiskResponseBody setOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public CreateDiskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

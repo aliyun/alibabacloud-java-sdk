@@ -4,24 +4,40 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeKeyPairsResponseBody extends TeaModel {
+    @NameInMap("KeyPairs")
+    public DescribeKeyPairsResponseBodyKeyPairs keyPairs;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("KeyPairs")
-    public DescribeKeyPairsResponseBodyKeyPairs keyPairs;
 
     public static DescribeKeyPairsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeKeyPairsResponseBody self = new DescribeKeyPairsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeKeyPairsResponseBody setKeyPairs(DescribeKeyPairsResponseBodyKeyPairs keyPairs) {
+        this.keyPairs = keyPairs;
+        return this;
+    }
+    public DescribeKeyPairsResponseBodyKeyPairs getKeyPairs() {
+        return this.keyPairs;
+    }
+
+    public DescribeKeyPairsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeKeyPairsResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeKeyPairsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeKeyPairsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,32 +64,16 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeKeyPairsResponseBody setKeyPairs(DescribeKeyPairsResponseBodyKeyPairs keyPairs) {
-        this.keyPairs = keyPairs;
-        return this;
-    }
-    public DescribeKeyPairsResponseBodyKeyPairs getKeyPairs() {
-        return this.keyPairs;
-    }
-
     public static class DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag self = new DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag setTagKey(String tagKey) {
@@ -90,6 +82,14 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }
@@ -117,11 +117,11 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("KeyPairName")
-        public String keyPairName;
-
         @NameInMap("KeyPairFingerPrint")
         public String keyPairFingerPrint;
+
+        @NameInMap("KeyPairName")
+        public String keyPairName;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -142,20 +142,20 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeKeyPairsResponseBodyKeyPairsKeyPair setKeyPairName(String keyPairName) {
-            this.keyPairName = keyPairName;
-            return this;
-        }
-        public String getKeyPairName() {
-            return this.keyPairName;
-        }
-
         public DescribeKeyPairsResponseBodyKeyPairsKeyPair setKeyPairFingerPrint(String keyPairFingerPrint) {
             this.keyPairFingerPrint = keyPairFingerPrint;
             return this;
         }
         public String getKeyPairFingerPrint() {
             return this.keyPairFingerPrint;
+        }
+
+        public DescribeKeyPairsResponseBodyKeyPairsKeyPair setKeyPairName(String keyPairName) {
+            this.keyPairName = keyPairName;
+            return this;
+        }
+        public String getKeyPairName() {
+            return this.keyPairName;
         }
 
         public DescribeKeyPairsResponseBodyKeyPairsKeyPair setResourceGroupId(String resourceGroupId) {

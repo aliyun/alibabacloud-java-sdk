@@ -4,8 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePhysicalConnectionsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Filter")
+    public java.util.List<DescribePhysicalConnectionsRequestFilter> filter;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,8 +22,8 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -22,29 +31,44 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("UserCidr")
     public String userCidr;
-
-    @NameInMap("Filter")
-    public java.util.List<DescribePhysicalConnectionsRequestFilter> filter;
 
     public static DescribePhysicalConnectionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePhysicalConnectionsRequest self = new DescribePhysicalConnectionsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribePhysicalConnectionsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribePhysicalConnectionsRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DescribePhysicalConnectionsRequest setFilter(java.util.List<DescribePhysicalConnectionsRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribePhysicalConnectionsRequestFilter> getFilter() {
+        return this.filter;
+    }
+
+    public DescribePhysicalConnectionsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribePhysicalConnectionsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribePhysicalConnectionsRequest setPageNumber(Integer pageNumber) {
@@ -63,12 +87,12 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribePhysicalConnectionsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribePhysicalConnectionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribePhysicalConnectionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -87,36 +111,12 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribePhysicalConnectionsRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public DescribePhysicalConnectionsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
     public DescribePhysicalConnectionsRequest setUserCidr(String userCidr) {
         this.userCidr = userCidr;
         return this;
     }
     public String getUserCidr() {
         return this.userCidr;
-    }
-
-    public DescribePhysicalConnectionsRequest setFilter(java.util.List<DescribePhysicalConnectionsRequestFilter> filter) {
-        this.filter = filter;
-        return this;
-    }
-    public java.util.List<DescribePhysicalConnectionsRequestFilter> getFilter() {
-        return this.filter;
     }
 
     public static class DescribePhysicalConnectionsRequestFilter extends TeaModel {

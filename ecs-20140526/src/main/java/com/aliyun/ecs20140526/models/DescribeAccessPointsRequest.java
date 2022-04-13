@@ -4,20 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessPointsRequest extends TeaModel {
+    @NameInMap("Filter")
+    public java.util.List<DescribeAccessPointsRequestFilter> filter;
+
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Type")
-    public String type;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -25,12 +16,29 @@ public class DescribeAccessPointsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Filter")
-    public java.util.List<DescribeAccessPointsRequestFilter> filter;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("Type")
+    public String type;
 
     public static DescribeAccessPointsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessPointsRequest self = new DescribeAccessPointsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAccessPointsRequest setFilter(java.util.List<DescribeAccessPointsRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribeAccessPointsRequestFilter> getFilter() {
+        return this.filter;
     }
 
     public DescribeAccessPointsRequest setOwnerId(Long ownerId) {
@@ -39,38 +47,6 @@ public class DescribeAccessPointsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeAccessPointsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeAccessPointsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeAccessPointsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeAccessPointsRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
     public DescribeAccessPointsRequest setPageNumber(Integer pageNumber) {
@@ -89,12 +65,36 @@ public class DescribeAccessPointsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeAccessPointsRequest setFilter(java.util.List<DescribeAccessPointsRequestFilter> filter) {
-        this.filter = filter;
+    public DescribeAccessPointsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.List<DescribeAccessPointsRequestFilter> getFilter() {
-        return this.filter;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeAccessPointsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeAccessPointsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeAccessPointsRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public static class DescribeAccessPointsRequestFilter extends TeaModel {

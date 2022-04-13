@@ -4,26 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsUsageResponseBody extends TeaModel {
-    @NameInMap("SnapshotSize")
-    public Long snapshotSize;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SnapshotCount")
     public Integer snapshotCount;
 
+    @NameInMap("SnapshotSize")
+    public Long snapshotSize;
+
     public static DescribeSnapshotsUsageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotsUsageResponseBody self = new DescribeSnapshotsUsageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSnapshotsUsageResponseBody setSnapshotSize(Long snapshotSize) {
-        this.snapshotSize = snapshotSize;
-        return this;
-    }
-    public Long getSnapshotSize() {
-        return this.snapshotSize;
     }
 
     public DescribeSnapshotsUsageResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class DescribeSnapshotsUsageResponseBody extends TeaModel {
     }
     public Integer getSnapshotCount() {
         return this.snapshotCount;
+    }
+
+    public DescribeSnapshotsUsageResponseBody setSnapshotSize(Long snapshotSize) {
+        this.snapshotSize = snapshotSize;
+        return this;
+    }
+    public Long getSnapshotSize() {
+        return this.snapshotSize;
     }
 
 }

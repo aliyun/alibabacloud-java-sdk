@@ -4,8 +4,59 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDiskRequest extends TeaModel {
+    @NameInMap("AdvancedFeatures")
+    public String advancedFeatures;
+
+    @NameInMap("Arn")
+    public java.util.List<CreateDiskRequestArn> arn;
+
+    @NameInMap("BurstingEnabled")
+    public Boolean burstingEnabled;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("DiskCategory")
+    public String diskCategory;
+
+    @NameInMap("DiskName")
+    public String diskName;
+
+    @NameInMap("EncryptAlgorithm")
+    public String encryptAlgorithm;
+
+    @NameInMap("Encrypted")
+    public Boolean encrypted;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("KMSKeyId")
+    public String KMSKeyId;
+
+    @NameInMap("MultiAttach")
+    public String multiAttach;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PerformanceLevel")
+    public String performanceLevel;
+
+    @NameInMap("ProvisionedIops")
+    public Long provisionedIops;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,75 +64,134 @@ public class CreateDiskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
+    @NameInMap("Size")
+    public Integer size;
 
     @NameInMap("SnapshotId")
     public String snapshotId;
 
-    @NameInMap("DiskName")
-    public String diskName;
-
-    @NameInMap("Size")
-    public Integer size;
-
-    @NameInMap("DiskCategory")
-    public String diskCategory;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("Encrypted")
-    public Boolean encrypted;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("KMSKeyId")
-    public String KMSKeyId;
-
-    @NameInMap("PerformanceLevel")
-    public String performanceLevel;
-
-    @NameInMap("AdvancedFeatures")
-    public String advancedFeatures;
+    @NameInMap("StorageClusterId")
+    public String storageClusterId;
 
     @NameInMap("StorageSetId")
     public String storageSetId;
 
-    @NameInMap("EncryptAlgorithm")
-    public String encryptAlgorithm;
-
     @NameInMap("StorageSetPartitionNumber")
     public Integer storageSetPartitionNumber;
-
-    @NameInMap("DedicatedBlockStorageClusterId")
-    public String dedicatedBlockStorageClusterId;
-
-    @NameInMap("MultiAttach")
-    public String multiAttach;
 
     @NameInMap("Tag")
     public java.util.List<CreateDiskRequestTag> tag;
 
-    @NameInMap("Arn")
-    public java.util.List<CreateDiskRequestArn> arn;
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static CreateDiskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDiskRequest self = new CreateDiskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDiskRequest setAdvancedFeatures(String advancedFeatures) {
+        this.advancedFeatures = advancedFeatures;
+        return this;
+    }
+    public String getAdvancedFeatures() {
+        return this.advancedFeatures;
+    }
+
+    public CreateDiskRequest setArn(java.util.List<CreateDiskRequestArn> arn) {
+        this.arn = arn;
+        return this;
+    }
+    public java.util.List<CreateDiskRequestArn> getArn() {
+        return this.arn;
+    }
+
+    public CreateDiskRequest setBurstingEnabled(Boolean burstingEnabled) {
+        this.burstingEnabled = burstingEnabled;
+        return this;
+    }
+    public Boolean getBurstingEnabled() {
+        return this.burstingEnabled;
+    }
+
+    public CreateDiskRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateDiskRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateDiskRequest setDiskCategory(String diskCategory) {
+        this.diskCategory = diskCategory;
+        return this;
+    }
+    public String getDiskCategory() {
+        return this.diskCategory;
+    }
+
+    public CreateDiskRequest setDiskName(String diskName) {
+        this.diskName = diskName;
+        return this;
+    }
+    public String getDiskName() {
+        return this.diskName;
+    }
+
+    public CreateDiskRequest setEncryptAlgorithm(String encryptAlgorithm) {
+        this.encryptAlgorithm = encryptAlgorithm;
+        return this;
+    }
+    public String getEncryptAlgorithm() {
+        return this.encryptAlgorithm;
+    }
+
+    public CreateDiskRequest setEncrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
+        return this;
+    }
+    public Boolean getEncrypted() {
+        return this.encrypted;
+    }
+
+    public CreateDiskRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public CreateDiskRequest setKMSKeyId(String KMSKeyId) {
+        this.KMSKeyId = KMSKeyId;
+        return this;
+    }
+    public String getKMSKeyId() {
+        return this.KMSKeyId;
+    }
+
+    public CreateDiskRequest setMultiAttach(String multiAttach) {
+        this.multiAttach = multiAttach;
+        return this;
+    }
+    public String getMultiAttach() {
+        return this.multiAttach;
+    }
+
+    public CreateDiskRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateDiskRequest setOwnerId(Long ownerId) {
@@ -90,6 +200,38 @@ public class CreateDiskRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateDiskRequest setPerformanceLevel(String performanceLevel) {
+        this.performanceLevel = performanceLevel;
+        return this;
+    }
+    public String getPerformanceLevel() {
+        return this.performanceLevel;
+    }
+
+    public CreateDiskRequest setProvisionedIops(Long provisionedIops) {
+        this.provisionedIops = provisionedIops;
+        return this;
+    }
+    public Long getProvisionedIops() {
+        return this.provisionedIops;
+    }
+
+    public CreateDiskRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateDiskRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateDiskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -108,20 +250,12 @@ public class CreateDiskRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateDiskRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateDiskRequest setSize(Integer size) {
+        this.size = size;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateDiskRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
+    public Integer getSize() {
+        return this.size;
     }
 
     public CreateDiskRequest setSnapshotId(String snapshotId) {
@@ -132,100 +266,12 @@ public class CreateDiskRequest extends TeaModel {
         return this.snapshotId;
     }
 
-    public CreateDiskRequest setDiskName(String diskName) {
-        this.diskName = diskName;
+    public CreateDiskRequest setStorageClusterId(String storageClusterId) {
+        this.storageClusterId = storageClusterId;
         return this;
     }
-    public String getDiskName() {
-        return this.diskName;
-    }
-
-    public CreateDiskRequest setSize(Integer size) {
-        this.size = size;
-        return this;
-    }
-    public Integer getSize() {
-        return this.size;
-    }
-
-    public CreateDiskRequest setDiskCategory(String diskCategory) {
-        this.diskCategory = diskCategory;
-        return this;
-    }
-    public String getDiskCategory() {
-        return this.diskCategory;
-    }
-
-    public CreateDiskRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public CreateDiskRequest setEncrypted(Boolean encrypted) {
-        this.encrypted = encrypted;
-        return this;
-    }
-    public Boolean getEncrypted() {
-        return this.encrypted;
-    }
-
-    public CreateDiskRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateDiskRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateDiskRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public CreateDiskRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public CreateDiskRequest setKMSKeyId(String KMSKeyId) {
-        this.KMSKeyId = KMSKeyId;
-        return this;
-    }
-    public String getKMSKeyId() {
-        return this.KMSKeyId;
-    }
-
-    public CreateDiskRequest setPerformanceLevel(String performanceLevel) {
-        this.performanceLevel = performanceLevel;
-        return this;
-    }
-    public String getPerformanceLevel() {
-        return this.performanceLevel;
-    }
-
-    public CreateDiskRequest setAdvancedFeatures(String advancedFeatures) {
-        this.advancedFeatures = advancedFeatures;
-        return this;
-    }
-    public String getAdvancedFeatures() {
-        return this.advancedFeatures;
+    public String getStorageClusterId() {
+        return this.storageClusterId;
     }
 
     public CreateDiskRequest setStorageSetId(String storageSetId) {
@@ -236,36 +282,12 @@ public class CreateDiskRequest extends TeaModel {
         return this.storageSetId;
     }
 
-    public CreateDiskRequest setEncryptAlgorithm(String encryptAlgorithm) {
-        this.encryptAlgorithm = encryptAlgorithm;
-        return this;
-    }
-    public String getEncryptAlgorithm() {
-        return this.encryptAlgorithm;
-    }
-
     public CreateDiskRequest setStorageSetPartitionNumber(Integer storageSetPartitionNumber) {
         this.storageSetPartitionNumber = storageSetPartitionNumber;
         return this;
     }
     public Integer getStorageSetPartitionNumber() {
         return this.storageSetPartitionNumber;
-    }
-
-    public CreateDiskRequest setDedicatedBlockStorageClusterId(String dedicatedBlockStorageClusterId) {
-        this.dedicatedBlockStorageClusterId = dedicatedBlockStorageClusterId;
-        return this;
-    }
-    public String getDedicatedBlockStorageClusterId() {
-        return this.dedicatedBlockStorageClusterId;
-    }
-
-    public CreateDiskRequest setMultiAttach(String multiAttach) {
-        this.multiAttach = multiAttach;
-        return this;
-    }
-    public String getMultiAttach() {
-        return this.multiAttach;
     }
 
     public CreateDiskRequest setTag(java.util.List<CreateDiskRequestTag> tag) {
@@ -276,16 +298,57 @@ public class CreateDiskRequest extends TeaModel {
         return this.tag;
     }
 
-    public CreateDiskRequest setArn(java.util.List<CreateDiskRequestArn> arn) {
-        this.arn = arn;
+    public CreateDiskRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
-    public java.util.List<CreateDiskRequestArn> getArn() {
-        return this.arn;
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
+    public static class CreateDiskRequestArn extends TeaModel {
+        @NameInMap("AssumeRoleFor")
+        public Long assumeRoleFor;
+
+        @NameInMap("RoleType")
+        public String roleType;
+
+        @NameInMap("Rolearn")
+        public String rolearn;
+
+        public static CreateDiskRequestArn build(java.util.Map<String, ?> map) throws Exception {
+            CreateDiskRequestArn self = new CreateDiskRequestArn();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDiskRequestArn setAssumeRoleFor(Long assumeRoleFor) {
+            this.assumeRoleFor = assumeRoleFor;
+            return this;
+        }
+        public Long getAssumeRoleFor() {
+            return this.assumeRoleFor;
+        }
+
+        public CreateDiskRequestArn setRoleType(String roleType) {
+            this.roleType = roleType;
+            return this;
+        }
+        public String getRoleType() {
+            return this.roleType;
+        }
+
+        public CreateDiskRequestArn setRolearn(String rolearn) {
+            this.rolearn = rolearn;
+            return this;
+        }
+        public String getRolearn() {
+            return this.rolearn;
+        }
+
     }
 
     public static class CreateDiskRequestTag extends TeaModel {
-        @NameInMap("key")
+        @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")
@@ -310,47 +373,6 @@ public class CreateDiskRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
-        }
-
-    }
-
-    public static class CreateDiskRequestArn extends TeaModel {
-        @NameInMap("RoleType")
-        public String roleType;
-
-        @NameInMap("Rolearn")
-        public String rolearn;
-
-        @NameInMap("AssumeRoleFor")
-        public Long assumeRoleFor;
-
-        public static CreateDiskRequestArn build(java.util.Map<String, ?> map) throws Exception {
-            CreateDiskRequestArn self = new CreateDiskRequestArn();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateDiskRequestArn setRoleType(String roleType) {
-            this.roleType = roleType;
-            return this;
-        }
-        public String getRoleType() {
-            return this.roleType;
-        }
-
-        public CreateDiskRequestArn setRolearn(String rolearn) {
-            this.rolearn = rolearn;
-            return this;
-        }
-        public String getRolearn() {
-            return this.rolearn;
-        }
-
-        public CreateDiskRequestArn setAssumeRoleFor(Long assumeRoleFor) {
-            this.assumeRoleFor = assumeRoleFor;
-            return this;
-        }
-        public Long getAssumeRoleFor() {
-            return this.assumeRoleFor;
         }
 
     }

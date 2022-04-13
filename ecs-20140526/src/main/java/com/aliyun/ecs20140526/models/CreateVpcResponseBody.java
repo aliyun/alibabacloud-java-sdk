@@ -4,37 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcResponseBody extends TeaModel {
-    @NameInMap("VpcId")
-    public String vpcId;
-
-    @NameInMap("VRouterId")
-    public String VRouterId;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("RouteTableId")
     public String routeTableId;
 
+    @NameInMap("VRouterId")
+    public String VRouterId;
+
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static CreateVpcResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateVpcResponseBody self = new CreateVpcResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateVpcResponseBody setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public CreateVpcResponseBody setVRouterId(String VRouterId) {
-        this.VRouterId = VRouterId;
-        return this;
-    }
-    public String getVRouterId() {
-        return this.VRouterId;
     }
 
     public CreateVpcResponseBody setRequestId(String requestId) {
@@ -51,6 +35,22 @@ public class CreateVpcResponseBody extends TeaModel {
     }
     public String getRouteTableId() {
         return this.routeTableId;
+    }
+
+    public CreateVpcResponseBody setVRouterId(String VRouterId) {
+        this.VRouterId = VRouterId;
+        return this;
+    }
+    public String getVRouterId() {
+        return this.VRouterId;
+    }
+
+    public CreateVpcResponseBody setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

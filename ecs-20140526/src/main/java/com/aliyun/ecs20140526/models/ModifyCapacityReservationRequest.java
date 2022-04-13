@@ -7,26 +7,8 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     @NameInMap("PrivatePoolOptions")
     public ModifyCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Description")
     public String description;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -34,11 +16,29 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     @NameInMap("EndTimeType")
     public String endTimeType;
 
+    @NameInMap("InstanceAmount")
+    public Integer instanceAmount;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Platform")
     public String platform;
 
-    @NameInMap("InstanceAmount")
-    public Integer instanceAmount;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static ModifyCapacityReservationRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCapacityReservationRequest self = new ModifyCapacityReservationRequest();
@@ -53,60 +53,12 @@ public class ModifyCapacityReservationRequest extends TeaModel {
         return this.privatePoolOptions;
     }
 
-    public ModifyCapacityReservationRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyCapacityReservationRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyCapacityReservationRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ModifyCapacityReservationRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyCapacityReservationRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public ModifyCapacityReservationRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public ModifyCapacityReservationRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public ModifyCapacityReservationRequest setEndTime(String endTime) {
@@ -125,6 +77,30 @@ public class ModifyCapacityReservationRequest extends TeaModel {
         return this.endTimeType;
     }
 
+    public ModifyCapacityReservationRequest setInstanceAmount(Integer instanceAmount) {
+        this.instanceAmount = instanceAmount;
+        return this;
+    }
+    public Integer getInstanceAmount() {
+        return this.instanceAmount;
+    }
+
+    public ModifyCapacityReservationRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyCapacityReservationRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ModifyCapacityReservationRequest setPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -133,12 +109,36 @@ public class ModifyCapacityReservationRequest extends TeaModel {
         return this.platform;
     }
 
-    public ModifyCapacityReservationRequest setInstanceAmount(Integer instanceAmount) {
-        this.instanceAmount = instanceAmount;
+    public ModifyCapacityReservationRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Integer getInstanceAmount() {
-        return this.instanceAmount;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyCapacityReservationRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyCapacityReservationRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyCapacityReservationRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public static class ModifyCapacityReservationRequestPrivatePoolOptions extends TeaModel {

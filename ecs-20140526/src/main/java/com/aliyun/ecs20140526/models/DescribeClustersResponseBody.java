@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeClustersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Clusters")
     public DescribeClustersResponseBodyClusters clusters;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeClustersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeClustersResponseBody self = new DescribeClustersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeClustersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeClustersResponseBody setClusters(DescribeClustersResponseBodyClusters clusters) {
@@ -29,6 +21,14 @@ public class DescribeClustersResponseBody extends TeaModel {
     }
     public DescribeClustersResponseBodyClusters getClusters() {
         return this.clusters;
+    }
+
+    public DescribeClustersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeClustersResponseBodyClustersCluster extends TeaModel {

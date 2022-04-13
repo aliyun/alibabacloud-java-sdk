@@ -4,6 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RedeployInstanceRequest extends TeaModel {
+    @NameInMap("ForceStop")
+    public Boolean forceStop;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +22,33 @@ public class RedeployInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("ForceStop")
-    public Boolean forceStop;
-
     public static RedeployInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RedeployInstanceRequest self = new RedeployInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RedeployInstanceRequest setForceStop(Boolean forceStop) {
+        this.forceStop = forceStop;
+        return this;
+    }
+    public Boolean getForceStop() {
+        return this.forceStop;
+    }
+
+    public RedeployInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public RedeployInstanceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public RedeployInstanceRequest setOwnerId(Long ownerId) {
@@ -49,30 +73,6 @@ public class RedeployInstanceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public RedeployInstanceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public RedeployInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public RedeployInstanceRequest setForceStop(Boolean forceStop) {
-        this.forceStop = forceStop;
-        return this;
-    }
-    public Boolean getForceStop() {
-        return this.forceStop;
     }
 
 }

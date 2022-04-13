@@ -4,20 +4,29 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("DedicatedHostChargeType")
+    public String dedicatedHostChargeType;
 
     @NameInMap("DedicatedHostIds")
     public String dedicatedHostIds;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DetailFee")
+    public Boolean detailFee;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Period")
     public Integer period;
@@ -25,51 +34,42 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    @NameInMap("DryRun")
-    public Boolean dryRun;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("AutoPay")
-    public Boolean autoPay;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("DedicatedHostChargeType")
-    public String dedicatedHostChargeType;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DetailFee")
-    public Boolean detailFee;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyDedicatedHostsChargeTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDedicatedHostsChargeTypeRequest self = new ModifyDedicatedHostsChargeTypeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDedicatedHostsChargeTypeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyDedicatedHostsChargeTypeRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
-    public ModifyDedicatedHostsChargeTypeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public ModifyDedicatedHostsChargeTypeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
-    public ModifyDedicatedHostsChargeTypeRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public ModifyDedicatedHostsChargeTypeRequest setDedicatedHostChargeType(String dedicatedHostChargeType) {
+        this.dedicatedHostChargeType = dedicatedHostChargeType;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getDedicatedHostChargeType() {
+        return this.dedicatedHostChargeType;
     }
 
     public ModifyDedicatedHostsChargeTypeRequest setDedicatedHostIds(String dedicatedHostIds) {
@@ -80,12 +80,36 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
         return this.dedicatedHostIds;
     }
 
-    public ModifyDedicatedHostsChargeTypeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyDedicatedHostsChargeTypeRequest setDetailFee(Boolean detailFee) {
+        this.detailFee = detailFee;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Boolean getDetailFee() {
+        return this.detailFee;
+    }
+
+    public ModifyDedicatedHostsChargeTypeRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public ModifyDedicatedHostsChargeTypeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyDedicatedHostsChargeTypeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyDedicatedHostsChargeTypeRequest setPeriod(Integer period) {
@@ -104,52 +128,28 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
         return this.periodUnit;
     }
 
-    public ModifyDedicatedHostsChargeTypeRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
+    public ModifyDedicatedHostsChargeTypeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public ModifyDedicatedHostsChargeTypeRequest setAutoPay(Boolean autoPay) {
-        this.autoPay = autoPay;
+    public ModifyDedicatedHostsChargeTypeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public Boolean getAutoPay() {
-        return this.autoPay;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public ModifyDedicatedHostsChargeTypeRequest setDedicatedHostChargeType(String dedicatedHostChargeType) {
-        this.dedicatedHostChargeType = dedicatedHostChargeType;
+    public ModifyDedicatedHostsChargeTypeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getDedicatedHostChargeType() {
-        return this.dedicatedHostChargeType;
-    }
-
-    public ModifyDedicatedHostsChargeTypeRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public ModifyDedicatedHostsChargeTypeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyDedicatedHostsChargeTypeRequest setDetailFee(Boolean detailFee) {
-        this.detailFee = detailFee;
-        return this;
-    }
-    public Boolean getDetailFee() {
-        return this.detailFee;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

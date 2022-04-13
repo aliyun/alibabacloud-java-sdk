@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AttachInstanceRamRoleResponseBody extends TeaModel {
+    @NameInMap("AttachInstanceRamRoleResults")
+    public AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResults attachInstanceRamRoleResults;
+
+    @NameInMap("FailCount")
+    public Integer failCount;
+
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
@@ -13,15 +19,25 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("FailCount")
-    public Integer failCount;
-
-    @NameInMap("AttachInstanceRamRoleResults")
-    public AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResults attachInstanceRamRoleResults;
-
     public static AttachInstanceRamRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AttachInstanceRamRoleResponseBody self = new AttachInstanceRamRoleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AttachInstanceRamRoleResponseBody setAttachInstanceRamRoleResults(AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResults attachInstanceRamRoleResults) {
+        this.attachInstanceRamRoleResults = attachInstanceRamRoleResults;
+        return this;
+    }
+    public AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResults getAttachInstanceRamRoleResults() {
+        return this.attachInstanceRamRoleResults;
+    }
+
+    public AttachInstanceRamRoleResponseBody setFailCount(Integer failCount) {
+        this.failCount = failCount;
+        return this;
+    }
+    public Integer getFailCount() {
+        return this.failCount;
     }
 
     public AttachInstanceRamRoleResponseBody setRamRoleName(String ramRoleName) {
@@ -48,31 +64,15 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public AttachInstanceRamRoleResponseBody setFailCount(Integer failCount) {
-        this.failCount = failCount;
-        return this;
-    }
-    public Integer getFailCount() {
-        return this.failCount;
-    }
-
-    public AttachInstanceRamRoleResponseBody setAttachInstanceRamRoleResults(AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResults attachInstanceRamRoleResults) {
-        this.attachInstanceRamRoleResults = attachInstanceRamRoleResults;
-        return this;
-    }
-    public AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResults getAttachInstanceRamRoleResults() {
-        return this.attachInstanceRamRoleResults;
-    }
-
     public static class AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResultsAttachInstanceRamRoleResult extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Message")
-        public String message;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("Message")
+        public String message;
 
         @NameInMap("Success")
         public Boolean success;
@@ -90,20 +90,20 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
             return this.code;
         }
 
-        public AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResultsAttachInstanceRamRoleResult setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
         public AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResultsAttachInstanceRamRoleResult setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResultsAttachInstanceRamRoleResult setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
         }
 
         public AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResultsAttachInstanceRamRoleResult setSuccess(Boolean success) {

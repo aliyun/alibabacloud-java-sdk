@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountAttributesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AccountAttributeItems")
     public DescribeAccountAttributesResponseBodyAccountAttributeItems accountAttributeItems;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeAccountAttributesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccountAttributesResponseBody self = new DescribeAccountAttributesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAccountAttributesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAccountAttributesResponseBody setAccountAttributeItems(DescribeAccountAttributesResponseBodyAccountAttributeItems accountAttributeItems) {
@@ -31,71 +23,39 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         return this.accountAttributeItems;
     }
 
+    public DescribeAccountAttributesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
         @NameInMap("DiskCategory")
         public String diskCategory;
-
-        @NameInMap("Value")
-        public String value;
 
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        @NameInMap("ZoneId")
-        public String zoneId;
+        @NameInMap("InstanceChargeType")
+        public String instanceChargeType;
 
         @NameInMap("InstanceType")
         public String instanceType;
 
-        @NameInMap("Count")
-        public Integer count;
+        @NameInMap("Value")
+        public String value;
 
-        @NameInMap("InstanceChargeType")
-        public String instanceChargeType;
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem self = new DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setDiskCategory(String diskCategory) {
-            this.diskCategory = diskCategory;
-            return this;
-        }
-        public String getDiskCategory() {
-            return this.diskCategory;
-        }
-
-        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setExpiredTime(String expiredTime) {
-            this.expiredTime = expiredTime;
-            return this;
-        }
-        public String getExpiredTime() {
-            return this.expiredTime;
-        }
-
-        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
         }
 
         public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setCount(Integer count) {
@@ -106,12 +66,52 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             return this.count;
         }
 
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setDiskCategory(String diskCategory) {
+            this.diskCategory = diskCategory;
+            return this;
+        }
+        public String getDiskCategory() {
+            return this.diskCategory;
+        }
+
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setExpiredTime(String expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
+        public String getExpiredTime() {
+            return this.expiredTime;
+        }
+
         public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setInstanceChargeType(String instanceChargeType) {
             this.instanceChargeType = instanceChargeType;
             return this;
         }
         public String getInstanceChargeType() {
             return this.instanceChargeType;
+        }
+
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

@@ -7,20 +7,20 @@ public class RemoveTagsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceId")
+    public String resourceId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ResourceType")
     public String resourceType;
-
-    @NameInMap("ResourceId")
-    public String resourceId;
 
     @NameInMap("Tag")
     public java.util.List<RemoveTagsRequestTag> tag;
@@ -36,6 +36,22 @@ public class RemoveTagsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public RemoveTagsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public RemoveTagsRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     public RemoveTagsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -54,28 +70,12 @@ public class RemoveTagsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public RemoveTagsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public RemoveTagsRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
-    }
-
-    public RemoveTagsRequest setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public String getResourceId() {
-        return this.resourceId;
     }
 
     public RemoveTagsRequest setTag(java.util.List<RemoveTagsRequestTag> tag) {
@@ -87,7 +87,7 @@ public class RemoveTagsRequest extends TeaModel {
     }
 
     public static class RemoveTagsRequestTag extends TeaModel {
-        @NameInMap("key")
+        @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")

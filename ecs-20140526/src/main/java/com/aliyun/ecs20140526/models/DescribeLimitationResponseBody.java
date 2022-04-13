@@ -7,11 +7,11 @@ public class DescribeLimitationResponseBody extends TeaModel {
     @NameInMap("Limitation")
     public String limitation;
 
-    @NameInMap("Value")
-    public String value;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Value")
+    public String value;
 
     public static DescribeLimitationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLimitationResponseBody self = new DescribeLimitationResponseBody();
@@ -26,20 +26,20 @@ public class DescribeLimitationResponseBody extends TeaModel {
         return this.limitation;
     }
 
-    public DescribeLimitationResponseBody setValue(String value) {
-        this.value = value;
-        return this;
-    }
-    public String getValue() {
-        return this.value;
-    }
-
     public DescribeLimitationResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeLimitationResponseBody setValue(String value) {
+        this.value = value;
+        return this;
+    }
+    public String getValue() {
+        return this.value;
     }
 
 }

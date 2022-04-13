@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AvailableZones")
     public DescribeAvailableResourceResponseBodyAvailableZones availableZones;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeAvailableResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableResourceResponseBody self = new DescribeAvailableResourceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAvailableResourceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAvailableResourceResponseBody setAvailableZones(DescribeAvailableResourceResponseBodyAvailableZones availableZones) {
@@ -31,44 +23,36 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         return this.availableZones;
     }
 
+    public DescribeAvailableResourceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("Max")
         public Integer max;
-
-        @NameInMap("Unit")
-        public String unit;
-
-        @NameInMap("StatusCategory")
-        public String statusCategory;
 
         @NameInMap("Min")
         public Integer min;
 
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StatusCategory")
+        public String statusCategory;
+
+        @NameInMap("Unit")
+        public String unit;
+
+        @NameInMap("Value")
+        public String value;
+
         public static DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource self = new DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource setMax(Integer max) {
@@ -79,12 +63,20 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             return this.max;
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource setUnit(String unit) {
-            this.unit = unit;
+        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource setMin(Integer min) {
+            this.min = min;
             return this;
         }
-        public String getUnit() {
-            return this.unit;
+        public Integer getMin() {
+            return this.min;
+        }
+
+        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource setStatusCategory(String statusCategory) {
@@ -95,12 +87,20 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             return this.statusCategory;
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource setMin(Integer min) {
-            this.min = min;
+        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource setUnit(String unit) {
+            this.unit = unit;
             return this;
         }
-        public Integer getMin() {
-            return this.min;
+        public String getUnit() {
+            return this.unit;
+        }
+
+        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -125,23 +125,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("SupportedResources")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources supportedResources;
+
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource self = new DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource setSupportedResources(DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources supportedResources) {
@@ -150,6 +142,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources getSupportedResources() {
             return this.supportedResources;
+        }
+
+        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -174,8 +174,11 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone extends TeaModel {
-        @NameInMap("ZoneId")
-        public String zoneId;
+        @NameInMap("AvailableResources")
+        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources availableResources;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("Status")
         public String status;
@@ -183,23 +186,28 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         @NameInMap("StatusCategory")
         public String statusCategory;
 
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("AvailableResources")
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources availableResources;
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone self = new DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setZoneId(String zoneId) {
-            this.zoneId = zoneId;
+        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setAvailableResources(DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources availableResources) {
+            this.availableResources = availableResources;
             return this;
         }
-        public String getZoneId() {
-            return this.zoneId;
+        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources getAvailableResources() {
+            return this.availableResources;
+        }
+
+        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setStatus(String status) {
@@ -218,20 +226,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             return this.statusCategory;
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setZoneId(String zoneId) {
+            this.zoneId = zoneId;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setAvailableResources(DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources availableResources) {
-            this.availableResources = availableResources;
-            return this;
-        }
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources getAvailableResources() {
-            return this.availableResources;
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

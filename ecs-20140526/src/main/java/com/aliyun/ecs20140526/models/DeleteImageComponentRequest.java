@@ -4,11 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteImageComponentRequest extends TeaModel {
-    @NameInMap("TemplateTag")
-    public java.util.List<DeleteImageComponentRequestTemplateTag> templateTag;
+    @NameInMap("ImageComponentId")
+    public String imageComponentId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,26 +22,28 @@ public class DeleteImageComponentRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ImageComponentId")
-    public String imageComponentId;
+    @NameInMap("TemplateTag")
+    public java.util.List<DeleteImageComponentRequestTemplateTag> templateTag;
 
     public static DeleteImageComponentRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteImageComponentRequest self = new DeleteImageComponentRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteImageComponentRequest setTemplateTag(java.util.List<DeleteImageComponentRequestTemplateTag> templateTag) {
-        this.templateTag = templateTag;
+    public DeleteImageComponentRequest setImageComponentId(String imageComponentId) {
+        this.imageComponentId = imageComponentId;
         return this;
     }
-    public java.util.List<DeleteImageComponentRequestTemplateTag> getTemplateTag() {
-        return this.templateTag;
+    public String getImageComponentId() {
+        return this.imageComponentId;
+    }
+
+    public DeleteImageComponentRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteImageComponentRequest setOwnerId(Long ownerId) {
@@ -44,6 +52,14 @@ public class DeleteImageComponentRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteImageComponentRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteImageComponentRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -62,28 +78,12 @@ public class DeleteImageComponentRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteImageComponentRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DeleteImageComponentRequest setTemplateTag(java.util.List<DeleteImageComponentRequestTemplateTag> templateTag) {
+        this.templateTag = templateTag;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DeleteImageComponentRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteImageComponentRequest setImageComponentId(String imageComponentId) {
-        this.imageComponentId = imageComponentId;
-        return this;
-    }
-    public String getImageComponentId() {
-        return this.imageComponentId;
+    public java.util.List<DeleteImageComponentRequestTemplateTag> getTemplateTag() {
+        return this.templateTag;
     }
 
     public static class DeleteImageComponentRequestTemplateTag extends TeaModel {

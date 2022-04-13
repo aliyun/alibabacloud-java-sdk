@@ -4,8 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceVpcAttributeRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PrivateIpAddress")
+    public String privateIpAddress;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,27 +22,34 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("SecurityGroupId")
+    public java.util.List<String> securityGroupId;
 
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    @NameInMap("PrivateIpAddress")
-    public String privateIpAddress;
-
     @NameInMap("VpcId")
     public String vpcId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("SecurityGroupId")
-    public java.util.List<String> securityGroupId;
 
     public static ModifyInstanceVpcAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceVpcAttributeRequest self = new ModifyInstanceVpcAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceVpcAttributeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyInstanceVpcAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyInstanceVpcAttributeRequest setOwnerId(Long ownerId) {
@@ -42,6 +58,14 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyInstanceVpcAttributeRequest setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
     }
 
     public ModifyInstanceVpcAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -60,12 +84,12 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyInstanceVpcAttributeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ModifyInstanceVpcAttributeRequest setSecurityGroupId(java.util.List<String> securityGroupId) {
+        this.securityGroupId = securityGroupId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public java.util.List<String> getSecurityGroupId() {
+        return this.securityGroupId;
     }
 
     public ModifyInstanceVpcAttributeRequest setVSwitchId(String vSwitchId) {
@@ -76,36 +100,12 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public ModifyInstanceVpcAttributeRequest setPrivateIpAddress(String privateIpAddress) {
-        this.privateIpAddress = privateIpAddress;
-        return this;
-    }
-    public String getPrivateIpAddress() {
-        return this.privateIpAddress;
-    }
-
     public ModifyInstanceVpcAttributeRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     public String getVpcId() {
         return this.vpcId;
-    }
-
-    public ModifyInstanceVpcAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyInstanceVpcAttributeRequest setSecurityGroupId(java.util.List<String> securityGroupId) {
-        this.securityGroupId = securityGroupId;
-        return this;
-    }
-    public java.util.List<String> getSecurityGroupId() {
-        return this.securityGroupId;
     }
 
 }

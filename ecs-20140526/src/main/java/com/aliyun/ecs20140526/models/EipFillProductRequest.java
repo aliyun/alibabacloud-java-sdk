@@ -4,8 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class EipFillProductRequest extends TeaModel {
-    @NameInMap("data")
-    public String data;
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,26 +19,31 @@ public class EipFillProductRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("UserCidr")
     public String userCidr;
+
+    @NameInMap("data")
+    public String data;
 
     public static EipFillProductRequest build(java.util.Map<String, ?> map) throws Exception {
         EipFillProductRequest self = new EipFillProductRequest();
         return TeaModel.build(map, self);
     }
 
-    public EipFillProductRequest setData(String data) {
-        this.data = data;
+    public EipFillProductRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public EipFillProductRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public EipFillProductRequest setOwnerId(Long ownerId) {
@@ -62,28 +70,20 @@ public class EipFillProductRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public EipFillProductRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public EipFillProductRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
     public EipFillProductRequest setUserCidr(String userCidr) {
         this.userCidr = userCidr;
         return this;
     }
     public String getUserCidr() {
         return this.userCidr;
+    }
+
+    public EipFillProductRequest setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
 }

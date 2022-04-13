@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ResetDisksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OperationProgressSet")
     public ResetDisksResponseBodyOperationProgressSet operationProgressSet;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ResetDisksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ResetDisksResponseBody self = new ResetDisksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ResetDisksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ResetDisksResponseBody setOperationProgressSet(ResetDisksResponseBodyOperationProgressSet operationProgressSet) {
@@ -29,6 +21,14 @@ public class ResetDisksResponseBody extends TeaModel {
     }
     public ResetDisksResponseBodyOperationProgressSet getOperationProgressSet() {
         return this.operationProgressSet;
+    }
+
+    public ResetDisksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem extends TeaModel {
@@ -81,11 +81,11 @@ public class ResetDisksResponseBody extends TeaModel {
     }
 
     public static class ResetDisksResponseBodyOperationProgressSetOperationProgress extends TeaModel {
-        @NameInMap("ErrorMsg")
-        public String errorMsg;
-
         @NameInMap("ErrorCode")
         public String errorCode;
+
+        @NameInMap("ErrorMsg")
+        public String errorMsg;
 
         @NameInMap("OperationStatus")
         public String operationStatus;
@@ -98,20 +98,20 @@ public class ResetDisksResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ResetDisksResponseBodyOperationProgressSetOperationProgress setErrorMsg(String errorMsg) {
-            this.errorMsg = errorMsg;
-            return this;
-        }
-        public String getErrorMsg() {
-            return this.errorMsg;
-        }
-
         public ResetDisksResponseBodyOperationProgressSetOperationProgress setErrorCode(String errorCode) {
             this.errorCode = errorCode;
             return this;
         }
         public String getErrorCode() {
             return this.errorCode;
+        }
+
+        public ResetDisksResponseBodyOperationProgressSetOperationProgress setErrorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
+            return this;
+        }
+        public String getErrorMsg() {
+            return this.errorMsg;
         }
 
         public ResetDisksResponseBodyOperationProgressSetOperationProgress setOperationStatus(String operationStatus) {

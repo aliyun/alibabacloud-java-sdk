@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StopInstancesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceResponses")
     public StopInstancesResponseBodyInstanceResponses instanceResponses;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static StopInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StopInstancesResponseBody self = new StopInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public StopInstancesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public StopInstancesResponseBody setInstanceResponses(StopInstancesResponseBodyInstanceResponses instanceResponses) {
@@ -31,18 +23,26 @@ public class StopInstancesResponseBody extends TeaModel {
         return this.instanceResponses;
     }
 
+    public StopInstancesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class StopInstancesResponseBodyInstanceResponsesInstanceResponse extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Message")
-        public String message;
+        @NameInMap("CurrentStatus")
+        public String currentStatus;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("CurrentStatus")
-        public String currentStatus;
+        @NameInMap("Message")
+        public String message;
 
         @NameInMap("PreviousStatus")
         public String previousStatus;
@@ -60,12 +60,12 @@ public class StopInstancesResponseBody extends TeaModel {
             return this.code;
         }
 
-        public StopInstancesResponseBodyInstanceResponsesInstanceResponse setMessage(String message) {
-            this.message = message;
+        public StopInstancesResponseBodyInstanceResponsesInstanceResponse setCurrentStatus(String currentStatus) {
+            this.currentStatus = currentStatus;
             return this;
         }
-        public String getMessage() {
-            return this.message;
+        public String getCurrentStatus() {
+            return this.currentStatus;
         }
 
         public StopInstancesResponseBodyInstanceResponsesInstanceResponse setInstanceId(String instanceId) {
@@ -76,12 +76,12 @@ public class StopInstancesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public StopInstancesResponseBodyInstanceResponsesInstanceResponse setCurrentStatus(String currentStatus) {
-            this.currentStatus = currentStatus;
+        public StopInstancesResponseBodyInstanceResponsesInstanceResponse setMessage(String message) {
+            this.message = message;
             return this;
         }
-        public String getCurrentStatus() {
-            return this.currentStatus;
+        public String getMessage() {
+            return this.message;
         }
 
         public StopInstancesResponseBodyInstanceResponsesInstanceResponse setPreviousStatus(String previousStatus) {

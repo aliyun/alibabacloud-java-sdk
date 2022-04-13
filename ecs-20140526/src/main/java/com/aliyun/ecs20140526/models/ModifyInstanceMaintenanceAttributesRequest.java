@@ -4,17 +4,8 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("ActionOnMaintenance")
+    public String actionOnMaintenance;
 
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -22,50 +13,35 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
     @NameInMap("MaintenanceWindow")
     public java.util.List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> maintenanceWindow;
 
+    @NameInMap("NotifyOnMaintenance")
+    public Boolean notifyOnMaintenance;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ActionOnMaintenance")
-    public String actionOnMaintenance;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("NotifyOnMaintenance")
-    public Boolean notifyOnMaintenance;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyInstanceMaintenanceAttributesRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceMaintenanceAttributesRequest self = new ModifyInstanceMaintenanceAttributesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceMaintenanceAttributesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyInstanceMaintenanceAttributesRequest setActionOnMaintenance(String actionOnMaintenance) {
+        this.actionOnMaintenance = actionOnMaintenance;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyInstanceMaintenanceAttributesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyInstanceMaintenanceAttributesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ModifyInstanceMaintenanceAttributesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getActionOnMaintenance() {
+        return this.actionOnMaintenance;
     }
 
     public ModifyInstanceMaintenanceAttributesRequest setInstanceId(java.util.List<String> instanceId) {
@@ -84,6 +60,30 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
         return this.maintenanceWindow;
     }
 
+    public ModifyInstanceMaintenanceAttributesRequest setNotifyOnMaintenance(Boolean notifyOnMaintenance) {
+        this.notifyOnMaintenance = notifyOnMaintenance;
+        return this;
+    }
+    public Boolean getNotifyOnMaintenance() {
+        return this.notifyOnMaintenance;
+    }
+
+    public ModifyInstanceMaintenanceAttributesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyInstanceMaintenanceAttributesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ModifyInstanceMaintenanceAttributesRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -92,20 +92,20 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ModifyInstanceMaintenanceAttributesRequest setActionOnMaintenance(String actionOnMaintenance) {
-        this.actionOnMaintenance = actionOnMaintenance;
+    public ModifyInstanceMaintenanceAttributesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getActionOnMaintenance() {
-        return this.actionOnMaintenance;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public ModifyInstanceMaintenanceAttributesRequest setNotifyOnMaintenance(Boolean notifyOnMaintenance) {
-        this.notifyOnMaintenance = notifyOnMaintenance;
+    public ModifyInstanceMaintenanceAttributesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public Boolean getNotifyOnMaintenance() {
-        return this.notifyOnMaintenance;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public static class ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow extends TeaModel {

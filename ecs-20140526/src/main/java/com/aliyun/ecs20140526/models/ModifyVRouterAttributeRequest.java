@@ -4,8 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyVRouterAttributeRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,24 +22,31 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("VRouterId")
     public String VRouterId;
 
     @NameInMap("VRouterName")
     public String VRouterName;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static ModifyVRouterAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyVRouterAttributeRequest self = new ModifyVRouterAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyVRouterAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyVRouterAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyVRouterAttributeRequest setOwnerId(Long ownerId) {
@@ -39,6 +55,14 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyVRouterAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyVRouterAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,14 +81,6 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyVRouterAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public ModifyVRouterAttributeRequest setVRouterId(String VRouterId) {
         this.VRouterId = VRouterId;
         return this;
@@ -79,22 +95,6 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
     }
     public String getVRouterName() {
         return this.VRouterName;
-    }
-
-    public ModifyVRouterAttributeRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ModifyVRouterAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

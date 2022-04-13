@@ -4,6 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
+    @NameInMap("DataDiskPolicyEnabled")
+    public Boolean dataDiskPolicyEnabled;
+
+    @NameInMap("DataDiskPolicyRetentionDays")
+    public Integer dataDiskPolicyRetentionDays;
+
+    @NameInMap("DataDiskPolicyRetentionLastWeek")
+    public Boolean dataDiskPolicyRetentionLastWeek;
+
+    @NameInMap("DataDiskPolicyTimePeriod")
+    public Integer dataDiskPolicyTimePeriod;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,33 +31,58 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("SystemDiskPolicyEnabled")
     public Boolean systemDiskPolicyEnabled;
 
-    @NameInMap("SystemDiskPolicyTimePeriod")
-    public Integer systemDiskPolicyTimePeriod;
-
     @NameInMap("SystemDiskPolicyRetentionDays")
     public Integer systemDiskPolicyRetentionDays;
 
     @NameInMap("SystemDiskPolicyRetentionLastWeek")
     public Boolean systemDiskPolicyRetentionLastWeek;
 
-    @NameInMap("DataDiskPolicyEnabled")
-    public Boolean dataDiskPolicyEnabled;
-
-    @NameInMap("DataDiskPolicyTimePeriod")
-    public Integer dataDiskPolicyTimePeriod;
-
-    @NameInMap("DataDiskPolicyRetentionDays")
-    public Integer dataDiskPolicyRetentionDays;
-
-    @NameInMap("DataDiskPolicyRetentionLastWeek")
-    public Boolean dataDiskPolicyRetentionLastWeek;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("SystemDiskPolicyTimePeriod")
+    public Integer systemDiskPolicyTimePeriod;
 
     public static ModifyAutoSnapshotPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAutoSnapshotPolicyRequest self = new ModifyAutoSnapshotPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyAutoSnapshotPolicyRequest setDataDiskPolicyEnabled(Boolean dataDiskPolicyEnabled) {
+        this.dataDiskPolicyEnabled = dataDiskPolicyEnabled;
+        return this;
+    }
+    public Boolean getDataDiskPolicyEnabled() {
+        return this.dataDiskPolicyEnabled;
+    }
+
+    public ModifyAutoSnapshotPolicyRequest setDataDiskPolicyRetentionDays(Integer dataDiskPolicyRetentionDays) {
+        this.dataDiskPolicyRetentionDays = dataDiskPolicyRetentionDays;
+        return this;
+    }
+    public Integer getDataDiskPolicyRetentionDays() {
+        return this.dataDiskPolicyRetentionDays;
+    }
+
+    public ModifyAutoSnapshotPolicyRequest setDataDiskPolicyRetentionLastWeek(Boolean dataDiskPolicyRetentionLastWeek) {
+        this.dataDiskPolicyRetentionLastWeek = dataDiskPolicyRetentionLastWeek;
+        return this;
+    }
+    public Boolean getDataDiskPolicyRetentionLastWeek() {
+        return this.dataDiskPolicyRetentionLastWeek;
+    }
+
+    public ModifyAutoSnapshotPolicyRequest setDataDiskPolicyTimePeriod(Integer dataDiskPolicyTimePeriod) {
+        this.dataDiskPolicyTimePeriod = dataDiskPolicyTimePeriod;
+        return this;
+    }
+    public Integer getDataDiskPolicyTimePeriod() {
+        return this.dataDiskPolicyTimePeriod;
+    }
+
+    public ModifyAutoSnapshotPolicyRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyAutoSnapshotPolicyRequest setOwnerId(Long ownerId) {
@@ -77,14 +117,6 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
         return this.systemDiskPolicyEnabled;
     }
 
-    public ModifyAutoSnapshotPolicyRequest setSystemDiskPolicyTimePeriod(Integer systemDiskPolicyTimePeriod) {
-        this.systemDiskPolicyTimePeriod = systemDiskPolicyTimePeriod;
-        return this;
-    }
-    public Integer getSystemDiskPolicyTimePeriod() {
-        return this.systemDiskPolicyTimePeriod;
-    }
-
     public ModifyAutoSnapshotPolicyRequest setSystemDiskPolicyRetentionDays(Integer systemDiskPolicyRetentionDays) {
         this.systemDiskPolicyRetentionDays = systemDiskPolicyRetentionDays;
         return this;
@@ -101,44 +133,12 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
         return this.systemDiskPolicyRetentionLastWeek;
     }
 
-    public ModifyAutoSnapshotPolicyRequest setDataDiskPolicyEnabled(Boolean dataDiskPolicyEnabled) {
-        this.dataDiskPolicyEnabled = dataDiskPolicyEnabled;
+    public ModifyAutoSnapshotPolicyRequest setSystemDiskPolicyTimePeriod(Integer systemDiskPolicyTimePeriod) {
+        this.systemDiskPolicyTimePeriod = systemDiskPolicyTimePeriod;
         return this;
     }
-    public Boolean getDataDiskPolicyEnabled() {
-        return this.dataDiskPolicyEnabled;
-    }
-
-    public ModifyAutoSnapshotPolicyRequest setDataDiskPolicyTimePeriod(Integer dataDiskPolicyTimePeriod) {
-        this.dataDiskPolicyTimePeriod = dataDiskPolicyTimePeriod;
-        return this;
-    }
-    public Integer getDataDiskPolicyTimePeriod() {
-        return this.dataDiskPolicyTimePeriod;
-    }
-
-    public ModifyAutoSnapshotPolicyRequest setDataDiskPolicyRetentionDays(Integer dataDiskPolicyRetentionDays) {
-        this.dataDiskPolicyRetentionDays = dataDiskPolicyRetentionDays;
-        return this;
-    }
-    public Integer getDataDiskPolicyRetentionDays() {
-        return this.dataDiskPolicyRetentionDays;
-    }
-
-    public ModifyAutoSnapshotPolicyRequest setDataDiskPolicyRetentionLastWeek(Boolean dataDiskPolicyRetentionLastWeek) {
-        this.dataDiskPolicyRetentionLastWeek = dataDiskPolicyRetentionLastWeek;
-        return this;
-    }
-    public Boolean getDataDiskPolicyRetentionLastWeek() {
-        return this.dataDiskPolicyRetentionLastWeek;
-    }
-
-    public ModifyAutoSnapshotPolicyRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public Integer getSystemDiskPolicyTimePeriod() {
+        return this.systemDiskPolicyTimePeriod;
     }
 
 }

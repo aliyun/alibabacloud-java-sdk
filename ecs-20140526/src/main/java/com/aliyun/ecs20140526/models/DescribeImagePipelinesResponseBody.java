@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagePipelinesResponseBody extends TeaModel {
+    @NameInMap("ImagePipeline")
+    public DescribeImagePipelinesResponseBodyImagePipeline imagePipeline;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -13,15 +19,25 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    @NameInMap("ImagePipeline")
-    public DescribeImagePipelinesResponseBodyImagePipeline imagePipeline;
-
     public static DescribeImagePipelinesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeImagePipelinesResponseBody self = new DescribeImagePipelinesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeImagePipelinesResponseBody setImagePipeline(DescribeImagePipelinesResponseBodyImagePipeline imagePipeline) {
+        this.imagePipeline = imagePipeline;
+        return this;
+    }
+    public DescribeImagePipelinesResponseBodyImagePipeline getImagePipeline() {
+        return this.imagePipeline;
+    }
+
+    public DescribeImagePipelinesResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public DescribeImagePipelinesResponseBody setNextToken(String nextToken) {
@@ -48,40 +64,35 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeImagePipelinesResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
+    public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts extends TeaModel {
+        @NameInMap("AddAccount")
+        public java.util.List<String> addAccount;
 
-    public DescribeImagePipelinesResponseBody setImagePipeline(DescribeImagePipelinesResponseBodyImagePipeline imagePipeline) {
-        this.imagePipeline = imagePipeline;
-        return this;
-    }
-    public DescribeImagePipelinesResponseBodyImagePipeline getImagePipeline() {
-        return this.imagePipeline;
+        public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts setAddAccount(java.util.List<String> addAccount) {
+            this.addAccount = addAccount;
+            return this;
+        }
+        public java.util.List<String> getAddAccount() {
+            return this.addAccount;
+        }
+
     }
 
     public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag setTagKey(String tagKey) {
@@ -90,6 +101,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }
@@ -132,31 +151,33 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts extends TeaModel {
-        @NameInMap("AddAccount")
-        public java.util.List<String> addAccount;
-
-        public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts build(java.util.Map<String, ?> map) throws Exception {
-            DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts setAddAccount(java.util.List<String> addAccount) {
-            this.addAccount = addAccount;
-            return this;
-        }
-        public java.util.List<String> getAddAccount() {
-            return this.addAccount;
-        }
-
-    }
-
     public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet extends TeaModel {
+        @NameInMap("AddAccounts")
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts addAccounts;
+
+        @NameInMap("BaseImage")
+        public String baseImage;
+
+        @NameInMap("BaseImageType")
+        public String baseImageType;
+
+        @NameInMap("BuildContent")
+        public String buildContent;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("DeleteInstanceOnFailure")
         public Boolean deleteInstanceOnFailure;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("ImageName")
+        public String imageName;
+
+        @NameInMap("ImagePipelineId")
+        public String imagePipelineId;
 
         @NameInMap("InstanceType")
         public String instanceType;
@@ -164,35 +185,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("InternetMaxBandwidthOut")
         public Integer internetMaxBandwidthOut;
 
-        @NameInMap("ImagePipelineId")
-        public String imagePipelineId;
-
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
-        @NameInMap("SystemDiskSize")
-        public Integer systemDiskSize;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("BaseImage")
-        public String baseImage;
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        @NameInMap("ImageName")
-        public String imageName;
-
-        @NameInMap("BaseImageType")
-        public String baseImageType;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("BuildContent")
-        public String buildContent;
+        @NameInMap("SystemDiskSize")
+        public Integer systemDiskSize;
 
         @NameInMap("Tags")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags tags;
@@ -200,12 +200,44 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("ToRegionIds")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetToRegionIds toRegionIds;
 
-        @NameInMap("AddAccounts")
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts addAccounts;
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
 
         public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setAddAccounts(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts addAccounts) {
+            this.addAccounts = addAccounts;
+            return this;
+        }
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts getAddAccounts() {
+            return this.addAccounts;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setBaseImage(String baseImage) {
+            this.baseImage = baseImage;
+            return this;
+        }
+        public String getBaseImage() {
+            return this.baseImage;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setBaseImageType(String baseImageType) {
+            this.baseImageType = baseImageType;
+            return this;
+        }
+        public String getBaseImageType() {
+            return this.baseImageType;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setBuildContent(String buildContent) {
+            this.buildContent = buildContent;
+            return this;
+        }
+        public String getBuildContent() {
+            return this.buildContent;
         }
 
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setCreationTime(String creationTime) {
@@ -224,6 +256,30 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.deleteInstanceOnFailure;
         }
 
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setImageName(String imageName) {
+            this.imageName = imageName;
+            return this;
+        }
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setImagePipelineId(String imagePipelineId) {
+            this.imagePipelineId = imagePipelineId;
+            return this;
+        }
+        public String getImagePipelineId() {
+            return this.imagePipelineId;
+        }
+
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
@@ -240,44 +296,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.internetMaxBandwidthOut;
         }
 
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setImagePipelineId(String imagePipelineId) {
-            this.imagePipelineId = imagePipelineId;
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getImagePipelineId() {
-            return this.imagePipelineId;
-        }
-
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setSystemDiskSize(Integer systemDiskSize) {
-            this.systemDiskSize = systemDiskSize;
-            return this;
-        }
-        public Integer getSystemDiskSize() {
-            return this.systemDiskSize;
-        }
-
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setBaseImage(String baseImage) {
-            this.baseImage = baseImage;
-            return this;
-        }
-        public String getBaseImage() {
-            return this.baseImage;
+        public String getName() {
+            return this.name;
         }
 
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setResourceGroupId(String resourceGroupId) {
@@ -288,36 +312,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setImageName(String imageName) {
-            this.imageName = imageName;
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setSystemDiskSize(Integer systemDiskSize) {
+            this.systemDiskSize = systemDiskSize;
             return this;
         }
-        public String getImageName() {
-            return this.imageName;
-        }
-
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setBaseImageType(String baseImageType) {
-            this.baseImageType = baseImageType;
-            return this;
-        }
-        public String getBaseImageType() {
-            return this.baseImageType;
-        }
-
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setBuildContent(String buildContent) {
-            this.buildContent = buildContent;
-            return this;
-        }
-        public String getBuildContent() {
-            return this.buildContent;
+        public Integer getSystemDiskSize() {
+            return this.systemDiskSize;
         }
 
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setTags(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags tags) {
@@ -336,12 +336,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.toRegionIds;
         }
 
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setAddAccounts(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts addAccounts) {
-            this.addAccounts = addAccounts;
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
             return this;
         }
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts getAddAccounts() {
-            return this.addAccounts;
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
     }

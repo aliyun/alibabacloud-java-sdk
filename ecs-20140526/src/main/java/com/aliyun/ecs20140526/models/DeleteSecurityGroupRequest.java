@@ -4,8 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteSecurityGroupRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +19,20 @@ public class DeleteSecurityGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static DeleteSecurityGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSecurityGroupRequest self = new DeleteSecurityGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSecurityGroupRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteSecurityGroupRequest setOwnerId(Long ownerId) {
@@ -33,6 +41,14 @@ public class DeleteSecurityGroupRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteSecurityGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteSecurityGroupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -51,28 +67,12 @@ public class DeleteSecurityGroupRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteSecurityGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DeleteSecurityGroupRequest setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
-    }
-
-    public DeleteSecurityGroupRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

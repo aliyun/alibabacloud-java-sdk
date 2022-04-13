@@ -4,8 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class UnassignPrivateIpAddressesRequest extends TeaModel {
+    @NameInMap("NetworkInterfaceId")
+    public String networkInterfaceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PrivateIpAddress")
+    public java.util.List<String> privateIpAddress;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +25,25 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("PrivateIpAddress")
-    public java.util.List<String> privateIpAddress;
-
-    @NameInMap("NetworkInterfaceId")
-    public String networkInterfaceId;
-
     public static UnassignPrivateIpAddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         UnassignPrivateIpAddressesRequest self = new UnassignPrivateIpAddressesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UnassignPrivateIpAddressesRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    public UnassignPrivateIpAddressesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public UnassignPrivateIpAddressesRequest setOwnerId(Long ownerId) {
@@ -36,6 +52,22 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public UnassignPrivateIpAddressesRequest setPrivateIpAddress(java.util.List<String> privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public java.util.List<String> getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
+    public UnassignPrivateIpAddressesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UnassignPrivateIpAddressesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -52,38 +84,6 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public UnassignPrivateIpAddressesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public UnassignPrivateIpAddressesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public UnassignPrivateIpAddressesRequest setPrivateIpAddress(java.util.List<String> privateIpAddress) {
-        this.privateIpAddress = privateIpAddress;
-        return this;
-    }
-    public java.util.List<String> getPrivateIpAddress() {
-        return this.privateIpAddress;
-    }
-
-    public UnassignPrivateIpAddressesRequest setNetworkInterfaceId(String networkInterfaceId) {
-        this.networkInterfaceId = networkInterfaceId;
-        return this;
-    }
-    public String getNetworkInterfaceId() {
-        return this.networkInterfaceId;
     }
 
 }

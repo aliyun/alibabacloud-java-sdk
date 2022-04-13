@@ -4,8 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateSecurityGroupRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,20 +28,8 @@ public class CreateSecurityGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
-
-    @NameInMap("VpcId")
-    public String vpcId;
 
     @NameInMap("SecurityGroupType")
     public String securityGroupType;
@@ -34,18 +37,39 @@ public class CreateSecurityGroupRequest extends TeaModel {
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("Tag")
     public java.util.List<CreateSecurityGroupRequestTag> tag;
+
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static CreateSecurityGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSecurityGroupRequest self = new CreateSecurityGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSecurityGroupRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateSecurityGroupRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateSecurityGroupRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateSecurityGroupRequest setOwnerId(Long ownerId) {
@@ -54,6 +78,22 @@ public class CreateSecurityGroupRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateSecurityGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateSecurityGroupRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateSecurityGroupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -72,44 +112,12 @@ public class CreateSecurityGroupRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateSecurityGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateSecurityGroupRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public CreateSecurityGroupRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
     public CreateSecurityGroupRequest setSecurityGroupName(String securityGroupName) {
         this.securityGroupName = securityGroupName;
         return this;
     }
     public String getSecurityGroupName() {
         return this.securityGroupName;
-    }
-
-    public CreateSecurityGroupRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
     }
 
     public CreateSecurityGroupRequest setSecurityGroupType(String securityGroupType) {
@@ -128,22 +136,6 @@ public class CreateSecurityGroupRequest extends TeaModel {
         return this.serviceManaged;
     }
 
-    public CreateSecurityGroupRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateSecurityGroupRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public CreateSecurityGroupRequest setTag(java.util.List<CreateSecurityGroupRequestTag> tag) {
         this.tag = tag;
         return this;
@@ -152,8 +144,16 @@ public class CreateSecurityGroupRequest extends TeaModel {
         return this.tag;
     }
 
+    public CreateSecurityGroupRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static class CreateSecurityGroupRequestTag extends TeaModel {
-        @NameInMap("key")
+        @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")

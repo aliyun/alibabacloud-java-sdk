@@ -4,24 +4,32 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotPackageResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("SnapshotPackages")
+    public DescribeSnapshotPackageResponseBodySnapshotPackages snapshotPackages;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("SnapshotPackages")
-    public DescribeSnapshotPackageResponseBodySnapshotPackages snapshotPackages;
-
     public static DescribeSnapshotPackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotPackageResponseBody self = new DescribeSnapshotPackageResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSnapshotPackageResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeSnapshotPackageResponseBody setPageSize(Integer pageSize) {
@@ -40,12 +48,12 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSnapshotPackageResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeSnapshotPackageResponseBody setSnapshotPackages(DescribeSnapshotPackageResponseBodySnapshotPackages snapshotPackages) {
+        this.snapshotPackages = snapshotPackages;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public DescribeSnapshotPackageResponseBodySnapshotPackages getSnapshotPackages() {
+        return this.snapshotPackages;
     }
 
     public DescribeSnapshotPackageResponseBody setTotalCount(Integer totalCount) {
@@ -56,14 +64,6 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeSnapshotPackageResponseBody setSnapshotPackages(DescribeSnapshotPackageResponseBodySnapshotPackages snapshotPackages) {
-        this.snapshotPackages = snapshotPackages;
-        return this;
-    }
-    public DescribeSnapshotPackageResponseBodySnapshotPackages getSnapshotPackages() {
-        return this.snapshotPackages;
-    }
-
     public static class DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
@@ -71,11 +71,11 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
-        @NameInMap("StartTime")
-        public String startTime;
-
         @NameInMap("InitCapacity")
         public Long initCapacity;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         public static DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage self = new DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage();
@@ -98,20 +98,20 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
         public DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage setInitCapacity(Long initCapacity) {
             this.initCapacity = initCapacity;
             return this;
         }
         public Long getInitCapacity() {
             return this.initCapacity;
+        }
+
+        public DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }

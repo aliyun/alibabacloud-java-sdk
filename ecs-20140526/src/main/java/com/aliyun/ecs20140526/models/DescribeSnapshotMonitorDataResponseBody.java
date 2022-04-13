@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("MonitorData")
     public DescribeSnapshotMonitorDataResponseBodyMonitorData monitorData;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeSnapshotMonitorDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotMonitorDataResponseBody self = new DescribeSnapshotMonitorDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSnapshotMonitorDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeSnapshotMonitorDataResponseBody setMonitorData(DescribeSnapshotMonitorDataResponseBodyMonitorData monitorData) {
@@ -29,6 +21,14 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
     }
     public DescribeSnapshotMonitorDataResponseBodyMonitorData getMonitorData() {
         return this.monitorData;
+    }
+
+    public DescribeSnapshotMonitorDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint extends TeaModel {

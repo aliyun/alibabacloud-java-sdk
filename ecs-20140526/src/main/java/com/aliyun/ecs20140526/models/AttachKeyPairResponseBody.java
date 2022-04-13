@@ -4,24 +4,32 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AttachKeyPairResponseBody extends TeaModel {
+    @NameInMap("FailCount")
+    public String failCount;
+
     @NameInMap("KeyPairName")
     public String keyPairName;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TotalCount")
-    public String totalCount;
-
-    @NameInMap("FailCount")
-    public String failCount;
-
     @NameInMap("Results")
     public AttachKeyPairResponseBodyResults results;
+
+    @NameInMap("TotalCount")
+    public String totalCount;
 
     public static AttachKeyPairResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AttachKeyPairResponseBody self = new AttachKeyPairResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AttachKeyPairResponseBody setFailCount(String failCount) {
+        this.failCount = failCount;
+        return this;
+    }
+    public String getFailCount() {
+        return this.failCount;
     }
 
     public AttachKeyPairResponseBody setKeyPairName(String keyPairName) {
@@ -40,22 +48,6 @@ public class AttachKeyPairResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AttachKeyPairResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
-    }
-
-    public AttachKeyPairResponseBody setFailCount(String failCount) {
-        this.failCount = failCount;
-        return this;
-    }
-    public String getFailCount() {
-        return this.failCount;
-    }
-
     public AttachKeyPairResponseBody setResults(AttachKeyPairResponseBodyResults results) {
         this.results = results;
         return this;
@@ -64,15 +56,23 @@ public class AttachKeyPairResponseBody extends TeaModel {
         return this.results;
     }
 
+    public AttachKeyPairResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class AttachKeyPairResponseBodyResultsResult extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Message")
-        public String message;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("Message")
+        public String message;
 
         @NameInMap("Success")
         public String success;
@@ -90,20 +90,20 @@ public class AttachKeyPairResponseBody extends TeaModel {
             return this.code;
         }
 
-        public AttachKeyPairResponseBodyResultsResult setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
         public AttachKeyPairResponseBodyResultsResult setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public AttachKeyPairResponseBodyResultsResult setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
         }
 
         public AttachKeyPairResponseBodyResultsResult setSuccess(String success) {

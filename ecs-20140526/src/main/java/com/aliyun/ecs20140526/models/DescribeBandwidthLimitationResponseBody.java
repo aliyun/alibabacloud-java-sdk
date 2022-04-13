@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeBandwidthLimitationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Bandwidths")
     public DescribeBandwidthLimitationResponseBodyBandwidths bandwidths;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeBandwidthLimitationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBandwidthLimitationResponseBody self = new DescribeBandwidthLimitationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBandwidthLimitationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeBandwidthLimitationResponseBody setBandwidths(DescribeBandwidthLimitationResponseBodyBandwidths bandwidths) {
@@ -29,6 +21,14 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
     }
     public DescribeBandwidthLimitationResponseBodyBandwidths getBandwidths() {
         return this.bandwidths;
+    }
+
+    public DescribeBandwidthLimitationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth extends TeaModel {

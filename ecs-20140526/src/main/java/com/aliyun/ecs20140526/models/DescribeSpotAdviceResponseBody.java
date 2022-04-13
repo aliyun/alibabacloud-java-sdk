@@ -4,18 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSpotAdviceResponseBody extends TeaModel {
+    @NameInMap("AvailableSpotZones")
+    public DescribeSpotAdviceResponseBodyAvailableSpotZones availableSpotZones;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("AvailableSpotZones")
-    public DescribeSpotAdviceResponseBodyAvailableSpotZones availableSpotZones;
-
     public static DescribeSpotAdviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSpotAdviceResponseBody self = new DescribeSpotAdviceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSpotAdviceResponseBody setAvailableSpotZones(DescribeSpotAdviceResponseBodyAvailableSpotZones availableSpotZones) {
+        this.availableSpotZones = availableSpotZones;
+        return this;
+    }
+    public DescribeSpotAdviceResponseBodyAvailableSpotZones getAvailableSpotZones() {
+        return this.availableSpotZones;
     }
 
     public DescribeSpotAdviceResponseBody setRegionId(String regionId) {
@@ -34,23 +42,15 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSpotAdviceResponseBody setAvailableSpotZones(DescribeSpotAdviceResponseBodyAvailableSpotZones availableSpotZones) {
-        this.availableSpotZones = availableSpotZones;
-        return this;
-    }
-    public DescribeSpotAdviceResponseBodyAvailableSpotZones getAvailableSpotZones() {
-        return this.availableSpotZones;
-    }
-
     public static class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource extends TeaModel {
-        @NameInMap("InterruptRateDesc")
-        public String interruptRateDesc;
-
         @NameInMap("AverageSpotDiscount")
         public Integer averageSpotDiscount;
 
         @NameInMap("InstanceType")
         public String instanceType;
+
+        @NameInMap("InterruptRateDesc")
+        public String interruptRateDesc;
 
         @NameInMap("InterruptionRate")
         public Float interruptionRate;
@@ -58,14 +58,6 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         public static DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource self = new DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource setInterruptRateDesc(String interruptRateDesc) {
-            this.interruptRateDesc = interruptRateDesc;
-            return this;
-        }
-        public String getInterruptRateDesc() {
-            return this.interruptRateDesc;
         }
 
         public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource setAverageSpotDiscount(Integer averageSpotDiscount) {
@@ -82,6 +74,14 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource setInterruptRateDesc(String interruptRateDesc) {
+            this.interruptRateDesc = interruptRateDesc;
+            return this;
+        }
+        public String getInterruptRateDesc() {
+            return this.interruptRateDesc;
         }
 
         public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource setInterruptionRate(Float interruptionRate) {
@@ -114,23 +114,15 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
     }
 
     public static class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone extends TeaModel {
-        @NameInMap("ZoneId")
-        public String zoneId;
-
         @NameInMap("AvailableSpotResources")
         public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources availableSpotResources;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone self = new DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
         public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone setAvailableSpotResources(DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources availableSpotResources) {
@@ -139,6 +131,14 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         }
         public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources getAvailableSpotResources() {
             return this.availableSpotResources;
+        }
+
+        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

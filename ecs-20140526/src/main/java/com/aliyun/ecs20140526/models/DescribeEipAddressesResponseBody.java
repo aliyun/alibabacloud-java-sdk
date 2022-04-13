@@ -4,24 +4,40 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipAddressesResponseBody extends TeaModel {
+    @NameInMap("EipAddresses")
+    public DescribeEipAddressesResponseBodyEipAddresses eipAddresses;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("EipAddresses")
-    public DescribeEipAddressesResponseBodyEipAddresses eipAddresses;
 
     public static DescribeEipAddressesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEipAddressesResponseBody self = new DescribeEipAddressesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeEipAddressesResponseBody setEipAddresses(DescribeEipAddressesResponseBodyEipAddresses eipAddresses) {
+        this.eipAddresses = eipAddresses;
+        return this;
+    }
+    public DescribeEipAddressesResponseBodyEipAddresses getEipAddresses() {
+        return this.eipAddresses;
+    }
+
+    public DescribeEipAddressesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeEipAddressesResponseBody setPageSize(Integer pageSize) {
@@ -40,28 +56,12 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeEipAddressesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeEipAddressesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribeEipAddressesResponseBody setEipAddresses(DescribeEipAddressesResponseBodyEipAddresses eipAddresses) {
-        this.eipAddresses = eipAddresses;
-        return this;
-    }
-    public DescribeEipAddressesResponseBodyEipAddresses getEipAddresses() {
-        return this.eipAddresses;
     }
 
     public static class DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLockReason extends TeaModel {
@@ -103,14 +103,23 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
     }
 
     public static class DescribeEipAddressesResponseBodyEipAddressesEipAddress extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AllocationId")
+        public String allocationId;
 
         @NameInMap("AllocationTime")
         public String allocationTime;
 
+        @NameInMap("Bandwidth")
+        public String bandwidth;
+
         @NameInMap("ChargeType")
         public String chargeType;
+
+        @NameInMap("EipBandwidth")
+        public String eipBandwidth;
+
+        @NameInMap("ExpiredTime")
+        public String expiredTime;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -118,41 +127,32 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
 
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("InternetChargeType")
+        public String internetChargeType;
 
         @NameInMap("IpAddress")
         public String ipAddress;
 
-        @NameInMap("Bandwidth")
-        public String bandwidth;
-
-        @NameInMap("ExpiredTime")
-        public String expiredTime;
-
-        @NameInMap("AllocationId")
-        public String allocationId;
-
-        @NameInMap("InternetChargeType")
-        public String internetChargeType;
-
-        @NameInMap("EipBandwidth")
-        public String eipBandwidth;
-
         @NameInMap("OperationLocks")
         public DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks operationLocks;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeEipAddressesResponseBodyEipAddressesEipAddress build(java.util.Map<String, ?> map) throws Exception {
             DescribeEipAddressesResponseBodyEipAddressesEipAddress self = new DescribeEipAddressesResponseBodyEipAddressesEipAddress();
             return TeaModel.build(map, self);
         }
 
-        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setStatus(String status) {
-            this.status = status;
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setAllocationId(String allocationId) {
+            this.allocationId = allocationId;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getAllocationId() {
+            return this.allocationId;
         }
 
         public DescribeEipAddressesResponseBodyEipAddressesEipAddress setAllocationTime(String allocationTime) {
@@ -163,12 +163,36 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             return this.allocationTime;
         }
 
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setBandwidth(String bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public String getBandwidth() {
+            return this.bandwidth;
+        }
+
         public DescribeEipAddressesResponseBodyEipAddressesEipAddress setChargeType(String chargeType) {
             this.chargeType = chargeType;
             return this;
         }
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setEipBandwidth(String eipBandwidth) {
+            this.eipBandwidth = eipBandwidth;
+            return this;
+        }
+        public String getEipBandwidth() {
+            return this.eipBandwidth;
+        }
+
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setExpiredTime(String expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
+        public String getExpiredTime() {
+            return this.expiredTime;
         }
 
         public DescribeEipAddressesResponseBodyEipAddressesEipAddress setInstanceId(String instanceId) {
@@ -187,12 +211,12 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setInternetChargeType(String internetChargeType) {
+            this.internetChargeType = internetChargeType;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public String getInternetChargeType() {
+            return this.internetChargeType;
         }
 
         public DescribeEipAddressesResponseBodyEipAddressesEipAddress setIpAddress(String ipAddress) {
@@ -203,52 +227,28 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             return this.ipAddress;
         }
 
-        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setBandwidth(String bandwidth) {
-            this.bandwidth = bandwidth;
-            return this;
-        }
-        public String getBandwidth() {
-            return this.bandwidth;
-        }
-
-        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setExpiredTime(String expiredTime) {
-            this.expiredTime = expiredTime;
-            return this;
-        }
-        public String getExpiredTime() {
-            return this.expiredTime;
-        }
-
-        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setAllocationId(String allocationId) {
-            this.allocationId = allocationId;
-            return this;
-        }
-        public String getAllocationId() {
-            return this.allocationId;
-        }
-
-        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setInternetChargeType(String internetChargeType) {
-            this.internetChargeType = internetChargeType;
-            return this;
-        }
-        public String getInternetChargeType() {
-            return this.internetChargeType;
-        }
-
-        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setEipBandwidth(String eipBandwidth) {
-            this.eipBandwidth = eipBandwidth;
-            return this;
-        }
-        public String getEipBandwidth() {
-            return this.eipBandwidth;
-        }
-
         public DescribeEipAddressesResponseBodyEipAddressesEipAddress setOperationLocks(DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks operationLocks) {
             this.operationLocks = operationLocks;
             return this;
         }
         public DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks getOperationLocks() {
             return this.operationLocks;
+        }
+
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

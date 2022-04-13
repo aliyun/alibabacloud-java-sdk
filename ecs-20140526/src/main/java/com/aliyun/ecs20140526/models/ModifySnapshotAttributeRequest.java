@@ -4,6 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifySnapshotAttributeRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("DisableInstantAccess")
+    public Boolean disableInstantAccess;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,24 +22,39 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("SnapshotId")
     public String snapshotId;
 
     @NameInMap("SnapshotName")
     public String snapshotName;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("DisableInstantAccess")
-    public Boolean disableInstantAccess;
-
     public static ModifySnapshotAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySnapshotAttributeRequest self = new ModifySnapshotAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySnapshotAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifySnapshotAttributeRequest setDisableInstantAccess(Boolean disableInstantAccess) {
+        this.disableInstantAccess = disableInstantAccess;
+        return this;
+    }
+    public Boolean getDisableInstantAccess() {
+        return this.disableInstantAccess;
+    }
+
+    public ModifySnapshotAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifySnapshotAttributeRequest setOwnerId(Long ownerId) {
@@ -57,14 +81,6 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySnapshotAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
     public ModifySnapshotAttributeRequest setSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -79,22 +95,6 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     }
     public String getSnapshotName() {
         return this.snapshotName;
-    }
-
-    public ModifySnapshotAttributeRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ModifySnapshotAttributeRequest setDisableInstantAccess(Boolean disableInstantAccess) {
-        this.disableInstantAccess = disableInstantAccess;
-        return this;
-    }
-    public Boolean getDisableInstantAccess() {
-        return this.disableInstantAccess;
     }
 
 }

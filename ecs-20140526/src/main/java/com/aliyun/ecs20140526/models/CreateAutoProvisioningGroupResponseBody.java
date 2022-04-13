@@ -7,11 +7,11 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
     @NameInMap("AutoProvisioningGroupId")
     public String autoProvisioningGroupId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LaunchResults")
     public CreateAutoProvisioningGroupResponseBodyLaunchResults launchResults;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateAutoProvisioningGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAutoProvisioningGroupResponseBody self = new CreateAutoProvisioningGroupResponseBody();
@@ -26,20 +26,20 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         return this.autoProvisioningGroupId;
     }
 
-    public CreateAutoProvisioningGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateAutoProvisioningGroupResponseBody setLaunchResults(CreateAutoProvisioningGroupResponseBodyLaunchResults launchResults) {
         this.launchResults = launchResults;
         return this;
     }
     public CreateAutoProvisioningGroupResponseBodyLaunchResults getLaunchResults() {
         return this.launchResults;
+    }
+
+    public CreateAutoProvisioningGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResultInstanceIds extends TeaModel {
@@ -62,51 +62,27 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult extends TeaModel {
-        @NameInMap("ZoneId")
-        public String zoneId;
+        @NameInMap("ErrorCode")
+        public String errorCode;
 
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        @NameInMap("InstanceIds")
+        public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResultInstanceIds instanceIds;
+
         @NameInMap("InstanceType")
         public String instanceType;
-
-        @NameInMap("ErrorCode")
-        public String errorCode;
 
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
-        @NameInMap("InstanceIds")
-        public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResultInstanceIds instanceIds;
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult build(java.util.Map<String, ?> map) throws Exception {
             CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult self = new CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult();
             return TeaModel.build(map, self);
-        }
-
-        public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult setErrorMsg(String errorMsg) {
-            this.errorMsg = errorMsg;
-            return this;
-        }
-        public String getErrorMsg() {
-            return this.errorMsg;
-        }
-
-        public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
         }
 
         public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult setErrorCode(String errorCode) {
@@ -117,12 +93,12 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             return this.errorCode;
         }
 
-        public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult setSpotStrategy(String spotStrategy) {
-            this.spotStrategy = spotStrategy;
+        public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult setErrorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
             return this;
         }
-        public String getSpotStrategy() {
-            return this.spotStrategy;
+        public String getErrorMsg() {
+            return this.errorMsg;
         }
 
         public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult setInstanceIds(CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResultInstanceIds instanceIds) {
@@ -131,6 +107,30 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
         public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResultInstanceIds getInstanceIds() {
             return this.instanceIds;
+        }
+
+        public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+        public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

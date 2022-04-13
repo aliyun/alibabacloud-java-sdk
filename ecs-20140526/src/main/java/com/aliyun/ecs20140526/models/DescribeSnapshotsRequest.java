@@ -7,29 +7,35 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<DescribeSnapshotsRequestFilter> filter;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("Category")
+    public String category;
 
     @NameInMap("DiskId")
     public String diskId;
 
-    @NameInMap("SnapshotLinkId")
-    public String snapshotLinkId;
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Encrypted")
+    public Boolean encrypted;
 
-    @NameInMap("SnapshotIds")
-    public String snapshotIds;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("KMSKeyId")
+    public String KMSKeyId;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -37,47 +43,41 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("SnapshotName")
-    public String snapshotName;
-
-    @NameInMap("Status")
-    public String status;
-
-    @NameInMap("SnapshotType")
-    public String snapshotType;
-
-    @NameInMap("Usage")
-    public String usage;
-
-    @NameInMap("SourceDiskType")
-    public String sourceDiskType;
-
-    @NameInMap("Encrypted")
-    public Boolean encrypted;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("DryRun")
-    public Boolean dryRun;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("KMSKeyId")
-    public String KMSKeyId;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
-    @NameInMap("Category")
-    public String category;
+    @NameInMap("SnapshotIds")
+    public String snapshotIds;
+
+    @NameInMap("SnapshotLinkId")
+    public String snapshotLinkId;
+
+    @NameInMap("SnapshotName")
+    public String snapshotName;
+
+    @NameInMap("SnapshotType")
+    public String snapshotType;
+
+    @NameInMap("SourceDiskType")
+    public String sourceDiskType;
+
+    @NameInMap("Status")
+    public String status;
 
     @NameInMap("Tag")
     public java.util.List<DescribeSnapshotsRequestTag> tag;
+
+    @NameInMap("Usage")
+    public String usage;
 
     public static DescribeSnapshotsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotsRequest self = new DescribeSnapshotsRequest();
@@ -92,36 +92,12 @@ public class DescribeSnapshotsRequest extends TeaModel {
         return this.filter;
     }
 
-    public DescribeSnapshotsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeSnapshotsRequest setCategory(String category) {
+        this.category = category;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeSnapshotsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeSnapshotsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeSnapshotsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getCategory() {
+        return this.category;
     }
 
     public DescribeSnapshotsRequest setDiskId(String diskId) {
@@ -132,28 +108,68 @@ public class DescribeSnapshotsRequest extends TeaModel {
         return this.diskId;
     }
 
-    public DescribeSnapshotsRequest setSnapshotLinkId(String snapshotLinkId) {
-        this.snapshotLinkId = snapshotLinkId;
+    public DescribeSnapshotsRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
         return this;
     }
-    public String getSnapshotLinkId() {
-        return this.snapshotLinkId;
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
-    public DescribeSnapshotsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeSnapshotsRequest setEncrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Boolean getEncrypted() {
+        return this.encrypted;
     }
 
-    public DescribeSnapshotsRequest setSnapshotIds(String snapshotIds) {
-        this.snapshotIds = snapshotIds;
+    public DescribeSnapshotsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getSnapshotIds() {
-        return this.snapshotIds;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeSnapshotsRequest setKMSKeyId(String KMSKeyId) {
+        this.KMSKeyId = KMSKeyId;
+        return this;
+    }
+    public String getKMSKeyId() {
+        return this.KMSKeyId;
+    }
+
+    public DescribeSnapshotsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeSnapshotsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public DescribeSnapshotsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeSnapshotsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeSnapshotsRequest setPageNumber(Integer pageNumber) {
@@ -172,76 +188,12 @@ public class DescribeSnapshotsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeSnapshotsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public DescribeSnapshotsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public DescribeSnapshotsRequest setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public DescribeSnapshotsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeSnapshotsRequest setSnapshotName(String snapshotName) {
-        this.snapshotName = snapshotName;
-        return this;
-    }
-    public String getSnapshotName() {
-        return this.snapshotName;
-    }
-
-    public DescribeSnapshotsRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public DescribeSnapshotsRequest setSnapshotType(String snapshotType) {
-        this.snapshotType = snapshotType;
-        return this;
-    }
-    public String getSnapshotType() {
-        return this.snapshotType;
-    }
-
-    public DescribeSnapshotsRequest setUsage(String usage) {
-        this.usage = usage;
-        return this;
-    }
-    public String getUsage() {
-        return this.usage;
-    }
-
-    public DescribeSnapshotsRequest setSourceDiskType(String sourceDiskType) {
-        this.sourceDiskType = sourceDiskType;
-        return this;
-    }
-    public String getSourceDiskType() {
-        return this.sourceDiskType;
-    }
-
-    public DescribeSnapshotsRequest setEncrypted(Boolean encrypted) {
-        this.encrypted = encrypted;
-        return this;
-    }
-    public Boolean getEncrypted() {
-        return this.encrypted;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeSnapshotsRequest setResourceGroupId(String resourceGroupId) {
@@ -252,28 +204,68 @@ public class DescribeSnapshotsRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribeSnapshotsRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
+    public DescribeSnapshotsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public DescribeSnapshotsRequest setKMSKeyId(String KMSKeyId) {
-        this.KMSKeyId = KMSKeyId;
+    public DescribeSnapshotsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getKMSKeyId() {
-        return this.KMSKeyId;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
-    public DescribeSnapshotsRequest setCategory(String category) {
-        this.category = category;
+    public DescribeSnapshotsRequest setSnapshotIds(String snapshotIds) {
+        this.snapshotIds = snapshotIds;
         return this;
     }
-    public String getCategory() {
-        return this.category;
+    public String getSnapshotIds() {
+        return this.snapshotIds;
+    }
+
+    public DescribeSnapshotsRequest setSnapshotLinkId(String snapshotLinkId) {
+        this.snapshotLinkId = snapshotLinkId;
+        return this;
+    }
+    public String getSnapshotLinkId() {
+        return this.snapshotLinkId;
+    }
+
+    public DescribeSnapshotsRequest setSnapshotName(String snapshotName) {
+        this.snapshotName = snapshotName;
+        return this;
+    }
+    public String getSnapshotName() {
+        return this.snapshotName;
+    }
+
+    public DescribeSnapshotsRequest setSnapshotType(String snapshotType) {
+        this.snapshotType = snapshotType;
+        return this;
+    }
+    public String getSnapshotType() {
+        return this.snapshotType;
+    }
+
+    public DescribeSnapshotsRequest setSourceDiskType(String sourceDiskType) {
+        this.sourceDiskType = sourceDiskType;
+        return this;
+    }
+    public String getSourceDiskType() {
+        return this.sourceDiskType;
+    }
+
+    public DescribeSnapshotsRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public DescribeSnapshotsRequest setTag(java.util.List<DescribeSnapshotsRequestTag> tag) {
@@ -282,6 +274,14 @@ public class DescribeSnapshotsRequest extends TeaModel {
     }
     public java.util.List<DescribeSnapshotsRequestTag> getTag() {
         return this.tag;
+    }
+
+    public DescribeSnapshotsRequest setUsage(String usage) {
+        this.usage = usage;
+        return this;
+    }
+    public String getUsage() {
+        return this.usage;
     }
 
     public static class DescribeSnapshotsRequestFilter extends TeaModel {
@@ -315,7 +315,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     }
 
     public static class DescribeSnapshotsRequestTag extends TeaModel {
-        @NameInMap("key")
+        @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")

@@ -4,8 +4,38 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ImportImageRequest extends TeaModel {
+    @NameInMap("Architecture")
+    public String architecture;
+
+    @NameInMap("BootMode")
+    public String bootMode;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("DiskDeviceMapping")
+    public java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping;
+
+    @NameInMap("ImageName")
+    public String imageName;
+
+    @NameInMap("LicenseType")
+    public String licenseType;
+
+    @NameInMap("OSType")
+    public String OSType;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Platform")
+    public String platform;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,38 +43,8 @@ public class ImportImageRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ImageName")
-    public String imageName;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("Architecture")
-    public String architecture;
-
-    @NameInMap("OSType")
-    public String OSType;
-
-    @NameInMap("Platform")
-    public String platform;
-
-    @NameInMap("BootMode")
-    public String bootMode;
-
     @NameInMap("RoleName")
     public String roleName;
-
-    @NameInMap("LicenseType")
-    public String licenseType;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("DiskDeviceMapping")
-    public java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping;
 
     @NameInMap("Tag")
     public java.util.List<ImportImageRequestTag> tag;
@@ -54,12 +54,92 @@ public class ImportImageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ImportImageRequest setArchitecture(String architecture) {
+        this.architecture = architecture;
+        return this;
+    }
+    public String getArchitecture() {
+        return this.architecture;
+    }
+
+    public ImportImageRequest setBootMode(String bootMode) {
+        this.bootMode = bootMode;
+        return this;
+    }
+    public String getBootMode() {
+        return this.bootMode;
+    }
+
+    public ImportImageRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ImportImageRequest setDiskDeviceMapping(java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping) {
+        this.diskDeviceMapping = diskDeviceMapping;
+        return this;
+    }
+    public java.util.List<ImportImageRequestDiskDeviceMapping> getDiskDeviceMapping() {
+        return this.diskDeviceMapping;
+    }
+
+    public ImportImageRequest setImageName(String imageName) {
+        this.imageName = imageName;
+        return this;
+    }
+    public String getImageName() {
+        return this.imageName;
+    }
+
+    public ImportImageRequest setLicenseType(String licenseType) {
+        this.licenseType = licenseType;
+        return this;
+    }
+    public String getLicenseType() {
+        return this.licenseType;
+    }
+
+    public ImportImageRequest setOSType(String OSType) {
+        this.OSType = OSType;
+        return this;
+    }
+    public String getOSType() {
+        return this.OSType;
+    }
+
     public ImportImageRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ImportImageRequest setPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+    public String getPlatform() {
+        return this.platform;
+    }
+
+    public ImportImageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ImportImageRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ImportImageRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -78,92 +158,12 @@ public class ImportImageRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ImportImageRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ImportImageRequest setImageName(String imageName) {
-        this.imageName = imageName;
-        return this;
-    }
-    public String getImageName() {
-        return this.imageName;
-    }
-
-    public ImportImageRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ImportImageRequest setArchitecture(String architecture) {
-        this.architecture = architecture;
-        return this;
-    }
-    public String getArchitecture() {
-        return this.architecture;
-    }
-
-    public ImportImageRequest setOSType(String OSType) {
-        this.OSType = OSType;
-        return this;
-    }
-    public String getOSType() {
-        return this.OSType;
-    }
-
-    public ImportImageRequest setPlatform(String platform) {
-        this.platform = platform;
-        return this;
-    }
-    public String getPlatform() {
-        return this.platform;
-    }
-
-    public ImportImageRequest setBootMode(String bootMode) {
-        this.bootMode = bootMode;
-        return this;
-    }
-    public String getBootMode() {
-        return this.bootMode;
-    }
-
     public ImportImageRequest setRoleName(String roleName) {
         this.roleName = roleName;
         return this;
     }
     public String getRoleName() {
         return this.roleName;
-    }
-
-    public ImportImageRequest setLicenseType(String licenseType) {
-        this.licenseType = licenseType;
-        return this;
-    }
-    public String getLicenseType() {
-        return this.licenseType;
-    }
-
-    public ImportImageRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public ImportImageRequest setDiskDeviceMapping(java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping) {
-        this.diskDeviceMapping = diskDeviceMapping;
-        return this;
-    }
-    public java.util.List<ImportImageRequestDiskDeviceMapping> getDiskDeviceMapping() {
-        return this.diskDeviceMapping;
     }
 
     public ImportImageRequest setTag(java.util.List<ImportImageRequestTag> tag) {
@@ -175,35 +175,27 @@ public class ImportImageRequest extends TeaModel {
     }
 
     public static class ImportImageRequestDiskDeviceMapping extends TeaModel {
-        @NameInMap("DiskImSize")
-        public Integer diskImSize;
-
         @NameInMap("Device")
         public String device;
 
-        @NameInMap("OSSBucket")
-        public String OSSBucket;
-
-        @NameInMap("Format")
-        public String format;
-
-        @NameInMap("OSSObject")
-        public String OSSObject;
+        @NameInMap("DiskImSize")
+        public Integer diskImSize;
 
         @NameInMap("DiskImageSize")
         public Integer diskImageSize;
 
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("OSSBucket")
+        public String OSSBucket;
+
+        @NameInMap("OSSObject")
+        public String OSSObject;
+
         public static ImportImageRequestDiskDeviceMapping build(java.util.Map<String, ?> map) throws Exception {
             ImportImageRequestDiskDeviceMapping self = new ImportImageRequestDiskDeviceMapping();
             return TeaModel.build(map, self);
-        }
-
-        public ImportImageRequestDiskDeviceMapping setDiskImSize(Integer diskImSize) {
-            this.diskImSize = diskImSize;
-            return this;
-        }
-        public Integer getDiskImSize() {
-            return this.diskImSize;
         }
 
         public ImportImageRequestDiskDeviceMapping setDevice(String device) {
@@ -214,12 +206,20 @@ public class ImportImageRequest extends TeaModel {
             return this.device;
         }
 
-        public ImportImageRequestDiskDeviceMapping setOSSBucket(String OSSBucket) {
-            this.OSSBucket = OSSBucket;
+        public ImportImageRequestDiskDeviceMapping setDiskImSize(Integer diskImSize) {
+            this.diskImSize = diskImSize;
             return this;
         }
-        public String getOSSBucket() {
-            return this.OSSBucket;
+        public Integer getDiskImSize() {
+            return this.diskImSize;
+        }
+
+        public ImportImageRequestDiskDeviceMapping setDiskImageSize(Integer diskImageSize) {
+            this.diskImageSize = diskImageSize;
+            return this;
+        }
+        public Integer getDiskImageSize() {
+            return this.diskImageSize;
         }
 
         public ImportImageRequestDiskDeviceMapping setFormat(String format) {
@@ -230,20 +230,20 @@ public class ImportImageRequest extends TeaModel {
             return this.format;
         }
 
+        public ImportImageRequestDiskDeviceMapping setOSSBucket(String OSSBucket) {
+            this.OSSBucket = OSSBucket;
+            return this;
+        }
+        public String getOSSBucket() {
+            return this.OSSBucket;
+        }
+
         public ImportImageRequestDiskDeviceMapping setOSSObject(String OSSObject) {
             this.OSSObject = OSSObject;
             return this;
         }
         public String getOSSObject() {
             return this.OSSObject;
-        }
-
-        public ImportImageRequestDiskDeviceMapping setDiskImageSize(Integer diskImageSize) {
-            this.diskImageSize = diskImageSize;
-            return this;
-        }
-        public Integer getDiskImageSize() {
-            return this.diskImageSize;
         }
 
     }

@@ -4,24 +4,40 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeHpcClustersResponseBody extends TeaModel {
+    @NameInMap("HpcClusters")
+    public DescribeHpcClustersResponseBodyHpcClusters hpcClusters;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("HpcClusters")
-    public DescribeHpcClustersResponseBodyHpcClusters hpcClusters;
 
     public static DescribeHpcClustersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeHpcClustersResponseBody self = new DescribeHpcClustersResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeHpcClustersResponseBody setHpcClusters(DescribeHpcClustersResponseBodyHpcClusters hpcClusters) {
+        this.hpcClusters = hpcClusters;
+        return this;
+    }
+    public DescribeHpcClustersResponseBodyHpcClusters getHpcClusters() {
+        return this.hpcClusters;
+    }
+
+    public DescribeHpcClustersResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeHpcClustersResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeHpcClustersResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeHpcClustersResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,27 +64,27 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeHpcClustersResponseBody setHpcClusters(DescribeHpcClustersResponseBodyHpcClusters hpcClusters) {
-        this.hpcClusters = hpcClusters;
-        return this;
-    }
-    public DescribeHpcClustersResponseBodyHpcClusters getHpcClusters() {
-        return this.hpcClusters;
-    }
-
     public static class DescribeHpcClustersResponseBodyHpcClustersHpcCluster extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("HpcClusterId")
         public String hpcClusterId;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Description")
-        public String description;
-
         public static DescribeHpcClustersResponseBodyHpcClustersHpcCluster build(java.util.Map<String, ?> map) throws Exception {
             DescribeHpcClustersResponseBodyHpcClustersHpcCluster self = new DescribeHpcClustersResponseBodyHpcClustersHpcCluster();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeHpcClustersResponseBodyHpcClustersHpcCluster setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeHpcClustersResponseBodyHpcClustersHpcCluster setHpcClusterId(String hpcClusterId) {
@@ -93,14 +101,6 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
-        }
-
-        public DescribeHpcClustersResponseBodyHpcClustersHpcCluster setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
     }

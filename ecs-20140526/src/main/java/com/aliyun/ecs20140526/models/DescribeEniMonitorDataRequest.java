@@ -4,8 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeEniMonitorDataRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("EniId")
+    public String eniId;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Period")
+    public Integer period;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,30 +31,44 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("EniId")
-    public String eniId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("Period")
-    public Integer period;
 
     public static DescribeEniMonitorDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEniMonitorDataRequest self = new DescribeEniMonitorDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeEniMonitorDataRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeEniMonitorDataRequest setEniId(String eniId) {
+        this.eniId = eniId;
+        return this;
+    }
+    public String getEniId() {
+        return this.eniId;
+    }
+
+    public DescribeEniMonitorDataRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeEniMonitorDataRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeEniMonitorDataRequest setOwnerId(Long ownerId) {
@@ -45,6 +77,22 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeEniMonitorDataRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public DescribeEniMonitorDataRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeEniMonitorDataRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -63,60 +111,12 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeEniMonitorDataRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeEniMonitorDataRequest setEniId(String eniId) {
-        this.eniId = eniId;
-        return this;
-    }
-    public String getEniId() {
-        return this.eniId;
-    }
-
-    public DescribeEniMonitorDataRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeEniMonitorDataRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public DescribeEniMonitorDataRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeEniMonitorDataRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeEniMonitorDataRequest setPeriod(Integer period) {
-        this.period = period;
-        return this;
-    }
-    public Integer getPeriod() {
-        return this.period;
     }
 
 }

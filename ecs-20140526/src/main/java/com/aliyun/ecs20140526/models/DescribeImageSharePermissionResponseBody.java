@@ -4,8 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSharePermissionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Accounts")
+    public DescribeImageSharePermissionResponseBodyAccounts accounts;
+
+    @NameInMap("ImageId")
+    public String imageId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,32 +16,37 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("ImageId")
-    public String imageId;
-
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("ShareGroups")
     public DescribeImageSharePermissionResponseBodyShareGroups shareGroups;
 
-    @NameInMap("Accounts")
-    public DescribeImageSharePermissionResponseBodyAccounts accounts;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeImageSharePermissionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageSharePermissionResponseBody self = new DescribeImageSharePermissionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeImageSharePermissionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeImageSharePermissionResponseBody setAccounts(DescribeImageSharePermissionResponseBodyAccounts accounts) {
+        this.accounts = accounts;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public DescribeImageSharePermissionResponseBodyAccounts getAccounts() {
+        return this.accounts;
+    }
+
+    public DescribeImageSharePermissionResponseBody setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
     }
 
     public DescribeImageSharePermissionResponseBody setPageNumber(Integer pageNumber) {
@@ -57,28 +65,20 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeImageSharePermissionResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeImageSharePermissionResponseBody setImageId(String imageId) {
-        this.imageId = imageId;
-        return this;
-    }
-    public String getImageId() {
-        return this.imageId;
-    }
-
     public DescribeImageSharePermissionResponseBody setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeImageSharePermissionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeImageSharePermissionResponseBody setShareGroups(DescribeImageSharePermissionResponseBodyShareGroups shareGroups) {
@@ -89,50 +89,12 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         return this.shareGroups;
     }
 
-    public DescribeImageSharePermissionResponseBody setAccounts(DescribeImageSharePermissionResponseBodyAccounts accounts) {
-        this.accounts = accounts;
+    public DescribeImageSharePermissionResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public DescribeImageSharePermissionResponseBodyAccounts getAccounts() {
-        return this.accounts;
-    }
-
-    public static class DescribeImageSharePermissionResponseBodyShareGroupsShareGroup extends TeaModel {
-        @NameInMap("Group")
-        public String group;
-
-        public static DescribeImageSharePermissionResponseBodyShareGroupsShareGroup build(java.util.Map<String, ?> map) throws Exception {
-            DescribeImageSharePermissionResponseBodyShareGroupsShareGroup self = new DescribeImageSharePermissionResponseBodyShareGroupsShareGroup();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeImageSharePermissionResponseBodyShareGroupsShareGroup setGroup(String group) {
-            this.group = group;
-            return this;
-        }
-        public String getGroup() {
-            return this.group;
-        }
-
-    }
-
-    public static class DescribeImageSharePermissionResponseBodyShareGroups extends TeaModel {
-        @NameInMap("ShareGroup")
-        public java.util.List<DescribeImageSharePermissionResponseBodyShareGroupsShareGroup> shareGroup;
-
-        public static DescribeImageSharePermissionResponseBodyShareGroups build(java.util.Map<String, ?> map) throws Exception {
-            DescribeImageSharePermissionResponseBodyShareGroups self = new DescribeImageSharePermissionResponseBodyShareGroups();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeImageSharePermissionResponseBodyShareGroups setShareGroup(java.util.List<DescribeImageSharePermissionResponseBodyShareGroupsShareGroup> shareGroup) {
-            this.shareGroup = shareGroup;
-            return this;
-        }
-        public java.util.List<DescribeImageSharePermissionResponseBodyShareGroupsShareGroup> getShareGroup() {
-            return this.shareGroup;
-        }
-
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeImageSharePermissionResponseBodyAccountsAccount extends TeaModel {
@@ -169,6 +131,44 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
         public java.util.List<DescribeImageSharePermissionResponseBodyAccountsAccount> getAccount() {
             return this.account;
+        }
+
+    }
+
+    public static class DescribeImageSharePermissionResponseBodyShareGroupsShareGroup extends TeaModel {
+        @NameInMap("Group")
+        public String group;
+
+        public static DescribeImageSharePermissionResponseBodyShareGroupsShareGroup build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageSharePermissionResponseBodyShareGroupsShareGroup self = new DescribeImageSharePermissionResponseBodyShareGroupsShareGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageSharePermissionResponseBodyShareGroupsShareGroup setGroup(String group) {
+            this.group = group;
+            return this;
+        }
+        public String getGroup() {
+            return this.group;
+        }
+
+    }
+
+    public static class DescribeImageSharePermissionResponseBodyShareGroups extends TeaModel {
+        @NameInMap("ShareGroup")
+        public java.util.List<DescribeImageSharePermissionResponseBodyShareGroupsShareGroup> shareGroup;
+
+        public static DescribeImageSharePermissionResponseBodyShareGroups build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageSharePermissionResponseBodyShareGroups self = new DescribeImageSharePermissionResponseBodyShareGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageSharePermissionResponseBodyShareGroups setShareGroup(java.util.List<DescribeImageSharePermissionResponseBodyShareGroupsShareGroup> shareGroup) {
+            this.shareGroup = shareGroup;
+            return this;
+        }
+        public java.util.List<DescribeImageSharePermissionResponseBodyShareGroupsShareGroup> getShareGroup() {
+            return this.shareGroup;
         }
 
     }

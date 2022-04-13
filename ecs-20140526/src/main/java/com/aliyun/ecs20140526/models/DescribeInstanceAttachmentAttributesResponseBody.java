@@ -4,24 +4,40 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
+    @NameInMap("Instances")
+    public DescribeInstanceAttachmentAttributesResponseBodyInstances instances;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Instances")
-    public DescribeInstanceAttachmentAttributesResponseBodyInstances instances;
 
     public static DescribeInstanceAttachmentAttributesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceAttachmentAttributesResponseBody self = new DescribeInstanceAttachmentAttributesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceAttachmentAttributesResponseBody setInstances(DescribeInstanceAttachmentAttributesResponseBodyInstances instances) {
+        this.instances = instances;
+        return this;
+    }
+    public DescribeInstanceAttachmentAttributesResponseBodyInstances getInstances() {
+        return this.instances;
+    }
+
+    public DescribeInstanceAttachmentAttributesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeInstanceAttachmentAttributesResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeInstanceAttachmentAttributesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeInstanceAttachmentAttributesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,23 +64,15 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeInstanceAttachmentAttributesResponseBody setInstances(DescribeInstanceAttachmentAttributesResponseBodyInstances instances) {
-        this.instances = instances;
-        return this;
-    }
-    public DescribeInstanceAttachmentAttributesResponseBodyInstances getInstances() {
-        return this.instances;
-    }
-
     public static class DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("PrivatePoolOptionsMatchCriteria")
-        public String privatePoolOptionsMatchCriteria;
-
         @NameInMap("PrivatePoolOptionsId")
         public String privatePoolOptionsId;
+
+        @NameInMap("PrivatePoolOptionsMatchCriteria")
+        public String privatePoolOptionsMatchCriteria;
 
         public static DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance self = new DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance();
@@ -87,20 +87,20 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance setPrivatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
-            this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
-            return this;
-        }
-        public String getPrivatePoolOptionsMatchCriteria() {
-            return this.privatePoolOptionsMatchCriteria;
-        }
-
         public DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance setPrivatePoolOptionsId(String privatePoolOptionsId) {
             this.privatePoolOptionsId = privatePoolOptionsId;
             return this;
         }
         public String getPrivatePoolOptionsId() {
             return this.privatePoolOptionsId;
+        }
+
+        public DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance setPrivatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
+            this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
+            return this;
+        }
+        public String getPrivatePoolOptionsMatchCriteria() {
+            return this.privatePoolOptionsMatchCriteria;
         }
 
     }

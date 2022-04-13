@@ -4,35 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateRouterInterfaceRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AccessPointId")
+    public String accessPointId;
 
-    @NameInMap("Role")
-    public String role;
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
 
-    @NameInMap("OppositeRegionId")
-    public String oppositeRegionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
-    @NameInMap("Spec")
-    public String spec;
-
-    @NameInMap("RouterType")
-    public String routerType;
-
-    @NameInMap("RouterId")
-    public String routerId;
-
-    @NameInMap("OppositeInterfaceId")
-    public String oppositeInterfaceId;
-
-    @NameInMap("OppositeRouterId")
-    public String oppositeRouterId;
-
-    @NameInMap("OppositeRouterType")
-    public String oppositeRouterType;
-
-    @NameInMap("OppositeInterfaceOwnerId")
-    public String oppositeInterfaceOwnerId;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("HealthCheckSourceIp")
     public String healthCheckSourceIp;
@@ -40,35 +22,44 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     @NameInMap("HealthCheckTargetIp")
     public String healthCheckTargetIp;
 
-    @NameInMap("AccessPointId")
-    public String accessPointId;
-
-    @NameInMap("OppositeAccessPointId")
-    public String oppositeAccessPointId;
-
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("InstanceChargeType")
+    public String instanceChargeType;
 
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("OppositeAccessPointId")
+    public String oppositeAccessPointId;
+
+    @NameInMap("OppositeInterfaceId")
+    public String oppositeInterfaceId;
+
+    @NameInMap("OppositeInterfaceOwnerId")
+    public String oppositeInterfaceOwnerId;
+
+    @NameInMap("OppositeRegionId")
+    public String oppositeRegionId;
+
+    @NameInMap("OppositeRouterId")
+    public String oppositeRouterId;
+
+    @NameInMap("OppositeRouterType")
+    public String oppositeRouterType;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Period")
     public Integer period;
-
-    @NameInMap("InstanceChargeType")
-    public String instanceChargeType;
-
-    @NameInMap("AutoPay")
-    public Boolean autoPay;
 
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -76,8 +67,17 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("Role")
+    public String role;
+
+    @NameInMap("RouterId")
+    public String routerId;
+
+    @NameInMap("RouterType")
+    public String routerType;
+
+    @NameInMap("Spec")
+    public String spec;
 
     @NameInMap("UserCidr")
     public String userCidr;
@@ -87,84 +87,36 @@ public class CreateRouterInterfaceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateRouterInterfaceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateRouterInterfaceRequest setAccessPointId(String accessPointId) {
+        this.accessPointId = accessPointId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getAccessPointId() {
+        return this.accessPointId;
     }
 
-    public CreateRouterInterfaceRequest setRole(String role) {
-        this.role = role;
+    public CreateRouterInterfaceRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
         return this;
     }
-    public String getRole() {
-        return this.role;
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
-    public CreateRouterInterfaceRequest setOppositeRegionId(String oppositeRegionId) {
-        this.oppositeRegionId = oppositeRegionId;
+    public CreateRouterInterfaceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getOppositeRegionId() {
-        return this.oppositeRegionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
-    public CreateRouterInterfaceRequest setSpec(String spec) {
-        this.spec = spec;
+    public CreateRouterInterfaceRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getSpec() {
-        return this.spec;
-    }
-
-    public CreateRouterInterfaceRequest setRouterType(String routerType) {
-        this.routerType = routerType;
-        return this;
-    }
-    public String getRouterType() {
-        return this.routerType;
-    }
-
-    public CreateRouterInterfaceRequest setRouterId(String routerId) {
-        this.routerId = routerId;
-        return this;
-    }
-    public String getRouterId() {
-        return this.routerId;
-    }
-
-    public CreateRouterInterfaceRequest setOppositeInterfaceId(String oppositeInterfaceId) {
-        this.oppositeInterfaceId = oppositeInterfaceId;
-        return this;
-    }
-    public String getOppositeInterfaceId() {
-        return this.oppositeInterfaceId;
-    }
-
-    public CreateRouterInterfaceRequest setOppositeRouterId(String oppositeRouterId) {
-        this.oppositeRouterId = oppositeRouterId;
-        return this;
-    }
-    public String getOppositeRouterId() {
-        return this.oppositeRouterId;
-    }
-
-    public CreateRouterInterfaceRequest setOppositeRouterType(String oppositeRouterType) {
-        this.oppositeRouterType = oppositeRouterType;
-        return this;
-    }
-    public String getOppositeRouterType() {
-        return this.oppositeRouterType;
-    }
-
-    public CreateRouterInterfaceRequest setOppositeInterfaceOwnerId(String oppositeInterfaceOwnerId) {
-        this.oppositeInterfaceOwnerId = oppositeInterfaceOwnerId;
-        return this;
-    }
-    public String getOppositeInterfaceOwnerId() {
-        return this.oppositeInterfaceOwnerId;
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateRouterInterfaceRequest setHealthCheckSourceIp(String healthCheckSourceIp) {
@@ -183,28 +135,12 @@ public class CreateRouterInterfaceRequest extends TeaModel {
         return this.healthCheckTargetIp;
     }
 
-    public CreateRouterInterfaceRequest setAccessPointId(String accessPointId) {
-        this.accessPointId = accessPointId;
+    public CreateRouterInterfaceRequest setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
         return this;
     }
-    public String getAccessPointId() {
-        return this.accessPointId;
-    }
-
-    public CreateRouterInterfaceRequest setOppositeAccessPointId(String oppositeAccessPointId) {
-        this.oppositeAccessPointId = oppositeAccessPointId;
-        return this;
-    }
-    public String getOppositeAccessPointId() {
-        return this.oppositeAccessPointId;
-    }
-
-    public CreateRouterInterfaceRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     public CreateRouterInterfaceRequest setName(String name) {
@@ -215,28 +151,76 @@ public class CreateRouterInterfaceRequest extends TeaModel {
         return this.name;
     }
 
+    public CreateRouterInterfaceRequest setOppositeAccessPointId(String oppositeAccessPointId) {
+        this.oppositeAccessPointId = oppositeAccessPointId;
+        return this;
+    }
+    public String getOppositeAccessPointId() {
+        return this.oppositeAccessPointId;
+    }
+
+    public CreateRouterInterfaceRequest setOppositeInterfaceId(String oppositeInterfaceId) {
+        this.oppositeInterfaceId = oppositeInterfaceId;
+        return this;
+    }
+    public String getOppositeInterfaceId() {
+        return this.oppositeInterfaceId;
+    }
+
+    public CreateRouterInterfaceRequest setOppositeInterfaceOwnerId(String oppositeInterfaceOwnerId) {
+        this.oppositeInterfaceOwnerId = oppositeInterfaceOwnerId;
+        return this;
+    }
+    public String getOppositeInterfaceOwnerId() {
+        return this.oppositeInterfaceOwnerId;
+    }
+
+    public CreateRouterInterfaceRequest setOppositeRegionId(String oppositeRegionId) {
+        this.oppositeRegionId = oppositeRegionId;
+        return this;
+    }
+    public String getOppositeRegionId() {
+        return this.oppositeRegionId;
+    }
+
+    public CreateRouterInterfaceRequest setOppositeRouterId(String oppositeRouterId) {
+        this.oppositeRouterId = oppositeRouterId;
+        return this;
+    }
+    public String getOppositeRouterId() {
+        return this.oppositeRouterId;
+    }
+
+    public CreateRouterInterfaceRequest setOppositeRouterType(String oppositeRouterType) {
+        this.oppositeRouterType = oppositeRouterType;
+        return this;
+    }
+    public String getOppositeRouterType() {
+        return this.oppositeRouterType;
+    }
+
+    public CreateRouterInterfaceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreateRouterInterfaceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public CreateRouterInterfaceRequest setPeriod(Integer period) {
         this.period = period;
         return this;
     }
     public Integer getPeriod() {
         return this.period;
-    }
-
-    public CreateRouterInterfaceRequest setInstanceChargeType(String instanceChargeType) {
-        this.instanceChargeType = instanceChargeType;
-        return this;
-    }
-    public String getInstanceChargeType() {
-        return this.instanceChargeType;
-    }
-
-    public CreateRouterInterfaceRequest setAutoPay(Boolean autoPay) {
-        this.autoPay = autoPay;
-        return this;
-    }
-    public Boolean getAutoPay() {
-        return this.autoPay;
     }
 
     public CreateRouterInterfaceRequest setPricingCycle(String pricingCycle) {
@@ -247,20 +231,12 @@ public class CreateRouterInterfaceRequest extends TeaModel {
         return this.pricingCycle;
     }
 
-    public CreateRouterInterfaceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateRouterInterfaceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateRouterInterfaceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateRouterInterfaceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -279,12 +255,36 @@ public class CreateRouterInterfaceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateRouterInterfaceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public CreateRouterInterfaceRequest setRole(String role) {
+        this.role = role;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRole() {
+        return this.role;
+    }
+
+    public CreateRouterInterfaceRequest setRouterId(String routerId) {
+        this.routerId = routerId;
+        return this;
+    }
+    public String getRouterId() {
+        return this.routerId;
+    }
+
+    public CreateRouterInterfaceRequest setRouterType(String routerType) {
+        this.routerType = routerType;
+        return this;
+    }
+    public String getRouterType() {
+        return this.routerType;
+    }
+
+    public CreateRouterInterfaceRequest setSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    public String getSpec() {
+        return this.spec;
     }
 
     public CreateRouterInterfaceRequest setUserCidr(String userCidr) {

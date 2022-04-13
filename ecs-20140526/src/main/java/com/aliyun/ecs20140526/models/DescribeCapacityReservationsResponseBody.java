@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCapacityReservationsResponseBody extends TeaModel {
+    @NameInMap("CapacityReservationSet")
+    public DescribeCapacityReservationsResponseBodyCapacityReservationSet capacityReservationSet;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -13,15 +19,25 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    @NameInMap("CapacityReservationSet")
-    public DescribeCapacityReservationsResponseBodyCapacityReservationSet capacityReservationSet;
-
     public static DescribeCapacityReservationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCapacityReservationsResponseBody self = new DescribeCapacityReservationsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCapacityReservationsResponseBody setCapacityReservationSet(DescribeCapacityReservationsResponseBodyCapacityReservationSet capacityReservationSet) {
+        this.capacityReservationSet = capacityReservationSet;
+        return this;
+    }
+    public DescribeCapacityReservationsResponseBodyCapacityReservationSet getCapacityReservationSet() {
+        return this.capacityReservationSet;
+    }
+
+    public DescribeCapacityReservationsResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public DescribeCapacityReservationsResponseBody setNextToken(String nextToken) {
@@ -48,46 +64,30 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeCapacityReservationsResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public DescribeCapacityReservationsResponseBody setCapacityReservationSet(DescribeCapacityReservationsResponseBodyCapacityReservationSet capacityReservationSet) {
-        this.capacityReservationSet = capacityReservationSet;
-        return this;
-    }
-    public DescribeCapacityReservationsResponseBodyCapacityReservationSet getCapacityReservationSet() {
-        return this.capacityReservationSet;
-    }
-
     public static class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource extends TeaModel {
-        @NameInMap("UsedAmount")
-        public Integer usedAmount;
+        @NameInMap("InstanceType")
+        public String instanceType;
 
         @NameInMap("TotalAmount")
         public Integer totalAmount;
 
+        @NameInMap("UsedAmount")
+        public Integer usedAmount;
+
         @NameInMap("zoneId")
         public String zoneId;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
 
         public static DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource self = new DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource setUsedAmount(Integer usedAmount) {
-            this.usedAmount = usedAmount;
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
             return this;
         }
-        public Integer getUsedAmount() {
-            return this.usedAmount;
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource setTotalAmount(Integer totalAmount) {
@@ -98,20 +98,20 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             return this.totalAmount;
         }
 
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource setUsedAmount(Integer usedAmount) {
+            this.usedAmount = usedAmount;
+            return this;
+        }
+        public Integer getUsedAmount() {
+            return this.usedAmount;
+        }
+
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
         public String getZoneId() {
             return this.zoneId;
-        }
-
-        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
         }
 
     }
@@ -136,23 +136,15 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     }
 
     public static class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTagsTag extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTagsTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTagsTag self = new DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTagsTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTagsTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTagsTag setTagKey(String tagKey) {
@@ -161,6 +153,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }
@@ -185,17 +185,29 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     }
 
     public static class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AllocatedResources")
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResources allocatedResources;
 
-        @NameInMap("TimeSlot")
-        public String timeSlot;
+        @NameInMap("Description")
+        public String description;
 
-        @NameInMap("PrivatePoolOptionsMatchCriteria")
-        public String privatePoolOptionsMatchCriteria;
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("EndTimeType")
+        public String endTimeType;
+
+        @NameInMap("InstanceChargeType")
+        public String instanceChargeType;
+
+        @NameInMap("Platform")
+        public String platform;
 
         @NameInMap("PrivatePoolOptionsId")
         public String privatePoolOptionsId;
+
+        @NameInMap("PrivatePoolOptionsMatchCriteria")
+        public String privatePoolOptionsMatchCriteria;
 
         @NameInMap("PrivatePoolOptionsName")
         public String privatePoolOptionsName;
@@ -203,60 +215,75 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        @NameInMap("InstanceChargeType")
-        public String instanceChargeType;
-
-        @NameInMap("EndTime")
-        public String endTime;
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("StartTime")
         public String startTime;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("StartTimeType")
+        public String startTimeType;
 
-        @NameInMap("EndTimeType")
-        public String endTimeType;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        @NameInMap("Platform")
-        public String platform;
-
-        @NameInMap("AllocatedResources")
-        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResources allocatedResources;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("Tags")
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTags tags;
+
+        @NameInMap("TimeSlot")
+        public String timeSlot;
 
         public static DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem self = new DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setStatus(String status) {
-            this.status = status;
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setAllocatedResources(DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResources allocatedResources) {
+            this.allocatedResources = allocatedResources;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResources getAllocatedResources() {
+            return this.allocatedResources;
         }
 
-        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setTimeSlot(String timeSlot) {
-            this.timeSlot = timeSlot;
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getTimeSlot() {
-            return this.timeSlot;
+        public String getDescription() {
+            return this.description;
         }
 
-        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setPrivatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
-            this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setEndTime(String endTime) {
+            this.endTime = endTime;
             return this;
         }
-        public String getPrivatePoolOptionsMatchCriteria() {
-            return this.privatePoolOptionsMatchCriteria;
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setEndTimeType(String endTimeType) {
+            this.endTimeType = endTimeType;
+            return this;
+        }
+        public String getEndTimeType() {
+            return this.endTimeType;
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setInstanceChargeType(String instanceChargeType) {
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
         }
 
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setPrivatePoolOptionsId(String privatePoolOptionsId) {
@@ -265,6 +292,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
         public String getPrivatePoolOptionsId() {
             return this.privatePoolOptionsId;
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setPrivatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
+            this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
+            return this;
+        }
+        public String getPrivatePoolOptionsMatchCriteria() {
+            return this.privatePoolOptionsMatchCriteria;
         }
 
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setPrivatePoolOptionsName(String privatePoolOptionsName) {
@@ -283,20 +318,12 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setInstanceChargeType(String instanceChargeType) {
-            this.instanceChargeType = instanceChargeType;
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
-        public String getInstanceChargeType() {
-            return this.instanceChargeType;
-        }
-
-        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setStartTime(String startTime) {
@@ -307,44 +334,20 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setDescription(String description) {
-            this.description = description;
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setStartTimeType(String startTimeType) {
+            this.startTimeType = startTimeType;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getStartTimeType() {
+            return this.startTimeType;
         }
 
-        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setEndTimeType(String endTimeType) {
-            this.endTimeType = endTimeType;
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getEndTimeType() {
-            return this.endTimeType;
-        }
-
-        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setPlatform(String platform) {
-            this.platform = platform;
-            return this;
-        }
-        public String getPlatform() {
-            return this.platform;
-        }
-
-        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setAllocatedResources(DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResources allocatedResources) {
-            this.allocatedResources = allocatedResources;
-            return this;
-        }
-        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResources getAllocatedResources() {
-            return this.allocatedResources;
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setTags(DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTags tags) {
@@ -353,6 +356,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTags getTags() {
             return this.tags;
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setTimeSlot(String timeSlot) {
+            this.timeSlot = timeSlot;
+            return this;
+        }
+        public String getTimeSlot() {
+            return this.timeSlot;
         }
 
     }

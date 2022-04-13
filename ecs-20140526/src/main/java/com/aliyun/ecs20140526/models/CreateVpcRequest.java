@@ -4,8 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcRequest extends TeaModel {
+    @NameInMap("CidrBlock")
+    public String cidrBlock;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,30 +28,47 @@ public class CreateVpcRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("CidrBlock")
-    public String cidrBlock;
+    @NameInMap("UserCidr")
+    public String userCidr;
 
     @NameInMap("VpcName")
     public String vpcName;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("UserCidr")
-    public String userCidr;
-
     public static CreateVpcRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVpcRequest self = new CreateVpcRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVpcRequest setCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
+        return this;
+    }
+    public String getCidrBlock() {
+        return this.cidrBlock;
+    }
+
+    public CreateVpcRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateVpcRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateVpcRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateVpcRequest setOwnerId(Long ownerId) {
@@ -45,6 +77,14 @@ public class CreateVpcRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateVpcRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateVpcRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -63,20 +103,12 @@ public class CreateVpcRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateVpcRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateVpcRequest setUserCidr(String userCidr) {
+        this.userCidr = userCidr;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateVpcRequest setCidrBlock(String cidrBlock) {
-        this.cidrBlock = cidrBlock;
-        return this;
-    }
-    public String getCidrBlock() {
-        return this.cidrBlock;
+    public String getUserCidr() {
+        return this.userCidr;
     }
 
     public CreateVpcRequest setVpcName(String vpcName) {
@@ -85,38 +117,6 @@ public class CreateVpcRequest extends TeaModel {
     }
     public String getVpcName() {
         return this.vpcName;
-    }
-
-    public CreateVpcRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public CreateVpcRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateVpcRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateVpcRequest setUserCidr(String userCidr) {
-        this.userCidr = userCidr;
-        return this;
-    }
-    public String getUserCidr() {
-        return this.userCidr;
     }
 
 }

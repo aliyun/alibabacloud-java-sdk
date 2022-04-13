@@ -4,8 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceVncPasswdRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +22,28 @@ public class ModifyInstanceVncPasswdRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("VncPassword")
     public String vncPassword;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static ModifyInstanceVncPasswdRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceVncPasswdRequest self = new ModifyInstanceVncPasswdRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceVncPasswdRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyInstanceVncPasswdRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyInstanceVncPasswdRequest setOwnerId(Long ownerId) {
@@ -36,6 +52,14 @@ public class ModifyInstanceVncPasswdRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyInstanceVncPasswdRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyInstanceVncPasswdRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -54,36 +78,12 @@ public class ModifyInstanceVncPasswdRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyInstanceVncPasswdRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ModifyInstanceVncPasswdRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public ModifyInstanceVncPasswdRequest setVncPassword(String vncPassword) {
         this.vncPassword = vncPassword;
         return this;
     }
     public String getVncPassword() {
         return this.vncPassword;
-    }
-
-    public ModifyInstanceVncPasswdRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

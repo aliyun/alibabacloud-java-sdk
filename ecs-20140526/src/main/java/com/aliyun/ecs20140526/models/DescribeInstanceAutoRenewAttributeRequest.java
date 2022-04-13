@@ -4,20 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public String pageNumber;
+
+    @NameInMap("PageSize")
+    public String pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -25,39 +25,23 @@ public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
     @NameInMap("RenewalStatus")
     public String renewalStatus;
 
-    @NameInMap("PageSize")
-    public String pageSize;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("PageNumber")
-    public String pageNumber;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeInstanceAutoRenewAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceAutoRenewAttributeRequest self = new DescribeInstanceAutoRenewAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceAutoRenewAttributeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeInstanceAutoRenewAttributeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeInstanceAutoRenewAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeInstanceAutoRenewAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeInstanceAutoRenewAttributeRequest setOwnerAccount(String ownerAccount) {
@@ -68,12 +52,28 @@ public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeInstanceAutoRenewAttributeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public DescribeInstanceAutoRenewAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeInstanceAutoRenewAttributeRequest setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeInstanceAutoRenewAttributeRequest setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeInstanceAutoRenewAttributeRequest setRegionId(String regionId) {
@@ -92,20 +92,20 @@ public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
         return this.renewalStatus;
     }
 
-    public DescribeInstanceAutoRenewAttributeRequest setPageSize(String pageSize) {
-        this.pageSize = pageSize;
+    public DescribeInstanceAutoRenewAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getPageSize() {
-        return this.pageSize;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public DescribeInstanceAutoRenewAttributeRequest setPageNumber(String pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeInstanceAutoRenewAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getPageNumber() {
-        return this.pageNumber;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

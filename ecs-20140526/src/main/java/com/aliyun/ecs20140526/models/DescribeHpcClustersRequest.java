@@ -4,26 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeHpcClustersRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("HpcClusterIds")
+    public String hpcClusterIds;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("HpcClusterIds")
-    public String hpcClusterIds;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -31,41 +22,18 @@ public class DescribeHpcClustersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static DescribeHpcClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeHpcClustersRequest self = new DescribeHpcClustersRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeHpcClustersRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeHpcClustersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeHpcClustersRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeHpcClustersRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeHpcClustersRequest setClientToken(String clientToken) {
@@ -76,6 +44,14 @@ public class DescribeHpcClustersRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public DescribeHpcClustersRequest setHpcClusterIds(String hpcClusterIds) {
+        this.hpcClusterIds = hpcClusterIds;
+        return this;
+    }
+    public String getHpcClusterIds() {
+        return this.hpcClusterIds;
+    }
+
     public DescribeHpcClustersRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -84,12 +60,12 @@ public class DescribeHpcClustersRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeHpcClustersRequest setHpcClusterIds(String hpcClusterIds) {
-        this.hpcClusterIds = hpcClusterIds;
+    public DescribeHpcClustersRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getHpcClusterIds() {
-        return this.hpcClusterIds;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeHpcClustersRequest setPageNumber(Integer pageNumber) {
@@ -106,6 +82,30 @@ public class DescribeHpcClustersRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeHpcClustersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeHpcClustersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeHpcClustersRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

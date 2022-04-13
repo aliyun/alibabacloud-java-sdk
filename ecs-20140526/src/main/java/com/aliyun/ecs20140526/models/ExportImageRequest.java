@@ -4,17 +4,8 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ExportImageRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ImageFormat")
+    public String imageFormat;
 
     @NameInMap("ImageId")
     public String imageId;
@@ -25,8 +16,17 @@ public class ExportImageRequest extends TeaModel {
     @NameInMap("OSSPrefix")
     public String OSSPrefix;
 
-    @NameInMap("ImageFormat")
-    public String imageFormat;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("RoleName")
     public String roleName;
@@ -36,36 +36,12 @@ public class ExportImageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ExportImageRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ExportImageRequest setImageFormat(String imageFormat) {
+        this.imageFormat = imageFormat;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ExportImageRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ExportImageRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ExportImageRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getImageFormat() {
+        return this.imageFormat;
     }
 
     public ExportImageRequest setImageId(String imageId) {
@@ -92,12 +68,36 @@ public class ExportImageRequest extends TeaModel {
         return this.OSSPrefix;
     }
 
-    public ExportImageRequest setImageFormat(String imageFormat) {
-        this.imageFormat = imageFormat;
+    public ExportImageRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getImageFormat() {
-        return this.imageFormat;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ExportImageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ExportImageRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ExportImageRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public ExportImageRequest setRoleName(String roleName) {

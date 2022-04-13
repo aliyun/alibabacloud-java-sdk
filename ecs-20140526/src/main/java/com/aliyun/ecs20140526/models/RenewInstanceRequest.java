@@ -7,20 +7,17 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("ExpectedRenewDay")
+    public Integer expectedRenewDay;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Period")
     public Integer period;
@@ -28,8 +25,11 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    @NameInMap("ExpectedRenewDay")
-    public Integer expectedRenewDay;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static RenewInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewInstanceRequest self = new RenewInstanceRequest();
@@ -44,28 +44,20 @@ public class RenewInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public RenewInstanceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public RenewInstanceRequest setExpectedRenewDay(Integer expectedRenewDay) {
+        this.expectedRenewDay = expectedRenewDay;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public Integer getExpectedRenewDay() {
+        return this.expectedRenewDay;
     }
 
-    public RenewInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public RenewInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public RenewInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public RenewInstanceRequest setOwnerAccount(String ownerAccount) {
@@ -76,12 +68,12 @@ public class RenewInstanceRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public RenewInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public RenewInstanceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public RenewInstanceRequest setPeriod(Integer period) {
@@ -100,12 +92,20 @@ public class RenewInstanceRequest extends TeaModel {
         return this.periodUnit;
     }
 
-    public RenewInstanceRequest setExpectedRenewDay(Integer expectedRenewDay) {
-        this.expectedRenewDay = expectedRenewDay;
+    public RenewInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public Integer getExpectedRenewDay() {
-        return this.expectedRenewDay;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public RenewInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

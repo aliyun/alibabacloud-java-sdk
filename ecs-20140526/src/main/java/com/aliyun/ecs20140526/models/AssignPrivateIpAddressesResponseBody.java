@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AssignPrivateIpAddressesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AssignedPrivateIpAddressesSet")
     public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AssignPrivateIpAddressesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AssignPrivateIpAddressesResponseBody self = new AssignPrivateIpAddressesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AssignPrivateIpAddressesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AssignPrivateIpAddressesResponseBody setAssignedPrivateIpAddressesSet(AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet) {
@@ -29,6 +21,14 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
     }
     public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet getAssignedPrivateIpAddressesSet() {
         return this.assignedPrivateIpAddressesSet;
+    }
+
+    public AssignPrivateIpAddressesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet extends TeaModel {

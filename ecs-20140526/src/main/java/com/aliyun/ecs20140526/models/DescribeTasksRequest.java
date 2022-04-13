@@ -4,14 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -19,30 +19,46 @@ public class DescribeTasksRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("TaskIds")
-    public String taskIds;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("TaskAction")
-    public String taskAction;
-
-    @NameInMap("TaskStatus")
-    public String taskStatus;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("TaskAction")
+    public String taskAction;
+
+    @NameInMap("TaskIds")
+    public String taskIds;
+
+    @NameInMap("TaskStatus")
+    public String taskStatus;
 
     public static DescribeTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTasksRequest self = new DescribeTasksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeTasksRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeTasksRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeTasksRequest setOwnerId(Long ownerId) {
@@ -51,22 +67,6 @@ public class DescribeTasksRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeTasksRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeTasksRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public DescribeTasksRequest setPageNumber(Integer pageNumber) {
@@ -85,14 +85,6 @@ public class DescribeTasksRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeTasksRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
     public DescribeTasksRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -101,28 +93,20 @@ public class DescribeTasksRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeTasksRequest setTaskIds(String taskIds) {
-        this.taskIds = taskIds;
+    public DescribeTasksRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getTaskIds() {
-        return this.taskIds;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public DescribeTasksRequest setTaskAction(String taskAction) {
-        this.taskAction = taskAction;
+    public DescribeTasksRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getTaskAction() {
-        return this.taskAction;
-    }
-
-    public DescribeTasksRequest setTaskStatus(String taskStatus) {
-        this.taskStatus = taskStatus;
-        return this;
-    }
-    public String getTaskStatus() {
-        return this.taskStatus;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeTasksRequest setStartTime(String startTime) {
@@ -133,12 +117,28 @@ public class DescribeTasksRequest extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeTasksRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeTasksRequest setTaskAction(String taskAction) {
+        this.taskAction = taskAction;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
+    public String getTaskAction() {
+        return this.taskAction;
+    }
+
+    public DescribeTasksRequest setTaskIds(String taskIds) {
+        this.taskIds = taskIds;
+        return this;
+    }
+    public String getTaskIds() {
+        return this.taskIds;
+    }
+
+    public DescribeTasksRequest setTaskStatus(String taskStatus) {
+        this.taskStatus = taskStatus;
+        return this;
+    }
+    public String getTaskStatus() {
+        return this.taskStatus;
     }
 
 }

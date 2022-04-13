@@ -4,14 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Currency")
     public String currency;
 
     @NameInMap("NextOffset")
     public Integer nextOffset;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("SpotPrices")
     public DescribeSpotPriceHistoryResponseBodySpotPrices spotPrices;
@@ -19,14 +19,6 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     public static DescribeSpotPriceHistoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSpotPriceHistoryResponseBody self = new DescribeSpotPriceHistoryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSpotPriceHistoryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeSpotPriceHistoryResponseBody setCurrency(String currency) {
@@ -45,6 +37,14 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         return this.nextOffset;
     }
 
+    public DescribeSpotPriceHistoryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeSpotPriceHistoryResponseBody setSpotPrices(DescribeSpotPriceHistoryResponseBodySpotPrices spotPrices) {
         this.spotPrices = spotPrices;
         return this;
@@ -54,11 +54,17 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType extends TeaModel {
+        @NameInMap("InstanceType")
+        public String instanceType;
+
         @NameInMap("IoOptimized")
         public String ioOptimized;
 
-        @NameInMap("ZoneId")
-        public String zoneId;
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        @NameInMap("OriginPrice")
+        public Float originPrice;
 
         @NameInMap("SpotPrice")
         public Float spotPrice;
@@ -66,18 +72,20 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         @NameInMap("Timestamp")
         public String timestamp;
 
-        @NameInMap("NetworkType")
-        public String networkType;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("OriginPrice")
-        public Float originPrice;
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType build(java.util.Map<String, ?> map) throws Exception {
             DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType self = new DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         public DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType setIoOptimized(String ioOptimized) {
@@ -88,12 +96,20 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             return this.ioOptimized;
         }
 
-        public DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType setZoneId(String zoneId) {
-            this.zoneId = zoneId;
+        public DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType setNetworkType(String networkType) {
+            this.networkType = networkType;
             return this;
         }
-        public String getZoneId() {
-            return this.zoneId;
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType setOriginPrice(Float originPrice) {
+            this.originPrice = originPrice;
+            return this;
+        }
+        public Float getOriginPrice() {
+            return this.originPrice;
         }
 
         public DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType setSpotPrice(Float spotPrice) {
@@ -112,28 +128,12 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             return this.timestamp;
         }
 
-        public DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType setNetworkType(String networkType) {
-            this.networkType = networkType;
+        public DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType setZoneId(String zoneId) {
+            this.zoneId = zoneId;
             return this;
         }
-        public String getNetworkType() {
-            return this.networkType;
-        }
-
-        public DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        public DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType setOriginPrice(Float originPrice) {
-            this.originPrice = originPrice;
-            return this;
-        }
-        public Float getOriginPrice() {
-            return this.originPrice;
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

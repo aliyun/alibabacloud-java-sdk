@@ -4,26 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyPrefixListRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AddEntry")
+    public java.util.List<ModifyPrefixListRequestAddEntry> addEntry;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("AddEntry")
-    public java.util.List<ModifyPrefixListRequestAddEntry> addEntry;
-
-    @NameInMap("RemoveEntry")
-    public java.util.List<ModifyPrefixListRequestRemoveEntry> removeEntry;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PrefixListId")
     public String prefixListId;
@@ -31,52 +22,21 @@ public class ModifyPrefixListRequest extends TeaModel {
     @NameInMap("PrefixListName")
     public String prefixListName;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("RemoveEntry")
+    public java.util.List<ModifyPrefixListRequestRemoveEntry> removeEntry;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyPrefixListRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPrefixListRequest self = new ModifyPrefixListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyPrefixListRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyPrefixListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyPrefixListRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ModifyPrefixListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyPrefixListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ModifyPrefixListRequest setAddEntry(java.util.List<ModifyPrefixListRequestAddEntry> addEntry) {
@@ -87,12 +47,28 @@ public class ModifyPrefixListRequest extends TeaModel {
         return this.addEntry;
     }
 
-    public ModifyPrefixListRequest setRemoveEntry(java.util.List<ModifyPrefixListRequestRemoveEntry> removeEntry) {
-        this.removeEntry = removeEntry;
+    public ModifyPrefixListRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public java.util.List<ModifyPrefixListRequestRemoveEntry> getRemoveEntry() {
-        return this.removeEntry;
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyPrefixListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyPrefixListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyPrefixListRequest setPrefixListId(String prefixListId) {
@@ -111,32 +87,48 @@ public class ModifyPrefixListRequest extends TeaModel {
         return this.prefixListName;
     }
 
-    public ModifyPrefixListRequest setDescription(String description) {
-        this.description = description;
+    public ModifyPrefixListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyPrefixListRequest setRemoveEntry(java.util.List<ModifyPrefixListRequestRemoveEntry> removeEntry) {
+        this.removeEntry = removeEntry;
+        return this;
+    }
+    public java.util.List<ModifyPrefixListRequestRemoveEntry> getRemoveEntry() {
+        return this.removeEntry;
+    }
+
+    public ModifyPrefixListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyPrefixListRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public static class ModifyPrefixListRequestAddEntry extends TeaModel {
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("Cidr")
         public String cidr;
+
+        @NameInMap("Description")
+        public String description;
 
         public static ModifyPrefixListRequestAddEntry build(java.util.Map<String, ?> map) throws Exception {
             ModifyPrefixListRequestAddEntry self = new ModifyPrefixListRequestAddEntry();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyPrefixListRequestAddEntry setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public ModifyPrefixListRequestAddEntry setCidr(String cidr) {
@@ -145,6 +137,14 @@ public class ModifyPrefixListRequest extends TeaModel {
         }
         public String getCidr() {
             return this.cidr;
+        }
+
+        public ModifyPrefixListRequestAddEntry setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
     }

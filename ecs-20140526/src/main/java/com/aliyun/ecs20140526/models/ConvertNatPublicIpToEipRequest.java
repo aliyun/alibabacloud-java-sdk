@@ -4,8 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ConvertNatPublicIpToEipRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,15 +19,17 @@ public class ConvertNatPublicIpToEipRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static ConvertNatPublicIpToEipRequest build(java.util.Map<String, ?> map) throws Exception {
         ConvertNatPublicIpToEipRequest self = new ConvertNatPublicIpToEipRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ConvertNatPublicIpToEipRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ConvertNatPublicIpToEipRequest setOwnerId(Long ownerId) {
@@ -30,6 +38,14 @@ public class ConvertNatPublicIpToEipRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ConvertNatPublicIpToEipRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ConvertNatPublicIpToEipRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -46,22 +62,6 @@ public class ConvertNatPublicIpToEipRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ConvertNatPublicIpToEipRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ConvertNatPublicIpToEipRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

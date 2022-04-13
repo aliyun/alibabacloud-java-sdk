@@ -4,24 +4,40 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeLaunchTemplatesResponseBody extends TeaModel {
+    @NameInMap("LaunchTemplateSets")
+    public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("LaunchTemplateSets")
-    public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets;
 
     public static DescribeLaunchTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLaunchTemplatesResponseBody self = new DescribeLaunchTemplatesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLaunchTemplatesResponseBody setLaunchTemplateSets(DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets) {
+        this.launchTemplateSets = launchTemplateSets;
+        return this;
+    }
+    public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets getLaunchTemplateSets() {
+        return this.launchTemplateSets;
+    }
+
+    public DescribeLaunchTemplatesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeLaunchTemplatesResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeLaunchTemplatesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeLaunchTemplatesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,32 +64,16 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeLaunchTemplatesResponseBody setLaunchTemplateSets(DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets) {
-        this.launchTemplateSets = launchTemplateSets;
-        return this;
-    }
-    public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets getLaunchTemplateSets() {
-        return this.launchTemplateSets;
-    }
-
     public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag self = new DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag setTagKey(String tagKey) {
@@ -90,6 +82,14 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }
@@ -114,29 +114,29 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet extends TeaModel {
-        @NameInMap("LaunchTemplateName")
-        public String launchTemplateName;
-
-        @NameInMap("DefaultVersionNumber")
-        public Long defaultVersionNumber;
-
-        @NameInMap("ModifiedTime")
-        public String modifiedTime;
-
-        @NameInMap("LaunchTemplateId")
-        public String launchTemplateId;
-
         @NameInMap("CreateTime")
         public String createTime;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
 
         @NameInMap("CreatedBy")
         public String createdBy;
 
+        @NameInMap("DefaultVersionNumber")
+        public Long defaultVersionNumber;
+
         @NameInMap("LatestVersionNumber")
         public Long latestVersionNumber;
+
+        @NameInMap("LaunchTemplateId")
+        public String launchTemplateId;
+
+        @NameInMap("LaunchTemplateName")
+        public String launchTemplateName;
+
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("Tags")
         public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags tags;
@@ -144,38 +144,6 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         public static DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet self = new DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setLaunchTemplateName(String launchTemplateName) {
-            this.launchTemplateName = launchTemplateName;
-            return this;
-        }
-        public String getLaunchTemplateName() {
-            return this.launchTemplateName;
-        }
-
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setDefaultVersionNumber(Long defaultVersionNumber) {
-            this.defaultVersionNumber = defaultVersionNumber;
-            return this;
-        }
-        public Long getDefaultVersionNumber() {
-            return this.defaultVersionNumber;
-        }
-
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setModifiedTime(String modifiedTime) {
-            this.modifiedTime = modifiedTime;
-            return this;
-        }
-        public String getModifiedTime() {
-            return this.modifiedTime;
-        }
-
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setLaunchTemplateId(String launchTemplateId) {
-            this.launchTemplateId = launchTemplateId;
-            return this;
-        }
-        public String getLaunchTemplateId() {
-            return this.launchTemplateId;
         }
 
         public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setCreateTime(String createTime) {
@@ -186,14 +154,6 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
         public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setCreatedBy(String createdBy) {
             this.createdBy = createdBy;
             return this;
@@ -202,12 +162,52 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             return this.createdBy;
         }
 
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setDefaultVersionNumber(Long defaultVersionNumber) {
+            this.defaultVersionNumber = defaultVersionNumber;
+            return this;
+        }
+        public Long getDefaultVersionNumber() {
+            return this.defaultVersionNumber;
+        }
+
         public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setLatestVersionNumber(Long latestVersionNumber) {
             this.latestVersionNumber = latestVersionNumber;
             return this;
         }
         public Long getLatestVersionNumber() {
             return this.latestVersionNumber;
+        }
+
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setLaunchTemplateId(String launchTemplateId) {
+            this.launchTemplateId = launchTemplateId;
+            return this;
+        }
+        public String getLaunchTemplateId() {
+            return this.launchTemplateId;
+        }
+
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setLaunchTemplateName(String launchTemplateName) {
+            this.launchTemplateName = launchTemplateName;
+            return this;
+        }
+        public String getLaunchTemplateName() {
+            return this.launchTemplateName;
+        }
+
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
+        }
+
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setTags(DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags tags) {

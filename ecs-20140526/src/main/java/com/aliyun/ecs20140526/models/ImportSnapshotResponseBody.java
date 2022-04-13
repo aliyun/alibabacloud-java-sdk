@@ -7,11 +7,11 @@ public class ImportSnapshotResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TaskId")
-    public String taskId;
-
     @NameInMap("SnapshotId")
     public String snapshotId;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     public static ImportSnapshotResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ImportSnapshotResponseBody self = new ImportSnapshotResponseBody();
@@ -26,20 +26,20 @@ public class ImportSnapshotResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ImportSnapshotResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
     public ImportSnapshotResponseBody setSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     public String getSnapshotId() {
         return this.snapshotId;
+    }
+
+    public ImportSnapshotResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

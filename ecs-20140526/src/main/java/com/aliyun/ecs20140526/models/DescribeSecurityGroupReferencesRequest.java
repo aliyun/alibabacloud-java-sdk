@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupReferencesRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -13,18 +19,28 @@ public class DescribeSecurityGroupReferencesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
 
     public static DescribeSecurityGroupReferencesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityGroupReferencesRequest self = new DescribeSecurityGroupReferencesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSecurityGroupReferencesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeSecurityGroupReferencesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeSecurityGroupReferencesRequest setRegionId(String regionId) {
@@ -49,22 +65,6 @@ public class DescribeSecurityGroupReferencesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeSecurityGroupReferencesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeSecurityGroupReferencesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeSecurityGroupReferencesRequest setSecurityGroupId(java.util.List<String> securityGroupId) {

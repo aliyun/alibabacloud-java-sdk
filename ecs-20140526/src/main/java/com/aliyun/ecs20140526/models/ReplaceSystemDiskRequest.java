@@ -7,29 +7,29 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     @NameInMap("SystemDisk")
     public ReplaceSystemDiskRequestSystemDisk systemDisk;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("ImageId")
-    public String imageId;
+    @NameInMap("Architecture")
+    public String architecture;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DiskId")
+    public String diskId;
+
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("KeyPairName")
+    public String keyPairName;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("UseAdditionalService")
-    public Boolean useAdditionalService;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Password")
     public String password;
@@ -37,20 +37,20 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     @NameInMap("PasswordInherit")
     public Boolean passwordInherit;
 
-    @NameInMap("KeyPairName")
-    public String keyPairName;
-
-    @NameInMap("DiskId")
-    public String diskId;
-
     @NameInMap("Platform")
     public String platform;
 
-    @NameInMap("Architecture")
-    public String architecture;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("SecurityEnhancementStrategy")
     public String securityEnhancementStrategy;
+
+    @NameInMap("UseAdditionalService")
+    public Boolean useAdditionalService;
 
     public static ReplaceSystemDiskRequest build(java.util.Map<String, ?> map) throws Exception {
         ReplaceSystemDiskRequest self = new ReplaceSystemDiskRequest();
@@ -65,44 +65,12 @@ public class ReplaceSystemDiskRequest extends TeaModel {
         return this.systemDisk;
     }
 
-    public ReplaceSystemDiskRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ReplaceSystemDiskRequest setArchitecture(String architecture) {
+        this.architecture = architecture;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ReplaceSystemDiskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ReplaceSystemDiskRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ReplaceSystemDiskRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ReplaceSystemDiskRequest setImageId(String imageId) {
-        this.imageId = imageId;
-        return this;
-    }
-    public String getImageId() {
-        return this.imageId;
+    public String getArchitecture() {
+        return this.architecture;
     }
 
     public ReplaceSystemDiskRequest setClientToken(String clientToken) {
@@ -113,6 +81,38 @@ public class ReplaceSystemDiskRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public ReplaceSystemDiskRequest setDiskId(String diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public String getDiskId() {
+        return this.diskId;
+    }
+
+    public ReplaceSystemDiskRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public ReplaceSystemDiskRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ReplaceSystemDiskRequest setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
+        return this;
+    }
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
     public ReplaceSystemDiskRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -121,12 +121,12 @@ public class ReplaceSystemDiskRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public ReplaceSystemDiskRequest setUseAdditionalService(Boolean useAdditionalService) {
-        this.useAdditionalService = useAdditionalService;
+    public ReplaceSystemDiskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public Boolean getUseAdditionalService() {
-        return this.useAdditionalService;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ReplaceSystemDiskRequest setPassword(String password) {
@@ -145,22 +145,6 @@ public class ReplaceSystemDiskRequest extends TeaModel {
         return this.passwordInherit;
     }
 
-    public ReplaceSystemDiskRequest setKeyPairName(String keyPairName) {
-        this.keyPairName = keyPairName;
-        return this;
-    }
-    public String getKeyPairName() {
-        return this.keyPairName;
-    }
-
-    public ReplaceSystemDiskRequest setDiskId(String diskId) {
-        this.diskId = diskId;
-        return this;
-    }
-    public String getDiskId() {
-        return this.diskId;
-    }
-
     public ReplaceSystemDiskRequest setPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -169,12 +153,20 @@ public class ReplaceSystemDiskRequest extends TeaModel {
         return this.platform;
     }
 
-    public ReplaceSystemDiskRequest setArchitecture(String architecture) {
-        this.architecture = architecture;
+    public ReplaceSystemDiskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getArchitecture() {
-        return this.architecture;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ReplaceSystemDiskRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public ReplaceSystemDiskRequest setSecurityEnhancementStrategy(String securityEnhancementStrategy) {
@@ -183,6 +175,14 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     }
     public String getSecurityEnhancementStrategy() {
         return this.securityEnhancementStrategy;
+    }
+
+    public ReplaceSystemDiskRequest setUseAdditionalService(Boolean useAdditionalService) {
+        this.useAdditionalService = useAdditionalService;
+        return this;
+    }
+    public Boolean getUseAdditionalService() {
+        return this.useAdditionalService;
     }
 
     public static class ReplaceSystemDiskRequestSystemDisk extends TeaModel {

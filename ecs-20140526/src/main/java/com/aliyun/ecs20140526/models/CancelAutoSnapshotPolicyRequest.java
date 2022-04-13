@@ -13,11 +13,11 @@ public class CancelAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("regionId")
-    public String regionId;
-
     @NameInMap("diskIds")
     public String diskIds;
+
+    @NameInMap("regionId")
+    public String regionId;
 
     public static CancelAutoSnapshotPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelAutoSnapshotPolicyRequest self = new CancelAutoSnapshotPolicyRequest();
@@ -48,20 +48,20 @@ public class CancelAutoSnapshotPolicyRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CancelAutoSnapshotPolicyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public CancelAutoSnapshotPolicyRequest setDiskIds(String diskIds) {
         this.diskIds = diskIds;
         return this;
     }
     public String getDiskIds() {
         return this.diskIds;
+    }
+
+    public CancelAutoSnapshotPolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

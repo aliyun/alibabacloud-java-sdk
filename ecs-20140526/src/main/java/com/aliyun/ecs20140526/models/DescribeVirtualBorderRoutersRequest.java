@@ -4,17 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeVirtualBorderRoutersRequest extends TeaModel {
+    @NameInMap("Filter")
+    public java.util.List<DescribeVirtualBorderRoutersRequestFilter> filter;
+
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -22,12 +16,26 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Filter")
-    public java.util.List<DescribeVirtualBorderRoutersRequestFilter> filter;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeVirtualBorderRoutersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVirtualBorderRoutersRequest self = new DescribeVirtualBorderRoutersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVirtualBorderRoutersRequest setFilter(java.util.List<DescribeVirtualBorderRoutersRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribeVirtualBorderRoutersRequestFilter> getFilter() {
+        return this.filter;
     }
 
     public DescribeVirtualBorderRoutersRequest setOwnerId(Long ownerId) {
@@ -36,30 +44,6 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeVirtualBorderRoutersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeVirtualBorderRoutersRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeVirtualBorderRoutersRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeVirtualBorderRoutersRequest setPageNumber(Integer pageNumber) {
@@ -78,12 +62,28 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeVirtualBorderRoutersRequest setFilter(java.util.List<DescribeVirtualBorderRoutersRequestFilter> filter) {
-        this.filter = filter;
+    public DescribeVirtualBorderRoutersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.List<DescribeVirtualBorderRoutersRequestFilter> getFilter() {
-        return this.filter;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeVirtualBorderRoutersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeVirtualBorderRoutersRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public static class DescribeVirtualBorderRoutersRequestFilter extends TeaModel {

@@ -4,23 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("DefaultVersion")
+    public Boolean defaultVersion;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("LaunchTemplateVersion")
-    public java.util.List<Integer> launchTemplateVersion;
+    @NameInMap("DetailFlag")
+    public Boolean detailFlag;
 
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
@@ -28,17 +16,20 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     @NameInMap("LaunchTemplateName")
     public String launchTemplateName;
 
-    @NameInMap("MinVersion")
-    public Long minVersion;
+    @NameInMap("LaunchTemplateVersion")
+    public java.util.List<Long> launchTemplateVersion;
 
     @NameInMap("MaxVersion")
     public Long maxVersion;
 
-    @NameInMap("DefaultVersion")
-    public Boolean defaultVersion;
+    @NameInMap("MinVersion")
+    public Long minVersion;
 
-    @NameInMap("DetailFlag")
-    public Boolean detailFlag;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -46,89 +37,18 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static DescribeLaunchTemplateVersionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLaunchTemplateVersionsRequest self = new DescribeLaunchTemplateVersionsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLaunchTemplateVersionsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeLaunchTemplateVersionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeLaunchTemplateVersionsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeLaunchTemplateVersionsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeLaunchTemplateVersionsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeLaunchTemplateVersionsRequest setLaunchTemplateVersion(java.util.List<Integer> launchTemplateVersion) {
-        this.launchTemplateVersion = launchTemplateVersion;
-        return this;
-    }
-    public java.util.List<Integer> getLaunchTemplateVersion() {
-        return this.launchTemplateVersion;
-    }
-
-    public DescribeLaunchTemplateVersionsRequest setLaunchTemplateId(String launchTemplateId) {
-        this.launchTemplateId = launchTemplateId;
-        return this;
-    }
-    public String getLaunchTemplateId() {
-        return this.launchTemplateId;
-    }
-
-    public DescribeLaunchTemplateVersionsRequest setLaunchTemplateName(String launchTemplateName) {
-        this.launchTemplateName = launchTemplateName;
-        return this;
-    }
-    public String getLaunchTemplateName() {
-        return this.launchTemplateName;
-    }
-
-    public DescribeLaunchTemplateVersionsRequest setMinVersion(Long minVersion) {
-        this.minVersion = minVersion;
-        return this;
-    }
-    public Long getMinVersion() {
-        return this.minVersion;
-    }
-
-    public DescribeLaunchTemplateVersionsRequest setMaxVersion(Long maxVersion) {
-        this.maxVersion = maxVersion;
-        return this;
-    }
-    public Long getMaxVersion() {
-        return this.maxVersion;
     }
 
     public DescribeLaunchTemplateVersionsRequest setDefaultVersion(Boolean defaultVersion) {
@@ -147,6 +67,62 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
         return this.detailFlag;
     }
 
+    public DescribeLaunchTemplateVersionsRequest setLaunchTemplateId(String launchTemplateId) {
+        this.launchTemplateId = launchTemplateId;
+        return this;
+    }
+    public String getLaunchTemplateId() {
+        return this.launchTemplateId;
+    }
+
+    public DescribeLaunchTemplateVersionsRequest setLaunchTemplateName(String launchTemplateName) {
+        this.launchTemplateName = launchTemplateName;
+        return this;
+    }
+    public String getLaunchTemplateName() {
+        return this.launchTemplateName;
+    }
+
+    public DescribeLaunchTemplateVersionsRequest setLaunchTemplateVersion(java.util.List<Long> launchTemplateVersion) {
+        this.launchTemplateVersion = launchTemplateVersion;
+        return this;
+    }
+    public java.util.List<Long> getLaunchTemplateVersion() {
+        return this.launchTemplateVersion;
+    }
+
+    public DescribeLaunchTemplateVersionsRequest setMaxVersion(Long maxVersion) {
+        this.maxVersion = maxVersion;
+        return this;
+    }
+    public Long getMaxVersion() {
+        return this.maxVersion;
+    }
+
+    public DescribeLaunchTemplateVersionsRequest setMinVersion(Long minVersion) {
+        this.minVersion = minVersion;
+        return this;
+    }
+    public Long getMinVersion() {
+        return this.minVersion;
+    }
+
+    public DescribeLaunchTemplateVersionsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeLaunchTemplateVersionsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public DescribeLaunchTemplateVersionsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -161,6 +137,30 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeLaunchTemplateVersionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeLaunchTemplateVersionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeLaunchTemplateVersionsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

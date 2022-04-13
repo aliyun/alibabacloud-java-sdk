@@ -4,24 +4,32 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotLinksResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("SnapshotLinks")
+    public DescribeSnapshotLinksResponseBodySnapshotLinks snapshotLinks;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("SnapshotLinks")
-    public DescribeSnapshotLinksResponseBodySnapshotLinks snapshotLinks;
-
     public static DescribeSnapshotLinksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotLinksResponseBody self = new DescribeSnapshotLinksResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSnapshotLinksResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeSnapshotLinksResponseBody setPageSize(Integer pageSize) {
@@ -40,12 +48,12 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSnapshotLinksResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeSnapshotLinksResponseBody setSnapshotLinks(DescribeSnapshotLinksResponseBodySnapshotLinks snapshotLinks) {
+        this.snapshotLinks = snapshotLinks;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public DescribeSnapshotLinksResponseBodySnapshotLinks getSnapshotLinks() {
+        return this.snapshotLinks;
     }
 
     public DescribeSnapshotLinksResponseBody setTotalCount(Integer totalCount) {
@@ -56,20 +64,27 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeSnapshotLinksResponseBody setSnapshotLinks(DescribeSnapshotLinksResponseBodySnapshotLinks snapshotLinks) {
-        this.snapshotLinks = snapshotLinks;
-        return this;
-    }
-    public DescribeSnapshotLinksResponseBodySnapshotLinks getSnapshotLinks() {
-        return this.snapshotLinks;
-    }
-
     public static class DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
-        @NameInMap("TotalSize")
-        public Long totalSize;
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("SnapshotLinkId")
+        public String snapshotLinkId;
+
+        @NameInMap("SourceDiskId")
+        public String sourceDiskId;
 
         @NameInMap("SourceDiskName")
         public String sourceDiskName;
@@ -80,30 +95,39 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("SnapshotLinkId")
-        public String snapshotLinkId;
-
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("SourceDiskId")
-        public String sourceDiskId;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        @NameInMap("Category")
-        public String category;
+        @NameInMap("TotalSize")
+        public Long totalSize;
 
         public static DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink self = new DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setInstantAccess(Boolean instantAccess) {
@@ -114,12 +138,28 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             return this.instantAccess;
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setTotalSize(Long totalSize) {
-            this.totalSize = totalSize;
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setRegionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
-        public Long getTotalSize() {
-            return this.totalSize;
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setSnapshotLinkId(String snapshotLinkId) {
+            this.snapshotLinkId = snapshotLinkId;
+            return this;
+        }
+        public String getSnapshotLinkId() {
+            return this.snapshotLinkId;
+        }
+
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setSourceDiskId(String sourceDiskId) {
+            this.sourceDiskId = sourceDiskId;
+            return this;
+        }
+        public String getSourceDiskId() {
+            return this.sourceDiskId;
         }
 
         public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setSourceDiskName(String sourceDiskName) {
@@ -146,22 +186,6 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             return this.sourceDiskType;
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setSnapshotLinkId(String snapshotLinkId) {
-            this.snapshotLinkId = snapshotLinkId;
-            return this;
-        }
-        public String getSnapshotLinkId() {
-            return this.snapshotLinkId;
-        }
-
         public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setTotalCount(Integer totalCount) {
             this.totalCount = totalCount;
             return this;
@@ -170,36 +194,12 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             return this.totalCount;
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setTotalSize(Long totalSize) {
+            this.totalSize = totalSize;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setSourceDiskId(String sourceDiskId) {
-            this.sourceDiskId = sourceDiskId;
-            return this;
-        }
-        public String getSourceDiskId() {
-            return this.sourceDiskId;
-        }
-
-        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
-        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
+        public Long getTotalSize() {
+            return this.totalSize;
         }
 
     }

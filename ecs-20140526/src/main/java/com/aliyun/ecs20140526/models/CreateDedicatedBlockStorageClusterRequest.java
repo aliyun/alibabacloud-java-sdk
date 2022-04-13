@@ -4,38 +4,29 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDedicatedBlockStorageClusterRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
-
-    @NameInMap("DedicatedBlockStorageClusterName")
-    public String dedicatedBlockStorageClusterName;
+    @NameInMap("Capacity")
+    public Integer capacity;
 
     @NameInMap("Category")
     public String category;
 
-    @NameInMap("Capacity")
-    public Integer capacity;
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("DedicatedBlockStorageClusterName")
+    public String dedicatedBlockStorageClusterName;
 
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("PerformanceLevel")
-    public String performanceLevel;
+    @NameInMap("FromApp")
+    public String fromApp;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Period")
     public Integer period;
@@ -43,79 +34,24 @@ public class CreateDedicatedBlockStorageClusterRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    @NameInMap("FromApp")
-    public String fromApp;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("Type")
+    public String type;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static CreateDedicatedBlockStorageClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDedicatedBlockStorageClusterRequest self = new CreateDedicatedBlockStorageClusterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDedicatedBlockStorageClusterRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateDedicatedBlockStorageClusterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateDedicatedBlockStorageClusterRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateDedicatedBlockStorageClusterRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateDedicatedBlockStorageClusterRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateDedicatedBlockStorageClusterRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public CreateDedicatedBlockStorageClusterRequest setDedicatedBlockStorageClusterName(String dedicatedBlockStorageClusterName) {
-        this.dedicatedBlockStorageClusterName = dedicatedBlockStorageClusterName;
-        return this;
-    }
-    public String getDedicatedBlockStorageClusterName() {
-        return this.dedicatedBlockStorageClusterName;
-    }
-
-    public CreateDedicatedBlockStorageClusterRequest setCategory(String category) {
-        this.category = category;
-        return this;
-    }
-    public String getCategory() {
-        return this.category;
     }
 
     public CreateDedicatedBlockStorageClusterRequest setCapacity(Integer capacity) {
@@ -126,6 +62,30 @@ public class CreateDedicatedBlockStorageClusterRequest extends TeaModel {
         return this.capacity;
     }
 
+    public CreateDedicatedBlockStorageClusterRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
+    }
+
+    public CreateDedicatedBlockStorageClusterRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateDedicatedBlockStorageClusterRequest setDedicatedBlockStorageClusterName(String dedicatedBlockStorageClusterName) {
+        this.dedicatedBlockStorageClusterName = dedicatedBlockStorageClusterName;
+        return this;
+    }
+    public String getDedicatedBlockStorageClusterName() {
+        return this.dedicatedBlockStorageClusterName;
+    }
+
     public CreateDedicatedBlockStorageClusterRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -134,12 +94,28 @@ public class CreateDedicatedBlockStorageClusterRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateDedicatedBlockStorageClusterRequest setPerformanceLevel(String performanceLevel) {
-        this.performanceLevel = performanceLevel;
+    public CreateDedicatedBlockStorageClusterRequest setFromApp(String fromApp) {
+        this.fromApp = fromApp;
         return this;
     }
-    public String getPerformanceLevel() {
-        return this.performanceLevel;
+    public String getFromApp() {
+        return this.fromApp;
+    }
+
+    public CreateDedicatedBlockStorageClusterRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreateDedicatedBlockStorageClusterRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CreateDedicatedBlockStorageClusterRequest setPeriod(Integer period) {
@@ -158,20 +134,44 @@ public class CreateDedicatedBlockStorageClusterRequest extends TeaModel {
         return this.periodUnit;
     }
 
-    public CreateDedicatedBlockStorageClusterRequest setFromApp(String fromApp) {
-        this.fromApp = fromApp;
+    public CreateDedicatedBlockStorageClusterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getFromApp() {
-        return this.fromApp;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public CreateDedicatedBlockStorageClusterRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateDedicatedBlockStorageClusterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateDedicatedBlockStorageClusterRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateDedicatedBlockStorageClusterRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
+    public CreateDedicatedBlockStorageClusterRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

@@ -4,8 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartInstanceRequest extends TeaModel {
-    @NameInMap("SourceRegionId")
-    public String sourceRegionId;
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    @NameInMap("InitLocalDisk")
+    public Boolean initLocalDisk;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,29 +25,44 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("InitLocalDisk")
-    public Boolean initLocalDisk;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DryRun")
-    public Boolean dryRun;
+    @NameInMap("SourceRegionId")
+    public String sourceRegionId;
 
     public static StartInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StartInstanceRequest self = new StartInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public StartInstanceRequest setSourceRegionId(String sourceRegionId) {
-        this.sourceRegionId = sourceRegionId;
+    public StartInstanceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
         return this;
     }
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public StartInstanceRequest setInitLocalDisk(Boolean initLocalDisk) {
+        this.initLocalDisk = initLocalDisk;
+        return this;
+    }
+    public Boolean getInitLocalDisk() {
+        return this.initLocalDisk;
+    }
+
+    public StartInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public StartInstanceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public StartInstanceRequest setOwnerId(Long ownerId) {
@@ -65,36 +89,12 @@ public class StartInstanceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public StartInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public StartInstanceRequest setSourceRegionId(String sourceRegionId) {
+        this.sourceRegionId = sourceRegionId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public StartInstanceRequest setInitLocalDisk(Boolean initLocalDisk) {
-        this.initLocalDisk = initLocalDisk;
-        return this;
-    }
-    public Boolean getInitLocalDisk() {
-        return this.initLocalDisk;
-    }
-
-    public StartInstanceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public StartInstanceRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
-        return this;
-    }
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
 }
