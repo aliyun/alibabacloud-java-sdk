@@ -4,14 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -22,6 +22,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public static DescribeVSwitchesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVSwitchesResponseBody self = new DescribeVSwitchesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVSwitchesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeVSwitchesResponseBody setPageSize(Integer pageSize) {
@@ -38,14 +46,6 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeVSwitchesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public DescribeVSwitchesResponseBody setTotalCount(Integer totalCount) {
@@ -65,98 +65,42 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     }
 
     public static class DescribeVSwitchesResponseBodyVSwitchesVSwitch extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("IsDefault")
-        public Boolean isDefault;
-
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
+        @NameInMap("AvailableIpAddressCount")
+        public Long availableIpAddressCount;
 
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        @NameInMap("CreationTime")
+        public String creationTime;
+
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("AvailableIpAddressCount")
-        public Long availableIpAddressCount;
+        @NameInMap("IsDefault")
+        public Boolean isDefault;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        @NameInMap("ZoneId")
-        public String zoneId;
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
 
         @NameInMap("VSwitchName")
         public String vSwitchName;
 
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static DescribeVSwitchesResponseBodyVSwitchesVSwitch build(java.util.Map<String, ?> map) throws Exception {
             DescribeVSwitchesResponseBodyVSwitchesVSwitch self = new DescribeVSwitchesResponseBodyVSwitchesVSwitch();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setIsDefault(Boolean isDefault) {
-            this.isDefault = isDefault;
-            return this;
-        }
-        public Boolean getIsDefault() {
-            return this.isDefault;
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setCidrBlock(String cidrBlock) {
-            this.cidrBlock = cidrBlock;
-            return this;
-        }
-        public String getCidrBlock() {
-            return this.cidrBlock;
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public DescribeVSwitchesResponseBodyVSwitchesVSwitch setAvailableIpAddressCount(Long availableIpAddressCount) {
@@ -167,6 +111,38 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.availableIpAddressCount;
         }
 
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setCidrBlock(String cidrBlock) {
+            this.cidrBlock = cidrBlock;
+            return this;
+        }
+        public String getCidrBlock() {
+            return this.cidrBlock;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setIsDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+        public Boolean getIsDefault() {
+            return this.isDefault;
+        }
+
         public DescribeVSwitchesResponseBodyVSwitchesVSwitch setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
@@ -175,12 +151,20 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setZoneId(String zoneId) {
-            this.zoneId = zoneId;
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getZoneId() {
-            return this.zoneId;
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
         public DescribeVSwitchesResponseBodyVSwitchesVSwitch setVSwitchName(String vSwitchName) {
@@ -189,6 +173,22 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
         public String getVSwitchName() {
             return this.vSwitchName;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

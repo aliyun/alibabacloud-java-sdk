@@ -4,24 +4,40 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
+    @NameInMap("NetworkInterfacePermissions")
+    public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissions networkInterfacePermissions;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("NetworkInterfacePermissions")
-    public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissions networkInterfacePermissions;
 
     public static DescribeNetworkInterfacePermissionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkInterfacePermissionsResponseBody self = new DescribeNetworkInterfacePermissionsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeNetworkInterfacePermissionsResponseBody setNetworkInterfacePermissions(DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissions networkInterfacePermissions) {
+        this.networkInterfacePermissions = networkInterfacePermissions;
+        return this;
+    }
+    public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissions getNetworkInterfacePermissions() {
+        return this.networkInterfacePermissions;
+    }
+
+    public DescribeNetworkInterfacePermissionsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeNetworkInterfacePermissionsResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeNetworkInterfacePermissionsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeNetworkInterfacePermissionsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,52 +64,28 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeNetworkInterfacePermissionsResponseBody setNetworkInterfacePermissions(DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissions networkInterfacePermissions) {
-        this.networkInterfacePermissions = networkInterfacePermissions;
-        return this;
-    }
-    public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissions getNetworkInterfacePermissions() {
-        return this.networkInterfacePermissions;
-    }
-
     public static class DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission extends TeaModel {
-        @NameInMap("Permission")
-        public String permission;
+        @NameInMap("AccountId")
+        public Long accountId;
 
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
-        @NameInMap("AccountId")
-        public Long accountId;
-
         @NameInMap("NetworkInterfacePermissionId")
         public String networkInterfacePermissionId;
 
-        @NameInMap("ServiceName")
-        public String serviceName;
+        @NameInMap("Permission")
+        public String permission;
 
         @NameInMap("PermissionState")
         public String permissionState;
 
+        @NameInMap("ServiceName")
+        public String serviceName;
+
         public static DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission self = new DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission setPermission(String permission) {
-            this.permission = permission;
-            return this;
-        }
-        public String getPermission() {
-            return this.permission;
-        }
-
-        public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission setNetworkInterfaceId(String networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
-            return this;
-        }
-        public String getNetworkInterfaceId() {
-            return this.networkInterfaceId;
         }
 
         public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission setAccountId(Long accountId) {
@@ -112,6 +96,14 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             return this.accountId;
         }
 
+        public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission setNetworkInterfaceId(String networkInterfaceId) {
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+        public String getNetworkInterfaceId() {
+            return this.networkInterfaceId;
+        }
+
         public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission setNetworkInterfacePermissionId(String networkInterfacePermissionId) {
             this.networkInterfacePermissionId = networkInterfacePermissionId;
             return this;
@@ -120,12 +112,12 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
             return this.networkInterfacePermissionId;
         }
 
-        public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission setServiceName(String serviceName) {
-            this.serviceName = serviceName;
+        public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission setPermission(String permission) {
+            this.permission = permission;
             return this;
         }
-        public String getServiceName() {
-            return this.serviceName;
+        public String getPermission() {
+            return this.permission;
         }
 
         public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission setPermissionState(String permissionState) {
@@ -134,6 +126,14 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         }
         public String getPermissionState() {
             return this.permissionState;
+        }
+
+        public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
         }
 
     }

@@ -4,14 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRamRoleRequest extends TeaModel {
+    @NameInMap("InstanceIds")
+    public String instanceIds;
+
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -19,18 +16,29 @@ public class DescribeInstanceRamRoleRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RamRoleName")
+    public String ramRoleName;
+
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("InstanceIds")
-    public String instanceIds;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("RamRoleName")
-    public String ramRoleName;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeInstanceRamRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceRamRoleRequest self = new DescribeInstanceRamRoleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceRamRoleRequest setInstanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public String getInstanceIds() {
+        return this.instanceIds;
     }
 
     public DescribeInstanceRamRoleRequest setOwnerId(Long ownerId) {
@@ -39,22 +47,6 @@ public class DescribeInstanceRamRoleRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeInstanceRamRoleRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeInstanceRamRoleRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public DescribeInstanceRamRoleRequest setPageNumber(Integer pageNumber) {
@@ -73,6 +65,14 @@ public class DescribeInstanceRamRoleRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeInstanceRamRoleRequest setRamRoleName(String ramRoleName) {
+        this.ramRoleName = ramRoleName;
+        return this;
+    }
+    public String getRamRoleName() {
+        return this.ramRoleName;
+    }
+
     public DescribeInstanceRamRoleRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -81,20 +81,20 @@ public class DescribeInstanceRamRoleRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeInstanceRamRoleRequest setInstanceIds(String instanceIds) {
-        this.instanceIds = instanceIds;
+    public DescribeInstanceRamRoleRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getInstanceIds() {
-        return this.instanceIds;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public DescribeInstanceRamRoleRequest setRamRoleName(String ramRoleName) {
-        this.ramRoleName = ramRoleName;
+    public DescribeInstanceRamRoleRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getRamRoleName() {
-        return this.ramRoleName;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

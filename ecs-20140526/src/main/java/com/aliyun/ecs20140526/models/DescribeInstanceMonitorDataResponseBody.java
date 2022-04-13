@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("MonitorData")
     public DescribeInstanceMonitorDataResponseBodyMonitorData monitorData;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeInstanceMonitorDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceMonitorDataResponseBody self = new DescribeInstanceMonitorDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceMonitorDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeInstanceMonitorDataResponseBody setMonitorData(DescribeInstanceMonitorDataResponseBodyMonitorData monitorData) {
@@ -31,42 +23,44 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         return this.monitorData;
     }
 
-    public static class DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData extends TeaModel {
-        @NameInMap("CPUCreditBalance")
-        public Float CPUCreditBalance;
+    public DescribeInstanceMonitorDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData extends TeaModel {
         @NameInMap("BPSRead")
         public Integer BPSRead;
-
-        @NameInMap("InternetTX")
-        public Integer internetTX;
-
-        @NameInMap("CPU")
-        public Integer CPU;
-
-        @NameInMap("CPUCreditUsage")
-        public Float CPUCreditUsage;
-
-        @NameInMap("IOPSWrite")
-        public Integer IOPSWrite;
-
-        @NameInMap("IntranetTX")
-        public Integer intranetTX;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
 
         @NameInMap("BPSWrite")
         public Integer BPSWrite;
 
-        @NameInMap("CPUNotpaidSurplusCreditUsage")
-        public Float CPUNotpaidSurplusCreditUsage;
+        @NameInMap("CPU")
+        public Integer CPU;
 
         @NameInMap("CPUAdvanceCreditBalance")
         public Float CPUAdvanceCreditBalance;
 
+        @NameInMap("CPUCreditBalance")
+        public Float CPUCreditBalance;
+
+        @NameInMap("CPUCreditUsage")
+        public Float CPUCreditUsage;
+
+        @NameInMap("CPUNotpaidSurplusCreditUsage")
+        public Float CPUNotpaidSurplusCreditUsage;
+
         @NameInMap("IOPSRead")
         public Integer IOPSRead;
+
+        @NameInMap("IOPSWrite")
+        public Integer IOPSWrite;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("InternetBandwidth")
         public Integer internetBandwidth;
@@ -74,26 +68,24 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         @NameInMap("InternetRX")
         public Integer internetRX;
 
-        @NameInMap("TimeStamp")
-        public String timeStamp;
-
-        @NameInMap("IntranetRX")
-        public Integer intranetRX;
+        @NameInMap("InternetTX")
+        public Integer internetTX;
 
         @NameInMap("IntranetBandwidth")
         public Integer intranetBandwidth;
 
+        @NameInMap("IntranetRX")
+        public Integer intranetRX;
+
+        @NameInMap("IntranetTX")
+        public Integer intranetTX;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
+
         public static DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData self = new DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setCPUCreditBalance(Float CPUCreditBalance) {
-            this.CPUCreditBalance = CPUCreditBalance;
-            return this;
-        }
-        public Float getCPUCreditBalance() {
-            return this.CPUCreditBalance;
         }
 
         public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setBPSRead(Integer BPSRead) {
@@ -104,12 +96,12 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.BPSRead;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setInternetTX(Integer internetTX) {
-            this.internetTX = internetTX;
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setBPSWrite(Integer BPSWrite) {
+            this.BPSWrite = BPSWrite;
             return this;
         }
-        public Integer getInternetTX() {
-            return this.internetTX;
+        public Integer getBPSWrite() {
+            return this.BPSWrite;
         }
 
         public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setCPU(Integer CPU) {
@@ -120,44 +112,28 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.CPU;
         }
 
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setCPUAdvanceCreditBalance(Float CPUAdvanceCreditBalance) {
+            this.CPUAdvanceCreditBalance = CPUAdvanceCreditBalance;
+            return this;
+        }
+        public Float getCPUAdvanceCreditBalance() {
+            return this.CPUAdvanceCreditBalance;
+        }
+
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setCPUCreditBalance(Float CPUCreditBalance) {
+            this.CPUCreditBalance = CPUCreditBalance;
+            return this;
+        }
+        public Float getCPUCreditBalance() {
+            return this.CPUCreditBalance;
+        }
+
         public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setCPUCreditUsage(Float CPUCreditUsage) {
             this.CPUCreditUsage = CPUCreditUsage;
             return this;
         }
         public Float getCPUCreditUsage() {
             return this.CPUCreditUsage;
-        }
-
-        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIOPSWrite(Integer IOPSWrite) {
-            this.IOPSWrite = IOPSWrite;
-            return this;
-        }
-        public Integer getIOPSWrite() {
-            return this.IOPSWrite;
-        }
-
-        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIntranetTX(Integer intranetTX) {
-            this.intranetTX = intranetTX;
-            return this;
-        }
-        public Integer getIntranetTX() {
-            return this.intranetTX;
-        }
-
-        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setBPSWrite(Integer BPSWrite) {
-            this.BPSWrite = BPSWrite;
-            return this;
-        }
-        public Integer getBPSWrite() {
-            return this.BPSWrite;
         }
 
         public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setCPUNotpaidSurplusCreditUsage(Float CPUNotpaidSurplusCreditUsage) {
@@ -168,20 +144,28 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.CPUNotpaidSurplusCreditUsage;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setCPUAdvanceCreditBalance(Float CPUAdvanceCreditBalance) {
-            this.CPUAdvanceCreditBalance = CPUAdvanceCreditBalance;
-            return this;
-        }
-        public Float getCPUAdvanceCreditBalance() {
-            return this.CPUAdvanceCreditBalance;
-        }
-
         public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIOPSRead(Integer IOPSRead) {
             this.IOPSRead = IOPSRead;
             return this;
         }
         public Integer getIOPSRead() {
             return this.IOPSRead;
+        }
+
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIOPSWrite(Integer IOPSWrite) {
+            this.IOPSWrite = IOPSWrite;
+            return this;
+        }
+        public Integer getIOPSWrite() {
+            return this.IOPSWrite;
+        }
+
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setInternetBandwidth(Integer internetBandwidth) {
@@ -200,12 +184,20 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.internetRX;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setInternetTX(Integer internetTX) {
+            this.internetTX = internetTX;
             return this;
         }
-        public String getTimeStamp() {
-            return this.timeStamp;
+        public Integer getInternetTX() {
+            return this.internetTX;
+        }
+
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIntranetBandwidth(Integer intranetBandwidth) {
+            this.intranetBandwidth = intranetBandwidth;
+            return this;
+        }
+        public Integer getIntranetBandwidth() {
+            return this.intranetBandwidth;
         }
 
         public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIntranetRX(Integer intranetRX) {
@@ -216,12 +208,20 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.intranetRX;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIntranetBandwidth(Integer intranetBandwidth) {
-            this.intranetBandwidth = intranetBandwidth;
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIntranetTX(Integer intranetTX) {
+            this.intranetTX = intranetTX;
             return this;
         }
-        public Integer getIntranetBandwidth() {
-            return this.intranetBandwidth;
+        public Integer getIntranetTX() {
+            return this.intranetTX;
+        }
+
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

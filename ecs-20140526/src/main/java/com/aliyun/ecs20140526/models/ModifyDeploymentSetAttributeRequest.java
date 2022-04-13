@@ -4,8 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDeploymentSetAttributeRequest extends TeaModel {
+    @NameInMap("DeploymentSetId")
+    public String deploymentSetId;
+
+    @NameInMap("DeploymentSetName")
+    public String deploymentSetName;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,24 +28,41 @@ public class ModifyDeploymentSetAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DeploymentSetId")
-    public String deploymentSetId;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("DeploymentSetName")
-    public String deploymentSetName;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static ModifyDeploymentSetAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDeploymentSetAttributeRequest self = new ModifyDeploymentSetAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDeploymentSetAttributeRequest setDeploymentSetId(String deploymentSetId) {
+        this.deploymentSetId = deploymentSetId;
+        return this;
+    }
+    public String getDeploymentSetId() {
+        return this.deploymentSetId;
+    }
+
+    public ModifyDeploymentSetAttributeRequest setDeploymentSetName(String deploymentSetName) {
+        this.deploymentSetName = deploymentSetName;
+        return this;
+    }
+    public String getDeploymentSetName() {
+        return this.deploymentSetName;
+    }
+
+    public ModifyDeploymentSetAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyDeploymentSetAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDeploymentSetAttributeRequest setOwnerId(Long ownerId) {
@@ -39,6 +71,14 @@ public class ModifyDeploymentSetAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyDeploymentSetAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyDeploymentSetAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -55,46 +95,6 @@ public class ModifyDeploymentSetAttributeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyDeploymentSetAttributeRequest setDeploymentSetId(String deploymentSetId) {
-        this.deploymentSetId = deploymentSetId;
-        return this;
-    }
-    public String getDeploymentSetId() {
-        return this.deploymentSetId;
-    }
-
-    public ModifyDeploymentSetAttributeRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ModifyDeploymentSetAttributeRequest setDeploymentSetName(String deploymentSetName) {
-        this.deploymentSetName = deploymentSetName;
-        return this;
-    }
-    public String getDeploymentSetName() {
-        return this.deploymentSetName;
-    }
-
-    public ModifyDeploymentSetAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyDeploymentSetAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

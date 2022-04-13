@@ -4,44 +4,8 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeReservedInstancesRequest extends TeaModel {
-    @NameInMap("Tag")
-    public java.util.List<DescribeReservedInstancesRequestTag> tag;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("ReservedInstanceId")
-    public java.util.List<String> reservedInstanceId;
-
-    @NameInMap("Status")
-    public java.util.List<String> status;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
-
-    @NameInMap("ReservedInstanceName")
-    public String reservedInstanceName;
-
-    @NameInMap("LockReason")
-    public String lockReason;
+    @NameInMap("AllocationType")
+    public String allocationType;
 
     @NameInMap("InstanceType")
     public String instanceType;
@@ -49,122 +13,62 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
-    @NameInMap("Scope")
-    public String scope;
+    @NameInMap("LockReason")
+    public String lockReason;
 
     @NameInMap("OfferingType")
     public String offeringType;
 
-    @NameInMap("AllocationType")
-    public String allocationType;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ReservedInstanceId")
+    public java.util.List<String> reservedInstanceId;
+
+    @NameInMap("ReservedInstanceName")
+    public String reservedInstanceName;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("Scope")
+    public String scope;
+
+    @NameInMap("Status")
+    public java.util.List<String> status;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeReservedInstancesRequestTag> tag;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static DescribeReservedInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeReservedInstancesRequest self = new DescribeReservedInstancesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeReservedInstancesRequest setTag(java.util.List<DescribeReservedInstancesRequestTag> tag) {
-        this.tag = tag;
+    public DescribeReservedInstancesRequest setAllocationType(String allocationType) {
+        this.allocationType = allocationType;
         return this;
     }
-    public java.util.List<DescribeReservedInstancesRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public DescribeReservedInstancesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeReservedInstancesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeReservedInstancesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeReservedInstancesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeReservedInstancesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeReservedInstancesRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeReservedInstancesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeReservedInstancesRequest setReservedInstanceId(java.util.List<String> reservedInstanceId) {
-        this.reservedInstanceId = reservedInstanceId;
-        return this;
-    }
-    public java.util.List<String> getReservedInstanceId() {
-        return this.reservedInstanceId;
-    }
-
-    public DescribeReservedInstancesRequest setStatus(java.util.List<String> status) {
-        this.status = status;
-        return this;
-    }
-    public java.util.List<String> getStatus() {
-        return this.status;
-    }
-
-    public DescribeReservedInstancesRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public DescribeReservedInstancesRequest setReservedInstanceName(String reservedInstanceName) {
-        this.reservedInstanceName = reservedInstanceName;
-        return this;
-    }
-    public String getReservedInstanceName() {
-        return this.reservedInstanceName;
-    }
-
-    public DescribeReservedInstancesRequest setLockReason(String lockReason) {
-        this.lockReason = lockReason;
-        return this;
-    }
-    public String getLockReason() {
-        return this.lockReason;
+    public String getAllocationType() {
+        return this.allocationType;
     }
 
     public DescribeReservedInstancesRequest setInstanceType(String instanceType) {
@@ -183,12 +87,12 @@ public class DescribeReservedInstancesRequest extends TeaModel {
         return this.instanceTypeFamily;
     }
 
-    public DescribeReservedInstancesRequest setScope(String scope) {
-        this.scope = scope;
+    public DescribeReservedInstancesRequest setLockReason(String lockReason) {
+        this.lockReason = lockReason;
         return this;
     }
-    public String getScope() {
-        return this.scope;
+    public String getLockReason() {
+        return this.lockReason;
     }
 
     public DescribeReservedInstancesRequest setOfferingType(String offeringType) {
@@ -199,12 +103,108 @@ public class DescribeReservedInstancesRequest extends TeaModel {
         return this.offeringType;
     }
 
-    public DescribeReservedInstancesRequest setAllocationType(String allocationType) {
-        this.allocationType = allocationType;
+    public DescribeReservedInstancesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getAllocationType() {
-        return this.allocationType;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeReservedInstancesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeReservedInstancesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeReservedInstancesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeReservedInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeReservedInstancesRequest setReservedInstanceId(java.util.List<String> reservedInstanceId) {
+        this.reservedInstanceId = reservedInstanceId;
+        return this;
+    }
+    public java.util.List<String> getReservedInstanceId() {
+        return this.reservedInstanceId;
+    }
+
+    public DescribeReservedInstancesRequest setReservedInstanceName(String reservedInstanceName) {
+        this.reservedInstanceName = reservedInstanceName;
+        return this;
+    }
+    public String getReservedInstanceName() {
+        return this.reservedInstanceName;
+    }
+
+    public DescribeReservedInstancesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeReservedInstancesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeReservedInstancesRequest setScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    public String getScope() {
+        return this.scope;
+    }
+
+    public DescribeReservedInstancesRequest setStatus(java.util.List<String> status) {
+        this.status = status;
+        return this;
+    }
+    public java.util.List<String> getStatus() {
+        return this.status;
+    }
+
+    public DescribeReservedInstancesRequest setTag(java.util.List<DescribeReservedInstancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeReservedInstancesRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public DescribeReservedInstancesRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
     public static class DescribeReservedInstancesRequestTag extends TeaModel {

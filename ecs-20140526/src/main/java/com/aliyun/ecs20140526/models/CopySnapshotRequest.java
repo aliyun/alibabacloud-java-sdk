@@ -4,8 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CopySnapshotRequest extends TeaModel {
+    @NameInMap("DestinationRegionId")
+    public String destinationRegionId;
+
+    @NameInMap("DestinationSnapshotDescription")
+    public String destinationSnapshotDescription;
+
+    @NameInMap("DestinationSnapshotName")
+    public String destinationSnapshotName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,33 +28,42 @@ public class CopySnapshotRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("Tag")
-    public java.util.List<CopySnapshotRequestTag> tag;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DestinationRegionId")
-    public String destinationRegionId;
+    @NameInMap("RetentionDays")
+    public Integer retentionDays;
 
     @NameInMap("SnapshotId")
     public String snapshotId;
 
-    @NameInMap("DestinationSnapshotName")
-    public String destinationSnapshotName;
-
-    @NameInMap("DestinationSnapshotDescription")
-    public String destinationSnapshotDescription;
-
-    @NameInMap("RetentionDays")
-    public Integer retentionDays;
+    @NameInMap("Tag")
+    public java.util.List<CopySnapshotRequestTag> tag;
 
     public static CopySnapshotRequest build(java.util.Map<String, ?> map) throws Exception {
         CopySnapshotRequest self = new CopySnapshotRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CopySnapshotRequest setDestinationRegionId(String destinationRegionId) {
+        this.destinationRegionId = destinationRegionId;
+        return this;
+    }
+    public String getDestinationRegionId() {
+        return this.destinationRegionId;
+    }
+
+    public CopySnapshotRequest setDestinationSnapshotDescription(String destinationSnapshotDescription) {
+        this.destinationSnapshotDescription = destinationSnapshotDescription;
+        return this;
+    }
+    public String getDestinationSnapshotDescription() {
+        return this.destinationSnapshotDescription;
+    }
+
+    public CopySnapshotRequest setDestinationSnapshotName(String destinationSnapshotName) {
+        this.destinationSnapshotName = destinationSnapshotName;
+        return this;
+    }
+    public String getDestinationSnapshotName() {
+        return this.destinationSnapshotName;
     }
 
     public CopySnapshotRequest setOwnerId(Long ownerId) {
@@ -48,6 +72,22 @@ public class CopySnapshotRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CopySnapshotRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CopySnapshotRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CopySnapshotRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -66,36 +106,12 @@ public class CopySnapshotRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CopySnapshotRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public CopySnapshotRequest setRetentionDays(Integer retentionDays) {
+        this.retentionDays = retentionDays;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public CopySnapshotRequest setTag(java.util.List<CopySnapshotRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<CopySnapshotRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public CopySnapshotRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CopySnapshotRequest setDestinationRegionId(String destinationRegionId) {
-        this.destinationRegionId = destinationRegionId;
-        return this;
-    }
-    public String getDestinationRegionId() {
-        return this.destinationRegionId;
+    public Integer getRetentionDays() {
+        return this.retentionDays;
     }
 
     public CopySnapshotRequest setSnapshotId(String snapshotId) {
@@ -106,28 +122,12 @@ public class CopySnapshotRequest extends TeaModel {
         return this.snapshotId;
     }
 
-    public CopySnapshotRequest setDestinationSnapshotName(String destinationSnapshotName) {
-        this.destinationSnapshotName = destinationSnapshotName;
+    public CopySnapshotRequest setTag(java.util.List<CopySnapshotRequestTag> tag) {
+        this.tag = tag;
         return this;
     }
-    public String getDestinationSnapshotName() {
-        return this.destinationSnapshotName;
-    }
-
-    public CopySnapshotRequest setDestinationSnapshotDescription(String destinationSnapshotDescription) {
-        this.destinationSnapshotDescription = destinationSnapshotDescription;
-        return this;
-    }
-    public String getDestinationSnapshotDescription() {
-        return this.destinationSnapshotDescription;
-    }
-
-    public CopySnapshotRequest setRetentionDays(Integer retentionDays) {
-        this.retentionDays = retentionDays;
-        return this;
-    }
-    public Integer getRetentionDays() {
-        return this.retentionDays;
+    public java.util.List<CopySnapshotRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class CopySnapshotRequestTag extends TeaModel {

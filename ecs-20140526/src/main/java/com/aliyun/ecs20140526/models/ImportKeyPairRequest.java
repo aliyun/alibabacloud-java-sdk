@@ -4,26 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ImportKeyPairRequest extends TeaModel {
+    @NameInMap("KeyPairName")
+    public String keyPairName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PublicKeyBody")
+    public String publicKeyBody;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("KeyPairName")
-    public String keyPairName;
-
-    @NameInMap("PublicKeyBody")
-    public String publicKeyBody;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("Tag")
     public java.util.List<ImportKeyPairRequestTag> tag;
@@ -33,12 +33,44 @@ public class ImportKeyPairRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ImportKeyPairRequest setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
+        return this;
+    }
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
     public ImportKeyPairRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ImportKeyPairRequest setPublicKeyBody(String publicKeyBody) {
+        this.publicKeyBody = publicKeyBody;
+        return this;
+    }
+    public String getPublicKeyBody() {
+        return this.publicKeyBody;
+    }
+
+    public ImportKeyPairRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ImportKeyPairRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ImportKeyPairRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -55,38 +87,6 @@ public class ImportKeyPairRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ImportKeyPairRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ImportKeyPairRequest setKeyPairName(String keyPairName) {
-        this.keyPairName = keyPairName;
-        return this;
-    }
-    public String getKeyPairName() {
-        return this.keyPairName;
-    }
-
-    public ImportKeyPairRequest setPublicKeyBody(String publicKeyBody) {
-        this.publicKeyBody = publicKeyBody;
-        return this;
-    }
-    public String getPublicKeyBody() {
-        return this.publicKeyBody;
-    }
-
-    public ImportKeyPairRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public ImportKeyPairRequest setTag(java.util.List<ImportKeyPairRequestTag> tag) {

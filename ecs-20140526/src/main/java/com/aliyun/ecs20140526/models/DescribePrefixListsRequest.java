@@ -4,20 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePrefixListsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AddressFamily")
+    public String addressFamily;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PrefixListId")
     public java.util.List<String> prefixListId;
@@ -25,42 +25,42 @@ public class DescribePrefixListsRequest extends TeaModel {
     @NameInMap("PrefixListName")
     public String prefixListName;
 
-    @NameInMap("NextToken")
-    public String nextToken;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("AddressFamily")
-    public String addressFamily;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribePrefixListsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePrefixListsRequest self = new DescribePrefixListsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribePrefixListsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribePrefixListsRequest setAddressFamily(String addressFamily) {
+        this.addressFamily = addressFamily;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAddressFamily() {
+        return this.addressFamily;
     }
 
-    public DescribePrefixListsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public DescribePrefixListsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
-    public DescribePrefixListsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public DescribePrefixListsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribePrefixListsRequest setOwnerAccount(String ownerAccount) {
@@ -71,12 +71,12 @@ public class DescribePrefixListsRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribePrefixListsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribePrefixListsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribePrefixListsRequest setPrefixListId(java.util.List<String> prefixListId) {
@@ -95,28 +95,28 @@ public class DescribePrefixListsRequest extends TeaModel {
         return this.prefixListName;
     }
 
-    public DescribePrefixListsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public DescribePrefixListsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public DescribePrefixListsRequest setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public DescribePrefixListsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public DescribePrefixListsRequest setAddressFamily(String addressFamily) {
-        this.addressFamily = addressFamily;
+    public DescribePrefixListsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getAddressFamily() {
-        return this.addressFamily;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

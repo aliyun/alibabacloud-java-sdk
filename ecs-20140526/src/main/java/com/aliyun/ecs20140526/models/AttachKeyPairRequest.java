@@ -4,8 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AttachKeyPairRequest extends TeaModel {
+    @NameInMap("InstanceIds")
+    public String instanceIds;
+
+    @NameInMap("KeyPairName")
+    public String keyPairName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +22,25 @@ public class AttachKeyPairRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("KeyPairName")
-    public String keyPairName;
-
-    @NameInMap("InstanceIds")
-    public String instanceIds;
-
     public static AttachKeyPairRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachKeyPairRequest self = new AttachKeyPairRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AttachKeyPairRequest setInstanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public String getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    public AttachKeyPairRequest setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
+        return this;
+    }
+    public String getKeyPairName() {
+        return this.keyPairName;
     }
 
     public AttachKeyPairRequest setOwnerId(Long ownerId) {
@@ -33,6 +49,14 @@ public class AttachKeyPairRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public AttachKeyPairRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public AttachKeyPairRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,30 +73,6 @@ public class AttachKeyPairRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public AttachKeyPairRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public AttachKeyPairRequest setKeyPairName(String keyPairName) {
-        this.keyPairName = keyPairName;
-        return this;
-    }
-    public String getKeyPairName() {
-        return this.keyPairName;
-    }
-
-    public AttachKeyPairRequest setInstanceIds(String instanceIds) {
-        this.instanceIds = instanceIds;
-        return this;
-    }
-    public String getInstanceIds() {
-        return this.instanceIds;
     }
 
 }

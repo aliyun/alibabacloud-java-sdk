@@ -4,24 +4,32 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("StorageCapacityUnits")
+    public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits storageCapacityUnits;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("StorageCapacityUnits")
-    public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits storageCapacityUnits;
-
     public static DescribeStorageCapacityUnitsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeStorageCapacityUnitsResponseBody self = new DescribeStorageCapacityUnitsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeStorageCapacityUnitsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeStorageCapacityUnitsResponseBody setPageSize(Integer pageSize) {
@@ -40,12 +48,12 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeStorageCapacityUnitsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeStorageCapacityUnitsResponseBody setStorageCapacityUnits(DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits storageCapacityUnits) {
+        this.storageCapacityUnits = storageCapacityUnits;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits getStorageCapacityUnits() {
+        return this.storageCapacityUnits;
     }
 
     public DescribeStorageCapacityUnitsResponseBody setTotalCount(Integer totalCount) {
@@ -56,32 +64,16 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeStorageCapacityUnitsResponseBody setStorageCapacityUnits(DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits storageCapacityUnits) {
-        this.storageCapacityUnits = storageCapacityUnits;
-        return this;
-    }
-    public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits getStorageCapacityUnits() {
-        return this.storageCapacityUnits;
-    }
-
     public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag self = new DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag setTagKey(String tagKey) {
@@ -90,6 +82,14 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }
@@ -114,29 +114,20 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     }
 
     public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("StartTime")
-        public String startTime;
+        @NameInMap("AllocationStatus")
+        public String allocationStatus;
 
         @NameInMap("Capacity")
         public Integer capacity;
 
+        @NameInMap("CreationTime")
+        public String creationTime;
+
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("AllocationStatus")
-        public String allocationStatus;
-
         @NameInMap("ExpiredTime")
         public String expiredTime;
-
-        @NameInMap("StorageCapacityUnitId")
-        public String storageCapacityUnitId;
 
         @NameInMap("Name")
         public String name;
@@ -144,52 +135,21 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StorageCapacityUnitId")
+        public String storageCapacityUnitId;
+
         @NameInMap("Tags")
         public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags tags;
 
         public static DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit build(java.util.Map<String, ?> map) throws Exception {
             DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit self = new DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setCapacity(Integer capacity) {
-            this.capacity = capacity;
-            return this;
-        }
-        public Integer getCapacity() {
-            return this.capacity;
-        }
-
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setAllocationStatus(String allocationStatus) {
@@ -200,20 +160,36 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             return this.allocationStatus;
         }
 
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setCapacity(Integer capacity) {
+            this.capacity = capacity;
+            return this;
+        }
+        public Integer getCapacity() {
+            return this.capacity;
+        }
+
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setExpiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
             return this;
         }
         public String getExpiredTime() {
             return this.expiredTime;
-        }
-
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setStorageCapacityUnitId(String storageCapacityUnitId) {
-            this.storageCapacityUnitId = storageCapacityUnitId;
-            return this;
-        }
-        public String getStorageCapacityUnitId() {
-            return this.storageCapacityUnitId;
         }
 
         public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setName(String name) {
@@ -230,6 +206,30 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setStorageCapacityUnitId(String storageCapacityUnitId) {
+            this.storageCapacityUnitId = storageCapacityUnitId;
+            return this;
+        }
+        public String getStorageCapacityUnitId() {
+            return this.storageCapacityUnitId;
         }
 
         public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setTags(DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags tags) {

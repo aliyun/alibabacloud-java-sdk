@@ -4,20 +4,8 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateRouteEntryRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("RouteTableId")
-    public String routeTableId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
@@ -25,8 +13,8 @@ public class CreateRouteEntryRequest extends TeaModel {
     @NameInMap("NextHopId")
     public String nextHopId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("NextHopList")
+    public java.util.List<CreateRouteEntryRequestNextHopList> nextHopList;
 
     @NameInMap("NextHopType")
     public String nextHopType;
@@ -34,52 +22,32 @@ public class CreateRouteEntryRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("NextHopList")
-    public java.util.List<CreateRouteEntryRequestNextHopList> nextHopList;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("RouteTableId")
+    public String routeTableId;
 
     public static CreateRouteEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRouteEntryRequest self = new CreateRouteEntryRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateRouteEntryRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CreateRouteEntryRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateRouteEntryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateRouteEntryRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateRouteEntryRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateRouteEntryRequest setRouteTableId(String routeTableId) {
-        this.routeTableId = routeTableId;
-        return this;
-    }
-    public String getRouteTableId() {
-        return this.routeTableId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateRouteEntryRequest setDestinationCidrBlock(String destinationCidrBlock) {
@@ -98,12 +66,12 @@ public class CreateRouteEntryRequest extends TeaModel {
         return this.nextHopId;
     }
 
-    public CreateRouteEntryRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateRouteEntryRequest setNextHopList(java.util.List<CreateRouteEntryRequestNextHopList> nextHopList) {
+        this.nextHopList = nextHopList;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public java.util.List<CreateRouteEntryRequestNextHopList> getNextHopList() {
+        return this.nextHopList;
     }
 
     public CreateRouteEntryRequest setNextHopType(String nextHopType) {
@@ -122,12 +90,44 @@ public class CreateRouteEntryRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public CreateRouteEntryRequest setNextHopList(java.util.List<CreateRouteEntryRequestNextHopList> nextHopList) {
-        this.nextHopList = nextHopList;
+    public CreateRouteEntryRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public java.util.List<CreateRouteEntryRequestNextHopList> getNextHopList() {
-        return this.nextHopList;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateRouteEntryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateRouteEntryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateRouteEntryRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateRouteEntryRequest setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+        return this;
+    }
+    public String getRouteTableId() {
+        return this.routeTableId;
     }
 
     public static class CreateRouteEntryRequestNextHopList extends TeaModel {

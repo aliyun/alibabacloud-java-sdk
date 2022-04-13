@@ -4,17 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyReservedInstancesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("Configuration")
+    public java.util.List<ModifyReservedInstancesRequestConfiguration> configuration;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -22,36 +19,23 @@ public class ModifyReservedInstancesRequest extends TeaModel {
     @NameInMap("ReservedInstanceId")
     public java.util.List<String> reservedInstanceId;
 
-    @NameInMap("Configuration")
-    public java.util.List<ModifyReservedInstancesRequestConfiguration> configuration;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyReservedInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyReservedInstancesRequest self = new ModifyReservedInstancesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyReservedInstancesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyReservedInstancesRequest setConfiguration(java.util.List<ModifyReservedInstancesRequestConfiguration> configuration) {
+        this.configuration = configuration;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyReservedInstancesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyReservedInstancesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public java.util.List<ModifyReservedInstancesRequestConfiguration> getConfiguration() {
+        return this.configuration;
     }
 
     public ModifyReservedInstancesRequest setOwnerAccount(String ownerAccount) {
@@ -60,6 +44,14 @@ public class ModifyReservedInstancesRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public ModifyReservedInstancesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyReservedInstancesRequest setRegionId(String regionId) {
@@ -78,57 +70,49 @@ public class ModifyReservedInstancesRequest extends TeaModel {
         return this.reservedInstanceId;
     }
 
-    public ModifyReservedInstancesRequest setConfiguration(java.util.List<ModifyReservedInstancesRequestConfiguration> configuration) {
-        this.configuration = configuration;
+    public ModifyReservedInstancesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public java.util.List<ModifyReservedInstancesRequestConfiguration> getConfiguration() {
-        return this.configuration;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyReservedInstancesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public static class ModifyReservedInstancesRequestConfiguration extends TeaModel {
-        @NameInMap("ReservedInstanceName")
-        public String reservedInstanceName;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        @NameInMap("Scope")
-        public String scope;
+        @NameInMap("InstanceAmount")
+        public Integer instanceAmount;
 
         @NameInMap("InstanceType")
         public String instanceType;
 
-        @NameInMap("InstanceAmount")
-        public Integer instanceAmount;
+        @NameInMap("ReservedInstanceName")
+        public String reservedInstanceName;
+
+        @NameInMap("Scope")
+        public String scope;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static ModifyReservedInstancesRequestConfiguration build(java.util.Map<String, ?> map) throws Exception {
             ModifyReservedInstancesRequestConfiguration self = new ModifyReservedInstancesRequestConfiguration();
             return TeaModel.build(map, self);
         }
 
-        public ModifyReservedInstancesRequestConfiguration setReservedInstanceName(String reservedInstanceName) {
-            this.reservedInstanceName = reservedInstanceName;
+        public ModifyReservedInstancesRequestConfiguration setInstanceAmount(Integer instanceAmount) {
+            this.instanceAmount = instanceAmount;
             return this;
         }
-        public String getReservedInstanceName() {
-            return this.reservedInstanceName;
-        }
-
-        public ModifyReservedInstancesRequestConfiguration setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public ModifyReservedInstancesRequestConfiguration setScope(String scope) {
-            this.scope = scope;
-            return this;
-        }
-        public String getScope() {
-            return this.scope;
+        public Integer getInstanceAmount() {
+            return this.instanceAmount;
         }
 
         public ModifyReservedInstancesRequestConfiguration setInstanceType(String instanceType) {
@@ -139,12 +123,28 @@ public class ModifyReservedInstancesRequest extends TeaModel {
             return this.instanceType;
         }
 
-        public ModifyReservedInstancesRequestConfiguration setInstanceAmount(Integer instanceAmount) {
-            this.instanceAmount = instanceAmount;
+        public ModifyReservedInstancesRequestConfiguration setReservedInstanceName(String reservedInstanceName) {
+            this.reservedInstanceName = reservedInstanceName;
             return this;
         }
-        public Integer getInstanceAmount() {
-            return this.instanceAmount;
+        public String getReservedInstanceName() {
+            return this.reservedInstanceName;
+        }
+
+        public ModifyReservedInstancesRequestConfiguration setScope(String scope) {
+            this.scope = scope;
+            return this;
+        }
+        public String getScope() {
+            return this.scope;
+        }
+
+        public ModifyReservedInstancesRequestConfiguration setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

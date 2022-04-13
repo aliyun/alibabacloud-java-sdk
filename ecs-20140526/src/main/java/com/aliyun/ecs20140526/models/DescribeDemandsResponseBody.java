@@ -4,11 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDemandsResponseBody extends TeaModel {
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("Demands")
+    public DescribeDemandsResponseBodyDemands demands;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,15 +22,25 @@ public class DescribeDemandsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Demands")
-    public DescribeDemandsResponseBodyDemands demands;
-
     public static DescribeDemandsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDemandsResponseBody self = new DescribeDemandsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDemandsResponseBody setDemands(DescribeDemandsResponseBodyDemands demands) {
+        this.demands = demands;
+        return this;
+    }
+    public DescribeDemandsResponseBodyDemands getDemands() {
+        return this.demands;
+    }
+
+    public DescribeDemandsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDemandsResponseBody setPageSize(Integer pageSize) {
@@ -35,12 +51,12 @@ public class DescribeDemandsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDemandsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDemandsResponseBody setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeDemandsResponseBody setRequestId(String requestId) {
@@ -59,34 +75,18 @@ public class DescribeDemandsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeDemandsResponseBody setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeDemandsResponseBody setDemands(DescribeDemandsResponseBodyDemands demands) {
-        this.demands = demands;
-        return this;
-    }
-    public DescribeDemandsResponseBodyDemands getDemands() {
-        return this.demands;
-    }
-
     public static class DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo extends TeaModel {
         @NameInMap("Amount")
         public Integer amount;
 
-        @NameInMap("SupplyStatus")
-        public String supplyStatus;
+        @NameInMap("SupplyEndTime")
+        public String supplyEndTime;
 
         @NameInMap("SupplyStartTime")
         public String supplyStartTime;
 
-        @NameInMap("SupplyEndTime")
-        public String supplyEndTime;
+        @NameInMap("SupplyStatus")
+        public String supplyStatus;
 
         public static DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo self = new DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo();
@@ -101,12 +101,12 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.amount;
         }
 
-        public DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo setSupplyStatus(String supplyStatus) {
-            this.supplyStatus = supplyStatus;
+        public DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo setSupplyEndTime(String supplyEndTime) {
+            this.supplyEndTime = supplyEndTime;
             return this;
         }
-        public String getSupplyStatus() {
-            return this.supplyStatus;
+        public String getSupplyEndTime() {
+            return this.supplyEndTime;
         }
 
         public DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo setSupplyStartTime(String supplyStartTime) {
@@ -117,12 +117,12 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.supplyStartTime;
         }
 
-        public DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo setSupplyEndTime(String supplyEndTime) {
-            this.supplyEndTime = supplyEndTime;
+        public DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo setSupplyStatus(String supplyStatus) {
+            this.supplyStatus = supplyStatus;
             return this;
         }
-        public String getSupplyEndTime() {
-            return this.supplyEndTime;
+        public String getSupplyStatus() {
+            return this.supplyStatus;
         }
 
     }
@@ -147,8 +147,14 @@ public class DescribeDemandsResponseBody extends TeaModel {
     }
 
     public static class DescribeDemandsResponseBodyDemandsDemand extends TeaModel {
+        @NameInMap("AvailableAmount")
+        public Integer availableAmount;
+
         @NameInMap("Comment")
         public String comment;
+
+        @NameInMap("DeliveringAmount")
+        public Integer deliveringAmount;
 
         @NameInMap("DemandDescription")
         public String demandDescription;
@@ -156,57 +162,59 @@ public class DescribeDemandsResponseBody extends TeaModel {
         @NameInMap("DemandId")
         public String demandId;
 
-        @NameInMap("DemandTime")
-        public String demandTime;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
         @NameInMap("DemandName")
         public String demandName;
-
-        @NameInMap("Period")
-        public Integer period;
-
-        @NameInMap("InstanceChargeType")
-        public String instanceChargeType;
-
-        @NameInMap("AvailableAmount")
-        public Integer availableAmount;
-
-        @NameInMap("EndTime")
-        public String endTime;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("PeriodUnit")
-        public String periodUnit;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        @NameInMap("UsedAmount")
-        public Integer usedAmount;
-
-        @NameInMap("TotalAmount")
-        public Integer totalAmount;
-
-        @NameInMap("DeliveringAmount")
-        public Integer deliveringAmount;
-
-        @NameInMap("InstanceTypeFamily")
-        public String instanceTypeFamily;
 
         @NameInMap("DemandStatus")
         public String demandStatus;
 
+        @NameInMap("DemandTime")
+        public String demandTime;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("InstanceChargeType")
+        public String instanceChargeType;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("InstanceTypeFamily")
+        public String instanceTypeFamily;
+
+        @NameInMap("Period")
+        public Integer period;
+
+        @NameInMap("PeriodUnit")
+        public String periodUnit;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
         @NameInMap("SupplyInfos")
         public DescribeDemandsResponseBodyDemandsDemandSupplyInfos supplyInfos;
+
+        @NameInMap("TotalAmount")
+        public Integer totalAmount;
+
+        @NameInMap("UsedAmount")
+        public Integer usedAmount;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeDemandsResponseBodyDemandsDemand build(java.util.Map<String, ?> map) throws Exception {
             DescribeDemandsResponseBodyDemandsDemand self = new DescribeDemandsResponseBodyDemandsDemand();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemand setAvailableAmount(Integer availableAmount) {
+            this.availableAmount = availableAmount;
+            return this;
+        }
+        public Integer getAvailableAmount() {
+            return this.availableAmount;
         }
 
         public DescribeDemandsResponseBodyDemandsDemand setComment(String comment) {
@@ -215,6 +223,14 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
         public String getComment() {
             return this.comment;
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemand setDeliveringAmount(Integer deliveringAmount) {
+            this.deliveringAmount = deliveringAmount;
+            return this;
+        }
+        public Integer getDeliveringAmount() {
+            return this.deliveringAmount;
         }
 
         public DescribeDemandsResponseBodyDemandsDemand setDemandDescription(String demandDescription) {
@@ -233,116 +249,12 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.demandId;
         }
 
-        public DescribeDemandsResponseBodyDemandsDemand setDemandTime(String demandTime) {
-            this.demandTime = demandTime;
-            return this;
-        }
-        public String getDemandTime() {
-            return this.demandTime;
-        }
-
-        public DescribeDemandsResponseBodyDemandsDemand setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
         public DescribeDemandsResponseBodyDemandsDemand setDemandName(String demandName) {
             this.demandName = demandName;
             return this;
         }
         public String getDemandName() {
             return this.demandName;
-        }
-
-        public DescribeDemandsResponseBodyDemandsDemand setPeriod(Integer period) {
-            this.period = period;
-            return this;
-        }
-        public Integer getPeriod() {
-            return this.period;
-        }
-
-        public DescribeDemandsResponseBodyDemandsDemand setInstanceChargeType(String instanceChargeType) {
-            this.instanceChargeType = instanceChargeType;
-            return this;
-        }
-        public String getInstanceChargeType() {
-            return this.instanceChargeType;
-        }
-
-        public DescribeDemandsResponseBodyDemandsDemand setAvailableAmount(Integer availableAmount) {
-            this.availableAmount = availableAmount;
-            return this;
-        }
-        public Integer getAvailableAmount() {
-            return this.availableAmount;
-        }
-
-        public DescribeDemandsResponseBodyDemandsDemand setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeDemandsResponseBodyDemandsDemand setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeDemandsResponseBodyDemandsDemand setPeriodUnit(String periodUnit) {
-            this.periodUnit = periodUnit;
-            return this;
-        }
-        public String getPeriodUnit() {
-            return this.periodUnit;
-        }
-
-        public DescribeDemandsResponseBodyDemandsDemand setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public DescribeDemandsResponseBodyDemandsDemand setUsedAmount(Integer usedAmount) {
-            this.usedAmount = usedAmount;
-            return this;
-        }
-        public Integer getUsedAmount() {
-            return this.usedAmount;
-        }
-
-        public DescribeDemandsResponseBodyDemandsDemand setTotalAmount(Integer totalAmount) {
-            this.totalAmount = totalAmount;
-            return this;
-        }
-        public Integer getTotalAmount() {
-            return this.totalAmount;
-        }
-
-        public DescribeDemandsResponseBodyDemandsDemand setDeliveringAmount(Integer deliveringAmount) {
-            this.deliveringAmount = deliveringAmount;
-            return this;
-        }
-        public Integer getDeliveringAmount() {
-            return this.deliveringAmount;
-        }
-
-        public DescribeDemandsResponseBodyDemandsDemand setInstanceTypeFamily(String instanceTypeFamily) {
-            this.instanceTypeFamily = instanceTypeFamily;
-            return this;
-        }
-        public String getInstanceTypeFamily() {
-            return this.instanceTypeFamily;
         }
 
         public DescribeDemandsResponseBodyDemandsDemand setDemandStatus(String demandStatus) {
@@ -353,12 +265,100 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.demandStatus;
         }
 
+        public DescribeDemandsResponseBodyDemandsDemand setDemandTime(String demandTime) {
+            this.demandTime = demandTime;
+            return this;
+        }
+        public String getDemandTime() {
+            return this.demandTime;
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemand setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemand setInstanceChargeType(String instanceChargeType) {
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemand setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemand setInstanceTypeFamily(String instanceTypeFamily) {
+            this.instanceTypeFamily = instanceTypeFamily;
+            return this;
+        }
+        public String getInstanceTypeFamily() {
+            return this.instanceTypeFamily;
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemand setPeriod(Integer period) {
+            this.period = period;
+            return this;
+        }
+        public Integer getPeriod() {
+            return this.period;
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemand setPeriodUnit(String periodUnit) {
+            this.periodUnit = periodUnit;
+            return this;
+        }
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemand setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
         public DescribeDemandsResponseBodyDemandsDemand setSupplyInfos(DescribeDemandsResponseBodyDemandsDemandSupplyInfos supplyInfos) {
             this.supplyInfos = supplyInfos;
             return this;
         }
         public DescribeDemandsResponseBodyDemandsDemandSupplyInfos getSupplyInfos() {
             return this.supplyInfos;
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemand setTotalAmount(Integer totalAmount) {
+            this.totalAmount = totalAmount;
+            return this;
+        }
+        public Integer getTotalAmount() {
+            return this.totalAmount;
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemand setUsedAmount(Integer usedAmount) {
+            this.usedAmount = usedAmount;
+            return this;
+        }
+        public Integer getUsedAmount() {
+            return this.usedAmount;
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemand setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

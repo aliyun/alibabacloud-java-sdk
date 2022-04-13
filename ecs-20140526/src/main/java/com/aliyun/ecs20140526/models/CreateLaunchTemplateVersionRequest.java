@@ -7,41 +7,23 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     @NameInMap("SystemDisk")
     public CreateLaunchTemplateVersionRequestSystemDisk systemDisk;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AutoReleaseTime")
+    public String autoReleaseTime;
 
     @NameInMap("DataDisk")
     public java.util.List<CreateLaunchTemplateVersionRequestDataDisk> dataDisk;
 
-    @NameInMap("NetworkInterface")
-    public java.util.List<CreateLaunchTemplateVersionRequestNetworkInterface> networkInterface;
+    @NameInMap("DeploymentSetId")
+    public String deploymentSetId;
 
-    @NameInMap("Tag")
-    public java.util.List<CreateLaunchTemplateVersionRequestTag> tag;
+    @NameInMap("Description")
+    public String description;
 
-    @NameInMap("SecurityGroupIds")
-    public java.util.List<String> securityGroupIds;
+    @NameInMap("EnableVmOsConfig")
+    public Boolean enableVmOsConfig;
 
-    @NameInMap("LaunchTemplateId")
-    public String launchTemplateId;
-
-    @NameInMap("LaunchTemplateName")
-    public String launchTemplateName;
-
-    @NameInMap("VersionDescription")
-    public String versionDescription;
+    @NameInMap("HostName")
+    public String hostName;
 
     @NameInMap("ImageId")
     public String imageId;
@@ -49,26 +31,17 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     @NameInMap("ImageOwnerAlias")
     public String imageOwnerAlias;
 
-    @NameInMap("PasswordInherit")
-    public Boolean passwordInherit;
-
-    @NameInMap("InstanceType")
-    public String instanceType;
-
-    @NameInMap("SecurityGroupId")
-    public String securityGroupId;
-
-    @NameInMap("VpcId")
-    public String vpcId;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
+    @NameInMap("InstanceChargeType")
+    public String instanceChargeType;
 
     @NameInMap("InstanceName")
     public String instanceName;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("InstanceType")
+    public String instanceType;
+
+    @NameInMap("InternetChargeType")
+    public String internetChargeType;
 
     @NameInMap("InternetMaxBandwidthIn")
     public Integer internetMaxBandwidthIn;
@@ -76,62 +49,92 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
 
-    @NameInMap("HostName")
-    public String hostName;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
-
     @NameInMap("IoOptimized")
     public String ioOptimized;
 
-    @NameInMap("InstanceChargeType")
-    public String instanceChargeType;
-
-    @NameInMap("Period")
-    public Integer period;
-
-    @NameInMap("InternetChargeType")
-    public String internetChargeType;
-
-    @NameInMap("EnableVmOsConfig")
-    public Boolean enableVmOsConfig;
-
-    @NameInMap("NetworkType")
-    public String networkType;
-
-    @NameInMap("UserData")
-    public String userData;
+    @NameInMap("Ipv6AddressCount")
+    public Integer ipv6AddressCount;
 
     @NameInMap("KeyPairName")
     public String keyPairName;
 
-    @NameInMap("RamRoleName")
-    public String ramRoleName;
+    @NameInMap("LaunchTemplateId")
+    public String launchTemplateId;
 
-    @NameInMap("AutoReleaseTime")
-    public String autoReleaseTime;
+    @NameInMap("LaunchTemplateName")
+    public String launchTemplateName;
 
-    @NameInMap("SpotStrategy")
-    public String spotStrategy;
+    @NameInMap("NetworkInterface")
+    public java.util.List<CreateLaunchTemplateVersionRequestNetworkInterface> networkInterface;
 
-    @NameInMap("SpotPriceLimit")
-    public Float spotPriceLimit;
+    @NameInMap("NetworkType")
+    public String networkType;
 
-    @NameInMap("SpotDuration")
-    public Integer spotDuration;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
-    @NameInMap("SecurityEnhancementStrategy")
-    public String securityEnhancementStrategy;
+    @NameInMap("PasswordInherit")
+    public Boolean passwordInherit;
+
+    @NameInMap("Period")
+    public Integer period;
 
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
-    @NameInMap("DeploymentSetId")
-    public String deploymentSetId;
+    @NameInMap("RamRoleName")
+    public String ramRoleName;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SecurityEnhancementStrategy")
+    public String securityEnhancementStrategy;
+
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
+
+    @NameInMap("SecurityGroupIds")
+    public java.util.List<String> securityGroupIds;
+
+    @NameInMap("SpotDuration")
+    public Integer spotDuration;
+
+    @NameInMap("SpotPriceLimit")
+    public Float spotPriceLimit;
+
+    @NameInMap("SpotStrategy")
+    public String spotStrategy;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateLaunchTemplateVersionRequestTag> tag;
+
+    @NameInMap("UserData")
+    public String userData;
+
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
+    @NameInMap("VersionDescription")
+    public String versionDescription;
+
+    @NameInMap("VpcId")
+    public String vpcId;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static CreateLaunchTemplateVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLaunchTemplateVersionRequest self = new CreateLaunchTemplateVersionRequest();
@@ -146,44 +149,12 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         return this.systemDisk;
     }
 
-    public CreateLaunchTemplateVersionRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CreateLaunchTemplateVersionRequest setAutoReleaseTime(String autoReleaseTime) {
+        this.autoReleaseTime = autoReleaseTime;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateLaunchTemplateVersionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateLaunchTemplateVersionRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateLaunchTemplateVersionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateLaunchTemplateVersionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getAutoReleaseTime() {
+        return this.autoReleaseTime;
     }
 
     public CreateLaunchTemplateVersionRequest setDataDisk(java.util.List<CreateLaunchTemplateVersionRequestDataDisk> dataDisk) {
@@ -194,52 +165,36 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         return this.dataDisk;
     }
 
-    public CreateLaunchTemplateVersionRequest setNetworkInterface(java.util.List<CreateLaunchTemplateVersionRequestNetworkInterface> networkInterface) {
-        this.networkInterface = networkInterface;
+    public CreateLaunchTemplateVersionRequest setDeploymentSetId(String deploymentSetId) {
+        this.deploymentSetId = deploymentSetId;
         return this;
     }
-    public java.util.List<CreateLaunchTemplateVersionRequestNetworkInterface> getNetworkInterface() {
-        return this.networkInterface;
+    public String getDeploymentSetId() {
+        return this.deploymentSetId;
     }
 
-    public CreateLaunchTemplateVersionRequest setTag(java.util.List<CreateLaunchTemplateVersionRequestTag> tag) {
-        this.tag = tag;
+    public CreateLaunchTemplateVersionRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public java.util.List<CreateLaunchTemplateVersionRequestTag> getTag() {
-        return this.tag;
+    public String getDescription() {
+        return this.description;
     }
 
-    public CreateLaunchTemplateVersionRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
-        this.securityGroupIds = securityGroupIds;
+    public CreateLaunchTemplateVersionRequest setEnableVmOsConfig(Boolean enableVmOsConfig) {
+        this.enableVmOsConfig = enableVmOsConfig;
         return this;
     }
-    public java.util.List<String> getSecurityGroupIds() {
-        return this.securityGroupIds;
+    public Boolean getEnableVmOsConfig() {
+        return this.enableVmOsConfig;
     }
 
-    public CreateLaunchTemplateVersionRequest setLaunchTemplateId(String launchTemplateId) {
-        this.launchTemplateId = launchTemplateId;
+    public CreateLaunchTemplateVersionRequest setHostName(String hostName) {
+        this.hostName = hostName;
         return this;
     }
-    public String getLaunchTemplateId() {
-        return this.launchTemplateId;
-    }
-
-    public CreateLaunchTemplateVersionRequest setLaunchTemplateName(String launchTemplateName) {
-        this.launchTemplateName = launchTemplateName;
-        return this;
-    }
-    public String getLaunchTemplateName() {
-        return this.launchTemplateName;
-    }
-
-    public CreateLaunchTemplateVersionRequest setVersionDescription(String versionDescription) {
-        this.versionDescription = versionDescription;
-        return this;
-    }
-    public String getVersionDescription() {
-        return this.versionDescription;
+    public String getHostName() {
+        return this.hostName;
     }
 
     public CreateLaunchTemplateVersionRequest setImageId(String imageId) {
@@ -258,44 +213,12 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         return this.imageOwnerAlias;
     }
 
-    public CreateLaunchTemplateVersionRequest setPasswordInherit(Boolean passwordInherit) {
-        this.passwordInherit = passwordInherit;
+    public CreateLaunchTemplateVersionRequest setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
         return this;
     }
-    public Boolean getPasswordInherit() {
-        return this.passwordInherit;
-    }
-
-    public CreateLaunchTemplateVersionRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
-    }
-
-    public CreateLaunchTemplateVersionRequest setSecurityGroupId(String securityGroupId) {
-        this.securityGroupId = securityGroupId;
-        return this;
-    }
-    public String getSecurityGroupId() {
-        return this.securityGroupId;
-    }
-
-    public CreateLaunchTemplateVersionRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public CreateLaunchTemplateVersionRequest setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     public CreateLaunchTemplateVersionRequest setInstanceName(String instanceName) {
@@ -306,12 +229,20 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public CreateLaunchTemplateVersionRequest setDescription(String description) {
-        this.description = description;
+    public CreateLaunchTemplateVersionRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public CreateLaunchTemplateVersionRequest setInternetChargeType(String internetChargeType) {
+        this.internetChargeType = internetChargeType;
+        return this;
+    }
+    public String getInternetChargeType() {
+        return this.internetChargeType;
     }
 
     public CreateLaunchTemplateVersionRequest setInternetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
@@ -330,22 +261,6 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         return this.internetMaxBandwidthOut;
     }
 
-    public CreateLaunchTemplateVersionRequest setHostName(String hostName) {
-        this.hostName = hostName;
-        return this;
-    }
-    public String getHostName() {
-        return this.hostName;
-    }
-
-    public CreateLaunchTemplateVersionRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
     public CreateLaunchTemplateVersionRequest setIoOptimized(String ioOptimized) {
         this.ioOptimized = ioOptimized;
         return this;
@@ -354,52 +269,12 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         return this.ioOptimized;
     }
 
-    public CreateLaunchTemplateVersionRequest setInstanceChargeType(String instanceChargeType) {
-        this.instanceChargeType = instanceChargeType;
+    public CreateLaunchTemplateVersionRequest setIpv6AddressCount(Integer ipv6AddressCount) {
+        this.ipv6AddressCount = ipv6AddressCount;
         return this;
     }
-    public String getInstanceChargeType() {
-        return this.instanceChargeType;
-    }
-
-    public CreateLaunchTemplateVersionRequest setPeriod(Integer period) {
-        this.period = period;
-        return this;
-    }
-    public Integer getPeriod() {
-        return this.period;
-    }
-
-    public CreateLaunchTemplateVersionRequest setInternetChargeType(String internetChargeType) {
-        this.internetChargeType = internetChargeType;
-        return this;
-    }
-    public String getInternetChargeType() {
-        return this.internetChargeType;
-    }
-
-    public CreateLaunchTemplateVersionRequest setEnableVmOsConfig(Boolean enableVmOsConfig) {
-        this.enableVmOsConfig = enableVmOsConfig;
-        return this;
-    }
-    public Boolean getEnableVmOsConfig() {
-        return this.enableVmOsConfig;
-    }
-
-    public CreateLaunchTemplateVersionRequest setNetworkType(String networkType) {
-        this.networkType = networkType;
-        return this;
-    }
-    public String getNetworkType() {
-        return this.networkType;
-    }
-
-    public CreateLaunchTemplateVersionRequest setUserData(String userData) {
-        this.userData = userData;
-        return this;
-    }
-    public String getUserData() {
-        return this.userData;
+    public Integer getIpv6AddressCount() {
+        return this.ipv6AddressCount;
     }
 
     public CreateLaunchTemplateVersionRequest setKeyPairName(String keyPairName) {
@@ -410,60 +285,68 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         return this.keyPairName;
     }
 
-    public CreateLaunchTemplateVersionRequest setRamRoleName(String ramRoleName) {
-        this.ramRoleName = ramRoleName;
+    public CreateLaunchTemplateVersionRequest setLaunchTemplateId(String launchTemplateId) {
+        this.launchTemplateId = launchTemplateId;
         return this;
     }
-    public String getRamRoleName() {
-        return this.ramRoleName;
+    public String getLaunchTemplateId() {
+        return this.launchTemplateId;
     }
 
-    public CreateLaunchTemplateVersionRequest setAutoReleaseTime(String autoReleaseTime) {
-        this.autoReleaseTime = autoReleaseTime;
+    public CreateLaunchTemplateVersionRequest setLaunchTemplateName(String launchTemplateName) {
+        this.launchTemplateName = launchTemplateName;
         return this;
     }
-    public String getAutoReleaseTime() {
-        return this.autoReleaseTime;
+    public String getLaunchTemplateName() {
+        return this.launchTemplateName;
     }
 
-    public CreateLaunchTemplateVersionRequest setSpotStrategy(String spotStrategy) {
-        this.spotStrategy = spotStrategy;
+    public CreateLaunchTemplateVersionRequest setNetworkInterface(java.util.List<CreateLaunchTemplateVersionRequestNetworkInterface> networkInterface) {
+        this.networkInterface = networkInterface;
         return this;
     }
-    public String getSpotStrategy() {
-        return this.spotStrategy;
+    public java.util.List<CreateLaunchTemplateVersionRequestNetworkInterface> getNetworkInterface() {
+        return this.networkInterface;
     }
 
-    public CreateLaunchTemplateVersionRequest setSpotPriceLimit(Float spotPriceLimit) {
-        this.spotPriceLimit = spotPriceLimit;
+    public CreateLaunchTemplateVersionRequest setNetworkType(String networkType) {
+        this.networkType = networkType;
         return this;
     }
-    public Float getSpotPriceLimit() {
-        return this.spotPriceLimit;
+    public String getNetworkType() {
+        return this.networkType;
     }
 
-    public CreateLaunchTemplateVersionRequest setSpotDuration(Integer spotDuration) {
-        this.spotDuration = spotDuration;
+    public CreateLaunchTemplateVersionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public Integer getSpotDuration() {
-        return this.spotDuration;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
-    public CreateLaunchTemplateVersionRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public CreateLaunchTemplateVersionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
-    public CreateLaunchTemplateVersionRequest setSecurityEnhancementStrategy(String securityEnhancementStrategy) {
-        this.securityEnhancementStrategy = securityEnhancementStrategy;
+    public CreateLaunchTemplateVersionRequest setPasswordInherit(Boolean passwordInherit) {
+        this.passwordInherit = passwordInherit;
         return this;
     }
-    public String getSecurityEnhancementStrategy() {
-        return this.securityEnhancementStrategy;
+    public Boolean getPasswordInherit() {
+        return this.passwordInherit;
+    }
+
+    public CreateLaunchTemplateVersionRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
     }
 
     public CreateLaunchTemplateVersionRequest setPrivateIpAddress(String privateIpAddress) {
@@ -474,26 +357,154 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         return this.privateIpAddress;
     }
 
-    public CreateLaunchTemplateVersionRequest setDeploymentSetId(String deploymentSetId) {
-        this.deploymentSetId = deploymentSetId;
+    public CreateLaunchTemplateVersionRequest setRamRoleName(String ramRoleName) {
+        this.ramRoleName = ramRoleName;
         return this;
     }
-    public String getDeploymentSetId() {
-        return this.deploymentSetId;
+    public String getRamRoleName() {
+        return this.ramRoleName;
+    }
+
+    public CreateLaunchTemplateVersionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateLaunchTemplateVersionRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateLaunchTemplateVersionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateLaunchTemplateVersionRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateLaunchTemplateVersionRequest setSecurityEnhancementStrategy(String securityEnhancementStrategy) {
+        this.securityEnhancementStrategy = securityEnhancementStrategy;
+        return this;
+    }
+    public String getSecurityEnhancementStrategy() {
+        return this.securityEnhancementStrategy;
+    }
+
+    public CreateLaunchTemplateVersionRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public CreateLaunchTemplateVersionRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+    public java.util.List<String> getSecurityGroupIds() {
+        return this.securityGroupIds;
+    }
+
+    public CreateLaunchTemplateVersionRequest setSpotDuration(Integer spotDuration) {
+        this.spotDuration = spotDuration;
+        return this;
+    }
+    public Integer getSpotDuration() {
+        return this.spotDuration;
+    }
+
+    public CreateLaunchTemplateVersionRequest setSpotPriceLimit(Float spotPriceLimit) {
+        this.spotPriceLimit = spotPriceLimit;
+        return this;
+    }
+    public Float getSpotPriceLimit() {
+        return this.spotPriceLimit;
+    }
+
+    public CreateLaunchTemplateVersionRequest setSpotStrategy(String spotStrategy) {
+        this.spotStrategy = spotStrategy;
+        return this;
+    }
+    public String getSpotStrategy() {
+        return this.spotStrategy;
+    }
+
+    public CreateLaunchTemplateVersionRequest setTag(java.util.List<CreateLaunchTemplateVersionRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateLaunchTemplateVersionRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public CreateLaunchTemplateVersionRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
+    }
+
+    public CreateLaunchTemplateVersionRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public CreateLaunchTemplateVersionRequest setVersionDescription(String versionDescription) {
+        this.versionDescription = versionDescription;
+        return this;
+    }
+    public String getVersionDescription() {
+        return this.versionDescription;
+    }
+
+    public CreateLaunchTemplateVersionRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public CreateLaunchTemplateVersionRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
     public static class CreateLaunchTemplateVersionRequestSystemDisk extends TeaModel {
         @NameInMap("Category")
         public String category;
 
-        @NameInMap("Size")
-        public Integer size;
-
-        @NameInMap("DiskName")
-        public String diskName;
+        @NameInMap("DeleteWithInstance")
+        public Boolean deleteWithInstance;
 
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("DiskName")
+        public String diskName;
 
         @NameInMap("Iops")
         public Integer iops;
@@ -501,8 +512,8 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
-        @NameInMap("DeleteWithInstance")
-        public Boolean deleteWithInstance;
+        @NameInMap("Size")
+        public Integer size;
 
         public static CreateLaunchTemplateVersionRequestSystemDisk build(java.util.Map<String, ?> map) throws Exception {
             CreateLaunchTemplateVersionRequestSystemDisk self = new CreateLaunchTemplateVersionRequestSystemDisk();
@@ -517,20 +528,12 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
             return this.category;
         }
 
-        public CreateLaunchTemplateVersionRequestSystemDisk setSize(Integer size) {
-            this.size = size;
+        public CreateLaunchTemplateVersionRequestSystemDisk setDeleteWithInstance(Boolean deleteWithInstance) {
+            this.deleteWithInstance = deleteWithInstance;
             return this;
         }
-        public Integer getSize() {
-            return this.size;
-        }
-
-        public CreateLaunchTemplateVersionRequestSystemDisk setDiskName(String diskName) {
-            this.diskName = diskName;
-            return this;
-        }
-        public String getDiskName() {
-            return this.diskName;
+        public Boolean getDeleteWithInstance() {
+            return this.deleteWithInstance;
         }
 
         public CreateLaunchTemplateVersionRequestSystemDisk setDescription(String description) {
@@ -539,6 +542,14 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public CreateLaunchTemplateVersionRequestSystemDisk setDiskName(String diskName) {
+            this.diskName = diskName;
+            return this;
+        }
+        public String getDiskName() {
+            return this.diskName;
         }
 
         public CreateLaunchTemplateVersionRequestSystemDisk setIops(Integer iops) {
@@ -557,74 +568,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
             return this.performanceLevel;
         }
 
-        public CreateLaunchTemplateVersionRequestSystemDisk setDeleteWithInstance(Boolean deleteWithInstance) {
-            this.deleteWithInstance = deleteWithInstance;
-            return this;
-        }
-        public Boolean getDeleteWithInstance() {
-            return this.deleteWithInstance;
-        }
-
-    }
-
-    public static class CreateLaunchTemplateVersionRequestDataDisk extends TeaModel {
-        @NameInMap("PerformanceLevel")
-        public String performanceLevel;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("SnapshotId")
-        public String snapshotId;
-
-        @NameInMap("Size")
-        public Integer size;
-
-        @NameInMap("Device")
-        public String device;
-
-        @NameInMap("DiskName")
-        public String diskName;
-
-        @NameInMap("Category")
-        public String category;
-
-        @NameInMap("DeleteWithInstance")
-        public Boolean deleteWithInstance;
-
-        @NameInMap("Encrypted")
-        public String encrypted;
-
-        public static CreateLaunchTemplateVersionRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
-            CreateLaunchTemplateVersionRequestDataDisk self = new CreateLaunchTemplateVersionRequestDataDisk();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateLaunchTemplateVersionRequestDataDisk setPerformanceLevel(String performanceLevel) {
-            this.performanceLevel = performanceLevel;
-            return this;
-        }
-        public String getPerformanceLevel() {
-            return this.performanceLevel;
-        }
-
-        public CreateLaunchTemplateVersionRequestDataDisk setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public CreateLaunchTemplateVersionRequestDataDisk setSnapshotId(String snapshotId) {
-            this.snapshotId = snapshotId;
-            return this;
-        }
-        public String getSnapshotId() {
-            return this.snapshotId;
-        }
-
-        public CreateLaunchTemplateVersionRequestDataDisk setSize(Integer size) {
+        public CreateLaunchTemplateVersionRequestSystemDisk setSize(Integer size) {
             this.size = size;
             return this;
         }
@@ -632,20 +576,39 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
             return this.size;
         }
 
-        public CreateLaunchTemplateVersionRequestDataDisk setDevice(String device) {
-            this.device = device;
-            return this;
-        }
-        public String getDevice() {
-            return this.device;
-        }
+    }
 
-        public CreateLaunchTemplateVersionRequestDataDisk setDiskName(String diskName) {
-            this.diskName = diskName;
-            return this;
-        }
-        public String getDiskName() {
-            return this.diskName;
+    public static class CreateLaunchTemplateVersionRequestDataDisk extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("DeleteWithInstance")
+        public Boolean deleteWithInstance;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Device")
+        public String device;
+
+        @NameInMap("DiskName")
+        public String diskName;
+
+        @NameInMap("Encrypted")
+        public String encrypted;
+
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
+        @NameInMap("Size")
+        public Integer size;
+
+        @NameInMap("SnapshotId")
+        public String snapshotId;
+
+        public static CreateLaunchTemplateVersionRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
+            CreateLaunchTemplateVersionRequestDataDisk self = new CreateLaunchTemplateVersionRequestDataDisk();
+            return TeaModel.build(map, self);
         }
 
         public CreateLaunchTemplateVersionRequestDataDisk setCategory(String category) {
@@ -664,6 +627,30 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
             return this.deleteWithInstance;
         }
 
+        public CreateLaunchTemplateVersionRequestDataDisk setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateLaunchTemplateVersionRequestDataDisk setDevice(String device) {
+            this.device = device;
+            return this;
+        }
+        public String getDevice() {
+            return this.device;
+        }
+
+        public CreateLaunchTemplateVersionRequestDataDisk setDiskName(String diskName) {
+            this.diskName = diskName;
+            return this;
+        }
+        public String getDiskName() {
+            return this.diskName;
+        }
+
         public CreateLaunchTemplateVersionRequestDataDisk setEncrypted(String encrypted) {
             this.encrypted = encrypted;
             return this;
@@ -672,46 +659,54 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
             return this.encrypted;
         }
 
+        public CreateLaunchTemplateVersionRequestDataDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public CreateLaunchTemplateVersionRequestDataDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public CreateLaunchTemplateVersionRequestDataDisk setSnapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+        }
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
     }
 
     public static class CreateLaunchTemplateVersionRequestNetworkInterface extends TeaModel {
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("NetworkInterfaceName")
         public String networkInterfaceName;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("PrimaryIpAddress")
+        public String primaryIpAddress;
 
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
-        @NameInMap("PrimaryIpAddress")
-        public String primaryIpAddress;
-
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
 
         public static CreateLaunchTemplateVersionRequestNetworkInterface build(java.util.Map<String, ?> map) throws Exception {
             CreateLaunchTemplateVersionRequestNetworkInterface self = new CreateLaunchTemplateVersionRequestNetworkInterface();
             return TeaModel.build(map, self);
-        }
-
-        public CreateLaunchTemplateVersionRequestNetworkInterface setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public CreateLaunchTemplateVersionRequestNetworkInterface setNetworkInterfaceName(String networkInterfaceName) {
-            this.networkInterfaceName = networkInterfaceName;
-            return this;
-        }
-        public String getNetworkInterfaceName() {
-            return this.networkInterfaceName;
         }
 
         public CreateLaunchTemplateVersionRequestNetworkInterface setDescription(String description) {
@@ -722,12 +717,12 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
             return this.description;
         }
 
-        public CreateLaunchTemplateVersionRequestNetworkInterface setSecurityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
+        public CreateLaunchTemplateVersionRequestNetworkInterface setNetworkInterfaceName(String networkInterfaceName) {
+            this.networkInterfaceName = networkInterfaceName;
             return this;
         }
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
+        public String getNetworkInterfaceName() {
+            return this.networkInterfaceName;
         }
 
         public CreateLaunchTemplateVersionRequestNetworkInterface setPrimaryIpAddress(String primaryIpAddress) {
@@ -738,12 +733,28 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
             return this.primaryIpAddress;
         }
 
+        public CreateLaunchTemplateVersionRequestNetworkInterface setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
         public CreateLaunchTemplateVersionRequestNetworkInterface setSecurityGroupIds(java.util.List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
         public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+        public CreateLaunchTemplateVersionRequestNetworkInterface setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteActivationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Activation")
     public DeleteActivationResponseBodyActivation activation;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DeleteActivationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteActivationResponseBody self = new DeleteActivationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteActivationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteActivationResponseBody setActivation(DeleteActivationResponseBodyActivation activation) {
@@ -31,21 +23,29 @@ public class DeleteActivationResponseBody extends TeaModel {
         return this.activation;
     }
 
+    public DeleteActivationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DeleteActivationResponseBodyActivation extends TeaModel {
+        @NameInMap("ActivationId")
+        public String activationId;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("DeregisteredCount")
         public Integer deregisteredCount;
 
-        @NameInMap("InstanceCount")
-        public Integer instanceCount;
-
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("RegisteredCount")
-        public Integer registeredCount;
+        @NameInMap("InstanceCount")
+        public Integer instanceCount;
 
         @NameInMap("InstanceName")
         public String instanceName;
@@ -53,15 +53,23 @@ public class DeleteActivationResponseBody extends TeaModel {
         @NameInMap("IpAddressRange")
         public String ipAddressRange;
 
+        @NameInMap("RegisteredCount")
+        public Integer registeredCount;
+
         @NameInMap("TimeToLiveInHours")
         public Long timeToLiveInHours;
-
-        @NameInMap("ActivationId")
-        public String activationId;
 
         public static DeleteActivationResponseBodyActivation build(java.util.Map<String, ?> map) throws Exception {
             DeleteActivationResponseBodyActivation self = new DeleteActivationResponseBodyActivation();
             return TeaModel.build(map, self);
+        }
+
+        public DeleteActivationResponseBodyActivation setActivationId(String activationId) {
+            this.activationId = activationId;
+            return this;
+        }
+        public String getActivationId() {
+            return this.activationId;
         }
 
         public DeleteActivationResponseBodyActivation setCreationTime(String creationTime) {
@@ -80,14 +88,6 @@ public class DeleteActivationResponseBody extends TeaModel {
             return this.deregisteredCount;
         }
 
-        public DeleteActivationResponseBodyActivation setInstanceCount(Integer instanceCount) {
-            this.instanceCount = instanceCount;
-            return this;
-        }
-        public Integer getInstanceCount() {
-            return this.instanceCount;
-        }
-
         public DeleteActivationResponseBodyActivation setDescription(String description) {
             this.description = description;
             return this;
@@ -96,12 +96,12 @@ public class DeleteActivationResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DeleteActivationResponseBodyActivation setRegisteredCount(Integer registeredCount) {
-            this.registeredCount = registeredCount;
+        public DeleteActivationResponseBodyActivation setInstanceCount(Integer instanceCount) {
+            this.instanceCount = instanceCount;
             return this;
         }
-        public Integer getRegisteredCount() {
-            return this.registeredCount;
+        public Integer getInstanceCount() {
+            return this.instanceCount;
         }
 
         public DeleteActivationResponseBodyActivation setInstanceName(String instanceName) {
@@ -120,20 +120,20 @@ public class DeleteActivationResponseBody extends TeaModel {
             return this.ipAddressRange;
         }
 
+        public DeleteActivationResponseBodyActivation setRegisteredCount(Integer registeredCount) {
+            this.registeredCount = registeredCount;
+            return this;
+        }
+        public Integer getRegisteredCount() {
+            return this.registeredCount;
+        }
+
         public DeleteActivationResponseBodyActivation setTimeToLiveInHours(Long timeToLiveInHours) {
             this.timeToLiveInHours = timeToLiveInHours;
             return this;
         }
         public Long getTimeToLiveInHours() {
             return this.timeToLiveInHours;
-        }
-
-        public DeleteActivationResponseBodyActivation setActivationId(String activationId) {
-            this.activationId = activationId;
-            return this;
-        }
-        public String getActivationId() {
-            return this.activationId;
         }
 
     }

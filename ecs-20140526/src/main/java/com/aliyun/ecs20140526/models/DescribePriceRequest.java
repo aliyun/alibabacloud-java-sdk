@@ -4,44 +4,41 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceRequest extends TeaModel {
-    @NameInMap("SystemDisk")
-    public DescribePriceRequestSystemDisk systemDisk;
-
     @NameInMap("DataDisk")
     public java.util.List<DescribePriceRequestDataDisk> dataDisk;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("SystemDisk")
+    public DescribePriceRequestSystemDisk systemDisk;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("Amount")
+    public Integer amount;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("AssuranceTimes")
+    public String assuranceTimes;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ResourceType")
-    public String resourceType;
-
-    @NameInMap("ImageId")
-    public String imageId;
-
-    @NameInMap("InstanceType")
-    public String instanceType;
+    @NameInMap("Capacity")
+    public Integer capacity;
 
     @NameInMap("DedicatedHostType")
     public String dedicatedHostType;
 
-    @NameInMap("IoOptimized")
-    public String ioOptimized;
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("InstanceAmount")
+    public Integer instanceAmount;
+
+    @NameInMap("InstanceCpuCoreCount")
+    public Integer instanceCpuCoreCount;
 
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
+
+    @NameInMap("InstanceType")
+    public String instanceType;
+
+    @NameInMap("InstanceTypeList")
+    public java.util.List<String> instanceTypeList;
 
     @NameInMap("InternetChargeType")
     public String internetChargeType;
@@ -49,47 +46,50 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
 
-    @NameInMap("Period")
-    public Integer period;
-
-    @NameInMap("PriceUnit")
-    public String priceUnit;
-
-    @NameInMap("Amount")
-    public Integer amount;
-
-    @NameInMap("OfferingType")
-    public String offeringType;
-
-    @NameInMap("InstanceAmount")
-    public Integer instanceAmount;
-
-    @NameInMap("Scope")
-    public String scope;
-
-    @NameInMap("Platform")
-    public String platform;
-
-    @NameInMap("Capacity")
-    public Integer capacity;
-
-    @NameInMap("AssuranceTimes")
-    public String assuranceTimes;
-
-    @NameInMap("InstanceCpuCoreCount")
-    public Integer instanceCpuCoreCount;
+    @NameInMap("IoOptimized")
+    public String ioOptimized;
 
     @NameInMap("Isp")
     public String isp;
 
-    @NameInMap("InstanceTypeList")
-    public java.util.List<String> instanceTypeList;
+    @NameInMap("OfferingType")
+    public String offeringType;
 
-    @NameInMap("SpotStrategy")
-    public String spotStrategy;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("Period")
+    public Integer period;
+
+    @NameInMap("Platform")
+    public String platform;
+
+    @NameInMap("PriceUnit")
+    public String priceUnit;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
+
+    @NameInMap("Scope")
+    public String scope;
 
     @NameInMap("SpotDuration")
     public Integer spotDuration;
+
+    @NameInMap("SpotStrategy")
+    public String spotStrategy;
 
     @NameInMap("ZoneId")
     public String zoneId;
@@ -97,14 +97,6 @@ public class DescribePriceRequest extends TeaModel {
     public static DescribePriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePriceRequest self = new DescribePriceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePriceRequest setSystemDisk(DescribePriceRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public DescribePriceRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
     }
 
     public DescribePriceRequest setDataDisk(java.util.List<DescribePriceRequestDataDisk> dataDisk) {
@@ -115,68 +107,36 @@ public class DescribePriceRequest extends TeaModel {
         return this.dataDisk;
     }
 
-    public DescribePriceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribePriceRequest setSystemDisk(DescribePriceRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public DescribePriceRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
     }
 
-    public DescribePriceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribePriceRequest setAmount(Integer amount) {
+        this.amount = amount;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public Integer getAmount() {
+        return this.amount;
     }
 
-    public DescribePriceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public DescribePriceRequest setAssuranceTimes(String assuranceTimes) {
+        this.assuranceTimes = assuranceTimes;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public String getAssuranceTimes() {
+        return this.assuranceTimes;
     }
 
-    public DescribePriceRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public DescribePriceRequest setCapacity(Integer capacity) {
+        this.capacity = capacity;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribePriceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribePriceRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
-    public DescribePriceRequest setImageId(String imageId) {
-        this.imageId = imageId;
-        return this;
-    }
-    public String getImageId() {
-        return this.imageId;
-    }
-
-    public DescribePriceRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
+    public Integer getCapacity() {
+        return this.capacity;
     }
 
     public DescribePriceRequest setDedicatedHostType(String dedicatedHostType) {
@@ -187,12 +147,28 @@ public class DescribePriceRequest extends TeaModel {
         return this.dedicatedHostType;
     }
 
-    public DescribePriceRequest setIoOptimized(String ioOptimized) {
-        this.ioOptimized = ioOptimized;
+    public DescribePriceRequest setImageId(String imageId) {
+        this.imageId = imageId;
         return this;
     }
-    public String getIoOptimized() {
-        return this.ioOptimized;
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public DescribePriceRequest setInstanceAmount(Integer instanceAmount) {
+        this.instanceAmount = instanceAmount;
+        return this;
+    }
+    public Integer getInstanceAmount() {
+        return this.instanceAmount;
+    }
+
+    public DescribePriceRequest setInstanceCpuCoreCount(Integer instanceCpuCoreCount) {
+        this.instanceCpuCoreCount = instanceCpuCoreCount;
+        return this;
+    }
+    public Integer getInstanceCpuCoreCount() {
+        return this.instanceCpuCoreCount;
     }
 
     public DescribePriceRequest setInstanceNetworkType(String instanceNetworkType) {
@@ -201,6 +177,22 @@ public class DescribePriceRequest extends TeaModel {
     }
     public String getInstanceNetworkType() {
         return this.instanceNetworkType;
+    }
+
+    public DescribePriceRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public DescribePriceRequest setInstanceTypeList(java.util.List<String> instanceTypeList) {
+        this.instanceTypeList = instanceTypeList;
+        return this;
+    }
+    public java.util.List<String> getInstanceTypeList() {
+        return this.instanceTypeList;
     }
 
     public DescribePriceRequest setInternetChargeType(String internetChargeType) {
@@ -219,84 +211,12 @@ public class DescribePriceRequest extends TeaModel {
         return this.internetMaxBandwidthOut;
     }
 
-    public DescribePriceRequest setPeriod(Integer period) {
-        this.period = period;
+    public DescribePriceRequest setIoOptimized(String ioOptimized) {
+        this.ioOptimized = ioOptimized;
         return this;
     }
-    public Integer getPeriod() {
-        return this.period;
-    }
-
-    public DescribePriceRequest setPriceUnit(String priceUnit) {
-        this.priceUnit = priceUnit;
-        return this;
-    }
-    public String getPriceUnit() {
-        return this.priceUnit;
-    }
-
-    public DescribePriceRequest setAmount(Integer amount) {
-        this.amount = amount;
-        return this;
-    }
-    public Integer getAmount() {
-        return this.amount;
-    }
-
-    public DescribePriceRequest setOfferingType(String offeringType) {
-        this.offeringType = offeringType;
-        return this;
-    }
-    public String getOfferingType() {
-        return this.offeringType;
-    }
-
-    public DescribePriceRequest setInstanceAmount(Integer instanceAmount) {
-        this.instanceAmount = instanceAmount;
-        return this;
-    }
-    public Integer getInstanceAmount() {
-        return this.instanceAmount;
-    }
-
-    public DescribePriceRequest setScope(String scope) {
-        this.scope = scope;
-        return this;
-    }
-    public String getScope() {
-        return this.scope;
-    }
-
-    public DescribePriceRequest setPlatform(String platform) {
-        this.platform = platform;
-        return this;
-    }
-    public String getPlatform() {
-        return this.platform;
-    }
-
-    public DescribePriceRequest setCapacity(Integer capacity) {
-        this.capacity = capacity;
-        return this;
-    }
-    public Integer getCapacity() {
-        return this.capacity;
-    }
-
-    public DescribePriceRequest setAssuranceTimes(String assuranceTimes) {
-        this.assuranceTimes = assuranceTimes;
-        return this;
-    }
-    public String getAssuranceTimes() {
-        return this.assuranceTimes;
-    }
-
-    public DescribePriceRequest setInstanceCpuCoreCount(Integer instanceCpuCoreCount) {
-        this.instanceCpuCoreCount = instanceCpuCoreCount;
-        return this;
-    }
-    public Integer getInstanceCpuCoreCount() {
-        return this.instanceCpuCoreCount;
+    public String getIoOptimized() {
+        return this.ioOptimized;
     }
 
     public DescribePriceRequest setIsp(String isp) {
@@ -307,20 +227,92 @@ public class DescribePriceRequest extends TeaModel {
         return this.isp;
     }
 
-    public DescribePriceRequest setInstanceTypeList(java.util.List<String> instanceTypeList) {
-        this.instanceTypeList = instanceTypeList;
+    public DescribePriceRequest setOfferingType(String offeringType) {
+        this.offeringType = offeringType;
         return this;
     }
-    public java.util.List<String> getInstanceTypeList() {
-        return this.instanceTypeList;
+    public String getOfferingType() {
+        return this.offeringType;
     }
 
-    public DescribePriceRequest setSpotStrategy(String spotStrategy) {
-        this.spotStrategy = spotStrategy;
+    public DescribePriceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getSpotStrategy() {
-        return this.spotStrategy;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribePriceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribePriceRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public DescribePriceRequest setPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+    public String getPlatform() {
+        return this.platform;
+    }
+
+    public DescribePriceRequest setPriceUnit(String priceUnit) {
+        this.priceUnit = priceUnit;
+        return this;
+    }
+    public String getPriceUnit() {
+        return this.priceUnit;
+    }
+
+    public DescribePriceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribePriceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribePriceRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribePriceRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public DescribePriceRequest setScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    public String getScope() {
+        return this.scope;
     }
 
     public DescribePriceRequest setSpotDuration(Integer spotDuration) {
@@ -331,6 +323,14 @@ public class DescribePriceRequest extends TeaModel {
         return this.spotDuration;
     }
 
+    public DescribePriceRequest setSpotStrategy(String spotStrategy) {
+        this.spotStrategy = spotStrategy;
+        return this;
+    }
+    public String getSpotStrategy() {
+        return this.spotStrategy;
+    }
+
     public DescribePriceRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
@@ -339,68 +339,19 @@ public class DescribePriceRequest extends TeaModel {
         return this.zoneId;
     }
 
-    public static class DescribePriceRequestSystemDisk extends TeaModel {
-        @NameInMap("Category")
-        public String category;
-
-        @NameInMap("Size")
-        public Integer size;
-
-        @NameInMap("PerformanceLevel")
-        public String performanceLevel;
-
-        public static DescribePriceRequestSystemDisk build(java.util.Map<String, ?> map) throws Exception {
-            DescribePriceRequestSystemDisk self = new DescribePriceRequestSystemDisk();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribePriceRequestSystemDisk setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
-        public DescribePriceRequestSystemDisk setSize(Integer size) {
-            this.size = size;
-            return this;
-        }
-        public Integer getSize() {
-            return this.size;
-        }
-
-        public DescribePriceRequestSystemDisk setPerformanceLevel(String performanceLevel) {
-            this.performanceLevel = performanceLevel;
-            return this;
-        }
-        public String getPerformanceLevel() {
-            return this.performanceLevel;
-        }
-
-    }
-
     public static class DescribePriceRequestDataDisk extends TeaModel {
-        @NameInMap("Size")
-        public Integer size;
-
         @NameInMap("Category")
         public String category;
 
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
+
+        @NameInMap("Size")
+        public Integer size;
 
         public static DescribePriceRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceRequestDataDisk self = new DescribePriceRequestDataDisk();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePriceRequestDataDisk setSize(Integer size) {
-            this.size = size;
-            return this;
-        }
-        public Integer getSize() {
-            return this.size;
         }
 
         public DescribePriceRequestDataDisk setCategory(String category) {
@@ -417,6 +368,55 @@ public class DescribePriceRequest extends TeaModel {
         }
         public String getPerformanceLevel() {
             return this.performanceLevel;
+        }
+
+        public DescribePriceRequestDataDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+    }
+
+    public static class DescribePriceRequestSystemDisk extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
+        @NameInMap("Size")
+        public Integer size;
+
+        public static DescribePriceRequestSystemDisk build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceRequestSystemDisk self = new DescribePriceRequestSystemDisk();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceRequestSystemDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribePriceRequestSystemDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public DescribePriceRequestSystemDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
         }
 
     }

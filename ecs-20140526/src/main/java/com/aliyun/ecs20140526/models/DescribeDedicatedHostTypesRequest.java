@@ -4,23 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostTypesRequest extends TeaModel {
+    @NameInMap("DedicatedHostType")
+    public String dedicatedHostType;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DedicatedHostType")
-    public String dedicatedHostType;
 
     @NameInMap("SupportedInstanceTypeFamily")
     public String supportedInstanceTypeFamily;
@@ -30,12 +30,36 @@ public class DescribeDedicatedHostTypesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDedicatedHostTypesRequest setDedicatedHostType(String dedicatedHostType) {
+        this.dedicatedHostType = dedicatedHostType;
+        return this;
+    }
+    public String getDedicatedHostType() {
+        return this.dedicatedHostType;
+    }
+
+    public DescribeDedicatedHostTypesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public DescribeDedicatedHostTypesRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeDedicatedHostTypesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeDedicatedHostTypesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -52,30 +76,6 @@ public class DescribeDedicatedHostTypesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeDedicatedHostTypesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeDedicatedHostTypesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeDedicatedHostTypesRequest setDedicatedHostType(String dedicatedHostType) {
-        this.dedicatedHostType = dedicatedHostType;
-        return this;
-    }
-    public String getDedicatedHostType() {
-        return this.dedicatedHostType;
     }
 
     public DescribeDedicatedHostTypesRequest setSupportedInstanceTypeFamily(String supportedInstanceTypeFamily) {

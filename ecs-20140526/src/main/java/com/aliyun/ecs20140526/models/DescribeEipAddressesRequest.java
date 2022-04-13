@@ -7,29 +7,32 @@ public class DescribeEipAddressesRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<DescribeEipAddressesRequestFilter> filter;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AllocationId")
+    public String allocationId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("AssociatedInstanceId")
+    public String associatedInstanceId;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("AssociatedInstanceType")
+    public String associatedInstanceType;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("ChargeType")
+    public String chargeType;
 
     @NameInMap("EipAddress")
     public String eipAddress;
 
-    @NameInMap("AllocationId")
-    public String allocationId;
-
     @NameInMap("ISP")
     public String ISP;
+
+    @NameInMap("LockReason")
+    public String lockReason;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -37,20 +40,17 @@ public class DescribeEipAddressesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("LockReason")
-    public String lockReason;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("AssociatedInstanceType")
-    public String associatedInstanceType;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
-    @NameInMap("AssociatedInstanceId")
-    public String associatedInstanceId;
-
-    @NameInMap("ChargeType")
-    public String chargeType;
+    @NameInMap("Status")
+    public String status;
 
     public static DescribeEipAddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEipAddressesRequest self = new DescribeEipAddressesRequest();
@@ -65,44 +65,36 @@ public class DescribeEipAddressesRequest extends TeaModel {
         return this.filter;
     }
 
-    public DescribeEipAddressesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeEipAddressesRequest setAllocationId(String allocationId) {
+        this.allocationId = allocationId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAllocationId() {
+        return this.allocationId;
     }
 
-    public DescribeEipAddressesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public DescribeEipAddressesRequest setAssociatedInstanceId(String associatedInstanceId) {
+        this.associatedInstanceId = associatedInstanceId;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public String getAssociatedInstanceId() {
+        return this.associatedInstanceId;
     }
 
-    public DescribeEipAddressesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public DescribeEipAddressesRequest setAssociatedInstanceType(String associatedInstanceType) {
+        this.associatedInstanceType = associatedInstanceType;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getAssociatedInstanceType() {
+        return this.associatedInstanceType;
     }
 
-    public DescribeEipAddressesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeEipAddressesRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeEipAddressesRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public DescribeEipAddressesRequest setEipAddress(String eipAddress) {
@@ -113,20 +105,36 @@ public class DescribeEipAddressesRequest extends TeaModel {
         return this.eipAddress;
     }
 
-    public DescribeEipAddressesRequest setAllocationId(String allocationId) {
-        this.allocationId = allocationId;
-        return this;
-    }
-    public String getAllocationId() {
-        return this.allocationId;
-    }
-
     public DescribeEipAddressesRequest setISP(String ISP) {
         this.ISP = ISP;
         return this;
     }
     public String getISP() {
         return this.ISP;
+    }
+
+    public DescribeEipAddressesRequest setLockReason(String lockReason) {
+        this.lockReason = lockReason;
+        return this;
+    }
+    public String getLockReason() {
+        return this.lockReason;
+    }
+
+    public DescribeEipAddressesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeEipAddressesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeEipAddressesRequest setPageNumber(Integer pageNumber) {
@@ -145,44 +153,36 @@ public class DescribeEipAddressesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeEipAddressesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeEipAddressesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public DescribeEipAddressesRequest setLockReason(String lockReason) {
-        this.lockReason = lockReason;
+    public DescribeEipAddressesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getLockReason() {
-        return this.lockReason;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public DescribeEipAddressesRequest setAssociatedInstanceType(String associatedInstanceType) {
-        this.associatedInstanceType = associatedInstanceType;
+    public DescribeEipAddressesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getAssociatedInstanceType() {
-        return this.associatedInstanceType;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
-    public DescribeEipAddressesRequest setAssociatedInstanceId(String associatedInstanceId) {
-        this.associatedInstanceId = associatedInstanceId;
+    public DescribeEipAddressesRequest setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getAssociatedInstanceId() {
-        return this.associatedInstanceId;
-    }
-
-    public DescribeEipAddressesRequest setChargeType(String chargeType) {
-        this.chargeType = chargeType;
-        return this;
-    }
-    public String getChargeType() {
-        return this.chargeType;
+    public String getStatus() {
+        return this.status;
     }
 
     public static class DescribeEipAddressesRequestFilter extends TeaModel {

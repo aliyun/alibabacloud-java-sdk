@@ -4,11 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagePipelineExecutionsRequest extends TeaModel {
-    @NameInMap("Tag")
-    public java.util.List<DescribeImagePipelineExecutionsRequestTag> tag;
+    @NameInMap("ExecutionId")
+    public String executionId;
+
+    @NameInMap("ImagePipelineId")
+    public String imagePipelineId;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,38 +31,55 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ImagePipelineId")
-    public String imagePipelineId;
-
-    @NameInMap("ExecutionId")
-    public String executionId;
-
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("MaxResults")
-    public Integer maxResults;
+    @NameInMap("Tag")
+    public java.util.List<DescribeImagePipelineExecutionsRequestTag> tag;
 
     public static DescribeImagePipelineExecutionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImagePipelineExecutionsRequest self = new DescribeImagePipelineExecutionsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeImagePipelineExecutionsRequest setTag(java.util.List<DescribeImagePipelineExecutionsRequestTag> tag) {
-        this.tag = tag;
+    public DescribeImagePipelineExecutionsRequest setExecutionId(String executionId) {
+        this.executionId = executionId;
         return this;
     }
-    public java.util.List<DescribeImagePipelineExecutionsRequestTag> getTag() {
-        return this.tag;
+    public String getExecutionId() {
+        return this.executionId;
+    }
+
+    public DescribeImagePipelineExecutionsRequest setImagePipelineId(String imagePipelineId) {
+        this.imagePipelineId = imagePipelineId;
+        return this;
+    }
+    public String getImagePipelineId() {
+        return this.imagePipelineId;
+    }
+
+    public DescribeImagePipelineExecutionsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeImagePipelineExecutionsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public DescribeImagePipelineExecutionsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeImagePipelineExecutionsRequest setOwnerId(Long ownerId) {
@@ -56,6 +88,14 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeImagePipelineExecutionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeImagePipelineExecutionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -74,38 +114,6 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeImagePipelineExecutionsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeImagePipelineExecutionsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeImagePipelineExecutionsRequest setImagePipelineId(String imagePipelineId) {
-        this.imagePipelineId = imagePipelineId;
-        return this;
-    }
-    public String getImagePipelineId() {
-        return this.imagePipelineId;
-    }
-
-    public DescribeImagePipelineExecutionsRequest setExecutionId(String executionId) {
-        this.executionId = executionId;
-        return this;
-    }
-    public String getExecutionId() {
-        return this.executionId;
-    }
-
     public DescribeImagePipelineExecutionsRequest setStatus(String status) {
         this.status = status;
         return this;
@@ -114,20 +122,12 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
         return this.status;
     }
 
-    public DescribeImagePipelineExecutionsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public DescribeImagePipelineExecutionsRequest setTag(java.util.List<DescribeImagePipelineExecutionsRequestTag> tag) {
+        this.tag = tag;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public DescribeImagePipelineExecutionsRequest setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public java.util.List<DescribeImagePipelineExecutionsRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class DescribeImagePipelineExecutionsRequestTag extends TeaModel {

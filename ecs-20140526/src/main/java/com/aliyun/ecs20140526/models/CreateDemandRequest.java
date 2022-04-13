@@ -4,41 +4,32 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDemandRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("Amount")
+    public Integer amount;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
+    @NameInMap("DemandDescription")
+    public String demandDescription;
 
     @NameInMap("DemandName")
     public String demandName;
 
-    @NameInMap("DemandDescription")
-    public String demandDescription;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("InstanceChargeType")
+    public String instanceChargeType;
 
     @NameInMap("InstanceType")
     public String instanceType;
 
-    @NameInMap("Amount")
-    public Integer amount;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
-    @NameInMap("InstanceChargeType")
-    public String instanceChargeType;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Period")
     public Integer period;
@@ -46,95 +37,24 @@ public class CreateDemandRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static CreateDemandRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDemandRequest self = new CreateDemandRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDemandRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateDemandRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateDemandRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateDemandRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateDemandRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateDemandRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateDemandRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public CreateDemandRequest setDemandName(String demandName) {
-        this.demandName = demandName;
-        return this;
-    }
-    public String getDemandName() {
-        return this.demandName;
-    }
-
-    public CreateDemandRequest setDemandDescription(String demandDescription) {
-        this.demandDescription = demandDescription;
-        return this;
-    }
-    public String getDemandDescription() {
-        return this.demandDescription;
-    }
-
-    public CreateDemandRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
     }
 
     public CreateDemandRequest setAmount(Integer amount) {
@@ -145,12 +65,68 @@ public class CreateDemandRequest extends TeaModel {
         return this.amount;
     }
 
+    public CreateDemandRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateDemandRequest setDemandDescription(String demandDescription) {
+        this.demandDescription = demandDescription;
+        return this;
+    }
+    public String getDemandDescription() {
+        return this.demandDescription;
+    }
+
+    public CreateDemandRequest setDemandName(String demandName) {
+        this.demandName = demandName;
+        return this;
+    }
+    public String getDemandName() {
+        return this.demandName;
+    }
+
+    public CreateDemandRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public CreateDemandRequest setInstanceChargeType(String instanceChargeType) {
         this.instanceChargeType = instanceChargeType;
         return this;
     }
     public String getInstanceChargeType() {
         return this.instanceChargeType;
+    }
+
+    public CreateDemandRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public CreateDemandRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreateDemandRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CreateDemandRequest setPeriod(Integer period) {
@@ -169,6 +145,30 @@ public class CreateDemandRequest extends TeaModel {
         return this.periodUnit;
     }
 
+    public CreateDemandRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateDemandRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateDemandRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public CreateDemandRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -177,12 +177,12 @@ public class CreateDemandRequest extends TeaModel {
         return this.startTime;
     }
 
-    public CreateDemandRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public CreateDemandRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

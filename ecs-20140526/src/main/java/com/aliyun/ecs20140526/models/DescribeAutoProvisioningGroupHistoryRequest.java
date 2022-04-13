@@ -4,20 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AutoProvisioningGroupId")
+    public String autoProvisioningGroupId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -25,42 +22,37 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("AutoProvisioningGroupId")
-    public String autoProvisioningGroupId;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
 
     public static DescribeAutoProvisioningGroupHistoryRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutoProvisioningGroupHistoryRequest self = new DescribeAutoProvisioningGroupHistoryRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAutoProvisioningGroupHistoryRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeAutoProvisioningGroupHistoryRequest setAutoProvisioningGroupId(String autoProvisioningGroupId) {
+        this.autoProvisioningGroupId = autoProvisioningGroupId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAutoProvisioningGroupId() {
+        return this.autoProvisioningGroupId;
     }
 
-    public DescribeAutoProvisioningGroupHistoryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public DescribeAutoProvisioningGroupHistoryRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeAutoProvisioningGroupHistoryRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeAutoProvisioningGroupHistoryRequest setOwnerAccount(String ownerAccount) {
@@ -71,12 +63,12 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeAutoProvisioningGroupHistoryRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeAutoProvisioningGroupHistoryRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeAutoProvisioningGroupHistoryRequest setPageNumber(Integer pageNumber) {
@@ -95,12 +87,28 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeAutoProvisioningGroupHistoryRequest setAutoProvisioningGroupId(String autoProvisioningGroupId) {
-        this.autoProvisioningGroupId = autoProvisioningGroupId;
+    public DescribeAutoProvisioningGroupHistoryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAutoProvisioningGroupId() {
-        return this.autoProvisioningGroupId;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeAutoProvisioningGroupHistoryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeAutoProvisioningGroupHistoryRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeAutoProvisioningGroupHistoryRequest setStartTime(String startTime) {
@@ -109,14 +117,6 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeAutoProvisioningGroupHistoryRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
 }

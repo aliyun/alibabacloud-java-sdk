@@ -4,8 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DisableActivationRequest extends TeaModel {
+    @NameInMap("ActivationId")
+    public String activationId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +22,25 @@ public class DisableActivationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ActivationId")
-    public String activationId;
-
     public static DisableActivationRequest build(java.util.Map<String, ?> map) throws Exception {
         DisableActivationRequest self = new DisableActivationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DisableActivationRequest setActivationId(String activationId) {
+        this.activationId = activationId;
+        return this;
+    }
+    public String getActivationId() {
+        return this.activationId;
+    }
+
+    public DisableActivationRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DisableActivationRequest setOwnerId(Long ownerId) {
@@ -33,6 +49,14 @@ public class DisableActivationRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DisableActivationRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DisableActivationRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,30 +73,6 @@ public class DisableActivationRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DisableActivationRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DisableActivationRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DisableActivationRequest setActivationId(String activationId) {
-        this.activationId = activationId;
-        return this;
-    }
-    public String getActivationId() {
-        return this.activationId;
     }
 
 }

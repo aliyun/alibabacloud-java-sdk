@@ -4,20 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeHaVipsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("Filter")
+    public java.util.List<DescribeHaVipsRequestFilter> filter;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -25,36 +19,26 @@ public class DescribeHaVipsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Filter")
-    public java.util.List<DescribeHaVipsRequestFilter> filter;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeHaVipsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeHaVipsRequest self = new DescribeHaVipsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeHaVipsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeHaVipsRequest setFilter(java.util.List<DescribeHaVipsRequestFilter> filter) {
+        this.filter = filter;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeHaVipsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeHaVipsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public java.util.List<DescribeHaVipsRequestFilter> getFilter() {
+        return this.filter;
     }
 
     public DescribeHaVipsRequest setOwnerAccount(String ownerAccount) {
@@ -65,12 +49,12 @@ public class DescribeHaVipsRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeHaVipsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeHaVipsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeHaVipsRequest setPageNumber(Integer pageNumber) {
@@ -89,12 +73,28 @@ public class DescribeHaVipsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeHaVipsRequest setFilter(java.util.List<DescribeHaVipsRequestFilter> filter) {
-        this.filter = filter;
+    public DescribeHaVipsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.List<DescribeHaVipsRequestFilter> getFilter() {
-        return this.filter;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeHaVipsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeHaVipsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public static class DescribeHaVipsRequestFilter extends TeaModel {

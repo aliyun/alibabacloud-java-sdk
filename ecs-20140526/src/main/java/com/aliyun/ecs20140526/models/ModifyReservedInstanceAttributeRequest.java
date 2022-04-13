@@ -4,17 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyReservedInstanceAttributeRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -25,36 +22,23 @@ public class ModifyReservedInstanceAttributeRequest extends TeaModel {
     @NameInMap("ReservedInstanceName")
     public String reservedInstanceName;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyReservedInstanceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyReservedInstanceAttributeRequest self = new ModifyReservedInstanceAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyReservedInstanceAttributeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyReservedInstanceAttributeRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyReservedInstanceAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyReservedInstanceAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getDescription() {
+        return this.description;
     }
 
     public ModifyReservedInstanceAttributeRequest setOwnerAccount(String ownerAccount) {
@@ -63,6 +47,14 @@ public class ModifyReservedInstanceAttributeRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public ModifyReservedInstanceAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyReservedInstanceAttributeRequest setRegionId(String regionId) {
@@ -89,12 +81,20 @@ public class ModifyReservedInstanceAttributeRequest extends TeaModel {
         return this.reservedInstanceName;
     }
 
-    public ModifyReservedInstanceAttributeRequest setDescription(String description) {
-        this.description = description;
+    public ModifyReservedInstanceAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyReservedInstanceAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

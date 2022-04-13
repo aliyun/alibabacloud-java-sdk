@@ -7,26 +7,11 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     @NameInMap("PrivatePoolOptions")
     public DescribeCapacityReservationsRequestPrivatePoolOptions privatePoolOptions;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("InstanceChargeType")
+    public String instanceChargeType;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeCapacityReservationsRequestTag> tag;
+    @NameInMap("InstanceType")
+    public String instanceType;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -34,20 +19,35 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Platform")
     public String platform;
 
-    @NameInMap("InstanceType")
-    public String instanceType;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("ZoneId")
-    public String zoneId;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
-    @NameInMap("InstanceChargeType")
-    public String instanceChargeType;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeCapacityReservationsRequestTag> tag;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static DescribeCapacityReservationsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCapacityReservationsRequest self = new DescribeCapacityReservationsRequest();
@@ -62,60 +62,20 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
         return this.privatePoolOptions;
     }
 
-    public DescribeCapacityReservationsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeCapacityReservationsRequest setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
-    public DescribeCapacityReservationsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public DescribeCapacityReservationsRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeCapacityReservationsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeCapacityReservationsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeCapacityReservationsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeCapacityReservationsRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public DescribeCapacityReservationsRequest setTag(java.util.List<DescribeCapacityReservationsRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeCapacityReservationsRequestTag> getTag() {
-        return this.tag;
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public DescribeCapacityReservationsRequest setMaxResults(Integer maxResults) {
@@ -134,6 +94,22 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public DescribeCapacityReservationsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeCapacityReservationsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public DescribeCapacityReservationsRequest setPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -142,28 +118,36 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
         return this.platform;
     }
 
-    public DescribeCapacityReservationsRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
+    public DescribeCapacityReservationsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getInstanceType() {
-        return this.instanceType;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public DescribeCapacityReservationsRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
+    public DescribeCapacityReservationsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public String getZoneId() {
-        return this.zoneId;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
-    public DescribeCapacityReservationsRequest setInstanceChargeType(String instanceChargeType) {
-        this.instanceChargeType = instanceChargeType;
+    public DescribeCapacityReservationsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getInstanceChargeType() {
-        return this.instanceChargeType;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeCapacityReservationsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeCapacityReservationsRequest setStatus(String status) {
@@ -172,6 +156,22 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeCapacityReservationsRequest setTag(java.util.List<DescribeCapacityReservationsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeCapacityReservationsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public DescribeCapacityReservationsRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
     public static class DescribeCapacityReservationsRequestPrivatePoolOptions extends TeaModel {

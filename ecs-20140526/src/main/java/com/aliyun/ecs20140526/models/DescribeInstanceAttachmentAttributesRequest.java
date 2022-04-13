@@ -4,23 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAttachmentAttributesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("InstanceIds")
+    public String instanceIds;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("InstanceIds")
-    public String instanceIds;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -28,33 +19,26 @@ public class DescribeInstanceAttachmentAttributesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static DescribeInstanceAttachmentAttributesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceAttachmentAttributesRequest self = new DescribeInstanceAttachmentAttributesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceAttachmentAttributesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeInstanceAttachmentAttributesRequest setInstanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeInstanceAttachmentAttributesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeInstanceAttachmentAttributesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getInstanceIds() {
+        return this.instanceIds;
     }
 
     public DescribeInstanceAttachmentAttributesRequest setOwnerAccount(String ownerAccount) {
@@ -65,20 +49,12 @@ public class DescribeInstanceAttachmentAttributesRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeInstanceAttachmentAttributesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeInstanceAttachmentAttributesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeInstanceAttachmentAttributesRequest setInstanceIds(String instanceIds) {
-        this.instanceIds = instanceIds;
-        return this;
-    }
-    public String getInstanceIds() {
-        return this.instanceIds;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeInstanceAttachmentAttributesRequest setPageNumber(Integer pageNumber) {
@@ -95,6 +71,30 @@ public class DescribeInstanceAttachmentAttributesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeInstanceAttachmentAttributesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeInstanceAttachmentAttributesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeInstanceAttachmentAttributesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

@@ -4,24 +4,40 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
+    @NameInMap("InstanceSystemEventSet")
+    public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSet instanceSystemEventSet;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("InstanceSystemEventSet")
-    public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSet instanceSystemEventSet;
 
     public static DescribeInstanceHistoryEventsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceHistoryEventsResponseBody self = new DescribeInstanceHistoryEventsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceHistoryEventsResponseBody setInstanceSystemEventSet(DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSet instanceSystemEventSet) {
+        this.instanceSystemEventSet = instanceSystemEventSet;
+        return this;
+    }
+    public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSet getInstanceSystemEventSet() {
+        return this.instanceSystemEventSet;
+    }
+
+    public DescribeInstanceHistoryEventsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeInstanceHistoryEventsResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeInstanceHistoryEventsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeInstanceHistoryEventsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,62 +64,16 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeInstanceHistoryEventsResponseBody setInstanceSystemEventSet(DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSet instanceSystemEventSet) {
-        this.instanceSystemEventSet = instanceSystemEventSet;
-        return this;
-    }
-    public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSet getInstanceSystemEventSet() {
-        return this.instanceSystemEventSet;
-    }
-
-    public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Code")
-        public Integer code;
-
-        public static DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType self = new DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType setCode(Integer code) {
-            this.code = code;
-            return this;
-        }
-        public Integer getCode() {
-            return this.code;
-        }
-
-    }
-
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("Code")
         public Integer code;
+
+        @NameInMap("Name")
+        public String name;
 
         public static DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus self = new DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus setCode(Integer code) {
@@ -122,17 +84,55 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             return this.code;
         }
 
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType extends TeaModel {
+        @NameInMap("Code")
+        public Integer code;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType self = new DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
     }
 
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("DeviceSize")
-        public String deviceSize;
-
         @NameInMap("DeviceCategory")
         public String deviceCategory;
+
+        @NameInMap("DeviceSize")
+        public String deviceSize;
 
         @NameInMap("DeviceType")
         public String deviceType;
@@ -153,20 +153,20 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk setDeviceSize(String deviceSize) {
-            this.deviceSize = deviceSize;
-            return this;
-        }
-        public String getDeviceSize() {
-            return this.deviceSize;
-        }
-
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk setDeviceCategory(String deviceCategory) {
             this.deviceCategory = deviceCategory;
             return this;
         }
         public String getDeviceCategory() {
             return this.deviceCategory;
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk setDeviceSize(String deviceSize) {
+            this.deviceSize = deviceSize;
+            return this;
+        }
+        public String getDeviceSize() {
+            return this.deviceSize;
         }
 
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk setDeviceType(String deviceType) {
@@ -206,6 +206,25 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeMigrationOptions extends TeaModel {
+        @NameInMap("MigrationOption")
+        public java.util.List<String> migrationOption;
+
+        public static DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeMigrationOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeMigrationOptions self = new DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeMigrationOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeMigrationOptions setMigrationOption(java.util.List<String> migrationOption) {
+            this.migrationOption = migrationOption;
+            return this;
+        }
+        public java.util.List<String> getMigrationOption() {
+            return this.migrationOption;
+        }
+
+    }
+
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute extends TeaModel {
         @NameInMap("Device")
         public String device;
@@ -213,14 +232,20 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         @NameInMap("DiskId")
         public String diskId;
 
-        @NameInMap("InactiveDisks")
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks;
+        @NameInMap("HostId")
+        public String hostId;
 
         @NameInMap("HostType")
         public String hostType;
 
-        @NameInMap("HostId")
-        public String hostId;
+        @NameInMap("InactiveDisks")
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks;
+
+        @NameInMap("MigrationOptions")
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeMigrationOptions migrationOptions;
+
+        @NameInMap("OnlineRepairPolicy")
+        public String onlineRepairPolicy;
 
         public static DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute self = new DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute();
@@ -243,12 +268,12 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             return this.diskId;
         }
 
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setInactiveDisks(DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks) {
-            this.inactiveDisks = inactiveDisks;
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setHostId(String hostId) {
+            this.hostId = hostId;
             return this;
         }
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks getInactiveDisks() {
-            return this.inactiveDisks;
+        public String getHostId() {
+            return this.hostId;
         }
 
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setHostType(String hostType) {
@@ -259,53 +284,85 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             return this.hostType;
         }
 
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setHostId(String hostId) {
-            this.hostId = hostId;
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setInactiveDisks(DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks) {
+            this.inactiveDisks = inactiveDisks;
             return this;
         }
-        public String getHostId() {
-            return this.hostId;
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks getInactiveDisks() {
+            return this.inactiveDisks;
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setMigrationOptions(DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeMigrationOptions migrationOptions) {
+            this.migrationOptions = migrationOptions;
+            return this;
+        }
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeMigrationOptions getMigrationOptions() {
+            return this.migrationOptions;
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setOnlineRepairPolicy(String onlineRepairPolicy) {
+            this.onlineRepairPolicy = onlineRepairPolicy;
+            return this;
+        }
+        public String getOnlineRepairPolicy() {
+            return this.onlineRepairPolicy;
         }
 
     }
 
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType extends TeaModel {
+        @NameInMap("EventCycleStatus")
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus eventCycleStatus;
+
+        @NameInMap("EventFinishTime")
+        public String eventFinishTime;
+
         @NameInMap("EventId")
         public String eventId;
 
         @NameInMap("EventPublishTime")
         public String eventPublishTime;
 
-        @NameInMap("EventFinishTime")
-        public String eventFinishTime;
-
-        @NameInMap("ResourceType")
-        public String resourceType;
-
-        @NameInMap("ImpactLevel")
-        public String impactLevel;
-
-        @NameInMap("NotBefore")
-        public String notBefore;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("Reason")
-        public String reason;
-
         @NameInMap("EventType")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType eventType;
-
-        @NameInMap("EventCycleStatus")
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus eventCycleStatus;
 
         @NameInMap("ExtendedAttribute")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute extendedAttribute;
 
+        @NameInMap("ImpactLevel")
+        public String impactLevel;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("NotBefore")
+        public String notBefore;
+
+        @NameInMap("Reason")
+        public String reason;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
         public static DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType self = new DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setEventCycleStatus(DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus eventCycleStatus) {
+            this.eventCycleStatus = eventCycleStatus;
+            return this;
+        }
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus getEventCycleStatus() {
+            return this.eventCycleStatus;
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setEventFinishTime(String eventFinishTime) {
+            this.eventFinishTime = eventFinishTime;
+            return this;
+        }
+        public String getEventFinishTime() {
+            return this.eventFinishTime;
         }
 
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setEventId(String eventId) {
@@ -324,20 +381,20 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             return this.eventPublishTime;
         }
 
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setEventFinishTime(String eventFinishTime) {
-            this.eventFinishTime = eventFinishTime;
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setEventType(DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType eventType) {
+            this.eventType = eventType;
             return this;
         }
-        public String getEventFinishTime() {
-            return this.eventFinishTime;
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType getEventType() {
+            return this.eventType;
         }
 
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setResourceType(String resourceType) {
-            this.resourceType = resourceType;
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setExtendedAttribute(DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute extendedAttribute) {
+            this.extendedAttribute = extendedAttribute;
             return this;
         }
-        public String getResourceType() {
-            return this.resourceType;
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute getExtendedAttribute() {
+            return this.extendedAttribute;
         }
 
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setImpactLevel(String impactLevel) {
@@ -348,20 +405,20 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             return this.impactLevel;
         }
 
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setNotBefore(String notBefore) {
-            this.notBefore = notBefore;
-            return this;
-        }
-        public String getNotBefore() {
-            return this.notBefore;
-        }
-
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setNotBefore(String notBefore) {
+            this.notBefore = notBefore;
+            return this;
+        }
+        public String getNotBefore() {
+            return this.notBefore;
         }
 
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setReason(String reason) {
@@ -372,28 +429,12 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setEventType(DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType eventType) {
-            this.eventType = eventType;
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setResourceType(String resourceType) {
+            this.resourceType = resourceType;
             return this;
         }
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType getEventType() {
-            return this.eventType;
-        }
-
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setEventCycleStatus(DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus eventCycleStatus) {
-            this.eventCycleStatus = eventCycleStatus;
-            return this;
-        }
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus getEventCycleStatus() {
-            return this.eventCycleStatus;
-        }
-
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType setExtendedAttribute(DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute extendedAttribute) {
-            this.extendedAttribute = extendedAttribute;
-            return this;
-        }
-        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute getExtendedAttribute() {
-            return this.extendedAttribute;
+        public String getResourceType() {
+            return this.resourceType;
         }
 
     }

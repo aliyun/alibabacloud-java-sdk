@@ -4,11 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
-    @NameInMap("Tag")
-    public java.util.List<DescribeNetworkInterfaceAttributeRequestTag> tag;
+    @NameInMap("Attribute")
+    public String attribute;
+
+    @NameInMap("NetworkInterfaceId")
+    public String networkInterfaceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,29 +25,36 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("NetworkInterfaceId")
-    public String networkInterfaceId;
-
-    @NameInMap("Attribute")
-    public String attribute;
+    @NameInMap("Tag")
+    public java.util.List<DescribeNetworkInterfaceAttributeRequestTag> tag;
 
     public static DescribeNetworkInterfaceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkInterfaceAttributeRequest self = new DescribeNetworkInterfaceAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeNetworkInterfaceAttributeRequest setTag(java.util.List<DescribeNetworkInterfaceAttributeRequestTag> tag) {
-        this.tag = tag;
+    public DescribeNetworkInterfaceAttributeRequest setAttribute(String attribute) {
+        this.attribute = attribute;
         return this;
     }
-    public java.util.List<DescribeNetworkInterfaceAttributeRequestTag> getTag() {
-        return this.tag;
+    public String getAttribute() {
+        return this.attribute;
+    }
+
+    public DescribeNetworkInterfaceAttributeRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    public DescribeNetworkInterfaceAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeNetworkInterfaceAttributeRequest setOwnerId(Long ownerId) {
@@ -47,6 +63,14 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeNetworkInterfaceAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeNetworkInterfaceAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -65,36 +89,12 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeNetworkInterfaceAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeNetworkInterfaceAttributeRequest setTag(java.util.List<DescribeNetworkInterfaceAttributeRequestTag> tag) {
+        this.tag = tag;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeNetworkInterfaceAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeNetworkInterfaceAttributeRequest setNetworkInterfaceId(String networkInterfaceId) {
-        this.networkInterfaceId = networkInterfaceId;
-        return this;
-    }
-    public String getNetworkInterfaceId() {
-        return this.networkInterfaceId;
-    }
-
-    public DescribeNetworkInterfaceAttributeRequest setAttribute(String attribute) {
-        this.attribute = attribute;
-        return this;
-    }
-    public String getAttribute() {
-        return this.attribute;
+    public java.util.List<DescribeNetworkInterfaceAttributeRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class DescribeNetworkInterfaceAttributeRequestTag extends TeaModel {

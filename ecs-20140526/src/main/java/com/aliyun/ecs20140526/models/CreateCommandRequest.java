@@ -4,8 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateCommandRequest extends TeaModel {
+    @NameInMap("CommandContent")
+    public String commandContent;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("EnableParameter")
+    public Boolean enableParameter;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,36 +31,58 @@ public class CreateCommandRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("Timeout")
+    public Long timeout;
 
     @NameInMap("Type")
     public String type;
 
-    @NameInMap("CommandContent")
-    public String commandContent;
-
     @NameInMap("WorkingDir")
     public String workingDir;
-
-    @NameInMap("Timeout")
-    public Long timeout;
-
-    @NameInMap("EnableParameter")
-    public Boolean enableParameter;
 
     public static CreateCommandRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCommandRequest self = new CreateCommandRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCommandRequest setCommandContent(String commandContent) {
+        this.commandContent = commandContent;
+        return this;
+    }
+    public String getCommandContent() {
+        return this.commandContent;
+    }
+
+    public CreateCommandRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateCommandRequest setEnableParameter(Boolean enableParameter) {
+        this.enableParameter = enableParameter;
+        return this;
+    }
+    public Boolean getEnableParameter() {
+        return this.enableParameter;
+    }
+
+    public CreateCommandRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateCommandRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateCommandRequest setOwnerId(Long ownerId) {
@@ -51,6 +91,14 @@ public class CreateCommandRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateCommandRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateCommandRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -69,36 +117,12 @@ public class CreateCommandRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateCommandRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public CreateCommandRequest setTimeout(Long timeout) {
+        this.timeout = timeout;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateCommandRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateCommandRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateCommandRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
+    public Long getTimeout() {
+        return this.timeout;
     }
 
     public CreateCommandRequest setType(String type) {
@@ -109,36 +133,12 @@ public class CreateCommandRequest extends TeaModel {
         return this.type;
     }
 
-    public CreateCommandRequest setCommandContent(String commandContent) {
-        this.commandContent = commandContent;
-        return this;
-    }
-    public String getCommandContent() {
-        return this.commandContent;
-    }
-
     public CreateCommandRequest setWorkingDir(String workingDir) {
         this.workingDir = workingDir;
         return this;
     }
     public String getWorkingDir() {
         return this.workingDir;
-    }
-
-    public CreateCommandRequest setTimeout(Long timeout) {
-        this.timeout = timeout;
-        return this;
-    }
-    public Long getTimeout() {
-        return this.timeout;
-    }
-
-    public CreateCommandRequest setEnableParameter(Boolean enableParameter) {
-        this.enableParameter = enableParameter;
-        return this;
-    }
-    public Boolean getEnableParameter() {
-        return this.enableParameter;
     }
 
 }

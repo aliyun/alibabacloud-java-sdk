@@ -4,8 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeVRoutersRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,21 +28,17 @@ public class DescribeVRoutersRequest extends TeaModel {
     @NameInMap("VRouterId")
     public String VRouterId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DescribeVRoutersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVRoutersRequest self = new DescribeVRoutersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVRoutersRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeVRoutersRequest setOwnerId(Long ownerId) {
@@ -39,6 +47,30 @@ public class DescribeVRoutersRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeVRoutersRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeVRoutersRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeVRoutersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeVRoutersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -63,38 +95,6 @@ public class DescribeVRoutersRequest extends TeaModel {
     }
     public String getVRouterId() {
         return this.VRouterId;
-    }
-
-    public DescribeVRoutersRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeVRoutersRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeVRoutersRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeVRoutersRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

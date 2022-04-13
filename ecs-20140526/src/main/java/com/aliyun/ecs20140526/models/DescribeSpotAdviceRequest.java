@@ -4,26 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSpotAdviceRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("Cores")
+    public Integer cores;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("GpuAmount")
+    public Integer gpuAmount;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("GpuSpec")
+    public String gpuSpec;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("InstanceFamilyLevel")
+    public String instanceFamilyLevel;
+
+    @NameInMap("InstanceTypeFamily")
+    public String instanceTypeFamily;
 
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Cores")
-    public Integer cores;
 
     @NameInMap("Memory")
     public Float memory;
@@ -34,72 +31,27 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     @NameInMap("MinMemory")
     public Float minMemory;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("ZoneId")
     public String zoneId;
-
-    @NameInMap("InstanceTypeFamily")
-    public String instanceTypeFamily;
-
-    @NameInMap("InstanceFamilyLevel")
-    public String instanceFamilyLevel;
-
-    @NameInMap("GpuSpec")
-    public String gpuSpec;
-
-    @NameInMap("GpuAmount")
-    public Integer gpuAmount;
 
     public static DescribeSpotAdviceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSpotAdviceRequest self = new DescribeSpotAdviceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSpotAdviceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeSpotAdviceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeSpotAdviceRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeSpotAdviceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeSpotAdviceRequest setInstanceTypes(java.util.List<String> instanceTypes) {
-        this.instanceTypes = instanceTypes;
-        return this;
-    }
-    public java.util.List<String> getInstanceTypes() {
-        return this.instanceTypes;
-    }
-
-    public DescribeSpotAdviceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeSpotAdviceRequest setCores(Integer cores) {
@@ -108,6 +60,46 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     }
     public Integer getCores() {
         return this.cores;
+    }
+
+    public DescribeSpotAdviceRequest setGpuAmount(Integer gpuAmount) {
+        this.gpuAmount = gpuAmount;
+        return this;
+    }
+    public Integer getGpuAmount() {
+        return this.gpuAmount;
+    }
+
+    public DescribeSpotAdviceRequest setGpuSpec(String gpuSpec) {
+        this.gpuSpec = gpuSpec;
+        return this;
+    }
+    public String getGpuSpec() {
+        return this.gpuSpec;
+    }
+
+    public DescribeSpotAdviceRequest setInstanceFamilyLevel(String instanceFamilyLevel) {
+        this.instanceFamilyLevel = instanceFamilyLevel;
+        return this;
+    }
+    public String getInstanceFamilyLevel() {
+        return this.instanceFamilyLevel;
+    }
+
+    public DescribeSpotAdviceRequest setInstanceTypeFamily(String instanceTypeFamily) {
+        this.instanceTypeFamily = instanceTypeFamily;
+        return this;
+    }
+    public String getInstanceTypeFamily() {
+        return this.instanceTypeFamily;
+    }
+
+    public DescribeSpotAdviceRequest setInstanceTypes(java.util.List<String> instanceTypes) {
+        this.instanceTypes = instanceTypes;
+        return this;
+    }
+    public java.util.List<String> getInstanceTypes() {
+        return this.instanceTypes;
     }
 
     public DescribeSpotAdviceRequest setMemory(Float memory) {
@@ -134,44 +126,52 @@ public class DescribeSpotAdviceRequest extends TeaModel {
         return this.minMemory;
     }
 
+    public DescribeSpotAdviceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeSpotAdviceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeSpotAdviceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeSpotAdviceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeSpotAdviceRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public DescribeSpotAdviceRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
     public String getZoneId() {
         return this.zoneId;
-    }
-
-    public DescribeSpotAdviceRequest setInstanceTypeFamily(String instanceTypeFamily) {
-        this.instanceTypeFamily = instanceTypeFamily;
-        return this;
-    }
-    public String getInstanceTypeFamily() {
-        return this.instanceTypeFamily;
-    }
-
-    public DescribeSpotAdviceRequest setInstanceFamilyLevel(String instanceFamilyLevel) {
-        this.instanceFamilyLevel = instanceFamilyLevel;
-        return this;
-    }
-    public String getInstanceFamilyLevel() {
-        return this.instanceFamilyLevel;
-    }
-
-    public DescribeSpotAdviceRequest setGpuSpec(String gpuSpec) {
-        this.gpuSpec = gpuSpec;
-        return this;
-    }
-    public String getGpuSpec() {
-        return this.gpuSpec;
-    }
-
-    public DescribeSpotAdviceRequest setGpuAmount(Integer gpuAmount) {
-        this.gpuAmount = gpuAmount;
-        return this;
-    }
-    public Integer getGpuAmount() {
-        return this.gpuAmount;
     }
 
 }

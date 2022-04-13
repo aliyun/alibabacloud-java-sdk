@@ -4,21 +4,37 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRamRoleResponseBody extends TeaModel {
+    @NameInMap("InstanceRamRoleSets")
+    public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets instanceRamRoleSets;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("InstanceRamRoleSets")
-    public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets instanceRamRoleSets;
-
     public static DescribeInstanceRamRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceRamRoleResponseBody self = new DescribeInstanceRamRoleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceRamRoleResponseBody setInstanceRamRoleSets(DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets instanceRamRoleSets) {
+        this.instanceRamRoleSets = instanceRamRoleSets;
+        return this;
+    }
+    public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets getInstanceRamRoleSets() {
+        return this.instanceRamRoleSets;
+    }
+
+    public DescribeInstanceRamRoleResponseBody setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeInstanceRamRoleResponseBody setRequestId(String requestId) {
@@ -37,40 +53,16 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeInstanceRamRoleResponseBody setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeInstanceRamRoleResponseBody setInstanceRamRoleSets(DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets instanceRamRoleSets) {
-        this.instanceRamRoleSets = instanceRamRoleSets;
-        return this;
-    }
-    public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets getInstanceRamRoleSets() {
-        return this.instanceRamRoleSets;
-    }
-
     public static class DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet extends TeaModel {
-        @NameInMap("RamRoleName")
-        public String ramRoleName;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("RamRoleName")
+        public String ramRoleName;
 
         public static DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet self = new DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet setRamRoleName(String ramRoleName) {
-            this.ramRoleName = ramRoleName;
-            return this;
-        }
-        public String getRamRoleName() {
-            return this.ramRoleName;
         }
 
         public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet setInstanceId(String instanceId) {
@@ -79,6 +71,14 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet setRamRoleName(String ramRoleName) {
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+        public String getRamRoleName() {
+            return this.ramRoleName;
         }
 
     }

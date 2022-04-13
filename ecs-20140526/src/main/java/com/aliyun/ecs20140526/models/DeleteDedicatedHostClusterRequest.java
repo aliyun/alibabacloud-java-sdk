@@ -4,8 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteDedicatedHostClusterRequest extends TeaModel {
+    @NameInMap("DedicatedHostClusterId")
+    public String dedicatedHostClusterId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +22,25 @@ public class DeleteDedicatedHostClusterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DedicatedHostClusterId")
-    public String dedicatedHostClusterId;
-
     public static DeleteDedicatedHostClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDedicatedHostClusterRequest self = new DeleteDedicatedHostClusterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDedicatedHostClusterRequest setDedicatedHostClusterId(String dedicatedHostClusterId) {
+        this.dedicatedHostClusterId = dedicatedHostClusterId;
+        return this;
+    }
+    public String getDedicatedHostClusterId() {
+        return this.dedicatedHostClusterId;
+    }
+
+    public DeleteDedicatedHostClusterRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteDedicatedHostClusterRequest setOwnerId(Long ownerId) {
@@ -33,6 +49,14 @@ public class DeleteDedicatedHostClusterRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteDedicatedHostClusterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteDedicatedHostClusterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,30 +73,6 @@ public class DeleteDedicatedHostClusterRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteDedicatedHostClusterRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DeleteDedicatedHostClusterRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteDedicatedHostClusterRequest setDedicatedHostClusterId(String dedicatedHostClusterId) {
-        this.dedicatedHostClusterId = dedicatedHostClusterId;
-        return this;
-    }
-    public String getDedicatedHostClusterId() {
-        return this.dedicatedHostClusterId;
     }
 
 }

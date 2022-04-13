@@ -4,8 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyStorageCapacityUnitAttributeRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,24 +25,36 @@ public class ModifyStorageCapacityUnitAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("StorageCapacityUnitId")
     public String storageCapacityUnitId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Description")
-    public String description;
 
     public static ModifyStorageCapacityUnitAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyStorageCapacityUnitAttributeRequest self = new ModifyStorageCapacityUnitAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyStorageCapacityUnitAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyStorageCapacityUnitAttributeRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ModifyStorageCapacityUnitAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyStorageCapacityUnitAttributeRequest setOwnerId(Long ownerId) {
@@ -39,6 +63,14 @@ public class ModifyStorageCapacityUnitAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyStorageCapacityUnitAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyStorageCapacityUnitAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,44 +89,12 @@ public class ModifyStorageCapacityUnitAttributeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyStorageCapacityUnitAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyStorageCapacityUnitAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public ModifyStorageCapacityUnitAttributeRequest setStorageCapacityUnitId(String storageCapacityUnitId) {
         this.storageCapacityUnitId = storageCapacityUnitId;
         return this;
     }
     public String getStorageCapacityUnitId() {
         return this.storageCapacityUnitId;
-    }
-
-    public ModifyStorageCapacityUnitAttributeRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public ModifyStorageCapacityUnitAttributeRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
 }

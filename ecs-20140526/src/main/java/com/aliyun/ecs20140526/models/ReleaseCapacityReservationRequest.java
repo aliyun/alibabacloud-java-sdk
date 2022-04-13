@@ -7,23 +7,23 @@ public class ReleaseCapacityReservationRequest extends TeaModel {
     @NameInMap("PrivatePoolOptions")
     public ReleaseCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DryRun")
-    public Boolean dryRun;
 
     public static ReleaseCapacityReservationRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseCapacityReservationRequest self = new ReleaseCapacityReservationRequest();
@@ -38,12 +38,36 @@ public class ReleaseCapacityReservationRequest extends TeaModel {
         return this.privatePoolOptions;
     }
 
+    public ReleaseCapacityReservationRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public ReleaseCapacityReservationRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public ReleaseCapacityReservationRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ReleaseCapacityReservationRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ReleaseCapacityReservationRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -60,30 +84,6 @@ public class ReleaseCapacityReservationRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ReleaseCapacityReservationRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ReleaseCapacityReservationRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ReleaseCapacityReservationRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
-        return this;
-    }
-    public Boolean getDryRun() {
-        return this.dryRun;
     }
 
     public static class ReleaseCapacityReservationRequestPrivatePoolOptions extends TeaModel {

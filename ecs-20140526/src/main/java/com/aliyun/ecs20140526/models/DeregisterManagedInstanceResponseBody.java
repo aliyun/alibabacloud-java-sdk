@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeregisterManagedInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Instance")
     public DeregisterManagedInstanceResponseBodyInstance instance;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DeregisterManagedInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeregisterManagedInstanceResponseBody self = new DeregisterManagedInstanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeregisterManagedInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeregisterManagedInstanceResponseBody setInstance(DeregisterManagedInstanceResponseBodyInstance instance) {
@@ -31,12 +23,20 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         return this.instance;
     }
 
-    public static class DeregisterManagedInstanceResponseBodyInstance extends TeaModel {
-        @NameInMap("LastInvokedTime")
-        public String lastInvokedTime;
+    public DeregisterManagedInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("InternetIp")
-        public String internetIp;
+    public static class DeregisterManagedInstanceResponseBodyInstance extends TeaModel {
+        @NameInMap("ActivationId")
+        public String activationId;
+
+        @NameInMap("AgentVersion")
+        public String agentVersion;
 
         @NameInMap("Hostname")
         public String hostname;
@@ -44,20 +44,23 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("ActivationId")
-        public String activationId;
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("InternetIp")
+        public String internetIp;
 
         @NameInMap("IntranetIp")
         public String intranetIp;
 
-        @NameInMap("AgentVersion")
-        public String agentVersion;
+        @NameInMap("InvocationCount")
+        public Long invocationCount;
 
-        @NameInMap("RegistrationTime")
-        public String registrationTime;
+        @NameInMap("LastInvokedTime")
+        public String lastInvokedTime;
 
-        @NameInMap("InstanceName")
-        public String instanceName;
+        @NameInMap("MachineId")
+        public String machineId;
 
         @NameInMap("OsType")
         public String osType;
@@ -65,31 +68,28 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         @NameInMap("OsVersion")
         public String osVersion;
 
-        @NameInMap("InvocationCount")
-        public Long invocationCount;
-
-        @NameInMap("MachineId")
-        public String machineId;
+        @NameInMap("RegistrationTime")
+        public String registrationTime;
 
         public static DeregisterManagedInstanceResponseBodyInstance build(java.util.Map<String, ?> map) throws Exception {
             DeregisterManagedInstanceResponseBodyInstance self = new DeregisterManagedInstanceResponseBodyInstance();
             return TeaModel.build(map, self);
         }
 
-        public DeregisterManagedInstanceResponseBodyInstance setLastInvokedTime(String lastInvokedTime) {
-            this.lastInvokedTime = lastInvokedTime;
+        public DeregisterManagedInstanceResponseBodyInstance setActivationId(String activationId) {
+            this.activationId = activationId;
             return this;
         }
-        public String getLastInvokedTime() {
-            return this.lastInvokedTime;
+        public String getActivationId() {
+            return this.activationId;
         }
 
-        public DeregisterManagedInstanceResponseBodyInstance setInternetIp(String internetIp) {
-            this.internetIp = internetIp;
+        public DeregisterManagedInstanceResponseBodyInstance setAgentVersion(String agentVersion) {
+            this.agentVersion = agentVersion;
             return this;
         }
-        public String getInternetIp() {
-            return this.internetIp;
+        public String getAgentVersion() {
+            return this.agentVersion;
         }
 
         public DeregisterManagedInstanceResponseBodyInstance setHostname(String hostname) {
@@ -108,12 +108,20 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DeregisterManagedInstanceResponseBodyInstance setActivationId(String activationId) {
-            this.activationId = activationId;
+        public DeregisterManagedInstanceResponseBodyInstance setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
             return this;
         }
-        public String getActivationId() {
-            return this.activationId;
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DeregisterManagedInstanceResponseBodyInstance setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
+            return this;
+        }
+        public String getInternetIp() {
+            return this.internetIp;
         }
 
         public DeregisterManagedInstanceResponseBodyInstance setIntranetIp(String intranetIp) {
@@ -124,28 +132,28 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             return this.intranetIp;
         }
 
-        public DeregisterManagedInstanceResponseBodyInstance setAgentVersion(String agentVersion) {
-            this.agentVersion = agentVersion;
+        public DeregisterManagedInstanceResponseBodyInstance setInvocationCount(Long invocationCount) {
+            this.invocationCount = invocationCount;
             return this;
         }
-        public String getAgentVersion() {
-            return this.agentVersion;
+        public Long getInvocationCount() {
+            return this.invocationCount;
         }
 
-        public DeregisterManagedInstanceResponseBodyInstance setRegistrationTime(String registrationTime) {
-            this.registrationTime = registrationTime;
+        public DeregisterManagedInstanceResponseBodyInstance setLastInvokedTime(String lastInvokedTime) {
+            this.lastInvokedTime = lastInvokedTime;
             return this;
         }
-        public String getRegistrationTime() {
-            return this.registrationTime;
+        public String getLastInvokedTime() {
+            return this.lastInvokedTime;
         }
 
-        public DeregisterManagedInstanceResponseBodyInstance setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
+        public DeregisterManagedInstanceResponseBodyInstance setMachineId(String machineId) {
+            this.machineId = machineId;
             return this;
         }
-        public String getInstanceName() {
-            return this.instanceName;
+        public String getMachineId() {
+            return this.machineId;
         }
 
         public DeregisterManagedInstanceResponseBodyInstance setOsType(String osType) {
@@ -164,20 +172,12 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             return this.osVersion;
         }
 
-        public DeregisterManagedInstanceResponseBodyInstance setInvocationCount(Long invocationCount) {
-            this.invocationCount = invocationCount;
+        public DeregisterManagedInstanceResponseBodyInstance setRegistrationTime(String registrationTime) {
+            this.registrationTime = registrationTime;
             return this;
         }
-        public Long getInvocationCount() {
-            return this.invocationCount;
-        }
-
-        public DeregisterManagedInstanceResponseBodyInstance setMachineId(String machineId) {
-            this.machineId = machineId;
-            return this;
-        }
-        public String getMachineId() {
-            return this.machineId;
+        public String getRegistrationTime() {
+            return this.registrationTime;
         }
 
     }

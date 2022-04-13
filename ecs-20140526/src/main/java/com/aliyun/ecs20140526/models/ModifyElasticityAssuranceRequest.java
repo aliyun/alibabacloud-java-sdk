@@ -7,23 +7,23 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     @NameInMap("PrivatePoolOptions")
     public ModifyElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
 
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Description")
-    public String description;
 
     public static ModifyElasticityAssuranceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyElasticityAssuranceRequest self = new ModifyElasticityAssuranceRequest();
@@ -38,12 +38,36 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
         return this.privatePoolOptions;
     }
 
+    public ModifyElasticityAssuranceRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyElasticityAssuranceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public ModifyElasticityAssuranceRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyElasticityAssuranceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyElasticityAssuranceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -60,30 +84,6 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyElasticityAssuranceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyElasticityAssuranceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyElasticityAssuranceRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public static class ModifyElasticityAssuranceRequestPrivatePoolOptions extends TeaModel {

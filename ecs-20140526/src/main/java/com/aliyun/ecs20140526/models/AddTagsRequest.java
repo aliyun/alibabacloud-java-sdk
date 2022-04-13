@@ -7,20 +7,20 @@ public class AddTagsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceId")
+    public String resourceId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ResourceType")
     public String resourceType;
-
-    @NameInMap("ResourceId")
-    public String resourceId;
 
     @NameInMap("Tag")
     public java.util.List<AddTagsRequestTag> tag;
@@ -36,6 +36,22 @@ public class AddTagsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public AddTagsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public AddTagsRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     public AddTagsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -54,28 +70,12 @@ public class AddTagsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public AddTagsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public AddTagsRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
-    }
-
-    public AddTagsRequest setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public String getResourceId() {
-        return this.resourceId;
     }
 
     public AddTagsRequest setTag(java.util.List<AddTagsRequestTag> tag) {
@@ -87,7 +87,7 @@ public class AddTagsRequest extends TeaModel {
     }
 
     public static class AddTagsRequestTag extends TeaModel {
-        @NameInMap("key")
+        @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")

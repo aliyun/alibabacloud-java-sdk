@@ -4,24 +4,40 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
+    @NameInMap("Links")
+    public DescribeClassicLinkInstancesResponseBodyLinks links;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Links")
-    public DescribeClassicLinkInstancesResponseBodyLinks links;
 
     public static DescribeClassicLinkInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeClassicLinkInstancesResponseBody self = new DescribeClassicLinkInstancesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeClassicLinkInstancesResponseBody setLinks(DescribeClassicLinkInstancesResponseBodyLinks links) {
+        this.links = links;
+        return this;
+    }
+    public DescribeClassicLinkInstancesResponseBodyLinks getLinks() {
+        return this.links;
+    }
+
+    public DescribeClassicLinkInstancesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeClassicLinkInstancesResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeClassicLinkInstancesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeClassicLinkInstancesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,32 +64,16 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeClassicLinkInstancesResponseBody setLinks(DescribeClassicLinkInstancesResponseBodyLinks links) {
-        this.links = links;
-        return this;
-    }
-    public DescribeClassicLinkInstancesResponseBodyLinks getLinks() {
-        return this.links;
-    }
-
     public static class DescribeClassicLinkInstancesResponseBodyLinksLink extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static DescribeClassicLinkInstancesResponseBodyLinksLink build(java.util.Map<String, ?> map) throws Exception {
             DescribeClassicLinkInstancesResponseBodyLinksLink self = new DescribeClassicLinkInstancesResponseBodyLinksLink();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeClassicLinkInstancesResponseBodyLinksLink setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
         }
 
         public DescribeClassicLinkInstancesResponseBodyLinksLink setInstanceId(String instanceId) {
@@ -90,6 +82,14 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeClassicLinkInstancesResponseBodyLinksLink setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

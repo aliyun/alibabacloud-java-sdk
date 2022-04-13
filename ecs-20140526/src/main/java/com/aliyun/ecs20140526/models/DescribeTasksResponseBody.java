@@ -4,35 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TaskSet")
     public DescribeTasksResponseBodyTaskSet taskSet;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTasksResponseBody self = new DescribeTasksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTasksResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public DescribeTasksResponseBody setPageNumber(Integer pageNumber) {
@@ -43,20 +35,12 @@ public class DescribeTasksResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeTasksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeTasksResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeTasksResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeTasksResponseBody setRegionId(String regionId) {
@@ -67,6 +51,14 @@ public class DescribeTasksResponseBody extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeTasksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeTasksResponseBody setTaskSet(DescribeTasksResponseBodyTaskSet taskSet) {
         this.taskSet = taskSet;
         return this;
@@ -75,12 +67,17 @@ public class DescribeTasksResponseBody extends TeaModel {
         return this.taskSet;
     }
 
+    public DescribeTasksResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeTasksResponseBodyTaskSetTask extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
-
-        @NameInMap("TaskStatus")
-        public String taskStatus;
 
         @NameInMap("FinishedTime")
         public String finishedTime;
@@ -88,11 +85,14 @@ public class DescribeTasksResponseBody extends TeaModel {
         @NameInMap("SupportCancel")
         public String supportCancel;
 
+        @NameInMap("TaskAction")
+        public String taskAction;
+
         @NameInMap("TaskId")
         public String taskId;
 
-        @NameInMap("TaskAction")
-        public String taskAction;
+        @NameInMap("TaskStatus")
+        public String taskStatus;
 
         public static DescribeTasksResponseBodyTaskSetTask build(java.util.Map<String, ?> map) throws Exception {
             DescribeTasksResponseBodyTaskSetTask self = new DescribeTasksResponseBodyTaskSetTask();
@@ -105,14 +105,6 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
-        }
-
-        public DescribeTasksResponseBodyTaskSetTask setTaskStatus(String taskStatus) {
-            this.taskStatus = taskStatus;
-            return this;
-        }
-        public String getTaskStatus() {
-            return this.taskStatus;
         }
 
         public DescribeTasksResponseBodyTaskSetTask setFinishedTime(String finishedTime) {
@@ -131,6 +123,14 @@ public class DescribeTasksResponseBody extends TeaModel {
             return this.supportCancel;
         }
 
+        public DescribeTasksResponseBodyTaskSetTask setTaskAction(String taskAction) {
+            this.taskAction = taskAction;
+            return this;
+        }
+        public String getTaskAction() {
+            return this.taskAction;
+        }
+
         public DescribeTasksResponseBodyTaskSetTask setTaskId(String taskId) {
             this.taskId = taskId;
             return this;
@@ -139,12 +139,12 @@ public class DescribeTasksResponseBody extends TeaModel {
             return this.taskId;
         }
 
-        public DescribeTasksResponseBodyTaskSetTask setTaskAction(String taskAction) {
-            this.taskAction = taskAction;
+        public DescribeTasksResponseBodyTaskSetTask setTaskStatus(String taskStatus) {
+            this.taskStatus = taskStatus;
             return this;
         }
-        public String getTaskAction() {
-            return this.taskAction;
+        public String getTaskStatus() {
+            return this.taskStatus;
         }
 
     }

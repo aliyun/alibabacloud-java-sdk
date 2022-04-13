@@ -4,8 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CancelImagePipelineExecutionRequest extends TeaModel {
+    @NameInMap("ExecutionId")
+    public String executionId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +22,28 @@ public class CancelImagePipelineExecutionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("TemplateTag")
     public java.util.List<CancelImagePipelineExecutionRequestTemplateTag> templateTag;
-
-    @NameInMap("ExecutionId")
-    public String executionId;
 
     public static CancelImagePipelineExecutionRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelImagePipelineExecutionRequest self = new CancelImagePipelineExecutionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CancelImagePipelineExecutionRequest setExecutionId(String executionId) {
+        this.executionId = executionId;
+        return this;
+    }
+    public String getExecutionId() {
+        return this.executionId;
+    }
+
+    public CancelImagePipelineExecutionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CancelImagePipelineExecutionRequest setOwnerId(Long ownerId) {
@@ -36,6 +52,14 @@ public class CancelImagePipelineExecutionRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CancelImagePipelineExecutionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CancelImagePipelineExecutionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -54,36 +78,12 @@ public class CancelImagePipelineExecutionRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CancelImagePipelineExecutionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CancelImagePipelineExecutionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public CancelImagePipelineExecutionRequest setTemplateTag(java.util.List<CancelImagePipelineExecutionRequestTemplateTag> templateTag) {
         this.templateTag = templateTag;
         return this;
     }
     public java.util.List<CancelImagePipelineExecutionRequestTemplateTag> getTemplateTag() {
         return this.templateTag;
-    }
-
-    public CancelImagePipelineExecutionRequest setExecutionId(String executionId) {
-        this.executionId = executionId;
-        return this;
-    }
-    public String getExecutionId() {
-        return this.executionId;
     }
 
     public static class CancelImagePipelineExecutionRequestTemplateTag extends TeaModel {

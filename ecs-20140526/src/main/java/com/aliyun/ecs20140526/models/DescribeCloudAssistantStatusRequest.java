@@ -4,23 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudAssistantStatusRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("OSType")
+    public String OSType;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("OSType")
-    public String OSType;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -28,36 +22,34 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeCloudAssistantStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCloudAssistantStatusRequest self = new DescribeCloudAssistantStatusRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCloudAssistantStatusRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeCloudAssistantStatusRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
-    public DescribeCloudAssistantStatusRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public DescribeCloudAssistantStatusRequest setOSType(String OSType) {
+        this.OSType = OSType;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeCloudAssistantStatusRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getOSType() {
+        return this.OSType;
     }
 
     public DescribeCloudAssistantStatusRequest setOwnerAccount(String ownerAccount) {
@@ -68,20 +60,12 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeCloudAssistantStatusRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeCloudAssistantStatusRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeCloudAssistantStatusRequest setOSType(String OSType) {
-        this.OSType = OSType;
-        return this;
-    }
-    public String getOSType() {
-        return this.OSType;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeCloudAssistantStatusRequest setPageNumber(Long pageNumber) {
@@ -100,12 +84,28 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeCloudAssistantStatusRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
+    public DescribeCloudAssistantStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeCloudAssistantStatusRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeCloudAssistantStatusRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

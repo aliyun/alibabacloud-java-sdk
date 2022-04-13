@@ -7,11 +7,11 @@ public class StartTerminalSessionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("SessionId")
-    public String sessionId;
-
     @NameInMap("SecurityToken")
     public String securityToken;
+
+    @NameInMap("SessionId")
+    public String sessionId;
 
     @NameInMap("WebSocketUrl")
     public String webSocketUrl;
@@ -29,20 +29,20 @@ public class StartTerminalSessionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public StartTerminalSessionResponseBody setSessionId(String sessionId) {
-        this.sessionId = sessionId;
-        return this;
-    }
-    public String getSessionId() {
-        return this.sessionId;
-    }
-
     public StartTerminalSessionResponseBody setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public StartTerminalSessionResponseBody setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public StartTerminalSessionResponseBody setWebSocketUrl(String webSocketUrl) {

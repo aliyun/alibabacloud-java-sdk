@@ -13,11 +13,11 @@ public class DeleteAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("regionId")
-    public String regionId;
-
     @NameInMap("autoSnapshotPolicyId")
     public String autoSnapshotPolicyId;
+
+    @NameInMap("regionId")
+    public String regionId;
 
     public static DeleteAutoSnapshotPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAutoSnapshotPolicyRequest self = new DeleteAutoSnapshotPolicyRequest();
@@ -48,20 +48,20 @@ public class DeleteAutoSnapshotPolicyRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteAutoSnapshotPolicyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DeleteAutoSnapshotPolicyRequest setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
         this.autoSnapshotPolicyId = autoSnapshotPolicyId;
         return this;
     }
     public String getAutoSnapshotPolicyId() {
         return this.autoSnapshotPolicyId;
+    }
+
+    public DeleteAutoSnapshotPolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

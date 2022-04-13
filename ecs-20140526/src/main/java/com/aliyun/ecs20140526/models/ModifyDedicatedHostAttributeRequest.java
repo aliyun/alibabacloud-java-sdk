@@ -7,20 +7,17 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
     @NameInMap("NetworkAttributes")
     public ModifyDedicatedHostAttributeRequestNetworkAttributes networkAttributes;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("ActionOnMaintenance")
+    public String actionOnMaintenance;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("AutoPlacement")
+    public String autoPlacement;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("CpuOverCommitRatio")
+    public Float cpuOverCommitRatio;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DedicatedHostClusterId")
+    public String dedicatedHostClusterId;
 
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
@@ -31,17 +28,20 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("ActionOnMaintenance")
-    public String actionOnMaintenance;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
-    @NameInMap("AutoPlacement")
-    public String autoPlacement;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
-    @NameInMap("DedicatedHostClusterId")
-    public String dedicatedHostClusterId;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("CpuOverCommitRatio")
-    public Float cpuOverCommitRatio;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyDedicatedHostAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDedicatedHostAttributeRequest self = new ModifyDedicatedHostAttributeRequest();
@@ -56,44 +56,36 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
         return this.networkAttributes;
     }
 
-    public ModifyDedicatedHostAttributeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyDedicatedHostAttributeRequest setActionOnMaintenance(String actionOnMaintenance) {
+        this.actionOnMaintenance = actionOnMaintenance;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getActionOnMaintenance() {
+        return this.actionOnMaintenance;
     }
 
-    public ModifyDedicatedHostAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public ModifyDedicatedHostAttributeRequest setAutoPlacement(String autoPlacement) {
+        this.autoPlacement = autoPlacement;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public String getAutoPlacement() {
+        return this.autoPlacement;
     }
 
-    public ModifyDedicatedHostAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public ModifyDedicatedHostAttributeRequest setCpuOverCommitRatio(Float cpuOverCommitRatio) {
+        this.cpuOverCommitRatio = cpuOverCommitRatio;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public Float getCpuOverCommitRatio() {
+        return this.cpuOverCommitRatio;
     }
 
-    public ModifyDedicatedHostAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyDedicatedHostAttributeRequest setDedicatedHostClusterId(String dedicatedHostClusterId) {
+        this.dedicatedHostClusterId = dedicatedHostClusterId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyDedicatedHostAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getDedicatedHostClusterId() {
+        return this.dedicatedHostClusterId;
     }
 
     public ModifyDedicatedHostAttributeRequest setDedicatedHostId(String dedicatedHostId) {
@@ -120,36 +112,44 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
         return this.description;
     }
 
-    public ModifyDedicatedHostAttributeRequest setActionOnMaintenance(String actionOnMaintenance) {
-        this.actionOnMaintenance = actionOnMaintenance;
+    public ModifyDedicatedHostAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getActionOnMaintenance() {
-        return this.actionOnMaintenance;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
-    public ModifyDedicatedHostAttributeRequest setAutoPlacement(String autoPlacement) {
-        this.autoPlacement = autoPlacement;
+    public ModifyDedicatedHostAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getAutoPlacement() {
-        return this.autoPlacement;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
-    public ModifyDedicatedHostAttributeRequest setDedicatedHostClusterId(String dedicatedHostClusterId) {
-        this.dedicatedHostClusterId = dedicatedHostClusterId;
+    public ModifyDedicatedHostAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDedicatedHostClusterId() {
-        return this.dedicatedHostClusterId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public ModifyDedicatedHostAttributeRequest setCpuOverCommitRatio(Float cpuOverCommitRatio) {
-        this.cpuOverCommitRatio = cpuOverCommitRatio;
+    public ModifyDedicatedHostAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public Float getCpuOverCommitRatio() {
-        return this.cpuOverCommitRatio;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyDedicatedHostAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public static class ModifyDedicatedHostAttributeRequestNetworkAttributes extends TeaModel {

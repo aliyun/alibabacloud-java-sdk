@@ -4,8 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDedicatedHostClusterRequest extends TeaModel {
+    @NameInMap("DedicatedHostClusterName")
+    public String dedicatedHostClusterName;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,33 +31,47 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
     @NameInMap("Tag")
     public java.util.List<CreateDedicatedHostClusterRequestTag> tag;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("ZoneId")
     public String zoneId;
 
-    @NameInMap("DedicatedHostClusterName")
-    public String dedicatedHostClusterName;
-
-    @NameInMap("Description")
-    public String description;
-
     public static CreateDedicatedHostClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDedicatedHostClusterRequest self = new CreateDedicatedHostClusterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDedicatedHostClusterRequest setDedicatedHostClusterName(String dedicatedHostClusterName) {
+        this.dedicatedHostClusterName = dedicatedHostClusterName;
+        return this;
+    }
+    public String getDedicatedHostClusterName() {
+        return this.dedicatedHostClusterName;
+    }
+
+    public CreateDedicatedHostClusterRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateDedicatedHostClusterRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public CreateDedicatedHostClusterRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateDedicatedHostClusterRequest setOwnerId(Long ownerId) {
@@ -48,6 +80,22 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateDedicatedHostClusterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateDedicatedHostClusterRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateDedicatedHostClusterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -66,30 +114,6 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateDedicatedHostClusterRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateDedicatedHostClusterRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateDedicatedHostClusterRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
-        return this;
-    }
-    public Boolean getDryRun() {
-        return this.dryRun;
-    }
-
     public CreateDedicatedHostClusterRequest setTag(java.util.List<CreateDedicatedHostClusterRequestTag> tag) {
         this.tag = tag;
         return this;
@@ -98,36 +122,12 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
         return this.tag;
     }
 
-    public CreateDedicatedHostClusterRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public CreateDedicatedHostClusterRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
     public String getZoneId() {
         return this.zoneId;
-    }
-
-    public CreateDedicatedHostClusterRequest setDedicatedHostClusterName(String dedicatedHostClusterName) {
-        this.dedicatedHostClusterName = dedicatedHostClusterName;
-        return this;
-    }
-    public String getDedicatedHostClusterName() {
-        return this.dedicatedHostClusterName;
-    }
-
-    public CreateDedicatedHostClusterRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public static class CreateDedicatedHostClusterRequestTag extends TeaModel {

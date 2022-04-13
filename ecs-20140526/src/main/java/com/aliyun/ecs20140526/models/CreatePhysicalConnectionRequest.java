@@ -4,20 +4,29 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreatePhysicalConnectionRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("AccessPointId")
     public String accessPointId;
 
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("CircuitCode")
+    public String circuitCode;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("LineOperator")
     public String lineOperator;
 
-    @NameInMap("bandwidth")
-    public Integer bandwidth;
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PeerLocation")
     public String peerLocation;
@@ -28,20 +37,8 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     @NameInMap("RedundantPhysicalConnectionId")
     public String redundantPhysicalConnectionId;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("CircuitCode")
-    public String circuitCode;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -49,23 +46,18 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("Type")
+    public String type;
 
     @NameInMap("UserCidr")
     public String userCidr;
 
+    @NameInMap("bandwidth")
+    public Integer bandwidth;
+
     public static CreatePhysicalConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePhysicalConnectionRequest self = new CreatePhysicalConnectionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreatePhysicalConnectionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreatePhysicalConnectionRequest setAccessPointId(String accessPointId) {
@@ -76,12 +68,28 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
         return this.accessPointId;
     }
 
-    public CreatePhysicalConnectionRequest setType(String type) {
-        this.type = type;
+    public CreatePhysicalConnectionRequest setCircuitCode(String circuitCode) {
+        this.circuitCode = circuitCode;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public String getCircuitCode() {
+        return this.circuitCode;
+    }
+
+    public CreatePhysicalConnectionRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreatePhysicalConnectionRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreatePhysicalConnectionRequest setLineOperator(String lineOperator) {
@@ -92,12 +100,28 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
         return this.lineOperator;
     }
 
-    public CreatePhysicalConnectionRequest setBandwidth(Integer bandwidth) {
-        this.bandwidth = bandwidth;
+    public CreatePhysicalConnectionRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public Integer getBandwidth() {
-        return this.bandwidth;
+    public String getName() {
+        return this.name;
+    }
+
+    public CreatePhysicalConnectionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreatePhysicalConnectionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CreatePhysicalConnectionRequest setPeerLocation(String peerLocation) {
@@ -124,44 +148,12 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
         return this.redundantPhysicalConnectionId;
     }
 
-    public CreatePhysicalConnectionRequest setDescription(String description) {
-        this.description = description;
+    public CreatePhysicalConnectionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public CreatePhysicalConnectionRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreatePhysicalConnectionRequest setCircuitCode(String circuitCode) {
-        this.circuitCode = circuitCode;
-        return this;
-    }
-    public String getCircuitCode() {
-        return this.circuitCode;
-    }
-
-    public CreatePhysicalConnectionRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreatePhysicalConnectionRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreatePhysicalConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -180,12 +172,12 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreatePhysicalConnectionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public CreatePhysicalConnectionRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getType() {
+        return this.type;
     }
 
     public CreatePhysicalConnectionRequest setUserCidr(String userCidr) {
@@ -194,6 +186,14 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     }
     public String getUserCidr() {
         return this.userCidr;
+    }
+
+    public CreatePhysicalConnectionRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
     }
 
 }

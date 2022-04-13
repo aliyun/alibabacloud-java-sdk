@@ -7,11 +7,11 @@ public class DescribePrefixListsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PrefixLists")
     public DescribePrefixListsResponseBodyPrefixLists prefixLists;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribePrefixListsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePrefixListsResponseBody self = new DescribePrefixListsResponseBody();
@@ -26,14 +26,6 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public DescribePrefixListsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribePrefixListsResponseBody setPrefixLists(DescribePrefixListsResponseBodyPrefixLists prefixLists) {
         this.prefixLists = prefixLists;
         return this;
@@ -42,63 +34,39 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         return this.prefixLists;
     }
 
+    public DescribePrefixListsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribePrefixListsResponseBodyPrefixListsPrefixList extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
+        @NameInMap("AddressFamily")
+        public String addressFamily;
 
         @NameInMap("AssociationCount")
         public Integer associationCount;
 
-        @NameInMap("MaxEntries")
-        public Integer maxEntries;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("AddressFamily")
-        public String addressFamily;
-
-        @NameInMap("PrefixListName")
-        public String prefixListName;
+        @NameInMap("MaxEntries")
+        public Integer maxEntries;
 
         @NameInMap("PrefixListId")
         public String prefixListId;
 
+        @NameInMap("PrefixListName")
+        public String prefixListName;
+
         public static DescribePrefixListsResponseBodyPrefixListsPrefixList build(java.util.Map<String, ?> map) throws Exception {
             DescribePrefixListsResponseBodyPrefixListsPrefixList self = new DescribePrefixListsResponseBodyPrefixListsPrefixList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePrefixListsResponseBodyPrefixListsPrefixList setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public DescribePrefixListsResponseBodyPrefixListsPrefixList setAssociationCount(Integer associationCount) {
-            this.associationCount = associationCount;
-            return this;
-        }
-        public Integer getAssociationCount() {
-            return this.associationCount;
-        }
-
-        public DescribePrefixListsResponseBodyPrefixListsPrefixList setMaxEntries(Integer maxEntries) {
-            this.maxEntries = maxEntries;
-            return this;
-        }
-        public Integer getMaxEntries() {
-            return this.maxEntries;
-        }
-
-        public DescribePrefixListsResponseBodyPrefixListsPrefixList setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public DescribePrefixListsResponseBodyPrefixListsPrefixList setAddressFamily(String addressFamily) {
@@ -109,12 +77,36 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             return this.addressFamily;
         }
 
-        public DescribePrefixListsResponseBodyPrefixListsPrefixList setPrefixListName(String prefixListName) {
-            this.prefixListName = prefixListName;
+        public DescribePrefixListsResponseBodyPrefixListsPrefixList setAssociationCount(Integer associationCount) {
+            this.associationCount = associationCount;
             return this;
         }
-        public String getPrefixListName() {
-            return this.prefixListName;
+        public Integer getAssociationCount() {
+            return this.associationCount;
+        }
+
+        public DescribePrefixListsResponseBodyPrefixListsPrefixList setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DescribePrefixListsResponseBodyPrefixListsPrefixList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribePrefixListsResponseBodyPrefixListsPrefixList setMaxEntries(Integer maxEntries) {
+            this.maxEntries = maxEntries;
+            return this;
+        }
+        public Integer getMaxEntries() {
+            return this.maxEntries;
         }
 
         public DescribePrefixListsResponseBodyPrefixListsPrefixList setPrefixListId(String prefixListId) {
@@ -123,6 +115,14 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         }
         public String getPrefixListId() {
             return this.prefixListId;
+        }
+
+        public DescribePrefixListsResponseBodyPrefixListsPrefixList setPrefixListName(String prefixListName) {
+            this.prefixListName = prefixListName;
+            return this;
+        }
+        public String getPrefixListName() {
+            return this.prefixListName;
         }
 
     }

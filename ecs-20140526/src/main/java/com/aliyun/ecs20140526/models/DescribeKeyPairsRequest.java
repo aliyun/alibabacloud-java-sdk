@@ -4,23 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeKeyPairsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("KeyPairFingerPrint")
+    public String keyPairFingerPrint;
 
     @NameInMap("KeyPairName")
     public String keyPairName;
 
-    @NameInMap("KeyPairFingerPrint")
-    public String keyPairFingerPrint;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -28,8 +19,17 @@ public class DescribeKeyPairsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("Tag")
     public java.util.List<DescribeKeyPairsRequestTag> tag;
@@ -39,36 +39,12 @@ public class DescribeKeyPairsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeKeyPairsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeKeyPairsRequest setKeyPairFingerPrint(String keyPairFingerPrint) {
+        this.keyPairFingerPrint = keyPairFingerPrint;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeKeyPairsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeKeyPairsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeKeyPairsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getKeyPairFingerPrint() {
+        return this.keyPairFingerPrint;
     }
 
     public DescribeKeyPairsRequest setKeyPairName(String keyPairName) {
@@ -79,12 +55,12 @@ public class DescribeKeyPairsRequest extends TeaModel {
         return this.keyPairName;
     }
 
-    public DescribeKeyPairsRequest setKeyPairFingerPrint(String keyPairFingerPrint) {
-        this.keyPairFingerPrint = keyPairFingerPrint;
+    public DescribeKeyPairsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getKeyPairFingerPrint() {
-        return this.keyPairFingerPrint;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeKeyPairsRequest setPageNumber(Integer pageNumber) {
@@ -103,12 +79,36 @@ public class DescribeKeyPairsRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeKeyPairsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeKeyPairsRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DescribeKeyPairsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeKeyPairsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeKeyPairsRequest setTag(java.util.List<DescribeKeyPairsRequestTag> tag) {

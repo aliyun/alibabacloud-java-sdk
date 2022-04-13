@@ -4,8 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifySnapshotGroupRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,24 +25,36 @@ public class ModifySnapshotGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SnapshotGroupId")
     public String snapshotGroupId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Description")
-    public String description;
 
     public static ModifySnapshotGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySnapshotGroupRequest self = new ModifySnapshotGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySnapshotGroupRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifySnapshotGroupRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ModifySnapshotGroupRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifySnapshotGroupRequest setOwnerId(Long ownerId) {
@@ -39,6 +63,14 @@ public class ModifySnapshotGroupRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifySnapshotGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifySnapshotGroupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,44 +89,12 @@ public class ModifySnapshotGroupRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySnapshotGroupRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifySnapshotGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public ModifySnapshotGroupRequest setSnapshotGroupId(String snapshotGroupId) {
         this.snapshotGroupId = snapshotGroupId;
         return this;
     }
     public String getSnapshotGroupId() {
         return this.snapshotGroupId;
-    }
-
-    public ModifySnapshotGroupRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public ModifySnapshotGroupRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
 }

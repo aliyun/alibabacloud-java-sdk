@@ -4,17 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyRouterInterfaceSpecRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
-    @NameInMap("RouterInterfaceId")
-    public String routerInterfaceId;
-
-    @NameInMap("Spec")
-    public String spec;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -22,11 +22,11 @@ public class ModifyRouterInterfaceSpecRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("RouterInterfaceId")
+    public String routerInterfaceId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("Spec")
+    public String spec;
 
     @NameInMap("UserCidr")
     public String userCidr;
@@ -36,28 +36,20 @@ public class ModifyRouterInterfaceSpecRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyRouterInterfaceSpecRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyRouterInterfaceSpecRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
-    public ModifyRouterInterfaceSpecRequest setRouterInterfaceId(String routerInterfaceId) {
-        this.routerInterfaceId = routerInterfaceId;
+    public ModifyRouterInterfaceSpecRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getRouterInterfaceId() {
-        return this.routerInterfaceId;
-    }
-
-    public ModifyRouterInterfaceSpecRequest setSpec(String spec) {
-        this.spec = spec;
-        return this;
-    }
-    public String getSpec() {
-        return this.spec;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyRouterInterfaceSpecRequest setOwnerId(Long ownerId) {
@@ -66,6 +58,14 @@ public class ModifyRouterInterfaceSpecRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyRouterInterfaceSpecRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyRouterInterfaceSpecRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -84,20 +84,20 @@ public class ModifyRouterInterfaceSpecRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyRouterInterfaceSpecRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public ModifyRouterInterfaceSpecRequest setRouterInterfaceId(String routerInterfaceId) {
+        this.routerInterfaceId = routerInterfaceId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRouterInterfaceId() {
+        return this.routerInterfaceId;
     }
 
-    public ModifyRouterInterfaceSpecRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyRouterInterfaceSpecRequest setSpec(String spec) {
+        this.spec = spec;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getSpec() {
+        return this.spec;
     }
 
     public ModifyRouterInterfaceSpecRequest setUserCidr(String userCidr) {

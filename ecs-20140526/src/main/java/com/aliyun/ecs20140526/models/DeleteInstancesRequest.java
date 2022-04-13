@@ -4,8 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstancesRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    @NameInMap("Force")
+    public Boolean force;
+
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,30 +31,52 @@ public class DeleteInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("Force")
-    public Boolean force;
-
     @NameInMap("TerminateSubscription")
     public Boolean terminateSubscription;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
 
     public static DeleteInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteInstancesRequest self = new DeleteInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteInstancesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteInstancesRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public DeleteInstancesRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    public DeleteInstancesRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DeleteInstancesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteInstancesRequest setOwnerId(Long ownerId) {
@@ -45,6 +85,14 @@ public class DeleteInstancesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteInstancesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -63,60 +111,12 @@ public class DeleteInstancesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteInstancesRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
-        return this;
-    }
-    public Boolean getDryRun() {
-        return this.dryRun;
-    }
-
-    public DeleteInstancesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DeleteInstancesRequest setForce(Boolean force) {
-        this.force = force;
-        return this;
-    }
-    public Boolean getForce() {
-        return this.force;
-    }
-
     public DeleteInstancesRequest setTerminateSubscription(Boolean terminateSubscription) {
         this.terminateSubscription = terminateSubscription;
         return this;
     }
     public Boolean getTerminateSubscription() {
         return this.terminateSubscription;
-    }
-
-    public DeleteInstancesRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public DeleteInstancesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteInstancesRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
 }

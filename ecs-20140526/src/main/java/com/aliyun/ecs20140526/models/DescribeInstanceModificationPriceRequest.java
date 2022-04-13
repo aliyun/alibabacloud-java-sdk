@@ -7,20 +7,8 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     @NameInMap("SystemDisk")
     public DescribeInstanceModificationPriceRequestSystemDisk systemDisk;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DataDisk")
+    public java.util.List<DescribeInstanceModificationPriceRequestDataDisk> dataDisk;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -28,8 +16,20 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
-    @NameInMap("DataDisk")
-    public java.util.List<DescribeInstanceModificationPriceRequestDataDisk> dataDisk;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeInstanceModificationPriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceModificationPriceRequest self = new DescribeInstanceModificationPriceRequest();
@@ -44,44 +44,12 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         return this.systemDisk;
     }
 
-    public DescribeInstanceModificationPriceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeInstanceModificationPriceRequest setDataDisk(java.util.List<DescribeInstanceModificationPriceRequestDataDisk> dataDisk) {
+        this.dataDisk = dataDisk;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeInstanceModificationPriceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeInstanceModificationPriceRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeInstanceModificationPriceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeInstanceModificationPriceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public java.util.List<DescribeInstanceModificationPriceRequestDataDisk> getDataDisk() {
+        return this.dataDisk;
     }
 
     public DescribeInstanceModificationPriceRequest setInstanceId(String instanceId) {
@@ -100,12 +68,44 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         return this.instanceType;
     }
 
-    public DescribeInstanceModificationPriceRequest setDataDisk(java.util.List<DescribeInstanceModificationPriceRequestDataDisk> dataDisk) {
-        this.dataDisk = dataDisk;
+    public DescribeInstanceModificationPriceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public java.util.List<DescribeInstanceModificationPriceRequestDataDisk> getDataDisk() {
-        return this.dataDisk;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeInstanceModificationPriceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeInstanceModificationPriceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeInstanceModificationPriceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeInstanceModificationPriceRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public static class DescribeInstanceModificationPriceRequestSystemDisk extends TeaModel {
@@ -128,18 +128,26 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     }
 
     public static class DescribeInstanceModificationPriceRequestDataDisk extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
         @NameInMap("Size")
         public Integer size;
 
-        @NameInMap("Category")
-        public String category;
-
         public static DescribeInstanceModificationPriceRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceModificationPriceRequestDataDisk self = new DescribeInstanceModificationPriceRequestDataDisk();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceModificationPriceRequestDataDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public DescribeInstanceModificationPriceRequestDataDisk setPerformanceLevel(String performanceLevel) {
@@ -156,14 +164,6 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         }
         public Integer getSize() {
             return this.size;
-        }
-
-        public DescribeInstanceModificationPriceRequestDataDisk setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
         }
 
     }

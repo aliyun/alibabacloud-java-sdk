@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
+    @NameInMap("ElasticityAssuranceItem")
+    public DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem elasticityAssuranceItem;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -13,15 +19,25 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    @NameInMap("ElasticityAssuranceItem")
-    public DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem elasticityAssuranceItem;
-
     public static DescribeElasticityAssuranceInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeElasticityAssuranceInstancesResponseBody self = new DescribeElasticityAssuranceInstancesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeElasticityAssuranceInstancesResponseBody setElasticityAssuranceItem(DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem elasticityAssuranceItem) {
+        this.elasticityAssuranceItem = elasticityAssuranceItem;
+        return this;
+    }
+    public DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem getElasticityAssuranceItem() {
+        return this.elasticityAssuranceItem;
+    }
+
+    public DescribeElasticityAssuranceInstancesResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public DescribeElasticityAssuranceInstancesResponseBody setNextToken(String nextToken) {
@@ -46,22 +62,6 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribeElasticityAssuranceInstancesResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public DescribeElasticityAssuranceInstancesResponseBody setElasticityAssuranceItem(DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem elasticityAssuranceItem) {
-        this.elasticityAssuranceItem = elasticityAssuranceItem;
-        return this;
-    }
-    public DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem getElasticityAssuranceItem() {
-        return this.elasticityAssuranceItem;
     }
 
     public static class DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet extends TeaModel {

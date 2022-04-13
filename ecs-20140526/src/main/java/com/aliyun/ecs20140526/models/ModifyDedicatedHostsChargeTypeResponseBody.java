@@ -4,18 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
+    @NameInMap("FeeOfInstances")
+    public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances feeOfInstances;
+
     @NameInMap("OrderId")
     public String orderId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("FeeOfInstances")
-    public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances feeOfInstances;
-
     public static ModifyDedicatedHostsChargeTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyDedicatedHostsChargeTypeResponseBody self = new ModifyDedicatedHostsChargeTypeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDedicatedHostsChargeTypeResponseBody setFeeOfInstances(ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances feeOfInstances) {
+        this.feeOfInstances = feeOfInstances;
+        return this;
+    }
+    public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances getFeeOfInstances() {
+        return this.feeOfInstances;
     }
 
     public ModifyDedicatedHostsChargeTypeResponseBody setOrderId(String orderId) {
@@ -34,35 +42,19 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifyDedicatedHostsChargeTypeResponseBody setFeeOfInstances(ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances feeOfInstances) {
-        this.feeOfInstances = feeOfInstances;
-        return this;
-    }
-    public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances getFeeOfInstances() {
-        return this.feeOfInstances;
-    }
-
     public static class ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstancesFeeOfInstance extends TeaModel {
-        @NameInMap("InstanceId")
-        public String instanceId;
-
         @NameInMap("Currency")
         public String currency;
 
         @NameInMap("Fee")
         public String fee;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         public static ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstancesFeeOfInstance build(java.util.Map<String, ?> map) throws Exception {
             ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstancesFeeOfInstance self = new ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstancesFeeOfInstance();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstancesFeeOfInstance setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
         public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstancesFeeOfInstance setCurrency(String currency) {
@@ -79,6 +71,14 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
         }
         public String getFee() {
             return this.fee;
+        }
+
+        public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstancesFeeOfInstance setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
     }

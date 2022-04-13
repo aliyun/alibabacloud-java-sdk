@@ -7,8 +7,35 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     @NameInMap("EventTime")
     public DescribeDisksFullStatusRequestEventTime eventTime;
 
+    @NameInMap("DiskId")
+    public java.util.List<String> diskId;
+
+    @NameInMap("EventId")
+    public java.util.List<String> eventId;
+
+    @NameInMap("EventType")
+    public String eventType;
+
+    @NameInMap("HealthStatus")
+    public String healthStatus;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,32 +43,11 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DiskId")
-    public java.util.List<String> diskId;
-
-    @NameInMap("EventId")
-    public java.util.List<String> eventId;
-
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("HealthStatus")
-    public String healthStatus;
-
-    @NameInMap("EventType")
-    public String eventType;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("Tag")
+    public java.util.List<DescribeDisksFullStatusRequestTag> tag;
 
     public static DescribeDisksFullStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDisksFullStatusRequest self = new DescribeDisksFullStatusRequest();
@@ -54,46 +60,6 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     }
     public DescribeDisksFullStatusRequestEventTime getEventTime() {
         return this.eventTime;
-    }
-
-    public DescribeDisksFullStatusRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeDisksFullStatusRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeDisksFullStatusRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeDisksFullStatusRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeDisksFullStatusRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeDisksFullStatusRequest setDiskId(java.util.List<String> diskId) {
@@ -112,12 +78,12 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
         return this.eventId;
     }
 
-    public DescribeDisksFullStatusRequest setStatus(String status) {
-        this.status = status;
+    public DescribeDisksFullStatusRequest setEventType(String eventType) {
+        this.eventType = eventType;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getEventType() {
+        return this.eventType;
     }
 
     public DescribeDisksFullStatusRequest setHealthStatus(String healthStatus) {
@@ -128,12 +94,20 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
         return this.healthStatus;
     }
 
-    public DescribeDisksFullStatusRequest setEventType(String eventType) {
-        this.eventType = eventType;
+    public DescribeDisksFullStatusRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getEventType() {
-        return this.eventType;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeDisksFullStatusRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeDisksFullStatusRequest setPageNumber(Integer pageNumber) {
@@ -152,16 +126,72 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public static class DescribeDisksFullStatusRequestEventTime extends TeaModel {
-        @NameInMap("Start")
-        public String start;
+    public DescribeDisksFullStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
 
+    public DescribeDisksFullStatusRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeDisksFullStatusRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeDisksFullStatusRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeDisksFullStatusRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DescribeDisksFullStatusRequest setTag(java.util.List<DescribeDisksFullStatusRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDisksFullStatusRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeDisksFullStatusRequestEventTime extends TeaModel {
         @NameInMap("End")
         public String end;
+
+        @NameInMap("Start")
+        public String start;
 
         public static DescribeDisksFullStatusRequestEventTime build(java.util.Map<String, ?> map) throws Exception {
             DescribeDisksFullStatusRequestEventTime self = new DescribeDisksFullStatusRequestEventTime();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksFullStatusRequestEventTime setEnd(String end) {
+            this.end = end;
+            return this;
+        }
+        public String getEnd() {
+            return this.end;
         }
 
         public DescribeDisksFullStatusRequestEventTime setStart(String start) {
@@ -172,12 +202,34 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
             return this.start;
         }
 
-        public DescribeDisksFullStatusRequestEventTime setEnd(String end) {
-            this.end = end;
+    }
+
+    public static class DescribeDisksFullStatusRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeDisksFullStatusRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksFullStatusRequestTag self = new DescribeDisksFullStatusRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksFullStatusRequestTag setKey(String key) {
+            this.key = key;
             return this;
         }
-        public String getEnd() {
-            return this.end;
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeDisksFullStatusRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

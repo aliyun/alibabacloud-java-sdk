@@ -7,11 +7,11 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PrefixListAssociations")
     public DescribePrefixListAssociationsResponseBodyPrefixListAssociations prefixListAssociations;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribePrefixListAssociationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePrefixListAssociationsResponseBody self = new DescribePrefixListAssociationsResponseBody();
@@ -26,20 +26,20 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public DescribePrefixListAssociationsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribePrefixListAssociationsResponseBody setPrefixListAssociations(DescribePrefixListAssociationsResponseBodyPrefixListAssociations prefixListAssociations) {
         this.prefixListAssociations = prefixListAssociations;
         return this;
     }
     public DescribePrefixListAssociationsResponseBodyPrefixListAssociations getPrefixListAssociations() {
         return this.prefixListAssociations;
+    }
+
+    public DescribePrefixListAssociationsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribePrefixListAssociationsResponseBodyPrefixListAssociationsPrefixListAssociation extends TeaModel {

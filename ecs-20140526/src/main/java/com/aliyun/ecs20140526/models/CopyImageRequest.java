@@ -4,44 +4,44 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CopyImageRequest extends TeaModel {
+    @NameInMap("DestinationDescription")
+    public String destinationDescription;
+
+    @NameInMap("DestinationImageName")
+    public String destinationImageName;
+
+    @NameInMap("DestinationRegionId")
+    public String destinationRegionId;
+
+    @NameInMap("EncryptAlgorithm")
+    public String encryptAlgorithm;
+
+    @NameInMap("Encrypted")
+    public Boolean encrypted;
+
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("KMSKeyId")
+    public String KMSKeyId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("DestinationImageName")
-    public String destinationImageName;
-
-    @NameInMap("DestinationDescription")
-    public String destinationDescription;
-
-    @NameInMap("ImageId")
-    public String imageId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DestinationRegionId")
-    public String destinationRegionId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("Encrypted")
-    public Boolean encrypted;
-
-    @NameInMap("KMSKeyId")
-    public String KMSKeyId;
-
-    @NameInMap("EncryptAlgorithm")
-    public String encryptAlgorithm;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("Tag")
     public java.util.List<CopyImageRequestTag> tag;
@@ -51,12 +51,92 @@ public class CopyImageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CopyImageRequest setDestinationDescription(String destinationDescription) {
+        this.destinationDescription = destinationDescription;
+        return this;
+    }
+    public String getDestinationDescription() {
+        return this.destinationDescription;
+    }
+
+    public CopyImageRequest setDestinationImageName(String destinationImageName) {
+        this.destinationImageName = destinationImageName;
+        return this;
+    }
+    public String getDestinationImageName() {
+        return this.destinationImageName;
+    }
+
+    public CopyImageRequest setDestinationRegionId(String destinationRegionId) {
+        this.destinationRegionId = destinationRegionId;
+        return this;
+    }
+    public String getDestinationRegionId() {
+        return this.destinationRegionId;
+    }
+
+    public CopyImageRequest setEncryptAlgorithm(String encryptAlgorithm) {
+        this.encryptAlgorithm = encryptAlgorithm;
+        return this;
+    }
+    public String getEncryptAlgorithm() {
+        return this.encryptAlgorithm;
+    }
+
+    public CopyImageRequest setEncrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
+        return this;
+    }
+    public Boolean getEncrypted() {
+        return this.encrypted;
+    }
+
+    public CopyImageRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public CopyImageRequest setKMSKeyId(String KMSKeyId) {
+        this.KMSKeyId = KMSKeyId;
+        return this;
+    }
+    public String getKMSKeyId() {
+        return this.KMSKeyId;
+    }
+
+    public CopyImageRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public CopyImageRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CopyImageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CopyImageRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CopyImageRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -73,86 +153,6 @@ public class CopyImageRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CopyImageRequest setDestinationImageName(String destinationImageName) {
-        this.destinationImageName = destinationImageName;
-        return this;
-    }
-    public String getDestinationImageName() {
-        return this.destinationImageName;
-    }
-
-    public CopyImageRequest setDestinationDescription(String destinationDescription) {
-        this.destinationDescription = destinationDescription;
-        return this;
-    }
-    public String getDestinationDescription() {
-        return this.destinationDescription;
-    }
-
-    public CopyImageRequest setImageId(String imageId) {
-        this.imageId = imageId;
-        return this;
-    }
-    public String getImageId() {
-        return this.imageId;
-    }
-
-    public CopyImageRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CopyImageRequest setDestinationRegionId(String destinationRegionId) {
-        this.destinationRegionId = destinationRegionId;
-        return this;
-    }
-    public String getDestinationRegionId() {
-        return this.destinationRegionId;
-    }
-
-    public CopyImageRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CopyImageRequest setEncrypted(Boolean encrypted) {
-        this.encrypted = encrypted;
-        return this;
-    }
-    public Boolean getEncrypted() {
-        return this.encrypted;
-    }
-
-    public CopyImageRequest setKMSKeyId(String KMSKeyId) {
-        this.KMSKeyId = KMSKeyId;
-        return this;
-    }
-    public String getKMSKeyId() {
-        return this.KMSKeyId;
-    }
-
-    public CopyImageRequest setEncryptAlgorithm(String encryptAlgorithm) {
-        this.encryptAlgorithm = encryptAlgorithm;
-        return this;
-    }
-    public String getEncryptAlgorithm() {
-        return this.encryptAlgorithm;
-    }
-
-    public CopyImageRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public CopyImageRequest setTag(java.util.List<CopyImageRequestTag> tag) {

@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceTypeFamilies")
     public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies instanceTypeFamilies;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeInstanceTypeFamiliesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceTypeFamiliesResponseBody self = new DescribeInstanceTypeFamiliesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceTypeFamiliesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeInstanceTypeFamiliesResponseBody setInstanceTypeFamilies(DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies instanceTypeFamilies) {
@@ -29,6 +21,14 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
     }
     public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies getInstanceTypeFamilies() {
         return this.instanceTypeFamilies;
+    }
+
+    public DescribeInstanceTypeFamiliesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily extends TeaModel {

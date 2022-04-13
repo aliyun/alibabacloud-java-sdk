@@ -4,23 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityGroupPolicyRequest extends TeaModel {
-    @NameInMap("SecurityGroupId")
-    public String securityGroupId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("InnerAccessPolicy")
-    public String innerAccessPolicy;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("InnerAccessPolicy")
+    public String innerAccessPolicy;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -28,25 +16,29 @@ public class ModifySecurityGroupPolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
+
     public static ModifySecurityGroupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySecurityGroupPolicyRequest self = new ModifySecurityGroupPolicyRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifySecurityGroupPolicyRequest setSecurityGroupId(String securityGroupId) {
-        this.securityGroupId = securityGroupId;
+    public ModifySecurityGroupPolicyRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getSecurityGroupId() {
-        return this.securityGroupId;
-    }
-
-    public ModifySecurityGroupPolicyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ModifySecurityGroupPolicyRequest setInnerAccessPolicy(String innerAccessPolicy) {
@@ -57,12 +49,28 @@ public class ModifySecurityGroupPolicyRequest extends TeaModel {
         return this.innerAccessPolicy;
     }
 
-    public ModifySecurityGroupPolicyRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public ModifySecurityGroupPolicyRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifySecurityGroupPolicyRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifySecurityGroupPolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifySecurityGroupPolicyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -81,20 +89,12 @@ public class ModifySecurityGroupPolicyRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySecurityGroupPolicyRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifySecurityGroupPolicyRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifySecurityGroupPolicyRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
     }
 
 }

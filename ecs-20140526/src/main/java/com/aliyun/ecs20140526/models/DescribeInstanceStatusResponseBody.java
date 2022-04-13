@@ -4,24 +4,40 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusResponseBody extends TeaModel {
+    @NameInMap("InstanceStatuses")
+    public DescribeInstanceStatusResponseBodyInstanceStatuses instanceStatuses;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("InstanceStatuses")
-    public DescribeInstanceStatusResponseBodyInstanceStatuses instanceStatuses;
 
     public static DescribeInstanceStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceStatusResponseBody self = new DescribeInstanceStatusResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceStatusResponseBody setInstanceStatuses(DescribeInstanceStatusResponseBodyInstanceStatuses instanceStatuses) {
+        this.instanceStatuses = instanceStatuses;
+        return this;
+    }
+    public DescribeInstanceStatusResponseBodyInstanceStatuses getInstanceStatuses() {
+        return this.instanceStatuses;
+    }
+
+    public DescribeInstanceStatusResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeInstanceStatusResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeInstanceStatusResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeInstanceStatusResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,32 +64,16 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeInstanceStatusResponseBody setInstanceStatuses(DescribeInstanceStatusResponseBodyInstanceStatuses instanceStatuses) {
-        this.instanceStatuses = instanceStatuses;
-        return this;
-    }
-    public DescribeInstanceStatusResponseBodyInstanceStatuses getInstanceStatuses() {
-        return this.instanceStatuses;
-    }
-
     public static class DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus self = new DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus setInstanceId(String instanceId) {
@@ -90,6 +82,14 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

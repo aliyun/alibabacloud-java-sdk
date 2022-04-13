@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DetachInstanceRamRoleResponseBody extends TeaModel {
+    @NameInMap("DetachInstanceRamRoleResults")
+    public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResults detachInstanceRamRoleResults;
+
+    @NameInMap("FailCount")
+    public Integer failCount;
+
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
@@ -13,15 +19,25 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("FailCount")
-    public Integer failCount;
-
-    @NameInMap("DetachInstanceRamRoleResults")
-    public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResults detachInstanceRamRoleResults;
-
     public static DetachInstanceRamRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetachInstanceRamRoleResponseBody self = new DetachInstanceRamRoleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DetachInstanceRamRoleResponseBody setDetachInstanceRamRoleResults(DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResults detachInstanceRamRoleResults) {
+        this.detachInstanceRamRoleResults = detachInstanceRamRoleResults;
+        return this;
+    }
+    public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResults getDetachInstanceRamRoleResults() {
+        return this.detachInstanceRamRoleResults;
+    }
+
+    public DetachInstanceRamRoleResponseBody setFailCount(Integer failCount) {
+        this.failCount = failCount;
+        return this;
+    }
+    public Integer getFailCount() {
+        return this.failCount;
     }
 
     public DetachInstanceRamRoleResponseBody setRamRoleName(String ramRoleName) {
@@ -48,40 +64,16 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DetachInstanceRamRoleResponseBody setFailCount(Integer failCount) {
-        this.failCount = failCount;
-        return this;
-    }
-    public Integer getFailCount() {
-        return this.failCount;
-    }
-
-    public DetachInstanceRamRoleResponseBody setDetachInstanceRamRoleResults(DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResults detachInstanceRamRoleResults) {
-        this.detachInstanceRamRoleResults = detachInstanceRamRoleResults;
-        return this;
-    }
-    public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResults getDetachInstanceRamRoleResults() {
-        return this.detachInstanceRamRoleResults;
-    }
-
     public static class DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSetsInstanceRamRoleSet extends TeaModel {
-        @NameInMap("RamRoleName")
-        public String ramRoleName;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("RamRoleName")
+        public String ramRoleName;
 
         public static DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSetsInstanceRamRoleSet build(java.util.Map<String, ?> map) throws Exception {
             DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSetsInstanceRamRoleSet self = new DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSetsInstanceRamRoleSet();
             return TeaModel.build(map, self);
-        }
-
-        public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSetsInstanceRamRoleSet setRamRoleName(String ramRoleName) {
-            this.ramRoleName = ramRoleName;
-            return this;
-        }
-        public String getRamRoleName() {
-            return this.ramRoleName;
         }
 
         public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSetsInstanceRamRoleSet setInstanceId(String instanceId) {
@@ -90,6 +82,14 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSetsInstanceRamRoleSet setRamRoleName(String ramRoleName) {
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+        public String getRamRoleName() {
+            return this.ramRoleName;
         }
 
     }
@@ -117,17 +117,17 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Message")
-        public String message;
-
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("Success")
-        public Boolean success;
-
         @NameInMap("InstanceRamRoleSets")
         public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSets instanceRamRoleSets;
+
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("Success")
+        public Boolean success;
 
         public static DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResult build(java.util.Map<String, ?> map) throws Exception {
             DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResult self = new DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResult();
@@ -142,14 +142,6 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             return this.code;
         }
 
-        public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResult setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
         public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResult setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -158,20 +150,28 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResult setSuccess(Boolean success) {
-            this.success = success;
-            return this;
-        }
-        public Boolean getSuccess() {
-            return this.success;
-        }
-
         public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResult setInstanceRamRoleSets(DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSets instanceRamRoleSets) {
             this.instanceRamRoleSets = instanceRamRoleSets;
             return this;
         }
         public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSets getInstanceRamRoleSets() {
             return this.instanceRamRoleSets;
+        }
+
+        public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResult setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResult setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
         }
 
     }

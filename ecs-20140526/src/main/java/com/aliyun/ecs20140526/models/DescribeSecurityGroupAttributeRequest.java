@@ -4,8 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupAttributeRequest extends TeaModel {
+    @NameInMap("Direction")
+    public String direction;
+
+    @NameInMap("NicType")
+    public String nicType;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,21 +28,33 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("NicType")
-    public String nicType;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("Direction")
-    public String direction;
-
     public static DescribeSecurityGroupAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityGroupAttributeRequest self = new DescribeSecurityGroupAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSecurityGroupAttributeRequest setDirection(String direction) {
+        this.direction = direction;
+        return this;
+    }
+    public String getDirection() {
+        return this.direction;
+    }
+
+    public DescribeSecurityGroupAttributeRequest setNicType(String nicType) {
+        this.nicType = nicType;
+        return this;
+    }
+    public String getNicType() {
+        return this.nicType;
+    }
+
+    public DescribeSecurityGroupAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeSecurityGroupAttributeRequest setOwnerId(Long ownerId) {
@@ -39,6 +63,14 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeSecurityGroupAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeSecurityGroupAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -63,38 +95,6 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
-    }
-
-    public DescribeSecurityGroupAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeSecurityGroupAttributeRequest setNicType(String nicType) {
-        this.nicType = nicType;
-        return this;
-    }
-    public String getNicType() {
-        return this.nicType;
-    }
-
-    public DescribeSecurityGroupAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeSecurityGroupAttributeRequest setDirection(String direction) {
-        this.direction = direction;
-        return this;
-    }
-    public String getDirection() {
-        return this.direction;
     }
 
 }

@@ -4,23 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteAutoProvisioningGroupRequest extends TeaModel {
+    @NameInMap("AutoProvisioningGroupId")
+    public String autoProvisioningGroupId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("AutoProvisioningGroupId")
-    public String autoProvisioningGroupId;
 
     @NameInMap("TerminateInstances")
     public Boolean terminateInstances;
@@ -30,12 +30,36 @@ public class DeleteAutoProvisioningGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteAutoProvisioningGroupRequest setAutoProvisioningGroupId(String autoProvisioningGroupId) {
+        this.autoProvisioningGroupId = autoProvisioningGroupId;
+        return this;
+    }
+    public String getAutoProvisioningGroupId() {
+        return this.autoProvisioningGroupId;
+    }
+
+    public DeleteAutoProvisioningGroupRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public DeleteAutoProvisioningGroupRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteAutoProvisioningGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteAutoProvisioningGroupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -52,30 +76,6 @@ public class DeleteAutoProvisioningGroupRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteAutoProvisioningGroupRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DeleteAutoProvisioningGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteAutoProvisioningGroupRequest setAutoProvisioningGroupId(String autoProvisioningGroupId) {
-        this.autoProvisioningGroupId = autoProvisioningGroupId;
-        return this;
-    }
-    public String getAutoProvisioningGroupId() {
-        return this.autoProvisioningGroupId;
     }
 
     public DeleteAutoProvisioningGroupRequest setTerminateInstances(Boolean terminateInstances) {

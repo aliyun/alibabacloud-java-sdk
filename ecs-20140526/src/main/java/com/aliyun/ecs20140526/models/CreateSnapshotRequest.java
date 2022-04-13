@@ -4,38 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateSnapshotRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("DiskId")
-    public String diskId;
-
-    @NameInMap("SnapshotName")
-    public String snapshotName;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("RetentionDays")
-    public Integer retentionDays;
-
     @NameInMap("Category")
     public String category;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("Description")
+    public String description;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("DiskId")
+    public String diskId;
 
     @NameInMap("InstantAccess")
     public Boolean instantAccess;
@@ -43,68 +22,33 @@ public class CreateSnapshotRequest extends TeaModel {
     @NameInMap("InstantAccessRetentionDays")
     public Integer instantAccessRetentionDays;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("RetentionDays")
+    public Integer retentionDays;
+
+    @NameInMap("SnapshotName")
+    public String snapshotName;
+
     @NameInMap("Tag")
     public java.util.List<CreateSnapshotRequestTag> tag;
 
     public static CreateSnapshotRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSnapshotRequest self = new CreateSnapshotRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateSnapshotRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateSnapshotRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateSnapshotRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateSnapshotRequest setDiskId(String diskId) {
-        this.diskId = diskId;
-        return this;
-    }
-    public String getDiskId() {
-        return this.diskId;
-    }
-
-    public CreateSnapshotRequest setSnapshotName(String snapshotName) {
-        this.snapshotName = snapshotName;
-        return this;
-    }
-    public String getSnapshotName() {
-        return this.snapshotName;
-    }
-
-    public CreateSnapshotRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public CreateSnapshotRequest setRetentionDays(Integer retentionDays) {
-        this.retentionDays = retentionDays;
-        return this;
-    }
-    public Integer getRetentionDays() {
-        return this.retentionDays;
     }
 
     public CreateSnapshotRequest setCategory(String category) {
@@ -123,20 +67,20 @@ public class CreateSnapshotRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateSnapshotRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public CreateSnapshotRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getDescription() {
+        return this.description;
     }
 
-    public CreateSnapshotRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public CreateSnapshotRequest setDiskId(String diskId) {
+        this.diskId = diskId;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getDiskId() {
+        return this.diskId;
     }
 
     public CreateSnapshotRequest setInstantAccess(Boolean instantAccess) {
@@ -155,6 +99,62 @@ public class CreateSnapshotRequest extends TeaModel {
         return this.instantAccessRetentionDays;
     }
 
+    public CreateSnapshotRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreateSnapshotRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateSnapshotRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateSnapshotRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateSnapshotRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateSnapshotRequest setRetentionDays(Integer retentionDays) {
+        this.retentionDays = retentionDays;
+        return this;
+    }
+    public Integer getRetentionDays() {
+        return this.retentionDays;
+    }
+
+    public CreateSnapshotRequest setSnapshotName(String snapshotName) {
+        this.snapshotName = snapshotName;
+        return this;
+    }
+    public String getSnapshotName() {
+        return this.snapshotName;
+    }
+
     public CreateSnapshotRequest setTag(java.util.List<CreateSnapshotRequestTag> tag) {
         this.tag = tag;
         return this;
@@ -164,7 +164,7 @@ public class CreateSnapshotRequest extends TeaModel {
     }
 
     public static class CreateSnapshotRequestTag extends TeaModel {
-        @NameInMap("key")
+        @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")

@@ -4,18 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
+    @NameInMap("FeeOfInstances")
+    public ModifyInstanceChargeTypeResponseBodyFeeOfInstances feeOfInstances;
+
     @NameInMap("OrderId")
     public String orderId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("FeeOfInstances")
-    public ModifyInstanceChargeTypeResponseBodyFeeOfInstances feeOfInstances;
-
     public static ModifyInstanceChargeTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceChargeTypeResponseBody self = new ModifyInstanceChargeTypeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceChargeTypeResponseBody setFeeOfInstances(ModifyInstanceChargeTypeResponseBodyFeeOfInstances feeOfInstances) {
+        this.feeOfInstances = feeOfInstances;
+        return this;
+    }
+    public ModifyInstanceChargeTypeResponseBodyFeeOfInstances getFeeOfInstances() {
+        return this.feeOfInstances;
     }
 
     public ModifyInstanceChargeTypeResponseBody setOrderId(String orderId) {
@@ -34,35 +42,19 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifyInstanceChargeTypeResponseBody setFeeOfInstances(ModifyInstanceChargeTypeResponseBodyFeeOfInstances feeOfInstances) {
-        this.feeOfInstances = feeOfInstances;
-        return this;
-    }
-    public ModifyInstanceChargeTypeResponseBodyFeeOfInstances getFeeOfInstances() {
-        return this.feeOfInstances;
-    }
-
     public static class ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance extends TeaModel {
-        @NameInMap("InstanceId")
-        public String instanceId;
-
         @NameInMap("Currency")
         public String currency;
 
         @NameInMap("Fee")
         public String fee;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         public static ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance build(java.util.Map<String, ?> map) throws Exception {
             ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance self = new ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
         public ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance setCurrency(String currency) {
@@ -79,6 +71,14 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         }
         public String getFee() {
             return this.fee;
+        }
+
+        public ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
     }

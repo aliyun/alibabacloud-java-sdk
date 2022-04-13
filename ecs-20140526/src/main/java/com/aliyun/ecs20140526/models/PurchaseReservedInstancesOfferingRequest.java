@@ -4,50 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Tag")
-    public java.util.List<PurchaseReservedInstancesOfferingRequestTag> tag;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
-
-    @NameInMap("ReservedInstanceName")
-    public String reservedInstanceName;
-
-    @NameInMap("InstanceType")
-    public String instanceType;
-
-    @NameInMap("Scope")
-    public String scope;
-
-    @NameInMap("InstanceAmount")
-    public Integer instanceAmount;
-
-    @NameInMap("OfferingType")
-    public String offeringType;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("Platform")
-    public String platform;
+    @NameInMap("InstanceAmount")
+    public Integer instanceAmount;
+
+    @NameInMap("InstanceType")
+    public String instanceType;
+
+    @NameInMap("OfferingType")
+    public String offeringType;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Period")
     public Integer period;
@@ -55,116 +31,44 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("Platform")
+    public String platform;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ReservedInstanceName")
+    public String reservedInstanceName;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("Scope")
+    public String scope;
+
+    @NameInMap("Tag")
+    public java.util.List<PurchaseReservedInstancesOfferingRequestTag> tag;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static PurchaseReservedInstancesOfferingRequest build(java.util.Map<String, ?> map) throws Exception {
         PurchaseReservedInstancesOfferingRequest self = new PurchaseReservedInstancesOfferingRequest();
         return TeaModel.build(map, self);
     }
 
-    public PurchaseReservedInstancesOfferingRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public PurchaseReservedInstancesOfferingRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public PurchaseReservedInstancesOfferingRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public PurchaseReservedInstancesOfferingRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public PurchaseReservedInstancesOfferingRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public PurchaseReservedInstancesOfferingRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public PurchaseReservedInstancesOfferingRequest setTag(java.util.List<PurchaseReservedInstancesOfferingRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<PurchaseReservedInstancesOfferingRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public PurchaseReservedInstancesOfferingRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public PurchaseReservedInstancesOfferingRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public PurchaseReservedInstancesOfferingRequest setReservedInstanceName(String reservedInstanceName) {
-        this.reservedInstanceName = reservedInstanceName;
-        return this;
-    }
-    public String getReservedInstanceName() {
-        return this.reservedInstanceName;
-    }
-
-    public PurchaseReservedInstancesOfferingRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
-    }
-
-    public PurchaseReservedInstancesOfferingRequest setScope(String scope) {
-        this.scope = scope;
-        return this;
-    }
-    public String getScope() {
-        return this.scope;
-    }
-
-    public PurchaseReservedInstancesOfferingRequest setInstanceAmount(Integer instanceAmount) {
-        this.instanceAmount = instanceAmount;
-        return this;
-    }
-    public Integer getInstanceAmount() {
-        return this.instanceAmount;
-    }
-
-    public PurchaseReservedInstancesOfferingRequest setOfferingType(String offeringType) {
-        this.offeringType = offeringType;
-        return this;
-    }
-    public String getOfferingType() {
-        return this.offeringType;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public PurchaseReservedInstancesOfferingRequest setDescription(String description) {
@@ -175,12 +79,44 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
         return this.description;
     }
 
-    public PurchaseReservedInstancesOfferingRequest setPlatform(String platform) {
-        this.platform = platform;
+    public PurchaseReservedInstancesOfferingRequest setInstanceAmount(Integer instanceAmount) {
+        this.instanceAmount = instanceAmount;
         return this;
     }
-    public String getPlatform() {
-        return this.platform;
+    public Integer getInstanceAmount() {
+        return this.instanceAmount;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setOfferingType(String offeringType) {
+        this.offeringType = offeringType;
+        return this;
+    }
+    public String getOfferingType() {
+        return this.offeringType;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public PurchaseReservedInstancesOfferingRequest setPeriod(Integer period) {
@@ -199,12 +135,76 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
         return this.periodUnit;
     }
 
-    public PurchaseReservedInstancesOfferingRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public PurchaseReservedInstancesOfferingRequest setPlatform(String platform) {
+        this.platform = platform;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getPlatform() {
+        return this.platform;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setReservedInstanceName(String reservedInstanceName) {
+        this.reservedInstanceName = reservedInstanceName;
+        return this;
+    }
+    public String getReservedInstanceName() {
+        return this.reservedInstanceName;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    public String getScope() {
+        return this.scope;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setTag(java.util.List<PurchaseReservedInstancesOfferingRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<PurchaseReservedInstancesOfferingRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
     public static class PurchaseReservedInstancesOfferingRequestTag extends TeaModel {

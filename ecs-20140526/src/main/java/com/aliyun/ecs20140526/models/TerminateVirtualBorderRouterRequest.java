@@ -4,14 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class TerminateVirtualBorderRouterRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
-    @NameInMap("VbrId")
-    public String vbrId;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -19,58 +22,15 @@ public class TerminateVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("UserCidr")
     public String userCidr;
+
+    @NameInMap("VbrId")
+    public String vbrId;
 
     public static TerminateVirtualBorderRouterRequest build(java.util.Map<String, ?> map) throws Exception {
         TerminateVirtualBorderRouterRequest self = new TerminateVirtualBorderRouterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public TerminateVirtualBorderRouterRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public TerminateVirtualBorderRouterRequest setVbrId(String vbrId) {
-        this.vbrId = vbrId;
-        return this;
-    }
-    public String getVbrId() {
-        return this.vbrId;
-    }
-
-    public TerminateVirtualBorderRouterRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public TerminateVirtualBorderRouterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public TerminateVirtualBorderRouterRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public TerminateVirtualBorderRouterRequest setClientToken(String clientToken) {
@@ -89,12 +49,52 @@ public class TerminateVirtualBorderRouterRequest extends TeaModel {
         return this.ownerAccount;
     }
 
+    public TerminateVirtualBorderRouterRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public TerminateVirtualBorderRouterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public TerminateVirtualBorderRouterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public TerminateVirtualBorderRouterRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public TerminateVirtualBorderRouterRequest setUserCidr(String userCidr) {
         this.userCidr = userCidr;
         return this;
     }
     public String getUserCidr() {
         return this.userCidr;
+    }
+
+    public TerminateVirtualBorderRouterRequest setVbrId(String vbrId) {
+        this.vbrId = vbrId;
+        return this;
+    }
+    public String getVbrId() {
+        return this.vbrId;
     }
 
 }

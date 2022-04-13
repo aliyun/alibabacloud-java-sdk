@@ -7,17 +7,17 @@ public class EipFillParamsResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
-    @NameInMap("success")
-    public Boolean success;
+    @NameInMap("data")
+    public String data;
 
     @NameInMap("message")
     public String message;
 
-    @NameInMap("data")
-    public String data;
-
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("success")
+    public Boolean success;
 
     public static EipFillParamsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EipFillParamsResponseBody self = new EipFillParamsResponseBody();
@@ -32,12 +32,12 @@ public class EipFillParamsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public EipFillParamsResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public EipFillParamsResponseBody setData(String data) {
+        this.data = data;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getData() {
+        return this.data;
     }
 
     public EipFillParamsResponseBody setMessage(String message) {
@@ -48,20 +48,20 @@ public class EipFillParamsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public EipFillParamsResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
     public EipFillParamsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public EipFillParamsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

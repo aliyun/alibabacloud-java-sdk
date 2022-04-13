@@ -4,24 +4,40 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeActivationsResponseBody extends TeaModel {
+    @NameInMap("ActivationList")
+    public java.util.List<DescribeActivationsResponseBodyActivationList> activationList;
+
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
     @NameInMap("PageSize")
     public Long pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
     @NameInMap("TotalCount")
     public Long totalCount;
-
-    @NameInMap("ActivationList")
-    public java.util.List<DescribeActivationsResponseBodyActivationList> activationList;
 
     public static DescribeActivationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeActivationsResponseBody self = new DescribeActivationsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeActivationsResponseBody setActivationList(java.util.List<DescribeActivationsResponseBodyActivationList> activationList) {
+        this.activationList = activationList;
+        return this;
+    }
+    public java.util.List<DescribeActivationsResponseBodyActivationList> getActivationList() {
+        return this.activationList;
+    }
+
+    public DescribeActivationsResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeActivationsResponseBody setPageSize(Long pageSize) {
@@ -40,14 +56,6 @@ public class DescribeActivationsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeActivationsResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeActivationsResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,48 +64,48 @@ public class DescribeActivationsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeActivationsResponseBody setActivationList(java.util.List<DescribeActivationsResponseBodyActivationList> activationList) {
-        this.activationList = activationList;
-        return this;
-    }
-    public java.util.List<DescribeActivationsResponseBodyActivationList> getActivationList() {
-        return this.activationList;
-    }
-
     public static class DescribeActivationsResponseBodyActivationList extends TeaModel {
+        @NameInMap("ActivationId")
+        public String activationId;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("DeregisteredCount")
         public Integer deregisteredCount;
 
-        @NameInMap("InstanceCount")
-        public Integer instanceCount;
-
         @NameInMap("Description")
         public String description;
-
-        @NameInMap("RegisteredCount")
-        public Integer registeredCount;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
 
         @NameInMap("Disabled")
         public Boolean disabled;
 
+        @NameInMap("InstanceCount")
+        public Integer instanceCount;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
         @NameInMap("IpAddressRange")
         public String ipAddressRange;
+
+        @NameInMap("RegisteredCount")
+        public Integer registeredCount;
 
         @NameInMap("TimeToLiveInHours")
         public Long timeToLiveInHours;
 
-        @NameInMap("ActivationId")
-        public String activationId;
-
         public static DescribeActivationsResponseBodyActivationList build(java.util.Map<String, ?> map) throws Exception {
             DescribeActivationsResponseBodyActivationList self = new DescribeActivationsResponseBodyActivationList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeActivationsResponseBodyActivationList setActivationId(String activationId) {
+            this.activationId = activationId;
+            return this;
+        }
+        public String getActivationId() {
+            return this.activationId;
         }
 
         public DescribeActivationsResponseBodyActivationList setCreationTime(String creationTime) {
@@ -116,36 +124,12 @@ public class DescribeActivationsResponseBody extends TeaModel {
             return this.deregisteredCount;
         }
 
-        public DescribeActivationsResponseBodyActivationList setInstanceCount(Integer instanceCount) {
-            this.instanceCount = instanceCount;
-            return this;
-        }
-        public Integer getInstanceCount() {
-            return this.instanceCount;
-        }
-
         public DescribeActivationsResponseBodyActivationList setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public DescribeActivationsResponseBodyActivationList setRegisteredCount(Integer registeredCount) {
-            this.registeredCount = registeredCount;
-            return this;
-        }
-        public Integer getRegisteredCount() {
-            return this.registeredCount;
-        }
-
-        public DescribeActivationsResponseBodyActivationList setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
         }
 
         public DescribeActivationsResponseBodyActivationList setDisabled(Boolean disabled) {
@@ -156,6 +140,22 @@ public class DescribeActivationsResponseBody extends TeaModel {
             return this.disabled;
         }
 
+        public DescribeActivationsResponseBodyActivationList setInstanceCount(Integer instanceCount) {
+            this.instanceCount = instanceCount;
+            return this;
+        }
+        public Integer getInstanceCount() {
+            return this.instanceCount;
+        }
+
+        public DescribeActivationsResponseBodyActivationList setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
         public DescribeActivationsResponseBodyActivationList setIpAddressRange(String ipAddressRange) {
             this.ipAddressRange = ipAddressRange;
             return this;
@@ -164,20 +164,20 @@ public class DescribeActivationsResponseBody extends TeaModel {
             return this.ipAddressRange;
         }
 
+        public DescribeActivationsResponseBodyActivationList setRegisteredCount(Integer registeredCount) {
+            this.registeredCount = registeredCount;
+            return this;
+        }
+        public Integer getRegisteredCount() {
+            return this.registeredCount;
+        }
+
         public DescribeActivationsResponseBodyActivationList setTimeToLiveInHours(Long timeToLiveInHours) {
             this.timeToLiveInHours = timeToLiveInHours;
             return this;
         }
         public Long getTimeToLiveInHours() {
             return this.timeToLiveInHours;
-        }
-
-        public DescribeActivationsResponseBodyActivationList setActivationId(String activationId) {
-            this.activationId = activationId;
-            return this;
-        }
-        public String getActivationId() {
-            return this.activationId;
         }
 
     }

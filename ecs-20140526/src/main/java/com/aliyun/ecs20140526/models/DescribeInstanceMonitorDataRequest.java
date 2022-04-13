@@ -4,8 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceMonitorDataRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Period")
+    public Integer period;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,24 +25,36 @@ public class DescribeInstanceMonitorDataRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("Period")
-    public Integer period;
 
     public static DescribeInstanceMonitorDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceMonitorDataRequest self = new DescribeInstanceMonitorDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceMonitorDataRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeInstanceMonitorDataRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeInstanceMonitorDataRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeInstanceMonitorDataRequest setOwnerId(Long ownerId) {
@@ -39,6 +63,14 @@ public class DescribeInstanceMonitorDataRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeInstanceMonitorDataRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
     }
 
     public DescribeInstanceMonitorDataRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,44 +89,12 @@ public class DescribeInstanceMonitorDataRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeInstanceMonitorDataRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeInstanceMonitorDataRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public DescribeInstanceMonitorDataRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeInstanceMonitorDataRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeInstanceMonitorDataRequest setPeriod(Integer period) {
-        this.period = period;
-        return this;
-    }
-    public Integer getPeriod() {
-        return this.period;
     }
 
 }

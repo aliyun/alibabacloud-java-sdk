@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipMonitorDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("EipMonitorDatas")
     public DescribeEipMonitorDataResponseBodyEipMonitorDatas eipMonitorDatas;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeEipMonitorDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEipMonitorDataResponseBody self = new DescribeEipMonitorDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeEipMonitorDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeEipMonitorDataResponseBody setEipMonitorDatas(DescribeEipMonitorDataResponseBodyEipMonitorDatas eipMonitorDatas) {
@@ -31,44 +23,36 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
         return this.eipMonitorDatas;
     }
 
+    public DescribeEipMonitorDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData extends TeaModel {
-        @NameInMap("EipTX")
-        public Integer eipTX;
-
-        @NameInMap("EipPackets")
-        public Integer eipPackets;
-
         @NameInMap("EipBandwidth")
         public Integer eipBandwidth;
-
-        @NameInMap("TimeStamp")
-        public String timeStamp;
 
         @NameInMap("EipFlow")
         public Integer eipFlow;
 
+        @NameInMap("EipPackets")
+        public Integer eipPackets;
+
         @NameInMap("EipRX")
         public Integer eipRX;
+
+        @NameInMap("EipTX")
+        public Integer eipTX;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         public static DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData build(java.util.Map<String, ?> map) throws Exception {
             DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData self = new DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipTX(Integer eipTX) {
-            this.eipTX = eipTX;
-            return this;
-        }
-        public Integer getEipTX() {
-            return this.eipTX;
-        }
-
-        public DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipPackets(Integer eipPackets) {
-            this.eipPackets = eipPackets;
-            return this;
-        }
-        public Integer getEipPackets() {
-            return this.eipPackets;
         }
 
         public DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipBandwidth(Integer eipBandwidth) {
@@ -79,14 +63,6 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             return this.eipBandwidth;
         }
 
-        public DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
-        }
-
         public DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipFlow(Integer eipFlow) {
             this.eipFlow = eipFlow;
             return this;
@@ -95,12 +71,36 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
             return this.eipFlow;
         }
 
+        public DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipPackets(Integer eipPackets) {
+            this.eipPackets = eipPackets;
+            return this;
+        }
+        public Integer getEipPackets() {
+            return this.eipPackets;
+        }
+
         public DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipRX(Integer eipRX) {
             this.eipRX = eipRX;
             return this;
         }
         public Integer getEipRX() {
             return this.eipRX;
+        }
+
+        public DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipTX(Integer eipTX) {
+            this.eipTX = eipTX;
+            return this;
+        }
+        public Integer getEipTX() {
+            return this.eipTX;
+        }
+
+        public DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

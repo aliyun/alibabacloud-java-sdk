@@ -4,14 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("OrderId")
     public String orderId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TradePrice")
     public Float tradePrice;
@@ -19,14 +19,6 @@ public class CreateInstanceResponseBody extends TeaModel {
     public static CreateInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceResponseBody self = new CreateInstanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateInstanceResponseBody setInstanceId(String instanceId) {
@@ -43,6 +35,14 @@ public class CreateInstanceResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public CreateInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateInstanceResponseBody setTradePrice(Float tradePrice) {

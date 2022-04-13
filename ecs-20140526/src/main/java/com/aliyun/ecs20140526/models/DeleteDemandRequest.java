@@ -4,8 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteDemandRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("DemandId")
+    public String demandId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Reason")
+    public String reason;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,24 +28,33 @@ public class DeleteDemandRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DemandId")
-    public String demandId;
-
-    @NameInMap("Reason")
-    public String reason;
-
     public static DeleteDemandRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDemandRequest self = new DeleteDemandRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDemandRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteDemandRequest setDemandId(String demandId) {
+        this.demandId = demandId;
+        return this;
+    }
+    public String getDemandId() {
+        return this.demandId;
+    }
+
+    public DeleteDemandRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteDemandRequest setOwnerId(Long ownerId) {
@@ -39,6 +63,22 @@ public class DeleteDemandRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteDemandRequest setReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    public String getReason() {
+        return this.reason;
+    }
+
+    public DeleteDemandRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteDemandRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -55,46 +95,6 @@ public class DeleteDemandRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteDemandRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DeleteDemandRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public DeleteDemandRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteDemandRequest setDemandId(String demandId) {
-        this.demandId = demandId;
-        return this;
-    }
-    public String getDemandId() {
-        return this.demandId;
-    }
-
-    public DeleteDemandRequest setReason(String reason) {
-        this.reason = reason;
-        return this;
-    }
-    public String getReason() {
-        return this.reason;
     }
 
 }

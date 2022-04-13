@@ -4,8 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceId")
+    public java.util.List<String> resourceId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,20 +25,8 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("NextToken")
-    public String nextToken;
-
     @NameInMap("ResourceType")
     public String resourceType;
-
-    @NameInMap("ResourceId")
-    public java.util.List<String> resourceId;
 
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -39,12 +39,44 @@ public class ListTagResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListTagResourcesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListTagResourcesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public ListTagResourcesRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ListTagResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
     }
 
     public ListTagResourcesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -63,44 +95,12 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ListTagResourcesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ListTagResourcesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListTagResourcesRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
     public ListTagResourcesRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
-    }
-
-    public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public java.util.List<String> getResourceId() {
-        return this.resourceId;
     }
 
     public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {
@@ -150,23 +150,15 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTagFilter extends TeaModel {
-        @NameInMap("TagValues")
-        public java.util.List<String> tagValues;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValues")
+        public java.util.List<String> tagValues;
 
         public static ListTagResourcesRequestTagFilter build(java.util.Map<String, ?> map) throws Exception {
             ListTagResourcesRequestTagFilter self = new ListTagResourcesRequestTagFilter();
             return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesRequestTagFilter setTagValues(java.util.List<String> tagValues) {
-            this.tagValues = tagValues;
-            return this;
-        }
-        public java.util.List<String> getTagValues() {
-            return this.tagValues;
         }
 
         public ListTagResourcesRequestTagFilter setTagKey(String tagKey) {
@@ -175,6 +167,14 @@ public class ListTagResourcesRequest extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public ListTagResourcesRequestTagFilter setTagValues(java.util.List<String> tagValues) {
+            this.tagValues = tagValues;
+            return this;
+        }
+        public java.util.List<String> getTagValues() {
+            return this.tagValues;
         }
 
     }

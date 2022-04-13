@@ -4,11 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateRouterInterfaceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OrderId")
     public Long orderId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("RouterInterfaceId")
     public String routerInterfaceId;
@@ -18,20 +18,20 @@ public class CreateRouterInterfaceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateRouterInterfaceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateRouterInterfaceResponseBody setOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public CreateRouterInterfaceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateRouterInterfaceResponseBody setRouterInterfaceId(String routerInterfaceId) {

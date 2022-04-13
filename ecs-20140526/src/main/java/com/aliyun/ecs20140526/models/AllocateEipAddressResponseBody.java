@@ -4,26 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AllocateEipAddressResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AllocationId")
     public String allocationId;
 
     @NameInMap("EipAddress")
     public String eipAddress;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static AllocateEipAddressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AllocateEipAddressResponseBody self = new AllocateEipAddressResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AllocateEipAddressResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AllocateEipAddressResponseBody setAllocationId(String allocationId) {
@@ -40,6 +32,14 @@ public class AllocateEipAddressResponseBody extends TeaModel {
     }
     public String getEipAddress() {
         return this.eipAddress;
+    }
+
+    public AllocateEipAddressResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

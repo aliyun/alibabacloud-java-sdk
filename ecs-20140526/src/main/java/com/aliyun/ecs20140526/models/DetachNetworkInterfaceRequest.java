@@ -4,26 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DetachNetworkInterfaceRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("NetworkInterfaceId")
+    public String networkInterfaceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("NetworkInterfaceId")
-    public String networkInterfaceId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
 
     @NameInMap("TrunkNetworkInstanceId")
     public String trunkNetworkInstanceId;
@@ -33,12 +33,44 @@ public class DetachNetworkInterfaceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DetachNetworkInterfaceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DetachNetworkInterfaceRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    public DetachNetworkInterfaceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public DetachNetworkInterfaceRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DetachNetworkInterfaceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DetachNetworkInterfaceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -55,38 +87,6 @@ public class DetachNetworkInterfaceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DetachNetworkInterfaceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DetachNetworkInterfaceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DetachNetworkInterfaceRequest setNetworkInterfaceId(String networkInterfaceId) {
-        this.networkInterfaceId = networkInterfaceId;
-        return this;
-    }
-    public String getNetworkInterfaceId() {
-        return this.networkInterfaceId;
-    }
-
-    public DetachNetworkInterfaceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public DetachNetworkInterfaceRequest setTrunkNetworkInstanceId(String trunkNetworkInstanceId) {

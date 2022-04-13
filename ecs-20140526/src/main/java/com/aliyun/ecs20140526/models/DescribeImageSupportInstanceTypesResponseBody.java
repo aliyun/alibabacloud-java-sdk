@@ -4,29 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ImageId")
     public String imageId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("InstanceTypes")
     public DescribeImageSupportInstanceTypesResponseBodyInstanceTypes instanceTypes;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeImageSupportInstanceTypesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageSupportInstanceTypesResponseBody self = new DescribeImageSupportInstanceTypesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeImageSupportInstanceTypesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeImageSupportInstanceTypesResponseBody setImageId(String imageId) {
@@ -37,14 +29,6 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         return this.imageId;
     }
 
-    public DescribeImageSupportInstanceTypesResponseBody setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DescribeImageSupportInstanceTypesResponseBody setInstanceTypes(DescribeImageSupportInstanceTypesResponseBodyInstanceTypes instanceTypes) {
         this.instanceTypes = instanceTypes;
         return this;
@@ -53,15 +37,31 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         return this.instanceTypes;
     }
 
+    public DescribeImageSupportInstanceTypesResponseBody setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeImageSupportInstanceTypesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
-        @NameInMap("InstanceTypeId")
-        public String instanceTypeId;
+        @NameInMap("CpuCoreCount")
+        public Integer cpuCoreCount;
 
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
-        @NameInMap("CpuCoreCount")
-        public Integer cpuCoreCount;
+        @NameInMap("InstanceTypeId")
+        public String instanceTypeId;
 
         @NameInMap("MemorySize")
         public Float memorySize;
@@ -71,12 +71,12 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceTypeId(String instanceTypeId) {
-            this.instanceTypeId = instanceTypeId;
+        public DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType setCpuCoreCount(Integer cpuCoreCount) {
+            this.cpuCoreCount = cpuCoreCount;
             return this;
         }
-        public String getInstanceTypeId() {
-            return this.instanceTypeId;
+        public Integer getCpuCoreCount() {
+            return this.cpuCoreCount;
         }
 
         public DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceTypeFamily(String instanceTypeFamily) {
@@ -87,12 +87,12 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             return this.instanceTypeFamily;
         }
 
-        public DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType setCpuCoreCount(Integer cpuCoreCount) {
-            this.cpuCoreCount = cpuCoreCount;
+        public DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceTypeId(String instanceTypeId) {
+            this.instanceTypeId = instanceTypeId;
             return this;
         }
-        public Integer getCpuCoreCount() {
-            return this.cpuCoreCount;
+        public String getInstanceTypeId() {
+            return this.instanceTypeId;
         }
 
         public DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType setMemorySize(Float memorySize) {
