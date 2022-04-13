@@ -14,7 +14,7 @@ public class ListK8sConfigMapsResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Result")
-    public java.util.List<ListK8sConfigMapsResponseBodyResult> result;
+    public ListK8sConfigMapsResponseBodyResult result;
 
     public static ListK8sConfigMapsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListK8sConfigMapsResponseBody self = new ListK8sConfigMapsResponseBody();
@@ -45,11 +45,11 @@ public class ListK8sConfigMapsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListK8sConfigMapsResponseBody setResult(java.util.List<ListK8sConfigMapsResponseBodyResult> result) {
+    public ListK8sConfigMapsResponseBody setResult(ListK8sConfigMapsResponseBodyResult result) {
         this.result = result;
         return this;
     }
-    public java.util.List<ListK8sConfigMapsResponseBodyResult> getResult() {
+    public ListK8sConfigMapsResponseBodyResult getResult() {
         return this.result;
     }
 

@@ -1,3 +1,6 @@
+2022-04-13 Version: 1.0.2
+- Supported ConfigMap management for K8s Applications.
+
 2022-04-12 Version: 1.0.1
 - Supported secret management for K8s Applications.
 
