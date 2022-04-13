@@ -4,6 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckWarningSummaryRequest extends TeaModel {
+    @NameInMap("ClusterId")
+    public String clusterId;
+
+    @NameInMap("ContainerFieldName")
+    public String containerFieldName;
+
+    @NameInMap("ContainerFieldValue")
+    public String containerFieldValue;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -28,6 +37,9 @@ public class DescribeCheckWarningSummaryRequest extends TeaModel {
     @NameInMap("StrategyId")
     public Long strategyId;
 
+    @NameInMap("TargetType")
+    public String targetType;
+
     @NameInMap("TypeName")
     public String typeName;
 
@@ -37,6 +49,30 @@ public class DescribeCheckWarningSummaryRequest extends TeaModel {
     public static DescribeCheckWarningSummaryRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCheckWarningSummaryRequest self = new DescribeCheckWarningSummaryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCheckWarningSummaryRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    public DescribeCheckWarningSummaryRequest setContainerFieldName(String containerFieldName) {
+        this.containerFieldName = containerFieldName;
+        return this;
+    }
+    public String getContainerFieldName() {
+        return this.containerFieldName;
+    }
+
+    public DescribeCheckWarningSummaryRequest setContainerFieldValue(String containerFieldValue) {
+        this.containerFieldValue = containerFieldValue;
+        return this;
+    }
+    public String getContainerFieldValue() {
+        return this.containerFieldValue;
     }
 
     public DescribeCheckWarningSummaryRequest setCurrentPage(Integer currentPage) {
@@ -101,6 +137,14 @@ public class DescribeCheckWarningSummaryRequest extends TeaModel {
     }
     public Long getStrategyId() {
         return this.strategyId;
+    }
+
+    public DescribeCheckWarningSummaryRequest setTargetType(String targetType) {
+        this.targetType = targetType;
+        return this;
+    }
+    public String getTargetType() {
+        return this.targetType;
     }
 
     public DescribeCheckWarningSummaryRequest setTypeName(String typeName) {

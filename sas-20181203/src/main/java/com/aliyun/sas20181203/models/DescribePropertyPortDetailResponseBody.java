@@ -98,9 +98,6 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         @NameInMap("BindIp")
         public String bindIp;
 
-        @NameInMap("Create")
-        public String create;
-
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
@@ -145,14 +142,6 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         }
         public String getBindIp() {
             return this.bindIp;
-        }
-
-        public DescribePropertyPortDetailResponseBodyPropertys setCreate(String create) {
-            this.create = create;
-            return this;
-        }
-        public String getCreate() {
-            return this.create;
         }
 
         public DescribePropertyPortDetailResponseBodyPropertys setCreateTimestamp(Long createTimestamp) {

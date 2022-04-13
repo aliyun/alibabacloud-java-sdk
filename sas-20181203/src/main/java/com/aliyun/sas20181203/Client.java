@@ -655,6 +655,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAffectedMaliciousFileImagesResponse describeAffectedMaliciousFileImagesWithOptions(DescribeAffectedMaliciousFileImagesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
         }
@@ -1333,6 +1337,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCheckWarningSummaryResponse describeCheckWarningSummaryWithOptions(DescribeCheckWarningSummaryRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.containerFieldName)) {
+            query.put("ContainerFieldName", request.containerFieldName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.containerFieldValue)) {
+            query.put("ContainerFieldValue", request.containerFieldValue);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
         }
@@ -1363,6 +1379,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.strategyId)) {
             query.put("StrategyId", request.strategyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
+            query.put("TargetType", request.targetType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.typeName)) {
@@ -2170,6 +2190,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeGroupedMaliciousFilesResponse describeGroupedMaliciousFilesWithOptions(DescribeGroupedMaliciousFilesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
         }
@@ -2399,6 +2423,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeImageBaselineCheckSummaryResponse describeImageBaselineCheckSummaryWithOptions(DescribeImageBaselineCheckSummaryRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.criteria)) {
             query.put("Criteria", request.criteria);
         }
@@ -2495,6 +2523,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aliasName)) {
             query.put("AliasName", request.aliasName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
@@ -2602,6 +2634,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BaselineNameKey", request.baselineNameKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.criteria)) {
             query.put("Criteria", request.criteria);
         }
@@ -2707,6 +2743,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aliasName)) {
             query.put("AliasName", request.aliasName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {

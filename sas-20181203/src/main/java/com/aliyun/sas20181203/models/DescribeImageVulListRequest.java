@@ -7,6 +7,9 @@ public class DescribeImageVulListRequest extends TeaModel {
     @NameInMap("AliasName")
     public String aliasName;
 
+    @NameInMap("ClusterId")
+    public String clusterId;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -72,6 +75,14 @@ public class DescribeImageVulListRequest extends TeaModel {
     }
     public String getAliasName() {
         return this.aliasName;
+    }
+
+    public DescribeImageVulListRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public DescribeImageVulListRequest setCurrentPage(Integer currentPage) {

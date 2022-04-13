@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
+    @NameInMap("ClusterId")
+    public String clusterId;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -46,6 +49,14 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     public static DescribeGroupedMaliciousFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGroupedMaliciousFilesRequest self = new DescribeGroupedMaliciousFilesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGroupedMaliciousFilesRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public DescribeGroupedMaliciousFilesRequest setCurrentPage(Integer currentPage) {

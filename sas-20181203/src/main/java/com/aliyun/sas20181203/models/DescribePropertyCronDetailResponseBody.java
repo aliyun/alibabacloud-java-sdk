@@ -98,9 +98,6 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         @NameInMap("Cmd")
         public String cmd;
 
-        @NameInMap("Create")
-        public String create;
-
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
@@ -145,14 +142,6 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
         }
         public String getCmd() {
             return this.cmd;
-        }
-
-        public DescribePropertyCronDetailResponseBodyPropertys setCreate(String create) {
-            this.create = create;
-            return this;
-        }
-        public String getCreate() {
-            return this.create;
         }
 
         public DescribePropertyCronDetailResponseBodyPropertys setCreateTimestamp(Long createTimestamp) {
