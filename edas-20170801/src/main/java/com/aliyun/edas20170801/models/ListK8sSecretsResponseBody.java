@@ -14,7 +14,7 @@ public class ListK8sSecretsResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Result")
-    public java.util.List<ListK8sSecretsResponseBodyResult> result;
+    public ListK8sSecretsResponseBodyResult result;
 
     public static ListK8sSecretsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListK8sSecretsResponseBody self = new ListK8sSecretsResponseBody();
@@ -45,11 +45,11 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListK8sSecretsResponseBody setResult(java.util.List<ListK8sSecretsResponseBodyResult> result) {
+    public ListK8sSecretsResponseBody setResult(ListK8sSecretsResponseBodyResult result) {
         this.result = result;
         return this;
     }
-    public java.util.List<ListK8sSecretsResponseBodyResult> getResult() {
+    public ListK8sSecretsResponseBodyResult getResult() {
         return this.result;
     }
 
@@ -62,9 +62,6 @@ public class ListK8sSecretsResponseBody extends TeaModel {
 
         @NameInMap("Issuer")
         public String issuer;
-
-        @NameInMap("KeySize")
-        public Integer keySize;
 
         @NameInMap("StartTime")
         public String startTime;
@@ -99,14 +96,6 @@ public class ListK8sSecretsResponseBody extends TeaModel {
         }
         public String getIssuer() {
             return this.issuer;
-        }
-
-        public ListK8sSecretsResponseBodyResultSecretsCertDetail setKeySize(Integer keySize) {
-            this.keySize = keySize;
-            return this;
-        }
-        public Integer getKeySize() {
-            return this.keySize;
         }
 
         public ListK8sSecretsResponseBodyResultSecretsCertDetail setStartTime(String startTime) {
