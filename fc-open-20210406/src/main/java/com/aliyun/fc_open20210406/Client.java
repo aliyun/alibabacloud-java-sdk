@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 import com.aliyun.fc_open20210406.models.*;
 import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
+import com.aliyun.gateway.spi.*;
+import com.aliyun.gateway.fc.*;
+import com.aliyun.gateway.fc.models.*;
+import com.aliyun.credentials.*;
 import com.aliyun.teaopenapi.*;
 import com.aliyun.teaopenapi.models.*;
 import com.aliyun.openapiutil.*;
@@ -12,8 +16,11 @@ import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
+    public com.aliyun.gateway.spi.Client _client;
     public Client(Config config) throws Exception {
         super(config);
+        this._client = new com.aliyun.gateway.fc.Client();
+        this._spi = _client;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-1", "account-id.ap-northeast-1.fc.aliyuncs.com"),
@@ -113,7 +120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAliasResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateAliasResponse());
     }
 
     public CreateCustomDomainResponse createCustomDomain(CreateCustomDomainRequest request) throws Exception {
@@ -139,6 +146,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.routeConfig))) {
             body.put("routeConfig", request.routeConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.tlsConfig))) {
+            body.put("tlsConfig", request.tlsConfig);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -173,7 +184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomDomainResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateCustomDomainResponse());
     }
 
     public CreateFunctionResponse createFunction(String serviceName, CreateFunctionRequest request) throws Exception {
@@ -294,7 +305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFunctionResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateFunctionResponse());
     }
 
     public CreateLayerVersionResponse createLayerVersion(String layerName, CreateLayerVersionRequest request) throws Exception {
@@ -351,7 +362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLayerVersionResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateLayerVersionResponse());
     }
 
     public CreateServiceResponse createService(CreateServiceRequest request) throws Exception {
@@ -427,7 +438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateServiceResponse());
     }
 
     public CreateTriggerResponse createTrigger(String serviceName, String functionName, CreateTriggerRequest request) throws Exception {
@@ -501,7 +512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTriggerResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateTriggerResponse());
     }
 
     public CreateVpcBindingResponse createVpcBinding(String serviceName, CreateVpcBindingRequest request) throws Exception {
@@ -550,7 +561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpcBindingResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateVpcBindingResponse());
     }
 
     public DeleteAliasResponse deleteAlias(String serviceName, String aliasName) throws Exception {
@@ -597,7 +608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAliasResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteAliasResponse());
     }
 
     public DeleteCustomDomainResponse deleteCustomDomain(String domainName) throws Exception {
@@ -639,7 +650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomDomainResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteCustomDomainResponse());
     }
 
     public DeleteFunctionResponse deleteFunction(String serviceName, String functionName) throws Exception {
@@ -686,7 +697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteFunctionResponse());
     }
 
     public DeleteFunctionAsyncInvokeConfigResponse deleteFunctionAsyncInvokeConfig(String serviceName, String functionName, DeleteFunctionAsyncInvokeConfigRequest request) throws Exception {
@@ -736,7 +747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionAsyncInvokeConfigResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteFunctionAsyncInvokeConfigResponse());
     }
 
     public DeleteFunctionOnDemandConfigResponse deleteFunctionOnDemandConfig(String serviceName, String functionName, DeleteFunctionOnDemandConfigRequest request) throws Exception {
@@ -790,7 +801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionOnDemandConfigResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteFunctionOnDemandConfigResponse());
     }
 
     public DeleteLayerVersionResponse deleteLayerVersion(String layerName, String version) throws Exception {
@@ -833,7 +844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLayerVersionResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteLayerVersionResponse());
     }
 
     public DeleteServiceResponse deleteService(String serviceName) throws Exception {
@@ -879,7 +890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteServiceResponse());
     }
 
     public DeleteServiceVersionResponse deleteServiceVersion(String serviceName, String versionId) throws Exception {
@@ -922,7 +933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceVersionResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteServiceVersionResponse());
     }
 
     public DeleteTriggerResponse deleteTrigger(String serviceName, String functionName, String triggerName) throws Exception {
@@ -970,7 +981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTriggerResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteTriggerResponse());
     }
 
     public DeleteVpcBindingResponse deleteVpcBinding(String serviceName, String vpcId) throws Exception {
@@ -1013,7 +1024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVpcBindingResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteVpcBindingResponse());
     }
 
     public DeregisterEventSourceResponse deregisterEventSource(String serviceName, String functionName, String sourceArn, DeregisterEventSourceRequest request) throws Exception {
@@ -1064,7 +1075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeregisterEventSourceResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeregisterEventSourceResponse());
     }
 
     public GetAccountSettingsResponse getAccountSettings() throws Exception {
@@ -1105,7 +1116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountSettingsResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetAccountSettingsResponse());
     }
 
     public GetAliasResponse getAlias(String serviceName, String aliasName) throws Exception {
@@ -1148,7 +1159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAliasResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetAliasResponse());
     }
 
     public GetCustomDomainResponse getCustomDomain(String domainName) throws Exception {
@@ -1190,7 +1201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomDomainResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetCustomDomainResponse());
     }
 
     public GetFunctionResponse getFunction(String serviceName, String functionName, GetFunctionRequest request) throws Exception {
@@ -1240,7 +1251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetFunctionResponse());
     }
 
     public GetFunctionAsyncInvokeConfigResponse getFunctionAsyncInvokeConfig(String serviceName, String functionName, GetFunctionAsyncInvokeConfigRequest request) throws Exception {
@@ -1290,7 +1301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionAsyncInvokeConfigResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetFunctionAsyncInvokeConfigResponse());
     }
 
     public GetFunctionCodeResponse getFunctionCode(String serviceName, String functionName, GetFunctionCodeRequest request) throws Exception {
@@ -1340,7 +1351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionCodeResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetFunctionCodeResponse());
     }
 
     public GetFunctionOnDemandConfigResponse getFunctionOnDemandConfig(String serviceName, String functionName, GetFunctionOnDemandConfigRequest request) throws Exception {
@@ -1390,7 +1401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionOnDemandConfigResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetFunctionOnDemandConfigResponse());
     }
 
     public GetLayerVersionResponse getLayerVersion(String layerName, String version) throws Exception {
@@ -1433,7 +1444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLayerVersionResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetLayerVersionResponse());
     }
 
     public GetProvisionConfigResponse getProvisionConfig(String serviceName, String functionName, GetProvisionConfigRequest request) throws Exception {
@@ -1483,7 +1494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProvisionConfigResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetProvisionConfigResponse());
     }
 
     public GetResourceTagsResponse getResourceTags(GetResourceTagsRequest request) throws Exception {
@@ -1531,7 +1542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceTagsResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetResourceTagsResponse());
     }
 
     public GetServiceResponse getService(String serviceName, GetServiceRequest request) throws Exception {
@@ -1580,7 +1591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetServiceResponse());
     }
 
     public GetStatefulAsyncInvocationResponse getStatefulAsyncInvocation(String serviceName, String functionName, String invocationId, GetStatefulAsyncInvocationRequest request) throws Exception {
@@ -1643,7 +1654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetStatefulAsyncInvocationResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetStatefulAsyncInvocationResponse());
     }
 
     public GetTriggerResponse getTrigger(String serviceName, String functionName, String triggerName) throws Exception {
@@ -1687,7 +1698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTriggerResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetTriggerResponse());
     }
 
     public InvokeFunctionResponse invokeFunction(String serviceName, String functionName, InvokeFunctionRequest request) throws Exception {
@@ -1750,7 +1761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "byte")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new InvokeFunctionResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new InvokeFunctionResponse());
     }
 
     public ListAliasesResponse listAliases(String serviceName, ListAliasesRequest request) throws Exception {
@@ -1811,7 +1822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAliasesResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListAliasesResponse());
     }
 
     public ListCustomDomainsResponse listCustomDomains(ListCustomDomainsRequest request) throws Exception {
@@ -1871,7 +1882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomDomainsResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListCustomDomainsResponse());
     }
 
     public ListEventSourcesResponse listEventSources(String serviceName, String functionName, ListEventSourcesRequest request) throws Exception {
@@ -1921,7 +1932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEventSourcesResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListEventSourcesResponse());
     }
 
     public ListFunctionAsyncInvokeConfigsResponse listFunctionAsyncInvokeConfigs(String serviceName, String functionName, ListFunctionAsyncInvokeConfigsRequest request) throws Exception {
@@ -1987,7 +1998,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionAsyncInvokeConfigsResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListFunctionAsyncInvokeConfigsResponse());
     }
 
     public ListFunctionsResponse listFunctions(String serviceName, ListFunctionsRequest request) throws Exception {
@@ -2052,7 +2063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionsResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListFunctionsResponse());
     }
 
     public ListLayerVersionsResponse listLayerVersions(String layerName, ListLayerVersionsRequest request) throws Exception {
@@ -2105,7 +2116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLayerVersionsResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListLayerVersionsResponse());
     }
 
     public ListLayersResponse listLayers(ListLayersRequest request) throws Exception {
@@ -2165,7 +2176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLayersResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListLayersResponse());
     }
 
     public ListOnDemandConfigsResponse listOnDemandConfigs(ListOnDemandConfigsRequest request) throws Exception {
@@ -2225,7 +2236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOnDemandConfigsResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListOnDemandConfigsResponse());
     }
 
     public ListProvisionConfigsResponse listProvisionConfigs(ListProvisionConfigsRequest request) throws Exception {
@@ -2285,7 +2296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProvisionConfigsResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListProvisionConfigsResponse());
     }
 
     public ListReservedCapacitiesResponse listReservedCapacities(ListReservedCapacitiesRequest request) throws Exception {
@@ -2337,7 +2348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListReservedCapacitiesResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListReservedCapacitiesResponse());
     }
 
     public ListServiceVersionsResponse listServiceVersions(String serviceName, ListServiceVersionsRequest request) throws Exception {
@@ -2398,7 +2409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceVersionsResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListServiceVersionsResponse());
     }
 
     public ListServicesResponse listServices(ListServicesRequest request) throws Exception {
@@ -2458,7 +2469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServicesResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListServicesResponse());
     }
 
     public ListStatefulAsyncInvocationFunctionsResponse listStatefulAsyncInvocationFunctions(ListStatefulAsyncInvocationFunctionsRequest request) throws Exception {
@@ -2510,7 +2521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListStatefulAsyncInvocationFunctionsResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListStatefulAsyncInvocationFunctionsResponse());
     }
 
     public ListStatefulAsyncInvocationsResponse listStatefulAsyncInvocations(String serviceName, String functionName, ListStatefulAsyncInvocationsRequest request) throws Exception {
@@ -2604,7 +2615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListStatefulAsyncInvocationsResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListStatefulAsyncInvocationsResponse());
     }
 
     public ListTaggedResourcesResponse listTaggedResources(ListTaggedResourcesRequest request) throws Exception {
@@ -2656,7 +2667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTaggedResourcesResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListTaggedResourcesResponse());
     }
 
     public ListTriggersResponse listTriggers(String serviceName, String functionName, ListTriggersRequest request) throws Exception {
@@ -2718,7 +2729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTriggersResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListTriggersResponse());
     }
 
     public ListVpcBindingsResponse listVpcBindings(String serviceName) throws Exception {
@@ -2760,7 +2771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVpcBindingsResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListVpcBindingsResponse());
     }
 
     public PublishServiceVersionResponse publishServiceVersion(String serviceName, PublishServiceVersionRequest request) throws Exception {
@@ -2813,7 +2824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishServiceVersionResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new PublishServiceVersionResponse());
     }
 
     public PutFunctionAsyncInvokeConfigResponse putFunctionAsyncInvokeConfig(String serviceName, String functionName, PutFunctionAsyncInvokeConfigRequest request) throws Exception {
@@ -2881,7 +2892,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new PutFunctionAsyncInvokeConfigResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new PutFunctionAsyncInvokeConfigResponse());
     }
 
     public PutFunctionOnDemandConfigResponse putFunctionOnDemandConfig(String serviceName, String functionName, PutFunctionOnDemandConfigRequest request) throws Exception {
@@ -2941,7 +2952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new PutFunctionOnDemandConfigResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new PutFunctionOnDemandConfigResponse());
     }
 
     public PutProvisionConfigResponse putProvisionConfig(String serviceName, String functionName, PutProvisionConfigRequest request) throws Exception {
@@ -3009,7 +3020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new PutProvisionConfigResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new PutProvisionConfigResponse());
     }
 
     public RegisterEventSourceResponse registerEventSource(String serviceName, String functionName, RegisterEventSourceRequest request) throws Exception {
@@ -3065,7 +3076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterEventSourceResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new RegisterEventSourceResponse());
     }
 
     public StopStatefulAsyncInvocationResponse stopStatefulAsyncInvocation(String serviceName, String functionName, String invocationId, StopStatefulAsyncInvocationRequest request) throws Exception {
@@ -3116,7 +3127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StopStatefulAsyncInvocationResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new StopStatefulAsyncInvocationResponse());
     }
 
     public TagResourceResponse tagResource(TagResourceRequest request) throws Exception {
@@ -3168,7 +3179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourceResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new TagResourceResponse());
     }
 
     public UntagResourceResponse untagResource(UntagResourceRequest request) throws Exception {
@@ -3224,7 +3235,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourceResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new UntagResourceResponse());
     }
 
     public UpdateAliasResponse updateAlias(String serviceName, String aliasName, UpdateAliasRequest request) throws Exception {
@@ -3286,7 +3297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAliasResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateAliasResponse());
     }
 
     public UpdateCustomDomainResponse updateCustomDomain(String domainName, UpdateCustomDomainRequest request) throws Exception {
@@ -3309,6 +3320,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.routeConfig))) {
             body.put("routeConfig", request.routeConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.tlsConfig))) {
+            body.put("tlsConfig", request.tlsConfig);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -3343,7 +3358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomDomainResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateCustomDomainResponse());
     }
 
     public UpdateFunctionResponse updateFunction(String serviceName, String functionName, UpdateFunctionRequest request) throws Exception {
@@ -3465,7 +3480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFunctionResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateFunctionResponse());
     }
 
     public UpdateServiceResponse updateService(String serviceName, UpdateServiceRequest request) throws Exception {
@@ -3542,7 +3557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateServiceResponse());
     }
 
     public UpdateTriggerResponse updateTrigger(String serviceName, String functionName, String triggerName, UpdateTriggerRequest request) throws Exception {
@@ -3609,6 +3624,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTriggerResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateTriggerResponse());
+    }
+
+    public java.util.Map<String, ?> signRequest(HttpRequest request) throws Exception {
+        com.aliyun.credentials.Client cred = _credential;
+        com.aliyun.gateway.fc.Client gateway = new com.aliyun.gateway.fc.Client();
+        return gateway.signRequest(request, cred);
     }
 }

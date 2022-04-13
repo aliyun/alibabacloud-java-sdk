@@ -16,6 +16,9 @@ public class CreateCustomDomainRequest extends TeaModel {
     @NameInMap("routeConfig")
     public RouteConfig routeConfig;
 
+    @NameInMap("tlsConfig")
+    public TLSConfig tlsConfig;
+
     public static CreateCustomDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCustomDomainRequest self = new CreateCustomDomainRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class CreateCustomDomainRequest extends TeaModel {
     }
     public RouteConfig getRouteConfig() {
         return this.routeConfig;
+    }
+
+    public CreateCustomDomainRequest setTlsConfig(TLSConfig tlsConfig) {
+        this.tlsConfig = tlsConfig;
+        return this;
+    }
+    public TLSConfig getTlsConfig() {
+        return this.tlsConfig;
     }
 
 }
