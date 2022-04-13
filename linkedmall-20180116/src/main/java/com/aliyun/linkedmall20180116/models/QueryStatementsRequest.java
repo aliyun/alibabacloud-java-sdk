@@ -7,6 +7,9 @@ public class QueryStatementsRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    @NameInMap("Currency")
+    public String currency;
+
     @NameInMap("EndTime")
     public String endTime;
 
@@ -48,6 +51,14 @@ public class QueryStatementsRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public QueryStatementsRequest setCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
+    public String getCurrency() {
+        return this.currency;
     }
 
     public QueryStatementsRequest setEndTime(String endTime) {

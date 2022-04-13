@@ -54,6 +54,9 @@ public class ApplyRefundResponseBody extends TeaModel {
     }
 
     public static class ApplyRefundResponseBodyRefundApplicationData extends TeaModel {
+        @NameInMap("DisputeId")
+        public Long disputeId;
+
         @NameInMap("DisputeStatus")
         public Integer disputeStatus;
 
@@ -66,6 +69,14 @@ public class ApplyRefundResponseBody extends TeaModel {
         public static ApplyRefundResponseBodyRefundApplicationData build(java.util.Map<String, ?> map) throws Exception {
             ApplyRefundResponseBodyRefundApplicationData self = new ApplyRefundResponseBodyRefundApplicationData();
             return TeaModel.build(map, self);
+        }
+
+        public ApplyRefundResponseBodyRefundApplicationData setDisputeId(Long disputeId) {
+            this.disputeId = disputeId;
+            return this;
+        }
+        public Long getDisputeId() {
+            return this.disputeId;
         }
 
         public ApplyRefundResponseBodyRefundApplicationData setDisputeStatus(Integer disputeStatus) {

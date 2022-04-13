@@ -115,11 +115,17 @@ public class QueryStatementsResponseBody extends TeaModel {
         @NameInMap("CreateDate")
         public String createDate;
 
+        @NameInMap("Currency")
+        public String currency;
+
         @NameInMap("EndTime")
         public String endTime;
 
         @NameInMap("ExtInfo")
         public String extInfo;
+
+        @NameInMap("KpNoGenerateTime")
+        public String kpNoGenerateTime;
 
         @NameInMap("ModifiedDate")
         public String modifiedDate;
@@ -178,6 +184,14 @@ public class QueryStatementsResponseBody extends TeaModel {
             return this.createDate;
         }
 
+        public QueryStatementsResponseBodyModelStatementList setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
         public QueryStatementsResponseBodyModelStatementList setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
@@ -192,6 +206,14 @@ public class QueryStatementsResponseBody extends TeaModel {
         }
         public String getExtInfo() {
             return this.extInfo;
+        }
+
+        public QueryStatementsResponseBodyModelStatementList setKpNoGenerateTime(String kpNoGenerateTime) {
+            this.kpNoGenerateTime = kpNoGenerateTime;
+            return this;
+        }
+        public String getKpNoGenerateTime() {
+            return this.kpNoGenerateTime;
         }
 
         public QueryStatementsResponseBodyModelStatementList setModifiedDate(String modifiedDate) {

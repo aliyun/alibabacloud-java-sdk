@@ -61,7 +61,7 @@ public class QueryItemInventoryRequest extends TeaModel {
         public String lmItemId;
 
         @NameInMap("SkuIdList")
-        public java.util.List<Integer> skuIdList;
+        public java.util.List<Long> skuIdList;
 
         public static QueryItemInventoryRequestItemList build(java.util.Map<String, ?> map) throws Exception {
             QueryItemInventoryRequestItemList self = new QueryItemInventoryRequestItemList();
@@ -84,11 +84,11 @@ public class QueryItemInventoryRequest extends TeaModel {
             return this.lmItemId;
         }
 
-        public QueryItemInventoryRequestItemList setSkuIdList(java.util.List<Integer> skuIdList) {
+        public QueryItemInventoryRequestItemList setSkuIdList(java.util.List<Long> skuIdList) {
             this.skuIdList = skuIdList;
             return this;
         }
-        public java.util.List<Integer> getSkuIdList() {
+        public java.util.List<Long> getSkuIdList() {
             return this.skuIdList;
         }
 
