@@ -626,6 +626,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("fieldValueList", request.fieldValueList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.parent)) {
+            body.put("parent", request.parent);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.participant)) {
             body.put("participant", request.participant);
         }
@@ -2487,6 +2491,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.category)) {
             query.put("category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conditions)) {
+            query.put("conditions", request.conditions);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {

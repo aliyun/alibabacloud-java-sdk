@@ -8,6 +8,10 @@ public class ListWorkitemsRequest extends TeaModel {
     @NameInMap("category")
     public String category;
 
+    // 过滤条件
+    @NameInMap("conditions")
+    public String conditions;
+
     // 每页最大返回数量，0-200，默认值20
     @NameInMap("maxResults")
     public String maxResults;
@@ -35,6 +39,14 @@ public class ListWorkitemsRequest extends TeaModel {
     }
     public String getCategory() {
         return this.category;
+    }
+
+    public ListWorkitemsRequest setConditions(String conditions) {
+        this.conditions = conditions;
+        return this;
+    }
+    public String getConditions() {
+        return this.conditions;
     }
 
     public ListWorkitemsRequest setMaxResults(String maxResults) {
