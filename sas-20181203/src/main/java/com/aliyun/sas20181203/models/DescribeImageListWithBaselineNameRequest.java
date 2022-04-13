@@ -7,6 +7,9 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     @NameInMap("BaselineNameKey")
     public String baselineNameKey;
 
+    @NameInMap("ClusterId")
+    public String clusterId;
+
     @NameInMap("Criteria")
     public String criteria;
 
@@ -45,6 +48,14 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     }
     public String getBaselineNameKey() {
         return this.baselineNameKey;
+    }
+
+    public DescribeImageListWithBaselineNameRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public DescribeImageListWithBaselineNameRequest setCriteria(String criteria) {

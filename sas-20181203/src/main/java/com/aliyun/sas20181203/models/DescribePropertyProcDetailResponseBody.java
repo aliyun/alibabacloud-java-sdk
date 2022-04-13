@@ -98,9 +98,6 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         @NameInMap("Cmdline")
         public String cmdline;
 
-        @NameInMap("Create")
-        public String create;
-
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
@@ -163,14 +160,6 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         }
         public String getCmdline() {
             return this.cmdline;
-        }
-
-        public DescribePropertyProcDetailResponseBodyPropertys setCreate(String create) {
-            this.create = create;
-            return this;
-        }
-        public String getCreate() {
-            return this.create;
         }
 
         public DescribePropertyProcDetailResponseBodyPropertys setCreateTimestamp(Long createTimestamp) {

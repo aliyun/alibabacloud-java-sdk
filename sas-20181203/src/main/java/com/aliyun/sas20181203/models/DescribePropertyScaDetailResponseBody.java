@@ -110,9 +110,6 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         @NameInMap("ContainerName")
         public String containerName;
 
-        @NameInMap("Create")
-        public String create;
-
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
@@ -166,6 +163,9 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
 
         @NameInMap("Proof")
         public String proof;
+
+        @NameInMap("RuntimeEnvVersion")
+        public String runtimeEnvVersion;
 
         @NameInMap("Type")
         public String type;
@@ -222,14 +222,6 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         }
         public String getContainerName() {
             return this.containerName;
-        }
-
-        public DescribePropertyScaDetailResponseBodyPropertys setCreate(String create) {
-            this.create = create;
-            return this;
-        }
-        public String getCreate() {
-            return this.create;
         }
 
         public DescribePropertyScaDetailResponseBodyPropertys setCreateTimestamp(Long createTimestamp) {
@@ -374,6 +366,14 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         }
         public String getProof() {
             return this.proof;
+        }
+
+        public DescribePropertyScaDetailResponseBodyPropertys setRuntimeEnvVersion(String runtimeEnvVersion) {
+            this.runtimeEnvVersion = runtimeEnvVersion;
+            return this;
+        }
+        public String getRuntimeEnvVersion() {
+            return this.runtimeEnvVersion;
         }
 
         public DescribePropertyScaDetailResponseBodyPropertys setType(String type) {

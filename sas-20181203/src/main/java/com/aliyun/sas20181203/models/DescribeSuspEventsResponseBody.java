@@ -304,6 +304,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("Level")
         public String level;
 
+        @NameInMap("MaliciousRuleStatus")
+        public String maliciousRuleStatus;
+
         @NameInMap("MarkMisRules")
         public String markMisRules;
 
@@ -627,6 +630,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
         public String getLevel() {
             return this.level;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setMaliciousRuleStatus(String maliciousRuleStatus) {
+            this.maliciousRuleStatus = maliciousRuleStatus;
+            return this;
+        }
+        public String getMaliciousRuleStatus() {
+            return this.maliciousRuleStatus;
         }
 
         public DescribeSuspEventsResponseBodySuspEvents setMarkMisRules(String markMisRules) {

@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageBaselineCheckSummaryRequest extends TeaModel {
+    @NameInMap("ClusterId")
+    public String clusterId;
+
     @NameInMap("Criteria")
     public String criteria;
 
@@ -25,6 +28,14 @@ public class DescribeImageBaselineCheckSummaryRequest extends TeaModel {
     public static DescribeImageBaselineCheckSummaryRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageBaselineCheckSummaryRequest self = new DescribeImageBaselineCheckSummaryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeImageBaselineCheckSummaryRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public DescribeImageBaselineCheckSummaryRequest setCriteria(String criteria) {

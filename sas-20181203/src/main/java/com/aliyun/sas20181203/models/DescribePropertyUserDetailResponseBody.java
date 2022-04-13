@@ -98,9 +98,6 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         @NameInMap("AccountsExpirationDate")
         public String accountsExpirationDate;
 
-        @NameInMap("Create")
-        public String create;
-
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
@@ -175,14 +172,6 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         }
         public String getAccountsExpirationDate() {
             return this.accountsExpirationDate;
-        }
-
-        public DescribePropertyUserDetailResponseBodyPropertys setCreate(String create) {
-            this.create = create;
-            return this;
-        }
-        public String getCreate() {
-            return this.create;
         }
 
         public DescribePropertyUserDetailResponseBodyPropertys setCreateTimestamp(Long createTimestamp) {

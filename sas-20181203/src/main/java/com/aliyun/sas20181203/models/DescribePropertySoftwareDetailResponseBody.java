@@ -95,9 +95,6 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
     }
 
     public static class DescribePropertySoftwareDetailResponseBodyPropertys extends TeaModel {
-        @NameInMap("Create")
-        public Long create;
-
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
@@ -137,14 +134,6 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         public static DescribePropertySoftwareDetailResponseBodyPropertys build(java.util.Map<String, ?> map) throws Exception {
             DescribePropertySoftwareDetailResponseBodyPropertys self = new DescribePropertySoftwareDetailResponseBodyPropertys();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePropertySoftwareDetailResponseBodyPropertys setCreate(Long create) {
-            this.create = create;
-            return this;
-        }
-        public Long getCreate() {
-            return this.create;
         }
 
         public DescribePropertySoftwareDetailResponseBodyPropertys setCreateTimestamp(Long createTimestamp) {
