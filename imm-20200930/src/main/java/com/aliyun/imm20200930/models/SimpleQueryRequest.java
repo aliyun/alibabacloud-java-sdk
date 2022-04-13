@@ -35,6 +35,10 @@ public class SimpleQueryRequest extends TeaModel {
     @NameInMap("Sort")
     public String sort;
 
+    // 仅返回哪些字段
+    @NameInMap("WithFields")
+    public java.util.List<String> withFields;
+
     public static SimpleQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         SimpleQueryRequest self = new SimpleQueryRequest();
         return TeaModel.build(map, self);
@@ -102,6 +106,14 @@ public class SimpleQueryRequest extends TeaModel {
     }
     public String getSort() {
         return this.sort;
+    }
+
+    public SimpleQueryRequest setWithFields(java.util.List<String> withFields) {
+        this.withFields = withFields;
+        return this;
+    }
+    public java.util.List<String> getWithFields() {
+        return this.withFields;
     }
 
     public static class SimpleQueryRequestAggregations extends TeaModel {

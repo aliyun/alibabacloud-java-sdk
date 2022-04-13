@@ -7,6 +7,9 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     @NameInMap("CreateTimeRange")
     public String createTimeRangeShrink;
 
+    @NameInMap("CustomLabels")
+    public String customLabels;
+
     @NameInMap("DatasetName")
     public String datasetName;
 
@@ -40,6 +43,9 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     @NameInMap("StoryType")
     public String storyType;
 
+    @NameInMap("WithEmptyStories")
+    public Boolean withEmptyStories;
+
     public static QueryStoriesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryStoriesShrinkRequest self = new QueryStoriesShrinkRequest();
         return TeaModel.build(map, self);
@@ -51,6 +57,14 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     }
     public String getCreateTimeRangeShrink() {
         return this.createTimeRangeShrink;
+    }
+
+    public QueryStoriesShrinkRequest setCustomLabels(String customLabels) {
+        this.customLabels = customLabels;
+        return this;
+    }
+    public String getCustomLabels() {
+        return this.customLabels;
     }
 
     public QueryStoriesShrinkRequest setDatasetName(String datasetName) {
@@ -139,6 +153,14 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     }
     public String getStoryType() {
         return this.storyType;
+    }
+
+    public QueryStoriesShrinkRequest setWithEmptyStories(Boolean withEmptyStories) {
+        this.withEmptyStories = withEmptyStories;
+        return this;
+    }
+    public Boolean getWithEmptyStories() {
+        return this.withEmptyStories;
     }
 
 }

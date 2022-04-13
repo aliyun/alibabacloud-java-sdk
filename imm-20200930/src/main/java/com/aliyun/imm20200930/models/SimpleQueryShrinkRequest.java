@@ -35,6 +35,10 @@ public class SimpleQueryShrinkRequest extends TeaModel {
     @NameInMap("Sort")
     public String sort;
 
+    // 仅返回哪些字段
+    @NameInMap("WithFields")
+    public String withFieldsShrink;
+
     public static SimpleQueryShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SimpleQueryShrinkRequest self = new SimpleQueryShrinkRequest();
         return TeaModel.build(map, self);
@@ -102,6 +106,14 @@ public class SimpleQueryShrinkRequest extends TeaModel {
     }
     public String getSort() {
         return this.sort;
+    }
+
+    public SimpleQueryShrinkRequest setWithFieldsShrink(String withFieldsShrink) {
+        this.withFieldsShrink = withFieldsShrink;
+        return this;
+    }
+    public String getWithFieldsShrink() {
+        return this.withFieldsShrink;
     }
 
 }
