@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>imm20200930</artifactId>
-  <version>1.26.6</version>
+  <version>1.26.7</version>
   <packaging>jar</packaging>
   <name>imm20200930</name>
   <description>Alibaba Cloud Intelligent Media Management (20200930) SDK for Java
@@ -145,6 +145,10 @@
                 <relocation>
                   <pattern>com.sun</pattern>
                   <shadedPattern>com.aliyun.imm20200930.external.com.sun</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache</pattern>
+                  <shadedPattern>com.aliyun.imm20200930.external.org.apache</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>

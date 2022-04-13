@@ -103,7 +103,7 @@ public class SimpleQueryResponseBody extends TeaModel {
         public String operation;
 
         @NameInMap("Value")
-        public String value;
+        public Double value;
 
         public static SimpleQueryResponseBodyAggregations build(java.util.Map<String, ?> map) throws Exception {
             SimpleQueryResponseBodyAggregations self = new SimpleQueryResponseBodyAggregations();
@@ -134,11 +134,11 @@ public class SimpleQueryResponseBody extends TeaModel {
             return this.operation;
         }
 
-        public SimpleQueryResponseBodyAggregations setValue(String value) {
+        public SimpleQueryResponseBodyAggregations setValue(Double value) {
             this.value = value;
             return this;
         }
-        public String getValue() {
+        public Double getValue() {
             return this.value;
         }
 

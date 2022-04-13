@@ -11,9 +11,13 @@ public class Story extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
-    // CustomFields
-    @NameInMap("CustomFields")
-    public String customFields;
+    // CustomId
+    @NameInMap("CustomId")
+    public String customId;
+
+    // CustomLabels
+    @NameInMap("CustomLabels")
+    public java.util.Map<String, ?> customLabels;
 
     // DatasetName
     @NameInMap("DatasetName")
@@ -88,12 +92,20 @@ public class Story extends TeaModel {
         return this.createTime;
     }
 
-    public Story setCustomFields(String customFields) {
-        this.customFields = customFields;
+    public Story setCustomId(String customId) {
+        this.customId = customId;
         return this;
     }
-    public String getCustomFields() {
-        return this.customFields;
+    public String getCustomId() {
+        return this.customId;
+    }
+
+    public Story setCustomLabels(java.util.Map<String, ?> customLabels) {
+        this.customLabels = customLabels;
+        return this;
+    }
+    public java.util.Map<String, ?> getCustomLabels() {
+        return this.customLabels;
     }
 
     public Story setDatasetName(String datasetName) {
