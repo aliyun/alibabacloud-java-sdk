@@ -29,6 +29,9 @@ public class GetCustomDomainResponseBody extends TeaModel {
     @NameInMap("routeConfig")
     public RouteConfig routeConfig;
 
+    @NameInMap("tlsConfig")
+    public TLSConfig tlsConfig;
+
     public static GetCustomDomainResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCustomDomainResponseBody self = new GetCustomDomainResponseBody();
         return TeaModel.build(map, self);
@@ -96,6 +99,14 @@ public class GetCustomDomainResponseBody extends TeaModel {
     }
     public RouteConfig getRouteConfig() {
         return this.routeConfig;
+    }
+
+    public GetCustomDomainResponseBody setTlsConfig(TLSConfig tlsConfig) {
+        this.tlsConfig = tlsConfig;
+        return this;
+    }
+    public TLSConfig getTlsConfig() {
+        return this.tlsConfig;
     }
 
 }
