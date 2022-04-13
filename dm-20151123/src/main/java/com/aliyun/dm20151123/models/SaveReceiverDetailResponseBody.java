@@ -4,14 +4,14 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class SaveReceiverDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public SaveReceiverDetailResponseBodyData data;
 
     @NameInMap("ErrorCount")
     public Integer errorCount;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("SuccessCount")
     public Integer successCount;
@@ -19,14 +19,6 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
     public static SaveReceiverDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SaveReceiverDetailResponseBody self = new SaveReceiverDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SaveReceiverDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SaveReceiverDetailResponseBody setData(SaveReceiverDetailResponseBodyData data) {
@@ -43,6 +35,14 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
     }
     public Integer getErrorCount() {
         return this.errorCount;
+    }
+
+    public SaveReceiverDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public SaveReceiverDetailResponseBody setSuccessCount(Integer successCount) {

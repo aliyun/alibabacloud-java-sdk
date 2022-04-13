@@ -4,8 +4,8 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryReceiverByParamResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("NextStart")
+    public String nextStart;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +13,23 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("data")
     public QueryReceiverByParamResponseBodyData data;
-
-    @NameInMap("NextStart")
-    public String nextStart;
 
     public static QueryReceiverByParamResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryReceiverByParamResponseBody self = new QueryReceiverByParamResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryReceiverByParamResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public QueryReceiverByParamResponseBody setNextStart(String nextStart) {
+        this.nextStart = nextStart;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public String getNextStart() {
+        return this.nextStart;
     }
 
     public QueryReceiverByParamResponseBody setPageSize(Integer pageSize) {
@@ -48,6 +48,14 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public QueryReceiverByParamResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public QueryReceiverByParamResponseBody setData(QueryReceiverByParamResponseBodyData data) {
         this.data = data;
         return this;
@@ -56,42 +64,66 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
         return this.data;
     }
 
-    public QueryReceiverByParamResponseBody setNextStart(String nextStart) {
-        this.nextStart = nextStart;
-        return this;
-    }
-    public String getNextStart() {
-        return this.nextStart;
-    }
-
     public static class QueryReceiverByParamResponseBodyDataReceiver extends TeaModel {
+        @NameInMap("Count")
+        public String count;
+
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("Desc")
+        public String desc;
+
+        @NameInMap("ReceiverId")
+        public String receiverId;
+
         @NameInMap("ReceiversAlias")
         public String receiversAlias;
 
         @NameInMap("ReceiversName")
         public String receiversName;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("ReceiverId")
-        public String receiverId;
+        @NameInMap("ReceiversStatus")
+        public String receiversStatus;
 
         @NameInMap("UtcCreateTime")
         public Long utcCreateTime;
 
-        @NameInMap("ReceiversStatus")
-        public String receiversStatus;
-
-        @NameInMap("Count")
-        public String count;
-
-        @NameInMap("Desc")
-        public String desc;
-
         public static QueryReceiverByParamResponseBodyDataReceiver build(java.util.Map<String, ?> map) throws Exception {
             QueryReceiverByParamResponseBodyDataReceiver self = new QueryReceiverByParamResponseBodyDataReceiver();
             return TeaModel.build(map, self);
+        }
+
+        public QueryReceiverByParamResponseBodyDataReceiver setCount(String count) {
+            this.count = count;
+            return this;
+        }
+        public String getCount() {
+            return this.count;
+        }
+
+        public QueryReceiverByParamResponseBodyDataReceiver setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public QueryReceiverByParamResponseBodyDataReceiver setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
+        }
+
+        public QueryReceiverByParamResponseBodyDataReceiver setReceiverId(String receiverId) {
+            this.receiverId = receiverId;
+            return this;
+        }
+        public String getReceiverId() {
+            return this.receiverId;
         }
 
         public QueryReceiverByParamResponseBodyDataReceiver setReceiversAlias(String receiversAlias) {
@@ -110,30 +142,6 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
             return this.receiversName;
         }
 
-        public QueryReceiverByParamResponseBodyDataReceiver setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public QueryReceiverByParamResponseBodyDataReceiver setReceiverId(String receiverId) {
-            this.receiverId = receiverId;
-            return this;
-        }
-        public String getReceiverId() {
-            return this.receiverId;
-        }
-
-        public QueryReceiverByParamResponseBodyDataReceiver setUtcCreateTime(Long utcCreateTime) {
-            this.utcCreateTime = utcCreateTime;
-            return this;
-        }
-        public Long getUtcCreateTime() {
-            return this.utcCreateTime;
-        }
-
         public QueryReceiverByParamResponseBodyDataReceiver setReceiversStatus(String receiversStatus) {
             this.receiversStatus = receiversStatus;
             return this;
@@ -142,20 +150,12 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
             return this.receiversStatus;
         }
 
-        public QueryReceiverByParamResponseBodyDataReceiver setCount(String count) {
-            this.count = count;
+        public QueryReceiverByParamResponseBodyDataReceiver setUtcCreateTime(Long utcCreateTime) {
+            this.utcCreateTime = utcCreateTime;
             return this;
         }
-        public String getCount() {
-            return this.count;
-        }
-
-        public QueryReceiverByParamResponseBodyDataReceiver setDesc(String desc) {
-            this.desc = desc;
-            return this;
-        }
-        public String getDesc() {
-            return this.desc;
+        public Long getUtcCreateTime() {
+            return this.utcCreateTime;
         }
 
     }

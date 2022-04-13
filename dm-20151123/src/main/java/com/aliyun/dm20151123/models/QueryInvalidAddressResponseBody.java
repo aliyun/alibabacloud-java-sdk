@@ -4,29 +4,29 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryInvalidAddressResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("NextStart")
+    public String nextStart;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("data")
     public QueryInvalidAddressResponseBodyData data;
-
-    @NameInMap("NextStart")
-    public Integer nextStart;
 
     public static QueryInvalidAddressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryInvalidAddressResponseBody self = new QueryInvalidAddressResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryInvalidAddressResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public QueryInvalidAddressResponseBody setNextStart(String nextStart) {
+        this.nextStart = nextStart;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public String getNextStart() {
+        return this.nextStart;
     }
 
     public QueryInvalidAddressResponseBody setRequestId(String requestId) {
@@ -37,20 +37,20 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public QueryInvalidAddressResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public QueryInvalidAddressResponseBody setData(QueryInvalidAddressResponseBodyData data) {
         this.data = data;
         return this;
     }
     public QueryInvalidAddressResponseBodyData getData() {
         return this.data;
-    }
-
-    public QueryInvalidAddressResponseBody setNextStart(Integer nextStart) {
-        this.nextStart = nextStart;
-        return this;
-    }
-    public Integer getNextStart() {
-        return this.nextStart;
     }
 
     public static class QueryInvalidAddressResponseBodyDataMailDetail extends TeaModel {

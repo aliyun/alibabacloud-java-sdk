@@ -4,6 +4,9 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class DeleteMailAddressRequest extends TeaModel {
+    @NameInMap("MailAddressId")
+    public Integer mailAddressId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,12 +16,17 @@ public class DeleteMailAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("MailAddressId")
-    public Integer mailAddressId;
-
     public static DeleteMailAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMailAddressRequest self = new DeleteMailAddressRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMailAddressRequest setMailAddressId(Integer mailAddressId) {
+        this.mailAddressId = mailAddressId;
+        return this;
+    }
+    public Integer getMailAddressId() {
+        return this.mailAddressId;
     }
 
     public DeleteMailAddressRequest setOwnerId(Long ownerId) {
@@ -43,14 +51,6 @@ public class DeleteMailAddressRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteMailAddressRequest setMailAddressId(Integer mailAddressId) {
-        this.mailAddressId = mailAddressId;
-        return this;
-    }
-    public Integer getMailAddressId() {
-        return this.mailAddressId;
     }
 
 }

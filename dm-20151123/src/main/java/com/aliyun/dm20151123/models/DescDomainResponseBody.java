@@ -4,56 +4,59 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class DescDomainResponseBody extends TeaModel {
-    @NameInMap("SpfRecord")
-    public String spfRecord;
-
-    @NameInMap("SpfAuthStatus")
-    public String spfAuthStatus;
-
     @NameInMap("CnameAuthStatus")
     public String cnameAuthStatus;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
-    @NameInMap("DnsMx")
-    public String dnsMx;
-
-    @NameInMap("CreateTime")
-    public String createTime;
-
-    @NameInMap("CnameRecord")
-    public String cnameRecord;
-
-    @NameInMap("DnsTxt")
-    public String dnsTxt;
 
     @NameInMap("CnameConfirmStatus")
     public String cnameConfirmStatus;
 
-    @NameInMap("IcpStatus")
-    public String icpStatus;
+    @NameInMap("CnameRecord")
+    public String cnameRecord;
+
+    @NameInMap("CreateTime")
+    public String createTime;
 
     @NameInMap("DefaultDomain")
     public String defaultDomain;
 
+    @NameInMap("DnsMx")
+    public String dnsMx;
+
     @NameInMap("DnsSpf")
     public String dnsSpf;
 
-    @NameInMap("MxRecord")
-    public String mxRecord;
+    @NameInMap("DnsTxt")
+    public String dnsTxt;
 
     @NameInMap("DomainId")
     public String domainId;
 
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("DomainStatus")
+    public String domainStatus;
+
     @NameInMap("DomainType")
     public String domainType;
 
+    @NameInMap("IcpStatus")
+    public String icpStatus;
+
     @NameInMap("MxAuthStatus")
     public String mxAuthStatus;
+
+    @NameInMap("MxRecord")
+    public String mxRecord;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SpfAuthStatus")
+    public String spfAuthStatus;
+
+    @NameInMap("SpfRecord")
+    public String spfRecord;
 
     @NameInMap("TlDomainName")
     public String tlDomainName;
@@ -61,28 +64,9 @@ public class DescDomainResponseBody extends TeaModel {
     @NameInMap("TracefRecord")
     public String tracefRecord;
 
-    @NameInMap("DomainStatus")
-    public String domainStatus;
-
     public static DescDomainResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescDomainResponseBody self = new DescDomainResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescDomainResponseBody setSpfRecord(String spfRecord) {
-        this.spfRecord = spfRecord;
-        return this;
-    }
-    public String getSpfRecord() {
-        return this.spfRecord;
-    }
-
-    public DescDomainResponseBody setSpfAuthStatus(String spfAuthStatus) {
-        this.spfAuthStatus = spfAuthStatus;
-        return this;
-    }
-    public String getSpfAuthStatus() {
-        return this.spfAuthStatus;
     }
 
     public DescDomainResponseBody setCnameAuthStatus(String cnameAuthStatus) {
@@ -93,36 +77,12 @@ public class DescDomainResponseBody extends TeaModel {
         return this.cnameAuthStatus;
     }
 
-    public DescDomainResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescDomainResponseBody setCnameConfirmStatus(String cnameConfirmStatus) {
+        this.cnameConfirmStatus = cnameConfirmStatus;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescDomainResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public DescDomainResponseBody setDnsMx(String dnsMx) {
-        this.dnsMx = dnsMx;
-        return this;
-    }
-    public String getDnsMx() {
-        return this.dnsMx;
-    }
-
-    public DescDomainResponseBody setCreateTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public String getCreateTime() {
-        return this.createTime;
+    public String getCnameConfirmStatus() {
+        return this.cnameConfirmStatus;
     }
 
     public DescDomainResponseBody setCnameRecord(String cnameRecord) {
@@ -133,28 +93,12 @@ public class DescDomainResponseBody extends TeaModel {
         return this.cnameRecord;
     }
 
-    public DescDomainResponseBody setDnsTxt(String dnsTxt) {
-        this.dnsTxt = dnsTxt;
+    public DescDomainResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
         return this;
     }
-    public String getDnsTxt() {
-        return this.dnsTxt;
-    }
-
-    public DescDomainResponseBody setCnameConfirmStatus(String cnameConfirmStatus) {
-        this.cnameConfirmStatus = cnameConfirmStatus;
-        return this;
-    }
-    public String getCnameConfirmStatus() {
-        return this.cnameConfirmStatus;
-    }
-
-    public DescDomainResponseBody setIcpStatus(String icpStatus) {
-        this.icpStatus = icpStatus;
-        return this;
-    }
-    public String getIcpStatus() {
-        return this.icpStatus;
+    public String getCreateTime() {
+        return this.createTime;
     }
 
     public DescDomainResponseBody setDefaultDomain(String defaultDomain) {
@@ -165,6 +109,14 @@ public class DescDomainResponseBody extends TeaModel {
         return this.defaultDomain;
     }
 
+    public DescDomainResponseBody setDnsMx(String dnsMx) {
+        this.dnsMx = dnsMx;
+        return this;
+    }
+    public String getDnsMx() {
+        return this.dnsMx;
+    }
+
     public DescDomainResponseBody setDnsSpf(String dnsSpf) {
         this.dnsSpf = dnsSpf;
         return this;
@@ -173,12 +125,12 @@ public class DescDomainResponseBody extends TeaModel {
         return this.dnsSpf;
     }
 
-    public DescDomainResponseBody setMxRecord(String mxRecord) {
-        this.mxRecord = mxRecord;
+    public DescDomainResponseBody setDnsTxt(String dnsTxt) {
+        this.dnsTxt = dnsTxt;
         return this;
     }
-    public String getMxRecord() {
-        return this.mxRecord;
+    public String getDnsTxt() {
+        return this.dnsTxt;
     }
 
     public DescDomainResponseBody setDomainId(String domainId) {
@@ -189,6 +141,22 @@ public class DescDomainResponseBody extends TeaModel {
         return this.domainId;
     }
 
+    public DescDomainResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescDomainResponseBody setDomainStatus(String domainStatus) {
+        this.domainStatus = domainStatus;
+        return this;
+    }
+    public String getDomainStatus() {
+        return this.domainStatus;
+    }
+
     public DescDomainResponseBody setDomainType(String domainType) {
         this.domainType = domainType;
         return this;
@@ -197,12 +165,52 @@ public class DescDomainResponseBody extends TeaModel {
         return this.domainType;
     }
 
+    public DescDomainResponseBody setIcpStatus(String icpStatus) {
+        this.icpStatus = icpStatus;
+        return this;
+    }
+    public String getIcpStatus() {
+        return this.icpStatus;
+    }
+
     public DescDomainResponseBody setMxAuthStatus(String mxAuthStatus) {
         this.mxAuthStatus = mxAuthStatus;
         return this;
     }
     public String getMxAuthStatus() {
         return this.mxAuthStatus;
+    }
+
+    public DescDomainResponseBody setMxRecord(String mxRecord) {
+        this.mxRecord = mxRecord;
+        return this;
+    }
+    public String getMxRecord() {
+        return this.mxRecord;
+    }
+
+    public DescDomainResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescDomainResponseBody setSpfAuthStatus(String spfAuthStatus) {
+        this.spfAuthStatus = spfAuthStatus;
+        return this;
+    }
+    public String getSpfAuthStatus() {
+        return this.spfAuthStatus;
+    }
+
+    public DescDomainResponseBody setSpfRecord(String spfRecord) {
+        this.spfRecord = spfRecord;
+        return this;
+    }
+    public String getSpfRecord() {
+        return this.spfRecord;
     }
 
     public DescDomainResponseBody setTlDomainName(String tlDomainName) {
@@ -219,14 +227,6 @@ public class DescDomainResponseBody extends TeaModel {
     }
     public String getTracefRecord() {
         return this.tracefRecord;
-    }
-
-    public DescDomainResponseBody setDomainStatus(String domainStatus) {
-        this.domainStatus = domainStatus;
-        return this;
-    }
-    public String getDomainStatus() {
-        return this.domainStatus;
     }
 
 }

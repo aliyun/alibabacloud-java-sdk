@@ -4,6 +4,18 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class SenderStatisticsDetailByParamRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("Length")
+    public Integer length;
+
+    @NameInMap("NextStart")
+    public String nextStart;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,33 +25,53 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("AccountName")
-    public String accountName;
-
-    @NameInMap("ToAddress")
-    public String toAddress;
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("Status")
     public Integer status;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
-
     @NameInMap("TagName")
     public String tagName;
 
-    @NameInMap("Length")
-    public Integer length;
-
-    @NameInMap("NextStart")
-    public String nextStart;
+    @NameInMap("ToAddress")
+    public String toAddress;
 
     public static SenderStatisticsDetailByParamRequest build(java.util.Map<String, ?> map) throws Exception {
         SenderStatisticsDetailByParamRequest self = new SenderStatisticsDetailByParamRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SenderStatisticsDetailByParamRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
+    }
+
+    public SenderStatisticsDetailByParamRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public SenderStatisticsDetailByParamRequest setLength(Integer length) {
+        this.length = length;
+        return this;
+    }
+    public Integer getLength() {
+        return this.length;
+    }
+
+    public SenderStatisticsDetailByParamRequest setNextStart(String nextStart) {
+        this.nextStart = nextStart;
+        return this;
+    }
+    public String getNextStart() {
+        return this.nextStart;
     }
 
     public SenderStatisticsDetailByParamRequest setOwnerId(Long ownerId) {
@@ -66,20 +98,12 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SenderStatisticsDetailByParamRequest setAccountName(String accountName) {
-        this.accountName = accountName;
+    public SenderStatisticsDetailByParamRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getAccountName() {
-        return this.accountName;
-    }
-
-    public SenderStatisticsDetailByParamRequest setToAddress(String toAddress) {
-        this.toAddress = toAddress;
-        return this;
-    }
-    public String getToAddress() {
-        return this.toAddress;
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public SenderStatisticsDetailByParamRequest setStatus(Integer status) {
@@ -90,22 +114,6 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
         return this.status;
     }
 
-    public SenderStatisticsDetailByParamRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public SenderStatisticsDetailByParamRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
     public SenderStatisticsDetailByParamRequest setTagName(String tagName) {
         this.tagName = tagName;
         return this;
@@ -114,20 +122,12 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
         return this.tagName;
     }
 
-    public SenderStatisticsDetailByParamRequest setLength(Integer length) {
-        this.length = length;
+    public SenderStatisticsDetailByParamRequest setToAddress(String toAddress) {
+        this.toAddress = toAddress;
         return this;
     }
-    public Integer getLength() {
-        return this.length;
-    }
-
-    public SenderStatisticsDetailByParamRequest setNextStart(String nextStart) {
-        this.nextStart = nextStart;
-        return this;
-    }
-    public String getNextStart() {
-        return this.nextStart;
+    public String getToAddress() {
+        return this.toAddress;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class BatchSendMailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("EnvId")
     public String envId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static BatchSendMailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchSendMailResponseBody self = new BatchSendMailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public BatchSendMailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public BatchSendMailResponseBody setEnvId(String envId) {
@@ -29,6 +21,14 @@ public class BatchSendMailResponseBody extends TeaModel {
     }
     public String getEnvId() {
         return this.envId;
+    }
+
+    public BatchSendMailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

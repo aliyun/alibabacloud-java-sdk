@@ -4,8 +4,14 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class SaveReceiverDetailRequest extends TeaModel {
+    @NameInMap("Detail")
+    public String detail;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ReceiverId")
+    public String receiverId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,15 +19,17 @@ public class SaveReceiverDetailRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ReceiverId")
-    public String receiverId;
-
-    @NameInMap("Detail")
-    public String detail;
-
     public static SaveReceiverDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveReceiverDetailRequest self = new SaveReceiverDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SaveReceiverDetailRequest setDetail(String detail) {
+        this.detail = detail;
+        return this;
+    }
+    public String getDetail() {
+        return this.detail;
     }
 
     public SaveReceiverDetailRequest setOwnerId(Long ownerId) {
@@ -30,6 +38,14 @@ public class SaveReceiverDetailRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SaveReceiverDetailRequest setReceiverId(String receiverId) {
+        this.receiverId = receiverId;
+        return this;
+    }
+    public String getReceiverId() {
+        return this.receiverId;
     }
 
     public SaveReceiverDetailRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -46,22 +62,6 @@ public class SaveReceiverDetailRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public SaveReceiverDetailRequest setReceiverId(String receiverId) {
-        this.receiverId = receiverId;
-        return this;
-    }
-    public String getReceiverId() {
-        return this.receiverId;
-    }
-
-    public SaveReceiverDetailRequest setDetail(String detail) {
-        this.detail = detail;
-        return this;
-    }
-    public String getDetail() {
-        return this.detail;
     }
 
 }

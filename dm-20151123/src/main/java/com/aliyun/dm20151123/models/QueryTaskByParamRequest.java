@@ -4,14 +4,11 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskByParamRequest extends TeaModel {
+    @NameInMap("KeyWord")
+    public String keyWord;
+
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -19,8 +16,11 @@ public class QueryTaskByParamRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("KeyWord")
-    public String keyWord;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("Status")
     public Integer status;
@@ -30,28 +30,20 @@ public class QueryTaskByParamRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public QueryTaskByParamRequest setKeyWord(String keyWord) {
+        this.keyWord = keyWord;
+        return this;
+    }
+    public String getKeyWord() {
+        return this.keyWord;
+    }
+
     public QueryTaskByParamRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public QueryTaskByParamRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public QueryTaskByParamRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public QueryTaskByParamRequest setPageNo(Integer pageNo) {
@@ -70,12 +62,20 @@ public class QueryTaskByParamRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryTaskByParamRequest setKeyWord(String keyWord) {
-        this.keyWord = keyWord;
+    public QueryTaskByParamRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getKeyWord() {
-        return this.keyWord;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public QueryTaskByParamRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public QueryTaskByParamRequest setStatus(Integer status) {

@@ -4,8 +4,17 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class CheckReplyToMailAddressRequest extends TeaModel {
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("MailAddressId")
+    public Integer mailAddressId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Region")
+    public String region;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +22,25 @@ public class CheckReplyToMailAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("Region")
-    public String region;
-
-    @NameInMap("MailAddressId")
-    public Integer mailAddressId;
-
     public static CheckReplyToMailAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckReplyToMailAddressRequest self = new CheckReplyToMailAddressRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CheckReplyToMailAddressRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public CheckReplyToMailAddressRequest setMailAddressId(Integer mailAddressId) {
+        this.mailAddressId = mailAddressId;
+        return this;
+    }
+    public Integer getMailAddressId() {
+        return this.mailAddressId;
     }
 
     public CheckReplyToMailAddressRequest setOwnerId(Long ownerId) {
@@ -33,6 +49,14 @@ public class CheckReplyToMailAddressRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CheckReplyToMailAddressRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
     public CheckReplyToMailAddressRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,30 +73,6 @@ public class CheckReplyToMailAddressRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CheckReplyToMailAddressRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public CheckReplyToMailAddressRequest setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
-    }
-
-    public CheckReplyToMailAddressRequest setMailAddressId(Integer mailAddressId) {
-        this.mailAddressId = mailAddressId;
-        return this;
-    }
-    public Integer getMailAddressId() {
-        return this.mailAddressId;
     }
 
 }

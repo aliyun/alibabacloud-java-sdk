@@ -4,18 +4,26 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
+    @NameInMap("NextStart")
+    public Integer nextStart;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("data")
     public SenderStatisticsDetailByParamResponseBodyData data;
 
-    @NameInMap("NextStart")
-    public Integer nextStart;
-
     public static SenderStatisticsDetailByParamResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SenderStatisticsDetailByParamResponseBody self = new SenderStatisticsDetailByParamResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SenderStatisticsDetailByParamResponseBody setNextStart(Integer nextStart) {
+        this.nextStart = nextStart;
+        return this;
+    }
+    public Integer getNextStart() {
+        return this.nextStart;
     }
 
     public SenderStatisticsDetailByParamResponseBody setRequestId(String requestId) {
@@ -34,17 +42,9 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         return this.data;
     }
 
-    public SenderStatisticsDetailByParamResponseBody setNextStart(Integer nextStart) {
-        this.nextStart = nextStart;
-        return this;
-    }
-    public Integer getNextStart() {
-        return this.nextStart;
-    }
-
     public static class SenderStatisticsDetailByParamResponseBodyDataMailDetail extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("LastUpdateTime")
         public String lastUpdateTime;
@@ -52,26 +52,26 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
+        @NameInMap("Status")
+        public Integer status;
+
         @NameInMap("ToAddress")
         public String toAddress;
 
         @NameInMap("UtcLastUpdateTime")
         public String utcLastUpdateTime;
 
-        @NameInMap("AccountName")
-        public String accountName;
-
         public static SenderStatisticsDetailByParamResponseBodyDataMailDetail build(java.util.Map<String, ?> map) throws Exception {
             SenderStatisticsDetailByParamResponseBodyDataMailDetail self = new SenderStatisticsDetailByParamResponseBodyDataMailDetail();
             return TeaModel.build(map, self);
         }
 
-        public SenderStatisticsDetailByParamResponseBodyDataMailDetail setStatus(Integer status) {
-            this.status = status;
+        public SenderStatisticsDetailByParamResponseBodyDataMailDetail setAccountName(String accountName) {
+            this.accountName = accountName;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public SenderStatisticsDetailByParamResponseBodyDataMailDetail setLastUpdateTime(String lastUpdateTime) {
@@ -90,6 +90,14 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             return this.message;
         }
 
+        public SenderStatisticsDetailByParamResponseBodyDataMailDetail setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
         public SenderStatisticsDetailByParamResponseBodyDataMailDetail setToAddress(String toAddress) {
             this.toAddress = toAddress;
             return this;
@@ -104,14 +112,6 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         }
         public String getUtcLastUpdateTime() {
             return this.utcLastUpdateTime;
-        }
-
-        public SenderStatisticsDetailByParamResponseBodyDataMailDetail setAccountName(String accountName) {
-            this.accountName = accountName;
-            return this;
-        }
-        public String getAccountName() {
-            return this.accountName;
         }
 
     }

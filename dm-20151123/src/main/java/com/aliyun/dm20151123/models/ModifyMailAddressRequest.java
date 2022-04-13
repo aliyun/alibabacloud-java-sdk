@@ -4,8 +4,17 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class ModifyMailAddressRequest extends TeaModel {
+    @NameInMap("MailAddressId")
+    public Integer mailAddressId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Password")
+    public String password;
+
+    @NameInMap("ReplyAddress")
+    public String replyAddress;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +22,17 @@ public class ModifyMailAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("MailAddressId")
-    public Integer mailAddressId;
-
-    @NameInMap("ReplyAddress")
-    public String replyAddress;
-
-    @NameInMap("Password")
-    public String password;
-
     public static ModifyMailAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyMailAddressRequest self = new ModifyMailAddressRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyMailAddressRequest setMailAddressId(Integer mailAddressId) {
+        this.mailAddressId = mailAddressId;
+        return this;
+    }
+    public Integer getMailAddressId() {
+        return this.mailAddressId;
     }
 
     public ModifyMailAddressRequest setOwnerId(Long ownerId) {
@@ -33,6 +41,22 @@ public class ModifyMailAddressRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyMailAddressRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
+    }
+
+    public ModifyMailAddressRequest setReplyAddress(String replyAddress) {
+        this.replyAddress = replyAddress;
+        return this;
+    }
+    public String getReplyAddress() {
+        return this.replyAddress;
     }
 
     public ModifyMailAddressRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,30 +73,6 @@ public class ModifyMailAddressRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyMailAddressRequest setMailAddressId(Integer mailAddressId) {
-        this.mailAddressId = mailAddressId;
-        return this;
-    }
-    public Integer getMailAddressId() {
-        return this.mailAddressId;
-    }
-
-    public ModifyMailAddressRequest setReplyAddress(String replyAddress) {
-        this.replyAddress = replyAddress;
-        return this;
-    }
-    public String getReplyAddress() {
-        return this.replyAddress;
-    }
-
-    public ModifyMailAddressRequest setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-    public String getPassword() {
-        return this.password;
     }
 
 }
