@@ -7,17 +7,17 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
     @NameInMap("DataSchema")
     public String dataSchema;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("NextStart")
+    public String nextStart;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("data")
     public QueryReceiverDetailResponseBodyData data;
-
-    @NameInMap("NextStart")
-    public String nextStart;
 
     public static QueryReceiverDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryReceiverDetailResponseBody self = new QueryReceiverDetailResponseBody();
@@ -32,12 +32,12 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         return this.dataSchema;
     }
 
-    public QueryReceiverDetailResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public QueryReceiverDetailResponseBody setNextStart(String nextStart) {
+        this.nextStart = nextStart;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public String getNextStart() {
+        return this.nextStart;
     }
 
     public QueryReceiverDetailResponseBody setRequestId(String requestId) {
@@ -48,6 +48,14 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public QueryReceiverDetailResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public QueryReceiverDetailResponseBody setData(QueryReceiverDetailResponseBodyData data) {
         this.data = data;
         return this;
@@ -56,23 +64,15 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         return this.data;
     }
 
-    public QueryReceiverDetailResponseBody setNextStart(String nextStart) {
-        this.nextStart = nextStart;
-        return this;
-    }
-    public String getNextStart() {
-        return this.nextStart;
-    }
-
     public static class QueryReceiverDetailResponseBodyDataDetail extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("Data")
         public String data;
 
         @NameInMap("Email")
         public String email;
-
-        @NameInMap("CreateTime")
-        public String createTime;
 
         @NameInMap("UtcCreateTime")
         public Long utcCreateTime;
@@ -80,6 +80,14 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         public static QueryReceiverDetailResponseBodyDataDetail build(java.util.Map<String, ?> map) throws Exception {
             QueryReceiverDetailResponseBodyDataDetail self = new QueryReceiverDetailResponseBodyDataDetail();
             return TeaModel.build(map, self);
+        }
+
+        public QueryReceiverDetailResponseBodyDataDetail setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public QueryReceiverDetailResponseBodyDataDetail setData(String data) {
@@ -96,14 +104,6 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
-        }
-
-        public QueryReceiverDetailResponseBodyDataDetail setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
         public QueryReceiverDetailResponseBodyDataDetail setUtcCreateTime(Long utcCreateTime) {

@@ -4,11 +4,11 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("data")
     public SenderStatisticsByTagNameAndBatchIDResponseBodyData data;
@@ -18,20 +18,20 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SenderStatisticsByTagNameAndBatchIDResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
     public SenderStatisticsByTagNameAndBatchIDResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public SenderStatisticsByTagNameAndBatchIDResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public SenderStatisticsByTagNameAndBatchIDResponseBody setData(SenderStatisticsByTagNameAndBatchIDResponseBodyData data) {
@@ -43,38 +43,30 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
     }
 
     public static class SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat extends TeaModel {
-        @NameInMap("unavailablePercent")
-        public String unavailablePercent;
-
         @NameInMap("CreateTime")
         public String createTime;
-
-        @NameInMap("succeededPercent")
-        public String succeededPercent;
 
         @NameInMap("faildCount")
         public String faildCount;
 
-        @NameInMap("unavailableCount")
-        public String unavailableCount;
+        @NameInMap("requestCount")
+        public String requestCount;
+
+        @NameInMap("succeededPercent")
+        public String succeededPercent;
 
         @NameInMap("successCount")
         public String successCount;
 
-        @NameInMap("requestCount")
-        public String requestCount;
+        @NameInMap("unavailableCount")
+        public String unavailableCount;
+
+        @NameInMap("unavailablePercent")
+        public String unavailablePercent;
 
         public static SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat build(java.util.Map<String, ?> map) throws Exception {
             SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat self = new SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat();
             return TeaModel.build(map, self);
-        }
-
-        public SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat setUnavailablePercent(String unavailablePercent) {
-            this.unavailablePercent = unavailablePercent;
-            return this;
-        }
-        public String getUnavailablePercent() {
-            return this.unavailablePercent;
         }
 
         public SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat setCreateTime(String createTime) {
@@ -85,14 +77,6 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat setSucceededPercent(String succeededPercent) {
-            this.succeededPercent = succeededPercent;
-            return this;
-        }
-        public String getSucceededPercent() {
-            return this.succeededPercent;
-        }
-
         public SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat setFaildCount(String faildCount) {
             this.faildCount = faildCount;
             return this;
@@ -101,12 +85,20 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
             return this.faildCount;
         }
 
-        public SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat setUnavailableCount(String unavailableCount) {
-            this.unavailableCount = unavailableCount;
+        public SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat setRequestCount(String requestCount) {
+            this.requestCount = requestCount;
             return this;
         }
-        public String getUnavailableCount() {
-            return this.unavailableCount;
+        public String getRequestCount() {
+            return this.requestCount;
+        }
+
+        public SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat setSucceededPercent(String succeededPercent) {
+            this.succeededPercent = succeededPercent;
+            return this;
+        }
+        public String getSucceededPercent() {
+            return this.succeededPercent;
         }
 
         public SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat setSuccessCount(String successCount) {
@@ -117,12 +109,20 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
             return this.successCount;
         }
 
-        public SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat setRequestCount(String requestCount) {
-            this.requestCount = requestCount;
+        public SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat setUnavailableCount(String unavailableCount) {
+            this.unavailableCount = unavailableCount;
             return this;
         }
-        public String getRequestCount() {
-            return this.requestCount;
+        public String getUnavailableCount() {
+            return this.unavailableCount;
+        }
+
+        public SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat setUnavailablePercent(String unavailablePercent) {
+            this.unavailablePercent = unavailablePercent;
+            return this;
+        }
+        public String getUnavailablePercent() {
+            return this.unavailablePercent;
         }
 
     }

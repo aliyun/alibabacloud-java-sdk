@@ -4,8 +4,8 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskByParamResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +13,23 @@ public class QueryTaskByParamResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("data")
     public QueryTaskByParamResponseBodyData data;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
 
     public static QueryTaskByParamResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTaskByParamResponseBody self = new QueryTaskByParamResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryTaskByParamResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public QueryTaskByParamResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public QueryTaskByParamResponseBody setPageSize(Integer pageSize) {
@@ -48,6 +48,14 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public QueryTaskByParamResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public QueryTaskByParamResponseBody setData(QueryTaskByParamResponseBodyData data) {
         this.data = data;
         return this;
@@ -56,85 +64,37 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         return this.data;
     }
 
-    public QueryTaskByParamResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public static class QueryTaskByParamResponseBodyDataTask extends TeaModel {
-        @NameInMap("ReceiversName")
-        public String receiversName;
-
-        @NameInMap("TagName")
-        public String tagName;
-
-        @NameInMap("TaskStatus")
-        public String taskStatus;
+        @NameInMap("AddressType")
+        public String addressType;
 
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("ReceiversName")
+        public String receiversName;
+
         @NameInMap("RequestCount")
         public String requestCount;
 
-        @NameInMap("AddressType")
-        public String addressType;
-
-        @NameInMap("UtcCreateTime")
-        public Long utcCreateTime;
-
-        @NameInMap("TemplateName")
-        public String templateName;
+        @NameInMap("TagName")
+        public String tagName;
 
         @NameInMap("TaskId")
         public String taskId;
 
+        @NameInMap("TaskStatus")
+        public String taskStatus;
+
+        @NameInMap("TemplateName")
+        public String templateName;
+
+        @NameInMap("UtcCreateTime")
+        public Long utcCreateTime;
+
         public static QueryTaskByParamResponseBodyDataTask build(java.util.Map<String, ?> map) throws Exception {
             QueryTaskByParamResponseBodyDataTask self = new QueryTaskByParamResponseBodyDataTask();
             return TeaModel.build(map, self);
-        }
-
-        public QueryTaskByParamResponseBodyDataTask setReceiversName(String receiversName) {
-            this.receiversName = receiversName;
-            return this;
-        }
-        public String getReceiversName() {
-            return this.receiversName;
-        }
-
-        public QueryTaskByParamResponseBodyDataTask setTagName(String tagName) {
-            this.tagName = tagName;
-            return this;
-        }
-        public String getTagName() {
-            return this.tagName;
-        }
-
-        public QueryTaskByParamResponseBodyDataTask setTaskStatus(String taskStatus) {
-            this.taskStatus = taskStatus;
-            return this;
-        }
-        public String getTaskStatus() {
-            return this.taskStatus;
-        }
-
-        public QueryTaskByParamResponseBodyDataTask setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public QueryTaskByParamResponseBodyDataTask setRequestCount(String requestCount) {
-            this.requestCount = requestCount;
-            return this;
-        }
-        public String getRequestCount() {
-            return this.requestCount;
         }
 
         public QueryTaskByParamResponseBodyDataTask setAddressType(String addressType) {
@@ -145,12 +105,52 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             return this.addressType;
         }
 
-        public QueryTaskByParamResponseBodyDataTask setUtcCreateTime(Long utcCreateTime) {
-            this.utcCreateTime = utcCreateTime;
+        public QueryTaskByParamResponseBodyDataTask setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public Long getUtcCreateTime() {
-            return this.utcCreateTime;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public QueryTaskByParamResponseBodyDataTask setReceiversName(String receiversName) {
+            this.receiversName = receiversName;
+            return this;
+        }
+        public String getReceiversName() {
+            return this.receiversName;
+        }
+
+        public QueryTaskByParamResponseBodyDataTask setRequestCount(String requestCount) {
+            this.requestCount = requestCount;
+            return this;
+        }
+        public String getRequestCount() {
+            return this.requestCount;
+        }
+
+        public QueryTaskByParamResponseBodyDataTask setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        public QueryTaskByParamResponseBodyDataTask setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        public QueryTaskByParamResponseBodyDataTask setTaskStatus(String taskStatus) {
+            this.taskStatus = taskStatus;
+            return this;
+        }
+        public String getTaskStatus() {
+            return this.taskStatus;
         }
 
         public QueryTaskByParamResponseBodyDataTask setTemplateName(String templateName) {
@@ -161,12 +161,12 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             return this.templateName;
         }
 
-        public QueryTaskByParamResponseBodyDataTask setTaskId(String taskId) {
-            this.taskId = taskId;
+        public QueryTaskByParamResponseBodyDataTask setUtcCreateTime(Long utcCreateTime) {
+            this.utcCreateTime = utcCreateTime;
             return this;
         }
-        public String getTaskId() {
-            return this.taskId;
+        public Long getUtcCreateTime() {
+            return this.utcCreateTime;
         }
 
     }

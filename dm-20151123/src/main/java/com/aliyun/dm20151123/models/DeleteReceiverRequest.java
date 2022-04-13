@@ -7,14 +7,14 @@ public class DeleteReceiverRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ReceiverId")
+    public String receiverId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("ReceiverId")
-    public String receiverId;
 
     public static DeleteReceiverRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteReceiverRequest self = new DeleteReceiverRequest();
@@ -27,6 +27,14 @@ public class DeleteReceiverRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteReceiverRequest setReceiverId(String receiverId) {
+        this.receiverId = receiverId;
+        return this;
+    }
+    public String getReceiverId() {
+        return this.receiverId;
     }
 
     public DeleteReceiverRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -43,14 +51,6 @@ public class DeleteReceiverRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteReceiverRequest setReceiverId(String receiverId) {
-        this.receiverId = receiverId;
-        return this;
-    }
-    public String getReceiverId() {
-        return this.receiverId;
     }
 
 }

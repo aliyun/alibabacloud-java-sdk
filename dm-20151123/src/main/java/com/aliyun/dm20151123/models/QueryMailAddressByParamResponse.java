@@ -3,21 +3,21 @@ package com.aliyun.dm20151123.models;
 
 import com.aliyun.tea.*;
 
-public class DescTemplateResponse extends TeaModel {
+public class QueryMailAddressByParamResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescTemplateResponseBody body;
+    public QueryMailAddressByParamResponseBody body;
 
-    public static DescTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescTemplateResponse self = new DescTemplateResponse();
+    public static QueryMailAddressByParamResponse build(java.util.Map<String, ?> map) throws Exception {
+        QueryMailAddressByParamResponse self = new QueryMailAddressByParamResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescTemplateResponse setHeaders(java.util.Map<String, String> headers) {
+    public QueryMailAddressByParamResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescTemplateResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescTemplateResponse setBody(DescTemplateResponseBody body) {
+    public QueryMailAddressByParamResponse setBody(QueryMailAddressByParamResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescTemplateResponseBody getBody() {
+    public QueryMailAddressByParamResponseBody getBody() {
         return this.body;
     }
 

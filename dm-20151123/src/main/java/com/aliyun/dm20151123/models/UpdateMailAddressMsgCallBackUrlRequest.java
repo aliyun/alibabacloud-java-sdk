@@ -4,6 +4,12 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class UpdateMailAddressMsgCallBackUrlRequest extends TeaModel {
+    @NameInMap("MailFrom")
+    public String mailFrom;
+
+    @NameInMap("NotifyUrl")
+    public String notifyUrl;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class UpdateMailAddressMsgCallBackUrlRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("MailFrom")
-    public String mailFrom;
-
-    @NameInMap("NotifyUrl")
-    public String notifyUrl;
-
     public static UpdateMailAddressMsgCallBackUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMailAddressMsgCallBackUrlRequest self = new UpdateMailAddressMsgCallBackUrlRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateMailAddressMsgCallBackUrlRequest setMailFrom(String mailFrom) {
+        this.mailFrom = mailFrom;
+        return this;
+    }
+    public String getMailFrom() {
+        return this.mailFrom;
+    }
+
+    public UpdateMailAddressMsgCallBackUrlRequest setNotifyUrl(String notifyUrl) {
+        this.notifyUrl = notifyUrl;
+        return this;
+    }
+    public String getNotifyUrl() {
+        return this.notifyUrl;
     }
 
     public UpdateMailAddressMsgCallBackUrlRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class UpdateMailAddressMsgCallBackUrlRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public UpdateMailAddressMsgCallBackUrlRequest setMailFrom(String mailFrom) {
-        this.mailFrom = mailFrom;
-        return this;
-    }
-    public String getMailFrom() {
-        return this.mailFrom;
-    }
-
-    public UpdateMailAddressMsgCallBackUrlRequest setNotifyUrl(String notifyUrl) {
-        this.notifyUrl = notifyUrl;
-        return this;
-    }
-    public String getNotifyUrl() {
-        return this.notifyUrl;
     }
 
 }

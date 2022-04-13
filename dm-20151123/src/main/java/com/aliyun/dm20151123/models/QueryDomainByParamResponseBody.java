@@ -4,8 +4,8 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainByParamResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +13,23 @@ public class QueryDomainByParamResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("data")
     public QueryDomainByParamResponseBodyData data;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
 
     public static QueryDomainByParamResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDomainByParamResponseBody self = new QueryDomainByParamResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryDomainByParamResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public QueryDomainByParamResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public QueryDomainByParamResponseBody setPageSize(Integer pageSize) {
@@ -48,6 +48,14 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public QueryDomainByParamResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public QueryDomainByParamResponseBody setData(QueryDomainByParamResponseBodyData data) {
         this.data = data;
         return this;
@@ -56,83 +64,43 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         return this.data;
     }
 
-    public QueryDomainByParamResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public static class QueryDomainByParamResponseBodyDataDomain extends TeaModel {
-        @NameInMap("DomainRecord")
-        public String domainRecord;
-
-        @NameInMap("SpfAuthStatus")
-        public String spfAuthStatus;
-
-        @NameInMap("MxAuthStatus")
-        public String mxAuthStatus;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
         @NameInMap("CnameAuthStatus")
         public String cnameAuthStatus;
 
         @NameInMap("ConfirmStatus")
         public String confirmStatus;
 
-        @NameInMap("IcpStatus")
-        public String icpStatus;
-
-        @NameInMap("UtcCreateTime")
-        public Long utcCreateTime;
-
-        @NameInMap("DomainStatus")
-        public String domainStatus;
-
-        @NameInMap("DomainName")
-        public String domainName;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("DomainId")
         public String domainId;
 
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("DomainRecord")
+        public String domainRecord;
+
+        @NameInMap("DomainStatus")
+        public String domainStatus;
+
+        @NameInMap("IcpStatus")
+        public String icpStatus;
+
+        @NameInMap("MxAuthStatus")
+        public String mxAuthStatus;
+
+        @NameInMap("SpfAuthStatus")
+        public String spfAuthStatus;
+
+        @NameInMap("UtcCreateTime")
+        public Long utcCreateTime;
+
         public static QueryDomainByParamResponseBodyDataDomain build(java.util.Map<String, ?> map) throws Exception {
             QueryDomainByParamResponseBodyDataDomain self = new QueryDomainByParamResponseBodyDataDomain();
             return TeaModel.build(map, self);
-        }
-
-        public QueryDomainByParamResponseBodyDataDomain setDomainRecord(String domainRecord) {
-            this.domainRecord = domainRecord;
-            return this;
-        }
-        public String getDomainRecord() {
-            return this.domainRecord;
-        }
-
-        public QueryDomainByParamResponseBodyDataDomain setSpfAuthStatus(String spfAuthStatus) {
-            this.spfAuthStatus = spfAuthStatus;
-            return this;
-        }
-        public String getSpfAuthStatus() {
-            return this.spfAuthStatus;
-        }
-
-        public QueryDomainByParamResponseBodyDataDomain setMxAuthStatus(String mxAuthStatus) {
-            this.mxAuthStatus = mxAuthStatus;
-            return this;
-        }
-        public String getMxAuthStatus() {
-            return this.mxAuthStatus;
-        }
-
-        public QueryDomainByParamResponseBodyDataDomain setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
         public QueryDomainByParamResponseBodyDataDomain setCnameAuthStatus(String cnameAuthStatus) {
@@ -151,28 +119,20 @@ public class QueryDomainByParamResponseBody extends TeaModel {
             return this.confirmStatus;
         }
 
-        public QueryDomainByParamResponseBodyDataDomain setIcpStatus(String icpStatus) {
-            this.icpStatus = icpStatus;
+        public QueryDomainByParamResponseBodyDataDomain setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getIcpStatus() {
-            return this.icpStatus;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
-        public QueryDomainByParamResponseBodyDataDomain setUtcCreateTime(Long utcCreateTime) {
-            this.utcCreateTime = utcCreateTime;
+        public QueryDomainByParamResponseBodyDataDomain setDomainId(String domainId) {
+            this.domainId = domainId;
             return this;
         }
-        public Long getUtcCreateTime() {
-            return this.utcCreateTime;
-        }
-
-        public QueryDomainByParamResponseBodyDataDomain setDomainStatus(String domainStatus) {
-            this.domainStatus = domainStatus;
-            return this;
-        }
-        public String getDomainStatus() {
-            return this.domainStatus;
+        public String getDomainId() {
+            return this.domainId;
         }
 
         public QueryDomainByParamResponseBodyDataDomain setDomainName(String domainName) {
@@ -183,12 +143,52 @@ public class QueryDomainByParamResponseBody extends TeaModel {
             return this.domainName;
         }
 
-        public QueryDomainByParamResponseBodyDataDomain setDomainId(String domainId) {
-            this.domainId = domainId;
+        public QueryDomainByParamResponseBodyDataDomain setDomainRecord(String domainRecord) {
+            this.domainRecord = domainRecord;
             return this;
         }
-        public String getDomainId() {
-            return this.domainId;
+        public String getDomainRecord() {
+            return this.domainRecord;
+        }
+
+        public QueryDomainByParamResponseBodyDataDomain setDomainStatus(String domainStatus) {
+            this.domainStatus = domainStatus;
+            return this;
+        }
+        public String getDomainStatus() {
+            return this.domainStatus;
+        }
+
+        public QueryDomainByParamResponseBodyDataDomain setIcpStatus(String icpStatus) {
+            this.icpStatus = icpStatus;
+            return this;
+        }
+        public String getIcpStatus() {
+            return this.icpStatus;
+        }
+
+        public QueryDomainByParamResponseBodyDataDomain setMxAuthStatus(String mxAuthStatus) {
+            this.mxAuthStatus = mxAuthStatus;
+            return this;
+        }
+        public String getMxAuthStatus() {
+            return this.mxAuthStatus;
+        }
+
+        public QueryDomainByParamResponseBodyDataDomain setSpfAuthStatus(String spfAuthStatus) {
+            this.spfAuthStatus = spfAuthStatus;
+            return this;
+        }
+        public String getSpfAuthStatus() {
+            return this.spfAuthStatus;
+        }
+
+        public QueryDomainByParamResponseBodyDataDomain setUtcCreateTime(Long utcCreateTime) {
+            this.utcCreateTime = utcCreateTime;
+            return this;
+        }
+        public Long getUtcCreateTime() {
+            return this.utcCreateTime;
         }
 
     }

@@ -4,14 +4,14 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class ModifyPWByDomainResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class ModifyPWByDomainResponseBody extends TeaModel {
     public static ModifyPWByDomainResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyPWByDomainResponseBody self = new ModifyPWByDomainResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyPWByDomainResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public ModifyPWByDomainResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class ModifyPWByDomainResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ModifyPWByDomainResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public ModifyPWByDomainResponseBody setSuccess(Boolean success) {

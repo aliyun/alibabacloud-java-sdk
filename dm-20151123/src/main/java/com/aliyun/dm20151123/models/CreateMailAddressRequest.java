@@ -4,20 +4,20 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class CreateMailAddressRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ReplyAddress")
+    public String replyAddress;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("AccountName")
-    public String accountName;
-
-    @NameInMap("ReplyAddress")
-    public String replyAddress;
 
     @NameInMap("Sendtype")
     public String sendtype;
@@ -27,12 +27,28 @@ public class CreateMailAddressRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateMailAddressRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
+    }
+
     public CreateMailAddressRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateMailAddressRequest setReplyAddress(String replyAddress) {
+        this.replyAddress = replyAddress;
+        return this;
+    }
+    public String getReplyAddress() {
+        return this.replyAddress;
     }
 
     public CreateMailAddressRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,22 +65,6 @@ public class CreateMailAddressRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreateMailAddressRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
-    }
-
-    public CreateMailAddressRequest setReplyAddress(String replyAddress) {
-        this.replyAddress = replyAddress;
-        return this;
-    }
-    public String getReplyAddress() {
-        return this.replyAddress;
     }
 
     public CreateMailAddressRequest setSendtype(String sendtype) {

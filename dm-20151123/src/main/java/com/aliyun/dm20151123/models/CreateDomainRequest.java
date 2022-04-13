@@ -4,6 +4,9 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class CreateDomainRequest extends TeaModel {
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,12 +16,17 @@ public class CreateDomainRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
     public static CreateDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDomainRequest self = new CreateDomainRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDomainRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public CreateDomainRequest setOwnerId(Long ownerId) {
@@ -43,14 +51,6 @@ public class CreateDomainRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreateDomainRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
 }

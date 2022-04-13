@@ -4,8 +4,8 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryTagByParamResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +13,23 @@ public class QueryTagByParamResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("data")
     public QueryTagByParamResponseBodyData data;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
 
     public static QueryTagByParamResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTagByParamResponseBody self = new QueryTagByParamResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryTagByParamResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public QueryTagByParamResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public QueryTagByParamResponseBody setPageSize(Integer pageSize) {
@@ -48,6 +48,14 @@ public class QueryTagByParamResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public QueryTagByParamResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public QueryTagByParamResponseBody setData(QueryTagByParamResponseBodyData data) {
         this.data = data;
         return this;
@@ -56,32 +64,16 @@ public class QueryTagByParamResponseBody extends TeaModel {
         return this.data;
     }
 
-    public QueryTagByParamResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public static class QueryTagByParamResponseBodyDataTag extends TeaModel {
-        @NameInMap("TagName")
-        public String tagName;
-
         @NameInMap("TagId")
         public String tagId;
+
+        @NameInMap("TagName")
+        public String tagName;
 
         public static QueryTagByParamResponseBodyDataTag build(java.util.Map<String, ?> map) throws Exception {
             QueryTagByParamResponseBodyDataTag self = new QueryTagByParamResponseBodyDataTag();
             return TeaModel.build(map, self);
-        }
-
-        public QueryTagByParamResponseBodyDataTag setTagName(String tagName) {
-            this.tagName = tagName;
-            return this;
-        }
-        public String getTagName() {
-            return this.tagName;
         }
 
         public QueryTagByParamResponseBodyDataTag setTagId(String tagId) {
@@ -90,6 +82,14 @@ public class QueryTagByParamResponseBody extends TeaModel {
         }
         public String getTagId() {
             return this.tagId;
+        }
+
+        public QueryTagByParamResponseBodyDataTag setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
         }
 
     }

@@ -4,29 +4,20 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class BatchSendMailRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("TemplateName")
-    public String templateName;
-
     @NameInMap("AccountName")
     public String accountName;
-
-    @NameInMap("ReceiversName")
-    public String receiversName;
 
     @NameInMap("AddressType")
     public Integer addressType;
 
-    @NameInMap("TagName")
-    public String tagName;
+    @NameInMap("ClickTrace")
+    public String clickTrace;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ReceiversName")
+    public String receiversName;
 
     @NameInMap("ReplyAddress")
     public String replyAddress;
@@ -34,44 +25,21 @@ public class BatchSendMailRequest extends TeaModel {
     @NameInMap("ReplyAddressAlias")
     public String replyAddressAlias;
 
-    @NameInMap("ClickTrace")
-    public String clickTrace;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("TagName")
+    public String tagName;
+
+    @NameInMap("TemplateName")
+    public String templateName;
 
     public static BatchSendMailRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchSendMailRequest self = new BatchSendMailRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchSendMailRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public BatchSendMailRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public BatchSendMailRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public BatchSendMailRequest setTemplateName(String templateName) {
-        this.templateName = templateName;
-        return this;
-    }
-    public String getTemplateName() {
-        return this.templateName;
     }
 
     public BatchSendMailRequest setAccountName(String accountName) {
@@ -82,14 +50,6 @@ public class BatchSendMailRequest extends TeaModel {
         return this.accountName;
     }
 
-    public BatchSendMailRequest setReceiversName(String receiversName) {
-        this.receiversName = receiversName;
-        return this;
-    }
-    public String getReceiversName() {
-        return this.receiversName;
-    }
-
     public BatchSendMailRequest setAddressType(Integer addressType) {
         this.addressType = addressType;
         return this;
@@ -98,12 +58,28 @@ public class BatchSendMailRequest extends TeaModel {
         return this.addressType;
     }
 
-    public BatchSendMailRequest setTagName(String tagName) {
-        this.tagName = tagName;
+    public BatchSendMailRequest setClickTrace(String clickTrace) {
+        this.clickTrace = clickTrace;
         return this;
     }
-    public String getTagName() {
-        return this.tagName;
+    public String getClickTrace() {
+        return this.clickTrace;
+    }
+
+    public BatchSendMailRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public BatchSendMailRequest setReceiversName(String receiversName) {
+        this.receiversName = receiversName;
+        return this;
+    }
+    public String getReceiversName() {
+        return this.receiversName;
     }
 
     public BatchSendMailRequest setReplyAddress(String replyAddress) {
@@ -122,12 +98,36 @@ public class BatchSendMailRequest extends TeaModel {
         return this.replyAddressAlias;
     }
 
-    public BatchSendMailRequest setClickTrace(String clickTrace) {
-        this.clickTrace = clickTrace;
+    public BatchSendMailRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getClickTrace() {
-        return this.clickTrace;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public BatchSendMailRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public BatchSendMailRequest setTagName(String tagName) {
+        this.tagName = tagName;
+        return this;
+    }
+    public String getTagName() {
+        return this.tagName;
+    }
+
+    public BatchSendMailRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
     }
 
 }

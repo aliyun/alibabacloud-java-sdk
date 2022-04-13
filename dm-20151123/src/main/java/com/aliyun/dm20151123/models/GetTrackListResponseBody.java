@@ -7,23 +7,23 @@ public class GetTrackListResponseBody extends TeaModel {
     @NameInMap("OffsetCreateTime")
     public String offsetCreateTime;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("data")
-    public GetTrackListResponseBodyData data;
-
-    @NameInMap("Total")
-    public Integer total;
+    @NameInMap("OffsetCreateTimeDesc")
+    public String offsetCreateTimeDesc;
 
     @NameInMap("PageNo")
     public Integer pageNo;
 
-    @NameInMap("OffsetCreateTimeDesc")
-    public String offsetCreateTimeDesc;
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Total")
+    public Integer total;
+
+    @NameInMap("data")
+    public GetTrackListResponseBodyData data;
 
     public static GetTrackListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTrackListResponseBody self = new GetTrackListResponseBody();
@@ -38,36 +38,12 @@ public class GetTrackListResponseBody extends TeaModel {
         return this.offsetCreateTime;
     }
 
-    public GetTrackListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetTrackListResponseBody setOffsetCreateTimeDesc(String offsetCreateTimeDesc) {
+        this.offsetCreateTimeDesc = offsetCreateTimeDesc;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetTrackListResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public GetTrackListResponseBody setData(GetTrackListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetTrackListResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetTrackListResponseBody setTotal(Integer total) {
-        this.total = total;
-        return this;
-    }
-    public Integer getTotal() {
-        return this.total;
+    public String getOffsetCreateTimeDesc() {
+        return this.offsetCreateTimeDesc;
     }
 
     public GetTrackListResponseBody setPageNo(Integer pageNo) {
@@ -78,80 +54,72 @@ public class GetTrackListResponseBody extends TeaModel {
         return this.pageNo;
     }
 
-    public GetTrackListResponseBody setOffsetCreateTimeDesc(String offsetCreateTimeDesc) {
-        this.offsetCreateTimeDesc = offsetCreateTimeDesc;
+    public GetTrackListResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getOffsetCreateTimeDesc() {
-        return this.offsetCreateTimeDesc;
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public GetTrackListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetTrackListResponseBody setTotal(Integer total) {
+        this.total = total;
+        return this;
+    }
+    public Integer getTotal() {
+        return this.total;
+    }
+
+    public GetTrackListResponseBody setData(GetTrackListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetTrackListResponseBodyData getData() {
+        return this.data;
     }
 
     public static class GetTrackListResponseBodyDataStat extends TeaModel {
-        @NameInMap("RcptClickRate")
-        public String rcptClickRate;
-
-        @NameInMap("RcptUniqueOpenCount")
-        public String rcptUniqueOpenCount;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("RcptClickCount")
         public String rcptClickCount;
 
-        @NameInMap("RcptUniqueClickCount")
-        public String rcptUniqueClickCount;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("RcptUniqueOpenRate")
-        public String rcptUniqueOpenRate;
-
-        @NameInMap("RcptUniqueClickRate")
-        public String rcptUniqueClickRate;
-
-        @NameInMap("TotalNumber")
-        public String totalNumber;
-
-        @NameInMap("RcptOpenRate")
-        public String rcptOpenRate;
+        @NameInMap("RcptClickRate")
+        public String rcptClickRate;
 
         @NameInMap("RcptOpenCount")
         public String rcptOpenCount;
 
+        @NameInMap("RcptOpenRate")
+        public String rcptOpenRate;
+
+        @NameInMap("RcptUniqueClickCount")
+        public String rcptUniqueClickCount;
+
+        @NameInMap("RcptUniqueClickRate")
+        public String rcptUniqueClickRate;
+
+        @NameInMap("RcptUniqueOpenCount")
+        public String rcptUniqueOpenCount;
+
+        @NameInMap("RcptUniqueOpenRate")
+        public String rcptUniqueOpenRate;
+
+        @NameInMap("TotalNumber")
+        public String totalNumber;
+
         public static GetTrackListResponseBodyDataStat build(java.util.Map<String, ?> map) throws Exception {
             GetTrackListResponseBodyDataStat self = new GetTrackListResponseBodyDataStat();
             return TeaModel.build(map, self);
-        }
-
-        public GetTrackListResponseBodyDataStat setRcptClickRate(String rcptClickRate) {
-            this.rcptClickRate = rcptClickRate;
-            return this;
-        }
-        public String getRcptClickRate() {
-            return this.rcptClickRate;
-        }
-
-        public GetTrackListResponseBodyDataStat setRcptUniqueOpenCount(String rcptUniqueOpenCount) {
-            this.rcptUniqueOpenCount = rcptUniqueOpenCount;
-            return this;
-        }
-        public String getRcptUniqueOpenCount() {
-            return this.rcptUniqueOpenCount;
-        }
-
-        public GetTrackListResponseBodyDataStat setRcptClickCount(String rcptClickCount) {
-            this.rcptClickCount = rcptClickCount;
-            return this;
-        }
-        public String getRcptClickCount() {
-            return this.rcptClickCount;
-        }
-
-        public GetTrackListResponseBodyDataStat setRcptUniqueClickCount(String rcptUniqueClickCount) {
-            this.rcptUniqueClickCount = rcptUniqueClickCount;
-            return this;
-        }
-        public String getRcptUniqueClickCount() {
-            return this.rcptUniqueClickCount;
         }
 
         public GetTrackListResponseBodyDataStat setCreateTime(String createTime) {
@@ -162,28 +130,28 @@ public class GetTrackListResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetTrackListResponseBodyDataStat setRcptUniqueOpenRate(String rcptUniqueOpenRate) {
-            this.rcptUniqueOpenRate = rcptUniqueOpenRate;
+        public GetTrackListResponseBodyDataStat setRcptClickCount(String rcptClickCount) {
+            this.rcptClickCount = rcptClickCount;
             return this;
         }
-        public String getRcptUniqueOpenRate() {
-            return this.rcptUniqueOpenRate;
+        public String getRcptClickCount() {
+            return this.rcptClickCount;
         }
 
-        public GetTrackListResponseBodyDataStat setRcptUniqueClickRate(String rcptUniqueClickRate) {
-            this.rcptUniqueClickRate = rcptUniqueClickRate;
+        public GetTrackListResponseBodyDataStat setRcptClickRate(String rcptClickRate) {
+            this.rcptClickRate = rcptClickRate;
             return this;
         }
-        public String getRcptUniqueClickRate() {
-            return this.rcptUniqueClickRate;
+        public String getRcptClickRate() {
+            return this.rcptClickRate;
         }
 
-        public GetTrackListResponseBodyDataStat setTotalNumber(String totalNumber) {
-            this.totalNumber = totalNumber;
+        public GetTrackListResponseBodyDataStat setRcptOpenCount(String rcptOpenCount) {
+            this.rcptOpenCount = rcptOpenCount;
             return this;
         }
-        public String getTotalNumber() {
-            return this.totalNumber;
+        public String getRcptOpenCount() {
+            return this.rcptOpenCount;
         }
 
         public GetTrackListResponseBodyDataStat setRcptOpenRate(String rcptOpenRate) {
@@ -194,12 +162,44 @@ public class GetTrackListResponseBody extends TeaModel {
             return this.rcptOpenRate;
         }
 
-        public GetTrackListResponseBodyDataStat setRcptOpenCount(String rcptOpenCount) {
-            this.rcptOpenCount = rcptOpenCount;
+        public GetTrackListResponseBodyDataStat setRcptUniqueClickCount(String rcptUniqueClickCount) {
+            this.rcptUniqueClickCount = rcptUniqueClickCount;
             return this;
         }
-        public String getRcptOpenCount() {
-            return this.rcptOpenCount;
+        public String getRcptUniqueClickCount() {
+            return this.rcptUniqueClickCount;
+        }
+
+        public GetTrackListResponseBodyDataStat setRcptUniqueClickRate(String rcptUniqueClickRate) {
+            this.rcptUniqueClickRate = rcptUniqueClickRate;
+            return this;
+        }
+        public String getRcptUniqueClickRate() {
+            return this.rcptUniqueClickRate;
+        }
+
+        public GetTrackListResponseBodyDataStat setRcptUniqueOpenCount(String rcptUniqueOpenCount) {
+            this.rcptUniqueOpenCount = rcptUniqueOpenCount;
+            return this;
+        }
+        public String getRcptUniqueOpenCount() {
+            return this.rcptUniqueOpenCount;
+        }
+
+        public GetTrackListResponseBodyDataStat setRcptUniqueOpenRate(String rcptUniqueOpenRate) {
+            this.rcptUniqueOpenRate = rcptUniqueOpenRate;
+            return this;
+        }
+        public String getRcptUniqueOpenRate() {
+            return this.rcptUniqueOpenRate;
+        }
+
+        public GetTrackListResponseBodyDataStat setTotalNumber(String totalNumber) {
+            this.totalNumber = totalNumber;
+            return this;
+        }
+        public String getTotalNumber() {
+            return this.totalNumber;
         }
 
     }

@@ -4,8 +4,14 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class DeleteReceiverDetailRequest extends TeaModel {
+    @NameInMap("Email")
+    public String email;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ReceiverId")
+    public String receiverId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,15 +19,17 @@ public class DeleteReceiverDetailRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ReceiverId")
-    public String receiverId;
-
-    @NameInMap("Email")
-    public String email;
-
     public static DeleteReceiverDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteReceiverDetailRequest self = new DeleteReceiverDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteReceiverDetailRequest setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public String getEmail() {
+        return this.email;
     }
 
     public DeleteReceiverDetailRequest setOwnerId(Long ownerId) {
@@ -30,6 +38,14 @@ public class DeleteReceiverDetailRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteReceiverDetailRequest setReceiverId(String receiverId) {
+        this.receiverId = receiverId;
+        return this;
+    }
+    public String getReceiverId() {
+        return this.receiverId;
     }
 
     public DeleteReceiverDetailRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -46,22 +62,6 @@ public class DeleteReceiverDetailRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteReceiverDetailRequest setReceiverId(String receiverId) {
-        this.receiverId = receiverId;
-        return this;
-    }
-    public String getReceiverId() {
-        return this.receiverId;
-    }
-
-    public DeleteReceiverDetailRequest setEmail(String email) {
-        this.email = email;
-        return this;
-    }
-    public String getEmail() {
-        return this.email;
     }
 
 }

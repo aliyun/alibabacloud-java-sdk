@@ -4,14 +4,11 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainByParamRequest extends TeaModel {
+    @NameInMap("KeyWord")
+    public String keyWord;
+
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -19,8 +16,11 @@ public class QueryDomainByParamRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("KeyWord")
-    public String keyWord;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("Status")
     public Integer status;
@@ -30,28 +30,20 @@ public class QueryDomainByParamRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public QueryDomainByParamRequest setKeyWord(String keyWord) {
+        this.keyWord = keyWord;
+        return this;
+    }
+    public String getKeyWord() {
+        return this.keyWord;
+    }
+
     public QueryDomainByParamRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public QueryDomainByParamRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public QueryDomainByParamRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public QueryDomainByParamRequest setPageNo(Integer pageNo) {
@@ -70,12 +62,20 @@ public class QueryDomainByParamRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryDomainByParamRequest setKeyWord(String keyWord) {
-        this.keyWord = keyWord;
+    public QueryDomainByParamRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getKeyWord() {
-        return this.keyWord;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public QueryDomainByParamRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public QueryDomainByParamRequest setStatus(Integer status) {

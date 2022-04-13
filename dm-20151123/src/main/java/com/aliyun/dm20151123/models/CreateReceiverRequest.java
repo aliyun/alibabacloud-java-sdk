@@ -4,8 +4,17 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class CreateReceiverRequest extends TeaModel {
+    @NameInMap("Desc")
+    public String desc;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ReceiversAlias")
+    public String receiversAlias;
+
+    @NameInMap("ReceiversName")
+    public String receiversName;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +22,17 @@ public class CreateReceiverRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ReceiversName")
-    public String receiversName;
-
-    @NameInMap("ReceiversAlias")
-    public String receiversAlias;
-
-    @NameInMap("Desc")
-    public String desc;
-
     public static CreateReceiverRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateReceiverRequest self = new CreateReceiverRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateReceiverRequest setDesc(String desc) {
+        this.desc = desc;
+        return this;
+    }
+    public String getDesc() {
+        return this.desc;
     }
 
     public CreateReceiverRequest setOwnerId(Long ownerId) {
@@ -33,6 +41,22 @@ public class CreateReceiverRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateReceiverRequest setReceiversAlias(String receiversAlias) {
+        this.receiversAlias = receiversAlias;
+        return this;
+    }
+    public String getReceiversAlias() {
+        return this.receiversAlias;
+    }
+
+    public CreateReceiverRequest setReceiversName(String receiversName) {
+        this.receiversName = receiversName;
+        return this;
+    }
+    public String getReceiversName() {
+        return this.receiversName;
     }
 
     public CreateReceiverRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,30 +73,6 @@ public class CreateReceiverRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreateReceiverRequest setReceiversName(String receiversName) {
-        this.receiversName = receiversName;
-        return this;
-    }
-    public String getReceiversName() {
-        return this.receiversName;
-    }
-
-    public CreateReceiverRequest setReceiversAlias(String receiversAlias) {
-        this.receiversAlias = receiversAlias;
-        return this;
-    }
-    public String getReceiversAlias() {
-        return this.receiversAlias;
-    }
-
-    public CreateReceiverRequest setDesc(String desc) {
-        this.desc = desc;
-        return this;
-    }
-    public String getDesc() {
-        return this.desc;
     }
 
 }

@@ -4,6 +4,12 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,14 +19,8 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("AccountName")
-    public String accountName;
-
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
 
     @NameInMap("TagName")
     public String tagName;
@@ -28,6 +28,22 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     public static SenderStatisticsByTagNameAndBatchIDRequest build(java.util.Map<String, ?> map) throws Exception {
         SenderStatisticsByTagNameAndBatchIDRequest self = new SenderStatisticsByTagNameAndBatchIDRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SenderStatisticsByTagNameAndBatchIDRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
+    }
+
+    public SenderStatisticsByTagNameAndBatchIDRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public SenderStatisticsByTagNameAndBatchIDRequest setOwnerId(Long ownerId) {
@@ -54,28 +70,12 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SenderStatisticsByTagNameAndBatchIDRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
-    }
-
     public SenderStatisticsByTagNameAndBatchIDRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public SenderStatisticsByTagNameAndBatchIDRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
     public SenderStatisticsByTagNameAndBatchIDRequest setTagName(String tagName) {
