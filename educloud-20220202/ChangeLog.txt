@@ -1,3 +1,6 @@
+2022-04-13 Version: 1.0.2
+- EduCloud API： DescribeLab修改
+
 2022-03-11 Version: 1.0.1
 - EduCloud API.
 

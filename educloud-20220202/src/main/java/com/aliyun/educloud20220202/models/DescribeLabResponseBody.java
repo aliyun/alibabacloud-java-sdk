@@ -159,6 +159,9 @@ public class DescribeLabResponseBody extends TeaModel {
     }
 
     public static class DescribeLabResponseBodyData extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
         @NameInMap("Chapter")
         public java.util.List<DescribeLabResponseBodyDataChapter> chapter;
 
@@ -168,12 +171,26 @@ public class DescribeLabResponseBody extends TeaModel {
         @NameInMap("LabId")
         public String labId;
 
+        @NameInMap("Tag")
+        public String tag;
+
+        @NameInMap("Time")
+        public String time;
+
         @NameInMap("Title")
         public String title;
 
         public static DescribeLabResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeLabResponseBodyData self = new DescribeLabResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLabResponseBodyData setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public DescribeLabResponseBodyData setChapter(java.util.List<DescribeLabResponseBodyDataChapter> chapter) {
@@ -198,6 +215,22 @@ public class DescribeLabResponseBody extends TeaModel {
         }
         public String getLabId() {
             return this.labId;
+        }
+
+        public DescribeLabResponseBodyData setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
+        }
+
+        public DescribeLabResponseBodyData setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
         }
 
         public DescribeLabResponseBodyData setTitle(String title) {
