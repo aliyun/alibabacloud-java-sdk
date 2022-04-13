@@ -24,6 +24,10 @@ public class CreateWorkitemRequest extends TeaModel {
     @NameInMap("fieldValueList")
     public java.util.List<CreateWorkitemRequestFieldValueList> fieldValueList;
 
+    // 所属父工作项的唯一标识
+    @NameInMap("parent")
+    public String parent;
+
     // 参与人id列表，或者企业名称列表
     @NameInMap("participant")
     public java.util.List<String> participant;
@@ -103,6 +107,14 @@ public class CreateWorkitemRequest extends TeaModel {
     }
     public java.util.List<CreateWorkitemRequestFieldValueList> getFieldValueList() {
         return this.fieldValueList;
+    }
+
+    public CreateWorkitemRequest setParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    public String getParent() {
+        return this.parent;
     }
 
     public CreateWorkitemRequest setParticipant(java.util.List<String> participant) {
