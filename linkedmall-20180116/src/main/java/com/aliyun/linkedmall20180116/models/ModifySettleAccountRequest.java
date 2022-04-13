@@ -25,8 +25,17 @@ public class ModifySettleAccountRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    @NameInMap("CountryOrAreaCode")
+    public String countryOrAreaCode;
+
+    @NameInMap("Currency")
+    public String currency;
+
     @NameInMap("ExtInfo")
     public String extInfo;
+
+    @NameInMap("IdempotentId")
+    public String idempotentId;
 
     public static ModifySettleAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySettleAccountRequest self = new ModifySettleAccountRequest();
@@ -89,12 +98,36 @@ public class ModifySettleAccountRequest extends TeaModel {
         return this.bizId;
     }
 
+    public ModifySettleAccountRequest setCountryOrAreaCode(String countryOrAreaCode) {
+        this.countryOrAreaCode = countryOrAreaCode;
+        return this;
+    }
+    public String getCountryOrAreaCode() {
+        return this.countryOrAreaCode;
+    }
+
+    public ModifySettleAccountRequest setCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
+    public String getCurrency() {
+        return this.currency;
+    }
+
     public ModifySettleAccountRequest setExtInfo(String extInfo) {
         this.extInfo = extInfo;
         return this;
     }
     public String getExtInfo() {
         return this.extInfo;
+    }
+
+    public ModifySettleAccountRequest setIdempotentId(String idempotentId) {
+        this.idempotentId = idempotentId;
+        return this;
+    }
+    public String getIdempotentId() {
+        return this.idempotentId;
     }
 
 }

@@ -22,8 +22,17 @@ public class RegisterSettleAccountRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    @NameInMap("CountryOrAreaCode")
+    public String countryOrAreaCode;
+
+    @NameInMap("Currency")
+    public String currency;
+
     @NameInMap("ExtInfo")
     public String extInfo;
+
+    @NameInMap("IdempotentId")
+    public String idempotentId;
 
     public static RegisterSettleAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         RegisterSettleAccountRequest self = new RegisterSettleAccountRequest();
@@ -78,12 +87,36 @@ public class RegisterSettleAccountRequest extends TeaModel {
         return this.bizId;
     }
 
+    public RegisterSettleAccountRequest setCountryOrAreaCode(String countryOrAreaCode) {
+        this.countryOrAreaCode = countryOrAreaCode;
+        return this;
+    }
+    public String getCountryOrAreaCode() {
+        return this.countryOrAreaCode;
+    }
+
+    public RegisterSettleAccountRequest setCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
+    public String getCurrency() {
+        return this.currency;
+    }
+
     public RegisterSettleAccountRequest setExtInfo(String extInfo) {
         this.extInfo = extInfo;
         return this;
     }
     public String getExtInfo() {
         return this.extInfo;
+    }
+
+    public RegisterSettleAccountRequest setIdempotentId(String idempotentId) {
+        this.idempotentId = idempotentId;
+        return this;
+    }
+    public String getIdempotentId() {
+        return this.idempotentId;
     }
 
 }
