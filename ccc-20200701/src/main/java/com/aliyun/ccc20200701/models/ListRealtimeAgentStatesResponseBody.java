@@ -83,6 +83,9 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         @NameInMap("SkillGroupIdList")
         public java.util.List<String> skillGroupIdList;
 
+        @NameInMap("SkillGroupNameList")
+        public java.util.List<String> skillGroupNameList;
+
         @NameInMap("State")
         public String state;
 
@@ -143,6 +146,14 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         }
         public java.util.List<String> getSkillGroupIdList() {
             return this.skillGroupIdList;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyDataList setSkillGroupNameList(java.util.List<String> skillGroupNameList) {
+            this.skillGroupNameList = skillGroupNameList;
+            return this;
+        }
+        public java.util.List<String> getSkillGroupNameList() {
+            return this.skillGroupNameList;
         }
 
         public ListRealtimeAgentStatesResponseBodyDataList setState(String state) {
