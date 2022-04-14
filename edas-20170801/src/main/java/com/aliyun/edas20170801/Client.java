@@ -1631,6 +1631,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BatchWaitTime", request.batchWaitTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.buildPackId)) {
+            query.put("BuildPackId", request.buildPackId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.changeOrderDesc)) {
             query.put("ChangeOrderDesc", request.changeOrderDesc);
         }

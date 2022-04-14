@@ -16,6 +16,9 @@ public class DeployK8sApplicationRequest extends TeaModel {
     @NameInMap("BatchWaitTime")
     public Integer batchWaitTime;
 
+    @NameInMap("BuildPackId")
+    public String buildPackId;
+
     @NameInMap("ChangeOrderDesc")
     public String changeOrderDesc;
 
@@ -183,6 +186,14 @@ public class DeployK8sApplicationRequest extends TeaModel {
     }
     public Integer getBatchWaitTime() {
         return this.batchWaitTime;
+    }
+
+    public DeployK8sApplicationRequest setBuildPackId(String buildPackId) {
+        this.buildPackId = buildPackId;
+        return this;
+    }
+    public String getBuildPackId() {
+        return this.buildPackId;
     }
 
     public DeployK8sApplicationRequest setChangeOrderDesc(String changeOrderDesc) {

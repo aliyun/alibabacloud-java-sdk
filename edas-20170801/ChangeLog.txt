@@ -1,3 +1,6 @@
+2022-04-14 Version: 1.0.3
+- Supported BuildPackId configurations for K8s Applications.
+
 2022-04-13 Version: 1.0.2
 - Supported ConfigMap management for K8s Applications.
 
