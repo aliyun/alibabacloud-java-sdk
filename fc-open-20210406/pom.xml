@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>fc_open20210406</artifactId>
-  <version>1.0.9</version>
+  <version>1.0.10</version>
   <packaging>jar</packaging>
   <name>fc_open20210406</name>
   <description>Alibaba Cloud FC-Open (20210406) SDK for Java
