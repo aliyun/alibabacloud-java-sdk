@@ -125,9 +125,6 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         @NameInMap("IpVersion")
         public Integer ipVersion;
 
-        @NameInMap("MessageType")
-        public String messageType;
-
         @NameInMap("Order")
         public Integer order;
 
@@ -312,14 +309,6 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         }
         public Integer getIpVersion() {
             return this.ipVersion;
-        }
-
-        public DescribeControlPolicyResponseBodyPolicys setMessageType(String messageType) {
-            this.messageType = messageType;
-            return this;
-        }
-        public String getMessageType() {
-            return this.messageType;
         }
 
         public DescribeControlPolicyResponseBodyPolicys setOrder(Integer order) {
