@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.vpcpeer20220101.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteVpcPeerConnectionResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteVpcPeerConnectionResponseBody body;
+
+    public static DeleteVpcPeerConnectionResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteVpcPeerConnectionResponse self = new DeleteVpcPeerConnectionResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteVpcPeerConnectionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteVpcPeerConnectionResponse setBody(DeleteVpcPeerConnectionResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteVpcPeerConnectionResponseBody getBody() {
+        return this.body;
+    }
+
+}
