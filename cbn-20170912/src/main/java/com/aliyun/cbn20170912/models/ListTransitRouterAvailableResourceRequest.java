@@ -19,6 +19,9 @@ public class ListTransitRouterAvailableResourceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SupportMulticast")
+    public Boolean supportMulticast;
+
     public static ListTransitRouterAvailableResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTransitRouterAvailableResourceRequest self = new ListTransitRouterAvailableResourceRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ListTransitRouterAvailableResourceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ListTransitRouterAvailableResourceRequest setSupportMulticast(Boolean supportMulticast) {
+        this.supportMulticast = supportMulticast;
+        return this;
+    }
+    public Boolean getSupportMulticast() {
+        return this.supportMulticast;
     }
 
 }
