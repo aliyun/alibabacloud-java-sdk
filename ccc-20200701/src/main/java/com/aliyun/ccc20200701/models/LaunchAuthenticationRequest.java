@@ -7,6 +7,9 @@ public class LaunchAuthenticationRequest extends TeaModel {
     @NameInMap("ContactFlowId")
     public String contactFlowId;
 
+    @NameInMap("ContactFlowVariables")
+    public String contactFlowVariables;
+
     @NameInMap("DeviceId")
     public String deviceId;
 
@@ -30,6 +33,14 @@ public class LaunchAuthenticationRequest extends TeaModel {
     }
     public String getContactFlowId() {
         return this.contactFlowId;
+    }
+
+    public LaunchAuthenticationRequest setContactFlowVariables(String contactFlowVariables) {
+        this.contactFlowVariables = contactFlowVariables;
+        return this;
+    }
+    public String getContactFlowVariables() {
+        return this.contactFlowVariables;
     }
 
     public LaunchAuthenticationRequest setDeviceId(String deviceId) {

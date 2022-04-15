@@ -2007,6 +2007,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ContactFlowId", request.contactFlowId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.contactFlowVariables)) {
+            query.put("ContactFlowVariables", request.contactFlowVariables);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
             query.put("DeviceId", request.deviceId);
         }
@@ -2052,6 +2056,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ContactFlowId", request.contactFlowId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.contactFlowVariables)) {
+            query.put("ContactFlowVariables", request.contactFlowVariables);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
             query.put("DeviceId", request.deviceId);
         }
@@ -2062,6 +2070,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
             query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smsMetadataId)) {
+            query.put("SmsMetadataId", request.smsMetadataId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.surveyChannel)) {
+            query.put("SurveyChannel", request.surveyChannel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {

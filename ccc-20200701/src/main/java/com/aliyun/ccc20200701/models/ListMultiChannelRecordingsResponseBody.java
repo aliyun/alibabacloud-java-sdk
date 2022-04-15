@@ -65,6 +65,9 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
     }
 
     public static class ListMultiChannelRecordingsResponseBodyData extends TeaModel {
+        @NameInMap("AgentChannelId")
+        public String agentChannelId;
+
         @NameInMap("AgentId")
         public String agentId;
 
@@ -95,6 +98,14 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         public static ListMultiChannelRecordingsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListMultiChannelRecordingsResponseBodyData self = new ListMultiChannelRecordingsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListMultiChannelRecordingsResponseBodyData setAgentChannelId(String agentChannelId) {
+            this.agentChannelId = agentChannelId;
+            return this;
+        }
+        public String getAgentChannelId() {
+            return this.agentChannelId;
         }
 
         public ListMultiChannelRecordingsResponseBodyData setAgentId(String agentId) {
