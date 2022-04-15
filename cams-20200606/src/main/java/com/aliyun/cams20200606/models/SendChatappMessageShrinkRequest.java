@@ -12,6 +12,10 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    // ISV客户wabaId
+    @NameInMap("CustWabaId")
+    public String custWabaId;
+
     // 发送方
     @NameInMap("From")
     public String from;
@@ -63,6 +67,14 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     }
     public String getContent() {
         return this.content;
+    }
+
+    public SendChatappMessageShrinkRequest setCustWabaId(String custWabaId) {
+        this.custWabaId = custWabaId;
+        return this;
+    }
+    public String getCustWabaId() {
+        return this.custWabaId;
     }
 
     public SendChatappMessageShrinkRequest setFrom(String from) {

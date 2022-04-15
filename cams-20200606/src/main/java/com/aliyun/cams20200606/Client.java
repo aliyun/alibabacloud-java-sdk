@@ -49,6 +49,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Contacts", request.contactsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
+            body.put("CustWabaId", request.custWabaId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
             body.put("From", request.from);
         }
@@ -147,6 +151,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Components", request.componentsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
+            body.put("CustWabaId", request.custWabaId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.exampleShrink)) {
             body.put("Example", request.exampleShrink);
         }
@@ -188,6 +196,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteChatappTemplateResponse deleteChatappTemplateWithOptions(DeleteChatappTemplateRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
+            query.put("CustWabaId", request.custWabaId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
             query.put("TemplateCode", request.templateCode);
         }
@@ -217,12 +229,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetChatappTemplateDetailResponse getChatappTemplateDetailWithOptions(GetChatappTemplateDetailRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
-            query.put("Language", request.language);
+        if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
+            query.put("CustWabaId", request.custWabaId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
@@ -262,6 +274,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.auditStatus)) {
             query.put("AuditStatus", request.auditStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
+            query.put("CustWabaId", request.custWabaId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
@@ -322,6 +338,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.channelType)) {
             body.put("ChannelType", request.channelType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
+            body.put("CustWabaId", request.custWabaId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {

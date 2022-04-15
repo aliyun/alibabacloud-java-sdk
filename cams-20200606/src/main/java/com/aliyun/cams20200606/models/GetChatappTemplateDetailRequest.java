@@ -4,12 +4,13 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetChatappTemplateDetailRequest extends TeaModel {
+    // ISV客户WabaId
+    @NameInMap("CustWabaId")
+    public String custWabaId;
+
     // 语言
     @NameInMap("Language")
     public String language;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
 
     // 模板分类
     @NameInMap("TemplateCode")
@@ -20,20 +21,20 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetChatappTemplateDetailRequest setCustWabaId(String custWabaId) {
+        this.custWabaId = custWabaId;
+        return this;
+    }
+    public String getCustWabaId() {
+        return this.custWabaId;
+    }
+
     public GetChatappTemplateDetailRequest setLanguage(String language) {
         this.language = language;
         return this;
     }
     public String getLanguage() {
         return this.language;
-    }
-
-    public GetChatappTemplateDetailRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public GetChatappTemplateDetailRequest setTemplateCode(String templateCode) {
