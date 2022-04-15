@@ -80,6 +80,9 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("SupportMulticast")
+        public Boolean supportMulticast;
+
         @NameInMap("TransitRouterDescription")
         public String transitRouterDescription;
 
@@ -135,6 +138,14 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListTransitRoutersResponseBodyTransitRouters setSupportMulticast(Boolean supportMulticast) {
+            this.supportMulticast = supportMulticast;
+            return this;
+        }
+        public Boolean getSupportMulticast() {
+            return this.supportMulticast;
         }
 
         public ListTransitRoutersResponseBodyTransitRouters setTransitRouterDescription(String transitRouterDescription) {

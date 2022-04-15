@@ -28,6 +28,9 @@ public class CreateTransitRouterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SupportMulticast")
+    public Boolean supportMulticast;
+
     @NameInMap("TransitRouterDescription")
     public String transitRouterDescription;
 
@@ -101,6 +104,14 @@ public class CreateTransitRouterRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateTransitRouterRequest setSupportMulticast(Boolean supportMulticast) {
+        this.supportMulticast = supportMulticast;
+        return this;
+    }
+    public Boolean getSupportMulticast() {
+        return this.supportMulticast;
     }
 
     public CreateTransitRouterRequest setTransitRouterDescription(String transitRouterDescription) {

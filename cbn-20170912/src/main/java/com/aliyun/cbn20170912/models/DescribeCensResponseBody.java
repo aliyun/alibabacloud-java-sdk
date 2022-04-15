@@ -145,11 +145,17 @@ public class DescribeCensResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Ipv6Level")
+        public String ipv6Level;
+
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ProtectionLevel")
         public String protectionLevel;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("Status")
         public String status;
@@ -194,6 +200,14 @@ public class DescribeCensResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeCensResponseBodyCensCen setIpv6Level(String ipv6Level) {
+            this.ipv6Level = ipv6Level;
+            return this;
+        }
+        public String getIpv6Level() {
+            return this.ipv6Level;
+        }
+
         public DescribeCensResponseBodyCensCen setName(String name) {
             this.name = name;
             return this;
@@ -208,6 +222,14 @@ public class DescribeCensResponseBody extends TeaModel {
         }
         public String getProtectionLevel() {
             return this.protectionLevel;
+        }
+
+        public DescribeCensResponseBodyCensCen setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeCensResponseBodyCensCen setStatus(String status) {
