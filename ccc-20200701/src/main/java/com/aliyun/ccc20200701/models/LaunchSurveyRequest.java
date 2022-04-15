@@ -7,6 +7,9 @@ public class LaunchSurveyRequest extends TeaModel {
     @NameInMap("ContactFlowId")
     public String contactFlowId;
 
+    @NameInMap("ContactFlowVariables")
+    public String contactFlowVariables;
+
     @NameInMap("DeviceId")
     public String deviceId;
 
@@ -15,6 +18,12 @@ public class LaunchSurveyRequest extends TeaModel {
 
     @NameInMap("JobId")
     public String jobId;
+
+    @NameInMap("SmsMetadataId")
+    public String smsMetadataId;
+
+    @NameInMap("SurveyChannel")
+    public String surveyChannel;
 
     @NameInMap("UserId")
     public String userId;
@@ -30,6 +39,14 @@ public class LaunchSurveyRequest extends TeaModel {
     }
     public String getContactFlowId() {
         return this.contactFlowId;
+    }
+
+    public LaunchSurveyRequest setContactFlowVariables(String contactFlowVariables) {
+        this.contactFlowVariables = contactFlowVariables;
+        return this;
+    }
+    public String getContactFlowVariables() {
+        return this.contactFlowVariables;
     }
 
     public LaunchSurveyRequest setDeviceId(String deviceId) {
@@ -54,6 +71,22 @@ public class LaunchSurveyRequest extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public LaunchSurveyRequest setSmsMetadataId(String smsMetadataId) {
+        this.smsMetadataId = smsMetadataId;
+        return this;
+    }
+    public String getSmsMetadataId() {
+        return this.smsMetadataId;
+    }
+
+    public LaunchSurveyRequest setSurveyChannel(String surveyChannel) {
+        this.surveyChannel = surveyChannel;
+        return this;
+    }
+    public String getSurveyChannel() {
+        return this.surveyChannel;
     }
 
     public LaunchSurveyRequest setUserId(String userId) {
