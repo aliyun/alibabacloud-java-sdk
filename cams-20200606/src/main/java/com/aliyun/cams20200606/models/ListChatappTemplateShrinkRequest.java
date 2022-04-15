@@ -8,6 +8,10 @@ public class ListChatappTemplateShrinkRequest extends TeaModel {
     @NameInMap("AuditStatus")
     public String auditStatus;
 
+    // ISV客户WabaId
+    @NameInMap("CustWabaId")
+    public String custWabaId;
+
     // 语言
     @NameInMap("Language")
     public String language;
@@ -30,6 +34,14 @@ public class ListChatappTemplateShrinkRequest extends TeaModel {
     }
     public String getAuditStatus() {
         return this.auditStatus;
+    }
+
+    public ListChatappTemplateShrinkRequest setCustWabaId(String custWabaId) {
+        this.custWabaId = custWabaId;
+        return this;
+    }
+    public String getCustWabaId() {
+        return this.custWabaId;
     }
 
     public ListChatappTemplateShrinkRequest setLanguage(String language) {

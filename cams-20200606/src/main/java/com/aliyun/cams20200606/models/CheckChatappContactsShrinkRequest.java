@@ -12,6 +12,10 @@ public class CheckChatappContactsShrinkRequest extends TeaModel {
     @NameInMap("Contacts")
     public String contactsShrink;
 
+    // ISV客户wabaId
+    @NameInMap("CustWabaId")
+    public String custWabaId;
+
     // 发送号码,所选择ChannelType下的Business账号，即在控制台上审核通过的Number
     @NameInMap("From")
     public String from;
@@ -35,6 +39,14 @@ public class CheckChatappContactsShrinkRequest extends TeaModel {
     }
     public String getContactsShrink() {
         return this.contactsShrink;
+    }
+
+    public CheckChatappContactsShrinkRequest setCustWabaId(String custWabaId) {
+        this.custWabaId = custWabaId;
+        return this;
+    }
+    public String getCustWabaId() {
+        return this.custWabaId;
     }
 
     public CheckChatappContactsShrinkRequest setFrom(String from) {

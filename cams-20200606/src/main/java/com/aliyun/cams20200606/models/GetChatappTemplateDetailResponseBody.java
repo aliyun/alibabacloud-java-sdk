@@ -133,6 +133,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("Buttons")
         public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsButtons> buttons;
 
+        // 描述，当Type为Header，且Format为IMGAGE/DOCUMENT/VIDEO 可以增加描述
+        @NameInMap("Caption")
+        public String caption;
+
+        // 文件名称，当Type为Header，且Format为DOCUMENT时可以给文件指定名称
+        @NameInMap("FileName")
+        public String fileName;
+
         // 所发送消息的文本
         @NameInMap("Text")
         public String text;
@@ -156,6 +164,22 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
         public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsButtons> getButtons() {
             return this.buttons;
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponents setCaption(String caption) {
+            this.caption = caption;
+            return this;
+        }
+        public String getCaption() {
+            return this.caption;
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponents setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+        public String getFileName() {
+            return this.fileName;
         }
 
         public GetChatappTemplateDetailResponseBodyDataComponents setText(String text) {

@@ -11,6 +11,10 @@ public class CreateChatappTemplateRequest extends TeaModel {
     @NameInMap("Components")
     public java.util.List<CreateChatappTemplateRequestComponents> components;
 
+    // ISV客户WabaId
+    @NameInMap("CustWabaId")
+    public String custWabaId;
+
     // 变量，KEY-VALUE结构
     @NameInMap("Example")
     public java.util.Map<String, String> example;
@@ -46,6 +50,14 @@ public class CreateChatappTemplateRequest extends TeaModel {
     }
     public java.util.List<CreateChatappTemplateRequestComponents> getComponents() {
         return this.components;
+    }
+
+    public CreateChatappTemplateRequest setCustWabaId(String custWabaId) {
+        this.custWabaId = custWabaId;
+        return this;
+    }
+    public String getCustWabaId() {
+        return this.custWabaId;
     }
 
     public CreateChatappTemplateRequest setExample(java.util.Map<String, String> example) {
@@ -154,6 +166,14 @@ public class CreateChatappTemplateRequest extends TeaModel {
         @NameInMap("Buttons")
         public java.util.List<CreateChatappTemplateRequestComponentsButtons> buttons;
 
+        // 描述，当Type为Header，且Format为IMGAGE/DOCUMENT/VIDEO 可以增加描述
+        @NameInMap("Caption")
+        public String caption;
+
+        // 文件名称，当Type为Header，且Format为DOCUMENT时可以给文件指定名称
+        @NameInMap("FileName")
+        public String fileName;
+
         // 格式
         // TEXT-文本 IMGAGE-图片 DOCUMENT-文档 VIDEO-视频
         @NameInMap("Format")
@@ -183,6 +203,22 @@ public class CreateChatappTemplateRequest extends TeaModel {
         }
         public java.util.List<CreateChatappTemplateRequestComponentsButtons> getButtons() {
             return this.buttons;
+        }
+
+        public CreateChatappTemplateRequestComponents setCaption(String caption) {
+            this.caption = caption;
+            return this;
+        }
+        public String getCaption() {
+            return this.caption;
+        }
+
+        public CreateChatappTemplateRequestComponents setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+        public String getFileName() {
+            return this.fileName;
         }
 
         public CreateChatappTemplateRequestComponents setFormat(String format) {

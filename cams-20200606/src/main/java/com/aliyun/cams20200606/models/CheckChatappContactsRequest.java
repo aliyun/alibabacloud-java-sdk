@@ -12,6 +12,10 @@ public class CheckChatappContactsRequest extends TeaModel {
     @NameInMap("Contacts")
     public java.util.List<String> contacts;
 
+    // ISV客户wabaId
+    @NameInMap("CustWabaId")
+    public String custWabaId;
+
     // 发送号码,所选择ChannelType下的Business账号，即在控制台上审核通过的Number
     @NameInMap("From")
     public String from;
@@ -35,6 +39,14 @@ public class CheckChatappContactsRequest extends TeaModel {
     }
     public java.util.List<String> getContacts() {
         return this.contacts;
+    }
+
+    public CheckChatappContactsRequest setCustWabaId(String custWabaId) {
+        this.custWabaId = custWabaId;
+        return this;
+    }
+    public String getCustWabaId() {
+        return this.custWabaId;
     }
 
     public CheckChatappContactsRequest setFrom(String from) {

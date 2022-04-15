@@ -11,6 +11,10 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     @NameInMap("Components")
     public String componentsShrink;
 
+    // ISV客户WabaId
+    @NameInMap("CustWabaId")
+    public String custWabaId;
+
     // 变量，KEY-VALUE结构
     @NameInMap("Example")
     public String exampleShrink;
@@ -46,6 +50,14 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     }
     public String getComponentsShrink() {
         return this.componentsShrink;
+    }
+
+    public CreateChatappTemplateShrinkRequest setCustWabaId(String custWabaId) {
+        this.custWabaId = custWabaId;
+        return this;
+    }
+    public String getCustWabaId() {
+        return this.custWabaId;
     }
 
     public CreateChatappTemplateShrinkRequest setExampleShrink(String exampleShrink) {
