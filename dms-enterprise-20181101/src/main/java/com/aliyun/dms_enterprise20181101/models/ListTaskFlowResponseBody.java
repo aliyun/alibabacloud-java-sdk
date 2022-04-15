@@ -64,7 +64,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
         return this.taskFlowList;
     }
 
-    public static class ListTaskFlowResponseBodyTaskFlowListDAGInstance extends TeaModel {
+    public static class ListTaskFlowResponseBodyTaskFlowListTaskFlow extends TeaModel {
         @NameInMap("CreatorId")
         public String creatorId;
 
@@ -89,12 +89,12 @@ public class ListTaskFlowResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
-        public static ListTaskFlowResponseBodyTaskFlowListDAGInstance build(java.util.Map<String, ?> map) throws Exception {
-            ListTaskFlowResponseBodyTaskFlowListDAGInstance self = new ListTaskFlowResponseBodyTaskFlowListDAGInstance();
+        public static ListTaskFlowResponseBodyTaskFlowListTaskFlow build(java.util.Map<String, ?> map) throws Exception {
+            ListTaskFlowResponseBodyTaskFlowListTaskFlow self = new ListTaskFlowResponseBodyTaskFlowListTaskFlow();
             return TeaModel.build(map, self);
         }
 
-        public ListTaskFlowResponseBodyTaskFlowListDAGInstance setCreatorId(String creatorId) {
+        public ListTaskFlowResponseBodyTaskFlowListTaskFlow setCreatorId(String creatorId) {
             this.creatorId = creatorId;
             return this;
         }
@@ -102,7 +102,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
             return this.creatorId;
         }
 
-        public ListTaskFlowResponseBodyTaskFlowListDAGInstance setCreatorNickName(String creatorNickName) {
+        public ListTaskFlowResponseBodyTaskFlowListTaskFlow setCreatorNickName(String creatorNickName) {
             this.creatorNickName = creatorNickName;
             return this;
         }
@@ -110,7 +110,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
             return this.creatorNickName;
         }
 
-        public ListTaskFlowResponseBodyTaskFlowListDAGInstance setDagOwnerNickName(String dagOwnerNickName) {
+        public ListTaskFlowResponseBodyTaskFlowListTaskFlow setDagOwnerNickName(String dagOwnerNickName) {
             this.dagOwnerNickName = dagOwnerNickName;
             return this;
         }
@@ -118,7 +118,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
             return this.dagOwnerNickName;
         }
 
-        public ListTaskFlowResponseBodyTaskFlowListDAGInstance setDeployId(Long deployId) {
+        public ListTaskFlowResponseBodyTaskFlowListTaskFlow setDeployId(Long deployId) {
             this.deployId = deployId;
             return this;
         }
@@ -126,7 +126,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
             return this.deployId;
         }
 
-        public ListTaskFlowResponseBodyTaskFlowListDAGInstance setId(Long id) {
+        public ListTaskFlowResponseBodyTaskFlowListTaskFlow setId(Long id) {
             this.id = id;
             return this;
         }
@@ -134,7 +134,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ListTaskFlowResponseBodyTaskFlowListDAGInstance setLatestInstanceStatus(Integer latestInstanceStatus) {
+        public ListTaskFlowResponseBodyTaskFlowListTaskFlow setLatestInstanceStatus(Integer latestInstanceStatus) {
             this.latestInstanceStatus = latestInstanceStatus;
             return this;
         }
@@ -142,7 +142,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
             return this.latestInstanceStatus;
         }
 
-        public ListTaskFlowResponseBodyTaskFlowListDAGInstance setLatestInstanceTime(String latestInstanceTime) {
+        public ListTaskFlowResponseBodyTaskFlowListTaskFlow setLatestInstanceTime(String latestInstanceTime) {
             this.latestInstanceTime = latestInstanceTime;
             return this;
         }
@@ -150,7 +150,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
             return this.latestInstanceTime;
         }
 
-        public ListTaskFlowResponseBodyTaskFlowListDAGInstance setStatus(Integer status) {
+        public ListTaskFlowResponseBodyTaskFlowListTaskFlow setStatus(Integer status) {
             this.status = status;
             return this;
         }
@@ -161,20 +161,20 @@ public class ListTaskFlowResponseBody extends TeaModel {
     }
 
     public static class ListTaskFlowResponseBodyTaskFlowList extends TeaModel {
-        @NameInMap("DAGInstance")
-        public java.util.List<ListTaskFlowResponseBodyTaskFlowListDAGInstance> DAGInstance;
+        @NameInMap("TaskFlow")
+        public java.util.List<ListTaskFlowResponseBodyTaskFlowListTaskFlow> taskFlow;
 
         public static ListTaskFlowResponseBodyTaskFlowList build(java.util.Map<String, ?> map) throws Exception {
             ListTaskFlowResponseBodyTaskFlowList self = new ListTaskFlowResponseBodyTaskFlowList();
             return TeaModel.build(map, self);
         }
 
-        public ListTaskFlowResponseBodyTaskFlowList setDAGInstance(java.util.List<ListTaskFlowResponseBodyTaskFlowListDAGInstance> DAGInstance) {
-            this.DAGInstance = DAGInstance;
+        public ListTaskFlowResponseBodyTaskFlowList setTaskFlow(java.util.List<ListTaskFlowResponseBodyTaskFlowListTaskFlow> taskFlow) {
+            this.taskFlow = taskFlow;
             return this;
         }
-        public java.util.List<ListTaskFlowResponseBodyTaskFlowListDAGInstance> getDAGInstance() {
-            return this.DAGInstance;
+        public java.util.List<ListTaskFlowResponseBodyTaskFlowListTaskFlow> getTaskFlow() {
+            return this.taskFlow;
         }
 
     }
