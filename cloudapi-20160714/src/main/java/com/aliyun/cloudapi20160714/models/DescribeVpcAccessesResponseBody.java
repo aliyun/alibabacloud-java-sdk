@@ -97,6 +97,9 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
+        @NameInMap("VpcTargetHostName")
+        public String vpcTargetHostName;
+
         public static DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute self = new DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute();
             return TeaModel.build(map, self);
@@ -164,6 +167,14 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute setVpcTargetHostName(String vpcTargetHostName) {
+            this.vpcTargetHostName = vpcTargetHostName;
+            return this;
+        }
+        public String getVpcTargetHostName() {
+            return this.vpcTargetHostName;
         }
 
     }
