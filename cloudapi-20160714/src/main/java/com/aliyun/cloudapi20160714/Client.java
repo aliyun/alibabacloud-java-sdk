@@ -6149,6 +6149,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VpcId", request.vpcId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcTargetHostName)) {
+            query.put("VpcTargetHostName", request.vpcTargetHostName);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));

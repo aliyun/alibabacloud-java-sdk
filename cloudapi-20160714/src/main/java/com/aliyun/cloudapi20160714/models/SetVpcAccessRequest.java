@@ -22,6 +22,9 @@ public class SetVpcAccessRequest extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
+    @NameInMap("VpcTargetHostName")
+    public String vpcTargetHostName;
+
     public static SetVpcAccessRequest build(java.util.Map<String, ?> map) throws Exception {
         SetVpcAccessRequest self = new SetVpcAccessRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class SetVpcAccessRequest extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public SetVpcAccessRequest setVpcTargetHostName(String vpcTargetHostName) {
+        this.vpcTargetHostName = vpcTargetHostName;
+        return this;
+    }
+    public String getVpcTargetHostName() {
+        return this.vpcTargetHostName;
     }
 
 }
