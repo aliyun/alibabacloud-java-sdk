@@ -33,29 +33,29 @@ public class DescribeEventDetailResponseBody extends TeaModel {
 
     public static class DescribeEventDetailResponseBodyEventDetailChartData extends TeaModel {
         @NameInMap("X")
-        public String x;
+        public java.util.List<String> x;
 
         @NameInMap("Y")
-        public String y;
+        public java.util.List<String> y;
 
         public static DescribeEventDetailResponseBodyEventDetailChartData build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventDetailResponseBodyEventDetailChartData self = new DescribeEventDetailResponseBodyEventDetailChartData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeEventDetailResponseBodyEventDetailChartData setX(String x) {
+        public DescribeEventDetailResponseBodyEventDetailChartData setX(java.util.List<String> x) {
             this.x = x;
             return this;
         }
-        public String getX() {
+        public java.util.List<String> getX() {
             return this.x;
         }
 
-        public DescribeEventDetailResponseBodyEventDetailChartData setY(String y) {
+        public DescribeEventDetailResponseBodyEventDetailChartData setY(java.util.List<String> y) {
             this.y = y;
             return this;
         }
-        public String getY() {
+        public java.util.List<String> getY() {
             return this.y;
         }
 

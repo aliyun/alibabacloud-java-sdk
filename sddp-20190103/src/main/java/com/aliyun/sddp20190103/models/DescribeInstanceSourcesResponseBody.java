@@ -74,6 +74,12 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         @NameInMap("CanModifyUserName")
         public Boolean canModifyUserName;
 
+        @NameInMap("CheckStatus")
+        public Integer checkStatus;
+
+        @NameInMap("DatamaskStatus")
+        public Integer datamaskStatus;
+
         @NameInMap("DbName")
         public String dbName;
 
@@ -82,6 +88,9 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
 
         @NameInMap("EngineType")
         public String engineType;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
 
         @NameInMap("GmtCreate")
         public Long gmtCreate;
@@ -118,6 +127,9 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
 
         @NameInMap("RegionName")
         public String regionName;
+
+        @NameInMap("SamplingSize")
+        public Integer samplingSize;
 
         @NameInMap("TenantId")
         public String tenantId;
@@ -157,6 +169,22 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             return this.canModifyUserName;
         }
 
+        public DescribeInstanceSourcesResponseBodyItems setCheckStatus(Integer checkStatus) {
+            this.checkStatus = checkStatus;
+            return this;
+        }
+        public Integer getCheckStatus() {
+            return this.checkStatus;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setDatamaskStatus(Integer datamaskStatus) {
+            this.datamaskStatus = datamaskStatus;
+            return this;
+        }
+        public Integer getDatamaskStatus() {
+            return this.datamaskStatus;
+        }
+
         public DescribeInstanceSourcesResponseBodyItems setDbName(String dbName) {
             this.dbName = dbName;
             return this;
@@ -179,6 +207,14 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         }
         public String getEngineType() {
             return this.engineType;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public DescribeInstanceSourcesResponseBodyItems setGmtCreate(Long gmtCreate) {
@@ -275,6 +311,14 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         }
         public String getRegionName() {
             return this.regionName;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setSamplingSize(Integer samplingSize) {
+            this.samplingSize = samplingSize;
+            return this;
+        }
+        public Integer getSamplingSize() {
+            return this.samplingSize;
         }
 
         public DescribeInstanceSourcesResponseBodyItems setTenantId(String tenantId) {
