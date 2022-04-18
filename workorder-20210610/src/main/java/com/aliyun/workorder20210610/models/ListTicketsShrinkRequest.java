@@ -3,7 +3,7 @@ package com.aliyun.workorder20210610.models;
 
 import com.aliyun.tea.*;
 
-public class ListTicketsRequest extends TeaModel {
+public class ListTicketsShrinkRequest extends TeaModel {
     @NameInMap("EndDate")
     public Long endDate;
 
@@ -26,14 +26,14 @@ public class ListTicketsRequest extends TeaModel {
     public String ticketId;
 
     @NameInMap("TicketIdList")
-    public java.util.List<String> ticketIdList;
+    public String ticketIdListShrink;
 
-    public static ListTicketsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListTicketsRequest self = new ListTicketsRequest();
+    public static ListTicketsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListTicketsShrinkRequest self = new ListTicketsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListTicketsRequest setEndDate(Long endDate) {
+    public ListTicketsShrinkRequest setEndDate(Long endDate) {
         this.endDate = endDate;
         return this;
     }
@@ -41,7 +41,7 @@ public class ListTicketsRequest extends TeaModel {
         return this.endDate;
     }
 
-    public ListTicketsRequest setKeyword(String keyword) {
+    public ListTicketsShrinkRequest setKeyword(String keyword) {
         this.keyword = keyword;
         return this;
     }
@@ -49,7 +49,7 @@ public class ListTicketsRequest extends TeaModel {
         return this.keyword;
     }
 
-    public ListTicketsRequest setPageNumber(Integer pageNumber) {
+    public ListTicketsShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -57,7 +57,7 @@ public class ListTicketsRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListTicketsRequest setPageSize(Integer pageSize) {
+    public ListTicketsShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -65,7 +65,7 @@ public class ListTicketsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListTicketsRequest setStartDate(Long startDate) {
+    public ListTicketsShrinkRequest setStartDate(Long startDate) {
         this.startDate = startDate;
         return this;
     }
@@ -73,7 +73,7 @@ public class ListTicketsRequest extends TeaModel {
         return this.startDate;
     }
 
-    public ListTicketsRequest setStatusList(java.util.List<String> statusList) {
+    public ListTicketsShrinkRequest setStatusList(java.util.List<String> statusList) {
         this.statusList = statusList;
         return this;
     }
@@ -81,7 +81,7 @@ public class ListTicketsRequest extends TeaModel {
         return this.statusList;
     }
 
-    public ListTicketsRequest setTicketId(String ticketId) {
+    public ListTicketsShrinkRequest setTicketId(String ticketId) {
         this.ticketId = ticketId;
         return this;
     }
@@ -89,12 +89,12 @@ public class ListTicketsRequest extends TeaModel {
         return this.ticketId;
     }
 
-    public ListTicketsRequest setTicketIdList(java.util.List<String> ticketIdList) {
-        this.ticketIdList = ticketIdList;
+    public ListTicketsShrinkRequest setTicketIdListShrink(String ticketIdListShrink) {
+        this.ticketIdListShrink = ticketIdListShrink;
         return this;
     }
-    public java.util.List<String> getTicketIdList() {
-        return this.ticketIdList;
+    public String getTicketIdListShrink() {
+        return this.ticketIdListShrink;
     }
 
 }

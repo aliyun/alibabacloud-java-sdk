@@ -4,6 +4,9 @@ package com.aliyun.workorder20210610.models;
 import com.aliyun.tea.*;
 
 public class ListCategoriesRequest extends TeaModel {
+    @NameInMap("Language")
+    public String language;
+
     @NameInMap("Name")
     public String name;
 
@@ -13,6 +16,14 @@ public class ListCategoriesRequest extends TeaModel {
     public static ListCategoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCategoriesRequest self = new ListCategoriesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListCategoriesRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public ListCategoriesRequest setName(String name) {

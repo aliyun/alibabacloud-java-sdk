@@ -1,3 +1,6 @@
+2022-04-18 Version: 1.1.0
+- Add interface.
+
 2021-12-30 Version: 1.0.0
 - AddevaluateTicket interface.
 
