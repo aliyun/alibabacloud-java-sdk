@@ -3,7 +3,7 @@ package com.aliyun.workorder20210610.models;
 
 import com.aliyun.tea.*;
 
-public class ReplyTicketRequest extends TeaModel {
+public class ReplyTicketShrinkRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
@@ -11,17 +11,17 @@ public class ReplyTicketRequest extends TeaModel {
     public Boolean encrypt;
 
     @NameInMap("FileNameList")
-    public java.util.List<String> fileNameList;
+    public String fileNameListShrink;
 
     @NameInMap("TicketId")
     public String ticketId;
 
-    public static ReplyTicketRequest build(java.util.Map<String, ?> map) throws Exception {
-        ReplyTicketRequest self = new ReplyTicketRequest();
+    public static ReplyTicketShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ReplyTicketShrinkRequest self = new ReplyTicketShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ReplyTicketRequest setContent(String content) {
+    public ReplyTicketShrinkRequest setContent(String content) {
         this.content = content;
         return this;
     }
@@ -29,7 +29,7 @@ public class ReplyTicketRequest extends TeaModel {
         return this.content;
     }
 
-    public ReplyTicketRequest setEncrypt(Boolean encrypt) {
+    public ReplyTicketShrinkRequest setEncrypt(Boolean encrypt) {
         this.encrypt = encrypt;
         return this;
     }
@@ -37,15 +37,15 @@ public class ReplyTicketRequest extends TeaModel {
         return this.encrypt;
     }
 
-    public ReplyTicketRequest setFileNameList(java.util.List<String> fileNameList) {
-        this.fileNameList = fileNameList;
+    public ReplyTicketShrinkRequest setFileNameListShrink(String fileNameListShrink) {
+        this.fileNameListShrink = fileNameListShrink;
         return this;
     }
-    public java.util.List<String> getFileNameList() {
-        return this.fileNameList;
+    public String getFileNameListShrink() {
+        return this.fileNameListShrink;
     }
 
-    public ReplyTicketRequest setTicketId(String ticketId) {
+    public ReplyTicketShrinkRequest setTicketId(String ticketId) {
         this.ticketId = ticketId;
         return this;
     }

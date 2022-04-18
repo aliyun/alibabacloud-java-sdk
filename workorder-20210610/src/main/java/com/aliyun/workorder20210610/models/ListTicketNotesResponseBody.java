@@ -64,6 +64,36 @@ public class ListTicketNotesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListTicketNotesResponseBodyDataAttachments extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Url")
+        public String url;
+
+        public static ListTicketNotesResponseBodyDataAttachments build(java.util.Map<String, ?> map) throws Exception {
+            ListTicketNotesResponseBodyDataAttachments self = new ListTicketNotesResponseBodyDataAttachments();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTicketNotesResponseBodyDataAttachments setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListTicketNotesResponseBodyDataAttachments setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
     public static class ListTicketNotesResponseBodyDataDialog extends TeaModel {
         @NameInMap("Content")
         public String content;
@@ -125,6 +155,9 @@ public class ListTicketNotesResponseBody extends TeaModel {
     }
 
     public static class ListTicketNotesResponseBodyData extends TeaModel {
+        @NameInMap("Attachments")
+        public java.util.List<ListTicketNotesResponseBodyDataAttachments> attachments;
+
         @NameInMap("CreateTime")
         public Long createTime;
 
@@ -149,6 +182,14 @@ public class ListTicketNotesResponseBody extends TeaModel {
         public static ListTicketNotesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListTicketNotesResponseBodyData self = new ListTicketNotesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListTicketNotesResponseBodyData setAttachments(java.util.List<ListTicketNotesResponseBodyDataAttachments> attachments) {
+            this.attachments = attachments;
+            return this;
+        }
+        public java.util.List<ListTicketNotesResponseBodyDataAttachments> getAttachments() {
+            return this.attachments;
         }
 
         public ListTicketNotesResponseBodyData setCreateTime(Long createTime) {
