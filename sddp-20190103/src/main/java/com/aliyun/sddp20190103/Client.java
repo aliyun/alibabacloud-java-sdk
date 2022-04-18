@@ -1037,6 +1037,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeInstanceSourcesResponse describeInstanceSourcesWithOptions(DescribeInstanceSourcesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.auditStatus)) {
+            query.put("AuditStatus", request.auditStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authStatus)) {
+            query.put("AuthStatus", request.authStatus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
         }
@@ -1057,8 +1065,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
             query.put("ProductId", request.productId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
+            query.put("SearchKey", request.searchKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchType)) {
+            query.put("SearchType", request.searchType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceRegionId)) {
