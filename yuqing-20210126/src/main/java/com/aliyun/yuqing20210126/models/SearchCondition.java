@@ -16,6 +16,14 @@ public class SearchCondition extends TeaModel {
     @NameInMap("assKeywordsIdx")
     public String assKeywordsIdx;
 
+    // 音频数量上限
+    @NameInMap("audioCountMaxFilter")
+    public Long audioCountMaxFilter;
+
+    // 音频数量下限
+    @NameInMap("audioCountMinFilter")
+    public Long audioCountMinFilter;
+
     // 粉丝数上限
     @NameInMap("authorFollowersCountMaxFilter")
     public Long authorFollowersCountMaxFilter;
@@ -96,7 +104,7 @@ public class SearchCondition extends TeaModel {
     @NameInMap("docUpdateTimeStartFilter")
     public Long docUpdateTimeStartFilter;
 
-    // 返回的数据是否去重，默认true
+    // 返回的数据是否去重
     @NameInMap("duplicateRemoval")
     public Boolean duplicateRemoval;
 
@@ -128,9 +136,17 @@ public class SearchCondition extends TeaModel {
     @NameInMap("excludingMediaHostsFilter")
     public String excludingMediaHostsFilter;
 
+    // 排除媒体名称
+    @NameInMap("excludingMediaNameFilter")
+    public String excludingMediaNameFilter;
+
     // 排除指定媒体库ids，媒体库在舆情平台上定义
     @NameInMap("excludingMediaPoolIdsFilter")
     public String excludingMediaPoolIdsFilter;
+
+    // 排除媒体消息类型
+    @NameInMap("excludingMessageTypeFilter")
+    public String excludingMessageTypeFilter;
 
     // 舆情筛选模板Id
     @NameInMap("filterId")
@@ -163,6 +179,22 @@ public class SearchCondition extends TeaModel {
     // 违规广告取值true or false
     @NameInMap("illegalAdvertisementFilter")
     public Boolean illegalAdvertisementFilter;
+
+    // 图片数上限
+    @NameInMap("imageCountMaxFilter")
+    public Long imageCountMaxFilter;
+
+    // 图片数下限
+    @NameInMap("imageCountMinFilter")
+    public Long imageCountMinFilter;
+
+    // 排除关键词标签
+    @NameInMap("keywordTreeIdsExcludeIdx")
+    public String keywordTreeIdsExcludeIdx;
+
+    // 关键词标签
+    @NameInMap("keywordTreeIdsIdx")
+    public String keywordTreeIdsIdx;
 
     // 点赞数上限
     @NameInMap("likesCountMaxFilter")
@@ -268,7 +300,7 @@ public class SearchCondition extends TeaModel {
     @NameInMap("sortBy")
     public String sortBy;
 
-    // 如'+'是升序，'-'是降序
+    // 如+是升序，-是降序
     @NameInMap("sortByDirection")
     public String sortByDirection;
 
@@ -295,6 +327,14 @@ public class SearchCondition extends TeaModel {
     // 指定索引模式,KEYWORD|CREATE_TIME
     @NameInMap("usedIndexModeSwitch")
     public String usedIndexModeSwitch;
+
+    // 视频数量上限
+    @NameInMap("videoCountMaxFilter")
+    public Long videoCountMaxFilter;
+
+    // 视频数量下限
+    @NameInMap("videoCountMinFilter")
+    public Long videoCountMinFilter;
 
     public static SearchCondition build(java.util.Map<String, ?> map) throws Exception {
         SearchCondition self = new SearchCondition();
@@ -323,6 +363,22 @@ public class SearchCondition extends TeaModel {
     }
     public String getAssKeywordsIdx() {
         return this.assKeywordsIdx;
+    }
+
+    public SearchCondition setAudioCountMaxFilter(Long audioCountMaxFilter) {
+        this.audioCountMaxFilter = audioCountMaxFilter;
+        return this;
+    }
+    public Long getAudioCountMaxFilter() {
+        return this.audioCountMaxFilter;
+    }
+
+    public SearchCondition setAudioCountMinFilter(Long audioCountMinFilter) {
+        this.audioCountMinFilter = audioCountMinFilter;
+        return this;
+    }
+    public Long getAudioCountMinFilter() {
+        return this.audioCountMinFilter;
     }
 
     public SearchCondition setAuthorFollowersCountMaxFilter(Long authorFollowersCountMaxFilter) {
@@ -549,12 +605,28 @@ public class SearchCondition extends TeaModel {
         return this.excludingMediaHostsFilter;
     }
 
+    public SearchCondition setExcludingMediaNameFilter(String excludingMediaNameFilter) {
+        this.excludingMediaNameFilter = excludingMediaNameFilter;
+        return this;
+    }
+    public String getExcludingMediaNameFilter() {
+        return this.excludingMediaNameFilter;
+    }
+
     public SearchCondition setExcludingMediaPoolIdsFilter(String excludingMediaPoolIdsFilter) {
         this.excludingMediaPoolIdsFilter = excludingMediaPoolIdsFilter;
         return this;
     }
     public String getExcludingMediaPoolIdsFilter() {
         return this.excludingMediaPoolIdsFilter;
+    }
+
+    public SearchCondition setExcludingMessageTypeFilter(String excludingMessageTypeFilter) {
+        this.excludingMessageTypeFilter = excludingMessageTypeFilter;
+        return this;
+    }
+    public String getExcludingMessageTypeFilter() {
+        return this.excludingMessageTypeFilter;
     }
 
     public SearchCondition setFilterId(Long filterId) {
@@ -619,6 +691,38 @@ public class SearchCondition extends TeaModel {
     }
     public Boolean getIllegalAdvertisementFilter() {
         return this.illegalAdvertisementFilter;
+    }
+
+    public SearchCondition setImageCountMaxFilter(Long imageCountMaxFilter) {
+        this.imageCountMaxFilter = imageCountMaxFilter;
+        return this;
+    }
+    public Long getImageCountMaxFilter() {
+        return this.imageCountMaxFilter;
+    }
+
+    public SearchCondition setImageCountMinFilter(Long imageCountMinFilter) {
+        this.imageCountMinFilter = imageCountMinFilter;
+        return this;
+    }
+    public Long getImageCountMinFilter() {
+        return this.imageCountMinFilter;
+    }
+
+    public SearchCondition setKeywordTreeIdsExcludeIdx(String keywordTreeIdsExcludeIdx) {
+        this.keywordTreeIdsExcludeIdx = keywordTreeIdsExcludeIdx;
+        return this;
+    }
+    public String getKeywordTreeIdsExcludeIdx() {
+        return this.keywordTreeIdsExcludeIdx;
+    }
+
+    public SearchCondition setKeywordTreeIdsIdx(String keywordTreeIdsIdx) {
+        this.keywordTreeIdsIdx = keywordTreeIdsIdx;
+        return this;
+    }
+    public String getKeywordTreeIdsIdx() {
+        return this.keywordTreeIdsIdx;
     }
 
     public SearchCondition setLikesCountMaxFilter(Long likesCountMaxFilter) {
@@ -883,6 +987,22 @@ public class SearchCondition extends TeaModel {
     }
     public String getUsedIndexModeSwitch() {
         return this.usedIndexModeSwitch;
+    }
+
+    public SearchCondition setVideoCountMaxFilter(Long videoCountMaxFilter) {
+        this.videoCountMaxFilter = videoCountMaxFilter;
+        return this;
+    }
+    public Long getVideoCountMaxFilter() {
+        return this.videoCountMaxFilter;
+    }
+
+    public SearchCondition setVideoCountMinFilter(Long videoCountMinFilter) {
+        this.videoCountMinFilter = videoCountMinFilter;
+        return this;
+    }
+    public Long getVideoCountMinFilter() {
+        return this.videoCountMinFilter;
     }
 
 }
