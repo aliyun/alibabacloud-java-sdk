@@ -905,6 +905,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.bindUserWithOptions(request, runtime);
     }
 
+    public CheckAIInstanceNameResponse checkAIInstanceNameWithOptions(CheckAIInstanceNameRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            body.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            body.put("InstanceType", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckAIInstanceName"),
+            new TeaPair("version", "2020-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckAIInstanceNameResponse());
+    }
+
+    public CheckAIInstanceNameResponse checkAIInstanceName(CheckAIInstanceNameRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.checkAIInstanceNameWithOptions(request, runtime);
+    }
+
     public CheckSLRResponse checkSLRWithOptions(CheckSLRRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1036,6 +1073,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateAIInstanceShrinkRequest request = new CreateAIInstanceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataSourceTimes)) {
+            request.dataSourceTimesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataSourceTimes, "DataSourceTimes", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleCycleDates)) {
             request.scheduleCycleDatesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleCycleDates, "ScheduleCycleDates", "json");
         }
@@ -1061,12 +1102,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DataSource", request.dataSource);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceTimesShrink)) {
+            body.put("DataSourceTimes", request.dataSourceTimesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dataType)) {
             body.put("DataType", request.dataType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             body.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            body.put("InstanceType", request.instanceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
@@ -3032,6 +3081,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             body.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            body.put("InstanceType", request.instanceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {

@@ -85,7 +85,7 @@ public class ListCorpsResponseBody extends TeaModel {
         public String parentCorpId;
 
         @NameInMap("YOfflineAcuUsed")
-        public Integer YOfflineAcuUsed;
+        public Double YOfflineAcuUsed;
 
         public static ListCorpsResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             ListCorpsResponseBodyDataRecords self = new ListCorpsResponseBodyDataRecords();
@@ -172,11 +172,11 @@ public class ListCorpsResponseBody extends TeaModel {
             return this.parentCorpId;
         }
 
-        public ListCorpsResponseBodyDataRecords setYOfflineAcuUsed(Integer YOfflineAcuUsed) {
+        public ListCorpsResponseBodyDataRecords setYOfflineAcuUsed(Double YOfflineAcuUsed) {
             this.YOfflineAcuUsed = YOfflineAcuUsed;
             return this;
         }
-        public Integer getYOfflineAcuUsed() {
+        public Double getYOfflineAcuUsed() {
             return this.YOfflineAcuUsed;
         }
 

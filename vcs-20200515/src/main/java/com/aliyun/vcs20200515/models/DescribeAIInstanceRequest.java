@@ -12,6 +12,10 @@ public class DescribeAIInstanceRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    // 实例类型
+    @NameInMap("InstanceType")
+    public String instanceType;
+
     // 当前页序号
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -43,6 +47,14 @@ public class DescribeAIInstanceRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public DescribeAIInstanceRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public DescribeAIInstanceRequest setPageNumber(Long pageNumber) {

@@ -20,6 +20,10 @@ public class CreateAIInstanceRequest extends TeaModel {
     @NameInMap("DataSource")
     public String dataSource;
 
+    // 数据源时间段
+    @NameInMap("DataSourceTimes")
+    public java.util.List<CreateAIInstanceRequestDataSourceTimes> dataSourceTimes;
+
     // 数据类型
     @NameInMap("DataType")
     public String dataType;
@@ -27,6 +31,10 @@ public class CreateAIInstanceRequest extends TeaModel {
     // 实例名称
     @NameInMap("InstanceName")
     public String instanceName;
+
+    // 实例类型
+    @NameInMap("InstanceType")
+    public String instanceType;
 
     // 所属项目Id
     @NameInMap("ProjectId")
@@ -85,6 +93,14 @@ public class CreateAIInstanceRequest extends TeaModel {
         return this.dataSource;
     }
 
+    public CreateAIInstanceRequest setDataSourceTimes(java.util.List<CreateAIInstanceRequestDataSourceTimes> dataSourceTimes) {
+        this.dataSourceTimes = dataSourceTimes;
+        return this;
+    }
+    public java.util.List<CreateAIInstanceRequestDataSourceTimes> getDataSourceTimes() {
+        return this.dataSourceTimes;
+    }
+
     public CreateAIInstanceRequest setDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -99,6 +115,14 @@ public class CreateAIInstanceRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public CreateAIInstanceRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public CreateAIInstanceRequest setProjectId(String projectId) {
@@ -139,6 +163,38 @@ public class CreateAIInstanceRequest extends TeaModel {
     }
     public Long getSpf() {
         return this.spf;
+    }
+
+    public static class CreateAIInstanceRequestDataSourceTimes extends TeaModel {
+        // 视频结束时间
+        @NameInMap("EndTime")
+        public String endTime;
+
+        // 视频开始时间
+        @NameInMap("StartTime")
+        public String startTime;
+
+        public static CreateAIInstanceRequestDataSourceTimes build(java.util.Map<String, ?> map) throws Exception {
+            CreateAIInstanceRequestDataSourceTimes self = new CreateAIInstanceRequestDataSourceTimes();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAIInstanceRequestDataSourceTimes setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public CreateAIInstanceRequestDataSourceTimes setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
     }
 
     public static class CreateAIInstanceRequestScheduleTimes extends TeaModel {

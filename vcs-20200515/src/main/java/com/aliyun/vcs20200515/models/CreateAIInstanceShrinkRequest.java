@@ -20,6 +20,10 @@ public class CreateAIInstanceShrinkRequest extends TeaModel {
     @NameInMap("DataSource")
     public String dataSource;
 
+    // 数据源时间段
+    @NameInMap("DataSourceTimes")
+    public String dataSourceTimesShrink;
+
     // 数据类型
     @NameInMap("DataType")
     public String dataType;
@@ -27,6 +31,10 @@ public class CreateAIInstanceShrinkRequest extends TeaModel {
     // 实例名称
     @NameInMap("InstanceName")
     public String instanceName;
+
+    // 实例类型
+    @NameInMap("InstanceType")
+    public String instanceType;
 
     // 所属项目Id
     @NameInMap("ProjectId")
@@ -85,6 +93,14 @@ public class CreateAIInstanceShrinkRequest extends TeaModel {
         return this.dataSource;
     }
 
+    public CreateAIInstanceShrinkRequest setDataSourceTimesShrink(String dataSourceTimesShrink) {
+        this.dataSourceTimesShrink = dataSourceTimesShrink;
+        return this;
+    }
+    public String getDataSourceTimesShrink() {
+        return this.dataSourceTimesShrink;
+    }
+
     public CreateAIInstanceShrinkRequest setDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -99,6 +115,14 @@ public class CreateAIInstanceShrinkRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public CreateAIInstanceShrinkRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public CreateAIInstanceShrinkRequest setProjectId(String projectId) {
