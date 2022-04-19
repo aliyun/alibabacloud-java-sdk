@@ -90,6 +90,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        @NameInMap("CoreVersion")
+        public String coreVersion;
+
         @NameInMap("CpuCores")
         public Integer cpuCores;
 
@@ -264,6 +267,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getConnectionString() {
             return this.connectionString;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setCoreVersion(String coreVersion) {
+            this.coreVersion = coreVersion;
+            return this;
+        }
+        public String getCoreVersion() {
+            return this.coreVersion;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setCpuCores(Integer cpuCores) {
