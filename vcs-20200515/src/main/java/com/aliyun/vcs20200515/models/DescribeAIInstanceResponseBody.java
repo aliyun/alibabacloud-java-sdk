@@ -86,6 +86,10 @@ public class DescribeAIInstanceResponseBody extends TeaModel {
         @NameInMap("DataSource")
         public String dataSource;
 
+        // 数据源时间段
+        @NameInMap("DataSourceTimes")
+        public String dataSourceTimes;
+
         // 数据类型
         @NameInMap("DataType")
         public String dataType;
@@ -97,6 +101,9 @@ public class DescribeAIInstanceResponseBody extends TeaModel {
         // 实例名称
         @NameInMap("InstanceName")
         public String instanceName;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
 
         // 含义随ScheduleType取值不同
         @NameInMap("ScheduleCycleDates")
@@ -183,6 +190,14 @@ public class DescribeAIInstanceResponseBody extends TeaModel {
             return this.dataSource;
         }
 
+        public DescribeAIInstanceResponseBodyDataRecords setDataSourceTimes(String dataSourceTimes) {
+            this.dataSourceTimes = dataSourceTimes;
+            return this;
+        }
+        public String getDataSourceTimes() {
+            return this.dataSourceTimes;
+        }
+
         public DescribeAIInstanceResponseBodyDataRecords setDataType(String dataType) {
             this.dataType = dataType;
             return this;
@@ -205,6 +220,14 @@ public class DescribeAIInstanceResponseBody extends TeaModel {
         }
         public String getInstanceName() {
             return this.instanceName;
+        }
+
+        public DescribeAIInstanceResponseBodyDataRecords setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         public DescribeAIInstanceResponseBodyDataRecords setScheduleCycleDates(String scheduleCycleDates) {

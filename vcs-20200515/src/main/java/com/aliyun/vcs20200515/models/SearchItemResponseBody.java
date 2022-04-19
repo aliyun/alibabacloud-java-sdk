@@ -66,15 +66,29 @@ public class SearchItemResponseBody extends TeaModel {
     }
 
     public static class SearchItemResponseBodyDataRecords extends TeaModel {
+        @NameInMap("ItemId")
+        public String itemId;
+
         @NameInMap("ItemImageSimilarity")
         public Double itemImageSimilarity;
 
         @NameInMap("ItemImageUrl")
         public String itemImageUrl;
 
+        @NameInMap("ItemName")
+        public String itemName;
+
         public static SearchItemResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             SearchItemResponseBodyDataRecords self = new SearchItemResponseBodyDataRecords();
             return TeaModel.build(map, self);
+        }
+
+        public SearchItemResponseBodyDataRecords setItemId(String itemId) {
+            this.itemId = itemId;
+            return this;
+        }
+        public String getItemId() {
+            return this.itemId;
         }
 
         public SearchItemResponseBodyDataRecords setItemImageSimilarity(Double itemImageSimilarity) {
@@ -91,6 +105,14 @@ public class SearchItemResponseBody extends TeaModel {
         }
         public String getItemImageUrl() {
             return this.itemImageUrl;
+        }
+
+        public SearchItemResponseBodyDataRecords setItemName(String itemName) {
+            this.itemName = itemName;
+            return this;
+        }
+        public String getItemName() {
+            return this.itemName;
         }
 
     }
