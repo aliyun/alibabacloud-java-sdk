@@ -394,6 +394,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createCoreWordWithOptions(request, runtime);
     }
 
+    public CreateDSEntityResponse createDSEntityWithOptions(CreateDSEntityRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.entityName)) {
+            query.put("EntityName", request.entityName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
+            query.put("EntityType", request.entityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDSEntity"),
+            new TeaPair("version", "2017-10-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDSEntityResponse());
+    }
+
+    public CreateDSEntityResponse createDSEntity(CreateDSEntityRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createDSEntityWithOptions(request, runtime);
+    }
+
     public CreateDialogResponse createDialogWithOptions(CreateDialogRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1887,6 +1924,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListConversationLogsResponse listConversationLogs(ListConversationLogsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listConversationLogsWithOptions(request, runtime);
+    }
+
+    public ListDSEntityResponse listDSEntityWithOptions(ListDSEntityRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDSEntity"),
+            new TeaPair("version", "2017-10-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDSEntityResponse());
+    }
+
+    public ListDSEntityResponse listDSEntity(ListDSEntityRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listDSEntityWithOptions(request, runtime);
     }
 
     public MoveKnowledgeCategoryResponse moveKnowledgeCategoryWithOptions(MoveKnowledgeCategoryRequest request, RuntimeOptions runtime) throws Exception {

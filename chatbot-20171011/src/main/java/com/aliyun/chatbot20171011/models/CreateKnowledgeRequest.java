@@ -36,6 +36,9 @@ public class CreateKnowledgeRequest extends TeaModel {
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
+        @NameInMap("OutlineId")
+        public Long outlineId;
+
         @NameInMap("Title")
         public String title;
 
@@ -50,6 +53,14 @@ public class CreateKnowledgeRequest extends TeaModel {
         }
         public Long getKnowledgeId() {
             return this.knowledgeId;
+        }
+
+        public CreateKnowledgeRequestKnowledgeOutlines setOutlineId(Long outlineId) {
+            this.outlineId = outlineId;
+            return this;
+        }
+        public Long getOutlineId() {
+            return this.outlineId;
         }
 
         public CreateKnowledgeRequestKnowledgeOutlines setTitle(String title) {
