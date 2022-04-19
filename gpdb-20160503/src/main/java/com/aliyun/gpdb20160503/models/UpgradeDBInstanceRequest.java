@@ -13,6 +13,9 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("InstanceSpec")
+    public String instanceSpec;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -21,6 +24,18 @@ public class UpgradeDBInstanceRequest extends TeaModel {
 
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("SegNodeNum")
+    public String segNodeNum;
+
+    @NameInMap("StorageSize")
+    public String storageSize;
+
+    @NameInMap("masterNodeNum")
+    public String masterNodeNum;
+
+    @NameInMap("upgradeType")
+    public Long upgradeType;
 
     public static UpgradeDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBInstanceRequest self = new UpgradeDBInstanceRequest();
@@ -51,6 +66,14 @@ public class UpgradeDBInstanceRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
+    public UpgradeDBInstanceRequest setInstanceSpec(String instanceSpec) {
+        this.instanceSpec = instanceSpec;
+        return this;
+    }
+    public String getInstanceSpec() {
+        return this.instanceSpec;
+    }
+
     public UpgradeDBInstanceRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -73,6 +96,38 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UpgradeDBInstanceRequest setSegNodeNum(String segNodeNum) {
+        this.segNodeNum = segNodeNum;
+        return this;
+    }
+    public String getSegNodeNum() {
+        return this.segNodeNum;
+    }
+
+    public UpgradeDBInstanceRequest setStorageSize(String storageSize) {
+        this.storageSize = storageSize;
+        return this;
+    }
+    public String getStorageSize() {
+        return this.storageSize;
+    }
+
+    public UpgradeDBInstanceRequest setMasterNodeNum(String masterNodeNum) {
+        this.masterNodeNum = masterNodeNum;
+        return this;
+    }
+    public String getMasterNodeNum() {
+        return this.masterNodeNum;
+    }
+
+    public UpgradeDBInstanceRequest setUpgradeType(Long upgradeType) {
+        this.upgradeType = upgradeType;
+        return this;
+    }
+    public Long getUpgradeType() {
+        return this.upgradeType;
     }
 
 }
