@@ -47,6 +47,10 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         @NameInMap("SupportedMisType")
         public java.util.List<String> supportedMisType;
 
+        // 资产uuid
+        @NameInMap("Uuid")
+        public String uuid;
+
         public static DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField self = new DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField();
             return TeaModel.build(map, self);
@@ -90,6 +94,14 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         }
         public java.util.List<String> getSupportedMisType() {
             return this.supportedMisType;
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
         }
 
     }
