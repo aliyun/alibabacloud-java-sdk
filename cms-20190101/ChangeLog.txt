@@ -1,3 +1,6 @@
+2022-04-19 Version: 7.0.42
+- Add alert label.
+
 2022-04-19 Version: 7.0.40
 - Add multi indicator monitoring.
 
