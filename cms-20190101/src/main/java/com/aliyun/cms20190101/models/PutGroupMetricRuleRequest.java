@@ -31,6 +31,9 @@ public class PutGroupMetricRuleRequest extends TeaModel {
     @NameInMap("Interval")
     public String interval;
 
+    @NameInMap("Labels")
+    public java.util.List<PutGroupMetricRuleRequestLabels> labels;
+
     @NameInMap("MetricName")
     public String metricName;
 
@@ -133,6 +136,14 @@ public class PutGroupMetricRuleRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
+    }
+
+    public PutGroupMetricRuleRequest setLabels(java.util.List<PutGroupMetricRuleRequestLabels> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.List<PutGroupMetricRuleRequestLabels> getLabels() {
+        return this.labels;
     }
 
     public PutGroupMetricRuleRequest setMetricName(String metricName) {
@@ -403,6 +414,36 @@ public class PutGroupMetricRuleRequest extends TeaModel {
         }
         public PutGroupMetricRuleRequestEscalationsWarn getWarn() {
             return this.warn;
+        }
+
+    }
+
+    public static class PutGroupMetricRuleRequestLabels extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static PutGroupMetricRuleRequestLabels build(java.util.Map<String, ?> map) throws Exception {
+            PutGroupMetricRuleRequestLabels self = new PutGroupMetricRuleRequestLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public PutGroupMetricRuleRequestLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public PutGroupMetricRuleRequestLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
