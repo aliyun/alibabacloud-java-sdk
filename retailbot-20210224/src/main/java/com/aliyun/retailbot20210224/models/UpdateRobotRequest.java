@@ -74,9 +74,16 @@ public class UpdateRobotRequest extends TeaModel {
         @NameInMap("RobotCode")
         public String robotCode;
 
+        // 卖家id
+        @NameInMap("SellerId")
+        public String sellerId;
+
         // 商家nick
         @NameInMap("SellerNick")
         public String sellerNick;
+
+        @NameInMap("ShopId")
+        public String shopId;
 
         // 签约时间
         @NameInMap("SignDate")
@@ -103,12 +110,28 @@ public class UpdateRobotRequest extends TeaModel {
             return this.robotCode;
         }
 
+        public UpdateRobotRequestRobotDTO setSellerId(String sellerId) {
+            this.sellerId = sellerId;
+            return this;
+        }
+        public String getSellerId() {
+            return this.sellerId;
+        }
+
         public UpdateRobotRequestRobotDTO setSellerNick(String sellerNick) {
             this.sellerNick = sellerNick;
             return this;
         }
         public String getSellerNick() {
             return this.sellerNick;
+        }
+
+        public UpdateRobotRequestRobotDTO setShopId(String shopId) {
+            this.shopId = shopId;
+            return this;
+        }
+        public String getShopId() {
+            return this.shopId;
         }
 
         public UpdateRobotRequestRobotDTO setSignDate(Long signDate) {
