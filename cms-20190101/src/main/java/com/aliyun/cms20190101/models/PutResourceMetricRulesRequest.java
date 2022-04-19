@@ -24,6 +24,9 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        @NameInMap("PreCondition")
+        public String preCondition;
+
         @NameInMap("Statistics")
         public String statistics;
 
@@ -44,6 +47,14 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         }
         public String getComparisonOperator() {
             return this.comparisonOperator;
+        }
+
+        public PutResourceMetricRulesRequestRulesEscalationsCritical setPreCondition(String preCondition) {
+            this.preCondition = preCondition;
+            return this;
+        }
+        public String getPreCondition() {
+            return this.preCondition;
         }
 
         public PutResourceMetricRulesRequestRulesEscalationsCritical setStatistics(String statistics) {
@@ -76,6 +87,9 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        @NameInMap("PreCondition")
+        public String preCondition;
+
         @NameInMap("Statistics")
         public String statistics;
 
@@ -96,6 +110,14 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         }
         public String getComparisonOperator() {
             return this.comparisonOperator;
+        }
+
+        public PutResourceMetricRulesRequestRulesEscalationsInfo setPreCondition(String preCondition) {
+            this.preCondition = preCondition;
+            return this;
+        }
+        public String getPreCondition() {
+            return this.preCondition;
         }
 
         public PutResourceMetricRulesRequestRulesEscalationsInfo setStatistics(String statistics) {
@@ -128,6 +150,9 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        @NameInMap("PreCondition")
+        public String preCondition;
+
         @NameInMap("Statistics")
         public String statistics;
 
@@ -148,6 +173,14 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         }
         public String getComparisonOperator() {
             return this.comparisonOperator;
+        }
+
+        public PutResourceMetricRulesRequestRulesEscalationsWarn setPreCondition(String preCondition) {
+            this.preCondition = preCondition;
+            return this;
+        }
+        public String getPreCondition() {
+            return this.preCondition;
         }
 
         public PutResourceMetricRulesRequestRulesEscalationsWarn setStatistics(String statistics) {
@@ -220,6 +253,36 @@ public class PutResourceMetricRulesRequest extends TeaModel {
 
     }
 
+    public static class PutResourceMetricRulesRequestRulesLabels extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static PutResourceMetricRulesRequestRulesLabels build(java.util.Map<String, ?> map) throws Exception {
+            PutResourceMetricRulesRequestRulesLabels self = new PutResourceMetricRulesRequestRulesLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public PutResourceMetricRulesRequestRulesLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public PutResourceMetricRulesRequestRulesLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class PutResourceMetricRulesRequestRules extends TeaModel {
         @NameInMap("Escalations")
         @Validation(required = true)
@@ -236,6 +299,9 @@ public class PutResourceMetricRulesRequest extends TeaModel {
 
         @NameInMap("Interval")
         public String interval;
+
+        @NameInMap("Labels")
+        public java.util.List<PutResourceMetricRulesRequestRulesLabels> labels;
 
         @NameInMap("MetricName")
         public String metricName;
@@ -310,6 +376,14 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         }
         public String getInterval() {
             return this.interval;
+        }
+
+        public PutResourceMetricRulesRequestRules setLabels(java.util.List<PutResourceMetricRulesRequestRulesLabels> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<PutResourceMetricRulesRequestRulesLabels> getLabels() {
+            return this.labels;
         }
 
         public PutResourceMetricRulesRequestRules setMetricName(String metricName) {

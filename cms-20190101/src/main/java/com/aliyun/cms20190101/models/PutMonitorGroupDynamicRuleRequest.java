@@ -10,6 +10,9 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
     @NameInMap("GroupRules")
     public java.util.List<PutMonitorGroupDynamicRuleRequestGroupRules> groupRules;
 
+    @NameInMap("IsAsync")
+    public Boolean isAsync;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,6 +35,14 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
     }
     public java.util.List<PutMonitorGroupDynamicRuleRequestGroupRules> getGroupRules() {
         return this.groupRules;
+    }
+
+    public PutMonitorGroupDynamicRuleRequest setIsAsync(Boolean isAsync) {
+        this.isAsync = isAsync;
+        return this;
+    }
+    public Boolean getIsAsync() {
+        return this.isAsync;
     }
 
     public PutMonitorGroupDynamicRuleRequest setRegionId(String regionId) {

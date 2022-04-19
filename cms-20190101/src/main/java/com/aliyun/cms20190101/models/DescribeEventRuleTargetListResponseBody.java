@@ -263,6 +263,9 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        @NameInMap("Topic")
+        public String topic;
+
         public static DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter self = new DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter();
             return TeaModel.build(map, self);
@@ -298,6 +301,14 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
         }
 
     }

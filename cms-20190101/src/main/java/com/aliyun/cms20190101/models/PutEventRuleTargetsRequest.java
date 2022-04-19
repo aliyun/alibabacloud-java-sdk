@@ -200,6 +200,9 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        @NameInMap("Topic")
+        public String topic;
+
         public static PutEventRuleTargetsRequestMnsParameters build(java.util.Map<String, ?> map) throws Exception {
             PutEventRuleTargetsRequestMnsParameters self = new PutEventRuleTargetsRequestMnsParameters();
             return TeaModel.build(map, self);
@@ -227,6 +230,14 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public PutEventRuleTargetsRequestMnsParameters setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
         }
 
     }

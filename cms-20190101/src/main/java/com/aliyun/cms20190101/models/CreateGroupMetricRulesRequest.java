@@ -46,6 +46,9 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        @NameInMap("PreCondition")
+        public String preCondition;
+
         @NameInMap("Statistics")
         public String statistics;
 
@@ -66,6 +69,14 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         }
         public String getComparisonOperator() {
             return this.comparisonOperator;
+        }
+
+        public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsCritical setPreCondition(String preCondition) {
+            this.preCondition = preCondition;
+            return this;
+        }
+        public String getPreCondition() {
+            return this.preCondition;
         }
 
         public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsCritical setStatistics(String statistics) {
@@ -98,6 +109,9 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        @NameInMap("PreCondition")
+        public String preCondition;
+
         @NameInMap("Statistics")
         public String statistics;
 
@@ -118,6 +132,14 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         }
         public String getComparisonOperator() {
             return this.comparisonOperator;
+        }
+
+        public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsInfo setPreCondition(String preCondition) {
+            this.preCondition = preCondition;
+            return this;
+        }
+        public String getPreCondition() {
+            return this.preCondition;
         }
 
         public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsInfo setStatistics(String statistics) {
@@ -150,6 +172,9 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        @NameInMap("PreCondition")
+        public String preCondition;
+
         @NameInMap("Statistics")
         public String statistics;
 
@@ -170,6 +195,14 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         }
         public String getComparisonOperator() {
             return this.comparisonOperator;
+        }
+
+        public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsWarn setPreCondition(String preCondition) {
+            this.preCondition = preCondition;
+            return this;
+        }
+        public String getPreCondition() {
+            return this.preCondition;
         }
 
         public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsWarn setStatistics(String statistics) {
@@ -242,6 +275,36 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
 
     }
 
+    public static class CreateGroupMetricRulesRequestGroupMetricRulesLabels extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateGroupMetricRulesRequestGroupMetricRulesLabels build(java.util.Map<String, ?> map) throws Exception {
+            CreateGroupMetricRulesRequestGroupMetricRulesLabels self = new CreateGroupMetricRulesRequestGroupMetricRulesLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateGroupMetricRulesRequestGroupMetricRulesLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateGroupMetricRulesRequestGroupMetricRulesLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateGroupMetricRulesRequestGroupMetricRules extends TeaModel {
         @NameInMap("Escalations")
         @Validation(required = true)
@@ -264,6 +327,9 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
 
         @NameInMap("Interval")
         public String interval;
+
+        @NameInMap("Labels")
+        public java.util.List<CreateGroupMetricRulesRequestGroupMetricRulesLabels> labels;
 
         @NameInMap("MetricName")
         public String metricName;
@@ -351,6 +417,14 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         }
         public String getInterval() {
             return this.interval;
+        }
+
+        public CreateGroupMetricRulesRequestGroupMetricRules setLabels(java.util.List<CreateGroupMetricRulesRequestGroupMetricRulesLabels> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<CreateGroupMetricRulesRequestGroupMetricRulesLabels> getLabels() {
+            return this.labels;
         }
 
         public CreateGroupMetricRulesRequestGroupMetricRules setMetricName(String metricName) {

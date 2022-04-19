@@ -122,6 +122,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.applyMetricRuleTemplateWithOptions(request, runtime);
     }
 
+    public BatchCreateOnceSiteMonitorResponse batchCreateOnceSiteMonitorWithOptions(BatchCreateOnceSiteMonitorRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskList)) {
+            query.put("TaskList", request.taskList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchCreateOnceSiteMonitor"),
+            new TeaPair("version", "2019-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCreateOnceSiteMonitorResponse());
+    }
+
+    public BatchCreateOnceSiteMonitorResponse batchCreateOnceSiteMonitor(BatchCreateOnceSiteMonitorRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.batchCreateOnceSiteMonitorWithOptions(request, runtime);
+    }
+
     public CreateCmsCallNumOrderResponse createCmsCallNumOrderWithOptions(CreateCmsCallNumOrderRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1578,7 +1607,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeActiveMetricRuleListResponse describeActiveMetricRuleListWithOptions(DescribeActiveMetricRuleListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.product)) {
+            query.put("Product", request.product);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1587,7 +1620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2019-01-01"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -5513,6 +5546,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Interval", request.interval);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
+            query.put("Labels", request.labels);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.metricName)) {
             query.put("MetricName", request.metricName);
         }
@@ -5727,6 +5764,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupRules)) {
             query.put("GroupRules", request.groupRules);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isAsync)) {
+            query.put("IsAsync", request.isAsync);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
