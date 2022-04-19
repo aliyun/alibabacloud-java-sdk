@@ -68,8 +68,14 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
+        @NameInMap("Content")
+        public String content;
+
         @NameInMap("Detail")
         public String detail;
+
+        @NameInMap("DetectTime")
+        public String detectTime;
 
         @NameInMap("DiagStatus")
         public String diagStatus;
@@ -82,6 +88,9 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
 
         @NameInMap("Protocol")
         public String protocol;
+
+        @NameInMap("StatusCode")
+        public String statusCode;
 
         @NameInMap("TaskId")
         public String taskId;
@@ -99,12 +108,28 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             return this.acceleratorId;
         }
 
+        public ListApplicationMonitorDetectResultResponseBodyApplicationMonitorDetectResultList setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
         public ListApplicationMonitorDetectResultResponseBodyApplicationMonitorDetectResultList setDetail(String detail) {
             this.detail = detail;
             return this;
         }
         public String getDetail() {
             return this.detail;
+        }
+
+        public ListApplicationMonitorDetectResultResponseBodyApplicationMonitorDetectResultList setDetectTime(String detectTime) {
+            this.detectTime = detectTime;
+            return this;
+        }
+        public String getDetectTime() {
+            return this.detectTime;
         }
 
         public ListApplicationMonitorDetectResultResponseBodyApplicationMonitorDetectResultList setDiagStatus(String diagStatus) {
@@ -137,6 +162,14 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         }
         public String getProtocol() {
             return this.protocol;
+        }
+
+        public ListApplicationMonitorDetectResultResponseBodyApplicationMonitorDetectResultList setStatusCode(String statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+        public String getStatusCode() {
+            return this.statusCode;
         }
 
         public ListApplicationMonitorDetectResultResponseBodyApplicationMonitorDetectResultList setTaskId(String taskId) {

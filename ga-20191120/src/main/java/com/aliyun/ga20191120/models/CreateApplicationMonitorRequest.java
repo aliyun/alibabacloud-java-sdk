@@ -13,8 +13,14 @@ public class CreateApplicationMonitorRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DetectEnable")
+    public Boolean detectEnable;
+
     @NameInMap("DetectThreshold")
     public Integer detectThreshold;
+
+    @NameInMap("DetectTimes")
+    public Integer detectTimes;
 
     @NameInMap("ListenerId")
     public String listenerId;
@@ -24,6 +30,9 @@ public class CreateApplicationMonitorRequest extends TeaModel {
 
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("SilenceTime")
+    public Integer silenceTime;
 
     @NameInMap("TaskName")
     public String taskName;
@@ -57,12 +66,28 @@ public class CreateApplicationMonitorRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateApplicationMonitorRequest setDetectEnable(Boolean detectEnable) {
+        this.detectEnable = detectEnable;
+        return this;
+    }
+    public Boolean getDetectEnable() {
+        return this.detectEnable;
+    }
+
     public CreateApplicationMonitorRequest setDetectThreshold(Integer detectThreshold) {
         this.detectThreshold = detectThreshold;
         return this;
     }
     public Integer getDetectThreshold() {
         return this.detectThreshold;
+    }
+
+    public CreateApplicationMonitorRequest setDetectTimes(Integer detectTimes) {
+        this.detectTimes = detectTimes;
+        return this;
+    }
+    public Integer getDetectTimes() {
+        return this.detectTimes;
     }
 
     public CreateApplicationMonitorRequest setListenerId(String listenerId) {
@@ -87,6 +112,14 @@ public class CreateApplicationMonitorRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateApplicationMonitorRequest setSilenceTime(Integer silenceTime) {
+        this.silenceTime = silenceTime;
+        return this;
+    }
+    public Integer getSilenceTime() {
+        return this.silenceTime;
     }
 
     public CreateApplicationMonitorRequest setTaskName(String taskName) {

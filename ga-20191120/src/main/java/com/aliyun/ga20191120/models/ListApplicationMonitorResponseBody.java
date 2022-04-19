@@ -71,14 +71,23 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         @NameInMap("Address")
         public String address;
 
+        @NameInMap("DetectEnable")
+        public Boolean detectEnable;
+
         @NameInMap("DetectThreshold")
         public Integer detectThreshold;
+
+        @NameInMap("DetectTimes")
+        public Integer detectTimes;
 
         @NameInMap("ListenerId")
         public String listenerId;
 
         @NameInMap("OptionsJson")
         public String optionsJson;
+
+        @NameInMap("SilenceTime")
+        public Integer silenceTime;
 
         @NameInMap("State")
         public String state;
@@ -110,12 +119,28 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
             return this.address;
         }
 
+        public ListApplicationMonitorResponseBodyApplicationMonitors setDetectEnable(Boolean detectEnable) {
+            this.detectEnable = detectEnable;
+            return this;
+        }
+        public Boolean getDetectEnable() {
+            return this.detectEnable;
+        }
+
         public ListApplicationMonitorResponseBodyApplicationMonitors setDetectThreshold(Integer detectThreshold) {
             this.detectThreshold = detectThreshold;
             return this;
         }
         public Integer getDetectThreshold() {
             return this.detectThreshold;
+        }
+
+        public ListApplicationMonitorResponseBodyApplicationMonitors setDetectTimes(Integer detectTimes) {
+            this.detectTimes = detectTimes;
+            return this;
+        }
+        public Integer getDetectTimes() {
+            return this.detectTimes;
         }
 
         public ListApplicationMonitorResponseBodyApplicationMonitors setListenerId(String listenerId) {
@@ -132,6 +157,14 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         }
         public String getOptionsJson() {
             return this.optionsJson;
+        }
+
+        public ListApplicationMonitorResponseBodyApplicationMonitors setSilenceTime(Integer silenceTime) {
+            this.silenceTime = silenceTime;
+            return this;
+        }
+        public Integer getSilenceTime() {
+            return this.silenceTime;
         }
 
         public ListApplicationMonitorResponseBodyApplicationMonitors setState(String state) {

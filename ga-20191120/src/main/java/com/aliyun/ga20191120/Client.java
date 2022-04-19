@@ -533,8 +533,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.detectEnable)) {
+            query.put("DetectEnable", request.detectEnable);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.detectThreshold)) {
             query.put("DetectThreshold", request.detectThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.detectTimes)) {
+            query.put("DetectTimes", request.detectTimes);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.listenerId)) {
@@ -547,6 +555,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.silenceTime)) {
+            query.put("SilenceTime", request.silenceTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
@@ -3503,8 +3515,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.detectEnable)) {
+            query.put("DetectEnable", request.detectEnable);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.detectThreshold)) {
             query.put("DetectThreshold", request.detectThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.detectTimes)) {
+            query.put("DetectTimes", request.detectTimes);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.listenerId)) {
@@ -3517,6 +3537,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.silenceTime)) {
+            query.put("SilenceTime", request.silenceTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {

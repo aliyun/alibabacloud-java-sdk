@@ -10,8 +10,14 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     @NameInMap("Address")
     public String address;
 
+    @NameInMap("DetectEnable")
+    public Boolean detectEnable;
+
     @NameInMap("DetectThreshold")
-    public String detectThreshold;
+    public Integer detectThreshold;
+
+    @NameInMap("DetectTimes")
+    public Integer detectTimes;
 
     @NameInMap("IspCityList")
     public java.util.List<DescribeApplicationMonitorResponseBodyIspCityList> ispCityList;
@@ -27,6 +33,9 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SilenceTime")
+    public Integer silenceTime;
 
     @NameInMap("TaskId")
     public String taskId;
@@ -55,12 +64,28 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         return this.address;
     }
 
-    public DescribeApplicationMonitorResponseBody setDetectThreshold(String detectThreshold) {
+    public DescribeApplicationMonitorResponseBody setDetectEnable(Boolean detectEnable) {
+        this.detectEnable = detectEnable;
+        return this;
+    }
+    public Boolean getDetectEnable() {
+        return this.detectEnable;
+    }
+
+    public DescribeApplicationMonitorResponseBody setDetectThreshold(Integer detectThreshold) {
         this.detectThreshold = detectThreshold;
         return this;
     }
-    public String getDetectThreshold() {
+    public Integer getDetectThreshold() {
         return this.detectThreshold;
+    }
+
+    public DescribeApplicationMonitorResponseBody setDetectTimes(Integer detectTimes) {
+        this.detectTimes = detectTimes;
+        return this;
+    }
+    public Integer getDetectTimes() {
+        return this.detectTimes;
     }
 
     public DescribeApplicationMonitorResponseBody setIspCityList(java.util.List<DescribeApplicationMonitorResponseBodyIspCityList> ispCityList) {
@@ -101,6 +126,14 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeApplicationMonitorResponseBody setSilenceTime(Integer silenceTime) {
+        this.silenceTime = silenceTime;
+        return this;
+    }
+    public Integer getSilenceTime() {
+        return this.silenceTime;
     }
 
     public DescribeApplicationMonitorResponseBody setTaskId(String taskId) {

@@ -10,8 +10,14 @@ public class UpdateApplicationMonitorRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DetectEnable")
+    public Boolean detectEnable;
+
     @NameInMap("DetectThreshold")
     public Integer detectThreshold;
+
+    @NameInMap("DetectTimes")
+    public Integer detectTimes;
 
     @NameInMap("ListenerId")
     public String listenerId;
@@ -21,6 +27,9 @@ public class UpdateApplicationMonitorRequest extends TeaModel {
 
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("SilenceTime")
+    public Integer silenceTime;
 
     @NameInMap("TaskId")
     public String taskId;
@@ -49,12 +58,28 @@ public class UpdateApplicationMonitorRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public UpdateApplicationMonitorRequest setDetectEnable(Boolean detectEnable) {
+        this.detectEnable = detectEnable;
+        return this;
+    }
+    public Boolean getDetectEnable() {
+        return this.detectEnable;
+    }
+
     public UpdateApplicationMonitorRequest setDetectThreshold(Integer detectThreshold) {
         this.detectThreshold = detectThreshold;
         return this;
     }
     public Integer getDetectThreshold() {
         return this.detectThreshold;
+    }
+
+    public UpdateApplicationMonitorRequest setDetectTimes(Integer detectTimes) {
+        this.detectTimes = detectTimes;
+        return this;
+    }
+    public Integer getDetectTimes() {
+        return this.detectTimes;
     }
 
     public UpdateApplicationMonitorRequest setListenerId(String listenerId) {
@@ -79,6 +104,14 @@ public class UpdateApplicationMonitorRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UpdateApplicationMonitorRequest setSilenceTime(Integer silenceTime) {
+        this.silenceTime = silenceTime;
+        return this;
+    }
+    public Integer getSilenceTime() {
+        return this.silenceTime;
     }
 
     public UpdateApplicationMonitorRequest setTaskId(String taskId) {
