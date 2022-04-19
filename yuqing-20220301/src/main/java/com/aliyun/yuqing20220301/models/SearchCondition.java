@@ -78,7 +78,7 @@ public class SearchCondition extends TeaModel {
 
     // 排除媒体库id列表
     @NameInMap("excludeMediaLibraryIdList")
-    public java.util.List<Long> excludeMediaLibraryIdList;
+    public java.util.List<String> excludeMediaLibraryIdList;
 
     // 排除媒体名称
     @NameInMap("excludeMediaNameList")
@@ -118,7 +118,7 @@ public class SearchCondition extends TeaModel {
 
     // 媒体库id列表
     @NameInMap("mediaLibraryIdList")
-    public java.util.List<Long> mediaLibraryIdList;
+    public java.util.List<String> mediaLibraryIdList;
 
     // 媒体名称
     @NameInMap("mediaNameList")
@@ -341,11 +341,11 @@ public class SearchCondition extends TeaModel {
         return this.excludeKeywordTagIds;
     }
 
-    public SearchCondition setExcludeMediaLibraryIdList(java.util.List<Long> excludeMediaLibraryIdList) {
+    public SearchCondition setExcludeMediaLibraryIdList(java.util.List<String> excludeMediaLibraryIdList) {
         this.excludeMediaLibraryIdList = excludeMediaLibraryIdList;
         return this;
     }
-    public java.util.List<Long> getExcludeMediaLibraryIdList() {
+    public java.util.List<String> getExcludeMediaLibraryIdList() {
         return this.excludeMediaLibraryIdList;
     }
 
@@ -421,11 +421,11 @@ public class SearchCondition extends TeaModel {
         return this.likesLevel;
     }
 
-    public SearchCondition setMediaLibraryIdList(java.util.List<Long> mediaLibraryIdList) {
+    public SearchCondition setMediaLibraryIdList(java.util.List<String> mediaLibraryIdList) {
         this.mediaLibraryIdList = mediaLibraryIdList;
         return this;
     }
-    public java.util.List<Long> getMediaLibraryIdList() {
+    public java.util.List<String> getMediaLibraryIdList() {
         return this.mediaLibraryIdList;
     }
 
