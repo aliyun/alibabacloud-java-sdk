@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dds20151201</artifactId>
-  <version>3.6.5</version>
+  <version>3.6.6</version>
   <packaging>jar</packaging>
   <name>dds20151201</name>
   <description>Alibaba Cloud Dds (20151201) SDK for Java
@@ -146,121 +146,9 @@
                   <pattern>com.sun</pattern>
                   <shadedPattern>com.aliyun.dds20151201.external.com.sun</shadedPattern>
                 </relocation>
-              </relocations>
-              <artifactSet>
-                <excludes>
-                  <exclude>org.jacoco:*</exclude>
-                </excludes>
-              </artifactSet>
-              <filters>
-                <filter>
-                  <artifact>*:*</artifact>
-                  <excludes>
-                    <exclude>META-INF/*.SF</exclude>
-                    <exclude>META-INF/*.DSA</exclude>
-                    <exclude>META-INF/*.RSA</exclude>
-                    <exclude>**/pom.xml</exclude>
-                  </excludes>
-                </filter>
-              </filters>
-              <transformers>
-                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-              </transformers>
-              <shadedArtifactAttached>true</shadedArtifactAttached>
-              <shadedClassifierName>shaded</shadedClassifierName>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.2.4</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-            <configuration>
-              <relocations>
                 <relocation>
-                  <pattern>com.google</pattern>
-                  <shadedPattern>com.aliyun.dds20151201.external.google</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>okhttp3</pattern>
-                  <shadedPattern>com.aliyun.dds20151201.external.okhttp3</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>okio</pattern>
-                  <shadedPattern>com.aliyun.dds20151201.external.okio</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>javax.xml</pattern>
-                  <shadedPattern>com.aliyun.dds20151201.external.javax.xml</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>com.sun</pattern>
-                  <shadedPattern>com.aliyun.dds20151201.external.com.sun</shadedPattern>
-                </relocation>
-              </relocations>
-              <artifactSet>
-                <excludes>
-                  <exclude>org.jacoco:*</exclude>
-                </excludes>
-              </artifactSet>
-              <filters>
-                <filter>
-                  <artifact>*:*</artifact>
-                  <excludes>
-                    <exclude>META-INF/*.SF</exclude>
-                    <exclude>META-INF/*.DSA</exclude>
-                    <exclude>META-INF/*.RSA</exclude>
-                    <exclude>**/pom.xml</exclude>
-                  </excludes>
-                </filter>
-              </filters>
-              <transformers>
-                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-              </transformers>
-              <shadedArtifactAttached>true</shadedArtifactAttached>
-              <shadedClassifierName>shaded</shadedClassifierName>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.2.4</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-            <configuration>
-              <relocations>
-                <relocation>
-                  <pattern>com.google</pattern>
-                  <shadedPattern>com.aliyun.dds20151201.external.google</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>okhttp3</pattern>
-                  <shadedPattern>com.aliyun.dds20151201.external.okhttp3</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>okio</pattern>
-                  <shadedPattern>com.aliyun.dds20151201.external.okio</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>javax.xml</pattern>
-                  <shadedPattern>com.aliyun.dds20151201.external.javax.xml</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>com.sun</pattern>
-                  <shadedPattern>com.aliyun.dds20151201.external.com.sun</shadedPattern>
+                  <pattern>org.apache</pattern>
+                  <shadedPattern>com.aliyun.dds20151201.external.org.apache</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>
