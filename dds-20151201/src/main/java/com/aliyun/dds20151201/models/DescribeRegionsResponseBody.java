@@ -84,6 +84,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("RegionName")
+        public String regionName;
+
         @NameInMap("Zones")
         public DescribeRegionsResponseBodyRegionsDdsRegionZones zones;
 
@@ -98,6 +101,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeRegionsResponseBodyRegionsDdsRegion setRegionName(String regionName) {
+            this.regionName = regionName;
+            return this;
+        }
+        public String getRegionName() {
+            return this.regionName;
         }
 
         public DescribeRegionsResponseBodyRegionsDdsRegion setZones(DescribeRegionsResponseBodyRegionsDdsRegionZones zones) {
