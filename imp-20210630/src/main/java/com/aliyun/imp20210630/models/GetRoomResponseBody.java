@@ -90,6 +90,10 @@ public class GetRoomResponseBody extends TeaModel {
     }
 
     public static class GetRoomResponseBodyResultRoomInfo extends TeaModel {
+        // 管理员ID列表。
+        @NameInMap("AdminIdList")
+        public java.util.List<String> adminIdList;
+
         // 应用唯一标识，由6位小写字母、数字组成。
         @NameInMap("AppId")
         public String appId;
@@ -141,6 +145,14 @@ public class GetRoomResponseBody extends TeaModel {
         public static GetRoomResponseBodyResultRoomInfo build(java.util.Map<String, ?> map) throws Exception {
             GetRoomResponseBodyResultRoomInfo self = new GetRoomResponseBodyResultRoomInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetRoomResponseBodyResultRoomInfo setAdminIdList(java.util.List<String> adminIdList) {
+            this.adminIdList = adminIdList;
+            return this;
+        }
+        public java.util.List<String> getAdminIdList() {
+            return this.adminIdList;
         }
 
         public GetRoomResponseBodyResultRoomInfo setAppId(String appId) {

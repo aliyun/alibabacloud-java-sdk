@@ -3,21 +3,21 @@ package com.aliyun.imp20210630.models;
 
 import com.aliyun.tea.*;
 
-public class GetUserInfoResponse extends TeaModel {
+public class ListSensitiveWordResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetUserInfoResponseBody body;
+    public ListSensitiveWordResponseBody body;
 
-    public static GetUserInfoResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetUserInfoResponse self = new GetUserInfoResponse();
+    public static ListSensitiveWordResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListSensitiveWordResponse self = new ListSensitiveWordResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetUserInfoResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListSensitiveWordResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class GetUserInfoResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetUserInfoResponse setBody(GetUserInfoResponseBody body) {
+    public ListSensitiveWordResponse setBody(ListSensitiveWordResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetUserInfoResponseBody getBody() {
+    public ListSensitiveWordResponseBody getBody() {
         return this.body;
     }
 
