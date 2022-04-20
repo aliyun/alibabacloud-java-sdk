@@ -3,21 +3,21 @@ package com.aliyun.dyvmsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class CancelCallResponse extends TeaModel {
+public class RecoverCallInConfigResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public CancelCallResponseBody body;
+    public RecoverCallInConfigResponseBody body;
 
-    public static CancelCallResponse build(java.util.Map<String, ?> map) throws Exception {
-        CancelCallResponse self = new CancelCallResponse();
+    public static RecoverCallInConfigResponse build(java.util.Map<String, ?> map) throws Exception {
+        RecoverCallInConfigResponse self = new RecoverCallInConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public CancelCallResponse setHeaders(java.util.Map<String, String> headers) {
+    public RecoverCallInConfigResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class CancelCallResponse extends TeaModel {
         return this.headers;
     }
 
-    public CancelCallResponse setBody(CancelCallResponseBody body) {
+    public RecoverCallInConfigResponse setBody(RecoverCallInConfigResponseBody body) {
         this.body = body;
         return this;
     }
-    public CancelCallResponseBody getBody() {
+    public RecoverCallInConfigResponseBody getBody() {
         return this.body;
     }
 
