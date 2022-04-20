@@ -4,6 +4,10 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class ListAppsRequest extends TeaModel {
+    // 过滤的应用id列表
+    @NameInMap("AppIds")
+    public String appIds;
+
     // 集成方式：- 一体化SDK：paasSDK - 样板间：standardRoom
     @NameInMap("IntegrationMode")
     public String integrationMode;
@@ -23,6 +27,14 @@ public class ListAppsRequest extends TeaModel {
     public static ListAppsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAppsRequest self = new ListAppsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListAppsRequest setAppIds(String appIds) {
+        this.appIds = appIds;
+        return this;
+    }
+    public String getAppIds() {
+        return this.appIds;
     }
 
     public ListAppsRequest setIntegrationMode(String integrationMode) {

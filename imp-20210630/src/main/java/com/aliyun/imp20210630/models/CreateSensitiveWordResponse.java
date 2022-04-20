@@ -3,21 +3,21 @@ package com.aliyun.imp20210630.models;
 
 import com.aliyun.tea.*;
 
-public class GetImpProductStatusResponse extends TeaModel {
+public class CreateSensitiveWordResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetImpProductStatusResponseBody body;
+    public CreateSensitiveWordResponseBody body;
 
-    public static GetImpProductStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetImpProductStatusResponse self = new GetImpProductStatusResponse();
+    public static CreateSensitiveWordResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateSensitiveWordResponse self = new CreateSensitiveWordResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetImpProductStatusResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateSensitiveWordResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class GetImpProductStatusResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetImpProductStatusResponse setBody(GetImpProductStatusResponseBody body) {
+    public CreateSensitiveWordResponse setBody(CreateSensitiveWordResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetImpProductStatusResponseBody getBody() {
+    public CreateSensitiveWordResponseBody getBody() {
         return this.body;
     }
 
