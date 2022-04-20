@@ -83,6 +83,58 @@ public class DescribeManagedServicesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeManagedServicesResponseBodyManagedServiceInfoSidecarResource extends TeaModel {
+        @NameInMap("LimitCPU")
+        public String limitCPU;
+
+        @NameInMap("LimitMemory")
+        public String limitMemory;
+
+        @NameInMap("RequestCPU")
+        public String requestCPU;
+
+        @NameInMap("RequestMemory")
+        public String requestMemory;
+
+        public static DescribeManagedServicesResponseBodyManagedServiceInfoSidecarResource build(java.util.Map<String, ?> map) throws Exception {
+            DescribeManagedServicesResponseBodyManagedServiceInfoSidecarResource self = new DescribeManagedServicesResponseBodyManagedServiceInfoSidecarResource();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeManagedServicesResponseBodyManagedServiceInfoSidecarResource setLimitCPU(String limitCPU) {
+            this.limitCPU = limitCPU;
+            return this;
+        }
+        public String getLimitCPU() {
+            return this.limitCPU;
+        }
+
+        public DescribeManagedServicesResponseBodyManagedServiceInfoSidecarResource setLimitMemory(String limitMemory) {
+            this.limitMemory = limitMemory;
+            return this;
+        }
+        public String getLimitMemory() {
+            return this.limitMemory;
+        }
+
+        public DescribeManagedServicesResponseBodyManagedServiceInfoSidecarResource setRequestCPU(String requestCPU) {
+            this.requestCPU = requestCPU;
+            return this;
+        }
+        public String getRequestCPU() {
+            return this.requestCPU;
+        }
+
+        public DescribeManagedServicesResponseBodyManagedServiceInfoSidecarResource setRequestMemory(String requestMemory) {
+            this.requestMemory = requestMemory;
+            return this;
+        }
+        public String getRequestMemory() {
+            return this.requestMemory;
+        }
+
+    }
+
     public static class DescribeManagedServicesResponseBodyManagedServiceInfo extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
@@ -101,6 +153,9 @@ public class DescribeManagedServicesResponseBody extends TeaModel {
 
         @NameInMap("SidecarInjectStatus")
         public String sidecarInjectStatus;
+
+        @NameInMap("SidecarResource")
+        public DescribeManagedServicesResponseBodyManagedServiceInfoSidecarResource sidecarResource;
 
         public static DescribeManagedServicesResponseBodyManagedServiceInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeManagedServicesResponseBodyManagedServiceInfo self = new DescribeManagedServicesResponseBodyManagedServiceInfo();
@@ -153,6 +208,14 @@ public class DescribeManagedServicesResponseBody extends TeaModel {
         }
         public String getSidecarInjectStatus() {
             return this.sidecarInjectStatus;
+        }
+
+        public DescribeManagedServicesResponseBodyManagedServiceInfo setSidecarResource(DescribeManagedServicesResponseBodyManagedServiceInfoSidecarResource sidecarResource) {
+            this.sidecarResource = sidecarResource;
+            return this;
+        }
+        public DescribeManagedServicesResponseBodyManagedServiceInfoSidecarResource getSidecarResource() {
+            return this.sidecarResource;
         }
 
     }
