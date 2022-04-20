@@ -2337,6 +2337,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AliasName", request.aliasName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.attachTypes)) {
+            query.put("AttachTypes", request.attachTypes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
         }

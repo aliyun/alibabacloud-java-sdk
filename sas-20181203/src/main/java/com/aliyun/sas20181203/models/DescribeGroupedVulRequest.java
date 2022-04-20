@@ -7,6 +7,9 @@ public class DescribeGroupedVulRequest extends TeaModel {
     @NameInMap("AliasName")
     public String aliasName;
 
+    @NameInMap("AttachTypes")
+    public String attachTypes;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -45,6 +48,14 @@ public class DescribeGroupedVulRequest extends TeaModel {
     }
     public String getAliasName() {
         return this.aliasName;
+    }
+
+    public DescribeGroupedVulRequest setAttachTypes(String attachTypes) {
+        this.attachTypes = attachTypes;
+        return this;
+    }
+    public String getAttachTypes() {
+        return this.attachTypes;
     }
 
     public DescribeGroupedVulRequest setCurrentPage(Integer currentPage) {
