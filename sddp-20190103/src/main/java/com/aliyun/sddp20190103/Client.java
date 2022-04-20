@@ -87,6 +87,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoScan", request.autoScan);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("Enable", request.enable);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.engineType)) {
             query.put("EngineType", request.engineType);
         }

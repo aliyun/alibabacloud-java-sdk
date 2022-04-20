@@ -10,6 +10,9 @@ public class CreateDataLimitRequest extends TeaModel {
     @NameInMap("AutoScan")
     public Integer autoScan;
 
+    @NameInMap("Enable")
+    public Integer enable;
+
     @NameInMap("EngineType")
     public String engineType;
 
@@ -62,6 +65,14 @@ public class CreateDataLimitRequest extends TeaModel {
     }
     public Integer getAutoScan() {
         return this.autoScan;
+    }
+
+    public CreateDataLimitRequest setEnable(Integer enable) {
+        this.enable = enable;
+        return this;
+    }
+    public Integer getEnable() {
+        return this.enable;
     }
 
     public CreateDataLimitRequest setEngineType(String engineType) {
