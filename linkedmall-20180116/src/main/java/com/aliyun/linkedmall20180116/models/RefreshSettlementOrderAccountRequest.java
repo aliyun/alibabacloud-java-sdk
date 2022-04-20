@@ -13,6 +13,9 @@ public class RefreshSettlementOrderAccountRequest extends TeaModel {
     @NameInMap("ExtInfo")
     public String extInfo;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     public static RefreshSettlementOrderAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         RefreshSettlementOrderAccountRequest self = new RefreshSettlementOrderAccountRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class RefreshSettlementOrderAccountRequest extends TeaModel {
     }
     public String getExtInfo() {
         return this.extInfo;
+    }
+
+    public RefreshSettlementOrderAccountRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

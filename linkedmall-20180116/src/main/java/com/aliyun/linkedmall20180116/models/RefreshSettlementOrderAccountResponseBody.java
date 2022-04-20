@@ -98,16 +98,16 @@ public class RefreshSettlementOrderAccountResponseBody extends TeaModel {
     }
 
     public static class RefreshSettlementOrderAccountResponseBodyModel extends TeaModel {
-        @NameInMap("accountNo")
+        @NameInMap("AccountNo")
         public String accountNo;
 
-        @NameInMap("message")
+        @NameInMap("Message")
         public String message;
 
-        @NameInMap("result")
+        @NameInMap("Result")
         public String result;
 
-        @NameInMap("settleNo")
+        @NameInMap("SettleNo")
         public String settleNo;
 
         public static RefreshSettlementOrderAccountResponseBodyModel build(java.util.Map<String, ?> map) throws Exception {
