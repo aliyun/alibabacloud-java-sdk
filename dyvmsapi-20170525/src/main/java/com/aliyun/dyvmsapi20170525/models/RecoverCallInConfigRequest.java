@@ -3,9 +3,9 @@ package com.aliyun.dyvmsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class CancelCallRequest extends TeaModel {
-    @NameInMap("CallId")
-    public String callId;
+public class RecoverCallInConfigRequest extends TeaModel {
+    @NameInMap("Number")
+    public String number;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,20 +16,20 @@ public class CancelCallRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static CancelCallRequest build(java.util.Map<String, ?> map) throws Exception {
-        CancelCallRequest self = new CancelCallRequest();
+    public static RecoverCallInConfigRequest build(java.util.Map<String, ?> map) throws Exception {
+        RecoverCallInConfigRequest self = new RecoverCallInConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public CancelCallRequest setCallId(String callId) {
-        this.callId = callId;
+    public RecoverCallInConfigRequest setNumber(String number) {
+        this.number = number;
         return this;
     }
-    public String getCallId() {
-        return this.callId;
+    public String getNumber() {
+        return this.number;
     }
 
-    public CancelCallRequest setOwnerId(Long ownerId) {
+    public RecoverCallInConfigRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -37,7 +37,7 @@ public class CancelCallRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CancelCallRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public RecoverCallInConfigRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -45,7 +45,7 @@ public class CancelCallRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public CancelCallRequest setResourceOwnerId(Long resourceOwnerId) {
+    public RecoverCallInConfigRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }

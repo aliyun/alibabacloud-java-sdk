@@ -3,9 +3,12 @@ package com.aliyun.dyvmsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class CancelCallResponseBody extends TeaModel {
+public class RecoverCallInConfigResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("Data")
+    public Boolean data;
 
     @NameInMap("Message")
     public String message;
@@ -13,15 +16,12 @@ public class CancelCallResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Status")
-    public Boolean status;
-
-    public static CancelCallResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CancelCallResponseBody self = new CancelCallResponseBody();
+    public static RecoverCallInConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        RecoverCallInConfigResponseBody self = new RecoverCallInConfigResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CancelCallResponseBody setCode(String code) {
+    public RecoverCallInConfigResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -29,7 +29,15 @@ public class CancelCallResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CancelCallResponseBody setMessage(String message) {
+    public RecoverCallInConfigResponseBody setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
+    }
+
+    public RecoverCallInConfigResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -37,20 +45,12 @@ public class CancelCallResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CancelCallResponseBody setRequestId(String requestId) {
+    public RecoverCallInConfigResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CancelCallResponseBody setStatus(Boolean status) {
-        this.status = status;
-        return this;
-    }
-    public Boolean getStatus() {
-        return this.status;
     }
 
 }

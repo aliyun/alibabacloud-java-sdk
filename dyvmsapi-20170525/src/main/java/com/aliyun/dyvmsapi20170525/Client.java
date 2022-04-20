@@ -211,47 +211,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchRobotSmartCallWithOptions(request, runtime);
     }
 
-    public CancelCallResponse cancelCallWithOptions(CancelCallRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.callId)) {
-            query.put("CallId", request.callId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CancelCall"),
-            new TeaPair("version", "2017-05-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelCallResponse());
-    }
-
-    public CancelCallResponse cancelCall(CancelCallRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.cancelCallWithOptions(request, runtime);
-    }
-
     public CancelOrderRobotTaskResponse cancelOrderRobotTaskWithOptions(CancelOrderRobotTaskRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -332,79 +291,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CancelRobotTaskResponse cancelRobotTask(CancelRobotTaskRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.cancelRobotTaskWithOptions(request, runtime);
-    }
-
-    public ClickToDialResponse clickToDialWithOptions(ClickToDialRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.asrFlag)) {
-            query.put("AsrFlag", request.asrFlag);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.asrModelId)) {
-            query.put("AsrModelId", request.asrModelId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
-            query.put("CalledNumber", request.calledNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.calledShowNumber)) {
-            query.put("CalledShowNumber", request.calledShowNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.callerNumber)) {
-            query.put("CallerNumber", request.callerNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.callerShowNumber)) {
-            query.put("CallerShowNumber", request.callerShowNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
-            query.put("OutId", request.outId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.recordFlag)) {
-            query.put("RecordFlag", request.recordFlag);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sessionTimeout)) {
-            query.put("SessionTimeout", request.sessionTimeout);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ClickToDial"),
-            new TeaPair("version", "2017-05-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ClickToDialResponse());
-    }
-
-    public ClickToDialResponse clickToDial(ClickToDialRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.clickToDialWithOptions(request, runtime);
     }
 
     public CreateCallTaskResponse createCallTaskWithOptions(CreateCallTaskRequest request, RuntimeOptions runtime) throws Exception {
@@ -1838,6 +1724,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryVoiceFileAuditInfoWithOptions(request, runtime);
     }
 
+    public RecoverCallInConfigResponse recoverCallInConfigWithOptions(RecoverCallInConfigRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.number)) {
+            query.put("Number", request.number);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecoverCallInConfig"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecoverCallInConfigResponse());
+    }
+
+    public RecoverCallInConfigResponse recoverCallInConfig(RecoverCallInConfigRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.recoverCallInConfigWithOptions(request, runtime);
+    }
+
     public RefreshMqttTokenResponse refreshMqttTokenWithOptions(RefreshMqttTokenRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2348,6 +2275,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartRobotTaskResponse startRobotTask(StartRobotTaskRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.startRobotTaskWithOptions(request, runtime);
+    }
+
+    public StopCallInConfigResponse stopCallInConfigWithOptions(StopCallInConfigRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.number)) {
+            query.put("Number", request.number);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopCallInConfig"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopCallInConfigResponse());
+    }
+
+    public StopCallInConfigResponse stopCallInConfig(StopCallInConfigRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.stopCallInConfigWithOptions(request, runtime);
     }
 
     public StopRobotTaskResponse stopRobotTaskWithOptions(StopRobotTaskRequest request, RuntimeOptions runtime) throws Exception {
