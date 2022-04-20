@@ -1,3 +1,9 @@
+2022-04-20 Version: 1.0.14
+- Add RefreshSettleOrderAccount.
+- Modify RegisterSettleAccount, support currency and country or area code.
+- Modify ModifySettleAccount, support currency and country or area code.
+- Modify QueryStatements, support currency.
+
 2022-04-13 Version: 2.13.2
 - Add createOrderOutDiscount and ModifyRefundApply api.
 
