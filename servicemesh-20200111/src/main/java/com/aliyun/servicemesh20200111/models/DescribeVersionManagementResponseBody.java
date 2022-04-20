@@ -47,6 +47,12 @@ public class DescribeVersionManagementResponseBody extends TeaModel {
         @NameInMap("PodName")
         public String podName;
 
+        @NameInMap("RestartTime")
+        public Integer restartTime;
+
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeVersionManagementResponseBodyVersionDetailsPodInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeVersionManagementResponseBodyVersionDetailsPodInstances self = new DescribeVersionManagementResponseBodyVersionDetailsPodInstances();
             return TeaModel.build(map, self);
@@ -92,6 +98,74 @@ public class DescribeVersionManagementResponseBody extends TeaModel {
             return this.podName;
         }
 
+        public DescribeVersionManagementResponseBodyVersionDetailsPodInstances setRestartTime(Integer restartTime) {
+            this.restartTime = restartTime;
+            return this;
+        }
+        public Integer getRestartTime() {
+            return this.restartTime;
+        }
+
+        public DescribeVersionManagementResponseBodyVersionDetailsPodInstances setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class DescribeVersionManagementResponseBodyVersionDetailsResource extends TeaModel {
+        @NameInMap("CPULimit")
+        public String CPULimit;
+
+        @NameInMap("CPURequest")
+        public String CPURequest;
+
+        @NameInMap("MemoryLimit")
+        public String memoryLimit;
+
+        @NameInMap("MemoryRequest")
+        public String memoryRequest;
+
+        public static DescribeVersionManagementResponseBodyVersionDetailsResource build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVersionManagementResponseBodyVersionDetailsResource self = new DescribeVersionManagementResponseBodyVersionDetailsResource();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVersionManagementResponseBodyVersionDetailsResource setCPULimit(String CPULimit) {
+            this.CPULimit = CPULimit;
+            return this;
+        }
+        public String getCPULimit() {
+            return this.CPULimit;
+        }
+
+        public DescribeVersionManagementResponseBodyVersionDetailsResource setCPURequest(String CPURequest) {
+            this.CPURequest = CPURequest;
+            return this;
+        }
+        public String getCPURequest() {
+            return this.CPURequest;
+        }
+
+        public DescribeVersionManagementResponseBodyVersionDetailsResource setMemoryLimit(String memoryLimit) {
+            this.memoryLimit = memoryLimit;
+            return this;
+        }
+        public String getMemoryLimit() {
+            return this.memoryLimit;
+        }
+
+        public DescribeVersionManagementResponseBodyVersionDetailsResource setMemoryRequest(String memoryRequest) {
+            this.memoryRequest = memoryRequest;
+            return this;
+        }
+        public String getMemoryRequest() {
+            return this.memoryRequest;
+        }
+
     }
 
     public static class DescribeVersionManagementResponseBodyVersionDetails extends TeaModel {
@@ -115,6 +189,9 @@ public class DescribeVersionManagementResponseBody extends TeaModel {
 
         @NameInMap("Replicas")
         public Integer replicas;
+
+        @NameInMap("Resource")
+        public DescribeVersionManagementResponseBodyVersionDetailsResource resource;
 
         @NameInMap("Version")
         public String version;
@@ -178,6 +255,14 @@ public class DescribeVersionManagementResponseBody extends TeaModel {
         }
         public Integer getReplicas() {
             return this.replicas;
+        }
+
+        public DescribeVersionManagementResponseBodyVersionDetails setResource(DescribeVersionManagementResponseBodyVersionDetailsResource resource) {
+            this.resource = resource;
+            return this;
+        }
+        public DescribeVersionManagementResponseBodyVersionDetailsResource getResource() {
+            return this.resource;
         }
 
         public DescribeVersionManagementResponseBodyVersionDetails setVersion(String version) {

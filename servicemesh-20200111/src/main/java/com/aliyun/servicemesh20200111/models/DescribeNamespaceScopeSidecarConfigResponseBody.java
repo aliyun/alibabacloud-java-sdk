@@ -31,6 +31,47 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher extends TeaModel {
+        @NameInMap("InclusionPrefixes")
+        public java.util.List<String> inclusionPrefixes;
+
+        @NameInMap("InclusionRegexps")
+        public java.util.List<String> inclusionRegexps;
+
+        @NameInMap("InclusionSuffixes")
+        public java.util.List<String> inclusionSuffixes;
+
+        public static DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher self = new DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher setInclusionPrefixes(java.util.List<String> inclusionPrefixes) {
+            this.inclusionPrefixes = inclusionPrefixes;
+            return this;
+        }
+        public java.util.List<String> getInclusionPrefixes() {
+            return this.inclusionPrefixes;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher setInclusionRegexps(java.util.List<String> inclusionRegexps) {
+            this.inclusionRegexps = inclusionRegexps;
+            return this;
+        }
+        public java.util.List<String> getInclusionRegexps() {
+            return this.inclusionRegexps;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher setInclusionSuffixes(java.util.List<String> inclusionSuffixes) {
+            this.inclusionSuffixes = inclusionSuffixes;
+            return this;
+        }
+        public java.util.List<String> getInclusionSuffixes() {
+            return this.inclusionSuffixes;
+        }
+
+    }
+
     public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitResourceLimit extends TeaModel {
         @NameInMap("ResourceCPULimit")
         public String resourceCPULimit;
@@ -152,6 +193,9 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches extends TeaModel {
+        @NameInMap("Concurrency")
+        public Integer concurrency;
+
         @NameInMap("ExcludeInboundPorts")
         public String excludeInboundPorts;
 
@@ -160,6 +204,9 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
         @NameInMap("ExcludeOutboundPorts")
         public String excludeOutboundPorts;
+
+        @NameInMap("HoldApplicationUntilProxyStarts")
+        public Boolean holdApplicationUntilProxyStarts;
 
         @NameInMap("IncludeInboundPorts")
         public String includeInboundPorts;
@@ -175,6 +222,12 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
         @NameInMap("LifecycleStr")
         public String lifecycleStr;
+
+        @NameInMap("LogLevel")
+        public String logLevel;
+
+        @NameInMap("ProxyStatsMatcher")
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher proxyStatsMatcher;
 
         @NameInMap("SidecarProxyInitResourceLimit")
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitResourceLimit sidecarProxyInitResourceLimit;
@@ -194,6 +247,14 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         public static DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches build(java.util.Map<String, ?> map) throws Exception {
             DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches self = new DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setConcurrency(Integer concurrency) {
+            this.concurrency = concurrency;
+            return this;
+        }
+        public Integer getConcurrency() {
+            return this.concurrency;
         }
 
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setExcludeInboundPorts(String excludeInboundPorts) {
@@ -218,6 +279,14 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         }
         public String getExcludeOutboundPorts() {
             return this.excludeOutboundPorts;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setHoldApplicationUntilProxyStarts(Boolean holdApplicationUntilProxyStarts) {
+            this.holdApplicationUntilProxyStarts = holdApplicationUntilProxyStarts;
+            return this;
+        }
+        public Boolean getHoldApplicationUntilProxyStarts() {
+            return this.holdApplicationUntilProxyStarts;
         }
 
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setIncludeInboundPorts(String includeInboundPorts) {
@@ -258,6 +327,22 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         }
         public String getLifecycleStr() {
             return this.lifecycleStr;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setLogLevel(String logLevel) {
+            this.logLevel = logLevel;
+            return this;
+        }
+        public String getLogLevel() {
+            return this.logLevel;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setProxyStatsMatcher(DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher proxyStatsMatcher) {
+            this.proxyStatsMatcher = proxyStatsMatcher;
+            return this;
+        }
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher getProxyStatsMatcher() {
+            return this.proxyStatsMatcher;
         }
 
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setSidecarProxyInitResourceLimit(DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitResourceLimit sidecarProxyInitResourceLimit) {

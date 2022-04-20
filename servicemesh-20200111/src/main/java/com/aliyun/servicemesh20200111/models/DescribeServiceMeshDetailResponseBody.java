@@ -404,7 +404,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartExec extends TeaModel {
-        @NameInMap("Command")
+        @NameInMap("command")
         public java.util.List<String> command;
 
         public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartExec build(java.util.Map<String, ?> map) throws Exception {
@@ -422,19 +422,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGetHTTPHeaders extends TeaModel {
-        @NameInMap("Name")
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGetHttpHeaders extends TeaModel {
+        @NameInMap("name")
         public String name;
 
-        @NameInMap("Value")
+        @NameInMap("value")
         public String value;
 
-        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGetHTTPHeaders build(java.util.Map<String, ?> map) throws Exception {
-            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGetHTTPHeaders self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGetHTTPHeaders();
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGetHttpHeaders build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGetHttpHeaders self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGetHttpHeaders();
             return TeaModel.build(map, self);
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGetHTTPHeaders setName(String name) {
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGetHttpHeaders setName(String name) {
             this.name = name;
             return this;
         }
@@ -442,7 +442,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGetHTTPHeaders setValue(String value) {
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGetHttpHeaders setValue(String value) {
             this.value = value;
             return this;
         }
@@ -452,33 +452,25 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGet extends TeaModel {
-        @NameInMap("HTTPHeaders")
-        public java.util.List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGetHTTPHeaders> HTTPHeaders;
-
-        @NameInMap("Host")
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGet extends TeaModel {
+        @NameInMap("host")
         public String host;
 
-        @NameInMap("Port")
+        @NameInMap("httpHeaders")
+        public java.util.List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGetHttpHeaders> httpHeaders;
+
+        @NameInMap("port")
         public String port;
 
-        @NameInMap("Scheme")
+        @NameInMap("scheme")
         public String scheme;
 
-        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGet self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGet();
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGet self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGet();
             return TeaModel.build(map, self);
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGet setHTTPHeaders(java.util.List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGetHTTPHeaders> HTTPHeaders) {
-            this.HTTPHeaders = HTTPHeaders;
-            return this;
-        }
-        public java.util.List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGetHTTPHeaders> getHTTPHeaders() {
-            return this.HTTPHeaders;
-        }
-
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGet setHost(String host) {
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGet setHost(String host) {
             this.host = host;
             return this;
         }
@@ -486,7 +478,15 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.host;
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGet setPort(String port) {
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGet setHttpHeaders(java.util.List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGetHttpHeaders> httpHeaders) {
+            this.httpHeaders = httpHeaders;
+            return this;
+        }
+        public java.util.List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGetHttpHeaders> getHttpHeaders() {
+            return this.httpHeaders;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGet setPort(String port) {
             this.port = port;
             return this;
         }
@@ -494,7 +494,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.port;
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGet setScheme(String scheme) {
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGet setScheme(String scheme) {
             this.scheme = scheme;
             return this;
         }
@@ -504,19 +504,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTCPSocket extends TeaModel {
-        @NameInMap("Host")
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTcpSocket extends TeaModel {
+        @NameInMap("host")
         public String host;
 
-        @NameInMap("Port")
+        @NameInMap("port")
         public String port;
 
-        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTCPSocket build(java.util.Map<String, ?> map) throws Exception {
-            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTCPSocket self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTCPSocket();
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTcpSocket build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTcpSocket self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTcpSocket();
             return TeaModel.build(map, self);
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTCPSocket setHost(String host) {
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTcpSocket setHost(String host) {
             this.host = host;
             return this;
         }
@@ -524,7 +524,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.host;
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTCPSocket setPort(String port) {
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTcpSocket setPort(String port) {
             this.port = port;
             return this;
         }
@@ -535,14 +535,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStart extends TeaModel {
-        @NameInMap("Exec")
+        @NameInMap("exec")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartExec exec;
 
-        @NameInMap("HTTPGet")
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGet HTTPGet;
+        @NameInMap("httpGet")
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGet httpGet;
 
-        @NameInMap("TCPSocket")
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTCPSocket TCPSocket;
+        @NameInMap("tcpSocket")
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTcpSocket tcpSocket;
 
         public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStart build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStart self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStart();
@@ -557,26 +557,26 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.exec;
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStart setHTTPGet(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGet HTTPGet) {
-            this.HTTPGet = HTTPGet;
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStart setHttpGet(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGet httpGet) {
+            this.httpGet = httpGet;
             return this;
         }
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGet getHTTPGet() {
-            return this.HTTPGet;
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHttpGet getHttpGet() {
+            return this.httpGet;
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStart setTCPSocket(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTCPSocket TCPSocket) {
-            this.TCPSocket = TCPSocket;
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStart setTcpSocket(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTcpSocket tcpSocket) {
+            this.tcpSocket = tcpSocket;
             return this;
         }
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTCPSocket getTCPSocket() {
-            return this.TCPSocket;
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTcpSocket getTcpSocket() {
+            return this.tcpSocket;
         }
 
     }
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopExec extends TeaModel {
-        @NameInMap("Command")
+        @NameInMap("command")
         public java.util.List<String> command;
 
         public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopExec build(java.util.Map<String, ?> map) throws Exception {
@@ -594,19 +594,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGetHTTPHeaders extends TeaModel {
-        @NameInMap("Name")
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGetHttpHeaders extends TeaModel {
+        @NameInMap("name")
         public String name;
 
-        @NameInMap("Value")
+        @NameInMap("value")
         public String value;
 
-        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGetHTTPHeaders build(java.util.Map<String, ?> map) throws Exception {
-            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGetHTTPHeaders self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGetHTTPHeaders();
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGetHttpHeaders build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGetHttpHeaders self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGetHttpHeaders();
             return TeaModel.build(map, self);
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGetHTTPHeaders setName(String name) {
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGetHttpHeaders setName(String name) {
             this.name = name;
             return this;
         }
@@ -614,7 +614,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGetHTTPHeaders setValue(String value) {
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGetHttpHeaders setValue(String value) {
             this.value = value;
             return this;
         }
@@ -624,33 +624,25 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGet extends TeaModel {
-        @NameInMap("HTTPHeaders")
-        public java.util.List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGetHTTPHeaders> HTTPHeaders;
-
-        @NameInMap("Host")
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGet extends TeaModel {
+        @NameInMap("host")
         public String host;
 
-        @NameInMap("Port")
+        @NameInMap("httpHeaders")
+        public java.util.List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGetHttpHeaders> httpHeaders;
+
+        @NameInMap("port")
         public String port;
 
-        @NameInMap("Scheme")
+        @NameInMap("scheme")
         public String scheme;
 
-        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGet self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGet();
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGet self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGet();
             return TeaModel.build(map, self);
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGet setHTTPHeaders(java.util.List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGetHTTPHeaders> HTTPHeaders) {
-            this.HTTPHeaders = HTTPHeaders;
-            return this;
-        }
-        public java.util.List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGetHTTPHeaders> getHTTPHeaders() {
-            return this.HTTPHeaders;
-        }
-
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGet setHost(String host) {
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGet setHost(String host) {
             this.host = host;
             return this;
         }
@@ -658,7 +650,15 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.host;
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGet setPort(String port) {
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGet setHttpHeaders(java.util.List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGetHttpHeaders> httpHeaders) {
+            this.httpHeaders = httpHeaders;
+            return this;
+        }
+        public java.util.List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGetHttpHeaders> getHttpHeaders() {
+            return this.httpHeaders;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGet setPort(String port) {
             this.port = port;
             return this;
         }
@@ -666,7 +666,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.port;
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGet setScheme(String scheme) {
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGet setScheme(String scheme) {
             this.scheme = scheme;
             return this;
         }
@@ -676,19 +676,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTCPSocket extends TeaModel {
-        @NameInMap("Host")
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTcpSocket extends TeaModel {
+        @NameInMap("host")
         public String host;
 
-        @NameInMap("Port")
+        @NameInMap("port")
         public String port;
 
-        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTCPSocket build(java.util.Map<String, ?> map) throws Exception {
-            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTCPSocket self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTCPSocket();
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTcpSocket build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTcpSocket self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTcpSocket();
             return TeaModel.build(map, self);
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTCPSocket setHost(String host) {
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTcpSocket setHost(String host) {
             this.host = host;
             return this;
         }
@@ -696,7 +696,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.host;
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTCPSocket setPort(String port) {
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTcpSocket setPort(String port) {
             this.port = port;
             return this;
         }
@@ -707,14 +707,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStop extends TeaModel {
-        @NameInMap("Exec")
+        @NameInMap("exec")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopExec exec;
 
-        @NameInMap("HTTPGet")
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGet HTTPGet;
+        @NameInMap("httpGet")
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGet httpGet;
 
-        @NameInMap("TCPSocket")
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTCPSocket TCPSocket;
+        @NameInMap("tcpSocket")
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTcpSocket tcpSocket;
 
         public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStop build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStop self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStop();
@@ -729,29 +729,29 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.exec;
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStop setHTTPGet(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGet HTTPGet) {
-            this.HTTPGet = HTTPGet;
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStop setHttpGet(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGet httpGet) {
+            this.httpGet = httpGet;
             return this;
         }
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGet getHTTPGet() {
-            return this.HTTPGet;
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHttpGet getHttpGet() {
+            return this.httpGet;
         }
 
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStop setTCPSocket(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTCPSocket TCPSocket) {
-            this.TCPSocket = TCPSocket;
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStop setTcpSocket(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTcpSocket tcpSocket) {
+            this.tcpSocket = tcpSocket;
             return this;
         }
-        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTCPSocket getTCPSocket() {
-            return this.TCPSocket;
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTcpSocket getTcpSocket() {
+            return this.tcpSocket;
         }
 
     }
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecycle extends TeaModel {
-        @NameInMap("PostStart")
+        @NameInMap("postStart")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStart postStart;
 
-        @NameInMap("PreStop")
+        @NameInMap("preStop")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStop preStop;
 
         public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecycle build(java.util.Map<String, ?> map) throws Exception {
@@ -2049,6 +2049,12 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         @NameInMap("Endpoints")
         public DescribeServiceMeshDetailResponseBodyServiceMeshEndpoints endpoints;
 
+        @NameInMap("OwnerId")
+        public String ownerId;
+
+        @NameInMap("OwnerType")
+        public String ownerType;
+
         @NameInMap("ServiceMeshInfo")
         public DescribeServiceMeshDetailResponseBodyServiceMeshServiceMeshInfo serviceMeshInfo;
 
@@ -2082,6 +2088,22 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
         public DescribeServiceMeshDetailResponseBodyServiceMeshEndpoints getEndpoints() {
             return this.endpoints;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMesh setOwnerId(String ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+        public String getOwnerId() {
+            return this.ownerId;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMesh setOwnerType(String ownerType) {
+            this.ownerType = ownerType;
+            return this;
+        }
+        public String getOwnerType() {
+            return this.ownerType;
         }
 
         public DescribeServiceMeshDetailResponseBodyServiceMesh setServiceMeshInfo(DescribeServiceMeshDetailResponseBodyServiceMeshServiceMeshInfo serviceMeshInfo) {

@@ -43,6 +43,9 @@ public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("CRAggregationEnabled")
     public Boolean CRAggregationEnabled;
 
+    @NameInMap("CanaryUpgradeEnabled")
+    public Boolean canaryUpgradeEnabled;
+
     @NameInMap("ChargeType")
     public String chargeType;
 
@@ -309,6 +312,14 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
     public Boolean getCRAggregationEnabled() {
         return this.CRAggregationEnabled;
+    }
+
+    public CreateServiceMeshRequest setCanaryUpgradeEnabled(Boolean canaryUpgradeEnabled) {
+        this.canaryUpgradeEnabled = canaryUpgradeEnabled;
+        return this;
+    }
+    public Boolean getCanaryUpgradeEnabled() {
+        return this.canaryUpgradeEnabled;
     }
 
     public CreateServiceMeshRequest setChargeType(String chargeType) {

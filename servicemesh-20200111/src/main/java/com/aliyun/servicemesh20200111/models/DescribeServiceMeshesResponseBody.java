@@ -531,6 +531,12 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         @NameInMap("Endpoints")
         public DescribeServiceMeshesResponseBodyServiceMeshesEndpoints endpoints;
 
+        @NameInMap("OwnerId")
+        public String ownerId;
+
+        @NameInMap("OwnerType")
+        public String ownerType;
+
         @NameInMap("ServiceMeshInfo")
         public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo serviceMeshInfo;
 
@@ -564,6 +570,22 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         }
         public DescribeServiceMeshesResponseBodyServiceMeshesEndpoints getEndpoints() {
             return this.endpoints;
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshes setOwnerId(String ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+        public String getOwnerId() {
+            return this.ownerId;
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshes setOwnerType(String ownerType) {
+            this.ownerType = ownerType;
+            return this;
+        }
+        public String getOwnerType() {
+            return this.ownerType;
         }
 
         public DescribeServiceMeshesResponseBodyServiceMeshes setServiceMeshInfo(DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo serviceMeshInfo) {
