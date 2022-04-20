@@ -8,10 +8,7 @@ public class RemovePhoneNumbersResponseBody extends TeaModel {
     public String code;
 
     @NameInMap("Data")
-    public String data;
-
-    @NameInMap("FailureList")
-    public java.util.List<String> failureList;
+    public java.util.List<String> data;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -38,20 +35,12 @@ public class RemovePhoneNumbersResponseBody extends TeaModel {
         return this.code;
     }
 
-    public RemovePhoneNumbersResponseBody setData(String data) {
+    public RemovePhoneNumbersResponseBody setData(java.util.List<String> data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public java.util.List<String> getData() {
         return this.data;
-    }
-
-    public RemovePhoneNumbersResponseBody setFailureList(java.util.List<String> failureList) {
-        this.failureList = failureList;
-        return this;
-    }
-    public java.util.List<String> getFailureList() {
-        return this.failureList;
     }
 
     public RemovePhoneNumbersResponseBody setHttpStatusCode(Integer httpStatusCode) {
