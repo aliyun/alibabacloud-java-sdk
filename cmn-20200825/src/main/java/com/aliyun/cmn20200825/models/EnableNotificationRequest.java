@@ -50,6 +50,12 @@ public class EnableNotificationRequest extends TeaModel {
         @NameInMap("DeviceId")
         public String deviceId;
 
+        @NameInMap("EventId")
+        public String eventId;
+
+        @NameInMap("EventObjectId")
+        public String eventObjectId;
+
         // 监控项ID
         @NameInMap("MonitorItemId")
         public String monitorItemId;
@@ -97,6 +103,22 @@ public class EnableNotificationRequest extends TeaModel {
         }
         public String getDeviceId() {
             return this.deviceId;
+        }
+
+        public EnableNotificationRequestList setEventId(String eventId) {
+            this.eventId = eventId;
+            return this;
+        }
+        public String getEventId() {
+            return this.eventId;
+        }
+
+        public EnableNotificationRequestList setEventObjectId(String eventObjectId) {
+            this.eventObjectId = eventObjectId;
+            return this;
+        }
+        public String getEventObjectId() {
+            return this.eventObjectId;
         }
 
         public EnableNotificationRequestList setMonitorItemId(String monitorItemId) {

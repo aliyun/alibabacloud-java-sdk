@@ -74,6 +74,12 @@ public class DisableNotificationRequest extends TeaModel {
         @NameInMap("DeviceId")
         public String deviceId;
 
+        @NameInMap("EventId")
+        public String eventId;
+
+        @NameInMap("EventObjectId")
+        public String eventObjectId;
+
         // 监控项ID
         @NameInMap("MonitorItemId")
         public String monitorItemId;
@@ -121,6 +127,22 @@ public class DisableNotificationRequest extends TeaModel {
         }
         public String getDeviceId() {
             return this.deviceId;
+        }
+
+        public DisableNotificationRequestList setEventId(String eventId) {
+            this.eventId = eventId;
+            return this;
+        }
+        public String getEventId() {
+            return this.eventId;
+        }
+
+        public DisableNotificationRequestList setEventObjectId(String eventObjectId) {
+            this.eventObjectId = eventObjectId;
+            return this;
+        }
+        public String getEventObjectId() {
+            return this.eventObjectId;
         }
 
         public DisableNotificationRequestList setMonitorItemId(String monitorItemId) {
