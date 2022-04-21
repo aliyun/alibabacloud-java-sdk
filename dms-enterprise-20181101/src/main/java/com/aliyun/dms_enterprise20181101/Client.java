@@ -4468,6 +4468,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDataCorrectExecSQLWithOptions(request, runtime);
     }
 
+    public OfflineTaskFlowResponse offlineTaskFlowWithOptions(OfflineTaskFlowRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dagId)) {
+            query.put("DagId", request.dagId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OfflineTaskFlow"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OfflineTaskFlowResponse());
+    }
+
+    public OfflineTaskFlowResponse offlineTaskFlow(OfflineTaskFlowRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.offlineTaskFlowWithOptions(request, runtime);
+    }
+
     public PauseDataCorrectSQLJobResponse pauseDataCorrectSQLJobWithOptions(PauseDataCorrectSQLJobRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
