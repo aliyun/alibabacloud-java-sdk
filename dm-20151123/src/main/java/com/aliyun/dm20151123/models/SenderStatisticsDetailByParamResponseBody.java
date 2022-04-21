@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
     @NameInMap("NextStart")
-    public Integer nextStart;
+    public String nextStart;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -18,11 +18,11 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SenderStatisticsDetailByParamResponseBody setNextStart(Integer nextStart) {
+    public SenderStatisticsDetailByParamResponseBody setNextStart(String nextStart) {
         this.nextStart = nextStart;
         return this;
     }
-    public Integer getNextStart() {
+    public String getNextStart() {
         return this.nextStart;
     }
 
