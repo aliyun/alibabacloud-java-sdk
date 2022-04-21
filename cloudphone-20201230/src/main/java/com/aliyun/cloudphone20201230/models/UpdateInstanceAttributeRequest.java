@@ -31,8 +31,9 @@ public class UpdateInstanceAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    // 标签列表，最多包含20个子项
+    @NameInMap("Tag")
+    public java.util.List<UpdateInstanceAttributeRequestTag> tag;
 
     @NameInMap("VncPassword")
     public String vncPassword;
@@ -114,12 +115,12 @@ public class UpdateInstanceAttributeRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public UpdateInstanceAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public UpdateInstanceAttributeRequest setTag(java.util.List<UpdateInstanceAttributeRequestTag> tag) {
+        this.tag = tag;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public java.util.List<UpdateInstanceAttributeRequestTag> getTag() {
+        return this.tag;
     }
 
     public UpdateInstanceAttributeRequest setVncPassword(String vncPassword) {
@@ -128,6 +129,38 @@ public class UpdateInstanceAttributeRequest extends TeaModel {
     }
     public String getVncPassword() {
         return this.vncPassword;
+    }
+
+    public static class UpdateInstanceAttributeRequestTag extends TeaModel {
+        // 标签键
+        @NameInMap("Key")
+        public String key;
+
+        // 标签值
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateInstanceAttributeRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            UpdateInstanceAttributeRequestTag self = new UpdateInstanceAttributeRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateInstanceAttributeRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public UpdateInstanceAttributeRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

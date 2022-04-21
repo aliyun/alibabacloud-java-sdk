@@ -58,11 +58,12 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
+
+    // 标签列表，最多包含20个子项
+    @NameInMap("Tag")
+    public java.util.List<RunInstancesRequestTag> tag;
 
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -216,14 +217,6 @@ public class RunInstancesRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public RunInstancesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
     public RunInstancesRequest setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
@@ -232,12 +225,52 @@ public class RunInstancesRequest extends TeaModel {
         return this.securityGroupId;
     }
 
+    public RunInstancesRequest setTag(java.util.List<RunInstancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<RunInstancesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public RunInstancesRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public static class RunInstancesRequestTag extends TeaModel {
+        // 标签键
+        @NameInMap("Key")
+        public String key;
+
+        // 标签值
+        @NameInMap("Value")
+        public String value;
+
+        public static RunInstancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            RunInstancesRequestTag self = new RunInstancesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public RunInstancesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public RunInstancesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

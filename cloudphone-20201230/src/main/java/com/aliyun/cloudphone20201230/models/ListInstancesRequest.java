@@ -52,6 +52,10 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    // 标签列表，最多包含20个子项
+    @NameInMap("Tag")
+    public java.util.List<ListInstancesRequestTag> tag;
+
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -188,12 +192,52 @@ public class ListInstancesRequest extends TeaModel {
         return this.status;
     }
 
+    public ListInstancesRequest setTag(java.util.List<ListInstancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListInstancesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public ListInstancesRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class ListInstancesRequestTag extends TeaModel {
+        // 标签键
+        @NameInMap("Key")
+        public String key;
+
+        // 标签值
+        @NameInMap("Value")
+        public String value;
+
+        public static ListInstancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesRequestTag self = new ListInstancesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListInstancesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
