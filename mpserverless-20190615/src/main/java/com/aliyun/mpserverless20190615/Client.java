@@ -1679,8 +1679,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listOpenPlatformConfigWithOptions(request, runtime);
     }
 
-    public ListSpaceResponse listSpaceWithOptions(ListSpaceRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListSpaceResponse listSpaceWithOptions(ListSpaceRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListSpaceShrinkRequest request = new ListSpaceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.spaceIds)) {
+            request.spaceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.spaceIds, "SpaceIds", "simple");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
             body.put("PageNum", request.pageNum);
@@ -1688,6 +1694,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spaceIdsShrink)) {
+            body.put("SpaceIds", request.spaceIdsShrink);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
