@@ -60,6 +60,9 @@ public class ListSpaceResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        @NameInMap("GmtLastAccess")
+        public Long gmtLastAccess;
+
         @NameInMap("Name")
         public String name;
 
@@ -88,6 +91,14 @@ public class ListSpaceResponseBody extends TeaModel {
         }
         public Long getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        public ListSpaceResponseBodySpaces setGmtLastAccess(Long gmtLastAccess) {
+            this.gmtLastAccess = gmtLastAccess;
+            return this;
+        }
+        public Long getGmtLastAccess() {
+            return this.gmtLastAccess;
         }
 
         public ListSpaceResponseBodySpaces setName(String name) {

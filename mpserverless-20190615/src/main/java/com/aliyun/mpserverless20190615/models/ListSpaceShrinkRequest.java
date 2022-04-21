@@ -3,7 +3,7 @@ package com.aliyun.mpserverless20190615.models;
 
 import com.aliyun.tea.*;
 
-public class ListSpaceRequest extends TeaModel {
+public class ListSpaceShrinkRequest extends TeaModel {
     @NameInMap("PageNum")
     public Integer pageNum;
 
@@ -11,14 +11,14 @@ public class ListSpaceRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("SpaceIds")
-    public java.util.List<String> spaceIds;
+    public String spaceIdsShrink;
 
-    public static ListSpaceRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListSpaceRequest self = new ListSpaceRequest();
+    public static ListSpaceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListSpaceShrinkRequest self = new ListSpaceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListSpaceRequest setPageNum(Integer pageNum) {
+    public ListSpaceShrinkRequest setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListSpaceRequest extends TeaModel {
         return this.pageNum;
     }
 
-    public ListSpaceRequest setPageSize(Integer pageSize) {
+    public ListSpaceShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -34,12 +34,12 @@ public class ListSpaceRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListSpaceRequest setSpaceIds(java.util.List<String> spaceIds) {
-        this.spaceIds = spaceIds;
+    public ListSpaceShrinkRequest setSpaceIdsShrink(String spaceIdsShrink) {
+        this.spaceIdsShrink = spaceIdsShrink;
         return this;
     }
-    public java.util.List<String> getSpaceIds() {
-        return this.spaceIds;
+    public String getSpaceIdsShrink() {
+        return this.spaceIdsShrink;
     }
 
 }
