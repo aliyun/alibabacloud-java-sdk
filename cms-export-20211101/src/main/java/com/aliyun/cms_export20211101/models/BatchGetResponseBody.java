@@ -188,7 +188,7 @@ public class BatchGetResponseBody extends TeaModel {
         public java.util.List<String> compressionKeys;
 
         @NameInMap("CompressionValues")
-        public java.util.List<java.util.List<java.util.Map<String, ?>>> compressionValues;
+        public java.util.List<java.util.List<String>> compressionValues;
 
         @NameInMap("Cursor")
         public String cursor;
@@ -215,11 +215,11 @@ public class BatchGetResponseBody extends TeaModel {
             return this.compressionKeys;
         }
 
-        public BatchGetResponseBodyData setCompressionValues(java.util.List<java.util.List<java.util.Map<String, ?>>> compressionValues) {
+        public BatchGetResponseBodyData setCompressionValues(java.util.List<java.util.List<String>> compressionValues) {
             this.compressionValues = compressionValues;
             return this;
         }
-        public java.util.List<java.util.List<java.util.Map<String, ?>>> getCompressionValues() {
+        public java.util.List<java.util.List<String>> getCompressionValues() {
             return this.compressionValues;
         }
 
