@@ -48,6 +48,9 @@ public class AddProductImageRequest extends TeaModel {
         @NameInMap("ProductImageCutout")
         public Boolean productImageCutout;
 
+        @NameInMap("ProductImageId")
+        public String productImageId;
+
         @NameInMap("ProductImageLabels")
         public java.util.List<String> productImageLabels;
 
@@ -70,6 +73,14 @@ public class AddProductImageRequest extends TeaModel {
         }
         public Boolean getProductImageCutout() {
             return this.productImageCutout;
+        }
+
+        public AddProductImageRequestProductImageList setProductImageId(String productImageId) {
+            this.productImageId = productImageId;
+            return this;
+        }
+        public String getProductImageId() {
+            return this.productImageId;
         }
 
         public AddProductImageRequestProductImageList setProductImageLabels(java.util.List<String> productImageLabels) {
