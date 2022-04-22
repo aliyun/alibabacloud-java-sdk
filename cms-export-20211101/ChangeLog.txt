@@ -1,3 +1,6 @@
+2022-04-22 Version: 1.0.6
+- Publish export-servicce v1.
+
 2022-03-16 Version: 1.0.5
 - Publish export-servicce v1.
 
