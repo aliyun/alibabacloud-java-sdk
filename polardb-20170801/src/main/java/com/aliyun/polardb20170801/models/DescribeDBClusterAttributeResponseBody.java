@@ -67,6 +67,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("ProxyCpuCores")
     public String proxyCpuCores;
 
+    @NameInMap("ProxyStandardCpuCores")
+    public String proxyStandardCpuCores;
+
     @NameInMap("ProxyStatus")
     public String proxyStatus;
 
@@ -282,6 +285,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         return this.proxyCpuCores;
     }
 
+    public DescribeDBClusterAttributeResponseBody setProxyStandardCpuCores(String proxyStandardCpuCores) {
+        this.proxyStandardCpuCores = proxyStandardCpuCores;
+        return this;
+    }
+    public String getProxyStandardCpuCores() {
+        return this.proxyStandardCpuCores;
+    }
+
     public DescribeDBClusterAttributeResponseBody setProxyStatus(String proxyStatus) {
         this.proxyStatus = proxyStatus;
         return this;
@@ -395,6 +406,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAttributeResponseBodyDBNodes extends TeaModel {
+        @NameInMap("AddedCpuCores")
+        public String addedCpuCores;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -419,6 +433,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("ImciSwitch")
         public String imciSwitch;
 
+        @NameInMap("MasterId")
+        public String masterId;
+
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
@@ -431,6 +448,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public static DescribeDBClusterAttributeResponseBodyDBNodes build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterAttributeResponseBodyDBNodes self = new DescribeDBClusterAttributeResponseBodyDBNodes();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBNodes setAddedCpuCores(String addedCpuCores) {
+            this.addedCpuCores = addedCpuCores;
+            return this;
+        }
+        public String getAddedCpuCores() {
+            return this.addedCpuCores;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBNodes setCreationTime(String creationTime) {
@@ -495,6 +520,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getImciSwitch() {
             return this.imciSwitch;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBNodes setMasterId(String masterId) {
+            this.masterId = masterId;
+            return this;
+        }
+        public String getMasterId() {
+            return this.masterId;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBNodes setMaxConnections(Integer maxConnections) {

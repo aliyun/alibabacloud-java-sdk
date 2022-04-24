@@ -3,7 +3,7 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyDBNodeHotReplicaModeResponseBody extends TeaModel {
+public class ModifyDBNodesClassResponseBody extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -13,12 +13,12 @@ public class ModifyDBNodeHotReplicaModeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ModifyDBNodeHotReplicaModeResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifyDBNodeHotReplicaModeResponseBody self = new ModifyDBNodeHotReplicaModeResponseBody();
+    public static ModifyDBNodesClassResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifyDBNodesClassResponseBody self = new ModifyDBNodesClassResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDBNodeHotReplicaModeResponseBody setDBClusterId(String DBClusterId) {
+    public ModifyDBNodesClassResponseBody setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -26,7 +26,7 @@ public class ModifyDBNodeHotReplicaModeResponseBody extends TeaModel {
         return this.DBClusterId;
     }
 
-    public ModifyDBNodeHotReplicaModeResponseBody setOrderId(String orderId) {
+    public ModifyDBNodesClassResponseBody setOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
@@ -34,7 +34,7 @@ public class ModifyDBNodeHotReplicaModeResponseBody extends TeaModel {
         return this.orderId;
     }
 
-    public ModifyDBNodeHotReplicaModeResponseBody setRequestId(String requestId) {
+    public ModifyDBNodesClassResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
