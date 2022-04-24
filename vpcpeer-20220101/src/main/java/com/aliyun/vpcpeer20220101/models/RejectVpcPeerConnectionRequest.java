@@ -4,12 +4,6 @@ package com.aliyun.vpcpeer20220101.models;
 import com.aliyun.tea.*;
 
 public class RejectVpcPeerConnectionRequest extends TeaModel {
-    @NameInMap("CallerBidLoginEmail")
-    public String callerBidLoginEmail;
-
-    @NameInMap("CallerUidLoginEmail")
-    public String callerUidLoginEmail;
-
     @NameInMap("Channel")
     public String channel;
 
@@ -22,37 +16,12 @@ public class RejectVpcPeerConnectionRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerIdLoginEmail")
-    public String ownerIdLoginEmail;
-
-    @NameInMap("RequestContent")
-    public String requestContent;
-
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     public static RejectVpcPeerConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         RejectVpcPeerConnectionRequest self = new RejectVpcPeerConnectionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RejectVpcPeerConnectionRequest setCallerBidLoginEmail(String callerBidLoginEmail) {
-        this.callerBidLoginEmail = callerBidLoginEmail;
-        return this;
-    }
-    public String getCallerBidLoginEmail() {
-        return this.callerBidLoginEmail;
-    }
-
-    public RejectVpcPeerConnectionRequest setCallerUidLoginEmail(String callerUidLoginEmail) {
-        this.callerUidLoginEmail = callerUidLoginEmail;
-        return this;
-    }
-    public String getCallerUidLoginEmail() {
-        return this.callerUidLoginEmail;
     }
 
     public RejectVpcPeerConnectionRequest setChannel(String channel) {
@@ -85,30 +54,6 @@ public class RejectVpcPeerConnectionRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public RejectVpcPeerConnectionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public RejectVpcPeerConnectionRequest setOwnerIdLoginEmail(String ownerIdLoginEmail) {
-        this.ownerIdLoginEmail = ownerIdLoginEmail;
-        return this;
-    }
-    public String getOwnerIdLoginEmail() {
-        return this.ownerIdLoginEmail;
-    }
-
-    public RejectVpcPeerConnectionRequest setRequestContent(String requestContent) {
-        this.requestContent = requestContent;
-        return this;
-    }
-    public String getRequestContent() {
-        return this.requestContent;
     }
 
     public RejectVpcPeerConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {

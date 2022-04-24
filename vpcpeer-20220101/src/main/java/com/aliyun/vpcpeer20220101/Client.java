@@ -35,14 +35,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AcceptVpcPeerConnectionResponse acceptVpcPeerConnectionWithOptions(AcceptVpcPeerConnectionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.callerBidLoginEmail)) {
-            body.put("CallerBidLoginEmail", request.callerBidLoginEmail);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.callerUidLoginEmail)) {
-            body.put("CallerUidLoginEmail", request.callerUidLoginEmail);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
             body.put("Channel", request.channel);
         }
@@ -57,14 +49,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            body.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerIdLoginEmail)) {
-            body.put("OwnerIdLoginEmail", request.ownerIdLoginEmail);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.requestContent)) {
@@ -177,6 +161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DryRun", request.dryRun);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            body.put("Force", request.force);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
         }
@@ -206,14 +194,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetVpcPeerConnectionAttributeResponse getVpcPeerConnectionAttributeWithOptions(GetVpcPeerConnectionAttributeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.callerBidLoginEmail)) {
-            body.put("CallerBidLoginEmail", request.callerBidLoginEmail);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.callerUidLoginEmail)) {
-            body.put("CallerUidLoginEmail", request.callerUidLoginEmail);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
             body.put("Channel", request.channel);
         }
@@ -228,14 +208,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            body.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerIdLoginEmail)) {
-            body.put("OwnerIdLoginEmail", request.ownerIdLoginEmail);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.requestContent)) {
@@ -387,14 +359,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RejectVpcPeerConnectionResponse rejectVpcPeerConnectionWithOptions(RejectVpcPeerConnectionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.callerBidLoginEmail)) {
-            body.put("CallerBidLoginEmail", request.callerBidLoginEmail);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.callerUidLoginEmail)) {
-            body.put("CallerUidLoginEmail", request.callerUidLoginEmail);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
             body.put("Channel", request.channel);
         }
@@ -409,18 +373,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            body.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerIdLoginEmail)) {
-            body.put("OwnerIdLoginEmail", request.ownerIdLoginEmail);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.requestContent)) {
-            body.put("RequestContent", request.requestContent);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {

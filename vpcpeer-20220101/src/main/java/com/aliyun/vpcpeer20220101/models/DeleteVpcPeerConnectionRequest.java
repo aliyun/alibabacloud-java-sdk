@@ -13,6 +13,10 @@ public class DeleteVpcPeerConnectionRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    // 是否强删
+    @NameInMap("Force")
+    public Boolean force;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -43,6 +47,14 @@ public class DeleteVpcPeerConnectionRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public DeleteVpcPeerConnectionRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public DeleteVpcPeerConnectionRequest setInstanceId(String instanceId) {

@@ -19,17 +19,8 @@ public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
     @NameInMap("BizStatus")
     public String bizStatus;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Description")
     public String description;
-
-    @NameInMap("DynamicCode")
-    public String dynamicCode;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
 
     @NameInMap("GmtCreate")
     public String gmtCreate;
@@ -40,14 +31,8 @@ public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("Name")
     public String name;
@@ -66,9 +51,6 @@ public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
 
     @NameInMap("Status")
     public String status;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     @NameInMap("Vpc")
     public Vpc vpc;
@@ -118,36 +100,12 @@ public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
         return this.bizStatus;
     }
 
-    public GetVpcPeerConnectionAttributeResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetVpcPeerConnectionAttributeResponseBody setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public GetVpcPeerConnectionAttributeResponseBody setDynamicCode(String dynamicCode) {
-        this.dynamicCode = dynamicCode;
-        return this;
-    }
-    public String getDynamicCode() {
-        return this.dynamicCode;
-    }
-
-    public GetVpcPeerConnectionAttributeResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
     }
 
     public GetVpcPeerConnectionAttributeResponseBody setGmtCreate(String gmtCreate) {
@@ -174,28 +132,12 @@ public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
         return this.gmtModified;
     }
 
-    public GetVpcPeerConnectionAttributeResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public GetVpcPeerConnectionAttributeResponseBody setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public GetVpcPeerConnectionAttributeResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public GetVpcPeerConnectionAttributeResponseBody setName(String name) {
@@ -244,14 +186,6 @@ public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public GetVpcPeerConnectionAttributeResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public GetVpcPeerConnectionAttributeResponseBody setVpc(Vpc vpc) {

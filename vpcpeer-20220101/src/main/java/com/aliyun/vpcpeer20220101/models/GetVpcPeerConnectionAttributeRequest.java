@@ -4,12 +4,6 @@ package com.aliyun.vpcpeer20220101.models;
 import com.aliyun.tea.*;
 
 public class GetVpcPeerConnectionAttributeRequest extends TeaModel {
-    @NameInMap("CallerBidLoginEmail")
-    public String callerBidLoginEmail;
-
-    @NameInMap("CallerUidLoginEmail")
-    public String callerUidLoginEmail;
-
     @NameInMap("Channel")
     public String channel;
 
@@ -22,12 +16,6 @@ public class GetVpcPeerConnectionAttributeRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerIdLoginEmail")
-    public String ownerIdLoginEmail;
-
     @NameInMap("RequestContent")
     public String requestContent;
 
@@ -37,22 +25,6 @@ public class GetVpcPeerConnectionAttributeRequest extends TeaModel {
     public static GetVpcPeerConnectionAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         GetVpcPeerConnectionAttributeRequest self = new GetVpcPeerConnectionAttributeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetVpcPeerConnectionAttributeRequest setCallerBidLoginEmail(String callerBidLoginEmail) {
-        this.callerBidLoginEmail = callerBidLoginEmail;
-        return this;
-    }
-    public String getCallerBidLoginEmail() {
-        return this.callerBidLoginEmail;
-    }
-
-    public GetVpcPeerConnectionAttributeRequest setCallerUidLoginEmail(String callerUidLoginEmail) {
-        this.callerUidLoginEmail = callerUidLoginEmail;
-        return this;
-    }
-    public String getCallerUidLoginEmail() {
-        return this.callerUidLoginEmail;
     }
 
     public GetVpcPeerConnectionAttributeRequest setChannel(String channel) {
@@ -85,22 +57,6 @@ public class GetVpcPeerConnectionAttributeRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public GetVpcPeerConnectionAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public GetVpcPeerConnectionAttributeRequest setOwnerIdLoginEmail(String ownerIdLoginEmail) {
-        this.ownerIdLoginEmail = ownerIdLoginEmail;
-        return this;
-    }
-    public String getOwnerIdLoginEmail() {
-        return this.ownerIdLoginEmail;
     }
 
     public GetVpcPeerConnectionAttributeRequest setRequestContent(String requestContent) {
