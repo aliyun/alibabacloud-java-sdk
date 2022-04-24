@@ -4,9 +4,6 @@ package com.aliyun.vpcpeer20220101.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpcPeerConnectionRequest extends TeaModel {
-    @NameInMap("Channel")
-    public String channel;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -25,14 +22,6 @@ public class ModifyVpcPeerConnectionRequest extends TeaModel {
     public static ModifyVpcPeerConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyVpcPeerConnectionRequest self = new ModifyVpcPeerConnectionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyVpcPeerConnectionRequest setChannel(String channel) {
-        this.channel = channel;
-        return this;
-    }
-    public String getChannel() {
-        return this.channel;
     }
 
     public ModifyVpcPeerConnectionRequest setClientToken(String clientToken) {

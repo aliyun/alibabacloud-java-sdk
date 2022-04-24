@@ -4,9 +4,6 @@ package com.aliyun.vpcpeer20220101.models;
 import com.aliyun.tea.*;
 
 public class AcceptVpcPeerConnectionRequest extends TeaModel {
-    @NameInMap("Channel")
-    public String channel;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -16,23 +13,12 @@ public class AcceptVpcPeerConnectionRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RequestContent")
-    public String requestContent;
-
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     public static AcceptVpcPeerConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         AcceptVpcPeerConnectionRequest self = new AcceptVpcPeerConnectionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AcceptVpcPeerConnectionRequest setChannel(String channel) {
-        this.channel = channel;
-        return this;
-    }
-    public String getChannel() {
-        return this.channel;
     }
 
     public AcceptVpcPeerConnectionRequest setClientToken(String clientToken) {
@@ -57,14 +43,6 @@ public class AcceptVpcPeerConnectionRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public AcceptVpcPeerConnectionRequest setRequestContent(String requestContent) {
-        this.requestContent = requestContent;
-        return this;
-    }
-    public String getRequestContent() {
-        return this.requestContent;
     }
 
     public AcceptVpcPeerConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
