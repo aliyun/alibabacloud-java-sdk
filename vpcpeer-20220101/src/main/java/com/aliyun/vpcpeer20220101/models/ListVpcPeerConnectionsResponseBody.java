@@ -4,32 +4,14 @@ package com.aliyun.vpcpeer20220101.models;
 import com.aliyun.tea.*;
 
 public class ListVpcPeerConnectionsResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("DynamicCode")
-    public String dynamicCode;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("MaxResults")
     public Integer maxResults;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -42,52 +24,12 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListVpcPeerConnectionsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListVpcPeerConnectionsResponseBody setDynamicCode(String dynamicCode) {
-        this.dynamicCode = dynamicCode;
-        return this;
-    }
-    public String getDynamicCode() {
-        return this.dynamicCode;
-    }
-
-    public ListVpcPeerConnectionsResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
-    public ListVpcPeerConnectionsResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public ListVpcPeerConnectionsResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     public Integer getMaxResults() {
         return this.maxResults;
-    }
-
-    public ListVpcPeerConnectionsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public ListVpcPeerConnectionsResponseBody setNextToken(String nextToken) {
@@ -104,14 +46,6 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ListVpcPeerConnectionsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public ListVpcPeerConnectionsResponseBody setTotalCount(Integer totalCount) {
