@@ -3,15 +3,13 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyDBNodeHotReplicaModeRequest extends TeaModel {
+public class DescribeDBNodesParametersRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    @NameInMap("DBNodeId")
-    public String DBNodeId;
-
-    @NameInMap("HotReplicaMode")
-    public String hotReplicaMode;
+    // 查询指定节点的参数列表
+    @NameInMap("DBNodeIds")
+    public String DBNodeIds;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -25,12 +23,12 @@ public class ModifyDBNodeHotReplicaModeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static ModifyDBNodeHotReplicaModeRequest build(java.util.Map<String, ?> map) throws Exception {
-        ModifyDBNodeHotReplicaModeRequest self = new ModifyDBNodeHotReplicaModeRequest();
+    public static DescribeDBNodesParametersRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDBNodesParametersRequest self = new DescribeDBNodesParametersRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDBNodeHotReplicaModeRequest setDBClusterId(String DBClusterId) {
+    public DescribeDBNodesParametersRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -38,23 +36,15 @@ public class ModifyDBNodeHotReplicaModeRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public ModifyDBNodeHotReplicaModeRequest setDBNodeId(String DBNodeId) {
-        this.DBNodeId = DBNodeId;
+    public DescribeDBNodesParametersRequest setDBNodeIds(String DBNodeIds) {
+        this.DBNodeIds = DBNodeIds;
         return this;
     }
-    public String getDBNodeId() {
-        return this.DBNodeId;
+    public String getDBNodeIds() {
+        return this.DBNodeIds;
     }
 
-    public ModifyDBNodeHotReplicaModeRequest setHotReplicaMode(String hotReplicaMode) {
-        this.hotReplicaMode = hotReplicaMode;
-        return this;
-    }
-    public String getHotReplicaMode() {
-        return this.hotReplicaMode;
-    }
-
-    public ModifyDBNodeHotReplicaModeRequest setOwnerAccount(String ownerAccount) {
+    public DescribeDBNodesParametersRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -62,7 +52,7 @@ public class ModifyDBNodeHotReplicaModeRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public ModifyDBNodeHotReplicaModeRequest setOwnerId(Long ownerId) {
+    public DescribeDBNodesParametersRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -70,7 +60,7 @@ public class ModifyDBNodeHotReplicaModeRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ModifyDBNodeHotReplicaModeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DescribeDBNodesParametersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -78,7 +68,7 @@ public class ModifyDBNodeHotReplicaModeRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public ModifyDBNodeHotReplicaModeRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DescribeDBNodesParametersRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }

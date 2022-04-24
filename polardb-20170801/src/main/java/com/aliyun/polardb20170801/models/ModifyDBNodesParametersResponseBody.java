@@ -3,16 +3,16 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class RefreshProxyLevelResponseBody extends TeaModel {
+public class ModifyDBNodesParametersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static RefreshProxyLevelResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        RefreshProxyLevelResponseBody self = new RefreshProxyLevelResponseBody();
+    public static ModifyDBNodesParametersResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifyDBNodesParametersResponseBody self = new ModifyDBNodesParametersResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public RefreshProxyLevelResponseBody setRequestId(String requestId) {
+    public ModifyDBNodesParametersResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

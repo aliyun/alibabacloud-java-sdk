@@ -80,6 +80,12 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         @NameInMap("IsModifiable")
         public Boolean isModifiable;
 
+        @NameInMap("IsNodeAvailable")
+        public String isNodeAvailable;
+
+        @NameInMap("ParamRelyRule")
+        public String paramRelyRule;
+
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
@@ -135,6 +141,22 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
         public Boolean getIsModifiable() {
             return this.isModifiable;
+        }
+
+        public DescribeDBClusterParametersResponseBodyRunningParametersParameter setIsNodeAvailable(String isNodeAvailable) {
+            this.isNodeAvailable = isNodeAvailable;
+            return this;
+        }
+        public String getIsNodeAvailable() {
+            return this.isNodeAvailable;
+        }
+
+        public DescribeDBClusterParametersResponseBodyRunningParametersParameter setParamRelyRule(String paramRelyRule) {
+            this.paramRelyRule = paramRelyRule;
+            return this;
+        }
+        public String getParamRelyRule() {
+            return this.paramRelyRule;
         }
 
         public DescribeDBClusterParametersResponseBodyRunningParametersParameter setParameterDescription(String parameterDescription) {

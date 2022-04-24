@@ -13,8 +13,20 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("DataLevel1BackupFrequency")
+    public String dataLevel1BackupFrequency;
+
+    @NameInMap("DataLevel1BackupPeriod")
+    public String dataLevel1BackupPeriod;
+
     @NameInMap("DataLevel1BackupRetentionPeriod")
     public String dataLevel1BackupRetentionPeriod;
+
+    @NameInMap("DataLevel1BackupTime")
+    public String dataLevel1BackupTime;
+
+    @NameInMap("DataLevel2BackupPeriod")
+    public String dataLevel2BackupPeriod;
 
     @NameInMap("DataLevel2BackupRetentionPeriod")
     public String dataLevel2BackupRetentionPeriod;
@@ -66,12 +78,44 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.DBClusterId;
     }
 
+    public ModifyBackupPolicyRequest setDataLevel1BackupFrequency(String dataLevel1BackupFrequency) {
+        this.dataLevel1BackupFrequency = dataLevel1BackupFrequency;
+        return this;
+    }
+    public String getDataLevel1BackupFrequency() {
+        return this.dataLevel1BackupFrequency;
+    }
+
+    public ModifyBackupPolicyRequest setDataLevel1BackupPeriod(String dataLevel1BackupPeriod) {
+        this.dataLevel1BackupPeriod = dataLevel1BackupPeriod;
+        return this;
+    }
+    public String getDataLevel1BackupPeriod() {
+        return this.dataLevel1BackupPeriod;
+    }
+
     public ModifyBackupPolicyRequest setDataLevel1BackupRetentionPeriod(String dataLevel1BackupRetentionPeriod) {
         this.dataLevel1BackupRetentionPeriod = dataLevel1BackupRetentionPeriod;
         return this;
     }
     public String getDataLevel1BackupRetentionPeriod() {
         return this.dataLevel1BackupRetentionPeriod;
+    }
+
+    public ModifyBackupPolicyRequest setDataLevel1BackupTime(String dataLevel1BackupTime) {
+        this.dataLevel1BackupTime = dataLevel1BackupTime;
+        return this;
+    }
+    public String getDataLevel1BackupTime() {
+        return this.dataLevel1BackupTime;
+    }
+
+    public ModifyBackupPolicyRequest setDataLevel2BackupPeriod(String dataLevel2BackupPeriod) {
+        this.dataLevel2BackupPeriod = dataLevel2BackupPeriod;
+        return this;
+    }
+    public String getDataLevel2BackupPeriod() {
+        return this.dataLevel2BackupPeriod;
     }
 
     public ModifyBackupPolicyRequest setDataLevel2BackupRetentionPeriod(String dataLevel2BackupRetentionPeriod) {

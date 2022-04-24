@@ -85,6 +85,12 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         @NameInMap("ForceRestart")
         public String forceRestart;
 
+        @NameInMap("IsNodeAvailable")
+        public String isNodeAvailable;
+
+        @NameInMap("ParamRelyRule")
+        public String paramRelyRule;
+
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
@@ -121,6 +127,22 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
         public String getForceRestart() {
             return this.forceRestart;
+        }
+
+        public DescribeParameterTemplatesResponseBodyParametersTemplateRecord setIsNodeAvailable(String isNodeAvailable) {
+            this.isNodeAvailable = isNodeAvailable;
+            return this;
+        }
+        public String getIsNodeAvailable() {
+            return this.isNodeAvailable;
+        }
+
+        public DescribeParameterTemplatesResponseBodyParametersTemplateRecord setParamRelyRule(String paramRelyRule) {
+            this.paramRelyRule = paramRelyRule;
+            return this;
+        }
+        public String getParamRelyRule() {
+            return this.paramRelyRule;
         }
 
         public DescribeParameterTemplatesResponseBodyParametersTemplateRecord setParameterDescription(String parameterDescription) {
