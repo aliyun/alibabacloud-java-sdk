@@ -34,6 +34,12 @@ public class GetLiveRoomUserStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetLiveRoomUserStatisticsResponseBodyResultUserStatisticsList extends TeaModel {
+        @NameInMap("CommentCount")
+        public Integer commentCount;
+
+        @NameInMap("LikeCount")
+        public Integer likeCount;
+
         // 用户ID。
         @NameInMap("UserId")
         public String userId;
@@ -45,6 +51,22 @@ public class GetLiveRoomUserStatisticsResponseBody extends TeaModel {
         public static GetLiveRoomUserStatisticsResponseBodyResultUserStatisticsList build(java.util.Map<String, ?> map) throws Exception {
             GetLiveRoomUserStatisticsResponseBodyResultUserStatisticsList self = new GetLiveRoomUserStatisticsResponseBodyResultUserStatisticsList();
             return TeaModel.build(map, self);
+        }
+
+        public GetLiveRoomUserStatisticsResponseBodyResultUserStatisticsList setCommentCount(Integer commentCount) {
+            this.commentCount = commentCount;
+            return this;
+        }
+        public Integer getCommentCount() {
+            return this.commentCount;
+        }
+
+        public GetLiveRoomUserStatisticsResponseBodyResultUserStatisticsList setLikeCount(Integer likeCount) {
+            this.likeCount = likeCount;
+            return this;
+        }
+        public Integer getLikeCount() {
+            return this.likeCount;
         }
 
         public GetLiveRoomUserStatisticsResponseBodyResultUserStatisticsList setUserId(String userId) {
