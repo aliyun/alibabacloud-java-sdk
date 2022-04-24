@@ -35,10 +35,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AcceptVpcPeerConnectionResponse acceptVpcPeerConnectionWithOptions(AcceptVpcPeerConnectionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
-            body.put("Channel", request.channel);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
         }
@@ -49,10 +45,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.requestContent)) {
-            body.put("RequestContent", request.requestContent);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -94,10 +86,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.acceptingVpcId)) {
             body.put("AcceptingVpcId", request.acceptingVpcId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
-            body.put("Channel", request.channel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -149,10 +137,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteVpcPeerConnectionResponse deleteVpcPeerConnectionWithOptions(DeleteVpcPeerConnectionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
-            body.put("Channel", request.channel);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
         }
@@ -194,10 +178,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetVpcPeerConnectionAttributeResponse getVpcPeerConnectionAttributeWithOptions(GetVpcPeerConnectionAttributeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
-            body.put("Channel", request.channel);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
         }
@@ -208,10 +188,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.requestContent)) {
-            body.put("RequestContent", request.requestContent);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -249,10 +225,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
-            body.put("Channel", request.channel);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
         }
@@ -310,10 +282,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyVpcPeerConnectionResponse modifyVpcPeerConnectionWithOptions(ModifyVpcPeerConnectionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
-            body.put("Channel", request.channel);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
         }
@@ -359,10 +327,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RejectVpcPeerConnectionResponse rejectVpcPeerConnectionWithOptions(RejectVpcPeerConnectionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
-            body.put("Channel", request.channel);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
         }

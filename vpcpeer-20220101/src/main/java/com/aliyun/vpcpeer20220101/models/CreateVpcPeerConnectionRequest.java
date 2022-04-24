@@ -13,9 +13,6 @@ public class CreateVpcPeerConnectionRequest extends TeaModel {
     @NameInMap("AcceptingVpcId")
     public String acceptingVpcId;
 
-    @NameInMap("Channel")
-    public String channel;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -61,14 +58,6 @@ public class CreateVpcPeerConnectionRequest extends TeaModel {
     }
     public String getAcceptingVpcId() {
         return this.acceptingVpcId;
-    }
-
-    public CreateVpcPeerConnectionRequest setChannel(String channel) {
-        this.channel = channel;
-        return this;
-    }
-    public String getChannel() {
-        return this.channel;
     }
 
     public CreateVpcPeerConnectionRequest setClientToken(String clientToken) {
