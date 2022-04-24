@@ -4,12 +4,6 @@ package com.aliyun.vpcpeer20220101.models;
 import com.aliyun.tea.*;
 
 public class ListVpcPeerConnectionsRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -32,22 +26,6 @@ public class ListVpcPeerConnectionsRequest extends TeaModel {
     public static ListVpcPeerConnectionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListVpcPeerConnectionsRequest self = new ListVpcPeerConnectionsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListVpcPeerConnectionsRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public ListVpcPeerConnectionsRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
-        return this;
-    }
-    public Boolean getDryRun() {
-        return this.dryRun;
     }
 
     public ListVpcPeerConnectionsRequest setInstanceId(String instanceId) {
