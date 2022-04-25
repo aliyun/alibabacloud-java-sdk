@@ -4,6 +4,10 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class MetaResource extends TeaModel {
+    // catalog resource
+    @NameInMap("CatalogResource")
+    public CatalogResource catalogResource;
+
     // column resource
     @NameInMap("ColumnResource")
     public ColumnResource columnResource;
@@ -16,7 +20,7 @@ public class MetaResource extends TeaModel {
     @NameInMap("FunctionResource")
     public FunctionResource functionResource;
 
-    // DATABASE, TABLE, FUNCTION, COLUMN任选其一
+    // CATALOG,DATABASE, TABLE, FUNCTION, COLUMN任选其一
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -27,6 +31,14 @@ public class MetaResource extends TeaModel {
     public static MetaResource build(java.util.Map<String, ?> map) throws Exception {
         MetaResource self = new MetaResource();
         return TeaModel.build(map, self);
+    }
+
+    public MetaResource setCatalogResource(CatalogResource catalogResource) {
+        this.catalogResource = catalogResource;
+        return this;
+    }
+    public CatalogResource getCatalogResource() {
+        return this.catalogResource;
     }
 
     public MetaResource setColumnResource(ColumnResource columnResource) {
