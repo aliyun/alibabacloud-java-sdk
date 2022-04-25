@@ -37,6 +37,9 @@ public class GetLindormInstanceListRequest extends TeaModel {
     @NameInMap("SupportEngine")
     public Integer supportEngine;
 
+    @NameInMap("Tag")
+    public java.util.List<GetLindormInstanceListRequestTag> tag;
+
     public static GetLindormInstanceListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLindormInstanceListRequest self = new GetLindormInstanceListRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,44 @@ public class GetLindormInstanceListRequest extends TeaModel {
     }
     public Integer getSupportEngine() {
         return this.supportEngine;
+    }
+
+    public GetLindormInstanceListRequest setTag(java.util.List<GetLindormInstanceListRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<GetLindormInstanceListRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class GetLindormInstanceListRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetLindormInstanceListRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            GetLindormInstanceListRequestTag self = new GetLindormInstanceListRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public GetLindormInstanceListRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetLindormInstanceListRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
