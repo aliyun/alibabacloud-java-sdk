@@ -1,3 +1,7 @@
+2022-04-25 Version: 1.0.4
+- Supported ResourceGroupId for InsertApplication.
+- Supported ResourceGroupId for InsertK8sApplication.
+
 2022-04-14 Version: 1.0.3
 - Supported BuildPackId configurations for K8s Applications.
 
