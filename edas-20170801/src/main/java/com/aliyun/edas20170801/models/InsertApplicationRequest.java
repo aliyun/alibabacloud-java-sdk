@@ -67,6 +67,9 @@ public class InsertApplicationRequest extends TeaModel {
     @NameInMap("ReservedPortStr")
     public String reservedPortStr;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("WebContainer")
     public String webContainer;
 
@@ -241,6 +244,14 @@ public class InsertApplicationRequest extends TeaModel {
     }
     public String getReservedPortStr() {
         return this.reservedPortStr;
+    }
+
+    public InsertApplicationRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public InsertApplicationRequest setWebContainer(String webContainer) {

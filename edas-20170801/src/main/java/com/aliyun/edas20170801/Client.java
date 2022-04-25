@@ -3150,6 +3150,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ReservedPortStr", request.reservedPortStr);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.webContainer)) {
             query.put("WebContainer", request.webContainer);
         }
@@ -3516,6 +3520,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.requestsmCpu)) {
             query.put("RequestsmCpu", request.requestsmCpu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.runtimeClassName)) {

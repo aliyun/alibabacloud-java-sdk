@@ -157,6 +157,9 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("RequestsmCpu")
     public Integer requestsmCpu;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("RuntimeClassName")
     public String runtimeClassName;
 
@@ -592,6 +595,14 @@ public class InsertK8sApplicationRequest extends TeaModel {
     }
     public Integer getRequestsmCpu() {
         return this.requestsmCpu;
+    }
+
+    public InsertK8sApplicationRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public InsertK8sApplicationRequest setRuntimeClassName(String runtimeClassName) {
