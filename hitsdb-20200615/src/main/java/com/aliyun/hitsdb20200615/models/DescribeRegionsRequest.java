@@ -13,9 +13,6 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -24,9 +21,6 @@ public class DescribeRegionsRequest extends TeaModel {
 
     @NameInMap("SecurityToken")
     public String securityToken;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
 
     public static DescribeRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsRequest self = new DescribeRegionsRequest();
@@ -57,14 +51,6 @@ public class DescribeRegionsRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeRegionsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DescribeRegionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -87,14 +73,6 @@ public class DescribeRegionsRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public DescribeRegionsRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
     }
 
 }

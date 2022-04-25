@@ -64,6 +64,36 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         return this.total;
     }
 
+    public static class GetLindormInstanceListResponseBodyInstanceListTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetLindormInstanceListResponseBodyInstanceListTags build(java.util.Map<String, ?> map) throws Exception {
+            GetLindormInstanceListResponseBodyInstanceListTags self = new GetLindormInstanceListResponseBodyInstanceListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetLindormInstanceListResponseBodyInstanceListTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetLindormInstanceListResponseBodyInstanceListTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetLindormInstanceListResponseBodyInstanceList extends TeaModel {
         @NameInMap("AliUid")
         public Long aliUid;
@@ -73,6 +103,9 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
 
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("EnableStream")
+        public Boolean enableStream;
 
         @NameInMap("EngineType")
         public String engineType;
@@ -107,6 +140,9 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         @NameInMap("ServiceType")
         public String serviceType;
 
+        @NameInMap("Tags")
+        public java.util.List<GetLindormInstanceListResponseBodyInstanceListTags> tags;
+
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -140,6 +176,14 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetLindormInstanceListResponseBodyInstanceList setEnableStream(Boolean enableStream) {
+            this.enableStream = enableStream;
+            return this;
+        }
+        public Boolean getEnableStream() {
+            return this.enableStream;
         }
 
         public GetLindormInstanceListResponseBodyInstanceList setEngineType(String engineType) {
@@ -228,6 +272,14 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
         public String getServiceType() {
             return this.serviceType;
+        }
+
+        public GetLindormInstanceListResponseBodyInstanceList setTags(java.util.List<GetLindormInstanceListResponseBodyInstanceListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetLindormInstanceListResponseBodyInstanceListTags> getTags() {
+            return this.tags;
         }
 
         public GetLindormInstanceListResponseBodyInstanceList setVpcId(String vpcId) {

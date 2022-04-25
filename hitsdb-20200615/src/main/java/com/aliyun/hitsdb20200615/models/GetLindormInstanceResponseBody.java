@@ -31,11 +31,23 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("DiskUsage")
     public String diskUsage;
 
+    @NameInMap("EnableCdc")
+    public Boolean enableCdc;
+
     @NameInMap("EnableCompute")
     public Boolean enableCompute;
 
     @NameInMap("EnableKms")
     public Boolean enableKms;
+
+    @NameInMap("EnableSSL")
+    public Boolean enableSSL;
+
+    @NameInMap("EnableShs")
+    public Boolean enableShs;
+
+    @NameInMap("EnableStream")
+    public Boolean enableStream;
 
     @NameInMap("EngineList")
     public java.util.List<GetLindormInstanceResponseBodyEngineList> engineList;
@@ -60,6 +72,12 @@ public class GetLindormInstanceResponseBody extends TeaModel {
 
     @NameInMap("InstanceStorage")
     public String instanceStorage;
+
+    @NameInMap("MaintainEndTime")
+    public String maintainEndTime;
+
+    @NameInMap("MaintainStartTime")
+    public String maintainStartTime;
 
     @NameInMap("NetworkType")
     public String networkType;
@@ -162,6 +180,14 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         return this.diskUsage;
     }
 
+    public GetLindormInstanceResponseBody setEnableCdc(Boolean enableCdc) {
+        this.enableCdc = enableCdc;
+        return this;
+    }
+    public Boolean getEnableCdc() {
+        return this.enableCdc;
+    }
+
     public GetLindormInstanceResponseBody setEnableCompute(Boolean enableCompute) {
         this.enableCompute = enableCompute;
         return this;
@@ -176,6 +202,30 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
     public Boolean getEnableKms() {
         return this.enableKms;
+    }
+
+    public GetLindormInstanceResponseBody setEnableSSL(Boolean enableSSL) {
+        this.enableSSL = enableSSL;
+        return this;
+    }
+    public Boolean getEnableSSL() {
+        return this.enableSSL;
+    }
+
+    public GetLindormInstanceResponseBody setEnableShs(Boolean enableShs) {
+        this.enableShs = enableShs;
+        return this;
+    }
+    public Boolean getEnableShs() {
+        return this.enableShs;
+    }
+
+    public GetLindormInstanceResponseBody setEnableStream(Boolean enableStream) {
+        this.enableStream = enableStream;
+        return this;
+    }
+    public Boolean getEnableStream() {
+        return this.enableStream;
     }
 
     public GetLindormInstanceResponseBody setEngineList(java.util.List<GetLindormInstanceResponseBodyEngineList> engineList) {
@@ -240,6 +290,22 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
     public String getInstanceStorage() {
         return this.instanceStorage;
+    }
+
+    public GetLindormInstanceResponseBody setMaintainEndTime(String maintainEndTime) {
+        this.maintainEndTime = maintainEndTime;
+        return this;
+    }
+    public String getMaintainEndTime() {
+        return this.maintainEndTime;
+    }
+
+    public GetLindormInstanceResponseBody setMaintainStartTime(String maintainStartTime) {
+        this.maintainStartTime = maintainStartTime;
+        return this;
+    }
+    public String getMaintainStartTime() {
+        return this.maintainStartTime;
     }
 
     public GetLindormInstanceResponseBody setNetworkType(String networkType) {

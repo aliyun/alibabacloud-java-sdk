@@ -16,9 +16,6 @@ public class UpdateInstanceIpWhiteListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -66,14 +63,6 @@ public class UpdateInstanceIpWhiteListRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public UpdateInstanceIpWhiteListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UpdateInstanceIpWhiteListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
