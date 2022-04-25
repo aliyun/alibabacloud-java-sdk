@@ -4,6 +4,9 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class AddSceneRequest extends TeaModel {
+    @NameInMap("CustomerUid")
+    public String customerUid;
+
     // 场景名称
     @NameInMap("Name")
     public String name;
@@ -19,6 +22,14 @@ public class AddSceneRequest extends TeaModel {
     public static AddSceneRequest build(java.util.Map<String, ?> map) throws Exception {
         AddSceneRequest self = new AddSceneRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddSceneRequest setCustomerUid(String customerUid) {
+        this.customerUid = customerUid;
+        return this;
+    }
+    public String getCustomerUid() {
+        return this.customerUid;
     }
 
     public AddSceneRequest setName(String name) {
