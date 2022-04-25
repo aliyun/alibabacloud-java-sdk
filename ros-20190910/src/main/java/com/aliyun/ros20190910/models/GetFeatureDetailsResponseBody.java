@@ -7,6 +7,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TemplateScratch")
+    public GetFeatureDetailsResponseBodyTemplateScratch templateScratch;
+
     @NameInMap("Terraform")
     public GetFeatureDetailsResponseBodyTerraform terraform;
 
@@ -23,12 +26,102 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetFeatureDetailsResponseBody setTemplateScratch(GetFeatureDetailsResponseBodyTemplateScratch templateScratch) {
+        this.templateScratch = templateScratch;
+        return this;
+    }
+    public GetFeatureDetailsResponseBodyTemplateScratch getTemplateScratch() {
+        return this.templateScratch;
+    }
+
     public GetFeatureDetailsResponseBody setTerraform(GetFeatureDetailsResponseBodyTerraform terraform) {
         this.terraform = terraform;
         return this;
     }
     public GetFeatureDetailsResponseBodyTerraform getTerraform() {
         return this.terraform;
+    }
+
+    public static class GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes extends TeaModel {
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("SourceResourceGroupSupported")
+        public Boolean sourceResourceGroupSupported;
+
+        @NameInMap("SourceResourcesSupported")
+        public Boolean sourceResourcesSupported;
+
+        @NameInMap("SourceSupported")
+        public Boolean sourceSupported;
+
+        @NameInMap("SourceTagSupported")
+        public Boolean sourceTagSupported;
+
+        public static GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes build(java.util.Map<String, ?> map) throws Exception {
+            GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes self = new GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes setSourceResourceGroupSupported(Boolean sourceResourceGroupSupported) {
+            this.sourceResourceGroupSupported = sourceResourceGroupSupported;
+            return this;
+        }
+        public Boolean getSourceResourceGroupSupported() {
+            return this.sourceResourceGroupSupported;
+        }
+
+        public GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes setSourceResourcesSupported(Boolean sourceResourcesSupported) {
+            this.sourceResourcesSupported = sourceResourcesSupported;
+            return this;
+        }
+        public Boolean getSourceResourcesSupported() {
+            return this.sourceResourcesSupported;
+        }
+
+        public GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes setSourceSupported(Boolean sourceSupported) {
+            this.sourceSupported = sourceSupported;
+            return this;
+        }
+        public Boolean getSourceSupported() {
+            return this.sourceSupported;
+        }
+
+        public GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes setSourceTagSupported(Boolean sourceTagSupported) {
+            this.sourceTagSupported = sourceTagSupported;
+            return this;
+        }
+        public Boolean getSourceTagSupported() {
+            return this.sourceTagSupported;
+        }
+
+    }
+
+    public static class GetFeatureDetailsResponseBodyTemplateScratch extends TeaModel {
+        @NameInMap("SupportedResourceTypes")
+        public java.util.List<GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes> supportedResourceTypes;
+
+        public static GetFeatureDetailsResponseBodyTemplateScratch build(java.util.Map<String, ?> map) throws Exception {
+            GetFeatureDetailsResponseBodyTemplateScratch self = new GetFeatureDetailsResponseBodyTemplateScratch();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFeatureDetailsResponseBodyTemplateScratch setSupportedResourceTypes(java.util.List<GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes> supportedResourceTypes) {
+            this.supportedResourceTypes = supportedResourceTypes;
+            return this;
+        }
+        public java.util.List<GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes> getSupportedResourceTypes() {
+            return this.supportedResourceTypes;
+        }
+
     }
 
     public static class GetFeatureDetailsResponseBodyTerraformSupportedResourceTypes extends TeaModel {

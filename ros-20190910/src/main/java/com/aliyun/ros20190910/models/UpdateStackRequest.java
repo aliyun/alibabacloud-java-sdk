@@ -25,6 +25,9 @@ public class UpdateStackRequest extends TeaModel {
     @NameInMap("ReplacementOption")
     public String replacementOption;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("StackId")
     public String stackId;
 
@@ -120,6 +123,14 @@ public class UpdateStackRequest extends TeaModel {
     }
     public String getReplacementOption() {
         return this.replacementOption;
+    }
+
+    public UpdateStackRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public UpdateStackRequest setStackId(String stackId) {
