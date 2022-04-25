@@ -166,6 +166,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddSceneResponse addSceneWithOptions(AddSceneRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customerUid)) {
+            query.put("CustomerUid", request.customerUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }
@@ -817,6 +821,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetScenePreviewInfoResponse getScenePreviewInfo(GetScenePreviewInfoRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getScenePreviewInfoWithOptions(request, runtime);
+    }
+
+    public GetScenePreviewResourceResponse getScenePreviewResourceWithOptions(GetScenePreviewResourceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.previewToken)) {
+            query.put("PreviewToken", request.previewToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetScenePreviewResource"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetScenePreviewResourceResponse());
+    }
+
+    public GetScenePreviewResourceResponse getScenePreviewResource(GetScenePreviewResourceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getScenePreviewResourceWithOptions(request, runtime);
     }
 
     public GetSingleConnDataResponse getSingleConnDataWithOptions(GetSingleConnDataRequest request, RuntimeOptions runtime) throws Exception {
