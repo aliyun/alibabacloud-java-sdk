@@ -942,6 +942,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Owner", request.owner);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.parentUid)) {
+            body.put("ParentUid", request.parentUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.physicalSpaceName)) {
             body.put("PhysicalSpaceName", request.physicalSpaceName);
         }
@@ -2505,6 +2509,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getInspectionTaskWithOptions(request, runtime);
     }
 
+    public GetMonitorItemResponse getMonitorItemWithOptions(GetMonitorItemRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMonitorItem"),
+            new TeaPair("version", "2020-08-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMonitorItemResponse());
+    }
+
+    public GetMonitorItemResponse getMonitorItem(GetMonitorItemRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getMonitorItemWithOptions(request, runtime);
+    }
+
     public GetOsDownloadPathResponse getOsDownloadPathWithOptions(GetOsDownloadPathRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -3787,6 +3816,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTasksHistoriesWithOptions(request, runtime);
     }
 
+    public ListTreePhysicalSpacesResponse listTreePhysicalSpacesWithOptions(ListTreePhysicalSpacesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTreePhysicalSpaces"),
+            new TeaPair("version", "2020-08-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTreePhysicalSpacesResponse());
+    }
+
+    public ListTreePhysicalSpacesResponse listTreePhysicalSpaces(ListTreePhysicalSpacesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listTreePhysicalSpacesWithOptions(request, runtime);
+    }
+
     public ListWorkOrdersResponse listWorkOrdersWithOptions(ListWorkOrdersRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4805,6 +4859,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
             body.put("Owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentUid)) {
+            body.put("ParentUid", request.parentUid);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.physicalSpaceId)) {

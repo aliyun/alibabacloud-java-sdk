@@ -24,6 +24,9 @@ public class UpdatePhysicalSpaceRequest extends TeaModel {
     @NameInMap("Owner")
     public String owner;
 
+    @NameInMap("ParentUid")
+    public String parentUid;
+
     // 实例 ID。
     @NameInMap("PhysicalSpaceId")
     public String physicalSpaceId;
@@ -91,6 +94,14 @@ public class UpdatePhysicalSpaceRequest extends TeaModel {
     }
     public String getOwner() {
         return this.owner;
+    }
+
+    public UpdatePhysicalSpaceRequest setParentUid(String parentUid) {
+        this.parentUid = parentUid;
+        return this;
+    }
+    public String getParentUid() {
+        return this.parentUid;
     }
 
     public UpdatePhysicalSpaceRequest setPhysicalSpaceId(String physicalSpaceId) {
