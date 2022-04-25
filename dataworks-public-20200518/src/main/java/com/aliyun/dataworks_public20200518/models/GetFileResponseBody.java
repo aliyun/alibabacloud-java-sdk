@@ -355,6 +355,36 @@ public class GetFileResponseBody extends TeaModel {
 
     }
 
+    public static class GetFileResponseBodyDataNodeConfigurationInputParameters extends TeaModel {
+        @NameInMap("ParameterName")
+        public String parameterName;
+
+        @NameInMap("ValueSource")
+        public String valueSource;
+
+        public static GetFileResponseBodyDataNodeConfigurationInputParameters build(java.util.Map<String, ?> map) throws Exception {
+            GetFileResponseBodyDataNodeConfigurationInputParameters self = new GetFileResponseBodyDataNodeConfigurationInputParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFileResponseBodyDataNodeConfigurationInputParameters setParameterName(String parameterName) {
+            this.parameterName = parameterName;
+            return this;
+        }
+        public String getParameterName() {
+            return this.parameterName;
+        }
+
+        public GetFileResponseBodyDataNodeConfigurationInputParameters setValueSource(String valueSource) {
+            this.valueSource = valueSource;
+            return this;
+        }
+        public String getValueSource() {
+            return this.valueSource;
+        }
+
+    }
+
     public static class GetFileResponseBodyDataNodeConfigurationOutputList extends TeaModel {
         @NameInMap("Output")
         public String output;
@@ -385,6 +415,58 @@ public class GetFileResponseBody extends TeaModel {
 
     }
 
+    public static class GetFileResponseBodyDataNodeConfigurationOutputParameters extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("ParameterName")
+        public String parameterName;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetFileResponseBodyDataNodeConfigurationOutputParameters build(java.util.Map<String, ?> map) throws Exception {
+            GetFileResponseBodyDataNodeConfigurationOutputParameters self = new GetFileResponseBodyDataNodeConfigurationOutputParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFileResponseBodyDataNodeConfigurationOutputParameters setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetFileResponseBodyDataNodeConfigurationOutputParameters setParameterName(String parameterName) {
+            this.parameterName = parameterName;
+            return this;
+        }
+        public String getParameterName() {
+            return this.parameterName;
+        }
+
+        public GetFileResponseBodyDataNodeConfigurationOutputParameters setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetFileResponseBodyDataNodeConfigurationOutputParameters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetFileResponseBodyDataNodeConfiguration extends TeaModel {
         @NameInMap("AutoRerunIntervalMillis")
         public Integer autoRerunIntervalMillis;
@@ -410,8 +492,14 @@ public class GetFileResponseBody extends TeaModel {
         @NameInMap("InputList")
         public java.util.List<GetFileResponseBodyDataNodeConfigurationInputList> inputList;
 
+        @NameInMap("InputParameters")
+        public java.util.List<GetFileResponseBodyDataNodeConfigurationInputParameters> inputParameters;
+
         @NameInMap("OutputList")
         public java.util.List<GetFileResponseBodyDataNodeConfigurationOutputList> outputList;
+
+        @NameInMap("OutputParameters")
+        public java.util.List<GetFileResponseBodyDataNodeConfigurationOutputParameters> outputParameters;
 
         @NameInMap("ParaValue")
         public String paraValue;
@@ -503,12 +591,28 @@ public class GetFileResponseBody extends TeaModel {
             return this.inputList;
         }
 
+        public GetFileResponseBodyDataNodeConfiguration setInputParameters(java.util.List<GetFileResponseBodyDataNodeConfigurationInputParameters> inputParameters) {
+            this.inputParameters = inputParameters;
+            return this;
+        }
+        public java.util.List<GetFileResponseBodyDataNodeConfigurationInputParameters> getInputParameters() {
+            return this.inputParameters;
+        }
+
         public GetFileResponseBodyDataNodeConfiguration setOutputList(java.util.List<GetFileResponseBodyDataNodeConfigurationOutputList> outputList) {
             this.outputList = outputList;
             return this;
         }
         public java.util.List<GetFileResponseBodyDataNodeConfigurationOutputList> getOutputList() {
             return this.outputList;
+        }
+
+        public GetFileResponseBodyDataNodeConfiguration setOutputParameters(java.util.List<GetFileResponseBodyDataNodeConfigurationOutputParameters> outputParameters) {
+            this.outputParameters = outputParameters;
+            return this;
+        }
+        public java.util.List<GetFileResponseBodyDataNodeConfigurationOutputParameters> getOutputParameters() {
+            return this.outputParameters;
         }
 
         public GetFileResponseBodyDataNodeConfiguration setParaValue(String paraValue) {

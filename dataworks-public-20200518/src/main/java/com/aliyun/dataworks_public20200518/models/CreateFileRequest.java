@@ -52,6 +52,12 @@ public class CreateFileRequest extends TeaModel {
     @NameInMap("InputList")
     public String inputList;
 
+    @NameInMap("InputParameters")
+    public String inputParameters;
+
+    @NameInMap("OutputParameters")
+    public String outputParameters;
+
     @NameInMap("Owner")
     public String owner;
 
@@ -216,6 +222,22 @@ public class CreateFileRequest extends TeaModel {
     }
     public String getInputList() {
         return this.inputList;
+    }
+
+    public CreateFileRequest setInputParameters(String inputParameters) {
+        this.inputParameters = inputParameters;
+        return this;
+    }
+    public String getInputParameters() {
+        return this.inputParameters;
+    }
+
+    public CreateFileRequest setOutputParameters(String outputParameters) {
+        this.outputParameters = outputParameters;
+        return this;
+    }
+    public String getOutputParameters() {
+        return this.outputParameters;
     }
 
     public CreateFileRequest setOwner(String owner) {
