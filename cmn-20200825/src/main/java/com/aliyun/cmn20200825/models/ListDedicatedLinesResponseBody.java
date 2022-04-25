@@ -8,9 +8,18 @@ public class ListDedicatedLinesResponseBody extends TeaModel {
     @NameInMap("DedicatedLines")
     public java.util.List<ListDedicatedLinesResponseBodyDedicatedLines> dedicatedLines;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public Integer nextToken;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListDedicatedLinesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDedicatedLinesResponseBody self = new ListDedicatedLinesResponseBody();
@@ -25,12 +34,36 @@ public class ListDedicatedLinesResponseBody extends TeaModel {
         return this.dedicatedLines;
     }
 
+    public ListDedicatedLinesResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListDedicatedLinesResponseBody setNextToken(Integer nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public Integer getNextToken() {
+        return this.nextToken;
+    }
+
     public ListDedicatedLinesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListDedicatedLinesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListDedicatedLinesResponseBodyDedicatedLines extends TeaModel {
@@ -85,6 +118,9 @@ public class ListDedicatedLinesResponseBody extends TeaModel {
         // 关联物理空间ID
         @NameInMap("PhysicalSpaceId")
         public String physicalSpaceId;
+
+        @NameInMap("SpaceName")
+        public String spaceName;
 
         public static ListDedicatedLinesResponseBodyDedicatedLines build(java.util.Map<String, ?> map) throws Exception {
             ListDedicatedLinesResponseBodyDedicatedLines self = new ListDedicatedLinesResponseBodyDedicatedLines();
@@ -193,6 +229,14 @@ public class ListDedicatedLinesResponseBody extends TeaModel {
         }
         public String getPhysicalSpaceId() {
             return this.physicalSpaceId;
+        }
+
+        public ListDedicatedLinesResponseBodyDedicatedLines setSpaceName(String spaceName) {
+            this.spaceName = spaceName;
+            return this;
+        }
+        public String getSpaceName() {
+            return this.spaceName;
         }
 
     }

@@ -74,6 +74,9 @@ public class ListDeviceFormsResponseBody extends TeaModel {
         @NameInMap("AttributeBuiltIn")
         public Boolean attributeBuiltIn;
 
+        @NameInMap("AttributeContent")
+        public String attributeContent;
+
         // 设备形态属性值格式
         @NameInMap("AttributeFormat")
         public String attributeFormat;
@@ -129,6 +132,14 @@ public class ListDeviceFormsResponseBody extends TeaModel {
         }
         public Boolean getAttributeBuiltIn() {
             return this.attributeBuiltIn;
+        }
+
+        public ListDeviceFormsResponseBodyDeviceFormsAttributeList setAttributeContent(String attributeContent) {
+            this.attributeContent = attributeContent;
+            return this;
+        }
+        public String getAttributeContent() {
+            return this.attributeContent;
         }
 
         public ListDeviceFormsResponseBodyDeviceFormsAttributeList setAttributeFormat(String attributeFormat) {
