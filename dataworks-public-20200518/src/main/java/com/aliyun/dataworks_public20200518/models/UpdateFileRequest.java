@@ -52,8 +52,14 @@ public class UpdateFileRequest extends TeaModel {
     @NameInMap("InputList")
     public String inputList;
 
+    @NameInMap("InputParameters")
+    public String inputParameters;
+
     @NameInMap("OutputList")
     public String outputList;
+
+    @NameInMap("OutputParameters")
+    public String outputParameters;
 
     @NameInMap("Owner")
     public String owner;
@@ -218,12 +224,28 @@ public class UpdateFileRequest extends TeaModel {
         return this.inputList;
     }
 
+    public UpdateFileRequest setInputParameters(String inputParameters) {
+        this.inputParameters = inputParameters;
+        return this;
+    }
+    public String getInputParameters() {
+        return this.inputParameters;
+    }
+
     public UpdateFileRequest setOutputList(String outputList) {
         this.outputList = outputList;
         return this;
     }
     public String getOutputList() {
         return this.outputList;
+    }
+
+    public UpdateFileRequest setOutputParameters(String outputParameters) {
+        this.outputParameters = outputParameters;
+        return this;
+    }
+    public String getOutputParameters() {
+        return this.outputParameters;
     }
 
     public UpdateFileRequest setOwner(String owner) {
