@@ -3,7 +3,7 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateFigureClustersMergingTaskRequest extends TeaModel {
+public class CreateFigureClustersMergingTaskShrinkRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
@@ -21,7 +21,7 @@ public class CreateFigureClustersMergingTaskRequest extends TeaModel {
     public String projectName;
 
     @NameInMap("Tags")
-    public java.util.Map<String, ?> tags;
+    public String tagsShrink;
 
     // 目的cluster
     @NameInMap("To")
@@ -30,12 +30,12 @@ public class CreateFigureClustersMergingTaskRequest extends TeaModel {
     @NameInMap("UserData")
     public String userData;
 
-    public static CreateFigureClustersMergingTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateFigureClustersMergingTaskRequest self = new CreateFigureClustersMergingTaskRequest();
+    public static CreateFigureClustersMergingTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateFigureClustersMergingTaskShrinkRequest self = new CreateFigureClustersMergingTaskShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateFigureClustersMergingTaskRequest setDatasetName(String datasetName) {
+    public CreateFigureClustersMergingTaskShrinkRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
@@ -43,7 +43,7 @@ public class CreateFigureClustersMergingTaskRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public CreateFigureClustersMergingTaskRequest setFrom(String from) {
+    public CreateFigureClustersMergingTaskShrinkRequest setFrom(String from) {
         this.from = from;
         return this;
     }
@@ -51,7 +51,7 @@ public class CreateFigureClustersMergingTaskRequest extends TeaModel {
         return this.from;
     }
 
-    public CreateFigureClustersMergingTaskRequest setNotifyEndpoint(String notifyEndpoint) {
+    public CreateFigureClustersMergingTaskShrinkRequest setNotifyEndpoint(String notifyEndpoint) {
         this.notifyEndpoint = notifyEndpoint;
         return this;
     }
@@ -59,7 +59,7 @@ public class CreateFigureClustersMergingTaskRequest extends TeaModel {
         return this.notifyEndpoint;
     }
 
-    public CreateFigureClustersMergingTaskRequest setNotifyTopicName(String notifyTopicName) {
+    public CreateFigureClustersMergingTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {
         this.notifyTopicName = notifyTopicName;
         return this;
     }
@@ -67,7 +67,7 @@ public class CreateFigureClustersMergingTaskRequest extends TeaModel {
         return this.notifyTopicName;
     }
 
-    public CreateFigureClustersMergingTaskRequest setProjectName(String projectName) {
+    public CreateFigureClustersMergingTaskShrinkRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -75,15 +75,15 @@ public class CreateFigureClustersMergingTaskRequest extends TeaModel {
         return this.projectName;
     }
 
-    public CreateFigureClustersMergingTaskRequest setTags(java.util.Map<String, ?> tags) {
-        this.tags = tags;
+    public CreateFigureClustersMergingTaskShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.Map<String, ?> getTags() {
-        return this.tags;
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
-    public CreateFigureClustersMergingTaskRequest setTo(String to) {
+    public CreateFigureClustersMergingTaskShrinkRequest setTo(String to) {
         this.to = to;
         return this;
     }
@@ -91,7 +91,7 @@ public class CreateFigureClustersMergingTaskRequest extends TeaModel {
         return this.to;
     }
 
-    public CreateFigureClustersMergingTaskRequest setUserData(String userData) {
+    public CreateFigureClustersMergingTaskShrinkRequest setUserData(String userData) {
         this.userData = userData;
         return this;
     }

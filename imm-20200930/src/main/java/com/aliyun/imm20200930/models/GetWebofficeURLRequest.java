@@ -8,6 +8,10 @@ public class GetWebofficeURLRequest extends TeaModel {
     @NameInMap("AssumeRoleChain")
     public AssumeRoleChain assumeRoleChain;
 
+    // 缓存预览标识
+    @NameInMap("CachePreview")
+    public Boolean cachePreview;
+
     // 是否支持外部上传
     @NameInMap("ExternalUploaded")
     public Boolean externalUploaded;
@@ -75,6 +79,14 @@ public class GetWebofficeURLRequest extends TeaModel {
     }
     public AssumeRoleChain getAssumeRoleChain() {
         return this.assumeRoleChain;
+    }
+
+    public GetWebofficeURLRequest setCachePreview(Boolean cachePreview) {
+        this.cachePreview = cachePreview;
+        return this;
+    }
+    public Boolean getCachePreview() {
+        return this.cachePreview;
     }
 
     public GetWebofficeURLRequest setExternalUploaded(Boolean externalUploaded) {

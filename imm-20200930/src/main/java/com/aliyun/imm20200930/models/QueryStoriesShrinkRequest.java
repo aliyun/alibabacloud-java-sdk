@@ -25,8 +25,14 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     @NameInMap("ObjectId")
     public String objectId;
 
+    @NameInMap("Order")
+    public String order;
+
     @NameInMap("ProjectName")
     public String projectName;
+
+    @NameInMap("Sort")
+    public String sort;
 
     @NameInMap("StoryEndTimeRange")
     public String storyEndTimeRangeShrink;
@@ -107,12 +113,28 @@ public class QueryStoriesShrinkRequest extends TeaModel {
         return this.objectId;
     }
 
+    public QueryStoriesShrinkRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
     public QueryStoriesShrinkRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public QueryStoriesShrinkRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
     }
 
     public QueryStoriesShrinkRequest setStoryEndTimeRangeShrink(String storyEndTimeRangeShrink) {

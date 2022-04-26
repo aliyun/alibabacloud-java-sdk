@@ -46,6 +46,12 @@ public class CreateStoryRequest extends TeaModel {
     @NameInMap("StoryType")
     public String storyType;
 
+    @NameInMap("Tags")
+    public java.util.Map<String, ?> tags;
+
+    @NameInMap("UserData")
+    public String userData;
+
     public static CreateStoryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStoryRequest self = new CreateStoryRequest();
         return TeaModel.build(map, self);
@@ -161,6 +167,22 @@ public class CreateStoryRequest extends TeaModel {
     }
     public String getStoryType() {
         return this.storyType;
+    }
+
+    public CreateStoryRequest setTags(java.util.Map<String, ?> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.Map<String, ?> getTags() {
+        return this.tags;
+    }
+
+    public CreateStoryRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
 }

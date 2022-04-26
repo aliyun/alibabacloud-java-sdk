@@ -40,6 +40,10 @@ public class AudioStream extends TeaModel {
     @NameInMap("Duration")
     public Float duration;
 
+    // FrameCount
+    @NameInMap("FrameCount")
+    public Long frameCount;
+
     // Index
     @NameInMap("Index")
     public Long index;
@@ -143,6 +147,14 @@ public class AudioStream extends TeaModel {
     }
     public Float getDuration() {
         return this.duration;
+    }
+
+    public AudioStream setFrameCount(Long frameCount) {
+        this.frameCount = frameCount;
+        return this;
+    }
+    public Long getFrameCount() {
+        return this.frameCount;
     }
 
     public AudioStream setIndex(Long index) {

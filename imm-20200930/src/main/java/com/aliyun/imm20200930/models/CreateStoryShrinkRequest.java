@@ -46,6 +46,12 @@ public class CreateStoryShrinkRequest extends TeaModel {
     @NameInMap("StoryType")
     public String storyType;
 
+    @NameInMap("Tags")
+    public String tagsShrink;
+
+    @NameInMap("UserData")
+    public String userData;
+
     public static CreateStoryShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStoryShrinkRequest self = new CreateStoryShrinkRequest();
         return TeaModel.build(map, self);
@@ -161,6 +167,22 @@ public class CreateStoryShrinkRequest extends TeaModel {
     }
     public String getStoryType() {
         return this.storyType;
+    }
+
+    public CreateStoryShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
+        return this;
+    }
+    public String getTagsShrink() {
+        return this.tagsShrink;
+    }
+
+    public CreateStoryShrinkRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
 }
