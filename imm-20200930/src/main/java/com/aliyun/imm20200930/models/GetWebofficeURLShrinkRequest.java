@@ -8,6 +8,10 @@ public class GetWebofficeURLShrinkRequest extends TeaModel {
     @NameInMap("AssumeRoleChain")
     public String assumeRoleChainShrink;
 
+    // 缓存预览标识
+    @NameInMap("CachePreview")
+    public Boolean cachePreview;
+
     // 是否支持外部上传
     @NameInMap("ExternalUploaded")
     public Boolean externalUploaded;
@@ -75,6 +79,14 @@ public class GetWebofficeURLShrinkRequest extends TeaModel {
     }
     public String getAssumeRoleChainShrink() {
         return this.assumeRoleChainShrink;
+    }
+
+    public GetWebofficeURLShrinkRequest setCachePreview(Boolean cachePreview) {
+        this.cachePreview = cachePreview;
+        return this;
+    }
+    public Boolean getCachePreview() {
+        return this.cachePreview;
     }
 
     public GetWebofficeURLShrinkRequest setExternalUploaded(Boolean externalUploaded) {

@@ -3,7 +3,7 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateFigureClusteringTaskRequest extends TeaModel {
+public class CreateFigureClusteringTaskShrinkRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
@@ -17,17 +17,17 @@ public class CreateFigureClusteringTaskRequest extends TeaModel {
     public String projectName;
 
     @NameInMap("Tags")
-    public java.util.Map<String, ?> tags;
+    public String tagsShrink;
 
     @NameInMap("UserData")
     public String userData;
 
-    public static CreateFigureClusteringTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateFigureClusteringTaskRequest self = new CreateFigureClusteringTaskRequest();
+    public static CreateFigureClusteringTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateFigureClusteringTaskShrinkRequest self = new CreateFigureClusteringTaskShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateFigureClusteringTaskRequest setDatasetName(String datasetName) {
+    public CreateFigureClusteringTaskShrinkRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
@@ -35,7 +35,7 @@ public class CreateFigureClusteringTaskRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public CreateFigureClusteringTaskRequest setNotifyEndpoint(String notifyEndpoint) {
+    public CreateFigureClusteringTaskShrinkRequest setNotifyEndpoint(String notifyEndpoint) {
         this.notifyEndpoint = notifyEndpoint;
         return this;
     }
@@ -43,7 +43,7 @@ public class CreateFigureClusteringTaskRequest extends TeaModel {
         return this.notifyEndpoint;
     }
 
-    public CreateFigureClusteringTaskRequest setNotifyTopicName(String notifyTopicName) {
+    public CreateFigureClusteringTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {
         this.notifyTopicName = notifyTopicName;
         return this;
     }
@@ -51,7 +51,7 @@ public class CreateFigureClusteringTaskRequest extends TeaModel {
         return this.notifyTopicName;
     }
 
-    public CreateFigureClusteringTaskRequest setProjectName(String projectName) {
+    public CreateFigureClusteringTaskShrinkRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -59,15 +59,15 @@ public class CreateFigureClusteringTaskRequest extends TeaModel {
         return this.projectName;
     }
 
-    public CreateFigureClusteringTaskRequest setTags(java.util.Map<String, ?> tags) {
-        this.tags = tags;
+    public CreateFigureClusteringTaskShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.Map<String, ?> getTags() {
-        return this.tags;
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
-    public CreateFigureClusteringTaskRequest setUserData(String userData) {
+    public CreateFigureClusteringTaskShrinkRequest setUserData(String userData) {
         this.userData = userData;
         return this;
     }

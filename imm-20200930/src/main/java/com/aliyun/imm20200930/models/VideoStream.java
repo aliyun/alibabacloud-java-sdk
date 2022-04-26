@@ -8,6 +8,10 @@ public class VideoStream extends TeaModel {
     @NameInMap("AverageFrameRate")
     public String averageFrameRate;
 
+    // BitDepth
+    @NameInMap("BitDepth")
+    public Long bitDepth;
+
     // Bitrate
     @NameInMap("Bitrate")
     public Long bitrate;
@@ -31,6 +35,22 @@ public class VideoStream extends TeaModel {
     // CodecTimeBase
     @NameInMap("CodecTimeBase")
     public String codecTimeBase;
+
+    // ColorPrimaries
+    @NameInMap("ColorPrimaries")
+    public String colorPrimaries;
+
+    // ColorRange
+    @NameInMap("ColorRange")
+    public String colorRange;
+
+    // ColorSpace
+    @NameInMap("ColorSpace")
+    public String colorSpace;
+
+    // ColorTransfer
+    @NameInMap("ColorTransfer")
+    public String colorTransfer;
 
     // DisplayAspectRatio
     @NameInMap("DisplayAspectRatio")
@@ -109,6 +129,14 @@ public class VideoStream extends TeaModel {
         return this.averageFrameRate;
     }
 
+    public VideoStream setBitDepth(Long bitDepth) {
+        this.bitDepth = bitDepth;
+        return this;
+    }
+    public Long getBitDepth() {
+        return this.bitDepth;
+    }
+
     public VideoStream setBitrate(Long bitrate) {
         this.bitrate = bitrate;
         return this;
@@ -155,6 +183,38 @@ public class VideoStream extends TeaModel {
     }
     public String getCodecTimeBase() {
         return this.codecTimeBase;
+    }
+
+    public VideoStream setColorPrimaries(String colorPrimaries) {
+        this.colorPrimaries = colorPrimaries;
+        return this;
+    }
+    public String getColorPrimaries() {
+        return this.colorPrimaries;
+    }
+
+    public VideoStream setColorRange(String colorRange) {
+        this.colorRange = colorRange;
+        return this;
+    }
+    public String getColorRange() {
+        return this.colorRange;
+    }
+
+    public VideoStream setColorSpace(String colorSpace) {
+        this.colorSpace = colorSpace;
+        return this;
+    }
+    public String getColorSpace() {
+        return this.colorSpace;
+    }
+
+    public VideoStream setColorTransfer(String colorTransfer) {
+        this.colorTransfer = colorTransfer;
+        return this;
+    }
+    public String getColorTransfer() {
+        return this.colorTransfer;
     }
 
     public VideoStream setDisplayAspectRatio(String displayAspectRatio) {

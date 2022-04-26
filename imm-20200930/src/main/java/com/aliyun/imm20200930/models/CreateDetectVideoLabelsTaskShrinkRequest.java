@@ -3,7 +3,7 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDetectVideoLabelsTaskRequest extends TeaModel {
+public class CreateDetectVideoLabelsTaskShrinkRequest extends TeaModel {
     // NotifyEndpoint
     @NameInMap("NotifyEndpoint")
     public String notifyEndpoint;
@@ -21,18 +21,18 @@ public class CreateDetectVideoLabelsTaskRequest extends TeaModel {
     public String sourceURI;
 
     @NameInMap("Tags")
-    public java.util.Map<String, ?> tags;
+    public String tagsShrink;
 
     // UserData
     @NameInMap("UserData")
     public String userData;
 
-    public static CreateDetectVideoLabelsTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateDetectVideoLabelsTaskRequest self = new CreateDetectVideoLabelsTaskRequest();
+    public static CreateDetectVideoLabelsTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateDetectVideoLabelsTaskShrinkRequest self = new CreateDetectVideoLabelsTaskShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDetectVideoLabelsTaskRequest setNotifyEndpoint(String notifyEndpoint) {
+    public CreateDetectVideoLabelsTaskShrinkRequest setNotifyEndpoint(String notifyEndpoint) {
         this.notifyEndpoint = notifyEndpoint;
         return this;
     }
@@ -40,7 +40,7 @@ public class CreateDetectVideoLabelsTaskRequest extends TeaModel {
         return this.notifyEndpoint;
     }
 
-    public CreateDetectVideoLabelsTaskRequest setNotifyTopicName(String notifyTopicName) {
+    public CreateDetectVideoLabelsTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {
         this.notifyTopicName = notifyTopicName;
         return this;
     }
@@ -48,7 +48,7 @@ public class CreateDetectVideoLabelsTaskRequest extends TeaModel {
         return this.notifyTopicName;
     }
 
-    public CreateDetectVideoLabelsTaskRequest setProjectName(String projectName) {
+    public CreateDetectVideoLabelsTaskShrinkRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -56,7 +56,7 @@ public class CreateDetectVideoLabelsTaskRequest extends TeaModel {
         return this.projectName;
     }
 
-    public CreateDetectVideoLabelsTaskRequest setSourceURI(String sourceURI) {
+    public CreateDetectVideoLabelsTaskShrinkRequest setSourceURI(String sourceURI) {
         this.sourceURI = sourceURI;
         return this;
     }
@@ -64,15 +64,15 @@ public class CreateDetectVideoLabelsTaskRequest extends TeaModel {
         return this.sourceURI;
     }
 
-    public CreateDetectVideoLabelsTaskRequest setTags(java.util.Map<String, ?> tags) {
-        this.tags = tags;
+    public CreateDetectVideoLabelsTaskShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.Map<String, ?> getTags() {
-        return this.tags;
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
-    public CreateDetectVideoLabelsTaskRequest setUserData(String userData) {
+    public CreateDetectVideoLabelsTaskShrinkRequest setUserData(String userData) {
         this.userData = userData;
         return this;
     }

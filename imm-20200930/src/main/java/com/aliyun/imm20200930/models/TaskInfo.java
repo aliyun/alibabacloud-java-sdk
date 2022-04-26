@@ -24,6 +24,10 @@ public class TaskInfo extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    // 标签
+    @NameInMap("Tags")
+    public java.util.Map<String, ?> tags;
+
     // 任务唯一ID
     @NameInMap("TaskId")
     public String taskId;
@@ -79,6 +83,14 @@ public class TaskInfo extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public TaskInfo setTags(java.util.Map<String, ?> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.Map<String, ?> getTags() {
+        return this.tags;
     }
 
     public TaskInfo setTaskId(String taskId) {

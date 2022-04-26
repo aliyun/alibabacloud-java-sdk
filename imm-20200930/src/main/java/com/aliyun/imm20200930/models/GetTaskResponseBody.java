@@ -36,6 +36,9 @@ public class GetTaskResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tags")
+    public java.util.Map<String, ?> tags;
+
     // 任务唯一ID
     @NameInMap("TaskId")
     public String taskId;
@@ -115,6 +118,14 @@ public class GetTaskResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public GetTaskResponseBody setTags(java.util.Map<String, ?> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.Map<String, ?> getTags() {
+        return this.tags;
     }
 
     public GetTaskResponseBody setTaskId(String taskId) {

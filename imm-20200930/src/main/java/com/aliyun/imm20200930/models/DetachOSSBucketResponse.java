@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.imm20200930.models;
+
+import com.aliyun.tea.*;
+
+public class DetachOSSBucketResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DetachOSSBucketResponseBody body;
+
+    public static DetachOSSBucketResponse build(java.util.Map<String, ?> map) throws Exception {
+        DetachOSSBucketResponse self = new DetachOSSBucketResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DetachOSSBucketResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DetachOSSBucketResponse setBody(DetachOSSBucketResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DetachOSSBucketResponseBody getBody() {
+        return this.body;
+    }
+
+}

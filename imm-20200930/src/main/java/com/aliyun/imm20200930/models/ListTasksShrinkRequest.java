@@ -3,7 +3,7 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class ListTasksRequest extends TeaModel {
+public class ListTasksShrinkRequest extends TeaModel {
     // MaxResults
     @NameInMap("MaxResults")
     public Long maxResults;
@@ -26,14 +26,14 @@ public class ListTasksRequest extends TeaModel {
     public String tagSelector;
 
     @NameInMap("TaskTypes")
-    public java.util.List<String> taskTypes;
+    public String taskTypesShrink;
 
-    public static ListTasksRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListTasksRequest self = new ListTasksRequest();
+    public static ListTasksShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListTasksShrinkRequest self = new ListTasksShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListTasksRequest setMaxResults(Long maxResults) {
+    public ListTasksShrinkRequest setMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -41,7 +41,7 @@ public class ListTasksRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListTasksRequest setNextToken(String nextToken) {
+    public ListTasksShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -49,7 +49,7 @@ public class ListTasksRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListTasksRequest setOrder(String order) {
+    public ListTasksShrinkRequest setOrder(String order) {
         this.order = order;
         return this;
     }
@@ -57,7 +57,7 @@ public class ListTasksRequest extends TeaModel {
         return this.order;
     }
 
-    public ListTasksRequest setProjectName(String projectName) {
+    public ListTasksShrinkRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -65,7 +65,7 @@ public class ListTasksRequest extends TeaModel {
         return this.projectName;
     }
 
-    public ListTasksRequest setSort(String sort) {
+    public ListTasksShrinkRequest setSort(String sort) {
         this.sort = sort;
         return this;
     }
@@ -73,7 +73,7 @@ public class ListTasksRequest extends TeaModel {
         return this.sort;
     }
 
-    public ListTasksRequest setTagSelector(String tagSelector) {
+    public ListTasksShrinkRequest setTagSelector(String tagSelector) {
         this.tagSelector = tagSelector;
         return this;
     }
@@ -81,12 +81,12 @@ public class ListTasksRequest extends TeaModel {
         return this.tagSelector;
     }
 
-    public ListTasksRequest setTaskTypes(java.util.List<String> taskTypes) {
-        this.taskTypes = taskTypes;
+    public ListTasksShrinkRequest setTaskTypesShrink(String taskTypesShrink) {
+        this.taskTypesShrink = taskTypesShrink;
         return this;
     }
-    public java.util.List<String> getTaskTypes() {
-        return this.taskTypes;
+    public String getTaskTypesShrink() {
+        return this.taskTypesShrink;
     }
 
 }
