@@ -1,3 +1,9 @@
+2022-04-26 Version: 2.4.4
+- Supported EndConference.
+- Supported StartConference.
+- Supported SignInGroup.
+- Supported RemovePhoneNumbers.
+
 2022-04-26 Version: 2.4.3
 - Support to pass variables to authentication IVR.
 

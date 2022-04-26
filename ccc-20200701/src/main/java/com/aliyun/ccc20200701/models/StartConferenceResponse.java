@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ccc20200701.models;
+
+import com.aliyun.tea.*;
+
+public class StartConferenceResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public StartConferenceResponseBody body;
+
+    public static StartConferenceResponse build(java.util.Map<String, ?> map) throws Exception {
+        StartConferenceResponse self = new StartConferenceResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public StartConferenceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public StartConferenceResponse setBody(StartConferenceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public StartConferenceResponseBody getBody() {
+        return this.body;
+    }
+
+}
