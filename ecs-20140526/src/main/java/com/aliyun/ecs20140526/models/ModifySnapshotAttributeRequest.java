@@ -10,6 +10,9 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     @NameInMap("DisableInstantAccess")
     public Boolean disableInstantAccess;
 
+    @NameInMap("InstantAccessRetentionDays")
+    public Long instantAccessRetentionDays;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -21,6 +24,9 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("RetentionDays")
+    public Long retentionDays;
 
     @NameInMap("SnapshotId")
     public String snapshotId;
@@ -47,6 +53,14 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     }
     public Boolean getDisableInstantAccess() {
         return this.disableInstantAccess;
+    }
+
+    public ModifySnapshotAttributeRequest setInstantAccessRetentionDays(Long instantAccessRetentionDays) {
+        this.instantAccessRetentionDays = instantAccessRetentionDays;
+        return this;
+    }
+    public Long getInstantAccessRetentionDays() {
+        return this.instantAccessRetentionDays;
     }
 
     public ModifySnapshotAttributeRequest setOwnerAccount(String ownerAccount) {
@@ -79,6 +93,14 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifySnapshotAttributeRequest setRetentionDays(Long retentionDays) {
+        this.retentionDays = retentionDays;
+        return this;
+    }
+    public Long getRetentionDays() {
+        return this.retentionDays;
     }
 
     public ModifySnapshotAttributeRequest setSnapshotId(String snapshotId) {

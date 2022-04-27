@@ -247,6 +247,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         @NameInMap("OnlineRepairPolicy")
         public String onlineRepairPolicy;
 
+        @NameInMap("Rack")
+        public String rack;
+
         public static DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute self = new DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute();
             return TeaModel.build(map, self);
@@ -306,6 +309,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
         public String getOnlineRepairPolicy() {
             return this.onlineRepairPolicy;
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setRack(String rack) {
+            this.rack = rack;
+            return this;
+        }
+        public String getRack() {
+            return this.rack;
         }
 
     }

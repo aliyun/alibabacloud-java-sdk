@@ -947,6 +947,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("SpotDuration")
         public Integer spotDuration;
 
+        @NameInMap("SpotInterruptionBehavior")
+        public String spotInterruptionBehavior;
+
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
 
@@ -1409,6 +1412,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Integer getSpotDuration() {
             return this.spotDuration;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setSpotInterruptionBehavior(String spotInterruptionBehavior) {
+            this.spotInterruptionBehavior = spotInterruptionBehavior;
+            return this;
+        }
+        public String getSpotInterruptionBehavior() {
+            return this.spotInterruptionBehavior;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setSpotPriceLimit(Float spotPriceLimit) {

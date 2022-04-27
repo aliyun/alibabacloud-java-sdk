@@ -7,6 +7,9 @@ public class DescribeAccountAttributesRequest extends TeaModel {
     @NameInMap("AttributeName")
     public java.util.List<String> attributeName;
 
+    @NameInMap("BizAliUid")
+    public String bizAliUid;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -33,6 +36,14 @@ public class DescribeAccountAttributesRequest extends TeaModel {
     }
     public java.util.List<String> getAttributeName() {
         return this.attributeName;
+    }
+
+    public DescribeAccountAttributesRequest setBizAliUid(String bizAliUid) {
+        this.bizAliUid = bizAliUid;
+        return this;
+    }
+    public String getBizAliUid() {
+        return this.bizAliUid;
     }
 
     public DescribeAccountAttributesRequest setOwnerId(Long ownerId) {

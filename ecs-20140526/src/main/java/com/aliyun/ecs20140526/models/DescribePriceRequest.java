@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceRequest extends TeaModel {
-    @NameInMap("DataDisk")
-    public java.util.List<DescribePriceRequestDataDisk> dataDisk;
-
-    @NameInMap("SystemDisk")
-    public DescribePriceRequestSystemDisk systemDisk;
-
     @NameInMap("Amount")
     public Integer amount;
 
@@ -18,6 +12,9 @@ public class DescribePriceRequest extends TeaModel {
 
     @NameInMap("Capacity")
     public Integer capacity;
+
+    @NameInMap("DataDisk")
+    public java.util.List<DescribePriceRequestDataDisk> dataDisk;
 
     @NameInMap("DedicatedHostType")
     public String dedicatedHostType;
@@ -91,28 +88,15 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
+    @NameInMap("SystemDisk")
+    public DescribePriceRequestSystemDisk systemDisk;
+
     @NameInMap("ZoneId")
     public String zoneId;
 
     public static DescribePriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePriceRequest self = new DescribePriceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePriceRequest setDataDisk(java.util.List<DescribePriceRequestDataDisk> dataDisk) {
-        this.dataDisk = dataDisk;
-        return this;
-    }
-    public java.util.List<DescribePriceRequestDataDisk> getDataDisk() {
-        return this.dataDisk;
-    }
-
-    public DescribePriceRequest setSystemDisk(DescribePriceRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public DescribePriceRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
     }
 
     public DescribePriceRequest setAmount(Integer amount) {
@@ -137,6 +121,14 @@ public class DescribePriceRequest extends TeaModel {
     }
     public Integer getCapacity() {
         return this.capacity;
+    }
+
+    public DescribePriceRequest setDataDisk(java.util.List<DescribePriceRequestDataDisk> dataDisk) {
+        this.dataDisk = dataDisk;
+        return this;
+    }
+    public java.util.List<DescribePriceRequestDataDisk> getDataDisk() {
+        return this.dataDisk;
     }
 
     public DescribePriceRequest setDedicatedHostType(String dedicatedHostType) {
@@ -329,6 +321,14 @@ public class DescribePriceRequest extends TeaModel {
     }
     public String getSpotStrategy() {
         return this.spotStrategy;
+    }
+
+    public DescribePriceRequest setSystemDisk(DescribePriceRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public DescribePriceRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
     }
 
     public DescribePriceRequest setZoneId(String zoneId) {
