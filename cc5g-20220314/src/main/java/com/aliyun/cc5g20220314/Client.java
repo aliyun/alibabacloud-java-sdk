@@ -375,6 +375,181 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detachVpcFromNetLinkWithOptions(request, runtime);
     }
 
+    public GetWirelessCloudConnectorResponse getWirelessCloudConnectorWithOptions(GetWirelessCloudConnectorRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWirelessCloudConnector"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWirelessCloudConnectorResponse());
+    }
+
+    public GetWirelessCloudConnectorResponse getWirelessCloudConnector(GetWirelessCloudConnectorRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getWirelessCloudConnectorWithOptions(request, runtime);
+    }
+
+    public ListAuthorizationRulesResponse listAuthorizationRulesWithOptions(ListAuthorizationRulesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAuthorizationRules"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAuthorizationRulesResponse());
+    }
+
+    public ListAuthorizationRulesResponse listAuthorizationRules(ListAuthorizationRulesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listAuthorizationRulesWithOptions(request, runtime);
+    }
+
+    public ListCardsResponse listCardsWithOptions(ListCardsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCards"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCardsResponse());
+    }
+
+    public ListCardsResponse listCards(ListCardsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listCardsWithOptions(request, runtime);
+    }
+
+    public ListDataPackagesResponse listDataPackagesWithOptions(ListDataPackagesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataPackages"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataPackagesResponse());
+    }
+
+    public ListDataPackagesResponse listDataPackages(ListDataPackagesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listDataPackagesWithOptions(request, runtime);
+    }
+
+    public ListOrdersResponse listOrdersWithOptions(ListOrdersRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOrders"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOrdersResponse());
+    }
+
+    public ListOrdersResponse listOrders(ListOrdersRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listOrdersWithOptions(request, runtime);
+    }
+
+    public ListRegionsResponse listRegionsWithOptions(ListRegionsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRegions"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRegionsResponse());
+    }
+
+    public ListRegionsResponse listRegions(ListRegionsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listRegionsWithOptions(request, runtime);
+    }
+
+    public ListWirelessCloudConnectorsResponse listWirelessCloudConnectorsWithOptions(ListWirelessCloudConnectorsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWirelessCloudConnectors"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWirelessCloudConnectorsResponse());
+    }
+
+    public ListWirelessCloudConnectorsResponse listWirelessCloudConnectors(ListWirelessCloudConnectorsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listWirelessCloudConnectorsWithOptions(request, runtime);
+    }
+
     public ListZonesResponse listZonesWithOptions(ListZonesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
