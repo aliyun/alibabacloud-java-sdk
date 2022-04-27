@@ -22,7 +22,7 @@ public class ListDevicesShrinkRequest extends TeaModel {
 
     // 设备主机名
     @NameInMap("HostName")
-    public java.util.List<String> hostName;
+    public String hostNameShrink;
 
     // 实例ID
     @NameInMap("InstanceId")
@@ -30,7 +30,7 @@ public class ListDevicesShrinkRequest extends TeaModel {
 
     // 设备IP
     @NameInMap("Ip")
-    public java.util.List<String> ip;
+    public String ipShrink;
 
     // 模糊查询值
     @NameInMap("Keyword")
@@ -38,7 +38,7 @@ public class ListDevicesShrinkRequest extends TeaModel {
 
     // 设备MAC
     @NameInMap("Mac")
-    public java.util.List<String> mac;
+    public String macShrink;
 
     // 返回结果的最大个数。
     @NameInMap("MaxResults")
@@ -46,7 +46,7 @@ public class ListDevicesShrinkRequest extends TeaModel {
 
     // 设备型号
     @NameInMap("Model")
-    public java.util.List<String> model;
+    public String modelShrink;
 
     // 当总结果个数大于MaxResults时，用于翻页的token。
     @NameInMap("NextToken")
@@ -62,19 +62,19 @@ public class ListDevicesShrinkRequest extends TeaModel {
 
     // 安全域
     @NameInMap("SecurityDomain")
-    public java.util.List<String> securityDomain;
+    public String securityDomainShrink;
 
     // 设备服务状态
     @NameInMap("ServiceStatus")
-    public java.util.List<String> serviceStatus;
+    public String serviceStatusShrink;
 
     // 设备SN
     @NameInMap("Sn")
-    public java.util.List<String> sn;
+    public String snShrink;
 
     // 设备厂商
     @NameInMap("Vendor")
-    public java.util.List<String> vendor;
+    public String vendorShrink;
 
     public static ListDevicesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDevicesShrinkRequest self = new ListDevicesShrinkRequest();
@@ -113,12 +113,12 @@ public class ListDevicesShrinkRequest extends TeaModel {
         return this.extAttributes;
     }
 
-    public ListDevicesShrinkRequest setHostName(java.util.List<String> hostName) {
-        this.hostName = hostName;
+    public ListDevicesShrinkRequest setHostNameShrink(String hostNameShrink) {
+        this.hostNameShrink = hostNameShrink;
         return this;
     }
-    public java.util.List<String> getHostName() {
-        return this.hostName;
+    public String getHostNameShrink() {
+        return this.hostNameShrink;
     }
 
     public ListDevicesShrinkRequest setInstanceId(String instanceId) {
@@ -129,12 +129,12 @@ public class ListDevicesShrinkRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListDevicesShrinkRequest setIp(java.util.List<String> ip) {
-        this.ip = ip;
+    public ListDevicesShrinkRequest setIpShrink(String ipShrink) {
+        this.ipShrink = ipShrink;
         return this;
     }
-    public java.util.List<String> getIp() {
-        return this.ip;
+    public String getIpShrink() {
+        return this.ipShrink;
     }
 
     public ListDevicesShrinkRequest setKeyword(String keyword) {
@@ -145,12 +145,12 @@ public class ListDevicesShrinkRequest extends TeaModel {
         return this.keyword;
     }
 
-    public ListDevicesShrinkRequest setMac(java.util.List<String> mac) {
-        this.mac = mac;
+    public ListDevicesShrinkRequest setMacShrink(String macShrink) {
+        this.macShrink = macShrink;
         return this;
     }
-    public java.util.List<String> getMac() {
-        return this.mac;
+    public String getMacShrink() {
+        return this.macShrink;
     }
 
     public ListDevicesShrinkRequest setMaxResults(Integer maxResults) {
@@ -161,12 +161,12 @@ public class ListDevicesShrinkRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListDevicesShrinkRequest setModel(java.util.List<String> model) {
-        this.model = model;
+    public ListDevicesShrinkRequest setModelShrink(String modelShrink) {
+        this.modelShrink = modelShrink;
         return this;
     }
-    public java.util.List<String> getModel() {
-        return this.model;
+    public String getModelShrink() {
+        return this.modelShrink;
     }
 
     public ListDevicesShrinkRequest setNextToken(String nextToken) {
@@ -193,36 +193,36 @@ public class ListDevicesShrinkRequest extends TeaModel {
         return this.physicalSpaceIdsShrink;
     }
 
-    public ListDevicesShrinkRequest setSecurityDomain(java.util.List<String> securityDomain) {
-        this.securityDomain = securityDomain;
+    public ListDevicesShrinkRequest setSecurityDomainShrink(String securityDomainShrink) {
+        this.securityDomainShrink = securityDomainShrink;
         return this;
     }
-    public java.util.List<String> getSecurityDomain() {
-        return this.securityDomain;
+    public String getSecurityDomainShrink() {
+        return this.securityDomainShrink;
     }
 
-    public ListDevicesShrinkRequest setServiceStatus(java.util.List<String> serviceStatus) {
-        this.serviceStatus = serviceStatus;
+    public ListDevicesShrinkRequest setServiceStatusShrink(String serviceStatusShrink) {
+        this.serviceStatusShrink = serviceStatusShrink;
         return this;
     }
-    public java.util.List<String> getServiceStatus() {
-        return this.serviceStatus;
+    public String getServiceStatusShrink() {
+        return this.serviceStatusShrink;
     }
 
-    public ListDevicesShrinkRequest setSn(java.util.List<String> sn) {
-        this.sn = sn;
+    public ListDevicesShrinkRequest setSnShrink(String snShrink) {
+        this.snShrink = snShrink;
         return this;
     }
-    public java.util.List<String> getSn() {
-        return this.sn;
+    public String getSnShrink() {
+        return this.snShrink;
     }
 
-    public ListDevicesShrinkRequest setVendor(java.util.List<String> vendor) {
-        this.vendor = vendor;
+    public ListDevicesShrinkRequest setVendorShrink(String vendorShrink) {
+        this.vendorShrink = vendorShrink;
         return this;
     }
-    public java.util.List<String> getVendor() {
-        return this.vendor;
+    public String getVendorShrink() {
+        return this.vendorShrink;
     }
 
 }
