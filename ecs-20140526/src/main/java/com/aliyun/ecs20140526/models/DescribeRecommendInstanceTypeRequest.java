@@ -19,6 +19,9 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     @NameInMap("InstanceTypeFamily")
     public java.util.List<String> instanceTypeFamily;
 
+    @NameInMap("InstanceTypeSupportIPv6")
+    public Boolean instanceTypeSupportIPv6;
+
     @NameInMap("IoOptimized")
     public String ioOptimized;
 
@@ -107,6 +110,14 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceTypeFamily() {
         return this.instanceTypeFamily;
+    }
+
+    public DescribeRecommendInstanceTypeRequest setInstanceTypeSupportIPv6(Boolean instanceTypeSupportIPv6) {
+        this.instanceTypeSupportIPv6 = instanceTypeSupportIPv6;
+        return this;
+    }
+    public Boolean getInstanceTypeSupportIPv6() {
+        return this.instanceTypeSupportIPv6;
     }
 
     public DescribeRecommendInstanceTypeRequest setIoOptimized(String ioOptimized) {

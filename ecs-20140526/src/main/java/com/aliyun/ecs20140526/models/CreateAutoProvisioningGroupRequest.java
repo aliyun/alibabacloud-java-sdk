@@ -350,6 +350,47 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.validUntil;
     }
 
+    public static class CreateAutoProvisioningGroupRequestLaunchConfigurationArn extends TeaModel {
+        @NameInMap("AssumeRoleFor")
+        public Long assumeRoleFor;
+
+        @NameInMap("RoleType")
+        public String roleType;
+
+        @NameInMap("Rolearn")
+        public String rolearn;
+
+        public static CreateAutoProvisioningGroupRequestLaunchConfigurationArn build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupRequestLaunchConfigurationArn self = new CreateAutoProvisioningGroupRequestLaunchConfigurationArn();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationArn setAssumeRoleFor(Long assumeRoleFor) {
+            this.assumeRoleFor = assumeRoleFor;
+            return this;
+        }
+        public Long getAssumeRoleFor() {
+            return this.assumeRoleFor;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationArn setRoleType(String roleType) {
+            this.roleType = roleType;
+            return this;
+        }
+        public String getRoleType() {
+            return this.roleType;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationArn setRolearn(String rolearn) {
+            this.rolearn = rolearn;
+            return this;
+        }
+        public String getRolearn() {
+            return this.rolearn;
+        }
+
+    }
+
     public static class CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk extends TeaModel {
         @NameInMap("Category")
         public String category;
@@ -468,6 +509,47 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     }
 
+    public static class CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk extends TeaModel {
+        @NameInMap("EncryptAlgorithm")
+        public String encryptAlgorithm;
+
+        @NameInMap("Encrypted")
+        public String encrypted;
+
+        @NameInMap("KMSKeyId")
+        public String KMSKeyId;
+
+        public static CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk self = new CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk setEncryptAlgorithm(String encryptAlgorithm) {
+            this.encryptAlgorithm = encryptAlgorithm;
+            return this;
+        }
+        public String getEncryptAlgorithm() {
+            return this.encryptAlgorithm;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk setEncrypted(String encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public String getEncrypted() {
+            return this.encrypted;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+    }
+
     public static class CreateAutoProvisioningGroupRequestLaunchConfigurationTag extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -499,6 +581,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupRequestLaunchConfiguration extends TeaModel {
+        @NameInMap("Arn")
+        public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> arn;
+
         @NameInMap("CreditSpecification")
         public String creditSpecification;
 
@@ -559,6 +644,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
+        @NameInMap("SystemDisk")
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk systemDisk;
+
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
@@ -583,6 +671,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public static CreateAutoProvisioningGroupRequestLaunchConfiguration build(java.util.Map<String, ?> map) throws Exception {
             CreateAutoProvisioningGroupRequestLaunchConfiguration self = new CreateAutoProvisioningGroupRequestLaunchConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setArn(java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> arn) {
+            this.arn = arn;
+            return this;
+        }
+        public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> getArn() {
+            return this.arn;
         }
 
         public CreateAutoProvisioningGroupRequestLaunchConfiguration setCreditSpecification(String creditSpecification) {
@@ -743,6 +839,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSystemDisk(CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk systemDisk) {
+            this.systemDisk = systemDisk;
+            return this;
+        }
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk getSystemDisk() {
+            return this.systemDisk;
         }
 
         public CreateAutoProvisioningGroupRequestLaunchConfiguration setSystemDiskCategory(String systemDiskCategory) {

@@ -254,6 +254,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("Architecture")
         public String architecture;
 
+        @NameInMap("BootMode")
+        public String bootMode;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -349,6 +352,14 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
         public String getArchitecture() {
             return this.architecture;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setBootMode(String bootMode) {
+            this.bootMode = bootMode;
+            return this;
+        }
+        public String getBootMode() {
+            return this.bootMode;
         }
 
         public DescribeImagesResponseBodyImagesImage setCreationTime(String creationTime) {

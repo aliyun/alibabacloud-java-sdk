@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTypesRequest extends TeaModel {
+    @NameInMap("Filters")
+    public java.util.List<DescribeInstanceTypesRequestFilters> filters;
+
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
@@ -31,6 +34,14 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public static DescribeInstanceTypesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceTypesRequest self = new DescribeInstanceTypesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceTypesRequest setFilters(java.util.List<DescribeInstanceTypesRequestFilters> filters) {
+        this.filters = filters;
+        return this;
+    }
+    public java.util.List<DescribeInstanceTypesRequestFilters> getFilters() {
+        return this.filters;
     }
 
     public DescribeInstanceTypesRequest setInstanceTypeFamily(String instanceTypeFamily) {
@@ -95,6 +106,36 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public static class DescribeInstanceTypesRequestFilters extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeInstanceTypesRequestFilters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypesRequestFilters self = new DescribeInstanceTypesRequestFilters();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesRequestFilters setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeInstanceTypesRequestFilters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

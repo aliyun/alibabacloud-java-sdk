@@ -7,6 +7,9 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("Architecture")
     public String architecture;
 
+    @NameInMap("BootMode")
+    public String bootMode;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -66,6 +69,14 @@ public class CreateImageRequest extends TeaModel {
     }
     public String getArchitecture() {
         return this.architecture;
+    }
+
+    public CreateImageRequest setBootMode(String bootMode) {
+        this.bootMode = bootMode;
+        return this;
+    }
+    public String getBootMode() {
+        return this.bootMode;
     }
 
     public CreateImageRequest setClientToken(String clientToken) {
