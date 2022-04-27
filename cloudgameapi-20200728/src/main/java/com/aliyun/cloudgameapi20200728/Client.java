@@ -35,9 +35,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AdaptGameVersionResponse adaptGameVersionWithOptions(AdaptGameVersionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("FrameRate", request.frameRate);
-        query.put("Resolution", request.resolution);
-        query.put("VersionId", request.versionId);
+        if (!com.aliyun.teautil.Common.isUnset(request.frameRate)) {
+            query.put("FrameRate", request.frameRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolution)) {
+            query.put("Resolution", request.resolution);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -63,8 +72,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddGameToProjectResponse addGameToProjectWithOptions(AddGameToProjectRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("GameId", request.gameId);
-        query.put("ProjectId", request.projectId);
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -119,12 +134,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BatchStopGameSessionsResponse batchStopGameSessionsWithOptions(BatchStopGameSessionsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("GameId", request.gameId);
-        query.put("ProjectId", request.projectId);
-        query.put("Reason", request.reason);
-        query.put("Tags", request.tags);
-        query.put("Token", request.token);
-        query.put("TrackInfo", request.trackInfo);
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            query.put("Reason", request.reason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trackInfo)) {
+            query.put("TrackInfo", request.trackInfo);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -147,12 +180,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchStopGameSessionsWithOptions(request, runtime);
     }
 
+    public CancelGameHangResponse cancelGameHangWithOptions(CancelGameHangRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessKey)) {
+            body.put("AccessKey", request.accessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameSession)) {
+            body.put("GameSession", request.gameSession);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelGameHang"),
+            new TeaPair("version", "2020-07-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelGameHangResponse());
+    }
+
+    public CancelGameHangResponse cancelGameHang(CancelGameHangRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.cancelGameHangWithOptions(request, runtime);
+    }
+
     public CloseOrderResponse closeOrderWithOptions(CloseOrderRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AccountDomain", request.accountDomain);
-        query.put("BuyerAccountId", request.buyerAccountId);
-        query.put("OrderId", request.orderId);
+        if (!com.aliyun.teautil.Common.isUnset(request.accountDomain)) {
+            query.put("AccountDomain", request.accountDomain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buyerAccountId)) {
+            query.put("BuyerAccountId", request.buyerAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -178,9 +253,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateGameResponse createGameWithOptions(CreateGameRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("ClientToken", request.clientToken);
-        query.put("GameName", request.gameName);
-        query.put("PlatformType", request.platformType);
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameName)) {
+            query.put("GameName", request.gameName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platformType)) {
+            query.put("PlatformType", request.platformType);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -206,16 +290,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateGameDeployWorkflowResponse createGameDeployWorkflowWithOptions(CreateGameDeployWorkflowRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("DownloadType", request.downloadType);
-        query.put("FileType", request.fileType);
-        query.put("FrameRate", request.frameRate);
-        query.put("GameId", request.gameId);
-        query.put("GameVersion", request.gameVersion);
-        query.put("Hash", request.hash);
-        query.put("Instance", request.instance);
-        query.put("ProjectId", request.projectId);
-        query.put("Resolution", request.resolution);
-        query.put("VersionName", request.versionName);
+        if (!com.aliyun.teautil.Common.isUnset(request.downloadType)) {
+            query.put("DownloadType", request.downloadType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileType)) {
+            query.put("FileType", request.fileType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.frameRate)) {
+            query.put("FrameRate", request.frameRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameVersion)) {
+            query.put("GameVersion", request.gameVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hash)) {
+            query.put("Hash", request.hash);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instance)) {
+            query.put("Instance", request.instance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolution)) {
+            query.put("Resolution", request.resolution);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionName)) {
+            query.put("VersionName", request.versionName);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -241,14 +355,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateOrderResponse createOrderWithOptions(CreateOrderRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AccountDomain", request.accountDomain);
-        query.put("Amount", request.amount);
-        query.put("BuyerAccountId", request.buyerAccountId);
-        query.put("IdempotentCode", request.idempotentCode);
-        query.put("ItemId", request.itemId);
-        query.put("OriginPrice", request.originPrice);
-        query.put("SettlementPrice", request.settlementPrice);
-        query.put("SkuId", request.skuId);
+        if (!com.aliyun.teautil.Common.isUnset(request.accountDomain)) {
+            query.put("AccountDomain", request.accountDomain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
+            query.put("Amount", request.amount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buyerAccountId)) {
+            query.put("BuyerAccountId", request.buyerAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idempotentCode)) {
+            query.put("IdempotentCode", request.idempotentCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.itemId)) {
+            query.put("ItemId", request.itemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originPrice)) {
+            query.put("OriginPrice", request.originPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.settlementPrice)) {
+            query.put("SettlementPrice", request.settlementPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skuId)) {
+            query.put("SkuId", request.skuId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -274,8 +412,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateProjectResponse createProjectWithOptions(CreateProjectRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("ClientToken", request.clientToken);
-        query.put("ProjectName", request.projectName);
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -301,9 +445,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateTokenResponse createTokenWithOptions(CreateTokenRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("ClientToken", request.clientToken);
-        query.put("CurrentToken", request.currentToken);
-        query.put("Session", request.session);
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentToken)) {
+            query.put("CurrentToken", request.currentToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.session)) {
+            query.put("Session", request.session);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -329,7 +482,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteGameResponse deleteGameWithOptions(DeleteGameRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("GameId", request.gameId);
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -355,7 +511,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteGameVersionResponse deleteGameVersionWithOptions(DeleteGameVersionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("VersionId", request.versionId);
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -381,7 +540,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteProjectResponse deleteProjectWithOptions(DeleteProjectRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("ProjectId", request.projectId);
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -407,9 +569,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeliveryOrderResponse deliveryOrderWithOptions(DeliveryOrderRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AccountDomain", request.accountDomain);
-        query.put("BuyerAccountId", request.buyerAccountId);
-        query.put("OrderId", request.orderId);
+        if (!com.aliyun.teautil.Common.isUnset(request.accountDomain)) {
+            query.put("AccountDomain", request.accountDomain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buyerAccountId)) {
+            query.put("BuyerAccountId", request.buyerAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -516,9 +687,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetGameCcuResponse getGameCcuWithOptions(GetGameCcuRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AccessKey", request.accessKey);
-        query.put("GameId", request.gameId);
-        query.put("RegionName", request.regionName);
+        if (!com.aliyun.teautil.Common.isUnset(request.accessKey)) {
+            query.put("AccessKey", request.accessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionName)) {
+            query.put("RegionName", request.regionName);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -544,7 +724,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetGameStatusResponse getGameStatusWithOptions(GetGameStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("GameSession", request.gameSession);
+        if (!com.aliyun.teautil.Common.isUnset(request.gameSession)) {
+            query.put("GameSession", request.gameSession);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -570,9 +753,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetGameStockResponse getGameStockWithOptions(GetGameStockRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AccessKey", request.accessKey);
-        query.put("GameId", request.gameId);
-        query.put("UserLevel", request.userLevel);
+        if (!com.aliyun.teautil.Common.isUnset(request.accessKey)) {
+            query.put("AccessKey", request.accessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userLevel)) {
+            query.put("UserLevel", request.userLevel);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -598,9 +790,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetGameTrialSurplusDurationResponse getGameTrialSurplusDurationWithOptions(GetGameTrialSurplusDurationRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AccountId", request.accountId);
-        query.put("GameId", request.gameId);
-        query.put("ProjectId", request.projectId);
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -626,7 +827,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetGameVersionResponse getGameVersionWithOptions(GetGameVersionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("VersionId", request.versionId);
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -652,7 +856,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetGameVersionProgressResponse getGameVersionProgressWithOptions(GetGameVersionProgressRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("TaskId", request.taskId);
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -678,7 +885,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetItemResponse getItemWithOptions(GetItemRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("ItemId", request.itemId);
+        if (!com.aliyun.teautil.Common.isUnset(request.itemId)) {
+            query.put("ItemId", request.itemId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -704,9 +914,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetOutAccountBindDetailResponse getOutAccountBindDetailWithOptions(GetOutAccountBindDetailRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AccountDomain", request.accountDomain);
-        query.put("AccountId", request.accountId);
-        query.put("OutAccountType", request.outAccountType);
+        if (!com.aliyun.teautil.Common.isUnset(request.accountDomain)) {
+            query.put("AccountDomain", request.accountDomain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outAccountType)) {
+            query.put("OutAccountType", request.outAccountType);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -732,7 +951,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSessionResponse getSessionWithOptions(GetSessionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("Token", request.token);
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -758,8 +980,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetStopGameTokenResponse getStopGameTokenWithOptions(GetStopGameTokenRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AccessKey", request.accessKey);
-        query.put("GameId", request.gameId);
+        if (!com.aliyun.teautil.Common.isUnset(request.accessKey)) {
+            query.put("AccessKey", request.accessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -785,8 +1013,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public KickPlayerResponse kickPlayerWithOptions(KickPlayerRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("GameSession", request.gameSession);
-        query.put("KickedAccountId", request.kickedAccountId);
+        if (!com.aliyun.teautil.Common.isUnset(request.gameSession)) {
+            query.put("GameSession", request.gameSession);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kickedAccountId)) {
+            query.put("KickedAccountId", request.kickedAccountId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -812,10 +1046,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListBoughtGamesResponse listBoughtGamesWithOptions(ListBoughtGamesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AccountDomain", request.accountDomain);
-        query.put("AccountId", request.accountId);
-        query.put("PageNumber", request.pageNumber);
-        query.put("PageSize", request.pageSize);
+        if (!com.aliyun.teautil.Common.isUnset(request.accountDomain)) {
+            query.put("AccountDomain", request.accountDomain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -841,7 +1087,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListContainerStatusResponse listContainerStatusWithOptions(ListContainerStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("GameSessionIdList", request.gameSessionIdList);
+        if (!com.aliyun.teautil.Common.isUnset(request.gameSessionIdList)) {
+            query.put("GameSessionIdList", request.gameSessionIdList);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -867,10 +1116,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDeployableInstancesResponse listDeployableInstancesWithOptions(ListDeployableInstancesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("PageNumber", request.pageNumber);
-        query.put("PageSize", request.pageSize);
-        query.put("ProjectId", request.projectId);
-        query.put("VersionId", request.versionId);
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -896,9 +1157,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListGameVersionsResponse listGameVersionsWithOptions(ListGameVersionsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("GameId", request.gameId);
-        query.put("MaxResults", request.maxResults);
-        query.put("NextToken", request.nextToken);
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -924,8 +1194,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListGamesResponse listGamesWithOptions(ListGamesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("MaxResults", request.maxResults);
-        query.put("NextToken", request.nextToken);
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -951,11 +1227,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListHistoryContainerStatusResponse listHistoryContainerStatusWithOptions(ListHistoryContainerStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("EndTime", request.endTime);
-        query.put("LastGameSessionId", request.lastGameSessionId);
-        query.put("PageSize", request.pageSize);
-        query.put("ProjectId", request.projectId);
-        query.put("StartTime", request.startTime);
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lastGameSessionId)) {
+            query.put("LastGameSessionId", request.lastGameSessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -981,8 +1272,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListProjectsResponse listProjectsWithOptions(ListProjectsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("MaxResults", request.maxResults);
-        query.put("NextToken", request.nextToken);
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1008,10 +1305,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryGameResponse queryGameWithOptions(QueryGameRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("PageNo", request.pageNo);
-        query.put("PageSize", request.pageSize);
-        query.put("ProjectId", request.projectId);
-        query.put("TenantId", request.tenantId);
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1034,11 +1343,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryGameWithOptions(request, runtime);
     }
 
+    public QueryGameHangResponse queryGameHangWithOptions(QueryGameHangRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessKey)) {
+            body.put("AccessKey", request.accessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameSession)) {
+            body.put("GameSession", request.gameSession);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryGameHang"),
+            new TeaPair("version", "2020-07-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryGameHangResponse());
+    }
+
+    public QueryGameHangResponse queryGameHang(QueryGameHangRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryGameHangWithOptions(request, runtime);
+    }
+
     public QueryItemsResponse queryItemsWithOptions(QueryItemsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("PageNumber", request.pageNumber);
-        query.put("PageSize", request.pageSize);
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1064,9 +1412,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryOrderResponse queryOrderWithOptions(QueryOrderRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AccountDomain", request.accountDomain);
-        query.put("BuyerAccountId", request.buyerAccountId);
-        query.put("OrderId", request.orderId);
+        if (!com.aliyun.teautil.Common.isUnset(request.accountDomain)) {
+            query.put("AccountDomain", request.accountDomain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buyerAccountId)) {
+            query.put("BuyerAccountId", request.buyerAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1092,9 +1449,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryOutAccountBindStatusResponse queryOutAccountBindStatusWithOptions(QueryOutAccountBindStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AccountDomain", request.accountDomain);
-        query.put("AccountId", request.accountId);
-        query.put("GameId", request.gameId);
+        if (!com.aliyun.teautil.Common.isUnset(request.accountDomain)) {
+            query.put("AccountDomain", request.accountDomain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1120,10 +1486,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryProjectResponse queryProjectWithOptions(QueryProjectRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("PageNo", request.pageNo);
-        query.put("PageSize", request.pageSize);
-        query.put("ProjectId", request.projectId);
-        query.put("TenantId", request.tenantId);
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1149,9 +1527,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryTenantResponse queryTenantWithOptions(QueryTenantRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("PageNo", request.pageNo);
-        query.put("PageSize", request.pageSize);
-        query.put("Param", request.param);
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.param)) {
+            query.put("Param", request.param);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1177,8 +1564,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveGameFromProjectResponse removeGameFromProjectWithOptions(RemoveGameFromProjectRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("GameId", request.gameId);
-        query.put("ProjectId", request.projectId);
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1201,10 +1594,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.removeGameFromProjectWithOptions(request, runtime);
     }
 
+    public SetGameAliveResponse setGameAliveWithOptions(SetGameAliveRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessKey)) {
+            body.put("AccessKey", request.accessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameSession)) {
+            body.put("GameSession", request.gameSession);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keepAlive)) {
+            body.put("KeepAlive", request.keepAlive);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetGameAlive"),
+            new TeaPair("version", "2020-07-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetGameAliveResponse());
+    }
+
+    public SetGameAliveResponse setGameAlive(SetGameAliveRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.setGameAliveWithOptions(request, runtime);
+    }
+
+    public SetGameHangResponse setGameHangWithOptions(SetGameHangRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessKey)) {
+            body.put("AccessKey", request.accessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
+            body.put("Duration", request.duration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameSession)) {
+            body.put("GameSession", request.gameSession);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetGameHang"),
+            new TeaPair("version", "2020-07-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetGameHangResponse());
+    }
+
+    public SetGameHangResponse setGameHang(SetGameHangRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.setGameHangWithOptions(request, runtime);
+    }
+
     public SkipTrialPolicyResponse skipTrialPolicyWithOptions(SkipTrialPolicyRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("GameSessionId", request.gameSessionId);
+        if (!com.aliyun.teautil.Common.isUnset(request.gameSessionId)) {
+            query.put("GameSessionId", request.gameSessionId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1279,11 +1749,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitDeploymentResponse submitDeploymentWithOptions(SubmitDeploymentRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("CloudGameInstanceIds", request.cloudGameInstanceIds);
-        query.put("GameId", request.gameId);
-        query.put("OperationType", request.operationType);
-        query.put("ProjectId", request.projectId);
-        query.put("VersionId", request.versionId);
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudGameInstanceIds)) {
+            query.put("CloudGameInstanceIds", request.cloudGameInstanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationType)) {
+            query.put("OperationType", request.operationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1309,25 +1794,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitInternalPurchaseChargeDataResponse submitInternalPurchaseChargeDataWithOptions(SubmitInternalPurchaseChargeDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("ActiveUserRetentionRateOneDay", request.activeUserRetentionRateOneDay);
-        query.put("ActiveUserRetentionRateSevenDay", request.activeUserRetentionRateSevenDay);
-        query.put("ActiveUserRetentionRateThirtyDay", request.activeUserRetentionRateThirtyDay);
-        query.put("Arpu", request.arpu);
-        query.put("ChargeDate", request.chargeDate);
-        query.put("Dau", request.dau);
-        query.put("GameId", request.gameId);
-        query.put("Mau", request.mau);
-        query.put("NewUserRetentionRateOneDay", request.newUserRetentionRateOneDay);
-        query.put("NewUserRetentionRateSevenDay", request.newUserRetentionRateSevenDay);
-        query.put("NewUserRetentionRateThirtyDay", request.newUserRetentionRateThirtyDay);
-        query.put("PaymentConversionRate", request.paymentConversionRate);
-        query.put("PlayTimeAverageOneDay", request.playTimeAverageOneDay);
-        query.put("PlayTimeAverageThirtyDay", request.playTimeAverageThirtyDay);
-        query.put("PlayTimeNinetyPointsOneDay", request.playTimeNinetyPointsOneDay);
-        query.put("PlayTimeNinetyPointsThirtyDay", request.playTimeNinetyPointsThirtyDay);
-        query.put("PlayTimeRangeOneDay", request.playTimeRangeOneDay);
-        query.put("PlayTimeRangeThirtyDay", request.playTimeRangeThirtyDay);
-        query.put("UserActivationRate", request.userActivationRate);
+        if (!com.aliyun.teautil.Common.isUnset(request.activeUserRetentionRateOneDay)) {
+            query.put("ActiveUserRetentionRateOneDay", request.activeUserRetentionRateOneDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.activeUserRetentionRateSevenDay)) {
+            query.put("ActiveUserRetentionRateSevenDay", request.activeUserRetentionRateSevenDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.activeUserRetentionRateThirtyDay)) {
+            query.put("ActiveUserRetentionRateThirtyDay", request.activeUserRetentionRateThirtyDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.arpu)) {
+            query.put("Arpu", request.arpu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeDate)) {
+            query.put("ChargeDate", request.chargeDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dau)) {
+            query.put("Dau", request.dau);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mau)) {
+            query.put("Mau", request.mau);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newUserRetentionRateOneDay)) {
+            query.put("NewUserRetentionRateOneDay", request.newUserRetentionRateOneDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newUserRetentionRateSevenDay)) {
+            query.put("NewUserRetentionRateSevenDay", request.newUserRetentionRateSevenDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newUserRetentionRateThirtyDay)) {
+            query.put("NewUserRetentionRateThirtyDay", request.newUserRetentionRateThirtyDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentConversionRate)) {
+            query.put("PaymentConversionRate", request.paymentConversionRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.playTimeAverageOneDay)) {
+            query.put("PlayTimeAverageOneDay", request.playTimeAverageOneDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.playTimeAverageThirtyDay)) {
+            query.put("PlayTimeAverageThirtyDay", request.playTimeAverageThirtyDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.playTimeNinetyPointsOneDay)) {
+            query.put("PlayTimeNinetyPointsOneDay", request.playTimeNinetyPointsOneDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.playTimeNinetyPointsThirtyDay)) {
+            query.put("PlayTimeNinetyPointsThirtyDay", request.playTimeNinetyPointsThirtyDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.playTimeRangeOneDay)) {
+            query.put("PlayTimeRangeOneDay", request.playTimeRangeOneDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.playTimeRangeThirtyDay)) {
+            query.put("PlayTimeRangeThirtyDay", request.playTimeRangeThirtyDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userActivationRate)) {
+            query.put("UserActivationRate", request.userActivationRate);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1353,7 +1895,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitInternalPurchaseOrdersResponse submitInternalPurchaseOrdersWithOptions(SubmitInternalPurchaseOrdersRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("OrderList", request.orderList);
+        if (!com.aliyun.teautil.Common.isUnset(request.orderList)) {
+            query.put("OrderList", request.orderList);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1379,11 +1924,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitInternalPurchaseReadyFlagResponse submitInternalPurchaseReadyFlagWithOptions(SubmitInternalPurchaseReadyFlagRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("BatchInfoList", request.batchInfoList);
-        query.put("ChargeDate", request.chargeDate);
-        query.put("GameId", request.gameId);
-        query.put("OrderTotalCount", request.orderTotalCount);
-        query.put("Status", request.status);
+        if (!com.aliyun.teautil.Common.isUnset(request.batchInfoList)) {
+            query.put("BatchInfoList", request.batchInfoList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeDate)) {
+            query.put("ChargeDate", request.chargeDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderTotalCount)) {
+            query.put("OrderTotalCount", request.orderTotalCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1409,12 +1969,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UploadGameVersionByDownloadResponse uploadGameVersionByDownloadWithOptions(UploadGameVersionByDownloadRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("DownloadType", request.downloadType);
-        query.put("FileType", request.fileType);
-        query.put("GameId", request.gameId);
-        query.put("GameVersion", request.gameVersion);
-        query.put("Hash", request.hash);
-        query.put("VersionName", request.versionName);
+        if (!com.aliyun.teautil.Common.isUnset(request.downloadType)) {
+            query.put("DownloadType", request.downloadType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileType)) {
+            query.put("FileType", request.fileType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameVersion)) {
+            query.put("GameVersion", request.gameVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hash)) {
+            query.put("Hash", request.hash);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionName)) {
+            query.put("VersionName", request.versionName);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
