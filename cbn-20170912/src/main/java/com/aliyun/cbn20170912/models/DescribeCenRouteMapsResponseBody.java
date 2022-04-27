@@ -396,6 +396,9 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("TransitRouterRouteTableId")
+        public String transitRouterRouteTableId;
+
         @NameInMap("TransmitDirection")
         public String transmitDirection;
 
@@ -626,6 +629,14 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setTransitRouterRouteTableId(String transitRouterRouteTableId) {
+            this.transitRouterRouteTableId = transitRouterRouteTableId;
+            return this;
+        }
+        public String getTransitRouterRouteTableId() {
+            return this.transitRouterRouteTableId;
         }
 
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setTransmitDirection(String transmitDirection) {

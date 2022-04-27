@@ -3286,6 +3286,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RouteMapId", request.routeMapId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.transitRouterRouteTableId)) {
+            query.put("TransitRouterRouteTableId", request.transitRouterRouteTableId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.transmitDirection)) {
             query.put("TransmitDirection", request.transmitDirection);
         }
@@ -7270,6 +7274,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateTransitRouterVbrAttachmentAttributeResponse updateTransitRouterVbrAttachmentAttributeWithOptions(UpdateTransitRouterVbrAttachmentAttributeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPublishRouteEnabled)) {
+            query.put("AutoPublishRouteEnabled", request.autoPublishRouteEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }

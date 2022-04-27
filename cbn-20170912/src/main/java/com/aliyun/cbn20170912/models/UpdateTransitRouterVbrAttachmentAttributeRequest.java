@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class UpdateTransitRouterVbrAttachmentAttributeRequest extends TeaModel {
+    @NameInMap("AutoPublishRouteEnabled")
+    public Boolean autoPublishRouteEnabled;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -34,6 +37,14 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends TeaModel {
     public static UpdateTransitRouterVbrAttachmentAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTransitRouterVbrAttachmentAttributeRequest self = new UpdateTransitRouterVbrAttachmentAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateTransitRouterVbrAttachmentAttributeRequest setAutoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
+        this.autoPublishRouteEnabled = autoPublishRouteEnabled;
+        return this;
+    }
+    public Boolean getAutoPublishRouteEnabled() {
+        return this.autoPublishRouteEnabled;
     }
 
     public UpdateTransitRouterVbrAttachmentAttributeRequest setClientToken(String clientToken) {

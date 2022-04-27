@@ -31,6 +31,9 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     @NameInMap("RouteMapId")
     public String routeMapId;
 
+    @NameInMap("TransitRouterRouteTableId")
+    public String transitRouterRouteTableId;
+
     @NameInMap("TransmitDirection")
     public String transmitDirection;
 
@@ -109,6 +112,14 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     }
     public String getRouteMapId() {
         return this.routeMapId;
+    }
+
+    public DescribeCenRouteMapsRequest setTransitRouterRouteTableId(String transitRouterRouteTableId) {
+        this.transitRouterRouteTableId = transitRouterRouteTableId;
+        return this;
+    }
+    public String getTransitRouterRouteTableId() {
+        return this.transitRouterRouteTableId;
     }
 
     public DescribeCenRouteMapsRequest setTransmitDirection(String transmitDirection) {
