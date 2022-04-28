@@ -37,6 +37,9 @@ public class ControlAiotDeviceRequest extends TeaModel {
     @NameInMap("IdentityNumber")
     public String identityNumber;
 
+    @NameInMap("IsProxy")
+    public Boolean isProxy;
+
     @NameInMap("MiFareCard")
     public ControlAiotDeviceRequestMiFareCard miFareCard;
 
@@ -146,6 +149,14 @@ public class ControlAiotDeviceRequest extends TeaModel {
     }
     public String getIdentityNumber() {
         return this.identityNumber;
+    }
+
+    public ControlAiotDeviceRequest setIsProxy(Boolean isProxy) {
+        this.isProxy = isProxy;
+        return this;
+    }
+    public Boolean getIsProxy() {
+        return this.isProxy;
     }
 
     public ControlAiotDeviceRequest setMiFareCard(ControlAiotDeviceRequestMiFareCard miFareCard) {
