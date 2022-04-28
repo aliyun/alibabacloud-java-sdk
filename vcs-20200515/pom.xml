@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>vcs20200515</artifactId>
-  <version>3.1.4</version>
+  <version>3.1.5</version>
   <packaging>jar</packaging>
   <name>vcs20200515</name>
   <description>Alibaba Cloud Visual Compute Service (20200515) SDK for Java

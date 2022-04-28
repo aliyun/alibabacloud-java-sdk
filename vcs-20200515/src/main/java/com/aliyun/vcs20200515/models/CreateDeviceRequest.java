@@ -88,9 +88,6 @@ public class CreateDeviceRequest extends TeaModel {
     @NameInMap("SubDeviceIdList")
     public String subDeviceIdList;
 
-    @NameInMap("UpStreamMode")
-    public String upStreamMode;
-
     @NameInMap("Vendor")
     public String vendor;
 
@@ -321,14 +318,6 @@ public class CreateDeviceRequest extends TeaModel {
     }
     public String getSubDeviceIdList() {
         return this.subDeviceIdList;
-    }
-
-    public CreateDeviceRequest setUpStreamMode(String upStreamMode) {
-        this.upStreamMode = upStreamMode;
-        return this;
-    }
-    public String getUpStreamMode() {
-        return this.upStreamMode;
     }
 
     public CreateDeviceRequest setVendor(String vendor) {
