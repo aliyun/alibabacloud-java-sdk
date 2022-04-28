@@ -2062,6 +2062,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeScdnUserQuotaWithOptions(request, runtime);
     }
 
+    public DescribeScdnVerifyContentResponse describeScdnVerifyContentWithOptions(DescribeScdnVerifyContentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeScdnVerifyContent"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScdnVerifyContentResponse());
+    }
+
+    public DescribeScdnVerifyContentResponse describeScdnVerifyContent(DescribeScdnVerifyContentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeScdnVerifyContentWithOptions(request, runtime);
+    }
+
     public OpenScdnServiceResponse openScdnServiceWithOptions(OpenScdnServiceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2495,5 +2528,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateScdnDomainResponse updateScdnDomain(UpdateScdnDomainRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateScdnDomainWithOptions(request, runtime);
+    }
+
+    public VerifyScdnDomainOwnerResponse verifyScdnDomainOwnerWithOptions(VerifyScdnDomainOwnerRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verifyType)) {
+            query.put("VerifyType", request.verifyType);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyScdnDomainOwner"),
+            new TeaPair("version", "2017-11-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyScdnDomainOwnerResponse());
+    }
+
+    public VerifyScdnDomainOwnerResponse verifyScdnDomainOwner(VerifyScdnDomainOwnerRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.verifyScdnDomainOwnerWithOptions(request, runtime);
     }
 }
