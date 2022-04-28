@@ -32,6 +32,9 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus extends TeaModel {
+        @NameInMap("Locked")
+        public Boolean locked;
+
         @NameInMap("PayType")
         public String payType;
 
@@ -47,6 +50,14 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
         public static DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus self = new DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus setLocked(Boolean locked) {
+            this.locked = locked;
+            return this;
+        }
+        public Boolean getLocked() {
+            return this.locked;
         }
 
         public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus setPayType(String payType) {
@@ -84,6 +95,9 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus extends TeaModel {
+        @NameInMap("Locked")
+        public Boolean locked;
+
         @NameInMap("PayType")
         public String payType;
 
@@ -99,6 +113,14 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
         public static DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus self = new DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus setLocked(Boolean locked) {
+            this.locked = locked;
+            return this;
+        }
+        public Boolean getLocked() {
+            return this.locked;
         }
 
         public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus setPayType(String payType) {
@@ -152,7 +174,7 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
         public String controlPlaneProjectStatus;
 
         @NameInMap("LogtailStatusRecord")
-        public java.util.Map<String, ClusterStatusLogtailStatusRecordValue> logtailStatusRecord;
+        public java.util.Map<String, ?> logtailStatusRecord;
 
         @NameInMap("PilotLoadBalancerStatus")
         public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus pilotLoadBalancerStatus;
@@ -205,11 +227,11 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
             return this.controlPlaneProjectStatus;
         }
 
-        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatus setLogtailStatusRecord(java.util.Map<String, ClusterStatusLogtailStatusRecordValue> logtailStatusRecord) {
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatus setLogtailStatusRecord(java.util.Map<String, ?> logtailStatusRecord) {
             this.logtailStatusRecord = logtailStatusRecord;
             return this;
         }
-        public java.util.Map<String, ClusterStatusLogtailStatusRecordValue> getLogtailStatusRecord() {
+        public java.util.Map<String, ?> getLogtailStatusRecord() {
             return this.logtailStatusRecord;
         }
 
