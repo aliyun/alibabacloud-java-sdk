@@ -7,9 +7,6 @@ public class PublishStagingConfigToProductionRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("FunctionName")
-    public String functionName;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -24,14 +21,6 @@ public class PublishStagingConfigToProductionRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public PublishStagingConfigToProductionRequest setFunctionName(String functionName) {
-        this.functionName = functionName;
-        return this;
-    }
-    public String getFunctionName() {
-        return this.functionName;
     }
 
     public PublishStagingConfigToProductionRequest setOwnerId(Long ownerId) {
