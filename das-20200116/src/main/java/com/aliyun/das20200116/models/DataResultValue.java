@@ -7,11 +7,11 @@ public class DataResultValue extends TeaModel {
     @NameInMap("sqlId")
     public String sqlId;
 
-    @NameInMap("errorCode")
-    public String errorCode;
+    @NameInMap("instanceId")
+    public String instanceId;
 
     @NameInMap("count")
-    public Long count;
+    public Integer count;
 
     public static DataResultValue build(java.util.Map<String, ?> map) throws Exception {
         DataResultValue self = new DataResultValue();
@@ -26,19 +26,19 @@ public class DataResultValue extends TeaModel {
         return this.sqlId;
     }
 
-    public DataResultValue setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public DataResultValue setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
-    public DataResultValue setCount(Long count) {
+    public DataResultValue setCount(Integer count) {
         this.count = count;
         return this;
     }
-    public Long getCount() {
+    public Integer getCount() {
         return this.count;
     }
 
