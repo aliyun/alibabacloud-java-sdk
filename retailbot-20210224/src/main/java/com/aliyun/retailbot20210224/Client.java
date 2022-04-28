@@ -584,6 +584,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("KnowledgeId", request.knowledgeId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.needSolution)) {
+            body.put("NeedSolution", request.needSolution);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.operatorId)) {
             body.put("OperatorId", request.operatorId);
         }
@@ -2079,6 +2083,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UninstallPackageResponse uninstallPackage(UninstallPackageRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.uninstallPackageWithOptions(request, runtime);
+    }
+
+    public UpdateKnowledgeResponse updateKnowledgeWithOptions(UpdateKnowledgeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.knowledge))) {
+            bodyFlat.put("Knowledge", request.knowledge);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatorId)) {
+            body.put("OperatorId", request.operatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatorName)) {
+            body.put("OperatorName", request.operatorName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.robotCode)) {
+            body.put("RobotCode", request.robotCode);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateKnowledge"),
+            new TeaPair("version", "2021-02-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateKnowledgeResponse());
+    }
+
+    public UpdateKnowledgeResponse updateKnowledge(UpdateKnowledgeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateKnowledgeWithOptions(request, runtime);
     }
 
     public UpdateRobotResponse updateRobotWithOptions(UpdateRobotRequest tmpReq, RuntimeOptions runtime) throws Exception {

@@ -69,6 +69,77 @@ public class GetKnowledgeResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetKnowledgeResponseBodyKnowledgeCategory extends TeaModel {
+        @NameInMap("CategoryId")
+        public Long categoryId;
+
+        @NameInMap("CategoryName")
+        public String categoryName;
+
+        @NameInMap("ParentCategoryId")
+        public Long parentCategoryId;
+
+        public static GetKnowledgeResponseBodyKnowledgeCategory build(java.util.Map<String, ?> map) throws Exception {
+            GetKnowledgeResponseBodyKnowledgeCategory self = new GetKnowledgeResponseBodyKnowledgeCategory();
+            return TeaModel.build(map, self);
+        }
+
+        public GetKnowledgeResponseBodyKnowledgeCategory setCategoryId(Long categoryId) {
+            this.categoryId = categoryId;
+            return this;
+        }
+        public Long getCategoryId() {
+            return this.categoryId;
+        }
+
+        public GetKnowledgeResponseBodyKnowledgeCategory setCategoryName(String categoryName) {
+            this.categoryName = categoryName;
+            return this;
+        }
+        public String getCategoryName() {
+            return this.categoryName;
+        }
+
+        public GetKnowledgeResponseBodyKnowledgeCategory setParentCategoryId(Long parentCategoryId) {
+            this.parentCategoryId = parentCategoryId;
+            return this;
+        }
+        public Long getParentCategoryId() {
+            return this.parentCategoryId;
+        }
+
+    }
+
+    public static class GetKnowledgeResponseBodyKnowledgePackages extends TeaModel {
+        @NameInMap("PackageCode")
+        public String packageCode;
+
+        @NameInMap("PackageName")
+        public String packageName;
+
+        public static GetKnowledgeResponseBodyKnowledgePackages build(java.util.Map<String, ?> map) throws Exception {
+            GetKnowledgeResponseBodyKnowledgePackages self = new GetKnowledgeResponseBodyKnowledgePackages();
+            return TeaModel.build(map, self);
+        }
+
+        public GetKnowledgeResponseBodyKnowledgePackages setPackageCode(String packageCode) {
+            this.packageCode = packageCode;
+            return this;
+        }
+        public String getPackageCode() {
+            return this.packageCode;
+        }
+
+        public GetKnowledgeResponseBodyKnowledgePackages setPackageName(String packageName) {
+            this.packageName = packageName;
+            return this;
+        }
+        public String getPackageName() {
+            return this.packageName;
+        }
+
+    }
+
     public static class GetKnowledgeResponseBodyKnowledgeSimilarQuestions extends TeaModel {
         // 创建时间
         @NameInMap("CreateTime")
@@ -390,6 +461,9 @@ public class GetKnowledgeResponseBody extends TeaModel {
     }
 
     public static class GetKnowledgeResponseBodyKnowledge extends TeaModel {
+        @NameInMap("Category")
+        public GetKnowledgeResponseBodyKnowledgeCategory category;
+
         // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
@@ -422,6 +496,9 @@ public class GetKnowledgeResponseBody extends TeaModel {
         @NameInMap("ModifyUserId")
         public String modifyUserId;
 
+        @NameInMap("Packages")
+        public java.util.List<GetKnowledgeResponseBodyKnowledgePackages> packages;
+
         // 场景key
         @NameInMap("SceneKey")
         public String sceneKey;
@@ -437,6 +514,14 @@ public class GetKnowledgeResponseBody extends TeaModel {
         public static GetKnowledgeResponseBodyKnowledge build(java.util.Map<String, ?> map) throws Exception {
             GetKnowledgeResponseBodyKnowledge self = new GetKnowledgeResponseBodyKnowledge();
             return TeaModel.build(map, self);
+        }
+
+        public GetKnowledgeResponseBodyKnowledge setCategory(GetKnowledgeResponseBodyKnowledgeCategory category) {
+            this.category = category;
+            return this;
+        }
+        public GetKnowledgeResponseBodyKnowledgeCategory getCategory() {
+            return this.category;
         }
 
         public GetKnowledgeResponseBodyKnowledge setCreateTime(String createTime) {
@@ -501,6 +586,14 @@ public class GetKnowledgeResponseBody extends TeaModel {
         }
         public String getModifyUserId() {
             return this.modifyUserId;
+        }
+
+        public GetKnowledgeResponseBodyKnowledge setPackages(java.util.List<GetKnowledgeResponseBodyKnowledgePackages> packages) {
+            this.packages = packages;
+            return this;
+        }
+        public java.util.List<GetKnowledgeResponseBodyKnowledgePackages> getPackages() {
+            return this.packages;
         }
 
         public GetKnowledgeResponseBodyKnowledge setSceneKey(String sceneKey) {

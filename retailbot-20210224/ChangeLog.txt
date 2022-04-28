@@ -1,3 +1,7 @@
+2022-04-28 Version: 1.0.0
+- Publish java sdk.
+
+
 2022-04-19 Version: 2.8.0
 - Update robot support sellerId and shopId.
 

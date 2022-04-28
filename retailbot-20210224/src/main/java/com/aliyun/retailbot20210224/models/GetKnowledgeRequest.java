@@ -8,6 +8,9 @@ public class GetKnowledgeRequest extends TeaModel {
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 
+    @NameInMap("NeedSolution")
+    public Boolean needSolution;
+
     // 操作人id
     @NameInMap("OperatorId")
     public String operatorId;
@@ -31,6 +34,14 @@ public class GetKnowledgeRequest extends TeaModel {
     }
     public Long getKnowledgeId() {
         return this.knowledgeId;
+    }
+
+    public GetKnowledgeRequest setNeedSolution(Boolean needSolution) {
+        this.needSolution = needSolution;
+        return this;
+    }
+    public Boolean getNeedSolution() {
+        return this.needSolution;
     }
 
     public GetKnowledgeRequest setOperatorId(String operatorId) {
