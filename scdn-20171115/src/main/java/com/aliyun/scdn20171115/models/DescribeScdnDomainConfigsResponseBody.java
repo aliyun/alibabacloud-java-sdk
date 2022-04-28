@@ -90,6 +90,9 @@ public class DescribeScdnDomainConfigsResponseBody extends TeaModel {
         @NameInMap("FunctionName")
         public String functionName;
 
+        @NameInMap("ParentId")
+        public Long parentId;
+
         @NameInMap("Status")
         public String status;
 
@@ -120,6 +123,14 @@ public class DescribeScdnDomainConfigsResponseBody extends TeaModel {
         }
         public String getFunctionName() {
             return this.functionName;
+        }
+
+        public DescribeScdnDomainConfigsResponseBodyDomainConfigsDomainConfig setParentId(Long parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public Long getParentId() {
+            return this.parentId;
         }
 
         public DescribeScdnDomainConfigsResponseBodyDomainConfigsDomainConfig setStatus(String status) {
