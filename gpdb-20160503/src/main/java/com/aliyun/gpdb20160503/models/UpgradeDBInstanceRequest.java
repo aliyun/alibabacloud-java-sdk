@@ -16,6 +16,9 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
+    @NameInMap("MasterNodeNum")
+    public String masterNodeNum;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -31,10 +34,7 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     @NameInMap("StorageSize")
     public String storageSize;
 
-    @NameInMap("masterNodeNum")
-    public String masterNodeNum;
-
-    @NameInMap("upgradeType")
+    @NameInMap("UpgradeType")
     public Long upgradeType;
 
     public static UpgradeDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -72,6 +72,14 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     }
     public String getInstanceSpec() {
         return this.instanceSpec;
+    }
+
+    public UpgradeDBInstanceRequest setMasterNodeNum(String masterNodeNum) {
+        this.masterNodeNum = masterNodeNum;
+        return this;
+    }
+    public String getMasterNodeNum() {
+        return this.masterNodeNum;
     }
 
     public UpgradeDBInstanceRequest setOwnerId(Long ownerId) {
@@ -112,14 +120,6 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     }
     public String getStorageSize() {
         return this.storageSize;
-    }
-
-    public UpgradeDBInstanceRequest setMasterNodeNum(String masterNodeNum) {
-        this.masterNodeNum = masterNodeNum;
-        return this;
-    }
-    public String getMasterNodeNum() {
-        return this.masterNodeNum;
     }
 
     public UpgradeDBInstanceRequest setUpgradeType(Long upgradeType) {
