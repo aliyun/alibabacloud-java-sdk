@@ -16,6 +16,10 @@ public class SearchCondition extends TeaModel {
     @NameInMap("assKeywordsIdx")
     public String assKeywordsIdx;
 
+    // 提及用户 如@蚂蚁集团
+    @NameInMap("atUsersIdx")
+    public String atUsersIdx;
+
     // 音频数量上限
     @NameInMap("audioCountMaxFilter")
     public Long audioCountMaxFilter;
@@ -35,6 +39,10 @@ public class SearchCondition extends TeaModel {
     // 指定用户名，多个用户用英文逗号隔开
     @NameInMap("authorNameIdx")
     public String authorNameIdx;
+
+    // 指定作者性别：如m:男，f:女
+    @NameInMap("authorSexFilter")
+    public String authorSexFilter;
 
     // 作者认证类型，多个用,隔开
     @NameInMap("authorVerifyTypeFilter")
@@ -128,6 +136,10 @@ public class SearchCondition extends TeaModel {
     @NameInMap("eroticismFilter")
     public Boolean eroticismFilter;
 
+    // 排除提及用户 如@蚂蚁集团
+    @NameInMap("excludeAtUsersIdx")
+    public String excludeAtUsersIdx;
+
     // 排除指定用户名，多个用户用英文逗号隔开
     @NameInMap("excludeAuthorNameIdx")
     public String excludeAuthorNameIdx;
@@ -203,6 +215,14 @@ public class SearchCondition extends TeaModel {
     // 点赞数下限
     @NameInMap("likesCountMinFilter")
     public Long likesCountMinFilter;
+
+    // 媒体市级过滤，如：媒体省份过滤，如：成都市
+    @NameInMap("mediaAreaCityFilter")
+    public String mediaAreaCityFilter;
+
+    // 媒体省份过滤，如：上海市
+    @NameInMap("mediaAreaProvinceFilter")
+    public String mediaAreaProvinceFilter;
 
     // 指定Host
     @NameInMap("mediaHostsFilter")
@@ -365,6 +385,14 @@ public class SearchCondition extends TeaModel {
         return this.assKeywordsIdx;
     }
 
+    public SearchCondition setAtUsersIdx(String atUsersIdx) {
+        this.atUsersIdx = atUsersIdx;
+        return this;
+    }
+    public String getAtUsersIdx() {
+        return this.atUsersIdx;
+    }
+
     public SearchCondition setAudioCountMaxFilter(Long audioCountMaxFilter) {
         this.audioCountMaxFilter = audioCountMaxFilter;
         return this;
@@ -403,6 +431,14 @@ public class SearchCondition extends TeaModel {
     }
     public String getAuthorNameIdx() {
         return this.authorNameIdx;
+    }
+
+    public SearchCondition setAuthorSexFilter(String authorSexFilter) {
+        this.authorSexFilter = authorSexFilter;
+        return this;
+    }
+    public String getAuthorSexFilter() {
+        return this.authorSexFilter;
     }
 
     public SearchCondition setAuthorVerifyTypeFilter(String authorVerifyTypeFilter) {
@@ -589,6 +625,14 @@ public class SearchCondition extends TeaModel {
         return this.eroticismFilter;
     }
 
+    public SearchCondition setExcludeAtUsersIdx(String excludeAtUsersIdx) {
+        this.excludeAtUsersIdx = excludeAtUsersIdx;
+        return this;
+    }
+    public String getExcludeAtUsersIdx() {
+        return this.excludeAtUsersIdx;
+    }
+
     public SearchCondition setExcludeAuthorNameIdx(String excludeAuthorNameIdx) {
         this.excludeAuthorNameIdx = excludeAuthorNameIdx;
         return this;
@@ -739,6 +783,22 @@ public class SearchCondition extends TeaModel {
     }
     public Long getLikesCountMinFilter() {
         return this.likesCountMinFilter;
+    }
+
+    public SearchCondition setMediaAreaCityFilter(String mediaAreaCityFilter) {
+        this.mediaAreaCityFilter = mediaAreaCityFilter;
+        return this;
+    }
+    public String getMediaAreaCityFilter() {
+        return this.mediaAreaCityFilter;
+    }
+
+    public SearchCondition setMediaAreaProvinceFilter(String mediaAreaProvinceFilter) {
+        this.mediaAreaProvinceFilter = mediaAreaProvinceFilter;
+        return this;
+    }
+    public String getMediaAreaProvinceFilter() {
+        return this.mediaAreaProvinceFilter;
     }
 
     public SearchCondition setMediaHostsFilter(String mediaHostsFilter) {
