@@ -4,6 +4,9 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class GetTagValRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public Long endTime;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -13,18 +16,23 @@ public class GetTagValRequest extends TeaModel {
     @NameInMap("SpanName")
     public String spanName;
 
-    @NameInMap("TagKey")
-    public String tagKey;
-
     @NameInMap("StartTime")
     public Long startTime;
 
-    @NameInMap("EndTime")
-    public Long endTime;
+    @NameInMap("TagKey")
+    public String tagKey;
 
     public static GetTagValRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTagValRequest self = new GetTagValRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetTagValRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public GetTagValRequest setRegionId(String regionId) {
@@ -51,14 +59,6 @@ public class GetTagValRequest extends TeaModel {
         return this.spanName;
     }
 
-    public GetTagValRequest setTagKey(String tagKey) {
-        this.tagKey = tagKey;
-        return this;
-    }
-    public String getTagKey() {
-        return this.tagKey;
-    }
-
     public GetTagValRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
@@ -67,12 +67,12 @@ public class GetTagValRequest extends TeaModel {
         return this.startTime;
     }
 
-    public GetTagValRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
+    public GetTagValRequest setTagKey(String tagKey) {
+        this.tagKey = tagKey;
         return this;
     }
-    public Long getEndTime() {
-        return this.endTime;
+    public String getTagKey() {
+        return this.tagKey;
     }
 
 }

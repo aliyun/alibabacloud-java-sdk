@@ -4,23 +4,15 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class ListIpOrHostsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("IpNames")
     public ListIpOrHostsResponseBodyIpNames ipNames;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListIpOrHostsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListIpOrHostsResponseBody self = new ListIpOrHostsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListIpOrHostsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListIpOrHostsResponseBody setIpNames(ListIpOrHostsResponseBodyIpNames ipNames) {
@@ -29,6 +21,14 @@ public class ListIpOrHostsResponseBody extends TeaModel {
     }
     public ListIpOrHostsResponseBodyIpNames getIpNames() {
         return this.ipNames;
+    }
+
+    public ListIpOrHostsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListIpOrHostsResponseBodyIpNames extends TeaModel {
