@@ -74,6 +74,9 @@ public class CompanyFindByIsvTypeResponseBody extends TeaModel {
     }
 
     public static class CompanyFindByIsvTypeResponseBodyData extends TeaModel {
+        @NameInMap("AliyunUid")
+        public String aliyunUid;
+
         @NameInMap("ContactPerson")
         public String contactPerson;
 
@@ -101,6 +104,14 @@ public class CompanyFindByIsvTypeResponseBody extends TeaModel {
         public static CompanyFindByIsvTypeResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CompanyFindByIsvTypeResponseBodyData self = new CompanyFindByIsvTypeResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CompanyFindByIsvTypeResponseBodyData setAliyunUid(String aliyunUid) {
+            this.aliyunUid = aliyunUid;
+            return this;
+        }
+        public String getAliyunUid() {
+            return this.aliyunUid;
         }
 
         public CompanyFindByIsvTypeResponseBodyData setContactPerson(String contactPerson) {

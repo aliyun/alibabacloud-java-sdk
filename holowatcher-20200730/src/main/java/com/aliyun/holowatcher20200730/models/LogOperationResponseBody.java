@@ -3,7 +3,7 @@ package com.aliyun.holowatcher20200730.models;
 
 import com.aliyun.tea.*;
 
-public class QueryBizLogByOpTypeAndTimeResponseBody extends TeaModel {
+public class LogOperationResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -15,17 +15,17 @@ public class QueryBizLogByOpTypeAndTimeResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("ResultObj")
-    public java.util.List<java.util.Map<String, ?>> resultObj;
+    public Boolean resultObj;
 
     @NameInMap("Success")
     public String success;
 
-    public static QueryBizLogByOpTypeAndTimeResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        QueryBizLogByOpTypeAndTimeResponseBody self = new QueryBizLogByOpTypeAndTimeResponseBody();
+    public static LogOperationResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        LogOperationResponseBody self = new LogOperationResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryBizLogByOpTypeAndTimeResponseBody setErrorCode(String errorCode) {
+    public LogOperationResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -33,7 +33,7 @@ public class QueryBizLogByOpTypeAndTimeResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public QueryBizLogByOpTypeAndTimeResponseBody setErrorMsg(String errorMsg) {
+    public LogOperationResponseBody setErrorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
         return this;
     }
@@ -41,7 +41,7 @@ public class QueryBizLogByOpTypeAndTimeResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public QueryBizLogByOpTypeAndTimeResponseBody setRequestId(String requestId) {
+    public LogOperationResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -49,15 +49,15 @@ public class QueryBizLogByOpTypeAndTimeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryBizLogByOpTypeAndTimeResponseBody setResultObj(java.util.List<java.util.Map<String, ?>> resultObj) {
+    public LogOperationResponseBody setResultObj(Boolean resultObj) {
         this.resultObj = resultObj;
         return this;
     }
-    public java.util.List<java.util.Map<String, ?>> getResultObj() {
+    public Boolean getResultObj() {
         return this.resultObj;
     }
 
-    public QueryBizLogByOpTypeAndTimeResponseBody setSuccess(String success) {
+    public LogOperationResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
