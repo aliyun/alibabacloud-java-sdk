@@ -187,6 +187,9 @@ public class CompanyFindAllResponseBody extends TeaModel {
         @NameInMap("AccountNums")
         public String accountNums;
 
+        @NameInMap("AliyunUid")
+        public String aliyunUid;
+
         @NameInMap("ContactPerson")
         public String contactPerson;
 
@@ -222,6 +225,14 @@ public class CompanyFindAllResponseBody extends TeaModel {
         }
         public String getAccountNums() {
             return this.accountNums;
+        }
+
+        public CompanyFindAllResponseBodyContent setAliyunUid(String aliyunUid) {
+            this.aliyunUid = aliyunUid;
+            return this;
+        }
+        public String getAliyunUid() {
+            return this.aliyunUid;
         }
 
         public CompanyFindAllResponseBodyContent setContactPerson(String contactPerson) {
