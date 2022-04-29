@@ -4,6 +4,9 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class ListIpOrHostsRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public Long endTime;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -13,12 +16,17 @@ public class ListIpOrHostsRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
-    @NameInMap("EndTime")
-    public Long endTime;
-
     public static ListIpOrHostsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListIpOrHostsRequest self = new ListIpOrHostsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListIpOrHostsRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public ListIpOrHostsRequest setRegionId(String regionId) {
@@ -43,14 +51,6 @@ public class ListIpOrHostsRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
-    }
-
-    public ListIpOrHostsRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
     }
 
 }

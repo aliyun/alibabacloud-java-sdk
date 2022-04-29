@@ -32,26 +32,18 @@ public class ListServicesResponseBody extends TeaModel {
     }
 
     public static class ListServicesResponseBodyServicesService extends TeaModel {
-        @NameInMap("ServiceName")
-        public String serviceName;
-
         @NameInMap("Pid")
         public String pid;
 
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ServiceName")
+        public String serviceName;
+
         public static ListServicesResponseBodyServicesService build(java.util.Map<String, ?> map) throws Exception {
             ListServicesResponseBodyServicesService self = new ListServicesResponseBodyServicesService();
             return TeaModel.build(map, self);
-        }
-
-        public ListServicesResponseBodyServicesService setServiceName(String serviceName) {
-            this.serviceName = serviceName;
-            return this;
-        }
-        public String getServiceName() {
-            return this.serviceName;
         }
 
         public ListServicesResponseBodyServicesService setPid(String pid) {
@@ -68,6 +60,14 @@ public class ListServicesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListServicesResponseBodyServicesService setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
         }
 
     }

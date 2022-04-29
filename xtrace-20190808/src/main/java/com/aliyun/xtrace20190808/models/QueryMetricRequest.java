@@ -4,20 +4,23 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class QueryMetricRequest extends TeaModel {
-    @NameInMap("IntervalInSec")
-    public Integer intervalInSec;
-
-    @NameInMap("StartTime")
-    public Long startTime;
+    @NameInMap("Dimensions")
+    public java.util.List<String> dimensions;
 
     @NameInMap("EndTime")
     public Long endTime;
 
-    @NameInMap("OrderBy")
-    public String orderBy;
+    @NameInMap("Filters")
+    public java.util.List<QueryMetricRequestFilters> filters;
+
+    @NameInMap("IntervalInSec")
+    public Integer intervalInSec;
 
     @NameInMap("Limit")
     public Integer limit;
+
+    @NameInMap("Measures")
+    public java.util.List<String> measures;
 
     @NameInMap("Metric")
     public String metric;
@@ -25,37 +28,26 @@ public class QueryMetricRequest extends TeaModel {
     @NameInMap("Order")
     public String order;
 
+    @NameInMap("OrderBy")
+    public String orderBy;
+
     @NameInMap("ProxyUserId")
     public String proxyUserId;
 
-    @NameInMap("Filters")
-    public java.util.List<QueryMetricRequestFilters> filters;
-
-    @NameInMap("Dimensions")
-    public java.util.List<String> dimensions;
-
-    @NameInMap("Measures")
-    public java.util.List<String> measures;
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static QueryMetricRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryMetricRequest self = new QueryMetricRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryMetricRequest setIntervalInSec(Integer intervalInSec) {
-        this.intervalInSec = intervalInSec;
+    public QueryMetricRequest setDimensions(java.util.List<String> dimensions) {
+        this.dimensions = dimensions;
         return this;
     }
-    public Integer getIntervalInSec() {
-        return this.intervalInSec;
-    }
-
-    public QueryMetricRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
+    public java.util.List<String> getDimensions() {
+        return this.dimensions;
     }
 
     public QueryMetricRequest setEndTime(Long endTime) {
@@ -66,12 +58,20 @@ public class QueryMetricRequest extends TeaModel {
         return this.endTime;
     }
 
-    public QueryMetricRequest setOrderBy(String orderBy) {
-        this.orderBy = orderBy;
+    public QueryMetricRequest setFilters(java.util.List<QueryMetricRequestFilters> filters) {
+        this.filters = filters;
         return this;
     }
-    public String getOrderBy() {
-        return this.orderBy;
+    public java.util.List<QueryMetricRequestFilters> getFilters() {
+        return this.filters;
+    }
+
+    public QueryMetricRequest setIntervalInSec(Integer intervalInSec) {
+        this.intervalInSec = intervalInSec;
+        return this;
+    }
+    public Integer getIntervalInSec() {
+        return this.intervalInSec;
     }
 
     public QueryMetricRequest setLimit(Integer limit) {
@@ -80,6 +80,14 @@ public class QueryMetricRequest extends TeaModel {
     }
     public Integer getLimit() {
         return this.limit;
+    }
+
+    public QueryMetricRequest setMeasures(java.util.List<String> measures) {
+        this.measures = measures;
+        return this;
+    }
+    public java.util.List<String> getMeasures() {
+        return this.measures;
     }
 
     public QueryMetricRequest setMetric(String metric) {
@@ -98,6 +106,14 @@ public class QueryMetricRequest extends TeaModel {
         return this.order;
     }
 
+    public QueryMetricRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
     public QueryMetricRequest setProxyUserId(String proxyUserId) {
         this.proxyUserId = proxyUserId;
         return this;
@@ -106,28 +122,12 @@ public class QueryMetricRequest extends TeaModel {
         return this.proxyUserId;
     }
 
-    public QueryMetricRequest setFilters(java.util.List<QueryMetricRequestFilters> filters) {
-        this.filters = filters;
+    public QueryMetricRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public java.util.List<QueryMetricRequestFilters> getFilters() {
-        return this.filters;
-    }
-
-    public QueryMetricRequest setDimensions(java.util.List<String> dimensions) {
-        this.dimensions = dimensions;
-        return this;
-    }
-    public java.util.List<String> getDimensions() {
-        return this.dimensions;
-    }
-
-    public QueryMetricRequest setMeasures(java.util.List<String> measures) {
-        this.measures = measures;
-        return this;
-    }
-    public java.util.List<String> getMeasures() {
-        return this.measures;
+    public Long getStartTime() {
+        return this.startTime;
     }
 
     public static class QueryMetricRequestFilters extends TeaModel {

@@ -4,6 +4,9 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class GetTagKeyRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public Long endTime;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -16,12 +19,17 @@ public class GetTagKeyRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
-    @NameInMap("EndTime")
-    public Long endTime;
-
     public static GetTagKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTagKeyRequest self = new GetTagKeyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetTagKeyRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public GetTagKeyRequest setRegionId(String regionId) {
@@ -54,14 +62,6 @@ public class GetTagKeyRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
-    }
-
-    public GetTagKeyRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
     }
 
 }

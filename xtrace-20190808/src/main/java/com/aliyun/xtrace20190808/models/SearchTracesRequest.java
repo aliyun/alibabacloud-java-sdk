@@ -4,26 +4,17 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTracesRequest extends TeaModel {
-    @NameInMap("StartTime")
-    public Long startTime;
+    @NameInMap("AppType")
+    public String appType;
 
     @NameInMap("EndTime")
     public Long endTime;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ServiceName")
-    public String serviceName;
-
-    @NameInMap("OperationName")
-    public String operationName;
-
     @NameInMap("MinDuration")
     public Long minDuration;
 
-    @NameInMap("AppType")
-    public String appType;
+    @NameInMap("OperationName")
+    public String operationName;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -31,11 +22,20 @@ public class SearchTracesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Reverse")
     public Boolean reverse;
 
     @NameInMap("ServiceIp")
     public String serviceIp;
+
+    @NameInMap("ServiceName")
+    public String serviceName;
+
+    @NameInMap("StartTime")
+    public Long startTime;
 
     @NameInMap("Tag")
     public java.util.List<SearchTracesRequestTag> tag;
@@ -45,12 +45,12 @@ public class SearchTracesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SearchTracesRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
+    public SearchTracesRequest setAppType(String appType) {
+        this.appType = appType;
         return this;
     }
-    public Long getStartTime() {
-        return this.startTime;
+    public String getAppType() {
+        return this.appType;
     }
 
     public SearchTracesRequest setEndTime(Long endTime) {
@@ -61,30 +61,6 @@ public class SearchTracesRequest extends TeaModel {
         return this.endTime;
     }
 
-    public SearchTracesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public SearchTracesRequest setServiceName(String serviceName) {
-        this.serviceName = serviceName;
-        return this;
-    }
-    public String getServiceName() {
-        return this.serviceName;
-    }
-
-    public SearchTracesRequest setOperationName(String operationName) {
-        this.operationName = operationName;
-        return this;
-    }
-    public String getOperationName() {
-        return this.operationName;
-    }
-
     public SearchTracesRequest setMinDuration(Long minDuration) {
         this.minDuration = minDuration;
         return this;
@@ -93,12 +69,12 @@ public class SearchTracesRequest extends TeaModel {
         return this.minDuration;
     }
 
-    public SearchTracesRequest setAppType(String appType) {
-        this.appType = appType;
+    public SearchTracesRequest setOperationName(String operationName) {
+        this.operationName = operationName;
         return this;
     }
-    public String getAppType() {
-        return this.appType;
+    public String getOperationName() {
+        return this.operationName;
     }
 
     public SearchTracesRequest setPageNumber(Integer pageNumber) {
@@ -117,6 +93,14 @@ public class SearchTracesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public SearchTracesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public SearchTracesRequest setReverse(Boolean reverse) {
         this.reverse = reverse;
         return this;
@@ -131,6 +115,22 @@ public class SearchTracesRequest extends TeaModel {
     }
     public String getServiceIp() {
         return this.serviceIp;
+    }
+
+    public SearchTracesRequest setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    public String getServiceName() {
+        return this.serviceName;
+    }
+
+    public SearchTracesRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
     public SearchTracesRequest setTag(java.util.List<SearchTracesRequestTag> tag) {
