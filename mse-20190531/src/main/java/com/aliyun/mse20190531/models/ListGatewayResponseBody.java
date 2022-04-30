@@ -313,6 +313,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("AhasOn")
         public Boolean ahasOn;
 
+        @NameInMap("AppVersion")
+        public String appVersion;
+
         @NameInMap("ArmsOn")
         public Boolean armsOn;
 
@@ -379,6 +382,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("StatusDesc")
         public String statusDesc;
 
+        @NameInMap("SupportWasm")
+        public Boolean supportWasm;
+
         @NameInMap("Tag")
         public String tag;
 
@@ -399,6 +405,14 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public Boolean getAhasOn() {
             return this.ahasOn;
+        }
+
+        public ListGatewayResponseBodyDataResult setAppVersion(String appVersion) {
+            this.appVersion = appVersion;
+            return this;
+        }
+        public String getAppVersion() {
+            return this.appVersion;
         }
 
         public ListGatewayResponseBodyDataResult setArmsOn(Boolean armsOn) {
@@ -575,6 +589,14 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public String getStatusDesc() {
             return this.statusDesc;
+        }
+
+        public ListGatewayResponseBodyDataResult setSupportWasm(Boolean supportWasm) {
+            this.supportWasm = supportWasm;
+            return this;
+        }
+        public Boolean getSupportWasm() {
+            return this.supportWasm;
         }
 
         public ListGatewayResponseBodyDataResult setTag(String tag) {
