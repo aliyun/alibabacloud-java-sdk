@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ListTasksShrinkRequest extends TeaModel {
+    @NameInMap("EndTimeRange")
+    public String endTimeRangeShrink;
+
     // MaxResults
     @NameInMap("MaxResults")
     public Long maxResults;
@@ -22,6 +25,12 @@ public class ListTasksShrinkRequest extends TeaModel {
     @NameInMap("Sort")
     public String sort;
 
+    @NameInMap("StartTimeRange")
+    public String startTimeRangeShrink;
+
+    @NameInMap("Status")
+    public String status;
+
     @NameInMap("TagSelector")
     public String tagSelector;
 
@@ -31,6 +40,14 @@ public class ListTasksShrinkRequest extends TeaModel {
     public static ListTasksShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTasksShrinkRequest self = new ListTasksShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTasksShrinkRequest setEndTimeRangeShrink(String endTimeRangeShrink) {
+        this.endTimeRangeShrink = endTimeRangeShrink;
+        return this;
+    }
+    public String getEndTimeRangeShrink() {
+        return this.endTimeRangeShrink;
     }
 
     public ListTasksShrinkRequest setMaxResults(Long maxResults) {
@@ -71,6 +88,22 @@ public class ListTasksShrinkRequest extends TeaModel {
     }
     public String getSort() {
         return this.sort;
+    }
+
+    public ListTasksShrinkRequest setStartTimeRangeShrink(String startTimeRangeShrink) {
+        this.startTimeRangeShrink = startTimeRangeShrink;
+        return this;
+    }
+    public String getStartTimeRangeShrink() {
+        return this.startTimeRangeShrink;
+    }
+
+    public ListTasksShrinkRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ListTasksShrinkRequest setTagSelector(String tagSelector) {
