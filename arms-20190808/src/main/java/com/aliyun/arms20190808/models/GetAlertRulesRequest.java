@@ -4,24 +4,31 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetAlertRulesRequest extends TeaModel {
+    // 告警规则ID
     @NameInMap("AlertIds")
-    public java.util.List<byte[]> alertIds;
+    public String alertIds;
 
+    // 告警规则名称
     @NameInMap("AlertNames")
-    public java.util.List<byte[]> alertNames;
+    public String alertNames;
 
+    // 告警规则运行状态
     @NameInMap("AlertStatus")
     public String alertStatus;
 
+    // 告警规则类型
     @NameInMap("AlertType")
     public String alertType;
 
+    // 页数
     @NameInMap("Page")
     public Long page;
 
+    // 地域
     @NameInMap("RegionId")
     public String regionId;
 
+    // 每一页大小
     @NameInMap("Size")
     public Long size;
 
@@ -30,19 +37,19 @@ public class GetAlertRulesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetAlertRulesRequest setAlertIds(java.util.List<byte[]> alertIds) {
+    public GetAlertRulesRequest setAlertIds(String alertIds) {
         this.alertIds = alertIds;
         return this;
     }
-    public java.util.List<byte[]> getAlertIds() {
+    public String getAlertIds() {
         return this.alertIds;
     }
 
-    public GetAlertRulesRequest setAlertNames(java.util.List<byte[]> alertNames) {
+    public GetAlertRulesRequest setAlertNames(String alertNames) {
         this.alertNames = alertNames;
         return this;
     }
-    public java.util.List<byte[]> getAlertNames() {
+    public String getAlertNames() {
         return this.alertNames;
     }
 

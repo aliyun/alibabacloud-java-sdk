@@ -362,9 +362,6 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         @NameInMap("AlertVersion")
         public Integer alertVersion;
 
-        @NameInMap("AlertWay")
-        public java.util.List<String> alertWay;
-
         @NameInMap("AlertWays")
         public java.util.List<String> alertWays;
 
@@ -464,14 +461,6 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         }
         public Integer getAlertVersion() {
             return this.alertVersion;
-        }
-
-        public SearchAlertRulesResponseBodyPageBeanAlertRules setAlertWay(java.util.List<String> alertWay) {
-            this.alertWay = alertWay;
-            return this;
-        }
-        public java.util.List<String> getAlertWay() {
-            return this.alertWay;
         }
 
         public SearchAlertRulesResponseBodyPageBeanAlertRules setAlertWays(java.util.List<String> alertWays) {

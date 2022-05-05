@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.arms20190808.models;
+
+import com.aliyun.tea.*;
+
+public class RemoveAliClusterIdsFromPrometheusGlobalViewResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody body;
+
+    public static RemoveAliClusterIdsFromPrometheusGlobalViewResponse build(java.util.Map<String, ?> map) throws Exception {
+        RemoveAliClusterIdsFromPrometheusGlobalViewResponse self = new RemoveAliClusterIdsFromPrometheusGlobalViewResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public RemoveAliClusterIdsFromPrometheusGlobalViewResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public RemoveAliClusterIdsFromPrometheusGlobalViewResponse setBody(RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody getBody() {
+        return this.body;
+    }
+
+}
