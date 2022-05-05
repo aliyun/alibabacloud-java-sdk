@@ -134,6 +134,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.algorithmCallBackWithOptions(request, runtime);
     }
 
+    public AlgorithmCreateBuildResponse algorithmCreateBuildWithOptions(AlgorithmCreateBuildRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gender)) {
+            body.put("Gender", request.gender);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.image)) {
+            body.put("Image", request.image);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AlgorithmCreateBuild"),
+            new TeaPair("version", "2020-07-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AlgorithmCreateBuildResponse());
+    }
+
+    public AlgorithmCreateBuildResponse algorithmCreateBuild(AlgorithmCreateBuildRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.algorithmCreateBuildWithOptions(request, runtime);
+    }
+
     public AlgorithmQueryModelResponse algorithmQueryModelWithOptions(AlgorithmQueryModelRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
