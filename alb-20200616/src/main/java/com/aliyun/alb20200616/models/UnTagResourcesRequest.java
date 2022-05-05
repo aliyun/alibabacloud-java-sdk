@@ -4,6 +4,10 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class UnTagResourcesRequest extends TeaModel {
+    // 是否删除全部
+    @NameInMap("All")
+    public Boolean all;
+
     // 资源实例Id
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -23,6 +27,14 @@ public class UnTagResourcesRequest extends TeaModel {
     public static UnTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         UnTagResourcesRequest self = new UnTagResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UnTagResourcesRequest setAll(Boolean all) {
+        this.all = all;
+        return this;
+    }
+    public Boolean getAll() {
+        return this.all;
     }
 
     public UnTagResourcesRequest setResourceId(java.util.List<String> resourceId) {

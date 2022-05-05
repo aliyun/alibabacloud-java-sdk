@@ -334,17 +334,89 @@ public class ListRulesResponseBody extends TeaModel {
     }
 
     public static class ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig extends TeaModel {
+        @NameInMap("QPS")
+        public Integer QPS;
+
         public static ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig build(java.util.Map<String, ?> map) throws Exception {
             ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig self = new ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig();
             return TeaModel.build(map, self);
         }
 
+        public ListRulesResponseBodyRulesRuleActionsTrafficLimitConfig setQPS(Integer QPS) {
+            this.QPS = QPS;
+            return this;
+        }
+        public Integer getQPS() {
+            return this.QPS;
+        }
+
+    }
+
+    public static class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples extends TeaModel {
+        @NameInMap("ServerGroupId")
+        public String serverGroupId;
+
+        @NameInMap("Weight")
+        public Integer weight;
+
+        public static ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples build(java.util.Map<String, ?> map) throws Exception {
+            ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples self = new ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples setServerGroupId(String serverGroupId) {
+            this.serverGroupId = serverGroupId;
+            return this;
+        }
+        public String getServerGroupId() {
+            return this.serverGroupId;
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+    }
+
+    public static class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig extends TeaModel {
+        @NameInMap("ServerGroupTuples")
+        public java.util.List<ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> serverGroupTuples;
+
+        public static ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig self = new ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig setServerGroupTuples(java.util.List<ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> serverGroupTuples) {
+            this.serverGroupTuples = serverGroupTuples;
+            return this;
+        }
+        public java.util.List<ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> getServerGroupTuples() {
+            return this.serverGroupTuples;
+        }
+
     }
 
     public static class ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig extends TeaModel {
+        // TargetType为服务器组时必选，目标服务器组
+        @NameInMap("MirrorGroupConfig")
+        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig mirrorGroupConfig;
+
         public static ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig build(java.util.Map<String, ?> map) throws Exception {
             ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig self = new ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig();
             return TeaModel.build(map, self);
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig setMirrorGroupConfig(ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig mirrorGroupConfig) {
+            this.mirrorGroupConfig = mirrorGroupConfig;
+            return this;
+        }
+        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig getMirrorGroupConfig() {
+            return this.mirrorGroupConfig;
         }
 
     }
@@ -660,6 +732,26 @@ public class ListRulesResponseBody extends TeaModel {
 
     }
 
+    public static class ListRulesResponseBodyRulesRuleConditionsSourceIpConfig extends TeaModel {
+        // 需要匹配的源IP列表
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static ListRulesResponseBodyRulesRuleConditionsSourceIpConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListRulesResponseBodyRulesRuleConditionsSourceIpConfig self = new ListRulesResponseBodyRulesRuleConditionsSourceIpConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRulesResponseBodyRulesRuleConditionsSourceIpConfig setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
     public static class ListRulesResponseBodyRulesRuleConditions extends TeaModel {
         // Cookie条件配置
         @NameInMap("CookieConfig")
@@ -684,6 +776,10 @@ public class ListRulesResponseBody extends TeaModel {
         // 查询字符串条件配置
         @NameInMap("QueryStringConfig")
         public ListRulesResponseBodyRulesRuleConditionsQueryStringConfig queryStringConfig;
+
+        // 源IP业务流量匹配
+        @NameInMap("SourceIpConfig")
+        public ListRulesResponseBodyRulesRuleConditionsSourceIpConfig sourceIpConfig;
 
         // 条件类型
         @NameInMap("Type")
@@ -740,6 +836,14 @@ public class ListRulesResponseBody extends TeaModel {
         }
         public ListRulesResponseBodyRulesRuleConditionsQueryStringConfig getQueryStringConfig() {
             return this.queryStringConfig;
+        }
+
+        public ListRulesResponseBodyRulesRuleConditions setSourceIpConfig(ListRulesResponseBodyRulesRuleConditionsSourceIpConfig sourceIpConfig) {
+            this.sourceIpConfig = sourceIpConfig;
+            return this;
+        }
+        public ListRulesResponseBodyRulesRuleConditionsSourceIpConfig getSourceIpConfig() {
+            return this.sourceIpConfig;
         }
 
         public ListRulesResponseBodyRulesRuleConditions setType(String type) {
