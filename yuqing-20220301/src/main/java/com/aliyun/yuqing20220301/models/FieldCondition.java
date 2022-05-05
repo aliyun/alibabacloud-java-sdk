@@ -8,11 +8,19 @@ public class FieldCondition extends TeaModel {
     @NameInMap("fieldName")
     public String fieldName;
 
+    // 复杂查询下，嵌套子条件字段jsonPath
+    @NameInMap("nestFieldPath")
+    public String nestFieldPath;
+
+    // 复杂查询下，嵌套子条件字段值
+    @NameInMap("nestFieldValue")
+    public java.util.List<Long> nestFieldValue;
+
     // 操作符，枚举值
     @NameInMap("operateType")
     public String operateType;
 
-    // 字段值
+    // 字段值，不同字段值类型不一样
     @NameInMap("value")
     public String value;
 
@@ -27,6 +35,22 @@ public class FieldCondition extends TeaModel {
     }
     public String getFieldName() {
         return this.fieldName;
+    }
+
+    public FieldCondition setNestFieldPath(String nestFieldPath) {
+        this.nestFieldPath = nestFieldPath;
+        return this;
+    }
+    public String getNestFieldPath() {
+        return this.nestFieldPath;
+    }
+
+    public FieldCondition setNestFieldValue(java.util.List<Long> nestFieldValue) {
+        this.nestFieldValue = nestFieldValue;
+        return this;
+    }
+    public java.util.List<Long> getNestFieldValue() {
+        return this.nestFieldValue;
     }
 
     public FieldCondition setOperateType(String operateType) {
