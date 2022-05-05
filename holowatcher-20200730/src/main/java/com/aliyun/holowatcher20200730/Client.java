@@ -3522,6 +3522,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DatasetId", request.datasetId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isCdn)) {
+            query.put("IsCdn", request.isCdn);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("Type", request.type);
         }

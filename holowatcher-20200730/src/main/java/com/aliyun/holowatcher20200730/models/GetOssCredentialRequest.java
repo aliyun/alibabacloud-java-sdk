@@ -10,6 +10,9 @@ public class GetOssCredentialRequest extends TeaModel {
     @NameInMap("DatasetId")
     public Long datasetId;
 
+    @NameInMap("IsCdn")
+    public Boolean isCdn;
+
     @NameInMap("Type")
     public String type;
 
@@ -32,6 +35,14 @@ public class GetOssCredentialRequest extends TeaModel {
     }
     public Long getDatasetId() {
         return this.datasetId;
+    }
+
+    public GetOssCredentialRequest setIsCdn(Boolean isCdn) {
+        this.isCdn = isCdn;
+        return this;
+    }
+    public Boolean getIsCdn() {
+        return this.isCdn;
     }
 
     public GetOssCredentialRequest setType(String type) {
