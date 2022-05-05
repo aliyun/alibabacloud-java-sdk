@@ -31,6 +31,10 @@ public class Story extends TeaModel {
     @NameInMap("Files")
     public java.util.List<File> files;
 
+    // MIILCustomFields
+    @NameInMap("MIILCustomFields")
+    public java.util.List<java.util.Map<String, ?>> MIILCustomFields;
+
     // ObjectId
     @NameInMap("ObjectId")
     public String objectId;
@@ -130,6 +134,14 @@ public class Story extends TeaModel {
     }
     public java.util.List<File> getFiles() {
         return this.files;
+    }
+
+    public Story setMIILCustomFields(java.util.List<java.util.Map<String, ?>> MIILCustomFields) {
+        this.MIILCustomFields = MIILCustomFields;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, ?>> getMIILCustomFields() {
+        return this.MIILCustomFields;
     }
 
     public Story setObjectId(String objectId) {

@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ListTasksRequest extends TeaModel {
+    @NameInMap("EndTimeRange")
+    public TimeRange endTimeRange;
+
     // MaxResults
     @NameInMap("MaxResults")
     public Long maxResults;
@@ -22,6 +25,12 @@ public class ListTasksRequest extends TeaModel {
     @NameInMap("Sort")
     public String sort;
 
+    @NameInMap("StartTimeRange")
+    public TimeRange startTimeRange;
+
+    @NameInMap("Status")
+    public String status;
+
     @NameInMap("TagSelector")
     public String tagSelector;
 
@@ -31,6 +40,14 @@ public class ListTasksRequest extends TeaModel {
     public static ListTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTasksRequest self = new ListTasksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTasksRequest setEndTimeRange(TimeRange endTimeRange) {
+        this.endTimeRange = endTimeRange;
+        return this;
+    }
+    public TimeRange getEndTimeRange() {
+        return this.endTimeRange;
     }
 
     public ListTasksRequest setMaxResults(Long maxResults) {
@@ -71,6 +88,22 @@ public class ListTasksRequest extends TeaModel {
     }
     public String getSort() {
         return this.sort;
+    }
+
+    public ListTasksRequest setStartTimeRange(TimeRange startTimeRange) {
+        this.startTimeRange = startTimeRange;
+        return this;
+    }
+    public TimeRange getStartTimeRange() {
+        return this.startTimeRange;
+    }
+
+    public ListTasksRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ListTasksRequest setTagSelector(String tagSelector) {
