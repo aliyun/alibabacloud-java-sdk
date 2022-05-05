@@ -96,6 +96,10 @@ public class SearchCondition extends TeaModel {
     @NameInMap("fieldConditions")
     public java.util.List<FieldCondition> fieldConditions;
 
+    // 高级筛选模板id
+    @NameInMap("filterId")
+    public Long filterId;
+
     // 文章是否含有图片
     @NameInMap("hasImage")
     public Boolean hasImage;
@@ -151,6 +155,10 @@ public class SearchCondition extends TeaModel {
     // 标题关键词
     @NameInMap("posKeywordListInTitle")
     public java.util.List<String> posKeywordListInTitle;
+
+    // 舆情项目id
+    @NameInMap("projectId")
+    public Long projectId;
 
     // 截止发布时间
     @NameInMap("publishTimeEnd")
@@ -381,6 +389,14 @@ public class SearchCondition extends TeaModel {
         return this.fieldConditions;
     }
 
+    public SearchCondition setFilterId(Long filterId) {
+        this.filterId = filterId;
+        return this;
+    }
+    public Long getFilterId() {
+        return this.filterId;
+    }
+
     public SearchCondition setHasImage(Boolean hasImage) {
         this.hasImage = hasImage;
         return this;
@@ -491,6 +507,14 @@ public class SearchCondition extends TeaModel {
     }
     public java.util.List<String> getPosKeywordListInTitle() {
         return this.posKeywordListInTitle;
+    }
+
+    public SearchCondition setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public SearchCondition setPublishTimeEnd(Long publishTimeEnd) {
