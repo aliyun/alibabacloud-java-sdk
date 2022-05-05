@@ -13,9 +13,6 @@ public class ListDashboardsRequest extends TeaModel {
     @NameInMap("DashboardName")
     public String dashboardName;
 
-    @NameInMap("DatasourceType")
-    public String datasourceType;
-
     @NameInMap("Product")
     public String product;
 
@@ -55,14 +52,6 @@ public class ListDashboardsRequest extends TeaModel {
     }
     public String getDashboardName() {
         return this.dashboardName;
-    }
-
-    public ListDashboardsRequest setDatasourceType(String datasourceType) {
-        this.datasourceType = datasourceType;
-        return this;
-    }
-    public String getDatasourceType() {
-        return this.datasourceType;
     }
 
     public ListDashboardsRequest setProduct(String product) {

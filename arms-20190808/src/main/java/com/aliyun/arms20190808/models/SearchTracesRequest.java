@@ -16,6 +16,9 @@ public class SearchTracesRequest extends TeaModel {
     @NameInMap("OperationName")
     public String operationName;
 
+    @NameInMap("Pid")
+    public String pid;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -69,6 +72,14 @@ public class SearchTracesRequest extends TeaModel {
     }
     public String getOperationName() {
         return this.operationName;
+    }
+
+    public SearchTracesRequest setPid(String pid) {
+        this.pid = pid;
+        return this;
+    }
+    public String getPid() {
+        return this.pid;
     }
 
     public SearchTracesRequest setRegionId(String regionId) {

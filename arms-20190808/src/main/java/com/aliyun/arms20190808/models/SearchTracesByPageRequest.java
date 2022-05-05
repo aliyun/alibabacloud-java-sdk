@@ -22,6 +22,9 @@ public class SearchTracesByPageRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Pid")
+    public String pid;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -36,6 +39,9 @@ public class SearchTracesByPageRequest extends TeaModel {
 
     @NameInMap("StartTime")
     public Long startTime;
+
+    @NameInMap("Tags")
+    public java.util.List<SearchTracesByPageRequestTags> tags;
 
     public static SearchTracesByPageRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchTracesByPageRequest self = new SearchTracesByPageRequest();
@@ -90,6 +96,14 @@ public class SearchTracesByPageRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public SearchTracesByPageRequest setPid(String pid) {
+        this.pid = pid;
+        return this;
+    }
+    public String getPid() {
+        return this.pid;
+    }
+
     public SearchTracesByPageRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -130,6 +144,14 @@ public class SearchTracesByPageRequest extends TeaModel {
         return this.startTime;
     }
 
+    public SearchTracesByPageRequest setTags(java.util.List<SearchTracesByPageRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<SearchTracesByPageRequestTags> getTags() {
+        return this.tags;
+    }
+
     public static class SearchTracesByPageRequestExclusionFilters extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -151,6 +173,36 @@ public class SearchTracesByPageRequest extends TeaModel {
         }
 
         public SearchTracesByPageRequestExclusionFilters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class SearchTracesByPageRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static SearchTracesByPageRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            SearchTracesByPageRequestTags self = new SearchTracesByPageRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchTracesByPageRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public SearchTracesByPageRequestTags setValue(String value) {
             this.value = value;
             return this;
         }
