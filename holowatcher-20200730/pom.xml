@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>holowatcher20200730</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>jar</packaging>
   <name>holowatcher20200730</name>
   <description>Alibaba Cloud holowatcher (20200730) SDK for Java
