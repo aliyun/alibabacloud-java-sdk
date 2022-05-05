@@ -3,17 +3,17 @@ package com.aliyun.ocr20191230.models;
 
 import com.aliyun.tea.*;
 
-public class RecognizeStructuredTaxiInvoicesAdvanceRequest extends TeaModel {
+public class RecognizeBankCardAdvanceRequest extends TeaModel {
     @NameInMap("ImageURLObject")
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
-    public static RecognizeStructuredTaxiInvoicesAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        RecognizeStructuredTaxiInvoicesAdvanceRequest self = new RecognizeStructuredTaxiInvoicesAdvanceRequest();
+    public static RecognizeBankCardAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        RecognizeBankCardAdvanceRequest self = new RecognizeBankCardAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public RecognizeStructuredTaxiInvoicesAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+    public RecognizeBankCardAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
         this.imageURLObject = imageURLObject;
         return this;
     }
