@@ -37,6 +37,9 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("EndTimeStamp")
     public Long endTimeStamp;
 
+    @NameInMap("InstanceChargeType")
+    public String instanceChargeType;
+
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
@@ -197,6 +200,14 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
     public Long getEndTimeStamp() {
         return this.endTimeStamp;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
+        return this;
+    }
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     public DescribeLoadBalancerAttributeResponseBody setInternetChargeType(String internetChargeType) {
