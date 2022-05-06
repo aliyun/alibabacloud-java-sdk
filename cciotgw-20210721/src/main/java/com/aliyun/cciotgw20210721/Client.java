@@ -573,12 +573,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DryRun", request.dryRun);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
+        if (!com.aliyun.teautil.Common.isUnset(request.greGwId)) {
+            query.put("GreGwId", request.greGwId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.zone)) {
-            query.put("Zone", request.zone);
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

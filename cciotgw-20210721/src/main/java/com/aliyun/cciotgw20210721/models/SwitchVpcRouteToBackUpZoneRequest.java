@@ -13,11 +13,11 @@ public class SwitchVpcRouteToBackUpZoneRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("GreGwId")
+    public String greGwId;
+
     @NameInMap("RegionId")
     public String regionId;
-
-    @NameInMap("Zone")
-    public String zone;
 
     public static SwitchVpcRouteToBackUpZoneRequest build(java.util.Map<String, ?> map) throws Exception {
         SwitchVpcRouteToBackUpZoneRequest self = new SwitchVpcRouteToBackUpZoneRequest();
@@ -48,20 +48,20 @@ public class SwitchVpcRouteToBackUpZoneRequest extends TeaModel {
         return this.dryRun;
     }
 
+    public SwitchVpcRouteToBackUpZoneRequest setGreGwId(String greGwId) {
+        this.greGwId = greGwId;
+        return this;
+    }
+    public String getGreGwId() {
+        return this.greGwId;
+    }
+
     public SwitchVpcRouteToBackUpZoneRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public SwitchVpcRouteToBackUpZoneRequest setZone(String zone) {
-        this.zone = zone;
-        return this;
-    }
-    public String getZone() {
-        return this.zone;
     }
 
 }
