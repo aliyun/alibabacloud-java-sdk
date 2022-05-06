@@ -3,7 +3,7 @@ package com.aliyun.iot20180120.models;
 
 import com.aliyun.tea.*;
 
-public class CreateSoundCodeRequest extends TeaModel {
+public class UpdateSoundCodeRequest extends TeaModel {
     @NameInMap("Duration")
     public Integer duration;
 
@@ -13,18 +13,18 @@ public class CreateSoundCodeRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("OpenType")
-    public String openType;
+    @NameInMap("SoundCode")
+    public String soundCode;
 
     @NameInMap("SoundCodeContent")
     public String soundCodeContent;
 
-    public static CreateSoundCodeRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateSoundCodeRequest self = new CreateSoundCodeRequest();
+    public static UpdateSoundCodeRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateSoundCodeRequest self = new UpdateSoundCodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateSoundCodeRequest setDuration(Integer duration) {
+    public UpdateSoundCodeRequest setDuration(Integer duration) {
         this.duration = duration;
         return this;
     }
@@ -32,7 +32,7 @@ public class CreateSoundCodeRequest extends TeaModel {
         return this.duration;
     }
 
-    public CreateSoundCodeRequest setIotInstanceId(String iotInstanceId) {
+    public UpdateSoundCodeRequest setIotInstanceId(String iotInstanceId) {
         this.iotInstanceId = iotInstanceId;
         return this;
     }
@@ -40,7 +40,7 @@ public class CreateSoundCodeRequest extends TeaModel {
         return this.iotInstanceId;
     }
 
-    public CreateSoundCodeRequest setName(String name) {
+    public UpdateSoundCodeRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -48,15 +48,15 @@ public class CreateSoundCodeRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateSoundCodeRequest setOpenType(String openType) {
-        this.openType = openType;
+    public UpdateSoundCodeRequest setSoundCode(String soundCode) {
+        this.soundCode = soundCode;
         return this;
     }
-    public String getOpenType() {
-        return this.openType;
+    public String getSoundCode() {
+        return this.soundCode;
     }
 
-    public CreateSoundCodeRequest setSoundCodeContent(String soundCodeContent) {
+    public UpdateSoundCodeRequest setSoundCodeContent(String soundCodeContent) {
         this.soundCodeContent = soundCodeContent;
         return this;
     }
