@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityGroupConfigurationRequest extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +16,20 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     public static ModifySecurityGroupConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySecurityGroupConfigurationRequest self = new ModifySecurityGroupConfigurationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySecurityGroupConfigurationRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     public ModifySecurityGroupConfigurationRequest setOwnerId(Long ownerId) {
@@ -46,14 +54,6 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifySecurityGroupConfigurationRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
     }
 
     public ModifySecurityGroupConfigurationRequest setSecurityGroupId(String securityGroupId) {

@@ -7,23 +7,23 @@ public class DescribeMetaListResponseBody extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
-    @NameInMap("TotalPageCount")
-    public Integer totalPageCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageRecordCount")
-    public Integer pageRecordCount;
-
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
+    @NameInMap("Items")
+    public DescribeMetaListResponseBodyItems items;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("Items")
-    public DescribeMetaListResponseBodyItems items;
+    @NameInMap("PageRecordCount")
+    public Integer pageRecordCount;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalPageCount")
+    public Integer totalPageCount;
+
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     public static DescribeMetaListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetaListResponseBody self = new DescribeMetaListResponseBody();
@@ -38,36 +38,12 @@ public class DescribeMetaListResponseBody extends TeaModel {
         return this.DBInstanceName;
     }
 
-    public DescribeMetaListResponseBody setTotalPageCount(Integer totalPageCount) {
-        this.totalPageCount = totalPageCount;
+    public DescribeMetaListResponseBody setItems(DescribeMetaListResponseBodyItems items) {
+        this.items = items;
         return this;
     }
-    public Integer getTotalPageCount() {
-        return this.totalPageCount;
-    }
-
-    public DescribeMetaListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeMetaListResponseBody setPageRecordCount(Integer pageRecordCount) {
-        this.pageRecordCount = pageRecordCount;
-        return this;
-    }
-    public Integer getPageRecordCount() {
-        return this.pageRecordCount;
-    }
-
-    public DescribeMetaListResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
+    public DescribeMetaListResponseBodyItems getItems() {
+        return this.items;
     }
 
     public DescribeMetaListResponseBody setPageNumber(Integer pageNumber) {
@@ -78,35 +54,51 @@ public class DescribeMetaListResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeMetaListResponseBody setItems(DescribeMetaListResponseBodyItems items) {
-        this.items = items;
+    public DescribeMetaListResponseBody setPageRecordCount(Integer pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
         return this;
     }
-    public DescribeMetaListResponseBodyItems getItems() {
-        return this.items;
+    public Integer getPageRecordCount() {
+        return this.pageRecordCount;
+    }
+
+    public DescribeMetaListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeMetaListResponseBody setTotalPageCount(Integer totalPageCount) {
+        this.totalPageCount = totalPageCount;
+        return this;
+    }
+    public Integer getTotalPageCount() {
+        return this.totalPageCount;
+    }
+
+    public DescribeMetaListResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeMetaListResponseBodyItemsMeta extends TeaModel {
-        @NameInMap("Tables")
-        public String tables;
-
         @NameInMap("Database")
         public String database;
 
         @NameInMap("Size")
         public String size;
 
+        @NameInMap("Tables")
+        public String tables;
+
         public static DescribeMetaListResponseBodyItemsMeta build(java.util.Map<String, ?> map) throws Exception {
             DescribeMetaListResponseBodyItemsMeta self = new DescribeMetaListResponseBodyItemsMeta();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMetaListResponseBodyItemsMeta setTables(String tables) {
-            this.tables = tables;
-            return this;
-        }
-        public String getTables() {
-            return this.tables;
         }
 
         public DescribeMetaListResponseBodyItemsMeta setDatabase(String database) {
@@ -123,6 +115,14 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
         public String getSize() {
             return this.size;
+        }
+
+        public DescribeMetaListResponseBodyItemsMeta setTables(String tables) {
+            this.tables = tables;
+            return this;
+        }
+        public String getTables() {
+            return this.tables;
         }
 
     }

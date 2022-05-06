@@ -32,11 +32,11 @@ public class CreateGADInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateGADInstanceResponseBodyResult extends TeaModel {
-        @NameInMap("GadInstanceName")
-        public String gadInstanceName;
-
         @NameInMap("CreateMemberCount")
         public String createMemberCount;
+
+        @NameInMap("GadInstanceName")
+        public String gadInstanceName;
 
         @NameInMap("TaskID")
         public String taskID;
@@ -46,20 +46,20 @@ public class CreateGADInstanceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateGADInstanceResponseBodyResult setGadInstanceName(String gadInstanceName) {
-            this.gadInstanceName = gadInstanceName;
-            return this;
-        }
-        public String getGadInstanceName() {
-            return this.gadInstanceName;
-        }
-
         public CreateGADInstanceResponseBodyResult setCreateMemberCount(String createMemberCount) {
             this.createMemberCount = createMemberCount;
             return this;
         }
         public String getCreateMemberCount() {
             return this.createMemberCount;
+        }
+
+        public CreateGADInstanceResponseBodyResult setGadInstanceName(String gadInstanceName) {
+            this.gadInstanceName = gadInstanceName;
+            return this;
+        }
+        public String getGadInstanceName() {
+            return this.gadInstanceName;
         }
 
         public CreateGADInstanceResponseBodyResult setTaskID(String taskID) {

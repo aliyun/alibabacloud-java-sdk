@@ -4,8 +4,8 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Items")
+    public DescribeInstanceAutoRenewalAttributeResponseBodyItems items;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,23 +13,23 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
-
-    @NameInMap("Items")
-    public DescribeInstanceAutoRenewalAttributeResponseBodyItems items;
 
     public static DescribeInstanceAutoRenewalAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceAutoRenewalAttributeResponseBody self = new DescribeInstanceAutoRenewalAttributeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceAutoRenewalAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeInstanceAutoRenewalAttributeResponseBody setItems(DescribeInstanceAutoRenewalAttributeResponseBodyItems items) {
+        this.items = items;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public DescribeInstanceAutoRenewalAttributeResponseBodyItems getItems() {
+        return this.items;
     }
 
     public DescribeInstanceAutoRenewalAttributeResponseBody setPageNumber(Integer pageNumber) {
@@ -48,6 +48,14 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         return this.pageRecordCount;
     }
 
+    public DescribeInstanceAutoRenewalAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeInstanceAutoRenewalAttributeResponseBody setTotalRecordCount(Integer totalRecordCount) {
         this.totalRecordCount = totalRecordCount;
         return this;
@@ -56,57 +64,25 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         return this.totalRecordCount;
     }
 
-    public DescribeInstanceAutoRenewalAttributeResponseBody setItems(DescribeInstanceAutoRenewalAttributeResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeInstanceAutoRenewalAttributeResponseBodyItems getItems() {
-        return this.items;
-    }
-
     public static class DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Duration")
-        public Integer duration;
+        @NameInMap("AutoRenew")
+        public String autoRenew;
 
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
-        @NameInMap("AutoRenew")
-        public String autoRenew;
+        @NameInMap("Duration")
+        public Integer duration;
 
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem self = new DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem setDuration(Integer duration) {
-            this.duration = duration;
-            return this;
-        }
-        public Integer getDuration() {
-            return this.duration;
-        }
-
-        public DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem setDBInstanceId(String DBInstanceId) {
-            this.DBInstanceId = DBInstanceId;
-            return this;
-        }
-        public String getDBInstanceId() {
-            return this.DBInstanceId;
         }
 
         public DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem setAutoRenew(String autoRenew) {
@@ -117,12 +93,36 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             return this.autoRenew;
         }
 
+        public DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        public DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
+        }
+
         public DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

@@ -4,26 +4,26 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceTDEResponseBody extends TeaModel {
-    @NameInMap("TDEStatus")
-    public String TDEStatus;
+    @NameInMap("Databases")
+    public DescribeDBInstanceTDEResponseBodyDatabases databases;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Databases")
-    public DescribeDBInstanceTDEResponseBodyDatabases databases;
+    @NameInMap("TDEStatus")
+    public String TDEStatus;
 
     public static DescribeDBInstanceTDEResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceTDEResponseBody self = new DescribeDBInstanceTDEResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstanceTDEResponseBody setTDEStatus(String TDEStatus) {
-        this.TDEStatus = TDEStatus;
+    public DescribeDBInstanceTDEResponseBody setDatabases(DescribeDBInstanceTDEResponseBodyDatabases databases) {
+        this.databases = databases;
         return this;
     }
-    public String getTDEStatus() {
-        return this.TDEStatus;
+    public DescribeDBInstanceTDEResponseBodyDatabases getDatabases() {
+        return this.databases;
     }
 
     public DescribeDBInstanceTDEResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDBInstanceTDEResponseBody setDatabases(DescribeDBInstanceTDEResponseBodyDatabases databases) {
-        this.databases = databases;
+    public DescribeDBInstanceTDEResponseBody setTDEStatus(String TDEStatus) {
+        this.TDEStatus = TDEStatus;
         return this;
     }
-    public DescribeDBInstanceTDEResponseBodyDatabases getDatabases() {
-        return this.databases;
+    public String getTDEStatus() {
+        return this.TDEStatus;
     }
 
     public static class DescribeDBInstanceTDEResponseBodyDatabasesDatabase extends TeaModel {

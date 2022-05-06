@@ -7,14 +7,14 @@ public class ModifyReadonlyInstanceDelayReplicationTimeResponseBody extends TeaM
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("ReadSQLReplicationTime")
+    public String readSQLReplicationTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TaskId")
     public String taskId;
-
-    @NameInMap("ReadSQLReplicationTime")
-    public String readSQLReplicationTime;
 
     public static ModifyReadonlyInstanceDelayReplicationTimeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyReadonlyInstanceDelayReplicationTimeResponseBody self = new ModifyReadonlyInstanceDelayReplicationTimeResponseBody();
@@ -27,6 +27,14 @@ public class ModifyReadonlyInstanceDelayReplicationTimeResponseBody extends TeaM
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifyReadonlyInstanceDelayReplicationTimeResponseBody setReadSQLReplicationTime(String readSQLReplicationTime) {
+        this.readSQLReplicationTime = readSQLReplicationTime;
+        return this;
+    }
+    public String getReadSQLReplicationTime() {
+        return this.readSQLReplicationTime;
     }
 
     public ModifyReadonlyInstanceDelayReplicationTimeResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class ModifyReadonlyInstanceDelayReplicationTimeResponseBody extends TeaM
     }
     public String getTaskId() {
         return this.taskId;
-    }
-
-    public ModifyReadonlyInstanceDelayReplicationTimeResponseBody setReadSQLReplicationTime(String readSQLReplicationTime) {
-        this.readSQLReplicationTime = readSQLReplicationTime;
-        return this;
-    }
-    public String getReadSQLReplicationTime() {
-        return this.readSQLReplicationTime;
     }
 
 }

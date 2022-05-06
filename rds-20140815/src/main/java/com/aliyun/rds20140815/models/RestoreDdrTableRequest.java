@@ -4,8 +4,20 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class RestoreDdrTableRequest extends TeaModel {
+    @NameInMap("BackupId")
+    public String backupId;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,29 +25,17 @@ public class RestoreDdrTableRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("RestoreTime")
+    public String restoreTime;
 
     @NameInMap("RestoreType")
     public String restoreType;
 
-    @NameInMap("BackupId")
-    public String backupId;
-
-    @NameInMap("RestoreTime")
-    public String restoreTime;
+    @NameInMap("SourceDBInstanceName")
+    public String sourceDBInstanceName;
 
     @NameInMap("SourceRegion")
     public String sourceRegion;
-
-    @NameInMap("SourceDBInstanceName")
-    public String sourceDBInstanceName;
 
     @NameInMap("TableMeta")
     public String tableMeta;
@@ -45,12 +45,44 @@ public class RestoreDdrTableRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RestoreDdrTableRequest setBackupId(String backupId) {
+        this.backupId = backupId;
+        return this;
+    }
+    public String getBackupId() {
+        return this.backupId;
+    }
+
+    public RestoreDdrTableRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public RestoreDdrTableRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
     public RestoreDdrTableRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public RestoreDdrTableRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public RestoreDdrTableRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -69,28 +101,12 @@ public class RestoreDdrTableRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public RestoreDdrTableRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public RestoreDdrTableRequest setRestoreTime(String restoreTime) {
+        this.restoreTime = restoreTime;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public RestoreDdrTableRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public RestoreDdrTableRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRestoreTime() {
+        return this.restoreTime;
     }
 
     public RestoreDdrTableRequest setRestoreType(String restoreType) {
@@ -101,20 +117,12 @@ public class RestoreDdrTableRequest extends TeaModel {
         return this.restoreType;
     }
 
-    public RestoreDdrTableRequest setBackupId(String backupId) {
-        this.backupId = backupId;
+    public RestoreDdrTableRequest setSourceDBInstanceName(String sourceDBInstanceName) {
+        this.sourceDBInstanceName = sourceDBInstanceName;
         return this;
     }
-    public String getBackupId() {
-        return this.backupId;
-    }
-
-    public RestoreDdrTableRequest setRestoreTime(String restoreTime) {
-        this.restoreTime = restoreTime;
-        return this;
-    }
-    public String getRestoreTime() {
-        return this.restoreTime;
+    public String getSourceDBInstanceName() {
+        return this.sourceDBInstanceName;
     }
 
     public RestoreDdrTableRequest setSourceRegion(String sourceRegion) {
@@ -123,14 +131,6 @@ public class RestoreDdrTableRequest extends TeaModel {
     }
     public String getSourceRegion() {
         return this.sourceRegion;
-    }
-
-    public RestoreDdrTableRequest setSourceDBInstanceName(String sourceDBInstanceName) {
-        this.sourceDBInstanceName = sourceDBInstanceName;
-        return this;
-    }
-    public String getSourceDBInstanceName() {
-        return this.sourceDBInstanceName;
     }
 
     public RestoreDdrTableRequest setTableMeta(String tableMeta) {

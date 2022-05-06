@@ -7,20 +7,20 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceId")
+    public java.util.List<String> resourceId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ResourceType")
     public String resourceType;
-
-    @NameInMap("ResourceId")
-    public java.util.List<String> resourceId;
 
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -36,6 +36,22 @@ public class TagResourcesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public TagResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public TagResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
     }
 
     public TagResourcesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -54,28 +70,12 @@ public class TagResourcesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public TagResourcesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public TagResourcesRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
-    }
-
-    public TagResourcesRequest setResourceId(java.util.List<String> resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public java.util.List<String> getResourceId() {
-        return this.resourceId;
     }
 
     public TagResourcesRequest setTag(java.util.List<TagResourcesRequestTag> tag) {

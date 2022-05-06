@@ -7,11 +7,11 @@ public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel 
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
-    @NameInMap("TargetMajorVersion")
-    public String targetMajorVersion;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TargetMajorVersion")
+    public String targetMajorVersion;
 
     @NameInMap("TaskId")
     public String taskId;
@@ -29,20 +29,20 @@ public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel 
         return this.DBInstanceName;
     }
 
-    public UpgradeDBInstanceMajorVersionPrecheckResponseBody setTargetMajorVersion(String targetMajorVersion) {
-        this.targetMajorVersion = targetMajorVersion;
-        return this;
-    }
-    public String getTargetMajorVersion() {
-        return this.targetMajorVersion;
-    }
-
     public UpgradeDBInstanceMajorVersionPrecheckResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpgradeDBInstanceMajorVersionPrecheckResponseBody setTargetMajorVersion(String targetMajorVersion) {
+        this.targetMajorVersion = targetMajorVersion;
+        return this;
+    }
+    public String getTargetMajorVersion() {
+        return this.targetMajorVersion;
     }
 
     public UpgradeDBInstanceMajorVersionPrecheckResponseBody setTaskId(String taskId) {

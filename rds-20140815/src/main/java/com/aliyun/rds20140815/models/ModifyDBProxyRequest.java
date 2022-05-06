@@ -4,29 +4,29 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBProxyRequest extends TeaModel {
+    @NameInMap("ConfigDBProxyService")
+    public String configDBProxyService;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("DBProxyInstanceNum")
+    public String DBProxyInstanceNum;
+
+    @NameInMap("InstanceNetworkType")
+    public String instanceNetworkType;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("ConfigDBProxyService")
-    public String configDBProxyService;
-
-    @NameInMap("DBProxyInstanceNum")
-    public String DBProxyInstanceNum;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("InstanceNetworkType")
-    public String instanceNetworkType;
 
     @NameInMap("VPCId")
     public String VPCId;
@@ -39,12 +39,52 @@ public class ModifyDBProxyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyDBProxyRequest setConfigDBProxyService(String configDBProxyService) {
+        this.configDBProxyService = configDBProxyService;
+        return this;
+    }
+    public String getConfigDBProxyService() {
+        return this.configDBProxyService;
+    }
+
+    public ModifyDBProxyRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyDBProxyRequest setDBProxyInstanceNum(String DBProxyInstanceNum) {
+        this.DBProxyInstanceNum = DBProxyInstanceNum;
+        return this;
+    }
+    public String getDBProxyInstanceNum() {
+        return this.DBProxyInstanceNum;
+    }
+
+    public ModifyDBProxyRequest setInstanceNetworkType(String instanceNetworkType) {
+        this.instanceNetworkType = instanceNetworkType;
+        return this;
+    }
+    public String getInstanceNetworkType() {
+        return this.instanceNetworkType;
+    }
+
     public ModifyDBProxyRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyDBProxyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyDBProxyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -61,46 +101,6 @@ public class ModifyDBProxyRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyDBProxyRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public ModifyDBProxyRequest setConfigDBProxyService(String configDBProxyService) {
-        this.configDBProxyService = configDBProxyService;
-        return this;
-    }
-    public String getConfigDBProxyService() {
-        return this.configDBProxyService;
-    }
-
-    public ModifyDBProxyRequest setDBProxyInstanceNum(String DBProxyInstanceNum) {
-        this.DBProxyInstanceNum = DBProxyInstanceNum;
-        return this;
-    }
-    public String getDBProxyInstanceNum() {
-        return this.DBProxyInstanceNum;
-    }
-
-    public ModifyDBProxyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyDBProxyRequest setInstanceNetworkType(String instanceNetworkType) {
-        this.instanceNetworkType = instanceNetworkType;
-        return this;
-    }
-    public String getInstanceNetworkType() {
-        return this.instanceNetworkType;
     }
 
     public ModifyDBProxyRequest setVPCId(String VPCId) {

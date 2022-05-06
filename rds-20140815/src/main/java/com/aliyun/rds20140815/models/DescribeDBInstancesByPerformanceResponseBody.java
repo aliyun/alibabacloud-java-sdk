@@ -4,8 +4,8 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Items")
+    public DescribeDBInstancesByPerformanceResponseBodyItems items;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,23 +13,23 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
-
-    @NameInMap("Items")
-    public DescribeDBInstancesByPerformanceResponseBodyItems items;
 
     public static DescribeDBInstancesByPerformanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesByPerformanceResponseBody self = new DescribeDBInstancesByPerformanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstancesByPerformanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDBInstancesByPerformanceResponseBody setItems(DescribeDBInstancesByPerformanceResponseBodyItems items) {
+        this.items = items;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public DescribeDBInstancesByPerformanceResponseBodyItems getItems() {
+        return this.items;
     }
 
     public DescribeDBInstancesByPerformanceResponseBody setPageNumber(Integer pageNumber) {
@@ -48,6 +48,14 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         return this.pageRecordCount;
     }
 
+    public DescribeDBInstancesByPerformanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeDBInstancesByPerformanceResponseBody setTotalRecordCount(Integer totalRecordCount) {
         this.totalRecordCount = totalRecordCount;
         return this;
@@ -56,32 +64,24 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         return this.totalRecordCount;
     }
 
-    public DescribeDBInstancesByPerformanceResponseBody setItems(DescribeDBInstancesByPerformanceResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeDBInstancesByPerformanceResponseBodyItems getItems() {
-        return this.items;
-    }
-
     public static class DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance extends TeaModel {
         @NameInMap("CPUUsage")
         public String CPUUsage;
 
-        @NameInMap("SessionUsage")
-        public String sessionUsage;
+        @NameInMap("DBInstanceDescription")
+        public String DBInstanceDescription;
 
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
-        @NameInMap("DBInstanceDescription")
-        public String DBInstanceDescription;
+        @NameInMap("DiskUsage")
+        public String diskUsage;
 
         @NameInMap("IOPSUsage")
         public String IOPSUsage;
 
-        @NameInMap("DiskUsage")
-        public String diskUsage;
+        @NameInMap("SessionUsage")
+        public String sessionUsage;
 
         public static DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance self = new DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance();
@@ -96,12 +96,12 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             return this.CPUUsage;
         }
 
-        public DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance setSessionUsage(String sessionUsage) {
-            this.sessionUsage = sessionUsage;
+        public DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance setDBInstanceDescription(String DBInstanceDescription) {
+            this.DBInstanceDescription = DBInstanceDescription;
             return this;
         }
-        public String getSessionUsage() {
-            return this.sessionUsage;
+        public String getDBInstanceDescription() {
+            return this.DBInstanceDescription;
         }
 
         public DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance setDBInstanceId(String DBInstanceId) {
@@ -112,12 +112,12 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             return this.DBInstanceId;
         }
 
-        public DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance setDBInstanceDescription(String DBInstanceDescription) {
-            this.DBInstanceDescription = DBInstanceDescription;
+        public DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance setDiskUsage(String diskUsage) {
+            this.diskUsage = diskUsage;
             return this;
         }
-        public String getDBInstanceDescription() {
-            return this.DBInstanceDescription;
+        public String getDiskUsage() {
+            return this.diskUsage;
         }
 
         public DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance setIOPSUsage(String IOPSUsage) {
@@ -128,12 +128,12 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             return this.IOPSUsage;
         }
 
-        public DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance setDiskUsage(String diskUsage) {
-            this.diskUsage = diskUsage;
+        public DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance setSessionUsage(String sessionUsage) {
+            this.sessionUsage = sessionUsage;
             return this;
         }
-        public String getDiskUsage() {
-            return this.diskUsage;
+        public String getSessionUsage() {
+            return this.sessionUsage;
         }
 
     }

@@ -4,11 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceMajorVersionPrecheckRequest extends TeaModel {
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("TargetMajorVersion")
     public String targetMajorVersion;
@@ -18,20 +18,20 @@ public class UpgradeDBInstanceMajorVersionPrecheckRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpgradeDBInstanceMajorVersionPrecheckRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
     public UpgradeDBInstanceMajorVersionPrecheckRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public UpgradeDBInstanceMajorVersionPrecheckRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public UpgradeDBInstanceMajorVersionPrecheckRequest setTargetMajorVersion(String targetMajorVersion) {

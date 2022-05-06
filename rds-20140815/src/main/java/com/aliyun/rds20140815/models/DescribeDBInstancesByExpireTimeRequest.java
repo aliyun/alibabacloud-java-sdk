@@ -4,8 +4,26 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
+    @NameInMap("ExpirePeriod")
+    public Integer expirePeriod;
+
+    @NameInMap("Expired")
+    public Boolean expired;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,73 +31,15 @@ public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Tags")
+    public String tags;
 
     @NameInMap("proxyId")
     public String proxyId;
 
-    @NameInMap("ExpirePeriod")
-    public Integer expirePeriod;
-
-    @NameInMap("Expired")
-    public Boolean expired;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Tags")
-    public String tags;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DescribeDBInstancesByExpireTimeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesByExpireTimeRequest self = new DescribeDBInstancesByExpireTimeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBInstancesByExpireTimeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeDBInstancesByExpireTimeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeDBInstancesByExpireTimeRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeDBInstancesByExpireTimeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeDBInstancesByExpireTimeRequest setProxyId(String proxyId) {
-        this.proxyId = proxyId;
-        return this;
-    }
-    public String getProxyId() {
-        return this.proxyId;
     }
 
     public DescribeDBInstancesByExpireTimeRequest setExpirePeriod(Integer expirePeriod) {
@@ -98,12 +58,20 @@ public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
         return this.expired;
     }
 
-    public DescribeDBInstancesByExpireTimeRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeDBInstancesByExpireTimeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeDBInstancesByExpireTimeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeDBInstancesByExpireTimeRequest setPageNumber(Integer pageNumber) {
@@ -114,6 +82,38 @@ public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeDBInstancesByExpireTimeRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeDBInstancesByExpireTimeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeDBInstancesByExpireTimeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeDBInstancesByExpireTimeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public DescribeDBInstancesByExpireTimeRequest setTags(String tags) {
         this.tags = tags;
         return this;
@@ -122,12 +122,12 @@ public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
         return this.tags;
     }
 
-    public DescribeDBInstancesByExpireTimeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeDBInstancesByExpireTimeRequest setProxyId(String proxyId) {
+        this.proxyId = proxyId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getProxyId() {
+        return this.proxyId;
     }
 
 }

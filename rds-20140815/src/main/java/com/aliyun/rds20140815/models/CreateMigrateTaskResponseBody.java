@@ -4,20 +4,20 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateMigrateTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("DBName")
-    public String DBName;
-
     @NameInMap("BackupMode")
     public String backupMode;
 
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DBName")
+    public String DBName;
+
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TaskId")
     public String taskId;
@@ -25,22 +25,6 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
     public static CreateMigrateTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateMigrateTaskResponseBody self = new CreateMigrateTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateMigrateTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateMigrateTaskResponseBody setDBName(String DBName) {
-        this.DBName = DBName;
-        return this;
-    }
-    public String getDBName() {
-        return this.DBName;
     }
 
     public CreateMigrateTaskResponseBody setBackupMode(String backupMode) {
@@ -59,12 +43,28 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
         return this.DBInstanceId;
     }
 
+    public CreateMigrateTaskResponseBody setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
+    }
+
     public CreateMigrateTaskResponseBody setMigrateTaskId(String migrateTaskId) {
         this.migrateTaskId = migrateTaskId;
         return this;
     }
     public String getMigrateTaskId() {
         return this.migrateTaskId;
+    }
+
+    public CreateMigrateTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateMigrateTaskResponseBody setTaskId(String taskId) {

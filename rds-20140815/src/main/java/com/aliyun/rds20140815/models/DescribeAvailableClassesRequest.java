@@ -4,17 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableClassesRequest extends TeaModel {
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("Category")
+    public String category;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("CommodityCode")
+    public String commodityCode;
 
-    @NameInMap("ZoneId")
-    public String zoneId;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
 
-    @NameInMap("InstanceChargeType")
-    public String instanceChargeType;
+    @NameInMap("DBInstanceStorageType")
+    public String DBInstanceStorageType;
 
     @NameInMap("Engine")
     public String engine;
@@ -22,56 +22,56 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("InstanceChargeType")
+    public String instanceChargeType;
 
     @NameInMap("OrderType")
     public String orderType;
 
-    @NameInMap("DBInstanceStorageType")
-    public String DBInstanceStorageType;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("Category")
-    public String category;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
-    @NameInMap("CommodityCode")
-    public String commodityCode;
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static DescribeAvailableClassesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableClassesRequest self = new DescribeAvailableClassesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAvailableClassesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public DescribeAvailableClassesRequest setCategory(String category) {
+        this.category = category;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getCategory() {
+        return this.category;
     }
 
-    public DescribeAvailableClassesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeAvailableClassesRequest setCommodityCode(String commodityCode) {
+        this.commodityCode = commodityCode;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getCommodityCode() {
+        return this.commodityCode;
     }
 
-    public DescribeAvailableClassesRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
+    public DescribeAvailableClassesRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getZoneId() {
-        return this.zoneId;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
-    public DescribeAvailableClassesRequest setInstanceChargeType(String instanceChargeType) {
-        this.instanceChargeType = instanceChargeType;
+    public DescribeAvailableClassesRequest setDBInstanceStorageType(String DBInstanceStorageType) {
+        this.DBInstanceStorageType = DBInstanceStorageType;
         return this;
     }
-    public String getInstanceChargeType() {
-        return this.instanceChargeType;
+    public String getDBInstanceStorageType() {
+        return this.DBInstanceStorageType;
     }
 
     public DescribeAvailableClassesRequest setEngine(String engine) {
@@ -90,12 +90,12 @@ public class DescribeAvailableClassesRequest extends TeaModel {
         return this.engineVersion;
     }
 
-    public DescribeAvailableClassesRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public DescribeAvailableClassesRequest setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     public DescribeAvailableClassesRequest setOrderType(String orderType) {
@@ -106,28 +106,28 @@ public class DescribeAvailableClassesRequest extends TeaModel {
         return this.orderType;
     }
 
-    public DescribeAvailableClassesRequest setDBInstanceStorageType(String DBInstanceStorageType) {
-        this.DBInstanceStorageType = DBInstanceStorageType;
+    public DescribeAvailableClassesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDBInstanceStorageType() {
-        return this.DBInstanceStorageType;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public DescribeAvailableClassesRequest setCategory(String category) {
-        this.category = category;
+    public DescribeAvailableClassesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getCategory() {
-        return this.category;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
-    public DescribeAvailableClassesRequest setCommodityCode(String commodityCode) {
-        this.commodityCode = commodityCode;
+    public DescribeAvailableClassesRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
-    public String getCommodityCode() {
-        return this.commodityCode;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

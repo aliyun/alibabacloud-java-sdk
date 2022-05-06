@@ -7,11 +7,11 @@ public class CopyDatabaseResponseBody extends TeaModel {
     @NameInMap("DBName")
     public String DBName;
 
-    @NameInMap("TaskId")
-    public String taskId;
-
     @NameInMap("DBStatus")
     public String DBStatus;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     public static CopyDatabaseResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CopyDatabaseResponseBody self = new CopyDatabaseResponseBody();
@@ -26,20 +26,20 @@ public class CopyDatabaseResponseBody extends TeaModel {
         return this.DBName;
     }
 
-    public CopyDatabaseResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
     public CopyDatabaseResponseBody setDBStatus(String DBStatus) {
         this.DBStatus = DBStatus;
         return this;
     }
     public String getDBStatus() {
         return this.DBStatus;
+    }
+
+    public CopyDatabaseResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

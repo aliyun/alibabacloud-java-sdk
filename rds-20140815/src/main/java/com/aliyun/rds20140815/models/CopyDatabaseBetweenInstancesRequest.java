@@ -4,20 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("BackupId")
+    public String backupId;
 
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("TargetDBInstanceId")
-    public String targetDBInstanceId;
-
     @NameInMap("DbNames")
     public String dbNames;
 
-    @NameInMap("BackupId")
-    public String backupId;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("RestoreTime")
     public String restoreTime;
@@ -25,17 +22,20 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     @NameInMap("SyncUserPrivilege")
     public String syncUserPrivilege;
 
+    @NameInMap("TargetDBInstanceId")
+    public String targetDBInstanceId;
+
     public static CopyDatabaseBetweenInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         CopyDatabaseBetweenInstancesRequest self = new CopyDatabaseBetweenInstancesRequest();
         return TeaModel.build(map, self);
     }
 
-    public CopyDatabaseBetweenInstancesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public CopyDatabaseBetweenInstancesRequest setBackupId(String backupId) {
+        this.backupId = backupId;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getBackupId() {
+        return this.backupId;
     }
 
     public CopyDatabaseBetweenInstancesRequest setDBInstanceId(String DBInstanceId) {
@@ -46,14 +46,6 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public CopyDatabaseBetweenInstancesRequest setTargetDBInstanceId(String targetDBInstanceId) {
-        this.targetDBInstanceId = targetDBInstanceId;
-        return this;
-    }
-    public String getTargetDBInstanceId() {
-        return this.targetDBInstanceId;
-    }
-
     public CopyDatabaseBetweenInstancesRequest setDbNames(String dbNames) {
         this.dbNames = dbNames;
         return this;
@@ -62,12 +54,12 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
         return this.dbNames;
     }
 
-    public CopyDatabaseBetweenInstancesRequest setBackupId(String backupId) {
-        this.backupId = backupId;
+    public CopyDatabaseBetweenInstancesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getBackupId() {
-        return this.backupId;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public CopyDatabaseBetweenInstancesRequest setRestoreTime(String restoreTime) {
@@ -84,6 +76,14 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     }
     public String getSyncUserPrivilege() {
         return this.syncUserPrivilege;
+    }
+
+    public CopyDatabaseBetweenInstancesRequest setTargetDBInstanceId(String targetDBInstanceId) {
+        this.targetDBInstanceId = targetDBInstanceId;
+        return this;
+    }
+    public String getTargetDBInstanceId() {
+        return this.targetDBInstanceId;
     }
 
 }

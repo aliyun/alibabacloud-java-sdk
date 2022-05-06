@@ -4,48 +4,24 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateDdrInstanceResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Port")
-    public String port;
-
     @NameInMap("ConnectionString")
     public String connectionString;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
 
     @NameInMap("OrderId")
     public String orderId;
 
+    @NameInMap("Port")
+    public String port;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CreateDdrInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDdrInstanceResponseBody self = new CreateDdrInstanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDdrInstanceResponseBody setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public CreateDdrInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateDdrInstanceResponseBody setPort(String port) {
-        this.port = port;
-        return this;
-    }
-    public String getPort() {
-        return this.port;
     }
 
     public CreateDdrInstanceResponseBody setConnectionString(String connectionString) {
@@ -56,12 +32,36 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
         return this.connectionString;
     }
 
+    public CreateDdrInstanceResponseBody setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
     public CreateDdrInstanceResponseBody setOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public CreateDdrInstanceResponseBody setPort(String port) {
+        this.port = port;
+        return this;
+    }
+    public String getPort() {
+        return this.port;
+    }
+
+    public CreateDdrInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

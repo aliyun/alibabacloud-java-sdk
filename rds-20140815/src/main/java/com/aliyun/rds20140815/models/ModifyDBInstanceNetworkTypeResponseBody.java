@@ -4,18 +4,26 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceNetworkTypeResponseBody extends TeaModel {
+    @NameInMap("ConnectionString")
+    public String connectionString;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TaskId")
     public String taskId;
 
-    @NameInMap("ConnectionString")
-    public String connectionString;
-
     public static ModifyDBInstanceNetworkTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceNetworkTypeResponseBody self = new ModifyDBInstanceNetworkTypeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBInstanceNetworkTypeResponseBody setConnectionString(String connectionString) {
+        this.connectionString = connectionString;
+        return this;
+    }
+    public String getConnectionString() {
+        return this.connectionString;
     }
 
     public ModifyDBInstanceNetworkTypeResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class ModifyDBInstanceNetworkTypeResponseBody extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
-    }
-
-    public ModifyDBInstanceNetworkTypeResponseBody setConnectionString(String connectionString) {
-        this.connectionString = connectionString;
-        return this;
-    }
-    public String getConnectionString() {
-        return this.connectionString;
     }
 
 }

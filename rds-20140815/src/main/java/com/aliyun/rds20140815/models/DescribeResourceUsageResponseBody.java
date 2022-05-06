@@ -4,29 +4,41 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceUsageResponseBody extends TeaModel {
-    @NameInMap("BackupOssDataSize")
-    public Long backupOssDataSize;
-
-    @NameInMap("DiskUsed")
-    public Long diskUsed;
-
     @NameInMap("ArchiveBackupSize")
     public Long archiveBackupSize;
-
-    @NameInMap("BackupOssLogSize")
-    public Long backupOssLogSize;
-
-    @NameInMap("BackupLogSize")
-    public Long backupLogSize;
 
     @NameInMap("BackupDataSize")
     public Long backupDataSize;
 
+    @NameInMap("BackupLogSize")
+    public Long backupLogSize;
+
+    @NameInMap("BackupOssDataSize")
+    public Long backupOssDataSize;
+
+    @NameInMap("BackupOssLogSize")
+    public Long backupOssLogSize;
+
+    @NameInMap("BackupSize")
+    public Long backupSize;
+
     @NameInMap("ColdBackupSize")
     public Long coldBackupSize;
 
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
     @NameInMap("DataSize")
     public Long dataSize;
+
+    @NameInMap("DiskUsed")
+    public Long diskUsed;
+
+    @NameInMap("Engine")
+    public String engine;
+
+    @NameInMap("LogSize")
+    public Long logSize;
 
     @NameInMap("PaidBackupSize")
     public Long paidBackupSize;
@@ -34,40 +46,12 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("LogSize")
-    public Long logSize;
-
-    @NameInMap("BackupSize")
-    public Long backupSize;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("Engine")
-    public String engine;
-
     @NameInMap("SQLSize")
     public Long SQLSize;
 
     public static DescribeResourceUsageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourceUsageResponseBody self = new DescribeResourceUsageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeResourceUsageResponseBody setBackupOssDataSize(Long backupOssDataSize) {
-        this.backupOssDataSize = backupOssDataSize;
-        return this;
-    }
-    public Long getBackupOssDataSize() {
-        return this.backupOssDataSize;
-    }
-
-    public DescribeResourceUsageResponseBody setDiskUsed(Long diskUsed) {
-        this.diskUsed = diskUsed;
-        return this;
-    }
-    public Long getDiskUsed() {
-        return this.diskUsed;
     }
 
     public DescribeResourceUsageResponseBody setArchiveBackupSize(Long archiveBackupSize) {
@@ -78,12 +62,12 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         return this.archiveBackupSize;
     }
 
-    public DescribeResourceUsageResponseBody setBackupOssLogSize(Long backupOssLogSize) {
-        this.backupOssLogSize = backupOssLogSize;
+    public DescribeResourceUsageResponseBody setBackupDataSize(Long backupDataSize) {
+        this.backupDataSize = backupDataSize;
         return this;
     }
-    public Long getBackupOssLogSize() {
-        return this.backupOssLogSize;
+    public Long getBackupDataSize() {
+        return this.backupDataSize;
     }
 
     public DescribeResourceUsageResponseBody setBackupLogSize(Long backupLogSize) {
@@ -94,12 +78,28 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         return this.backupLogSize;
     }
 
-    public DescribeResourceUsageResponseBody setBackupDataSize(Long backupDataSize) {
-        this.backupDataSize = backupDataSize;
+    public DescribeResourceUsageResponseBody setBackupOssDataSize(Long backupOssDataSize) {
+        this.backupOssDataSize = backupOssDataSize;
         return this;
     }
-    public Long getBackupDataSize() {
-        return this.backupDataSize;
+    public Long getBackupOssDataSize() {
+        return this.backupOssDataSize;
+    }
+
+    public DescribeResourceUsageResponseBody setBackupOssLogSize(Long backupOssLogSize) {
+        this.backupOssLogSize = backupOssLogSize;
+        return this;
+    }
+    public Long getBackupOssLogSize() {
+        return this.backupOssLogSize;
+    }
+
+    public DescribeResourceUsageResponseBody setBackupSize(Long backupSize) {
+        this.backupSize = backupSize;
+        return this;
+    }
+    public Long getBackupSize() {
+        return this.backupSize;
     }
 
     public DescribeResourceUsageResponseBody setColdBackupSize(Long coldBackupSize) {
@@ -110,12 +110,44 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         return this.coldBackupSize;
     }
 
+    public DescribeResourceUsageResponseBody setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
     public DescribeResourceUsageResponseBody setDataSize(Long dataSize) {
         this.dataSize = dataSize;
         return this;
     }
     public Long getDataSize() {
         return this.dataSize;
+    }
+
+    public DescribeResourceUsageResponseBody setDiskUsed(Long diskUsed) {
+        this.diskUsed = diskUsed;
+        return this;
+    }
+    public Long getDiskUsed() {
+        return this.diskUsed;
+    }
+
+    public DescribeResourceUsageResponseBody setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
+    }
+
+    public DescribeResourceUsageResponseBody setLogSize(Long logSize) {
+        this.logSize = logSize;
+        return this;
+    }
+    public Long getLogSize() {
+        return this.logSize;
     }
 
     public DescribeResourceUsageResponseBody setPaidBackupSize(Long paidBackupSize) {
@@ -132,38 +164,6 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeResourceUsageResponseBody setLogSize(Long logSize) {
-        this.logSize = logSize;
-        return this;
-    }
-    public Long getLogSize() {
-        return this.logSize;
-    }
-
-    public DescribeResourceUsageResponseBody setBackupSize(Long backupSize) {
-        this.backupSize = backupSize;
-        return this;
-    }
-    public Long getBackupSize() {
-        return this.backupSize;
-    }
-
-    public DescribeResourceUsageResponseBody setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public DescribeResourceUsageResponseBody setEngine(String engine) {
-        this.engine = engine;
-        return this;
-    }
-    public String getEngine() {
-        return this.engine;
     }
 
     public DescribeResourceUsageResponseBody setSQLSize(Long SQLSize) {

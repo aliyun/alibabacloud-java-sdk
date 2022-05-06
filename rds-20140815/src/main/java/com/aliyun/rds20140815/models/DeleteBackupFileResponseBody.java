@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteBackupFileResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DeletedBaksetIds")
     public DeleteBackupFileResponseBodyDeletedBaksetIds deletedBaksetIds;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DeleteBackupFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteBackupFileResponseBody self = new DeleteBackupFileResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteBackupFileResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteBackupFileResponseBody setDeletedBaksetIds(DeleteBackupFileResponseBodyDeletedBaksetIds deletedBaksetIds) {
@@ -29,6 +21,14 @@ public class DeleteBackupFileResponseBody extends TeaModel {
     }
     public DeleteBackupFileResponseBodyDeletedBaksetIds getDeletedBaksetIds() {
         return this.deletedBaksetIds;
+    }
+
+    public DeleteBackupFileResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DeleteBackupFileResponseBodyDeletedBaksetIds extends TeaModel {

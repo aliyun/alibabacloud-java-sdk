@@ -4,41 +4,44 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("ArchiveBackupKeepCount")
+    public Integer archiveBackupKeepCount;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("ArchiveBackupKeepPolicy")
+    public String archiveBackupKeepPolicy;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("ArchiveBackupRetentionPeriod")
+    public String archiveBackupRetentionPeriod;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("BackupPolicyMode")
-    public String backupPolicyMode;
-
-    @NameInMap("PreferredBackupTime")
-    public String preferredBackupTime;
-
-    @NameInMap("PreferredBackupPeriod")
-    public String preferredBackupPeriod;
-
-    @NameInMap("BackupRetentionPeriod")
-    public String backupRetentionPeriod;
+    @NameInMap("BackupInterval")
+    public String backupInterval;
 
     @NameInMap("BackupLog")
     public String backupLog;
 
-    @NameInMap("LogBackupRetentionPeriod")
-    public String logBackupRetentionPeriod;
+    @NameInMap("BackupMethod")
+    public String backupMethod;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("BackupPolicyMode")
+    public String backupPolicyMode;
+
+    @NameInMap("BackupRetentionPeriod")
+    public String backupRetentionPeriod;
+
+    @NameInMap("Category")
+    public String category;
+
+    @NameInMap("CompressType")
+    public String compressType;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
 
     @NameInMap("EnableBackupLog")
     public String enableBackupLog;
+
+    @NameInMap("HighSpaceUsageProtection")
+    public String highSpaceUsageProtection;
 
     @NameInMap("LocalLogRetentionHours")
     public String localLogRetentionHours;
@@ -46,106 +49,71 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("LocalLogRetentionSpace")
     public String localLogRetentionSpace;
 
-    @NameInMap("HighSpaceUsageProtection")
-    public String highSpaceUsageProtection;
-
     @NameInMap("LogBackupFrequency")
     public String logBackupFrequency;
-
-    @NameInMap("CompressType")
-    public String compressType;
-
-    @NameInMap("ArchiveBackupRetentionPeriod")
-    public String archiveBackupRetentionPeriod;
-
-    @NameInMap("ArchiveBackupKeepPolicy")
-    public String archiveBackupKeepPolicy;
-
-    @NameInMap("ArchiveBackupKeepCount")
-    public Integer archiveBackupKeepCount;
-
-    @NameInMap("ReleasedKeepPolicy")
-    public String releasedKeepPolicy;
 
     @NameInMap("LogBackupLocalRetentionNumber")
     public Integer logBackupLocalRetentionNumber;
 
-    @NameInMap("Category")
-    public String category;
+    @NameInMap("LogBackupRetentionPeriod")
+    public String logBackupRetentionPeriod;
 
-    @NameInMap("BackupInterval")
-    public String backupInterval;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
-    @NameInMap("BackupMethod")
-    public String backupMethod;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PreferredBackupPeriod")
+    public String preferredBackupPeriod;
+
+    @NameInMap("PreferredBackupTime")
+    public String preferredBackupTime;
+
+    @NameInMap("ReleasedKeepPolicy")
+    public String releasedKeepPolicy;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBackupPolicyRequest self = new ModifyBackupPolicyRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyBackupPolicyRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyBackupPolicyRequest setArchiveBackupKeepCount(Integer archiveBackupKeepCount) {
+        this.archiveBackupKeepCount = archiveBackupKeepCount;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public Integer getArchiveBackupKeepCount() {
+        return this.archiveBackupKeepCount;
     }
 
-    public ModifyBackupPolicyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public ModifyBackupPolicyRequest setArchiveBackupKeepPolicy(String archiveBackupKeepPolicy) {
+        this.archiveBackupKeepPolicy = archiveBackupKeepPolicy;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public String getArchiveBackupKeepPolicy() {
+        return this.archiveBackupKeepPolicy;
     }
 
-    public ModifyBackupPolicyRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public ModifyBackupPolicyRequest setArchiveBackupRetentionPeriod(String archiveBackupRetentionPeriod) {
+        this.archiveBackupRetentionPeriod = archiveBackupRetentionPeriod;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getArchiveBackupRetentionPeriod() {
+        return this.archiveBackupRetentionPeriod;
     }
 
-    public ModifyBackupPolicyRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public ModifyBackupPolicyRequest setBackupInterval(String backupInterval) {
+        this.backupInterval = backupInterval;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public ModifyBackupPolicyRequest setBackupPolicyMode(String backupPolicyMode) {
-        this.backupPolicyMode = backupPolicyMode;
-        return this;
-    }
-    public String getBackupPolicyMode() {
-        return this.backupPolicyMode;
-    }
-
-    public ModifyBackupPolicyRequest setPreferredBackupTime(String preferredBackupTime) {
-        this.preferredBackupTime = preferredBackupTime;
-        return this;
-    }
-    public String getPreferredBackupTime() {
-        return this.preferredBackupTime;
-    }
-
-    public ModifyBackupPolicyRequest setPreferredBackupPeriod(String preferredBackupPeriod) {
-        this.preferredBackupPeriod = preferredBackupPeriod;
-        return this;
-    }
-    public String getPreferredBackupPeriod() {
-        return this.preferredBackupPeriod;
-    }
-
-    public ModifyBackupPolicyRequest setBackupRetentionPeriod(String backupRetentionPeriod) {
-        this.backupRetentionPeriod = backupRetentionPeriod;
-        return this;
-    }
-    public String getBackupRetentionPeriod() {
-        return this.backupRetentionPeriod;
+    public String getBackupInterval() {
+        return this.backupInterval;
     }
 
     public ModifyBackupPolicyRequest setBackupLog(String backupLog) {
@@ -156,20 +124,52 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.backupLog;
     }
 
-    public ModifyBackupPolicyRequest setLogBackupRetentionPeriod(String logBackupRetentionPeriod) {
-        this.logBackupRetentionPeriod = logBackupRetentionPeriod;
+    public ModifyBackupPolicyRequest setBackupMethod(String backupMethod) {
+        this.backupMethod = backupMethod;
         return this;
     }
-    public String getLogBackupRetentionPeriod() {
-        return this.logBackupRetentionPeriod;
+    public String getBackupMethod() {
+        return this.backupMethod;
     }
 
-    public ModifyBackupPolicyRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ModifyBackupPolicyRequest setBackupPolicyMode(String backupPolicyMode) {
+        this.backupPolicyMode = backupPolicyMode;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getBackupPolicyMode() {
+        return this.backupPolicyMode;
+    }
+
+    public ModifyBackupPolicyRequest setBackupRetentionPeriod(String backupRetentionPeriod) {
+        this.backupRetentionPeriod = backupRetentionPeriod;
+        return this;
+    }
+    public String getBackupRetentionPeriod() {
+        return this.backupRetentionPeriod;
+    }
+
+    public ModifyBackupPolicyRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
+    }
+
+    public ModifyBackupPolicyRequest setCompressType(String compressType) {
+        this.compressType = compressType;
+        return this;
+    }
+    public String getCompressType() {
+        return this.compressType;
+    }
+
+    public ModifyBackupPolicyRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     public ModifyBackupPolicyRequest setEnableBackupLog(String enableBackupLog) {
@@ -178,6 +178,14 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     }
     public String getEnableBackupLog() {
         return this.enableBackupLog;
+    }
+
+    public ModifyBackupPolicyRequest setHighSpaceUsageProtection(String highSpaceUsageProtection) {
+        this.highSpaceUsageProtection = highSpaceUsageProtection;
+        return this;
+    }
+    public String getHighSpaceUsageProtection() {
+        return this.highSpaceUsageProtection;
     }
 
     public ModifyBackupPolicyRequest setLocalLogRetentionHours(String localLogRetentionHours) {
@@ -196,60 +204,12 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.localLogRetentionSpace;
     }
 
-    public ModifyBackupPolicyRequest setHighSpaceUsageProtection(String highSpaceUsageProtection) {
-        this.highSpaceUsageProtection = highSpaceUsageProtection;
-        return this;
-    }
-    public String getHighSpaceUsageProtection() {
-        return this.highSpaceUsageProtection;
-    }
-
     public ModifyBackupPolicyRequest setLogBackupFrequency(String logBackupFrequency) {
         this.logBackupFrequency = logBackupFrequency;
         return this;
     }
     public String getLogBackupFrequency() {
         return this.logBackupFrequency;
-    }
-
-    public ModifyBackupPolicyRequest setCompressType(String compressType) {
-        this.compressType = compressType;
-        return this;
-    }
-    public String getCompressType() {
-        return this.compressType;
-    }
-
-    public ModifyBackupPolicyRequest setArchiveBackupRetentionPeriod(String archiveBackupRetentionPeriod) {
-        this.archiveBackupRetentionPeriod = archiveBackupRetentionPeriod;
-        return this;
-    }
-    public String getArchiveBackupRetentionPeriod() {
-        return this.archiveBackupRetentionPeriod;
-    }
-
-    public ModifyBackupPolicyRequest setArchiveBackupKeepPolicy(String archiveBackupKeepPolicy) {
-        this.archiveBackupKeepPolicy = archiveBackupKeepPolicy;
-        return this;
-    }
-    public String getArchiveBackupKeepPolicy() {
-        return this.archiveBackupKeepPolicy;
-    }
-
-    public ModifyBackupPolicyRequest setArchiveBackupKeepCount(Integer archiveBackupKeepCount) {
-        this.archiveBackupKeepCount = archiveBackupKeepCount;
-        return this;
-    }
-    public Integer getArchiveBackupKeepCount() {
-        return this.archiveBackupKeepCount;
-    }
-
-    public ModifyBackupPolicyRequest setReleasedKeepPolicy(String releasedKeepPolicy) {
-        this.releasedKeepPolicy = releasedKeepPolicy;
-        return this;
-    }
-    public String getReleasedKeepPolicy() {
-        return this.releasedKeepPolicy;
     }
 
     public ModifyBackupPolicyRequest setLogBackupLocalRetentionNumber(Integer logBackupLocalRetentionNumber) {
@@ -260,28 +220,68 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.logBackupLocalRetentionNumber;
     }
 
-    public ModifyBackupPolicyRequest setCategory(String category) {
-        this.category = category;
+    public ModifyBackupPolicyRequest setLogBackupRetentionPeriod(String logBackupRetentionPeriod) {
+        this.logBackupRetentionPeriod = logBackupRetentionPeriod;
         return this;
     }
-    public String getCategory() {
-        return this.category;
+    public String getLogBackupRetentionPeriod() {
+        return this.logBackupRetentionPeriod;
     }
 
-    public ModifyBackupPolicyRequest setBackupInterval(String backupInterval) {
-        this.backupInterval = backupInterval;
+    public ModifyBackupPolicyRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getBackupInterval() {
-        return this.backupInterval;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
-    public ModifyBackupPolicyRequest setBackupMethod(String backupMethod) {
-        this.backupMethod = backupMethod;
+    public ModifyBackupPolicyRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getBackupMethod() {
-        return this.backupMethod;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyBackupPolicyRequest setPreferredBackupPeriod(String preferredBackupPeriod) {
+        this.preferredBackupPeriod = preferredBackupPeriod;
+        return this;
+    }
+    public String getPreferredBackupPeriod() {
+        return this.preferredBackupPeriod;
+    }
+
+    public ModifyBackupPolicyRequest setPreferredBackupTime(String preferredBackupTime) {
+        this.preferredBackupTime = preferredBackupTime;
+        return this;
+    }
+    public String getPreferredBackupTime() {
+        return this.preferredBackupTime;
+    }
+
+    public ModifyBackupPolicyRequest setReleasedKeepPolicy(String releasedKeepPolicy) {
+        this.releasedKeepPolicy = releasedKeepPolicy;
+        return this;
+    }
+    public String getReleasedKeepPolicy() {
+        return this.releasedKeepPolicy;
+    }
+
+    public ModifyBackupPolicyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyBackupPolicyRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

@@ -4,8 +4,26 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class StartDBInstanceRequest extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("DBInstanceTransType")
+    public Integer DBInstanceTransType;
+
+    @NameInMap("DedicatedHostGroupId")
+    public String dedicatedHostGroupId;
+
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
+    @NameInMap("EngineVersion")
+    public String engineVersion;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,41 +31,23 @@ public class StartDBInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("SpecifiedTime")
+    public String specifiedTime;
 
-    @NameInMap("DedicatedHostGroupId")
-    public String dedicatedHostGroupId;
+    @NameInMap("Storage")
+    public Integer storage;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("TargetDBInstanceClass")
+    public String targetDBInstanceClass;
+
+    @NameInMap("TargetDedicatedHostIdForLog")
+    public String targetDedicatedHostIdForLog;
 
     @NameInMap("TargetDedicatedHostIdForMaster")
     public String targetDedicatedHostIdForMaster;
 
     @NameInMap("TargetDedicatedHostIdForSlave")
     public String targetDedicatedHostIdForSlave;
-
-    @NameInMap("TargetDedicatedHostIdForLog")
-    public String targetDedicatedHostIdForLog;
-
-    @NameInMap("EffectiveTime")
-    public String effectiveTime;
-
-    @NameInMap("SpecifiedTime")
-    public String specifiedTime;
-
-    @NameInMap("TargetDBInstanceClass")
-    public String targetDBInstanceClass;
-
-    @NameInMap("EngineVersion")
-    public String engineVersion;
-
-    @NameInMap("DBInstanceTransType")
-    public Integer DBInstanceTransType;
-
-    @NameInMap("Storage")
-    public Integer storage;
 
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -60,12 +60,60 @@ public class StartDBInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public StartDBInstanceRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public StartDBInstanceRequest setDBInstanceTransType(Integer DBInstanceTransType) {
+        this.DBInstanceTransType = DBInstanceTransType;
+        return this;
+    }
+    public Integer getDBInstanceTransType() {
+        return this.DBInstanceTransType;
+    }
+
+    public StartDBInstanceRequest setDedicatedHostGroupId(String dedicatedHostGroupId) {
+        this.dedicatedHostGroupId = dedicatedHostGroupId;
+        return this;
+    }
+    public String getDedicatedHostGroupId() {
+        return this.dedicatedHostGroupId;
+    }
+
+    public StartDBInstanceRequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+    }
+    public String getEffectiveTime() {
+        return this.effectiveTime;
+    }
+
+    public StartDBInstanceRequest setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public String getEngineVersion() {
+        return this.engineVersion;
+    }
+
     public StartDBInstanceRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public StartDBInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public StartDBInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -84,28 +132,36 @@ public class StartDBInstanceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public StartDBInstanceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public StartDBInstanceRequest setSpecifiedTime(String specifiedTime) {
+        this.specifiedTime = specifiedTime;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getSpecifiedTime() {
+        return this.specifiedTime;
     }
 
-    public StartDBInstanceRequest setDedicatedHostGroupId(String dedicatedHostGroupId) {
-        this.dedicatedHostGroupId = dedicatedHostGroupId;
+    public StartDBInstanceRequest setStorage(Integer storage) {
+        this.storage = storage;
         return this;
     }
-    public String getDedicatedHostGroupId() {
-        return this.dedicatedHostGroupId;
+    public Integer getStorage() {
+        return this.storage;
     }
 
-    public StartDBInstanceRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public StartDBInstanceRequest setTargetDBInstanceClass(String targetDBInstanceClass) {
+        this.targetDBInstanceClass = targetDBInstanceClass;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getTargetDBInstanceClass() {
+        return this.targetDBInstanceClass;
+    }
+
+    public StartDBInstanceRequest setTargetDedicatedHostIdForLog(String targetDedicatedHostIdForLog) {
+        this.targetDedicatedHostIdForLog = targetDedicatedHostIdForLog;
+        return this;
+    }
+    public String getTargetDedicatedHostIdForLog() {
+        return this.targetDedicatedHostIdForLog;
     }
 
     public StartDBInstanceRequest setTargetDedicatedHostIdForMaster(String targetDedicatedHostIdForMaster) {
@@ -122,62 +178,6 @@ public class StartDBInstanceRequest extends TeaModel {
     }
     public String getTargetDedicatedHostIdForSlave() {
         return this.targetDedicatedHostIdForSlave;
-    }
-
-    public StartDBInstanceRequest setTargetDedicatedHostIdForLog(String targetDedicatedHostIdForLog) {
-        this.targetDedicatedHostIdForLog = targetDedicatedHostIdForLog;
-        return this;
-    }
-    public String getTargetDedicatedHostIdForLog() {
-        return this.targetDedicatedHostIdForLog;
-    }
-
-    public StartDBInstanceRequest setEffectiveTime(String effectiveTime) {
-        this.effectiveTime = effectiveTime;
-        return this;
-    }
-    public String getEffectiveTime() {
-        return this.effectiveTime;
-    }
-
-    public StartDBInstanceRequest setSpecifiedTime(String specifiedTime) {
-        this.specifiedTime = specifiedTime;
-        return this;
-    }
-    public String getSpecifiedTime() {
-        return this.specifiedTime;
-    }
-
-    public StartDBInstanceRequest setTargetDBInstanceClass(String targetDBInstanceClass) {
-        this.targetDBInstanceClass = targetDBInstanceClass;
-        return this;
-    }
-    public String getTargetDBInstanceClass() {
-        return this.targetDBInstanceClass;
-    }
-
-    public StartDBInstanceRequest setEngineVersion(String engineVersion) {
-        this.engineVersion = engineVersion;
-        return this;
-    }
-    public String getEngineVersion() {
-        return this.engineVersion;
-    }
-
-    public StartDBInstanceRequest setDBInstanceTransType(Integer DBInstanceTransType) {
-        this.DBInstanceTransType = DBInstanceTransType;
-        return this;
-    }
-    public Integer getDBInstanceTransType() {
-        return this.DBInstanceTransType;
-    }
-
-    public StartDBInstanceRequest setStorage(Integer storage) {
-        this.storage = storage;
-        return this;
-    }
-    public Integer getStorage() {
-        return this.storage;
     }
 
     public StartDBInstanceRequest setVSwitchId(String vSwitchId) {

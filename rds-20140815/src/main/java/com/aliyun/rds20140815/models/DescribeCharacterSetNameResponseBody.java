@@ -4,18 +4,26 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeCharacterSetNameResponseBody extends TeaModel {
+    @NameInMap("CharacterSetNameItems")
+    public DescribeCharacterSetNameResponseBodyCharacterSetNameItems characterSetNameItems;
+
     @NameInMap("Engine")
     public String engine;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("CharacterSetNameItems")
-    public DescribeCharacterSetNameResponseBodyCharacterSetNameItems characterSetNameItems;
-
     public static DescribeCharacterSetNameResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCharacterSetNameResponseBody self = new DescribeCharacterSetNameResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCharacterSetNameResponseBody setCharacterSetNameItems(DescribeCharacterSetNameResponseBodyCharacterSetNameItems characterSetNameItems) {
+        this.characterSetNameItems = characterSetNameItems;
+        return this;
+    }
+    public DescribeCharacterSetNameResponseBodyCharacterSetNameItems getCharacterSetNameItems() {
+        return this.characterSetNameItems;
     }
 
     public DescribeCharacterSetNameResponseBody setEngine(String engine) {
@@ -32,14 +40,6 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeCharacterSetNameResponseBody setCharacterSetNameItems(DescribeCharacterSetNameResponseBodyCharacterSetNameItems characterSetNameItems) {
-        this.characterSetNameItems = characterSetNameItems;
-        return this;
-    }
-    public DescribeCharacterSetNameResponseBodyCharacterSetNameItems getCharacterSetNameItems() {
-        return this.characterSetNameItems;
     }
 
     public static class DescribeCharacterSetNameResponseBodyCharacterSetNameItems extends TeaModel {

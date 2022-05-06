@@ -4,18 +4,26 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class StartDBInstanceResponseBody extends TeaModel {
+    @NameInMap("MigrationId")
+    public Integer migrationId;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TaskId")
     public Integer taskId;
 
-    @NameInMap("MigrationId")
-    public Integer migrationId;
-
     public static StartDBInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartDBInstanceResponseBody self = new StartDBInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public StartDBInstanceResponseBody setMigrationId(Integer migrationId) {
+        this.migrationId = migrationId;
+        return this;
+    }
+    public Integer getMigrationId() {
+        return this.migrationId;
     }
 
     public StartDBInstanceResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class StartDBInstanceResponseBody extends TeaModel {
     }
     public Integer getTaskId() {
         return this.taskId;
-    }
-
-    public StartDBInstanceResponseBody setMigrationId(Integer migrationId) {
-        this.migrationId = migrationId;
-        return this;
-    }
-    public Integer getMigrationId() {
-        return this.migrationId;
     }
 
 }

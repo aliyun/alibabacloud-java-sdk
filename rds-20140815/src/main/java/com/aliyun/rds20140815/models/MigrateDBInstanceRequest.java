@@ -4,8 +4,20 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class MigrateDBInstanceRequest extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("DedicatedHostGroupId")
+    public String dedicatedHostGroupId;
+
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,14 +25,8 @@ public class MigrateDBInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DedicatedHostGroupId")
-    public String dedicatedHostGroupId;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("SpecifiedTime")
+    public String specifiedTime;
 
     @NameInMap("TargetDedicatedHostIdForMaster")
     public String targetDedicatedHostIdForMaster;
@@ -28,21 +34,39 @@ public class MigrateDBInstanceRequest extends TeaModel {
     @NameInMap("TargetDedicatedHostIdForSlave")
     public String targetDedicatedHostIdForSlave;
 
-    @NameInMap("EffectiveTime")
-    public String effectiveTime;
-
-    @NameInMap("SpecifiedTime")
-    public String specifiedTime;
+    @NameInMap("ZoneIdForFollower")
+    public String zoneIdForFollower;
 
     @NameInMap("ZoneIdForLog")
     public String zoneIdForLog;
 
-    @NameInMap("ZoneIdForFollower")
-    public String zoneIdForFollower;
-
     public static MigrateDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         MigrateDBInstanceRequest self = new MigrateDBInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public MigrateDBInstanceRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public MigrateDBInstanceRequest setDedicatedHostGroupId(String dedicatedHostGroupId) {
+        this.dedicatedHostGroupId = dedicatedHostGroupId;
+        return this;
+    }
+    public String getDedicatedHostGroupId() {
+        return this.dedicatedHostGroupId;
+    }
+
+    public MigrateDBInstanceRequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+    }
+    public String getEffectiveTime() {
+        return this.effectiveTime;
     }
 
     public MigrateDBInstanceRequest setOwnerId(Long ownerId) {
@@ -51,6 +75,14 @@ public class MigrateDBInstanceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public MigrateDBInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public MigrateDBInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -69,28 +101,12 @@ public class MigrateDBInstanceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public MigrateDBInstanceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public MigrateDBInstanceRequest setSpecifiedTime(String specifiedTime) {
+        this.specifiedTime = specifiedTime;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public MigrateDBInstanceRequest setDedicatedHostGroupId(String dedicatedHostGroupId) {
-        this.dedicatedHostGroupId = dedicatedHostGroupId;
-        return this;
-    }
-    public String getDedicatedHostGroupId() {
-        return this.dedicatedHostGroupId;
-    }
-
-    public MigrateDBInstanceRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getSpecifiedTime() {
+        return this.specifiedTime;
     }
 
     public MigrateDBInstanceRequest setTargetDedicatedHostIdForMaster(String targetDedicatedHostIdForMaster) {
@@ -109,20 +125,12 @@ public class MigrateDBInstanceRequest extends TeaModel {
         return this.targetDedicatedHostIdForSlave;
     }
 
-    public MigrateDBInstanceRequest setEffectiveTime(String effectiveTime) {
-        this.effectiveTime = effectiveTime;
+    public MigrateDBInstanceRequest setZoneIdForFollower(String zoneIdForFollower) {
+        this.zoneIdForFollower = zoneIdForFollower;
         return this;
     }
-    public String getEffectiveTime() {
-        return this.effectiveTime;
-    }
-
-    public MigrateDBInstanceRequest setSpecifiedTime(String specifiedTime) {
-        this.specifiedTime = specifiedTime;
-        return this;
-    }
-    public String getSpecifiedTime() {
-        return this.specifiedTime;
+    public String getZoneIdForFollower() {
+        return this.zoneIdForFollower;
     }
 
     public MigrateDBInstanceRequest setZoneIdForLog(String zoneIdForLog) {
@@ -131,14 +139,6 @@ public class MigrateDBInstanceRequest extends TeaModel {
     }
     public String getZoneIdForLog() {
         return this.zoneIdForLog;
-    }
-
-    public MigrateDBInstanceRequest setZoneIdForFollower(String zoneIdForFollower) {
-        this.zoneIdForFollower = zoneIdForFollower;
-        return this;
-    }
-    public String getZoneIdForFollower() {
-        return this.zoneIdForFollower;
     }
 
 }

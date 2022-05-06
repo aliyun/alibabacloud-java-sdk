@@ -4,8 +4,20 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class GrantOperatorPermissionRequest extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("ExpiredTime")
+    public String expiredTime;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Privileges")
+    public String privileges;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,45 +25,9 @@ public class GrantOperatorPermissionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("ExpiredTime")
-    public String expiredTime;
-
-    @NameInMap("Privileges")
-    public String privileges;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static GrantOperatorPermissionRequest build(java.util.Map<String, ?> map) throws Exception {
         GrantOperatorPermissionRequest self = new GrantOperatorPermissionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GrantOperatorPermissionRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public GrantOperatorPermissionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public GrantOperatorPermissionRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public GrantOperatorPermissionRequest setDBInstanceId(String DBInstanceId) {
@@ -70,6 +46,22 @@ public class GrantOperatorPermissionRequest extends TeaModel {
         return this.expiredTime;
     }
 
+    public GrantOperatorPermissionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public GrantOperatorPermissionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public GrantOperatorPermissionRequest setPrivileges(String privileges) {
         this.privileges = privileges;
         return this;
@@ -78,12 +70,20 @@ public class GrantOperatorPermissionRequest extends TeaModel {
         return this.privileges;
     }
 
-    public GrantOperatorPermissionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public GrantOperatorPermissionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public GrantOperatorPermissionRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

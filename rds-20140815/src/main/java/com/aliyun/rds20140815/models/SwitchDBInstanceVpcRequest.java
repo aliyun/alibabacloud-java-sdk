@@ -4,11 +4,14 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class SwitchDBInstanceVpcRequest extends TeaModel {
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    @NameInMap("PrivateIpAddress")
+    public String privateIpAddress;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("VPCId")
     public String VPCId;
@@ -16,20 +19,9 @@ public class SwitchDBInstanceVpcRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    @NameInMap("PrivateIpAddress")
-    public String privateIpAddress;
-
     public static SwitchDBInstanceVpcRequest build(java.util.Map<String, ?> map) throws Exception {
         SwitchDBInstanceVpcRequest self = new SwitchDBInstanceVpcRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SwitchDBInstanceVpcRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public SwitchDBInstanceVpcRequest setDBInstanceId(String DBInstanceId) {
@@ -38,6 +30,22 @@ public class SwitchDBInstanceVpcRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public SwitchDBInstanceVpcRequest setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
+    public SwitchDBInstanceVpcRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public SwitchDBInstanceVpcRequest setVPCId(String VPCId) {
@@ -54,14 +62,6 @@ public class SwitchDBInstanceVpcRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
-    }
-
-    public SwitchDBInstanceVpcRequest setPrivateIpAddress(String privateIpAddress) {
-        this.privateIpAddress = privateIpAddress;
-        return this;
-    }
-    public String getPrivateIpAddress() {
-        return this.privateIpAddress;
     }
 
 }

@@ -4,20 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
+    @NameInMap("Creator")
+    public String creator;
+
     @NameInMap("DeleteDate")
     public String deleteDate;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("Origin")
-    public String origin;
-
-    @NameInMap("MaterialExpireTime")
-    public String materialExpireTime;
+    @NameInMap("EncryptionKey")
+    public String encryptionKey;
 
     @NameInMap("EncryptionKeyStatus")
     public String encryptionKeyStatus;
@@ -25,15 +22,26 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     @NameInMap("KeyUsage")
     public String keyUsage;
 
-    @NameInMap("EncryptionKey")
-    public String encryptionKey;
+    @NameInMap("MaterialExpireTime")
+    public String materialExpireTime;
 
-    @NameInMap("Creator")
-    public String creator;
+    @NameInMap("Origin")
+    public String origin;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDBInstanceEncryptionKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceEncryptionKeyResponseBody self = new DescribeDBInstanceEncryptionKeyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBInstanceEncryptionKeyResponseBody setCreator(String creator) {
+        this.creator = creator;
+        return this;
+    }
+    public String getCreator() {
+        return this.creator;
     }
 
     public DescribeDBInstanceEncryptionKeyResponseBody setDeleteDate(String deleteDate) {
@@ -44,14 +52,6 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         return this.deleteDate;
     }
 
-    public DescribeDBInstanceEncryptionKeyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDBInstanceEncryptionKeyResponseBody setDescription(String description) {
         this.description = description;
         return this;
@@ -60,20 +60,12 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         return this.description;
     }
 
-    public DescribeDBInstanceEncryptionKeyResponseBody setOrigin(String origin) {
-        this.origin = origin;
+    public DescribeDBInstanceEncryptionKeyResponseBody setEncryptionKey(String encryptionKey) {
+        this.encryptionKey = encryptionKey;
         return this;
     }
-    public String getOrigin() {
-        return this.origin;
-    }
-
-    public DescribeDBInstanceEncryptionKeyResponseBody setMaterialExpireTime(String materialExpireTime) {
-        this.materialExpireTime = materialExpireTime;
-        return this;
-    }
-    public String getMaterialExpireTime() {
-        return this.materialExpireTime;
+    public String getEncryptionKey() {
+        return this.encryptionKey;
     }
 
     public DescribeDBInstanceEncryptionKeyResponseBody setEncryptionKeyStatus(String encryptionKeyStatus) {
@@ -92,20 +84,28 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         return this.keyUsage;
     }
 
-    public DescribeDBInstanceEncryptionKeyResponseBody setEncryptionKey(String encryptionKey) {
-        this.encryptionKey = encryptionKey;
+    public DescribeDBInstanceEncryptionKeyResponseBody setMaterialExpireTime(String materialExpireTime) {
+        this.materialExpireTime = materialExpireTime;
         return this;
     }
-    public String getEncryptionKey() {
-        return this.encryptionKey;
+    public String getMaterialExpireTime() {
+        return this.materialExpireTime;
     }
 
-    public DescribeDBInstanceEncryptionKeyResponseBody setCreator(String creator) {
-        this.creator = creator;
+    public DescribeDBInstanceEncryptionKeyResponseBody setOrigin(String origin) {
+        this.origin = origin;
         return this;
     }
-    public String getCreator() {
-        return this.creator;
+    public String getOrigin() {
+        return this.origin;
+    }
+
+    public DescribeDBInstanceEncryptionKeyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

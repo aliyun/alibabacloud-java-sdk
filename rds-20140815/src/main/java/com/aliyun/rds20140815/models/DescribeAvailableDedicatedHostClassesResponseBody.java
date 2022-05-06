@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableDedicatedHostClassesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("HostClasses")
     public DescribeAvailableDedicatedHostClassesResponseBodyHostClasses hostClasses;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeAvailableDedicatedHostClassesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableDedicatedHostClassesResponseBody self = new DescribeAvailableDedicatedHostClassesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAvailableDedicatedHostClassesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAvailableDedicatedHostClassesResponseBody setHostClasses(DescribeAvailableDedicatedHostClassesResponseBodyHostClasses hostClasses) {
@@ -29,6 +21,14 @@ public class DescribeAvailableDedicatedHostClassesResponseBody extends TeaModel 
     }
     public DescribeAvailableDedicatedHostClassesResponseBodyHostClasses getHostClasses() {
         return this.hostClasses;
+    }
+
+    public DescribeAvailableDedicatedHostClassesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeAvailableDedicatedHostClassesResponseBodyHostClassesHostClasses extends TeaModel {

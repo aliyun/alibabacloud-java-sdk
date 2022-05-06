@@ -4,14 +4,8 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateOnlineDatabaseTaskRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("CheckDBMode")
+    public String checkDBMode;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -25,39 +19,29 @@ public class CreateOnlineDatabaseTaskRequest extends TeaModel {
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;
 
-    @NameInMap("CheckDBMode")
-    public String checkDBMode;
-
     @NameInMap("OwnerAccount")
     public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static CreateOnlineDatabaseTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOnlineDatabaseTaskRequest self = new CreateOnlineDatabaseTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateOnlineDatabaseTaskRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CreateOnlineDatabaseTaskRequest setCheckDBMode(String checkDBMode) {
+        this.checkDBMode = checkDBMode;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateOnlineDatabaseTaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateOnlineDatabaseTaskRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getCheckDBMode() {
+        return this.checkDBMode;
     }
 
     public CreateOnlineDatabaseTaskRequest setClientToken(String clientToken) {
@@ -92,20 +76,36 @@ public class CreateOnlineDatabaseTaskRequest extends TeaModel {
         return this.migrateTaskId;
     }
 
-    public CreateOnlineDatabaseTaskRequest setCheckDBMode(String checkDBMode) {
-        this.checkDBMode = checkDBMode;
-        return this;
-    }
-    public String getCheckDBMode() {
-        return this.checkDBMode;
-    }
-
     public CreateOnlineDatabaseTaskRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public CreateOnlineDatabaseTaskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateOnlineDatabaseTaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateOnlineDatabaseTaskRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

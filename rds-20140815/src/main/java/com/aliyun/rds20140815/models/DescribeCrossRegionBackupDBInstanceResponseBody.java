@@ -4,30 +4,70 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
+    @NameInMap("Items")
+    public DescribeCrossRegionBackupDBInstanceResponseBodyItems items;
+
+    @NameInMap("ItemsNumbers")
+    public Integer itemsNumbers;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TotalRecords")
     public Integer totalRecords;
 
-    @NameInMap("ItemsNumbers")
-    public Integer itemsNumbers;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Items")
-    public DescribeCrossRegionBackupDBInstanceResponseBodyItems items;
-
     public static DescribeCrossRegionBackupDBInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCrossRegionBackupDBInstanceResponseBody self = new DescribeCrossRegionBackupDBInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCrossRegionBackupDBInstanceResponseBody setItems(DescribeCrossRegionBackupDBInstanceResponseBodyItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeCrossRegionBackupDBInstanceResponseBodyItems getItems() {
+        return this.items;
+    }
+
+    public DescribeCrossRegionBackupDBInstanceResponseBody setItemsNumbers(Integer itemsNumbers) {
+        this.itemsNumbers = itemsNumbers;
+        return this;
+    }
+    public Integer getItemsNumbers() {
+        return this.itemsNumbers;
+    }
+
+    public DescribeCrossRegionBackupDBInstanceResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeCrossRegionBackupDBInstanceResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeCrossRegionBackupDBInstanceResponseBody setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeCrossRegionBackupDBInstanceResponseBody setRequestId(String requestId) {
@@ -46,64 +86,42 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         return this.totalRecords;
     }
 
-    public DescribeCrossRegionBackupDBInstanceResponseBody setItemsNumbers(Integer itemsNumbers) {
-        this.itemsNumbers = itemsNumbers;
-        return this;
-    }
-    public Integer getItemsNumbers() {
-        return this.itemsNumbers;
-    }
-
-    public DescribeCrossRegionBackupDBInstanceResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeCrossRegionBackupDBInstanceResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeCrossRegionBackupDBInstanceResponseBody setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeCrossRegionBackupDBInstanceResponseBody setItems(DescribeCrossRegionBackupDBInstanceResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeCrossRegionBackupDBInstanceResponseBodyItems getItems() {
-        return this.items;
-    }
-
     public static class DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem extends TeaModel {
-        @NameInMap("LogBackupEnabledTime")
-        public String logBackupEnabledTime;
-
         @NameInMap("BackupEnabled")
         public String backupEnabled;
+
+        @NameInMap("BackupEnabledTime")
+        public String backupEnabledTime;
+
+        @NameInMap("CrossBackupRegion")
+        public String crossBackupRegion;
+
+        @NameInMap("CrossBackupType")
+        public String crossBackupType;
+
+        @NameInMap("DBInstanceDescription")
+        public String DBInstanceDescription;
+
+        @NameInMap("DBInstanceId")
+        public String DBInstanceId;
 
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
-        @NameInMap("LockMode")
-        public String lockMode;
+        @NameInMap("Engine")
+        public String engine;
 
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        @NameInMap("LockMode")
+        public String lockMode;
+
         @NameInMap("LogBackupEnabled")
         public String logBackupEnabled;
+
+        @NameInMap("LogBackupEnabledTime")
+        public String logBackupEnabledTime;
 
         @NameInMap("RetentType")
         public Integer retentType;
@@ -111,35 +129,9 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         @NameInMap("Retention")
         public Integer retention;
 
-        @NameInMap("CrossBackupType")
-        public String crossBackupType;
-
-        @NameInMap("CrossBackupRegion")
-        public String crossBackupRegion;
-
-        @NameInMap("DBInstanceId")
-        public String DBInstanceId;
-
-        @NameInMap("Engine")
-        public String engine;
-
-        @NameInMap("BackupEnabledTime")
-        public String backupEnabledTime;
-
-        @NameInMap("DBInstanceDescription")
-        public String DBInstanceDescription;
-
         public static DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem self = new DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setLogBackupEnabledTime(String logBackupEnabledTime) {
-            this.logBackupEnabledTime = logBackupEnabledTime;
-            return this;
-        }
-        public String getLogBackupEnabledTime() {
-            return this.logBackupEnabledTime;
         }
 
         public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setBackupEnabled(String backupEnabled) {
@@ -150,6 +142,46 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             return this.backupEnabled;
         }
 
+        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setBackupEnabledTime(String backupEnabledTime) {
+            this.backupEnabledTime = backupEnabledTime;
+            return this;
+        }
+        public String getBackupEnabledTime() {
+            return this.backupEnabledTime;
+        }
+
+        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setCrossBackupRegion(String crossBackupRegion) {
+            this.crossBackupRegion = crossBackupRegion;
+            return this;
+        }
+        public String getCrossBackupRegion() {
+            return this.crossBackupRegion;
+        }
+
+        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setCrossBackupType(String crossBackupType) {
+            this.crossBackupType = crossBackupType;
+            return this;
+        }
+        public String getCrossBackupType() {
+            return this.crossBackupType;
+        }
+
+        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setDBInstanceDescription(String DBInstanceDescription) {
+            this.DBInstanceDescription = DBInstanceDescription;
+            return this;
+        }
+        public String getDBInstanceDescription() {
+            return this.DBInstanceDescription;
+        }
+
+        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
         public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setDBInstanceStatus(String DBInstanceStatus) {
             this.DBInstanceStatus = DBInstanceStatus;
             return this;
@@ -158,12 +190,12 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             return this.DBInstanceStatus;
         }
 
-        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setLockMode(String lockMode) {
-            this.lockMode = lockMode;
+        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setEngine(String engine) {
+            this.engine = engine;
             return this;
         }
-        public String getLockMode() {
-            return this.lockMode;
+        public String getEngine() {
+            return this.engine;
         }
 
         public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setEngineVersion(String engineVersion) {
@@ -174,12 +206,28 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             return this.engineVersion;
         }
 
+        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setLockMode(String lockMode) {
+            this.lockMode = lockMode;
+            return this;
+        }
+        public String getLockMode() {
+            return this.lockMode;
+        }
+
         public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setLogBackupEnabled(String logBackupEnabled) {
             this.logBackupEnabled = logBackupEnabled;
             return this;
         }
         public String getLogBackupEnabled() {
             return this.logBackupEnabled;
+        }
+
+        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setLogBackupEnabledTime(String logBackupEnabledTime) {
+            this.logBackupEnabledTime = logBackupEnabledTime;
+            return this;
+        }
+        public String getLogBackupEnabledTime() {
+            return this.logBackupEnabledTime;
         }
 
         public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setRetentType(Integer retentType) {
@@ -196,54 +244,6 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         }
         public Integer getRetention() {
             return this.retention;
-        }
-
-        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setCrossBackupType(String crossBackupType) {
-            this.crossBackupType = crossBackupType;
-            return this;
-        }
-        public String getCrossBackupType() {
-            return this.crossBackupType;
-        }
-
-        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setCrossBackupRegion(String crossBackupRegion) {
-            this.crossBackupRegion = crossBackupRegion;
-            return this;
-        }
-        public String getCrossBackupRegion() {
-            return this.crossBackupRegion;
-        }
-
-        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setDBInstanceId(String DBInstanceId) {
-            this.DBInstanceId = DBInstanceId;
-            return this;
-        }
-        public String getDBInstanceId() {
-            return this.DBInstanceId;
-        }
-
-        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setEngine(String engine) {
-            this.engine = engine;
-            return this;
-        }
-        public String getEngine() {
-            return this.engine;
-        }
-
-        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setBackupEnabledTime(String backupEnabledTime) {
-            this.backupEnabledTime = backupEnabledTime;
-            return this;
-        }
-        public String getBackupEnabledTime() {
-            return this.backupEnabledTime;
-        }
-
-        public DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem setDBInstanceDescription(String DBInstanceDescription) {
-            this.DBInstanceDescription = DBInstanceDescription;
-            return this;
-        }
-        public String getDBInstanceDescription() {
-            return this.DBInstanceDescription;
         }
 
     }

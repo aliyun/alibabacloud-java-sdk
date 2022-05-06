@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceProxyConfigurationRequest extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,12 +16,17 @@ public class DescribeDBInstanceProxyConfigurationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
     public static DescribeDBInstanceProxyConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceProxyConfigurationRequest self = new DescribeDBInstanceProxyConfigurationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBInstanceProxyConfigurationRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     public DescribeDBInstanceProxyConfigurationRequest setOwnerId(Long ownerId) {
@@ -43,14 +51,6 @@ public class DescribeDBInstanceProxyConfigurationRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeDBInstanceProxyConfigurationRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
     }
 
 }

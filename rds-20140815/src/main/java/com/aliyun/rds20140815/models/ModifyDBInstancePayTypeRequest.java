@@ -4,14 +4,8 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstancePayTypeRequest extends TeaModel {
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
-
-    @NameInMap("UsedTime")
-    public Integer usedTime;
 
     @NameInMap("PayType")
     public String payType;
@@ -19,17 +13,15 @@ public class ModifyDBInstancePayTypeRequest extends TeaModel {
     @NameInMap("Period")
     public String period;
 
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("UsedTime")
+    public Integer usedTime;
+
     public static ModifyDBInstancePayTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstancePayTypeRequest self = new ModifyDBInstancePayTypeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDBInstancePayTypeRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public ModifyDBInstancePayTypeRequest setDBInstanceId(String DBInstanceId) {
@@ -38,14 +30,6 @@ public class ModifyDBInstancePayTypeRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
-    }
-
-    public ModifyDBInstancePayTypeRequest setUsedTime(Integer usedTime) {
-        this.usedTime = usedTime;
-        return this;
-    }
-    public Integer getUsedTime() {
-        return this.usedTime;
     }
 
     public ModifyDBInstancePayTypeRequest setPayType(String payType) {
@@ -62,6 +46,22 @@ public class ModifyDBInstancePayTypeRequest extends TeaModel {
     }
     public String getPeriod() {
         return this.period;
+    }
+
+    public ModifyDBInstancePayTypeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyDBInstancePayTypeRequest setUsedTime(Integer usedTime) {
+        this.usedTime = usedTime;
+        return this;
+    }
+    public Integer getUsedTime() {
+        return this.usedTime;
     }
 
 }

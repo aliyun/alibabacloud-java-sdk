@@ -4,6 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeMigrateTaskByIdRequest extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("MigrateTaskId")
+    public String migrateTaskId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class DescribeMigrateTaskByIdRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("MigrateTaskId")
-    public String migrateTaskId;
-
     public static DescribeMigrateTaskByIdRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMigrateTaskByIdRequest self = new DescribeMigrateTaskByIdRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMigrateTaskByIdRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeMigrateTaskByIdRequest setMigrateTaskId(String migrateTaskId) {
+        this.migrateTaskId = migrateTaskId;
+        return this;
+    }
+    public String getMigrateTaskId() {
+        return this.migrateTaskId;
     }
 
     public DescribeMigrateTaskByIdRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class DescribeMigrateTaskByIdRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeMigrateTaskByIdRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public DescribeMigrateTaskByIdRequest setMigrateTaskId(String migrateTaskId) {
-        this.migrateTaskId = migrateTaskId;
-        return this;
-    }
-    public String getMigrateTaskId() {
-        return this.migrateTaskId;
     }
 
 }

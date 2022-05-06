@@ -4,17 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    @NameInMap("DBProxyConnectStringNetType")
+    public String DBProxyConnectStringNetType;
 
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
@@ -25,36 +19,18 @@ public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
     @NameInMap("DBProxyNewConnectStringPort")
     public String DBProxyNewConnectStringPort;
 
-    @NameInMap("DBProxyConnectStringNetType")
-    public String DBProxyConnectStringNetType;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyDBProxyEndpointAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBProxyEndpointAddressRequest self = new ModifyDBProxyEndpointAddressRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDBProxyEndpointAddressRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyDBProxyEndpointAddressRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyDBProxyEndpointAddressRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public ModifyDBProxyEndpointAddressRequest setDBInstanceId(String DBInstanceId) {
@@ -63,6 +39,14 @@ public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifyDBProxyEndpointAddressRequest setDBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
+        this.DBProxyConnectStringNetType = DBProxyConnectStringNetType;
+        return this;
+    }
+    public String getDBProxyConnectStringNetType() {
+        return this.DBProxyConnectStringNetType;
     }
 
     public ModifyDBProxyEndpointAddressRequest setDBProxyEndpointId(String DBProxyEndpointId) {
@@ -89,12 +73,28 @@ public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
         return this.DBProxyNewConnectStringPort;
     }
 
-    public ModifyDBProxyEndpointAddressRequest setDBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
-        this.DBProxyConnectStringNetType = DBProxyConnectStringNetType;
+    public ModifyDBProxyEndpointAddressRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getDBProxyConnectStringNetType() {
-        return this.DBProxyConnectStringNetType;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyDBProxyEndpointAddressRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyDBProxyEndpointAddressRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

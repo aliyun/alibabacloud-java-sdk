@@ -4,8 +4,8 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ConfigParameters")
+    public DescribeParametersResponseBodyConfigParameters configParameters;
 
     @NameInMap("Engine")
     public String engine;
@@ -13,8 +13,8 @@ public class DescribeParametersResponseBody extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
-    @NameInMap("ConfigParameters")
-    public DescribeParametersResponseBodyConfigParameters configParameters;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("RunningParameters")
     public DescribeParametersResponseBodyRunningParameters runningParameters;
@@ -24,12 +24,12 @@ public class DescribeParametersResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeParametersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeParametersResponseBody setConfigParameters(DescribeParametersResponseBodyConfigParameters configParameters) {
+        this.configParameters = configParameters;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public DescribeParametersResponseBodyConfigParameters getConfigParameters() {
+        return this.configParameters;
     }
 
     public DescribeParametersResponseBody setEngine(String engine) {
@@ -48,12 +48,12 @@ public class DescribeParametersResponseBody extends TeaModel {
         return this.engineVersion;
     }
 
-    public DescribeParametersResponseBody setConfigParameters(DescribeParametersResponseBodyConfigParameters configParameters) {
-        this.configParameters = configParameters;
+    public DescribeParametersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribeParametersResponseBodyConfigParameters getConfigParameters() {
-        return this.configParameters;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeParametersResponseBody setRunningParameters(DescribeParametersResponseBodyRunningParameters runningParameters) {

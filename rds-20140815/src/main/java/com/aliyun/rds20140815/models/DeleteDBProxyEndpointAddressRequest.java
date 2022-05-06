@@ -4,29 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteDBProxyEndpointAddressRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
-
-    @NameInMap("DBProxyEndpointId")
-    public String DBProxyEndpointId;
 
     @NameInMap("DBProxyConnectStringNetType")
     public String DBProxyConnectStringNetType;
 
+    @NameInMap("DBProxyEndpointId")
+    public String DBProxyEndpointId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DeleteDBProxyEndpointAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDBProxyEndpointAddressRequest self = new DeleteDBProxyEndpointAddressRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteDBProxyEndpointAddressRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DeleteDBProxyEndpointAddressRequest setDBInstanceId(String DBInstanceId) {
@@ -37,6 +29,14 @@ public class DeleteDBProxyEndpointAddressRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
+    public DeleteDBProxyEndpointAddressRequest setDBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
+        this.DBProxyConnectStringNetType = DBProxyConnectStringNetType;
+        return this;
+    }
+    public String getDBProxyConnectStringNetType() {
+        return this.DBProxyConnectStringNetType;
+    }
+
     public DeleteDBProxyEndpointAddressRequest setDBProxyEndpointId(String DBProxyEndpointId) {
         this.DBProxyEndpointId = DBProxyEndpointId;
         return this;
@@ -45,12 +45,12 @@ public class DeleteDBProxyEndpointAddressRequest extends TeaModel {
         return this.DBProxyEndpointId;
     }
 
-    public DeleteDBProxyEndpointAddressRequest setDBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
-        this.DBProxyConnectStringNetType = DBProxyConnectStringNetType;
+    public DeleteDBProxyEndpointAddressRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDBProxyConnectStringNetType() {
-        return this.DBProxyConnectStringNetType;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -4,6 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class SwitchDBInstanceHARequest extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
+    @NameInMap("Force")
+    public String force;
+
+    @NameInMap("NodeId")
+    public String nodeId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,24 +28,49 @@ public class SwitchDBInstanceHARequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("NodeId")
-    public String nodeId;
-
-    @NameInMap("Force")
-    public String force;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("EffectiveTime")
-    public String effectiveTime;
-
     public static SwitchDBInstanceHARequest build(java.util.Map<String, ?> map) throws Exception {
         SwitchDBInstanceHARequest self = new SwitchDBInstanceHARequest();
         return TeaModel.build(map, self);
+    }
+
+    public SwitchDBInstanceHARequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public SwitchDBInstanceHARequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+    }
+    public String getEffectiveTime() {
+        return this.effectiveTime;
+    }
+
+    public SwitchDBInstanceHARequest setForce(String force) {
+        this.force = force;
+        return this;
+    }
+    public String getForce() {
+        return this.force;
+    }
+
+    public SwitchDBInstanceHARequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    public SwitchDBInstanceHARequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public SwitchDBInstanceHARequest setOwnerId(Long ownerId) {
@@ -55,46 +95,6 @@ public class SwitchDBInstanceHARequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public SwitchDBInstanceHARequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public SwitchDBInstanceHARequest setNodeId(String nodeId) {
-        this.nodeId = nodeId;
-        return this;
-    }
-    public String getNodeId() {
-        return this.nodeId;
-    }
-
-    public SwitchDBInstanceHARequest setForce(String force) {
-        this.force = force;
-        return this;
-    }
-    public String getForce() {
-        return this.force;
-    }
-
-    public SwitchDBInstanceHARequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public SwitchDBInstanceHARequest setEffectiveTime(String effectiveTime) {
-        this.effectiveTime = effectiveTime;
-        return this;
-    }
-    public String getEffectiveTime() {
-        return this.effectiveTime;
     }
 
 }

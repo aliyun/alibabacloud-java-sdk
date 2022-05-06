@@ -4,103 +4,42 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBProxyResponseBody extends TeaModel {
-    @NameInMap("DBProxyInstanceLatestMinorVersion")
-    public String DBProxyInstanceLatestMinorVersion;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DBProxyConnectStringItems")
+    public DescribeDBProxyResponseBodyDBProxyConnectStringItems DBProxyConnectStringItems;
 
     @NameInMap("DBProxyInstanceCurrentMinorVersion")
     public String DBProxyInstanceCurrentMinorVersion;
 
-    @NameInMap("DBProxyInstanceNum")
-    public Integer DBProxyInstanceNum;
-
-    @NameInMap("DBProxyInstanceType")
-    public String DBProxyInstanceType;
-
-    @NameInMap("DBProxyInstanceStatus")
-    public String DBProxyInstanceStatus;
-
-    @NameInMap("DBProxyServiceStatus")
-    public String DBProxyServiceStatus;
+    @NameInMap("DBProxyInstanceLatestMinorVersion")
+    public String DBProxyInstanceLatestMinorVersion;
 
     @NameInMap("DBProxyInstanceName")
     public String DBProxyInstanceName;
 
-    @NameInMap("DBProxyConnectStringItems")
-    public DescribeDBProxyResponseBodyDBProxyConnectStringItems DBProxyConnectStringItems;
+    @NameInMap("DBProxyInstanceNum")
+    public Integer DBProxyInstanceNum;
+
+    @NameInMap("DBProxyInstanceSize")
+    public String DBProxyInstanceSize;
+
+    @NameInMap("DBProxyInstanceStatus")
+    public String DBProxyInstanceStatus;
+
+    @NameInMap("DBProxyInstanceType")
+    public String DBProxyInstanceType;
+
+    @NameInMap("DBProxyServiceStatus")
+    public String DBProxyServiceStatus;
 
     @NameInMap("DbProxyEndpointItems")
     public DescribeDBProxyResponseBodyDbProxyEndpointItems dbProxyEndpointItems;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeDBProxyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBProxyResponseBody self = new DescribeDBProxyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBProxyResponseBody setDBProxyInstanceLatestMinorVersion(String DBProxyInstanceLatestMinorVersion) {
-        this.DBProxyInstanceLatestMinorVersion = DBProxyInstanceLatestMinorVersion;
-        return this;
-    }
-    public String getDBProxyInstanceLatestMinorVersion() {
-        return this.DBProxyInstanceLatestMinorVersion;
-    }
-
-    public DescribeDBProxyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDBProxyResponseBody setDBProxyInstanceCurrentMinorVersion(String DBProxyInstanceCurrentMinorVersion) {
-        this.DBProxyInstanceCurrentMinorVersion = DBProxyInstanceCurrentMinorVersion;
-        return this;
-    }
-    public String getDBProxyInstanceCurrentMinorVersion() {
-        return this.DBProxyInstanceCurrentMinorVersion;
-    }
-
-    public DescribeDBProxyResponseBody setDBProxyInstanceNum(Integer DBProxyInstanceNum) {
-        this.DBProxyInstanceNum = DBProxyInstanceNum;
-        return this;
-    }
-    public Integer getDBProxyInstanceNum() {
-        return this.DBProxyInstanceNum;
-    }
-
-    public DescribeDBProxyResponseBody setDBProxyInstanceType(String DBProxyInstanceType) {
-        this.DBProxyInstanceType = DBProxyInstanceType;
-        return this;
-    }
-    public String getDBProxyInstanceType() {
-        return this.DBProxyInstanceType;
-    }
-
-    public DescribeDBProxyResponseBody setDBProxyInstanceStatus(String DBProxyInstanceStatus) {
-        this.DBProxyInstanceStatus = DBProxyInstanceStatus;
-        return this;
-    }
-    public String getDBProxyInstanceStatus() {
-        return this.DBProxyInstanceStatus;
-    }
-
-    public DescribeDBProxyResponseBody setDBProxyServiceStatus(String DBProxyServiceStatus) {
-        this.DBProxyServiceStatus = DBProxyServiceStatus;
-        return this;
-    }
-    public String getDBProxyServiceStatus() {
-        return this.DBProxyServiceStatus;
-    }
-
-    public DescribeDBProxyResponseBody setDBProxyInstanceName(String DBProxyInstanceName) {
-        this.DBProxyInstanceName = DBProxyInstanceName;
-        return this;
-    }
-    public String getDBProxyInstanceName() {
-        return this.DBProxyInstanceName;
     }
 
     public DescribeDBProxyResponseBody setDBProxyConnectStringItems(DescribeDBProxyResponseBodyDBProxyConnectStringItems DBProxyConnectStringItems) {
@@ -111,6 +50,70 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         return this.DBProxyConnectStringItems;
     }
 
+    public DescribeDBProxyResponseBody setDBProxyInstanceCurrentMinorVersion(String DBProxyInstanceCurrentMinorVersion) {
+        this.DBProxyInstanceCurrentMinorVersion = DBProxyInstanceCurrentMinorVersion;
+        return this;
+    }
+    public String getDBProxyInstanceCurrentMinorVersion() {
+        return this.DBProxyInstanceCurrentMinorVersion;
+    }
+
+    public DescribeDBProxyResponseBody setDBProxyInstanceLatestMinorVersion(String DBProxyInstanceLatestMinorVersion) {
+        this.DBProxyInstanceLatestMinorVersion = DBProxyInstanceLatestMinorVersion;
+        return this;
+    }
+    public String getDBProxyInstanceLatestMinorVersion() {
+        return this.DBProxyInstanceLatestMinorVersion;
+    }
+
+    public DescribeDBProxyResponseBody setDBProxyInstanceName(String DBProxyInstanceName) {
+        this.DBProxyInstanceName = DBProxyInstanceName;
+        return this;
+    }
+    public String getDBProxyInstanceName() {
+        return this.DBProxyInstanceName;
+    }
+
+    public DescribeDBProxyResponseBody setDBProxyInstanceNum(Integer DBProxyInstanceNum) {
+        this.DBProxyInstanceNum = DBProxyInstanceNum;
+        return this;
+    }
+    public Integer getDBProxyInstanceNum() {
+        return this.DBProxyInstanceNum;
+    }
+
+    public DescribeDBProxyResponseBody setDBProxyInstanceSize(String DBProxyInstanceSize) {
+        this.DBProxyInstanceSize = DBProxyInstanceSize;
+        return this;
+    }
+    public String getDBProxyInstanceSize() {
+        return this.DBProxyInstanceSize;
+    }
+
+    public DescribeDBProxyResponseBody setDBProxyInstanceStatus(String DBProxyInstanceStatus) {
+        this.DBProxyInstanceStatus = DBProxyInstanceStatus;
+        return this;
+    }
+    public String getDBProxyInstanceStatus() {
+        return this.DBProxyInstanceStatus;
+    }
+
+    public DescribeDBProxyResponseBody setDBProxyInstanceType(String DBProxyInstanceType) {
+        this.DBProxyInstanceType = DBProxyInstanceType;
+        return this;
+    }
+    public String getDBProxyInstanceType() {
+        return this.DBProxyInstanceType;
+    }
+
+    public DescribeDBProxyResponseBody setDBProxyServiceStatus(String DBProxyServiceStatus) {
+        this.DBProxyServiceStatus = DBProxyServiceStatus;
+        return this;
+    }
+    public String getDBProxyServiceStatus() {
+        return this.DBProxyServiceStatus;
+    }
+
     public DescribeDBProxyResponseBody setDbProxyEndpointItems(DescribeDBProxyResponseBodyDbProxyEndpointItems dbProxyEndpointItems) {
         this.dbProxyEndpointItems = dbProxyEndpointItems;
         return this;
@@ -119,39 +122,47 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         return this.dbProxyEndpointItems;
     }
 
+    public DescribeDBProxyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems extends TeaModel {
-        @NameInMap("DBProxyConnectStringNetWorkType")
-        public String DBProxyConnectStringNetWorkType;
+        @NameInMap("DBProxyConnectString")
+        public String DBProxyConnectString;
 
         @NameInMap("DBProxyConnectStringNetType")
         public String DBProxyConnectStringNetType;
 
-        @NameInMap("DBProxyVpcInstanceId")
-        public String DBProxyVpcInstanceId;
-
-        @NameInMap("DBProxyEndpointName")
-        public String DBProxyEndpointName;
-
-        @NameInMap("DBProxyEndpointId")
-        public String DBProxyEndpointId;
+        @NameInMap("DBProxyConnectStringNetWorkType")
+        public String DBProxyConnectStringNetWorkType;
 
         @NameInMap("DBProxyConnectStringPort")
         public String DBProxyConnectStringPort;
 
-        @NameInMap("DBProxyConnectString")
-        public String DBProxyConnectString;
+        @NameInMap("DBProxyEndpointId")
+        public String DBProxyEndpointId;
+
+        @NameInMap("DBProxyEndpointName")
+        public String DBProxyEndpointName;
+
+        @NameInMap("DBProxyVpcInstanceId")
+        public String DBProxyVpcInstanceId;
 
         public static DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems self = new DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems setDBProxyConnectStringNetWorkType(String DBProxyConnectStringNetWorkType) {
-            this.DBProxyConnectStringNetWorkType = DBProxyConnectStringNetWorkType;
+        public DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems setDBProxyConnectString(String DBProxyConnectString) {
+            this.DBProxyConnectString = DBProxyConnectString;
             return this;
         }
-        public String getDBProxyConnectStringNetWorkType() {
-            return this.DBProxyConnectStringNetWorkType;
+        public String getDBProxyConnectString() {
+            return this.DBProxyConnectString;
         }
 
         public DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems setDBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
@@ -162,28 +173,12 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             return this.DBProxyConnectStringNetType;
         }
 
-        public DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems setDBProxyVpcInstanceId(String DBProxyVpcInstanceId) {
-            this.DBProxyVpcInstanceId = DBProxyVpcInstanceId;
+        public DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems setDBProxyConnectStringNetWorkType(String DBProxyConnectStringNetWorkType) {
+            this.DBProxyConnectStringNetWorkType = DBProxyConnectStringNetWorkType;
             return this;
         }
-        public String getDBProxyVpcInstanceId() {
-            return this.DBProxyVpcInstanceId;
-        }
-
-        public DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems setDBProxyEndpointName(String DBProxyEndpointName) {
-            this.DBProxyEndpointName = DBProxyEndpointName;
-            return this;
-        }
-        public String getDBProxyEndpointName() {
-            return this.DBProxyEndpointName;
-        }
-
-        public DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems setDBProxyEndpointId(String DBProxyEndpointId) {
-            this.DBProxyEndpointId = DBProxyEndpointId;
-            return this;
-        }
-        public String getDBProxyEndpointId() {
-            return this.DBProxyEndpointId;
+        public String getDBProxyConnectStringNetWorkType() {
+            return this.DBProxyConnectStringNetWorkType;
         }
 
         public DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems setDBProxyConnectStringPort(String DBProxyConnectStringPort) {
@@ -194,12 +189,28 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             return this.DBProxyConnectStringPort;
         }
 
-        public DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems setDBProxyConnectString(String DBProxyConnectString) {
-            this.DBProxyConnectString = DBProxyConnectString;
+        public DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems setDBProxyEndpointId(String DBProxyEndpointId) {
+            this.DBProxyEndpointId = DBProxyEndpointId;
             return this;
         }
-        public String getDBProxyConnectString() {
-            return this.DBProxyConnectString;
+        public String getDBProxyEndpointId() {
+            return this.DBProxyEndpointId;
+        }
+
+        public DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems setDBProxyEndpointName(String DBProxyEndpointName) {
+            this.DBProxyEndpointName = DBProxyEndpointName;
+            return this;
+        }
+        public String getDBProxyEndpointName() {
+            return this.DBProxyEndpointName;
+        }
+
+        public DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems setDBProxyVpcInstanceId(String DBProxyVpcInstanceId) {
+            this.DBProxyVpcInstanceId = DBProxyVpcInstanceId;
+            return this;
+        }
+        public String getDBProxyVpcInstanceId() {
+            return this.DBProxyVpcInstanceId;
         }
 
     }

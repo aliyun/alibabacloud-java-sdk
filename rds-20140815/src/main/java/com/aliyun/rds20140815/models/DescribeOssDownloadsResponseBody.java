@@ -7,14 +7,14 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Items")
+    public DescribeOssDownloadsResponseBodyItems items;
 
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;
 
-    @NameInMap("Items")
-    public DescribeOssDownloadsResponseBodyItems items;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeOssDownloadsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeOssDownloadsResponseBody self = new DescribeOssDownloadsResponseBody();
@@ -29,12 +29,12 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public DescribeOssDownloadsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeOssDownloadsResponseBody setItems(DescribeOssDownloadsResponseBodyItems items) {
+        this.items = items;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public DescribeOssDownloadsResponseBodyItems getItems() {
+        return this.items;
     }
 
     public DescribeOssDownloadsResponseBody setMigrateTaskId(String migrateTaskId) {
@@ -45,32 +45,26 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         return this.migrateTaskId;
     }
 
-    public DescribeOssDownloadsResponseBody setItems(DescribeOssDownloadsResponseBodyItems items) {
-        this.items = items;
+    public DescribeOssDownloadsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribeOssDownloadsResponseBodyItems getItems() {
-        return this.items;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeOssDownloadsResponseBodyItemsOssDownload extends TeaModel {
-        @NameInMap("EndTime")
-        public String endTime;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("BackupMode")
+        public String backupMode;
 
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("BackupMode")
-        public String backupMode;
+        @NameInMap("Description")
+        public String description;
 
-        @NameInMap("IsAvailable")
-        public String isAvailable;
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("FileName")
         public String fileName;
@@ -78,41 +72,15 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         @NameInMap("FileSize")
         public String fileSize;
 
+        @NameInMap("IsAvailable")
+        public String isAvailable;
+
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeOssDownloadsResponseBodyItemsOssDownload build(java.util.Map<String, ?> map) throws Exception {
             DescribeOssDownloadsResponseBodyItemsOssDownload self = new DescribeOssDownloadsResponseBodyItemsOssDownload();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeOssDownloadsResponseBodyItemsOssDownload setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeOssDownloadsResponseBodyItemsOssDownload setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeOssDownloadsResponseBodyItemsOssDownload setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeOssDownloadsResponseBodyItemsOssDownload setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
         public DescribeOssDownloadsResponseBodyItemsOssDownload setBackupMode(String backupMode) {
@@ -123,12 +91,28 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             return this.backupMode;
         }
 
-        public DescribeOssDownloadsResponseBodyItemsOssDownload setIsAvailable(String isAvailable) {
-            this.isAvailable = isAvailable;
+        public DescribeOssDownloadsResponseBodyItemsOssDownload setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getIsAvailable() {
-            return this.isAvailable;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeOssDownloadsResponseBodyItemsOssDownload setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeOssDownloadsResponseBodyItemsOssDownload setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public DescribeOssDownloadsResponseBodyItemsOssDownload setFileName(String fileName) {
@@ -145,6 +129,22 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         }
         public String getFileSize() {
             return this.fileSize;
+        }
+
+        public DescribeOssDownloadsResponseBodyItemsOssDownload setIsAvailable(String isAvailable) {
+            this.isAvailable = isAvailable;
+            return this;
+        }
+        public String getIsAvailable() {
+            return this.isAvailable;
+        }
+
+        public DescribeOssDownloadsResponseBodyItemsOssDownload setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

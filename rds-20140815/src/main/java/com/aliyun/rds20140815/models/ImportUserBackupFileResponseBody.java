@@ -4,26 +4,26 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ImportUserBackupFileResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public Boolean status;
+    @NameInMap("BackupId")
+    public String backupId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("BackupId")
-    public String backupId;
+    @NameInMap("Status")
+    public Boolean status;
 
     public static ImportUserBackupFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ImportUserBackupFileResponseBody self = new ImportUserBackupFileResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ImportUserBackupFileResponseBody setStatus(Boolean status) {
-        this.status = status;
+    public ImportUserBackupFileResponseBody setBackupId(String backupId) {
+        this.backupId = backupId;
         return this;
     }
-    public Boolean getStatus() {
-        return this.status;
+    public String getBackupId() {
+        return this.backupId;
     }
 
     public ImportUserBackupFileResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class ImportUserBackupFileResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ImportUserBackupFileResponseBody setBackupId(String backupId) {
-        this.backupId = backupId;
+    public ImportUserBackupFileResponseBody setStatus(Boolean status) {
+        this.status = status;
         return this;
     }
-    public String getBackupId() {
-        return this.backupId;
+    public Boolean getStatus() {
+        return this.status;
     }
 
 }

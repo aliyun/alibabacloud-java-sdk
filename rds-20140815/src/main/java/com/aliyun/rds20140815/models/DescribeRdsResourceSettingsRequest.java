@@ -7,14 +7,14 @@ public class DescribeRdsResourceSettingsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ResourceNiche")
+    public String resourceNiche;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("ResourceNiche")
-    public String resourceNiche;
 
     public static DescribeRdsResourceSettingsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRdsResourceSettingsRequest self = new DescribeRdsResourceSettingsRequest();
@@ -27,6 +27,14 @@ public class DescribeRdsResourceSettingsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeRdsResourceSettingsRequest setResourceNiche(String resourceNiche) {
+        this.resourceNiche = resourceNiche;
+        return this;
+    }
+    public String getResourceNiche() {
+        return this.resourceNiche;
     }
 
     public DescribeRdsResourceSettingsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -43,14 +51,6 @@ public class DescribeRdsResourceSettingsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeRdsResourceSettingsRequest setResourceNiche(String resourceNiche) {
-        this.resourceNiche = resourceNiche;
-        return this;
-    }
-    public String getResourceNiche() {
-        return this.resourceNiche;
     }
 
 }

@@ -4,11 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class TransformDBInstancePayTypeResponseBody extends TeaModel {
+    @NameInMap("ChargeType")
+    public String chargeType;
+
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("ExpiredTime")
     public String expiredTime;
@@ -16,12 +16,20 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
-    @NameInMap("ChargeType")
-    public String chargeType;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static TransformDBInstancePayTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TransformDBInstancePayTypeResponseBody self = new TransformDBInstancePayTypeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public TransformDBInstancePayTypeResponseBody setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public TransformDBInstancePayTypeResponseBody setDBInstanceId(String DBInstanceId) {
@@ -30,14 +38,6 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
-    }
-
-    public TransformDBInstancePayTypeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public TransformDBInstancePayTypeResponseBody setExpiredTime(String expiredTime) {
@@ -56,12 +56,12 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         return this.orderId;
     }
 
-    public TransformDBInstancePayTypeResponseBody setChargeType(String chargeType) {
-        this.chargeType = chargeType;
+    public TransformDBInstancePayTypeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getChargeType() {
-        return this.chargeType;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

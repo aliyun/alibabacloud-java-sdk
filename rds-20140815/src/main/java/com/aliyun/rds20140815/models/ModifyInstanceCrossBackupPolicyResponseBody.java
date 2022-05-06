@@ -7,11 +7,20 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     @NameInMap("BackupEnabled")
     public String backupEnabled;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("CrossBackupRegion")
+    public String crossBackupRegion;
+
+    @NameInMap("CrossBackupType")
+    public String crossBackupType;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
 
     @NameInMap("LogBackupEnabled")
     public String logBackupEnabled;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -19,17 +28,8 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     @NameInMap("RetentType")
     public Integer retentType;
 
-    @NameInMap("CrossBackupRegion")
-    public String crossBackupRegion;
-
-    @NameInMap("CrossBackupType")
-    public String crossBackupType;
-
     @NameInMap("Retention")
     public Integer retention;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
 
     public static ModifyInstanceCrossBackupPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceCrossBackupPolicyResponseBody self = new ModifyInstanceCrossBackupPolicyResponseBody();
@@ -42,38 +42,6 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     }
     public String getBackupEnabled() {
         return this.backupEnabled;
-    }
-
-    public ModifyInstanceCrossBackupPolicyResponseBody setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyInstanceCrossBackupPolicyResponseBody setLogBackupEnabled(String logBackupEnabled) {
-        this.logBackupEnabled = logBackupEnabled;
-        return this;
-    }
-    public String getLogBackupEnabled() {
-        return this.logBackupEnabled;
-    }
-
-    public ModifyInstanceCrossBackupPolicyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ModifyInstanceCrossBackupPolicyResponseBody setRetentType(Integer retentType) {
-        this.retentType = retentType;
-        return this;
-    }
-    public Integer getRetentType() {
-        return this.retentType;
     }
 
     public ModifyInstanceCrossBackupPolicyResponseBody setCrossBackupRegion(String crossBackupRegion) {
@@ -92,20 +60,52 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         return this.crossBackupType;
     }
 
-    public ModifyInstanceCrossBackupPolicyResponseBody setRetention(Integer retention) {
-        this.retention = retention;
-        return this;
-    }
-    public Integer getRetention() {
-        return this.retention;
-    }
-
     public ModifyInstanceCrossBackupPolicyResponseBody setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifyInstanceCrossBackupPolicyResponseBody setLogBackupEnabled(String logBackupEnabled) {
+        this.logBackupEnabled = logBackupEnabled;
+        return this;
+    }
+    public String getLogBackupEnabled() {
+        return this.logBackupEnabled;
+    }
+
+    public ModifyInstanceCrossBackupPolicyResponseBody setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyInstanceCrossBackupPolicyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyInstanceCrossBackupPolicyResponseBody setRetentType(Integer retentType) {
+        this.retentType = retentType;
+        return this;
+    }
+    public Integer getRetentType() {
+        return this.retentType;
+    }
+
+    public ModifyInstanceCrossBackupPolicyResponseBody setRetention(Integer retention) {
+        this.retention = retention;
+        return this;
+    }
+    public Integer getRetention() {
+        return this.retention;
     }
 
 }

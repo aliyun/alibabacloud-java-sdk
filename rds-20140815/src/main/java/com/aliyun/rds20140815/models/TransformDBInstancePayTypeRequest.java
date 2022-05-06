@@ -4,26 +4,23 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class TransformDBInstancePayTypeRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AutoRenew")
+    public String autoRenew;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("BusinessInfo")
+    public String businessInfo;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("UsedTime")
-    public Integer usedTime;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PayType")
     public String payType;
@@ -31,36 +28,34 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     @NameInMap("Period")
     public String period;
 
-    @NameInMap("BusinessInfo")
-    public String businessInfo;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("UsedTime")
+    public Integer usedTime;
 
     public static TransformDBInstancePayTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         TransformDBInstancePayTypeRequest self = new TransformDBInstancePayTypeRequest();
         return TeaModel.build(map, self);
     }
 
-    public TransformDBInstancePayTypeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public TransformDBInstancePayTypeRequest setAutoRenew(String autoRenew) {
+        this.autoRenew = autoRenew;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAutoRenew() {
+        return this.autoRenew;
     }
 
-    public TransformDBInstancePayTypeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public TransformDBInstancePayTypeRequest setBusinessInfo(String businessInfo) {
+        this.businessInfo = businessInfo;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public TransformDBInstancePayTypeRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getBusinessInfo() {
+        return this.businessInfo;
     }
 
     public TransformDBInstancePayTypeRequest setClientToken(String clientToken) {
@@ -71,14 +66,6 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public TransformDBInstancePayTypeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
     public TransformDBInstancePayTypeRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
@@ -87,12 +74,20 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public TransformDBInstancePayTypeRequest setUsedTime(Integer usedTime) {
-        this.usedTime = usedTime;
+    public TransformDBInstancePayTypeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public Integer getUsedTime() {
-        return this.usedTime;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public TransformDBInstancePayTypeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public TransformDBInstancePayTypeRequest setPayType(String payType) {
@@ -111,12 +106,28 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
         return this.period;
     }
 
-    public TransformDBInstancePayTypeRequest setBusinessInfo(String businessInfo) {
-        this.businessInfo = businessInfo;
+    public TransformDBInstancePayTypeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getBusinessInfo() {
-        return this.businessInfo;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public TransformDBInstancePayTypeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public TransformDBInstancePayTypeRequest setUsedTime(Integer usedTime) {
+        this.usedTime = usedTime;
+        return this;
+    }
+    public Integer getUsedTime() {
+        return this.usedTime;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeCollationTimeZonesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CollationTimeZones")
     public DescribeCollationTimeZonesResponseBodyCollationTimeZones collationTimeZones;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeCollationTimeZonesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCollationTimeZonesResponseBody self = new DescribeCollationTimeZonesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCollationTimeZonesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeCollationTimeZonesResponseBody setCollationTimeZones(DescribeCollationTimeZonesResponseBodyCollationTimeZones collationTimeZones) {
@@ -31,27 +23,35 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
         return this.collationTimeZones;
     }
 
+    public DescribeCollationTimeZonesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone extends TeaModel {
-        @NameInMap("TimeZone")
-        public String timeZone;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("StandardTimeOffset")
         public String standardTimeOffset;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("TimeZone")
+        public String timeZone;
 
         public static DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone self = new DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone setTimeZone(String timeZone) {
-            this.timeZone = timeZone;
+        public DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getTimeZone() {
-            return this.timeZone;
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone setStandardTimeOffset(String standardTimeOffset) {
@@ -62,12 +62,12 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
             return this.standardTimeOffset;
         }
 
-        public DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone setDescription(String description) {
-            this.description = description;
+        public DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getTimeZone() {
+            return this.timeZone;
         }
 
     }

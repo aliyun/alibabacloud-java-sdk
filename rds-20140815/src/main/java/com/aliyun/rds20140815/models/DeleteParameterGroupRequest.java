@@ -7,17 +7,17 @@ public class DeleteParameterGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ParameterGroupId")
+    public String parameterGroupId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ParameterGroupId")
-    public String parameterGroupId;
 
     public static DeleteParameterGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteParameterGroupRequest self = new DeleteParameterGroupRequest();
@@ -30,6 +30,22 @@ public class DeleteParameterGroupRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteParameterGroupRequest setParameterGroupId(String parameterGroupId) {
+        this.parameterGroupId = parameterGroupId;
+        return this;
+    }
+    public String getParameterGroupId() {
+        return this.parameterGroupId;
+    }
+
+    public DeleteParameterGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteParameterGroupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -46,22 +62,6 @@ public class DeleteParameterGroupRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteParameterGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteParameterGroupRequest setParameterGroupId(String parameterGroupId) {
-        this.parameterGroupId = parameterGroupId;
-        return this;
-    }
-    public String getParameterGroupId() {
-        return this.parameterGroupId;
     }
 
 }

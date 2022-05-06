@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class MigrateSecurityIPModeRequest extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,12 +16,17 @@ public class MigrateSecurityIPModeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
     public static MigrateSecurityIPModeRequest build(java.util.Map<String, ?> map) throws Exception {
         MigrateSecurityIPModeRequest self = new MigrateSecurityIPModeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public MigrateSecurityIPModeRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     public MigrateSecurityIPModeRequest setOwnerId(Long ownerId) {
@@ -43,14 +51,6 @@ public class MigrateSecurityIPModeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public MigrateSecurityIPModeRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
     }
 
 }

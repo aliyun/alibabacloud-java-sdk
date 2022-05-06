@@ -4,24 +4,32 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeErrorLogsResponseBody extends TeaModel {
+    @NameInMap("Items")
+    public DescribeErrorLogsResponseBodyItems items;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
-
-    @NameInMap("Items")
-    public DescribeErrorLogsResponseBodyItems items;
 
     public static DescribeErrorLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeErrorLogsResponseBody self = new DescribeErrorLogsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeErrorLogsResponseBody setItems(DescribeErrorLogsResponseBodyItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeErrorLogsResponseBodyItems getItems() {
+        return this.items;
     }
 
     public DescribeErrorLogsResponseBody setPageNumber(Integer pageNumber) {
@@ -32,14 +40,6 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeErrorLogsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeErrorLogsResponseBody setPageRecordCount(Integer pageRecordCount) {
         this.pageRecordCount = pageRecordCount;
         return this;
@@ -48,20 +48,20 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         return this.pageRecordCount;
     }
 
+    public DescribeErrorLogsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeErrorLogsResponseBody setTotalRecordCount(Integer totalRecordCount) {
         this.totalRecordCount = totalRecordCount;
         return this;
     }
     public Integer getTotalRecordCount() {
         return this.totalRecordCount;
-    }
-
-    public DescribeErrorLogsResponseBody setItems(DescribeErrorLogsResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeErrorLogsResponseBodyItems getItems() {
-        return this.items;
     }
 
     public static class DescribeErrorLogsResponseBodyItemsErrorLog extends TeaModel {

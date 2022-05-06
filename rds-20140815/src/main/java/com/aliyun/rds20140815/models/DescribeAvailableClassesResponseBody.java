@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableClassesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DBInstanceClasses")
     public java.util.List<DescribeAvailableClassesResponseBodyDBInstanceClasses> DBInstanceClasses;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeAvailableClassesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableClassesResponseBody self = new DescribeAvailableClassesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAvailableClassesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAvailableClassesResponseBody setDBInstanceClasses(java.util.List<DescribeAvailableClassesResponseBodyDBInstanceClasses> DBInstanceClasses) {
@@ -31,27 +23,35 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
         return this.DBInstanceClasses;
     }
 
+    public DescribeAvailableClassesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange extends TeaModel {
-        @NameInMap("Step")
-        public Integer step;
+        @NameInMap("MaxValue")
+        public Integer maxValue;
 
         @NameInMap("MinValue")
         public Integer minValue;
 
-        @NameInMap("MaxValue")
-        public Integer maxValue;
+        @NameInMap("Step")
+        public Integer step;
 
         public static DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange self = new DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange setStep(Integer step) {
-            this.step = step;
+        public DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange setMaxValue(Integer maxValue) {
+            this.maxValue = maxValue;
             return this;
         }
-        public Integer getStep() {
-            return this.step;
+        public Integer getMaxValue() {
+            return this.maxValue;
         }
 
         public DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange setMinValue(Integer minValue) {
@@ -62,12 +62,12 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
             return this.minValue;
         }
 
-        public DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange setMaxValue(Integer maxValue) {
-            this.maxValue = maxValue;
+        public DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange setStep(Integer step) {
+            this.step = step;
             return this;
         }
-        public Integer getMaxValue() {
-            return this.maxValue;
+        public Integer getStep() {
+            return this.step;
         }
 
     }

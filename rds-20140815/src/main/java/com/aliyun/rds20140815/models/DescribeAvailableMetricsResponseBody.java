@@ -4,34 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableMetricsResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
+    @NameInMap("Items")
+    public java.util.List<DescribeAvailableMetricsResponseBodyItems> items;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Items")
-    public java.util.List<DescribeAvailableMetricsResponseBodyItems> items;
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     public static DescribeAvailableMetricsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableMetricsResponseBody self = new DescribeAvailableMetricsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAvailableMetricsResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
-    }
-
-    public DescribeAvailableMetricsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAvailableMetricsResponseBody setItems(java.util.List<DescribeAvailableMetricsResponseBodyItems> items) {
@@ -42,53 +26,53 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         return this.items;
     }
 
+    public DescribeAvailableMetricsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeAvailableMetricsResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
     public static class DescribeAvailableMetricsResponseBodyItems extends TeaModel {
-        @NameInMap("GroupKey")
-        public String groupKey;
-
-        @NameInMap("SortRule")
-        public Integer sortRule;
-
         @NameInMap("Description")
         public String description;
-
-        @NameInMap("Unit")
-        public String unit;
-
-        @NameInMap("MetricsKey")
-        public String metricsKey;
-
-        @NameInMap("GroupKeyType")
-        public String groupKeyType;
-
-        @NameInMap("MetricsKeyAlias")
-        public String metricsKeyAlias;
-
-        @NameInMap("Method")
-        public String method;
 
         @NameInMap("Dimension")
         public String dimension;
 
+        @NameInMap("GroupKey")
+        public String groupKey;
+
+        @NameInMap("GroupKeyType")
+        public String groupKeyType;
+
+        @NameInMap("Method")
+        public String method;
+
+        @NameInMap("MetricsKey")
+        public String metricsKey;
+
+        @NameInMap("MetricsKeyAlias")
+        public String metricsKeyAlias;
+
+        @NameInMap("SortRule")
+        public Integer sortRule;
+
+        @NameInMap("Unit")
+        public String unit;
+
         public static DescribeAvailableMetricsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableMetricsResponseBodyItems self = new DescribeAvailableMetricsResponseBodyItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAvailableMetricsResponseBodyItems setGroupKey(String groupKey) {
-            this.groupKey = groupKey;
-            return this;
-        }
-        public String getGroupKey() {
-            return this.groupKey;
-        }
-
-        public DescribeAvailableMetricsResponseBodyItems setSortRule(Integer sortRule) {
-            this.sortRule = sortRule;
-            return this;
-        }
-        public Integer getSortRule() {
-            return this.sortRule;
         }
 
         public DescribeAvailableMetricsResponseBodyItems setDescription(String description) {
@@ -99,20 +83,20 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeAvailableMetricsResponseBodyItems setUnit(String unit) {
-            this.unit = unit;
+        public DescribeAvailableMetricsResponseBodyItems setDimension(String dimension) {
+            this.dimension = dimension;
             return this;
         }
-        public String getUnit() {
-            return this.unit;
+        public String getDimension() {
+            return this.dimension;
         }
 
-        public DescribeAvailableMetricsResponseBodyItems setMetricsKey(String metricsKey) {
-            this.metricsKey = metricsKey;
+        public DescribeAvailableMetricsResponseBodyItems setGroupKey(String groupKey) {
+            this.groupKey = groupKey;
             return this;
         }
-        public String getMetricsKey() {
-            return this.metricsKey;
+        public String getGroupKey() {
+            return this.groupKey;
         }
 
         public DescribeAvailableMetricsResponseBodyItems setGroupKeyType(String groupKeyType) {
@@ -123,14 +107,6 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             return this.groupKeyType;
         }
 
-        public DescribeAvailableMetricsResponseBodyItems setMetricsKeyAlias(String metricsKeyAlias) {
-            this.metricsKeyAlias = metricsKeyAlias;
-            return this;
-        }
-        public String getMetricsKeyAlias() {
-            return this.metricsKeyAlias;
-        }
-
         public DescribeAvailableMetricsResponseBodyItems setMethod(String method) {
             this.method = method;
             return this;
@@ -139,12 +115,36 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             return this.method;
         }
 
-        public DescribeAvailableMetricsResponseBodyItems setDimension(String dimension) {
-            this.dimension = dimension;
+        public DescribeAvailableMetricsResponseBodyItems setMetricsKey(String metricsKey) {
+            this.metricsKey = metricsKey;
             return this;
         }
-        public String getDimension() {
-            return this.dimension;
+        public String getMetricsKey() {
+            return this.metricsKey;
+        }
+
+        public DescribeAvailableMetricsResponseBodyItems setMetricsKeyAlias(String metricsKeyAlias) {
+            this.metricsKeyAlias = metricsKeyAlias;
+            return this;
+        }
+        public String getMetricsKeyAlias() {
+            return this.metricsKeyAlias;
+        }
+
+        public DescribeAvailableMetricsResponseBodyItems setSortRule(Integer sortRule) {
+            this.sortRule = sortRule;
+            return this;
+        }
+        public Integer getSortRule() {
+            return this.sortRule;
+        }
+
+        public DescribeAvailableMetricsResponseBodyItems setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
         }
 
     }

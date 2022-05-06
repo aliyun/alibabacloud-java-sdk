@@ -4,11 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateGADInstanceRequest extends TeaModel {
-    @NameInMap("CentralRegionId")
-    public String centralRegionId;
-
     @NameInMap("CentralDBInstanceId")
     public String centralDBInstanceId;
+
+    @NameInMap("CentralRdsDtsAdminAccount")
+    public String centralRdsDtsAdminAccount;
+
+    @NameInMap("CentralRdsDtsAdminPassword")
+    public String centralRdsDtsAdminPassword;
+
+    @NameInMap("CentralRegionId")
+    public String centralRegionId;
 
     @NameInMap("DBList")
     public String DBList;
@@ -19,23 +25,9 @@ public class CreateGADInstanceRequest extends TeaModel {
     @NameInMap("UnitNode")
     public java.util.List<CreateGADInstanceRequestUnitNode> unitNode;
 
-    @NameInMap("CentralRdsDtsAdminAccount")
-    public String centralRdsDtsAdminAccount;
-
-    @NameInMap("CentralRdsDtsAdminPassword")
-    public String centralRdsDtsAdminPassword;
-
     public static CreateGADInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGADInstanceRequest self = new CreateGADInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateGADInstanceRequest setCentralRegionId(String centralRegionId) {
-        this.centralRegionId = centralRegionId;
-        return this;
-    }
-    public String getCentralRegionId() {
-        return this.centralRegionId;
     }
 
     public CreateGADInstanceRequest setCentralDBInstanceId(String centralDBInstanceId) {
@@ -44,6 +36,30 @@ public class CreateGADInstanceRequest extends TeaModel {
     }
     public String getCentralDBInstanceId() {
         return this.centralDBInstanceId;
+    }
+
+    public CreateGADInstanceRequest setCentralRdsDtsAdminAccount(String centralRdsDtsAdminAccount) {
+        this.centralRdsDtsAdminAccount = centralRdsDtsAdminAccount;
+        return this;
+    }
+    public String getCentralRdsDtsAdminAccount() {
+        return this.centralRdsDtsAdminAccount;
+    }
+
+    public CreateGADInstanceRequest setCentralRdsDtsAdminPassword(String centralRdsDtsAdminPassword) {
+        this.centralRdsDtsAdminPassword = centralRdsDtsAdminPassword;
+        return this;
+    }
+    public String getCentralRdsDtsAdminPassword() {
+        return this.centralRdsDtsAdminPassword;
+    }
+
+    public CreateGADInstanceRequest setCentralRegionId(String centralRegionId) {
+        this.centralRegionId = centralRegionId;
+        return this;
+    }
+    public String getCentralRegionId() {
+        return this.centralRegionId;
     }
 
     public CreateGADInstanceRequest setDBList(String DBList) {
@@ -70,58 +86,21 @@ public class CreateGADInstanceRequest extends TeaModel {
         return this.unitNode;
     }
 
-    public CreateGADInstanceRequest setCentralRdsDtsAdminAccount(String centralRdsDtsAdminAccount) {
-        this.centralRdsDtsAdminAccount = centralRdsDtsAdminAccount;
-        return this;
-    }
-    public String getCentralRdsDtsAdminAccount() {
-        return this.centralRdsDtsAdminAccount;
-    }
-
-    public CreateGADInstanceRequest setCentralRdsDtsAdminPassword(String centralRdsDtsAdminPassword) {
-        this.centralRdsDtsAdminPassword = centralRdsDtsAdminPassword;
-        return this;
-    }
-    public String getCentralRdsDtsAdminPassword() {
-        return this.centralRdsDtsAdminPassword;
-    }
-
     public static class CreateGADInstanceRequestUnitNode extends TeaModel {
-        @NameInMap("RegionID")
-        public String regionID;
-
-        @NameInMap("ZoneID")
-        public String zoneID;
-
-        @NameInMap("VpcID")
-        public String vpcID;
+        @NameInMap("DBInstanceDescription")
+        public String DBInstanceDescription;
 
         @NameInMap("DBInstanceStorage")
         public Long DBInstanceStorage;
 
-        @NameInMap("SecurityIPList")
-        public String securityIPList;
-
-        @NameInMap("VSwitchID")
-        public String vSwitchID;
-
-        @NameInMap("ZoneIDSlave1")
-        public String zoneIDSlave1;
-
-        @NameInMap("ZoneIDSlave2")
-        public String zoneIDSlave2;
-
-        @NameInMap("DtsInstanceClass")
-        public String dtsInstanceClass;
-
         @NameInMap("DbInstanceClass")
         public String dbInstanceClass;
 
-        @NameInMap("PayType")
-        public String payType;
+        @NameInMap("DtsConflict")
+        public String dtsConflict;
 
-        @NameInMap("DBInstanceDescription")
-        public String DBInstanceDescription;
+        @NameInMap("DtsInstanceClass")
+        public String dtsInstanceClass;
 
         @NameInMap("Engine")
         public String engine;
@@ -129,36 +108,41 @@ public class CreateGADInstanceRequest extends TeaModel {
         @NameInMap("EngineVersion")
         public String engineVersion;
 
-        @NameInMap("DtsConflict")
-        public String dtsConflict;
+        @NameInMap("PayType")
+        public String payType;
+
+        @NameInMap("RegionID")
+        public String regionID;
+
+        @NameInMap("SecurityIPList")
+        public String securityIPList;
+
+        @NameInMap("VSwitchID")
+        public String vSwitchID;
+
+        @NameInMap("VpcID")
+        public String vpcID;
+
+        @NameInMap("ZoneID")
+        public String zoneID;
+
+        @NameInMap("ZoneIDSlave1")
+        public String zoneIDSlave1;
+
+        @NameInMap("ZoneIDSlave2")
+        public String zoneIDSlave2;
 
         public static CreateGADInstanceRequestUnitNode build(java.util.Map<String, ?> map) throws Exception {
             CreateGADInstanceRequestUnitNode self = new CreateGADInstanceRequestUnitNode();
             return TeaModel.build(map, self);
         }
 
-        public CreateGADInstanceRequestUnitNode setRegionID(String regionID) {
-            this.regionID = regionID;
+        public CreateGADInstanceRequestUnitNode setDBInstanceDescription(String DBInstanceDescription) {
+            this.DBInstanceDescription = DBInstanceDescription;
             return this;
         }
-        public String getRegionID() {
-            return this.regionID;
-        }
-
-        public CreateGADInstanceRequestUnitNode setZoneID(String zoneID) {
-            this.zoneID = zoneID;
-            return this;
-        }
-        public String getZoneID() {
-            return this.zoneID;
-        }
-
-        public CreateGADInstanceRequestUnitNode setVpcID(String vpcID) {
-            this.vpcID = vpcID;
-            return this;
-        }
-        public String getVpcID() {
-            return this.vpcID;
+        public String getDBInstanceDescription() {
+            return this.DBInstanceDescription;
         }
 
         public CreateGADInstanceRequestUnitNode setDBInstanceStorage(Long DBInstanceStorage) {
@@ -169,46 +153,6 @@ public class CreateGADInstanceRequest extends TeaModel {
             return this.DBInstanceStorage;
         }
 
-        public CreateGADInstanceRequestUnitNode setSecurityIPList(String securityIPList) {
-            this.securityIPList = securityIPList;
-            return this;
-        }
-        public String getSecurityIPList() {
-            return this.securityIPList;
-        }
-
-        public CreateGADInstanceRequestUnitNode setVSwitchID(String vSwitchID) {
-            this.vSwitchID = vSwitchID;
-            return this;
-        }
-        public String getVSwitchID() {
-            return this.vSwitchID;
-        }
-
-        public CreateGADInstanceRequestUnitNode setZoneIDSlave1(String zoneIDSlave1) {
-            this.zoneIDSlave1 = zoneIDSlave1;
-            return this;
-        }
-        public String getZoneIDSlave1() {
-            return this.zoneIDSlave1;
-        }
-
-        public CreateGADInstanceRequestUnitNode setZoneIDSlave2(String zoneIDSlave2) {
-            this.zoneIDSlave2 = zoneIDSlave2;
-            return this;
-        }
-        public String getZoneIDSlave2() {
-            return this.zoneIDSlave2;
-        }
-
-        public CreateGADInstanceRequestUnitNode setDtsInstanceClass(String dtsInstanceClass) {
-            this.dtsInstanceClass = dtsInstanceClass;
-            return this;
-        }
-        public String getDtsInstanceClass() {
-            return this.dtsInstanceClass;
-        }
-
         public CreateGADInstanceRequestUnitNode setDbInstanceClass(String dbInstanceClass) {
             this.dbInstanceClass = dbInstanceClass;
             return this;
@@ -217,20 +161,20 @@ public class CreateGADInstanceRequest extends TeaModel {
             return this.dbInstanceClass;
         }
 
-        public CreateGADInstanceRequestUnitNode setPayType(String payType) {
-            this.payType = payType;
+        public CreateGADInstanceRequestUnitNode setDtsConflict(String dtsConflict) {
+            this.dtsConflict = dtsConflict;
             return this;
         }
-        public String getPayType() {
-            return this.payType;
+        public String getDtsConflict() {
+            return this.dtsConflict;
         }
 
-        public CreateGADInstanceRequestUnitNode setDBInstanceDescription(String DBInstanceDescription) {
-            this.DBInstanceDescription = DBInstanceDescription;
+        public CreateGADInstanceRequestUnitNode setDtsInstanceClass(String dtsInstanceClass) {
+            this.dtsInstanceClass = dtsInstanceClass;
             return this;
         }
-        public String getDBInstanceDescription() {
-            return this.DBInstanceDescription;
+        public String getDtsInstanceClass() {
+            return this.dtsInstanceClass;
         }
 
         public CreateGADInstanceRequestUnitNode setEngine(String engine) {
@@ -249,12 +193,68 @@ public class CreateGADInstanceRequest extends TeaModel {
             return this.engineVersion;
         }
 
-        public CreateGADInstanceRequestUnitNode setDtsConflict(String dtsConflict) {
-            this.dtsConflict = dtsConflict;
+        public CreateGADInstanceRequestUnitNode setPayType(String payType) {
+            this.payType = payType;
             return this;
         }
-        public String getDtsConflict() {
-            return this.dtsConflict;
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public CreateGADInstanceRequestUnitNode setRegionID(String regionID) {
+            this.regionID = regionID;
+            return this;
+        }
+        public String getRegionID() {
+            return this.regionID;
+        }
+
+        public CreateGADInstanceRequestUnitNode setSecurityIPList(String securityIPList) {
+            this.securityIPList = securityIPList;
+            return this;
+        }
+        public String getSecurityIPList() {
+            return this.securityIPList;
+        }
+
+        public CreateGADInstanceRequestUnitNode setVSwitchID(String vSwitchID) {
+            this.vSwitchID = vSwitchID;
+            return this;
+        }
+        public String getVSwitchID() {
+            return this.vSwitchID;
+        }
+
+        public CreateGADInstanceRequestUnitNode setVpcID(String vpcID) {
+            this.vpcID = vpcID;
+            return this;
+        }
+        public String getVpcID() {
+            return this.vpcID;
+        }
+
+        public CreateGADInstanceRequestUnitNode setZoneID(String zoneID) {
+            this.zoneID = zoneID;
+            return this;
+        }
+        public String getZoneID() {
+            return this.zoneID;
+        }
+
+        public CreateGADInstanceRequestUnitNode setZoneIDSlave1(String zoneIDSlave1) {
+            this.zoneIDSlave1 = zoneIDSlave1;
+            return this;
+        }
+        public String getZoneIDSlave1() {
+            return this.zoneIDSlave1;
+        }
+
+        public CreateGADInstanceRequestUnitNode setZoneIDSlave2(String zoneIDSlave2) {
+            this.zoneIDSlave2 = zoneIDSlave2;
+            return this;
+        }
+        public String getZoneIDSlave2() {
+            return this.zoneIDSlave2;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableZonesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AvailableZones")
     public java.util.List<DescribeAvailableZonesResponseBodyAvailableZones> availableZones;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeAvailableZonesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableZonesResponseBody self = new DescribeAvailableZonesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAvailableZonesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAvailableZonesResponseBody setAvailableZones(java.util.List<DescribeAvailableZonesResponseBodyAvailableZones> availableZones) {
@@ -29,6 +21,14 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     }
     public java.util.List<DescribeAvailableZonesResponseBodyAvailableZones> getAvailableZones() {
         return this.availableZones;
+    }
+
+    public DescribeAvailableZonesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes extends TeaModel {
@@ -81,23 +81,15 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions extends TeaModel {
-        @NameInMap("Version")
-        public String version;
-
         @NameInMap("SupportedCategorys")
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys> supportedCategorys;
+
+        @NameInMap("Version")
+        public String version;
 
         public static DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions self = new DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
         }
 
         public DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions setSupportedCategorys(java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys> supportedCategorys) {
@@ -106,6 +98,14 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys> getSupportedCategorys() {
             return this.supportedCategorys;
+        }
+
+        public DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }
@@ -141,26 +141,18 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableZonesResponseBodyAvailableZones extends TeaModel {
-        @NameInMap("ZoneId")
-        public String zoneId;
-
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("SupportedEngines")
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines> supportedEngines;
 
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static DescribeAvailableZonesResponseBodyAvailableZones build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableZonesResponseBodyAvailableZones self = new DescribeAvailableZonesResponseBodyAvailableZones();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAvailableZonesResponseBodyAvailableZones setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
         public DescribeAvailableZonesResponseBodyAvailableZones setRegionId(String regionId) {
@@ -177,6 +169,14 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines> getSupportedEngines() {
             return this.supportedEngines;
+        }
+
+        public DescribeAvailableZonesResponseBodyAvailableZones setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

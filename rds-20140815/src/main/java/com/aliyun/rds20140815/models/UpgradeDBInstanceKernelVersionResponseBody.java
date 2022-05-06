@@ -7,11 +7,11 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
-    @NameInMap("TargetMinorVersion")
-    public String targetMinorVersion;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TargetMinorVersion")
+    public String targetMinorVersion;
 
     @NameInMap("TaskId")
     public String taskId;
@@ -29,20 +29,20 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
         return this.DBInstanceName;
     }
 
-    public UpgradeDBInstanceKernelVersionResponseBody setTargetMinorVersion(String targetMinorVersion) {
-        this.targetMinorVersion = targetMinorVersion;
-        return this;
-    }
-    public String getTargetMinorVersion() {
-        return this.targetMinorVersion;
-    }
-
     public UpgradeDBInstanceKernelVersionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpgradeDBInstanceKernelVersionResponseBody setTargetMinorVersion(String targetMinorVersion) {
+        this.targetMinorVersion = targetMinorVersion;
+        return this;
+    }
+    public String getTargetMinorVersion() {
+        return this.targetMinorVersion;
     }
 
     public UpgradeDBInstanceKernelVersionResponseBody setTaskId(String taskId) {

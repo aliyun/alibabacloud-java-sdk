@@ -4,20 +4,14 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescibeImportsFromDatabaseRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("Engine")
     public String engine;
@@ -25,48 +19,30 @@ public class DescibeImportsFromDatabaseRequest extends TeaModel {
     @NameInMap("ImportId")
     public Integer importId;
 
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescibeImportsFromDatabaseRequest build(java.util.Map<String, ?> map) throws Exception {
         DescibeImportsFromDatabaseRequest self = new DescibeImportsFromDatabaseRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescibeImportsFromDatabaseRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescibeImportsFromDatabaseRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescibeImportsFromDatabaseRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public DescibeImportsFromDatabaseRequest setClientToken(String clientToken) {
@@ -85,6 +61,14 @@ public class DescibeImportsFromDatabaseRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
+    public DescibeImportsFromDatabaseRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public DescibeImportsFromDatabaseRequest setEngine(String engine) {
         this.engine = engine;
         return this;
@@ -101,28 +85,20 @@ public class DescibeImportsFromDatabaseRequest extends TeaModel {
         return this.importId;
     }
 
-    public DescibeImportsFromDatabaseRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescibeImportsFromDatabaseRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
-    public DescibeImportsFromDatabaseRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescibeImportsFromDatabaseRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescibeImportsFromDatabaseRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescibeImportsFromDatabaseRequest setPageNumber(Integer pageNumber) {
@@ -133,12 +109,36 @@ public class DescibeImportsFromDatabaseRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescibeImportsFromDatabaseRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescibeImportsFromDatabaseRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescibeImportsFromDatabaseRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescibeImportsFromDatabaseRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescibeImportsFromDatabaseRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }
