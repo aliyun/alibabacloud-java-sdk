@@ -56,4 +56,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getOssUploadParamWithOptions(request, runtime);
     }
+
+    public UploadNotaryResponse uploadNotaryWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UploadNotary"),
+            new TeaPair("version", "2021-10-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UploadNotaryResponse());
+    }
+
+    public UploadNotaryResponse uploadNotary() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.uploadNotaryWithOptions(runtime);
+    }
 }
