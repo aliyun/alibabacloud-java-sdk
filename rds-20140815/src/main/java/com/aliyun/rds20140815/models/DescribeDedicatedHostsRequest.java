@@ -4,8 +4,29 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostsRequest extends TeaModel {
+    @NameInMap("AllocationStatus")
+    public String allocationStatus;
+
+    @NameInMap("DedicatedHostGroupId")
+    public String dedicatedHostGroupId;
+
+    @NameInMap("DedicatedHostId")
+    public String dedicatedHostId;
+
+    @NameInMap("HostStatus")
+    public String hostStatus;
+
+    @NameInMap("HostType")
+    public String hostType;
+
+    @NameInMap("OrderId")
+    public Long orderId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,33 +34,60 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DedicatedHostGroupId")
-    public String dedicatedHostGroupId;
-
-    @NameInMap("OrderId")
-    public Long orderId;
-
-    @NameInMap("HostType")
-    public String hostType;
-
-    @NameInMap("HostStatus")
-    public String hostStatus;
-
-    @NameInMap("AllocationStatus")
-    public String allocationStatus;
-
     @NameInMap("ZoneId")
     public String zoneId;
-
-    @NameInMap("DedicatedHostId")
-    public String dedicatedHostId;
 
     public static DescribeDedicatedHostsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDedicatedHostsRequest self = new DescribeDedicatedHostsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDedicatedHostsRequest setAllocationStatus(String allocationStatus) {
+        this.allocationStatus = allocationStatus;
+        return this;
+    }
+    public String getAllocationStatus() {
+        return this.allocationStatus;
+    }
+
+    public DescribeDedicatedHostsRequest setDedicatedHostGroupId(String dedicatedHostGroupId) {
+        this.dedicatedHostGroupId = dedicatedHostGroupId;
+        return this;
+    }
+    public String getDedicatedHostGroupId() {
+        return this.dedicatedHostGroupId;
+    }
+
+    public DescribeDedicatedHostsRequest setDedicatedHostId(String dedicatedHostId) {
+        this.dedicatedHostId = dedicatedHostId;
+        return this;
+    }
+    public String getDedicatedHostId() {
+        return this.dedicatedHostId;
+    }
+
+    public DescribeDedicatedHostsRequest setHostStatus(String hostStatus) {
+        this.hostStatus = hostStatus;
+        return this;
+    }
+    public String getHostStatus() {
+        return this.hostStatus;
+    }
+
+    public DescribeDedicatedHostsRequest setHostType(String hostType) {
+        this.hostType = hostType;
+        return this;
+    }
+    public String getHostType() {
+        return this.hostType;
+    }
+
+    public DescribeDedicatedHostsRequest setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public DescribeDedicatedHostsRequest setOwnerId(Long ownerId) {
@@ -48,6 +96,14 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeDedicatedHostsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeDedicatedHostsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -66,68 +122,12 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeDedicatedHostsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeDedicatedHostsRequest setDedicatedHostGroupId(String dedicatedHostGroupId) {
-        this.dedicatedHostGroupId = dedicatedHostGroupId;
-        return this;
-    }
-    public String getDedicatedHostGroupId() {
-        return this.dedicatedHostGroupId;
-    }
-
-    public DescribeDedicatedHostsRequest setOrderId(Long orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public Long getOrderId() {
-        return this.orderId;
-    }
-
-    public DescribeDedicatedHostsRequest setHostType(String hostType) {
-        this.hostType = hostType;
-        return this;
-    }
-    public String getHostType() {
-        return this.hostType;
-    }
-
-    public DescribeDedicatedHostsRequest setHostStatus(String hostStatus) {
-        this.hostStatus = hostStatus;
-        return this;
-    }
-    public String getHostStatus() {
-        return this.hostStatus;
-    }
-
-    public DescribeDedicatedHostsRequest setAllocationStatus(String allocationStatus) {
-        this.allocationStatus = allocationStatus;
-        return this;
-    }
-    public String getAllocationStatus() {
-        return this.allocationStatus;
-    }
-
     public DescribeDedicatedHostsRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
     public String getZoneId() {
         return this.zoneId;
-    }
-
-    public DescribeDedicatedHostsRequest setDedicatedHostId(String dedicatedHostId) {
-        this.dedicatedHostId = dedicatedHostId;
-        return this;
-    }
-    public String getDedicatedHostId() {
-        return this.dedicatedHostId;
     }
 
 }

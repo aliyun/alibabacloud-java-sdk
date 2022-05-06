@@ -4,11 +4,20 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("EncryptionKey")
+    public String encryptionKey;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,17 +25,8 @@ public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("EncryptionKey")
-    public String encryptionKey;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("TargetRegionId")
     public String targetRegionId;
@@ -36,12 +36,28 @@ public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstanceEncryptionKeyRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeDBInstanceEncryptionKeyRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeDBInstanceEncryptionKeyRequest setEncryptionKey(String encryptionKey) {
+        this.encryptionKey = encryptionKey;
+        return this;
+    }
+    public String getEncryptionKey() {
+        return this.encryptionKey;
+    }
+
+    public DescribeDBInstanceEncryptionKeyRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeDBInstanceEncryptionKeyRequest setOwnerId(Long ownerId) {
@@ -50,6 +66,14 @@ public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeDBInstanceEncryptionKeyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeDBInstanceEncryptionKeyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -68,36 +92,12 @@ public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeDBInstanceEncryptionKeyRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeDBInstanceEncryptionKeyRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeDBInstanceEncryptionKeyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeDBInstanceEncryptionKeyRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public DescribeDBInstanceEncryptionKeyRequest setEncryptionKey(String encryptionKey) {
-        this.encryptionKey = encryptionKey;
-        return this;
-    }
-    public String getEncryptionKey() {
-        return this.encryptionKey;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeDBInstanceEncryptionKeyRequest setTargetRegionId(String targetRegionId) {

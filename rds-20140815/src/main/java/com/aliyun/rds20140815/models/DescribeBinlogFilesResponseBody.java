@@ -4,67 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeBinlogFilesResponseBody extends TeaModel {
-    @NameInMap("TotalFileSize")
-    public Long totalFileSize;
+    @NameInMap("Items")
+    public DescribeBinlogFilesResponseBodyItems items;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("PageRecordCount")
+    public Integer pageRecordCount;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageRecordCount")
-    public Integer pageRecordCount;
+    @NameInMap("TotalFileSize")
+    public Long totalFileSize;
 
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
-    @NameInMap("Items")
-    public DescribeBinlogFilesResponseBodyItems items;
-
     public static DescribeBinlogFilesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBinlogFilesResponseBody self = new DescribeBinlogFilesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBinlogFilesResponseBody setTotalFileSize(Long totalFileSize) {
-        this.totalFileSize = totalFileSize;
-        return this;
-    }
-    public Long getTotalFileSize() {
-        return this.totalFileSize;
-    }
-
-    public DescribeBinlogFilesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeBinlogFilesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeBinlogFilesResponseBody setPageRecordCount(Integer pageRecordCount) {
-        this.pageRecordCount = pageRecordCount;
-        return this;
-    }
-    public Integer getPageRecordCount() {
-        return this.pageRecordCount;
-    }
-
-    public DescribeBinlogFilesResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
     }
 
     public DescribeBinlogFilesResponseBody setItems(DescribeBinlogFilesResponseBodyItems items) {
@@ -75,88 +35,80 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         return this.items;
     }
 
+    public DescribeBinlogFilesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeBinlogFilesResponseBody setPageRecordCount(Integer pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
+        return this;
+    }
+    public Integer getPageRecordCount() {
+        return this.pageRecordCount;
+    }
+
+    public DescribeBinlogFilesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeBinlogFilesResponseBody setTotalFileSize(Long totalFileSize) {
+        this.totalFileSize = totalFileSize;
+        return this;
+    }
+    public Long getTotalFileSize() {
+        return this.totalFileSize;
+    }
+
+    public DescribeBinlogFilesResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
     public static class DescribeBinlogFilesResponseBodyItemsBinLogFile extends TeaModel {
-        @NameInMap("RemoteStatus")
-        public String remoteStatus;
-
-        @NameInMap("IntranetDownloadLink")
-        public String intranetDownloadLink;
-
-        @NameInMap("LogBeginTime")
-        public String logBeginTime;
-
-        @NameInMap("LinkExpiredTime")
-        public String linkExpiredTime;
+        @NameInMap("Checksum")
+        public String checksum;
 
         @NameInMap("DownloadLink")
         public String downloadLink;
 
-        @NameInMap("LogFileName")
-        public String logFileName;
-
-        @NameInMap("Checksum")
-        public String checksum;
-
-        @NameInMap("LogEndTime")
-        public String logEndTime;
+        @NameInMap("FileSize")
+        public Long fileSize;
 
         @NameInMap("HostInstanceID")
         public String hostInstanceID;
 
-        @NameInMap("FileSize")
-        public Long fileSize;
+        @NameInMap("IntranetDownloadLink")
+        public String intranetDownloadLink;
+
+        @NameInMap("LinkExpiredTime")
+        public String linkExpiredTime;
+
+        @NameInMap("LogBeginTime")
+        public String logBeginTime;
+
+        @NameInMap("LogEndTime")
+        public String logEndTime;
+
+        @NameInMap("LogFileName")
+        public String logFileName;
+
+        @NameInMap("RemoteStatus")
+        public String remoteStatus;
 
         public static DescribeBinlogFilesResponseBodyItemsBinLogFile build(java.util.Map<String, ?> map) throws Exception {
             DescribeBinlogFilesResponseBodyItemsBinLogFile self = new DescribeBinlogFilesResponseBodyItemsBinLogFile();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBinlogFilesResponseBodyItemsBinLogFile setRemoteStatus(String remoteStatus) {
-            this.remoteStatus = remoteStatus;
-            return this;
-        }
-        public String getRemoteStatus() {
-            return this.remoteStatus;
-        }
-
-        public DescribeBinlogFilesResponseBodyItemsBinLogFile setIntranetDownloadLink(String intranetDownloadLink) {
-            this.intranetDownloadLink = intranetDownloadLink;
-            return this;
-        }
-        public String getIntranetDownloadLink() {
-            return this.intranetDownloadLink;
-        }
-
-        public DescribeBinlogFilesResponseBodyItemsBinLogFile setLogBeginTime(String logBeginTime) {
-            this.logBeginTime = logBeginTime;
-            return this;
-        }
-        public String getLogBeginTime() {
-            return this.logBeginTime;
-        }
-
-        public DescribeBinlogFilesResponseBodyItemsBinLogFile setLinkExpiredTime(String linkExpiredTime) {
-            this.linkExpiredTime = linkExpiredTime;
-            return this;
-        }
-        public String getLinkExpiredTime() {
-            return this.linkExpiredTime;
-        }
-
-        public DescribeBinlogFilesResponseBodyItemsBinLogFile setDownloadLink(String downloadLink) {
-            this.downloadLink = downloadLink;
-            return this;
-        }
-        public String getDownloadLink() {
-            return this.downloadLink;
-        }
-
-        public DescribeBinlogFilesResponseBodyItemsBinLogFile setLogFileName(String logFileName) {
-            this.logFileName = logFileName;
-            return this;
-        }
-        public String getLogFileName() {
-            return this.logFileName;
         }
 
         public DescribeBinlogFilesResponseBodyItemsBinLogFile setChecksum(String checksum) {
@@ -167,12 +119,20 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             return this.checksum;
         }
 
-        public DescribeBinlogFilesResponseBodyItemsBinLogFile setLogEndTime(String logEndTime) {
-            this.logEndTime = logEndTime;
+        public DescribeBinlogFilesResponseBodyItemsBinLogFile setDownloadLink(String downloadLink) {
+            this.downloadLink = downloadLink;
             return this;
         }
-        public String getLogEndTime() {
-            return this.logEndTime;
+        public String getDownloadLink() {
+            return this.downloadLink;
+        }
+
+        public DescribeBinlogFilesResponseBodyItemsBinLogFile setFileSize(Long fileSize) {
+            this.fileSize = fileSize;
+            return this;
+        }
+        public Long getFileSize() {
+            return this.fileSize;
         }
 
         public DescribeBinlogFilesResponseBodyItemsBinLogFile setHostInstanceID(String hostInstanceID) {
@@ -183,12 +143,52 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             return this.hostInstanceID;
         }
 
-        public DescribeBinlogFilesResponseBodyItemsBinLogFile setFileSize(Long fileSize) {
-            this.fileSize = fileSize;
+        public DescribeBinlogFilesResponseBodyItemsBinLogFile setIntranetDownloadLink(String intranetDownloadLink) {
+            this.intranetDownloadLink = intranetDownloadLink;
             return this;
         }
-        public Long getFileSize() {
-            return this.fileSize;
+        public String getIntranetDownloadLink() {
+            return this.intranetDownloadLink;
+        }
+
+        public DescribeBinlogFilesResponseBodyItemsBinLogFile setLinkExpiredTime(String linkExpiredTime) {
+            this.linkExpiredTime = linkExpiredTime;
+            return this;
+        }
+        public String getLinkExpiredTime() {
+            return this.linkExpiredTime;
+        }
+
+        public DescribeBinlogFilesResponseBodyItemsBinLogFile setLogBeginTime(String logBeginTime) {
+            this.logBeginTime = logBeginTime;
+            return this;
+        }
+        public String getLogBeginTime() {
+            return this.logBeginTime;
+        }
+
+        public DescribeBinlogFilesResponseBodyItemsBinLogFile setLogEndTime(String logEndTime) {
+            this.logEndTime = logEndTime;
+            return this;
+        }
+        public String getLogEndTime() {
+            return this.logEndTime;
+        }
+
+        public DescribeBinlogFilesResponseBodyItemsBinLogFile setLogFileName(String logFileName) {
+            this.logFileName = logFileName;
+            return this;
+        }
+        public String getLogFileName() {
+            return this.logFileName;
+        }
+
+        public DescribeBinlogFilesResponseBodyItemsBinLogFile setRemoteStatus(String remoteStatus) {
+            this.remoteStatus = remoteStatus;
+            return this;
+        }
+        public String getRemoteStatus() {
+            return this.remoteStatus;
         }
 
     }

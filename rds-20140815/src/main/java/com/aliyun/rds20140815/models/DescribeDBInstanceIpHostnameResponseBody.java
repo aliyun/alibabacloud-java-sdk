@@ -7,11 +7,11 @@ public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("IpHostnameInfos")
     public String ipHostnameInfos;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDBInstanceIpHostnameResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceIpHostnameResponseBody self = new DescribeDBInstanceIpHostnameResponseBody();
@@ -26,20 +26,20 @@ public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public DescribeDBInstanceIpHostnameResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDBInstanceIpHostnameResponseBody setIpHostnameInfos(String ipHostnameInfos) {
         this.ipHostnameInfos = ipHostnameInfos;
         return this;
     }
     public String getIpHostnameInfos() {
         return this.ipHostnameInfos;
+    }
+
+    public DescribeDBInstanceIpHostnameResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

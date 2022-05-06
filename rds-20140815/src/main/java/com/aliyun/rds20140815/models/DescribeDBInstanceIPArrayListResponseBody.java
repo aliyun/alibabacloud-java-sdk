@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Items")
     public DescribeDBInstanceIPArrayListResponseBodyItems items;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDBInstanceIPArrayListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceIPArrayListResponseBody self = new DescribeDBInstanceIPArrayListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBInstanceIPArrayListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDBInstanceIPArrayListResponseBody setItems(DescribeDBInstanceIPArrayListResponseBodyItems items) {
@@ -31,6 +23,14 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         return this.items;
     }
 
+    public DescribeDBInstanceIPArrayListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray extends TeaModel {
         @NameInMap("DBInstanceIPArrayAttribute")
         public String DBInstanceIPArrayAttribute;
@@ -38,11 +38,11 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         @NameInMap("DBInstanceIPArrayName")
         public String DBInstanceIPArrayName;
 
-        @NameInMap("SecurityIPType")
-        public String securityIPType;
-
         @NameInMap("SecurityIPList")
         public String securityIPList;
+
+        @NameInMap("SecurityIPType")
+        public String securityIPType;
 
         public static DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray self = new DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray();
@@ -65,20 +65,20 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             return this.DBInstanceIPArrayName;
         }
 
-        public DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray setSecurityIPType(String securityIPType) {
-            this.securityIPType = securityIPType;
-            return this;
-        }
-        public String getSecurityIPType() {
-            return this.securityIPType;
-        }
-
         public DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray setSecurityIPList(String securityIPList) {
             this.securityIPList = securityIPList;
             return this;
         }
         public String getSecurityIPList() {
             return this.securityIPList;
+        }
+
+        public DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray setSecurityIPType(String securityIPType) {
+            this.securityIPType = securityIPType;
+            return this;
+        }
+        public String getSecurityIPType() {
+            return this.securityIPType;
         }
 
     }

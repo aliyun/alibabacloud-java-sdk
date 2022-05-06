@@ -7,23 +7,23 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
-    @NameInMap("TotalPageCount")
-    public Integer totalPageCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageRecordCount")
-    public Integer pageRecordCount;
-
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
+    @NameInMap("Items")
+    public DescribeCrossBackupMetaListResponseBodyItems items;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("Items")
-    public DescribeCrossBackupMetaListResponseBodyItems items;
+    @NameInMap("PageRecordCount")
+    public Integer pageRecordCount;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalPageCount")
+    public Integer totalPageCount;
+
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     public static DescribeCrossBackupMetaListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCrossBackupMetaListResponseBody self = new DescribeCrossBackupMetaListResponseBody();
@@ -38,36 +38,12 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         return this.DBInstanceName;
     }
 
-    public DescribeCrossBackupMetaListResponseBody setTotalPageCount(Integer totalPageCount) {
-        this.totalPageCount = totalPageCount;
+    public DescribeCrossBackupMetaListResponseBody setItems(DescribeCrossBackupMetaListResponseBodyItems items) {
+        this.items = items;
         return this;
     }
-    public Integer getTotalPageCount() {
-        return this.totalPageCount;
-    }
-
-    public DescribeCrossBackupMetaListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeCrossBackupMetaListResponseBody setPageRecordCount(Integer pageRecordCount) {
-        this.pageRecordCount = pageRecordCount;
-        return this;
-    }
-    public Integer getPageRecordCount() {
-        return this.pageRecordCount;
-    }
-
-    public DescribeCrossBackupMetaListResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
+    public DescribeCrossBackupMetaListResponseBodyItems getItems() {
+        return this.items;
     }
 
     public DescribeCrossBackupMetaListResponseBody setPageNumber(Integer pageNumber) {
@@ -78,35 +54,51 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeCrossBackupMetaListResponseBody setItems(DescribeCrossBackupMetaListResponseBodyItems items) {
-        this.items = items;
+    public DescribeCrossBackupMetaListResponseBody setPageRecordCount(Integer pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
         return this;
     }
-    public DescribeCrossBackupMetaListResponseBodyItems getItems() {
-        return this.items;
+    public Integer getPageRecordCount() {
+        return this.pageRecordCount;
+    }
+
+    public DescribeCrossBackupMetaListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeCrossBackupMetaListResponseBody setTotalPageCount(Integer totalPageCount) {
+        this.totalPageCount = totalPageCount;
+        return this;
+    }
+    public Integer getTotalPageCount() {
+        return this.totalPageCount;
+    }
+
+    public DescribeCrossBackupMetaListResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeCrossBackupMetaListResponseBodyItemsMeta extends TeaModel {
-        @NameInMap("Tables")
-        public String tables;
-
         @NameInMap("Database")
         public String database;
 
         @NameInMap("Size")
         public String size;
 
+        @NameInMap("Tables")
+        public String tables;
+
         public static DescribeCrossBackupMetaListResponseBodyItemsMeta build(java.util.Map<String, ?> map) throws Exception {
             DescribeCrossBackupMetaListResponseBodyItemsMeta self = new DescribeCrossBackupMetaListResponseBodyItemsMeta();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCrossBackupMetaListResponseBodyItemsMeta setTables(String tables) {
-            this.tables = tables;
-            return this;
-        }
-        public String getTables() {
-            return this.tables;
         }
 
         public DescribeCrossBackupMetaListResponseBodyItemsMeta setDatabase(String database) {
@@ -123,6 +115,14 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
         public String getSize() {
             return this.size;
+        }
+
+        public DescribeCrossBackupMetaListResponseBodyItemsMeta setTables(String tables) {
+            this.tables = tables;
+            return this;
+        }
+        public String getTables() {
+            return this.tables;
         }
 
     }

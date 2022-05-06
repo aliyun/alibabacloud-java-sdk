@@ -4,23 +4,23 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateDBProxyEndpointAddressRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ConnectionStringPrefix")
+    public String connectionStringPrefix;
 
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DBProxyConnectStringNetType")
+    public String DBProxyConnectStringNetType;
+
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
-
-    @NameInMap("ConnectionStringPrefix")
-    public String connectionStringPrefix;
 
     @NameInMap("DBProxyNewConnectStringPort")
     public String DBProxyNewConnectStringPort;
 
-    @NameInMap("DBProxyConnectStringNetType")
-    public String DBProxyConnectStringNetType;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("VPCId")
     public String VPCId;
@@ -33,12 +33,12 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateDBProxyEndpointAddressRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateDBProxyEndpointAddressRequest setConnectionStringPrefix(String connectionStringPrefix) {
+        this.connectionStringPrefix = connectionStringPrefix;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getConnectionStringPrefix() {
+        return this.connectionStringPrefix;
     }
 
     public CreateDBProxyEndpointAddressRequest setDBInstanceId(String DBInstanceId) {
@@ -49,20 +49,20 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
+    public CreateDBProxyEndpointAddressRequest setDBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
+        this.DBProxyConnectStringNetType = DBProxyConnectStringNetType;
+        return this;
+    }
+    public String getDBProxyConnectStringNetType() {
+        return this.DBProxyConnectStringNetType;
+    }
+
     public CreateDBProxyEndpointAddressRequest setDBProxyEndpointId(String DBProxyEndpointId) {
         this.DBProxyEndpointId = DBProxyEndpointId;
         return this;
     }
     public String getDBProxyEndpointId() {
         return this.DBProxyEndpointId;
-    }
-
-    public CreateDBProxyEndpointAddressRequest setConnectionStringPrefix(String connectionStringPrefix) {
-        this.connectionStringPrefix = connectionStringPrefix;
-        return this;
-    }
-    public String getConnectionStringPrefix() {
-        return this.connectionStringPrefix;
     }
 
     public CreateDBProxyEndpointAddressRequest setDBProxyNewConnectStringPort(String DBProxyNewConnectStringPort) {
@@ -73,12 +73,12 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
         return this.DBProxyNewConnectStringPort;
     }
 
-    public CreateDBProxyEndpointAddressRequest setDBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
-        this.DBProxyConnectStringNetType = DBProxyConnectStringNetType;
+    public CreateDBProxyEndpointAddressRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDBProxyConnectStringNetType() {
-        return this.DBProxyConnectStringNetType;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateDBProxyEndpointAddressRequest setVPCId(String VPCId) {

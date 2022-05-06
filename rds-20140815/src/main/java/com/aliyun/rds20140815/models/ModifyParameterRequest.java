@@ -4,23 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyParameterRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
-
-    @NameInMap("Parameters")
-    public String parameters;
 
     @NameInMap("Forcerestart")
     public Boolean forcerestart;
@@ -28,36 +16,30 @@ public class ModifyParameterRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
+
+    @NameInMap("Parameters")
+    public String parameters;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SwitchTime")
+    public String switchTime;
+
+    @NameInMap("SwitchTimeMode")
+    public String switchTimeMode;
 
     public static ModifyParameterRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyParameterRequest self = new ModifyParameterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyParameterRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyParameterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyParameterRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public ModifyParameterRequest setClientToken(String clientToken) {
@@ -76,14 +58,6 @@ public class ModifyParameterRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public ModifyParameterRequest setParameters(String parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public String getParameters() {
-        return this.parameters;
-    }
-
     public ModifyParameterRequest setForcerestart(Boolean forcerestart) {
         this.forcerestart = forcerestart;
         return this;
@@ -100,12 +74,60 @@ public class ModifyParameterRequest extends TeaModel {
         return this.ownerAccount;
     }
 
+    public ModifyParameterRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ModifyParameterRequest setParameterGroupId(String parameterGroupId) {
         this.parameterGroupId = parameterGroupId;
         return this;
     }
     public String getParameterGroupId() {
         return this.parameterGroupId;
+    }
+
+    public ModifyParameterRequest setParameters(String parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public String getParameters() {
+        return this.parameters;
+    }
+
+    public ModifyParameterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyParameterRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyParameterRequest setSwitchTime(String switchTime) {
+        this.switchTime = switchTime;
+        return this;
+    }
+    public String getSwitchTime() {
+        return this.switchTime;
+    }
+
+    public ModifyParameterRequest setSwitchTimeMode(String switchTimeMode) {
+        this.switchTimeMode = switchTimeMode;
+        return this;
+    }
+    public String getSwitchTimeMode() {
+        return this.switchTimeMode;
     }
 
 }

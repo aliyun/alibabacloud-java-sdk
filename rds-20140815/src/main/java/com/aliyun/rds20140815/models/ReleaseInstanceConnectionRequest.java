@@ -4,6 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstanceConnectionRequest extends TeaModel {
+    @NameInMap("CurrentConnectionString")
+    public String currentConnectionString;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("InstanceNetworkType")
+    public String instanceNetworkType;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,21 +25,41 @@ public class ReleaseInstanceConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("CurrentConnectionString")
-    public String currentConnectionString;
-
-    @NameInMap("InstanceNetworkType")
-    public String instanceNetworkType;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static ReleaseInstanceConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseInstanceConnectionRequest self = new ReleaseInstanceConnectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReleaseInstanceConnectionRequest setCurrentConnectionString(String currentConnectionString) {
+        this.currentConnectionString = currentConnectionString;
+        return this;
+    }
+    public String getCurrentConnectionString() {
+        return this.currentConnectionString;
+    }
+
+    public ReleaseInstanceConnectionRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ReleaseInstanceConnectionRequest setInstanceNetworkType(String instanceNetworkType) {
+        this.instanceNetworkType = instanceNetworkType;
+        return this;
+    }
+    public String getInstanceNetworkType() {
+        return this.instanceNetworkType;
+    }
+
+    public ReleaseInstanceConnectionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ReleaseInstanceConnectionRequest setOwnerId(Long ownerId) {
@@ -52,38 +84,6 @@ public class ReleaseInstanceConnectionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ReleaseInstanceConnectionRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public ReleaseInstanceConnectionRequest setCurrentConnectionString(String currentConnectionString) {
-        this.currentConnectionString = currentConnectionString;
-        return this;
-    }
-    public String getCurrentConnectionString() {
-        return this.currentConnectionString;
-    }
-
-    public ReleaseInstanceConnectionRequest setInstanceNetworkType(String instanceNetworkType) {
-        this.instanceNetworkType = instanceNetworkType;
-        return this;
-    }
-    public String getInstanceNetworkType() {
-        return this.instanceNetworkType;
-    }
-
-    public ReleaseInstanceConnectionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

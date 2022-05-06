@@ -7,11 +7,11 @@ public class ModifyActionEventPolicyResponseBody extends TeaModel {
     @NameInMap("EnableEventLog")
     public String enableEventLog;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ModifyActionEventPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyActionEventPolicyResponseBody self = new ModifyActionEventPolicyResponseBody();
@@ -26,20 +26,20 @@ public class ModifyActionEventPolicyResponseBody extends TeaModel {
         return this.enableEventLog;
     }
 
-    public ModifyActionEventPolicyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ModifyActionEventPolicyResponseBody setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyActionEventPolicyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

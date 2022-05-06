@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Regions")
     public DescribeAvailableCrossRegionResponseBodyRegions regions;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeAvailableCrossRegionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableCrossRegionResponseBody self = new DescribeAvailableCrossRegionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAvailableCrossRegionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAvailableCrossRegionResponseBody setRegions(DescribeAvailableCrossRegionResponseBodyRegions regions) {
@@ -29,6 +21,14 @@ public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
     }
     public DescribeAvailableCrossRegionResponseBodyRegions getRegions() {
         return this.regions;
+    }
+
+    public DescribeAvailableCrossRegionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeAvailableCrossRegionResponseBodyRegions extends TeaModel {

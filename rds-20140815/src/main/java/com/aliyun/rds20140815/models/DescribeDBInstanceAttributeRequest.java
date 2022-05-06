@@ -4,26 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceAttributeRequest extends TeaModel {
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("Expired")
     public String expired;
 
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static DescribeDBInstanceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceAttributeRequest self = new DescribeDBInstanceAttributeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBInstanceAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public DescribeDBInstanceAttributeRequest setDBInstanceId(String DBInstanceId) {
@@ -40,6 +32,14 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     }
     public String getExpired() {
         return this.expired;
+    }
+
+    public DescribeDBInstanceAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

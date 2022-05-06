@@ -4,14 +4,14 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("WhitelistNetworkType")
     public String whitelistNetworkType;
@@ -19,14 +19,6 @@ public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
     public static DescribeDBInstanceIPArrayListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceIPArrayListRequest self = new DescribeDBInstanceIPArrayListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBInstanceIPArrayListRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public DescribeDBInstanceIPArrayListRequest setDBInstanceId(String DBInstanceId) {
@@ -43,6 +35,14 @@ public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public DescribeDBInstanceIPArrayListRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeDBInstanceIPArrayListRequest setWhitelistNetworkType(String whitelistNetworkType) {

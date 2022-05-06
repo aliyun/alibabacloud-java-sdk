@@ -4,15 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyHASwitchConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -22,36 +13,21 @@ public class ModifyHASwitchConfigRequest extends TeaModel {
     @NameInMap("ManualHATime")
     public String manualHATime;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyHASwitchConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyHASwitchConfigRequest self = new ModifyHASwitchConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyHASwitchConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyHASwitchConfigRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyHASwitchConfigRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public ModifyHASwitchConfigRequest setDBInstanceId(String DBInstanceId) {
@@ -78,12 +54,36 @@ public class ModifyHASwitchConfigRequest extends TeaModel {
         return this.manualHATime;
     }
 
+    public ModifyHASwitchConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ModifyHASwitchConfigRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyHASwitchConfigRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyHASwitchConfigRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

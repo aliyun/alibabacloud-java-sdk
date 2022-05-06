@@ -7,17 +7,8 @@ public class CloneParameterGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("TargetRegionId")
-    public String targetRegionId;
+    @NameInMap("ParameterGroupDesc")
+    public String parameterGroupDesc;
 
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
@@ -25,8 +16,17 @@ public class CloneParameterGroupRequest extends TeaModel {
     @NameInMap("ParameterGroupName")
     public String parameterGroupName;
 
-    @NameInMap("ParameterGroupDesc")
-    public String parameterGroupDesc;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("TargetRegionId")
+    public String targetRegionId;
 
     public static CloneParameterGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CloneParameterGroupRequest self = new CloneParameterGroupRequest();
@@ -41,36 +41,12 @@ public class CloneParameterGroupRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CloneParameterGroupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public CloneParameterGroupRequest setParameterGroupDesc(String parameterGroupDesc) {
+        this.parameterGroupDesc = parameterGroupDesc;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CloneParameterGroupRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CloneParameterGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CloneParameterGroupRequest setTargetRegionId(String targetRegionId) {
-        this.targetRegionId = targetRegionId;
-        return this;
-    }
-    public String getTargetRegionId() {
-        return this.targetRegionId;
+    public String getParameterGroupDesc() {
+        return this.parameterGroupDesc;
     }
 
     public CloneParameterGroupRequest setParameterGroupId(String parameterGroupId) {
@@ -89,12 +65,36 @@ public class CloneParameterGroupRequest extends TeaModel {
         return this.parameterGroupName;
     }
 
-    public CloneParameterGroupRequest setParameterGroupDesc(String parameterGroupDesc) {
-        this.parameterGroupDesc = parameterGroupDesc;
+    public CloneParameterGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getParameterGroupDesc() {
-        return this.parameterGroupDesc;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CloneParameterGroupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CloneParameterGroupRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CloneParameterGroupRequest setTargetRegionId(String targetRegionId) {
+        this.targetRegionId = targetRegionId;
+        return this;
+    }
+    public String getTargetRegionId() {
+        return this.targetRegionId;
     }
 
 }

@@ -4,17 +4,29 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBProxyEndpointResponseBody extends TeaModel {
+    @NameInMap("DBProxyConnectString")
+    public String DBProxyConnectString;
+
     @NameInMap("DBProxyConnectStringNetType")
     public String DBProxyConnectStringNetType;
+
+    @NameInMap("DBProxyConnectStringPort")
+    public String DBProxyConnectStringPort;
+
+    @NameInMap("DBProxyEndpointId")
+    public String DBProxyEndpointId;
 
     @NameInMap("DBProxyFeatures")
     public String DBProxyFeatures;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DbProxyEndpointAliases")
+    public String dbProxyEndpointAliases;
 
-    @NameInMap("ReadOnlyInstanceWeight")
-    public String readOnlyInstanceWeight;
+    @NameInMap("DbProxyEndpointReadWriteMode")
+    public String dbProxyEndpointReadWriteMode;
+
+    @NameInMap("EndpointConnectItems")
+    public DescribeDBProxyEndpointResponseBodyEndpointConnectItems endpointConnectItems;
 
     @NameInMap("ReadOnlyInstanceDistributionType")
     public String readOnlyInstanceDistributionType;
@@ -22,27 +34,23 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @NameInMap("ReadOnlyInstanceMaxDelayTime")
     public String readOnlyInstanceMaxDelayTime;
 
-    @NameInMap("DbProxyEndpointReadWriteMode")
-    public String dbProxyEndpointReadWriteMode;
+    @NameInMap("ReadOnlyInstanceWeight")
+    public String readOnlyInstanceWeight;
 
-    @NameInMap("DbProxyEndpointAliases")
-    public String dbProxyEndpointAliases;
-
-    @NameInMap("DBProxyEndpointId")
-    public String DBProxyEndpointId;
-
-    @NameInMap("DBProxyConnectStringPort")
-    public String DBProxyConnectStringPort;
-
-    @NameInMap("DBProxyConnectString")
-    public String DBProxyConnectString;
-
-    @NameInMap("EndpointConnectItems")
-    public DescribeDBProxyEndpointResponseBodyEndpointConnectItems endpointConnectItems;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDBProxyEndpointResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBProxyEndpointResponseBody self = new DescribeDBProxyEndpointResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBProxyEndpointResponseBody setDBProxyConnectString(String DBProxyConnectString) {
+        this.DBProxyConnectString = DBProxyConnectString;
+        return this;
+    }
+    public String getDBProxyConnectString() {
+        return this.DBProxyConnectString;
     }
 
     public DescribeDBProxyEndpointResponseBody setDBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
@@ -53,6 +61,22 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         return this.DBProxyConnectStringNetType;
     }
 
+    public DescribeDBProxyEndpointResponseBody setDBProxyConnectStringPort(String DBProxyConnectStringPort) {
+        this.DBProxyConnectStringPort = DBProxyConnectStringPort;
+        return this;
+    }
+    public String getDBProxyConnectStringPort() {
+        return this.DBProxyConnectStringPort;
+    }
+
+    public DescribeDBProxyEndpointResponseBody setDBProxyEndpointId(String DBProxyEndpointId) {
+        this.DBProxyEndpointId = DBProxyEndpointId;
+        return this;
+    }
+    public String getDBProxyEndpointId() {
+        return this.DBProxyEndpointId;
+    }
+
     public DescribeDBProxyEndpointResponseBody setDBProxyFeatures(String DBProxyFeatures) {
         this.DBProxyFeatures = DBProxyFeatures;
         return this;
@@ -61,20 +85,28 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         return this.DBProxyFeatures;
     }
 
-    public DescribeDBProxyEndpointResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDBProxyEndpointResponseBody setDbProxyEndpointAliases(String dbProxyEndpointAliases) {
+        this.dbProxyEndpointAliases = dbProxyEndpointAliases;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getDbProxyEndpointAliases() {
+        return this.dbProxyEndpointAliases;
     }
 
-    public DescribeDBProxyEndpointResponseBody setReadOnlyInstanceWeight(String readOnlyInstanceWeight) {
-        this.readOnlyInstanceWeight = readOnlyInstanceWeight;
+    public DescribeDBProxyEndpointResponseBody setDbProxyEndpointReadWriteMode(String dbProxyEndpointReadWriteMode) {
+        this.dbProxyEndpointReadWriteMode = dbProxyEndpointReadWriteMode;
         return this;
     }
-    public String getReadOnlyInstanceWeight() {
-        return this.readOnlyInstanceWeight;
+    public String getDbProxyEndpointReadWriteMode() {
+        return this.dbProxyEndpointReadWriteMode;
+    }
+
+    public DescribeDBProxyEndpointResponseBody setEndpointConnectItems(DescribeDBProxyEndpointResponseBodyEndpointConnectItems endpointConnectItems) {
+        this.endpointConnectItems = endpointConnectItems;
+        return this;
+    }
+    public DescribeDBProxyEndpointResponseBodyEndpointConnectItems getEndpointConnectItems() {
+        return this.endpointConnectItems;
     }
 
     public DescribeDBProxyEndpointResponseBody setReadOnlyInstanceDistributionType(String readOnlyInstanceDistributionType) {
@@ -93,75 +125,35 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         return this.readOnlyInstanceMaxDelayTime;
     }
 
-    public DescribeDBProxyEndpointResponseBody setDbProxyEndpointReadWriteMode(String dbProxyEndpointReadWriteMode) {
-        this.dbProxyEndpointReadWriteMode = dbProxyEndpointReadWriteMode;
+    public DescribeDBProxyEndpointResponseBody setReadOnlyInstanceWeight(String readOnlyInstanceWeight) {
+        this.readOnlyInstanceWeight = readOnlyInstanceWeight;
         return this;
     }
-    public String getDbProxyEndpointReadWriteMode() {
-        return this.dbProxyEndpointReadWriteMode;
+    public String getReadOnlyInstanceWeight() {
+        return this.readOnlyInstanceWeight;
     }
 
-    public DescribeDBProxyEndpointResponseBody setDbProxyEndpointAliases(String dbProxyEndpointAliases) {
-        this.dbProxyEndpointAliases = dbProxyEndpointAliases;
+    public DescribeDBProxyEndpointResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getDbProxyEndpointAliases() {
-        return this.dbProxyEndpointAliases;
-    }
-
-    public DescribeDBProxyEndpointResponseBody setDBProxyEndpointId(String DBProxyEndpointId) {
-        this.DBProxyEndpointId = DBProxyEndpointId;
-        return this;
-    }
-    public String getDBProxyEndpointId() {
-        return this.DBProxyEndpointId;
-    }
-
-    public DescribeDBProxyEndpointResponseBody setDBProxyConnectStringPort(String DBProxyConnectStringPort) {
-        this.DBProxyConnectStringPort = DBProxyConnectStringPort;
-        return this;
-    }
-    public String getDBProxyConnectStringPort() {
-        return this.DBProxyConnectStringPort;
-    }
-
-    public DescribeDBProxyEndpointResponseBody setDBProxyConnectString(String DBProxyConnectString) {
-        this.DBProxyConnectString = DBProxyConnectString;
-        return this;
-    }
-    public String getDBProxyConnectString() {
-        return this.DBProxyConnectString;
-    }
-
-    public DescribeDBProxyEndpointResponseBody setEndpointConnectItems(DescribeDBProxyEndpointResponseBodyEndpointConnectItems endpointConnectItems) {
-        this.endpointConnectItems = endpointConnectItems;
-        return this;
-    }
-    public DescribeDBProxyEndpointResponseBodyEndpointConnectItems getEndpointConnectItems() {
-        return this.endpointConnectItems;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems extends TeaModel {
-        @NameInMap("DbProxyEndpointPort")
-        public String dbProxyEndpointPort;
-
         @NameInMap("DbProxyEndpointConnectString")
         public String dbProxyEndpointConnectString;
 
         @NameInMap("DbProxyEndpointNetType")
         public String dbProxyEndpointNetType;
 
+        @NameInMap("DbProxyEndpointPort")
+        public String dbProxyEndpointPort;
+
         public static DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems self = new DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems setDbProxyEndpointPort(String dbProxyEndpointPort) {
-            this.dbProxyEndpointPort = dbProxyEndpointPort;
-            return this;
-        }
-        public String getDbProxyEndpointPort() {
-            return this.dbProxyEndpointPort;
         }
 
         public DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems setDbProxyEndpointConnectString(String dbProxyEndpointConnectString) {
@@ -178,6 +170,14 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
         }
         public String getDbProxyEndpointNetType() {
             return this.dbProxyEndpointNetType;
+        }
+
+        public DescribeDBProxyEndpointResponseBodyEndpointConnectItemsEndpointConnectItems setDbProxyEndpointPort(String dbProxyEndpointPort) {
+            this.dbProxyEndpointPort = dbProxyEndpointPort;
+            return this;
+        }
+        public String getDbProxyEndpointPort() {
+            return this.dbProxyEndpointPort;
         }
 
     }

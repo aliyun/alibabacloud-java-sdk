@@ -4,26 +4,14 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class AllocateReadWriteSplittingConnectionRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("ConnectionStringPrefix")
+    public String connectionStringPrefix;
 
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("ConnectionStringPrefix")
-    public String connectionStringPrefix;
-
-    @NameInMap("Port")
-    public String port;
+    @NameInMap("DistributionType")
+    public String distributionType;
 
     @NameInMap("MaxDelayTime")
     public String maxDelayTime;
@@ -31,8 +19,20 @@ public class AllocateReadWriteSplittingConnectionRequest extends TeaModel {
     @NameInMap("NetType")
     public String netType;
 
-    @NameInMap("DistributionType")
-    public String distributionType;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("Port")
+    public String port;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("Weight")
     public String weight;
@@ -40,46 +40,6 @@ public class AllocateReadWriteSplittingConnectionRequest extends TeaModel {
     public static AllocateReadWriteSplittingConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateReadWriteSplittingConnectionRequest self = new AllocateReadWriteSplittingConnectionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AllocateReadWriteSplittingConnectionRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public AllocateReadWriteSplittingConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public AllocateReadWriteSplittingConnectionRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public AllocateReadWriteSplittingConnectionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public AllocateReadWriteSplittingConnectionRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
     }
 
     public AllocateReadWriteSplittingConnectionRequest setConnectionStringPrefix(String connectionStringPrefix) {
@@ -90,12 +50,20 @@ public class AllocateReadWriteSplittingConnectionRequest extends TeaModel {
         return this.connectionStringPrefix;
     }
 
-    public AllocateReadWriteSplittingConnectionRequest setPort(String port) {
-        this.port = port;
+    public AllocateReadWriteSplittingConnectionRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getPort() {
-        return this.port;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public AllocateReadWriteSplittingConnectionRequest setDistributionType(String distributionType) {
+        this.distributionType = distributionType;
+        return this;
+    }
+    public String getDistributionType() {
+        return this.distributionType;
     }
 
     public AllocateReadWriteSplittingConnectionRequest setMaxDelayTime(String maxDelayTime) {
@@ -114,12 +82,44 @@ public class AllocateReadWriteSplittingConnectionRequest extends TeaModel {
         return this.netType;
     }
 
-    public AllocateReadWriteSplittingConnectionRequest setDistributionType(String distributionType) {
-        this.distributionType = distributionType;
+    public AllocateReadWriteSplittingConnectionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getDistributionType() {
-        return this.distributionType;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public AllocateReadWriteSplittingConnectionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public AllocateReadWriteSplittingConnectionRequest setPort(String port) {
+        this.port = port;
+        return this;
+    }
+    public String getPort() {
+        return this.port;
+    }
+
+    public AllocateReadWriteSplittingConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public AllocateReadWriteSplittingConnectionRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public AllocateReadWriteSplittingConnectionRequest setWeight(String weight) {

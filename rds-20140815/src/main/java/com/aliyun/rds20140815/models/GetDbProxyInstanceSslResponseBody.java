@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class GetDbProxyInstanceSslResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DbProxyCertListItems")
     public GetDbProxyInstanceSslResponseBodyDbProxyCertListItems dbProxyCertListItems;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetDbProxyInstanceSslResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDbProxyInstanceSslResponseBody self = new GetDbProxyInstanceSslResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDbProxyInstanceSslResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetDbProxyInstanceSslResponseBody setDbProxyCertListItems(GetDbProxyInstanceSslResponseBodyDbProxyCertListItems dbProxyCertListItems) {
@@ -31,7 +23,18 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
         return this.dbProxyCertListItems;
     }
 
+    public GetDbProxyInstanceSslResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems extends TeaModel {
+        @NameInMap("CertCommonName")
+        public String certCommonName;
+
         @NameInMap("DbInstanceName")
         public String dbInstanceName;
 
@@ -44,12 +47,17 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
         @NameInMap("SslExpiredTime")
         public String sslExpiredTime;
 
-        @NameInMap("CertCommonName")
-        public String certCommonName;
-
         public static GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems build(java.util.Map<String, ?> map) throws Exception {
             GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems self = new GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems();
             return TeaModel.build(map, self);
+        }
+
+        public GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems setCertCommonName(String certCommonName) {
+            this.certCommonName = certCommonName;
+            return this;
+        }
+        public String getCertCommonName() {
+            return this.certCommonName;
         }
 
         public GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems setDbInstanceName(String dbInstanceName) {
@@ -82,14 +90,6 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
         }
         public String getSslExpiredTime() {
             return this.sslExpiredTime;
-        }
-
-        public GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems setCertCommonName(String certCommonName) {
-            this.certCommonName = certCommonName;
-            return this;
-        }
-        public String getCertCommonName() {
-            return this.certCommonName;
         }
 
     }

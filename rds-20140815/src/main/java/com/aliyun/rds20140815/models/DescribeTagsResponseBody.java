@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Items")
     public DescribeTagsResponseBodyItems items;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTagsResponseBody self = new DescribeTagsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTagsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeTagsResponseBody setItems(DescribeTagsResponseBodyItems items) {
@@ -29,6 +21,14 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
     public DescribeTagsResponseBodyItems getItems() {
         return this.items;
+    }
+
+    public DescribeTagsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeTagsResponseBodyItemsTagInfosDBInstanceIds extends TeaModel {
@@ -51,26 +51,26 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyItemsTagInfos extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
+        @NameInMap("DBInstanceIds")
+        public DescribeTagsResponseBodyItemsTagInfosDBInstanceIds DBInstanceIds;
 
         @NameInMap("TagKey")
         public String tagKey;
 
-        @NameInMap("DBInstanceIds")
-        public DescribeTagsResponseBodyItemsTagInfosDBInstanceIds DBInstanceIds;
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static DescribeTagsResponseBodyItemsTagInfos build(java.util.Map<String, ?> map) throws Exception {
             DescribeTagsResponseBodyItemsTagInfos self = new DescribeTagsResponseBodyItemsTagInfos();
             return TeaModel.build(map, self);
         }
 
-        public DescribeTagsResponseBodyItemsTagInfos setTagValue(String tagValue) {
-            this.tagValue = tagValue;
+        public DescribeTagsResponseBodyItemsTagInfos setDBInstanceIds(DescribeTagsResponseBodyItemsTagInfosDBInstanceIds DBInstanceIds) {
+            this.DBInstanceIds = DBInstanceIds;
             return this;
         }
-        public String getTagValue() {
-            return this.tagValue;
+        public DescribeTagsResponseBodyItemsTagInfosDBInstanceIds getDBInstanceIds() {
+            return this.DBInstanceIds;
         }
 
         public DescribeTagsResponseBodyItemsTagInfos setTagKey(String tagKey) {
@@ -81,12 +81,12 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.tagKey;
         }
 
-        public DescribeTagsResponseBodyItemsTagInfos setDBInstanceIds(DescribeTagsResponseBodyItemsTagInfosDBInstanceIds DBInstanceIds) {
-            this.DBInstanceIds = DBInstanceIds;
+        public DescribeTagsResponseBodyItemsTagInfos setTagValue(String tagValue) {
+            this.tagValue = tagValue;
             return this;
         }
-        public DescribeTagsResponseBodyItemsTagInfosDBInstanceIds getDBInstanceIds() {
-            return this.DBInstanceIds;
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

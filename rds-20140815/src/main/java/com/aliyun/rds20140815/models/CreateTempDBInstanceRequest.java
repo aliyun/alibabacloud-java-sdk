@@ -4,6 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateTempDBInstanceRequest extends TeaModel {
+    @NameInMap("BackupId")
+    public Integer backupId;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,21 +22,36 @@ public class CreateTempDBInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("BackupId")
-    public Integer backupId;
-
     @NameInMap("RestoreTime")
     public String restoreTime;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static CreateTempDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTempDBInstanceRequest self = new CreateTempDBInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTempDBInstanceRequest setBackupId(Integer backupId) {
+        this.backupId = backupId;
+        return this;
+    }
+    public Integer getBackupId() {
+        return this.backupId;
+    }
+
+    public CreateTempDBInstanceRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public CreateTempDBInstanceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateTempDBInstanceRequest setOwnerId(Long ownerId) {
@@ -54,36 +78,12 @@ public class CreateTempDBInstanceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateTempDBInstanceRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public CreateTempDBInstanceRequest setBackupId(Integer backupId) {
-        this.backupId = backupId;
-        return this;
-    }
-    public Integer getBackupId() {
-        return this.backupId;
-    }
-
     public CreateTempDBInstanceRequest setRestoreTime(String restoreTime) {
         this.restoreTime = restoreTime;
         return this;
     }
     public String getRestoreTime() {
         return this.restoreTime;
-    }
-
-    public CreateTempDBInstanceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

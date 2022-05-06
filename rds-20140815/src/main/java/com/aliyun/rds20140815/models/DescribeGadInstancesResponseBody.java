@@ -4,24 +4,16 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeGadInstancesResponseBody extends TeaModel {
+    @NameInMap("GadInstances")
+    public java.util.List<DescribeGadInstancesResponseBodyGadInstances> gadInstances;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("GadInstances")
-    public java.util.List<DescribeGadInstancesResponseBodyGadInstances> gadInstances;
-
     public static DescribeGadInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGadInstancesResponseBody self = new DescribeGadInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGadInstancesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeGadInstancesResponseBody setGadInstances(java.util.List<DescribeGadInstancesResponseBodyGadInstances> gadInstances) {
@@ -32,9 +24,20 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         return this.gadInstances;
     }
 
+    public DescribeGadInstancesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers extends TeaModel {
         @NameInMap("DBInstanceID")
         public String DBInstanceID;
+
+        @NameInMap("DtsInstance")
+        public String dtsInstance;
 
         @NameInMap("Engine")
         public String engine;
@@ -51,9 +54,6 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("DtsInstance")
-        public String dtsInstance;
-
         public static DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers build(java.util.Map<String, ?> map) throws Exception {
             DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers self = new DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers();
             return TeaModel.build(map, self);
@@ -65,6 +65,14 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         }
         public String getDBInstanceID() {
             return this.DBInstanceID;
+        }
+
+        public DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers setDtsInstance(String dtsInstance) {
+            this.dtsInstance = dtsInstance;
+            return this;
+        }
+        public String getDtsInstance() {
+            return this.dtsInstance;
         }
 
         public DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers setEngine(String engine) {
@@ -107,65 +115,33 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers setDtsInstance(String dtsInstance) {
-            this.dtsInstance = dtsInstance;
-            return this;
-        }
-        public String getDtsInstance() {
-            return this.dtsInstance;
-        }
-
     }
 
     public static class DescribeGadInstancesResponseBodyGadInstances extends TeaModel {
-        @NameInMap("GadInstanceName")
-        public String gadInstanceName;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("GadInstanceMembers")
+        public java.util.List<DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers> gadInstanceMembers;
 
-        @NameInMap("CreationTime")
-        public String creationTime;
+        @NameInMap("GadInstanceName")
+        public String gadInstanceName;
 
         @NameInMap("ModificationTime")
         public String modificationTime;
 
-        @NameInMap("GadInstanceMembers")
-        public java.util.List<DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers> gadInstanceMembers;
-
         @NameInMap("Service")
         public String service;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeGadInstancesResponseBodyGadInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeGadInstancesResponseBodyGadInstances self = new DescribeGadInstancesResponseBodyGadInstances();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeGadInstancesResponseBodyGadInstances setGadInstanceName(String gadInstanceName) {
-            this.gadInstanceName = gadInstanceName;
-            return this;
-        }
-        public String getGadInstanceName() {
-            return this.gadInstanceName;
-        }
-
-        public DescribeGadInstancesResponseBodyGadInstances setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeGadInstancesResponseBodyGadInstances setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeGadInstancesResponseBodyGadInstances setCreationTime(String creationTime) {
@@ -176,12 +152,12 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeGadInstancesResponseBodyGadInstances setModificationTime(String modificationTime) {
-            this.modificationTime = modificationTime;
+        public DescribeGadInstancesResponseBodyGadInstances setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getModificationTime() {
-            return this.modificationTime;
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeGadInstancesResponseBodyGadInstances setGadInstanceMembers(java.util.List<DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers> gadInstanceMembers) {
@@ -192,12 +168,36 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             return this.gadInstanceMembers;
         }
 
+        public DescribeGadInstancesResponseBodyGadInstances setGadInstanceName(String gadInstanceName) {
+            this.gadInstanceName = gadInstanceName;
+            return this;
+        }
+        public String getGadInstanceName() {
+            return this.gadInstanceName;
+        }
+
+        public DescribeGadInstancesResponseBodyGadInstances setModificationTime(String modificationTime) {
+            this.modificationTime = modificationTime;
+            return this;
+        }
+        public String getModificationTime() {
+            return this.modificationTime;
+        }
+
         public DescribeGadInstancesResponseBodyGadInstances setService(String service) {
             this.service = service;
             return this;
         }
         public String getService() {
             return this.service;
+        }
+
+        public DescribeGadInstancesResponseBodyGadInstances setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

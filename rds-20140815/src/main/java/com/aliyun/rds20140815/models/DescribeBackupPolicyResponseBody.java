@@ -4,50 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("LogBackupRetentionPeriod")
-    public Integer logBackupRetentionPeriod;
-
-    @NameInMap("ArchiveBackupKeepPolicy")
-    public String archiveBackupKeepPolicy;
-
     @NameInMap("ArchiveBackupKeepCount")
     public String archiveBackupKeepCount;
 
-    @NameInMap("LocalLogRetentionHours")
-    public Integer localLogRetentionHours;
-
-    @NameInMap("BackupRetentionPeriod")
-    public Integer backupRetentionPeriod;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PreferredBackupPeriod")
-    public String preferredBackupPeriod;
-
-    @NameInMap("CompressType")
-    public String compressType;
-
-    @NameInMap("SupportReleasedKeep")
-    public Integer supportReleasedKeep;
-
-    @NameInMap("LocalLogRetentionSpace")
-    public String localLogRetentionSpace;
-
-    @NameInMap("SupportVolumeShadowCopy")
-    public Integer supportVolumeShadowCopy;
-
-    @NameInMap("BackupMethod")
-    public String backupMethod;
-
-    @NameInMap("LogBackupFrequency")
-    public String logBackupFrequency;
-
-    @NameInMap("PreferredNextBackupTime")
-    public String preferredNextBackupTime;
-
-    @NameInMap("HighSpaceUsageProtection")
-    public String highSpaceUsageProtection;
+    @NameInMap("ArchiveBackupKeepPolicy")
+    public String archiveBackupKeepPolicy;
 
     @NameInMap("ArchiveBackupRetentionPeriod")
     public String archiveBackupRetentionPeriod;
@@ -55,43 +16,66 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("BackupInterval")
     public String backupInterval;
 
-    @NameInMap("ReleasedKeepPolicy")
-    public String releasedKeepPolicy;
+    @NameInMap("BackupLog")
+    public String backupLog;
 
-    @NameInMap("PreferredBackupTime")
-    public String preferredBackupTime;
+    @NameInMap("BackupMethod")
+    public String backupMethod;
 
-    @NameInMap("LogBackupLocalRetentionNumber")
-    public Integer logBackupLocalRetentionNumber;
+    @NameInMap("BackupRetentionPeriod")
+    public Integer backupRetentionPeriod;
 
     @NameInMap("Category")
     public String category;
 
+    @NameInMap("CompressType")
+    public String compressType;
+
     @NameInMap("EnableBackupLog")
     public String enableBackupLog;
 
-    @NameInMap("BackupLog")
-    public String backupLog;
+    @NameInMap("HighSpaceUsageProtection")
+    public String highSpaceUsageProtection;
+
+    @NameInMap("LocalLogRetentionHours")
+    public Integer localLogRetentionHours;
+
+    @NameInMap("LocalLogRetentionSpace")
+    public String localLogRetentionSpace;
+
+    @NameInMap("LogBackupFrequency")
+    public String logBackupFrequency;
+
+    @NameInMap("LogBackupLocalRetentionNumber")
+    public Integer logBackupLocalRetentionNumber;
+
+    @NameInMap("LogBackupRetentionPeriod")
+    public Integer logBackupRetentionPeriod;
+
+    @NameInMap("PreferredBackupPeriod")
+    public String preferredBackupPeriod;
+
+    @NameInMap("PreferredBackupTime")
+    public String preferredBackupTime;
+
+    @NameInMap("PreferredNextBackupTime")
+    public String preferredNextBackupTime;
+
+    @NameInMap("ReleasedKeepPolicy")
+    public String releasedKeepPolicy;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SupportReleasedKeep")
+    public Integer supportReleasedKeep;
+
+    @NameInMap("SupportVolumeShadowCopy")
+    public Integer supportVolumeShadowCopy;
 
     public static DescribeBackupPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPolicyResponseBody self = new DescribeBackupPolicyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBackupPolicyResponseBody setLogBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
-        this.logBackupRetentionPeriod = logBackupRetentionPeriod;
-        return this;
-    }
-    public Integer getLogBackupRetentionPeriod() {
-        return this.logBackupRetentionPeriod;
-    }
-
-    public DescribeBackupPolicyResponseBody setArchiveBackupKeepPolicy(String archiveBackupKeepPolicy) {
-        this.archiveBackupKeepPolicy = archiveBackupKeepPolicy;
-        return this;
-    }
-    public String getArchiveBackupKeepPolicy() {
-        return this.archiveBackupKeepPolicy;
     }
 
     public DescribeBackupPolicyResponseBody setArchiveBackupKeepCount(String archiveBackupKeepCount) {
@@ -102,100 +86,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.archiveBackupKeepCount;
     }
 
-    public DescribeBackupPolicyResponseBody setLocalLogRetentionHours(Integer localLogRetentionHours) {
-        this.localLogRetentionHours = localLogRetentionHours;
+    public DescribeBackupPolicyResponseBody setArchiveBackupKeepPolicy(String archiveBackupKeepPolicy) {
+        this.archiveBackupKeepPolicy = archiveBackupKeepPolicy;
         return this;
     }
-    public Integer getLocalLogRetentionHours() {
-        return this.localLogRetentionHours;
-    }
-
-    public DescribeBackupPolicyResponseBody setBackupRetentionPeriod(Integer backupRetentionPeriod) {
-        this.backupRetentionPeriod = backupRetentionPeriod;
-        return this;
-    }
-    public Integer getBackupRetentionPeriod() {
-        return this.backupRetentionPeriod;
-    }
-
-    public DescribeBackupPolicyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeBackupPolicyResponseBody setPreferredBackupPeriod(String preferredBackupPeriod) {
-        this.preferredBackupPeriod = preferredBackupPeriod;
-        return this;
-    }
-    public String getPreferredBackupPeriod() {
-        return this.preferredBackupPeriod;
-    }
-
-    public DescribeBackupPolicyResponseBody setCompressType(String compressType) {
-        this.compressType = compressType;
-        return this;
-    }
-    public String getCompressType() {
-        return this.compressType;
-    }
-
-    public DescribeBackupPolicyResponseBody setSupportReleasedKeep(Integer supportReleasedKeep) {
-        this.supportReleasedKeep = supportReleasedKeep;
-        return this;
-    }
-    public Integer getSupportReleasedKeep() {
-        return this.supportReleasedKeep;
-    }
-
-    public DescribeBackupPolicyResponseBody setLocalLogRetentionSpace(String localLogRetentionSpace) {
-        this.localLogRetentionSpace = localLogRetentionSpace;
-        return this;
-    }
-    public String getLocalLogRetentionSpace() {
-        return this.localLogRetentionSpace;
-    }
-
-    public DescribeBackupPolicyResponseBody setSupportVolumeShadowCopy(Integer supportVolumeShadowCopy) {
-        this.supportVolumeShadowCopy = supportVolumeShadowCopy;
-        return this;
-    }
-    public Integer getSupportVolumeShadowCopy() {
-        return this.supportVolumeShadowCopy;
-    }
-
-    public DescribeBackupPolicyResponseBody setBackupMethod(String backupMethod) {
-        this.backupMethod = backupMethod;
-        return this;
-    }
-    public String getBackupMethod() {
-        return this.backupMethod;
-    }
-
-    public DescribeBackupPolicyResponseBody setLogBackupFrequency(String logBackupFrequency) {
-        this.logBackupFrequency = logBackupFrequency;
-        return this;
-    }
-    public String getLogBackupFrequency() {
-        return this.logBackupFrequency;
-    }
-
-    public DescribeBackupPolicyResponseBody setPreferredNextBackupTime(String preferredNextBackupTime) {
-        this.preferredNextBackupTime = preferredNextBackupTime;
-        return this;
-    }
-    public String getPreferredNextBackupTime() {
-        return this.preferredNextBackupTime;
-    }
-
-    public DescribeBackupPolicyResponseBody setHighSpaceUsageProtection(String highSpaceUsageProtection) {
-        this.highSpaceUsageProtection = highSpaceUsageProtection;
-        return this;
-    }
-    public String getHighSpaceUsageProtection() {
-        return this.highSpaceUsageProtection;
+    public String getArchiveBackupKeepPolicy() {
+        return this.archiveBackupKeepPolicy;
     }
 
     public DescribeBackupPolicyResponseBody setArchiveBackupRetentionPeriod(String archiveBackupRetentionPeriod) {
@@ -214,28 +110,28 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.backupInterval;
     }
 
-    public DescribeBackupPolicyResponseBody setReleasedKeepPolicy(String releasedKeepPolicy) {
-        this.releasedKeepPolicy = releasedKeepPolicy;
+    public DescribeBackupPolicyResponseBody setBackupLog(String backupLog) {
+        this.backupLog = backupLog;
         return this;
     }
-    public String getReleasedKeepPolicy() {
-        return this.releasedKeepPolicy;
+    public String getBackupLog() {
+        return this.backupLog;
     }
 
-    public DescribeBackupPolicyResponseBody setPreferredBackupTime(String preferredBackupTime) {
-        this.preferredBackupTime = preferredBackupTime;
+    public DescribeBackupPolicyResponseBody setBackupMethod(String backupMethod) {
+        this.backupMethod = backupMethod;
         return this;
     }
-    public String getPreferredBackupTime() {
-        return this.preferredBackupTime;
+    public String getBackupMethod() {
+        return this.backupMethod;
     }
 
-    public DescribeBackupPolicyResponseBody setLogBackupLocalRetentionNumber(Integer logBackupLocalRetentionNumber) {
-        this.logBackupLocalRetentionNumber = logBackupLocalRetentionNumber;
+    public DescribeBackupPolicyResponseBody setBackupRetentionPeriod(Integer backupRetentionPeriod) {
+        this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
     }
-    public Integer getLogBackupLocalRetentionNumber() {
-        return this.logBackupLocalRetentionNumber;
+    public Integer getBackupRetentionPeriod() {
+        return this.backupRetentionPeriod;
     }
 
     public DescribeBackupPolicyResponseBody setCategory(String category) {
@@ -246,6 +142,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.category;
     }
 
+    public DescribeBackupPolicyResponseBody setCompressType(String compressType) {
+        this.compressType = compressType;
+        return this;
+    }
+    public String getCompressType() {
+        return this.compressType;
+    }
+
     public DescribeBackupPolicyResponseBody setEnableBackupLog(String enableBackupLog) {
         this.enableBackupLog = enableBackupLog;
         return this;
@@ -254,12 +158,108 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.enableBackupLog;
     }
 
-    public DescribeBackupPolicyResponseBody setBackupLog(String backupLog) {
-        this.backupLog = backupLog;
+    public DescribeBackupPolicyResponseBody setHighSpaceUsageProtection(String highSpaceUsageProtection) {
+        this.highSpaceUsageProtection = highSpaceUsageProtection;
         return this;
     }
-    public String getBackupLog() {
-        return this.backupLog;
+    public String getHighSpaceUsageProtection() {
+        return this.highSpaceUsageProtection;
+    }
+
+    public DescribeBackupPolicyResponseBody setLocalLogRetentionHours(Integer localLogRetentionHours) {
+        this.localLogRetentionHours = localLogRetentionHours;
+        return this;
+    }
+    public Integer getLocalLogRetentionHours() {
+        return this.localLogRetentionHours;
+    }
+
+    public DescribeBackupPolicyResponseBody setLocalLogRetentionSpace(String localLogRetentionSpace) {
+        this.localLogRetentionSpace = localLogRetentionSpace;
+        return this;
+    }
+    public String getLocalLogRetentionSpace() {
+        return this.localLogRetentionSpace;
+    }
+
+    public DescribeBackupPolicyResponseBody setLogBackupFrequency(String logBackupFrequency) {
+        this.logBackupFrequency = logBackupFrequency;
+        return this;
+    }
+    public String getLogBackupFrequency() {
+        return this.logBackupFrequency;
+    }
+
+    public DescribeBackupPolicyResponseBody setLogBackupLocalRetentionNumber(Integer logBackupLocalRetentionNumber) {
+        this.logBackupLocalRetentionNumber = logBackupLocalRetentionNumber;
+        return this;
+    }
+    public Integer getLogBackupLocalRetentionNumber() {
+        return this.logBackupLocalRetentionNumber;
+    }
+
+    public DescribeBackupPolicyResponseBody setLogBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
+        this.logBackupRetentionPeriod = logBackupRetentionPeriod;
+        return this;
+    }
+    public Integer getLogBackupRetentionPeriod() {
+        return this.logBackupRetentionPeriod;
+    }
+
+    public DescribeBackupPolicyResponseBody setPreferredBackupPeriod(String preferredBackupPeriod) {
+        this.preferredBackupPeriod = preferredBackupPeriod;
+        return this;
+    }
+    public String getPreferredBackupPeriod() {
+        return this.preferredBackupPeriod;
+    }
+
+    public DescribeBackupPolicyResponseBody setPreferredBackupTime(String preferredBackupTime) {
+        this.preferredBackupTime = preferredBackupTime;
+        return this;
+    }
+    public String getPreferredBackupTime() {
+        return this.preferredBackupTime;
+    }
+
+    public DescribeBackupPolicyResponseBody setPreferredNextBackupTime(String preferredNextBackupTime) {
+        this.preferredNextBackupTime = preferredNextBackupTime;
+        return this;
+    }
+    public String getPreferredNextBackupTime() {
+        return this.preferredNextBackupTime;
+    }
+
+    public DescribeBackupPolicyResponseBody setReleasedKeepPolicy(String releasedKeepPolicy) {
+        this.releasedKeepPolicy = releasedKeepPolicy;
+        return this;
+    }
+    public String getReleasedKeepPolicy() {
+        return this.releasedKeepPolicy;
+    }
+
+    public DescribeBackupPolicyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeBackupPolicyResponseBody setSupportReleasedKeep(Integer supportReleasedKeep) {
+        this.supportReleasedKeep = supportReleasedKeep;
+        return this;
+    }
+    public Integer getSupportReleasedKeep() {
+        return this.supportReleasedKeep;
+    }
+
+    public DescribeBackupPolicyResponseBody setSupportVolumeShadowCopy(Integer supportVolumeShadowCopy) {
+        this.supportVolumeShadowCopy = supportVolumeShadowCopy;
+        return this;
+    }
+    public Integer getSupportVolumeShadowCopy() {
+        return this.supportVolumeShadowCopy;
     }
 
 }

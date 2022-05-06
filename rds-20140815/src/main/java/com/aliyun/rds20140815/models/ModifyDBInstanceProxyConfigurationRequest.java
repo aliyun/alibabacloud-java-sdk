@@ -4,17 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceProxyConfigurationRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("ProxyConfigurationKey")
     public String proxyConfigurationKey;
@@ -22,33 +16,15 @@ public class ModifyDBInstanceProxyConfigurationRequest extends TeaModel {
     @NameInMap("ProxyConfigurationValue")
     public String proxyConfigurationValue;
 
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static ModifyDBInstanceProxyConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceProxyConfigurationRequest self = new ModifyDBInstanceProxyConfigurationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDBInstanceProxyConfigurationRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyDBInstanceProxyConfigurationRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyDBInstanceProxyConfigurationRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public ModifyDBInstanceProxyConfigurationRequest setDBInstanceId(String DBInstanceId) {
@@ -57,6 +33,14 @@ public class ModifyDBInstanceProxyConfigurationRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifyDBInstanceProxyConfigurationRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyDBInstanceProxyConfigurationRequest setProxyConfigurationKey(String proxyConfigurationKey) {
@@ -73,6 +57,22 @@ public class ModifyDBInstanceProxyConfigurationRequest extends TeaModel {
     }
     public String getProxyConfigurationValue() {
         return this.proxyConfigurationValue;
+    }
+
+    public ModifyDBInstanceProxyConfigurationRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyDBInstanceProxyConfigurationRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

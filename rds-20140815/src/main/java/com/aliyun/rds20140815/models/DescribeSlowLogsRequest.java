@@ -4,8 +4,26 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogsRequest extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("DBName")
+    public String DBName;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,33 +31,47 @@ public class DescribeSlowLogsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("SortKey")
+    public String sortKey;
 
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("DBName")
-    public String DBName;
-
-    @NameInMap("SortKey")
-    public String sortKey;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DescribeSlowLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSlowLogsRequest self = new DescribeSlowLogsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSlowLogsRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeSlowLogsRequest setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
+    }
+
+    public DescribeSlowLogsRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeSlowLogsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeSlowLogsRequest setOwnerId(Long ownerId) {
@@ -48,6 +80,22 @@ public class DescribeSlowLogsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeSlowLogsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeSlowLogsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeSlowLogsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -66,38 +114,6 @@ public class DescribeSlowLogsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeSlowLogsRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public DescribeSlowLogsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeSlowLogsRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeSlowLogsRequest setDBName(String DBName) {
-        this.DBName = DBName;
-        return this;
-    }
-    public String getDBName() {
-        return this.DBName;
-    }
-
     public DescribeSlowLogsRequest setSortKey(String sortKey) {
         this.sortKey = sortKey;
         return this;
@@ -106,28 +122,12 @@ public class DescribeSlowLogsRequest extends TeaModel {
         return this.sortKey;
     }
 
-    public DescribeSlowLogsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeSlowLogsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeSlowLogsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeSlowLogsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

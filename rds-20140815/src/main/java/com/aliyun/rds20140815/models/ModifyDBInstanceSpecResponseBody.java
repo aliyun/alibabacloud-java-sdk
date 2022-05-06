@@ -7,11 +7,11 @@ public class ModifyDBInstanceSpecResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OrderId")
     public Long orderId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ModifyDBInstanceSpecResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceSpecResponseBody self = new ModifyDBInstanceSpecResponseBody();
@@ -26,20 +26,20 @@ public class ModifyDBInstanceSpecResponseBody extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public ModifyDBInstanceSpecResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ModifyDBInstanceSpecResponseBody setOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public ModifyDBInstanceSpecResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

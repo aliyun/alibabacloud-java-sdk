@@ -4,104 +4,44 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Engine")
-    public String engine;
-
-    @NameInMap("EngineVersion")
-    public String engineVersion;
-
-    @NameInMap("DBInstanceClass")
-    public String DBInstanceClass;
-
-    @NameInMap("DBInstanceStorage")
-    public Integer DBInstanceStorage;
-
-    @NameInMap("SystemDBCharset")
-    public String systemDBCharset;
-
-    @NameInMap("DBInstanceNetType")
-    public String DBInstanceNetType;
-
-    @NameInMap("DBInstanceDescription")
-    public String DBInstanceDescription;
-
-    @NameInMap("SecurityIPList")
-    public String securityIPList;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("PayType")
-    public String payType;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
-
-    @NameInMap("ZoneIdSlave1")
-    public String zoneIdSlave1;
-
-    @NameInMap("ZoneIdSlave2")
-    public String zoneIdSlave2;
-
-    @NameInMap("InstanceNetworkType")
-    public String instanceNetworkType;
-
-    @NameInMap("ConnectionMode")
-    public String connectionMode;
-
-    @NameInMap("VPCId")
-    public String VPCId;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
-
-    @NameInMap("PrivateIpAddress")
-    public String privateIpAddress;
-
-    @NameInMap("UsedTime")
-    public String usedTime;
-
-    @NameInMap("Period")
-    public String period;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("DBInstanceStorageType")
-    public String DBInstanceStorageType;
-
-    @NameInMap("BusinessInfo")
-    public String businessInfo;
-
-    @NameInMap("EncryptionKey")
-    public String encryptionKey;
-
-    @NameInMap("RoleARN")
-    public String roleARN;
+    @NameInMap("Amount")
+    public Integer amount;
 
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    @NameInMap("BusinessInfo")
+    public String businessInfo;
+
     @NameInMap("Category")
     public String category;
 
-    @NameInMap("DedicatedHostGroupId")
-    public String dedicatedHostGroupId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
-    @NameInMap("TargetDedicatedHostIdForMaster")
-    public String targetDedicatedHostIdForMaster;
+    @NameInMap("ConnectionMode")
+    public String connectionMode;
 
-    @NameInMap("TargetDedicatedHostIdForSlave")
-    public String targetDedicatedHostIdForSlave;
+    @NameInMap("CreateStrategy")
+    public String createStrategy;
 
-    @NameInMap("TargetDedicatedHostIdForLog")
-    public String targetDedicatedHostIdForLog;
+    @NameInMap("DBInstanceClass")
+    public String DBInstanceClass;
+
+    @NameInMap("DBInstanceDescription")
+    public String DBInstanceDescription;
+
+    @NameInMap("DBInstanceNetType")
+    public String DBInstanceNetType;
+
+    @NameInMap("DBInstanceStorage")
+    public Integer DBInstanceStorage;
+
+    @NameInMap("DBInstanceStorageType")
+    public String DBInstanceStorageType;
+
+    @NameInMap("DBIsIgnoreCase")
+    public String DBIsIgnoreCase;
 
     @NameInMap("DBParamGroupId")
     public String DBParamGroupId;
@@ -109,11 +49,50 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("DBTimeZone")
     public String DBTimeZone;
 
-    @NameInMap("DBIsIgnoreCase")
-    public String DBIsIgnoreCase;
+    @NameInMap("DedicatedHostGroupId")
+    public String dedicatedHostGroupId;
 
-    @NameInMap("TargetMinorVersion")
-    public String targetMinorVersion;
+    @NameInMap("DeletionProtection")
+    public Boolean deletionProtection;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    @NameInMap("EncryptionKey")
+    public String encryptionKey;
+
+    @NameInMap("Engine")
+    public String engine;
+
+    @NameInMap("EngineVersion")
+    public String engineVersion;
+
+    @NameInMap("InstanceNetworkType")
+    public String instanceNetworkType;
+
+    @NameInMap("PayType")
+    public String payType;
+
+    @NameInMap("Period")
+    public String period;
+
+    @NameInMap("PrivateIpAddress")
+    public String privateIpAddress;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("RoleARN")
+    public String roleARN;
+
+    @NameInMap("SecurityIPList")
+    public String securityIPList;
 
     @NameInMap("StorageAutoScale")
     public String storageAutoScale;
@@ -124,240 +103,56 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("StorageUpperBound")
     public Integer storageUpperBound;
 
-    @NameInMap("DryRun")
-    public Boolean dryRun;
+    @NameInMap("SystemDBCharset")
+    public String systemDBCharset;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateDBInstanceRequestTag> tag;
+
+    @NameInMap("TargetDedicatedHostIdForLog")
+    public String targetDedicatedHostIdForLog;
+
+    @NameInMap("TargetDedicatedHostIdForMaster")
+    public String targetDedicatedHostIdForMaster;
+
+    @NameInMap("TargetDedicatedHostIdForSlave")
+    public String targetDedicatedHostIdForSlave;
+
+    @NameInMap("TargetMinorVersion")
+    public String targetMinorVersion;
+
+    @NameInMap("UsedTime")
+    public String usedTime;
 
     @NameInMap("UserBackupId")
     public String userBackupId;
 
-    @NameInMap("Amount")
-    public Integer amount;
+    @NameInMap("VPCId")
+    public String VPCId;
 
-    @NameInMap("CreateStrategy")
-    public String createStrategy;
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
 
-    @NameInMap("Tag")
-    public java.util.List<CreateDBInstanceRequestTag> tag;
+    @NameInMap("ZoneId")
+    public String zoneId;
+
+    @NameInMap("ZoneIdSlave1")
+    public String zoneIdSlave1;
+
+    @NameInMap("ZoneIdSlave2")
+    public String zoneIdSlave2;
 
     public static CreateDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBInstanceRequest self = new CreateDBInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDBInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public CreateDBInstanceRequest setAmount(Integer amount) {
+        this.amount = amount;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateDBInstanceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateDBInstanceRequest setEngine(String engine) {
-        this.engine = engine;
-        return this;
-    }
-    public String getEngine() {
-        return this.engine;
-    }
-
-    public CreateDBInstanceRequest setEngineVersion(String engineVersion) {
-        this.engineVersion = engineVersion;
-        return this;
-    }
-    public String getEngineVersion() {
-        return this.engineVersion;
-    }
-
-    public CreateDBInstanceRequest setDBInstanceClass(String DBInstanceClass) {
-        this.DBInstanceClass = DBInstanceClass;
-        return this;
-    }
-    public String getDBInstanceClass() {
-        return this.DBInstanceClass;
-    }
-
-    public CreateDBInstanceRequest setDBInstanceStorage(Integer DBInstanceStorage) {
-        this.DBInstanceStorage = DBInstanceStorage;
-        return this;
-    }
-    public Integer getDBInstanceStorage() {
-        return this.DBInstanceStorage;
-    }
-
-    public CreateDBInstanceRequest setSystemDBCharset(String systemDBCharset) {
-        this.systemDBCharset = systemDBCharset;
-        return this;
-    }
-    public String getSystemDBCharset() {
-        return this.systemDBCharset;
-    }
-
-    public CreateDBInstanceRequest setDBInstanceNetType(String DBInstanceNetType) {
-        this.DBInstanceNetType = DBInstanceNetType;
-        return this;
-    }
-    public String getDBInstanceNetType() {
-        return this.DBInstanceNetType;
-    }
-
-    public CreateDBInstanceRequest setDBInstanceDescription(String DBInstanceDescription) {
-        this.DBInstanceDescription = DBInstanceDescription;
-        return this;
-    }
-    public String getDBInstanceDescription() {
-        return this.DBInstanceDescription;
-    }
-
-    public CreateDBInstanceRequest setSecurityIPList(String securityIPList) {
-        this.securityIPList = securityIPList;
-        return this;
-    }
-    public String getSecurityIPList() {
-        return this.securityIPList;
-    }
-
-    public CreateDBInstanceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateDBInstanceRequest setPayType(String payType) {
-        this.payType = payType;
-        return this;
-    }
-    public String getPayType() {
-        return this.payType;
-    }
-
-    public CreateDBInstanceRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public CreateDBInstanceRequest setZoneIdSlave1(String zoneIdSlave1) {
-        this.zoneIdSlave1 = zoneIdSlave1;
-        return this;
-    }
-    public String getZoneIdSlave1() {
-        return this.zoneIdSlave1;
-    }
-
-    public CreateDBInstanceRequest setZoneIdSlave2(String zoneIdSlave2) {
-        this.zoneIdSlave2 = zoneIdSlave2;
-        return this;
-    }
-    public String getZoneIdSlave2() {
-        return this.zoneIdSlave2;
-    }
-
-    public CreateDBInstanceRequest setInstanceNetworkType(String instanceNetworkType) {
-        this.instanceNetworkType = instanceNetworkType;
-        return this;
-    }
-    public String getInstanceNetworkType() {
-        return this.instanceNetworkType;
-    }
-
-    public CreateDBInstanceRequest setConnectionMode(String connectionMode) {
-        this.connectionMode = connectionMode;
-        return this;
-    }
-    public String getConnectionMode() {
-        return this.connectionMode;
-    }
-
-    public CreateDBInstanceRequest setVPCId(String VPCId) {
-        this.VPCId = VPCId;
-        return this;
-    }
-    public String getVPCId() {
-        return this.VPCId;
-    }
-
-    public CreateDBInstanceRequest setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    public CreateDBInstanceRequest setPrivateIpAddress(String privateIpAddress) {
-        this.privateIpAddress = privateIpAddress;
-        return this;
-    }
-    public String getPrivateIpAddress() {
-        return this.privateIpAddress;
-    }
-
-    public CreateDBInstanceRequest setUsedTime(String usedTime) {
-        this.usedTime = usedTime;
-        return this;
-    }
-    public String getUsedTime() {
-        return this.usedTime;
-    }
-
-    public CreateDBInstanceRequest setPeriod(String period) {
-        this.period = period;
-        return this;
-    }
-    public String getPeriod() {
-        return this.period;
-    }
-
-    public CreateDBInstanceRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public CreateDBInstanceRequest setDBInstanceStorageType(String DBInstanceStorageType) {
-        this.DBInstanceStorageType = DBInstanceStorageType;
-        return this;
-    }
-    public String getDBInstanceStorageType() {
-        return this.DBInstanceStorageType;
-    }
-
-    public CreateDBInstanceRequest setBusinessInfo(String businessInfo) {
-        this.businessInfo = businessInfo;
-        return this;
-    }
-    public String getBusinessInfo() {
-        return this.businessInfo;
-    }
-
-    public CreateDBInstanceRequest setEncryptionKey(String encryptionKey) {
-        this.encryptionKey = encryptionKey;
-        return this;
-    }
-    public String getEncryptionKey() {
-        return this.encryptionKey;
-    }
-
-    public CreateDBInstanceRequest setRoleARN(String roleARN) {
-        this.roleARN = roleARN;
-        return this;
-    }
-    public String getRoleARN() {
-        return this.roleARN;
+    public Integer getAmount() {
+        return this.amount;
     }
 
     public CreateDBInstanceRequest setAutoRenew(String autoRenew) {
@@ -368,6 +163,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.autoRenew;
     }
 
+    public CreateDBInstanceRequest setBusinessInfo(String businessInfo) {
+        this.businessInfo = businessInfo;
+        return this;
+    }
+    public String getBusinessInfo() {
+        return this.businessInfo;
+    }
+
     public CreateDBInstanceRequest setCategory(String category) {
         this.category = category;
         return this;
@@ -376,36 +179,76 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.category;
     }
 
-    public CreateDBInstanceRequest setDedicatedHostGroupId(String dedicatedHostGroupId) {
-        this.dedicatedHostGroupId = dedicatedHostGroupId;
+    public CreateDBInstanceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getDedicatedHostGroupId() {
-        return this.dedicatedHostGroupId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
-    public CreateDBInstanceRequest setTargetDedicatedHostIdForMaster(String targetDedicatedHostIdForMaster) {
-        this.targetDedicatedHostIdForMaster = targetDedicatedHostIdForMaster;
+    public CreateDBInstanceRequest setConnectionMode(String connectionMode) {
+        this.connectionMode = connectionMode;
         return this;
     }
-    public String getTargetDedicatedHostIdForMaster() {
-        return this.targetDedicatedHostIdForMaster;
+    public String getConnectionMode() {
+        return this.connectionMode;
     }
 
-    public CreateDBInstanceRequest setTargetDedicatedHostIdForSlave(String targetDedicatedHostIdForSlave) {
-        this.targetDedicatedHostIdForSlave = targetDedicatedHostIdForSlave;
+    public CreateDBInstanceRequest setCreateStrategy(String createStrategy) {
+        this.createStrategy = createStrategy;
         return this;
     }
-    public String getTargetDedicatedHostIdForSlave() {
-        return this.targetDedicatedHostIdForSlave;
+    public String getCreateStrategy() {
+        return this.createStrategy;
     }
 
-    public CreateDBInstanceRequest setTargetDedicatedHostIdForLog(String targetDedicatedHostIdForLog) {
-        this.targetDedicatedHostIdForLog = targetDedicatedHostIdForLog;
+    public CreateDBInstanceRequest setDBInstanceClass(String DBInstanceClass) {
+        this.DBInstanceClass = DBInstanceClass;
         return this;
     }
-    public String getTargetDedicatedHostIdForLog() {
-        return this.targetDedicatedHostIdForLog;
+    public String getDBInstanceClass() {
+        return this.DBInstanceClass;
+    }
+
+    public CreateDBInstanceRequest setDBInstanceDescription(String DBInstanceDescription) {
+        this.DBInstanceDescription = DBInstanceDescription;
+        return this;
+    }
+    public String getDBInstanceDescription() {
+        return this.DBInstanceDescription;
+    }
+
+    public CreateDBInstanceRequest setDBInstanceNetType(String DBInstanceNetType) {
+        this.DBInstanceNetType = DBInstanceNetType;
+        return this;
+    }
+    public String getDBInstanceNetType() {
+        return this.DBInstanceNetType;
+    }
+
+    public CreateDBInstanceRequest setDBInstanceStorage(Integer DBInstanceStorage) {
+        this.DBInstanceStorage = DBInstanceStorage;
+        return this;
+    }
+    public Integer getDBInstanceStorage() {
+        return this.DBInstanceStorage;
+    }
+
+    public CreateDBInstanceRequest setDBInstanceStorageType(String DBInstanceStorageType) {
+        this.DBInstanceStorageType = DBInstanceStorageType;
+        return this;
+    }
+    public String getDBInstanceStorageType() {
+        return this.DBInstanceStorageType;
+    }
+
+    public CreateDBInstanceRequest setDBIsIgnoreCase(String DBIsIgnoreCase) {
+        this.DBIsIgnoreCase = DBIsIgnoreCase;
+        return this;
+    }
+    public String getDBIsIgnoreCase() {
+        return this.DBIsIgnoreCase;
     }
 
     public CreateDBInstanceRequest setDBParamGroupId(String DBParamGroupId) {
@@ -424,20 +267,124 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.DBTimeZone;
     }
 
-    public CreateDBInstanceRequest setDBIsIgnoreCase(String DBIsIgnoreCase) {
-        this.DBIsIgnoreCase = DBIsIgnoreCase;
+    public CreateDBInstanceRequest setDedicatedHostGroupId(String dedicatedHostGroupId) {
+        this.dedicatedHostGroupId = dedicatedHostGroupId;
         return this;
     }
-    public String getDBIsIgnoreCase() {
-        return this.DBIsIgnoreCase;
+    public String getDedicatedHostGroupId() {
+        return this.dedicatedHostGroupId;
     }
 
-    public CreateDBInstanceRequest setTargetMinorVersion(String targetMinorVersion) {
-        this.targetMinorVersion = targetMinorVersion;
+    public CreateDBInstanceRequest setDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
         return this;
     }
-    public String getTargetMinorVersion() {
-        return this.targetMinorVersion;
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
+    }
+
+    public CreateDBInstanceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public CreateDBInstanceRequest setEncryptionKey(String encryptionKey) {
+        this.encryptionKey = encryptionKey;
+        return this;
+    }
+    public String getEncryptionKey() {
+        return this.encryptionKey;
+    }
+
+    public CreateDBInstanceRequest setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
+    }
+
+    public CreateDBInstanceRequest setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public String getEngineVersion() {
+        return this.engineVersion;
+    }
+
+    public CreateDBInstanceRequest setInstanceNetworkType(String instanceNetworkType) {
+        this.instanceNetworkType = instanceNetworkType;
+        return this;
+    }
+    public String getInstanceNetworkType() {
+        return this.instanceNetworkType;
+    }
+
+    public CreateDBInstanceRequest setPayType(String payType) {
+        this.payType = payType;
+        return this;
+    }
+    public String getPayType() {
+        return this.payType;
+    }
+
+    public CreateDBInstanceRequest setPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    public String getPeriod() {
+        return this.period;
+    }
+
+    public CreateDBInstanceRequest setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
+    public CreateDBInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateDBInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateDBInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateDBInstanceRequest setRoleARN(String roleARN) {
+        this.roleARN = roleARN;
+        return this;
+    }
+    public String getRoleARN() {
+        return this.roleARN;
+    }
+
+    public CreateDBInstanceRequest setSecurityIPList(String securityIPList) {
+        this.securityIPList = securityIPList;
+        return this;
+    }
+    public String getSecurityIPList() {
+        return this.securityIPList;
     }
 
     public CreateDBInstanceRequest setStorageAutoScale(String storageAutoScale) {
@@ -464,12 +411,60 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.storageUpperBound;
     }
 
-    public CreateDBInstanceRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
+    public CreateDBInstanceRequest setSystemDBCharset(String systemDBCharset) {
+        this.systemDBCharset = systemDBCharset;
         return this;
     }
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getSystemDBCharset() {
+        return this.systemDBCharset;
+    }
+
+    public CreateDBInstanceRequest setTag(java.util.List<CreateDBInstanceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateDBInstanceRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public CreateDBInstanceRequest setTargetDedicatedHostIdForLog(String targetDedicatedHostIdForLog) {
+        this.targetDedicatedHostIdForLog = targetDedicatedHostIdForLog;
+        return this;
+    }
+    public String getTargetDedicatedHostIdForLog() {
+        return this.targetDedicatedHostIdForLog;
+    }
+
+    public CreateDBInstanceRequest setTargetDedicatedHostIdForMaster(String targetDedicatedHostIdForMaster) {
+        this.targetDedicatedHostIdForMaster = targetDedicatedHostIdForMaster;
+        return this;
+    }
+    public String getTargetDedicatedHostIdForMaster() {
+        return this.targetDedicatedHostIdForMaster;
+    }
+
+    public CreateDBInstanceRequest setTargetDedicatedHostIdForSlave(String targetDedicatedHostIdForSlave) {
+        this.targetDedicatedHostIdForSlave = targetDedicatedHostIdForSlave;
+        return this;
+    }
+    public String getTargetDedicatedHostIdForSlave() {
+        return this.targetDedicatedHostIdForSlave;
+    }
+
+    public CreateDBInstanceRequest setTargetMinorVersion(String targetMinorVersion) {
+        this.targetMinorVersion = targetMinorVersion;
+        return this;
+    }
+    public String getTargetMinorVersion() {
+        return this.targetMinorVersion;
+    }
+
+    public CreateDBInstanceRequest setUsedTime(String usedTime) {
+        this.usedTime = usedTime;
+        return this;
+    }
+    public String getUsedTime() {
+        return this.usedTime;
     }
 
     public CreateDBInstanceRequest setUserBackupId(String userBackupId) {
@@ -480,28 +475,44 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.userBackupId;
     }
 
-    public CreateDBInstanceRequest setAmount(Integer amount) {
-        this.amount = amount;
+    public CreateDBInstanceRequest setVPCId(String VPCId) {
+        this.VPCId = VPCId;
         return this;
     }
-    public Integer getAmount() {
-        return this.amount;
+    public String getVPCId() {
+        return this.VPCId;
     }
 
-    public CreateDBInstanceRequest setCreateStrategy(String createStrategy) {
-        this.createStrategy = createStrategy;
+    public CreateDBInstanceRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
         return this;
     }
-    public String getCreateStrategy() {
-        return this.createStrategy;
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
-    public CreateDBInstanceRequest setTag(java.util.List<CreateDBInstanceRequestTag> tag) {
-        this.tag = tag;
+    public CreateDBInstanceRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
-    public java.util.List<CreateDBInstanceRequestTag> getTag() {
-        return this.tag;
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
+    public CreateDBInstanceRequest setZoneIdSlave1(String zoneIdSlave1) {
+        this.zoneIdSlave1 = zoneIdSlave1;
+        return this;
+    }
+    public String getZoneIdSlave1() {
+        return this.zoneIdSlave1;
+    }
+
+    public CreateDBInstanceRequest setZoneIdSlave2(String zoneIdSlave2) {
+        this.zoneIdSlave2 = zoneIdSlave2;
+        return this;
+    }
+    public String getZoneIdSlave2() {
+        return this.zoneIdSlave2;
     }
 
     public static class CreateDBInstanceRequestTag extends TeaModel {

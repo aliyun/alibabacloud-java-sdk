@@ -7,11 +7,14 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("OrderId")
+    public String orderId;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("OrderId")
-    public String orderId;
+    @NameInMap("TaskId")
+    public Long taskId;
 
     public static UpgradeDBInstanceMajorVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBInstanceMajorVersionResponseBody self = new UpgradeDBInstanceMajorVersionResponseBody();
@@ -26,6 +29,14 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
         return this.DBInstanceId;
     }
 
+    public UpgradeDBInstanceMajorVersionResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
+    }
+
     public UpgradeDBInstanceMajorVersionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -34,12 +45,12 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpgradeDBInstanceMajorVersionResponseBody setOrderId(String orderId) {
-        this.orderId = orderId;
+    public UpgradeDBInstanceMajorVersionResponseBody setTaskId(Long taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

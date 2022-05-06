@@ -4,26 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteDatabaseRequest extends TeaModel {
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("DBName")
     public String DBName;
 
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static DeleteDatabaseRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDatabaseRequest self = new DeleteDatabaseRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteDatabaseRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public DeleteDatabaseRequest setDBInstanceId(String DBInstanceId) {
@@ -40,6 +32,14 @@ public class DeleteDatabaseRequest extends TeaModel {
     }
     public String getDBName() {
         return this.DBName;
+    }
+
+    public DeleteDatabaseRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

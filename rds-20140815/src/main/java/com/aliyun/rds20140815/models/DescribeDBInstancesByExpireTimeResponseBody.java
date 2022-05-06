@@ -4,8 +4,8 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Items")
+    public DescribeDBInstancesByExpireTimeResponseBodyItems items;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,23 +13,23 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
-
-    @NameInMap("Items")
-    public DescribeDBInstancesByExpireTimeResponseBodyItems items;
 
     public static DescribeDBInstancesByExpireTimeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesByExpireTimeResponseBody self = new DescribeDBInstancesByExpireTimeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstancesByExpireTimeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDBInstancesByExpireTimeResponseBody setItems(DescribeDBInstancesByExpireTimeResponseBodyItems items) {
+        this.items = items;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public DescribeDBInstancesByExpireTimeResponseBodyItems getItems() {
+        return this.items;
     }
 
     public DescribeDBInstancesByExpireTimeResponseBody setPageNumber(Integer pageNumber) {
@@ -48,6 +48,14 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         return this.pageRecordCount;
     }
 
+    public DescribeDBInstancesByExpireTimeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeDBInstancesByExpireTimeResponseBody setTotalRecordCount(Integer totalRecordCount) {
         this.totalRecordCount = totalRecordCount;
         return this;
@@ -56,20 +64,9 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         return this.totalRecordCount;
     }
 
-    public DescribeDBInstancesByExpireTimeResponseBody setItems(DescribeDBInstancesByExpireTimeResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeDBInstancesByExpireTimeResponseBodyItems getItems() {
-        return this.items;
-    }
-
     public static class DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime extends TeaModel {
-        @NameInMap("ExpireTime")
-        public String expireTime;
-
-        @NameInMap("PayType")
-        public String payType;
+        @NameInMap("DBInstanceDescription")
+        public String DBInstanceDescription;
 
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
@@ -77,31 +74,26 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
-        @NameInMap("DBInstanceDescription")
-        public String DBInstanceDescription;
+        @NameInMap("ExpireTime")
+        public String expireTime;
 
         @NameInMap("LockMode")
         public String lockMode;
+
+        @NameInMap("PayType")
+        public String payType;
 
         public static DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime self = new DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
+        public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setDBInstanceDescription(String DBInstanceDescription) {
+            this.DBInstanceDescription = DBInstanceDescription;
             return this;
         }
-        public String getExpireTime() {
-            return this.expireTime;
-        }
-
-        public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setPayType(String payType) {
-            this.payType = payType;
-            return this;
-        }
-        public String getPayType() {
-            return this.payType;
+        public String getDBInstanceDescription() {
+            return this.DBInstanceDescription;
         }
 
         public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setDBInstanceId(String DBInstanceId) {
@@ -120,12 +112,12 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             return this.DBInstanceStatus;
         }
 
-        public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setDBInstanceDescription(String DBInstanceDescription) {
-            this.DBInstanceDescription = DBInstanceDescription;
+        public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
             return this;
         }
-        public String getDBInstanceDescription() {
-            return this.DBInstanceDescription;
+        public String getExpireTime() {
+            return this.expireTime;
         }
 
         public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setLockMode(String lockMode) {
@@ -134,6 +126,14 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         }
         public String getLockMode() {
             return this.lockMode;
+        }
+
+        public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
         }
 
     }

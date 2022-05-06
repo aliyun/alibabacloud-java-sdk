@@ -7,11 +7,11 @@ public class CreateDiagnosticReportRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static CreateDiagnosticReportRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDiagnosticReportRequest self = new CreateDiagnosticReportRequest();
@@ -26,20 +26,20 @@ public class CreateDiagnosticReportRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public CreateDiagnosticReportRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public CreateDiagnosticReportRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public CreateDiagnosticReportRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

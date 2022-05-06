@@ -7,20 +7,20 @@ public class DescribeAvailableDedicatedHostClassesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("StorageType")
+    public String storageType;
 
     @NameInMap("ZoneId")
     public String zoneId;
-
-    @NameInMap("StorageType")
-    public String storageType;
 
     public static DescribeAvailableDedicatedHostClassesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableDedicatedHostClassesRequest self = new DescribeAvailableDedicatedHostClassesRequest();
@@ -33,6 +33,14 @@ public class DescribeAvailableDedicatedHostClassesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeAvailableDedicatedHostClassesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeAvailableDedicatedHostClassesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -51,12 +59,12 @@ public class DescribeAvailableDedicatedHostClassesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeAvailableDedicatedHostClassesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeAvailableDedicatedHostClassesRequest setStorageType(String storageType) {
+        this.storageType = storageType;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public DescribeAvailableDedicatedHostClassesRequest setZoneId(String zoneId) {
@@ -65,14 +73,6 @@ public class DescribeAvailableDedicatedHostClassesRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
-    }
-
-    public DescribeAvailableDedicatedHostClassesRequest setStorageType(String storageType) {
-        this.storageType = storageType;
-        return this;
-    }
-    public String getStorageType() {
-        return this.storageType;
     }
 
 }

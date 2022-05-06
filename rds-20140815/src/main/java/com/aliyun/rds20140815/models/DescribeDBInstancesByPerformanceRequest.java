@@ -7,8 +7,26 @@ public class DescribeDBInstancesByPerformanceRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<DescribeDBInstancesByPerformanceRequestTag> tag;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,35 +34,17 @@ public class DescribeDBInstancesByPerformanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("proxyId")
-    public String proxyId;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("SortKey")
+    public String sortKey;
 
     @NameInMap("SortMethod")
     public String sortMethod;
 
-    @NameInMap("SortKey")
-    public String sortKey;
-
     @NameInMap("Tags")
     public String tags;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("proxyId")
+    public String proxyId;
 
     public static DescribeDBInstancesByPerformanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesByPerformanceRequest self = new DescribeDBInstancesByPerformanceRequest();
@@ -59,12 +59,60 @@ public class DescribeDBInstancesByPerformanceRequest extends TeaModel {
         return this.tag;
     }
 
+    public DescribeDBInstancesByPerformanceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DescribeDBInstancesByPerformanceRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeDBInstancesByPerformanceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public DescribeDBInstancesByPerformanceRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeDBInstancesByPerformanceRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDBInstancesByPerformanceRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeDBInstancesByPerformanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeDBInstancesByPerformanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -83,44 +131,12 @@ public class DescribeDBInstancesByPerformanceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeDBInstancesByPerformanceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DescribeDBInstancesByPerformanceRequest setSortKey(String sortKey) {
+        this.sortKey = sortKey;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public DescribeDBInstancesByPerformanceRequest setProxyId(String proxyId) {
-        this.proxyId = proxyId;
-        return this;
-    }
-    public String getProxyId() {
-        return this.proxyId;
-    }
-
-    public DescribeDBInstancesByPerformanceRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public DescribeDBInstancesByPerformanceRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeDBInstancesByPerformanceRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getSortKey() {
+        return this.sortKey;
     }
 
     public DescribeDBInstancesByPerformanceRequest setSortMethod(String sortMethod) {
@@ -131,14 +147,6 @@ public class DescribeDBInstancesByPerformanceRequest extends TeaModel {
         return this.sortMethod;
     }
 
-    public DescribeDBInstancesByPerformanceRequest setSortKey(String sortKey) {
-        this.sortKey = sortKey;
-        return this;
-    }
-    public String getSortKey() {
-        return this.sortKey;
-    }
-
     public DescribeDBInstancesByPerformanceRequest setTags(String tags) {
         this.tags = tags;
         return this;
@@ -147,20 +155,12 @@ public class DescribeDBInstancesByPerformanceRequest extends TeaModel {
         return this.tags;
     }
 
-    public DescribeDBInstancesByPerformanceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeDBInstancesByPerformanceRequest setProxyId(String proxyId) {
+        this.proxyId = proxyId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeDBInstancesByPerformanceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getProxyId() {
+        return this.proxyId;
     }
 
     public static class DescribeDBInstancesByPerformanceRequestTag extends TeaModel {

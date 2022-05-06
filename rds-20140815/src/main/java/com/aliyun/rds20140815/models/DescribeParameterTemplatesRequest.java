@@ -4,17 +4,14 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("Category")
+    public String category;
 
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
 
     @NameInMap("Engine")
     public String engine;
@@ -25,42 +22,29 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("Category")
-    public String category;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeParameterTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeParameterTemplatesRequest self = new DescribeParameterTemplatesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeParameterTemplatesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeParameterTemplatesRequest setCategory(String category) {
+        this.category = category;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeParameterTemplatesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeParameterTemplatesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getCategory() {
+        return this.category;
     }
 
     public DescribeParameterTemplatesRequest setClientToken(String clientToken) {
@@ -69,6 +53,14 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public DescribeParameterTemplatesRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     public DescribeParameterTemplatesRequest setEngine(String engine) {
@@ -95,12 +87,12 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeParameterTemplatesRequest setCategory(String category) {
-        this.category = category;
+    public DescribeParameterTemplatesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getCategory() {
-        return this.category;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeParameterTemplatesRequest setRegionId(String regionId) {
@@ -111,12 +103,20 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeParameterTemplatesRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public DescribeParameterTemplatesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeParameterTemplatesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

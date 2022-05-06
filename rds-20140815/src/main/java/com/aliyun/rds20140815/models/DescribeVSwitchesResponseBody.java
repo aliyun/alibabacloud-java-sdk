@@ -4,17 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     @NameInMap("VSwitchs")
     public java.util.List<DescribeVSwitchesResponseBodyVSwitchs> vSwitchs;
@@ -22,22 +22,6 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public static DescribeVSwitchesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVSwitchesResponseBody self = new DescribeVSwitchesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVSwitchesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeVSwitchesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeVSwitchesResponseBody setPageNumber(Long pageNumber) {
@@ -54,6 +38,22 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeVSwitchesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeVSwitchesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeVSwitchesResponseBody setVSwitchs(java.util.List<DescribeVSwitchesResponseBodyVSwitchs> vSwitchs) {

@@ -4,6 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceKeywordsRequest extends TeaModel {
+    @NameInMap("Key")
+    public String key;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class DescribeInstanceKeywordsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Key")
-    public String key;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DescribeInstanceKeywordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceKeywordsRequest self = new DescribeInstanceKeywordsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceKeywordsRequest setKey(String key) {
+        this.key = key;
+        return this;
+    }
+    public String getKey() {
+        return this.key;
+    }
+
+    public DescribeInstanceKeywordsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeInstanceKeywordsRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class DescribeInstanceKeywordsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeInstanceKeywordsRequest setKey(String key) {
-        this.key = key;
-        return this;
-    }
-    public String getKey() {
-        return this.key;
-    }
-
-    public DescribeInstanceKeywordsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

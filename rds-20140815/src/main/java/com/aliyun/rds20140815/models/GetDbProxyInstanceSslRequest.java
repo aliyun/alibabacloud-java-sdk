@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class GetDbProxyInstanceSslRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static GetDbProxyInstanceSslRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDbProxyInstanceSslRequest self = new GetDbProxyInstanceSslRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetDbProxyInstanceSslRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetDbProxyInstanceSslRequest setDbInstanceId(String dbInstanceId) {
@@ -29,6 +21,14 @@ public class GetDbProxyInstanceSslRequest extends TeaModel {
     }
     public String getDbInstanceId() {
         return this.dbInstanceId;
+    }
+
+    public GetDbProxyInstanceSslRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

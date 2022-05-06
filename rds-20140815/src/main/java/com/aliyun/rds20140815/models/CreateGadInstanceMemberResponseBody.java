@@ -33,23 +33,15 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
     }
 
     public static class CreateGadInstanceMemberResponseBodyResult extends TeaModel {
-        @NameInMap("GadInstanceName")
-        public String gadInstanceName;
-
         @NameInMap("CreateCount")
         public String createCount;
+
+        @NameInMap("GadInstanceName")
+        public String gadInstanceName;
 
         public static CreateGadInstanceMemberResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CreateGadInstanceMemberResponseBodyResult self = new CreateGadInstanceMemberResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public CreateGadInstanceMemberResponseBodyResult setGadInstanceName(String gadInstanceName) {
-            this.gadInstanceName = gadInstanceName;
-            return this;
-        }
-        public String getGadInstanceName() {
-            return this.gadInstanceName;
         }
 
         public CreateGadInstanceMemberResponseBodyResult setCreateCount(String createCount) {
@@ -58,6 +50,14 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
         }
         public String getCreateCount() {
             return this.createCount;
+        }
+
+        public CreateGadInstanceMemberResponseBodyResult setGadInstanceName(String gadInstanceName) {
+            this.gadInstanceName = gadInstanceName;
+            return this;
+        }
+        public String getGadInstanceName() {
+            return this.gadInstanceName;
         }
 
     }

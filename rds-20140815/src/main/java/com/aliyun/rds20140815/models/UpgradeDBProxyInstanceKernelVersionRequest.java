@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +16,23 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("SwitchTime")
+    public String switchTime;
 
     @NameInMap("UpgradeTime")
     public String upgradeTime;
 
-    @NameInMap("SwitchTime")
-    public String switchTime;
-
     public static UpgradeDBProxyInstanceKernelVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBProxyInstanceKernelVersionRequest self = new UpgradeDBProxyInstanceKernelVersionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpgradeDBProxyInstanceKernelVersionRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     public UpgradeDBProxyInstanceKernelVersionRequest setOwnerId(Long ownerId) {
@@ -51,12 +59,12 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UpgradeDBProxyInstanceKernelVersionRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public UpgradeDBProxyInstanceKernelVersionRequest setSwitchTime(String switchTime) {
+        this.switchTime = switchTime;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getSwitchTime() {
+        return this.switchTime;
     }
 
     public UpgradeDBProxyInstanceKernelVersionRequest setUpgradeTime(String upgradeTime) {
@@ -65,14 +73,6 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     }
     public String getUpgradeTime() {
         return this.upgradeTime;
-    }
-
-    public UpgradeDBProxyInstanceKernelVersionRequest setSwitchTime(String switchTime) {
-        this.switchTime = switchTime;
-        return this;
-    }
-    public String getSwitchTime() {
-        return this.switchTime;
     }
 
 }

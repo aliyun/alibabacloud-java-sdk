@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ReportList")
     public java.util.List<DescribeDiagnosticReportListResponseBodyReportList> reportList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDiagnosticReportListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDiagnosticReportListResponseBody self = new DescribeDiagnosticReportListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDiagnosticReportListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDiagnosticReportListResponseBody setReportList(java.util.List<DescribeDiagnosticReportListResponseBodyReportList> reportList) {
@@ -31,33 +23,33 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         return this.reportList;
     }
 
-    public static class DescribeDiagnosticReportListResponseBodyReportList extends TeaModel {
-        @NameInMap("EndTime")
-        public String endTime;
+    public DescribeDiagnosticReportListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeDiagnosticReportListResponseBodyReportList extends TeaModel {
         @NameInMap("DiagnosticTime")
         public String diagnosticTime;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("Score")
-        public Integer score;
 
         @NameInMap("DownloadURL")
         public String downloadURL;
 
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("Score")
+        public Integer score;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
         public static DescribeDiagnosticReportListResponseBodyReportList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDiagnosticReportListResponseBodyReportList self = new DescribeDiagnosticReportListResponseBodyReportList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDiagnosticReportListResponseBodyReportList setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
         }
 
         public DescribeDiagnosticReportListResponseBodyReportList setDiagnosticTime(String diagnosticTime) {
@@ -68,12 +60,20 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
             return this.diagnosticTime;
         }
 
-        public DescribeDiagnosticReportListResponseBodyReportList setStartTime(String startTime) {
-            this.startTime = startTime;
+        public DescribeDiagnosticReportListResponseBodyReportList setDownloadURL(String downloadURL) {
+            this.downloadURL = downloadURL;
             return this;
         }
-        public String getStartTime() {
-            return this.startTime;
+        public String getDownloadURL() {
+            return this.downloadURL;
+        }
+
+        public DescribeDiagnosticReportListResponseBodyReportList setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public DescribeDiagnosticReportListResponseBodyReportList setScore(Integer score) {
@@ -84,12 +84,12 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
             return this.score;
         }
 
-        public DescribeDiagnosticReportListResponseBodyReportList setDownloadURL(String downloadURL) {
-            this.downloadURL = downloadURL;
+        public DescribeDiagnosticReportListResponseBodyReportList setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public String getDownloadURL() {
-            return this.downloadURL;
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }

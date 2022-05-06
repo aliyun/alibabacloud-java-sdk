@@ -7,11 +7,11 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DedicatedHosts")
     public DescribeDedicatedHostsResponseBodyDedicatedHosts dedicatedHosts;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDedicatedHostsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDedicatedHostsResponseBody self = new DescribeDedicatedHostsResponseBody();
@@ -26,14 +26,6 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         return this.dedicatedHostGroupId;
     }
 
-    public DescribeDedicatedHostsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDedicatedHostsResponseBody setDedicatedHosts(DescribeDedicatedHostsResponseBodyDedicatedHosts dedicatedHosts) {
         this.dedicatedHosts = dedicatedHosts;
         return this;
@@ -42,126 +34,110 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         return this.dedicatedHosts;
     }
 
+    public DescribeDedicatedHostsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts extends TeaModel {
-        @NameInMap("HostType")
-        public String hostType;
-
-        @NameInMap("HostStorage")
-        public String hostStorage;
-
-        @NameInMap("MemoryUsed")
-        public String memoryUsed;
-
-        @NameInMap("DedicatedHostGroupId")
-        public String dedicatedHostGroupId;
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("AllocationStatus")
         public String allocationStatus;
 
-        @NameInMap("StorageUsed")
-        public String storageUsed;
-
-        @NameInMap("DedicatedHostId")
-        public String dedicatedHostId;
-
-        @NameInMap("MemAllocationRatio")
-        public String memAllocationRatio;
-
-        @NameInMap("CreatedTime")
-        public String createdTime;
-
-        @NameInMap("IPAddress")
-        public String IPAddress;
-
-        @NameInMap("HostStatus")
-        public String hostStatus;
-
-        @NameInMap("HostName")
-        public String hostName;
-
-        @NameInMap("HostCPU")
-        public String hostCPU;
-
-        @NameInMap("InstanceNumber")
-        public String instanceNumber;
-
-        @NameInMap("OpenPermission")
-        public String openPermission;
-
-        @NameInMap("CpuUsed")
-        public String cpuUsed;
-
-        @NameInMap("VPCId")
-        public String VPCId;
-
-        @NameInMap("HostClass")
-        public String hostClass;
-
-        @NameInMap("EndTime")
-        public String endTime;
-
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
+        @NameInMap("BastionInstanceId")
+        public String bastionInstanceId;
 
         @NameInMap("CPUAllocationRatio")
         public String CPUAllocationRatio;
 
-        @NameInMap("ZoneId")
-        public String zoneId;
+        @NameInMap("CpuUsed")
+        public String cpuUsed;
 
-        @NameInMap("ImageCategory")
-        public String imageCategory;
+        @NameInMap("CreatedTime")
+        public String createdTime;
 
-        @NameInMap("Engine")
-        public String engine;
+        @NameInMap("DedicatedHostGroupId")
+        public String dedicatedHostGroupId;
+
+        @NameInMap("DedicatedHostId")
+        public String dedicatedHostId;
 
         @NameInMap("DiskAllocationRatio")
         public String diskAllocationRatio;
 
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("Engine")
+        public String engine;
+
+        @NameInMap("HostCPU")
+        public String hostCPU;
+
+        @NameInMap("HostClass")
+        public String hostClass;
+
         @NameInMap("HostMem")
         public String hostMem;
 
-        @NameInMap("BastionInstanceId")
-        public String bastionInstanceId;
+        @NameInMap("HostName")
+        public String hostName;
 
-        @NameInMap("AccountName")
-        public String accountName;
+        @NameInMap("HostStatus")
+        public String hostStatus;
+
+        @NameInMap("HostStorage")
+        public String hostStorage;
+
+        @NameInMap("HostType")
+        public String hostType;
+
+        @NameInMap("IPAddress")
+        public String IPAddress;
+
+        @NameInMap("ImageCategory")
+        public String imageCategory;
+
+        @NameInMap("InstanceNumber")
+        public String instanceNumber;
+
+        @NameInMap("MemAllocationRatio")
+        public String memAllocationRatio;
+
+        @NameInMap("MemoryUsed")
+        public String memoryUsed;
+
+        @NameInMap("OpenPermission")
+        public String openPermission;
+
+        @NameInMap("StorageUsed")
+        public String storageUsed;
+
+        @NameInMap("VPCId")
+        public String VPCId;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts build(java.util.Map<String, ?> map) throws Exception {
             DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setHostType(String hostType) {
-            this.hostType = hostType;
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setAccountName(String accountName) {
+            this.accountName = accountName;
             return this;
         }
-        public String getHostType() {
-            return this.hostType;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setHostStorage(String hostStorage) {
-            this.hostStorage = hostStorage;
-            return this;
-        }
-        public String getHostStorage() {
-            return this.hostStorage;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setMemoryUsed(String memoryUsed) {
-            this.memoryUsed = memoryUsed;
-            return this;
-        }
-        public String getMemoryUsed() {
-            return this.memoryUsed;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setDedicatedHostGroupId(String dedicatedHostGroupId) {
-            this.dedicatedHostGroupId = dedicatedHostGroupId;
-            return this;
-        }
-        public String getDedicatedHostGroupId() {
-            return this.dedicatedHostGroupId;
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setAllocationStatus(String allocationStatus) {
@@ -172,124 +148,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.allocationStatus;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setStorageUsed(String storageUsed) {
-            this.storageUsed = storageUsed;
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setBastionInstanceId(String bastionInstanceId) {
+            this.bastionInstanceId = bastionInstanceId;
             return this;
         }
-        public String getStorageUsed() {
-            return this.storageUsed;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setDedicatedHostId(String dedicatedHostId) {
-            this.dedicatedHostId = dedicatedHostId;
-            return this;
-        }
-        public String getDedicatedHostId() {
-            return this.dedicatedHostId;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setMemAllocationRatio(String memAllocationRatio) {
-            this.memAllocationRatio = memAllocationRatio;
-            return this;
-        }
-        public String getMemAllocationRatio() {
-            return this.memAllocationRatio;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
-            return this;
-        }
-        public String getCreatedTime() {
-            return this.createdTime;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setIPAddress(String IPAddress) {
-            this.IPAddress = IPAddress;
-            return this;
-        }
-        public String getIPAddress() {
-            return this.IPAddress;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setHostStatus(String hostStatus) {
-            this.hostStatus = hostStatus;
-            return this;
-        }
-        public String getHostStatus() {
-            return this.hostStatus;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setHostName(String hostName) {
-            this.hostName = hostName;
-            return this;
-        }
-        public String getHostName() {
-            return this.hostName;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setHostCPU(String hostCPU) {
-            this.hostCPU = hostCPU;
-            return this;
-        }
-        public String getHostCPU() {
-            return this.hostCPU;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setInstanceNumber(String instanceNumber) {
-            this.instanceNumber = instanceNumber;
-            return this;
-        }
-        public String getInstanceNumber() {
-            return this.instanceNumber;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setOpenPermission(String openPermission) {
-            this.openPermission = openPermission;
-            return this;
-        }
-        public String getOpenPermission() {
-            return this.openPermission;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setCpuUsed(String cpuUsed) {
-            this.cpuUsed = cpuUsed;
-            return this;
-        }
-        public String getCpuUsed() {
-            return this.cpuUsed;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setVPCId(String VPCId) {
-            this.VPCId = VPCId;
-            return this;
-        }
-        public String getVPCId() {
-            return this.VPCId;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setHostClass(String hostClass) {
-            this.hostClass = hostClass;
-            return this;
-        }
-        public String getHostClass() {
-            return this.hostClass;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
+        public String getBastionInstanceId() {
+            return this.bastionInstanceId;
         }
 
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setCPUAllocationRatio(String CPUAllocationRatio) {
@@ -300,28 +164,36 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.CPUAllocationRatio;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setZoneId(String zoneId) {
-            this.zoneId = zoneId;
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setCpuUsed(String cpuUsed) {
+            this.cpuUsed = cpuUsed;
             return this;
         }
-        public String getZoneId() {
-            return this.zoneId;
+        public String getCpuUsed() {
+            return this.cpuUsed;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setImageCategory(String imageCategory) {
-            this.imageCategory = imageCategory;
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
             return this;
         }
-        public String getImageCategory() {
-            return this.imageCategory;
+        public String getCreatedTime() {
+            return this.createdTime;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setEngine(String engine) {
-            this.engine = engine;
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setDedicatedHostGroupId(String dedicatedHostGroupId) {
+            this.dedicatedHostGroupId = dedicatedHostGroupId;
             return this;
         }
-        public String getEngine() {
-            return this.engine;
+        public String getDedicatedHostGroupId() {
+            return this.dedicatedHostGroupId;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setDedicatedHostId(String dedicatedHostId) {
+            this.dedicatedHostId = dedicatedHostId;
+            return this;
+        }
+        public String getDedicatedHostId() {
+            return this.dedicatedHostId;
         }
 
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setDiskAllocationRatio(String diskAllocationRatio) {
@@ -332,6 +204,38 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.diskAllocationRatio;
         }
 
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setHostCPU(String hostCPU) {
+            this.hostCPU = hostCPU;
+            return this;
+        }
+        public String getHostCPU() {
+            return this.hostCPU;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setHostClass(String hostClass) {
+            this.hostClass = hostClass;
+            return this;
+        }
+        public String getHostClass() {
+            return this.hostClass;
+        }
+
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setHostMem(String hostMem) {
             this.hostMem = hostMem;
             return this;
@@ -340,20 +244,116 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.hostMem;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setBastionInstanceId(String bastionInstanceId) {
-            this.bastionInstanceId = bastionInstanceId;
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setHostName(String hostName) {
+            this.hostName = hostName;
             return this;
         }
-        public String getBastionInstanceId() {
-            return this.bastionInstanceId;
+        public String getHostName() {
+            return this.hostName;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setAccountName(String accountName) {
-            this.accountName = accountName;
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setHostStatus(String hostStatus) {
+            this.hostStatus = hostStatus;
             return this;
         }
-        public String getAccountName() {
-            return this.accountName;
+        public String getHostStatus() {
+            return this.hostStatus;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setHostStorage(String hostStorage) {
+            this.hostStorage = hostStorage;
+            return this;
+        }
+        public String getHostStorage() {
+            return this.hostStorage;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setHostType(String hostType) {
+            this.hostType = hostType;
+            return this;
+        }
+        public String getHostType() {
+            return this.hostType;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setIPAddress(String IPAddress) {
+            this.IPAddress = IPAddress;
+            return this;
+        }
+        public String getIPAddress() {
+            return this.IPAddress;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setImageCategory(String imageCategory) {
+            this.imageCategory = imageCategory;
+            return this;
+        }
+        public String getImageCategory() {
+            return this.imageCategory;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setInstanceNumber(String instanceNumber) {
+            this.instanceNumber = instanceNumber;
+            return this;
+        }
+        public String getInstanceNumber() {
+            return this.instanceNumber;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setMemAllocationRatio(String memAllocationRatio) {
+            this.memAllocationRatio = memAllocationRatio;
+            return this;
+        }
+        public String getMemAllocationRatio() {
+            return this.memAllocationRatio;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setMemoryUsed(String memoryUsed) {
+            this.memoryUsed = memoryUsed;
+            return this;
+        }
+        public String getMemoryUsed() {
+            return this.memoryUsed;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setOpenPermission(String openPermission) {
+            this.openPermission = openPermission;
+            return this;
+        }
+        public String getOpenPermission() {
+            return this.openPermission;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setStorageUsed(String storageUsed) {
+            this.storageUsed = storageUsed;
+            return this;
+        }
+        public String getStorageUsed() {
+            return this.storageUsed;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setVPCId(String VPCId) {
+            this.VPCId = VPCId;
+            return this;
+        }
+        public String getVPCId() {
+            return this.VPCId;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

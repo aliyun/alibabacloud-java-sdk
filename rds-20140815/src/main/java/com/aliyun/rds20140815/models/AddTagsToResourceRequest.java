@@ -7,8 +7,20 @@ public class AddTagsToResourceRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<AddTagsToResourceRequestTag> tag;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,23 +28,11 @@ public class AddTagsToResourceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("proxyId")
-    public String proxyId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
     @NameInMap("Tags")
     public String tags;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("proxyId")
+    public String proxyId;
 
     public static AddTagsToResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddTagsToResourceRequest self = new AddTagsToResourceRequest();
@@ -47,12 +47,44 @@ public class AddTagsToResourceRequest extends TeaModel {
         return this.tag;
     }
 
+    public AddTagsToResourceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public AddTagsToResourceRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public AddTagsToResourceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public AddTagsToResourceRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public AddTagsToResourceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public AddTagsToResourceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -71,38 +103,6 @@ public class AddTagsToResourceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public AddTagsToResourceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public AddTagsToResourceRequest setProxyId(String proxyId) {
-        this.proxyId = proxyId;
-        return this;
-    }
-    public String getProxyId() {
-        return this.proxyId;
-    }
-
-    public AddTagsToResourceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public AddTagsToResourceRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
     public AddTagsToResourceRequest setTags(String tags) {
         this.tags = tags;
         return this;
@@ -111,12 +111,12 @@ public class AddTagsToResourceRequest extends TeaModel {
         return this.tags;
     }
 
-    public AddTagsToResourceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public AddTagsToResourceRequest setProxyId(String proxyId) {
+        this.proxyId = proxyId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getProxyId() {
+        return this.proxyId;
     }
 
     public static class AddTagsToResourceRequestTag extends TeaModel {

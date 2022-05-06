@@ -4,6 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstancePublicConnectionRequest extends TeaModel {
+    @NameInMap("CurrentConnectionString")
+    public String currentConnectionString;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +22,33 @@ public class ReleaseInstancePublicConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("CurrentConnectionString")
-    public String currentConnectionString;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static ReleaseInstancePublicConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseInstancePublicConnectionRequest self = new ReleaseInstancePublicConnectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReleaseInstancePublicConnectionRequest setCurrentConnectionString(String currentConnectionString) {
+        this.currentConnectionString = currentConnectionString;
+        return this;
+    }
+    public String getCurrentConnectionString() {
+        return this.currentConnectionString;
+    }
+
+    public ReleaseInstancePublicConnectionRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ReleaseInstancePublicConnectionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ReleaseInstancePublicConnectionRequest setOwnerId(Long ownerId) {
@@ -49,30 +73,6 @@ public class ReleaseInstancePublicConnectionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ReleaseInstancePublicConnectionRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public ReleaseInstancePublicConnectionRequest setCurrentConnectionString(String currentConnectionString) {
-        this.currentConnectionString = currentConnectionString;
-        return this;
-    }
-    public String getCurrentConnectionString() {
-        return this.currentConnectionString;
-    }
-
-    public ReleaseInstancePublicConnectionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

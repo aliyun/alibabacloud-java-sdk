@@ -4,8 +4,14 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ReadSQLReplicationTime")
+    public String readSQLReplicationTime;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,15 +19,17 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends TeaModel 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("ReadSQLReplicationTime")
-    public String readSQLReplicationTime;
-
     public static ModifyReadonlyInstanceDelayReplicationTimeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyReadonlyInstanceDelayReplicationTimeRequest self = new ModifyReadonlyInstanceDelayReplicationTimeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyReadonlyInstanceDelayReplicationTimeRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     public ModifyReadonlyInstanceDelayReplicationTimeRequest setOwnerId(Long ownerId) {
@@ -30,6 +38,14 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends TeaModel 
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyReadonlyInstanceDelayReplicationTimeRequest setReadSQLReplicationTime(String readSQLReplicationTime) {
+        this.readSQLReplicationTime = readSQLReplicationTime;
+        return this;
+    }
+    public String getReadSQLReplicationTime() {
+        return this.readSQLReplicationTime;
     }
 
     public ModifyReadonlyInstanceDelayReplicationTimeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -46,22 +62,6 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends TeaModel 
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyReadonlyInstanceDelayReplicationTimeRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public ModifyReadonlyInstanceDelayReplicationTimeRequest setReadSQLReplicationTime(String readSQLReplicationTime) {
-        this.readSQLReplicationTime = readSQLReplicationTime;
-        return this;
-    }
-    public String getReadSQLReplicationTime() {
-        return this.readSQLReplicationTime;
     }
 
 }

@@ -4,11 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceProxyConfigurationResponseBody extends TeaModel {
-    @NameInMap("PersistentConnectionsConfiguration")
-    public String persistentConnectionsConfiguration;
-
     @NameInMap("AttacksProtectionConfiguration")
     public String attacksProtectionConfiguration;
+
+    @NameInMap("PersistentConnectionsConfiguration")
+    public String persistentConnectionsConfiguration;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -21,20 +21,20 @@ public class DescribeDBInstanceProxyConfigurationResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstanceProxyConfigurationResponseBody setPersistentConnectionsConfiguration(String persistentConnectionsConfiguration) {
-        this.persistentConnectionsConfiguration = persistentConnectionsConfiguration;
-        return this;
-    }
-    public String getPersistentConnectionsConfiguration() {
-        return this.persistentConnectionsConfiguration;
-    }
-
     public DescribeDBInstanceProxyConfigurationResponseBody setAttacksProtectionConfiguration(String attacksProtectionConfiguration) {
         this.attacksProtectionConfiguration = attacksProtectionConfiguration;
         return this;
     }
     public String getAttacksProtectionConfiguration() {
         return this.attacksProtectionConfiguration;
+    }
+
+    public DescribeDBInstanceProxyConfigurationResponseBody setPersistentConnectionsConfiguration(String persistentConnectionsConfiguration) {
+        this.persistentConnectionsConfiguration = persistentConnectionsConfiguration;
+        return this;
+    }
+    public String getPersistentConnectionsConfiguration() {
+        return this.persistentConnectionsConfiguration;
     }
 
     public DescribeDBInstanceProxyConfigurationResponseBody setRequestId(String requestId) {

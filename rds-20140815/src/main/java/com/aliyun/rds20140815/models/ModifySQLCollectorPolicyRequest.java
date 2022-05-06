@@ -4,8 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifySQLCollectorPolicyRequest extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +22,28 @@ public class ModifySQLCollectorPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
     @NameInMap("SQLCollectorStatus")
     public String SQLCollectorStatus;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     public static ModifySQLCollectorPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySQLCollectorPolicyRequest self = new ModifySQLCollectorPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySQLCollectorPolicyRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifySQLCollectorPolicyRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifySQLCollectorPolicyRequest setOwnerId(Long ownerId) {
@@ -36,6 +52,14 @@ public class ModifySQLCollectorPolicyRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifySQLCollectorPolicyRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ModifySQLCollectorPolicyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -54,36 +78,12 @@ public class ModifySQLCollectorPolicyRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySQLCollectorPolicyRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
     public ModifySQLCollectorPolicyRequest setSQLCollectorStatus(String SQLCollectorStatus) {
         this.SQLCollectorStatus = SQLCollectorStatus;
         return this;
     }
     public String getSQLCollectorStatus() {
         return this.SQLCollectorStatus;
-    }
-
-    public ModifySQLCollectorPolicyRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifySQLCollectorPolicyRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
 }

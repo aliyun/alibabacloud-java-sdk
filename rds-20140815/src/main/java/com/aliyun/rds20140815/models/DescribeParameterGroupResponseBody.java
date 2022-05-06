@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ParamGroup")
     public DescribeParameterGroupResponseBodyParamGroup paramGroup;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeParameterGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeParameterGroupResponseBody self = new DescribeParameterGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeParameterGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeParameterGroupResponseBody setParamGroup(DescribeParameterGroupResponseBodyParamGroup paramGroup) {
@@ -29,6 +21,14 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     }
     public DescribeParameterGroupResponseBodyParamGroup getParamGroup() {
         return this.paramGroup;
+    }
+
+    public DescribeParameterGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeParameterGroupResponseBodyParamGroupParameterGroupParamDetailParameterDetail extends TeaModel {
@@ -81,17 +81,26 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterGroupResponseBodyParamGroupParameterGroup extends TeaModel {
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
-        @NameInMap("ParameterGroupDesc")
-        public String parameterGroupDesc;
-
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("Engine")
+        public String engine;
+
+        @NameInMap("EngineVersion")
+        public String engineVersion;
+
         @NameInMap("ForceRestart")
         public Integer forceRestart;
+
+        @NameInMap("ParamCounts")
+        public Integer paramCounts;
+
+        @NameInMap("ParamDetail")
+        public DescribeParameterGroupResponseBodyParamGroupParameterGroupParamDetail paramDetail;
+
+        @NameInMap("ParameterGroupDesc")
+        public String parameterGroupDesc;
 
         @NameInMap("ParameterGroupId")
         public String parameterGroupId;
@@ -99,40 +108,15 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         @NameInMap("ParameterGroupName")
         public String parameterGroupName;
 
-        @NameInMap("Engine")
-        public String engine;
-
-        @NameInMap("ParamCounts")
-        public Integer paramCounts;
-
-        @NameInMap("EngineVersion")
-        public String engineVersion;
-
         @NameInMap("ParameterGroupType")
         public Integer parameterGroupType;
 
-        @NameInMap("ParamDetail")
-        public DescribeParameterGroupResponseBodyParamGroupParameterGroupParamDetail paramDetail;
+        @NameInMap("UpdateTime")
+        public String updateTime;
 
         public static DescribeParameterGroupResponseBodyParamGroupParameterGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeParameterGroupResponseBodyParamGroupParameterGroup self = new DescribeParameterGroupResponseBodyParamGroupParameterGroup();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeParameterGroupResponseBodyParamGroupParameterGroup setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public DescribeParameterGroupResponseBodyParamGroupParameterGroup setParameterGroupDesc(String parameterGroupDesc) {
-            this.parameterGroupDesc = parameterGroupDesc;
-            return this;
-        }
-        public String getParameterGroupDesc() {
-            return this.parameterGroupDesc;
         }
 
         public DescribeParameterGroupResponseBodyParamGroupParameterGroup setCreateTime(String createTime) {
@@ -143,12 +127,52 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public DescribeParameterGroupResponseBodyParamGroupParameterGroup setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public DescribeParameterGroupResponseBodyParamGroupParameterGroup setEngineVersion(String engineVersion) {
+            this.engineVersion = engineVersion;
+            return this;
+        }
+        public String getEngineVersion() {
+            return this.engineVersion;
+        }
+
         public DescribeParameterGroupResponseBodyParamGroupParameterGroup setForceRestart(Integer forceRestart) {
             this.forceRestart = forceRestart;
             return this;
         }
         public Integer getForceRestart() {
             return this.forceRestart;
+        }
+
+        public DescribeParameterGroupResponseBodyParamGroupParameterGroup setParamCounts(Integer paramCounts) {
+            this.paramCounts = paramCounts;
+            return this;
+        }
+        public Integer getParamCounts() {
+            return this.paramCounts;
+        }
+
+        public DescribeParameterGroupResponseBodyParamGroupParameterGroup setParamDetail(DescribeParameterGroupResponseBodyParamGroupParameterGroupParamDetail paramDetail) {
+            this.paramDetail = paramDetail;
+            return this;
+        }
+        public DescribeParameterGroupResponseBodyParamGroupParameterGroupParamDetail getParamDetail() {
+            return this.paramDetail;
+        }
+
+        public DescribeParameterGroupResponseBodyParamGroupParameterGroup setParameterGroupDesc(String parameterGroupDesc) {
+            this.parameterGroupDesc = parameterGroupDesc;
+            return this;
+        }
+        public String getParameterGroupDesc() {
+            return this.parameterGroupDesc;
         }
 
         public DescribeParameterGroupResponseBodyParamGroupParameterGroup setParameterGroupId(String parameterGroupId) {
@@ -167,30 +191,6 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             return this.parameterGroupName;
         }
 
-        public DescribeParameterGroupResponseBodyParamGroupParameterGroup setEngine(String engine) {
-            this.engine = engine;
-            return this;
-        }
-        public String getEngine() {
-            return this.engine;
-        }
-
-        public DescribeParameterGroupResponseBodyParamGroupParameterGroup setParamCounts(Integer paramCounts) {
-            this.paramCounts = paramCounts;
-            return this;
-        }
-        public Integer getParamCounts() {
-            return this.paramCounts;
-        }
-
-        public DescribeParameterGroupResponseBodyParamGroupParameterGroup setEngineVersion(String engineVersion) {
-            this.engineVersion = engineVersion;
-            return this;
-        }
-        public String getEngineVersion() {
-            return this.engineVersion;
-        }
-
         public DescribeParameterGroupResponseBodyParamGroupParameterGroup setParameterGroupType(Integer parameterGroupType) {
             this.parameterGroupType = parameterGroupType;
             return this;
@@ -199,12 +199,12 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             return this.parameterGroupType;
         }
 
-        public DescribeParameterGroupResponseBodyParamGroupParameterGroup setParamDetail(DescribeParameterGroupResponseBodyParamGroupParameterGroupParamDetail paramDetail) {
-            this.paramDetail = paramDetail;
+        public DescribeParameterGroupResponseBodyParamGroupParameterGroup setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public DescribeParameterGroupResponseBodyParamGroupParameterGroupParamDetail getParamDetail() {
-            return this.paramDetail;
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

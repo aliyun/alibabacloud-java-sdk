@@ -4,6 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class UnlockAccountRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class UnlockAccountRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("AccountName")
-    public String accountName;
-
     public static UnlockAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         UnlockAccountRequest self = new UnlockAccountRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UnlockAccountRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
+    }
+
+    public UnlockAccountRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     public UnlockAccountRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class UnlockAccountRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public UnlockAccountRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public UnlockAccountRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
     }
 
 }

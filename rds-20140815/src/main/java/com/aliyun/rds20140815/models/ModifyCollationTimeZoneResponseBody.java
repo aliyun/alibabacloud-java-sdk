@@ -13,11 +13,11 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Timezone")
-    public String timezone;
-
     @NameInMap("TaskId")
     public String taskId;
+
+    @NameInMap("Timezone")
+    public String timezone;
 
     public static ModifyCollationTimeZoneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyCollationTimeZoneResponseBody self = new ModifyCollationTimeZoneResponseBody();
@@ -48,20 +48,20 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifyCollationTimeZoneResponseBody setTimezone(String timezone) {
-        this.timezone = timezone;
-        return this;
-    }
-    public String getTimezone() {
-        return this.timezone;
-    }
-
     public ModifyCollationTimeZoneResponseBody setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public ModifyCollationTimeZoneResponseBody setTimezone(String timezone) {
+        this.timezone = timezone;
+        return this;
+    }
+    public String getTimezone() {
+        return this.timezone;
     }
 
 }

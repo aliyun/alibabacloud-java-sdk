@@ -4,8 +4,8 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLLogRecordsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Items")
+    public DescribeSQLLogRecordsResponseBodyItems items;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,23 +13,23 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
-
-    @NameInMap("Items")
-    public DescribeSQLLogRecordsResponseBodyItems items;
 
     public static DescribeSQLLogRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSQLLogRecordsResponseBody self = new DescribeSQLLogRecordsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSQLLogRecordsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeSQLLogRecordsResponseBody setItems(DescribeSQLLogRecordsResponseBodyItems items) {
+        this.items = items;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public DescribeSQLLogRecordsResponseBodyItems getItems() {
+        return this.items;
     }
 
     public DescribeSQLLogRecordsResponseBody setPageNumber(Integer pageNumber) {
@@ -48,6 +48,14 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         return this.pageRecordCount;
     }
 
+    public DescribeSQLLogRecordsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeSQLLogRecordsResponseBody setTotalRecordCount(Long totalRecordCount) {
         this.totalRecordCount = totalRecordCount;
         return this;
@@ -56,23 +64,9 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         return this.totalRecordCount;
     }
 
-    public DescribeSQLLogRecordsResponseBody setItems(DescribeSQLLogRecordsResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeSQLLogRecordsResponseBodyItems getItems() {
-        return this.items;
-    }
-
     public static class DescribeSQLLogRecordsResponseBodyItemsSQLRecord extends TeaModel {
-        @NameInMap("HostAddress")
-        public String hostAddress;
-
-        @NameInMap("SQLText")
-        public String SQLText;
-
-        @NameInMap("ReturnRowCounts")
-        public Long returnRowCounts;
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("DBName")
         public String DBName;
@@ -80,42 +74,32 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         @NameInMap("ExecuteTime")
         public String executeTime;
 
+        @NameInMap("HostAddress")
+        public String hostAddress;
+
+        @NameInMap("ReturnRowCounts")
+        public Long returnRowCounts;
+
+        @NameInMap("SQLText")
+        public String SQLText;
+
         @NameInMap("ThreadID")
         public String threadID;
 
         @NameInMap("TotalExecutionTimes")
         public Long totalExecutionTimes;
 
-        @NameInMap("AccountName")
-        public String accountName;
-
         public static DescribeSQLLogRecordsResponseBodyItemsSQLRecord build(java.util.Map<String, ?> map) throws Exception {
             DescribeSQLLogRecordsResponseBodyItemsSQLRecord self = new DescribeSQLLogRecordsResponseBodyItemsSQLRecord();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSQLLogRecordsResponseBodyItemsSQLRecord setHostAddress(String hostAddress) {
-            this.hostAddress = hostAddress;
+        public DescribeSQLLogRecordsResponseBodyItemsSQLRecord setAccountName(String accountName) {
+            this.accountName = accountName;
             return this;
         }
-        public String getHostAddress() {
-            return this.hostAddress;
-        }
-
-        public DescribeSQLLogRecordsResponseBodyItemsSQLRecord setSQLText(String SQLText) {
-            this.SQLText = SQLText;
-            return this;
-        }
-        public String getSQLText() {
-            return this.SQLText;
-        }
-
-        public DescribeSQLLogRecordsResponseBodyItemsSQLRecord setReturnRowCounts(Long returnRowCounts) {
-            this.returnRowCounts = returnRowCounts;
-            return this;
-        }
-        public Long getReturnRowCounts() {
-            return this.returnRowCounts;
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public DescribeSQLLogRecordsResponseBodyItemsSQLRecord setDBName(String DBName) {
@@ -134,6 +118,30 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             return this.executeTime;
         }
 
+        public DescribeSQLLogRecordsResponseBodyItemsSQLRecord setHostAddress(String hostAddress) {
+            this.hostAddress = hostAddress;
+            return this;
+        }
+        public String getHostAddress() {
+            return this.hostAddress;
+        }
+
+        public DescribeSQLLogRecordsResponseBodyItemsSQLRecord setReturnRowCounts(Long returnRowCounts) {
+            this.returnRowCounts = returnRowCounts;
+            return this;
+        }
+        public Long getReturnRowCounts() {
+            return this.returnRowCounts;
+        }
+
+        public DescribeSQLLogRecordsResponseBodyItemsSQLRecord setSQLText(String SQLText) {
+            this.SQLText = SQLText;
+            return this;
+        }
+        public String getSQLText() {
+            return this.SQLText;
+        }
+
         public DescribeSQLLogRecordsResponseBodyItemsSQLRecord setThreadID(String threadID) {
             this.threadID = threadID;
             return this;
@@ -148,14 +156,6 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         }
         public Long getTotalExecutionTimes() {
             return this.totalExecutionTimes;
-        }
-
-        public DescribeSQLLogRecordsResponseBodyItemsSQLRecord setAccountName(String accountName) {
-            this.accountName = accountName;
-            return this;
-        }
-        public String getAccountName() {
-            return this.accountName;
         }
 
     }

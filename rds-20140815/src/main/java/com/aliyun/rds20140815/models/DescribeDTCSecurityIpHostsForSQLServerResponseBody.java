@@ -7,14 +7,14 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("IpHostPairNum")
     public String ipHostPairNum;
 
     @NameInMap("Items")
     public DescribeDTCSecurityIpHostsForSQLServerResponseBodyItems items;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDTCSecurityIpHostsForSQLServerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDTCSecurityIpHostsForSQLServerResponseBody self = new DescribeDTCSecurityIpHostsForSQLServerResponseBody();
@@ -27,14 +27,6 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
-    }
-
-    public DescribeDTCSecurityIpHostsForSQLServerResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDTCSecurityIpHostsForSQLServerResponseBody setIpHostPairNum(String ipHostPairNum) {
@@ -51,6 +43,14 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
     }
     public DescribeDTCSecurityIpHostsForSQLServerResponseBodyItems getItems() {
         return this.items;
+    }
+
+    public DescribeDTCSecurityIpHostsForSQLServerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeDTCSecurityIpHostsForSQLServerResponseBodyItemsWhiteListGroups extends TeaModel {

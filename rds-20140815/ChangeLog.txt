@@ -1,3 +1,6 @@
+2022-05-06 Version: 1.0.5
+- StartDBInstance parameter change.
+
 2021-10-25 Version: 1.0.4
 - AMP Version Change.
 

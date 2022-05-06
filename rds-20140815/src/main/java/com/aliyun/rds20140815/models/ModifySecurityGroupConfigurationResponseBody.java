@@ -7,11 +7,11 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Items")
     public ModifySecurityGroupConfigurationResponseBodyItems items;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ModifySecurityGroupConfigurationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifySecurityGroupConfigurationResponseBody self = new ModifySecurityGroupConfigurationResponseBody();
@@ -26,14 +26,6 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         return this.DBInstanceName;
     }
 
-    public ModifySecurityGroupConfigurationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ModifySecurityGroupConfigurationResponseBody setItems(ModifySecurityGroupConfigurationResponseBodyItems items) {
         this.items = items;
         return this;
@@ -42,15 +34,23 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         return this.items;
     }
 
+    public ModifySecurityGroupConfigurationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ModifySecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation extends TeaModel {
         @NameInMap("NetworkType")
         public String networkType;
 
-        @NameInMap("SecurityGroupId")
-        public String securityGroupId;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
 
         public static ModifySecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation build(java.util.Map<String, ?> map) throws Exception {
             ModifySecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation self = new ModifySecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation();
@@ -65,20 +65,20 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
             return this.networkType;
         }
 
-        public ModifySecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation setSecurityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
-        }
-
         public ModifySecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ModifySecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
     }

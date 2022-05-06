@@ -4,43 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("Engine")
     public String engine;
 
+    @NameInMap("PerformanceKeys")
+    public DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PerformanceKeys")
-    public DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys;
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeDBInstancePerformanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancePerformanceResponseBody self = new DescribeDBInstancePerformanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBInstancePerformanceResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDBInstancePerformanceResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDBInstancePerformanceResponseBody setDBInstanceId(String DBInstanceId) {
@@ -51,12 +35,28 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         return this.DBInstanceId;
     }
 
+    public DescribeDBInstancePerformanceResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public DescribeDBInstancePerformanceResponseBody setEngine(String engine) {
         this.engine = engine;
         return this;
     }
     public String getEngine() {
         return this.engine;
+    }
+
+    public DescribeDBInstancePerformanceResponseBody setPerformanceKeys(DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys) {
+        this.performanceKeys = performanceKeys;
+        return this;
+    }
+    public DescribeDBInstancePerformanceResponseBodyPerformanceKeys getPerformanceKeys() {
+        return this.performanceKeys;
     }
 
     public DescribeDBInstancePerformanceResponseBody setRequestId(String requestId) {
@@ -67,12 +67,12 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDBInstancePerformanceResponseBody setPerformanceKeys(DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys) {
-        this.performanceKeys = performanceKeys;
+    public DescribeDBInstancePerformanceResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public DescribeDBInstancePerformanceResponseBodyPerformanceKeys getPerformanceKeys() {
-        return this.performanceKeys;
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue extends TeaModel {
@@ -128,11 +128,11 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
-        @NameInMap("ValueFormat")
-        public String valueFormat;
-
         @NameInMap("Unit")
         public String unit;
+
+        @NameInMap("ValueFormat")
+        public String valueFormat;
 
         @NameInMap("Values")
         public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValues values;
@@ -150,20 +150,20 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey setValueFormat(String valueFormat) {
-            this.valueFormat = valueFormat;
-            return this;
-        }
-        public String getValueFormat() {
-            return this.valueFormat;
-        }
-
         public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey setUnit(String unit) {
             this.unit = unit;
             return this;
         }
         public String getUnit() {
             return this.unit;
+        }
+
+        public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey setValueFormat(String valueFormat) {
+            this.valueFormat = valueFormat;
+            return this;
+        }
+        public String getValueFormat() {
+            return this.valueFormat;
         }
 
         public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey setValues(DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValues values) {

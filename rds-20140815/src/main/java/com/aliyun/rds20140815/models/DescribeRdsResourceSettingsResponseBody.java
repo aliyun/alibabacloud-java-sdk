@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("RdsInstanceResourceSettings")
     public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettings rdsInstanceResourceSettings;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeRdsResourceSettingsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRdsResourceSettingsResponseBody self = new DescribeRdsResourceSettingsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRdsResourceSettingsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeRdsResourceSettingsResponseBody setRdsInstanceResourceSettings(DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettings rdsInstanceResourceSettings) {
@@ -31,53 +23,45 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
         return this.rdsInstanceResourceSettings;
     }
 
+    public DescribeRdsResourceSettingsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting extends TeaModel {
-        @NameInMap("PoppedUpButtonType")
-        public String poppedUpButtonType;
-
-        @NameInMap("NoticeBarContent")
-        public String noticeBarContent;
-
         @NameInMap("EndDate")
         public String endDate;
-
-        @NameInMap("PoppedUpContent")
-        public String poppedUpContent;
-
-        @NameInMap("StartDate")
-        public String startDate;
-
-        @NameInMap("PoppedUpButtonText")
-        public String poppedUpButtonText;
 
         @NameInMap("IsTop")
         public String isTop;
 
-        @NameInMap("ResourceNiche")
-        public String resourceNiche;
+        @NameInMap("NoticeBarContent")
+        public String noticeBarContent;
+
+        @NameInMap("PoppedUpButtonText")
+        public String poppedUpButtonText;
+
+        @NameInMap("PoppedUpButtonType")
+        public String poppedUpButtonType;
 
         @NameInMap("PoppedUpButtonUrl")
         public String poppedUpButtonUrl;
 
+        @NameInMap("PoppedUpContent")
+        public String poppedUpContent;
+
+        @NameInMap("ResourceNiche")
+        public String resourceNiche;
+
+        @NameInMap("StartDate")
+        public String startDate;
+
         public static DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting build(java.util.Map<String, ?> map) throws Exception {
             DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting self = new DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setPoppedUpButtonType(String poppedUpButtonType) {
-            this.poppedUpButtonType = poppedUpButtonType;
-            return this;
-        }
-        public String getPoppedUpButtonType() {
-            return this.poppedUpButtonType;
-        }
-
-        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setNoticeBarContent(String noticeBarContent) {
-            this.noticeBarContent = noticeBarContent;
-            return this;
-        }
-        public String getNoticeBarContent() {
-            return this.noticeBarContent;
         }
 
         public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setEndDate(String endDate) {
@@ -88,20 +72,20 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             return this.endDate;
         }
 
-        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setPoppedUpContent(String poppedUpContent) {
-            this.poppedUpContent = poppedUpContent;
+        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setIsTop(String isTop) {
+            this.isTop = isTop;
             return this;
         }
-        public String getPoppedUpContent() {
-            return this.poppedUpContent;
+        public String getIsTop() {
+            return this.isTop;
         }
 
-        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setStartDate(String startDate) {
-            this.startDate = startDate;
+        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setNoticeBarContent(String noticeBarContent) {
+            this.noticeBarContent = noticeBarContent;
             return this;
         }
-        public String getStartDate() {
-            return this.startDate;
+        public String getNoticeBarContent() {
+            return this.noticeBarContent;
         }
 
         public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setPoppedUpButtonText(String poppedUpButtonText) {
@@ -112,12 +96,28 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             return this.poppedUpButtonText;
         }
 
-        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setIsTop(String isTop) {
-            this.isTop = isTop;
+        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setPoppedUpButtonType(String poppedUpButtonType) {
+            this.poppedUpButtonType = poppedUpButtonType;
             return this;
         }
-        public String getIsTop() {
-            return this.isTop;
+        public String getPoppedUpButtonType() {
+            return this.poppedUpButtonType;
+        }
+
+        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setPoppedUpButtonUrl(String poppedUpButtonUrl) {
+            this.poppedUpButtonUrl = poppedUpButtonUrl;
+            return this;
+        }
+        public String getPoppedUpButtonUrl() {
+            return this.poppedUpButtonUrl;
+        }
+
+        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setPoppedUpContent(String poppedUpContent) {
+            this.poppedUpContent = poppedUpContent;
+            return this;
+        }
+        public String getPoppedUpContent() {
+            return this.poppedUpContent;
         }
 
         public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setResourceNiche(String resourceNiche) {
@@ -128,12 +128,12 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             return this.resourceNiche;
         }
 
-        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setPoppedUpButtonUrl(String poppedUpButtonUrl) {
-            this.poppedUpButtonUrl = poppedUpButtonUrl;
+        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setStartDate(String startDate) {
+            this.startDate = startDate;
             return this;
         }
-        public String getPoppedUpButtonUrl() {
-            return this.poppedUpButtonUrl;
+        public String getStartDate() {
+            return this.startDate;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeHADiagnoseConfigResponseBody extends TeaModel {
-    @NameInMap("TcpConnectionType")
-    public String tcpConnectionType;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TcpConnectionType")
+    public String tcpConnectionType;
 
     public static DescribeHADiagnoseConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeHADiagnoseConfigResponseBody self = new DescribeHADiagnoseConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeHADiagnoseConfigResponseBody setTcpConnectionType(String tcpConnectionType) {
-        this.tcpConnectionType = tcpConnectionType;
-        return this;
-    }
-    public String getTcpConnectionType() {
-        return this.tcpConnectionType;
     }
 
     public DescribeHADiagnoseConfigResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class DescribeHADiagnoseConfigResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeHADiagnoseConfigResponseBody setTcpConnectionType(String tcpConnectionType) {
+        this.tcpConnectionType = tcpConnectionType;
+        return this;
+    }
+    public String getTcpConnectionType() {
+        return this.tcpConnectionType;
     }
 
 }

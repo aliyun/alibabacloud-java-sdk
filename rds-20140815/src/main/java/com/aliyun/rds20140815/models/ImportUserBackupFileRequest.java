@@ -4,29 +4,29 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ImportUserBackupFileRequest extends TeaModel {
+    @NameInMap("BackupFile")
+    public String backupFile;
+
+    @NameInMap("BucketRegion")
+    public String bucketRegion;
+
+    @NameInMap("Comment")
+    public String comment;
+
+    @NameInMap("EngineVersion")
+    public String engineVersion;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("EngineVersion")
-    public String engineVersion;
-
-    @NameInMap("BucketRegion")
-    public String bucketRegion;
-
-    @NameInMap("BackupFile")
-    public String backupFile;
-
-    @NameInMap("Comment")
-    public String comment;
 
     @NameInMap("RestoreSize")
     public Integer restoreSize;
@@ -42,12 +42,52 @@ public class ImportUserBackupFileRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ImportUserBackupFileRequest setBackupFile(String backupFile) {
+        this.backupFile = backupFile;
+        return this;
+    }
+    public String getBackupFile() {
+        return this.backupFile;
+    }
+
+    public ImportUserBackupFileRequest setBucketRegion(String bucketRegion) {
+        this.bucketRegion = bucketRegion;
+        return this;
+    }
+    public String getBucketRegion() {
+        return this.bucketRegion;
+    }
+
+    public ImportUserBackupFileRequest setComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    public String getComment() {
+        return this.comment;
+    }
+
+    public ImportUserBackupFileRequest setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public String getEngineVersion() {
+        return this.engineVersion;
+    }
+
     public ImportUserBackupFileRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ImportUserBackupFileRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ImportUserBackupFileRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -64,46 +104,6 @@ public class ImportUserBackupFileRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ImportUserBackupFileRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ImportUserBackupFileRequest setEngineVersion(String engineVersion) {
-        this.engineVersion = engineVersion;
-        return this;
-    }
-    public String getEngineVersion() {
-        return this.engineVersion;
-    }
-
-    public ImportUserBackupFileRequest setBucketRegion(String bucketRegion) {
-        this.bucketRegion = bucketRegion;
-        return this;
-    }
-    public String getBucketRegion() {
-        return this.bucketRegion;
-    }
-
-    public ImportUserBackupFileRequest setBackupFile(String backupFile) {
-        this.backupFile = backupFile;
-        return this;
-    }
-    public String getBackupFile() {
-        return this.backupFile;
-    }
-
-    public ImportUserBackupFileRequest setComment(String comment) {
-        this.comment = comment;
-        return this;
-    }
-    public String getComment() {
-        return this.comment;
     }
 
     public ImportUserBackupFileRequest setRestoreSize(Integer restoreSize) {

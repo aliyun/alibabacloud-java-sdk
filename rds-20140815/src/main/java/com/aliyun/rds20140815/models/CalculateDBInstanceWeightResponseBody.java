@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CalculateDBInstanceWeightResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Items")
     public CalculateDBInstanceWeightResponseBodyItems items;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CalculateDBInstanceWeightResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CalculateDBInstanceWeightResponseBody self = new CalculateDBInstanceWeightResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CalculateDBInstanceWeightResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CalculateDBInstanceWeightResponseBody setItems(CalculateDBInstanceWeightResponseBodyItems items) {
@@ -31,49 +23,33 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
         return this.items;
     }
 
-    public static class CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight extends TeaModel {
-        @NameInMap("ReadonlyInstanceSQLDelayedTime")
-        public String readonlyInstanceSQLDelayedTime;
+    public CalculateDBInstanceWeightResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("Weight")
-        public String weight;
+    public static class CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight extends TeaModel {
+        @NameInMap("DBInstanceId")
+        public String DBInstanceId;
 
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
-        @NameInMap("DBInstanceId")
-        public String DBInstanceId;
+        @NameInMap("ReadonlyInstanceSQLDelayedTime")
+        public String readonlyInstanceSQLDelayedTime;
 
         @NameInMap("Role")
         public String role;
 
+        @NameInMap("Weight")
+        public String weight;
+
         public static CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight build(java.util.Map<String, ?> map) throws Exception {
             CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight self = new CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight();
             return TeaModel.build(map, self);
-        }
-
-        public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setReadonlyInstanceSQLDelayedTime(String readonlyInstanceSQLDelayedTime) {
-            this.readonlyInstanceSQLDelayedTime = readonlyInstanceSQLDelayedTime;
-            return this;
-        }
-        public String getReadonlyInstanceSQLDelayedTime() {
-            return this.readonlyInstanceSQLDelayedTime;
-        }
-
-        public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setWeight(String weight) {
-            this.weight = weight;
-            return this;
-        }
-        public String getWeight() {
-            return this.weight;
-        }
-
-        public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setDBInstanceType(String DBInstanceType) {
-            this.DBInstanceType = DBInstanceType;
-            return this;
-        }
-        public String getDBInstanceType() {
-            return this.DBInstanceType;
         }
 
         public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setDBInstanceId(String DBInstanceId) {
@@ -84,12 +60,36 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
             return this.DBInstanceId;
         }
 
+        public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setDBInstanceType(String DBInstanceType) {
+            this.DBInstanceType = DBInstanceType;
+            return this;
+        }
+        public String getDBInstanceType() {
+            return this.DBInstanceType;
+        }
+
+        public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setReadonlyInstanceSQLDelayedTime(String readonlyInstanceSQLDelayedTime) {
+            this.readonlyInstanceSQLDelayedTime = readonlyInstanceSQLDelayedTime;
+            return this;
+        }
+        public String getReadonlyInstanceSQLDelayedTime() {
+            return this.readonlyInstanceSQLDelayedTime;
+        }
+
         public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setRole(String role) {
             this.role = role;
             return this;
         }
         public String getRole() {
             return this.role;
+        }
+
+        public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setWeight(String weight) {
+            this.weight = weight;
+            return this;
+        }
+        public String getWeight() {
+            return this.weight;
         }
 
     }

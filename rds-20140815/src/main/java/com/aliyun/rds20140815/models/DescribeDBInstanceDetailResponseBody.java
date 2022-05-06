@@ -13,11 +13,11 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
     @NameInMap("LicenseType")
     public String licenseType;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDBInstanceDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceDetailResponseBody self = new DescribeDBInstanceDetailResponseBody();
@@ -48,20 +48,20 @@ public class DescribeDBInstanceDetailResponseBody extends TeaModel {
         return this.licenseType;
     }
 
-    public DescribeDBInstanceDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDBInstanceDetailResponseBody setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDBInstanceDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

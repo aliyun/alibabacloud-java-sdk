@@ -7,11 +7,11 @@ public class RecoveryDBInstanceResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OrderId")
     public String orderId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecoveryDBInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecoveryDBInstanceResponseBody self = new RecoveryDBInstanceResponseBody();
@@ -26,20 +26,20 @@ public class RecoveryDBInstanceResponseBody extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public RecoveryDBInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public RecoveryDBInstanceResponseBody setOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public RecoveryDBInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

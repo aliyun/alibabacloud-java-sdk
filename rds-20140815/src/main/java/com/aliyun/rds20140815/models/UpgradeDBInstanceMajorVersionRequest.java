@@ -4,56 +4,56 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("CollectStatMode")
+    public String collectStatMode;
 
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
 
-    @NameInMap("PayType")
-    public String payType;
+    @NameInMap("DBInstanceStorageType")
+    public String DBInstanceStorageType;
 
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
-    @NameInMap("SwitchTimeMode")
-    public String switchTimeMode;
+    @NameInMap("PayType")
+    public String payType;
 
-    @NameInMap("SwitchTime")
-    public String switchTime;
+    @NameInMap("Period")
+    public String period;
+
+    @NameInMap("PrivateIpAddress")
+    public String privateIpAddress;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("SwitchOver")
     public String switchOver;
 
-    @NameInMap("CollectStatMode")
-    public String collectStatMode;
+    @NameInMap("SwitchTime")
+    public String switchTime;
+
+    @NameInMap("SwitchTimeMode")
+    public String switchTimeMode;
 
     @NameInMap("TargetMajorVersion")
     public String targetMajorVersion;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("UsedTime")
+    public String usedTime;
 
     @NameInMap("VPCId")
     public String VPCId;
 
     @NameInMap("VSwitchId")
     public String vSwitchId;
-
-    @NameInMap("PrivateIpAddress")
-    public String privateIpAddress;
-
-    @NameInMap("UsedTime")
-    public String usedTime;
-
-    @NameInMap("Period")
-    public String period;
-
-    @NameInMap("DBInstanceStorageType")
-    public String DBInstanceStorageType;
 
     @NameInMap("ZoneId")
     public String zoneId;
@@ -69,12 +69,12 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpgradeDBInstanceMajorVersionRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public UpgradeDBInstanceMajorVersionRequest setCollectStatMode(String collectStatMode) {
+        this.collectStatMode = collectStatMode;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getCollectStatMode() {
+        return this.collectStatMode;
     }
 
     public UpgradeDBInstanceMajorVersionRequest setDBInstanceClass(String DBInstanceClass) {
@@ -85,6 +85,14 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
         return this.DBInstanceClass;
     }
 
+    public UpgradeDBInstanceMajorVersionRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
     public UpgradeDBInstanceMajorVersionRequest setDBInstanceStorage(Integer DBInstanceStorage) {
         this.DBInstanceStorage = DBInstanceStorage;
         return this;
@@ -93,12 +101,12 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
         return this.DBInstanceStorage;
     }
 
-    public UpgradeDBInstanceMajorVersionRequest setPayType(String payType) {
-        this.payType = payType;
+    public UpgradeDBInstanceMajorVersionRequest setDBInstanceStorageType(String DBInstanceStorageType) {
+        this.DBInstanceStorageType = DBInstanceStorageType;
         return this;
     }
-    public String getPayType() {
-        return this.payType;
+    public String getDBInstanceStorageType() {
+        return this.DBInstanceStorageType;
     }
 
     public UpgradeDBInstanceMajorVersionRequest setInstanceNetworkType(String instanceNetworkType) {
@@ -109,20 +117,36 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
         return this.instanceNetworkType;
     }
 
-    public UpgradeDBInstanceMajorVersionRequest setSwitchTimeMode(String switchTimeMode) {
-        this.switchTimeMode = switchTimeMode;
+    public UpgradeDBInstanceMajorVersionRequest setPayType(String payType) {
+        this.payType = payType;
         return this;
     }
-    public String getSwitchTimeMode() {
-        return this.switchTimeMode;
+    public String getPayType() {
+        return this.payType;
     }
 
-    public UpgradeDBInstanceMajorVersionRequest setSwitchTime(String switchTime) {
-        this.switchTime = switchTime;
+    public UpgradeDBInstanceMajorVersionRequest setPeriod(String period) {
+        this.period = period;
         return this;
     }
-    public String getSwitchTime() {
-        return this.switchTime;
+    public String getPeriod() {
+        return this.period;
+    }
+
+    public UpgradeDBInstanceMajorVersionRequest setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
+    public UpgradeDBInstanceMajorVersionRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public UpgradeDBInstanceMajorVersionRequest setSwitchOver(String switchOver) {
@@ -133,12 +157,20 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
         return this.switchOver;
     }
 
-    public UpgradeDBInstanceMajorVersionRequest setCollectStatMode(String collectStatMode) {
-        this.collectStatMode = collectStatMode;
+    public UpgradeDBInstanceMajorVersionRequest setSwitchTime(String switchTime) {
+        this.switchTime = switchTime;
         return this;
     }
-    public String getCollectStatMode() {
-        return this.collectStatMode;
+    public String getSwitchTime() {
+        return this.switchTime;
+    }
+
+    public UpgradeDBInstanceMajorVersionRequest setSwitchTimeMode(String switchTimeMode) {
+        this.switchTimeMode = switchTimeMode;
+        return this;
+    }
+    public String getSwitchTimeMode() {
+        return this.switchTimeMode;
     }
 
     public UpgradeDBInstanceMajorVersionRequest setTargetMajorVersion(String targetMajorVersion) {
@@ -149,12 +181,12 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
         return this.targetMajorVersion;
     }
 
-    public UpgradeDBInstanceMajorVersionRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public UpgradeDBInstanceMajorVersionRequest setUsedTime(String usedTime) {
+        this.usedTime = usedTime;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getUsedTime() {
+        return this.usedTime;
     }
 
     public UpgradeDBInstanceMajorVersionRequest setVPCId(String VPCId) {
@@ -171,38 +203,6 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
-    }
-
-    public UpgradeDBInstanceMajorVersionRequest setPrivateIpAddress(String privateIpAddress) {
-        this.privateIpAddress = privateIpAddress;
-        return this;
-    }
-    public String getPrivateIpAddress() {
-        return this.privateIpAddress;
-    }
-
-    public UpgradeDBInstanceMajorVersionRequest setUsedTime(String usedTime) {
-        this.usedTime = usedTime;
-        return this;
-    }
-    public String getUsedTime() {
-        return this.usedTime;
-    }
-
-    public UpgradeDBInstanceMajorVersionRequest setPeriod(String period) {
-        this.period = period;
-        return this;
-    }
-    public String getPeriod() {
-        return this.period;
-    }
-
-    public UpgradeDBInstanceMajorVersionRequest setDBInstanceStorageType(String DBInstanceStorageType) {
-        this.DBInstanceStorageType = DBInstanceStorageType;
-        return this;
-    }
-    public String getDBInstanceStorageType() {
-        return this.DBInstanceStorageType;
     }
 
     public UpgradeDBInstanceMajorVersionRequest setZoneId(String zoneId) {
