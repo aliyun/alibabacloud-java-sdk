@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.iot20180120.models;
+
+import com.aliyun.tea.*;
+
+public class GetSoundCodeScheduleResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public GetSoundCodeScheduleResponseBody body;
+
+    public static GetSoundCodeScheduleResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetSoundCodeScheduleResponse self = new GetSoundCodeScheduleResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public GetSoundCodeScheduleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetSoundCodeScheduleResponse setBody(GetSoundCodeScheduleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetSoundCodeScheduleResponseBody getBody() {
+        return this.body;
+    }
+
+}

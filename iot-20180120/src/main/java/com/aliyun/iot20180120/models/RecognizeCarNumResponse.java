@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.iot20180120.models;
+
+import com.aliyun.tea.*;
+
+public class RecognizeCarNumResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public RecognizeCarNumResponseBody body;
+
+    public static RecognizeCarNumResponse build(java.util.Map<String, ?> map) throws Exception {
+        RecognizeCarNumResponse self = new RecognizeCarNumResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public RecognizeCarNumResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public RecognizeCarNumResponse setBody(RecognizeCarNumResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RecognizeCarNumResponseBody getBody() {
+        return this.body;
+    }
+
+}

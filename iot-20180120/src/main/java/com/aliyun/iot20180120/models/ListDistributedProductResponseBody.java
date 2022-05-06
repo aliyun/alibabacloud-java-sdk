@@ -66,7 +66,7 @@ public class ListDistributedProductResponseBody extends TeaModel {
 
     public static class ListDistributedProductResponseBodyDataInfoItems extends TeaModel {
         @NameInMap("GmtCreate")
-        public Integer gmtCreate;
+        public Long gmtCreate;
 
         @NameInMap("ProductKey")
         public String productKey;
@@ -103,11 +103,11 @@ public class ListDistributedProductResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListDistributedProductResponseBodyDataInfoItems setGmtCreate(Integer gmtCreate) {
+        public ListDistributedProductResponseBodyDataInfoItems setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
-        public Integer getGmtCreate() {
+        public Long getGmtCreate() {
             return this.gmtCreate;
         }
 

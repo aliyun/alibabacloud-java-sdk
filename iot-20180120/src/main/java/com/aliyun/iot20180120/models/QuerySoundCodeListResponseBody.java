@@ -71,6 +71,12 @@ public class QuerySoundCodeListResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("OpenType")
+        public String openType;
+
         @NameInMap("SoundCode")
         public String soundCode;
 
@@ -96,6 +102,22 @@ public class QuerySoundCodeListResponseBody extends TeaModel {
         }
         public Long getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        public QuerySoundCodeListResponseBodyDataListItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public QuerySoundCodeListResponseBodyDataListItems setOpenType(String openType) {
+            this.openType = openType;
+            return this;
+        }
+        public String getOpenType() {
+            return this.openType;
         }
 
         public QuerySoundCodeListResponseBodyDataListItems setSoundCode(String soundCode) {
