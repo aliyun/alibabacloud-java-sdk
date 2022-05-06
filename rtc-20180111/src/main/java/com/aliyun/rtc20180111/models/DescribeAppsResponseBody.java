@@ -88,6 +88,9 @@ public class DescribeAppsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("Region")
+        public String region;
+
         @NameInMap("ServiceAreas")
         public DescribeAppsResponseBodyAppListAppServiceAreas serviceAreas;
 
@@ -137,6 +140,14 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeAppsResponseBodyAppListApp setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
         public DescribeAppsResponseBodyAppListApp setServiceAreas(DescribeAppsResponseBodyAppListAppServiceAreas serviceAreas) {
