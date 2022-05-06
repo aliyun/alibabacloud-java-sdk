@@ -135,6 +135,9 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         @NameInMap("DeleteProtection")
         public String deleteProtection;
 
+        @NameInMap("InstanceChargeType")
+        public String instanceChargeType;
+
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
@@ -248,6 +251,14 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
         public String getDeleteProtection() {
             return this.deleteProtection;
+        }
+
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setInstanceChargeType(String instanceChargeType) {
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
         }
 
         public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setInternetChargeType(String internetChargeType) {
