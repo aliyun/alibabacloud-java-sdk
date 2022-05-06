@@ -65,13 +65,6 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
     }
 
     public static class RemoveServersFromServerGroupRequestServers extends TeaModel {
-        // 服务器描述信息
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("Id")
-        public Long id;
-
         // 服务器端口
         @NameInMap("Port")
         public Integer port;
@@ -88,33 +81,9 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
         @NameInMap("ServerType")
         public String serverType;
 
-        // 后端权重
-        @NameInMap("Weight")
-        public Integer weight;
-
-        // 服务器对应的zoneId
-        @NameInMap("ZoneId")
-        public String zoneId;
-
         public static RemoveServersFromServerGroupRequestServers build(java.util.Map<String, ?> map) throws Exception {
             RemoveServersFromServerGroupRequestServers self = new RemoveServersFromServerGroupRequestServers();
             return TeaModel.build(map, self);
-        }
-
-        public RemoveServersFromServerGroupRequestServers setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public RemoveServersFromServerGroupRequestServers setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
         }
 
         public RemoveServersFromServerGroupRequestServers setPort(Integer port) {
@@ -147,22 +116,6 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
         }
         public String getServerType() {
             return this.serverType;
-        }
-
-        public RemoveServersFromServerGroupRequestServers setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
-        }
-
-        public RemoveServersFromServerGroupRequestServers setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
     }
