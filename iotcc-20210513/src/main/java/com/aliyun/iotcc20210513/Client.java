@@ -598,6 +598,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createIoTCloudConnectorWithOptions(request, runtime);
     }
 
+    public CreateIoTCloudConnectorBackhaulRouteResponse createIoTCloudConnectorBackhaulRouteWithOptions(CreateIoTCloudConnectorBackhaulRouteRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ioTCloudConnectorId)) {
+            query.put("IoTCloudConnectorId", request.ioTCloudConnectorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateIoTCloudConnectorBackhaulRoute"),
+            new TeaPair("version", "2021-05-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIoTCloudConnectorBackhaulRouteResponse());
+    }
+
+    public CreateIoTCloudConnectorBackhaulRouteResponse createIoTCloudConnectorBackhaulRoute(CreateIoTCloudConnectorBackhaulRouteRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createIoTCloudConnectorBackhaulRouteWithOptions(request, runtime);
+    }
+
     public CreateIoTCloudConnectorGroupResponse createIoTCloudConnectorGroupWithOptions(CreateIoTCloudConnectorGroupRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1058,6 +1099,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteIoTCloudConnectorGroupResponse deleteIoTCloudConnectorGroup(DeleteIoTCloudConnectorGroupRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteIoTCloudConnectorGroupWithOptions(request, runtime);
+    }
+
+    public DeleteIoTCloudConnetorBackhaulRouteResponse deleteIoTCloudConnetorBackhaulRouteWithOptions(DeleteIoTCloudConnetorBackhaulRouteRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ioTCloudConnectorId)) {
+            query.put("IoTCloudConnectorId", request.ioTCloudConnectorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteIoTCloudConnetorBackhaulRoute"),
+            new TeaPair("version", "2021-05-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIoTCloudConnetorBackhaulRouteResponse());
+    }
+
+    public DeleteIoTCloudConnetorBackhaulRouteResponse deleteIoTCloudConnetorBackhaulRoute(DeleteIoTCloudConnetorBackhaulRouteRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteIoTCloudConnetorBackhaulRouteWithOptions(request, runtime);
     }
 
     public DeleteServiceResponse deleteServiceWithOptions(DeleteServiceRequest request, RuntimeOptions runtime) throws Exception {
@@ -2254,6 +2336,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListIoTCloudConnectorsResponse listIoTCloudConnectors(ListIoTCloudConnectorsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listIoTCloudConnectorsWithOptions(request, runtime);
+    }
+
+    public ListIoTCoudConnectorBackhaulRouteResponse listIoTCoudConnectorBackhaulRouteWithOptions(ListIoTCoudConnectorBackhaulRouteRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ioTCloudConnectorId)) {
+            query.put("IoTCloudConnectorId", request.ioTCloudConnectorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIoTCoudConnectorBackhaulRoute"),
+            new TeaPair("version", "2021-05-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIoTCoudConnectorBackhaulRouteResponse());
+    }
+
+    public ListIoTCoudConnectorBackhaulRouteResponse listIoTCoudConnectorBackhaulRoute(ListIoTCoudConnectorBackhaulRouteRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listIoTCoudConnectorBackhaulRouteWithOptions(request, runtime);
     }
 
     public ListRegionsResponse listRegionsWithOptions(ListRegionsRequest request, RuntimeOptions runtime) throws Exception {
