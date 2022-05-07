@@ -3,7 +3,7 @@ package com.aliyun.iotcc20210513.models;
 
 import com.aliyun.tea.*;
 
-public class AssociateVSwitchWithIoTCloudConnectorResponse extends TeaModel {
+public class DeleteIoTCloudConnetorBackhaulRouteResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class AssociateVSwitchWithIoTCloudConnectorResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public AssociateVSwitchWithIoTCloudConnectorResponseBody body;
+    public DeleteIoTCloudConnetorBackhaulRouteResponseBody body;
 
-    public static AssociateVSwitchWithIoTCloudConnectorResponse build(java.util.Map<String, ?> map) throws Exception {
-        AssociateVSwitchWithIoTCloudConnectorResponse self = new AssociateVSwitchWithIoTCloudConnectorResponse();
+    public static DeleteIoTCloudConnetorBackhaulRouteResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteIoTCloudConnetorBackhaulRouteResponse self = new DeleteIoTCloudConnetorBackhaulRouteResponse();
         return TeaModel.build(map, self);
     }
 
-    public AssociateVSwitchWithIoTCloudConnectorResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteIoTCloudConnetorBackhaulRouteResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class AssociateVSwitchWithIoTCloudConnectorResponse extends TeaModel {
         return this.headers;
     }
 
-    public AssociateVSwitchWithIoTCloudConnectorResponse setStatusCode(Integer statusCode) {
+    public DeleteIoTCloudConnetorBackhaulRouteResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class AssociateVSwitchWithIoTCloudConnectorResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public AssociateVSwitchWithIoTCloudConnectorResponse setBody(AssociateVSwitchWithIoTCloudConnectorResponseBody body) {
+    public DeleteIoTCloudConnetorBackhaulRouteResponse setBody(DeleteIoTCloudConnetorBackhaulRouteResponseBody body) {
         this.body = body;
         return this;
     }
-    public AssociateVSwitchWithIoTCloudConnectorResponseBody getBody() {
+    public DeleteIoTCloudConnetorBackhaulRouteResponseBody getBody() {
         return this.body;
     }
 

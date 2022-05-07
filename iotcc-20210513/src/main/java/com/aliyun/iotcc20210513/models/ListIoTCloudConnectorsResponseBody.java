@@ -92,6 +92,12 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
         @NameInMap("IoTCloudConnectorStatus")
         public String ioTCloudConnectorStatus;
 
+        @NameInMap("IpFeature")
+        public String ipFeature;
+
+        @NameInMap("Mode")
+        public String mode;
+
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
@@ -182,6 +188,22 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
         }
         public String getIoTCloudConnectorStatus() {
             return this.ioTCloudConnectorStatus;
+        }
+
+        public ListIoTCloudConnectorsResponseBodyIoTCloudConnectors setIpFeature(String ipFeature) {
+            this.ipFeature = ipFeature;
+            return this;
+        }
+        public String getIpFeature() {
+            return this.ipFeature;
+        }
+
+        public ListIoTCloudConnectorsResponseBodyIoTCloudConnectors setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
         }
 
         public ListIoTCloudConnectorsResponseBodyIoTCloudConnectors setModifyTime(Long modifyTime) {
