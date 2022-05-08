@@ -25,6 +25,9 @@ public class SetDomainCertificateRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("SslVerifyDepth")
+    public String sslVerifyDepth;
+
     public static SetDomainCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDomainCertificateRequest self = new SetDomainCertificateRequest();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class SetDomainCertificateRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public SetDomainCertificateRequest setSslVerifyDepth(String sslVerifyDepth) {
+        this.sslVerifyDepth = sslVerifyDepth;
+        return this;
+    }
+    public String getSslVerifyDepth() {
+        return this.sslVerifyDepth;
     }
 
 }
