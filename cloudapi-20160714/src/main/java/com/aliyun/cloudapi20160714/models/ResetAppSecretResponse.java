@@ -8,6 +8,10 @@ public class ResetAppSecretResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public ResetAppSecretResponseBody body;
@@ -23,6 +27,14 @@ public class ResetAppSecretResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public ResetAppSecretResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public ResetAppSecretResponse setBody(ResetAppSecretResponseBody body) {
