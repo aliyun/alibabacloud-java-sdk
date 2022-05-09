@@ -687,6 +687,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getOssPolicyWithOptions(request, runtime);
     }
 
+    public GetPackSceneTaskStatusResponse getPackSceneTaskStatusWithOptions(GetPackSceneTaskStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPackSceneTaskStatus"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPackSceneTaskStatusResponse());
+    }
+
+    public GetPackSceneTaskStatusResponse getPackSceneTaskStatus(GetPackSceneTaskStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getPackSceneTaskStatusWithOptions(request, runtime);
+    }
+
     public GetRectifyImageResponse getRectifyImageWithOptions(GetRectifyImageRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -743,6 +776,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSceneBuildTaskStatusResponse getSceneBuildTaskStatus(GetSceneBuildTaskStatusRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getSceneBuildTaskStatusWithOptions(request, runtime);
+    }
+
+    public GetScenePackUrlResponse getScenePackUrlWithOptions(GetScenePackUrlRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetScenePackUrl"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetScenePackUrlResponse());
+    }
+
+    public GetScenePackUrlResponse getScenePackUrl(GetScenePackUrlRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getScenePackUrlWithOptions(request, runtime);
     }
 
     public GetScenePreviewDataResponse getScenePreviewDataWithOptions(GetScenePreviewDataRequest request, RuntimeOptions runtime) throws Exception {
@@ -1188,6 +1250,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public OptimizeRightAngleResponse optimizeRightAngle(OptimizeRightAngleRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.optimizeRightAngleWithOptions(request, runtime);
+    }
+
+    public PackSceneResponse packSceneWithOptions(PackSceneRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PackScene"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PackSceneResponse());
+    }
+
+    public PackSceneResponse packScene(PackSceneRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.packSceneWithOptions(request, runtime);
     }
 
     public PredImageResponse predImageWithOptions(PredImageRequest request, RuntimeOptions runtime) throws Exception {

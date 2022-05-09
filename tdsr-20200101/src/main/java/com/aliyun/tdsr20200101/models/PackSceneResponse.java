@@ -3,7 +3,7 @@ package com.aliyun.tdsr20200101.models;
 
 import com.aliyun.tea.*;
 
-public class GetHotspotTagResponse extends TeaModel {
+public class PackSceneResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetHotspotTagResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetHotspotTagResponseBody body;
+    public PackSceneResponseBody body;
 
-    public static GetHotspotTagResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetHotspotTagResponse self = new GetHotspotTagResponse();
+    public static PackSceneResponse build(java.util.Map<String, ?> map) throws Exception {
+        PackSceneResponse self = new PackSceneResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetHotspotTagResponse setHeaders(java.util.Map<String, String> headers) {
+    public PackSceneResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetHotspotTagResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetHotspotTagResponse setStatusCode(Integer statusCode) {
+    public PackSceneResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetHotspotTagResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetHotspotTagResponse setBody(GetHotspotTagResponseBody body) {
+    public PackSceneResponse setBody(PackSceneResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetHotspotTagResponseBody getBody() {
+    public PackSceneResponseBody getBody() {
         return this.body;
     }
 
