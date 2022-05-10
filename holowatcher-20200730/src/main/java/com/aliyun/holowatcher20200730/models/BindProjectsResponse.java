@@ -3,7 +3,7 @@ package com.aliyun.holowatcher20200730.models;
 
 import com.aliyun.tea.*;
 
-public class CompanyFindByIsvTypeResponse extends TeaModel {
+public class BindProjectsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CompanyFindByIsvTypeResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CompanyFindByIsvTypeResponseBody body;
+    public BindProjectsResponseBody body;
 
-    public static CompanyFindByIsvTypeResponse build(java.util.Map<String, ?> map) throws Exception {
-        CompanyFindByIsvTypeResponse self = new CompanyFindByIsvTypeResponse();
+    public static BindProjectsResponse build(java.util.Map<String, ?> map) throws Exception {
+        BindProjectsResponse self = new BindProjectsResponse();
         return TeaModel.build(map, self);
     }
 
-    public CompanyFindByIsvTypeResponse setHeaders(java.util.Map<String, String> headers) {
+    public BindProjectsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CompanyFindByIsvTypeResponse extends TeaModel {
         return this.headers;
     }
 
-    public CompanyFindByIsvTypeResponse setStatusCode(Integer statusCode) {
+    public BindProjectsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CompanyFindByIsvTypeResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CompanyFindByIsvTypeResponse setBody(CompanyFindByIsvTypeResponseBody body) {
+    public BindProjectsResponse setBody(BindProjectsResponseBody body) {
         this.body = body;
         return this;
     }
-    public CompanyFindByIsvTypeResponseBody getBody() {
+    public BindProjectsResponseBody getBody() {
         return this.body;
     }
 
