@@ -310,6 +310,12 @@ public class DescribeCallResponseBody extends TeaModel {
         @NameInMap("Location")
         public String location;
 
+        @NameInMap("LocationCn")
+        public String locationCn;
+
+        @NameInMap("LocationEn")
+        public String locationEn;
+
         // 网络类型，如WiFi，4G等
         @NameInMap("Network")
         public String network;
@@ -405,6 +411,22 @@ public class DescribeCallResponseBody extends TeaModel {
         }
         public String getLocation() {
             return this.location;
+        }
+
+        public DescribeCallResponseBodyUserDetailList setLocationCn(String locationCn) {
+            this.locationCn = locationCn;
+            return this;
+        }
+        public String getLocationCn() {
+            return this.locationCn;
+        }
+
+        public DescribeCallResponseBodyUserDetailList setLocationEn(String locationEn) {
+            this.locationEn = locationEn;
+            return this;
+        }
+        public String getLocationEn() {
+            return this.locationEn;
         }
 
         public DescribeCallResponseBodyUserDetailList setNetwork(String network) {
