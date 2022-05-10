@@ -7,9 +7,6 @@ public class DescribeDtsJobsRequest extends TeaModel {
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
-    @NameInMap("DedicatedClusterNodeId")
-    public Long dedicatedClusterNodeId;
-
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
@@ -63,14 +60,6 @@ public class DescribeDtsJobsRequest extends TeaModel {
     }
     public String getDedicatedClusterId() {
         return this.dedicatedClusterId;
-    }
-
-    public DescribeDtsJobsRequest setDedicatedClusterNodeId(Long dedicatedClusterNodeId) {
-        this.dedicatedClusterNodeId = dedicatedClusterNodeId;
-        return this;
-    }
-    public Long getDedicatedClusterNodeId() {
-        return this.dedicatedClusterNodeId;
     }
 
     public DescribeDtsJobsRequest setDtsJobId(String dtsJobId) {
