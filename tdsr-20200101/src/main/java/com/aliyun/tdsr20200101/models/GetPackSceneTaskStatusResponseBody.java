@@ -71,7 +71,7 @@ public class GetPackSceneTaskStatusResponseBody extends TeaModel {
     public static class GetPackSceneTaskStatusResponseBodyData extends TeaModel {
         // 任务进度
         @NameInMap("Progress")
-        public String progress;
+        public Long progress;
 
         // 任务状态
         @NameInMap("Status")
@@ -82,11 +82,11 @@ public class GetPackSceneTaskStatusResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetPackSceneTaskStatusResponseBodyData setProgress(String progress) {
+        public GetPackSceneTaskStatusResponseBodyData setProgress(Long progress) {
             this.progress = progress;
             return this;
         }
-        public String getProgress() {
+        public Long getProgress() {
             return this.progress;
         }
 
