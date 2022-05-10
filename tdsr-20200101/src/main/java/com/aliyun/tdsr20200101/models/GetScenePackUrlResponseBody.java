@@ -79,7 +79,7 @@ public class GetScenePackUrlResponseBody extends TeaModel {
 
         // 是否有效
         @NameInMap("Valid")
-        public String valid;
+        public Boolean valid;
 
         public static GetScenePackUrlResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetScenePackUrlResponseBodyData self = new GetScenePackUrlResponseBodyData();
@@ -102,11 +102,11 @@ public class GetScenePackUrlResponseBody extends TeaModel {
             return this.url;
         }
 
-        public GetScenePackUrlResponseBodyData setValid(String valid) {
+        public GetScenePackUrlResponseBodyData setValid(Boolean valid) {
             this.valid = valid;
             return this;
         }
-        public String getValid() {
+        public Boolean getValid() {
             return this.valid;
         }
 
