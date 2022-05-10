@@ -222,6 +222,9 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         @NameInMap("CanSkip")
         public Boolean canSkip;
 
+        @NameInMap("Current")
+        public String current;
+
         @NameInMap("DdlSql")
         public String ddlSql;
 
@@ -307,6 +310,14 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         }
         public Boolean getCanSkip() {
             return this.canSkip;
+        }
+
+        public DescribePreCheckStatusResponseBodyJobProgress setCurrent(String current) {
+            this.current = current;
+            return this;
+        }
+        public String getCurrent() {
+            return this.current;
         }
 
         public DescribePreCheckStatusResponseBodyJobProgress setDdlSql(String ddlSql) {
@@ -546,6 +557,9 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         @NameInMap("CanSkip")
         public Boolean canSkip;
 
+        @NameInMap("Current")
+        public String current;
+
         @NameInMap("DdlSql")
         public String ddlSql;
 
@@ -631,6 +645,14 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         }
         public Boolean getCanSkip() {
             return this.canSkip;
+        }
+
+        public DescribePreCheckStatusResponseBodySubDistributedJobStatusJobProgress setCurrent(String current) {
+            this.current = current;
+            return this;
+        }
+        public String getCurrent() {
+            return this.current;
         }
 
         public DescribePreCheckStatusResponseBodySubDistributedJobStatusJobProgress setDdlSql(String ddlSql) {
