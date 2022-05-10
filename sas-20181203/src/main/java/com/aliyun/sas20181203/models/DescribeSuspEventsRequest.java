@@ -31,6 +31,9 @@ public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("GroupId")
     public Long groupId;
 
+    @NameInMap("Id")
+    public Long id;
+
     @NameInMap("Lang")
     public String lang;
 
@@ -148,6 +151,14 @@ public class DescribeSuspEventsRequest extends TeaModel {
     }
     public Long getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeSuspEventsRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public DescribeSuspEventsRequest setLang(String lang) {

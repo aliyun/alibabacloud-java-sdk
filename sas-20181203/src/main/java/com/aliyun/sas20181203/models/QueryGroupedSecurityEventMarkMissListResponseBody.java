@@ -7,9 +7,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("List")
     public java.util.List<QueryGroupedSecurityEventMarkMissListResponseBodyList> list;
 
@@ -25,9 +22,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("TimeCost")
-    public Long timeCost;
-
     public static QueryGroupedSecurityEventMarkMissListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryGroupedSecurityEventMarkMissListResponseBody self = new QueryGroupedSecurityEventMarkMissListResponseBody();
         return TeaModel.build(map, self);
@@ -39,14 +33,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
     }
     public String getCode() {
         return this.code;
-    }
-
-    public QueryGroupedSecurityEventMarkMissListResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public QueryGroupedSecurityEventMarkMissListResponseBody setList(java.util.List<QueryGroupedSecurityEventMarkMissListResponseBodyList> list) {
@@ -89,14 +75,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         return this.success;
     }
 
-    public QueryGroupedSecurityEventMarkMissListResponseBody setTimeCost(Long timeCost) {
-        this.timeCost = timeCost;
-        return this;
-    }
-    public Long getTimeCost() {
-        return this.timeCost;
-    }
-
     public static class QueryGroupedSecurityEventMarkMissListResponseBodyList extends TeaModel {
         // 用户统一编号
         @NameInMap("AliUid")
@@ -129,14 +107,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         // 加白字段别名
         @NameInMap("FiledAliasName")
         public String filedAliasName;
-
-        // 创建时间
-        @NameInMap("GmtCreate")
-        public Long gmtCreate;
-
-        // 修改时间
-        @NameInMap("GmtModified")
-        public Long gmtModified;
 
         // 操作符
         @NameInMap("Operate")
@@ -213,22 +183,6 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         }
         public String getFiledAliasName() {
             return this.filedAliasName;
-        }
-
-        public QueryGroupedSecurityEventMarkMissListResponseBodyList setGmtCreate(Long gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public Long getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public QueryGroupedSecurityEventMarkMissListResponseBodyList setGmtModified(Long gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public Long getGmtModified() {
-            return this.gmtModified;
         }
 
         public QueryGroupedSecurityEventMarkMissListResponseBodyList setOperate(String operate) {

@@ -863,6 +863,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GroupId", request.groupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
@@ -4931,6 +4935,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GroupId", request.groupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
@@ -7687,6 +7695,161 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.pauseClientWithOptions(request, runtime);
     }
 
+    public PublicCreateImageScanTaskResponse publicCreateImageScanTaskWithOptions(PublicCreateImageScanTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.digests)) {
+            query.put("Digests", request.digests);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionIds)) {
+            query.put("RegionIds", request.regionIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registryTypes)) {
+            query.put("RegistryTypes", request.registryTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repoIds)) {
+            query.put("RepoIds", request.repoIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repoNames)) {
+            query.put("RepoNames", request.repoNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repoNamespaces)) {
+            query.put("RepoNamespaces", request.repoNamespaces);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublicCreateImageScanTask"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublicCreateImageScanTaskResponse());
+    }
+
+    public PublicCreateImageScanTaskResponse publicCreateImageScanTask(PublicCreateImageScanTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.publicCreateImageScanTaskWithOptions(request, runtime);
+    }
+
+    public PublicPreCheckImageScanTaskResponse publicPreCheckImageScanTaskWithOptions(PublicPreCheckImageScanTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.digests)) {
+            query.put("Digests", request.digests);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionIds)) {
+            query.put("RegionIds", request.regionIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registryTypes)) {
+            query.put("RegistryTypes", request.registryTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repoIds)) {
+            query.put("RepoIds", request.repoIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repoNames)) {
+            query.put("RepoNames", request.repoNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repoNamespaces)) {
+            query.put("RepoNamespaces", request.repoNamespaces);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublicPreCheckImageScanTask"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublicPreCheckImageScanTaskResponse());
+    }
+
+    public PublicPreCheckImageScanTaskResponse publicPreCheckImageScanTask(PublicPreCheckImageScanTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.publicPreCheckImageScanTaskWithOptions(request, runtime);
+    }
+
+    public PublicSyncAndCreateImageScanTaskResponse publicSyncAndCreateImageScanTaskWithOptions(PublicSyncAndCreateImageScanTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.images)) {
+            query.put("Images", request.images);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublicSyncAndCreateImageScanTask"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublicSyncAndCreateImageScanTaskResponse());
+    }
+
+    public PublicSyncAndCreateImageScanTaskResponse publicSyncAndCreateImageScanTask(PublicSyncAndCreateImageScanTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.publicSyncAndCreateImageScanTaskWithOptions(request, runtime);
+    }
+
     public QueryGroupIdByGroupNameResponse queryGroupIdByGroupNameWithOptions(QueryGroupIdByGroupNameRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7742,10 +7905,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             body.put("Lang", request.lang);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.maxId)) {
-            body.put("MaxId", request.maxId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
@@ -7946,71 +8105,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartBaselineSecurityCheckResponse startBaselineSecurityCheck(StartBaselineSecurityCheckRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.startBaselineSecurityCheckWithOptions(request, runtime);
-    }
-
-    public StartImageVulScanResponse startImageVulScanWithOptions(StartImageVulScanRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.imageDigest)) {
-            query.put("ImageDigest", request.imageDigest);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.imageLayer)) {
-            query.put("ImageLayer", request.imageLayer);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.imageTag)) {
-            query.put("ImageTag", request.imageTag);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
-            query.put("Lang", request.lang);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.registryTypes)) {
-            query.put("RegistryTypes", request.registryTypes);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.repName)) {
-            query.put("RepName", request.repName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.repoId)) {
-            query.put("RepoId", request.repoId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.repoInstanceId)) {
-            query.put("RepoInstanceId", request.repoInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.repoNamespace)) {
-            query.put("RepoNamespace", request.repoNamespace);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.repoRegionId)) {
-            query.put("RepoRegionId", request.repoRegionId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "StartImageVulScan"),
-            new TeaPair("version", "2018-12-03"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartImageVulScanResponse());
-    }
-
-    public StartImageVulScanResponse startImageVulScan(StartImageVulScanRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.startImageVulScanWithOptions(request, runtime);
     }
 
     public StartVirusScanTaskResponse startVirusScanTaskWithOptions(StartVirusScanTaskRequest request, RuntimeOptions runtime) throws Exception {
