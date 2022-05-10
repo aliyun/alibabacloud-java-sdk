@@ -8,6 +8,10 @@ public class DeleteTableColumnStatisticsResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public DeleteTableColumnStatisticsResponseBody body;
@@ -23,6 +27,14 @@ public class DeleteTableColumnStatisticsResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DeleteTableColumnStatisticsResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public DeleteTableColumnStatisticsResponse setBody(DeleteTableColumnStatisticsResponseBody body) {
