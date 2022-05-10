@@ -3,7 +3,7 @@ package com.aliyun.datalake20200710.models;
 
 import com.aliyun.tea.*;
 
-public class UpdatePartitionColumnStatisticsResponse extends TeaModel {
+public class SubmitQueryResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class UpdatePartitionColumnStatisticsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdatePartitionColumnStatisticsResponseBody body;
+    public SubmitQueryResponseBody body;
 
-    public static UpdatePartitionColumnStatisticsResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdatePartitionColumnStatisticsResponse self = new UpdatePartitionColumnStatisticsResponse();
+    public static SubmitQueryResponse build(java.util.Map<String, ?> map) throws Exception {
+        SubmitQueryResponse self = new SubmitQueryResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdatePartitionColumnStatisticsResponse setHeaders(java.util.Map<String, String> headers) {
+    public SubmitQueryResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class UpdatePartitionColumnStatisticsResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdatePartitionColumnStatisticsResponse setStatusCode(Integer statusCode) {
+    public SubmitQueryResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class UpdatePartitionColumnStatisticsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdatePartitionColumnStatisticsResponse setBody(UpdatePartitionColumnStatisticsResponseBody body) {
+    public SubmitQueryResponse setBody(SubmitQueryResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdatePartitionColumnStatisticsResponseBody getBody() {
+    public SubmitQueryResponseBody getBody() {
         return this.body;
     }
 
