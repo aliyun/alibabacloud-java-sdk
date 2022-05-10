@@ -52,6 +52,9 @@ public class SendMessageRequest extends TeaModel {
         @NameInMap("SpeechText")
         public String speechText;
 
+        @NameInMap("interrupt")
+        public Boolean interrupt;
+
         public static SendMessageRequestTextRequest build(java.util.Map<String, ?> map) throws Exception {
             SendMessageRequestTextRequest self = new SendMessageRequestTextRequest();
             return TeaModel.build(map, self);
@@ -79,6 +82,14 @@ public class SendMessageRequest extends TeaModel {
         }
         public String getSpeechText() {
             return this.speechText;
+        }
+
+        public SendMessageRequestTextRequest setInterrupt(Boolean interrupt) {
+            this.interrupt = interrupt;
+            return this;
+        }
+        public Boolean getInterrupt() {
+            return this.interrupt;
         }
 
     }
