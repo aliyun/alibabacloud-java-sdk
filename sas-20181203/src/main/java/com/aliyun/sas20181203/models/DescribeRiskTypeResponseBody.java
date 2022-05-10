@@ -117,9 +117,6 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRules extends TeaModel {
-        @NameInMap("DefaultValue")
-        public Integer defaultValue;
-
         @NameInMap("Optional")
         public Integer optional;
 
@@ -135,14 +132,6 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         public static DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRules build(java.util.Map<String, ?> map) throws Exception {
             DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRules self = new DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRules();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRules setDefaultValue(Integer defaultValue) {
-            this.defaultValue = defaultValue;
-            return this;
-        }
-        public Integer getDefaultValue() {
-            return this.defaultValue;
         }
 
         public DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRules setOptional(Integer optional) {

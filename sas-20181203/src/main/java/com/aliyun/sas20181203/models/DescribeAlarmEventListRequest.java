@@ -22,6 +22,9 @@ public class DescribeAlarmEventListRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("Id")
+    public Long id;
+
     @NameInMap("Lang")
     public String lang;
 
@@ -94,6 +97,14 @@ public class DescribeAlarmEventListRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeAlarmEventListRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public DescribeAlarmEventListRequest setLang(String lang) {

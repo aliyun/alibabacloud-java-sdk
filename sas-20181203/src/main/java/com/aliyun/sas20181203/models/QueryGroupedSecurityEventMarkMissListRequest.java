@@ -17,9 +17,6 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("MaxId")
-    public Long maxId;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -65,14 +62,6 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public QueryGroupedSecurityEventMarkMissListRequest setMaxId(Long maxId) {
-        this.maxId = maxId;
-        return this;
-    }
-    public Long getMaxId() {
-        return this.maxId;
     }
 
     public QueryGroupedSecurityEventMarkMissListRequest setPageSize(Integer pageSize) {
