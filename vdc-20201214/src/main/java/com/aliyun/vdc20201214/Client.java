@@ -286,6 +286,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCallResponse());
     }
 
+    public DescribeCallInfoResponse describeCallInfo(DescribeCallInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeCallInfoWithOptions(request, headers, runtime);
+    }
+
+    public DescribeCallInfoResponse describeCallInfoWithOptions(DescribeCallInfoRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("ChannelId", request.channelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createdTs)) {
+            query.put("CreatedTs", request.createdTs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destroyedTs)) {
+            query.put("DestroyedTs", request.destroyedTs);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCallInfo"),
+            new TeaPair("version", "2020-12-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/call/describeCallInfo"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCallInfoResponse());
+    }
+
     public DescribeCallListResponse describeCallList(DescribeCallListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -433,6 +476,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCallUserExpResponse());
+    }
+
+    public DescribeCallUserListResponse describeCallUserList(DescribeCallUserListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeCallUserListWithOptions(request, headers, runtime);
+    }
+
+    public DescribeCallUserListResponse describeCallUserListWithOptions(DescribeCallUserListRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("ChannelId", request.channelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createdTs)) {
+            query.put("CreatedTs", request.createdTs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destroyedTs)) {
+            query.put("DestroyedTs", request.destroyedTs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extDataType)) {
+            query.put("ExtDataType", request.extDataType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryExpInfo)) {
+            query.put("QueryExpInfo", request.queryExpInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleType)) {
+            query.put("RoleType", request.roleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCallUserList"),
+            new TeaPair("version", "2020-12-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/call/describeCallUserList"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCallUserListResponse());
     }
 
     public DescribeChannelAreaDistributionStatDataResponse describeChannelAreaDistributionStatData(DescribeChannelAreaDistributionStatDataRequest request) throws Exception {

@@ -162,6 +162,12 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList extends TeaModel {
+        @NameInMap("Acs")
+        public String acs;
+
+        @NameInMap("EventCode")
+        public String eventCode;
+
         // 事件名称。
         @NameInMap("EventName")
         public String eventName;
@@ -170,13 +176,50 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         @NameInMap("EventType")
         public String eventType;
 
+        @NameInMap("Os")
+        public String os;
+
+        @NameInMap("Sdk")
+        public String sdk;
+
+        @NameInMap("StreamName")
+        public String streamName;
+
+        @NameInMap("StreamType")
+        public String streamType;
+
+        @NameInMap("TrackCode")
+        public String trackCode;
+
+        @NameInMap("TrackName")
+        public String trackName;
+
         // 事件发生的时间，使用UNIX时间戳表示，单位：秒。
         @NameInMap("Ts")
         public Long ts;
 
+        @NameInMap("UserId")
+        public String userId;
+
         public static DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList build(java.util.Map<String, ?> map) throws Exception {
             DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList self = new DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList setAcs(String acs) {
+            this.acs = acs;
+            return this;
+        }
+        public String getAcs() {
+            return this.acs;
+        }
+
+        public DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList setEventCode(String eventCode) {
+            this.eventCode = eventCode;
+            return this;
+        }
+        public String getEventCode() {
+            return this.eventCode;
         }
 
         public DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList setEventName(String eventName) {
@@ -195,12 +238,68 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             return this.eventType;
         }
 
+        public DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList setOs(String os) {
+            this.os = os;
+            return this;
+        }
+        public String getOs() {
+            return this.os;
+        }
+
+        public DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList setSdk(String sdk) {
+            this.sdk = sdk;
+            return this;
+        }
+        public String getSdk() {
+            return this.sdk;
+        }
+
+        public DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList setStreamName(String streamName) {
+            this.streamName = streamName;
+            return this;
+        }
+        public String getStreamName() {
+            return this.streamName;
+        }
+
+        public DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList setStreamType(String streamType) {
+            this.streamType = streamType;
+            return this;
+        }
+        public String getStreamType() {
+            return this.streamType;
+        }
+
+        public DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList setTrackCode(String trackCode) {
+            this.trackCode = trackCode;
+            return this;
+        }
+        public String getTrackCode() {
+            return this.trackCode;
+        }
+
+        public DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList setTrackName(String trackName) {
+            this.trackName = trackName;
+            return this;
+        }
+        public String getTrackName() {
+            return this.trackName;
+        }
+
         public DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList setTs(Long ts) {
             this.ts = ts;
             return this;
         }
         public Long getTs() {
             return this.ts;
+        }
+
+        public DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

@@ -3,7 +3,7 @@ package com.aliyun.vdc20201214.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeQualityOverallDataResponse extends TeaModel {
+public class DescribeCallUserListResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeQualityOverallDataResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeQualityOverallDataResponseBody body;
+    public DescribeCallUserListResponseBody body;
 
-    public static DescribeQualityOverallDataResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeQualityOverallDataResponse self = new DescribeQualityOverallDataResponse();
+    public static DescribeCallUserListResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeCallUserListResponse self = new DescribeCallUserListResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeQualityOverallDataResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeCallUserListResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeQualityOverallDataResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeQualityOverallDataResponse setStatusCode(Integer statusCode) {
+    public DescribeCallUserListResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeQualityOverallDataResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeQualityOverallDataResponse setBody(DescribeQualityOverallDataResponseBody body) {
+    public DescribeCallUserListResponse setBody(DescribeCallUserListResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeQualityOverallDataResponseBody getBody() {
+    public DescribeCallUserListResponseBody getBody() {
         return this.body;
     }
 

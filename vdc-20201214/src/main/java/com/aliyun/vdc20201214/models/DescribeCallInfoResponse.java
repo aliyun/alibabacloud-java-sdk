@@ -3,7 +3,7 @@ package com.aliyun.vdc20201214.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeQualityOverallDataResponse extends TeaModel {
+public class DescribeCallInfoResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeQualityOverallDataResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeQualityOverallDataResponseBody body;
+    public DescribeCallInfoResponseBody body;
 
-    public static DescribeQualityOverallDataResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeQualityOverallDataResponse self = new DescribeQualityOverallDataResponse();
+    public static DescribeCallInfoResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeCallInfoResponse self = new DescribeCallInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeQualityOverallDataResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeCallInfoResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeQualityOverallDataResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeQualityOverallDataResponse setStatusCode(Integer statusCode) {
+    public DescribeCallInfoResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeQualityOverallDataResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeQualityOverallDataResponse setBody(DescribeQualityOverallDataResponseBody body) {
+    public DescribeCallInfoResponse setBody(DescribeCallInfoResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeQualityOverallDataResponseBody getBody() {
+    public DescribeCallInfoResponseBody getBody() {
         return this.body;
     }
 
