@@ -479,25 +479,4 @@ public class Client extends com.aliyun.teaopenapi.Client {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.huichengetestWithOptions(runtime);
     }
-
-    public TsResponse tsWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "Ts"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new TsResponse());
-    }
-
-    public TsResponse ts() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.tsWithOptions(runtime);
-    }
 }
