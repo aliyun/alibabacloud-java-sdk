@@ -108,60 +108,15 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetUserVpcSecurityGroupResponseBodySecurityGroupListTags extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static GetUserVpcSecurityGroupResponseBodySecurityGroupListTags build(java.util.Map<String, ?> map) throws Exception {
-            GetUserVpcSecurityGroupResponseBodySecurityGroupListTags self = new GetUserVpcSecurityGroupResponseBodySecurityGroupListTags();
-            return TeaModel.build(map, self);
-        }
-
-        public GetUserVpcSecurityGroupResponseBodySecurityGroupListTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public GetUserVpcSecurityGroupResponseBodySecurityGroupListTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class GetUserVpcSecurityGroupResponseBodySecurityGroupList extends TeaModel {
-        @NameInMap("AvailableInstanceAmount")
-        public Integer availableInstanceAmount;
-
-        @NameInMap("CreationTime")
-        public String creationTime;
-
         @NameInMap("Description")
         public String description;
-
-        @NameInMap("EcsCount")
-        public Integer ecsCount;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
 
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         @NameInMap("SecurityGroupName")
         public String securityGroupName;
-
-        @NameInMap("Tags")
-        public java.util.List<GetUserVpcSecurityGroupResponseBodySecurityGroupListTags> tags;
 
         @NameInMap("VpcId")
         public String vpcId;
@@ -171,44 +126,12 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetUserVpcSecurityGroupResponseBodySecurityGroupList setAvailableInstanceAmount(Integer availableInstanceAmount) {
-            this.availableInstanceAmount = availableInstanceAmount;
-            return this;
-        }
-        public Integer getAvailableInstanceAmount() {
-            return this.availableInstanceAmount;
-        }
-
-        public GetUserVpcSecurityGroupResponseBodySecurityGroupList setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
         public GetUserVpcSecurityGroupResponseBodySecurityGroupList setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public GetUserVpcSecurityGroupResponseBodySecurityGroupList setEcsCount(Integer ecsCount) {
-            this.ecsCount = ecsCount;
-            return this;
-        }
-        public Integer getEcsCount() {
-            return this.ecsCount;
-        }
-
-        public GetUserVpcSecurityGroupResponseBodySecurityGroupList setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
         }
 
         public GetUserVpcSecurityGroupResponseBodySecurityGroupList setSecurityGroupId(String securityGroupId) {
@@ -225,14 +148,6 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
         }
         public String getSecurityGroupName() {
             return this.securityGroupName;
-        }
-
-        public GetUserVpcSecurityGroupResponseBodySecurityGroupList setTags(java.util.List<GetUserVpcSecurityGroupResponseBodySecurityGroupListTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<GetUserVpcSecurityGroupResponseBodySecurityGroupListTags> getTags() {
-            return this.tags;
         }
 
         public GetUserVpcSecurityGroupResponseBodySecurityGroupList setVpcId(String vpcId) {

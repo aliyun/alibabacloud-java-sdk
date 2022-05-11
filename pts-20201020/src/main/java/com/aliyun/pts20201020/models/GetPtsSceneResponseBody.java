@@ -351,6 +351,58 @@ public class GetPtsSceneResponseBody extends TeaModel {
 
     }
 
+    public static class GetPtsSceneResponseBodySceneLoadConfigVpcLoadConfig extends TeaModel {
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static GetPtsSceneResponseBodySceneLoadConfigVpcLoadConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetPtsSceneResponseBodySceneLoadConfigVpcLoadConfig self = new GetPtsSceneResponseBodySceneLoadConfigVpcLoadConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPtsSceneResponseBodySceneLoadConfigVpcLoadConfig setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public GetPtsSceneResponseBodySceneLoadConfigVpcLoadConfig setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public GetPtsSceneResponseBodySceneLoadConfigVpcLoadConfig setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public GetPtsSceneResponseBodySceneLoadConfigVpcLoadConfig setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+    }
+
     public static class GetPtsSceneResponseBodySceneLoadConfig extends TeaModel {
         @NameInMap("AgentCount")
         public Integer agentCount;
@@ -358,8 +410,17 @@ public class GetPtsSceneResponseBody extends TeaModel {
         @NameInMap("ApiLoadConfigList")
         public java.util.List<GetPtsSceneResponseBodySceneLoadConfigApiLoadConfigList> apiLoadConfigList;
 
+        @NameInMap("AutoStep")
+        public Boolean autoStep;
+
         @NameInMap("Configuration")
         public GetPtsSceneResponseBodySceneLoadConfigConfiguration configuration;
+
+        @NameInMap("Increment")
+        public Integer increment;
+
+        @NameInMap("KeepTime")
+        public Integer keepTime;
 
         @NameInMap("MaxRunningTime")
         public Integer maxRunningTime;
@@ -369,6 +430,9 @@ public class GetPtsSceneResponseBody extends TeaModel {
 
         @NameInMap("TestMode")
         public String testMode;
+
+        @NameInMap("VpcLoadConfig")
+        public GetPtsSceneResponseBodySceneLoadConfigVpcLoadConfig vpcLoadConfig;
 
         public static GetPtsSceneResponseBodySceneLoadConfig build(java.util.Map<String, ?> map) throws Exception {
             GetPtsSceneResponseBodySceneLoadConfig self = new GetPtsSceneResponseBodySceneLoadConfig();
@@ -391,12 +455,36 @@ public class GetPtsSceneResponseBody extends TeaModel {
             return this.apiLoadConfigList;
         }
 
+        public GetPtsSceneResponseBodySceneLoadConfig setAutoStep(Boolean autoStep) {
+            this.autoStep = autoStep;
+            return this;
+        }
+        public Boolean getAutoStep() {
+            return this.autoStep;
+        }
+
         public GetPtsSceneResponseBodySceneLoadConfig setConfiguration(GetPtsSceneResponseBodySceneLoadConfigConfiguration configuration) {
             this.configuration = configuration;
             return this;
         }
         public GetPtsSceneResponseBodySceneLoadConfigConfiguration getConfiguration() {
             return this.configuration;
+        }
+
+        public GetPtsSceneResponseBodySceneLoadConfig setIncrement(Integer increment) {
+            this.increment = increment;
+            return this;
+        }
+        public Integer getIncrement() {
+            return this.increment;
+        }
+
+        public GetPtsSceneResponseBodySceneLoadConfig setKeepTime(Integer keepTime) {
+            this.keepTime = keepTime;
+            return this;
+        }
+        public Integer getKeepTime() {
+            return this.keepTime;
         }
 
         public GetPtsSceneResponseBodySceneLoadConfig setMaxRunningTime(Integer maxRunningTime) {
@@ -421,6 +509,14 @@ public class GetPtsSceneResponseBody extends TeaModel {
         }
         public String getTestMode() {
             return this.testMode;
+        }
+
+        public GetPtsSceneResponseBodySceneLoadConfig setVpcLoadConfig(GetPtsSceneResponseBodySceneLoadConfigVpcLoadConfig vpcLoadConfig) {
+            this.vpcLoadConfig = vpcLoadConfig;
+            return this;
+        }
+        public GetPtsSceneResponseBodySceneLoadConfigVpcLoadConfig getVpcLoadConfig() {
+            return this.vpcLoadConfig;
         }
 
     }

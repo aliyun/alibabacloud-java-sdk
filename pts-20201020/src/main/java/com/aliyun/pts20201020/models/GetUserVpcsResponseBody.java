@@ -108,54 +108,12 @@ public class GetUserVpcsResponseBody extends TeaModel {
         return this.vpcs;
     }
 
-    public static class GetUserVpcsResponseBodyVpcsTags extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static GetUserVpcsResponseBodyVpcsTags build(java.util.Map<String, ?> map) throws Exception {
-            GetUserVpcsResponseBodyVpcsTags self = new GetUserVpcsResponseBodyVpcsTags();
-            return TeaModel.build(map, self);
-        }
-
-        public GetUserVpcsResponseBodyVpcsTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public GetUserVpcsResponseBodyVpcsTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class GetUserVpcsResponseBodyVpcs extends TeaModel {
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
-        @NameInMap("CreationTime")
-        public String creationTime;
-
         @NameInMap("Description")
         public String description;
-
-        @NameInMap("Ipv6CidrBlock")
-        public String ipv6CidrBlock;
-
-        @NameInMap("IsDefault")
-        public Boolean isDefault;
-
-        @NameInMap("NatGatewayIds")
-        public java.util.List<String> natGatewayIds;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -165,18 +123,6 @@ public class GetUserVpcsResponseBody extends TeaModel {
 
         @NameInMap("RouterTableIds")
         public java.util.List<String> routerTableIds;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Tags")
-        public java.util.List<GetUserVpcsResponseBodyVpcsTags> tags;
-
-        @NameInMap("UserCidrs")
-        public java.util.List<String> userCidrs;
-
-        @NameInMap("VRouterId")
-        public String VRouterId;
 
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
@@ -200,44 +146,12 @@ public class GetUserVpcsResponseBody extends TeaModel {
             return this.cidrBlock;
         }
 
-        public GetUserVpcsResponseBodyVpcs setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
         public GetUserVpcsResponseBodyVpcs setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public GetUserVpcsResponseBodyVpcs setIpv6CidrBlock(String ipv6CidrBlock) {
-            this.ipv6CidrBlock = ipv6CidrBlock;
-            return this;
-        }
-        public String getIpv6CidrBlock() {
-            return this.ipv6CidrBlock;
-        }
-
-        public GetUserVpcsResponseBodyVpcs setIsDefault(Boolean isDefault) {
-            this.isDefault = isDefault;
-            return this;
-        }
-        public Boolean getIsDefault() {
-            return this.isDefault;
-        }
-
-        public GetUserVpcsResponseBodyVpcs setNatGatewayIds(java.util.List<String> natGatewayIds) {
-            this.natGatewayIds = natGatewayIds;
-            return this;
-        }
-        public java.util.List<String> getNatGatewayIds() {
-            return this.natGatewayIds;
         }
 
         public GetUserVpcsResponseBodyVpcs setRegionId(String regionId) {
@@ -262,38 +176,6 @@ public class GetUserVpcsResponseBody extends TeaModel {
         }
         public java.util.List<String> getRouterTableIds() {
             return this.routerTableIds;
-        }
-
-        public GetUserVpcsResponseBodyVpcs setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetUserVpcsResponseBodyVpcs setTags(java.util.List<GetUserVpcsResponseBodyVpcsTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<GetUserVpcsResponseBodyVpcsTags> getTags() {
-            return this.tags;
-        }
-
-        public GetUserVpcsResponseBodyVpcs setUserCidrs(java.util.List<String> userCidrs) {
-            this.userCidrs = userCidrs;
-            return this;
-        }
-        public java.util.List<String> getUserCidrs() {
-            return this.userCidrs;
-        }
-
-        public GetUserVpcsResponseBodyVpcs setVRouterId(String VRouterId) {
-            this.VRouterId = VRouterId;
-            return this;
-        }
-        public String getVRouterId() {
-            return this.VRouterId;
         }
 
         public GetUserVpcsResponseBodyVpcs setVSwitchIds(java.util.List<String> vSwitchIds) {
