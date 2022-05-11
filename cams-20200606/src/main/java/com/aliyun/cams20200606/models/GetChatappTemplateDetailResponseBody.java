@@ -141,6 +141,10 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("FileName")
         public String fileName;
 
+        // 格式
+        @NameInMap("Format")
+        public String format;
+
         // 所发送消息的文本
         @NameInMap("Text")
         public String text;
@@ -180,6 +184,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
         public String getFileName() {
             return this.fileName;
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponents setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
         }
 
         public GetChatappTemplateDetailResponseBodyDataComponents setText(String text) {
