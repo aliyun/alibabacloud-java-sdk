@@ -679,6 +679,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.completeAttendedTransferWithOptions(request, runtime);
     }
 
+    public CreateAudioFileResponse createAudioFileWithOptions(CreateAudioFileRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioFileName)) {
+            query.put("AudioFileName", request.audioFileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossFileKey)) {
+            query.put("OssFileKey", request.ossFileKey);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAudioFile"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAudioFileResponse());
+    }
+
+    public CreateAudioFileResponse createAudioFile(CreateAudioFileRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createAudioFileWithOptions(request, runtime);
+    }
+
     public CreateCallTagsResponse createCallTagsWithOptions(CreateCallTagsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -987,6 +1028,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createUserWithOptions(request, runtime);
     }
 
+    public DeleteAudioFileResponse deleteAudioFileWithOptions(DeleteAudioFileRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioResourceId)) {
+            query.put("AudioResourceId", request.audioResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAudioFile"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAudioFileResponse());
+    }
+
+    public DeleteAudioFileResponse deleteAudioFile(DeleteAudioFileRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteAudioFileWithOptions(request, runtime);
+    }
+
     public DeleteCallTagResponse deleteCallTagWithOptions(DeleteCallTagRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1199,6 +1273,105 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExportDoNotCallNumbersResponse exportDoNotCallNumbers(ExportDoNotCallNumbersRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.exportDoNotCallNumbersWithOptions(request, runtime);
+    }
+
+    public GetAudioFileResponse getAudioFileWithOptions(GetAudioFileRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioResourceId)) {
+            query.put("AudioResourceId", request.audioResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAudioFile"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAudioFileResponse());
+    }
+
+    public GetAudioFileResponse getAudioFile(GetAudioFileRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getAudioFileWithOptions(request, runtime);
+    }
+
+    public GetAudioFileDownloadUrlResponse getAudioFileDownloadUrlWithOptions(GetAudioFileDownloadUrlRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioResourceId)) {
+            query.put("AudioResourceId", request.audioResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAudioFileDownloadUrl"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAudioFileDownloadUrlResponse());
+    }
+
+    public GetAudioFileDownloadUrlResponse getAudioFileDownloadUrl(GetAudioFileDownloadUrlRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getAudioFileDownloadUrlWithOptions(request, runtime);
+    }
+
+    public GetAudioFileUploadParametersResponse getAudioFileUploadParametersWithOptions(GetAudioFileUploadParametersRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioFileName)) {
+            query.put("AudioFileName", request.audioFileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAudioFileUploadParameters"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAudioFileUploadParametersResponse());
+    }
+
+    public GetAudioFileUploadParametersResponse getAudioFileUploadParameters(GetAudioFileUploadParametersRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getAudioFileUploadParametersWithOptions(request, runtime);
     }
 
     public GetCallDetailRecordResponse getCallDetailRecordWithOptions(GetCallDetailRecordRequest request, RuntimeOptions runtime) throws Exception {
@@ -2355,6 +2528,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAttemptsResponse listAttempts(ListAttemptsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listAttemptsWithOptions(request, runtime);
+    }
+
+    public ListAudioFilesResponse listAudioFilesWithOptions(ListAudioFilesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAudioFiles"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAudioFilesResponse());
+    }
+
+    public ListAudioFilesResponse listAudioFiles(ListAudioFilesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listAudioFilesWithOptions(request, runtime);
     }
 
     public ListBriefSkillGroupsResponse listBriefSkillGroupsWithOptions(ListBriefSkillGroupsRequest request, RuntimeOptions runtime) throws Exception {
@@ -4122,6 +4332,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public MakeCallResponse makeCall(MakeCallRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.makeCallWithOptions(request, runtime);
+    }
+
+    public ModifyAudioFileResponse modifyAudioFileWithOptions(ModifyAudioFileRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioFileName)) {
+            query.put("AudioFileName", request.audioFileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.audioResourceId)) {
+            query.put("AudioResourceId", request.audioResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossFileKey)) {
+            query.put("OssFileKey", request.ossFileKey);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAudioFile"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAudioFileResponse());
+    }
+
+    public ModifyAudioFileResponse modifyAudioFile(ModifyAudioFileRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyAudioFileWithOptions(request, runtime);
     }
 
     public ModifyCustomCallTaggingResponse modifyCustomCallTaggingWithOptions(ModifyCustomCallTaggingRequest request, RuntimeOptions runtime) throws Exception {
