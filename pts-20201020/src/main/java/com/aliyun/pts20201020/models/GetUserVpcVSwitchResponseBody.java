@@ -108,99 +108,12 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
         return this.vSwitchList;
     }
 
-    public static class GetUserVpcVSwitchResponseBodyVSwitchListRouteTable extends TeaModel {
-        @NameInMap("RouteTableId")
-        public String routeTableId;
-
-        @NameInMap("RouteTableType")
-        public String routeTableType;
-
-        public static GetUserVpcVSwitchResponseBodyVSwitchListRouteTable build(java.util.Map<String, ?> map) throws Exception {
-            GetUserVpcVSwitchResponseBodyVSwitchListRouteTable self = new GetUserVpcVSwitchResponseBodyVSwitchListRouteTable();
-            return TeaModel.build(map, self);
-        }
-
-        public GetUserVpcVSwitchResponseBodyVSwitchListRouteTable setRouteTableId(String routeTableId) {
-            this.routeTableId = routeTableId;
-            return this;
-        }
-        public String getRouteTableId() {
-            return this.routeTableId;
-        }
-
-        public GetUserVpcVSwitchResponseBodyVSwitchListRouteTable setRouteTableType(String routeTableType) {
-            this.routeTableType = routeTableType;
-            return this;
-        }
-        public String getRouteTableType() {
-            return this.routeTableType;
-        }
-
-    }
-
-    public static class GetUserVpcVSwitchResponseBodyVSwitchListTags extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static GetUserVpcVSwitchResponseBodyVSwitchListTags build(java.util.Map<String, ?> map) throws Exception {
-            GetUserVpcVSwitchResponseBodyVSwitchListTags self = new GetUserVpcVSwitchResponseBodyVSwitchListTags();
-            return TeaModel.build(map, self);
-        }
-
-        public GetUserVpcVSwitchResponseBodyVSwitchListTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public GetUserVpcVSwitchResponseBodyVSwitchListTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class GetUserVpcVSwitchResponseBodyVSwitchList extends TeaModel {
         @NameInMap("AvailableIpAddressCount")
         public Long availableIpAddressCount;
 
-        @NameInMap("CidrBlock")
-        public String cidrBlock;
-
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("Ipv6CidrBlock")
-        public String ipv6CidrBlock;
-
-        @NameInMap("IsDefault")
-        public Boolean isDefault;
-
         @NameInMap("MaxAgentCount")
         public Integer maxAgentCount;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        @NameInMap("RouteTable")
-        public java.util.List<GetUserVpcVSwitchResponseBodyVSwitchListRouteTable> routeTable;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Tags")
-        public java.util.List<GetUserVpcVSwitchResponseBodyVSwitchListTags> tags;
 
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -210,9 +123,6 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
 
         @NameInMap("VpcId")
         public String vpcId;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
 
         public static GetUserVpcVSwitchResponseBodyVSwitchList build(java.util.Map<String, ?> map) throws Exception {
             GetUserVpcVSwitchResponseBodyVSwitchList self = new GetUserVpcVSwitchResponseBodyVSwitchList();
@@ -227,84 +137,12 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
             return this.availableIpAddressCount;
         }
 
-        public GetUserVpcVSwitchResponseBodyVSwitchList setCidrBlock(String cidrBlock) {
-            this.cidrBlock = cidrBlock;
-            return this;
-        }
-        public String getCidrBlock() {
-            return this.cidrBlock;
-        }
-
-        public GetUserVpcVSwitchResponseBodyVSwitchList setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public GetUserVpcVSwitchResponseBodyVSwitchList setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public GetUserVpcVSwitchResponseBodyVSwitchList setIpv6CidrBlock(String ipv6CidrBlock) {
-            this.ipv6CidrBlock = ipv6CidrBlock;
-            return this;
-        }
-        public String getIpv6CidrBlock() {
-            return this.ipv6CidrBlock;
-        }
-
-        public GetUserVpcVSwitchResponseBodyVSwitchList setIsDefault(Boolean isDefault) {
-            this.isDefault = isDefault;
-            return this;
-        }
-        public Boolean getIsDefault() {
-            return this.isDefault;
-        }
-
         public GetUserVpcVSwitchResponseBodyVSwitchList setMaxAgentCount(Integer maxAgentCount) {
             this.maxAgentCount = maxAgentCount;
             return this;
         }
         public Integer getMaxAgentCount() {
             return this.maxAgentCount;
-        }
-
-        public GetUserVpcVSwitchResponseBodyVSwitchList setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        public GetUserVpcVSwitchResponseBodyVSwitchList setRouteTable(java.util.List<GetUserVpcVSwitchResponseBodyVSwitchListRouteTable> routeTable) {
-            this.routeTable = routeTable;
-            return this;
-        }
-        public java.util.List<GetUserVpcVSwitchResponseBodyVSwitchListRouteTable> getRouteTable() {
-            return this.routeTable;
-        }
-
-        public GetUserVpcVSwitchResponseBodyVSwitchList setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetUserVpcVSwitchResponseBodyVSwitchList setTags(java.util.List<GetUserVpcVSwitchResponseBodyVSwitchListTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<GetUserVpcVSwitchResponseBodyVSwitchListTags> getTags() {
-            return this.tags;
         }
 
         public GetUserVpcVSwitchResponseBodyVSwitchList setVSwitchId(String vSwitchId) {
@@ -329,14 +167,6 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
-        }
-
-        public GetUserVpcVSwitchResponseBodyVSwitchList setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
     }

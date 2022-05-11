@@ -965,13 +965,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ModifyPtsSceneResponse modifyPtsSceneWithOptions(ModifyPtsSceneRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
-            query.put("Scene", request.scene);
+            body.put("Scene", request.scene);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyPtsScene"),
