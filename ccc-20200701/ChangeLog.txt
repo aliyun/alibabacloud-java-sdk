@@ -1,3 +1,6 @@
+2022-05-11 Version: 2.4.6
+- Supported Audio management apis.
+
 2022-04-26 Version: 2.4.5
 - Supported GetVoicemailRecording.
 

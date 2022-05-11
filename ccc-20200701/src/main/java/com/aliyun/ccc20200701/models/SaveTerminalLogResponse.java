@@ -8,6 +8,10 @@ public class SaveTerminalLogResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public SaveTerminalLogResponseBody body;
@@ -23,6 +27,14 @@ public class SaveTerminalLogResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public SaveTerminalLogResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public SaveTerminalLogResponse setBody(SaveTerminalLogResponseBody body) {
