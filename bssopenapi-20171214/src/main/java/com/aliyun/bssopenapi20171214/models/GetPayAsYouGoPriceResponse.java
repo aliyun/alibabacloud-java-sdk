@@ -8,6 +8,10 @@ public class GetPayAsYouGoPriceResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public GetPayAsYouGoPriceResponseBody body;
@@ -23,6 +27,14 @@ public class GetPayAsYouGoPriceResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public GetPayAsYouGoPriceResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public GetPayAsYouGoPriceResponse setBody(GetPayAsYouGoPriceResponseBody body) {
