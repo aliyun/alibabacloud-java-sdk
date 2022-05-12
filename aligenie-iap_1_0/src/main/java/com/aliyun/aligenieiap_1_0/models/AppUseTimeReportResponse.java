@@ -3,7 +3,7 @@ package com.aliyun.aligenieiap_1_0.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteReminderResponse extends TeaModel {
+public class AppUseTimeReportResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DeleteReminderResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DeleteReminderResponseBody body;
+    public AppUseTimeReportResponseBody body;
 
-    public static DeleteReminderResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteReminderResponse self = new DeleteReminderResponse();
+    public static AppUseTimeReportResponse build(java.util.Map<String, ?> map) throws Exception {
+        AppUseTimeReportResponse self = new AppUseTimeReportResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteReminderResponse setHeaders(java.util.Map<String, String> headers) {
+    public AppUseTimeReportResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DeleteReminderResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteReminderResponse setStatusCode(Integer statusCode) {
+    public AppUseTimeReportResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DeleteReminderResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteReminderResponse setBody(DeleteReminderResponseBody body) {
+    public AppUseTimeReportResponse setBody(AppUseTimeReportResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteReminderResponseBody getBody() {
+    public AppUseTimeReportResponseBody getBody() {
         return this.body;
     }
 
