@@ -4,6 +4,15 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreatePickUpWaybillShrinkRequest extends TeaModel {
+    @NameInMap("AppointGotEndTime")
+    public String appointGotEndTime;
+
+    @NameInMap("AppointGotStartTime")
+    public String appointGotStartTime;
+
+    @NameInMap("BizType")
+    public Integer bizType;
+
     @NameInMap("ConsigneeAddress")
     public String consigneeAddressShrink;
 
@@ -46,6 +55,30 @@ public class CreatePickUpWaybillShrinkRequest extends TeaModel {
     public static CreatePickUpWaybillShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePickUpWaybillShrinkRequest self = new CreatePickUpWaybillShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreatePickUpWaybillShrinkRequest setAppointGotEndTime(String appointGotEndTime) {
+        this.appointGotEndTime = appointGotEndTime;
+        return this;
+    }
+    public String getAppointGotEndTime() {
+        return this.appointGotEndTime;
+    }
+
+    public CreatePickUpWaybillShrinkRequest setAppointGotStartTime(String appointGotStartTime) {
+        this.appointGotStartTime = appointGotStartTime;
+        return this;
+    }
+    public String getAppointGotStartTime() {
+        return this.appointGotStartTime;
+    }
+
+    public CreatePickUpWaybillShrinkRequest setBizType(Integer bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public Integer getBizType() {
+        return this.bizType;
     }
 
     public CreatePickUpWaybillShrinkRequest setConsigneeAddressShrink(String consigneeAddressShrink) {

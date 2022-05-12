@@ -8,6 +8,10 @@ public class BuySecretNoResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public BuySecretNoResponseBody body;
@@ -23,6 +27,14 @@ public class BuySecretNoResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public BuySecretNoResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public BuySecretNoResponse setBody(BuySecretNoResponseBody body) {
