@@ -28,6 +28,9 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("Duration")
     public Integer duration;
 
+    @NameInMap("InstanceChargeType")
+    public String instanceChargeType;
+
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
@@ -146,6 +149,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
     public Integer getDuration() {
         return this.duration;
+    }
+
+    public CreateLoadBalancerRequest setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
+        return this;
+    }
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     public CreateLoadBalancerRequest setInternetChargeType(String internetChargeType) {

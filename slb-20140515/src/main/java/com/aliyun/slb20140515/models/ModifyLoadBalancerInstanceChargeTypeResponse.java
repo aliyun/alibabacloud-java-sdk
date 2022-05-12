@@ -3,7 +3,7 @@ package com.aliyun.slb20140515.models;
 
 import com.aliyun.tea.*;
 
-public class AddListenerWhiteListItemResponse extends TeaModel {
+public class ModifyLoadBalancerInstanceChargeTypeResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class AddListenerWhiteListItemResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public AddListenerWhiteListItemResponseBody body;
+    public ModifyLoadBalancerInstanceChargeTypeResponseBody body;
 
-    public static AddListenerWhiteListItemResponse build(java.util.Map<String, ?> map) throws Exception {
-        AddListenerWhiteListItemResponse self = new AddListenerWhiteListItemResponse();
+    public static ModifyLoadBalancerInstanceChargeTypeResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyLoadBalancerInstanceChargeTypeResponse self = new ModifyLoadBalancerInstanceChargeTypeResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddListenerWhiteListItemResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyLoadBalancerInstanceChargeTypeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class AddListenerWhiteListItemResponse extends TeaModel {
         return this.headers;
     }
 
-    public AddListenerWhiteListItemResponse setStatusCode(Integer statusCode) {
+    public ModifyLoadBalancerInstanceChargeTypeResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class AddListenerWhiteListItemResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public AddListenerWhiteListItemResponse setBody(AddListenerWhiteListItemResponseBody body) {
+    public ModifyLoadBalancerInstanceChargeTypeResponse setBody(ModifyLoadBalancerInstanceChargeTypeResponseBody body) {
         this.body = body;
         return this;
     }
-    public AddListenerWhiteListItemResponseBody getBody() {
+    public ModifyLoadBalancerInstanceChargeTypeResponseBody getBody() {
         return this.body;
     }
 
