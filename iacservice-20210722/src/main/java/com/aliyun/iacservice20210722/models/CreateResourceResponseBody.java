@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResourceResponseBody extends TeaModel {
     // 请求id
-    @NameInMap("RequestId")
+    @NameInMap("requestId")
     public String requestId;
 
     // 资源id
