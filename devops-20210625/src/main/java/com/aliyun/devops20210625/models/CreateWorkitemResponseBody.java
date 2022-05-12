@@ -126,6 +126,10 @@ public class CreateWorkitemResponseBody extends TeaModel {
         @NameInMap("spaceType")
         public String spaceType;
 
+        // 迭代的id
+        @NameInMap("sprintIdentifier")
+        public String sprintIdentifier;
+
         // 状态名称
         @NameInMap("status")
         public String status;
@@ -265,6 +269,14 @@ public class CreateWorkitemResponseBody extends TeaModel {
         }
         public String getSpaceType() {
             return this.spaceType;
+        }
+
+        public CreateWorkitemResponseBodyWorkitem setSprintIdentifier(String sprintIdentifier) {
+            this.sprintIdentifier = sprintIdentifier;
+            return this;
+        }
+        public String getSprintIdentifier() {
+            return this.sprintIdentifier;
         }
 
         public CreateWorkitemResponseBodyWorkitem setStatus(String status) {

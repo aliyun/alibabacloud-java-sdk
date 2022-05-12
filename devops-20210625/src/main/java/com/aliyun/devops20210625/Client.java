@@ -606,10 +606,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         organizationId = com.aliyun.openapiutil.Client.getEncodeParam(organizationId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.ak.issue.member)) {
-            body.put("ak", request.ak.issue.member);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.assignedTo)) {
             body.put("assignedTo", request.assignedTo);
         }
@@ -634,6 +630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("parent", request.parent);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.participant)) {
+            body.put("participant", request.participant);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.space)) {
             body.put("space", request.space);
         }
@@ -654,12 +654,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("subject", request.subject);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.workitem.tracker)) {
-            body.put("workitem", request.workitem.tracker);
+        if (!com.aliyun.teautil.Common.isUnset(request.tracker)) {
+            body.put("tracker", request.tracker);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.workitem.verifier)) {
-            body.put("workitem", request.workitem.verifier);
+        if (!com.aliyun.teautil.Common.isUnset(request.verifier)) {
+            body.put("verifier", request.verifier);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workitemType)) {
@@ -2515,6 +2515,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
             query.put("orderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchType)) {
+            query.put("searchType", request.searchType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.spaceIdentifier)) {

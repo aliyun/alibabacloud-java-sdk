@@ -69,78 +69,6 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         return this.workitem;
     }
 
-    public static class GetWorkItemInfoResponseBodyWorkitemAkIssue extends TeaModel {
-        // 参与人account id列表
-        @NameInMap("member")
-        public java.util.List<String> member;
-
-        public static GetWorkItemInfoResponseBodyWorkitemAkIssue build(java.util.Map<String, ?> map) throws Exception {
-            GetWorkItemInfoResponseBodyWorkitemAkIssue self = new GetWorkItemInfoResponseBodyWorkitemAkIssue();
-            return TeaModel.build(map, self);
-        }
-
-        public GetWorkItemInfoResponseBodyWorkitemAkIssue setMember(java.util.List<String> member) {
-            this.member = member;
-            return this;
-        }
-        public java.util.List<String> getMember() {
-            return this.member;
-        }
-
-    }
-
-    public static class GetWorkItemInfoResponseBodyWorkitemAk extends TeaModel {
-        @NameInMap("issue")
-        @Validation(required = true)
-        public GetWorkItemInfoResponseBodyWorkitemAkIssue issue;
-
-        public static GetWorkItemInfoResponseBodyWorkitemAk build(java.util.Map<String, ?> map) throws Exception {
-            GetWorkItemInfoResponseBodyWorkitemAk self = new GetWorkItemInfoResponseBodyWorkitemAk();
-            return TeaModel.build(map, self);
-        }
-
-        public GetWorkItemInfoResponseBodyWorkitemAk setIssue(GetWorkItemInfoResponseBodyWorkitemAkIssue issue) {
-            this.issue = issue;
-            return this;
-        }
-        public GetWorkItemInfoResponseBodyWorkitemAkIssue getIssue() {
-            return this.issue;
-        }
-
-    }
-
-    public static class GetWorkItemInfoResponseBodyWorkitemWorkitem extends TeaModel {
-        // 抄送人的account id列表
-        @NameInMap("tracker")
-        public java.util.List<String> tracker;
-
-        // 验证者的account id列表
-        @NameInMap("verifier")
-        public java.util.List<String> verifier;
-
-        public static GetWorkItemInfoResponseBodyWorkitemWorkitem build(java.util.Map<String, ?> map) throws Exception {
-            GetWorkItemInfoResponseBodyWorkitemWorkitem self = new GetWorkItemInfoResponseBodyWorkitemWorkitem();
-            return TeaModel.build(map, self);
-        }
-
-        public GetWorkItemInfoResponseBodyWorkitemWorkitem setTracker(java.util.List<String> tracker) {
-            this.tracker = tracker;
-            return this;
-        }
-        public java.util.List<String> getTracker() {
-            return this.tracker;
-        }
-
-        public GetWorkItemInfoResponseBodyWorkitemWorkitem setVerifier(java.util.List<String> verifier) {
-            this.verifier = verifier;
-            return this;
-        }
-        public java.util.List<String> getVerifier() {
-            return this.verifier;
-        }
-
-    }
-
     public static class GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList extends TeaModel {
         // 根据语言环境获取当前展示的值
         @NameInMap("displayValue")
@@ -326,14 +254,6 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemInfoResponseBodyWorkitem extends TeaModel {
-        @NameInMap("ak")
-        @Validation(required = true)
-        public GetWorkItemInfoResponseBodyWorkitemAk ak;
-
-        @NameInMap("workitem")
-        @Validation(required = true)
-        public GetWorkItemInfoResponseBodyWorkitemWorkitem workitem;
-
         // 负责人
         @NameInMap("assignedTo")
         public String assignedTo;
@@ -378,6 +298,10 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         @NameInMap("parentIdentifier")
         public String parentIdentifier;
 
+        // 参与人account id列表
+        @NameInMap("participant")
+        public java.util.List<String> participant;
+
         // 编号
         @NameInMap("serialNumber")
         public String serialNumber;
@@ -418,9 +342,17 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         @NameInMap("tag")
         public java.util.List<String> tag;
 
+        // 抄送人的account id列表
+        @NameInMap("tracker")
+        public java.util.List<String> tracker;
+
         // 状态更新时间
         @NameInMap("updateStatusAt")
         public Long updateStatusAt;
+
+        // 验证者的account id列表
+        @NameInMap("verifier")
+        public java.util.List<String> verifier;
 
         // 工作项类型id
         @NameInMap("workitemTypeIdentifier")
@@ -429,22 +361,6 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         public static GetWorkItemInfoResponseBodyWorkitem build(java.util.Map<String, ?> map) throws Exception {
             GetWorkItemInfoResponseBodyWorkitem self = new GetWorkItemInfoResponseBodyWorkitem();
             return TeaModel.build(map, self);
-        }
-
-        public GetWorkItemInfoResponseBodyWorkitem setAk(GetWorkItemInfoResponseBodyWorkitemAk ak) {
-            this.ak = ak;
-            return this;
-        }
-        public GetWorkItemInfoResponseBodyWorkitemAk getAk() {
-            return this.ak;
-        }
-
-        public GetWorkItemInfoResponseBodyWorkitem setWorkitem(GetWorkItemInfoResponseBodyWorkitemWorkitem workitem) {
-            this.workitem = workitem;
-            return this;
-        }
-        public GetWorkItemInfoResponseBodyWorkitemWorkitem getWorkitem() {
-            return this.workitem;
         }
 
         public GetWorkItemInfoResponseBodyWorkitem setAssignedTo(String assignedTo) {
@@ -535,6 +451,14 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             return this.parentIdentifier;
         }
 
+        public GetWorkItemInfoResponseBodyWorkitem setParticipant(java.util.List<String> participant) {
+            this.participant = participant;
+            return this;
+        }
+        public java.util.List<String> getParticipant() {
+            return this.participant;
+        }
+
         public GetWorkItemInfoResponseBodyWorkitem setSerialNumber(String serialNumber) {
             this.serialNumber = serialNumber;
             return this;
@@ -615,12 +539,28 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             return this.tag;
         }
 
+        public GetWorkItemInfoResponseBodyWorkitem setTracker(java.util.List<String> tracker) {
+            this.tracker = tracker;
+            return this;
+        }
+        public java.util.List<String> getTracker() {
+            return this.tracker;
+        }
+
         public GetWorkItemInfoResponseBodyWorkitem setUpdateStatusAt(Long updateStatusAt) {
             this.updateStatusAt = updateStatusAt;
             return this;
         }
         public Long getUpdateStatusAt() {
             return this.updateStatusAt;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitem setVerifier(java.util.List<String> verifier) {
+            this.verifier = verifier;
+            return this;
+        }
+        public java.util.List<String> getVerifier() {
+            return this.verifier;
         }
 
         public GetWorkItemInfoResponseBodyWorkitem setWorkitemTypeIdentifier(String workitemTypeIdentifier) {

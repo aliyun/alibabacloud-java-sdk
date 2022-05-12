@@ -4,14 +4,6 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkitemRequest extends TeaModel {
-    @NameInMap("ak")
-    @Validation(required = true)
-    public CreateWorkitemRequestAk ak;
-
-    @NameInMap("workitem")
-    @Validation(required = true)
-    public CreateWorkitemRequestWorkitem workitem;
-
     // 工作项负责人的account id，或者企业中的用户名
     @NameInMap("assignedTo")
     public String assignedTo;
@@ -36,6 +28,10 @@ public class CreateWorkitemRequest extends TeaModel {
     @NameInMap("parent")
     public String parent;
 
+    // 参与人account id列表，或者企业名称列表
+    @NameInMap("participant")
+    public java.util.List<String> participant;
+
     // 项目id
     @NameInMap("space")
     public String space;
@@ -56,6 +52,14 @@ public class CreateWorkitemRequest extends TeaModel {
     @NameInMap("subject")
     public String subject;
 
+    // 抄送人account id列表
+    @NameInMap("tracker")
+    public java.util.List<String> tracker;
+
+    // 验证者account id列表，或者企业名称列表
+    @NameInMap("verifier")
+    public java.util.List<String> verifier;
+
     // 工作项小类型id
     @NameInMap("workitemType")
     public String workitemType;
@@ -63,22 +67,6 @@ public class CreateWorkitemRequest extends TeaModel {
     public static CreateWorkitemRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWorkitemRequest self = new CreateWorkitemRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateWorkitemRequest setAk(CreateWorkitemRequestAk ak) {
-        this.ak = ak;
-        return this;
-    }
-    public CreateWorkitemRequestAk getAk() {
-        return this.ak;
-    }
-
-    public CreateWorkitemRequest setWorkitem(CreateWorkitemRequestWorkitem workitem) {
-        this.workitem = workitem;
-        return this;
-    }
-    public CreateWorkitemRequestWorkitem getWorkitem() {
-        return this.workitem;
     }
 
     public CreateWorkitemRequest setAssignedTo(String assignedTo) {
@@ -129,6 +117,14 @@ public class CreateWorkitemRequest extends TeaModel {
         return this.parent;
     }
 
+    public CreateWorkitemRequest setParticipant(java.util.List<String> participant) {
+        this.participant = participant;
+        return this;
+    }
+    public java.util.List<String> getParticipant() {
+        return this.participant;
+    }
+
     public CreateWorkitemRequest setSpace(String space) {
         this.space = space;
         return this;
@@ -169,84 +165,28 @@ public class CreateWorkitemRequest extends TeaModel {
         return this.subject;
     }
 
+    public CreateWorkitemRequest setTracker(java.util.List<String> tracker) {
+        this.tracker = tracker;
+        return this;
+    }
+    public java.util.List<String> getTracker() {
+        return this.tracker;
+    }
+
+    public CreateWorkitemRequest setVerifier(java.util.List<String> verifier) {
+        this.verifier = verifier;
+        return this;
+    }
+    public java.util.List<String> getVerifier() {
+        return this.verifier;
+    }
+
     public CreateWorkitemRequest setWorkitemType(String workitemType) {
         this.workitemType = workitemType;
         return this;
     }
     public String getWorkitemType() {
         return this.workitemType;
-    }
-
-    public static class CreateWorkitemRequestAkIssue extends TeaModel {
-        // 参与人account id列表，或者企业名称列表
-        @NameInMap("member")
-        public java.util.List<String> member;
-
-        public static CreateWorkitemRequestAkIssue build(java.util.Map<String, ?> map) throws Exception {
-            CreateWorkitemRequestAkIssue self = new CreateWorkitemRequestAkIssue();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateWorkitemRequestAkIssue setMember(java.util.List<String> member) {
-            this.member = member;
-            return this;
-        }
-        public java.util.List<String> getMember() {
-            return this.member;
-        }
-
-    }
-
-    public static class CreateWorkitemRequestAk extends TeaModel {
-        @NameInMap("issue")
-        @Validation(required = true)
-        public CreateWorkitemRequestAkIssue issue;
-
-        public static CreateWorkitemRequestAk build(java.util.Map<String, ?> map) throws Exception {
-            CreateWorkitemRequestAk self = new CreateWorkitemRequestAk();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateWorkitemRequestAk setIssue(CreateWorkitemRequestAkIssue issue) {
-            this.issue = issue;
-            return this;
-        }
-        public CreateWorkitemRequestAkIssue getIssue() {
-            return this.issue;
-        }
-
-    }
-
-    public static class CreateWorkitemRequestWorkitem extends TeaModel {
-        // 抄送人account id列表
-        @NameInMap("tracker")
-        public java.util.List<String> tracker;
-
-        // 验证者account id列表，或者企业名称列表
-        @NameInMap("verifier")
-        public java.util.List<String> verifier;
-
-        public static CreateWorkitemRequestWorkitem build(java.util.Map<String, ?> map) throws Exception {
-            CreateWorkitemRequestWorkitem self = new CreateWorkitemRequestWorkitem();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateWorkitemRequestWorkitem setTracker(java.util.List<String> tracker) {
-            this.tracker = tracker;
-            return this;
-        }
-        public java.util.List<String> getTracker() {
-            return this.tracker;
-        }
-
-        public CreateWorkitemRequestWorkitem setVerifier(java.util.List<String> verifier) {
-            this.verifier = verifier;
-            return this;
-        }
-        public java.util.List<String> getVerifier() {
-            return this.verifier;
-        }
-
     }
 
     public static class CreateWorkitemRequestFieldValueList extends TeaModel {

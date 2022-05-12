@@ -32,6 +32,10 @@ public class ListWorkitemsRequest extends TeaModel {
     @NameInMap("orderBy")
     public String orderBy;
 
+    // 查询类型
+    @NameInMap("searchType")
+    public String searchType;
+
     // 项目id
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
@@ -99,6 +103,14 @@ public class ListWorkitemsRequest extends TeaModel {
     }
     public String getOrderBy() {
         return this.orderBy;
+    }
+
+    public ListWorkitemsRequest setSearchType(String searchType) {
+        this.searchType = searchType;
+        return this;
+    }
+    public String getSearchType() {
+        return this.searchType;
     }
 
     public ListWorkitemsRequest setSpaceIdentifier(String spaceIdentifier) {
