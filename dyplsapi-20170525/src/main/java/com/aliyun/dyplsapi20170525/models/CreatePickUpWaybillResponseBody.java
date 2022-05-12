@@ -64,6 +64,9 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        @NameInMap("GotCode")
+        public String gotCode;
+
         @NameInMap("MailNo")
         public String mailNo;
 
@@ -97,6 +100,14 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         }
         public String getErrorMsg() {
             return this.errorMsg;
+        }
+
+        public CreatePickUpWaybillResponseBodyData setGotCode(String gotCode) {
+            this.gotCode = gotCode;
+            return this;
+        }
+        public String getGotCode() {
+            return this.gotCode;
         }
 
         public CreatePickUpWaybillResponseBodyData setMailNo(String mailNo) {

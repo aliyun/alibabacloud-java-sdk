@@ -743,6 +743,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appointGotEndTime)) {
+            query.put("AppointGotEndTime", request.appointGotEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appointGotStartTime)) {
+            query.put("AppointGotStartTime", request.appointGotStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.consigneeAddressShrink)) {
             query.put("ConsigneeAddress", request.consigneeAddressShrink);
         }
