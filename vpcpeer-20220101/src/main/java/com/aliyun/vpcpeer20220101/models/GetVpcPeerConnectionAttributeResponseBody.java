@@ -46,9 +46,6 @@ public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("Status")
     public String status;
 
@@ -170,14 +167,6 @@ public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetVpcPeerConnectionAttributeResponseBody setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public GetVpcPeerConnectionAttributeResponseBody setStatus(String status) {
