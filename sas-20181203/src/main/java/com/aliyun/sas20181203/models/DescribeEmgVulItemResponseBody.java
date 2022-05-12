@@ -68,6 +68,9 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         @NameInMap("AliasName")
         public String aliasName;
 
+        @NameInMap("CheckType")
+        public Integer checkType;
+
         @NameInMap("GmtLastCheck")
         public Long gmtLastCheck;
 
@@ -100,6 +103,14 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         }
         public String getAliasName() {
             return this.aliasName;
+        }
+
+        public DescribeEmgVulItemResponseBodyGroupedVulItems setCheckType(Integer checkType) {
+            this.checkType = checkType;
+            return this;
+        }
+        public Integer getCheckType() {
+            return this.checkType;
         }
 
         public DescribeEmgVulItemResponseBodyGroupedVulItems setGmtLastCheck(Long gmtLastCheck) {

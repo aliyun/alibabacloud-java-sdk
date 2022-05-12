@@ -1903,6 +1903,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeEmgVulItemResponse describeEmgVulItemWithOptions(DescribeEmgVulItemRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkType)) {
+            query.put("CheckType", request.checkType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
         }
