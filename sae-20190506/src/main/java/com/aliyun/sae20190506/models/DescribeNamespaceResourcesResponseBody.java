@@ -96,6 +96,12 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("JumpServerAppId")
+        public String jumpServerAppId;
+
+        @NameInMap("JumpServerIp")
+        public String jumpServerIp;
+
         @NameInMap("LastChangeOrderId")
         public String lastChangeOrderId;
 
@@ -162,6 +168,22 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeNamespaceResourcesResponseBodyData setJumpServerAppId(String jumpServerAppId) {
+            this.jumpServerAppId = jumpServerAppId;
+            return this;
+        }
+        public String getJumpServerAppId() {
+            return this.jumpServerAppId;
+        }
+
+        public DescribeNamespaceResourcesResponseBodyData setJumpServerIp(String jumpServerIp) {
+            this.jumpServerIp = jumpServerIp;
+            return this;
+        }
+        public String getJumpServerIp() {
+            return this.jumpServerIp;
         }
 
         public DescribeNamespaceResourcesResponseBodyData setLastChangeOrderId(String lastChangeOrderId) {

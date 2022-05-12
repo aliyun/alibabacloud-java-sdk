@@ -64,6 +64,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("Jdk")
     public String jdk;
 
+    @NameInMap("KafkaConfigs")
+    public String kafkaConfigs;
+
     @NameInMap("KafkaEndpoint")
     public String kafkaEndpoint;
 
@@ -306,6 +309,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getJdk() {
         return this.jdk;
+    }
+
+    public DeployApplicationRequest setKafkaConfigs(String kafkaConfigs) {
+        this.kafkaConfigs = kafkaConfigs;
+        return this;
+    }
+    public String getKafkaConfigs() {
+        return this.kafkaConfigs;
     }
 
     public DeployApplicationRequest setKafkaEndpoint(String kafkaEndpoint) {

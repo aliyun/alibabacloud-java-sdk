@@ -3,7 +3,7 @@ package com.aliyun.sae20190506.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeApplicationStatusResponse extends TeaModel {
+public class UpdateApplicationVswitchesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeApplicationStatusResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeApplicationStatusResponseBody body;
+    public UpdateApplicationVswitchesResponseBody body;
 
-    public static DescribeApplicationStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeApplicationStatusResponse self = new DescribeApplicationStatusResponse();
+    public static UpdateApplicationVswitchesResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateApplicationVswitchesResponse self = new UpdateApplicationVswitchesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApplicationStatusResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateApplicationVswitchesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeApplicationStatusResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeApplicationStatusResponse setStatusCode(Integer statusCode) {
+    public UpdateApplicationVswitchesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeApplicationStatusResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeApplicationStatusResponse setBody(DescribeApplicationStatusResponseBody body) {
+    public UpdateApplicationVswitchesResponse setBody(UpdateApplicationVswitchesResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeApplicationStatusResponseBody getBody() {
+    public UpdateApplicationVswitchesResponseBody getBody() {
         return this.body;
     }
 

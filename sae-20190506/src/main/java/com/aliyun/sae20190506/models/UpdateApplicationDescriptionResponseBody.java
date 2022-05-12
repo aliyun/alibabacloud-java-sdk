@@ -3,12 +3,9 @@ package com.aliyun.sae20190506.models;
 
 import com.aliyun.tea.*;
 
-public class UploadFilesResponseBody extends TeaModel {
+public class UpdateApplicationDescriptionResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Data")
-    public String data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -25,12 +22,12 @@ public class UploadFilesResponseBody extends TeaModel {
     @NameInMap("TraceId")
     public String traceId;
 
-    public static UploadFilesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UploadFilesResponseBody self = new UploadFilesResponseBody();
+    public static UpdateApplicationDescriptionResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateApplicationDescriptionResponseBody self = new UpdateApplicationDescriptionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UploadFilesResponseBody setCode(String code) {
+    public UpdateApplicationDescriptionResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -38,15 +35,7 @@ public class UploadFilesResponseBody extends TeaModel {
         return this.code;
     }
 
-    public UploadFilesResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public UploadFilesResponseBody setErrorCode(String errorCode) {
+    public UpdateApplicationDescriptionResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -54,7 +43,7 @@ public class UploadFilesResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public UploadFilesResponseBody setMessage(String message) {
+    public UpdateApplicationDescriptionResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -62,7 +51,7 @@ public class UploadFilesResponseBody extends TeaModel {
         return this.message;
     }
 
-    public UploadFilesResponseBody setRequestId(String requestId) {
+    public UpdateApplicationDescriptionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -70,7 +59,7 @@ public class UploadFilesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UploadFilesResponseBody setSuccess(Boolean success) {
+    public UpdateApplicationDescriptionResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -78,7 +67,7 @@ public class UploadFilesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public UploadFilesResponseBody setTraceId(String traceId) {
+    public UpdateApplicationDescriptionResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
     }

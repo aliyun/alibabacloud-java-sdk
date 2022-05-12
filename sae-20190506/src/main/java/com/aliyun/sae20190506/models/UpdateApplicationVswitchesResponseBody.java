@@ -3,12 +3,9 @@ package com.aliyun.sae20190506.models;
 
 import com.aliyun.tea.*;
 
-public class DownloadFilesResponseBody extends TeaModel {
+public class UpdateApplicationVswitchesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Data")
-    public String data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -25,12 +22,12 @@ public class DownloadFilesResponseBody extends TeaModel {
     @NameInMap("TraceId")
     public String traceId;
 
-    public static DownloadFilesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DownloadFilesResponseBody self = new DownloadFilesResponseBody();
+    public static UpdateApplicationVswitchesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateApplicationVswitchesResponseBody self = new UpdateApplicationVswitchesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DownloadFilesResponseBody setCode(String code) {
+    public UpdateApplicationVswitchesResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -38,15 +35,7 @@ public class DownloadFilesResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DownloadFilesResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public DownloadFilesResponseBody setErrorCode(String errorCode) {
+    public UpdateApplicationVswitchesResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -54,7 +43,7 @@ public class DownloadFilesResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DownloadFilesResponseBody setMessage(String message) {
+    public UpdateApplicationVswitchesResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -62,7 +51,7 @@ public class DownloadFilesResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DownloadFilesResponseBody setRequestId(String requestId) {
+    public UpdateApplicationVswitchesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -70,7 +59,7 @@ public class DownloadFilesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DownloadFilesResponseBody setSuccess(Boolean success) {
+    public UpdateApplicationVswitchesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -78,7 +67,7 @@ public class DownloadFilesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DownloadFilesResponseBody setTraceId(String traceId) {
+    public UpdateApplicationVswitchesResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
     }

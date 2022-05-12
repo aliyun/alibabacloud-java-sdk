@@ -60,6 +60,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Jdk")
     public String jdk;
 
+    @NameInMap("KafkaConfigs")
+    public String kafkaConfigs;
+
     @NameInMap("KafkaEndpoint")
     public String kafkaEndpoint;
 
@@ -125,6 +128,9 @@ public class CreateApplicationRequest extends TeaModel {
 
     @NameInMap("PreStop")
     public String preStop;
+
+    @NameInMap("ProgrammingLanguage")
+    public String programmingLanguage;
 
     @NameInMap("Readiness")
     public String readiness;
@@ -308,6 +314,14 @@ public class CreateApplicationRequest extends TeaModel {
         return this.jdk;
     }
 
+    public CreateApplicationRequest setKafkaConfigs(String kafkaConfigs) {
+        this.kafkaConfigs = kafkaConfigs;
+        return this;
+    }
+    public String getKafkaConfigs() {
+        return this.kafkaConfigs;
+    }
+
     public CreateApplicationRequest setKafkaEndpoint(String kafkaEndpoint) {
         this.kafkaEndpoint = kafkaEndpoint;
         return this;
@@ -474,6 +488,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getPreStop() {
         return this.preStop;
+    }
+
+    public CreateApplicationRequest setProgrammingLanguage(String programmingLanguage) {
+        this.programmingLanguage = programmingLanguage;
+        return this;
+    }
+    public String getProgrammingLanguage() {
+        return this.programmingLanguage;
     }
 
     public CreateApplicationRequest setReadiness(String readiness) {

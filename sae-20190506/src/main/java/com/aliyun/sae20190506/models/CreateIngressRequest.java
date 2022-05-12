@@ -16,6 +16,12 @@ public class CreateIngressRequest extends TeaModel {
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
+    @NameInMap("ListenerProtocol")
+    public String listenerProtocol;
+
+    @NameInMap("LoadBalanceType")
+    public String loadBalanceType;
+
     @NameInMap("NamespaceId")
     public String namespaceId;
 
@@ -60,6 +66,22 @@ public class CreateIngressRequest extends TeaModel {
     }
     public Integer getListenerPort() {
         return this.listenerPort;
+    }
+
+    public CreateIngressRequest setListenerProtocol(String listenerProtocol) {
+        this.listenerProtocol = listenerProtocol;
+        return this;
+    }
+    public String getListenerProtocol() {
+        return this.listenerProtocol;
+    }
+
+    public CreateIngressRequest setLoadBalanceType(String loadBalanceType) {
+        this.loadBalanceType = loadBalanceType;
+        return this;
+    }
+    public String getLoadBalanceType() {
+        return this.loadBalanceType;
     }
 
     public CreateIngressRequest setNamespaceId(String namespaceId) {

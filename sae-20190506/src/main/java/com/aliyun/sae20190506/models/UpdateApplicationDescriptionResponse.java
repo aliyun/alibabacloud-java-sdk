@@ -3,7 +3,7 @@ package com.aliyun.sae20190506.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeApplicationStatusResponse extends TeaModel {
+public class UpdateApplicationDescriptionResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeApplicationStatusResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeApplicationStatusResponseBody body;
+    public UpdateApplicationDescriptionResponseBody body;
 
-    public static DescribeApplicationStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeApplicationStatusResponse self = new DescribeApplicationStatusResponse();
+    public static UpdateApplicationDescriptionResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateApplicationDescriptionResponse self = new UpdateApplicationDescriptionResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApplicationStatusResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateApplicationDescriptionResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeApplicationStatusResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeApplicationStatusResponse setStatusCode(Integer statusCode) {
+    public UpdateApplicationDescriptionResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeApplicationStatusResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeApplicationStatusResponse setBody(DescribeApplicationStatusResponseBody body) {
+    public UpdateApplicationDescriptionResponse setBody(UpdateApplicationDescriptionResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeApplicationStatusResponseBody getBody() {
+    public UpdateApplicationDescriptionResponseBody getBody() {
         return this.body;
     }
 
