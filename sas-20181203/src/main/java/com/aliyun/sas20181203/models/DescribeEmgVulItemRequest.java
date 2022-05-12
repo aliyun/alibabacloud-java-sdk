@@ -4,6 +4,10 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeEmgVulItemRequest extends TeaModel {
+    // 检测方式
+    @NameInMap("CheckType")
+    public Integer checkType;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -25,6 +29,14 @@ public class DescribeEmgVulItemRequest extends TeaModel {
     public static DescribeEmgVulItemRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEmgVulItemRequest self = new DescribeEmgVulItemRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeEmgVulItemRequest setCheckType(Integer checkType) {
+        this.checkType = checkType;
+        return this;
+    }
+    public Integer getCheckType() {
+        return this.checkType;
     }
 
     public DescribeEmgVulItemRequest setCurrentPage(Integer currentPage) {
