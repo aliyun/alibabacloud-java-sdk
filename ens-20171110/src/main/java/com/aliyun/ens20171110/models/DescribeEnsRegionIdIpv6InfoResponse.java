@@ -8,6 +8,10 @@ public class DescribeEnsRegionIdIpv6InfoResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public DescribeEnsRegionIdIpv6InfoResponseBody body;
@@ -23,6 +27,14 @@ public class DescribeEnsRegionIdIpv6InfoResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DescribeEnsRegionIdIpv6InfoResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public DescribeEnsRegionIdIpv6InfoResponse setBody(DescribeEnsRegionIdIpv6InfoResponseBody body) {

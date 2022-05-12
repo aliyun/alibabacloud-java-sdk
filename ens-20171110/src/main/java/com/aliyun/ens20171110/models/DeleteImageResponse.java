@@ -3,7 +3,7 @@ package com.aliyun.ens20171110.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeApplicationResponse extends TeaModel {
+public class DeleteImageResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeApplicationResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeApplicationResponseBody body;
+    public DeleteImageResponseBody body;
 
-    public static DescribeApplicationResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeApplicationResponse self = new DescribeApplicationResponse();
+    public static DeleteImageResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteImageResponse self = new DeleteImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApplicationResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteImageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeApplicationResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeApplicationResponse setStatusCode(Integer statusCode) {
+    public DeleteImageResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeApplicationResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeApplicationResponse setBody(DescribeApplicationResponseBody body) {
+    public DeleteImageResponse setBody(DeleteImageResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeApplicationResponseBody getBody() {
+    public DeleteImageResponseBody getBody() {
         return this.body;
     }
 

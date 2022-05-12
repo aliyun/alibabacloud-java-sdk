@@ -7,6 +7,9 @@ public class StartLoadBalancerListenerRequest extends TeaModel {
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
+    @NameInMap("ListenerProtocol")
+    public String listenerProtocol;
+
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -21,6 +24,14 @@ public class StartLoadBalancerListenerRequest extends TeaModel {
     }
     public Integer getListenerPort() {
         return this.listenerPort;
+    }
+
+    public StartLoadBalancerListenerRequest setListenerProtocol(String listenerProtocol) {
+        this.listenerProtocol = listenerProtocol;
+        return this;
+    }
+    public String getListenerProtocol() {
+        return this.listenerProtocol;
     }
 
     public StartLoadBalancerListenerRequest setLoadBalancerId(String loadBalancerId) {
