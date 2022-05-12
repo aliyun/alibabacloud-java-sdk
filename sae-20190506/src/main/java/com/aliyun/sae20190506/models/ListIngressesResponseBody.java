@@ -99,6 +99,12 @@ public class ListIngressesResponseBody extends TeaModel {
         @NameInMap("ListenerPort")
         public String listenerPort;
 
+        @NameInMap("ListenerProtocol")
+        public String listenerProtocol;
+
+        @NameInMap("LoadBalanceType")
+        public String loadBalanceType;
+
         @NameInMap("Name")
         public String name;
 
@@ -146,6 +152,22 @@ public class ListIngressesResponseBody extends TeaModel {
         }
         public String getListenerPort() {
             return this.listenerPort;
+        }
+
+        public ListIngressesResponseBodyDataIngressList setListenerProtocol(String listenerProtocol) {
+            this.listenerProtocol = listenerProtocol;
+            return this;
+        }
+        public String getListenerProtocol() {
+            return this.listenerProtocol;
+        }
+
+        public ListIngressesResponseBodyDataIngressList setLoadBalanceType(String loadBalanceType) {
+            this.loadBalanceType = loadBalanceType;
+            return this;
+        }
+        public String getLoadBalanceType() {
+            return this.loadBalanceType;
         }
 
         public ListIngressesResponseBodyDataIngressList setName(String name) {

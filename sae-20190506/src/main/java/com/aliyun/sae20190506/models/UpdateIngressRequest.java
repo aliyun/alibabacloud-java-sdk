@@ -19,6 +19,12 @@ public class UpdateIngressRequest extends TeaModel {
     @NameInMap("ListenerPort")
     public String listenerPort;
 
+    @NameInMap("ListenerProtocol")
+    public String listenerProtocol;
+
+    @NameInMap("LoadBalanceType")
+    public String loadBalanceType;
+
     @NameInMap("Rules")
     public String rules;
 
@@ -65,6 +71,22 @@ public class UpdateIngressRequest extends TeaModel {
     }
     public String getListenerPort() {
         return this.listenerPort;
+    }
+
+    public UpdateIngressRequest setListenerProtocol(String listenerProtocol) {
+        this.listenerProtocol = listenerProtocol;
+        return this;
+    }
+    public String getListenerProtocol() {
+        return this.listenerProtocol;
+    }
+
+    public UpdateIngressRequest setLoadBalanceType(String loadBalanceType) {
+        this.loadBalanceType = loadBalanceType;
+        return this;
+    }
+    public String getLoadBalanceType() {
+        return this.loadBalanceType;
     }
 
     public UpdateIngressRequest setRules(String rules) {
