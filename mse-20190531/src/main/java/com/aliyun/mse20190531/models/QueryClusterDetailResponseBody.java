@@ -86,6 +86,9 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("SingleTunnelVip")
         public String singleTunnelVip;
 
+        @NameInMap("Zone")
+        public String zone;
+
         public static QueryClusterDetailResponseBodyDataInstanceModels build(java.util.Map<String, ?> map) throws Exception {
             QueryClusterDetailResponseBodyDataInstanceModels self = new QueryClusterDetailResponseBodyDataInstanceModels();
             return TeaModel.build(map, self);
@@ -145,6 +148,14 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         }
         public String getSingleTunnelVip() {
             return this.singleTunnelVip;
+        }
+
+        public QueryClusterDetailResponseBodyDataInstanceModels setZone(String zone) {
+            this.zone = zone;
+            return this;
+        }
+        public String getZone() {
+            return this.zone;
         }
 
     }

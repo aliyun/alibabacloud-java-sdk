@@ -115,6 +115,9 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         @NameInMap("Md5")
         public String md5;
 
+        @NameInMap("Status")
+        public String status;
+
         public static ListListenersByConfigResponseBodyListeners build(java.util.Map<String, ?> map) throws Exception {
             ListListenersByConfigResponseBodyListeners self = new ListListenersByConfigResponseBodyListeners();
             return TeaModel.build(map, self);
@@ -134,6 +137,14 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
         public String getMd5() {
             return this.md5;
+        }
+
+        public ListListenersByConfigResponseBodyListeners setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
