@@ -52,6 +52,9 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EncryptionEnabled")
+        public Boolean encryptionEnabled;
+
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
@@ -118,6 +121,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeNASFileSystemsResponseBodyFileSystems setEncryptionEnabled(Boolean encryptionEnabled) {
+            this.encryptionEnabled = encryptionEnabled;
+            return this;
+        }
+        public Boolean getEncryptionEnabled() {
+            return this.encryptionEnabled;
         }
 
         public DescribeNASFileSystemsResponseBodyFileSystems setFileSystemId(String fileSystemId) {

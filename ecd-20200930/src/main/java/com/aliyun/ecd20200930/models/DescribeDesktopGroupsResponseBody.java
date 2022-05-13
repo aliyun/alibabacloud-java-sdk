@@ -43,6 +43,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopGroupsResponseBodyDesktopGroups extends TeaModel {
+        @NameInMap("BindAmount")
+        public Long bindAmount;
+
         @NameInMap("Comments")
         public String comments;
 
@@ -85,8 +88,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
+        @NameInMap("ImageId")
+        public String imageId;
+
         @NameInMap("KeepDuration")
         public Long keepDuration;
+
+        @NameInMap("LoadPolicy")
+        public Long loadPolicy;
 
         @NameInMap("MaxDesktopsCount")
         public Integer maxDesktopsCount;
@@ -112,6 +121,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("OwnBundleName")
         public String ownBundleName;
 
+        @NameInMap("OwnType")
+        public Long ownType;
+
         @NameInMap("PayType")
         public String payType;
 
@@ -136,6 +148,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public static DescribeDesktopGroupsResponseBodyDesktopGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeDesktopGroupsResponseBodyDesktopGroups self = new DescribeDesktopGroupsResponseBodyDesktopGroups();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setBindAmount(Long bindAmount) {
+            this.bindAmount = bindAmount;
+            return this;
+        }
+        public Long getBindAmount() {
+            return this.bindAmount;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setComments(String comments) {
@@ -250,12 +270,28 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             return this.gpuSpec;
         }
 
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
         public DescribeDesktopGroupsResponseBodyDesktopGroups setKeepDuration(Long keepDuration) {
             this.keepDuration = keepDuration;
             return this;
         }
         public Long getKeepDuration() {
             return this.keepDuration;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setLoadPolicy(Long loadPolicy) {
+            this.loadPolicy = loadPolicy;
+            return this;
+        }
+        public Long getLoadPolicy() {
+            return this.loadPolicy;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setMaxDesktopsCount(Integer maxDesktopsCount) {
@@ -320,6 +356,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public String getOwnBundleName() {
             return this.ownBundleName;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setOwnType(Long ownType) {
+            this.ownType = ownType;
+            return this;
+        }
+        public Long getOwnType() {
+            return this.ownType;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setPayType(String payType) {

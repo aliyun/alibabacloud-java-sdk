@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateADConnectorOfficeSiteRequest extends TeaModel {
+    @NameInMap("AdHostname")
+    public String adHostname;
+
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
@@ -43,6 +46,9 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     @NameInMap("OfficeSiteName")
     public String officeSiteName;
 
+    @NameInMap("ProtocolType")
+    public String protocolType;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -55,15 +61,20 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     @NameInMap("SubDomainName")
     public String subDomainName;
 
-    @NameInMap("Type")
-    public String type;
-
     @NameInMap("VerifyCode")
     public String verifyCode;
 
     public static CreateADConnectorOfficeSiteRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateADConnectorOfficeSiteRequest self = new CreateADConnectorOfficeSiteRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateADConnectorOfficeSiteRequest setAdHostname(String adHostname) {
+        this.adHostname = adHostname;
+        return this;
+    }
+    public String getAdHostname() {
+        return this.adHostname;
     }
 
     public CreateADConnectorOfficeSiteRequest setBandwidth(Integer bandwidth) {
@@ -170,6 +181,14 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
         return this.officeSiteName;
     }
 
+    public CreateADConnectorOfficeSiteRequest setProtocolType(String protocolType) {
+        this.protocolType = protocolType;
+        return this;
+    }
+    public String getProtocolType() {
+        return this.protocolType;
+    }
+
     public CreateADConnectorOfficeSiteRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -200,14 +219,6 @@ public class CreateADConnectorOfficeSiteRequest extends TeaModel {
     }
     public String getSubDomainName() {
         return this.subDomainName;
-    }
-
-    public CreateADConnectorOfficeSiteRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
     public CreateADConnectorOfficeSiteRequest setVerifyCode(String verifyCode) {

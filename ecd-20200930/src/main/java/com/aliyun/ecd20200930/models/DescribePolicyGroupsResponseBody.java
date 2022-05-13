@@ -279,6 +279,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("AuthorizeSecurityPolicyRules")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules;
 
+        @NameInMap("CameraRedirect")
+        public String cameraRedirect;
+
         @NameInMap("ClientTypes")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsClientTypes> clientTypes;
 
@@ -324,6 +327,18 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("PrinterRedirection")
         public String printerRedirection;
 
+        @NameInMap("Recording")
+        public String recording;
+
+        @NameInMap("RecordingEndTime")
+        public String recordingEndTime;
+
+        @NameInMap("RecordingFps")
+        public Long recordingFps;
+
+        @NameInMap("RecordingStartTime")
+        public String recordingStartTime;
+
         @NameInMap("UsbRedirect")
         public String usbRedirect;
 
@@ -364,6 +379,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules> getAuthorizeSecurityPolicyRules() {
             return this.authorizeSecurityPolicyRules;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setCameraRedirect(String cameraRedirect) {
+            this.cameraRedirect = cameraRedirect;
+            return this;
+        }
+        public String getCameraRedirect() {
+            return this.cameraRedirect;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setClientTypes(java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsClientTypes> clientTypes) {
@@ -484,6 +507,38 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getPrinterRedirection() {
             return this.printerRedirection;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecording(String recording) {
+            this.recording = recording;
+            return this;
+        }
+        public String getRecording() {
+            return this.recording;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordingEndTime(String recordingEndTime) {
+            this.recordingEndTime = recordingEndTime;
+            return this;
+        }
+        public String getRecordingEndTime() {
+            return this.recordingEndTime;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordingFps(Long recordingFps) {
+            this.recordingFps = recordingFps;
+            return this;
+        }
+        public Long getRecordingFps() {
+            return this.recordingFps;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordingStartTime(String recordingStartTime) {
+            this.recordingStartTime = recordingStartTime;
+            return this;
+        }
+        public String getRecordingStartTime() {
+            return this.recordingStartTime;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setUsbRedirect(String usbRedirect) {

@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyADConnectorDirectoryRequest extends TeaModel {
+    @NameInMap("AdHostname")
+    public String adHostname;
+
     @NameInMap("DirectoryId")
     public String directoryId;
 
@@ -25,6 +28,9 @@ public class ModifyADConnectorDirectoryRequest extends TeaModel {
     @NameInMap("MfaEnabled")
     public Boolean mfaEnabled;
 
+    @NameInMap("OUName")
+    public String OUName;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -37,6 +43,14 @@ public class ModifyADConnectorDirectoryRequest extends TeaModel {
     public static ModifyADConnectorDirectoryRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyADConnectorDirectoryRequest self = new ModifyADConnectorDirectoryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyADConnectorDirectoryRequest setAdHostname(String adHostname) {
+        this.adHostname = adHostname;
+        return this;
+    }
+    public String getAdHostname() {
+        return this.adHostname;
     }
 
     public ModifyADConnectorDirectoryRequest setDirectoryId(String directoryId) {
@@ -93,6 +107,14 @@ public class ModifyADConnectorDirectoryRequest extends TeaModel {
     }
     public Boolean getMfaEnabled() {
         return this.mfaEnabled;
+    }
+
+    public ModifyADConnectorDirectoryRequest setOUName(String OUName) {
+        this.OUName = OUName;
+        return this;
+    }
+    public String getOUName() {
+        return this.OUName;
     }
 
     public ModifyADConnectorDirectoryRequest setRegionId(String regionId) {

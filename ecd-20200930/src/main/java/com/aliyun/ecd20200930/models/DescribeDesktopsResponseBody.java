@@ -63,6 +63,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("DiskType")
         public String diskType;
 
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
         public static DescribeDesktopsResponseBodyDesktopsDisks build(java.util.Map<String, ?> map) throws Exception {
             DescribeDesktopsResponseBodyDesktopsDisks self = new DescribeDesktopsResponseBodyDesktopsDisks();
             return TeaModel.build(map, self);
@@ -92,6 +95,66 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             return this.diskType;
         }
 
+        public DescribeDesktopsResponseBodyDesktopsDisks setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+    }
+
+    public static class DescribeDesktopsResponseBodyDesktopsFotaUpdate extends TeaModel {
+        @NameInMap("CurrentAppVersion")
+        public String currentAppVersion;
+
+        @NameInMap("NewAppVersion")
+        public String newAppVersion;
+
+        @NameInMap("ReleaseNote")
+        public String releaseNote;
+
+        @NameInMap("Size")
+        public Long size;
+
+        public static DescribeDesktopsResponseBodyDesktopsFotaUpdate build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDesktopsResponseBodyDesktopsFotaUpdate self = new DescribeDesktopsResponseBodyDesktopsFotaUpdate();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsFotaUpdate setCurrentAppVersion(String currentAppVersion) {
+            this.currentAppVersion = currentAppVersion;
+            return this;
+        }
+        public String getCurrentAppVersion() {
+            return this.currentAppVersion;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsFotaUpdate setNewAppVersion(String newAppVersion) {
+            this.newAppVersion = newAppVersion;
+            return this;
+        }
+        public String getNewAppVersion() {
+            return this.newAppVersion;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsFotaUpdate setReleaseNote(String releaseNote) {
+            this.releaseNote = releaseNote;
+            return this;
+        }
+        public String getReleaseNote() {
+            return this.releaseNote;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsFotaUpdate setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
     }
 
     public static class DescribeDesktopsResponseBodyDesktopsSessions extends TeaModel {
@@ -100,6 +163,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         @NameInMap("EstablishmentTime")
         public String establishmentTime;
+
+        @NameInMap("ExternalUserName")
+        public String externalUserName;
 
         public static DescribeDesktopsResponseBodyDesktopsSessions build(java.util.Map<String, ?> map) throws Exception {
             DescribeDesktopsResponseBodyDesktopsSessions self = new DescribeDesktopsResponseBodyDesktopsSessions();
@@ -120,6 +186,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getEstablishmentTime() {
             return this.establishmentTime;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsSessions setExternalUserName(String externalUserName) {
+            this.externalUserName = externalUserName;
+            return this;
+        }
+        public String getExternalUserName() {
+            return this.externalUserName;
         }
 
     }
@@ -157,6 +231,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     public static class DescribeDesktopsResponseBodyDesktops extends TeaModel {
         @NameInMap("BundleId")
         public String bundleId;
+
+        @NameInMap("BundleName")
+        public String bundleName;
 
         @NameInMap("ChargeType")
         public String chargeType;
@@ -212,6 +289,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        @NameInMap("FotaUpdate")
+        public DescribeDesktopsResponseBodyDesktopsFotaUpdate fotaUpdate;
+
         @NameInMap("GpuCategory")
         public Long gpuCategory;
 
@@ -251,14 +331,23 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
+        @NameInMap("OfficeSiteVpcType")
+        public String officeSiteVpcType;
+
         @NameInMap("OsType")
         public String osType;
+
+        @NameInMap("Platform")
+        public String platform;
 
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
+
+        @NameInMap("Progress")
+        public String progress;
 
         @NameInMap("ProtocolType")
         public String protocolType;
@@ -278,6 +367,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<DescribeDesktopsResponseBodyDesktopsTags> tags;
 
+        @NameInMap("ZoneType")
+        public String zoneType;
+
         public static DescribeDesktopsResponseBodyDesktops build(java.util.Map<String, ?> map) throws Exception {
             DescribeDesktopsResponseBodyDesktops self = new DescribeDesktopsResponseBodyDesktops();
             return TeaModel.build(map, self);
@@ -289,6 +381,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getBundleId() {
             return this.bundleId;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setBundleName(String bundleName) {
+            this.bundleName = bundleName;
+            return this;
+        }
+        public String getBundleName() {
+            return this.bundleName;
         }
 
         public DescribeDesktopsResponseBodyDesktops setChargeType(String chargeType) {
@@ -435,6 +535,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
+        public DescribeDesktopsResponseBodyDesktops setFotaUpdate(DescribeDesktopsResponseBodyDesktopsFotaUpdate fotaUpdate) {
+            this.fotaUpdate = fotaUpdate;
+            return this;
+        }
+        public DescribeDesktopsResponseBodyDesktopsFotaUpdate getFotaUpdate() {
+            return this.fotaUpdate;
+        }
+
         public DescribeDesktopsResponseBodyDesktops setGpuCategory(Long gpuCategory) {
             this.gpuCategory = gpuCategory;
             return this;
@@ -539,12 +647,28 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             return this.officeSiteType;
         }
 
+        public DescribeDesktopsResponseBodyDesktops setOfficeSiteVpcType(String officeSiteVpcType) {
+            this.officeSiteVpcType = officeSiteVpcType;
+            return this;
+        }
+        public String getOfficeSiteVpcType() {
+            return this.officeSiteVpcType;
+        }
+
         public DescribeDesktopsResponseBodyDesktops setOsType(String osType) {
             this.osType = osType;
             return this;
         }
         public String getOsType() {
             return this.osType;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
         }
 
         public DescribeDesktopsResponseBodyDesktops setPolicyGroupId(String policyGroupId) {
@@ -561,6 +685,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getPolicyGroupName() {
             return this.policyGroupName;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
         }
 
         public DescribeDesktopsResponseBodyDesktops setProtocolType(String protocolType) {
@@ -609,6 +741,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDesktopsResponseBodyDesktopsTags> getTags() {
             return this.tags;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setZoneType(String zoneType) {
+            this.zoneType = zoneType;
+            return this;
+        }
+        public String getZoneType() {
+            return this.zoneType;
         }
 
     }

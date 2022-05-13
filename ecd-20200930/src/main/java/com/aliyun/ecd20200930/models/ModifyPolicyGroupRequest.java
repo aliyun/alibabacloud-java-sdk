@@ -10,6 +10,9 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("AuthorizeSecurityPolicyRule")
     public java.util.List<ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule;
 
+    @NameInMap("CameraRedirect")
+    public String cameraRedirect;
+
     @NameInMap("ClientType")
     public java.util.List<ModifyPolicyGroupRequestClientType> clientType;
 
@@ -45,6 +48,18 @@ public class ModifyPolicyGroupRequest extends TeaModel {
 
     @NameInMap("PrinterRedirection")
     public String printerRedirection;
+
+    @NameInMap("Recording")
+    public String recording;
+
+    @NameInMap("RecordingEndTime")
+    public String recordingEndTime;
+
+    @NameInMap("RecordingFps")
+    public Long recordingFps;
+
+    @NameInMap("RecordingStartTime")
+    public String recordingStartTime;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -95,6 +110,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
     public java.util.List<ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule> getAuthorizeSecurityPolicyRule() {
         return this.authorizeSecurityPolicyRule;
+    }
+
+    public ModifyPolicyGroupRequest setCameraRedirect(String cameraRedirect) {
+        this.cameraRedirect = cameraRedirect;
+        return this;
+    }
+    public String getCameraRedirect() {
+        return this.cameraRedirect;
     }
 
     public ModifyPolicyGroupRequest setClientType(java.util.List<ModifyPolicyGroupRequestClientType> clientType) {
@@ -191,6 +214,38 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
     public String getPrinterRedirection() {
         return this.printerRedirection;
+    }
+
+    public ModifyPolicyGroupRequest setRecording(String recording) {
+        this.recording = recording;
+        return this;
+    }
+    public String getRecording() {
+        return this.recording;
+    }
+
+    public ModifyPolicyGroupRequest setRecordingEndTime(String recordingEndTime) {
+        this.recordingEndTime = recordingEndTime;
+        return this;
+    }
+    public String getRecordingEndTime() {
+        return this.recordingEndTime;
+    }
+
+    public ModifyPolicyGroupRequest setRecordingFps(Long recordingFps) {
+        this.recordingFps = recordingFps;
+        return this;
+    }
+    public Long getRecordingFps() {
+        return this.recordingFps;
+    }
+
+    public ModifyPolicyGroupRequest setRecordingStartTime(String recordingStartTime) {
+        this.recordingStartTime = recordingStartTime;
+        return this;
+    }
+    public String getRecordingStartTime() {
+        return this.recordingStartTime;
     }
 
     public ModifyPolicyGroupRequest setRegionId(String regionId) {

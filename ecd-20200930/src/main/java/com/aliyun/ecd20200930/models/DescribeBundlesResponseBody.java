@@ -166,6 +166,9 @@ public class DescribeBundlesResponseBody extends TeaModel {
         @NameInMap("ImageId")
         public String imageId;
 
+        @NameInMap("ImageName")
+        public String imageName;
+
         @NameInMap("Language")
         public String language;
 
@@ -174,6 +177,9 @@ public class DescribeBundlesResponseBody extends TeaModel {
 
         @NameInMap("ProtocolType")
         public String protocolType;
+
+        @NameInMap("SessionType")
+        public String sessionType;
 
         @NameInMap("StockState")
         public String stockState;
@@ -263,6 +269,14 @@ public class DescribeBundlesResponseBody extends TeaModel {
             return this.imageId;
         }
 
+        public DescribeBundlesResponseBodyBundles setImageName(String imageName) {
+            this.imageName = imageName;
+            return this;
+        }
+        public String getImageName() {
+            return this.imageName;
+        }
+
         public DescribeBundlesResponseBodyBundles setLanguage(String language) {
             this.language = language;
             return this;
@@ -285,6 +299,14 @@ public class DescribeBundlesResponseBody extends TeaModel {
         }
         public String getProtocolType() {
             return this.protocolType;
+        }
+
+        public DescribeBundlesResponseBodyBundles setSessionType(String sessionType) {
+            this.sessionType = sessionType;
+            return this;
+        }
+        public String getSessionType() {
+            return this.sessionType;
         }
 
         public DescribeBundlesResponseBodyBundles setStockState(String stockState) {

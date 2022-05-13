@@ -7,6 +7,9 @@ public class CreateNASFileSystemRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EncryptType")
+    public String encryptType;
+
     @NameInMap("Name")
     public String name;
 
@@ -30,6 +33,14 @@ public class CreateNASFileSystemRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateNASFileSystemRequest setEncryptType(String encryptType) {
+        this.encryptType = encryptType;
+        return this;
+    }
+    public String getEncryptType() {
+        return this.encryptType;
     }
 
     public CreateNASFileSystemRequest setName(String name) {

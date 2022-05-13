@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDesktopGroupDetailResponseBody extends TeaModel {
     @NameInMap("Desktops")
-    public java.util.List<GetDesktopGroupDetailResponseBodyDesktops> desktops;
+    public GetDesktopGroupDetailResponseBodyDesktops desktops;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -15,11 +15,11 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetDesktopGroupDetailResponseBody setDesktops(java.util.List<GetDesktopGroupDetailResponseBodyDesktops> desktops) {
+    public GetDesktopGroupDetailResponseBody setDesktops(GetDesktopGroupDetailResponseBodyDesktops desktops) {
         this.desktops = desktops;
         return this;
     }
-    public java.util.List<GetDesktopGroupDetailResponseBodyDesktops> getDesktops() {
+    public GetDesktopGroupDetailResponseBodyDesktops getDesktops() {
         return this.desktops;
     }
 
@@ -31,12 +31,56 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetDesktopGroupDetailResponseBodyDesktopsTimerInfos extends TeaModel {
+        @NameInMap("CronExpression")
+        public String cronExpression;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("TimerType")
+        public Integer timerType;
+
+        public static GetDesktopGroupDetailResponseBodyDesktopsTimerInfos build(java.util.Map<String, ?> map) throws Exception {
+            GetDesktopGroupDetailResponseBodyDesktopsTimerInfos self = new GetDesktopGroupDetailResponseBodyDesktopsTimerInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktopsTimerInfos setCronExpression(String cronExpression) {
+            this.cronExpression = cronExpression;
+            return this;
+        }
+        public String getCronExpression() {
+            return this.cronExpression;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktopsTimerInfos setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktopsTimerInfos setTimerType(Integer timerType) {
+            this.timerType = timerType;
+            return this;
+        }
+        public Integer getTimerType() {
+            return this.timerType;
+        }
+
+    }
+
     public static class GetDesktopGroupDetailResponseBodyDesktops extends TeaModel {
         @NameInMap("AllowAutoSetup")
         public Integer allowAutoSetup;
 
         @NameInMap("AllowBufferCount")
         public Integer allowBufferCount;
+
+        @NameInMap("BindAmount")
+        public Integer bindAmount;
 
         @NameInMap("Comments")
         public String comments;
@@ -80,6 +124,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("KeepDuration")
         public Long keepDuration;
 
+        @NameInMap("LoadPolicy")
+        public Integer loadPolicy;
+
         @NameInMap("MaxDesktopsCount")
         public Integer maxDesktopsCount;
 
@@ -104,6 +151,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("OwnBundleName")
         public String ownBundleName;
 
+        @NameInMap("OwnType")
+        public Integer ownType;
+
         @NameInMap("PayType")
         public String payType;
 
@@ -117,7 +167,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer resType;
 
         @NameInMap("ResetType")
-        public Long resetType;
+        public Integer resetType;
 
         @NameInMap("Status")
         public Integer status;
@@ -127,6 +177,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
+
+        @NameInMap("TimerInfos")
+        public java.util.List<GetDesktopGroupDetailResponseBodyDesktopsTimerInfos> timerInfos;
 
         public static GetDesktopGroupDetailResponseBodyDesktops build(java.util.Map<String, ?> map) throws Exception {
             GetDesktopGroupDetailResponseBodyDesktops self = new GetDesktopGroupDetailResponseBodyDesktops();
@@ -147,6 +200,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
         public Integer getAllowBufferCount() {
             return this.allowBufferCount;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktops setBindAmount(Integer bindAmount) {
+            this.bindAmount = bindAmount;
+            return this;
+        }
+        public Integer getBindAmount() {
+            return this.bindAmount;
         }
 
         public GetDesktopGroupDetailResponseBodyDesktops setComments(String comments) {
@@ -261,6 +322,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             return this.keepDuration;
         }
 
+        public GetDesktopGroupDetailResponseBodyDesktops setLoadPolicy(Integer loadPolicy) {
+            this.loadPolicy = loadPolicy;
+            return this;
+        }
+        public Integer getLoadPolicy() {
+            return this.loadPolicy;
+        }
+
         public GetDesktopGroupDetailResponseBodyDesktops setMaxDesktopsCount(Integer maxDesktopsCount) {
             this.maxDesktopsCount = maxDesktopsCount;
             return this;
@@ -325,6 +394,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             return this.ownBundleName;
         }
 
+        public GetDesktopGroupDetailResponseBodyDesktops setOwnType(Integer ownType) {
+            this.ownType = ownType;
+            return this;
+        }
+        public Integer getOwnType() {
+            return this.ownType;
+        }
+
         public GetDesktopGroupDetailResponseBodyDesktops setPayType(String payType) {
             this.payType = payType;
             return this;
@@ -357,11 +434,11 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             return this.resType;
         }
 
-        public GetDesktopGroupDetailResponseBodyDesktops setResetType(Long resetType) {
+        public GetDesktopGroupDetailResponseBodyDesktops setResetType(Integer resetType) {
             this.resetType = resetType;
             return this;
         }
-        public Long getResetType() {
+        public Integer getResetType() {
             return this.resetType;
         }
 
@@ -387,6 +464,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
         public Integer getSystemDiskSize() {
             return this.systemDiskSize;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktops setTimerInfos(java.util.List<GetDesktopGroupDetailResponseBodyDesktopsTimerInfos> timerInfos) {
+            this.timerInfos = timerInfos;
+            return this;
+        }
+        public java.util.List<GetDesktopGroupDetailResponseBodyDesktopsTimerInfos> getTimerInfos() {
+            return this.timerInfos;
         }
 
     }

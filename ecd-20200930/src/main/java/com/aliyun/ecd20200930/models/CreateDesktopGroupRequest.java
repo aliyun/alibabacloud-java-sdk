@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateDesktopGroupRequest extends TeaModel {
+    @NameInMap("AllClassifyUsers")
+    public Boolean allClassifyUsers;
+
     @NameInMap("AllowAutoSetup")
     public Integer allowAutoSetup;
 
@@ -13,11 +16,17 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    @NameInMap("BindAmount")
+    public Long bindAmount;
+
     @NameInMap("BundleId")
     public String bundleId;
 
     @NameInMap("ChargeType")
     public String chargeType;
+
+    @NameInMap("Classify")
+    public String classify;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -39,6 +48,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
 
     @NameInMap("KeepDuration")
     public Long keepDuration;
+
+    @NameInMap("LoadPolicy")
+    public Long loadPolicy;
 
     @NameInMap("MaxDesktopsCount")
     public Integer maxDesktopsCount;
@@ -78,6 +90,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateDesktopGroupRequest setAllClassifyUsers(Boolean allClassifyUsers) {
+        this.allClassifyUsers = allClassifyUsers;
+        return this;
+    }
+    public Boolean getAllClassifyUsers() {
+        return this.allClassifyUsers;
+    }
+
     public CreateDesktopGroupRequest setAllowAutoSetup(Integer allowAutoSetup) {
         this.allowAutoSetup = allowAutoSetup;
         return this;
@@ -102,6 +122,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
         return this.autoPay;
     }
 
+    public CreateDesktopGroupRequest setBindAmount(Long bindAmount) {
+        this.bindAmount = bindAmount;
+        return this;
+    }
+    public Long getBindAmount() {
+        return this.bindAmount;
+    }
+
     public CreateDesktopGroupRequest setBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -116,6 +144,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public CreateDesktopGroupRequest setClassify(String classify) {
+        this.classify = classify;
+        return this;
+    }
+    public String getClassify() {
+        return this.classify;
     }
 
     public CreateDesktopGroupRequest setClientToken(String clientToken) {
@@ -172,6 +208,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
     }
     public Long getKeepDuration() {
         return this.keepDuration;
+    }
+
+    public CreateDesktopGroupRequest setLoadPolicy(Long loadPolicy) {
+        this.loadPolicy = loadPolicy;
+        return this;
+    }
+    public Long getLoadPolicy() {
+        return this.loadPolicy;
     }
 
     public CreateDesktopGroupRequest setMaxDesktopsCount(Integer maxDesktopsCount) {

@@ -34,6 +34,9 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("ManagementFlag")
+    public String managementFlag;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -43,11 +46,17 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    @NameInMap("OfficeSiteName")
+    public String officeSiteName;
+
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
     @NameInMap("ProtocolType")
     public String protocolType;
+
+    @NameInMap("QueryFotaUpdate")
+    public Boolean queryFotaUpdate;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -140,6 +149,14 @@ public class DescribeDesktopsRequest extends TeaModel {
         return this.groupId;
     }
 
+    public DescribeDesktopsRequest setManagementFlag(String managementFlag) {
+        this.managementFlag = managementFlag;
+        return this;
+    }
+    public String getManagementFlag() {
+        return this.managementFlag;
+    }
+
     public DescribeDesktopsRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -164,6 +181,14 @@ public class DescribeDesktopsRequest extends TeaModel {
         return this.officeSiteId;
     }
 
+    public DescribeDesktopsRequest setOfficeSiteName(String officeSiteName) {
+        this.officeSiteName = officeSiteName;
+        return this;
+    }
+    public String getOfficeSiteName() {
+        return this.officeSiteName;
+    }
+
     public DescribeDesktopsRequest setPolicyGroupId(String policyGroupId) {
         this.policyGroupId = policyGroupId;
         return this;
@@ -178,6 +203,14 @@ public class DescribeDesktopsRequest extends TeaModel {
     }
     public String getProtocolType() {
         return this.protocolType;
+    }
+
+    public DescribeDesktopsRequest setQueryFotaUpdate(Boolean queryFotaUpdate) {
+        this.queryFotaUpdate = queryFotaUpdate;
+        return this;
+    }
+    public Boolean getQueryFotaUpdate() {
+        return this.queryFotaUpdate;
     }
 
     public DescribeDesktopsRequest setRegionId(String regionId) {

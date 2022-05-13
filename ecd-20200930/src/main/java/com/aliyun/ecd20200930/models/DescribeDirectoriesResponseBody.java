@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDirectoriesResponseBody extends TeaModel {
+    @NameInMap("AdHostname")
+    public String adHostname;
+
     @NameInMap("Directories")
     public java.util.List<DescribeDirectoriesResponseBodyDirectories> directories;
 
@@ -16,6 +19,14 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     public static DescribeDirectoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDirectoriesResponseBody self = new DescribeDirectoriesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDirectoriesResponseBody setAdHostname(String adHostname) {
+        this.adHostname = adHostname;
+        return this;
+    }
+    public String getAdHostname() {
+        return this.adHostname;
     }
 
     public DescribeDirectoriesResponseBody setDirectories(java.util.List<DescribeDirectoriesResponseBodyDirectories> directories) {
@@ -52,6 +63,9 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
+        @NameInMap("Specification")
+        public String specification;
+
         @NameInMap("TrustKey")
         public String trustKey;
 
@@ -85,6 +99,14 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         }
         public String getNetworkInterfaceId() {
             return this.networkInterfaceId;
+        }
+
+        public DescribeDirectoriesResponseBodyDirectoriesADConnectors setSpecification(String specification) {
+            this.specification = specification;
+            return this;
+        }
+        public String getSpecification() {
+            return this.specification;
         }
 
         public DescribeDirectoriesResponseBodyDirectoriesADConnectors setTrustKey(String trustKey) {

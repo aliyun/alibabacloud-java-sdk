@@ -43,12 +43,23 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
     }
 
     public static class ListDirectoryUsersResponseBodyUsers extends TeaModel {
+        @NameInMap("DisplayName")
+        public String displayName;
+
         @NameInMap("EndUser")
         public String endUser;
 
         public static ListDirectoryUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
             ListDirectoryUsersResponseBodyUsers self = new ListDirectoryUsersResponseBodyUsers();
             return TeaModel.build(map, self);
+        }
+
+        public ListDirectoryUsersResponseBodyUsers setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
         }
 
         public ListDirectoryUsersResponseBodyUsers setEndUser(String endUser) {
