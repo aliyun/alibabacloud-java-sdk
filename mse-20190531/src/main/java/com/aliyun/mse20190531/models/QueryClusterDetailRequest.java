@@ -7,6 +7,9 @@ public class QueryClusterDetailRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("AclSwitch")
+    public Boolean aclSwitch;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -24,6 +27,14 @@ public class QueryClusterDetailRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public QueryClusterDetailRequest setAclSwitch(Boolean aclSwitch) {
+        this.aclSwitch = aclSwitch;
+        return this;
+    }
+    public Boolean getAclSwitch() {
+        return this.aclSwitch;
     }
 
     public QueryClusterDetailRequest setInstanceId(String instanceId) {

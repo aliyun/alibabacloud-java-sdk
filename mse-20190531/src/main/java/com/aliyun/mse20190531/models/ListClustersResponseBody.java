@@ -154,6 +154,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("IntranetDomain")
         public String intranetDomain;
 
+        @NameInMap("MseVersion")
+        public String mseVersion;
+
         @NameInMap("VersionCode")
         public String versionCode;
 
@@ -280,6 +283,14 @@ public class ListClustersResponseBody extends TeaModel {
         }
         public String getIntranetDomain() {
             return this.intranetDomain;
+        }
+
+        public ListClustersResponseBodyData setMseVersion(String mseVersion) {
+            this.mseVersion = mseVersion;
+            return this;
+        }
+        public String getMseVersion() {
+            return this.mseVersion;
         }
 
         public ListClustersResponseBodyData setVersionCode(String versionCode) {
