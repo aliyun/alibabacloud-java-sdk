@@ -7,6 +7,9 @@ public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    @NameInMap("DesktopGroupIds")
+    public java.util.List<String> desktopGroupIds;
+
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
@@ -24,6 +27,14 @@ public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     }
     public String getDesktopGroupId() {
         return this.desktopGroupId;
+    }
+
+    public RemoveUserFromDesktopGroupRequest setDesktopGroupIds(java.util.List<String> desktopGroupIds) {
+        this.desktopGroupIds = desktopGroupIds;
+        return this;
+    }
+    public java.util.List<String> getDesktopGroupIds() {
+        return this.desktopGroupIds;
     }
 
     public RemoveUserFromDesktopGroupRequest setEndUserIds(java.util.List<String> endUserIds) {

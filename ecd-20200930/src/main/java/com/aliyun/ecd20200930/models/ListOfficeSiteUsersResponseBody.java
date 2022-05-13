@@ -43,12 +43,23 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
     }
 
     public static class ListOfficeSiteUsersResponseBodyUsers extends TeaModel {
+        @NameInMap("DisplayName")
+        public String displayName;
+
         @NameInMap("EndUser")
         public String endUser;
 
         public static ListOfficeSiteUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
             ListOfficeSiteUsersResponseBodyUsers self = new ListOfficeSiteUsersResponseBodyUsers();
             return TeaModel.build(map, self);
+        }
+
+        public ListOfficeSiteUsersResponseBodyUsers setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
         }
 
         public ListOfficeSiteUsersResponseBodyUsers setEndUser(String endUser) {

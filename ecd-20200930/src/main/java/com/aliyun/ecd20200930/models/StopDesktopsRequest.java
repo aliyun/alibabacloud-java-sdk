@@ -7,9 +7,6 @@ public class StopDesktopsRequest extends TeaModel {
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
-    @NameInMap("Hibernate")
-    public Boolean hibernate;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -27,14 +24,6 @@ public class StopDesktopsRequest extends TeaModel {
     }
     public java.util.List<String> getDesktopId() {
         return this.desktopId;
-    }
-
-    public StopDesktopsRequest setHibernate(Boolean hibernate) {
-        this.hibernate = hibernate;
-        return this;
-    }
-    public Boolean getHibernate() {
-        return this.hibernate;
     }
 
     public StopDesktopsRequest setRegionId(String regionId) {

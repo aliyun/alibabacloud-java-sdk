@@ -16,6 +16,9 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
+    @NameInMap("CloudBoxOfficeSite")
+    public Boolean cloudBoxOfficeSite;
+
     @NameInMap("DesktopAccessType")
     public String desktopAccessType;
 
@@ -24,6 +27,9 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
 
     @NameInMap("EnableInternetAccess")
     public Boolean enableInternetAccess;
+
+    @NameInMap("NeedVerifyZeroDevice")
+    public Boolean needVerifyZeroDevice;
 
     @NameInMap("OfficeSiteName")
     public String officeSiteName;
@@ -74,6 +80,14 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
         return this.cidrBlock;
     }
 
+    public CreateSimpleOfficeSiteRequest setCloudBoxOfficeSite(Boolean cloudBoxOfficeSite) {
+        this.cloudBoxOfficeSite = cloudBoxOfficeSite;
+        return this;
+    }
+    public Boolean getCloudBoxOfficeSite() {
+        return this.cloudBoxOfficeSite;
+    }
+
     public CreateSimpleOfficeSiteRequest setDesktopAccessType(String desktopAccessType) {
         this.desktopAccessType = desktopAccessType;
         return this;
@@ -96,6 +110,14 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     }
     public Boolean getEnableInternetAccess() {
         return this.enableInternetAccess;
+    }
+
+    public CreateSimpleOfficeSiteRequest setNeedVerifyZeroDevice(Boolean needVerifyZeroDevice) {
+        this.needVerifyZeroDevice = needVerifyZeroDevice;
+        return this;
+    }
+    public Boolean getNeedVerifyZeroDevice() {
+        return this.needVerifyZeroDevice;
     }
 
     public CreateSimpleOfficeSiteRequest setOfficeSiteName(String officeSiteName) {

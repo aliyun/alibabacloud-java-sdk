@@ -52,6 +52,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
+        @NameInMap("Specification")
+        public String specification;
+
         @NameInMap("TrustKey")
         public String trustKey;
 
@@ -85,6 +88,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public String getNetworkInterfaceId() {
             return this.networkInterfaceId;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSitesADConnectors setSpecification(String specification) {
+            this.specification = specification;
+            return this;
+        }
+        public String getSpecification() {
+            return this.specification;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSitesADConnectors setTrustKey(String trustKey) {
@@ -161,6 +172,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("ADConnectors")
         public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesADConnectors> ADConnectors;
 
+        @NameInMap("AdHostname")
+        public String adHostname;
+
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
@@ -169,6 +183,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         @NameInMap("CidrBlock")
         public String cidrBlock;
+
+        @NameInMap("CloudBoxOfficeSite")
+        public Boolean cloudBoxOfficeSite;
 
         @NameInMap("CreationTime")
         public String creationTime;
@@ -224,6 +241,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("NeedVerifyLoginRisk")
         public Boolean needVerifyLoginRisk;
 
+        @NameInMap("NeedVerifyZeroDevice")
+        public Boolean needVerifyZeroDevice;
+
         @NameInMap("NetworkPackageId")
         public String networkPackageId;
 
@@ -236,8 +256,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("OuName")
         public String ouName;
 
+        @NameInMap("ProtocolType")
+        public String protocolType;
+
         @NameInMap("SsoEnabled")
         public Boolean ssoEnabled;
+
+        @NameInMap("SsoType")
+        public String ssoType;
 
         @NameInMap("Status")
         public String status;
@@ -257,6 +283,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
+        @NameInMap("VpcType")
+        public String vpcType;
+
         public static DescribeOfficeSitesResponseBodyOfficeSites build(java.util.Map<String, ?> map) throws Exception {
             DescribeOfficeSitesResponseBodyOfficeSites self = new DescribeOfficeSitesResponseBodyOfficeSites();
             return TeaModel.build(map, self);
@@ -268,6 +297,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesADConnectors> getADConnectors() {
             return this.ADConnectors;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setAdHostname(String adHostname) {
+            this.adHostname = adHostname;
+            return this;
+        }
+        public String getAdHostname() {
+            return this.adHostname;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setBandwidth(Integer bandwidth) {
@@ -292,6 +329,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public String getCidrBlock() {
             return this.cidrBlock;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setCloudBoxOfficeSite(Boolean cloudBoxOfficeSite) {
+            this.cloudBoxOfficeSite = cloudBoxOfficeSite;
+            return this;
+        }
+        public Boolean getCloudBoxOfficeSite() {
+            return this.cloudBoxOfficeSite;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setCreationTime(String creationTime) {
@@ -438,6 +483,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             return this.needVerifyLoginRisk;
         }
 
+        public DescribeOfficeSitesResponseBodyOfficeSites setNeedVerifyZeroDevice(Boolean needVerifyZeroDevice) {
+            this.needVerifyZeroDevice = needVerifyZeroDevice;
+            return this;
+        }
+        public Boolean getNeedVerifyZeroDevice() {
+            return this.needVerifyZeroDevice;
+        }
+
         public DescribeOfficeSitesResponseBodyOfficeSites setNetworkPackageId(String networkPackageId) {
             this.networkPackageId = networkPackageId;
             return this;
@@ -470,12 +523,28 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             return this.ouName;
         }
 
+        public DescribeOfficeSitesResponseBodyOfficeSites setProtocolType(String protocolType) {
+            this.protocolType = protocolType;
+            return this;
+        }
+        public String getProtocolType() {
+            return this.protocolType;
+        }
+
         public DescribeOfficeSitesResponseBodyOfficeSites setSsoEnabled(Boolean ssoEnabled) {
             this.ssoEnabled = ssoEnabled;
             return this;
         }
         public Boolean getSsoEnabled() {
             return this.ssoEnabled;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setSsoType(String ssoType) {
+            this.ssoType = ssoType;
+            return this;
+        }
+        public String getSsoType() {
+            return this.ssoType;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setStatus(String status) {
@@ -524,6 +593,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setVpcType(String vpcType) {
+            this.vpcType = vpcType;
+            return this;
+        }
+        public String getVpcType() {
+            return this.vpcType;
         }
 
     }

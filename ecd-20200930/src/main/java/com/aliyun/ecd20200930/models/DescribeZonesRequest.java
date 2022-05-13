@@ -4,23 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
-    @NameInMap("CloudType")
-    public String cloudType;
-
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ZoneType")
+    public String zoneType;
 
     public static DescribeZonesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeZonesRequest self = new DescribeZonesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeZonesRequest setCloudType(String cloudType) {
-        this.cloudType = cloudType;
-        return this;
-    }
-    public String getCloudType() {
-        return this.cloudType;
     }
 
     public DescribeZonesRequest setRegionId(String regionId) {
@@ -29,6 +21,14 @@ public class DescribeZonesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeZonesRequest setZoneType(String zoneType) {
+        this.zoneType = zoneType;
+        return this;
+    }
+    public String getZoneType() {
+        return this.zoneType;
     }
 
 }

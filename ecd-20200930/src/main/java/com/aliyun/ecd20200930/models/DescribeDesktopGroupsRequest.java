@@ -10,6 +10,12 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     @NameInMap("DesktopGroupName")
     public String desktopGroupName;
 
+    @NameInMap("EndUserIds")
+    public java.util.List<String> endUserIds;
+
+    @NameInMap("ExcludedEndUserIds")
+    public java.util.List<String> excludedEndUserIds;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -18,6 +24,9 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
 
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
+
+    @NameInMap("OwnType")
+    public Long ownType;
 
     @NameInMap("Period")
     public Integer period;
@@ -55,6 +64,22 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
         return this.desktopGroupName;
     }
 
+    public DescribeDesktopGroupsRequest setEndUserIds(java.util.List<String> endUserIds) {
+        this.endUserIds = endUserIds;
+        return this;
+    }
+    public java.util.List<String> getEndUserIds() {
+        return this.endUserIds;
+    }
+
+    public DescribeDesktopGroupsRequest setExcludedEndUserIds(java.util.List<String> excludedEndUserIds) {
+        this.excludedEndUserIds = excludedEndUserIds;
+        return this;
+    }
+    public java.util.List<String> getExcludedEndUserIds() {
+        return this.excludedEndUserIds;
+    }
+
     public DescribeDesktopGroupsRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -77,6 +102,14 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     }
     public String getOfficeSiteId() {
         return this.officeSiteId;
+    }
+
+    public DescribeDesktopGroupsRequest setOwnType(Long ownType) {
+        this.ownType = ownType;
+        return this;
+    }
+    public Long getOwnType() {
+        return this.ownType;
     }
 
     public DescribeDesktopGroupsRequest setPeriod(Integer period) {

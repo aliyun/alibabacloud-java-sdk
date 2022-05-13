@@ -10,6 +10,9 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     @NameInMap("NeedVerifyLoginRisk")
     public Boolean needVerifyLoginRisk;
 
+    @NameInMap("NeedVerifyZeroDevice")
+    public Boolean needVerifyZeroDevice;
+
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
@@ -38,6 +41,14 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     }
     public Boolean getNeedVerifyLoginRisk() {
         return this.needVerifyLoginRisk;
+    }
+
+    public ModifyOfficeSiteAttributeRequest setNeedVerifyZeroDevice(Boolean needVerifyZeroDevice) {
+        this.needVerifyZeroDevice = needVerifyZeroDevice;
+        return this;
+    }
+    public Boolean getNeedVerifyZeroDevice() {
+        return this.needVerifyZeroDevice;
     }
 
     public ModifyOfficeSiteAttributeRequest setOfficeSiteId(String officeSiteId) {

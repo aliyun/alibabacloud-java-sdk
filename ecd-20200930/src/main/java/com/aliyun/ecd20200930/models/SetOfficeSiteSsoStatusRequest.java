@@ -13,6 +13,9 @@ public class SetOfficeSiteSsoStatusRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SsoType")
+    public String ssoType;
+
     public static SetOfficeSiteSsoStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         SetOfficeSiteSsoStatusRequest self = new SetOfficeSiteSsoStatusRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class SetOfficeSiteSsoStatusRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public SetOfficeSiteSsoStatusRequest setSsoType(String ssoType) {
+        this.ssoType = ssoType;
+        return this;
+    }
+    public String getSsoType() {
+        return this.ssoType;
     }
 
 }

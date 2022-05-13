@@ -10,6 +10,12 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     @NameInMap("AllowBufferCount")
     public Integer allowBufferCount;
 
+    @NameInMap("BindAmount")
+    public Long bindAmount;
+
+    @NameInMap("Classify")
+    public String classify;
+
     @NameInMap("Comments")
     public String comments;
 
@@ -19,8 +25,14 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     @NameInMap("DesktopGroupName")
     public String desktopGroupName;
 
+    @NameInMap("ImageId")
+    public String imageId;
+
     @NameInMap("KeepDuration")
     public Long keepDuration;
+
+    @NameInMap("LoadPolicy")
+    public Long loadPolicy;
 
     @NameInMap("MaxDesktopsCount")
     public Integer maxDesktopsCount;
@@ -64,6 +76,22 @@ public class ModifyDesktopGroupRequest extends TeaModel {
         return this.allowBufferCount;
     }
 
+    public ModifyDesktopGroupRequest setBindAmount(Long bindAmount) {
+        this.bindAmount = bindAmount;
+        return this;
+    }
+    public Long getBindAmount() {
+        return this.bindAmount;
+    }
+
+    public ModifyDesktopGroupRequest setClassify(String classify) {
+        this.classify = classify;
+        return this;
+    }
+    public String getClassify() {
+        return this.classify;
+    }
+
     public ModifyDesktopGroupRequest setComments(String comments) {
         this.comments = comments;
         return this;
@@ -88,12 +116,28 @@ public class ModifyDesktopGroupRequest extends TeaModel {
         return this.desktopGroupName;
     }
 
+    public ModifyDesktopGroupRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
     public ModifyDesktopGroupRequest setKeepDuration(Long keepDuration) {
         this.keepDuration = keepDuration;
         return this;
     }
     public Long getKeepDuration() {
         return this.keepDuration;
+    }
+
+    public ModifyDesktopGroupRequest setLoadPolicy(Long loadPolicy) {
+        this.loadPolicy = loadPolicy;
+        return this;
+    }
+    public Long getLoadPolicy() {
+        return this.loadPolicy;
     }
 
     public ModifyDesktopGroupRequest setMaxDesktopsCount(Integer maxDesktopsCount) {

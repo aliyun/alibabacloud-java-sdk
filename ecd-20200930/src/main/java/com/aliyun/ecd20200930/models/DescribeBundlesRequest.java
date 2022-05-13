@@ -40,6 +40,9 @@ public class DescribeBundlesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SupportMultiSession")
+    public Boolean supportMultiSession;
+
     public static DescribeBundlesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBundlesRequest self = new DescribeBundlesRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class DescribeBundlesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeBundlesRequest setSupportMultiSession(Boolean supportMultiSession) {
+        this.supportMultiSession = supportMultiSession;
+        return this;
+    }
+    public Boolean getSupportMultiSession() {
+        return this.supportMultiSession;
     }
 
 }

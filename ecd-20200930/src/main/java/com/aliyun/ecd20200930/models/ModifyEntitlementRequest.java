@@ -13,9 +13,6 @@ public class ModifyEntitlementRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("TaskId")
-    public String taskId;
-
     public static ModifyEntitlementRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyEntitlementRequest self = new ModifyEntitlementRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class ModifyEntitlementRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ModifyEntitlementRequest setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
     }
 
 }

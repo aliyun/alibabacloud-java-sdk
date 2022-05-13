@@ -28,6 +28,9 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("LangType")
+    public String langType;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -113,6 +116,14 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public ExportDesktopListInfoRequest setLangType(String langType) {
+        this.langType = langType;
+        return this;
+    }
+    public String getLangType() {
+        return this.langType;
     }
 
     public ExportDesktopListInfoRequest setMaxResults(Integer maxResults) {

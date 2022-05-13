@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
+    @NameInMap("AdHostname")
+    public String adHostname;
+
     @NameInMap("DnsAddress")
     public java.util.List<String> dnsAddress;
 
@@ -18,6 +21,9 @@ public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
 
     @NameInMap("MfaEnabled")
     public Boolean mfaEnabled;
+
+    @NameInMap("OUName")
+    public String OUName;
 
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
@@ -37,6 +43,14 @@ public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
     public static ModifyADConnectorOfficeSiteRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyADConnectorOfficeSiteRequest self = new ModifyADConnectorOfficeSiteRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyADConnectorOfficeSiteRequest setAdHostname(String adHostname) {
+        this.adHostname = adHostname;
+        return this;
+    }
+    public String getAdHostname() {
+        return this.adHostname;
     }
 
     public ModifyADConnectorOfficeSiteRequest setDnsAddress(java.util.List<String> dnsAddress) {
@@ -77,6 +91,14 @@ public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
     }
     public Boolean getMfaEnabled() {
         return this.mfaEnabled;
+    }
+
+    public ModifyADConnectorOfficeSiteRequest setOUName(String OUName) {
+        this.OUName = OUName;
+        return this;
+    }
+    public String getOUName() {
+        return this.OUName;
     }
 
     public ModifyADConnectorOfficeSiteRequest setOfficeSiteId(String officeSiteId) {

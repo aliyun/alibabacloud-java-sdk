@@ -73,6 +73,9 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
         @NameInMap("TotalEdsCountForGroup")
         public Integer totalEdsCountForGroup;
 
+        @NameInMap("VpcType")
+        public String vpcType;
+
         @NameInMap("WillExpiredEdsCount")
         public Integer willExpiredEdsCount;
 
@@ -162,6 +165,14 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
         }
         public Integer getTotalEdsCountForGroup() {
             return this.totalEdsCountForGroup;
+        }
+
+        public ListOfficeSiteOverviewResponseBodyOfficeSiteOverviewResults setVpcType(String vpcType) {
+            this.vpcType = vpcType;
+            return this;
+        }
+        public String getVpcType() {
+            return this.vpcType;
         }
 
         public ListOfficeSiteOverviewResponseBodyOfficeSiteOverviewResults setWillExpiredEdsCount(Integer willExpiredEdsCount) {

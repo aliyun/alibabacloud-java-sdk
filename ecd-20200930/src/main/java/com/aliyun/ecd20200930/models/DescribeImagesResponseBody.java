@@ -43,6 +43,9 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImages extends TeaModel {
+        @NameInMap("AppVersion")
+        public String appVersion;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -88,6 +91,14 @@ public class DescribeImagesResponseBody extends TeaModel {
         public static DescribeImagesResponseBodyImages build(java.util.Map<String, ?> map) throws Exception {
             DescribeImagesResponseBodyImages self = new DescribeImagesResponseBodyImages();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeImagesResponseBodyImages setAppVersion(String appVersion) {
+            this.appVersion = appVersion;
+            return this;
+        }
+        public String getAppVersion() {
+            return this.appVersion;
         }
 
         public DescribeImagesResponseBodyImages setCreationTime(String creationTime) {

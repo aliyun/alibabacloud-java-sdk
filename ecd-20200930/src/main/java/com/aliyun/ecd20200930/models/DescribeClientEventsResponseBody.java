@@ -61,6 +61,12 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         @NameInMap("ClientVersion")
         public String clientVersion;
 
+        @NameInMap("DesktopGroupId")
+        public String desktopGroupId;
+
+        @NameInMap("DesktopGroupName")
+        public String desktopGroupName;
+
         @NameInMap("DesktopId")
         public String desktopId;
 
@@ -154,6 +160,22 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         }
         public String getClientVersion() {
             return this.clientVersion;
+        }
+
+        public DescribeClientEventsResponseBodyEvents setDesktopGroupId(String desktopGroupId) {
+            this.desktopGroupId = desktopGroupId;
+            return this;
+        }
+        public String getDesktopGroupId() {
+            return this.desktopGroupId;
+        }
+
+        public DescribeClientEventsResponseBodyEvents setDesktopGroupName(String desktopGroupName) {
+            this.desktopGroupName = desktopGroupName;
+            return this;
+        }
+        public String getDesktopGroupName() {
+            return this.desktopGroupName;
         }
 
         public DescribeClientEventsResponseBodyEvents setDesktopId(String desktopId) {

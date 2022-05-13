@@ -22,6 +22,9 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    @NameInMap("LangType")
+    public String langType;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -88,6 +91,14 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     }
     public String getExpiredTime() {
         return this.expiredTime;
+    }
+
+    public ExportDesktopGroupInfoRequest setLangType(String langType) {
+        this.langType = langType;
+        return this;
+    }
+    public String getLangType() {
+        return this.langType;
     }
 
     public ExportDesktopGroupInfoRequest setMaxResults(Integer maxResults) {
