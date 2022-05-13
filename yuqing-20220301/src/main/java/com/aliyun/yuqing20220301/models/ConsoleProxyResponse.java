@@ -8,6 +8,10 @@ public class ConsoleProxyResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public ConsoleProxyResponseBody body;
@@ -23,6 +27,14 @@ public class ConsoleProxyResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public ConsoleProxyResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public ConsoleProxyResponse setBody(ConsoleProxyResponseBody body) {

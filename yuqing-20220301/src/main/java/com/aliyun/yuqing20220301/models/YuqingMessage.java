@@ -68,6 +68,10 @@ public class YuqingMessage extends TeaModel {
     @NameInMap("emotionType")
     public Integer emotionType;
 
+    // 扩展字段值
+    @NameInMap("extInfo")
+    public java.util.Map<String, String> extInfo;
+
     // 命中的搜索词列表
     @NameInMap("highlightKeywords")
     public java.util.List<String> highlightKeywords;
@@ -235,6 +239,14 @@ public class YuqingMessage extends TeaModel {
     }
     public Integer getEmotionType() {
         return this.emotionType;
+    }
+
+    public YuqingMessage setExtInfo(java.util.Map<String, String> extInfo) {
+        this.extInfo = extInfo;
+        return this;
+    }
+    public java.util.Map<String, String> getExtInfo() {
+        return this.extInfo;
     }
 
     public YuqingMessage setHighlightKeywords(java.util.List<String> highlightKeywords) {
