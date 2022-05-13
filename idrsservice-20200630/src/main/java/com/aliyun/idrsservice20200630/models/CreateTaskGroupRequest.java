@@ -34,9 +34,6 @@ public class CreateTaskGroupRequest extends TeaModel {
     @NameInMap("VideoInfo")
     public java.util.List<CreateTaskGroupRequestVideoInfo> videoInfo;
 
-    @NameInMap("VideoMetaUrl")
-    public java.util.List<String> videoMetaUrl;
-
     public static CreateTaskGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTaskGroupRequest self = new CreateTaskGroupRequest();
         return TeaModel.build(map, self);
@@ -120,14 +117,6 @@ public class CreateTaskGroupRequest extends TeaModel {
     }
     public java.util.List<CreateTaskGroupRequestVideoInfo> getVideoInfo() {
         return this.videoInfo;
-    }
-
-    public CreateTaskGroupRequest setVideoMetaUrl(java.util.List<String> videoMetaUrl) {
-        this.videoMetaUrl = videoMetaUrl;
-        return this;
-    }
-    public java.util.List<String> getVideoMetaUrl() {
-        return this.videoMetaUrl;
     }
 
     public static class CreateTaskGroupRequestVideoInfo extends TeaModel {
