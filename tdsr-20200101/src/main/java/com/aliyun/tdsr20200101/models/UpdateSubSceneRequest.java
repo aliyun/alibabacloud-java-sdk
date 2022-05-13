@@ -12,6 +12,9 @@ public class UpdateSubSceneRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("ViewPoint")
+    public java.util.List<Double> viewPoint;
+
     public static UpdateSubSceneRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSubSceneRequest self = new UpdateSubSceneRequest();
         return TeaModel.build(map, self);
@@ -31,6 +34,14 @@ public class UpdateSubSceneRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateSubSceneRequest setViewPoint(java.util.List<Double> viewPoint) {
+        this.viewPoint = viewPoint;
+        return this;
+    }
+    public java.util.List<Double> getViewPoint() {
+        return this.viewPoint;
     }
 
 }

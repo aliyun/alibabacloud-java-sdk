@@ -19,6 +19,10 @@ public class ListSubSceneRequest extends TeaModel {
     @NameInMap("ShowLayoutData")
     public Boolean showLayoutData;
 
+    // 排序字段，默认：NAME（名称），SEQUENCE（自定义排序）
+    @NameInMap("SortField")
+    public String sortField;
+
     public static ListSubSceneRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSubSceneRequest self = new ListSubSceneRequest();
         return TeaModel.build(map, self);
@@ -54,6 +58,14 @@ public class ListSubSceneRequest extends TeaModel {
     }
     public Boolean getShowLayoutData() {
         return this.showLayoutData;
+    }
+
+    public ListSubSceneRequest setSortField(String sortField) {
+        this.sortField = sortField;
+        return this;
+    }
+    public String getSortField() {
+        return this.sortField;
     }
 
 }
