@@ -16,6 +16,12 @@ public class ListDetectProcessesRequest extends TeaModel {
     @NameInMap("PublishStatus")
     public Boolean publishStatus;
 
+    @NameInMap("Sort")
+    public String sort;
+
+    @NameInMap("SortKey")
+    public String sortKey;
+
     @NameInMap("Type")
     public String type;
 
@@ -54,6 +60,22 @@ public class ListDetectProcessesRequest extends TeaModel {
     }
     public Boolean getPublishStatus() {
         return this.publishStatus;
+    }
+
+    public ListDetectProcessesRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
+    }
+
+    public ListDetectProcessesRequest setSortKey(String sortKey) {
+        this.sortKey = sortKey;
+        return this;
+    }
+    public String getSortKey() {
+        return this.sortKey;
     }
 
     public ListDetectProcessesRequest setType(String type) {

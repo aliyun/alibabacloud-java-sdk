@@ -86,6 +86,12 @@ public class ListDetectProcessesResponseBody extends TeaModel {
         @NameInMap("NewVersion")
         public Boolean newVersion;
 
+        @NameInMap("Published")
+        public Boolean published;
+
+        @NameInMap("Type")
+        public String type;
+
         @NameInMap("UpdatedAt")
         public String updatedAt;
 
@@ -172,6 +178,22 @@ public class ListDetectProcessesResponseBody extends TeaModel {
         }
         public Boolean getNewVersion() {
             return this.newVersion;
+        }
+
+        public ListDetectProcessesResponseBodyDataItems setPublished(Boolean published) {
+            this.published = published;
+            return this;
+        }
+        public Boolean getPublished() {
+            return this.published;
+        }
+
+        public ListDetectProcessesResponseBodyDataItems setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public ListDetectProcessesResponseBodyDataItems setUpdatedAt(String updatedAt) {
