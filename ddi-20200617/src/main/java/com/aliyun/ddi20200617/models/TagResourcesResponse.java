@@ -3,7 +3,7 @@ package com.aliyun.ddi20200617.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyFlowJobResponse extends TeaModel {
+public class TagResourcesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ModifyFlowJobResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ModifyFlowJobResponseBody body;
+    public TagResourcesResponseBody body;
 
-    public static ModifyFlowJobResponse build(java.util.Map<String, ?> map) throws Exception {
-        ModifyFlowJobResponse self = new ModifyFlowJobResponse();
+    public static TagResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
+        TagResourcesResponse self = new TagResourcesResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyFlowJobResponse setHeaders(java.util.Map<String, String> headers) {
+    public TagResourcesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ModifyFlowJobResponse extends TeaModel {
         return this.headers;
     }
 
-    public ModifyFlowJobResponse setStatusCode(Integer statusCode) {
+    public TagResourcesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ModifyFlowJobResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ModifyFlowJobResponse setBody(ModifyFlowJobResponseBody body) {
+    public TagResourcesResponse setBody(TagResourcesResponseBody body) {
         this.body = body;
         return this;
     }
-    public ModifyFlowJobResponseBody getBody() {
+    public TagResourcesResponseBody getBody() {
         return this.body;
     }
 
