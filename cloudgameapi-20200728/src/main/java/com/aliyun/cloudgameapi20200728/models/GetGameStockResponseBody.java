@@ -4,6 +4,9 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetGameStockResponseBody extends TeaModel {
+    @NameInMap("AvailableTotal")
+    public Long availableTotal;
+
     @NameInMap("GameId")
     public String gameId;
 
@@ -13,12 +16,26 @@ public class GetGameStockResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("QuotaTotal")
+    public Long quotaTotal;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("UsedTotal")
+    public Long usedTotal;
 
     public static GetGameStockResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetGameStockResponseBody self = new GetGameStockResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetGameStockResponseBody setAvailableTotal(Long availableTotal) {
+        this.availableTotal = availableTotal;
+        return this;
+    }
+    public Long getAvailableTotal() {
+        return this.availableTotal;
     }
 
     public GetGameStockResponseBody setGameId(String gameId) {
@@ -45,12 +62,28 @@ public class GetGameStockResponseBody extends TeaModel {
         return this.message;
     }
 
+    public GetGameStockResponseBody setQuotaTotal(Long quotaTotal) {
+        this.quotaTotal = quotaTotal;
+        return this;
+    }
+    public Long getQuotaTotal() {
+        return this.quotaTotal;
+    }
+
     public GetGameStockResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetGameStockResponseBody setUsedTotal(Long usedTotal) {
+        this.usedTotal = usedTotal;
+        return this;
+    }
+    public Long getUsedTotal() {
+        return this.usedTotal;
     }
 
     public static class GetGameStockResponseBodyInstanceStockList extends TeaModel {
@@ -60,11 +93,14 @@ public class GetGameStockResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("InstanceSpec")
-        public String instanceSpec;
+        @NameInMap("QuotaSlots")
+        public Long quotaSlots;
 
         @NameInMap("ReginName")
         public String reginName;
+
+        @NameInMap("UsedSlots")
+        public Long usedSlots;
 
         @NameInMap("UserLevel")
         public Long userLevel;
@@ -90,12 +126,12 @@ public class GetGameStockResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public GetGameStockResponseBodyInstanceStockList setInstanceSpec(String instanceSpec) {
-            this.instanceSpec = instanceSpec;
+        public GetGameStockResponseBodyInstanceStockList setQuotaSlots(Long quotaSlots) {
+            this.quotaSlots = quotaSlots;
             return this;
         }
-        public String getInstanceSpec() {
-            return this.instanceSpec;
+        public Long getQuotaSlots() {
+            return this.quotaSlots;
         }
 
         public GetGameStockResponseBodyInstanceStockList setReginName(String reginName) {
@@ -104,6 +140,14 @@ public class GetGameStockResponseBody extends TeaModel {
         }
         public String getReginName() {
             return this.reginName;
+        }
+
+        public GetGameStockResponseBodyInstanceStockList setUsedSlots(Long usedSlots) {
+            this.usedSlots = usedSlots;
+            return this;
+        }
+        public Long getUsedSlots() {
+            return this.usedSlots;
         }
 
         public GetGameStockResponseBodyInstanceStockList setUserLevel(Long userLevel) {

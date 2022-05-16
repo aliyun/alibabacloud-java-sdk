@@ -3,7 +3,7 @@ package com.aliyun.cloudgameapi20200728.models;
 
 import com.aliyun.tea.*;
 
-public class GetOutAccountBindDetailResponse extends TeaModel {
+public class GetQueuingSizeResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetOutAccountBindDetailResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetOutAccountBindDetailResponseBody body;
+    public GetQueuingSizeResponseBody body;
 
-    public static GetOutAccountBindDetailResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetOutAccountBindDetailResponse self = new GetOutAccountBindDetailResponse();
+    public static GetQueuingSizeResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetQueuingSizeResponse self = new GetQueuingSizeResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetOutAccountBindDetailResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetQueuingSizeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetOutAccountBindDetailResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetOutAccountBindDetailResponse setStatusCode(Integer statusCode) {
+    public GetQueuingSizeResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetOutAccountBindDetailResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetOutAccountBindDetailResponse setBody(GetOutAccountBindDetailResponseBody body) {
+    public GetQueuingSizeResponse setBody(GetQueuingSizeResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetOutAccountBindDetailResponseBody getBody() {
+    public GetQueuingSizeResponseBody getBody() {
         return this.body;
     }
 
