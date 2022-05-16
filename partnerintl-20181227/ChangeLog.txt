@@ -1,3 +1,6 @@
+2022-05-16 Version: 1.0.7
+- Support query for compute nest.
+
 2022-04-13 Version: 1.0.5
 - Support query for compute nest.
 
