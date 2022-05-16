@@ -88,8 +88,14 @@ public class GetCardDetailResponseBody extends TeaModel {
         @NameInMap("Imsi")
         public java.util.List<String> imsi;
 
+        @NameInMap("Ip")
+        public java.util.List<String> ip;
+
         @NameInMap("Msisdn")
         public java.util.List<String> msisdn;
+
+        @NameInMap("OpenSms")
+        public Boolean openSms;
 
         @NameInMap("OsStatus")
         public String osStatus;
@@ -146,12 +152,28 @@ public class GetCardDetailResponseBody extends TeaModel {
             return this.imsi;
         }
 
+        public GetCardDetailResponseBodyDataListPsimCards setIp(java.util.List<String> ip) {
+            this.ip = ip;
+            return this;
+        }
+        public java.util.List<String> getIp() {
+            return this.ip;
+        }
+
         public GetCardDetailResponseBodyDataListPsimCards setMsisdn(java.util.List<String> msisdn) {
             this.msisdn = msisdn;
             return this;
         }
         public java.util.List<String> getMsisdn() {
             return this.msisdn;
+        }
+
+        public GetCardDetailResponseBodyDataListPsimCards setOpenSms(Boolean openSms) {
+            this.openSms = openSms;
+            return this;
+        }
+        public Boolean getOpenSms() {
+            return this.openSms;
         }
 
         public GetCardDetailResponseBodyDataListPsimCards setOsStatus(String osStatus) {
@@ -310,6 +332,9 @@ public class GetCardDetailResponseBody extends TeaModel {
         @NameInMap("Imsi")
         public java.util.List<String> imsi;
 
+        @NameInMap("Ip")
+        public java.util.List<String> ip;
+
         @NameInMap("IsAutoRecharge")
         public Boolean isAutoRecharge;
 
@@ -321,6 +346,9 @@ public class GetCardDetailResponseBody extends TeaModel {
 
         @NameInMap("OpenAccountTime")
         public String openAccountTime;
+
+        @NameInMap("OpenSms")
+        public Boolean openSms;
 
         @NameInMap("OsStatus")
         public String osStatus;
@@ -560,6 +588,14 @@ public class GetCardDetailResponseBody extends TeaModel {
             return this.imsi;
         }
 
+        public GetCardDetailResponseBodyDataVsimCardInfo setIp(java.util.List<String> ip) {
+            this.ip = ip;
+            return this;
+        }
+        public java.util.List<String> getIp() {
+            return this.ip;
+        }
+
         public GetCardDetailResponseBodyDataVsimCardInfo setIsAutoRecharge(Boolean isAutoRecharge) {
             this.isAutoRecharge = isAutoRecharge;
             return this;
@@ -590,6 +626,14 @@ public class GetCardDetailResponseBody extends TeaModel {
         }
         public String getOpenAccountTime() {
             return this.openAccountTime;
+        }
+
+        public GetCardDetailResponseBodyDataVsimCardInfo setOpenSms(Boolean openSms) {
+            this.openSms = openSms;
+            return this;
+        }
+        public Boolean getOpenSms() {
+            return this.openSms;
         }
 
         public GetCardDetailResponseBodyDataVsimCardInfo setOsStatus(String osStatus) {
