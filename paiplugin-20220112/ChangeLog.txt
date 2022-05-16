@@ -1,3 +1,6 @@
+2022-05-16 Version: 1.0.11
+- Add Algorithm APIs.
+
 2022-03-08 Version: 1.0.9
 - CreateTemplate adds input parameter Signature.
 

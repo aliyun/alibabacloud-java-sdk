@@ -138,7 +138,7 @@ public class ListMessageMetricsResponseBody extends TeaModel {
     }
 
     public static class ListMessageMetricsResponseBodyData extends TeaModel {
-        // 统计数据列表。
+        // 分页返回的统计数据条目列表。
         @NameInMap("Metrics")
         public java.util.List<ListMessageMetricsResponseBodyDataMetrics> metrics;
 
@@ -150,7 +150,7 @@ public class ListMessageMetricsResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 总统计数量。
+        // 总统计数据条目数量。
         @NameInMap("TotalCount")
         public Integer totalCount;
 

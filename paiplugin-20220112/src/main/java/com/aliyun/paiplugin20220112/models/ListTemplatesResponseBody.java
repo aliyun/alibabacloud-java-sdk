@@ -212,11 +212,11 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 模板列表。
+        // 分页返回的模板列表。
         @NameInMap("Templates")
         public java.util.List<ListTemplatesResponseBodyDataTemplates> templates;
 
-        // 总模板数量。
+        // 全部模板注册记录数量。
         @NameInMap("TotalCount")
         public Integer totalCount;
 

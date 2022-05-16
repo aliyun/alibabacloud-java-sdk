@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
-    // 内容类型过滤。
+    // 模板内容过滤。
     @NameInMap("Content")
     public String content;
 
@@ -21,10 +21,16 @@ public class ListTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     // 审核状态过滤。
+    // - 0 : 审核中。
+    // - 1 : 审核通过。
+    // - 2 : 审核不通过。
     @NameInMap("Status")
     public Integer status;
 
     // 模板类型过滤。
+    // - 0 : 验证码。
+    // - 1 : 短信通知。
+    // - 2 : 推广短信。
     @NameInMap("Type")
     public Integer type;
 
