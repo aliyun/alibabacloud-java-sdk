@@ -4,7 +4,7 @@ package com.aliyun.paiplugin20220112.models;
 import com.aliyun.tea.*;
 
 public class ListMessageMetricsRequest extends TeaModel {
-    // 结束日期，必填，格式20220102。
+    // 结束日期，格式20220102。
     @NameInMap("EndDate")
     public String endDate;
 
@@ -32,7 +32,7 @@ public class ListMessageMetricsRequest extends TeaModel {
     @NameInMap("SignatureId")
     public String signatureId;
 
-    // 开始日期，必填，格式20220102。
+    // 开始日期，格式20220102。
     @NameInMap("StartDate")
     public String startDate;
 
@@ -45,9 +45,9 @@ public class ListMessageMetricsRequest extends TeaModel {
     public String templateId;
 
     // 模板类型。
-    // 0 : 验证码。
-    // 1 : 短信通知。
-    // 2 : 推广短信。
+    // - 0 : 验证码。
+    // - 1 : 短信通知。
+    // - 2 : 推广短信。
     @NameInMap("TemplateType")
     public Integer templateType;
 
