@@ -3,7 +3,7 @@ package com.aliyun.linkcard20210520.models;
 
 import com.aliyun.tea.*;
 
-public class GetCardFlowInfoResponse extends TeaModel {
+public class ListOrderResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetCardFlowInfoResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetCardFlowInfoResponseBody body;
+    public ListOrderResponseBody body;
 
-    public static GetCardFlowInfoResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetCardFlowInfoResponse self = new GetCardFlowInfoResponse();
+    public static ListOrderResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListOrderResponse self = new ListOrderResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetCardFlowInfoResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListOrderResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetCardFlowInfoResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetCardFlowInfoResponse setStatusCode(Integer statusCode) {
+    public ListOrderResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetCardFlowInfoResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetCardFlowInfoResponse setBody(GetCardFlowInfoResponseBody body) {
+    public ListOrderResponse setBody(ListOrderResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetCardFlowInfoResponseBody getBody() {
+    public ListOrderResponseBody getBody() {
         return this.body;
     }
 

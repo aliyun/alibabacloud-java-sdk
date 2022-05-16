@@ -202,8 +202,14 @@ public class GetCardFlowInfoResponseBody extends TeaModel {
         @NameInMap("NetWorkDelay")
         public String netWorkDelay;
 
+        @NameInMap("Ratio")
+        public String ratio;
+
         @NameInMap("SignalStrength")
         public String signalStrength;
+
+        @NameInMap("UsedFlow")
+        public String usedFlow;
 
         @NameInMap("Vendor")
         public String vendor;
@@ -221,12 +227,28 @@ public class GetCardFlowInfoResponseBody extends TeaModel {
             return this.netWorkDelay;
         }
 
+        public GetCardFlowInfoResponseBodyDataListVendorDetail setRatio(String ratio) {
+            this.ratio = ratio;
+            return this;
+        }
+        public String getRatio() {
+            return this.ratio;
+        }
+
         public GetCardFlowInfoResponseBodyDataListVendorDetail setSignalStrength(String signalStrength) {
             this.signalStrength = signalStrength;
             return this;
         }
         public String getSignalStrength() {
             return this.signalStrength;
+        }
+
+        public GetCardFlowInfoResponseBodyDataListVendorDetail setUsedFlow(String usedFlow) {
+            this.usedFlow = usedFlow;
+            return this;
+        }
+        public String getUsedFlow() {
+            return this.usedFlow;
         }
 
         public GetCardFlowInfoResponseBodyDataListVendorDetail setVendor(String vendor) {
