@@ -10,9 +10,6 @@ public class GetGameStockRequest extends TeaModel {
     @NameInMap("GameId")
     public String gameId;
 
-    @NameInMap("UserLevel")
-    public Long userLevel;
-
     public static GetGameStockRequest build(java.util.Map<String, ?> map) throws Exception {
         GetGameStockRequest self = new GetGameStockRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class GetGameStockRequest extends TeaModel {
     }
     public String getGameId() {
         return this.gameId;
-    }
-
-    public GetGameStockRequest setUserLevel(Long userLevel) {
-        this.userLevel = userLevel;
-        return this;
-    }
-    public Long getUserLevel() {
-        return this.userLevel;
     }
 
 }

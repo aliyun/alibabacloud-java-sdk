@@ -8,6 +8,10 @@ public class UploadGameVersionByDownloadResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public UploadGameVersionByDownloadResponseBody body;
@@ -23,6 +27,14 @@ public class UploadGameVersionByDownloadResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public UploadGameVersionByDownloadResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public UploadGameVersionByDownloadResponse setBody(UploadGameVersionByDownloadResponseBody body) {
