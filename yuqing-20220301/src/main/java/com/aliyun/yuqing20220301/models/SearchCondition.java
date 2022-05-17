@@ -100,6 +100,10 @@ public class SearchCondition extends TeaModel {
     @NameInMap("filterId")
     public Long filterId;
 
+    // 是否含有音频
+    @NameInMap("hasAudio")
+    public Boolean hasAudio;
+
     // 文章是否含有图片
     @NameInMap("hasImage")
     public Boolean hasImage;
@@ -111,6 +115,10 @@ public class SearchCondition extends TeaModel {
     // 网站域名
     @NameInMap("hostNameList")
     public java.util.List<String> hostNameList;
+
+    // 影响力等级，1：低，2：中，3：高，4：低级别以上
+    @NameInMap("influenceLevel")
+    public Long influenceLevel;
 
     // 关键词标签Id列表
     @NameInMap("keywordTagIds")
@@ -159,6 +167,10 @@ public class SearchCondition extends TeaModel {
     // 舆情项目id
     @NameInMap("projectId")
     public Long projectId;
+
+    // 传播度等级，1：低，2：中，3：高，4：低级别以上
+    @NameInMap("propagationLevel")
+    public Long propagationLevel;
 
     // 截止发布时间
     @NameInMap("publishTimeEnd")
@@ -397,6 +409,14 @@ public class SearchCondition extends TeaModel {
         return this.filterId;
     }
 
+    public SearchCondition setHasAudio(Boolean hasAudio) {
+        this.hasAudio = hasAudio;
+        return this;
+    }
+    public Boolean getHasAudio() {
+        return this.hasAudio;
+    }
+
     public SearchCondition setHasImage(Boolean hasImage) {
         this.hasImage = hasImage;
         return this;
@@ -419,6 +439,14 @@ public class SearchCondition extends TeaModel {
     }
     public java.util.List<String> getHostNameList() {
         return this.hostNameList;
+    }
+
+    public SearchCondition setInfluenceLevel(Long influenceLevel) {
+        this.influenceLevel = influenceLevel;
+        return this;
+    }
+    public Long getInfluenceLevel() {
+        return this.influenceLevel;
     }
 
     public SearchCondition setKeywordTagIds(java.util.List<Long> keywordTagIds) {
@@ -515,6 +543,14 @@ public class SearchCondition extends TeaModel {
     }
     public Long getProjectId() {
         return this.projectId;
+    }
+
+    public SearchCondition setPropagationLevel(Long propagationLevel) {
+        this.propagationLevel = propagationLevel;
+        return this;
+    }
+    public Long getPropagationLevel() {
+        return this.propagationLevel;
     }
 
     public SearchCondition setPublishTimeEnd(Long publishTimeEnd) {
