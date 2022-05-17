@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>slb20140515</artifactId>
-  <version>3.3.15</version>
+  <version>3.3.16</version>
   <packaging>jar</packaging>
   <name>slb20140515</name>
   <description>Alibaba Cloud Server Load Balancer (20140515) SDK for Java
@@ -51,7 +51,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>endpoint-util</artifactId>
-      <version>0.0.6</version>
+      <version>0.0.7</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
