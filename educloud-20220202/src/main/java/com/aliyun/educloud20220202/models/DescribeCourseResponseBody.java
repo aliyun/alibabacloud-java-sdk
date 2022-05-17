@@ -66,6 +66,9 @@ public class DescribeCourseResponseBody extends TeaModel {
     }
 
     public static class DescribeCourseResponseBodyDataChapterLessons extends TeaModel {
+        @NameInMap("Duration")
+        public Long duration;
+
         @NameInMap("LessonId")
         public String lessonId;
 
@@ -78,6 +81,14 @@ public class DescribeCourseResponseBody extends TeaModel {
         public static DescribeCourseResponseBodyDataChapterLessons build(java.util.Map<String, ?> map) throws Exception {
             DescribeCourseResponseBodyDataChapterLessons self = new DescribeCourseResponseBodyDataChapterLessons();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCourseResponseBodyDataChapterLessons setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
         }
 
         public DescribeCourseResponseBodyDataChapterLessons setLessonId(String lessonId) {
@@ -107,6 +118,9 @@ public class DescribeCourseResponseBody extends TeaModel {
     }
 
     public static class DescribeCourseResponseBodyDataChapterUnitLessons extends TeaModel {
+        @NameInMap("Duration")
+        public Long duration;
+
         @NameInMap("LessonId")
         public String lessonId;
 
@@ -119,6 +133,14 @@ public class DescribeCourseResponseBody extends TeaModel {
         public static DescribeCourseResponseBodyDataChapterUnitLessons build(java.util.Map<String, ?> map) throws Exception {
             DescribeCourseResponseBodyDataChapterUnitLessons self = new DescribeCourseResponseBodyDataChapterUnitLessons();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCourseResponseBodyDataChapterUnitLessons setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
         }
 
         public DescribeCourseResponseBodyDataChapterUnitLessons setLessonId(String lessonId) {
@@ -241,6 +263,9 @@ public class DescribeCourseResponseBody extends TeaModel {
     }
 
     public static class DescribeCourseResponseBodyDataLessons extends TeaModel {
+        @NameInMap("Duration")
+        public Long duration;
+
         @NameInMap("LessonId")
         public String lessonId;
 
@@ -253,6 +278,14 @@ public class DescribeCourseResponseBody extends TeaModel {
         public static DescribeCourseResponseBodyDataLessons build(java.util.Map<String, ?> map) throws Exception {
             DescribeCourseResponseBodyDataLessons self = new DescribeCourseResponseBodyDataLessons();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCourseResponseBodyDataLessons setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
         }
 
         public DescribeCourseResponseBodyDataLessons setLessonId(String lessonId) {
