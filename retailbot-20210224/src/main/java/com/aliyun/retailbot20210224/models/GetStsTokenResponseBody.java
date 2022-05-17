@@ -4,16 +4,29 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class GetStsTokenResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Data")
     public GetStsTokenResponseBodyData data;
 
-    // Id of the request
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("Success")
-    public String success;
+    public Boolean success;
 
     public static GetStsTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetStsTokenResponseBody self = new GetStsTokenResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetStsTokenResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetStsTokenResponseBody setData(GetStsTokenResponseBodyData data) {
@@ -24,11 +37,19 @@ public class GetStsTokenResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GetStsTokenResponseBody setSuccess(String success) {
+    public GetStsTokenResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetStsTokenResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 
