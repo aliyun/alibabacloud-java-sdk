@@ -20,7 +20,7 @@ public class QueryCommodityByServiceIdResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Result")
-    public java.util.Map<String, String> result;
+    public java.util.Map<String, ?> result;
 
     @NameInMap("Success")
     public Boolean success;
@@ -70,11 +70,11 @@ public class QueryCommodityByServiceIdResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryCommodityByServiceIdResponseBody setResult(java.util.Map<String, String> result) {
+    public QueryCommodityByServiceIdResponseBody setResult(java.util.Map<String, ?> result) {
         this.result = result;
         return this;
     }
-    public java.util.Map<String, String> getResult() {
+    public java.util.Map<String, ?> getResult() {
         return this.result;
     }
 
