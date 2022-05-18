@@ -205,6 +205,9 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         @NameInMap("AliasName")
         public String aliasName;
 
+        @NameInMap("CanFix")
+        public String canFix;
+
         @NameInMap("CanUpdate")
         public Boolean canUpdate;
 
@@ -267,6 +270,14 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
         public String getAliasName() {
             return this.aliasName;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setCanFix(String canFix) {
+            this.canFix = canFix;
+            return this;
+        }
+        public String getCanFix() {
+            return this.canFix;
         }
 
         public DescribeImageVulListResponseBodyVulRecords setCanUpdate(Boolean canUpdate) {
