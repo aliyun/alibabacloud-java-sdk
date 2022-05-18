@@ -10,6 +10,12 @@ public class CreateTicketWithStatusRequest extends TeaModel {
     @NameInMap("CategoryId")
     public Long categoryId;
 
+    @NameInMap("ChannelId")
+    public String channelId;
+
+    @NameInMap("ChannelType")
+    public String channelType;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -43,6 +49,9 @@ public class CreateTicketWithStatusRequest extends TeaModel {
     @NameInMap("TemplateId")
     public Long templateId;
 
+    @NameInMap("TouchId")
+    public String touchId;
+
     @NameInMap("status")
     public Integer status;
 
@@ -65,6 +74,22 @@ public class CreateTicketWithStatusRequest extends TeaModel {
     }
     public Long getCategoryId() {
         return this.categoryId;
+    }
+
+    public CreateTicketWithStatusRequest setChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    public String getChannelId() {
+        return this.channelId;
+    }
+
+    public CreateTicketWithStatusRequest setChannelType(String channelType) {
+        this.channelType = channelType;
+        return this;
+    }
+    public String getChannelType() {
+        return this.channelType;
     }
 
     public CreateTicketWithStatusRequest setClientToken(String clientToken) {
@@ -153,6 +178,14 @@ public class CreateTicketWithStatusRequest extends TeaModel {
     }
     public Long getTemplateId() {
         return this.templateId;
+    }
+
+    public CreateTicketWithStatusRequest setTouchId(String touchId) {
+        this.touchId = touchId;
+        return this;
+    }
+    public String getTouchId() {
+        return this.touchId;
     }
 
     public CreateTicketWithStatusRequest setStatus(Integer status) {
