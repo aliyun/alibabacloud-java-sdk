@@ -393,6 +393,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createSimilarSecurityEventsQueryTaskWithOptions(request, runtime);
     }
 
+    public CreateSuspEventNoteResponse createSuspEventNoteWithOptions(CreateSuspEventNoteRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.note)) {
+            query.put("Note", request.note);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSuspEventNote"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSuspEventNoteResponse());
+    }
+
+    public CreateSuspEventNoteResponse createSuspEventNote(CreateSuspEventNoteRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createSuspEventNoteWithOptions(request, runtime);
+    }
+
     public CreateVulAutoRepairConfigResponse createVulAutoRepairConfigWithOptions(CreateVulAutoRepairConfigRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3269,6 +3302,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeNoticeConfigResponse describeNoticeConfig(DescribeNoticeConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeNoticeConfigWithOptions(request, runtime);
+    }
+
+    public DescribeOnceTaskResponse describeOnceTaskWithOptions(DescribeOnceTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimeQuery)) {
+            query.put("EndTimeQuery", request.endTimeQuery);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rootTaskId)) {
+            query.put("RootTaskId", request.rootTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimeQuery)) {
+            query.put("StartTimeQuery", request.startTimeQuery);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            query.put("TaskType", request.taskType);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeOnceTask"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOnceTaskResponse());
+    }
+
+    public DescribeOnceTaskResponse describeOnceTask(DescribeOnceTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeOnceTaskWithOptions(request, runtime);
     }
 
     public DescribePropertyCountResponse describePropertyCountWithOptions(DescribePropertyCountRequest request, RuntimeOptions runtime) throws Exception {
