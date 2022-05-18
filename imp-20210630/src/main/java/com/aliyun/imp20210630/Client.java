@@ -1069,6 +1069,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteSensitiveWordWithOptions(request, runtime);
     }
 
+    public DescribeMeterImpPlayBackTimeByLiveIdResponse describeMeterImpPlayBackTimeByLiveIdWithOptions(DescribeMeterImpPlayBackTimeByLiveIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTs)) {
+            query.put("EndTs", request.endTs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.liveId)) {
+            query.put("LiveId", request.liveId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTs)) {
+            query.put("StartTs", request.startTs);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterImpPlayBackTimeByLiveId"),
+            new TeaPair("version", "2021-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterImpPlayBackTimeByLiveIdResponse());
+    }
+
+    public DescribeMeterImpPlayBackTimeByLiveIdResponse describeMeterImpPlayBackTimeByLiveId(DescribeMeterImpPlayBackTimeByLiveIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeMeterImpPlayBackTimeByLiveIdWithOptions(request, runtime);
+    }
+
+    public DescribeMeterImpWatchLiveTimeByLiveIdResponse describeMeterImpWatchLiveTimeByLiveIdWithOptions(DescribeMeterImpWatchLiveTimeByLiveIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.liveId)) {
+            query.put("LiveId", request.liveId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMeterImpWatchLiveTimeByLiveId"),
+            new TeaPair("version", "2021-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeterImpWatchLiveTimeByLiveIdResponse());
+    }
+
+    public DescribeMeterImpWatchLiveTimeByLiveIdResponse describeMeterImpWatchLiveTimeByLiveId(DescribeMeterImpWatchLiveTimeByLiveIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeMeterImpWatchLiveTimeByLiveIdWithOptions(request, runtime);
+    }
+
     public GetAppResponse getAppWithOptions(GetAppRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
