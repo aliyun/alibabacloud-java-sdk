@@ -24,6 +24,9 @@ public class LaunchProductRequest extends TeaModel {
     @NameInMap("ProvisionedProductName")
     public String provisionedProductName;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     // ROS资源栈所属的地域ID
     @NameInMap("StackRegionId")
     public String stackRegionId;
@@ -71,6 +74,14 @@ public class LaunchProductRequest extends TeaModel {
     }
     public String getProvisionedProductName() {
         return this.provisionedProductName;
+    }
+
+    public LaunchProductRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public LaunchProductRequest setStackRegionId(String stackRegionId) {

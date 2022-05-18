@@ -24,6 +24,9 @@ public class CreateConstraintRequest extends TeaModel {
     @NameInMap("ProductId")
     public String productId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static CreateConstraintRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateConstraintRequest self = new CreateConstraintRequest();
         return TeaModel.build(map, self);
@@ -67,6 +70,14 @@ public class CreateConstraintRequest extends TeaModel {
     }
     public String getProductId() {
         return this.productId;
+    }
+
+    public CreateConstraintRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }
