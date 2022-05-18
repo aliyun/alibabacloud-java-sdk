@@ -24,6 +24,9 @@ public class CreateProductVersionRequest extends TeaModel {
     @NameInMap("ProductVersionName")
     public String productVersionName;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 模板类型
     @NameInMap("TemplateType")
     public String templateType;
@@ -75,6 +78,14 @@ public class CreateProductVersionRequest extends TeaModel {
     }
     public String getProductVersionName() {
         return this.productVersionName;
+    }
+
+    public CreateProductVersionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateProductVersionRequest setTemplateType(String templateType) {

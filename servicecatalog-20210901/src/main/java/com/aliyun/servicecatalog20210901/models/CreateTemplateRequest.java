@@ -4,6 +4,9 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 模板内容
     @NameInMap("TemplateBody")
     public String templateBody;
@@ -15,6 +18,14 @@ public class CreateTemplateRequest extends TeaModel {
     public static CreateTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTemplateRequest self = new CreateTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTemplateRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateTemplateRequest setTemplateBody(String templateBody) {

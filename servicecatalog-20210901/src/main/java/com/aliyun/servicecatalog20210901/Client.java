@@ -14,7 +14,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("servicecatalog", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -34,6 +34,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public AssociatePrincipalWithPortfolioResponse associatePrincipalWithPortfolioWithOptions(AssociatePrincipalWithPortfolioRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.portfolioId)) {
             body.put("PortfolioId", request.portfolioId);
@@ -48,6 +53,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -71,6 +77,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public AssociateProductWithPortfolioResponse associateProductWithPortfolioWithOptions(AssociateProductWithPortfolioRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.portfolioId)) {
             body.put("PortfolioId", request.portfolioId);
@@ -81,6 +92,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -104,6 +116,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateConstraintResponse createConstraintWithOptions(CreateConstraintRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.config)) {
             body.put("Config", request.config);
@@ -126,6 +143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -149,6 +167,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreatePortfolioResponse createPortfolioWithOptions(CreatePortfolioRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
@@ -163,6 +186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -192,6 +216,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.productVersionParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.productVersionParameters), "ProductVersionParameters", "json");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
@@ -214,6 +243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -237,6 +267,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateProductVersionResponse createProductVersionWithOptions(CreateProductVersionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.active)) {
             body.put("Active", request.active);
@@ -267,6 +302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -290,6 +326,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateTemplateResponse createTemplateWithOptions(CreateTemplateRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
             body.put("TemplateBody", request.templateBody);
@@ -300,6 +341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -323,12 +365,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteConstraintResponse deleteConstraintWithOptions(DeleteConstraintRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.constraintId)) {
             body.put("ConstraintId", request.constraintId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -352,12 +400,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeletePortfolioResponse deletePortfolioWithOptions(DeletePortfolioRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.portfolioId)) {
             body.put("PortfolioId", request.portfolioId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -381,12 +435,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteProductResponse deleteProductWithOptions(DeleteProductRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
             body.put("ProductId", request.productId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -410,12 +470,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteProductVersionResponse deleteProductVersionWithOptions(DeleteProductVersionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.productVersionId)) {
             body.put("ProductVersionId", request.productVersionId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -439,6 +505,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DisassociatePrincipalFromPortfolioResponse disassociatePrincipalFromPortfolioWithOptions(DisassociatePrincipalFromPortfolioRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.portfolioId)) {
             body.put("PortfolioId", request.portfolioId);
@@ -453,6 +524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -476,6 +548,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DisassociateProductFromPortfolioResponse disassociateProductFromPortfolioWithOptions(DisassociateProductFromPortfolioRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.portfolioId)) {
             body.put("PortfolioId", request.portfolioId);
@@ -486,6 +563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -563,6 +641,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPortfolioResponse getPortfolio(GetPortfolioRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getPortfolioWithOptions(request, runtime);
+    }
+
+    public GetProductResponse getProductWithOptions(GetProductRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProduct"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProductResponse());
+    }
+
+    public GetProductResponse getProduct(GetProductRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getProductWithOptions(request, runtime);
     }
 
     public GetProductAsAdminResponse getProductAsAdminWithOptions(GetProductAsAdminRequest request, RuntimeOptions runtime) throws Exception {
@@ -745,6 +848,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public LaunchProductResponse launchProductWithOptions(LaunchProductRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.inputs)) {
             body.put("Inputs", request.inputs);
@@ -771,6 +879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -959,6 +1068,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListProductVersionsResponse listProductVersions(ListProductVersionsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listProductVersionsWithOptions(request, runtime);
+    }
+
+    public ListProductsResponse listProductsWithOptions(ListProductsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProducts"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductsResponse());
+    }
+
+    public ListProductsResponse listProducts(ListProductsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listProductsWithOptions(request, runtime);
     }
 
     public ListProductsAsAdminResponse listProductsAsAdminWithOptions(ListProductsAsAdminRequest request, RuntimeOptions runtime) throws Exception {
@@ -1174,14 +1308,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTasksWithOptions(request, runtime);
     }
 
+    public SearchProductsAsAdminResponse searchProductsAsAdminWithOptions(SearchProductsAsAdminRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
+            body.put("Filters", request.filters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portfolioId)) {
+            body.put("PortfolioId", request.portfolioId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchProductsAsAdmin"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchProductsAsAdminResponse());
+    }
+
+    public SearchProductsAsAdminResponse searchProductsAsAdmin(SearchProductsAsAdminRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.searchProductsAsAdminWithOptions(request, runtime);
+    }
+
     public TerminateProvisionedProductResponse terminateProvisionedProductWithOptions(TerminateProvisionedProductRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.provisionedProductId)) {
             body.put("ProvisionedProductId", request.provisionedProductId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -1205,6 +1386,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateConstraintResponse updateConstraintWithOptions(UpdateConstraintRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.config)) {
             body.put("Config", request.config);
@@ -1219,6 +1405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -1242,6 +1429,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdatePortfolioResponse updatePortfolioWithOptions(UpdatePortfolioRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
@@ -1260,6 +1452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -1283,6 +1476,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateProductResponse updateProductWithOptions(UpdateProductRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
@@ -1301,6 +1499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -1324,6 +1523,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateProductVersionResponse updateProductVersionWithOptions(UpdateProductVersionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.active)) {
             body.put("Active", request.active);
@@ -1346,6 +1550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -1369,6 +1574,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateProvisionedProductResponse updateProvisionedProductWithOptions(UpdateProvisionedProductRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.inputs)) {
             body.put("Inputs", request.inputs);
@@ -1391,6 +1601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(

@@ -16,6 +16,9 @@ public class DisassociatePrincipalFromPortfolioRequest extends TeaModel {
     @NameInMap("PrincipalType")
     public String principalType;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DisassociatePrincipalFromPortfolioRequest build(java.util.Map<String, ?> map) throws Exception {
         DisassociatePrincipalFromPortfolioRequest self = new DisassociatePrincipalFromPortfolioRequest();
         return TeaModel.build(map, self);
@@ -43,6 +46,14 @@ public class DisassociatePrincipalFromPortfolioRequest extends TeaModel {
     }
     public String getPrincipalType() {
         return this.principalType;
+    }
+
+    public DisassociatePrincipalFromPortfolioRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

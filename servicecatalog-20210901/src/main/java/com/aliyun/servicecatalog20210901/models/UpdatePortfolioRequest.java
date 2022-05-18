@@ -20,6 +20,9 @@ public class UpdatePortfolioRequest extends TeaModel {
     @NameInMap("ProviderName")
     public String providerName;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static UpdatePortfolioRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePortfolioRequest self = new UpdatePortfolioRequest();
         return TeaModel.build(map, self);
@@ -55,6 +58,14 @@ public class UpdatePortfolioRequest extends TeaModel {
     }
     public String getProviderName() {
         return this.providerName;
+    }
+
+    public UpdatePortfolioRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

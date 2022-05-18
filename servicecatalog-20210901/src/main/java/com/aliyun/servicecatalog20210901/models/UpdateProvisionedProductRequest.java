@@ -24,6 +24,9 @@ public class UpdateProvisionedProductRequest extends TeaModel {
     @NameInMap("ProvisionedProductId")
     public String provisionedProductId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static UpdateProvisionedProductRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProvisionedProductRequest self = new UpdateProvisionedProductRequest();
         return TeaModel.build(map, self);
@@ -67,6 +70,14 @@ public class UpdateProvisionedProductRequest extends TeaModel {
     }
     public String getProvisionedProductId() {
         return this.provisionedProductId;
+    }
+
+    public UpdateProvisionedProductRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

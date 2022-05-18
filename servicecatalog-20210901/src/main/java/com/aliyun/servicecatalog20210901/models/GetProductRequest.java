@@ -3,20 +3,19 @@ package com.aliyun.servicecatalog20210901.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteProductRequest extends TeaModel {
-    // 产品ID
+public class GetProductRequest extends TeaModel {
     @NameInMap("ProductId")
     public String productId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    public static DeleteProductRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteProductRequest self = new DeleteProductRequest();
+    public static GetProductRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetProductRequest self = new GetProductRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteProductRequest setProductId(String productId) {
+    public GetProductRequest setProductId(String productId) {
         this.productId = productId;
         return this;
     }
@@ -24,7 +23,7 @@ public class DeleteProductRequest extends TeaModel {
         return this.productId;
     }
 
-    public DeleteProductRequest setRegionId(String regionId) {
+    public GetProductRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
