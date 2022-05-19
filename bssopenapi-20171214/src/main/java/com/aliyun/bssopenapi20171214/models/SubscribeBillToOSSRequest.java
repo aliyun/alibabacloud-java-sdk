@@ -10,6 +10,10 @@ public class SubscribeBillToOSSRequest extends TeaModel {
     @NameInMap("BucketOwnerId")
     public Long bucketOwnerId;
 
+    // OSS Bucket存储路径
+    @NameInMap("BucketPath")
+    public String bucketPath;
+
     @NameInMap("MultAccountRelSubscribe")
     public String multAccountRelSubscribe;
 
@@ -38,6 +42,14 @@ public class SubscribeBillToOSSRequest extends TeaModel {
     }
     public Long getBucketOwnerId() {
         return this.bucketOwnerId;
+    }
+
+    public SubscribeBillToOSSRequest setBucketPath(String bucketPath) {
+        this.bucketPath = bucketPath;
+        return this;
+    }
+    public String getBucketPath() {
+        return this.bucketPath;
     }
 
     public SubscribeBillToOSSRequest setMultAccountRelSubscribe(String multAccountRelSubscribe) {
