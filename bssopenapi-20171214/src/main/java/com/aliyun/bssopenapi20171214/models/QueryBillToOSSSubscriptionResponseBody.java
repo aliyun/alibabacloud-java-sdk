@@ -68,6 +68,9 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         @NameInMap("BucketOwnerId")
         public Long bucketOwnerId;
 
+        @NameInMap("BucketPath")
+        public String bucketPath;
+
         @NameInMap("SubscribeBucket")
         public String subscribeBucket;
 
@@ -91,6 +94,14 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         }
         public Long getBucketOwnerId() {
             return this.bucketOwnerId;
+        }
+
+        public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setBucketPath(String bucketPath) {
+            this.bucketPath = bucketPath;
+            return this;
+        }
+        public String getBucketPath() {
+            return this.bucketPath;
         }
 
         public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setSubscribeBucket(String subscribeBucket) {

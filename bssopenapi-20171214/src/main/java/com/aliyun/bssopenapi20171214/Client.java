@@ -4249,6 +4249,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BucketOwnerId", request.bucketOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketPath)) {
+            query.put("BucketPath", request.bucketPath);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.multAccountRelSubscribe)) {
             query.put("MultAccountRelSubscribe", request.multAccountRelSubscribe);
         }
