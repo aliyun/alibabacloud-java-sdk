@@ -3,7 +3,7 @@ package com.aliyun.dm20151123.models;
 
 import com.aliyun.tea.*;
 
-public class SenderStatisticsDetailByParamResponse extends TeaModel {
+public class GetIpfilterListResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class SenderStatisticsDetailByParamResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public SenderStatisticsDetailByParamResponseBody body;
+    public GetIpfilterListResponseBody body;
 
-    public static SenderStatisticsDetailByParamResponse build(java.util.Map<String, ?> map) throws Exception {
-        SenderStatisticsDetailByParamResponse self = new SenderStatisticsDetailByParamResponse();
+    public static GetIpfilterListResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetIpfilterListResponse self = new GetIpfilterListResponse();
         return TeaModel.build(map, self);
     }
 
-    public SenderStatisticsDetailByParamResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetIpfilterListResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class SenderStatisticsDetailByParamResponse extends TeaModel {
         return this.headers;
     }
 
-    public SenderStatisticsDetailByParamResponse setStatusCode(Integer statusCode) {
+    public GetIpfilterListResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class SenderStatisticsDetailByParamResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SenderStatisticsDetailByParamResponse setBody(SenderStatisticsDetailByParamResponseBody body) {
+    public GetIpfilterListResponse setBody(GetIpfilterListResponseBody body) {
         this.body = body;
         return this;
     }
-    public SenderStatisticsDetailByParamResponseBody getBody() {
+    public GetIpfilterListResponseBody getBody() {
         return this.body;
     }
 

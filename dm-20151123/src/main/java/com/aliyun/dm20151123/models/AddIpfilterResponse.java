@@ -3,7 +3,7 @@ package com.aliyun.dm20151123.models;
 
 import com.aliyun.tea.*;
 
-public class SenderStatisticsDetailByParamResponse extends TeaModel {
+public class AddIpfilterResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class SenderStatisticsDetailByParamResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public SenderStatisticsDetailByParamResponseBody body;
+    public AddIpfilterResponseBody body;
 
-    public static SenderStatisticsDetailByParamResponse build(java.util.Map<String, ?> map) throws Exception {
-        SenderStatisticsDetailByParamResponse self = new SenderStatisticsDetailByParamResponse();
+    public static AddIpfilterResponse build(java.util.Map<String, ?> map) throws Exception {
+        AddIpfilterResponse self = new AddIpfilterResponse();
         return TeaModel.build(map, self);
     }
 
-    public SenderStatisticsDetailByParamResponse setHeaders(java.util.Map<String, String> headers) {
+    public AddIpfilterResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class SenderStatisticsDetailByParamResponse extends TeaModel {
         return this.headers;
     }
 
-    public SenderStatisticsDetailByParamResponse setStatusCode(Integer statusCode) {
+    public AddIpfilterResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class SenderStatisticsDetailByParamResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SenderStatisticsDetailByParamResponse setBody(SenderStatisticsDetailByParamResponseBody body) {
+    public AddIpfilterResponse setBody(AddIpfilterResponseBody body) {
         this.body = body;
         return this;
     }
-    public SenderStatisticsDetailByParamResponseBody getBody() {
+    public AddIpfilterResponseBody getBody() {
         return this.body;
     }
 
