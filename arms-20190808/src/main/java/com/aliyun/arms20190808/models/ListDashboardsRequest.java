@@ -13,6 +13,9 @@ public class ListDashboardsRequest extends TeaModel {
     @NameInMap("DashboardName")
     public String dashboardName;
 
+    @NameInMap("Language")
+    public String language;
+
     @NameInMap("Product")
     public String product;
 
@@ -52,6 +55,14 @@ public class ListDashboardsRequest extends TeaModel {
     }
     public String getDashboardName() {
         return this.dashboardName;
+    }
+
+    public ListDashboardsRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public ListDashboardsRequest setProduct(String product) {
