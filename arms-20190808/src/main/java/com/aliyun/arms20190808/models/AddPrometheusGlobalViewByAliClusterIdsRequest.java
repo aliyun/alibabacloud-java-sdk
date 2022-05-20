@@ -10,6 +10,9 @@ public class AddPrometheusGlobalViewByAliClusterIdsRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    @NameInMap("ProductCode")
+    public String productCode;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,6 +35,14 @@ public class AddPrometheusGlobalViewByAliClusterIdsRequest extends TeaModel {
     }
     public String getGroupName() {
         return this.groupName;
+    }
+
+    public AddPrometheusGlobalViewByAliClusterIdsRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
     }
 
     public AddPrometheusGlobalViewByAliClusterIdsRequest setRegionId(String regionId) {
