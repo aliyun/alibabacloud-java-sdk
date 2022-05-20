@@ -7,6 +7,10 @@ public class ListActiveGroupsRequest extends TeaModel {
     @NameInMap("AppCode")
     public String appCode;
 
+    // 当总结果个数大于MaxResults时，用于翻页的token。
+    @NameInMap("AppVersion")
+    public String appVersion;
+
     // 查询过滤参数，多个过滤参数之间是且的关系。例如:过滤实例名称为i-a123、i-b123，且实例状态为Stopped：&Filter.1.Name=InstanceName&Filter.1.Value.1=i-a123&Filter.1.Value.2=i-b123&Filter.2.Name=Status&Filter.2.Value=Stopped。
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,10 +21,6 @@ public class ListActiveGroupsRequest extends TeaModel {
 
     @NameInMap("UserProfile")
     public ListActiveGroupsRequestUserProfile userProfile;
-
-    // 当总结果个数大于MaxResults时，用于翻页的token。
-    @NameInMap("Version")
-    public String version;
 
     public static ListActiveGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListActiveGroupsRequest self = new ListActiveGroupsRequest();
@@ -33,6 +33,14 @@ public class ListActiveGroupsRequest extends TeaModel {
     }
     public String getAppCode() {
         return this.appCode;
+    }
+
+    public ListActiveGroupsRequest setAppVersion(String appVersion) {
+        this.appVersion = appVersion;
+        return this;
+    }
+    public String getAppVersion() {
+        return this.appVersion;
     }
 
     public ListActiveGroupsRequest setInstanceId(String instanceId) {
@@ -57,14 +65,6 @@ public class ListActiveGroupsRequest extends TeaModel {
     }
     public ListActiveGroupsRequestUserProfile getUserProfile() {
         return this.userProfile;
-    }
-
-    public ListActiveGroupsRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public static class ListActiveGroupsRequestUserProfile extends TeaModel {

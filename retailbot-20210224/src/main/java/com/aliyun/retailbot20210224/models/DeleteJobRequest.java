@@ -7,6 +7,9 @@ public class DeleteJobRequest extends TeaModel {
     @NameInMap("AppCode")
     public String appCode;
 
+    @NameInMap("AppVersion")
+    public String appVersion;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,9 +22,6 @@ public class DeleteJobRequest extends TeaModel {
     @NameInMap("UserProfile")
     public DeleteJobRequestUserProfile userProfile;
 
-    @NameInMap("Version")
-    public String version;
-
     public static DeleteJobRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteJobRequest self = new DeleteJobRequest();
         return TeaModel.build(map, self);
@@ -33,6 +33,14 @@ public class DeleteJobRequest extends TeaModel {
     }
     public String getAppCode() {
         return this.appCode;
+    }
+
+    public DeleteJobRequest setAppVersion(String appVersion) {
+        this.appVersion = appVersion;
+        return this;
+    }
+    public String getAppVersion() {
+        return this.appVersion;
     }
 
     public DeleteJobRequest setInstanceId(String instanceId) {
@@ -65,14 +73,6 @@ public class DeleteJobRequest extends TeaModel {
     }
     public DeleteJobRequestUserProfile getUserProfile() {
         return this.userProfile;
-    }
-
-    public DeleteJobRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public static class DeleteJobRequestUserProfile extends TeaModel {

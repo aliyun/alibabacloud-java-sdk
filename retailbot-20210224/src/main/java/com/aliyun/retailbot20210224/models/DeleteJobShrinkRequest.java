@@ -7,6 +7,9 @@ public class DeleteJobShrinkRequest extends TeaModel {
     @NameInMap("AppCode")
     public String appCode;
 
+    @NameInMap("AppVersion")
+    public String appVersion;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,9 +22,6 @@ public class DeleteJobShrinkRequest extends TeaModel {
     @NameInMap("UserProfile")
     public String userProfileShrink;
 
-    @NameInMap("Version")
-    public String version;
-
     public static DeleteJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteJobShrinkRequest self = new DeleteJobShrinkRequest();
         return TeaModel.build(map, self);
@@ -33,6 +33,14 @@ public class DeleteJobShrinkRequest extends TeaModel {
     }
     public String getAppCode() {
         return this.appCode;
+    }
+
+    public DeleteJobShrinkRequest setAppVersion(String appVersion) {
+        this.appVersion = appVersion;
+        return this;
+    }
+    public String getAppVersion() {
+        return this.appVersion;
     }
 
     public DeleteJobShrinkRequest setInstanceId(String instanceId) {
@@ -65,14 +73,6 @@ public class DeleteJobShrinkRequest extends TeaModel {
     }
     public String getUserProfileShrink() {
         return this.userProfileShrink;
-    }
-
-    public DeleteJobShrinkRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

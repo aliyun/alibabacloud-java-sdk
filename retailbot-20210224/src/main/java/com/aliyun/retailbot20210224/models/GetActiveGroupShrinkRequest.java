@@ -7,6 +7,9 @@ public class GetActiveGroupShrinkRequest extends TeaModel {
     @NameInMap("AppCode")
     public String appCode;
 
+    @NameInMap("AppVersion")
+    public String appVersion;
+
     @NameInMap("GroupId")
     public Long groupId;
 
@@ -21,9 +24,6 @@ public class GetActiveGroupShrinkRequest extends TeaModel {
     @NameInMap("UserProfile")
     public String userProfileShrink;
 
-    @NameInMap("Version")
-    public String version;
-
     public static GetActiveGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetActiveGroupShrinkRequest self = new GetActiveGroupShrinkRequest();
         return TeaModel.build(map, self);
@@ -35,6 +35,14 @@ public class GetActiveGroupShrinkRequest extends TeaModel {
     }
     public String getAppCode() {
         return this.appCode;
+    }
+
+    public GetActiveGroupShrinkRequest setAppVersion(String appVersion) {
+        this.appVersion = appVersion;
+        return this;
+    }
+    public String getAppVersion() {
+        return this.appVersion;
     }
 
     public GetActiveGroupShrinkRequest setGroupId(Long groupId) {
@@ -67,14 +75,6 @@ public class GetActiveGroupShrinkRequest extends TeaModel {
     }
     public String getUserProfileShrink() {
         return this.userProfileShrink;
-    }
-
-    public GetActiveGroupShrinkRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

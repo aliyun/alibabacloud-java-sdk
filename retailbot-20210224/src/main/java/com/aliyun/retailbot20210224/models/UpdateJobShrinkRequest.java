@@ -35,6 +35,9 @@ public class UpdateJobShrinkRequest extends TeaModel {
         @NameInMap("AppCode")
         public String appCode;
 
+        @NameInMap("AppVersion")
+        public String appVersion;
+
         @NameInMap("Config")
         public String config;
 
@@ -59,9 +62,6 @@ public class UpdateJobShrinkRequest extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
-        @NameInMap("Version")
-        public String version;
-
         public static UpdateJobShrinkRequestActiveJobDTO build(java.util.Map<String, ?> map) throws Exception {
             UpdateJobShrinkRequestActiveJobDTO self = new UpdateJobShrinkRequestActiveJobDTO();
             return TeaModel.build(map, self);
@@ -73,6 +73,14 @@ public class UpdateJobShrinkRequest extends TeaModel {
         }
         public String getAppCode() {
             return this.appCode;
+        }
+
+        public UpdateJobShrinkRequestActiveJobDTO setAppVersion(String appVersion) {
+            this.appVersion = appVersion;
+            return this;
+        }
+        public String getAppVersion() {
+            return this.appVersion;
         }
 
         public UpdateJobShrinkRequestActiveJobDTO setConfig(String config) {
@@ -137,14 +145,6 @@ public class UpdateJobShrinkRequest extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
-        }
-
-        public UpdateJobShrinkRequestActiveJobDTO setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
         }
 
     }

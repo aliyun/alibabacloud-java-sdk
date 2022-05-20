@@ -7,6 +7,9 @@ public class GetActiveGroupRequest extends TeaModel {
     @NameInMap("AppCode")
     public String appCode;
 
+    @NameInMap("AppVersion")
+    public String appVersion;
+
     @NameInMap("GroupId")
     public Long groupId;
 
@@ -21,9 +24,6 @@ public class GetActiveGroupRequest extends TeaModel {
     @NameInMap("UserProfile")
     public GetActiveGroupRequestUserProfile userProfile;
 
-    @NameInMap("Version")
-    public String version;
-
     public static GetActiveGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         GetActiveGroupRequest self = new GetActiveGroupRequest();
         return TeaModel.build(map, self);
@@ -35,6 +35,14 @@ public class GetActiveGroupRequest extends TeaModel {
     }
     public String getAppCode() {
         return this.appCode;
+    }
+
+    public GetActiveGroupRequest setAppVersion(String appVersion) {
+        this.appVersion = appVersion;
+        return this;
+    }
+    public String getAppVersion() {
+        return this.appVersion;
     }
 
     public GetActiveGroupRequest setGroupId(Long groupId) {
@@ -67,14 +75,6 @@ public class GetActiveGroupRequest extends TeaModel {
     }
     public GetActiveGroupRequestUserProfile getUserProfile() {
         return this.userProfile;
-    }
-
-    public GetActiveGroupRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public static class GetActiveGroupRequestUserProfile extends TeaModel {
