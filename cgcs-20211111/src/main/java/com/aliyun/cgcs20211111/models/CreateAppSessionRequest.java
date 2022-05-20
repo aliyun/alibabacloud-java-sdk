@@ -24,6 +24,9 @@ public class CreateAppSessionRequest extends TeaModel {
     @NameInMap("CustomUserId")
     public String customUserId;
 
+    @NameInMap("EnablePostpaid")
+    public Boolean enablePostpaid;
+
     // 启动参数
     @NameInMap("StartParameters")
     public java.util.List<CreateAppSessionRequestStartParameters> startParameters;
@@ -31,6 +34,9 @@ public class CreateAppSessionRequest extends TeaModel {
     // 系统信息：如端侧机型等信息
     @NameInMap("SystemInfo")
     public java.util.List<CreateAppSessionRequestSystemInfo> systemInfo;
+
+    @NameInMap("Timeout")
+    public Long timeout;
 
     public static CreateAppSessionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppSessionRequest self = new CreateAppSessionRequest();
@@ -77,6 +83,14 @@ public class CreateAppSessionRequest extends TeaModel {
         return this.customUserId;
     }
 
+    public CreateAppSessionRequest setEnablePostpaid(Boolean enablePostpaid) {
+        this.enablePostpaid = enablePostpaid;
+        return this;
+    }
+    public Boolean getEnablePostpaid() {
+        return this.enablePostpaid;
+    }
+
     public CreateAppSessionRequest setStartParameters(java.util.List<CreateAppSessionRequestStartParameters> startParameters) {
         this.startParameters = startParameters;
         return this;
@@ -91,6 +105,14 @@ public class CreateAppSessionRequest extends TeaModel {
     }
     public java.util.List<CreateAppSessionRequestSystemInfo> getSystemInfo() {
         return this.systemInfo;
+    }
+
+    public CreateAppSessionRequest setTimeout(Long timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Long getTimeout() {
+        return this.timeout;
     }
 
     public static class CreateAppSessionRequestStartParameters extends TeaModel {

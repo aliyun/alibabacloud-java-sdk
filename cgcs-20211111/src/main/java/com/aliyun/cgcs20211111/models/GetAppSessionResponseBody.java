@@ -24,9 +24,6 @@ public class GetAppSessionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ScheduleInfo")
-    public java.util.List<GetAppSessionResponseBodyScheduleInfo> scheduleInfo;
-
     // 状态
     @NameInMap("Status")
     public String status;
@@ -76,51 +73,12 @@ public class GetAppSessionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetAppSessionResponseBody setScheduleInfo(java.util.List<GetAppSessionResponseBodyScheduleInfo> scheduleInfo) {
-        this.scheduleInfo = scheduleInfo;
-        return this;
-    }
-    public java.util.List<GetAppSessionResponseBodyScheduleInfo> getScheduleInfo() {
-        return this.scheduleInfo;
-    }
-
     public GetAppSessionResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public static class GetAppSessionResponseBodyScheduleInfo extends TeaModel {
-        // key数值，枚举有多个数值，例如： RegionId 大区id ServerIp 服务端 IP ServerPort 端口
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static GetAppSessionResponseBodyScheduleInfo build(java.util.Map<String, ?> map) throws Exception {
-            GetAppSessionResponseBodyScheduleInfo self = new GetAppSessionResponseBodyScheduleInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAppSessionResponseBodyScheduleInfo setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public GetAppSessionResponseBodyScheduleInfo setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
     }
 
 }
