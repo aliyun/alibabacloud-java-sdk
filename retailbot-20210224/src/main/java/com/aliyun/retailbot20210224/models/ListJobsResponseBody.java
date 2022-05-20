@@ -69,6 +69,9 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("AppCode")
         public String appCode;
 
+        @NameInMap("AppVersion")
+        public String appVersion;
+
         @NameInMap("Config")
         public String config;
 
@@ -103,9 +106,6 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("TenantId")
         public Long tenantId;
 
-        @NameInMap("Version")
-        public String version;
-
         public static ListJobsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListJobsResponseBodyData self = new ListJobsResponseBodyData();
             return TeaModel.build(map, self);
@@ -117,6 +117,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public String getAppCode() {
             return this.appCode;
+        }
+
+        public ListJobsResponseBodyData setAppVersion(String appVersion) {
+            this.appVersion = appVersion;
+            return this;
+        }
+        public String getAppVersion() {
+            return this.appVersion;
         }
 
         public ListJobsResponseBodyData setConfig(String config) {
@@ -205,14 +213,6 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public Long getTenantId() {
             return this.tenantId;
-        }
-
-        public ListJobsResponseBodyData setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
         }
 
     }

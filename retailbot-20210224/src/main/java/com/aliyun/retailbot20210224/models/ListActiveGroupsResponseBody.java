@@ -70,6 +70,9 @@ public class ListActiveGroupsResponseBody extends TeaModel {
         @NameInMap("AppCode")
         public String appCode;
 
+        @NameInMap("AppVersion")
+        public String appVersion;
+
         @NameInMap("Config")
         public String config;
 
@@ -97,9 +100,6 @@ public class ListActiveGroupsResponseBody extends TeaModel {
         @NameInMap("ShopId")
         public String shopId;
 
-        @NameInMap("Version")
-        public String version;
-
         public static ListActiveGroupsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListActiveGroupsResponseBodyData self = new ListActiveGroupsResponseBodyData();
             return TeaModel.build(map, self);
@@ -111,6 +111,14 @@ public class ListActiveGroupsResponseBody extends TeaModel {
         }
         public String getAppCode() {
             return this.appCode;
+        }
+
+        public ListActiveGroupsResponseBodyData setAppVersion(String appVersion) {
+            this.appVersion = appVersion;
+            return this;
+        }
+        public String getAppVersion() {
+            return this.appVersion;
         }
 
         public ListActiveGroupsResponseBodyData setConfig(String config) {
@@ -183,14 +191,6 @@ public class ListActiveGroupsResponseBody extends TeaModel {
         }
         public String getShopId() {
             return this.shopId;
-        }
-
-        public ListActiveGroupsResponseBodyData setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
         }
 
     }

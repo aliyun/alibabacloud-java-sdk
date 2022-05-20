@@ -7,6 +7,9 @@ public class GetJobRequest extends TeaModel {
     @NameInMap("AppCode")
     public String appCode;
 
+    @NameInMap("AppVersion")
+    public String appVersion;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,9 +22,6 @@ public class GetJobRequest extends TeaModel {
     @NameInMap("UserProfile")
     public GetJobRequestUserProfile userProfile;
 
-    @NameInMap("Version")
-    public String version;
-
     public static GetJobRequest build(java.util.Map<String, ?> map) throws Exception {
         GetJobRequest self = new GetJobRequest();
         return TeaModel.build(map, self);
@@ -33,6 +33,14 @@ public class GetJobRequest extends TeaModel {
     }
     public String getAppCode() {
         return this.appCode;
+    }
+
+    public GetJobRequest setAppVersion(String appVersion) {
+        this.appVersion = appVersion;
+        return this;
+    }
+    public String getAppVersion() {
+        return this.appVersion;
     }
 
     public GetJobRequest setInstanceId(String instanceId) {
@@ -65,14 +73,6 @@ public class GetJobRequest extends TeaModel {
     }
     public GetJobRequestUserProfile getUserProfile() {
         return this.userProfile;
-    }
-
-    public GetJobRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public static class GetJobRequestUserProfile extends TeaModel {

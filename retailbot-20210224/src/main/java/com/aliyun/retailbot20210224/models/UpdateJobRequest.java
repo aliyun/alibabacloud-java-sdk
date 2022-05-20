@@ -35,6 +35,9 @@ public class UpdateJobRequest extends TeaModel {
         @NameInMap("AppCode")
         public String appCode;
 
+        @NameInMap("AppVersion")
+        public String appVersion;
+
         @NameInMap("Config")
         public String config;
 
@@ -59,9 +62,6 @@ public class UpdateJobRequest extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
-        @NameInMap("Version")
-        public String version;
-
         public static UpdateJobRequestActiveJobDTO build(java.util.Map<String, ?> map) throws Exception {
             UpdateJobRequestActiveJobDTO self = new UpdateJobRequestActiveJobDTO();
             return TeaModel.build(map, self);
@@ -73,6 +73,14 @@ public class UpdateJobRequest extends TeaModel {
         }
         public String getAppCode() {
             return this.appCode;
+        }
+
+        public UpdateJobRequestActiveJobDTO setAppVersion(String appVersion) {
+            this.appVersion = appVersion;
+            return this;
+        }
+        public String getAppVersion() {
+            return this.appVersion;
         }
 
         public UpdateJobRequestActiveJobDTO setConfig(String config) {
@@ -137,14 +145,6 @@ public class UpdateJobRequest extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
-        }
-
-        public UpdateJobRequestActiveJobDTO setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
         }
 
     }

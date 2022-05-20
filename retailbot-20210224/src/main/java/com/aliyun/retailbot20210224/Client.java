@@ -534,6 +534,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createUserAccessTokenWithOptions(request, runtime);
     }
 
+    public DeleteBlackEntryResponse deleteBlackEntryWithOptions(DeleteBlackEntryRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.blackEntryId)) {
+            body.put("BlackEntryId", request.blackEntryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.robotCode)) {
+            body.put("RobotCode", request.robotCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slotId)) {
+            body.put("SlotId", request.slotId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteBlackEntry"),
+            new TeaPair("version", "2021-02-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteBlackEntryResponse());
+    }
+
+    public DeleteBlackEntryResponse deleteBlackEntry(DeleteBlackEntryRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteBlackEntryWithOptions(request, runtime);
+    }
+
     public DeleteCoreEntryResponse deleteCoreEntryWithOptions(DeleteCoreEntryRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DeleteCoreEntryShrinkRequest request = new DeleteCoreEntryShrinkRequest();
@@ -1309,6 +1346,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppCode", request.appCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.appVersion)) {
+            query.put("AppVersion", request.appVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -1319,10 +1360,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.userProfileShrink)) {
             query.put("UserProfile", request.userProfileShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
-            query.put("Version", request.version);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

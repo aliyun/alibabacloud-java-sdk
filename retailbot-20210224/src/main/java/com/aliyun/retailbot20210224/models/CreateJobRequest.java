@@ -35,6 +35,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("AppCode")
         public String appCode;
 
+        @NameInMap("AppVersion")
+        public String appVersion;
+
         @NameInMap("Config")
         public String config;
 
@@ -53,9 +56,6 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("StartTime")
         public Long startTime;
 
-        @NameInMap("Version")
-        public String version;
-
         public static CreateJobRequestActiveJobDTO build(java.util.Map<String, ?> map) throws Exception {
             CreateJobRequestActiveJobDTO self = new CreateJobRequestActiveJobDTO();
             return TeaModel.build(map, self);
@@ -67,6 +67,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public String getAppCode() {
             return this.appCode;
+        }
+
+        public CreateJobRequestActiveJobDTO setAppVersion(String appVersion) {
+            this.appVersion = appVersion;
+            return this;
+        }
+        public String getAppVersion() {
+            return this.appVersion;
         }
 
         public CreateJobRequestActiveJobDTO setConfig(String config) {
@@ -115,14 +123,6 @@ public class CreateJobRequest extends TeaModel {
         }
         public Long getStartTime() {
             return this.startTime;
-        }
-
-        public CreateJobRequestActiveJobDTO setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
         }
 
     }
