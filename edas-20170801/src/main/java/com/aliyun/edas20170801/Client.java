@@ -14,6 +14,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(Config config) throws Exception {
         super(config);
+        this._signatureAlgorithm = "v2";
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-2-pop", "edas.ap-northeast-1.aliyuncs.com"),
@@ -1615,6 +1616,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeployK8sApplicationResponse deployK8sApplicationWithOptions(DeployK8sApplicationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.annotations)) {
+            query.put("Annotations", request.annotations);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
         }
@@ -1683,6 +1688,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableAhas", request.enableAhas);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableEmptyPushReject)) {
+            query.put("EnableEmptyPushReject", request.enableEmptyPushReject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableLosslessRule)) {
+            query.put("EnableLosslessRule", request.enableLosslessRule);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.envFroms)) {
             query.put("EnvFroms", request.envFroms);
         }
@@ -1707,12 +1720,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JavaStartUpConfig", request.javaStartUpConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
+            query.put("Labels", request.labels);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.liveness)) {
             query.put("Liveness", request.liveness);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.localVolume)) {
             query.put("LocalVolume", request.localVolume);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.losslessRuleAligned)) {
+            query.put("LosslessRuleAligned", request.losslessRuleAligned);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.losslessRuleDelayTime)) {
+            query.put("LosslessRuleDelayTime", request.losslessRuleDelayTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.losslessRuleFuncType)) {
+            query.put("LosslessRuleFuncType", request.losslessRuleFuncType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.losslessRuleRelated)) {
+            query.put("LosslessRuleRelated", request.losslessRuleRelated);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.losslessRuleWarmupTime)) {
+            query.put("LosslessRuleWarmupTime", request.losslessRuleWarmupTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.mcpuLimit)) {
@@ -3318,6 +3355,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InsertK8sApplicationResponse insertK8sApplicationWithOptions(InsertK8sApplicationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.annotations)) {
+            query.put("Annotations", request.annotations);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             query.put("AppName", request.appName);
         }
@@ -3382,6 +3423,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableAsm", request.enableAsm);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableEmptyPushReject)) {
+            query.put("EnableEmptyPushReject", request.enableEmptyPushReject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableLosslessRule)) {
+            query.put("EnableLosslessRule", request.enableLosslessRule);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.envFroms)) {
             query.put("EnvFroms", request.envFroms);
         }
@@ -3438,6 +3487,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JavaStartUpConfig", request.javaStartUpConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
+            query.put("Labels", request.labels);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.limitCpu)) {
             query.put("LimitCpu", request.limitCpu);
         }
@@ -3460,6 +3513,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.logicalRegionId)) {
             query.put("LogicalRegionId", request.logicalRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.losslessRuleAligned)) {
+            query.put("LosslessRuleAligned", request.losslessRuleAligned);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.losslessRuleDelayTime)) {
+            query.put("LosslessRuleDelayTime", request.losslessRuleDelayTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.losslessRuleFuncType)) {
+            query.put("LosslessRuleFuncType", request.losslessRuleFuncType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.losslessRuleRelated)) {
+            query.put("LosslessRuleRelated", request.losslessRuleRelated);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.losslessRuleWarmupTime)) {
+            query.put("LosslessRuleWarmupTime", request.losslessRuleWarmupTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.mountDescs)) {

@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DeployK8sApplicationRequest extends TeaModel {
+    @NameInMap("Annotations")
+    public String annotations;
+
     @NameInMap("AppId")
     public String appId;
 
@@ -55,6 +58,14 @@ public class DeployK8sApplicationRequest extends TeaModel {
     @NameInMap("EnableAhas")
     public Boolean enableAhas;
 
+    // 是否开启推空保护
+    @NameInMap("EnableEmptyPushReject")
+    public Boolean enableEmptyPushReject;
+
+    // 是否启用无损上线规则
+    @NameInMap("EnableLosslessRule")
+    public Boolean enableLosslessRule;
+
     @NameInMap("EnvFroms")
     public String envFroms;
 
@@ -73,11 +84,34 @@ public class DeployK8sApplicationRequest extends TeaModel {
     @NameInMap("JavaStartUpConfig")
     public String javaStartUpConfig;
 
+    @NameInMap("Labels")
+    public String labels;
+
     @NameInMap("Liveness")
     public String liveness;
 
     @NameInMap("LocalVolume")
     public String localVolume;
+
+    // 是否启用无损滚动发布模式配置通过就绪检查前完成服务注册
+    @NameInMap("LosslessRuleAligned")
+    public Boolean losslessRuleAligned;
+
+    // 无损上线延迟注册时长
+    @NameInMap("LosslessRuleDelayTime")
+    public Integer losslessRuleDelayTime;
+
+    // 无损上线服务预热曲线
+    @NameInMap("LosslessRuleFuncType")
+    public Integer losslessRuleFuncType;
+
+    // 是否启用无损滚动发布模式配置通过就绪检查前完成服务预热
+    @NameInMap("LosslessRuleRelated")
+    public Boolean losslessRuleRelated;
+
+    // 无损上线服务预热时长
+    @NameInMap("LosslessRuleWarmupTime")
+    public Integer losslessRuleWarmupTime;
 
     @NameInMap("McpuLimit")
     public Integer mcpuLimit;
@@ -154,6 +188,14 @@ public class DeployK8sApplicationRequest extends TeaModel {
     public static DeployK8sApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         DeployK8sApplicationRequest self = new DeployK8sApplicationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeployK8sApplicationRequest setAnnotations(String annotations) {
+        this.annotations = annotations;
+        return this;
+    }
+    public String getAnnotations() {
+        return this.annotations;
     }
 
     public DeployK8sApplicationRequest setAppId(String appId) {
@@ -292,6 +334,22 @@ public class DeployK8sApplicationRequest extends TeaModel {
         return this.enableAhas;
     }
 
+    public DeployK8sApplicationRequest setEnableEmptyPushReject(Boolean enableEmptyPushReject) {
+        this.enableEmptyPushReject = enableEmptyPushReject;
+        return this;
+    }
+    public Boolean getEnableEmptyPushReject() {
+        return this.enableEmptyPushReject;
+    }
+
+    public DeployK8sApplicationRequest setEnableLosslessRule(Boolean enableLosslessRule) {
+        this.enableLosslessRule = enableLosslessRule;
+        return this;
+    }
+    public Boolean getEnableLosslessRule() {
+        return this.enableLosslessRule;
+    }
+
     public DeployK8sApplicationRequest setEnvFroms(String envFroms) {
         this.envFroms = envFroms;
         return this;
@@ -340,6 +398,14 @@ public class DeployK8sApplicationRequest extends TeaModel {
         return this.javaStartUpConfig;
     }
 
+    public DeployK8sApplicationRequest setLabels(String labels) {
+        this.labels = labels;
+        return this;
+    }
+    public String getLabels() {
+        return this.labels;
+    }
+
     public DeployK8sApplicationRequest setLiveness(String liveness) {
         this.liveness = liveness;
         return this;
@@ -354,6 +420,46 @@ public class DeployK8sApplicationRequest extends TeaModel {
     }
     public String getLocalVolume() {
         return this.localVolume;
+    }
+
+    public DeployK8sApplicationRequest setLosslessRuleAligned(Boolean losslessRuleAligned) {
+        this.losslessRuleAligned = losslessRuleAligned;
+        return this;
+    }
+    public Boolean getLosslessRuleAligned() {
+        return this.losslessRuleAligned;
+    }
+
+    public DeployK8sApplicationRequest setLosslessRuleDelayTime(Integer losslessRuleDelayTime) {
+        this.losslessRuleDelayTime = losslessRuleDelayTime;
+        return this;
+    }
+    public Integer getLosslessRuleDelayTime() {
+        return this.losslessRuleDelayTime;
+    }
+
+    public DeployK8sApplicationRequest setLosslessRuleFuncType(Integer losslessRuleFuncType) {
+        this.losslessRuleFuncType = losslessRuleFuncType;
+        return this;
+    }
+    public Integer getLosslessRuleFuncType() {
+        return this.losslessRuleFuncType;
+    }
+
+    public DeployK8sApplicationRequest setLosslessRuleRelated(Boolean losslessRuleRelated) {
+        this.losslessRuleRelated = losslessRuleRelated;
+        return this;
+    }
+    public Boolean getLosslessRuleRelated() {
+        return this.losslessRuleRelated;
+    }
+
+    public DeployK8sApplicationRequest setLosslessRuleWarmupTime(Integer losslessRuleWarmupTime) {
+        this.losslessRuleWarmupTime = losslessRuleWarmupTime;
+        return this;
+    }
+    public Integer getLosslessRuleWarmupTime() {
+        return this.losslessRuleWarmupTime;
     }
 
     public DeployK8sApplicationRequest setMcpuLimit(Integer mcpuLimit) {
