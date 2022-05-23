@@ -8,6 +8,10 @@ public class ListK8sSecretsResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public ListK8sSecretsResponseBody body;
@@ -23,6 +27,14 @@ public class ListK8sSecretsResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public ListK8sSecretsResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public ListK8sSecretsResponse setBody(ListK8sSecretsResponseBody body) {
