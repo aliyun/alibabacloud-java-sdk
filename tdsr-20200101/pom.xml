@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>tdsr20200101</artifactId>
-  <version>3.1.0</version>
+  <version>3.1.1</version>
   <packaging>jar</packaging>
   <name>tdsr20200101</name>
   <description>Alibaba Cloud 3D space reconstruction (20200101) SDK for Java
@@ -57,7 +57,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>endpoint-util</artifactId>
-      <version>0.0.6</version>
+      <version>0.0.7</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
