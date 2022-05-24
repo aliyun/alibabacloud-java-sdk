@@ -7,6 +7,12 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
+    @NameInMap("AutoRenewDuration")
+    public Integer autoRenewDuration;
+
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
 
@@ -57,6 +63,22 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    public CreateBandwidthPackageRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    public CreateBandwidthPackageRequest setAutoRenewDuration(Integer autoRenewDuration) {
+        this.autoRenewDuration = autoRenewDuration;
+        return this;
+    }
+    public Integer getAutoRenewDuration() {
+        return this.autoRenewDuration;
     }
 
     public CreateBandwidthPackageRequest setAutoUseCoupon(String autoUseCoupon) {

@@ -3,7 +3,7 @@ package com.aliyun.ga20191120.models;
 
 import com.aliyun.tea.*;
 
-public class ListApplicationMonitorResponse extends TeaModel {
+public class UpdateBandwidthPackagaAutoRenewAttributeResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListApplicationMonitorResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListApplicationMonitorResponseBody body;
+    public UpdateBandwidthPackagaAutoRenewAttributeResponseBody body;
 
-    public static ListApplicationMonitorResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListApplicationMonitorResponse self = new ListApplicationMonitorResponse();
+    public static UpdateBandwidthPackagaAutoRenewAttributeResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateBandwidthPackagaAutoRenewAttributeResponse self = new UpdateBandwidthPackagaAutoRenewAttributeResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListApplicationMonitorResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateBandwidthPackagaAutoRenewAttributeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListApplicationMonitorResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListApplicationMonitorResponse setStatusCode(Integer statusCode) {
+    public UpdateBandwidthPackagaAutoRenewAttributeResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListApplicationMonitorResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListApplicationMonitorResponse setBody(ListApplicationMonitorResponseBody body) {
+    public UpdateBandwidthPackagaAutoRenewAttributeResponse setBody(UpdateBandwidthPackagaAutoRenewAttributeResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListApplicationMonitorResponseBody getBody() {
+    public UpdateBandwidthPackagaAutoRenewAttributeResponseBody getBody() {
         return this.body;
     }
 
