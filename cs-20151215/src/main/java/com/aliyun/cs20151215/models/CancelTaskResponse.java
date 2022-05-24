@@ -3,7 +3,7 @@ package com.aliyun.cs20151215.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteAlertContactGroupResponse extends TeaModel {
+public class CancelTaskResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -12,12 +12,12 @@ public class DeleteAlertContactGroupResponse extends TeaModel {
     @Validation(required = true)
     public Integer statusCode;
 
-    public static DeleteAlertContactGroupResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteAlertContactGroupResponse self = new DeleteAlertContactGroupResponse();
+    public static CancelTaskResponse build(java.util.Map<String, ?> map) throws Exception {
+        CancelTaskResponse self = new CancelTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAlertContactGroupResponse setHeaders(java.util.Map<String, String> headers) {
+    public CancelTaskResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,7 +25,7 @@ public class DeleteAlertContactGroupResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteAlertContactGroupResponse setStatusCode(Integer statusCode) {
+    public CancelTaskResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }

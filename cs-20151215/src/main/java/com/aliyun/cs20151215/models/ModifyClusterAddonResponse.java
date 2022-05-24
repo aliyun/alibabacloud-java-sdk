@@ -8,6 +8,10 @@ public class ModifyClusterAddonResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     public static ModifyClusterAddonResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterAddonResponse self = new ModifyClusterAddonResponse();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class ModifyClusterAddonResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public ModifyClusterAddonResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
 }
