@@ -8,6 +8,10 @@ public class PauseComponentUpgradeResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     public static PauseComponentUpgradeResponse build(java.util.Map<String, ?> map) throws Exception {
         PauseComponentUpgradeResponse self = new PauseComponentUpgradeResponse();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class PauseComponentUpgradeResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public PauseComponentUpgradeResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
 }

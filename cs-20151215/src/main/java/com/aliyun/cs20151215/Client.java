@@ -200,6 +200,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelComponentUpgradeResponse());
     }
 
+    public CancelTaskResponse cancelTask(String taskId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.cancelTaskWithOptions(taskId, headers, runtime);
+    }
+
+    public CancelTaskResponse cancelTaskWithOptions(String taskId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        taskId = com.aliyun.openapiutil.Client.getEncodeParam(taskId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelTask"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/tasks/" + taskId + "/cancel"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelTaskResponse());
+    }
+
     public CancelWorkflowResponse cancelWorkflow(String workflowName, CancelWorkflowRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2048,6 +2073,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeKubernetesVersionMetadataResponse());
     }
 
+    public DescribeNodePoolVulsResponse describeNodePoolVuls(String clusterId, String nodepoolId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeNodePoolVulsWithOptions(clusterId, nodepoolId, headers, runtime);
+    }
+
+    public DescribeNodePoolVulsResponse describeNodePoolVulsWithOptions(String clusterId, String nodepoolId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
+        nodepoolId = com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNodePoolVuls"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + clusterId + "/nodepools/" + nodepoolId + "/vuls"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNodePoolVulsResponse());
+    }
+
     public DescribePoliciesResponse describePolicies() throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2435,6 +2486,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new EdgeClusterAddEdgeMachineResponse());
+    }
+
+    public FixNodePoolVulsResponse fixNodePoolVuls(String clusterId, String nodepoolId, FixNodePoolVulsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.fixNodePoolVulsWithOptions(clusterId, nodepoolId, request, headers, runtime);
+    }
+
+    public FixNodePoolVulsResponse fixNodePoolVulsWithOptions(String clusterId, String nodepoolId, FixNodePoolVulsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
+        nodepoolId = com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nodes)) {
+            body.put("nodes", request.nodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.rolloutPolicy))) {
+            body.put("rollout_policy", request.rolloutPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vulList)) {
+            body.put("vul_list", request.vulList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FixNodePoolVuls"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + clusterId + "/nodepools/" + nodepoolId + "/vuls/fix"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FixNodePoolVulsResponse());
     }
 
     public GetKubernetesTriggerResponse getKubernetesTrigger(String ClusterId, GetKubernetesTriggerRequest request) throws Exception {
@@ -2982,6 +3074,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PauseComponentUpgradeResponse());
     }
 
+    public PauseTaskResponse pauseTask(String taskId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.pauseTaskWithOptions(taskId, headers, runtime);
+    }
+
+    public PauseTaskResponse pauseTaskWithOptions(String taskId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        taskId = com.aliyun.openapiutil.Client.getEncodeParam(taskId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PauseTask"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/tasks/" + taskId + "/pause"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PauseTaskResponse());
+    }
+
     public RemoveClusterNodesResponse removeClusterNodes(String ClusterId, RemoveClusterNodesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3104,6 +3221,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeComponentUpgradeResponse());
+    }
+
+    public ResumeTaskResponse resumeTask(String taskId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.resumeTaskWithOptions(taskId, headers, runtime);
+    }
+
+    public ResumeTaskResponse resumeTaskWithOptions(String taskId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        taskId = com.aliyun.openapiutil.Client.getEncodeParam(taskId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResumeTask"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/tasks/" + taskId + "/resume"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeTaskResponse());
     }
 
     public ResumeUpgradeClusterResponse resumeUpgradeCluster(String ClusterId) throws Exception {
