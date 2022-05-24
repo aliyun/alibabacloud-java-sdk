@@ -4,6 +4,9 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationShrinkRequest extends TeaModel {
+    @NameInMap("ApplicationParams")
+    public String applicationParamsShrink;
+
     // 区域ID
     @NameInMap("AreaId")
     public String areaId;
@@ -28,9 +31,20 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    @NameInMap("Variables")
+    public String variables;
+
     public static CreateApplicationShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationShrinkRequest self = new CreateApplicationShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateApplicationShrinkRequest setApplicationParamsShrink(String applicationParamsShrink) {
+        this.applicationParamsShrink = applicationParamsShrink;
+        return this;
+    }
+    public String getApplicationParamsShrink() {
+        return this.applicationParamsShrink;
     }
 
     public CreateApplicationShrinkRequest setAreaId(String areaId) {
@@ -79,6 +93,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public CreateApplicationShrinkRequest setVariables(String variables) {
+        this.variables = variables;
+        return this;
+    }
+    public String getVariables() {
+        return this.variables;
     }
 
 }
