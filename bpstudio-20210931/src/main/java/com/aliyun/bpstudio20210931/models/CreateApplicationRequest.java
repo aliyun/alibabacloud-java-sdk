@@ -4,6 +4,9 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
+    @NameInMap("ApplicationParams")
+    public java.util.Map<String, ?> applicationParams;
+
     // 区域ID
     @NameInMap("AreaId")
     public String areaId;
@@ -28,9 +31,20 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    @NameInMap("Variables")
+    public String variables;
+
     public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationRequest self = new CreateApplicationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateApplicationRequest setApplicationParams(java.util.Map<String, ?> applicationParams) {
+        this.applicationParams = applicationParams;
+        return this;
+    }
+    public java.util.Map<String, ?> getApplicationParams() {
+        return this.applicationParams;
     }
 
     public CreateApplicationRequest setAreaId(String areaId) {
@@ -79,6 +93,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public CreateApplicationRequest setVariables(String variables) {
+        this.variables = variables;
+        return this;
+    }
+    public String getVariables() {
+        return this.variables;
     }
 
     public static class CreateApplicationRequestInstances extends TeaModel {
