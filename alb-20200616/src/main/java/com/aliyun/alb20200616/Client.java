@@ -508,6 +508,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AddressAllocatedMode", request.addressAllocatedMode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.addressIpVersion)) {
+            query.put("AddressIpVersion", request.addressIpVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.addressType)) {
             query.put("AddressType", request.addressType);
         }
