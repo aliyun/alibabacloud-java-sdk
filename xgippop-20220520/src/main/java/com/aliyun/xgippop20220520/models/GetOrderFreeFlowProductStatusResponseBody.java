@@ -3,13 +3,13 @@ package com.aliyun.xgippop20220520.models;
 
 import com.aliyun.tea.*;
 
-public class GetFreeFlowProductListResponseBody extends TeaModel {
+public class GetOrderFreeFlowProductStatusResponseBody extends TeaModel {
     // 结果码
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
-    public String data;
+    public java.util.List<java.util.Map<String, ?>> data;
 
     // 结果描述
     @NameInMap("Message")
@@ -27,12 +27,12 @@ public class GetFreeFlowProductListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static GetFreeFlowProductListResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetFreeFlowProductListResponseBody self = new GetFreeFlowProductListResponseBody();
+    public static GetOrderFreeFlowProductStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetOrderFreeFlowProductStatusResponseBody self = new GetOrderFreeFlowProductStatusResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetFreeFlowProductListResponseBody setCode(String code) {
+    public GetOrderFreeFlowProductStatusResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -40,15 +40,15 @@ public class GetFreeFlowProductListResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetFreeFlowProductListResponseBody setData(String data) {
+    public GetOrderFreeFlowProductStatusResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public java.util.List<java.util.Map<String, ?>> getData() {
         return this.data;
     }
 
-    public GetFreeFlowProductListResponseBody setMessage(String message) {
+    public GetOrderFreeFlowProductStatusResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -56,7 +56,7 @@ public class GetFreeFlowProductListResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetFreeFlowProductListResponseBody setRequestId(String requestId) {
+    public GetOrderFreeFlowProductStatusResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -64,7 +64,7 @@ public class GetFreeFlowProductListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetFreeFlowProductListResponseBody setRt(Long rt) {
+    public GetOrderFreeFlowProductStatusResponseBody setRt(Long rt) {
         this.rt = rt;
         return this;
     }
@@ -72,7 +72,7 @@ public class GetFreeFlowProductListResponseBody extends TeaModel {
         return this.rt;
     }
 
-    public GetFreeFlowProductListResponseBody setSuccess(Boolean success) {
+    public GetOrderFreeFlowProductStatusResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
