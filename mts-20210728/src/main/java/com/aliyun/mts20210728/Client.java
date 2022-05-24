@@ -371,6 +371,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("UserData", request.userData);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.visibleMessage)) {
+            body.put("VisibleMessage", request.visibleMessage);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))

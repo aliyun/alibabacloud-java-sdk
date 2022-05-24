@@ -44,6 +44,10 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     @NameInMap("UserData")
     public String userData;
 
+    // 可见水印(必须是英文字符)
+    @NameInMap("VisibleMessage")
+    public String visibleMessage;
+
     public static SubmitCopyrightJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitCopyrightJobRequest self = new SubmitCopyrightJobRequest();
         return TeaModel.build(map, self);
@@ -127,6 +131,14 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
+    }
+
+    public SubmitCopyrightJobRequest setVisibleMessage(String visibleMessage) {
+        this.visibleMessage = visibleMessage;
+        return this;
+    }
+    public String getVisibleMessage() {
+        return this.visibleMessage;
     }
 
 }
