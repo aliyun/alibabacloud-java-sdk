@@ -8,6 +8,10 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("AddressAllocatedMode")
     public String addressAllocatedMode;
 
+    // 协议版本
+    @NameInMap("AddressIpVersion")
+    public String addressIpVersion;
+
     // 负载均衡的地址类型
     @NameInMap("AddressType")
     public String addressType;
@@ -63,6 +67,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
     public String getAddressAllocatedMode() {
         return this.addressAllocatedMode;
+    }
+
+    public CreateLoadBalancerRequest setAddressIpVersion(String addressIpVersion) {
+        this.addressIpVersion = addressIpVersion;
+        return this;
+    }
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
     }
 
     public CreateLoadBalancerRequest setAddressType(String addressType) {

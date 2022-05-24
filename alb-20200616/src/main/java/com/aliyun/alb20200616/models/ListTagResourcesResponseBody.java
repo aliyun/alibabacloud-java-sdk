@@ -20,10 +20,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
-    // 总记录数
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     public static ListTagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesResponseBody self = new ListTagResourcesResponseBody();
         return TeaModel.build(map, self);
@@ -59,14 +55,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
     public java.util.List<ListTagResourcesResponseBodyTagResources> getTagResources() {
         return this.tagResources;
-    }
-
-    public ListTagResourcesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
