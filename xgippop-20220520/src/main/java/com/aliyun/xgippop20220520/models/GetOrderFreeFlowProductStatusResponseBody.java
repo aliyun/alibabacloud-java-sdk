@@ -9,7 +9,7 @@ public class GetOrderFreeFlowProductStatusResponseBody extends TeaModel {
     public String code;
 
     @NameInMap("Data")
-    public java.util.List<java.util.Map<String, ?>> data;
+    public GetOrderFreeFlowProductStatusResponseBodyData data;
 
     // 结果描述
     @NameInMap("Message")
@@ -40,11 +40,11 @@ public class GetOrderFreeFlowProductStatusResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetOrderFreeFlowProductStatusResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
+    public GetOrderFreeFlowProductStatusResponseBody setData(GetOrderFreeFlowProductStatusResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<java.util.Map<String, ?>> getData() {
+    public GetOrderFreeFlowProductStatusResponseBodyData getData() {
         return this.data;
     }
 
@@ -78,6 +78,61 @@ public class GetOrderFreeFlowProductStatusResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class GetOrderFreeFlowProductStatusResponseBodyData extends TeaModel {
+        // C端免流订单ID
+        @NameInMap("CustomerFlowOrderId")
+        public String customerFlowOrderId;
+
+        @NameInMap("CustomerFlowRequestId")
+        public String customerFlowRequestId;
+
+        // status为fail时，描述fail的具体原因
+        @NameInMap("Error")
+        public String error;
+
+        // 执行中ordering、成功success、失败fail
+        @NameInMap("Status")
+        public String status;
+
+        public static GetOrderFreeFlowProductStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetOrderFreeFlowProductStatusResponseBodyData self = new GetOrderFreeFlowProductStatusResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetOrderFreeFlowProductStatusResponseBodyData setCustomerFlowOrderId(String customerFlowOrderId) {
+            this.customerFlowOrderId = customerFlowOrderId;
+            return this;
+        }
+        public String getCustomerFlowOrderId() {
+            return this.customerFlowOrderId;
+        }
+
+        public GetOrderFreeFlowProductStatusResponseBodyData setCustomerFlowRequestId(String customerFlowRequestId) {
+            this.customerFlowRequestId = customerFlowRequestId;
+            return this;
+        }
+        public String getCustomerFlowRequestId() {
+            return this.customerFlowRequestId;
+        }
+
+        public GetOrderFreeFlowProductStatusResponseBodyData setError(String error) {
+            this.error = error;
+            return this;
+        }
+        public String getError() {
+            return this.error;
+        }
+
+        public GetOrderFreeFlowProductStatusResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
 }
