@@ -14,6 +14,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(Config config) throws Exception {
         super(config);
+        this._signatureAlgorithm = "v2";
         this._endpointRule = "central";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dyplsapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -827,6 +828,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreatePickUpWaybillResponse createPickUpWaybill(CreatePickUpWaybillRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createPickUpWaybillWithOptions(request, runtime);
+    }
+
+    public CreatePickUpWaybillPreQueryResponse createPickUpWaybillPreQueryWithOptions(CreatePickUpWaybillPreQueryRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreatePickUpWaybillPreQueryShrinkRequest request = new CreatePickUpWaybillPreQueryShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.consigneeInfo))) {
+            request.consigneeInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.consigneeInfo), "ConsigneeInfo", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.senderInfo))) {
+            request.senderInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.senderInfo), "SenderInfo", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consigneeInfoShrink)) {
+            query.put("ConsigneeInfo", request.consigneeInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpCode)) {
+            query.put("CpCode", request.cpCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderChannels)) {
+            query.put("OrderChannels", request.orderChannels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outerOrderCode)) {
+            query.put("OuterOrderCode", request.outerOrderCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preWeight)) {
+            query.put("PreWeight", request.preWeight);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.senderInfoShrink)) {
+            query.put("SenderInfo", request.senderInfoShrink);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePickUpWaybillPreQuery"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePickUpWaybillPreQueryResponse());
+    }
+
+    public CreatePickUpWaybillPreQueryResponse createPickUpWaybillPreQuery(CreatePickUpWaybillPreQueryRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createPickUpWaybillPreQueryWithOptions(request, runtime);
     }
 
     public DeleteSecretBlacklistResponse deleteSecretBlacklistWithOptions(DeleteSecretBlacklistRequest request, RuntimeOptions runtime) throws Exception {
