@@ -252,10 +252,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
         applicationId = com.aliyun.openapiutil.Client.getEncodeParam(applicationId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
-            query.put("client_id", request.clientId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
             query.put("scope", request.scope);
         }

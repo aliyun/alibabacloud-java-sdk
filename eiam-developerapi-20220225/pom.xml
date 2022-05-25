@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>eiam_developerapi20220225</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>eiam_developerapi20220225</name>
   <description>Alibaba Cloud Eiam-developerapi (20220225) SDK for Java
