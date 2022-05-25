@@ -3,7 +3,7 @@ package com.aliyun.ocr20191230.models;
 
 import com.aliyun.tea.*;
 
-public class TrimDocumentResponse extends TeaModel {
+public class RecognizeTurkeyIdentityCardResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class TrimDocumentResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public TrimDocumentResponseBody body;
+    public RecognizeTurkeyIdentityCardResponseBody body;
 
-    public static TrimDocumentResponse build(java.util.Map<String, ?> map) throws Exception {
-        TrimDocumentResponse self = new TrimDocumentResponse();
+    public static RecognizeTurkeyIdentityCardResponse build(java.util.Map<String, ?> map) throws Exception {
+        RecognizeTurkeyIdentityCardResponse self = new RecognizeTurkeyIdentityCardResponse();
         return TeaModel.build(map, self);
     }
 
-    public TrimDocumentResponse setHeaders(java.util.Map<String, String> headers) {
+    public RecognizeTurkeyIdentityCardResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class TrimDocumentResponse extends TeaModel {
         return this.headers;
     }
 
-    public TrimDocumentResponse setStatusCode(Integer statusCode) {
+    public RecognizeTurkeyIdentityCardResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class TrimDocumentResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public TrimDocumentResponse setBody(TrimDocumentResponseBody body) {
+    public RecognizeTurkeyIdentityCardResponse setBody(RecognizeTurkeyIdentityCardResponseBody body) {
         this.body = body;
         return this;
     }
-    public TrimDocumentResponseBody getBody() {
+    public RecognizeTurkeyIdentityCardResponseBody getBody() {
         return this.body;
     }
 
