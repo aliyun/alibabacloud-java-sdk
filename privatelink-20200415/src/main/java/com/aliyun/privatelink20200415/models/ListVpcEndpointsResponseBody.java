@@ -8,7 +8,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
     public java.util.List<ListVpcEndpointsResponseBodyEndpoints> endpoints;
 
     @NameInMap("MaxResults")
-    public String maxResults;
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -29,11 +29,11 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         return this.endpoints;
     }
 
-    public ListVpcEndpointsResponseBody setMaxResults(String maxResults) {
+    public ListVpcEndpointsResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 

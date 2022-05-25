@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
     @NameInMap("MaxResults")
-    public String maxResults;
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -21,11 +21,11 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListVpcEndpointServiceUsersResponseBody setMaxResults(String maxResults) {
+    public ListVpcEndpointServiceUsersResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
