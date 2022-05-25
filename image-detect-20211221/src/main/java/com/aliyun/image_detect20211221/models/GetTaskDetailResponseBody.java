@@ -84,6 +84,9 @@ public class GetTaskDetailResponseBody extends TeaModel {
         @NameInMap("ImageTotal")
         public Integer imageTotal;
 
+        @NameInMap("Level")
+        public Integer level;
+
         @NameInMap("OssAccessKeyId")
         public String ossAccessKeyId;
 
@@ -165,6 +168,14 @@ public class GetTaskDetailResponseBody extends TeaModel {
         }
         public Integer getImageTotal() {
             return this.imageTotal;
+        }
+
+        public GetTaskDetailResponseBodyResponse setLevel(Integer level) {
+            this.level = level;
+            return this;
+        }
+        public Integer getLevel() {
+            return this.level;
         }
 
         public GetTaskDetailResponseBodyResponse setOssAccessKeyId(String ossAccessKeyId) {

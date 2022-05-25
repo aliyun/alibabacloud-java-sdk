@@ -64,6 +64,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateTaskResponse createTaskWithOptions(CreateTaskRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.level)) {
+            query.put("Level", request.level);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ossBucketName)) {
             query.put("OssBucketName", request.ossBucketName);
         }

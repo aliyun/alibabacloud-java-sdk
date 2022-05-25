@@ -4,6 +4,9 @@ package com.aliyun.image_detect20211221.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskRequest extends TeaModel {
+    @NameInMap("Level")
+    public Integer level;
+
     @NameInMap("OssBucketName")
     public String ossBucketName;
 
@@ -31,6 +34,14 @@ public class CreateTaskRequest extends TeaModel {
     public static CreateTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTaskRequest self = new CreateTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTaskRequest setLevel(Integer level) {
+        this.level = level;
+        return this;
+    }
+    public Integer getLevel() {
+        return this.level;
     }
 
     public CreateTaskRequest setOssBucketName(String ossBucketName) {
