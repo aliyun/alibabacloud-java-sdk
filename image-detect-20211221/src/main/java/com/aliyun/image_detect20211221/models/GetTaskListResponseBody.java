@@ -72,6 +72,9 @@ public class GetTaskListResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        @NameInMap("Level")
+        public Integer level;
+
         @NameInMap("Priority")
         public String priority;
 
@@ -106,6 +109,14 @@ public class GetTaskListResponseBody extends TeaModel {
         }
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        public GetTaskListResponseBodyResponseTaskList setLevel(Integer level) {
+            this.level = level;
+            return this;
+        }
+        public Integer getLevel() {
+            return this.level;
         }
 
         public GetTaskListResponseBodyResponseTaskList setPriority(String priority) {
