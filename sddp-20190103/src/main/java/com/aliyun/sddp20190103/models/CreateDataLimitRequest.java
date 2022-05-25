@@ -40,6 +40,9 @@ public class CreateDataLimitRequest extends TeaModel {
     @NameInMap("ResourceType")
     public Integer resourceType;
 
+    @NameInMap("SamplingSize")
+    public Integer samplingSize;
+
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;
 
@@ -145,6 +148,14 @@ public class CreateDataLimitRequest extends TeaModel {
     }
     public Integer getResourceType() {
         return this.resourceType;
+    }
+
+    public CreateDataLimitRequest setSamplingSize(Integer samplingSize) {
+        this.samplingSize = samplingSize;
+        return this;
+    }
+    public Integer getSamplingSize() {
+        return this.samplingSize;
     }
 
     public CreateDataLimitRequest setServiceRegionId(String serviceRegionId) {

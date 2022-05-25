@@ -41,6 +41,9 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
+        @NameInMap("DataManagerRole")
+        public Integer dataManagerRole;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -92,6 +95,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         }
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        public DescribeUserStatusResponseBodyUserStatus setDataManagerRole(Integer dataManagerRole) {
+            this.dataManagerRole = dataManagerRole;
+            return this;
+        }
+        public Integer getDataManagerRole() {
+            return this.dataManagerRole;
         }
 
         public DescribeUserStatusResponseBodyUserStatus setInstanceId(String instanceId) {

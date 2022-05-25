@@ -127,6 +127,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceType", request.resourceType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.samplingSize)) {
+            query.put("SamplingSize", request.samplingSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serviceRegionId)) {
             query.put("ServiceRegionId", request.serviceRegionId);
         }
@@ -1687,6 +1691,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
             query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.samplingSize)) {
+            query.put("SamplingSize", request.samplingSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceRegionId)) {
