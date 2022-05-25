@@ -1005,6 +1005,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getSingleConnDataWithOptions(request, runtime);
     }
 
+    public GetSourcePackStatusResponse getSourcePackStatusWithOptions(GetSourcePackStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSourcePackStatus"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSourcePackStatusResponse());
+    }
+
+    public GetSourcePackStatusResponse getSourcePackStatus(GetSourcePackStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getSourcePackStatusWithOptions(request, runtime);
+    }
+
     public GetSubSceneTaskStatusResponse getSubSceneTaskStatusWithOptions(GetSubSceneTaskStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1099,8 +1128,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Mode", request.mode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.optimizeModelEffect)) {
-            query.put("OptimizeModelEffect", request.optimizeModelEffect);
+        if (!com.aliyun.teautil.Common.isUnset(request.modelStyle)) {
+            query.put("ModelStyle", request.modelStyle);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.optimizeWallWidth)) {
@@ -1365,6 +1394,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PackSceneResponse packScene(PackSceneRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.packSceneWithOptions(request, runtime);
+    }
+
+    public PackSourceResponse packSourceWithOptions(PackSourceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            query.put("SceneId", request.sceneId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PackSource"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PackSourceResponse());
+    }
+
+    public PackSourceResponse packSource(PackSourceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.packSourceWithOptions(request, runtime);
     }
 
     public PredImageResponse predImageWithOptions(PredImageRequest request, RuntimeOptions runtime) throws Exception {

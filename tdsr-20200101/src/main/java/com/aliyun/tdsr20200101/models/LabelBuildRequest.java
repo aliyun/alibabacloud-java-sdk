@@ -8,11 +8,11 @@ public class LabelBuildRequest extends TeaModel {
     @NameInMap("Mode")
     public String mode;
 
-    // 模型效果 PASTER：切片模型（默认） DEPTH：深度模型 VIRTUAL：虚拟模型 MOBILE：移动重建模型
-    @NameInMap("OptimizeModelEffect")
-    public String optimizeModelEffect;
+    // 模型效果 PATCH：切片模型（默认） DEPTH：深度模型 VIRTUAL：虚拟模型 MOBILE：移动重建模型
+    @NameInMap("ModelStyle")
+    public String modelStyle;
 
-    // 墙宽优化，SHUTDOWN:关闭（默认） STANDARD：标准 DEPTH：深度
+    // 墙宽优化，OFF:关闭（默认） NORMAL：标准 ENHANCED：加强
     @NameInMap("OptimizeWallWidth")
     public String optimizeWallWidth;
 
@@ -41,12 +41,12 @@ public class LabelBuildRequest extends TeaModel {
         return this.mode;
     }
 
-    public LabelBuildRequest setOptimizeModelEffect(String optimizeModelEffect) {
-        this.optimizeModelEffect = optimizeModelEffect;
+    public LabelBuildRequest setModelStyle(String modelStyle) {
+        this.modelStyle = modelStyle;
         return this;
     }
-    public String getOptimizeModelEffect() {
-        return this.optimizeModelEffect;
+    public String getModelStyle() {
+        return this.modelStyle;
     }
 
     public LabelBuildRequest setOptimizeWallWidth(String optimizeWallWidth) {

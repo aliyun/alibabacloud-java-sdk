@@ -24,6 +24,10 @@ public class PublishStatusResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    // 文件同步状态
+    @NameInMap("SyncStatus")
+    public String syncStatus;
+
     public static PublishStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PublishStatusResponseBody self = new PublishStatusResponseBody();
         return TeaModel.build(map, self);
@@ -67,6 +71,14 @@ public class PublishStatusResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public PublishStatusResponseBody setSyncStatus(String syncStatus) {
+        this.syncStatus = syncStatus;
+        return this;
+    }
+    public String getSyncStatus() {
+        return this.syncStatus;
     }
 
 }
