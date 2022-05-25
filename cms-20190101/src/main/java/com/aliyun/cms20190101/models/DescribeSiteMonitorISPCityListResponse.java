@@ -8,6 +8,10 @@ public class DescribeSiteMonitorISPCityListResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public DescribeSiteMonitorISPCityListResponseBody body;
@@ -23,6 +27,14 @@ public class DescribeSiteMonitorISPCityListResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DescribeSiteMonitorISPCityListResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public DescribeSiteMonitorISPCityListResponse setBody(DescribeSiteMonitorISPCityListResponseBody body) {

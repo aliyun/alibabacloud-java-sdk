@@ -40,6 +40,9 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
     @NameInMap("Period")
     public String period;
 
+    @NameInMap("Prometheus")
+    public String prometheusShrink;
+
     @NameInMap("Resources")
     public String resources;
 
@@ -154,6 +157,14 @@ public class PutResourceMetricRuleShrinkRequest extends TeaModel {
     }
     public String getPeriod() {
         return this.period;
+    }
+
+    public PutResourceMetricRuleShrinkRequest setPrometheusShrink(String prometheusShrink) {
+        this.prometheusShrink = prometheusShrink;
+        return this;
+    }
+    public String getPrometheusShrink() {
+        return this.prometheusShrink;
     }
 
     public PutResourceMetricRuleShrinkRequest setResources(String resources) {

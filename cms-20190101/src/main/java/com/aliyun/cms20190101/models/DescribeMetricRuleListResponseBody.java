@@ -499,6 +499,107 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotationsAnnotations extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotationsAnnotations build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotationsAnnotations self = new DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotationsAnnotations();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotationsAnnotations setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotationsAnnotations setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotations extends TeaModel {
+        @NameInMap("Annotations")
+        public java.util.List<DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotationsAnnotations> annotations;
+
+        public static DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotations build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotations self = new DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotations();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotations setAnnotations(java.util.List<DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotationsAnnotations> annotations) {
+            this.annotations = annotations;
+            return this;
+        }
+        public java.util.List<DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotationsAnnotations> getAnnotations() {
+            return this.annotations;
+        }
+
+    }
+
+    public static class DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheus extends TeaModel {
+        @NameInMap("Annotations")
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotations annotations;
+
+        @NameInMap("Level")
+        public String level;
+
+        @NameInMap("PromQL")
+        public String promQL;
+
+        @NameInMap("Times")
+        public Long times;
+
+        public static DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheus self = new DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheus setAnnotations(DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotations annotations) {
+            this.annotations = annotations;
+            return this;
+        }
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheusAnnotations getAnnotations() {
+            return this.annotations;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheus setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheus setPromQL(String promQL) {
+            this.promQL = promQL;
+            return this;
+        }
+        public String getPromQL() {
+            return this.promQL;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheus setTimes(Long times) {
+            this.times = times;
+            return this;
+        }
+        public Long getTimes() {
+            return this.times;
+        }
+
+    }
+
     public static class DescribeMetricRuleListResponseBodyAlarmsAlarm extends TeaModel {
         @NameInMap("AlertState")
         public String alertState;
@@ -547,6 +648,9 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
         @NameInMap("Period")
         public String period;
+
+        @NameInMap("Prometheus")
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheus prometheus;
 
         @NameInMap("Resources")
         public String resources;
@@ -697,6 +801,14 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         }
         public String getPeriod() {
             return this.period;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setPrometheus(DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheus prometheus) {
+            this.prometheus = prometheus;
+            return this;
+        }
+        public DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheus getPrometheus() {
+            return this.prometheus;
         }
 
         public DescribeMetricRuleListResponseBodyAlarmsAlarm setResources(String resources) {

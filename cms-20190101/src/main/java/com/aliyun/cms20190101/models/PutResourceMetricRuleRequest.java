@@ -40,6 +40,9 @@ public class PutResourceMetricRuleRequest extends TeaModel {
     @NameInMap("Period")
     public String period;
 
+    @NameInMap("Prometheus")
+    public PutResourceMetricRuleRequestPrometheus prometheus;
+
     @NameInMap("Resources")
     public String resources;
 
@@ -154,6 +157,14 @@ public class PutResourceMetricRuleRequest extends TeaModel {
     }
     public String getPeriod() {
         return this.period;
+    }
+
+    public PutResourceMetricRuleRequest setPrometheus(PutResourceMetricRuleRequestPrometheus prometheus) {
+        this.prometheus = prometheus;
+        return this;
+    }
+    public PutResourceMetricRuleRequestPrometheus getPrometheus() {
+        return this.prometheus;
     }
 
     public PutResourceMetricRuleRequest setResources(String resources) {
@@ -548,6 +559,88 @@ public class PutResourceMetricRuleRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class PutResourceMetricRuleRequestPrometheusAnnotations extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static PutResourceMetricRuleRequestPrometheusAnnotations build(java.util.Map<String, ?> map) throws Exception {
+            PutResourceMetricRuleRequestPrometheusAnnotations self = new PutResourceMetricRuleRequestPrometheusAnnotations();
+            return TeaModel.build(map, self);
+        }
+
+        public PutResourceMetricRuleRequestPrometheusAnnotations setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public PutResourceMetricRuleRequestPrometheusAnnotations setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class PutResourceMetricRuleRequestPrometheus extends TeaModel {
+        @NameInMap("Annotations")
+        public java.util.List<PutResourceMetricRuleRequestPrometheusAnnotations> annotations;
+
+        @NameInMap("Level")
+        public String level;
+
+        @NameInMap("PromQL")
+        public String promQL;
+
+        @NameInMap("Times")
+        public Integer times;
+
+        public static PutResourceMetricRuleRequestPrometheus build(java.util.Map<String, ?> map) throws Exception {
+            PutResourceMetricRuleRequestPrometheus self = new PutResourceMetricRuleRequestPrometheus();
+            return TeaModel.build(map, self);
+        }
+
+        public PutResourceMetricRuleRequestPrometheus setAnnotations(java.util.List<PutResourceMetricRuleRequestPrometheusAnnotations> annotations) {
+            this.annotations = annotations;
+            return this;
+        }
+        public java.util.List<PutResourceMetricRuleRequestPrometheusAnnotations> getAnnotations() {
+            return this.annotations;
+        }
+
+        public PutResourceMetricRuleRequestPrometheus setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public PutResourceMetricRuleRequestPrometheus setPromQL(String promQL) {
+            this.promQL = promQL;
+            return this;
+        }
+        public String getPromQL() {
+            return this.promQL;
+        }
+
+        public PutResourceMetricRuleRequestPrometheus setTimes(Integer times) {
+            this.times = times;
+            return this;
+        }
+        public Integer getTimes() {
+            return this.times;
         }
 
     }
