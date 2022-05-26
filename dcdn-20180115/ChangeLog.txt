@@ -1,3 +1,6 @@
+2022-05-26 Version: 1.0.12
+ - Add SetDcdnFullDomainsBlockIP.
+
 2022-04-28 Version: 1.0.11
 - Add DescribeDcdnWafDomains.
 
