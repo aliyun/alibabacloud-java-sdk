@@ -103,6 +103,9 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         @NameInMap("TotalTime")
         public String totalTime;
 
+        @NameInMap("User")
+        public String user;
+
         public static DescribeAuditLogRecordsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeAuditLogRecordsResponseBodyItems self = new DescribeAuditLogRecordsResponseBodyItems();
             return TeaModel.build(map, self);
@@ -178,6 +181,14 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
         public String getTotalTime() {
             return this.totalTime;
+        }
+
+        public DescribeAuditLogRecordsResponseBodyItems setUser(String user) {
+            this.user = user;
+            return this;
+        }
+        public String getUser() {
+            return this.user;
         }
 
     }
