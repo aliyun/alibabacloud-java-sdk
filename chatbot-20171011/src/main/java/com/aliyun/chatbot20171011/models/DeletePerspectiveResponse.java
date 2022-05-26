@@ -3,7 +3,7 @@ package com.aliyun.chatbot20171011.models;
 
 import com.aliyun.tea.*;
 
-public class ListBotDsDetailsResponse extends TeaModel {
+public class DeletePerspectiveResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListBotDsDetailsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListBotDsDetailsResponseBody body;
+    public DeletePerspectiveResponseBody body;
 
-    public static ListBotDsDetailsResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListBotDsDetailsResponse self = new ListBotDsDetailsResponse();
+    public static DeletePerspectiveResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeletePerspectiveResponse self = new DeletePerspectiveResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListBotDsDetailsResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeletePerspectiveResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListBotDsDetailsResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListBotDsDetailsResponse setStatusCode(Integer statusCode) {
+    public DeletePerspectiveResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListBotDsDetailsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListBotDsDetailsResponse setBody(ListBotDsDetailsResponseBody body) {
+    public DeletePerspectiveResponse setBody(DeletePerspectiveResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListBotDsDetailsResponseBody getBody() {
+    public DeletePerspectiveResponseBody getBody() {
         return this.body;
     }
 
