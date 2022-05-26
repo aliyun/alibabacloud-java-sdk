@@ -13,11 +13,11 @@ public class AlivisionImgdupRequest extends TeaModel {
     @NameInMap("OutputImageNum")
     public Integer outputImageNum;
 
-    @NameInMap("PicNum")
-    public Integer picNum;
+    @NameInMap("PicNumList")
+    public String picNumList;
 
-    @NameInMap("PicUrl")
-    public String picUrl;
+    @NameInMap("PicUrlList")
+    public String picUrlList;
 
     public static AlivisionImgdupRequest build(java.util.Map<String, ?> map) throws Exception {
         AlivisionImgdupRequest self = new AlivisionImgdupRequest();
@@ -48,20 +48,20 @@ public class AlivisionImgdupRequest extends TeaModel {
         return this.outputImageNum;
     }
 
-    public AlivisionImgdupRequest setPicNum(Integer picNum) {
-        this.picNum = picNum;
+    public AlivisionImgdupRequest setPicNumList(String picNumList) {
+        this.picNumList = picNumList;
         return this;
     }
-    public Integer getPicNum() {
-        return this.picNum;
+    public String getPicNumList() {
+        return this.picNumList;
     }
 
-    public AlivisionImgdupRequest setPicUrl(String picUrl) {
-        this.picUrl = picUrl;
+    public AlivisionImgdupRequest setPicUrlList(String picUrlList) {
+        this.picUrlList = picUrlList;
         return this;
     }
-    public String getPicUrl() {
-        return this.picUrl;
+    public String getPicUrlList() {
+        return this.picUrlList;
     }
 
 }

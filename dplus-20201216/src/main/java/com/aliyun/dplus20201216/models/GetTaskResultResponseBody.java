@@ -66,8 +66,8 @@ public class GetTaskResultResponseBody extends TeaModel {
     }
 
     public static class GetTaskResultResponseBodyData extends TeaModel {
-        @NameInMap("Resuslt")
-        public String resuslt;
+        @NameInMap("Result")
+        public String result;
 
         @NameInMap("Status")
         public Long status;
@@ -83,12 +83,12 @@ public class GetTaskResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetTaskResultResponseBodyData setResuslt(String resuslt) {
-            this.resuslt = resuslt;
+        public GetTaskResultResponseBodyData setResult(String result) {
+            this.result = result;
             return this;
         }
-        public String getResuslt() {
-            return this.resuslt;
+        public String getResult() {
+            return this.result;
         }
 
         public GetTaskResultResponseBodyData setStatus(Long status) {
