@@ -103,6 +103,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("IncludeInboundPorts")
     public String includeInboundPorts;
 
+    @NameInMap("IntegrateKiali")
+    public Boolean integrateKiali;
+
     @NameInMap("KialiEnabled")
     public Boolean kialiEnabled;
 
@@ -499,6 +502,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public String getIncludeInboundPorts() {
         return this.includeInboundPorts;
+    }
+
+    public UpdateMeshFeatureRequest setIntegrateKiali(Boolean integrateKiali) {
+        this.integrateKiali = integrateKiali;
+        return this;
+    }
+    public Boolean getIntegrateKiali() {
+        return this.integrateKiali;
     }
 
     public UpdateMeshFeatureRequest setKialiEnabled(Boolean kialiEnabled) {
