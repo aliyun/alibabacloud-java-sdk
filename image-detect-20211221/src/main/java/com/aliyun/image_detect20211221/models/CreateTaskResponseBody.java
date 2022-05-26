@@ -14,6 +14,9 @@ public class CreateTaskResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Response")
+    public CreateTaskResponseBodyResponse response;
+
     @NameInMap("Success")
     public String success;
 
@@ -46,12 +49,39 @@ public class CreateTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public CreateTaskResponseBody setResponse(CreateTaskResponseBodyResponse response) {
+        this.response = response;
+        return this;
+    }
+    public CreateTaskResponseBodyResponse getResponse() {
+        return this.response;
+    }
+
     public CreateTaskResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
     public String getSuccess() {
         return this.success;
+    }
+
+    public static class CreateTaskResponseBodyResponse extends TeaModel {
+        @NameInMap("TaskUid")
+        public String taskUid;
+
+        public static CreateTaskResponseBodyResponse build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskResponseBodyResponse self = new CreateTaskResponseBodyResponse();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskResponseBodyResponse setTaskUid(String taskUid) {
+            this.taskUid = taskUid;
+            return this;
+        }
+        public String getTaskUid() {
+            return this.taskUid;
+        }
+
     }
 
 }
