@@ -94,6 +94,58 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusConfigSourceStatus extends TeaModel {
+        @NameInMap("Address")
+        public String address;
+
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Valid")
+        public Boolean valid;
+
+        public static DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusConfigSourceStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusConfigSourceStatus self = new DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusConfigSourceStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusConfigSourceStatus setAddress(String address) {
+            this.address = address;
+            return this;
+        }
+        public String getAddress() {
+            return this.address;
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusConfigSourceStatus setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusConfigSourceStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusConfigSourceStatus setValid(Boolean valid) {
+            this.valid = valid;
+            return this;
+        }
+        public Boolean getValid() {
+            return this.valid;
+        }
+
+    }
+
     public static class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus extends TeaModel {
         @NameInMap("Locked")
         public Boolean locked;
@@ -170,6 +222,9 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
         @NameInMap("AuditProjectStatus")
         public String auditProjectStatus;
 
+        @NameInMap("ConfigSourceStatus")
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusConfigSourceStatus configSourceStatus;
+
         @NameInMap("ControlPlaneProjectStatus")
         public String controlPlaneProjectStatus;
 
@@ -217,6 +272,14 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
         }
         public String getAuditProjectStatus() {
             return this.auditProjectStatus;
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatus setConfigSourceStatus(DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusConfigSourceStatus configSourceStatus) {
+            this.configSourceStatus = configSourceStatus;
+            return this;
+        }
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusConfigSourceStatus getConfigSourceStatus() {
+            return this.configSourceStatus;
         }
 
         public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatus setControlPlaneProjectStatus(String controlPlaneProjectStatus) {

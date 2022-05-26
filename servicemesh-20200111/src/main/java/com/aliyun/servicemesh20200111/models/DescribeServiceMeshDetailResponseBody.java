@@ -384,6 +384,25 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationIstioCRHistory extends TeaModel {
         @NameInMap("EnableHistory")
         public Boolean enableHistory;
@@ -906,6 +925,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration extends TeaModel {
+        @NameInMap("CRAggregationConfiguration")
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration CRAggregationConfiguration;
+
         @NameInMap("CRAggregationEnabled")
         public Boolean CRAggregationEnabled;
 
@@ -939,6 +961,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setCRAggregationConfiguration(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration CRAggregationConfiguration) {
+            this.CRAggregationConfiguration = CRAggregationConfiguration;
+            return this;
+        }
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration getCRAggregationConfiguration() {
+            return this.CRAggregationConfiguration;
         }
 
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setCRAggregationEnabled(Boolean CRAggregationEnabled) {
@@ -1581,6 +1611,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         @NameInMap("RequestMemory")
         public String requestMemory;
 
+        @NameInMap("SidecarInjectorNum")
+        public Integer sidecarInjectorNum;
+
         @NameInMap("SidecarInjectorWebhookAsYaml")
         public String sidecarInjectorWebhookAsYaml;
 
@@ -1643,6 +1676,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
         public String getRequestMemory() {
             return this.requestMemory;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjector setSidecarInjectorNum(Integer sidecarInjectorNum) {
+            this.sidecarInjectorNum = sidecarInjectorNum;
+            return this;
+        }
+        public Integer getSidecarInjectorNum() {
+            return this.sidecarInjectorNum;
         }
 
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjector setSidecarInjectorWebhookAsYaml(String sidecarInjectorWebhookAsYaml) {

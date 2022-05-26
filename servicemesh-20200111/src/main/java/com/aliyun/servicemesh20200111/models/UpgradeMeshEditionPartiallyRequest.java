@@ -7,6 +7,9 @@ public class UpgradeMeshEditionPartiallyRequest extends TeaModel {
     @NameInMap("ASMGatewayContinue")
     public Boolean ASMGatewayContinue;
 
+    @NameInMap("ExpectedVersion")
+    public String expectedVersion;
+
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
@@ -27,6 +30,14 @@ public class UpgradeMeshEditionPartiallyRequest extends TeaModel {
     }
     public Boolean getASMGatewayContinue() {
         return this.ASMGatewayContinue;
+    }
+
+    public UpgradeMeshEditionPartiallyRequest setExpectedVersion(String expectedVersion) {
+        this.expectedVersion = expectedVersion;
+        return this;
+    }
+    public String getExpectedVersion() {
+        return this.expectedVersion;
     }
 
     public UpgradeMeshEditionPartiallyRequest setServiceMeshId(String serviceMeshId) {
