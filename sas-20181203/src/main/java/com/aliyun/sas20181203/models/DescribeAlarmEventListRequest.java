@@ -46,6 +46,9 @@ public class DescribeAlarmEventListRequest extends TeaModel {
     @NameInMap("TacticId")
     public String tacticId;
 
+    @NameInMap("UniqueInfo")
+    public String uniqueInfo;
+
     public static DescribeAlarmEventListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlarmEventListRequest self = new DescribeAlarmEventListRequest();
         return TeaModel.build(map, self);
@@ -161,6 +164,14 @@ public class DescribeAlarmEventListRequest extends TeaModel {
     }
     public String getTacticId() {
         return this.tacticId;
+    }
+
+    public DescribeAlarmEventListRequest setUniqueInfo(String uniqueInfo) {
+        this.uniqueInfo = uniqueInfo;
+        return this;
+    }
+    public String getUniqueInfo() {
+        return this.uniqueInfo;
     }
 
 }
