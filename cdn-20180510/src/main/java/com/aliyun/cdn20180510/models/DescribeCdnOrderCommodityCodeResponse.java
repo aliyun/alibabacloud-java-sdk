@@ -3,7 +3,7 @@ package com.aliyun.cdn20180510.models;
 
 import com.aliyun.tea.*;
 
-public class SetDomainGreenManagerConfigResponse extends TeaModel {
+public class DescribeCdnOrderCommodityCodeResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class SetDomainGreenManagerConfigResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public SetDomainGreenManagerConfigResponseBody body;
+    public DescribeCdnOrderCommodityCodeResponseBody body;
 
-    public static SetDomainGreenManagerConfigResponse build(java.util.Map<String, ?> map) throws Exception {
-        SetDomainGreenManagerConfigResponse self = new SetDomainGreenManagerConfigResponse();
+    public static DescribeCdnOrderCommodityCodeResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeCdnOrderCommodityCodeResponse self = new DescribeCdnOrderCommodityCodeResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetDomainGreenManagerConfigResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeCdnOrderCommodityCodeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class SetDomainGreenManagerConfigResponse extends TeaModel {
         return this.headers;
     }
 
-    public SetDomainGreenManagerConfigResponse setStatusCode(Integer statusCode) {
+    public DescribeCdnOrderCommodityCodeResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class SetDomainGreenManagerConfigResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SetDomainGreenManagerConfigResponse setBody(SetDomainGreenManagerConfigResponseBody body) {
+    public DescribeCdnOrderCommodityCodeResponse setBody(DescribeCdnOrderCommodityCodeResponseBody body) {
         this.body = body;
         return this;
     }
-    public SetDomainGreenManagerConfigResponseBody getBody() {
+    public DescribeCdnOrderCommodityCodeResponseBody getBody() {
         return this.body;
     }
 
