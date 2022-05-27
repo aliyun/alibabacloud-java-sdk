@@ -422,6 +422,12 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("AliasName")
         public String aliasName;
 
+        @NameInMap("AuthVersion")
+        public String authVersion;
+
+        @NameInMap("Bind")
+        public Boolean bind;
+
         @NameInMap("ExtendContentJson")
         public DescribeVulListResponseBodyVulRecordsExtendContentJson extendContentJson;
 
@@ -457,6 +463,9 @@ public class DescribeVulListResponseBody extends TeaModel {
 
         @NameInMap("Online")
         public Boolean online;
+
+        @NameInMap("OsName")
+        public String osName;
 
         @NameInMap("OsVersion")
         public String osVersion;
@@ -502,6 +511,22 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
         public String getAliasName() {
             return this.aliasName;
+        }
+
+        public DescribeVulListResponseBodyVulRecords setAuthVersion(String authVersion) {
+            this.authVersion = authVersion;
+            return this;
+        }
+        public String getAuthVersion() {
+            return this.authVersion;
+        }
+
+        public DescribeVulListResponseBodyVulRecords setBind(Boolean bind) {
+            this.bind = bind;
+            return this;
+        }
+        public Boolean getBind() {
+            return this.bind;
         }
 
         public DescribeVulListResponseBodyVulRecords setExtendContentJson(DescribeVulListResponseBodyVulRecordsExtendContentJson extendContentJson) {
@@ -598,6 +623,14 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
         public Boolean getOnline() {
             return this.online;
+        }
+
+        public DescribeVulListResponseBodyVulRecords setOsName(String osName) {
+            this.osName = osName;
+            return this;
+        }
+        public String getOsName() {
+            return this.osName;
         }
 
         public DescribeVulListResponseBodyVulRecords setOsVersion(String osVersion) {
