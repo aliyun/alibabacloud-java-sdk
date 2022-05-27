@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
+    @NameInMap("BabelfishPort")
+    public String babelfishPort;
+
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
@@ -34,6 +37,14 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public static ModifyDBInstanceConnectionStringRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceConnectionStringRequest self = new ModifyDBInstanceConnectionStringRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setBabelfishPort(String babelfishPort) {
+        this.babelfishPort = babelfishPort;
+        return this;
+    }
+    public String getBabelfishPort() {
+        return this.babelfishPort;
     }
 
     public ModifyDBInstanceConnectionStringRequest setConnectionStringPrefix(String connectionStringPrefix) {

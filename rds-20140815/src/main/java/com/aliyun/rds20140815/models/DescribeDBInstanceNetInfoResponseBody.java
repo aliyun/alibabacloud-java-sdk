@@ -185,6 +185,9 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo extends TeaModel {
+        @NameInMap("BabelfishPort")
+        public String babelfishPort;
+
         @NameInMap("ConnectionString")
         public String connectionString;
 
@@ -227,6 +230,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public static DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo self = new DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setBabelfishPort(String babelfishPort) {
+            this.babelfishPort = babelfishPort;
+            return this;
+        }
+        public String getBabelfishPort() {
+            return this.babelfishPort;
         }
 
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setConnectionString(String connectionString) {

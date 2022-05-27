@@ -14,10 +14,10 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Long ownerId;
 
     @NameInMap("PageNumber")
-    public Long pageNumber;
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
-    public Long pageSize;
+    public Integer pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -66,19 +66,19 @@ public class DescribeVSwitchesRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeVSwitchesRequest setPageNumber(Long pageNumber) {
+    public DescribeVSwitchesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public Long getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public DescribeVSwitchesRequest setPageSize(Long pageSize) {
+    public DescribeVSwitchesRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 

@@ -31,6 +31,36 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig extends TeaModel {
+        @NameInMap("BabelfishEnabled")
+        public String babelfishEnabled;
+
+        @NameInMap("MigrationMode")
+        public String migrationMode;
+
+        public static DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig self = new DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig setBabelfishEnabled(String babelfishEnabled) {
+            this.babelfishEnabled = babelfishEnabled;
+            return this;
+        }
+        public String getBabelfishEnabled() {
+            return this.babelfishEnabled;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig setMigrationMode(String migrationMode) {
+            this.migrationMode = migrationMode;
+            return this;
+        }
+        public String getMigrationMode() {
+            return this.migrationMode;
+        }
+
+    }
+
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtraDBInstanceIds extends TeaModel {
         @NameInMap("DBInstanceId")
         public java.util.List<String> DBInstanceId;
@@ -187,6 +217,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @NameInMap("AvailabilityValue")
         public String availabilityValue;
+
+        @NameInMap("BabelfishConfig")
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig babelfishConfig;
 
         @NameInMap("Category")
         public String category;
@@ -400,6 +433,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getAvailabilityValue() {
             return this.availabilityValue;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setBabelfishConfig(DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig babelfishConfig) {
+            this.babelfishConfig = babelfishConfig;
+            return this;
+        }
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig getBabelfishConfig() {
+            return this.babelfishConfig;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setCategory(String category) {

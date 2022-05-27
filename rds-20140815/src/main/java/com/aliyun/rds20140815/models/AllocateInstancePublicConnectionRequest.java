@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class AllocateInstancePublicConnectionRequest extends TeaModel {
+    @NameInMap("BabelfishPort")
+    public String babelfishPort;
+
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
@@ -31,6 +34,14 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     public static AllocateInstancePublicConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateInstancePublicConnectionRequest self = new AllocateInstancePublicConnectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AllocateInstancePublicConnectionRequest setBabelfishPort(String babelfishPort) {
+        this.babelfishPort = babelfishPort;
+        return this;
+    }
+    public String getBabelfishPort() {
+        return this.babelfishPort;
     }
 
     public AllocateInstancePublicConnectionRequest setConnectionStringPrefix(String connectionStringPrefix) {
