@@ -8,9 +8,6 @@ public class DeletePortfolioRequest extends TeaModel {
     @NameInMap("PortfolioId")
     public String portfolioId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static DeletePortfolioRequest build(java.util.Map<String, ?> map) throws Exception {
         DeletePortfolioRequest self = new DeletePortfolioRequest();
         return TeaModel.build(map, self);
@@ -22,14 +19,6 @@ public class DeletePortfolioRequest extends TeaModel {
     }
     public String getPortfolioId() {
         return this.portfolioId;
-    }
-
-    public DeletePortfolioRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

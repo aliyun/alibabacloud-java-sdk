@@ -16,9 +16,6 @@ public class AssociatePrincipalWithPortfolioRequest extends TeaModel {
     @NameInMap("PrincipalType")
     public String principalType;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static AssociatePrincipalWithPortfolioRequest build(java.util.Map<String, ?> map) throws Exception {
         AssociatePrincipalWithPortfolioRequest self = new AssociatePrincipalWithPortfolioRequest();
         return TeaModel.build(map, self);
@@ -46,14 +43,6 @@ public class AssociatePrincipalWithPortfolioRequest extends TeaModel {
     }
     public String getPrincipalType() {
         return this.principalType;
-    }
-
-    public AssociatePrincipalWithPortfolioRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

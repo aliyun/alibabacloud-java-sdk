@@ -12,9 +12,6 @@ public class DisassociateProductFromPortfolioRequest extends TeaModel {
     @NameInMap("ProductId")
     public String productId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static DisassociateProductFromPortfolioRequest build(java.util.Map<String, ?> map) throws Exception {
         DisassociateProductFromPortfolioRequest self = new DisassociateProductFromPortfolioRequest();
         return TeaModel.build(map, self);
@@ -34,14 +31,6 @@ public class DisassociateProductFromPortfolioRequest extends TeaModel {
     }
     public String getProductId() {
         return this.productId;
-    }
-
-    public DisassociateProductFromPortfolioRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

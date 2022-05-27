@@ -16,9 +16,6 @@ public class UpdateConstraintRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static UpdateConstraintRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateConstraintRequest self = new UpdateConstraintRequest();
         return TeaModel.build(map, self);
@@ -46,14 +43,6 @@ public class UpdateConstraintRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public UpdateConstraintRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

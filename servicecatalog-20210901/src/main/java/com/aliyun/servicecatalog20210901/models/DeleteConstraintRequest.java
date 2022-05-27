@@ -8,9 +8,6 @@ public class DeleteConstraintRequest extends TeaModel {
     @NameInMap("ConstraintId")
     public String constraintId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static DeleteConstraintRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteConstraintRequest self = new DeleteConstraintRequest();
         return TeaModel.build(map, self);
@@ -22,14 +19,6 @@ public class DeleteConstraintRequest extends TeaModel {
     }
     public String getConstraintId() {
         return this.constraintId;
-    }
-
-    public DeleteConstraintRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

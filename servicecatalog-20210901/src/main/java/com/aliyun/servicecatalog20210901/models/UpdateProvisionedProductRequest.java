@@ -4,9 +4,8 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class UpdateProvisionedProductRequest extends TeaModel {
-    // 用户输入
-    @NameInMap("Inputs")
-    public String inputs;
+    @NameInMap("Parameters")
+    public java.util.List<UpdateProvisionedProductRequestParameters> parameters;
 
     // 产品组合ID
     @NameInMap("PortfolioId")
@@ -24,20 +23,17 @@ public class UpdateProvisionedProductRequest extends TeaModel {
     @NameInMap("ProvisionedProductId")
     public String provisionedProductId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static UpdateProvisionedProductRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProvisionedProductRequest self = new UpdateProvisionedProductRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateProvisionedProductRequest setInputs(String inputs) {
-        this.inputs = inputs;
+    public UpdateProvisionedProductRequest setParameters(java.util.List<UpdateProvisionedProductRequestParameters> parameters) {
+        this.parameters = parameters;
         return this;
     }
-    public String getInputs() {
-        return this.inputs;
+    public java.util.List<UpdateProvisionedProductRequestParameters> getParameters() {
+        return this.parameters;
     }
 
     public UpdateProvisionedProductRequest setPortfolioId(String portfolioId) {
@@ -72,12 +68,34 @@ public class UpdateProvisionedProductRequest extends TeaModel {
         return this.provisionedProductId;
     }
 
-    public UpdateProvisionedProductRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public static class UpdateProvisionedProductRequestParameters extends TeaModel {
+        @NameInMap("ParameterKey")
+        public String parameterKey;
+
+        @NameInMap("ParameterValue")
+        public String parameterValue;
+
+        public static UpdateProvisionedProductRequestParameters build(java.util.Map<String, ?> map) throws Exception {
+            UpdateProvisionedProductRequestParameters self = new UpdateProvisionedProductRequestParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateProvisionedProductRequestParameters setParameterKey(String parameterKey) {
+            this.parameterKey = parameterKey;
+            return this;
+        }
+        public String getParameterKey() {
+            return this.parameterKey;
+        }
+
+        public UpdateProvisionedProductRequestParameters setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
+        }
+
     }
 
 }
