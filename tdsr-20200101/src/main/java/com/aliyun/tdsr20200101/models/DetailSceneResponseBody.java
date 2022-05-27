@@ -8,6 +8,10 @@ public class DetailSceneResponseBody extends TeaModel {
     @NameInMap("Code")
     public Long code;
 
+    // 封面地址
+    @NameInMap("CoverUrl")
+    public String coverUrl;
+
     // 创建时间
     @NameInMap("GmtCreate")
     public Long gmtCreate;
@@ -67,6 +71,14 @@ public class DetailSceneResponseBody extends TeaModel {
     }
     public Long getCode() {
         return this.code;
+    }
+
+    public DetailSceneResponseBody setCoverUrl(String coverUrl) {
+        this.coverUrl = coverUrl;
+        return this;
+    }
+    public String getCoverUrl() {
+        return this.coverUrl;
     }
 
     public DetailSceneResponseBody setGmtCreate(Long gmtCreate) {
