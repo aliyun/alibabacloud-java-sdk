@@ -4,9 +4,8 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class LaunchProductRequest extends TeaModel {
-    // 模板参数
-    @NameInMap("Inputs")
-    public String inputs;
+    @NameInMap("Parameters")
+    public java.util.List<LaunchProductRequestParameters> parameters;
 
     // 产品组合ID
     @NameInMap("PortfolioId")
@@ -24,9 +23,6 @@ public class LaunchProductRequest extends TeaModel {
     @NameInMap("ProvisionedProductName")
     public String provisionedProductName;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // ROS资源栈所属的地域ID
     @NameInMap("StackRegionId")
     public String stackRegionId;
@@ -36,12 +32,12 @@ public class LaunchProductRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public LaunchProductRequest setInputs(String inputs) {
-        this.inputs = inputs;
+    public LaunchProductRequest setParameters(java.util.List<LaunchProductRequestParameters> parameters) {
+        this.parameters = parameters;
         return this;
     }
-    public String getInputs() {
-        return this.inputs;
+    public java.util.List<LaunchProductRequestParameters> getParameters() {
+        return this.parameters;
     }
 
     public LaunchProductRequest setPortfolioId(String portfolioId) {
@@ -76,20 +72,42 @@ public class LaunchProductRequest extends TeaModel {
         return this.provisionedProductName;
     }
 
-    public LaunchProductRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public LaunchProductRequest setStackRegionId(String stackRegionId) {
         this.stackRegionId = stackRegionId;
         return this;
     }
     public String getStackRegionId() {
         return this.stackRegionId;
+    }
+
+    public static class LaunchProductRequestParameters extends TeaModel {
+        @NameInMap("ParameterKey")
+        public String parameterKey;
+
+        @NameInMap("ParameterValue")
+        public String parameterValue;
+
+        public static LaunchProductRequestParameters build(java.util.Map<String, ?> map) throws Exception {
+            LaunchProductRequestParameters self = new LaunchProductRequestParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public LaunchProductRequestParameters setParameterKey(String parameterKey) {
+            this.parameterKey = parameterKey;
+            return this;
+        }
+        public String getParameterKey() {
+            return this.parameterKey;
+        }
+
+        public LaunchProductRequestParameters setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
+        }
+
     }
 
 }

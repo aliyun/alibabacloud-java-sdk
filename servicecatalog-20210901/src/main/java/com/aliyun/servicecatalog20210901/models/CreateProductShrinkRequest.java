@@ -24,9 +24,6 @@ public class CreateProductShrinkRequest extends TeaModel {
     @NameInMap("ProviderName")
     public String providerName;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static CreateProductShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProductShrinkRequest self = new CreateProductShrinkRequest();
         return TeaModel.build(map, self);
@@ -70,14 +67,6 @@ public class CreateProductShrinkRequest extends TeaModel {
     }
     public String getProviderName() {
         return this.providerName;
-    }
-
-    public CreateProductShrinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

@@ -72,10 +72,6 @@ public class ListProvisionedProductsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 模板输入
-        @NameInMap("Inputs")
-        public String inputs;
-
         // 上一次执行的实例操作任务ID
         @NameInMap("LastProvisioningTaskId")
         public String lastProvisioningTaskId;
@@ -128,6 +124,9 @@ public class ListProvisionedProductsResponseBody extends TeaModel {
         @NameInMap("ProvisionedProductName")
         public String provisionedProductName;
 
+        @NameInMap("ProvisionedProductType")
+        public String provisionedProductType;
+
         // ROS资源栈的ID
         @NameInMap("StackId")
         public String stackId;
@@ -155,14 +154,6 @@ public class ListProvisionedProductsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        public ListProvisionedProductsResponseBodyProvisionedProductDetails setInputs(String inputs) {
-            this.inputs = inputs;
-            return this;
-        }
-        public String getInputs() {
-            return this.inputs;
         }
 
         public ListProvisionedProductsResponseBodyProvisionedProductDetails setLastProvisioningTaskId(String lastProvisioningTaskId) {
@@ -267,6 +258,14 @@ public class ListProvisionedProductsResponseBody extends TeaModel {
         }
         public String getProvisionedProductName() {
             return this.provisionedProductName;
+        }
+
+        public ListProvisionedProductsResponseBodyProvisionedProductDetails setProvisionedProductType(String provisionedProductType) {
+            this.provisionedProductType = provisionedProductType;
+            return this;
+        }
+        public String getProvisionedProductType() {
+            return this.provisionedProductType;
         }
 
         public ListProvisionedProductsResponseBodyProvisionedProductDetails setStackId(String stackId) {

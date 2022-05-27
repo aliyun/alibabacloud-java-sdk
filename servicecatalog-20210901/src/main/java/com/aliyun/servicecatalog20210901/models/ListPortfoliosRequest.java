@@ -92,8 +92,8 @@ public class ListPortfoliosRequest extends TeaModel {
 
     public static class ListPortfoliosRequestFilters extends TeaModel {
         // 过滤条件的名称
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Key")
+        public String key;
 
         // 过滤条件的值
         @NameInMap("Value")
@@ -104,12 +104,12 @@ public class ListPortfoliosRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListPortfoliosRequestFilters setName(String name) {
-            this.name = name;
+        public ListPortfoliosRequestFilters setKey(String key) {
+            this.key = key;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getKey() {
+            return this.key;
         }
 
         public ListPortfoliosRequestFilters setValue(String value) {

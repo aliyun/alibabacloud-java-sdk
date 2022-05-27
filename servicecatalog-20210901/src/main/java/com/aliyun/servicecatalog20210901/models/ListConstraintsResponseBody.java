@@ -62,6 +62,9 @@ public class ListConstraintsResponseBody extends TeaModel {
         @NameInMap("ProductId")
         public String productId;
 
+        @NameInMap("ProductName")
+        public String productName;
+
         public static ListConstraintsResponseBodyConstraintDetails build(java.util.Map<String, ?> map) throws Exception {
             ListConstraintsResponseBodyConstraintDetails self = new ListConstraintsResponseBodyConstraintDetails();
             return TeaModel.build(map, self);
@@ -121,6 +124,14 @@ public class ListConstraintsResponseBody extends TeaModel {
         }
         public String getProductId() {
             return this.productId;
+        }
+
+        public ListConstraintsResponseBodyConstraintDetails setProductName(String productName) {
+            this.productName = productName;
+            return this;
+        }
+        public String getProductName() {
+            return this.productName;
         }
 
     }

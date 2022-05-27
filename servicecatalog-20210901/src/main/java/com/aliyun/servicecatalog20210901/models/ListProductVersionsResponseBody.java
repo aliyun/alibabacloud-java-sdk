@@ -50,6 +50,9 @@ public class ListProductVersionsResponseBody extends TeaModel {
         @NameInMap("Guidance")
         public String guidance;
 
+        @NameInMap("ProductId")
+        public String productId;
+
         // 产品版本ID
         @NameInMap("ProductVersionId")
         public String productVersionId;
@@ -101,6 +104,14 @@ public class ListProductVersionsResponseBody extends TeaModel {
         }
         public String getGuidance() {
             return this.guidance;
+        }
+
+        public ListProductVersionsResponseBodyProductVersionDetails setProductId(String productId) {
+            this.productId = productId;
+            return this;
+        }
+        public String getProductId() {
+            return this.productId;
         }
 
         public ListProductVersionsResponseBodyProductVersionDetails setProductVersionId(String productVersionId) {

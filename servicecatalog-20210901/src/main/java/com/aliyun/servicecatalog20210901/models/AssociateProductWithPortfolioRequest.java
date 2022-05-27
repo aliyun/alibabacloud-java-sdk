@@ -12,9 +12,6 @@ public class AssociateProductWithPortfolioRequest extends TeaModel {
     @NameInMap("ProductId")
     public String productId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static AssociateProductWithPortfolioRequest build(java.util.Map<String, ?> map) throws Exception {
         AssociateProductWithPortfolioRequest self = new AssociateProductWithPortfolioRequest();
         return TeaModel.build(map, self);
@@ -34,14 +31,6 @@ public class AssociateProductWithPortfolioRequest extends TeaModel {
     }
     public String getProductId() {
         return this.productId;
-    }
-
-    public AssociateProductWithPortfolioRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

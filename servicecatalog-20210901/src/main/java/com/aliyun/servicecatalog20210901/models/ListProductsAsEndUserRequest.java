@@ -69,8 +69,8 @@ public class ListProductsAsEndUserRequest extends TeaModel {
 
     public static class ListProductsAsEndUserRequestFilters extends TeaModel {
         // 过滤条件的名称
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Key")
+        public String key;
 
         // 过滤条件的值
         @NameInMap("Value")
@@ -81,12 +81,12 @@ public class ListProductsAsEndUserRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListProductsAsEndUserRequestFilters setName(String name) {
-            this.name = name;
+        public ListProductsAsEndUserRequestFilters setKey(String key) {
+            this.key = key;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getKey() {
+            return this.key;
         }
 
         public ListProductsAsEndUserRequestFilters setValue(String value) {

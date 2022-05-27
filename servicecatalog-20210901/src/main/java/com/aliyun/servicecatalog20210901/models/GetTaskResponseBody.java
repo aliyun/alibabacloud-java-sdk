@@ -33,22 +33,150 @@ public class GetTaskResponseBody extends TeaModel {
         return this.taskDetail;
     }
 
+    public static class GetTaskResponseBodyTaskDetailLogTerraformLogs extends TeaModel {
+        @NameInMap("Command")
+        public String command;
+
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("Stream")
+        public String stream;
+
+        public static GetTaskResponseBodyTaskDetailLogTerraformLogs build(java.util.Map<String, ?> map) throws Exception {
+            GetTaskResponseBodyTaskDetailLogTerraformLogs self = new GetTaskResponseBodyTaskDetailLogTerraformLogs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTaskResponseBodyTaskDetailLogTerraformLogs setCommand(String command) {
+            this.command = command;
+            return this;
+        }
+        public String getCommand() {
+            return this.command;
+        }
+
+        public GetTaskResponseBodyTaskDetailLogTerraformLogs setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public GetTaskResponseBodyTaskDetailLogTerraformLogs setStream(String stream) {
+            this.stream = stream;
+            return this;
+        }
+        public String getStream() {
+            return this.stream;
+        }
+
+    }
+
+    public static class GetTaskResponseBodyTaskDetailLog extends TeaModel {
+        @NameInMap("TerraformLogs")
+        public java.util.List<GetTaskResponseBodyTaskDetailLogTerraformLogs> terraformLogs;
+
+        public static GetTaskResponseBodyTaskDetailLog build(java.util.Map<String, ?> map) throws Exception {
+            GetTaskResponseBodyTaskDetailLog self = new GetTaskResponseBodyTaskDetailLog();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTaskResponseBodyTaskDetailLog setTerraformLogs(java.util.List<GetTaskResponseBodyTaskDetailLogTerraformLogs> terraformLogs) {
+            this.terraformLogs = terraformLogs;
+            return this;
+        }
+        public java.util.List<GetTaskResponseBodyTaskDetailLogTerraformLogs> getTerraformLogs() {
+            return this.terraformLogs;
+        }
+
+    }
+
+    public static class GetTaskResponseBodyTaskDetailOutputs extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("OutputKey")
+        public String outputKey;
+
+        @NameInMap("OutputValue")
+        public String outputValue;
+
+        public static GetTaskResponseBodyTaskDetailOutputs build(java.util.Map<String, ?> map) throws Exception {
+            GetTaskResponseBodyTaskDetailOutputs self = new GetTaskResponseBodyTaskDetailOutputs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTaskResponseBodyTaskDetailOutputs setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetTaskResponseBodyTaskDetailOutputs setOutputKey(String outputKey) {
+            this.outputKey = outputKey;
+            return this;
+        }
+        public String getOutputKey() {
+            return this.outputKey;
+        }
+
+        public GetTaskResponseBodyTaskDetailOutputs setOutputValue(String outputValue) {
+            this.outputValue = outputValue;
+            return this;
+        }
+        public String getOutputValue() {
+            return this.outputValue;
+        }
+
+    }
+
+    public static class GetTaskResponseBodyTaskDetailParameters extends TeaModel {
+        @NameInMap("ParameterKey")
+        public String parameterKey;
+
+        @NameInMap("ParameterValue")
+        public String parameterValue;
+
+        public static GetTaskResponseBodyTaskDetailParameters build(java.util.Map<String, ?> map) throws Exception {
+            GetTaskResponseBodyTaskDetailParameters self = new GetTaskResponseBodyTaskDetailParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTaskResponseBodyTaskDetailParameters setParameterKey(String parameterKey) {
+            this.parameterKey = parameterKey;
+            return this;
+        }
+        public String getParameterKey() {
+            return this.parameterKey;
+        }
+
+        public GetTaskResponseBodyTaskDetailParameters setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
+        }
+
+    }
+
     public static class GetTaskResponseBodyTaskDetail extends TeaModel {
         // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 模板参数
-        @NameInMap("Inputs")
-        public String inputs;
-
-        // 模板日志
         @NameInMap("Log")
-        public String log;
+        public GetTaskResponseBodyTaskDetailLog log;
 
-        // 模板输出
         @NameInMap("Outputs")
-        public String outputs;
+        public java.util.List<GetTaskResponseBodyTaskDetailOutputs> outputs;
+
+        @NameInMap("Parameters")
+        public java.util.List<GetTaskResponseBodyTaskDetailParameters> parameters;
 
         // 产品组合ID
         @NameInMap("PortfolioId")
@@ -94,6 +222,9 @@ public class GetTaskResponseBody extends TeaModel {
         @NameInMap("TaskType")
         public String taskType;
 
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
         public static GetTaskResponseBodyTaskDetail build(java.util.Map<String, ?> map) throws Exception {
             GetTaskResponseBodyTaskDetail self = new GetTaskResponseBodyTaskDetail();
             return TeaModel.build(map, self);
@@ -107,28 +238,28 @@ public class GetTaskResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetTaskResponseBodyTaskDetail setInputs(String inputs) {
-            this.inputs = inputs;
-            return this;
-        }
-        public String getInputs() {
-            return this.inputs;
-        }
-
-        public GetTaskResponseBodyTaskDetail setLog(String log) {
+        public GetTaskResponseBodyTaskDetail setLog(GetTaskResponseBodyTaskDetailLog log) {
             this.log = log;
             return this;
         }
-        public String getLog() {
+        public GetTaskResponseBodyTaskDetailLog getLog() {
             return this.log;
         }
 
-        public GetTaskResponseBodyTaskDetail setOutputs(String outputs) {
+        public GetTaskResponseBodyTaskDetail setOutputs(java.util.List<GetTaskResponseBodyTaskDetailOutputs> outputs) {
             this.outputs = outputs;
             return this;
         }
-        public String getOutputs() {
+        public java.util.List<GetTaskResponseBodyTaskDetailOutputs> getOutputs() {
             return this.outputs;
+        }
+
+        public GetTaskResponseBodyTaskDetail setParameters(java.util.List<GetTaskResponseBodyTaskDetailParameters> parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public java.util.List<GetTaskResponseBodyTaskDetailParameters> getParameters() {
+            return this.parameters;
         }
 
         public GetTaskResponseBodyTaskDetail setPortfolioId(String portfolioId) {
@@ -217,6 +348,14 @@ public class GetTaskResponseBody extends TeaModel {
         }
         public String getTaskType() {
             return this.taskType;
+        }
+
+        public GetTaskResponseBodyTaskDetail setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }
