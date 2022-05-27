@@ -3,7 +3,7 @@ package com.aliyun.imageprocess20200320.models;
 
 import com.aliyun.tea.*;
 
-public class TranslateMedResponse extends TeaModel {
+public class DetectLymphResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class TranslateMedResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public TranslateMedResponseBody body;
+    public DetectLymphResponseBody body;
 
-    public static TranslateMedResponse build(java.util.Map<String, ?> map) throws Exception {
-        TranslateMedResponse self = new TranslateMedResponse();
+    public static DetectLymphResponse build(java.util.Map<String, ?> map) throws Exception {
+        DetectLymphResponse self = new DetectLymphResponse();
         return TeaModel.build(map, self);
     }
 
-    public TranslateMedResponse setHeaders(java.util.Map<String, String> headers) {
+    public DetectLymphResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class TranslateMedResponse extends TeaModel {
         return this.headers;
     }
 
-    public TranslateMedResponse setStatusCode(Integer statusCode) {
+    public DetectLymphResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class TranslateMedResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public TranslateMedResponse setBody(TranslateMedResponseBody body) {
+    public DetectLymphResponse setBody(DetectLymphResponseBody body) {
         this.body = body;
         return this;
     }
-    public TranslateMedResponseBody getBody() {
+    public DetectLymphResponseBody getBody() {
         return this.body;
     }
 

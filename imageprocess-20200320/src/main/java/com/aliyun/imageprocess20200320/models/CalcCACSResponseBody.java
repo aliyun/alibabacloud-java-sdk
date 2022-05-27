@@ -31,16 +31,71 @@ public class CalcCACSResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class CalcCACSResponseBodyDataDetections extends TeaModel {
+        @NameInMap("CalciumId")
+        public Long calciumId;
+
+        @NameInMap("CalciumScore")
+        public Float calciumScore;
+
+        @NameInMap("CalciumVolume")
+        public Float calciumVolume;
+
+        public static CalcCACSResponseBodyDataDetections build(java.util.Map<String, ?> map) throws Exception {
+            CalcCACSResponseBodyDataDetections self = new CalcCACSResponseBodyDataDetections();
+            return TeaModel.build(map, self);
+        }
+
+        public CalcCACSResponseBodyDataDetections setCalciumId(Long calciumId) {
+            this.calciumId = calciumId;
+            return this;
+        }
+        public Long getCalciumId() {
+            return this.calciumId;
+        }
+
+        public CalcCACSResponseBodyDataDetections setCalciumScore(Float calciumScore) {
+            this.calciumScore = calciumScore;
+            return this;
+        }
+        public Float getCalciumScore() {
+            return this.calciumScore;
+        }
+
+        public CalcCACSResponseBodyDataDetections setCalciumVolume(Float calciumVolume) {
+            this.calciumVolume = calciumVolume;
+            return this;
+        }
+        public Float getCalciumVolume() {
+            return this.calciumVolume;
+        }
+
+    }
+
     public static class CalcCACSResponseBodyData extends TeaModel {
+        @NameInMap("Detections")
+        public java.util.List<CalcCACSResponseBodyDataDetections> detections;
+
         @NameInMap("ResultUrl")
         public String resultUrl;
 
         @NameInMap("Score")
         public String score;
 
+        @NameInMap("VolumeScore")
+        public String volumeScore;
+
         public static CalcCACSResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CalcCACSResponseBodyData self = new CalcCACSResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CalcCACSResponseBodyData setDetections(java.util.List<CalcCACSResponseBodyDataDetections> detections) {
+            this.detections = detections;
+            return this;
+        }
+        public java.util.List<CalcCACSResponseBodyDataDetections> getDetections() {
+            return this.detections;
         }
 
         public CalcCACSResponseBodyData setResultUrl(String resultUrl) {
@@ -57,6 +112,14 @@ public class CalcCACSResponseBody extends TeaModel {
         }
         public String getScore() {
             return this.score;
+        }
+
+        public CalcCACSResponseBodyData setVolumeScore(String volumeScore) {
+            this.volumeScore = volumeScore;
+            return this;
+        }
+        public String getVolumeScore() {
+            return this.volumeScore;
         }
 
     }
