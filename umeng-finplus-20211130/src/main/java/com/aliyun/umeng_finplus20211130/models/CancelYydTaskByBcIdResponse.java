@@ -3,7 +3,7 @@ package com.aliyun.umeng_finplus20211130.models;
 
 import com.aliyun.tea.*;
 
-public class GetDataSetStatusResponse extends TeaModel {
+public class CancelYydTaskByBcIdResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetDataSetStatusResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetDataSetStatusResponseBody body;
+    public CancelYydTaskByBcIdResponseBody body;
 
-    public static GetDataSetStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetDataSetStatusResponse self = new GetDataSetStatusResponse();
+    public static CancelYydTaskByBcIdResponse build(java.util.Map<String, ?> map) throws Exception {
+        CancelYydTaskByBcIdResponse self = new CancelYydTaskByBcIdResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDataSetStatusResponse setHeaders(java.util.Map<String, String> headers) {
+    public CancelYydTaskByBcIdResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetDataSetStatusResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetDataSetStatusResponse setStatusCode(Integer statusCode) {
+    public CancelYydTaskByBcIdResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetDataSetStatusResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetDataSetStatusResponse setBody(GetDataSetStatusResponseBody body) {
+    public CancelYydTaskByBcIdResponse setBody(CancelYydTaskByBcIdResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetDataSetStatusResponseBody getBody() {
+    public CancelYydTaskByBcIdResponseBody getBody() {
         return this.body;
     }
 
