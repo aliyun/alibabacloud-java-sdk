@@ -118,6 +118,10 @@ public class ListSceneResponseBody extends TeaModel {
     }
 
     public static class ListSceneResponseBodyList extends TeaModel {
+        // 封面地址
+        @NameInMap("CoverUrl")
+        public String coverUrl;
+
         // 创建时间
         @NameInMap("GmtCreate")
         public Long gmtCreate;
@@ -157,6 +161,14 @@ public class ListSceneResponseBody extends TeaModel {
         public static ListSceneResponseBodyList build(java.util.Map<String, ?> map) throws Exception {
             ListSceneResponseBodyList self = new ListSceneResponseBodyList();
             return TeaModel.build(map, self);
+        }
+
+        public ListSceneResponseBodyList setCoverUrl(String coverUrl) {
+            this.coverUrl = coverUrl;
+            return this;
+        }
+        public String getCoverUrl() {
+            return this.coverUrl;
         }
 
         public ListSceneResponseBodyList setGmtCreate(Long gmtCreate) {
