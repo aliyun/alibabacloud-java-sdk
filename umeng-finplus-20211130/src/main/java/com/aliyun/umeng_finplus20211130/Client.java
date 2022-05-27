@@ -258,4 +258,161 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitDataSetTaskResponse());
     }
+
+    public CancelYydTaskByBcIdResponse cancelYydTaskByBcId(CancelYydTaskByBcIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.cancelYydTaskByBcIdWithOptions(request, headers, runtime);
+    }
+
+    public CancelYydTaskByBcIdResponse cancelYydTaskByBcIdWithOptions(CancelYydTaskByBcIdRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bcId)) {
+            query.put("bcId", request.bcId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "cancelYydTaskByBcId"),
+            new TeaPair("version", "2021-11-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/batch_compute/yyd/task/cancel"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelYydTaskByBcIdResponse());
+    }
+
+    public CreateYydComputeTaskResponse createYydComputeTask(CreateYydComputeTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createYydComputeTaskWithOptions(request, headers, runtime);
+    }
+
+    public CreateYydComputeTaskResponse createYydComputeTaskWithOptions(CreateYydComputeTaskRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetId)) {
+            body.put("DatasetId", request.datasetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remarks)) {
+            body.put("Remarks", request.remarks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("appId", request.appId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "createYydComputeTask"),
+            new TeaPair("version", "2021-11-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/batch_compute/yyd/task/create"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateYydComputeTaskResponse());
+    }
+
+    public CreateYydDataSetResponse createYydDataSet(CreateYydDataSetRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createYydDataSetWithOptions(request, headers, runtime);
+    }
+
+    public CreateYydDataSetResponse createYydDataSetWithOptions(CreateYydDataSetRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossFileName)) {
+            body.put("ossFileName", request.ossFileName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "createYydDataSet"),
+            new TeaPair("version", "2021-11-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/batch_compute/yyd/dataset/create"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateYydDataSetResponse());
+    }
+
+    public ListYydComputeTaskListResponse listYydComputeTaskList() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listYydComputeTaskListWithOptions(headers, runtime);
+    }
+
+    public ListYydComputeTaskListResponse listYydComputeTaskListWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "listYydComputeTaskList"),
+            new TeaPair("version", "2021-11-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/batch_compute/yyd/task/list"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListYydComputeTaskListResponse());
+    }
+
+    public ListYydDataSetResponse listYydDataSet() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listYydDataSetWithOptions(headers, runtime);
+    }
+
+    public ListYydDataSetResponse listYydDataSetWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "listYydDataSet"),
+            new TeaPair("version", "2021-11-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/batch_compute/yyd/dataset/list"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListYydDataSetResponse());
+    }
 }

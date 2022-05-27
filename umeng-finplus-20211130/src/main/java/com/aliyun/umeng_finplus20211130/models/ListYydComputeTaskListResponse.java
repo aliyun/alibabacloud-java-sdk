@@ -3,7 +3,7 @@ package com.aliyun.umeng_finplus20211130.models;
 
 import com.aliyun.tea.*;
 
-public class GetDataSetStatusResponse extends TeaModel {
+public class ListYydComputeTaskListResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetDataSetStatusResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetDataSetStatusResponseBody body;
+    public ListYydComputeTaskListResponseBody body;
 
-    public static GetDataSetStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetDataSetStatusResponse self = new GetDataSetStatusResponse();
+    public static ListYydComputeTaskListResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListYydComputeTaskListResponse self = new ListYydComputeTaskListResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDataSetStatusResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListYydComputeTaskListResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetDataSetStatusResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetDataSetStatusResponse setStatusCode(Integer statusCode) {
+    public ListYydComputeTaskListResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetDataSetStatusResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetDataSetStatusResponse setBody(GetDataSetStatusResponseBody body) {
+    public ListYydComputeTaskListResponse setBody(ListYydComputeTaskListResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetDataSetStatusResponseBody getBody() {
+    public ListYydComputeTaskListResponseBody getBody() {
         return this.body;
     }
 
