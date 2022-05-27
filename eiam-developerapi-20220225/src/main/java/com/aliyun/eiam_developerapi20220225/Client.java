@@ -422,48 +422,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetOrganizationalUnitResponse());
     }
 
-    public GetOrganizationalUnitIdByExternalIdResponse getOrganizationalUnitIdByExternalId(String instanceId, String applicationId, GetOrganizationalUnitIdByExternalIdRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        GetOrganizationalUnitIdByExternalIdHeaders headers = new GetOrganizationalUnitIdByExternalIdHeaders();
-        return this.getOrganizationalUnitIdByExternalIdWithOptions(instanceId, applicationId, request, headers, runtime);
-    }
-
-    public GetOrganizationalUnitIdByExternalIdResponse getOrganizationalUnitIdByExternalIdWithOptions(String instanceId, String applicationId, GetOrganizationalUnitIdByExternalIdRequest request, GetOrganizationalUnitIdByExternalIdHeaders headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        applicationId = com.aliyun.openapiutil.Client.getEncodeParam(applicationId);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.organizationalUnitExternalId)) {
-            body.put("organizationalUnitExternalId", request.organizationalUnitExternalId);
-        }
-
-        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
-            realHeaders = headers.commonHeaders;
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
-            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", realHeaders),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetOrganizationalUnitIdByExternalId"),
-            new TeaPair("version", "2022-02-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v2/" + instanceId + "/" + applicationId + "/organizationalUnits/_/actions/getOrganizationalUnitIdByExternalId"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOrganizationalUnitIdByExternalIdResponse());
-    }
-
     public GetUserResponse getUser(String instanceId, String applicationId, String userId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         GetUserHeaders headers = new GetUserHeaders();
@@ -498,48 +456,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserResponse());
-    }
-
-    public GetUserIdByExternalIdResponse getUserIdByExternalId(String instanceId, String applicationId, GetUserIdByExternalIdRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        GetUserIdByExternalIdHeaders headers = new GetUserIdByExternalIdHeaders();
-        return this.getUserIdByExternalIdWithOptions(instanceId, applicationId, request, headers, runtime);
-    }
-
-    public GetUserIdByExternalIdResponse getUserIdByExternalIdWithOptions(String instanceId, String applicationId, GetUserIdByExternalIdRequest request, GetUserIdByExternalIdHeaders headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        applicationId = com.aliyun.openapiutil.Client.getEncodeParam(applicationId);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.userExternalId)) {
-            body.put("userExternalId", request.userExternalId);
-        }
-
-        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
-            realHeaders = headers.commonHeaders;
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
-            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", realHeaders),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetUserIdByExternalId"),
-            new TeaPair("version", "2022-02-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v2/" + instanceId + "/" + applicationId + "/users/_/actions/getUserIdByExternalId"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserIdByExternalIdResponse());
     }
 
     public GetUserInfoResponse getUserInfo(String instanceId, String applicationId) throws Exception {
