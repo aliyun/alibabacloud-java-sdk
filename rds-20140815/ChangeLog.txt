@@ -1,3 +1,6 @@
+2022-05-27 Version: 1.1.0
+- StartDBInstance parameter change.
+
 2022-05-06 Version: 1.0.5
 - StartDBInstance parameter change.
 

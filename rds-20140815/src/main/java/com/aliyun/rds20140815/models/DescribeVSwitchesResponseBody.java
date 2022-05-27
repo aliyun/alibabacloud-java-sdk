@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
-    public Long pageNumber;
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
-    public Long pageSize;
+    public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TotalCount")
-    public Long totalCount;
+    public Integer totalCount;
 
     @NameInMap("VSwitchs")
     public java.util.List<DescribeVSwitchesResponseBodyVSwitchs> vSwitchs;
@@ -24,19 +24,19 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeVSwitchesResponseBody setPageNumber(Long pageNumber) {
+    public DescribeVSwitchesResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public Long getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public DescribeVSwitchesResponseBody setPageSize(Long pageSize) {
+    public DescribeVSwitchesResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -48,11 +48,11 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeVSwitchesResponseBody setTotalCount(Long totalCount) {
+    public DescribeVSwitchesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.totalCount;
     }
 
@@ -65,32 +65,17 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     }
 
     public static class DescribeVSwitchesResponseBodyVSwitchs extends TeaModel {
-        @NameInMap("AliUid")
-        public String aliUid;
-
-        @NameInMap("Bid")
-        public String bid;
-
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
-
-        @NameInMap("GmtModified")
-        public String gmtModified;
-
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         @NameInMap("IzNo")
         public String izNo;
-
-        @NameInMap("RegionNo")
-        public String regionNo;
 
         @NameInMap("Status")
         public String status;
@@ -104,22 +89,6 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public static DescribeVSwitchesResponseBodyVSwitchs build(java.util.Map<String, ?> map) throws Exception {
             DescribeVSwitchesResponseBodyVSwitchs self = new DescribeVSwitchesResponseBodyVSwitchs();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchs setAliUid(String aliUid) {
-            this.aliUid = aliUid;
-            return this;
-        }
-        public String getAliUid() {
-            return this.aliUid;
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchs setBid(String bid) {
-            this.bid = bid;
-            return this;
-        }
-        public String getBid() {
-            return this.bid;
         }
 
         public DescribeVSwitchesResponseBodyVSwitchs setCidrBlock(String cidrBlock) {
@@ -138,22 +107,6 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitchs setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchs setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public String getGmtModified() {
-            return this.gmtModified;
-        }
-
         public DescribeVSwitchesResponseBodyVSwitchs setIsDefault(Boolean isDefault) {
             this.isDefault = isDefault;
             return this;
@@ -168,14 +121,6 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
         public String getIzNo() {
             return this.izNo;
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchs setRegionNo(String regionNo) {
-            this.regionNo = regionNo;
-            return this;
-        }
-        public String getRegionNo() {
-            return this.regionNo;
         }
 
         public DescribeVSwitchesResponseBodyVSwitchs setStatus(String status) {

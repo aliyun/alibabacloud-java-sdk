@@ -8,6 +8,10 @@ public class CalculateDBInstanceWeightResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public CalculateDBInstanceWeightResponseBody body;
@@ -23,6 +27,14 @@ public class CalculateDBInstanceWeightResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public CalculateDBInstanceWeightResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public CalculateDBInstanceWeightResponse setBody(CalculateDBInstanceWeightResponseBody body) {
