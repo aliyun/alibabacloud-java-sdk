@@ -4,9 +4,6 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
-    @NameInMap("ApplicationParams")
-    public java.util.Map<String, ?> applicationParams;
-
     // 区域ID
     @NameInMap("AreaId")
     public String areaId;
@@ -14,6 +11,9 @@ public class CreateApplicationRequest extends TeaModel {
     // 幂等标记
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("Configuration")
+    public java.util.Map<String, ?> configuration;
 
     // 待替换实例列表
     @NameInMap("Instances")
@@ -32,19 +32,11 @@ public class CreateApplicationRequest extends TeaModel {
     public String templateId;
 
     @NameInMap("Variables")
-    public String variables;
+    public java.util.Map<String, ?> variables;
 
     public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationRequest self = new CreateApplicationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateApplicationRequest setApplicationParams(java.util.Map<String, ?> applicationParams) {
-        this.applicationParams = applicationParams;
-        return this;
-    }
-    public java.util.Map<String, ?> getApplicationParams() {
-        return this.applicationParams;
     }
 
     public CreateApplicationRequest setAreaId(String areaId) {
@@ -61,6 +53,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateApplicationRequest setConfiguration(java.util.Map<String, ?> configuration) {
+        this.configuration = configuration;
+        return this;
+    }
+    public java.util.Map<String, ?> getConfiguration() {
+        return this.configuration;
     }
 
     public CreateApplicationRequest setInstances(java.util.List<CreateApplicationRequestInstances> instances) {
@@ -95,11 +95,11 @@ public class CreateApplicationRequest extends TeaModel {
         return this.templateId;
     }
 
-    public CreateApplicationRequest setVariables(String variables) {
+    public CreateApplicationRequest setVariables(java.util.Map<String, ?> variables) {
         this.variables = variables;
         return this;
     }
-    public String getVariables() {
+    public java.util.Map<String, ?> getVariables() {
         return this.variables;
     }
 

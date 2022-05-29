@@ -4,9 +4,6 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationShrinkRequest extends TeaModel {
-    @NameInMap("ApplicationParams")
-    public String applicationParamsShrink;
-
     // 区域ID
     @NameInMap("AreaId")
     public String areaId;
@@ -14,6 +11,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     // 幂等标记
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("Configuration")
+    public String configurationShrink;
 
     // 待替换实例列表
     @NameInMap("Instances")
@@ -32,19 +32,11 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     public String templateId;
 
     @NameInMap("Variables")
-    public String variables;
+    public String variablesShrink;
 
     public static CreateApplicationShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationShrinkRequest self = new CreateApplicationShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateApplicationShrinkRequest setApplicationParamsShrink(String applicationParamsShrink) {
-        this.applicationParamsShrink = applicationParamsShrink;
-        return this;
-    }
-    public String getApplicationParamsShrink() {
-        return this.applicationParamsShrink;
     }
 
     public CreateApplicationShrinkRequest setAreaId(String areaId) {
@@ -61,6 +53,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateApplicationShrinkRequest setConfigurationShrink(String configurationShrink) {
+        this.configurationShrink = configurationShrink;
+        return this;
+    }
+    public String getConfigurationShrink() {
+        return this.configurationShrink;
     }
 
     public CreateApplicationShrinkRequest setInstancesShrink(String instancesShrink) {
@@ -95,12 +95,12 @@ public class CreateApplicationShrinkRequest extends TeaModel {
         return this.templateId;
     }
 
-    public CreateApplicationShrinkRequest setVariables(String variables) {
-        this.variables = variables;
+    public CreateApplicationShrinkRequest setVariablesShrink(String variablesShrink) {
+        this.variablesShrink = variablesShrink;
         return this;
     }
-    public String getVariables() {
-        return this.variables;
+    public String getVariablesShrink() {
+        return this.variablesShrink;
     }
 
 }

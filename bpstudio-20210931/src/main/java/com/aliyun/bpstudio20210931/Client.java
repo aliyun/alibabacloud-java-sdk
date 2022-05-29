@@ -36,25 +36,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateApplicationShrinkRequest request = new CreateApplicationShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.applicationParams)) {
-            request.applicationParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.applicationParams, "ApplicationParams", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.configuration)) {
+            request.configurationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.configuration, "Configuration", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.instances)) {
             request.instancesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instances, "Instances", "json");
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.applicationParamsShrink)) {
-            body.put("ApplicationParams", request.applicationParamsShrink);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.variables)) {
+            request.variablesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.variables, "Variables", "json");
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.areaId)) {
             body.put("AreaId", request.areaId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configurationShrink)) {
+            body.put("Configuration", request.configurationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instancesShrink)) {
@@ -73,8 +77,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TemplateId", request.templateId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.variables)) {
-            body.put("Variables", request.variables);
+        if (!com.aliyun.teautil.Common.isUnset(request.variablesShrink)) {
+            body.put("Variables", request.variablesShrink);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
