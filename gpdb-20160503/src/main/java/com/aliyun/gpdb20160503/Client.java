@@ -2678,6 +2678,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifySecurityIpsWithOptions(request, runtime);
     }
 
+    public RebalanceDBInstanceResponse rebalanceDBInstanceWithOptions(RebalanceDBInstanceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RebalanceDBInstance"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RebalanceDBInstanceResponse());
+    }
+
+    public RebalanceDBInstanceResponse rebalanceDBInstance(RebalanceDBInstanceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.rebalanceDBInstanceWithOptions(request, runtime);
+    }
+
     public ReleaseInstancePublicConnectionResponse releaseInstancePublicConnectionWithOptions(ReleaseInstancePublicConnectionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
