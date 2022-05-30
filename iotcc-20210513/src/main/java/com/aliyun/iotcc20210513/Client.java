@@ -572,6 +572,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceUid", request.resourceUid);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.wildcardDomainEnabled)) {
             query.put("WildcardDomainEnabled", request.wildcardDomainEnabled);
         }
