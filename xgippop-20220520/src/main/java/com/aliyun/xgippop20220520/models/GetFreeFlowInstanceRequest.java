@@ -4,8 +4,8 @@ package com.aliyun.xgippop20220520.models;
 import com.aliyun.tea.*;
 
 public class GetFreeFlowInstanceRequest extends TeaModel {
-    @NameInMap("AliUid")
-    public Long aliUid;
+    @NameInMap("Aliuid")
+    public Long aliuid;
 
     // 应用ID
     @NameInMap("AppId")
@@ -23,12 +23,12 @@ public class GetFreeFlowInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetFreeFlowInstanceRequest setAliUid(Long aliUid) {
-        this.aliUid = aliUid;
+    public GetFreeFlowInstanceRequest setAliuid(Long aliuid) {
+        this.aliuid = aliuid;
         return this;
     }
-    public Long getAliUid() {
-        return this.aliUid;
+    public Long getAliuid() {
+        return this.aliuid;
     }
 
     public GetFreeFlowInstanceRequest setAppId(String appId) {
