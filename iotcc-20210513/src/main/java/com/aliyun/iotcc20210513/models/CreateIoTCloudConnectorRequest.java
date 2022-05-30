@@ -28,6 +28,9 @@ public class CreateIoTCloudConnectorRequest extends TeaModel {
     @NameInMap("ResourceUid")
     public Long resourceUid;
 
+    @NameInMap("Type")
+    public String type;
+
     @NameInMap("WildcardDomainEnabled")
     public Boolean wildcardDomainEnabled;
 
@@ -98,6 +101,14 @@ public class CreateIoTCloudConnectorRequest extends TeaModel {
     }
     public Long getResourceUid() {
         return this.resourceUid;
+    }
+
+    public CreateIoTCloudConnectorRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public CreateIoTCloudConnectorRequest setWildcardDomainEnabled(Boolean wildcardDomainEnabled) {
