@@ -36,11 +36,11 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
     public static class DescribeWebhookContactsResponseBodyPageBeanWebhookContactsWebhook extends TeaModel {
         // HTTP请求头
         @NameInMap("BizHeaders")
-        public String bizHeaders;
+        public java.util.Map<String, ?> bizHeaders;
 
         // HTTP请求参数
         @NameInMap("BizParams")
-        public String bizParams;
+        public java.util.Map<String, ?> bizParams;
 
         // 告警通知模板
         @NameInMap("Body")
@@ -63,19 +63,19 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeWebhookContactsResponseBodyPageBeanWebhookContactsWebhook setBizHeaders(String bizHeaders) {
+        public DescribeWebhookContactsResponseBodyPageBeanWebhookContactsWebhook setBizHeaders(java.util.Map<String, ?> bizHeaders) {
             this.bizHeaders = bizHeaders;
             return this;
         }
-        public String getBizHeaders() {
+        public java.util.Map<String, ?> getBizHeaders() {
             return this.bizHeaders;
         }
 
-        public DescribeWebhookContactsResponseBodyPageBeanWebhookContactsWebhook setBizParams(String bizParams) {
+        public DescribeWebhookContactsResponseBodyPageBeanWebhookContactsWebhook setBizParams(java.util.Map<String, ?> bizParams) {
             this.bizParams = bizParams;
             return this;
         }
-        public String getBizParams() {
+        public java.util.Map<String, ?> getBizParams() {
             return this.bizParams;
         }
 
