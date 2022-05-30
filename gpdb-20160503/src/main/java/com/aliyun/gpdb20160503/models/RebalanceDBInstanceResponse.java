@@ -3,7 +3,7 @@ package com.aliyun.gpdb20160503.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeLogBackupsResponse extends TeaModel {
+public class RebalanceDBInstanceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeLogBackupsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeLogBackupsResponseBody body;
+    public RebalanceDBInstanceResponseBody body;
 
-    public static DescribeLogBackupsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeLogBackupsResponse self = new DescribeLogBackupsResponse();
+    public static RebalanceDBInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
+        RebalanceDBInstanceResponse self = new RebalanceDBInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLogBackupsResponse setHeaders(java.util.Map<String, String> headers) {
+    public RebalanceDBInstanceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeLogBackupsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeLogBackupsResponse setStatusCode(Integer statusCode) {
+    public RebalanceDBInstanceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeLogBackupsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeLogBackupsResponse setBody(DescribeLogBackupsResponseBody body) {
+    public RebalanceDBInstanceResponse setBody(RebalanceDBInstanceResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeLogBackupsResponseBody getBody() {
+    public RebalanceDBInstanceResponseBody getBody() {
         return this.body;
     }
 
