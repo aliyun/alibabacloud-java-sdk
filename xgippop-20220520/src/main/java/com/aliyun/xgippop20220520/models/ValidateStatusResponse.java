@@ -1,0 +1,48 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.xgippop20220520.models;
+
+import com.aliyun.tea.*;
+
+public class ValidateStatusResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ValidateStatusResponseBody body;
+
+    public static ValidateStatusResponse build(java.util.Map<String, ?> map) throws Exception {
+        ValidateStatusResponse self = new ValidateStatusResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ValidateStatusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ValidateStatusResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public ValidateStatusResponse setBody(ValidateStatusResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ValidateStatusResponseBody getBody() {
+        return this.body;
+    }
+
+}
