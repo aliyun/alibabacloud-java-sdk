@@ -4,8 +4,8 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateMediaConvertTaskRequest extends TeaModel {
-    @NameInMap("DatasetName")
-    public String datasetName;
+    @NameInMap("CredentialConfig")
+    public CredentialConfig credentialConfig;
 
     @NameInMap("NotifyEndpoint")
     public String notifyEndpoint;
@@ -33,12 +33,12 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateMediaConvertTaskRequest setDatasetName(String datasetName) {
-        this.datasetName = datasetName;
+    public CreateMediaConvertTaskRequest setCredentialConfig(CredentialConfig credentialConfig) {
+        this.credentialConfig = credentialConfig;
         return this;
     }
-    public String getDatasetName() {
-        return this.datasetName;
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     public CreateMediaConvertTaskRequest setNotifyEndpoint(String notifyEndpoint) {
@@ -213,6 +213,9 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         @NameInMap("Bitrate")
         public Integer bitrate;
 
+        @NameInMap("BitrateOption")
+        public String bitrateOption;
+
         @NameInMap("Channel")
         public Integer channel;
 
@@ -225,6 +228,9 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         @NameInMap("SampleRate")
         public Integer sampleRate;
 
+        @NameInMap("SampleRateOption")
+        public String sampleRateOption;
+
         public static CreateMediaConvertTaskRequestTargetsAudioTranscodeAudio build(java.util.Map<String, ?> map) throws Exception {
             CreateMediaConvertTaskRequestTargetsAudioTranscodeAudio self = new CreateMediaConvertTaskRequestTargetsAudioTranscodeAudio();
             return TeaModel.build(map, self);
@@ -236,6 +242,14 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         }
         public Integer getBitrate() {
             return this.bitrate;
+        }
+
+        public CreateMediaConvertTaskRequestTargetsAudioTranscodeAudio setBitrateOption(String bitrateOption) {
+            this.bitrateOption = bitrateOption;
+            return this;
+        }
+        public String getBitrateOption() {
+            return this.bitrateOption;
         }
 
         public CreateMediaConvertTaskRequestTargetsAudioTranscodeAudio setChannel(Integer channel) {
@@ -268,6 +282,14 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         }
         public Integer getSampleRate() {
             return this.sampleRate;
+        }
+
+        public CreateMediaConvertTaskRequestTargetsAudioTranscodeAudio setSampleRateOption(String sampleRateOption) {
+            this.sampleRateOption = sampleRateOption;
+            return this;
+        }
+        public String getSampleRateOption() {
+            return this.sampleRateOption;
         }
 
     }
@@ -586,6 +608,9 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         @NameInMap("Format")
         public String format;
 
+        @NameInMap("StartNumber")
+        public Integer startNumber;
+
         public static CreateMediaConvertTaskRequestTargetsSegment build(java.util.Map<String, ?> map) throws Exception {
             CreateMediaConvertTaskRequestTargetsSegment self = new CreateMediaConvertTaskRequestTargetsSegment();
             return TeaModel.build(map, self);
@@ -605,6 +630,14 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         }
         public String getFormat() {
             return this.format;
+        }
+
+        public CreateMediaConvertTaskRequestTargetsSegment setStartNumber(Integer startNumber) {
+            this.startNumber = startNumber;
+            return this;
+        }
+        public Integer getStartNumber() {
+            return this.startNumber;
         }
 
     }
@@ -978,6 +1011,9 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         @NameInMap("Bitrate")
         public Integer bitrate;
 
+        @NameInMap("BitrateOption")
+        public String bitrateOption;
+
         @NameInMap("BufferSize")
         public Integer bufferSize;
 
@@ -989,6 +1025,9 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
 
         @NameInMap("FrameRate")
         public Float frameRate;
+
+        @NameInMap("FrameRateOption")
+        public String frameRateOption;
 
         @NameInMap("GOPSize")
         public Integer GOPSize;
@@ -1004,6 +1043,9 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
 
         @NameInMap("Resolution")
         public String resolution;
+
+        @NameInMap("ResolutionOption")
+        public String resolutionOption;
 
         @NameInMap("Rotation")
         public Integer rotation;
@@ -1040,6 +1082,14 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
             return this.bitrate;
         }
 
+        public CreateMediaConvertTaskRequestTargetsVideoTranscodeVideo setBitrateOption(String bitrateOption) {
+            this.bitrateOption = bitrateOption;
+            return this;
+        }
+        public String getBitrateOption() {
+            return this.bitrateOption;
+        }
+
         public CreateMediaConvertTaskRequestTargetsVideoTranscodeVideo setBufferSize(Integer bufferSize) {
             this.bufferSize = bufferSize;
             return this;
@@ -1070,6 +1120,14 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         }
         public Float getFrameRate() {
             return this.frameRate;
+        }
+
+        public CreateMediaConvertTaskRequestTargetsVideoTranscodeVideo setFrameRateOption(String frameRateOption) {
+            this.frameRateOption = frameRateOption;
+            return this;
+        }
+        public String getFrameRateOption() {
+            return this.frameRateOption;
         }
 
         public CreateMediaConvertTaskRequestTargetsVideoTranscodeVideo setGOPSize(Integer GOPSize) {
@@ -1110,6 +1168,14 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         }
         public String getResolution() {
             return this.resolution;
+        }
+
+        public CreateMediaConvertTaskRequestTargetsVideoTranscodeVideo setResolutionOption(String resolutionOption) {
+            this.resolutionOption = resolutionOption;
+            return this;
+        }
+        public String getResolutionOption() {
+            return this.resolutionOption;
         }
 
         public CreateMediaConvertTaskRequestTargetsVideoTranscodeVideo setRotation(Integer rotation) {
@@ -1181,8 +1247,8 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         @NameInMap("Image")
         public CreateMediaConvertTaskRequestTargetsImage image;
 
-        @NameInMap("PresetId")
-        public String presetId;
+        @NameInMap("Preset")
+        public PresetReference preset;
 
         @NameInMap("Segment")
         public CreateMediaConvertTaskRequestTargetsSegment segment;
@@ -1228,12 +1294,12 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
             return this.image;
         }
 
-        public CreateMediaConvertTaskRequestTargets setPresetId(String presetId) {
-            this.presetId = presetId;
+        public CreateMediaConvertTaskRequestTargets setPreset(PresetReference preset) {
+            this.preset = preset;
             return this;
         }
-        public String getPresetId() {
-            return this.presetId;
+        public PresetReference getPreset() {
+            return this.preset;
         }
 
         public CreateMediaConvertTaskRequestTargets setSegment(CreateMediaConvertTaskRequestTargetsSegment segment) {

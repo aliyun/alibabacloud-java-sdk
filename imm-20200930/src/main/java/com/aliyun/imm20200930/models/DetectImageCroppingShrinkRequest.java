@@ -3,12 +3,12 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DetectImageCroppingRequest extends TeaModel {
+public class DetectImageCroppingShrinkRequest extends TeaModel {
     @NameInMap("AspectRatios")
     public String aspectRatios;
 
     @NameInMap("CredentialConfig")
-    public CredentialConfig credentialConfig;
+    public String credentialConfigShrink;
 
     // 项目名称
     @NameInMap("ProjectName")
@@ -18,12 +18,12 @@ public class DetectImageCroppingRequest extends TeaModel {
     @NameInMap("SourceURI")
     public String sourceURI;
 
-    public static DetectImageCroppingRequest build(java.util.Map<String, ?> map) throws Exception {
-        DetectImageCroppingRequest self = new DetectImageCroppingRequest();
+    public static DetectImageCroppingShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DetectImageCroppingShrinkRequest self = new DetectImageCroppingShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DetectImageCroppingRequest setAspectRatios(String aspectRatios) {
+    public DetectImageCroppingShrinkRequest setAspectRatios(String aspectRatios) {
         this.aspectRatios = aspectRatios;
         return this;
     }
@@ -31,15 +31,15 @@ public class DetectImageCroppingRequest extends TeaModel {
         return this.aspectRatios;
     }
 
-    public DetectImageCroppingRequest setCredentialConfig(CredentialConfig credentialConfig) {
-        this.credentialConfig = credentialConfig;
+    public DetectImageCroppingShrinkRequest setCredentialConfigShrink(String credentialConfigShrink) {
+        this.credentialConfigShrink = credentialConfigShrink;
         return this;
     }
-    public CredentialConfig getCredentialConfig() {
-        return this.credentialConfig;
+    public String getCredentialConfigShrink() {
+        return this.credentialConfigShrink;
     }
 
-    public DetectImageCroppingRequest setProjectName(String projectName) {
+    public DetectImageCroppingShrinkRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -47,7 +47,7 @@ public class DetectImageCroppingRequest extends TeaModel {
         return this.projectName;
     }
 
-    public DetectImageCroppingRequest setSourceURI(String sourceURI) {
+    public DetectImageCroppingShrinkRequest setSourceURI(String sourceURI) {
         this.sourceURI = sourceURI;
         return this;
     }

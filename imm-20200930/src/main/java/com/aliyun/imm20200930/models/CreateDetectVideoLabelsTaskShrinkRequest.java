@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateDetectVideoLabelsTaskShrinkRequest extends TeaModel {
+    @NameInMap("CredentialConfig")
+    public String credentialConfigShrink;
+
     // NotifyEndpoint
     @NameInMap("NotifyEndpoint")
     public String notifyEndpoint;
@@ -30,6 +33,14 @@ public class CreateDetectVideoLabelsTaskShrinkRequest extends TeaModel {
     public static CreateDetectVideoLabelsTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDetectVideoLabelsTaskShrinkRequest self = new CreateDetectVideoLabelsTaskShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDetectVideoLabelsTaskShrinkRequest setCredentialConfigShrink(String credentialConfigShrink) {
+        this.credentialConfigShrink = credentialConfigShrink;
+        return this;
+    }
+    public String getCredentialConfigShrink() {
+        return this.credentialConfigShrink;
     }
 
     public CreateDetectVideoLabelsTaskShrinkRequest setNotifyEndpoint(String notifyEndpoint) {

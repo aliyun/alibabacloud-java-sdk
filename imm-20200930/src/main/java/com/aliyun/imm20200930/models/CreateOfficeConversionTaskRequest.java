@@ -4,9 +4,8 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateOfficeConversionTaskRequest extends TeaModel {
-    // 链式授权
-    @NameInMap("AssumeRoleChain")
-    public AssumeRoleChain assumeRoleChain;
+    @NameInMap("CredentialConfig")
+    public CredentialConfig credentialConfig;
 
     // 转换终止页，包含终止页，默认转换到最后一页，表格转图片时需要指定 SheetIndex 才有效
     @NameInMap("EndPage")
@@ -27,6 +26,10 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     // 转文本时是否保留文档中的换行符，默认不保留
     @NameInMap("HoldLineFeed")
     public Boolean holdLineFeed;
+
+    // 输出图片 DPI，允许范围 96-600，默认 96
+    @NameInMap("ImageDPI")
+    public Long imageDPI;
 
     // 转图片时是否转换成一张长图，最多支持将 20 页合成一张长图，超过可能报错，默认为不转成长图
     @NameInMap("LongPicture")
@@ -51,6 +54,10 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     // mns 消息通知 topic
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
+
+    // 指定转换页码，优先级高于 StartPage/EndPage，格式：多个页码用 “," 拼接，连续页码用 "-" 连接，样例参考: 1,2-4,7
+    @NameInMap("Pages")
+    public String pages;
 
     // 表格转图片纸张是否水平放置，默认为否
     @NameInMap("PaperHorizontal")
@@ -125,12 +132,12 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateOfficeConversionTaskRequest setAssumeRoleChain(AssumeRoleChain assumeRoleChain) {
-        this.assumeRoleChain = assumeRoleChain;
+    public CreateOfficeConversionTaskRequest setCredentialConfig(CredentialConfig credentialConfig) {
+        this.credentialConfig = credentialConfig;
         return this;
     }
-    public AssumeRoleChain getAssumeRoleChain() {
-        return this.assumeRoleChain;
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     public CreateOfficeConversionTaskRequest setEndPage(Long endPage) {
@@ -171,6 +178,14 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     }
     public Boolean getHoldLineFeed() {
         return this.holdLineFeed;
+    }
+
+    public CreateOfficeConversionTaskRequest setImageDPI(Long imageDPI) {
+        this.imageDPI = imageDPI;
+        return this;
+    }
+    public Long getImageDPI() {
+        return this.imageDPI;
     }
 
     public CreateOfficeConversionTaskRequest setLongPicture(Boolean longPicture) {
@@ -219,6 +234,14 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     }
     public String getNotifyTopicName() {
         return this.notifyTopicName;
+    }
+
+    public CreateOfficeConversionTaskRequest setPages(String pages) {
+        this.pages = pages;
+        return this;
+    }
+    public String getPages() {
+        return this.pages;
     }
 
     public CreateOfficeConversionTaskRequest setPaperHorizontal(Boolean paperHorizontal) {

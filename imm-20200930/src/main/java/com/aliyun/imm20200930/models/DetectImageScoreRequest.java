@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DetectImageScoreRequest extends TeaModel {
+    @NameInMap("CredentialConfig")
+    public CredentialConfig credentialConfig;
+
     // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
@@ -14,6 +17,14 @@ public class DetectImageScoreRequest extends TeaModel {
     public static DetectImageScoreRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectImageScoreRequest self = new DetectImageScoreRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DetectImageScoreRequest setCredentialConfig(CredentialConfig credentialConfig) {
+        this.credentialConfig = credentialConfig;
+        return this;
+    }
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     public DetectImageScoreRequest setProjectName(String projectName) {

@@ -4,8 +4,8 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateMediaConvertTaskShrinkRequest extends TeaModel {
-    @NameInMap("DatasetName")
-    public String datasetName;
+    @NameInMap("CredentialConfig")
+    public String credentialConfigShrink;
 
     @NameInMap("NotifyEndpoint")
     public String notifyEndpoint;
@@ -33,12 +33,12 @@ public class CreateMediaConvertTaskShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateMediaConvertTaskShrinkRequest setDatasetName(String datasetName) {
-        this.datasetName = datasetName;
+    public CreateMediaConvertTaskShrinkRequest setCredentialConfigShrink(String credentialConfigShrink) {
+        this.credentialConfigShrink = credentialConfigShrink;
         return this;
     }
-    public String getDatasetName() {
-        return this.datasetName;
+    public String getCredentialConfigShrink() {
+        return this.credentialConfigShrink;
     }
 
     public CreateMediaConvertTaskShrinkRequest setNotifyEndpoint(String notifyEndpoint) {

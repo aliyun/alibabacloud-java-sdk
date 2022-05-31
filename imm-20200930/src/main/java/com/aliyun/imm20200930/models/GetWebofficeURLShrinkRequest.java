@@ -4,13 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetWebofficeURLShrinkRequest extends TeaModel {
-    // 链式授权
-    @NameInMap("AssumeRoleChain")
-    public String assumeRoleChainShrink;
-
     // 缓存预览标识
     @NameInMap("CachePreview")
     public Boolean cachePreview;
+
+    @NameInMap("CredentialConfig")
+    public String credentialConfigShrink;
 
     // 是否支持外部上传
     @NameInMap("ExternalUploaded")
@@ -73,20 +72,20 @@ public class GetWebofficeURLShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetWebofficeURLShrinkRequest setAssumeRoleChainShrink(String assumeRoleChainShrink) {
-        this.assumeRoleChainShrink = assumeRoleChainShrink;
-        return this;
-    }
-    public String getAssumeRoleChainShrink() {
-        return this.assumeRoleChainShrink;
-    }
-
     public GetWebofficeURLShrinkRequest setCachePreview(Boolean cachePreview) {
         this.cachePreview = cachePreview;
         return this;
     }
     public Boolean getCachePreview() {
         return this.cachePreview;
+    }
+
+    public GetWebofficeURLShrinkRequest setCredentialConfigShrink(String credentialConfigShrink) {
+        this.credentialConfigShrink = credentialConfigShrink;
+        return this;
+    }
+    public String getCredentialConfigShrink() {
+        return this.credentialConfigShrink;
     }
 
     public GetWebofficeURLShrinkRequest setExternalUploaded(Boolean externalUploaded) {
