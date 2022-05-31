@@ -17,6 +17,9 @@ public class ListAppSessionsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListAppSessionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAppSessionsResponseBody self = new ListAppSessionsResponseBody();
         return TeaModel.build(map, self);
@@ -52,6 +55,14 @@ public class ListAppSessionsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListAppSessionsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListAppSessionsResponseBodyAppSessions extends TeaModel {
