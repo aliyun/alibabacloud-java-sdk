@@ -3,7 +3,7 @@ package com.aliyun.linkedmall20220531.models;
 
 import com.aliyun.tea.*;
 
-public class QueryDistributionItemGroupResponseBody extends TeaModel {
+public class ListDistributionItemResponseBody extends TeaModel {
     // 渠道公共数据
     @NameInMap("BizViewData")
     public java.util.Map<String, ?> bizViewData;
@@ -22,7 +22,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
 
     // 请求结果数据
     @NameInMap("Model")
-    public java.util.List<QueryDistributionItemGroupResponseBodyModel> model;
+    public java.util.List<ListDistributionItemResponseBodyModel> model;
 
     // 当前页
     @NameInMap("PageNumber")
@@ -52,12 +52,12 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    public static QueryDistributionItemGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        QueryDistributionItemGroupResponseBody self = new QueryDistributionItemGroupResponseBody();
+    public static ListDistributionItemResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListDistributionItemResponseBody self = new ListDistributionItemResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryDistributionItemGroupResponseBody setBizViewData(java.util.Map<String, ?> bizViewData) {
+    public ListDistributionItemResponseBody setBizViewData(java.util.Map<String, ?> bizViewData) {
         this.bizViewData = bizViewData;
         return this;
     }
@@ -65,7 +65,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
         return this.bizViewData;
     }
 
-    public QueryDistributionItemGroupResponseBody setCode(String code) {
+    public ListDistributionItemResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -73,7 +73,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
         return this.code;
     }
 
-    public QueryDistributionItemGroupResponseBody setLogsId(String logsId) {
+    public ListDistributionItemResponseBody setLogsId(String logsId) {
         this.logsId = logsId;
         return this;
     }
@@ -81,7 +81,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
         return this.logsId;
     }
 
-    public QueryDistributionItemGroupResponseBody setMessage(String message) {
+    public ListDistributionItemResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -89,15 +89,15 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
         return this.message;
     }
 
-    public QueryDistributionItemGroupResponseBody setModel(java.util.List<QueryDistributionItemGroupResponseBodyModel> model) {
+    public ListDistributionItemResponseBody setModel(java.util.List<ListDistributionItemResponseBodyModel> model) {
         this.model = model;
         return this;
     }
-    public java.util.List<QueryDistributionItemGroupResponseBodyModel> getModel() {
+    public java.util.List<ListDistributionItemResponseBodyModel> getModel() {
         return this.model;
     }
 
-    public QueryDistributionItemGroupResponseBody setPageNumber(Long pageNumber) {
+    public ListDistributionItemResponseBody setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -105,7 +105,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public QueryDistributionItemGroupResponseBody setPageSize(Long pageSize) {
+    public ListDistributionItemResponseBody setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -113,7 +113,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryDistributionItemGroupResponseBody setRequestId(String requestId) {
+    public ListDistributionItemResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -121,7 +121,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryDistributionItemGroupResponseBody setSubCode(String subCode) {
+    public ListDistributionItemResponseBody setSubCode(String subCode) {
         this.subCode = subCode;
         return this;
     }
@@ -129,7 +129,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
         return this.subCode;
     }
 
-    public QueryDistributionItemGroupResponseBody setSubMessage(String subMessage) {
+    public ListDistributionItemResponseBody setSubMessage(String subMessage) {
         this.subMessage = subMessage;
         return this;
     }
@@ -137,7 +137,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
         return this.subMessage;
     }
 
-    public QueryDistributionItemGroupResponseBody setSuccess(Boolean success) {
+    public ListDistributionItemResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -145,7 +145,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryDistributionItemGroupResponseBody setTotalCount(Long totalCount) {
+    public ListDistributionItemResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
@@ -153,7 +153,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class QueryDistributionItemGroupResponseBodyModelMSkuList extends TeaModel {
+    public static class ListDistributionItemResponseBodyModelMSkuList extends TeaModel {
         @NameInMap("MCanSell")
         public String MCanSell;
 
@@ -172,12 +172,12 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
         @NameInMap("MTaoBaoCurrentPrice")
         public String MTaoBaoCurrentPrice;
 
-        public static QueryDistributionItemGroupResponseBodyModelMSkuList build(java.util.Map<String, ?> map) throws Exception {
-            QueryDistributionItemGroupResponseBodyModelMSkuList self = new QueryDistributionItemGroupResponseBodyModelMSkuList();
+        public static ListDistributionItemResponseBodyModelMSkuList build(java.util.Map<String, ?> map) throws Exception {
+            ListDistributionItemResponseBodyModelMSkuList self = new ListDistributionItemResponseBodyModelMSkuList();
             return TeaModel.build(map, self);
         }
 
-        public QueryDistributionItemGroupResponseBodyModelMSkuList setMCanSell(String MCanSell) {
+        public ListDistributionItemResponseBodyModelMSkuList setMCanSell(String MCanSell) {
             this.MCanSell = MCanSell;
             return this;
         }
@@ -185,7 +185,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
             return this.MCanSell;
         }
 
-        public QueryDistributionItemGroupResponseBodyModelMSkuList setMPriceCent(String MPriceCent) {
+        public ListDistributionItemResponseBodyModelMSkuList setMPriceCent(String MPriceCent) {
             this.MPriceCent = MPriceCent;
             return this;
         }
@@ -193,7 +193,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
             return this.MPriceCent;
         }
 
-        public QueryDistributionItemGroupResponseBodyModelMSkuList setMSkuId(String MSkuId) {
+        public ListDistributionItemResponseBodyModelMSkuList setMSkuId(String MSkuId) {
             this.MSkuId = MSkuId;
             return this;
         }
@@ -201,7 +201,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
             return this.MSkuId;
         }
 
-        public QueryDistributionItemGroupResponseBodyModelMSkuList setMSkuPicUrl(String MSkuPicUrl) {
+        public ListDistributionItemResponseBodyModelMSkuList setMSkuPicUrl(String MSkuPicUrl) {
             this.MSkuPicUrl = MSkuPicUrl;
             return this;
         }
@@ -209,7 +209,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
             return this.MSkuPicUrl;
         }
 
-        public QueryDistributionItemGroupResponseBodyModelMSkuList setMSkuTitle(String MSkuTitle) {
+        public ListDistributionItemResponseBodyModelMSkuList setMSkuTitle(String MSkuTitle) {
             this.MSkuTitle = MSkuTitle;
             return this;
         }
@@ -217,7 +217,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
             return this.MSkuTitle;
         }
 
-        public QueryDistributionItemGroupResponseBodyModelMSkuList setMTaoBaoCurrentPrice(String MTaoBaoCurrentPrice) {
+        public ListDistributionItemResponseBodyModelMSkuList setMTaoBaoCurrentPrice(String MTaoBaoCurrentPrice) {
             this.MTaoBaoCurrentPrice = MTaoBaoCurrentPrice;
             return this;
         }
@@ -227,7 +227,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
 
     }
 
-    public static class QueryDistributionItemGroupResponseBodyModel extends TeaModel {
+    public static class ListDistributionItemResponseBodyModel extends TeaModel {
         @NameInMap("MCanSell")
         public String MCanSell;
 
@@ -247,14 +247,14 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
         public String MReservePrice;
 
         @NameInMap("MSkuList")
-        public java.util.List<QueryDistributionItemGroupResponseBodyModelMSkuList> MSkuList;
+        public java.util.List<ListDistributionItemResponseBodyModelMSkuList> MSkuList;
 
-        public static QueryDistributionItemGroupResponseBodyModel build(java.util.Map<String, ?> map) throws Exception {
-            QueryDistributionItemGroupResponseBodyModel self = new QueryDistributionItemGroupResponseBodyModel();
+        public static ListDistributionItemResponseBodyModel build(java.util.Map<String, ?> map) throws Exception {
+            ListDistributionItemResponseBodyModel self = new ListDistributionItemResponseBodyModel();
             return TeaModel.build(map, self);
         }
 
-        public QueryDistributionItemGroupResponseBodyModel setMCanSell(String MCanSell) {
+        public ListDistributionItemResponseBodyModel setMCanSell(String MCanSell) {
             this.MCanSell = MCanSell;
             return this;
         }
@@ -262,7 +262,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
             return this.MCanSell;
         }
 
-        public QueryDistributionItemGroupResponseBodyModel setMCategoryId(String MCategoryId) {
+        public ListDistributionItemResponseBodyModel setMCategoryId(String MCategoryId) {
             this.MCategoryId = MCategoryId;
             return this;
         }
@@ -270,7 +270,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
             return this.MCategoryId;
         }
 
-        public QueryDistributionItemGroupResponseBodyModel setMItemId(String MItemId) {
+        public ListDistributionItemResponseBodyModel setMItemId(String MItemId) {
             this.MItemId = MItemId;
             return this;
         }
@@ -278,7 +278,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
             return this.MItemId;
         }
 
-        public QueryDistributionItemGroupResponseBodyModel setMItemTitle(String MItemTitle) {
+        public ListDistributionItemResponseBodyModel setMItemTitle(String MItemTitle) {
             this.MItemTitle = MItemTitle;
             return this;
         }
@@ -286,7 +286,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
             return this.MItemTitle;
         }
 
-        public QueryDistributionItemGroupResponseBodyModel setMMainPicUrl(String MMainPicUrl) {
+        public ListDistributionItemResponseBodyModel setMMainPicUrl(String MMainPicUrl) {
             this.MMainPicUrl = MMainPicUrl;
             return this;
         }
@@ -294,7 +294,7 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
             return this.MMainPicUrl;
         }
 
-        public QueryDistributionItemGroupResponseBodyModel setMReservePrice(String MReservePrice) {
+        public ListDistributionItemResponseBodyModel setMReservePrice(String MReservePrice) {
             this.MReservePrice = MReservePrice;
             return this;
         }
@@ -302,11 +302,11 @@ public class QueryDistributionItemGroupResponseBody extends TeaModel {
             return this.MReservePrice;
         }
 
-        public QueryDistributionItemGroupResponseBodyModel setMSkuList(java.util.List<QueryDistributionItemGroupResponseBodyModelMSkuList> MSkuList) {
+        public ListDistributionItemResponseBodyModel setMSkuList(java.util.List<ListDistributionItemResponseBodyModelMSkuList> MSkuList) {
             this.MSkuList = MSkuList;
             return this;
         }
-        public java.util.List<QueryDistributionItemGroupResponseBodyModelMSkuList> getMSkuList() {
+        public java.util.List<ListDistributionItemResponseBodyModelMSkuList> getMSkuList() {
             return this.MSkuList;
         }
 

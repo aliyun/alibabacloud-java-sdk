@@ -88,49 +88,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public AddDistributionItemResponse addDistributionItemWithOptions(AddDistributionItemRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        AddDistributionItemShrinkRequest request = new AddDistributionItemShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.lmItemIds)) {
-            request.lmItemIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.lmItemIds, "LmItemIds", "json");
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
-            body.put("BizId", request.bizId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
-            body.put("DistributionMallId", request.distributionMallId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.lmItemIdsShrink)) {
-            body.put("LmItemIds", request.lmItemIdsShrink);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "AddDistributionItem"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDistributionItemResponse());
-    }
-
-    public AddDistributionItemResponse addDistributionItem(AddDistributionItemRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.addDistributionItemWithOptions(request, runtime);
-    }
-
     public ApplyCreateDistributionOrderResponse applyCreateDistributionOrderWithOptions(ApplyCreateDistributionOrderRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ApplyCreateDistributionOrderShrinkRequest request = new ApplyCreateDistributionOrderShrinkRequest();
@@ -188,96 +145,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ApplyCreateDistributionOrderResponse applyCreateDistributionOrder(ApplyCreateDistributionOrderRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.applyCreateDistributionOrderWithOptions(request, runtime);
-    }
-
-    public ApplyDistributionMallResponse applyDistributionMallWithOptions(ApplyDistributionMallRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallName)) {
-            body.put("DistributionMallName", request.distributionMallName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
-            body.put("DistributorId", request.distributorId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
-            body.put("Remark", request.remark);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ApplyDistributionMall"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyDistributionMallResponse());
-    }
-
-    public ApplyDistributionMallResponse applyDistributionMall(ApplyDistributionMallRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.applyDistributionMallWithOptions(request, runtime);
-    }
-
-    public ApplyDistributorResponse applyDistributorWithOptions(ApplyDistributorRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.contractor)) {
-            body.put("Contractor", request.contractor);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributorName)) {
-            body.put("DistributorName", request.distributorName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.entityInfo)) {
-            body.put("EntityInfo", request.entityInfo);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.industry)) {
-            body.put("Industry", request.industry);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
-            body.put("Phone", request.phone);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.preference)) {
-            body.put("Preference", request.preference);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.scale)) {
-            body.put("Scale", request.scale);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ApplyDistributor"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyDistributorResponse());
-    }
-
-    public ApplyDistributorResponse applyDistributor(ApplyDistributorRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.applyDistributorWithOptions(request, runtime);
     }
 
     public ApplyRefund4DistributionResponse applyRefund4DistributionWithOptions(ApplyRefund4DistributionRequest tmpReq, RuntimeOptions runtime) throws Exception {
@@ -429,39 +296,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.cancelRefund4DistributionWithOptions(request, runtime);
     }
 
-    public ChangeDistributorSubjectInfoResponse changeDistributorSubjectInfoWithOptions(ChangeDistributorSubjectInfoRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
-            body.put("DistributorId", request.distributorId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.subjectInfo)) {
-            body.put("Subject_info", request.subjectInfo);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ChangeDistributorSubjectInfo"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeDistributorSubjectInfoResponse());
-    }
-
-    public ChangeDistributorSubjectInfoResponse changeDistributorSubjectInfo(ChangeDistributorSubjectInfoRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.changeDistributorSubjectInfoWithOptions(request, runtime);
-    }
-
     public ConfirmDisburse4DistributionResponse confirmDisburse4DistributionWithOptions(ConfirmDisburse4DistributionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -501,98 +335,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ConfirmDisburse4DistributionResponse confirmDisburse4Distribution(ConfirmDisburse4DistributionRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.confirmDisburse4DistributionWithOptions(request, runtime);
-    }
-
-    public CreateDistributionResponse createDistributionWithOptions(CreateDistributionRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
-            body.put("BizId", request.bizId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.customerId)) {
-            body.put("CustomerId", request.customerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
-            body.put("Description", request.description);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
-            body.put("DistributionMallId", request.distributionMallId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
-            body.put("DistributorId", request.distributorId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            body.put("Name", request.name);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateDistribution"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDistributionResponse());
-    }
-
-    public CreateDistributionResponse createDistribution(CreateDistributionRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.createDistributionWithOptions(request, runtime);
-    }
-
-    public DownShelfDistributionItemResponse downShelfDistributionItemWithOptions(DownShelfDistributionItemRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        DownShelfDistributionItemShrinkRequest request = new DownShelfDistributionItemShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.lmItemIds)) {
-            request.lmItemIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.lmItemIds, "LmItemIds", "json");
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
-            body.put("BizId", request.bizId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
-            body.put("DistributionMallId", request.distributionMallId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.lmItemIdsShrink)) {
-            body.put("LmItemIds", request.lmItemIdsShrink);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DownShelfDistributionItem"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DownShelfDistributionItemResponse());
-    }
-
-    public DownShelfDistributionItemResponse downShelfDistributionItem(DownShelfDistributionItemRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.downShelfDistributionItemWithOptions(request, runtime);
     }
 
     public InitApplyRefund4DistributionResponse initApplyRefund4DistributionWithOptions(InitApplyRefund4DistributionRequest request, RuntimeOptions runtime) throws Exception {
@@ -685,6 +427,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.initModifyRefund4DistributionWithOptions(request, runtime);
     }
 
+    public ListDistributionItemResponse listDistributionItemWithOptions(ListDistributionItemRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListDistributionItemShrinkRequest request = new ListDistributionItemShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.lmItemIds)) {
+            request.lmItemIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.lmItemIds, "LmItemIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            body.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
+            body.put("DistributionMallId", request.distributionMallId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
+            body.put("DistributorId", request.distributorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.itemStatus)) {
+            body.put("ItemStatus", request.itemStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lmItemIdsShrink)) {
+            body.put("LmItemIds", request.lmItemIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDistributionItem"),
+            new TeaPair("version", "2022-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDistributionItemResponse());
+    }
+
+    public ListDistributionItemResponse listDistributionItem(ListDistributionItemRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listDistributionItemWithOptions(request, runtime);
+    }
+
     public ListDistributionMallResponse listDistributionMallWithOptions(ListDistributionMallRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -732,149 +533,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDistributionMallResponse listDistributionMall(ListDistributionMallRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listDistributionMallWithOptions(request, runtime);
-    }
-
-    public ListDistributorResponse listDistributorWithOptions(ListDistributorRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
-            body.put("DistributorId", request.distributorId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributorName)) {
-            body.put("DistributorName", request.distributorName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
-            body.put("EndDate", request.endDate);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.scale)) {
-            body.put("Scale", request.scale);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
-            body.put("StartDate", request.startDate);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
-            body.put("Status", request.status);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListDistributor"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDistributorResponse());
-    }
-
-    public ListDistributorResponse listDistributor(ListDistributorRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.listDistributorWithOptions(request, runtime);
-    }
-
-    public ModifyDistributionItemInventoryResponse modifyDistributionItemInventoryWithOptions(ModifyDistributionItemInventoryRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        ModifyDistributionItemInventoryShrinkRequest request = new ModifyDistributionItemInventoryShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.itemList)) {
-            request.itemListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.itemList, "ItemList", "json");
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
-            body.put("BizId", request.bizId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
-            body.put("DistributionMallId", request.distributionMallId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.itemListShrink)) {
-            body.put("ItemList", request.itemListShrink);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ModifyDistributionItemInventory"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDistributionItemInventoryResponse());
-    }
-
-    public ModifyDistributionItemInventoryResponse modifyDistributionItemInventory(ModifyDistributionItemInventoryRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.modifyDistributionItemInventoryWithOptions(request, runtime);
-    }
-
-    public ModifyDistributionItemSupplierPriceResponse modifyDistributionItemSupplierPriceWithOptions(ModifyDistributionItemSupplierPriceRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        ModifyDistributionItemSupplierPriceShrinkRequest request = new ModifyDistributionItemSupplierPriceShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.itemList)) {
-            request.itemListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.itemList, "ItemList", "json");
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
-            body.put("BizId", request.bizId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
-            body.put("DistributionMallId", request.distributionMallId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.itemListShrink)) {
-            body.put("ItemList", request.itemListShrink);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ModifyDistributionItemSupplierPrice"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDistributionItemSupplierPriceResponse());
-    }
-
-    public ModifyDistributionItemSupplierPriceResponse modifyDistributionItemSupplierPrice(ModifyDistributionItemSupplierPriceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.modifyDistributionItemSupplierPriceWithOptions(request, runtime);
     }
 
     public ModifyRefund4DistributionResponse modifyRefund4DistributionWithOptions(ModifyRefund4DistributionRequest tmpReq, RuntimeOptions runtime) throws Exception {
@@ -952,122 +610,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyRefund4DistributionWithOptions(request, runtime);
     }
 
-    public QueryChannelDistributionItemGroupResponse queryChannelDistributionItemGroupWithOptions(QueryChannelDistributionItemGroupRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
-            body.put("BizId", request.bizId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.customerId)) {
-            body.put("CustomerId", request.customerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
-            body.put("DistributionMallId", request.distributionMallId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
-            body.put("DistributorId", request.distributorId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            body.put("Name", request.name);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.subBizCode)) {
-            body.put("SubBizCode", request.subBizCode);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "QueryChannelDistributionItemGroup"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryChannelDistributionItemGroupResponse());
-    }
-
-    public QueryChannelDistributionItemGroupResponse queryChannelDistributionItemGroup(QueryChannelDistributionItemGroupRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.queryChannelDistributionItemGroupWithOptions(request, runtime);
-    }
-
-    public QueryDistributionItemGroupResponse queryDistributionItemGroupWithOptions(QueryDistributionItemGroupRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        QueryDistributionItemGroupShrinkRequest request = new QueryDistributionItemGroupShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.lmItemIds)) {
-            request.lmItemIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.lmItemIds, "LmItemIds", "json");
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
-            body.put("BizId", request.bizId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
-            body.put("DistributionMallId", request.distributionMallId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
-            body.put("DistributorId", request.distributorId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.itemStatus)) {
-            body.put("ItemStatus", request.itemStatus);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.lmItemIdsShrink)) {
-            body.put("LmItemIds", request.lmItemIdsShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "QueryDistributionItemGroup"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDistributionItemGroupResponse());
-    }
-
-    public QueryDistributionItemGroupResponse queryDistributionItemGroup(QueryDistributionItemGroupRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.queryDistributionItemGroupWithOptions(request, runtime);
-    }
-
     public QueryDistributionMallResponse queryDistributionMallWithOptions(QueryDistributionMallRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1095,59 +637,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryDistributionMallResponse queryDistributionMall(QueryDistributionMallRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryDistributionMallWithOptions(request, runtime);
-    }
-
-    public QueryDistributionMallDistributionItemGroupResponse queryDistributionMallDistributionItemGroupWithOptions(QueryDistributionMallDistributionItemGroupRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
-            body.put("BizId", request.bizId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
-            body.put("DistributionMallId", request.distributionMallId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
-            body.put("DistributorId", request.distributorId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            body.put("Name", request.name);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.subBizCode)) {
-            body.put("SubBizCode", request.subBizCode);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "QueryDistributionMallDistributionItemGroup"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDistributionMallDistributionItemGroupResponse());
-    }
-
-    public QueryDistributionMallDistributionItemGroupResponse queryDistributionMallDistributionItemGroup(QueryDistributionMallDistributionItemGroupRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.queryDistributionMallDistributionItemGroupWithOptions(request, runtime);
     }
 
     public QueryDistributionTradeStatusResponse queryDistributionTradeStatusWithOptions(QueryDistributionTradeStatusRequest request, RuntimeOptions runtime) throws Exception {
@@ -1191,9 +680,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryDistributionTradeStatusWithOptions(request, runtime);
     }
 
-    public QueryDistributorResponse queryDistributorWithOptions(QueryDistributorRequest request, RuntimeOptions runtime) throws Exception {
+    public QueryItemDetailResponse queryItemDetailWithOptions(QueryItemDetailRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
+            body.put("DistributionMallId", request.distributionMallId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
             body.put("DistributorId", request.distributorId);
         }
@@ -1202,7 +695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "QueryDistributor"),
+            new TeaPair("action", "QueryItemDetail"),
             new TeaPair("version", "2022-05-31"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
@@ -1212,12 +705,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDistributorResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryItemDetailResponse());
     }
 
-    public QueryDistributorResponse queryDistributor(QueryDistributorRequest request) throws Exception {
+    public QueryItemDetailResponse queryItemDetail(QueryItemDetailRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.queryDistributorWithOptions(request, runtime);
+        return this.queryItemDetailWithOptions(request, runtime);
     }
 
     public QueryLogistics4DistributionResponse queryLogistics4DistributionWithOptions(QueryLogistics4DistributionRequest request, RuntimeOptions runtime) throws Exception {
@@ -1376,78 +869,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryRefundApplicationDetail4DistributionWithOptions(request, runtime);
     }
 
-    public RemoveDistributionItemResponse removeDistributionItemWithOptions(RemoveDistributionItemRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        RemoveDistributionItemShrinkRequest request = new RemoveDistributionItemShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.lmItemIds)) {
-            request.lmItemIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.lmItemIds, "LmItemIds", "json");
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
-            body.put("BizId", request.bizId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
-            body.put("DistributionMallId", request.distributionMallId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.lmItemIdsShrink)) {
-            body.put("LmItemIds", request.lmItemIdsShrink);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "RemoveDistributionItem"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveDistributionItemResponse());
-    }
-
-    public RemoveDistributionItemResponse removeDistributionItem(RemoveDistributionItemRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.removeDistributionItemWithOptions(request, runtime);
-    }
-
-    public RemoveDistributorResponse removeDistributorWithOptions(RemoveDistributorRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
-            body.put("DistributorId", request.distributorId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "RemoveDistributor"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveDistributorResponse());
-    }
-
-    public RemoveDistributorResponse removeDistributor(RemoveDistributorRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.removeDistributorWithOptions(request, runtime);
-    }
-
     public RenderDistributionOrderResponse renderDistributionOrderWithOptions(RenderDistributionOrderRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         RenderDistributionOrderShrinkRequest request = new RenderDistributionOrderShrinkRequest();
@@ -1554,103 +975,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitReturnGoodLogistics4DistributionResponse submitReturnGoodLogistics4Distribution(SubmitReturnGoodLogistics4DistributionRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.submitReturnGoodLogistics4DistributionWithOptions(request, runtime);
-    }
-
-    public UnbindChannelBizToDistributionMallResponse unbindChannelBizToDistributionMallWithOptions(UnbindChannelBizToDistributionMallRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
-            body.put("BizId", request.bizId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
-            body.put("DistributionMallId", request.distributionMallId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
-            body.put("DistributorId", request.distributorId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.subBizId)) {
-            body.put("SubBizId", request.subBizId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.targetBizId)) {
-            body.put("TargetBizId", request.targetBizId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.targetSubBizId)) {
-            body.put("TargetSubBizId", request.targetSubBizId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UnbindChannelBizToDistributionMall"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindChannelBizToDistributionMallResponse());
-    }
-
-    public UnbindChannelBizToDistributionMallResponse unbindChannelBizToDistributionMall(UnbindChannelBizToDistributionMallRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.unbindChannelBizToDistributionMallWithOptions(request, runtime);
-    }
-
-    public UpdateDistributorResponse updateDistributorWithOptions(UpdateDistributorRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.contractor)) {
-            body.put("Contractor", request.contractor);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
-            body.put("DistributorId", request.distributorId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.industry)) {
-            body.put("Industry", request.industry);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
-            body.put("Phone", request.phone);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.preference)) {
-            body.put("Preference", request.preference);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.scale)) {
-            body.put("Scale", request.scale);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateDistributor"),
-            new TeaPair("version", "2022-05-31"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDistributorResponse());
-    }
-
-    public UpdateDistributorResponse updateDistributor(UpdateDistributorRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.updateDistributorWithOptions(request, runtime);
     }
 }

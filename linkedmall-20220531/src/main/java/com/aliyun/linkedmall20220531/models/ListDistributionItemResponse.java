@@ -3,7 +3,7 @@ package com.aliyun.linkedmall20220531.models;
 
 import com.aliyun.tea.*;
 
-public class DownShelfDistributionItemResponse extends TeaModel {
+public class ListDistributionItemResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DownShelfDistributionItemResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DownShelfDistributionItemResponseBody body;
+    public ListDistributionItemResponseBody body;
 
-    public static DownShelfDistributionItemResponse build(java.util.Map<String, ?> map) throws Exception {
-        DownShelfDistributionItemResponse self = new DownShelfDistributionItemResponse();
+    public static ListDistributionItemResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListDistributionItemResponse self = new ListDistributionItemResponse();
         return TeaModel.build(map, self);
     }
 
-    public DownShelfDistributionItemResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListDistributionItemResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DownShelfDistributionItemResponse extends TeaModel {
         return this.headers;
     }
 
-    public DownShelfDistributionItemResponse setStatusCode(Integer statusCode) {
+    public ListDistributionItemResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DownShelfDistributionItemResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DownShelfDistributionItemResponse setBody(DownShelfDistributionItemResponseBody body) {
+    public ListDistributionItemResponse setBody(ListDistributionItemResponseBody body) {
         this.body = body;
         return this;
     }
-    public DownShelfDistributionItemResponseBody getBody() {
+    public ListDistributionItemResponseBody getBody() {
         return this.body;
     }
 
