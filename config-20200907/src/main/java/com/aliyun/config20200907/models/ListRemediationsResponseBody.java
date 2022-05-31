@@ -50,9 +50,6 @@ public class ListRemediationsResponseBody extends TeaModel {
         @NameInMap("LastSuccessfulInvocationType")
         public String lastSuccessfulInvocationType;
 
-        @NameInMap("RemediationDynamicParams")
-        public String remediationDynamicParams;
-
         @NameInMap("RemediationId")
         public String remediationId;
 
@@ -119,14 +116,6 @@ public class ListRemediationsResponseBody extends TeaModel {
         }
         public String getLastSuccessfulInvocationType() {
             return this.lastSuccessfulInvocationType;
-        }
-
-        public ListRemediationsResponseBodyRemediations setRemediationDynamicParams(String remediationDynamicParams) {
-            this.remediationDynamicParams = remediationDynamicParams;
-            return this;
-        }
-        public String getRemediationDynamicParams() {
-            return this.remediationDynamicParams;
         }
 
         public ListRemediationsResponseBodyRemediations setRemediationId(String remediationId) {

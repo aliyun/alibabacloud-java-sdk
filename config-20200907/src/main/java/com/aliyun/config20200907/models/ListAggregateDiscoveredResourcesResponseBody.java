@@ -159,8 +159,8 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         @NameInMap("NextToken")
         public String nextToken;
 
-        @NameInMap("PreviousToken")
-        public String previousToken;
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfiles build(java.util.Map<String, ?> map) throws Exception {
             ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfiles self = new ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfiles();
@@ -191,12 +191,12 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
             return this.nextToken;
         }
 
-        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfiles setPreviousToken(String previousToken) {
-            this.previousToken = previousToken;
+        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfiles setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public String getPreviousToken() {
-            return this.previousToken;
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

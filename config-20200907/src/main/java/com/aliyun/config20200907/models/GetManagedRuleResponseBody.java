@@ -82,7 +82,7 @@ public class GetManagedRuleResponseBody extends TeaModel {
 
     public static class GetManagedRuleResponseBodyManagedRule extends TeaModel {
         @NameInMap("CompulsoryInputParameterDetails")
-        public java.util.List<String> compulsoryInputParameterDetails;
+        public java.util.Map<String, ?> compulsoryInputParameterDetails;
 
         @NameInMap("ConfigRuleName")
         public String configRuleName;
@@ -100,7 +100,7 @@ public class GetManagedRuleResponseBody extends TeaModel {
         public java.util.List<String> labels;
 
         @NameInMap("OptionalInputParameterDetails")
-        public java.util.List<String> optionalInputParameterDetails;
+        public java.util.Map<String, ?> optionalInputParameterDetails;
 
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -116,11 +116,11 @@ public class GetManagedRuleResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetManagedRuleResponseBodyManagedRule setCompulsoryInputParameterDetails(java.util.List<String> compulsoryInputParameterDetails) {
+        public GetManagedRuleResponseBodyManagedRule setCompulsoryInputParameterDetails(java.util.Map<String, ?> compulsoryInputParameterDetails) {
             this.compulsoryInputParameterDetails = compulsoryInputParameterDetails;
             return this;
         }
-        public java.util.List<String> getCompulsoryInputParameterDetails() {
+        public java.util.Map<String, ?> getCompulsoryInputParameterDetails() {
             return this.compulsoryInputParameterDetails;
         }
 
@@ -164,11 +164,11 @@ public class GetManagedRuleResponseBody extends TeaModel {
             return this.labels;
         }
 
-        public GetManagedRuleResponseBodyManagedRule setOptionalInputParameterDetails(java.util.List<String> optionalInputParameterDetails) {
+        public GetManagedRuleResponseBodyManagedRule setOptionalInputParameterDetails(java.util.Map<String, ?> optionalInputParameterDetails) {
             this.optionalInputParameterDetails = optionalInputParameterDetails;
             return this;
         }
-        public java.util.List<String> getOptionalInputParameterDetails() {
+        public java.util.Map<String, ?> getOptionalInputParameterDetails() {
             return this.optionalInputParameterDetails;
         }
 
