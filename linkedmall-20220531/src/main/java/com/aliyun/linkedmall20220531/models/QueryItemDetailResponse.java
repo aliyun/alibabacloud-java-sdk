@@ -3,7 +3,7 @@ package com.aliyun.linkedmall20220531.models;
 
 import com.aliyun.tea.*;
 
-public class AddDistributionItemResponse extends TeaModel {
+public class QueryItemDetailResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class AddDistributionItemResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public AddDistributionItemResponseBody body;
+    public QueryItemDetailResponseBody body;
 
-    public static AddDistributionItemResponse build(java.util.Map<String, ?> map) throws Exception {
-        AddDistributionItemResponse self = new AddDistributionItemResponse();
+    public static QueryItemDetailResponse build(java.util.Map<String, ?> map) throws Exception {
+        QueryItemDetailResponse self = new QueryItemDetailResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddDistributionItemResponse setHeaders(java.util.Map<String, String> headers) {
+    public QueryItemDetailResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class AddDistributionItemResponse extends TeaModel {
         return this.headers;
     }
 
-    public AddDistributionItemResponse setStatusCode(Integer statusCode) {
+    public QueryItemDetailResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class AddDistributionItemResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public AddDistributionItemResponse setBody(AddDistributionItemResponseBody body) {
+    public QueryItemDetailResponse setBody(QueryItemDetailResponseBody body) {
         this.body = body;
         return this;
     }
-    public AddDistributionItemResponseBody getBody() {
+    public QueryItemDetailResponseBody getBody() {
         return this.body;
     }
 

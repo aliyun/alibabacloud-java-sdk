@@ -3,7 +3,7 @@ package com.aliyun.linkedmall20220531.models;
 
 import com.aliyun.tea.*;
 
-public class QueryDistributionItemGroupShrinkRequest extends TeaModel {
+public class ListDistributionItemShrinkRequest extends TeaModel {
     // 业务号
     @NameInMap("BizId")
     public String bizId;
@@ -32,12 +32,12 @@ public class QueryDistributionItemGroupShrinkRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    public static QueryDistributionItemGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        QueryDistributionItemGroupShrinkRequest self = new QueryDistributionItemGroupShrinkRequest();
+    public static ListDistributionItemShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListDistributionItemShrinkRequest self = new ListDistributionItemShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryDistributionItemGroupShrinkRequest setBizId(String bizId) {
+    public ListDistributionItemShrinkRequest setBizId(String bizId) {
         this.bizId = bizId;
         return this;
     }
@@ -45,7 +45,7 @@ public class QueryDistributionItemGroupShrinkRequest extends TeaModel {
         return this.bizId;
     }
 
-    public QueryDistributionItemGroupShrinkRequest setDistributionMallId(String distributionMallId) {
+    public ListDistributionItemShrinkRequest setDistributionMallId(String distributionMallId) {
         this.distributionMallId = distributionMallId;
         return this;
     }
@@ -53,7 +53,7 @@ public class QueryDistributionItemGroupShrinkRequest extends TeaModel {
         return this.distributionMallId;
     }
 
-    public QueryDistributionItemGroupShrinkRequest setDistributorId(String distributorId) {
+    public ListDistributionItemShrinkRequest setDistributorId(String distributorId) {
         this.distributorId = distributorId;
         return this;
     }
@@ -61,7 +61,7 @@ public class QueryDistributionItemGroupShrinkRequest extends TeaModel {
         return this.distributorId;
     }
 
-    public QueryDistributionItemGroupShrinkRequest setItemStatus(Integer itemStatus) {
+    public ListDistributionItemShrinkRequest setItemStatus(Integer itemStatus) {
         this.itemStatus = itemStatus;
         return this;
     }
@@ -69,7 +69,7 @@ public class QueryDistributionItemGroupShrinkRequest extends TeaModel {
         return this.itemStatus;
     }
 
-    public QueryDistributionItemGroupShrinkRequest setLmItemIdsShrink(String lmItemIdsShrink) {
+    public ListDistributionItemShrinkRequest setLmItemIdsShrink(String lmItemIdsShrink) {
         this.lmItemIdsShrink = lmItemIdsShrink;
         return this;
     }
@@ -77,7 +77,7 @@ public class QueryDistributionItemGroupShrinkRequest extends TeaModel {
         return this.lmItemIdsShrink;
     }
 
-    public QueryDistributionItemGroupShrinkRequest setPageNumber(Integer pageNumber) {
+    public ListDistributionItemShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -85,7 +85,7 @@ public class QueryDistributionItemGroupShrinkRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public QueryDistributionItemGroupShrinkRequest setPageSize(Integer pageSize) {
+    public ListDistributionItemShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }

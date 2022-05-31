@@ -3,7 +3,7 @@ package com.aliyun.linkedmall20220531.models;
 
 import com.aliyun.tea.*;
 
-public class QueryDistributionItemGroupRequest extends TeaModel {
+public class ListDistributionItemRequest extends TeaModel {
     // 业务号
     @NameInMap("BizId")
     public String bizId;
@@ -32,12 +32,12 @@ public class QueryDistributionItemGroupRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    public static QueryDistributionItemGroupRequest build(java.util.Map<String, ?> map) throws Exception {
-        QueryDistributionItemGroupRequest self = new QueryDistributionItemGroupRequest();
+    public static ListDistributionItemRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListDistributionItemRequest self = new ListDistributionItemRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryDistributionItemGroupRequest setBizId(String bizId) {
+    public ListDistributionItemRequest setBizId(String bizId) {
         this.bizId = bizId;
         return this;
     }
@@ -45,7 +45,7 @@ public class QueryDistributionItemGroupRequest extends TeaModel {
         return this.bizId;
     }
 
-    public QueryDistributionItemGroupRequest setDistributionMallId(String distributionMallId) {
+    public ListDistributionItemRequest setDistributionMallId(String distributionMallId) {
         this.distributionMallId = distributionMallId;
         return this;
     }
@@ -53,7 +53,7 @@ public class QueryDistributionItemGroupRequest extends TeaModel {
         return this.distributionMallId;
     }
 
-    public QueryDistributionItemGroupRequest setDistributorId(String distributorId) {
+    public ListDistributionItemRequest setDistributorId(String distributorId) {
         this.distributorId = distributorId;
         return this;
     }
@@ -61,7 +61,7 @@ public class QueryDistributionItemGroupRequest extends TeaModel {
         return this.distributorId;
     }
 
-    public QueryDistributionItemGroupRequest setItemStatus(Integer itemStatus) {
+    public ListDistributionItemRequest setItemStatus(Integer itemStatus) {
         this.itemStatus = itemStatus;
         return this;
     }
@@ -69,7 +69,7 @@ public class QueryDistributionItemGroupRequest extends TeaModel {
         return this.itemStatus;
     }
 
-    public QueryDistributionItemGroupRequest setLmItemIds(java.util.List<String> lmItemIds) {
+    public ListDistributionItemRequest setLmItemIds(java.util.List<String> lmItemIds) {
         this.lmItemIds = lmItemIds;
         return this;
     }
@@ -77,7 +77,7 @@ public class QueryDistributionItemGroupRequest extends TeaModel {
         return this.lmItemIds;
     }
 
-    public QueryDistributionItemGroupRequest setPageNumber(Integer pageNumber) {
+    public ListDistributionItemRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -85,7 +85,7 @@ public class QueryDistributionItemGroupRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public QueryDistributionItemGroupRequest setPageSize(Integer pageSize) {
+    public ListDistributionItemRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
