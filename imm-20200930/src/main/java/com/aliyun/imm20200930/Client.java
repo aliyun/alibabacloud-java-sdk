@@ -350,11 +350,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDetectVideoLabelsTaskShrinkRequest request = new CreateDetectVideoLabelsTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.credentialConfig))) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.credentialConfig), "CredentialConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
             request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            query.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.notifyEndpoint)) {
             query.put("NotifyEndpoint", request.notifyEndpoint);
         }
@@ -523,6 +531,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateMediaConvertTaskShrinkRequest request = new CreateMediaConvertTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.credentialConfig))) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.credentialConfig), "CredentialConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sources)) {
             request.sourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sources, "Sources", "json");
         }
@@ -536,8 +548,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
-            query.put("DatasetName", request.datasetName);
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            query.put("CredentialConfig", request.credentialConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyEndpoint)) {
@@ -594,8 +606,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateOfficeConversionTaskShrinkRequest request = new CreateOfficeConversionTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.assumeRoleChain))) {
-            request.assumeRoleChainShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.assumeRoleChain), "AssumeRoleChain", "json");
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.credentialConfig))) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.credentialConfig), "CredentialConfig", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
@@ -607,8 +619,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.assumeRoleChainShrink)) {
-            query.put("AssumeRoleChain", request.assumeRoleChainShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            query.put("CredentialConfig", request.credentialConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endPage)) {
@@ -629,6 +641,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.holdLineFeed)) {
             query.put("HoldLineFeed", request.holdLineFeed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageDPI)) {
+            query.put("ImageDPI", request.imageDPI);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.longPicture)) {
@@ -653,6 +669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
             query.put("NotifyTopicName", request.notifyTopicName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pages)) {
+            query.put("Pages", request.pages);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.paperHorizontal)) {
@@ -1125,11 +1145,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detachOSSBucketWithOptions(request, runtime);
     }
 
-    public DetectImageCroppingResponse detectImageCroppingWithOptions(DetectImageCroppingRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DetectImageCroppingResponse detectImageCroppingWithOptions(DetectImageCroppingRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DetectImageCroppingShrinkRequest request = new DetectImageCroppingShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.credentialConfig))) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.credentialConfig), "CredentialConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aspectRatios)) {
             query.put("AspectRatios", request.aspectRatios);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            query.put("CredentialConfig", request.credentialConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
@@ -1162,9 +1192,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detectImageCroppingWithOptions(request, runtime);
     }
 
-    public DetectImageFacesResponse detectImageFacesWithOptions(DetectImageFacesRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DetectImageFacesResponse detectImageFacesWithOptions(DetectImageFacesRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DetectImageFacesShrinkRequest request = new DetectImageFacesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.credentialConfig))) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.credentialConfig), "CredentialConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            query.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             query.put("ProjectName", request.projectName);
         }
@@ -1195,9 +1235,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detectImageFacesWithOptions(request, runtime);
     }
 
-    public DetectImageLabelsResponse detectImageLabelsWithOptions(DetectImageLabelsRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DetectImageLabelsResponse detectImageLabelsWithOptions(DetectImageLabelsRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DetectImageLabelsShrinkRequest request = new DetectImageLabelsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.credentialConfig))) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.credentialConfig), "CredentialConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            query.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             query.put("ProjectName", request.projectName);
         }
@@ -1232,9 +1282,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detectImageLabelsWithOptions(request, runtime);
     }
 
-    public DetectImageScoreResponse detectImageScoreWithOptions(DetectImageScoreRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DetectImageScoreResponse detectImageScoreWithOptions(DetectImageScoreRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DetectImageScoreShrinkRequest request = new DetectImageScoreShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.credentialConfig))) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.credentialConfig), "CredentialConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            query.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             query.put("ProjectName", request.projectName);
         }
@@ -1495,9 +1555,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getFileMetaWithOptions(request, runtime);
     }
 
-    public GetMediaMetaResponse getMediaMetaWithOptions(GetMediaMetaRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GetMediaMetaResponse getMediaMetaWithOptions(GetMediaMetaRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetMediaMetaShrinkRequest request = new GetMediaMetaShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.credentialConfig))) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.credentialConfig), "CredentialConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            query.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             query.put("ProjectName", request.projectName);
         }
@@ -1668,8 +1738,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetWebofficeURLShrinkRequest request = new GetWebofficeURLShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.assumeRoleChain))) {
-            request.assumeRoleChainShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.assumeRoleChain), "AssumeRoleChain", "json");
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.credentialConfig))) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.credentialConfig), "CredentialConfig", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.permission))) {
@@ -1685,12 +1755,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.assumeRoleChainShrink)) {
-            query.put("AssumeRoleChain", request.assumeRoleChainShrink);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.cachePreview)) {
             query.put("CachePreview", request.cachePreview);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            query.put("CredentialConfig", request.credentialConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.externalUploaded)) {
@@ -2241,8 +2311,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         RefreshWebofficeTokenShrinkRequest request = new RefreshWebofficeTokenShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.assumeRoleChain))) {
-            request.assumeRoleChainShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.assumeRoleChain), "AssumeRoleChain", "json");
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.credentialConfig))) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.credentialConfig), "CredentialConfig", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2250,8 +2320,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AccessToken", request.accessToken);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.assumeRoleChainShrink)) {
-            query.put("AssumeRoleChain", request.assumeRoleChainShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            query.put("CredentialConfig", request.credentialConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {

@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetMediaMetaRequest extends TeaModel {
+    @NameInMap("CredentialConfig")
+    public CredentialConfig credentialConfig;
+
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -13,6 +16,14 @@ public class GetMediaMetaRequest extends TeaModel {
     public static GetMediaMetaRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMediaMetaRequest self = new GetMediaMetaRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetMediaMetaRequest setCredentialConfig(CredentialConfig credentialConfig) {
+        this.credentialConfig = credentialConfig;
+        return this;
+    }
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     public GetMediaMetaRequest setProjectName(String projectName) {

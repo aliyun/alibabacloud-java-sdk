@@ -8,9 +8,8 @@ public class RefreshWebofficeTokenRequest extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
-    // 链式授权
-    @NameInMap("AssumeRoleChain")
-    public AssumeRoleChain assumeRoleChain;
+    @NameInMap("CredentialConfig")
+    public CredentialConfig credentialConfig;
 
     // 项目名称
     @NameInMap("ProjectName")
@@ -33,12 +32,12 @@ public class RefreshWebofficeTokenRequest extends TeaModel {
         return this.accessToken;
     }
 
-    public RefreshWebofficeTokenRequest setAssumeRoleChain(AssumeRoleChain assumeRoleChain) {
-        this.assumeRoleChain = assumeRoleChain;
+    public RefreshWebofficeTokenRequest setCredentialConfig(CredentialConfig credentialConfig) {
+        this.credentialConfig = credentialConfig;
         return this;
     }
-    public AssumeRoleChain getAssumeRoleChain() {
-        return this.assumeRoleChain;
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     public RefreshWebofficeTokenRequest setProjectName(String projectName) {

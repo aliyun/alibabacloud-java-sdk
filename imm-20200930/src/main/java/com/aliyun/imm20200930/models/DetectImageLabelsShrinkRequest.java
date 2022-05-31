@@ -3,9 +3,9 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DetectImageLabelsRequest extends TeaModel {
+public class DetectImageLabelsShrinkRequest extends TeaModel {
     @NameInMap("CredentialConfig")
-    public CredentialConfig credentialConfig;
+    public String credentialConfigShrink;
 
     // 项目名称
     @NameInMap("ProjectName")
@@ -19,20 +19,20 @@ public class DetectImageLabelsRequest extends TeaModel {
     @NameInMap("Threshold")
     public Float threshold;
 
-    public static DetectImageLabelsRequest build(java.util.Map<String, ?> map) throws Exception {
-        DetectImageLabelsRequest self = new DetectImageLabelsRequest();
+    public static DetectImageLabelsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DetectImageLabelsShrinkRequest self = new DetectImageLabelsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DetectImageLabelsRequest setCredentialConfig(CredentialConfig credentialConfig) {
-        this.credentialConfig = credentialConfig;
+    public DetectImageLabelsShrinkRequest setCredentialConfigShrink(String credentialConfigShrink) {
+        this.credentialConfigShrink = credentialConfigShrink;
         return this;
     }
-    public CredentialConfig getCredentialConfig() {
-        return this.credentialConfig;
+    public String getCredentialConfigShrink() {
+        return this.credentialConfigShrink;
     }
 
-    public DetectImageLabelsRequest setProjectName(String projectName) {
+    public DetectImageLabelsShrinkRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -40,7 +40,7 @@ public class DetectImageLabelsRequest extends TeaModel {
         return this.projectName;
     }
 
-    public DetectImageLabelsRequest setSourceURI(String sourceURI) {
+    public DetectImageLabelsShrinkRequest setSourceURI(String sourceURI) {
         this.sourceURI = sourceURI;
         return this;
     }
@@ -48,7 +48,7 @@ public class DetectImageLabelsRequest extends TeaModel {
         return this.sourceURI;
     }
 
-    public DetectImageLabelsRequest setThreshold(Float threshold) {
+    public DetectImageLabelsShrinkRequest setThreshold(Float threshold) {
         this.threshold = threshold;
         return this;
     }

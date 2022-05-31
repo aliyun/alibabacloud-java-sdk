@@ -36,6 +36,10 @@ public class File extends TeaModel {
     @NameInMap("AudioStreams")
     public java.util.List<AudioStream> audioStreams;
 
+    // Bitrate
+    @NameInMap("Bitrate")
+    public Long bitrate;
+
     // CacheControl
     @NameInMap("CacheControl")
     public String cacheControl;
@@ -92,6 +96,10 @@ public class File extends TeaModel {
     @NameInMap("DocumentLanguage")
     public String documentLanguage;
 
+    // Duration
+    @NameInMap("Duration")
+    public Double duration;
+
     // ETag
     @NameInMap("ETag")
     public String ETag;
@@ -127,6 +135,14 @@ public class File extends TeaModel {
     // Filename
     @NameInMap("Filename")
     public String filename;
+
+    // FormatLongName
+    @NameInMap("FormatLongName")
+    public String formatLongName;
+
+    // FormatName
+    @NameInMap("FormatName")
+    public String formatName;
 
     // ImageHeight
     @NameInMap("ImageHeight")
@@ -231,6 +247,10 @@ public class File extends TeaModel {
     @NameInMap("ProduceTime")
     public String produceTime;
 
+    // ProgramCount
+    @NameInMap("ProgramCount")
+    public Long programCount;
+
     // ProjectName
     @NameInMap("ProjectName")
     public String projectName;
@@ -254,6 +274,14 @@ public class File extends TeaModel {
     // Size
     @NameInMap("Size")
     public Long size;
+
+    // StartTime
+    @NameInMap("StartTime")
+    public String startTime;
+
+    // StreamCount
+    @NameInMap("StreamCount")
+    public Long streamCount;
 
     // Subtitles
     @NameInMap("Subtitles")
@@ -362,6 +390,14 @@ public class File extends TeaModel {
     }
     public java.util.List<AudioStream> getAudioStreams() {
         return this.audioStreams;
+    }
+
+    public File setBitrate(Long bitrate) {
+        this.bitrate = bitrate;
+        return this;
+    }
+    public Long getBitrate() {
+        return this.bitrate;
     }
 
     public File setCacheControl(String cacheControl) {
@@ -476,6 +512,14 @@ public class File extends TeaModel {
         return this.documentLanguage;
     }
 
+    public File setDuration(Double duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Double getDuration() {
+        return this.duration;
+    }
+
     public File setETag(String ETag) {
         this.ETag = ETag;
         return this;
@@ -546,6 +590,22 @@ public class File extends TeaModel {
     }
     public String getFilename() {
         return this.filename;
+    }
+
+    public File setFormatLongName(String formatLongName) {
+        this.formatLongName = formatLongName;
+        return this;
+    }
+    public String getFormatLongName() {
+        return this.formatLongName;
+    }
+
+    public File setFormatName(String formatName) {
+        this.formatName = formatName;
+        return this;
+    }
+    public String getFormatName() {
+        return this.formatName;
     }
 
     public File setImageHeight(Long imageHeight) {
@@ -756,6 +816,14 @@ public class File extends TeaModel {
         return this.produceTime;
     }
 
+    public File setProgramCount(Long programCount) {
+        this.programCount = programCount;
+        return this;
+    }
+    public Long getProgramCount() {
+        return this.programCount;
+    }
+
     public File setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -802,6 +870,22 @@ public class File extends TeaModel {
     }
     public Long getSize() {
         return this.size;
+    }
+
+    public File setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public File setStreamCount(Long streamCount) {
+        this.streamCount = streamCount;
+        return this;
+    }
+    public Long getStreamCount() {
+        return this.streamCount;
     }
 
     public File setSubtitles(java.util.List<SubtitleStream> subtitles) {

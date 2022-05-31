@@ -8,9 +8,8 @@ public class RefreshWebofficeTokenShrinkRequest extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
-    // 链式授权
-    @NameInMap("AssumeRoleChain")
-    public String assumeRoleChainShrink;
+    @NameInMap("CredentialConfig")
+    public String credentialConfigShrink;
 
     // 项目名称
     @NameInMap("ProjectName")
@@ -33,12 +32,12 @@ public class RefreshWebofficeTokenShrinkRequest extends TeaModel {
         return this.accessToken;
     }
 
-    public RefreshWebofficeTokenShrinkRequest setAssumeRoleChainShrink(String assumeRoleChainShrink) {
-        this.assumeRoleChainShrink = assumeRoleChainShrink;
+    public RefreshWebofficeTokenShrinkRequest setCredentialConfigShrink(String credentialConfigShrink) {
+        this.credentialConfigShrink = credentialConfigShrink;
         return this;
     }
-    public String getAssumeRoleChainShrink() {
-        return this.assumeRoleChainShrink;
+    public String getCredentialConfigShrink() {
+        return this.credentialConfigShrink;
     }
 
     public RefreshWebofficeTokenShrinkRequest setProjectName(String projectName) {
