@@ -53,8 +53,8 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         @NameInMap("LastSuccessfulInvocationType")
         public String lastSuccessfulInvocationType;
 
-        @NameInMap("RemediationDynamicParams")
-        public String remediationDynamicParams;
+        @NameInMap("RemediaitonOriginParams")
+        public String remediaitonOriginParams;
 
         @NameInMap("RemediationId")
         public String remediationId;
@@ -129,12 +129,12 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
             return this.lastSuccessfulInvocationType;
         }
 
-        public ListAggregateRemediationsResponseBodyRemediations setRemediationDynamicParams(String remediationDynamicParams) {
-            this.remediationDynamicParams = remediationDynamicParams;
+        public ListAggregateRemediationsResponseBodyRemediations setRemediaitonOriginParams(String remediaitonOriginParams) {
+            this.remediaitonOriginParams = remediaitonOriginParams;
             return this;
         }
-        public String getRemediationDynamicParams() {
-            return this.remediationDynamicParams;
+        public String getRemediaitonOriginParams() {
+            return this.remediaitonOriginParams;
         }
 
         public ListAggregateRemediationsResponseBodyRemediations setRemediationId(String remediationId) {

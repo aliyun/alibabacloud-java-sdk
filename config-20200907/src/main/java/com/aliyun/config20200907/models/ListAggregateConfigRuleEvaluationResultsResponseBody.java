@@ -44,6 +44,9 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
+        @NameInMap("IgnoreDate")
+        public String ignoreDate;
+
         @NameInMap("RegionId")
         public String regionId;
 
@@ -94,6 +97,14 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
         }
         public String getConfigRuleName() {
             return this.configRuleName;
+        }
+
+        public ListAggregateConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setIgnoreDate(String ignoreDate) {
+            this.ignoreDate = ignoreDate;
+            return this;
+        }
+        public String getIgnoreDate() {
+            return this.ignoreDate;
         }
 
         public ListAggregateConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setRegionId(String regionId) {

@@ -41,6 +41,9 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
+        @NameInMap("IgnoreDate")
+        public String ignoreDate;
+
         @NameInMap("RegionId")
         public String regionId;
 
@@ -80,6 +83,14 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
         }
         public String getConfigRuleName() {
             return this.configRuleName;
+        }
+
+        public ListResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setIgnoreDate(String ignoreDate) {
+            this.ignoreDate = ignoreDate;
+            return this;
+        }
+        public String getIgnoreDate() {
+            return this.ignoreDate;
         }
 
         public ListResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setRegionId(String regionId) {

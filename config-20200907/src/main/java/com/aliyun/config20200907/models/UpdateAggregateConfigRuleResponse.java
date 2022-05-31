@@ -8,6 +8,10 @@ public class UpdateAggregateConfigRuleResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public UpdateAggregateConfigRuleResponseBody body;
@@ -23,6 +27,14 @@ public class UpdateAggregateConfigRuleResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public UpdateAggregateConfigRuleResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public UpdateAggregateConfigRuleResponse setBody(UpdateAggregateConfigRuleResponseBody body) {

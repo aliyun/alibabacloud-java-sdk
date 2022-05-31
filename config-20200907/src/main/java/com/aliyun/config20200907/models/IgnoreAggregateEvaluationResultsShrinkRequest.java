@@ -10,6 +10,9 @@ public class IgnoreAggregateEvaluationResultsShrinkRequest extends TeaModel {
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    @NameInMap("IgnoreDate")
+    public String ignoreDate;
+
     @NameInMap("Reason")
     public String reason;
 
@@ -35,6 +38,14 @@ public class IgnoreAggregateEvaluationResultsShrinkRequest extends TeaModel {
     }
     public String getConfigRuleId() {
         return this.configRuleId;
+    }
+
+    public IgnoreAggregateEvaluationResultsShrinkRequest setIgnoreDate(String ignoreDate) {
+        this.ignoreDate = ignoreDate;
+        return this;
+    }
+    public String getIgnoreDate() {
+        return this.ignoreDate;
     }
 
     public IgnoreAggregateEvaluationResultsShrinkRequest setReason(String reason) {
