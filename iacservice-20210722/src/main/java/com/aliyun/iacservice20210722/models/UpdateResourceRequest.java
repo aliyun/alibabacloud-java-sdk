@@ -7,8 +7,8 @@ public class UpdateResourceRequest extends TeaModel {
     @NameInMap("body")
     public String body;
 
-    @NameInMap("isAsync")
-    public Boolean isAsync;
+    @NameInMap("resourceTypeVersion")
+    public String resourceTypeVersion;
 
     public static UpdateResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateResourceRequest self = new UpdateResourceRequest();
@@ -23,12 +23,12 @@ public class UpdateResourceRequest extends TeaModel {
         return this.body;
     }
 
-    public UpdateResourceRequest setIsAsync(Boolean isAsync) {
-        this.isAsync = isAsync;
+    public UpdateResourceRequest setResourceTypeVersion(String resourceTypeVersion) {
+        this.resourceTypeVersion = resourceTypeVersion;
         return this;
     }
-    public Boolean getIsAsync() {
-        return this.isAsync;
+    public String getResourceTypeVersion() {
+        return this.resourceTypeVersion;
     }
 
 }
