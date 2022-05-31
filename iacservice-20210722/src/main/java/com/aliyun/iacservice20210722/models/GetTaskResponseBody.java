@@ -32,15 +32,60 @@ public class GetTaskResponseBody extends TeaModel {
         return this.task;
     }
 
+    public static class GetTaskResponseBodyTaskError extends TeaModel {
+        @NameInMap("code")
+        public String code;
+
+        @NameInMap("message")
+        public String message;
+
+        public static GetTaskResponseBodyTaskError build(java.util.Map<String, ?> map) throws Exception {
+            GetTaskResponseBodyTaskError self = new GetTaskResponseBodyTaskError();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTaskResponseBodyTaskError setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public GetTaskResponseBodyTaskError setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+    }
+
     public static class GetTaskResponseBodyTask extends TeaModel {
-        @NameInMap("failedReason")
-        public String failedReason;
+        @NameInMap("createTime")
+        public String createTime;
+
+        @NameInMap("error")
+        public GetTaskResponseBodyTaskError error;
+
+        @NameInMap("productCode")
+        public String productCode;
 
         @NameInMap("resourceId")
         public String resourceId;
 
+        @NameInMap("resourceTypeCode")
+        public String resourceTypeCode;
+
+        @NameInMap("retryAfter")
+        public Integer retryAfter;
+
         @NameInMap("status")
         public String status;
+
+        @NameInMap("taskAction")
+        public String taskAction;
 
         @NameInMap("taskId")
         public String taskId;
@@ -50,12 +95,28 @@ public class GetTaskResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetTaskResponseBodyTask setFailedReason(String failedReason) {
-            this.failedReason = failedReason;
+        public GetTaskResponseBodyTask setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getFailedReason() {
-            return this.failedReason;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetTaskResponseBodyTask setError(GetTaskResponseBodyTaskError error) {
+            this.error = error;
+            return this;
+        }
+        public GetTaskResponseBodyTaskError getError() {
+            return this.error;
+        }
+
+        public GetTaskResponseBodyTask setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
         }
 
         public GetTaskResponseBodyTask setResourceId(String resourceId) {
@@ -66,12 +127,36 @@ public class GetTaskResponseBody extends TeaModel {
             return this.resourceId;
         }
 
+        public GetTaskResponseBodyTask setResourceTypeCode(String resourceTypeCode) {
+            this.resourceTypeCode = resourceTypeCode;
+            return this;
+        }
+        public String getResourceTypeCode() {
+            return this.resourceTypeCode;
+        }
+
+        public GetTaskResponseBodyTask setRetryAfter(Integer retryAfter) {
+            this.retryAfter = retryAfter;
+            return this;
+        }
+        public Integer getRetryAfter() {
+            return this.retryAfter;
+        }
+
         public GetTaskResponseBodyTask setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetTaskResponseBodyTask setTaskAction(String taskAction) {
+            this.taskAction = taskAction;
+            return this;
+        }
+        public String getTaskAction() {
+            return this.taskAction;
         }
 
         public GetTaskResponseBodyTask setTaskId(String taskId) {

@@ -44,8 +44,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         productCode = com.aliyun.openapiutil.Client.getEncodeParam(productCode);
         resourceTypeCode = com.aliyun.openapiutil.Client.getEncodeParam(resourceTypeCode);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.isAsync)) {
-            query.put("isAsync", request.isAsync);
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypeVersion)) {
+            query.put("resourceTypeVersion", request.resourceTypeVersion);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -80,12 +80,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         resourceTypeCode = com.aliyun.openapiutil.Client.getEncodeParam(resourceTypeCode);
         resourceId = com.aliyun.openapiutil.Client.getEncodeParam(resourceId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.isAsync)) {
-            query.put("isAsync", request.isAsync);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypeVersion)) {
+            query.put("resourceTypeVersion", request.resourceTypeVersion);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -363,6 +363,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourcesResponse());
     }
 
+    public ListTasksResponse listTasks(ListTasksRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listTasksWithOptions(request, headers, runtime);
+    }
+
+    public ListTasksResponse listTasksWithOptions(ListTasksRequest tmpReq, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListTasksShrinkRequest request = new ListTasksShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskIds)) {
+            request.taskIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskIds, "taskIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskIdsShrink)) {
+            query.put("taskIds", request.taskIdsShrink);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTasks"),
+            new TeaPair("version", "2021-07-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/tasks"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTasksResponse());
+    }
+
     public ReloadResourcesResponse reloadResources(String provider, String productCode, String resourceTypeCode, ReloadResourcesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -416,8 +461,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         resourceTypeCode = com.aliyun.openapiutil.Client.getEncodeParam(resourceTypeCode);
         resourceId = com.aliyun.openapiutil.Client.getEncodeParam(resourceId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.isAsync)) {
-            query.put("isAsync", request.isAsync);
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypeVersion)) {
+            query.put("resourceTypeVersion", request.resourceTypeVersion);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
