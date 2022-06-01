@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>amptest20201230</artifactId>
-  <version>1.1.60</version>
+  <version>1.2.4</version>
   <packaging>jar</packaging>
   <name>amptest20201230</name>
   <description>Alibaba Cloud AmpTest (20201230) SDK for Java
