@@ -15,6 +15,9 @@ public class ListActiveGroupsShrinkRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("PageParam")
+    public String pageParamShrink;
+
     // A short description of struct
     @NameInMap("ShopId")
     public String shopId;
@@ -49,6 +52,14 @@ public class ListActiveGroupsShrinkRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListActiveGroupsShrinkRequest setPageParamShrink(String pageParamShrink) {
+        this.pageParamShrink = pageParamShrink;
+        return this;
+    }
+    public String getPageParamShrink() {
+        return this.pageParamShrink;
     }
 
     public ListActiveGroupsShrinkRequest setShopId(String shopId) {

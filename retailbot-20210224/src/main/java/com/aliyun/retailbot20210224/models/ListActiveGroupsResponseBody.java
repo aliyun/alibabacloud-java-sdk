@@ -8,9 +8,8 @@ public class ListActiveGroupsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 数组，返回示例目录。
     @NameInMap("Data")
-    public java.util.List<ListActiveGroupsResponseBodyData> data;
+    public ListActiveGroupsResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
@@ -34,11 +33,11 @@ public class ListActiveGroupsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListActiveGroupsResponseBody setData(java.util.List<ListActiveGroupsResponseBodyData> data) {
+    public ListActiveGroupsResponseBody setData(ListActiveGroupsResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<ListActiveGroupsResponseBodyData> getData() {
+    public ListActiveGroupsResponseBodyData getData() {
         return this.data;
     }
 
@@ -66,7 +65,7 @@ public class ListActiveGroupsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ListActiveGroupsResponseBodyData extends TeaModel {
+    public static class ListActiveGroupsResponseBodyDataGroupList extends TeaModel {
         @NameInMap("AppCode")
         public String appCode;
 
@@ -85,8 +84,8 @@ public class ListActiveGroupsResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("GroupId")
+        public Long groupId;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -100,12 +99,15 @@ public class ListActiveGroupsResponseBody extends TeaModel {
         @NameInMap("ShopId")
         public String shopId;
 
-        public static ListActiveGroupsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            ListActiveGroupsResponseBodyData self = new ListActiveGroupsResponseBodyData();
+        @NameInMap("Status")
+        public Integer status;
+
+        public static ListActiveGroupsResponseBodyDataGroupList build(java.util.Map<String, ?> map) throws Exception {
+            ListActiveGroupsResponseBodyDataGroupList self = new ListActiveGroupsResponseBodyDataGroupList();
             return TeaModel.build(map, self);
         }
 
-        public ListActiveGroupsResponseBodyData setAppCode(String appCode) {
+        public ListActiveGroupsResponseBodyDataGroupList setAppCode(String appCode) {
             this.appCode = appCode;
             return this;
         }
@@ -113,7 +115,7 @@ public class ListActiveGroupsResponseBody extends TeaModel {
             return this.appCode;
         }
 
-        public ListActiveGroupsResponseBodyData setAppVersion(String appVersion) {
+        public ListActiveGroupsResponseBodyDataGroupList setAppVersion(String appVersion) {
             this.appVersion = appVersion;
             return this;
         }
@@ -121,7 +123,7 @@ public class ListActiveGroupsResponseBody extends TeaModel {
             return this.appVersion;
         }
 
-        public ListActiveGroupsResponseBodyData setConfig(String config) {
+        public ListActiveGroupsResponseBodyDataGroupList setConfig(String config) {
             this.config = config;
             return this;
         }
@@ -129,7 +131,7 @@ public class ListActiveGroupsResponseBody extends TeaModel {
             return this.config;
         }
 
-        public ListActiveGroupsResponseBodyData setDescription(String description) {
+        public ListActiveGroupsResponseBodyDataGroupList setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -137,7 +139,7 @@ public class ListActiveGroupsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListActiveGroupsResponseBodyData setGmtCreate(Long gmtCreate) {
+        public ListActiveGroupsResponseBodyDataGroupList setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
@@ -145,7 +147,7 @@ public class ListActiveGroupsResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public ListActiveGroupsResponseBodyData setGmtModified(Long gmtModified) {
+        public ListActiveGroupsResponseBodyDataGroupList setGmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
             return this;
         }
@@ -153,15 +155,15 @@ public class ListActiveGroupsResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public ListActiveGroupsResponseBodyData setId(Long id) {
-            this.id = id;
+        public ListActiveGroupsResponseBodyDataGroupList setGroupId(Long groupId) {
+            this.groupId = groupId;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public Long getGroupId() {
+            return this.groupId;
         }
 
-        public ListActiveGroupsResponseBodyData setInstanceId(String instanceId) {
+        public ListActiveGroupsResponseBodyDataGroupList setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -169,7 +171,7 @@ public class ListActiveGroupsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListActiveGroupsResponseBodyData setModifier(String modifier) {
+        public ListActiveGroupsResponseBodyDataGroupList setModifier(String modifier) {
             this.modifier = modifier;
             return this;
         }
@@ -177,7 +179,7 @@ public class ListActiveGroupsResponseBody extends TeaModel {
             return this.modifier;
         }
 
-        public ListActiveGroupsResponseBodyData setName(String name) {
+        public ListActiveGroupsResponseBodyDataGroupList setName(String name) {
             this.name = name;
             return this;
         }
@@ -185,12 +187,83 @@ public class ListActiveGroupsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListActiveGroupsResponseBodyData setShopId(String shopId) {
+        public ListActiveGroupsResponseBodyDataGroupList setShopId(String shopId) {
             this.shopId = shopId;
             return this;
         }
         public String getShopId() {
             return this.shopId;
+        }
+
+        public ListActiveGroupsResponseBodyDataGroupList setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class ListActiveGroupsResponseBodyData extends TeaModel {
+        @NameInMap("GroupList")
+        public java.util.List<ListActiveGroupsResponseBodyDataGroupList> groupList;
+
+        @NameInMap("PageNo")
+        public Integer pageNo;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("TotalPage")
+        public Integer totalPage;
+
+        @NameInMap("TotalSize")
+        public Long totalSize;
+
+        public static ListActiveGroupsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ListActiveGroupsResponseBodyData self = new ListActiveGroupsResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ListActiveGroupsResponseBodyData setGroupList(java.util.List<ListActiveGroupsResponseBodyDataGroupList> groupList) {
+            this.groupList = groupList;
+            return this;
+        }
+        public java.util.List<ListActiveGroupsResponseBodyDataGroupList> getGroupList() {
+            return this.groupList;
+        }
+
+        public ListActiveGroupsResponseBodyData setPageNo(Integer pageNo) {
+            this.pageNo = pageNo;
+            return this;
+        }
+        public Integer getPageNo() {
+            return this.pageNo;
+        }
+
+        public ListActiveGroupsResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListActiveGroupsResponseBodyData setTotalPage(Integer totalPage) {
+            this.totalPage = totalPage;
+            return this;
+        }
+        public Integer getTotalPage() {
+            return this.totalPage;
+        }
+
+        public ListActiveGroupsResponseBodyData setTotalSize(Long totalSize) {
+            this.totalSize = totalSize;
+            return this;
+        }
+        public Long getTotalSize() {
+            return this.totalSize;
         }
 
     }

@@ -1224,6 +1224,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListActiveGroupsShrinkRequest request = new ListActiveGroupsShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.pageParam))) {
+            request.pageParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.pageParam), "PageParam", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.userProfile))) {
             request.userProfileShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.userProfile), "UserProfile", "json");
         }
@@ -1337,6 +1341,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListJobsShrinkRequest request = new ListJobsShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.pageParam))) {
+            request.pageParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.pageParam), "PageParam", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.status)) {
+            request.statusShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.status, "Status", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.userProfile))) {
             request.userProfileShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.userProfile), "UserProfile", "json");
         }
@@ -1354,8 +1366,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pageParamShrink)) {
+            query.put("PageParam", request.pageParamShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shopId)) {
             query.put("ShopId", request.shopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusShrink)) {
+            query.put("Status", request.statusShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userProfileShrink)) {

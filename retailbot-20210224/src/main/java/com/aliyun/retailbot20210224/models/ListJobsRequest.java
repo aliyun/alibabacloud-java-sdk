@@ -13,8 +13,14 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("PageParam")
+    public ListJobsRequestPageParam pageParam;
+
     @NameInMap("ShopId")
     public String shopId;
+
+    @NameInMap("Status")
+    public java.util.List<Integer> status;
 
     @NameInMap("UserProfile")
     public ListJobsRequestUserProfile userProfile;
@@ -48,6 +54,14 @@ public class ListJobsRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public ListJobsRequest setPageParam(ListJobsRequestPageParam pageParam) {
+        this.pageParam = pageParam;
+        return this;
+    }
+    public ListJobsRequestPageParam getPageParam() {
+        return this.pageParam;
+    }
+
     public ListJobsRequest setShopId(String shopId) {
         this.shopId = shopId;
         return this;
@@ -56,12 +70,50 @@ public class ListJobsRequest extends TeaModel {
         return this.shopId;
     }
 
+    public ListJobsRequest setStatus(java.util.List<Integer> status) {
+        this.status = status;
+        return this;
+    }
+    public java.util.List<Integer> getStatus() {
+        return this.status;
+    }
+
     public ListJobsRequest setUserProfile(ListJobsRequestUserProfile userProfile) {
         this.userProfile = userProfile;
         return this;
     }
     public ListJobsRequestUserProfile getUserProfile() {
         return this.userProfile;
+    }
+
+    public static class ListJobsRequestPageParam extends TeaModel {
+        @NameInMap("PageNo")
+        public Integer pageNo;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        public static ListJobsRequestPageParam build(java.util.Map<String, ?> map) throws Exception {
+            ListJobsRequestPageParam self = new ListJobsRequestPageParam();
+            return TeaModel.build(map, self);
+        }
+
+        public ListJobsRequestPageParam setPageNo(Integer pageNo) {
+            this.pageNo = pageNo;
+            return this;
+        }
+        public Integer getPageNo() {
+            return this.pageNo;
+        }
+
+        public ListJobsRequestPageParam setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
     }
 
     public static class ListJobsRequestUserProfile extends TeaModel {
