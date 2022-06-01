@@ -7,9 +7,8 @@ public class ListJobsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 数组，返回示例目录。
     @NameInMap("Data")
-    public java.util.List<ListJobsResponseBodyData> data;
+    public ListJobsResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
@@ -33,11 +32,11 @@ public class ListJobsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListJobsResponseBody setData(java.util.List<ListJobsResponseBodyData> data) {
+    public ListJobsResponseBody setData(ListJobsResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<ListJobsResponseBodyData> getData() {
+    public ListJobsResponseBodyData getData() {
         return this.data;
     }
 
@@ -65,7 +64,7 @@ public class ListJobsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ListJobsResponseBodyData extends TeaModel {
+    public static class ListJobsResponseBodyDataJobList extends TeaModel {
         @NameInMap("AppCode")
         public String appCode;
 
@@ -87,7 +86,6 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 资源一级ID
         @NameInMap("JobId")
         public String jobId;
 
@@ -103,15 +101,12 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
-        @NameInMap("TenantId")
-        public Long tenantId;
-
-        public static ListJobsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            ListJobsResponseBodyData self = new ListJobsResponseBodyData();
+        public static ListJobsResponseBodyDataJobList build(java.util.Map<String, ?> map) throws Exception {
+            ListJobsResponseBodyDataJobList self = new ListJobsResponseBodyDataJobList();
             return TeaModel.build(map, self);
         }
 
-        public ListJobsResponseBodyData setAppCode(String appCode) {
+        public ListJobsResponseBodyDataJobList setAppCode(String appCode) {
             this.appCode = appCode;
             return this;
         }
@@ -119,7 +114,7 @@ public class ListJobsResponseBody extends TeaModel {
             return this.appCode;
         }
 
-        public ListJobsResponseBodyData setAppVersion(String appVersion) {
+        public ListJobsResponseBodyDataJobList setAppVersion(String appVersion) {
             this.appVersion = appVersion;
             return this;
         }
@@ -127,7 +122,7 @@ public class ListJobsResponseBody extends TeaModel {
             return this.appVersion;
         }
 
-        public ListJobsResponseBodyData setConfig(String config) {
+        public ListJobsResponseBodyDataJobList setConfig(String config) {
             this.config = config;
             return this;
         }
@@ -135,7 +130,7 @@ public class ListJobsResponseBody extends TeaModel {
             return this.config;
         }
 
-        public ListJobsResponseBodyData setEndTime(Long endTime) {
+        public ListJobsResponseBodyDataJobList setEndTime(Long endTime) {
             this.endTime = endTime;
             return this;
         }
@@ -143,7 +138,7 @@ public class ListJobsResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public ListJobsResponseBodyData setGmtCreate(Long gmtCreate) {
+        public ListJobsResponseBodyDataJobList setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
@@ -151,7 +146,7 @@ public class ListJobsResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public ListJobsResponseBodyData setGmtModified(Long gmtModified) {
+        public ListJobsResponseBodyDataJobList setGmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
             return this;
         }
@@ -159,7 +154,7 @@ public class ListJobsResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public ListJobsResponseBodyData setInstanceId(String instanceId) {
+        public ListJobsResponseBodyDataJobList setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -167,7 +162,7 @@ public class ListJobsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListJobsResponseBodyData setJobId(String jobId) {
+        public ListJobsResponseBodyDataJobList setJobId(String jobId) {
             this.jobId = jobId;
             return this;
         }
@@ -175,7 +170,7 @@ public class ListJobsResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public ListJobsResponseBodyData setJobName(String jobName) {
+        public ListJobsResponseBodyDataJobList setJobName(String jobName) {
             this.jobName = jobName;
             return this;
         }
@@ -183,7 +178,7 @@ public class ListJobsResponseBody extends TeaModel {
             return this.jobName;
         }
 
-        public ListJobsResponseBodyData setShopId(String shopId) {
+        public ListJobsResponseBodyDataJobList setShopId(String shopId) {
             this.shopId = shopId;
             return this;
         }
@@ -191,7 +186,7 @@ public class ListJobsResponseBody extends TeaModel {
             return this.shopId;
         }
 
-        public ListJobsResponseBodyData setStartTime(Long startTime) {
+        public ListJobsResponseBodyDataJobList setStartTime(Long startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -199,7 +194,7 @@ public class ListJobsResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public ListJobsResponseBodyData setStatus(Integer status) {
+        public ListJobsResponseBodyDataJobList setStatus(Integer status) {
             this.status = status;
             return this;
         }
@@ -207,12 +202,67 @@ public class ListJobsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListJobsResponseBodyData setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
+    }
+
+    public static class ListJobsResponseBodyData extends TeaModel {
+        @NameInMap("JobList")
+        public java.util.List<ListJobsResponseBodyDataJobList> jobList;
+
+        @NameInMap("PageNo")
+        public Integer pageNo;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("TotalPage")
+        public Integer totalPage;
+
+        @NameInMap("TotalSize")
+        public Long totalSize;
+
+        public static ListJobsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ListJobsResponseBodyData self = new ListJobsResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ListJobsResponseBodyData setJobList(java.util.List<ListJobsResponseBodyDataJobList> jobList) {
+            this.jobList = jobList;
             return this;
         }
-        public Long getTenantId() {
-            return this.tenantId;
+        public java.util.List<ListJobsResponseBodyDataJobList> getJobList() {
+            return this.jobList;
+        }
+
+        public ListJobsResponseBodyData setPageNo(Integer pageNo) {
+            this.pageNo = pageNo;
+            return this;
+        }
+        public Integer getPageNo() {
+            return this.pageNo;
+        }
+
+        public ListJobsResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListJobsResponseBodyData setTotalPage(Integer totalPage) {
+            this.totalPage = totalPage;
+            return this;
+        }
+        public Integer getTotalPage() {
+            return this.totalPage;
+        }
+
+        public ListJobsResponseBodyData setTotalSize(Long totalSize) {
+            this.totalSize = totalSize;
+            return this;
+        }
+        public Long getTotalSize() {
+            return this.totalSize;
         }
 
     }
