@@ -619,6 +619,9 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         @NameInMap("Components")
         public GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroupComponents components;
 
+        @NameInMap("Env")
+        public String env;
+
         public static GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroup build(java.util.Map<String, ?> map) throws Exception {
             GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroup self = new GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroup();
             return TeaModel.build(map, self);
@@ -630,6 +633,14 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         }
         public GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroupComponents getComponents() {
             return this.components;
+        }
+
+        public GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroup setEnv(String env) {
+            this.env = env;
+            return this;
+        }
+        public String getEnv() {
+            return this.env;
         }
 
     }
