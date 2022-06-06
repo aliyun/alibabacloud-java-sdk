@@ -3,7 +3,7 @@ package com.aliyun.ocr_api20210707.models;
 
 import com.aliyun.tea.*;
 
-public class RecognizeGeneralResponse extends TeaModel {
+public class RecognizeShoppingReceiptResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class RecognizeGeneralResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public RecognizeGeneralResponseBody body;
+    public RecognizeShoppingReceiptResponseBody body;
 
-    public static RecognizeGeneralResponse build(java.util.Map<String, ?> map) throws Exception {
-        RecognizeGeneralResponse self = new RecognizeGeneralResponse();
+    public static RecognizeShoppingReceiptResponse build(java.util.Map<String, ?> map) throws Exception {
+        RecognizeShoppingReceiptResponse self = new RecognizeShoppingReceiptResponse();
         return TeaModel.build(map, self);
     }
 
-    public RecognizeGeneralResponse setHeaders(java.util.Map<String, String> headers) {
+    public RecognizeShoppingReceiptResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class RecognizeGeneralResponse extends TeaModel {
         return this.headers;
     }
 
-    public RecognizeGeneralResponse setStatusCode(Integer statusCode) {
+    public RecognizeShoppingReceiptResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class RecognizeGeneralResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RecognizeGeneralResponse setBody(RecognizeGeneralResponseBody body) {
+    public RecognizeShoppingReceiptResponse setBody(RecognizeShoppingReceiptResponseBody body) {
         this.body = body;
         return this;
     }
-    public RecognizeGeneralResponseBody getBody() {
+    public RecognizeShoppingReceiptResponseBody getBody() {
         return this.body;
     }
 

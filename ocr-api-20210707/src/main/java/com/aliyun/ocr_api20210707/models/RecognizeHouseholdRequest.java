@@ -4,6 +4,9 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeHouseholdRequest extends TeaModel {
+    @NameInMap("IsResidentPage")
+    public Boolean isResidentPage;
+
     // 图片链接（长度不超 2048，不支持 base64）
     @NameInMap("Url")
     public String url;
@@ -15,6 +18,14 @@ public class RecognizeHouseholdRequest extends TeaModel {
     public static RecognizeHouseholdRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeHouseholdRequest self = new RecognizeHouseholdRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RecognizeHouseholdRequest setIsResidentPage(Boolean isResidentPage) {
+        this.isResidentPage = isResidentPage;
+        return this;
+    }
+    public Boolean getIsResidentPage() {
+        return this.isResidentPage;
     }
 
     public RecognizeHouseholdRequest setUrl(String url) {

@@ -126,6 +126,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.recognizeAirItineraryWithOptions(request, runtime);
     }
 
+    public RecognizeBankAcceptanceResponse recognizeBankAcceptanceWithOptions(RecognizeBankAcceptanceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", request.body),
+            new TeaPair("stream", request.body)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecognizeBankAcceptance"),
+            new TeaPair("version", "2021-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizeBankAcceptanceResponse());
+    }
+
+    public RecognizeBankAcceptanceResponse recognizeBankAcceptance(RecognizeBankAcceptanceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.recognizeBankAcceptanceWithOptions(request, runtime);
+    }
+
     public RecognizeBankAccountLicenseResponse recognizeBankAccountLicenseWithOptions(RecognizeBankAccountLicenseRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -557,6 +588,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RecognizeCosmeticProduceLicenseResponse recognizeCosmeticProduceLicense(RecognizeCosmeticProduceLicenseRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.recognizeCosmeticProduceLicenseWithOptions(request, runtime);
+    }
+
+    public RecognizeCovidTestReportResponse recognizeCovidTestReportWithOptions(RecognizeCovidTestReportRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", request.body),
+            new TeaPair("stream", request.body)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecognizeCovidTestReport"),
+            new TeaPair("version", "2021-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizeCovidTestReportResponse());
+    }
+
+    public RecognizeCovidTestReportResponse recognizeCovidTestReport(RecognizeCovidTestReportRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.recognizeCovidTestReportWithOptions(request, runtime);
     }
 
     public RecognizeCtwoMedicalDeviceManageLicenseResponse recognizeCtwoMedicalDeviceManageLicenseWithOptions(RecognizeCtwoMedicalDeviceManageLicenseRequest request, RuntimeOptions runtime) throws Exception {
@@ -1295,6 +1357,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RecognizeHouseholdResponse recognizeHouseholdWithOptions(RecognizeHouseholdRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isResidentPage)) {
+            query.put("IsResidentPage", request.isResidentPage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.url)) {
             query.put("Url", request.url);
         }
@@ -1928,6 +1994,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.recognizeRussianWithOptions(request, runtime);
     }
 
+    public RecognizeShoppingReceiptResponse recognizeShoppingReceiptWithOptions(RecognizeShoppingReceiptRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", request.body),
+            new TeaPair("stream", request.body)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecognizeShoppingReceipt"),
+            new TeaPair("version", "2021-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizeShoppingReceiptResponse());
+    }
+
+    public RecognizeShoppingReceiptResponse recognizeShoppingReceipt(RecognizeShoppingReceiptRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.recognizeShoppingReceiptWithOptions(request, runtime);
+    }
+
     public RecognizeSocialSecurityCardResponse recognizeSocialSecurityCardWithOptions(RecognizeSocialSecurityCardRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1957,6 +2054,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RecognizeSocialSecurityCardResponse recognizeSocialSecurityCard(RecognizeSocialSecurityCardRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.recognizeSocialSecurityCardWithOptions(request, runtime);
+    }
+
+    public RecognizeSocialSecurityCardVersionIIResponse recognizeSocialSecurityCardVersionIIWithOptions(RecognizeSocialSecurityCardVersionIIRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", request.body),
+            new TeaPair("stream", request.body)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecognizeSocialSecurityCardVersionII"),
+            new TeaPair("version", "2021-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizeSocialSecurityCardVersionIIResponse());
+    }
+
+    public RecognizeSocialSecurityCardVersionIIResponse recognizeSocialSecurityCardVersionII(RecognizeSocialSecurityCardVersionIIRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.recognizeSocialSecurityCardVersionIIWithOptions(request, runtime);
     }
 
     public RecognizeTableOcrResponse recognizeTableOcrWithOptions(RecognizeTableOcrRequest request, RuntimeOptions runtime) throws Exception {
