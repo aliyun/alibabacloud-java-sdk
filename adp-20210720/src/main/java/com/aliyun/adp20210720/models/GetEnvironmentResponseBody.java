@@ -72,6 +72,129 @@ public class GetEnvironmentResponseBody extends TeaModel {
 
     }
 
+    public static class GetEnvironmentResponseBodyDataSiteSurveyReportCheckListFailedList extends TeaModel {
+        @NameInMap("ip")
+        public String ip;
+
+        @NameInMap("reason")
+        public java.util.Map<String, ?> reason;
+
+        public static GetEnvironmentResponseBodyDataSiteSurveyReportCheckListFailedList build(java.util.Map<String, ?> map) throws Exception {
+            GetEnvironmentResponseBodyDataSiteSurveyReportCheckListFailedList self = new GetEnvironmentResponseBodyDataSiteSurveyReportCheckListFailedList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEnvironmentResponseBodyDataSiteSurveyReportCheckListFailedList setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
+        }
+
+        public GetEnvironmentResponseBodyDataSiteSurveyReportCheckListFailedList setReason(java.util.Map<String, ?> reason) {
+            this.reason = reason;
+            return this;
+        }
+        public java.util.Map<String, ?> getReason() {
+            return this.reason;
+        }
+
+    }
+
+    public static class GetEnvironmentResponseBodyDataSiteSurveyReportCheckList extends TeaModel {
+        @NameInMap("description")
+        public java.util.Map<String, ?> description;
+
+        @NameInMap("failedList")
+        public java.util.List<GetEnvironmentResponseBodyDataSiteSurveyReportCheckListFailedList> failedList;
+
+        @NameInMap("level")
+        public String level;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("status")
+        public String status;
+
+        public static GetEnvironmentResponseBodyDataSiteSurveyReportCheckList build(java.util.Map<String, ?> map) throws Exception {
+            GetEnvironmentResponseBodyDataSiteSurveyReportCheckList self = new GetEnvironmentResponseBodyDataSiteSurveyReportCheckList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEnvironmentResponseBodyDataSiteSurveyReportCheckList setDescription(java.util.Map<String, ?> description) {
+            this.description = description;
+            return this;
+        }
+        public java.util.Map<String, ?> getDescription() {
+            return this.description;
+        }
+
+        public GetEnvironmentResponseBodyDataSiteSurveyReportCheckList setFailedList(java.util.List<GetEnvironmentResponseBodyDataSiteSurveyReportCheckListFailedList> failedList) {
+            this.failedList = failedList;
+            return this;
+        }
+        public java.util.List<GetEnvironmentResponseBodyDataSiteSurveyReportCheckListFailedList> getFailedList() {
+            return this.failedList;
+        }
+
+        public GetEnvironmentResponseBodyDataSiteSurveyReportCheckList setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public GetEnvironmentResponseBodyDataSiteSurveyReportCheckList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetEnvironmentResponseBodyDataSiteSurveyReportCheckList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class GetEnvironmentResponseBodyDataSiteSurveyReport extends TeaModel {
+        @NameInMap("checkList")
+        public java.util.List<GetEnvironmentResponseBodyDataSiteSurveyReportCheckList> checkList;
+
+        @NameInMap("result")
+        public String result;
+
+        public static GetEnvironmentResponseBodyDataSiteSurveyReport build(java.util.Map<String, ?> map) throws Exception {
+            GetEnvironmentResponseBodyDataSiteSurveyReport self = new GetEnvironmentResponseBodyDataSiteSurveyReport();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEnvironmentResponseBodyDataSiteSurveyReport setCheckList(java.util.List<GetEnvironmentResponseBodyDataSiteSurveyReportCheckList> checkList) {
+            this.checkList = checkList;
+            return this;
+        }
+        public java.util.List<GetEnvironmentResponseBodyDataSiteSurveyReportCheckList> getCheckList() {
+            return this.checkList;
+        }
+
+        public GetEnvironmentResponseBodyDataSiteSurveyReport setResult(String result) {
+            this.result = result;
+            return this;
+        }
+        public String getResult() {
+            return this.result;
+        }
+
+    }
+
     public static class GetEnvironmentResponseBodyData extends TeaModel {
         @NameInMap("clusterId")
         public String clusterId;
@@ -109,11 +232,20 @@ public class GetEnvironmentResponseBody extends TeaModel {
         @NameInMap("platform")
         public GetEnvironmentResponseBodyDataPlatform platform;
 
+        @NameInMap("platformList")
+        public java.util.List<Platform> platformList;
+
+        @NameInMap("platformStatus")
+        public String platformStatus;
+
         @NameInMap("productName")
         public String productName;
 
         @NameInMap("productVersion")
         public String productVersion;
+
+        @NameInMap("siteSurveyReport")
+        public GetEnvironmentResponseBodyDataSiteSurveyReport siteSurveyReport;
 
         @NameInMap("uid")
         public String uid;
@@ -225,6 +357,22 @@ public class GetEnvironmentResponseBody extends TeaModel {
             return this.platform;
         }
 
+        public GetEnvironmentResponseBodyData setPlatformList(java.util.List<Platform> platformList) {
+            this.platformList = platformList;
+            return this;
+        }
+        public java.util.List<Platform> getPlatformList() {
+            return this.platformList;
+        }
+
+        public GetEnvironmentResponseBodyData setPlatformStatus(String platformStatus) {
+            this.platformStatus = platformStatus;
+            return this;
+        }
+        public String getPlatformStatus() {
+            return this.platformStatus;
+        }
+
         public GetEnvironmentResponseBodyData setProductName(String productName) {
             this.productName = productName;
             return this;
@@ -239,6 +387,14 @@ public class GetEnvironmentResponseBody extends TeaModel {
         }
         public String getProductVersion() {
             return this.productVersion;
+        }
+
+        public GetEnvironmentResponseBodyData setSiteSurveyReport(GetEnvironmentResponseBodyDataSiteSurveyReport siteSurveyReport) {
+            this.siteSurveyReport = siteSurveyReport;
+            return this;
+        }
+        public GetEnvironmentResponseBodyDataSiteSurveyReport getSiteSurveyReport() {
+            return this.siteSurveyReport;
         }
 
         public GetEnvironmentResponseBodyData setUid(String uid) {

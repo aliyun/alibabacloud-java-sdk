@@ -16,6 +16,9 @@ public class CreateEnvironmentRequest extends TeaModel {
     @NameInMap("platform")
     public CreateEnvironmentRequestPlatform platform;
 
+    @NameInMap("platformList")
+    public java.util.List<Platform> platformList;
+
     @NameInMap("productVersionUID")
     public String productVersionUID;
 
@@ -64,6 +67,14 @@ public class CreateEnvironmentRequest extends TeaModel {
     }
     public CreateEnvironmentRequestPlatform getPlatform() {
         return this.platform;
+    }
+
+    public CreateEnvironmentRequest setPlatformList(java.util.List<Platform> platformList) {
+        this.platformList = platformList;
+        return this;
+    }
+    public java.util.List<Platform> getPlatformList() {
+        return this.platformList;
     }
 
     public CreateEnvironmentRequest setProductVersionUID(String productVersionUID) {

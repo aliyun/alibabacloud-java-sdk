@@ -64,6 +64,9 @@ public class GetProductVersionPackageResponseBody extends TeaModel {
         @NameInMap("platform")
         public Platform platform;
 
+        @NameInMap("platformList")
+        public java.util.List<Platform> platformList;
+
         public static GetProductVersionPackageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetProductVersionPackageResponseBodyData self = new GetProductVersionPackageResponseBodyData();
             return TeaModel.build(map, self);
@@ -123,6 +126,14 @@ public class GetProductVersionPackageResponseBody extends TeaModel {
         }
         public Platform getPlatform() {
             return this.platform;
+        }
+
+        public GetProductVersionPackageResponseBodyData setPlatformList(java.util.List<Platform> platformList) {
+            this.platformList = platformList;
+            return this;
+        }
+        public java.util.List<Platform> getPlatformList() {
+            return this.platformList;
         }
 
     }

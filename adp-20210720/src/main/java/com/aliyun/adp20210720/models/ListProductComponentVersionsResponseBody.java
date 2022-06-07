@@ -46,6 +46,15 @@ public class ListProductComponentVersionsResponseBody extends TeaModel {
         @NameInMap("list")
         public java.util.List<ProductComponentRelationDetail> list;
 
+        @NameInMap("pageNum")
+        public Long pageNum;
+
+        @NameInMap("pageSize")
+        public Long pageSize;
+
+        @NameInMap("total")
+        public Long total;
+
         public static ListProductComponentVersionsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListProductComponentVersionsResponseBodyData self = new ListProductComponentVersionsResponseBodyData();
             return TeaModel.build(map, self);
@@ -57,6 +66,30 @@ public class ListProductComponentVersionsResponseBody extends TeaModel {
         }
         public java.util.List<ProductComponentRelationDetail> getList() {
             return this.list;
+        }
+
+        public ListProductComponentVersionsResponseBodyData setPageNum(Long pageNum) {
+            this.pageNum = pageNum;
+            return this;
+        }
+        public Long getPageNum() {
+            return this.pageNum;
+        }
+
+        public ListProductComponentVersionsResponseBodyData setPageSize(Long pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Long getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListProductComponentVersionsResponseBodyData setTotal(Long total) {
+            this.total = total;
+            return this;
+        }
+        public Long getTotal() {
+            return this.total;
         }
 
     }

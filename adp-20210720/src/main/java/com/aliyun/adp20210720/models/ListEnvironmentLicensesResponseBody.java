@@ -109,6 +109,47 @@ public class ListEnvironmentLicensesResponseBody extends TeaModel {
 
     }
 
+    public static class ListEnvironmentLicensesResponseBodyDataListLicenseQuotaCustomQuotas extends TeaModel {
+        @NameInMap("description")
+        public String description;
+
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static ListEnvironmentLicensesResponseBodyDataListLicenseQuotaCustomQuotas build(java.util.Map<String, ?> map) throws Exception {
+            ListEnvironmentLicensesResponseBodyDataListLicenseQuotaCustomQuotas self = new ListEnvironmentLicensesResponseBodyDataListLicenseQuotaCustomQuotas();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEnvironmentLicensesResponseBodyDataListLicenseQuotaCustomQuotas setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListEnvironmentLicensesResponseBodyDataListLicenseQuotaCustomQuotas setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListEnvironmentLicensesResponseBodyDataListLicenseQuotaCustomQuotas setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListEnvironmentLicensesResponseBodyDataListLicenseQuota extends TeaModel {
         // 集群配额
         @NameInMap("clusterQuota")
@@ -117,6 +158,9 @@ public class ListEnvironmentLicensesResponseBody extends TeaModel {
         // 组件配额
         @NameInMap("componentQuotas")
         public java.util.List<ListEnvironmentLicensesResponseBodyDataListLicenseQuotaComponentQuotas> componentQuotas;
+
+        @NameInMap("customQuotas")
+        public java.util.List<ListEnvironmentLicensesResponseBodyDataListLicenseQuotaCustomQuotas> customQuotas;
 
         public static ListEnvironmentLicensesResponseBodyDataListLicenseQuota build(java.util.Map<String, ?> map) throws Exception {
             ListEnvironmentLicensesResponseBodyDataListLicenseQuota self = new ListEnvironmentLicensesResponseBodyDataListLicenseQuota();
@@ -139,6 +183,14 @@ public class ListEnvironmentLicensesResponseBody extends TeaModel {
             return this.componentQuotas;
         }
 
+        public ListEnvironmentLicensesResponseBodyDataListLicenseQuota setCustomQuotas(java.util.List<ListEnvironmentLicensesResponseBodyDataListLicenseQuotaCustomQuotas> customQuotas) {
+            this.customQuotas = customQuotas;
+            return this;
+        }
+        public java.util.List<ListEnvironmentLicensesResponseBodyDataListLicenseQuotaCustomQuotas> getCustomQuotas() {
+            return this.customQuotas;
+        }
+
     }
 
     public static class ListEnvironmentLicensesResponseBodyDataList extends TeaModel {
@@ -154,9 +206,15 @@ public class ListEnvironmentLicensesResponseBody extends TeaModel {
         @NameInMap("licenseQuota")
         public ListEnvironmentLicensesResponseBodyDataListLicenseQuota licenseQuota;
 
+        @NameInMap("productVersionUID")
+        public String productVersionUID;
+
         // 拒绝原因
         @NameInMap("rejectReason")
         public String rejectReason;
+
+        @NameInMap("scope")
+        public String scope;
 
         // 状态
         @NameInMap("status")
@@ -199,12 +257,28 @@ public class ListEnvironmentLicensesResponseBody extends TeaModel {
             return this.licenseQuota;
         }
 
+        public ListEnvironmentLicensesResponseBodyDataList setProductVersionUID(String productVersionUID) {
+            this.productVersionUID = productVersionUID;
+            return this;
+        }
+        public String getProductVersionUID() {
+            return this.productVersionUID;
+        }
+
         public ListEnvironmentLicensesResponseBodyDataList setRejectReason(String rejectReason) {
             this.rejectReason = rejectReason;
             return this;
         }
         public String getRejectReason() {
             return this.rejectReason;
+        }
+
+        public ListEnvironmentLicensesResponseBodyDataList setScope(String scope) {
+            this.scope = scope;
+            return this;
+        }
+        public String getScope() {
+            return this.scope;
         }
 
         public ListEnvironmentLicensesResponseBodyDataList setStatus(String status) {

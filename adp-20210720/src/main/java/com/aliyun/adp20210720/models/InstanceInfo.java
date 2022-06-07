@@ -12,9 +12,25 @@ public class InstanceInfo extends TeaModel {
     @NameInMap("arch")
     public String arch;
 
+    // clusterLabels
+    @NameInMap("clusterLabels")
+    public java.util.Map<String, String> clusterLabels;
+
+    // clusterTaints
+    @NameInMap("clusterTaints")
+    public java.util.List<InstanceInfoClusterTaints> clusterTaints;
+
+    // clusterUID
+    @NameInMap("clusterUID")
+    public String clusterUID;
+
     // cpu
     @NameInMap("cpu")
     public String cpu;
+
+    // createdAt
+    @NameInMap("createdAt")
+    public String createdAt;
 
     // dataDisk
     @NameInMap("dataDisk")
@@ -96,6 +112,10 @@ public class InstanceInfo extends TeaModel {
     @NameInMap("taints")
     public java.util.List<InstanceInfoTaints> taints;
 
+    // uid
+    @NameInMap("uid")
+    public String uid;
+
     public static InstanceInfo build(java.util.Map<String, ?> map) throws Exception {
         InstanceInfo self = new InstanceInfo();
         return TeaModel.build(map, self);
@@ -117,12 +137,44 @@ public class InstanceInfo extends TeaModel {
         return this.arch;
     }
 
+    public InstanceInfo setClusterLabels(java.util.Map<String, String> clusterLabels) {
+        this.clusterLabels = clusterLabels;
+        return this;
+    }
+    public java.util.Map<String, String> getClusterLabels() {
+        return this.clusterLabels;
+    }
+
+    public InstanceInfo setClusterTaints(java.util.List<InstanceInfoClusterTaints> clusterTaints) {
+        this.clusterTaints = clusterTaints;
+        return this;
+    }
+    public java.util.List<InstanceInfoClusterTaints> getClusterTaints() {
+        return this.clusterTaints;
+    }
+
+    public InstanceInfo setClusterUID(String clusterUID) {
+        this.clusterUID = clusterUID;
+        return this;
+    }
+    public String getClusterUID() {
+        return this.clusterUID;
+    }
+
     public InstanceInfo setCpu(String cpu) {
         this.cpu = cpu;
         return this;
     }
     public String getCpu() {
         return this.cpu;
+    }
+
+    public InstanceInfo setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    public String getCreatedAt() {
+        return this.createdAt;
     }
 
     public InstanceInfo setDataDisk(java.util.List<Disk> dataDisk) {
@@ -283,6 +335,58 @@ public class InstanceInfo extends TeaModel {
     }
     public java.util.List<InstanceInfoTaints> getTaints() {
         return this.taints;
+    }
+
+    public InstanceInfo setUid(String uid) {
+        this.uid = uid;
+        return this;
+    }
+    public String getUid() {
+        return this.uid;
+    }
+
+    public static class InstanceInfoClusterTaints extends TeaModel {
+        // effect
+        @NameInMap("effect")
+        public String effect;
+
+        // key
+        @NameInMap("key")
+        public String key;
+
+        // value
+        @NameInMap("value")
+        public String value;
+
+        public static InstanceInfoClusterTaints build(java.util.Map<String, ?> map) throws Exception {
+            InstanceInfoClusterTaints self = new InstanceInfoClusterTaints();
+            return TeaModel.build(map, self);
+        }
+
+        public InstanceInfoClusterTaints setEffect(String effect) {
+            this.effect = effect;
+            return this;
+        }
+        public String getEffect() {
+            return this.effect;
+        }
+
+        public InstanceInfoClusterTaints setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public InstanceInfoClusterTaints setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class InstanceInfoNetworkCards extends TeaModel {

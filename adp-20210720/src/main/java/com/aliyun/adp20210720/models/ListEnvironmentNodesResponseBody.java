@@ -44,7 +44,7 @@ public class ListEnvironmentNodesResponseBody extends TeaModel {
 
     public static class ListEnvironmentNodesResponseBodyData extends TeaModel {
         @NameInMap("list")
-        public java.util.List<GetInstanceInfoResponse> list;
+        public java.util.List<InstanceInfo> list;
 
         @NameInMap("pageNum")
         public Long pageNum;
@@ -60,11 +60,11 @@ public class ListEnvironmentNodesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListEnvironmentNodesResponseBodyData setList(java.util.List<GetInstanceInfoResponse> list) {
+        public ListEnvironmentNodesResponseBodyData setList(java.util.List<InstanceInfo> list) {
             this.list = list;
             return this;
         }
-        public java.util.List<GetInstanceInfoResponse> getList() {
+        public java.util.List<InstanceInfo> getList() {
             return this.list;
         }
 
