@@ -3,7 +3,7 @@ package com.aliyun.idaas_doraemon20210520.models;
 
 import com.aliyun.tea.*;
 
-public class ListAuthenticationLogsResponse extends TeaModel {
+public class ListCostUnitOrdersResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListAuthenticationLogsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListAuthenticationLogsResponseBody body;
+    public ListCostUnitOrdersResponseBody body;
 
-    public static ListAuthenticationLogsResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListAuthenticationLogsResponse self = new ListAuthenticationLogsResponse();
+    public static ListCostUnitOrdersResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListCostUnitOrdersResponse self = new ListCostUnitOrdersResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListAuthenticationLogsResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListCostUnitOrdersResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListAuthenticationLogsResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListAuthenticationLogsResponse setStatusCode(Integer statusCode) {
+    public ListCostUnitOrdersResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListAuthenticationLogsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListAuthenticationLogsResponse setBody(ListAuthenticationLogsResponseBody body) {
+    public ListCostUnitOrdersResponse setBody(ListCostUnitOrdersResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListAuthenticationLogsResponseBody getBody() {
+    public ListCostUnitOrdersResponseBody getBody() {
         return this.body;
     }
 
