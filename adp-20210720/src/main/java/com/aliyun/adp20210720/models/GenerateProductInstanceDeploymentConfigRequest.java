@@ -7,6 +7,9 @@ public class GenerateProductInstanceDeploymentConfigRequest extends TeaModel {
     @NameInMap("environmentUID")
     public String environmentUID;
 
+    @NameInMap("packageUID")
+    public String packageUID;
+
     @NameInMap("productVersionUID")
     public String productVersionUID;
 
@@ -21,6 +24,14 @@ public class GenerateProductInstanceDeploymentConfigRequest extends TeaModel {
     }
     public String getEnvironmentUID() {
         return this.environmentUID;
+    }
+
+    public GenerateProductInstanceDeploymentConfigRequest setPackageUID(String packageUID) {
+        this.packageUID = packageUID;
+        return this;
+    }
+    public String getPackageUID() {
+        return this.packageUID;
     }
 
     public GenerateProductInstanceDeploymentConfigRequest setProductVersionUID(String productVersionUID) {

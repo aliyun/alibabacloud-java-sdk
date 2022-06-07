@@ -4,6 +4,9 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListFoundationReferenceComponentsRequest extends TeaModel {
+    @NameInMap("foundationReferenceUID")
+    public String foundationReferenceUID;
+
     // foundation version uid
     @NameInMap("foundationVersionUID")
     public String foundationVersionUID;
@@ -18,6 +21,14 @@ public class ListFoundationReferenceComponentsRequest extends TeaModel {
     public static ListFoundationReferenceComponentsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFoundationReferenceComponentsRequest self = new ListFoundationReferenceComponentsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListFoundationReferenceComponentsRequest setFoundationReferenceUID(String foundationReferenceUID) {
+        this.foundationReferenceUID = foundationReferenceUID;
+        return this;
+    }
+    public String getFoundationReferenceUID() {
+        return this.foundationReferenceUID;
     }
 
     public ListFoundationReferenceComponentsRequest setFoundationVersionUID(String foundationVersionUID) {

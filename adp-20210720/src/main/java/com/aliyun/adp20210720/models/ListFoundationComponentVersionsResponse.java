@@ -8,6 +8,10 @@ public class ListFoundationComponentVersionsResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public ListFoundationComponentVersionsResponseBody body;
@@ -23,6 +27,14 @@ public class ListFoundationComponentVersionsResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public ListFoundationComponentVersionsResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public ListFoundationComponentVersionsResponse setBody(ListFoundationComponentVersionsResponseBody body) {

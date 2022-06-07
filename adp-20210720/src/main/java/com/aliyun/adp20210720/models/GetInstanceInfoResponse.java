@@ -12,6 +12,14 @@ public class GetInstanceInfoResponse extends TeaModel {
     @NameInMap("arch")
     public String arch;
 
+    // clusterLabels
+    @NameInMap("clusterLabels")
+    public java.util.Map<String, String> clusterLabels;
+
+    // clusterTaints
+    @NameInMap("clusterTaints")
+    public java.util.List<GetInstanceInfoResponseClusterTaints> clusterTaints;
+
     // cpu
     @NameInMap("cpu")
     public String cpu;
@@ -115,6 +123,22 @@ public class GetInstanceInfoResponse extends TeaModel {
     }
     public String getArch() {
         return this.arch;
+    }
+
+    public GetInstanceInfoResponse setClusterLabels(java.util.Map<String, String> clusterLabels) {
+        this.clusterLabels = clusterLabels;
+        return this;
+    }
+    public java.util.Map<String, String> getClusterLabels() {
+        return this.clusterLabels;
+    }
+
+    public GetInstanceInfoResponse setClusterTaints(java.util.List<GetInstanceInfoResponseClusterTaints> clusterTaints) {
+        this.clusterTaints = clusterTaints;
+        return this;
+    }
+    public java.util.List<GetInstanceInfoResponseClusterTaints> getClusterTaints() {
+        return this.clusterTaints;
     }
 
     public GetInstanceInfoResponse setCpu(String cpu) {
@@ -283,6 +307,50 @@ public class GetInstanceInfoResponse extends TeaModel {
     }
     public String getUid() {
         return this.uid;
+    }
+
+    public static class GetInstanceInfoResponseClusterTaints extends TeaModel {
+        // effect
+        @NameInMap("effect")
+        public String effect;
+
+        // key
+        @NameInMap("key")
+        public String key;
+
+        // value
+        @NameInMap("value")
+        public String value;
+
+        public static GetInstanceInfoResponseClusterTaints build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceInfoResponseClusterTaints self = new GetInstanceInfoResponseClusterTaints();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceInfoResponseClusterTaints setEffect(String effect) {
+            this.effect = effect;
+            return this;
+        }
+        public String getEffect() {
+            return this.effect;
+        }
+
+        public GetInstanceInfoResponseClusterTaints setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetInstanceInfoResponseClusterTaints setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class GetInstanceInfoResponseNetworkCards extends TeaModel {

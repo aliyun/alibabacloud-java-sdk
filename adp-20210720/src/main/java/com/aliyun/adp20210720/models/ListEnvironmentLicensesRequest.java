@@ -12,6 +12,9 @@ public class ListEnvironmentLicensesRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    @NameInMap("scope")
+    public String scope;
+
     // 类型
     @NameInMap("type")
     public String type;
@@ -35,6 +38,14 @@ public class ListEnvironmentLicensesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListEnvironmentLicensesRequest setScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    public String getScope() {
+        return this.scope;
     }
 
     public ListEnvironmentLicensesRequest setType(String type) {

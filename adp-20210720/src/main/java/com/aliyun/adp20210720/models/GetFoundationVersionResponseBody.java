@@ -42,6 +42,36 @@ public class GetFoundationVersionResponseBody extends TeaModel {
         return this.msg;
     }
 
+    public static class GetFoundationVersionResponseBodyDataSiteSurveyTool extends TeaModel {
+        @NameInMap("clusterCheckerURL")
+        public String clusterCheckerURL;
+
+        @NameInMap("clusterInfoBrief")
+        public String clusterInfoBrief;
+
+        public static GetFoundationVersionResponseBodyDataSiteSurveyTool build(java.util.Map<String, ?> map) throws Exception {
+            GetFoundationVersionResponseBodyDataSiteSurveyTool self = new GetFoundationVersionResponseBodyDataSiteSurveyTool();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFoundationVersionResponseBodyDataSiteSurveyTool setClusterCheckerURL(String clusterCheckerURL) {
+            this.clusterCheckerURL = clusterCheckerURL;
+            return this;
+        }
+        public String getClusterCheckerURL() {
+            return this.clusterCheckerURL;
+        }
+
+        public GetFoundationVersionResponseBodyDataSiteSurveyTool setClusterInfoBrief(String clusterInfoBrief) {
+            this.clusterInfoBrief = clusterInfoBrief;
+            return this;
+        }
+        public String getClusterInfoBrief() {
+            return this.clusterInfoBrief;
+        }
+
+    }
+
     public static class GetFoundationVersionResponseBodyData extends TeaModel {
         // description
         @NameInMap("description")
@@ -61,6 +91,9 @@ public class GetFoundationVersionResponseBody extends TeaModel {
         // platforms
         @NameInMap("platforms")
         public java.util.List<Platform> platforms;
+
+        @NameInMap("siteSurveyTool")
+        public GetFoundationVersionResponseBodyDataSiteSurveyTool siteSurveyTool;
 
         // status，ENUM:["Testing","Published","Deprecated"] Published 后，则全平台所有用户可见，请谨慎操作
         @NameInMap("status")
@@ -121,6 +154,14 @@ public class GetFoundationVersionResponseBody extends TeaModel {
         }
         public java.util.List<Platform> getPlatforms() {
             return this.platforms;
+        }
+
+        public GetFoundationVersionResponseBodyData setSiteSurveyTool(GetFoundationVersionResponseBodyDataSiteSurveyTool siteSurveyTool) {
+            this.siteSurveyTool = siteSurveyTool;
+            return this;
+        }
+        public GetFoundationVersionResponseBodyDataSiteSurveyTool getSiteSurveyTool() {
+            return this.siteSurveyTool;
         }
 
         public GetFoundationVersionResponseBodyData setStatus(String status) {

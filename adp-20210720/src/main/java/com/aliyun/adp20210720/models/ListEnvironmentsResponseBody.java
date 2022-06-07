@@ -79,9 +79,6 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
-        @NameInMap("id")
-        public Integer id;
-
         @NameInMap("location")
         public String location;
 
@@ -90,6 +87,9 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
         @NameInMap("platform")
         public ListEnvironmentsResponseBodyDataListPlatform platform;
+
+        @NameInMap("platformList")
+        public java.util.List<Platform> platformList;
 
         @NameInMap("productName")
         public String productName;
@@ -127,14 +127,6 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListEnvironmentsResponseBodyDataList setId(Integer id) {
-            this.id = id;
-            return this;
-        }
-        public Integer getId() {
-            return this.id;
-        }
-
         public ListEnvironmentsResponseBodyDataList setLocation(String location) {
             this.location = location;
             return this;
@@ -157,6 +149,14 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
         public ListEnvironmentsResponseBodyDataListPlatform getPlatform() {
             return this.platform;
+        }
+
+        public ListEnvironmentsResponseBodyDataList setPlatformList(java.util.List<Platform> platformList) {
+            this.platformList = platformList;
+            return this;
+        }
+        public java.util.List<Platform> getPlatformList() {
+            return this.platformList;
         }
 
         public ListEnvironmentsResponseBodyDataList setProductName(String productName) {

@@ -8,9 +8,17 @@ public class CreateProductDeploymentRequest extends TeaModel {
     @NameInMap("environmentUID")
     public String environmentUID;
 
+    // 指定产品部署的 namespace，仅 ACK 底座支持
+    @NameInMap("namespace")
+    public String namespace;
+
     // 旧产品版本uid
     @NameInMap("oldProductVersionUID")
     public String oldProductVersionUID;
+
+    // 部署包配置文件
+    @NameInMap("packageConfig")
+    public String packageConfig;
 
     // 部署包uid
     @NameInMap("packageUID")
@@ -33,12 +41,28 @@ public class CreateProductDeploymentRequest extends TeaModel {
         return this.environmentUID;
     }
 
+    public CreateProductDeploymentRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
     public CreateProductDeploymentRequest setOldProductVersionUID(String oldProductVersionUID) {
         this.oldProductVersionUID = oldProductVersionUID;
         return this;
     }
     public String getOldProductVersionUID() {
         return this.oldProductVersionUID;
+    }
+
+    public CreateProductDeploymentRequest setPackageConfig(String packageConfig) {
+        this.packageConfig = packageConfig;
+        return this;
+    }
+    public String getPackageConfig() {
+        return this.packageConfig;
     }
 
     public CreateProductDeploymentRequest setPackageUID(String packageUID) {
