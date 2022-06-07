@@ -1,3 +1,7 @@
+2022-06-07 Version: 2.8.14
+- Ner customSlot support.
+
+
 2022-06-01 Version: 2.8.13
 - Private to publick.
 - Apaas CrowGroup.

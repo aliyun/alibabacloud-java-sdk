@@ -254,10 +254,6 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         @NameInMap("Solutions")
         public java.util.List<RecognizeMessageForTestResponseBodyDataKnowledgesSolutions> solutions;
 
-        // 行业包codes
-        @NameInMap("packageCodes")
-        public java.util.List<String> packageCodes;
-
         public static RecognizeMessageForTestResponseBodyDataKnowledges build(java.util.Map<String, ?> map) throws Exception {
             RecognizeMessageForTestResponseBodyDataKnowledges self = new RecognizeMessageForTestResponseBodyDataKnowledges();
             return TeaModel.build(map, self);
@@ -293,14 +289,6 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         }
         public java.util.List<RecognizeMessageForTestResponseBodyDataKnowledgesSolutions> getSolutions() {
             return this.solutions;
-        }
-
-        public RecognizeMessageForTestResponseBodyDataKnowledges setPackageCodes(java.util.List<String> packageCodes) {
-            this.packageCodes = packageCodes;
-            return this;
-        }
-        public java.util.List<String> getPackageCodes() {
-            return this.packageCodes;
         }
 
     }
