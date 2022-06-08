@@ -82,6 +82,9 @@ public class OrderFreeFlowProductResponseBody extends TeaModel {
     }
 
     public static class OrderFreeFlowProductResponseBodyData extends TeaModel {
+        @NameInMap("BizCode")
+        public String bizCode;
+
         // C端免流订单ID
         @NameInMap("CustomerFlowOrderId")
         public String customerFlowOrderId;
@@ -96,6 +99,14 @@ public class OrderFreeFlowProductResponseBody extends TeaModel {
         public static OrderFreeFlowProductResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             OrderFreeFlowProductResponseBodyData self = new OrderFreeFlowProductResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public OrderFreeFlowProductResponseBodyData setBizCode(String bizCode) {
+            this.bizCode = bizCode;
+            return this;
+        }
+        public String getBizCode() {
+            return this.bizCode;
         }
 
         public OrderFreeFlowProductResponseBodyData setCustomerFlowOrderId(String customerFlowOrderId) {
