@@ -20,10 +20,6 @@ public class ListPublicMediaBasicInfosRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 区域标识
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static ListPublicMediaBasicInfosRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPublicMediaBasicInfosRequest self = new ListPublicMediaBasicInfosRequest();
         return TeaModel.build(map, self);
@@ -59,14 +55,6 @@ public class ListPublicMediaBasicInfosRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListPublicMediaBasicInfosRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

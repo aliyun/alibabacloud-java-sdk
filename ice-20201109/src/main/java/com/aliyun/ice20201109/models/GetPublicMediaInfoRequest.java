@@ -7,9 +7,6 @@ public class GetPublicMediaInfoRequest extends TeaModel {
     @NameInMap("MediaId")
     public String mediaId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static GetPublicMediaInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPublicMediaInfoRequest self = new GetPublicMediaInfoRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class GetPublicMediaInfoRequest extends TeaModel {
     }
     public String getMediaId() {
         return this.mediaId;
-    }
-
-    public GetPublicMediaInfoRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

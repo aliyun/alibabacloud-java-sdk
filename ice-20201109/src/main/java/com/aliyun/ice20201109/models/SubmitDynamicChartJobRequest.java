@@ -40,9 +40,6 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     @NameInMap("OutputConfig")
     public String outputConfig;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 副标题
     @NameInMap("Subtitle")
     public String subtitle;
@@ -134,14 +131,6 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     }
     public String getOutputConfig() {
         return this.outputConfig;
-    }
-
-    public SubmitDynamicChartJobRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public SubmitDynamicChartJobRequest setSubtitle(String subtitle) {

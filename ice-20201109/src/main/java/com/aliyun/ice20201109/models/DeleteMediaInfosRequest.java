@@ -12,9 +12,6 @@ public class DeleteMediaInfosRequest extends TeaModel {
     @NameInMap("MediaIds")
     public String mediaIds;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static DeleteMediaInfosRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMediaInfosRequest self = new DeleteMediaInfosRequest();
         return TeaModel.build(map, self);
@@ -34,14 +31,6 @@ public class DeleteMediaInfosRequest extends TeaModel {
     }
     public String getMediaIds() {
         return this.mediaIds;
-    }
-
-    public DeleteMediaInfosRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

@@ -198,11 +198,11 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        // 直播剪辑作业完成时间，格式为utc时间。  格式为："YYYY-MM-DD'T'hh:mm:ss'Z'"。
+        // 直播剪辑作业完成时间，格式为utc时间。  格式为："2021-06-21T08:01:00Z"。
         @NameInMap("CompleteTime")
         public String completeTime;
 
-        // 直播剪辑作业创建时间，格式为utc时间。  格式为："YYYY-MM-DD'T'hh:mm:ss'Z'"。
+        // 直播剪辑作业创建时间，格式为utc时间。  格式为："2021-06-21T08:01:00Z"。
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -230,7 +230,7 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
-        // 直播剪辑作业修改时间，格式为utc时间。  格式为："YYYY-MM-DD'T'hh:mm:ss'Z'"。
+        // 直播剪辑作业修改时间，格式为utc时间。  格式为："2021-06-21T08:01:00Z"。
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 

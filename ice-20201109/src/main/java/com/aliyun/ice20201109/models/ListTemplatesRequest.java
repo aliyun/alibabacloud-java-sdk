@@ -12,6 +12,14 @@ public class ListTemplatesRequest extends TeaModel {
     @NameInMap("Keyword")
     public String keyword;
 
+    // 当前页码。默认值为1。
+    @NameInMap("PageNo")
+    public Long pageNo;
+
+    // 分页大小，每页显示条数。默认值为10，最大值为100。
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     // 排序参数，默认根据创建时间倒序
     @NameInMap("SortType")
     public String sortType;
@@ -43,6 +51,22 @@ public class ListTemplatesRequest extends TeaModel {
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public ListTemplatesRequest setPageNo(Long pageNo) {
+        this.pageNo = pageNo;
+        return this;
+    }
+    public Long getPageNo() {
+        return this.pageNo;
+    }
+
+    public ListTemplatesRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public ListTemplatesRequest setSortType(String sortType) {

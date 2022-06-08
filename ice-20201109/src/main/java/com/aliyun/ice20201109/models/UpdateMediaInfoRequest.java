@@ -44,9 +44,6 @@ public class UpdateMediaInfoRequest extends TeaModel {
     @NameInMap("MediaTags")
     public String mediaTags;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 标题
     @NameInMap("Title")
     public String title;
@@ -138,14 +135,6 @@ public class UpdateMediaInfoRequest extends TeaModel {
     }
     public String getMediaTags() {
         return this.mediaTags;
-    }
-
-    public UpdateMediaInfoRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UpdateMediaInfoRequest setTitle(String title) {
