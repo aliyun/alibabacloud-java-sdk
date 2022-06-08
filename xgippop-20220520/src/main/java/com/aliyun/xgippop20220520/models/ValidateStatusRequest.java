@@ -12,17 +12,17 @@ public class ValidateStatusRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // C端手机号
-    @NameInMap("MobileNumber")
-    public String mobileNumber;
+    // 凭证类型
+    @NameInMap("CredentialType")
+    public String credentialType;
+
+    // mobile=150xxxx4661
+    @NameInMap("CredentialValue")
+    public String credentialValue;
 
     // 取值包括cm（中国移动）/ct（中国电信）/cu（中国联通）
     @NameInMap("Operator")
     public String operator;
-
-    // 运营商伪码
-    @NameInMap("ProductCode")
-    public String productCode;
 
     public static ValidateStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ValidateStatusRequest self = new ValidateStatusRequest();
@@ -45,12 +45,20 @@ public class ValidateStatusRequest extends TeaModel {
         return this.appId;
     }
 
-    public ValidateStatusRequest setMobileNumber(String mobileNumber) {
-        this.mobileNumber = mobileNumber;
+    public ValidateStatusRequest setCredentialType(String credentialType) {
+        this.credentialType = credentialType;
         return this;
     }
-    public String getMobileNumber() {
-        return this.mobileNumber;
+    public String getCredentialType() {
+        return this.credentialType;
+    }
+
+    public ValidateStatusRequest setCredentialValue(String credentialValue) {
+        this.credentialValue = credentialValue;
+        return this;
+    }
+    public String getCredentialValue() {
+        return this.credentialValue;
     }
 
     public ValidateStatusRequest setOperator(String operator) {
@@ -59,14 +67,6 @@ public class ValidateStatusRequest extends TeaModel {
     }
     public String getOperator() {
         return this.operator;
-    }
-
-    public ValidateStatusRequest setProductCode(String productCode) {
-        this.productCode = productCode;
-        return this;
-    }
-    public String getProductCode() {
-        return this.productCode;
     }
 
 }
