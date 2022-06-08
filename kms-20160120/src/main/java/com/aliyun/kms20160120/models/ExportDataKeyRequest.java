@@ -13,11 +13,11 @@ public class ExportDataKeyRequest extends TeaModel {
     @NameInMap("PublicKeyBlob")
     public String publicKeyBlob;
 
-    @NameInMap("WrappingKeySpec")
-    public String wrappingKeySpec;
-
     @NameInMap("WrappingAlgorithm")
     public String wrappingAlgorithm;
+
+    @NameInMap("WrappingKeySpec")
+    public String wrappingKeySpec;
 
     public static ExportDataKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportDataKeyRequest self = new ExportDataKeyRequest();
@@ -48,20 +48,20 @@ public class ExportDataKeyRequest extends TeaModel {
         return this.publicKeyBlob;
     }
 
-    public ExportDataKeyRequest setWrappingKeySpec(String wrappingKeySpec) {
-        this.wrappingKeySpec = wrappingKeySpec;
-        return this;
-    }
-    public String getWrappingKeySpec() {
-        return this.wrappingKeySpec;
-    }
-
     public ExportDataKeyRequest setWrappingAlgorithm(String wrappingAlgorithm) {
         this.wrappingAlgorithm = wrappingAlgorithm;
         return this;
     }
     public String getWrappingAlgorithm() {
         return this.wrappingAlgorithm;
+    }
+
+    public ExportDataKeyRequest setWrappingKeySpec(String wrappingKeySpec) {
+        this.wrappingKeySpec = wrappingKeySpec;
+        return this;
+    }
+    public String getWrappingKeySpec() {
+        return this.wrappingKeySpec;
     }
 
 }

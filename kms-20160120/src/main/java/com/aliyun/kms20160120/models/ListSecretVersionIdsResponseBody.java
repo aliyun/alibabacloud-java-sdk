@@ -4,20 +4,20 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListSecretVersionIdsResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("SecretName")
     public String secretName;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
 
     @NameInMap("VersionIds")
     public ListSecretVersionIdsResponseBodyVersionIds versionIds;
@@ -25,6 +25,30 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
     public static ListSecretVersionIdsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSecretVersionIdsResponseBody self = new ListSecretVersionIdsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListSecretVersionIdsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListSecretVersionIdsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListSecretVersionIdsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListSecretVersionIdsResponseBody setSecretName(String secretName) {
@@ -41,30 +65,6 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public ListSecretVersionIdsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListSecretVersionIdsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListSecretVersionIdsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public ListSecretVersionIdsResponseBody setVersionIds(ListSecretVersionIdsResponseBodyVersionIds versionIds) {

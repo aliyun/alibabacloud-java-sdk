@@ -4,26 +4,18 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class UploadCertificateRequest extends TeaModel {
-    @NameInMap("CertificateId")
-    public String certificateId;
-
     @NameInMap("Certificate")
     public String certificate;
 
     @NameInMap("CertificateChain")
     public String certificateChain;
 
+    @NameInMap("CertificateId")
+    public String certificateId;
+
     public static UploadCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadCertificateRequest self = new UploadCertificateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UploadCertificateRequest setCertificateId(String certificateId) {
-        this.certificateId = certificateId;
-        return this;
-    }
-    public String getCertificateId() {
-        return this.certificateId;
     }
 
     public UploadCertificateRequest setCertificate(String certificate) {
@@ -40,6 +32,14 @@ public class UploadCertificateRequest extends TeaModel {
     }
     public String getCertificateChain() {
         return this.certificateChain;
+    }
+
+    public UploadCertificateRequest setCertificateId(String certificateId) {
+        this.certificateId = certificateId;
+        return this;
+    }
+    public String getCertificateId() {
+        return this.certificateId;
     }
 
 }

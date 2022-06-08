@@ -4,9 +4,6 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListSecretVersionIdsRequest extends TeaModel {
-    @NameInMap("SecretName")
-    public String secretName;
-
     @NameInMap("IncludeDeprecated")
     public String includeDeprecated;
 
@@ -16,17 +13,12 @@ public class ListSecretVersionIdsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SecretName")
+    public String secretName;
+
     public static ListSecretVersionIdsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSecretVersionIdsRequest self = new ListSecretVersionIdsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListSecretVersionIdsRequest setSecretName(String secretName) {
-        this.secretName = secretName;
-        return this;
-    }
-    public String getSecretName() {
-        return this.secretName;
     }
 
     public ListSecretVersionIdsRequest setIncludeDeprecated(String includeDeprecated) {
@@ -51,6 +43,14 @@ public class ListSecretVersionIdsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListSecretVersionIdsRequest setSecretName(String secretName) {
+        this.secretName = secretName;
+        return this;
+    }
+    public String getSecretName() {
+        return this.secretName;
     }
 
 }

@@ -4,11 +4,11 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CertificatePublicKeyVerifyRequest extends TeaModel {
-    @NameInMap("CertificateId")
-    public String certificateId;
-
     @NameInMap("Algorithm")
     public String algorithm;
+
+    @NameInMap("CertificateId")
+    public String certificateId;
 
     @NameInMap("Message")
     public String message;
@@ -24,20 +24,20 @@ public class CertificatePublicKeyVerifyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CertificatePublicKeyVerifyRequest setCertificateId(String certificateId) {
-        this.certificateId = certificateId;
-        return this;
-    }
-    public String getCertificateId() {
-        return this.certificateId;
-    }
-
     public CertificatePublicKeyVerifyRequest setAlgorithm(String algorithm) {
         this.algorithm = algorithm;
         return this;
     }
     public String getAlgorithm() {
         return this.algorithm;
+    }
+
+    public CertificatePublicKeyVerifyRequest setCertificateId(String certificateId) {
+        this.certificateId = certificateId;
+        return this;
+    }
+    public String getCertificateId() {
+        return this.certificateId;
     }
 
     public CertificatePublicKeyVerifyRequest setMessage(String message) {

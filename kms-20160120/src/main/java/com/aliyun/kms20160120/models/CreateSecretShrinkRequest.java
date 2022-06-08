@@ -4,14 +4,20 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CreateSecretShrinkRequest extends TeaModel {
-    @NameInMap("SecretName")
-    public String secretName;
+    @NameInMap("Description")
+    public String description;
 
-    @NameInMap("VersionId")
-    public String versionId;
+    @NameInMap("EnableAutomaticRotation")
+    public Boolean enableAutomaticRotation;
 
     @NameInMap("EncryptionKeyId")
     public String encryptionKeyId;
+
+    @NameInMap("ExtendedConfig")
+    public String extendedConfigShrink;
+
+    @NameInMap("RotationInterval")
+    public String rotationInterval;
 
     @NameInMap("SecretData")
     public String secretData;
@@ -19,43 +25,37 @@ public class CreateSecretShrinkRequest extends TeaModel {
     @NameInMap("SecretDataType")
     public String secretDataType;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("Tags")
-    public String tags;
+    @NameInMap("SecretName")
+    public String secretName;
 
     @NameInMap("SecretType")
     public String secretType;
 
-    @NameInMap("ExtendedConfig")
-    public String extendedConfigShrink;
+    @NameInMap("Tags")
+    public String tags;
 
-    @NameInMap("EnableAutomaticRotation")
-    public Boolean enableAutomaticRotation;
-
-    @NameInMap("RotationInterval")
-    public String rotationInterval;
+    @NameInMap("VersionId")
+    public String versionId;
 
     public static CreateSecretShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSecretShrinkRequest self = new CreateSecretShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateSecretShrinkRequest setSecretName(String secretName) {
-        this.secretName = secretName;
+    public CreateSecretShrinkRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getSecretName() {
-        return this.secretName;
+    public String getDescription() {
+        return this.description;
     }
 
-    public CreateSecretShrinkRequest setVersionId(String versionId) {
-        this.versionId = versionId;
+    public CreateSecretShrinkRequest setEnableAutomaticRotation(Boolean enableAutomaticRotation) {
+        this.enableAutomaticRotation = enableAutomaticRotation;
         return this;
     }
-    public String getVersionId() {
-        return this.versionId;
+    public Boolean getEnableAutomaticRotation() {
+        return this.enableAutomaticRotation;
     }
 
     public CreateSecretShrinkRequest setEncryptionKeyId(String encryptionKeyId) {
@@ -64,6 +64,22 @@ public class CreateSecretShrinkRequest extends TeaModel {
     }
     public String getEncryptionKeyId() {
         return this.encryptionKeyId;
+    }
+
+    public CreateSecretShrinkRequest setExtendedConfigShrink(String extendedConfigShrink) {
+        this.extendedConfigShrink = extendedConfigShrink;
+        return this;
+    }
+    public String getExtendedConfigShrink() {
+        return this.extendedConfigShrink;
+    }
+
+    public CreateSecretShrinkRequest setRotationInterval(String rotationInterval) {
+        this.rotationInterval = rotationInterval;
+        return this;
+    }
+    public String getRotationInterval() {
+        return this.rotationInterval;
     }
 
     public CreateSecretShrinkRequest setSecretData(String secretData) {
@@ -82,20 +98,12 @@ public class CreateSecretShrinkRequest extends TeaModel {
         return this.secretDataType;
     }
 
-    public CreateSecretShrinkRequest setDescription(String description) {
-        this.description = description;
+    public CreateSecretShrinkRequest setSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public CreateSecretShrinkRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
+    public String getSecretName() {
+        return this.secretName;
     }
 
     public CreateSecretShrinkRequest setSecretType(String secretType) {
@@ -106,28 +114,20 @@ public class CreateSecretShrinkRequest extends TeaModel {
         return this.secretType;
     }
 
-    public CreateSecretShrinkRequest setExtendedConfigShrink(String extendedConfigShrink) {
-        this.extendedConfigShrink = extendedConfigShrink;
+    public CreateSecretShrinkRequest setTags(String tags) {
+        this.tags = tags;
         return this;
     }
-    public String getExtendedConfigShrink() {
-        return this.extendedConfigShrink;
+    public String getTags() {
+        return this.tags;
     }
 
-    public CreateSecretShrinkRequest setEnableAutomaticRotation(Boolean enableAutomaticRotation) {
-        this.enableAutomaticRotation = enableAutomaticRotation;
+    public CreateSecretShrinkRequest setVersionId(String versionId) {
+        this.versionId = versionId;
         return this;
     }
-    public Boolean getEnableAutomaticRotation() {
-        return this.enableAutomaticRotation;
-    }
-
-    public CreateSecretShrinkRequest setRotationInterval(String rotationInterval) {
-        this.rotationInterval = rotationInterval;
-        return this;
-    }
-    public String getRotationInterval() {
-        return this.rotationInterval;
+    public String getVersionId() {
+        return this.versionId;
     }
 
 }

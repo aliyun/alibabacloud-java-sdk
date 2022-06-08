@@ -4,17 +4,8 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class DescribeCertificateResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
-
-    @NameInMap("ProtectionLevel")
-    public String protectionLevel;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Issuer")
-    public String issuer;
+    @NameInMap("Arn")
+    public String arn;
 
     @NameInMap("CertificateId")
     public String certificateId;
@@ -22,77 +13,62 @@ public class DescribeCertificateResponseBody extends TeaModel {
     @NameInMap("CreatedAt")
     public String createdAt;
 
+    @NameInMap("ExportablePrivateKey")
+    public Boolean exportablePrivateKey;
+
+    @NameInMap("Issuer")
+    public String issuer;
+
     @NameInMap("KeySpec")
     public String keySpec;
-
-    @NameInMap("SubjectAlternativeNames")
-    public java.util.List<String> subjectAlternativeNames;
-
-    @NameInMap("SignatureAlgorithm")
-    public String signatureAlgorithm;
-
-    @NameInMap("SubjectKeyIdentifier")
-    public String subjectKeyIdentifier;
 
     @NameInMap("NotAfter")
     public String notAfter;
 
-    @NameInMap("UpdatedAt")
-    public String updatedAt;
+    @NameInMap("NotBefore")
+    public String notBefore;
 
-    @NameInMap("Subject")
-    public String subject;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Serial")
     public String serial;
 
+    @NameInMap("SignatureAlgorithm")
+    public String signatureAlgorithm;
+
+    @NameInMap("Status")
+    public String status;
+
+    @NameInMap("Subject")
+    public String subject;
+
+    @NameInMap("SubjectAlternativeNames")
+    public java.util.List<String> subjectAlternativeNames;
+
+    @NameInMap("SubjectKeyIdentifier")
+    public String subjectKeyIdentifier;
+
     @NameInMap("SubjectPublicKey")
     public String subjectPublicKey;
 
-    @NameInMap("Arn")
-    public String arn;
-
-    @NameInMap("NotBefore")
-    public String notBefore;
-
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
+
+    @NameInMap("UpdatedAt")
+    public String updatedAt;
 
     public static DescribeCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCertificateResponseBody self = new DescribeCertificateResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCertificateResponseBody setStatus(String status) {
-        this.status = status;
+    public DescribeCertificateResponseBody setArn(String arn) {
+        this.arn = arn;
         return this;
     }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public DescribeCertificateResponseBody setProtectionLevel(String protectionLevel) {
-        this.protectionLevel = protectionLevel;
-        return this;
-    }
-    public String getProtectionLevel() {
-        return this.protectionLevel;
-    }
-
-    public DescribeCertificateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeCertificateResponseBody setIssuer(String issuer) {
-        this.issuer = issuer;
-        return this;
-    }
-    public String getIssuer() {
-        return this.issuer;
+    public String getArn() {
+        return this.arn;
     }
 
     public DescribeCertificateResponseBody setCertificateId(String certificateId) {
@@ -111,36 +87,28 @@ public class DescribeCertificateResponseBody extends TeaModel {
         return this.createdAt;
     }
 
+    public DescribeCertificateResponseBody setExportablePrivateKey(Boolean exportablePrivateKey) {
+        this.exportablePrivateKey = exportablePrivateKey;
+        return this;
+    }
+    public Boolean getExportablePrivateKey() {
+        return this.exportablePrivateKey;
+    }
+
+    public DescribeCertificateResponseBody setIssuer(String issuer) {
+        this.issuer = issuer;
+        return this;
+    }
+    public String getIssuer() {
+        return this.issuer;
+    }
+
     public DescribeCertificateResponseBody setKeySpec(String keySpec) {
         this.keySpec = keySpec;
         return this;
     }
     public String getKeySpec() {
         return this.keySpec;
-    }
-
-    public DescribeCertificateResponseBody setSubjectAlternativeNames(java.util.List<String> subjectAlternativeNames) {
-        this.subjectAlternativeNames = subjectAlternativeNames;
-        return this;
-    }
-    public java.util.List<String> getSubjectAlternativeNames() {
-        return this.subjectAlternativeNames;
-    }
-
-    public DescribeCertificateResponseBody setSignatureAlgorithm(String signatureAlgorithm) {
-        this.signatureAlgorithm = signatureAlgorithm;
-        return this;
-    }
-    public String getSignatureAlgorithm() {
-        return this.signatureAlgorithm;
-    }
-
-    public DescribeCertificateResponseBody setSubjectKeyIdentifier(String subjectKeyIdentifier) {
-        this.subjectKeyIdentifier = subjectKeyIdentifier;
-        return this;
-    }
-    public String getSubjectKeyIdentifier() {
-        return this.subjectKeyIdentifier;
     }
 
     public DescribeCertificateResponseBody setNotAfter(String notAfter) {
@@ -151,20 +119,20 @@ public class DescribeCertificateResponseBody extends TeaModel {
         return this.notAfter;
     }
 
-    public DescribeCertificateResponseBody setUpdatedAt(String updatedAt) {
-        this.updatedAt = updatedAt;
+    public DescribeCertificateResponseBody setNotBefore(String notBefore) {
+        this.notBefore = notBefore;
         return this;
     }
-    public String getUpdatedAt() {
-        return this.updatedAt;
+    public String getNotBefore() {
+        return this.notBefore;
     }
 
-    public DescribeCertificateResponseBody setSubject(String subject) {
-        this.subject = subject;
+    public DescribeCertificateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getSubject() {
-        return this.subject;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeCertificateResponseBody setSerial(String serial) {
@@ -175,6 +143,46 @@ public class DescribeCertificateResponseBody extends TeaModel {
         return this.serial;
     }
 
+    public DescribeCertificateResponseBody setSignatureAlgorithm(String signatureAlgorithm) {
+        this.signatureAlgorithm = signatureAlgorithm;
+        return this;
+    }
+    public String getSignatureAlgorithm() {
+        return this.signatureAlgorithm;
+    }
+
+    public DescribeCertificateResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DescribeCertificateResponseBody setSubject(String subject) {
+        this.subject = subject;
+        return this;
+    }
+    public String getSubject() {
+        return this.subject;
+    }
+
+    public DescribeCertificateResponseBody setSubjectAlternativeNames(java.util.List<String> subjectAlternativeNames) {
+        this.subjectAlternativeNames = subjectAlternativeNames;
+        return this;
+    }
+    public java.util.List<String> getSubjectAlternativeNames() {
+        return this.subjectAlternativeNames;
+    }
+
+    public DescribeCertificateResponseBody setSubjectKeyIdentifier(String subjectKeyIdentifier) {
+        this.subjectKeyIdentifier = subjectKeyIdentifier;
+        return this;
+    }
+    public String getSubjectKeyIdentifier() {
+        return this.subjectKeyIdentifier;
+    }
+
     public DescribeCertificateResponseBody setSubjectPublicKey(String subjectPublicKey) {
         this.subjectPublicKey = subjectPublicKey;
         return this;
@@ -183,28 +191,20 @@ public class DescribeCertificateResponseBody extends TeaModel {
         return this.subjectPublicKey;
     }
 
-    public DescribeCertificateResponseBody setArn(String arn) {
-        this.arn = arn;
-        return this;
-    }
-    public String getArn() {
-        return this.arn;
-    }
-
-    public DescribeCertificateResponseBody setNotBefore(String notBefore) {
-        this.notBefore = notBefore;
-        return this;
-    }
-    public String getNotBefore() {
-        return this.notBefore;
-    }
-
     public DescribeCertificateResponseBody setTags(java.util.Map<String, ?> tags) {
         this.tags = tags;
         return this;
     }
     public java.util.Map<String, ?> getTags() {
         return this.tags;
+    }
+
+    public DescribeCertificateResponseBody setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    public String getUpdatedAt() {
+        return this.updatedAt;
     }
 
 }

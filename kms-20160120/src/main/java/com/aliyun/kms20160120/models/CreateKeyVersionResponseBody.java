@@ -4,23 +4,15 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CreateKeyVersionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("KeyVersion")
     public CreateKeyVersionResponseBodyKeyVersion keyVersion;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateKeyVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateKeyVersionResponseBody self = new CreateKeyVersionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateKeyVersionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateKeyVersionResponseBody setKeyVersion(CreateKeyVersionResponseBodyKeyVersion keyVersion) {
@@ -31,27 +23,35 @@ public class CreateKeyVersionResponseBody extends TeaModel {
         return this.keyVersion;
     }
 
+    public CreateKeyVersionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class CreateKeyVersionResponseBodyKeyVersion extends TeaModel {
-        @NameInMap("KeyVersionId")
-        public String keyVersionId;
+        @NameInMap("CreationDate")
+        public String creationDate;
 
         @NameInMap("KeyId")
         public String keyId;
 
-        @NameInMap("CreationDate")
-        public String creationDate;
+        @NameInMap("KeyVersionId")
+        public String keyVersionId;
 
         public static CreateKeyVersionResponseBodyKeyVersion build(java.util.Map<String, ?> map) throws Exception {
             CreateKeyVersionResponseBodyKeyVersion self = new CreateKeyVersionResponseBodyKeyVersion();
             return TeaModel.build(map, self);
         }
 
-        public CreateKeyVersionResponseBodyKeyVersion setKeyVersionId(String keyVersionId) {
-            this.keyVersionId = keyVersionId;
+        public CreateKeyVersionResponseBodyKeyVersion setCreationDate(String creationDate) {
+            this.creationDate = creationDate;
             return this;
         }
-        public String getKeyVersionId() {
-            return this.keyVersionId;
+        public String getCreationDate() {
+            return this.creationDate;
         }
 
         public CreateKeyVersionResponseBodyKeyVersion setKeyId(String keyId) {
@@ -62,12 +62,12 @@ public class CreateKeyVersionResponseBody extends TeaModel {
             return this.keyId;
         }
 
-        public CreateKeyVersionResponseBodyKeyVersion setCreationDate(String creationDate) {
-            this.creationDate = creationDate;
+        public CreateKeyVersionResponseBodyKeyVersion setKeyVersionId(String keyVersionId) {
+            this.keyVersionId = keyVersionId;
             return this;
         }
-        public String getCreationDate() {
-            return this.creationDate;
+        public String getKeyVersionId() {
+            return this.keyVersionId;
         }
 
     }

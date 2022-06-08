@@ -4,6 +4,9 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class AsymmetricDecryptRequest extends TeaModel {
+    @NameInMap("Algorithm")
+    public String algorithm;
+
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
 
@@ -13,12 +16,17 @@ public class AsymmetricDecryptRequest extends TeaModel {
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
-    @NameInMap("Algorithm")
-    public String algorithm;
-
     public static AsymmetricDecryptRequest build(java.util.Map<String, ?> map) throws Exception {
         AsymmetricDecryptRequest self = new AsymmetricDecryptRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AsymmetricDecryptRequest setAlgorithm(String algorithm) {
+        this.algorithm = algorithm;
+        return this;
+    }
+    public String getAlgorithm() {
+        return this.algorithm;
     }
 
     public AsymmetricDecryptRequest setCiphertextBlob(String ciphertextBlob) {
@@ -43,14 +51,6 @@ public class AsymmetricDecryptRequest extends TeaModel {
     }
     public String getKeyVersionId() {
         return this.keyVersionId;
-    }
-
-    public AsymmetricDecryptRequest setAlgorithm(String algorithm) {
-        this.algorithm = algorithm;
-        return this;
-    }
-    public String getAlgorithm() {
-        return this.algorithm;
     }
 
 }

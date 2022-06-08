@@ -4,14 +4,20 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CreateSecretRequest extends TeaModel {
-    @NameInMap("SecretName")
-    public String secretName;
+    @NameInMap("Description")
+    public String description;
 
-    @NameInMap("VersionId")
-    public String versionId;
+    @NameInMap("EnableAutomaticRotation")
+    public Boolean enableAutomaticRotation;
 
     @NameInMap("EncryptionKeyId")
     public String encryptionKeyId;
+
+    @NameInMap("ExtendedConfig")
+    public java.util.Map<String, ?> extendedConfig;
+
+    @NameInMap("RotationInterval")
+    public String rotationInterval;
 
     @NameInMap("SecretData")
     public String secretData;
@@ -19,43 +25,37 @@ public class CreateSecretRequest extends TeaModel {
     @NameInMap("SecretDataType")
     public String secretDataType;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("Tags")
-    public String tags;
+    @NameInMap("SecretName")
+    public String secretName;
 
     @NameInMap("SecretType")
     public String secretType;
 
-    @NameInMap("ExtendedConfig")
-    public java.util.Map<String, ?> extendedConfig;
+    @NameInMap("Tags")
+    public String tags;
 
-    @NameInMap("EnableAutomaticRotation")
-    public Boolean enableAutomaticRotation;
-
-    @NameInMap("RotationInterval")
-    public String rotationInterval;
+    @NameInMap("VersionId")
+    public String versionId;
 
     public static CreateSecretRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSecretRequest self = new CreateSecretRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateSecretRequest setSecretName(String secretName) {
-        this.secretName = secretName;
+    public CreateSecretRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getSecretName() {
-        return this.secretName;
+    public String getDescription() {
+        return this.description;
     }
 
-    public CreateSecretRequest setVersionId(String versionId) {
-        this.versionId = versionId;
+    public CreateSecretRequest setEnableAutomaticRotation(Boolean enableAutomaticRotation) {
+        this.enableAutomaticRotation = enableAutomaticRotation;
         return this;
     }
-    public String getVersionId() {
-        return this.versionId;
+    public Boolean getEnableAutomaticRotation() {
+        return this.enableAutomaticRotation;
     }
 
     public CreateSecretRequest setEncryptionKeyId(String encryptionKeyId) {
@@ -64,6 +64,22 @@ public class CreateSecretRequest extends TeaModel {
     }
     public String getEncryptionKeyId() {
         return this.encryptionKeyId;
+    }
+
+    public CreateSecretRequest setExtendedConfig(java.util.Map<String, ?> extendedConfig) {
+        this.extendedConfig = extendedConfig;
+        return this;
+    }
+    public java.util.Map<String, ?> getExtendedConfig() {
+        return this.extendedConfig;
+    }
+
+    public CreateSecretRequest setRotationInterval(String rotationInterval) {
+        this.rotationInterval = rotationInterval;
+        return this;
+    }
+    public String getRotationInterval() {
+        return this.rotationInterval;
     }
 
     public CreateSecretRequest setSecretData(String secretData) {
@@ -82,20 +98,12 @@ public class CreateSecretRequest extends TeaModel {
         return this.secretDataType;
     }
 
-    public CreateSecretRequest setDescription(String description) {
-        this.description = description;
+    public CreateSecretRequest setSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public CreateSecretRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
+    public String getSecretName() {
+        return this.secretName;
     }
 
     public CreateSecretRequest setSecretType(String secretType) {
@@ -106,28 +114,20 @@ public class CreateSecretRequest extends TeaModel {
         return this.secretType;
     }
 
-    public CreateSecretRequest setExtendedConfig(java.util.Map<String, ?> extendedConfig) {
-        this.extendedConfig = extendedConfig;
+    public CreateSecretRequest setTags(String tags) {
+        this.tags = tags;
         return this;
     }
-    public java.util.Map<String, ?> getExtendedConfig() {
-        return this.extendedConfig;
+    public String getTags() {
+        return this.tags;
     }
 
-    public CreateSecretRequest setEnableAutomaticRotation(Boolean enableAutomaticRotation) {
-        this.enableAutomaticRotation = enableAutomaticRotation;
+    public CreateSecretRequest setVersionId(String versionId) {
+        this.versionId = versionId;
         return this;
     }
-    public Boolean getEnableAutomaticRotation() {
-        return this.enableAutomaticRotation;
-    }
-
-    public CreateSecretRequest setRotationInterval(String rotationInterval) {
-        this.rotationInterval = rotationInterval;
-        return this;
-    }
-    public String getRotationInterval() {
-        return this.rotationInterval;
+    public String getVersionId() {
+        return this.versionId;
     }
 
 }

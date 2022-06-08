@@ -4,17 +4,11 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetRandomPasswordRequest extends TeaModel {
-    @NameInMap("PasswordLength")
-    public String passwordLength;
-
     @NameInMap("ExcludeCharacters")
     public String excludeCharacters;
 
     @NameInMap("ExcludeLowercase")
     public String excludeLowercase;
-
-    @NameInMap("ExcludeUppercase")
-    public String excludeUppercase;
 
     @NameInMap("ExcludeNumbers")
     public String excludeNumbers;
@@ -22,20 +16,18 @@ public class GetRandomPasswordRequest extends TeaModel {
     @NameInMap("ExcludePunctuation")
     public String excludePunctuation;
 
+    @NameInMap("ExcludeUppercase")
+    public String excludeUppercase;
+
+    @NameInMap("PasswordLength")
+    public String passwordLength;
+
     @NameInMap("RequireEachIncludedType")
     public String requireEachIncludedType;
 
     public static GetRandomPasswordRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRandomPasswordRequest self = new GetRandomPasswordRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetRandomPasswordRequest setPasswordLength(String passwordLength) {
-        this.passwordLength = passwordLength;
-        return this;
-    }
-    public String getPasswordLength() {
-        return this.passwordLength;
     }
 
     public GetRandomPasswordRequest setExcludeCharacters(String excludeCharacters) {
@@ -54,14 +46,6 @@ public class GetRandomPasswordRequest extends TeaModel {
         return this.excludeLowercase;
     }
 
-    public GetRandomPasswordRequest setExcludeUppercase(String excludeUppercase) {
-        this.excludeUppercase = excludeUppercase;
-        return this;
-    }
-    public String getExcludeUppercase() {
-        return this.excludeUppercase;
-    }
-
     public GetRandomPasswordRequest setExcludeNumbers(String excludeNumbers) {
         this.excludeNumbers = excludeNumbers;
         return this;
@@ -76,6 +60,22 @@ public class GetRandomPasswordRequest extends TeaModel {
     }
     public String getExcludePunctuation() {
         return this.excludePunctuation;
+    }
+
+    public GetRandomPasswordRequest setExcludeUppercase(String excludeUppercase) {
+        this.excludeUppercase = excludeUppercase;
+        return this;
+    }
+    public String getExcludeUppercase() {
+        return this.excludeUppercase;
+    }
+
+    public GetRandomPasswordRequest setPasswordLength(String passwordLength) {
+        this.passwordLength = passwordLength;
+        return this;
+    }
+    public String getPasswordLength() {
+        return this.passwordLength;
     }
 
     public GetRandomPasswordRequest setRequireEachIncludedType(String requireEachIncludedType) {

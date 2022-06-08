@@ -7,14 +7,14 @@ public class ListSecretsRequest extends TeaModel {
     @NameInMap("FetchTags")
     public String fetchTags;
 
+    @NameInMap("Filters")
+    public String filters;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("Filters")
-    public String filters;
 
     public static ListSecretsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSecretsRequest self = new ListSecretsRequest();
@@ -27,6 +27,14 @@ public class ListSecretsRequest extends TeaModel {
     }
     public String getFetchTags() {
         return this.fetchTags;
+    }
+
+    public ListSecretsRequest setFilters(String filters) {
+        this.filters = filters;
+        return this;
+    }
+    public String getFilters() {
+        return this.filters;
     }
 
     public ListSecretsRequest setPageNumber(Integer pageNumber) {
@@ -43,14 +51,6 @@ public class ListSecretsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListSecretsRequest setFilters(String filters) {
-        this.filters = filters;
-        return this;
-    }
-    public String getFilters() {
-        return this.filters;
     }
 
 }

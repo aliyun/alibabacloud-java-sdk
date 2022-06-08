@@ -4,8 +4,8 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListSecretsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -16,20 +16,20 @@ public class ListSecretsResponseBody extends TeaModel {
     @NameInMap("SecretList")
     public ListSecretsResponseBodySecretList secretList;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListSecretsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSecretsResponseBody self = new ListSecretsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListSecretsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListSecretsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListSecretsResponseBody setPageSize(Integer pageSize) {
@@ -56,32 +56,24 @@ public class ListSecretsResponseBody extends TeaModel {
         return this.secretList;
     }
 
-    public ListSecretsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListSecretsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListSecretsResponseBodySecretListSecretTagsTag extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static ListSecretsResponseBodySecretListSecretTagsTag build(java.util.Map<String, ?> map) throws Exception {
             ListSecretsResponseBodySecretListSecretTagsTag self = new ListSecretsResponseBodySecretListSecretTagsTag();
             return TeaModel.build(map, self);
-        }
-
-        public ListSecretsResponseBodySecretListSecretTagsTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public ListSecretsResponseBodySecretListSecretTagsTag setTagKey(String tagKey) {
@@ -90,6 +82,14 @@ public class ListSecretsResponseBody extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public ListSecretsResponseBodySecretListSecretTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }
@@ -114,35 +114,27 @@ public class ListSecretsResponseBody extends TeaModel {
     }
 
     public static class ListSecretsResponseBodySecretListSecret extends TeaModel {
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
         @NameInMap("CreateTime")
         public String createTime;
-
-        @NameInMap("SecretName")
-        public String secretName;
-
-        @NameInMap("Tags")
-        public ListSecretsResponseBodySecretListSecretTags tags;
-
-        @NameInMap("SecretType")
-        public String secretType;
 
         @NameInMap("PlannedDeleteTime")
         public String plannedDeleteTime;
 
+        @NameInMap("SecretName")
+        public String secretName;
+
+        @NameInMap("SecretType")
+        public String secretType;
+
+        @NameInMap("Tags")
+        public ListSecretsResponseBodySecretListSecretTags tags;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
         public static ListSecretsResponseBodySecretListSecret build(java.util.Map<String, ?> map) throws Exception {
             ListSecretsResponseBodySecretListSecret self = new ListSecretsResponseBodySecretListSecret();
             return TeaModel.build(map, self);
-        }
-
-        public ListSecretsResponseBodySecretListSecret setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
         }
 
         public ListSecretsResponseBodySecretListSecret setCreateTime(String createTime) {
@@ -153,20 +145,20 @@ public class ListSecretsResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListSecretsResponseBodySecretListSecret setPlannedDeleteTime(String plannedDeleteTime) {
+            this.plannedDeleteTime = plannedDeleteTime;
+            return this;
+        }
+        public String getPlannedDeleteTime() {
+            return this.plannedDeleteTime;
+        }
+
         public ListSecretsResponseBodySecretListSecret setSecretName(String secretName) {
             this.secretName = secretName;
             return this;
         }
         public String getSecretName() {
             return this.secretName;
-        }
-
-        public ListSecretsResponseBodySecretListSecret setTags(ListSecretsResponseBodySecretListSecretTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public ListSecretsResponseBodySecretListSecretTags getTags() {
-            return this.tags;
         }
 
         public ListSecretsResponseBodySecretListSecret setSecretType(String secretType) {
@@ -177,12 +169,20 @@ public class ListSecretsResponseBody extends TeaModel {
             return this.secretType;
         }
 
-        public ListSecretsResponseBodySecretListSecret setPlannedDeleteTime(String plannedDeleteTime) {
-            this.plannedDeleteTime = plannedDeleteTime;
+        public ListSecretsResponseBodySecretListSecret setTags(ListSecretsResponseBodySecretListSecretTags tags) {
+            this.tags = tags;
             return this;
         }
-        public String getPlannedDeleteTime() {
-            return this.plannedDeleteTime;
+        public ListSecretsResponseBodySecretListSecretTags getTags() {
+            return this.tags;
+        }
+
+        public ListSecretsResponseBodySecretListSecret setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

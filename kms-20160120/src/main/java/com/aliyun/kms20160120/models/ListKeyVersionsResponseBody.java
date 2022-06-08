@@ -7,8 +7,8 @@ public class ListKeyVersionsResponseBody extends TeaModel {
     @NameInMap("KeyVersions")
     public ListKeyVersionsResponseBodyKeyVersions keyVersions;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -16,8 +16,8 @@ public class ListKeyVersionsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListKeyVersionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListKeyVersionsResponseBody self = new ListKeyVersionsResponseBody();
@@ -32,12 +32,12 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         return this.keyVersions;
     }
 
-    public ListKeyVersionsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListKeyVersionsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListKeyVersionsResponseBody setPageSize(Integer pageSize) {
@@ -56,35 +56,35 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListKeyVersionsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListKeyVersionsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListKeyVersionsResponseBodyKeyVersionsKeyVersion extends TeaModel {
-        @NameInMap("KeyVersionId")
-        public String keyVersionId;
+        @NameInMap("CreationDate")
+        public String creationDate;
 
         @NameInMap("KeyId")
         public String keyId;
 
-        @NameInMap("CreationDate")
-        public String creationDate;
+        @NameInMap("KeyVersionId")
+        public String keyVersionId;
 
         public static ListKeyVersionsResponseBodyKeyVersionsKeyVersion build(java.util.Map<String, ?> map) throws Exception {
             ListKeyVersionsResponseBodyKeyVersionsKeyVersion self = new ListKeyVersionsResponseBodyKeyVersionsKeyVersion();
             return TeaModel.build(map, self);
         }
 
-        public ListKeyVersionsResponseBodyKeyVersionsKeyVersion setKeyVersionId(String keyVersionId) {
-            this.keyVersionId = keyVersionId;
+        public ListKeyVersionsResponseBodyKeyVersionsKeyVersion setCreationDate(String creationDate) {
+            this.creationDate = creationDate;
             return this;
         }
-        public String getKeyVersionId() {
-            return this.keyVersionId;
+        public String getCreationDate() {
+            return this.creationDate;
         }
 
         public ListKeyVersionsResponseBodyKeyVersionsKeyVersion setKeyId(String keyId) {
@@ -95,12 +95,12 @@ public class ListKeyVersionsResponseBody extends TeaModel {
             return this.keyId;
         }
 
-        public ListKeyVersionsResponseBodyKeyVersionsKeyVersion setCreationDate(String creationDate) {
-            this.creationDate = creationDate;
+        public ListKeyVersionsResponseBodyKeyVersionsKeyVersion setKeyVersionId(String keyVersionId) {
+            this.keyVersionId = keyVersionId;
             return this;
         }
-        public String getCreationDate() {
-            return this.creationDate;
+        public String getKeyVersionId() {
+            return this.keyVersionId;
         }
 
     }

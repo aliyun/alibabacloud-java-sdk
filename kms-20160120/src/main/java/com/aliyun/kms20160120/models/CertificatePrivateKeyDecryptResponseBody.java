@@ -4,26 +4,18 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CertificatePrivateKeyDecryptResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CertificateId")
     public String certificateId;
 
     @NameInMap("Plaintext")
     public String plaintext;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CertificatePrivateKeyDecryptResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CertificatePrivateKeyDecryptResponseBody self = new CertificatePrivateKeyDecryptResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CertificatePrivateKeyDecryptResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CertificatePrivateKeyDecryptResponseBody setCertificateId(String certificateId) {
@@ -40,6 +32,14 @@ public class CertificatePrivateKeyDecryptResponseBody extends TeaModel {
     }
     public String getPlaintext() {
         return this.plaintext;
+    }
+
+    public CertificatePrivateKeyDecryptResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

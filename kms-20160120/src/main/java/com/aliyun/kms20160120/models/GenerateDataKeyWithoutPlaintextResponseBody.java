@@ -4,9 +4,6 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GenerateDataKeyWithoutPlaintextResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
 
@@ -16,17 +13,12 @@ public class GenerateDataKeyWithoutPlaintextResponseBody extends TeaModel {
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static GenerateDataKeyWithoutPlaintextResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenerateDataKeyWithoutPlaintextResponseBody self = new GenerateDataKeyWithoutPlaintextResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GenerateDataKeyWithoutPlaintextResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GenerateDataKeyWithoutPlaintextResponseBody setCiphertextBlob(String ciphertextBlob) {
@@ -51,6 +43,14 @@ public class GenerateDataKeyWithoutPlaintextResponseBody extends TeaModel {
     }
     public String getKeyVersionId() {
         return this.keyVersionId;
+    }
+
+    public GenerateDataKeyWithoutPlaintextResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

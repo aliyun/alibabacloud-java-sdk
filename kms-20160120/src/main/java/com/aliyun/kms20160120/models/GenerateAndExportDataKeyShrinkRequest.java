@@ -4,6 +4,9 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GenerateAndExportDataKeyShrinkRequest extends TeaModel {
+    @NameInMap("EncryptionContext")
+    public String encryptionContextShrink;
+
     @NameInMap("KeyId")
     public String keyId;
 
@@ -13,21 +16,26 @@ public class GenerateAndExportDataKeyShrinkRequest extends TeaModel {
     @NameInMap("NumberOfBytes")
     public Integer numberOfBytes;
 
-    @NameInMap("EncryptionContext")
-    public String encryptionContextShrink;
-
     @NameInMap("PublicKeyBlob")
     public String publicKeyBlob;
-
-    @NameInMap("WrappingKeySpec")
-    public String wrappingKeySpec;
 
     @NameInMap("WrappingAlgorithm")
     public String wrappingAlgorithm;
 
+    @NameInMap("WrappingKeySpec")
+    public String wrappingKeySpec;
+
     public static GenerateAndExportDataKeyShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateAndExportDataKeyShrinkRequest self = new GenerateAndExportDataKeyShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GenerateAndExportDataKeyShrinkRequest setEncryptionContextShrink(String encryptionContextShrink) {
+        this.encryptionContextShrink = encryptionContextShrink;
+        return this;
+    }
+    public String getEncryptionContextShrink() {
+        return this.encryptionContextShrink;
     }
 
     public GenerateAndExportDataKeyShrinkRequest setKeyId(String keyId) {
@@ -54,14 +62,6 @@ public class GenerateAndExportDataKeyShrinkRequest extends TeaModel {
         return this.numberOfBytes;
     }
 
-    public GenerateAndExportDataKeyShrinkRequest setEncryptionContextShrink(String encryptionContextShrink) {
-        this.encryptionContextShrink = encryptionContextShrink;
-        return this;
-    }
-    public String getEncryptionContextShrink() {
-        return this.encryptionContextShrink;
-    }
-
     public GenerateAndExportDataKeyShrinkRequest setPublicKeyBlob(String publicKeyBlob) {
         this.publicKeyBlob = publicKeyBlob;
         return this;
@@ -70,20 +70,20 @@ public class GenerateAndExportDataKeyShrinkRequest extends TeaModel {
         return this.publicKeyBlob;
     }
 
-    public GenerateAndExportDataKeyShrinkRequest setWrappingKeySpec(String wrappingKeySpec) {
-        this.wrappingKeySpec = wrappingKeySpec;
-        return this;
-    }
-    public String getWrappingKeySpec() {
-        return this.wrappingKeySpec;
-    }
-
     public GenerateAndExportDataKeyShrinkRequest setWrappingAlgorithm(String wrappingAlgorithm) {
         this.wrappingAlgorithm = wrappingAlgorithm;
         return this;
     }
     public String getWrappingAlgorithm() {
         return this.wrappingAlgorithm;
+    }
+
+    public GenerateAndExportDataKeyShrinkRequest setWrappingKeySpec(String wrappingKeySpec) {
+        this.wrappingKeySpec = wrappingKeySpec;
+        return this;
+    }
+    public String getWrappingKeySpec() {
+        return this.wrappingKeySpec;
     }
 
 }

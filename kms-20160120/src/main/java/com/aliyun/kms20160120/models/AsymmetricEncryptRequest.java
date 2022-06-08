@@ -4,8 +4,8 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class AsymmetricEncryptRequest extends TeaModel {
-    @NameInMap("Plaintext")
-    public String plaintext;
+    @NameInMap("Algorithm")
+    public String algorithm;
 
     @NameInMap("KeyId")
     public String keyId;
@@ -13,20 +13,20 @@ public class AsymmetricEncryptRequest extends TeaModel {
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
-    @NameInMap("Algorithm")
-    public String algorithm;
+    @NameInMap("Plaintext")
+    public String plaintext;
 
     public static AsymmetricEncryptRequest build(java.util.Map<String, ?> map) throws Exception {
         AsymmetricEncryptRequest self = new AsymmetricEncryptRequest();
         return TeaModel.build(map, self);
     }
 
-    public AsymmetricEncryptRequest setPlaintext(String plaintext) {
-        this.plaintext = plaintext;
+    public AsymmetricEncryptRequest setAlgorithm(String algorithm) {
+        this.algorithm = algorithm;
         return this;
     }
-    public String getPlaintext() {
-        return this.plaintext;
+    public String getAlgorithm() {
+        return this.algorithm;
     }
 
     public AsymmetricEncryptRequest setKeyId(String keyId) {
@@ -45,12 +45,12 @@ public class AsymmetricEncryptRequest extends TeaModel {
         return this.keyVersionId;
     }
 
-    public AsymmetricEncryptRequest setAlgorithm(String algorithm) {
-        this.algorithm = algorithm;
+    public AsymmetricEncryptRequest setPlaintext(String plaintext) {
+        this.plaintext = plaintext;
         return this;
     }
-    public String getAlgorithm() {
-        return this.algorithm;
+    public String getPlaintext() {
+        return this.plaintext;
     }
 
 }

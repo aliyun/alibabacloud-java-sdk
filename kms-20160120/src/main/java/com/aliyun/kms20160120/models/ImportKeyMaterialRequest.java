@@ -4,14 +4,14 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ImportKeyMaterialRequest extends TeaModel {
-    @NameInMap("KeyId")
-    public String keyId;
-
     @NameInMap("EncryptedKeyMaterial")
     public String encryptedKeyMaterial;
 
     @NameInMap("ImportToken")
     public String importToken;
+
+    @NameInMap("KeyId")
+    public String keyId;
 
     @NameInMap("KeyMaterialExpireUnix")
     public Long keyMaterialExpireUnix;
@@ -19,14 +19,6 @@ public class ImportKeyMaterialRequest extends TeaModel {
     public static ImportKeyMaterialRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportKeyMaterialRequest self = new ImportKeyMaterialRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ImportKeyMaterialRequest setKeyId(String keyId) {
-        this.keyId = keyId;
-        return this;
-    }
-    public String getKeyId() {
-        return this.keyId;
     }
 
     public ImportKeyMaterialRequest setEncryptedKeyMaterial(String encryptedKeyMaterial) {
@@ -43,6 +35,14 @@ public class ImportKeyMaterialRequest extends TeaModel {
     }
     public String getImportToken() {
         return this.importToken;
+    }
+
+    public ImportKeyMaterialRequest setKeyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
+    public String getKeyId() {
+        return this.keyId;
     }
 
     public ImportKeyMaterialRequest setKeyMaterialExpireUnix(Long keyMaterialExpireUnix) {
