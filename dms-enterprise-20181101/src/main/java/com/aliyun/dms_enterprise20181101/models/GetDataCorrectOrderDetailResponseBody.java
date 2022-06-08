@@ -339,6 +339,9 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         @NameInMap("DatabaseList")
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailDatabaseList databaseList;
 
+        @NameInMap("ExecMode")
+        public String execMode;
+
         @NameInMap("OrderDetail")
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailOrderDetail orderDetail;
 
@@ -359,6 +362,14 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         }
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailDatabaseList getDatabaseList() {
             return this.databaseList;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail setExecMode(String execMode) {
+            this.execMode = execMode;
+            return this;
+        }
+        public String getExecMode() {
+            return this.execMode;
         }
 
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail setOrderDetail(GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailOrderDetail orderDetail) {
