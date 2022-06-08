@@ -4,19 +4,22 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListSmartJobsResponseBody extends TeaModel {
+    // 本次请求所返回的最大记录条数，最后一页前每页记录条数为MaxResults取值。  例如：  正例：10,10,5，反例：10,5,10
     @NameInMap("MaxResults")
     public String maxResults;
 
+    // 用来表示当前调用返回读取到的位置，空代表数据已经读取完毕。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
+    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SmartJobList")
     public java.util.List<ListSmartJobsResponseBodySmartJobList> smartJobList;
 
+    // 本次请求条件下的数据总量，此参数为可选参数，默认可不返回。
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -66,9 +69,11 @@ public class ListSmartJobsResponseBody extends TeaModel {
     }
 
     public static class ListSmartJobsResponseBodySmartJobListInputConfig extends TeaModel {
+        // 文件信息
         @NameInMap("InputFile")
         public String inputFile;
 
+        // 关键词信息
         @NameInMap("Keyword")
         public String keyword;
 
@@ -96,9 +101,11 @@ public class ListSmartJobsResponseBody extends TeaModel {
     }
 
     public static class ListSmartJobsResponseBodySmartJobListOutputConfig extends TeaModel {
+        // OSS Bucket
         @NameInMap("Bucket")
         public String bucket;
 
+        // OSS Object
         @NameInMap("Object")
         public String object;
 
@@ -126,39 +133,51 @@ public class ListSmartJobsResponseBody extends TeaModel {
     }
 
     public static class ListSmartJobsResponseBodySmartJobList extends TeaModel {
+        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
+        // 任务描述
         @NameInMap("Description")
         public String description;
 
+        // 输入配置
         @NameInMap("EditingConfig")
         public String editingConfig;
 
+        // 任务输入配置
         @NameInMap("InputConfig")
         public ListSmartJobsResponseBodySmartJobListInputConfig inputConfig;
 
+        // 任务Id
         @NameInMap("JobId")
         public String jobId;
 
+        // 任务状态
         @NameInMap("JobState")
         public String jobState;
 
+        // 任务类型
         @NameInMap("JobType")
         public String jobType;
 
+        // 最后修改时间
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        // 任务输出配置
         @NameInMap("OutputConfig")
         public ListSmartJobsResponseBodySmartJobListOutputConfig outputConfig;
 
+        // 任务标题
         @NameInMap("Title")
         public String title;
 
+        // 用户自定义字段
         @NameInMap("UserData")
         public String userData;
 
+        // 用户Id
         @NameInMap("UserId")
         public Long userId;
 

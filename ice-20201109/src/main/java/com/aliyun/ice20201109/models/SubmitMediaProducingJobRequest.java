@@ -25,9 +25,6 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     @NameInMap("ProjectMetadata")
     public String projectMetadata;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Source")
     public String source;
 
@@ -99,14 +96,6 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     }
     public String getProjectMetadata() {
         return this.projectMetadata;
-    }
-
-    public SubmitMediaProducingJobRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public SubmitMediaProducingJobRequest setSource(String source) {

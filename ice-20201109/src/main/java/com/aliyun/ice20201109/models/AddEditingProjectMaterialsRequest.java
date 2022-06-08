@@ -12,9 +12,6 @@ public class AddEditingProjectMaterialsRequest extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static AddEditingProjectMaterialsRequest build(java.util.Map<String, ?> map) throws Exception {
         AddEditingProjectMaterialsRequest self = new AddEditingProjectMaterialsRequest();
         return TeaModel.build(map, self);
@@ -34,14 +31,6 @@ public class AddEditingProjectMaterialsRequest extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
-    }
-
-    public AddEditingProjectMaterialsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

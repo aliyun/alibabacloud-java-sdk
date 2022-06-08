@@ -4,11 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteSmartJobRequest extends TeaModel {
+    // 任务id，多个任务id用英文逗号分割
     @NameInMap("JobId")
     public String jobId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     public static DeleteSmartJobRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSmartJobRequest self = new DeleteSmartJobRequest();
@@ -21,14 +19,6 @@ public class DeleteSmartJobRequest extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
-    }
-
-    public DeleteSmartJobRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

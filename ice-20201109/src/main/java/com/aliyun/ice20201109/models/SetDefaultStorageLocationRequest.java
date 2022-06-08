@@ -10,9 +10,6 @@ public class SetDefaultStorageLocationRequest extends TeaModel {
     @NameInMap("Path")
     public String path;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("StorageType")
     public String storageType;
 
@@ -35,14 +32,6 @@ public class SetDefaultStorageLocationRequest extends TeaModel {
     }
     public String getPath() {
         return this.path;
-    }
-
-    public SetDefaultStorageLocationRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public SetDefaultStorageLocationRequest setStorageType(String storageType) {

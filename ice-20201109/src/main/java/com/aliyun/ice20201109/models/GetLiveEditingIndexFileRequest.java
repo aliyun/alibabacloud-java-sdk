@@ -13,9 +13,6 @@ public class GetLiveEditingIndexFileRequest extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("StreamName")
     public String streamName;
 
@@ -46,14 +43,6 @@ public class GetLiveEditingIndexFileRequest extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
-    }
-
-    public GetLiveEditingIndexFileRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetLiveEditingIndexFileRequest setStreamName(String streamName) {

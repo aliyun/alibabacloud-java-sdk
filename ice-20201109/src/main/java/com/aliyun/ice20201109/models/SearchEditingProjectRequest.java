@@ -23,10 +23,6 @@ public class SearchEditingProjectRequest extends TeaModel {
     @NameInMap("ProjectType")
     public String projectType;
 
-    // RegionId
-    @NameInMap("RegionId")
-    public String regionId;
-
     // 结果排序方式
     @NameInMap("SortBy")
     public String sortBy;
@@ -86,14 +82,6 @@ public class SearchEditingProjectRequest extends TeaModel {
     }
     public String getProjectType() {
         return this.projectType;
-    }
-
-    public SearchEditingProjectRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public SearchEditingProjectRequest setSortBy(String sortBy) {

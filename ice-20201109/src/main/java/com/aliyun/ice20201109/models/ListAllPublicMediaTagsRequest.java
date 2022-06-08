@@ -11,10 +11,6 @@ public class ListAllPublicMediaTagsRequest extends TeaModel {
     @NameInMap("EntityId")
     public String entityId;
 
-    // 区域标识
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static ListAllPublicMediaTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAllPublicMediaTagsRequest self = new ListAllPublicMediaTagsRequest();
         return TeaModel.build(map, self);
@@ -34,14 +30,6 @@ public class ListAllPublicMediaTagsRequest extends TeaModel {
     }
     public String getEntityId() {
         return this.entityId;
-    }
-
-    public ListAllPublicMediaTagsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

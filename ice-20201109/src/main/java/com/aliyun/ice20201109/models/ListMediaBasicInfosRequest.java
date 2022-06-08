@@ -24,6 +24,10 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    // 媒资ID，单个媒资ID支持前缀匹配
+    @NameInMap("MediaId")
+    public String mediaId;
+
     // 媒资媒体类型
     @NameInMap("MediaType")
     public String mediaType;
@@ -31,9 +35,6 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     // 页号
     @NameInMap("NextToken")
     public String nextToken;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     // 排序
     @NameInMap("SortBy")
@@ -96,6 +97,14 @@ public class ListMediaBasicInfosRequest extends TeaModel {
         return this.maxResults;
     }
 
+    public ListMediaBasicInfosRequest setMediaId(String mediaId) {
+        this.mediaId = mediaId;
+        return this;
+    }
+    public String getMediaId() {
+        return this.mediaId;
+    }
+
     public ListMediaBasicInfosRequest setMediaType(String mediaType) {
         this.mediaType = mediaType;
         return this;
@@ -110,14 +119,6 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListMediaBasicInfosRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListMediaBasicInfosRequest setSortBy(String sortBy) {
