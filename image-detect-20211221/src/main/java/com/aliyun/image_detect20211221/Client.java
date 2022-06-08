@@ -68,6 +68,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Level", request.level);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mqConfigName)) {
+            query.put("MqConfigName", request.mqConfigName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ossBucketName)) {
             query.put("OssBucketName", request.ossBucketName);
         }
@@ -120,6 +124,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateTaskResponse createTask(CreateTaskRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createTaskWithOptions(request, runtime);
+    }
+
+    public DeleteMqConfigResponse deleteMqConfigWithOptions(DeleteMqConfigRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configName)) {
+            query.put("ConfigName", request.configName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMqConfig"),
+            new TeaPair("version", "2021-12-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMqConfigResponse());
+    }
+
+    public DeleteMqConfigResponse deleteMqConfig(DeleteMqConfigRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteMqConfigWithOptions(request, runtime);
     }
 
     public DeleteOssConfigResponse deleteOssConfigWithOptions(DeleteOssConfigRequest request, RuntimeOptions runtime) throws Exception {
@@ -178,6 +211,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DetectImageResponse detectImage(DetectImageRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.detectImageWithOptions(request, runtime);
+    }
+
+    public GetMqConfigListResponse getMqConfigListWithOptions(GetMqConfigListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMqConfigList"),
+            new TeaPair("version", "2021-12-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMqConfigListResponse());
+    }
+
+    public GetMqConfigListResponse getMqConfigList(GetMqConfigListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getMqConfigListWithOptions(request, runtime);
     }
 
     public GetOssConfigListResponse getOssConfigListWithOptions(GetOssConfigListRequest request, RuntimeOptions runtime) throws Exception {
@@ -281,6 +339,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTaskListResponse getTaskList(GetTaskListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getTaskListWithOptions(request, runtime);
+    }
+
+    public SaveMqConfigResponse saveMqConfigWithOptions(SaveMqConfigRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configName)) {
+            query.put("ConfigName", request.configName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mqAccessKey)) {
+            query.put("MqAccessKey", request.mqAccessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mqAccessSecret)) {
+            query.put("MqAccessSecret", request.mqAccessSecret);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mqEndpoint)) {
+            query.put("MqEndpoint", request.mqEndpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mqGroupId)) {
+            query.put("MqGroupId", request.mqGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mqTopic)) {
+            query.put("MqTopic", request.mqTopic);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SaveMqConfig"),
+            new TeaPair("version", "2021-12-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SaveMqConfigResponse());
+    }
+
+    public SaveMqConfigResponse saveMqConfig(SaveMqConfigRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.saveMqConfigWithOptions(request, runtime);
     }
 
     public SaveOssConfigResponse saveOssConfigWithOptions(SaveOssConfigRequest request, RuntimeOptions runtime) throws Exception {

@@ -87,11 +87,29 @@ public class GetTaskDetailResponseBody extends TeaModel {
         @NameInMap("Level")
         public Integer level;
 
+        @NameInMap("MqAccessKey")
+        public String mqAccessKey;
+
+        @NameInMap("MqConfigName")
+        public String mqConfigName;
+
+        @NameInMap("MqEndpoint")
+        public String mqEndpoint;
+
+        @NameInMap("MqGroupId")
+        public String mqGroupId;
+
+        @NameInMap("MqTopic")
+        public String mqTopic;
+
         @NameInMap("OssAccessKeyId")
         public String ossAccessKeyId;
 
         @NameInMap("OssBucketName")
         public String ossBucketName;
+
+        @NameInMap("OssConfigName")
+        public String ossConfigName;
 
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
@@ -178,6 +196,46 @@ public class GetTaskDetailResponseBody extends TeaModel {
             return this.level;
         }
 
+        public GetTaskDetailResponseBodyResponse setMqAccessKey(String mqAccessKey) {
+            this.mqAccessKey = mqAccessKey;
+            return this;
+        }
+        public String getMqAccessKey() {
+            return this.mqAccessKey;
+        }
+
+        public GetTaskDetailResponseBodyResponse setMqConfigName(String mqConfigName) {
+            this.mqConfigName = mqConfigName;
+            return this;
+        }
+        public String getMqConfigName() {
+            return this.mqConfigName;
+        }
+
+        public GetTaskDetailResponseBodyResponse setMqEndpoint(String mqEndpoint) {
+            this.mqEndpoint = mqEndpoint;
+            return this;
+        }
+        public String getMqEndpoint() {
+            return this.mqEndpoint;
+        }
+
+        public GetTaskDetailResponseBodyResponse setMqGroupId(String mqGroupId) {
+            this.mqGroupId = mqGroupId;
+            return this;
+        }
+        public String getMqGroupId() {
+            return this.mqGroupId;
+        }
+
+        public GetTaskDetailResponseBodyResponse setMqTopic(String mqTopic) {
+            this.mqTopic = mqTopic;
+            return this;
+        }
+        public String getMqTopic() {
+            return this.mqTopic;
+        }
+
         public GetTaskDetailResponseBodyResponse setOssAccessKeyId(String ossAccessKeyId) {
             this.ossAccessKeyId = ossAccessKeyId;
             return this;
@@ -192,6 +250,14 @@ public class GetTaskDetailResponseBody extends TeaModel {
         }
         public String getOssBucketName() {
             return this.ossBucketName;
+        }
+
+        public GetTaskDetailResponseBodyResponse setOssConfigName(String ossConfigName) {
+            this.ossConfigName = ossConfigName;
+            return this;
+        }
+        public String getOssConfigName() {
+            return this.ossConfigName;
         }
 
         public GetTaskDetailResponseBodyResponse setOssEndpoint(String ossEndpoint) {

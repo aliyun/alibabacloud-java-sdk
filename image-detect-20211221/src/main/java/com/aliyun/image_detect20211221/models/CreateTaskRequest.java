@@ -7,6 +7,9 @@ public class CreateTaskRequest extends TeaModel {
     @NameInMap("Level")
     public Integer level;
 
+    @NameInMap("MqConfigName")
+    public String mqConfigName;
+
     @NameInMap("OssBucketName")
     public String ossBucketName;
 
@@ -42,6 +45,14 @@ public class CreateTaskRequest extends TeaModel {
     }
     public Integer getLevel() {
         return this.level;
+    }
+
+    public CreateTaskRequest setMqConfigName(String mqConfigName) {
+        this.mqConfigName = mqConfigName;
+        return this;
+    }
+    public String getMqConfigName() {
+        return this.mqConfigName;
     }
 
     public CreateTaskRequest setOssBucketName(String ossBucketName) {
