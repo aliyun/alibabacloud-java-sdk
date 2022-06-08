@@ -7,6 +7,12 @@ public class CreateKeyRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EnableAutomaticRotation")
+    public Boolean enableAutomaticRotation;
+
+    @NameInMap("KeySpec")
+    public String keySpec;
+
     @NameInMap("KeyUsage")
     public String keyUsage;
 
@@ -16,14 +22,8 @@ public class CreateKeyRequest extends TeaModel {
     @NameInMap("ProtectionLevel")
     public String protectionLevel;
 
-    @NameInMap("EnableAutomaticRotation")
-    public Boolean enableAutomaticRotation;
-
     @NameInMap("RotationInterval")
     public String rotationInterval;
-
-    @NameInMap("KeySpec")
-    public String keySpec;
 
     public static CreateKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateKeyRequest self = new CreateKeyRequest();
@@ -36,6 +36,22 @@ public class CreateKeyRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateKeyRequest setEnableAutomaticRotation(Boolean enableAutomaticRotation) {
+        this.enableAutomaticRotation = enableAutomaticRotation;
+        return this;
+    }
+    public Boolean getEnableAutomaticRotation() {
+        return this.enableAutomaticRotation;
+    }
+
+    public CreateKeyRequest setKeySpec(String keySpec) {
+        this.keySpec = keySpec;
+        return this;
+    }
+    public String getKeySpec() {
+        return this.keySpec;
     }
 
     public CreateKeyRequest setKeyUsage(String keyUsage) {
@@ -62,28 +78,12 @@ public class CreateKeyRequest extends TeaModel {
         return this.protectionLevel;
     }
 
-    public CreateKeyRequest setEnableAutomaticRotation(Boolean enableAutomaticRotation) {
-        this.enableAutomaticRotation = enableAutomaticRotation;
-        return this;
-    }
-    public Boolean getEnableAutomaticRotation() {
-        return this.enableAutomaticRotation;
-    }
-
     public CreateKeyRequest setRotationInterval(String rotationInterval) {
         this.rotationInterval = rotationInterval;
         return this;
     }
     public String getRotationInterval() {
         return this.rotationInterval;
-    }
-
-    public CreateKeyRequest setKeySpec(String keySpec) {
-        this.keySpec = keySpec;
-        return this;
-    }
-    public String getKeySpec() {
-        return this.keySpec;
     }
 
 }

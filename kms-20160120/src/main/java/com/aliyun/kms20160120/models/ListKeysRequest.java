@@ -4,18 +4,26 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListKeysRequest extends TeaModel {
+    @NameInMap("Filters")
+    public String filters;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Filters")
-    public String filters;
-
     public static ListKeysRequest build(java.util.Map<String, ?> map) throws Exception {
         ListKeysRequest self = new ListKeysRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListKeysRequest setFilters(String filters) {
+        this.filters = filters;
+        return this;
+    }
+    public String getFilters() {
+        return this.filters;
     }
 
     public ListKeysRequest setPageNumber(Integer pageNumber) {
@@ -32,14 +40,6 @@ public class ListKeysRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListKeysRequest setFilters(String filters) {
-        this.filters = filters;
-        return this;
-    }
-    public String getFilters() {
-        return this.filters;
     }
 
 }

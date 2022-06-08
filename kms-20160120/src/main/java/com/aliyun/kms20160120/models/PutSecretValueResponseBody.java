@@ -4,14 +4,14 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class PutSecretValueResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("SecretName")
     public String secretName;
 
     @NameInMap("VersionId")
     public String versionId;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("VersionStages")
     public PutSecretValueResponseBodyVersionStages versionStages;
@@ -19,6 +19,14 @@ public class PutSecretValueResponseBody extends TeaModel {
     public static PutSecretValueResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PutSecretValueResponseBody self = new PutSecretValueResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public PutSecretValueResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PutSecretValueResponseBody setSecretName(String secretName) {
@@ -35,14 +43,6 @@ public class PutSecretValueResponseBody extends TeaModel {
     }
     public String getVersionId() {
         return this.versionId;
-    }
-
-    public PutSecretValueResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public PutSecretValueResponseBody setVersionStages(PutSecretValueResponseBodyVersionStages versionStages) {

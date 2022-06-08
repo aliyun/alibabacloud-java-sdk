@@ -7,11 +7,11 @@ public class ReEncryptRequest extends TeaModel {
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
 
-    @NameInMap("SourceKeyId")
-    public String sourceKeyId;
+    @NameInMap("DestinationEncryptionContext")
+    public java.util.Map<String, ?> destinationEncryptionContext;
 
-    @NameInMap("SourceKeyVersionId")
-    public String sourceKeyVersionId;
+    @NameInMap("DestinationKeyId")
+    public String destinationKeyId;
 
     @NameInMap("SourceEncryptionAlgorithm")
     public String sourceEncryptionAlgorithm;
@@ -19,11 +19,11 @@ public class ReEncryptRequest extends TeaModel {
     @NameInMap("SourceEncryptionContext")
     public java.util.Map<String, ?> sourceEncryptionContext;
 
-    @NameInMap("DestinationKeyId")
-    public String destinationKeyId;
+    @NameInMap("SourceKeyId")
+    public String sourceKeyId;
 
-    @NameInMap("DestinationEncryptionContext")
-    public java.util.Map<String, ?> destinationEncryptionContext;
+    @NameInMap("SourceKeyVersionId")
+    public String sourceKeyVersionId;
 
     public static ReEncryptRequest build(java.util.Map<String, ?> map) throws Exception {
         ReEncryptRequest self = new ReEncryptRequest();
@@ -38,20 +38,20 @@ public class ReEncryptRequest extends TeaModel {
         return this.ciphertextBlob;
     }
 
-    public ReEncryptRequest setSourceKeyId(String sourceKeyId) {
-        this.sourceKeyId = sourceKeyId;
+    public ReEncryptRequest setDestinationEncryptionContext(java.util.Map<String, ?> destinationEncryptionContext) {
+        this.destinationEncryptionContext = destinationEncryptionContext;
         return this;
     }
-    public String getSourceKeyId() {
-        return this.sourceKeyId;
+    public java.util.Map<String, ?> getDestinationEncryptionContext() {
+        return this.destinationEncryptionContext;
     }
 
-    public ReEncryptRequest setSourceKeyVersionId(String sourceKeyVersionId) {
-        this.sourceKeyVersionId = sourceKeyVersionId;
+    public ReEncryptRequest setDestinationKeyId(String destinationKeyId) {
+        this.destinationKeyId = destinationKeyId;
         return this;
     }
-    public String getSourceKeyVersionId() {
-        return this.sourceKeyVersionId;
+    public String getDestinationKeyId() {
+        return this.destinationKeyId;
     }
 
     public ReEncryptRequest setSourceEncryptionAlgorithm(String sourceEncryptionAlgorithm) {
@@ -70,20 +70,20 @@ public class ReEncryptRequest extends TeaModel {
         return this.sourceEncryptionContext;
     }
 
-    public ReEncryptRequest setDestinationKeyId(String destinationKeyId) {
-        this.destinationKeyId = destinationKeyId;
+    public ReEncryptRequest setSourceKeyId(String sourceKeyId) {
+        this.sourceKeyId = sourceKeyId;
         return this;
     }
-    public String getDestinationKeyId() {
-        return this.destinationKeyId;
+    public String getSourceKeyId() {
+        return this.sourceKeyId;
     }
 
-    public ReEncryptRequest setDestinationEncryptionContext(java.util.Map<String, ?> destinationEncryptionContext) {
-        this.destinationEncryptionContext = destinationEncryptionContext;
+    public ReEncryptRequest setSourceKeyVersionId(String sourceKeyVersionId) {
+        this.sourceKeyVersionId = sourceKeyVersionId;
         return this;
     }
-    public java.util.Map<String, ?> getDestinationEncryptionContext() {
-        return this.destinationEncryptionContext;
+    public String getSourceKeyVersionId() {
+        return this.sourceKeyVersionId;
     }
 
 }

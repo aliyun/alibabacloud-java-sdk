@@ -4,26 +4,18 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class UpdateSecretRotationPolicyRequest extends TeaModel {
-    @NameInMap("SecretName")
-    public String secretName;
-
     @NameInMap("EnableAutomaticRotation")
     public Boolean enableAutomaticRotation;
 
     @NameInMap("RotationInterval")
     public String rotationInterval;
 
+    @NameInMap("SecretName")
+    public String secretName;
+
     public static UpdateSecretRotationPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSecretRotationPolicyRequest self = new UpdateSecretRotationPolicyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateSecretRotationPolicyRequest setSecretName(String secretName) {
-        this.secretName = secretName;
-        return this;
-    }
-    public String getSecretName() {
-        return this.secretName;
     }
 
     public UpdateSecretRotationPolicyRequest setEnableAutomaticRotation(Boolean enableAutomaticRotation) {
@@ -40,6 +32,14 @@ public class UpdateSecretRotationPolicyRequest extends TeaModel {
     }
     public String getRotationInterval() {
         return this.rotationInterval;
+    }
+
+    public UpdateSecretRotationPolicyRequest setSecretName(String secretName) {
+        this.secretName = secretName;
+        return this;
+    }
+    public String getSecretName() {
+        return this.secretName;
     }
 
 }

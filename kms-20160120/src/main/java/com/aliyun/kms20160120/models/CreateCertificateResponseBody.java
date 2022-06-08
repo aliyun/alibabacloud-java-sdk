@@ -4,21 +4,37 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CreateCertificateResponseBody extends TeaModel {
+    @NameInMap("Arn")
+    public String arn;
+
+    @NameInMap("CertificateId")
+    public String certificateId;
+
     @NameInMap("Csr")
     public String csr;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("CertificateId")
-    public String certificateId;
-
-    @NameInMap("Arn")
-    public String arn;
-
     public static CreateCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateCertificateResponseBody self = new CreateCertificateResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCertificateResponseBody setArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
+    public String getArn() {
+        return this.arn;
+    }
+
+    public CreateCertificateResponseBody setCertificateId(String certificateId) {
+        this.certificateId = certificateId;
+        return this;
+    }
+    public String getCertificateId() {
+        return this.certificateId;
     }
 
     public CreateCertificateResponseBody setCsr(String csr) {
@@ -35,22 +51,6 @@ public class CreateCertificateResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateCertificateResponseBody setCertificateId(String certificateId) {
-        this.certificateId = certificateId;
-        return this;
-    }
-    public String getCertificateId() {
-        return this.certificateId;
-    }
-
-    public CreateCertificateResponseBody setArn(String arn) {
-        this.arn = arn;
-        return this;
-    }
-    public String getArn() {
-        return this.arn;
     }
 
 }

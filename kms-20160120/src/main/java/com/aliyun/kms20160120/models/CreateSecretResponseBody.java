@@ -4,11 +4,14 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CreateSecretResponseBody extends TeaModel {
-    @NameInMap("SecretName")
-    public String secretName;
+    @NameInMap("Arn")
+    public String arn;
 
-    @NameInMap("VersionId")
-    public String versionId;
+    @NameInMap("AutomaticRotation")
+    public String automaticRotation;
+
+    @NameInMap("ExtendedConfig")
+    public String extendedConfig;
 
     @NameInMap("NextRotationDate")
     public String nextRotationDate;
@@ -16,40 +19,45 @@ public class CreateSecretResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("SecretType")
-    public String secretType;
-
     @NameInMap("RotationInterval")
     public String rotationInterval;
 
-    @NameInMap("ExtendedConfig")
-    public String extendedConfig;
+    @NameInMap("SecretName")
+    public String secretName;
 
-    @NameInMap("Arn")
-    public String arn;
+    @NameInMap("SecretType")
+    public String secretType;
 
-    @NameInMap("AutomaticRotation")
-    public String automaticRotation;
+    @NameInMap("VersionId")
+    public String versionId;
 
     public static CreateSecretResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSecretResponseBody self = new CreateSecretResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateSecretResponseBody setSecretName(String secretName) {
-        this.secretName = secretName;
+    public CreateSecretResponseBody setArn(String arn) {
+        this.arn = arn;
         return this;
     }
-    public String getSecretName() {
-        return this.secretName;
+    public String getArn() {
+        return this.arn;
     }
 
-    public CreateSecretResponseBody setVersionId(String versionId) {
-        this.versionId = versionId;
+    public CreateSecretResponseBody setAutomaticRotation(String automaticRotation) {
+        this.automaticRotation = automaticRotation;
         return this;
     }
-    public String getVersionId() {
-        return this.versionId;
+    public String getAutomaticRotation() {
+        return this.automaticRotation;
+    }
+
+    public CreateSecretResponseBody setExtendedConfig(String extendedConfig) {
+        this.extendedConfig = extendedConfig;
+        return this;
+    }
+    public String getExtendedConfig() {
+        return this.extendedConfig;
     }
 
     public CreateSecretResponseBody setNextRotationDate(String nextRotationDate) {
@@ -68,14 +76,6 @@ public class CreateSecretResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateSecretResponseBody setSecretType(String secretType) {
-        this.secretType = secretType;
-        return this;
-    }
-    public String getSecretType() {
-        return this.secretType;
-    }
-
     public CreateSecretResponseBody setRotationInterval(String rotationInterval) {
         this.rotationInterval = rotationInterval;
         return this;
@@ -84,28 +84,28 @@ public class CreateSecretResponseBody extends TeaModel {
         return this.rotationInterval;
     }
 
-    public CreateSecretResponseBody setExtendedConfig(String extendedConfig) {
-        this.extendedConfig = extendedConfig;
+    public CreateSecretResponseBody setSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
-    public String getExtendedConfig() {
-        return this.extendedConfig;
+    public String getSecretName() {
+        return this.secretName;
     }
 
-    public CreateSecretResponseBody setArn(String arn) {
-        this.arn = arn;
+    public CreateSecretResponseBody setSecretType(String secretType) {
+        this.secretType = secretType;
         return this;
     }
-    public String getArn() {
-        return this.arn;
+    public String getSecretType() {
+        return this.secretType;
     }
 
-    public CreateSecretResponseBody setAutomaticRotation(String automaticRotation) {
-        this.automaticRotation = automaticRotation;
+    public CreateSecretResponseBody setVersionId(String versionId) {
+        this.versionId = versionId;
         return this;
     }
-    public String getAutomaticRotation() {
-        return this.automaticRotation;
+    public String getVersionId() {
+        return this.versionId;
     }
 
 }

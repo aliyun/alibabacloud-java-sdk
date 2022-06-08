@@ -7,11 +7,11 @@ public class ReEncryptShrinkRequest extends TeaModel {
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
 
-    @NameInMap("SourceKeyId")
-    public String sourceKeyId;
+    @NameInMap("DestinationEncryptionContext")
+    public String destinationEncryptionContextShrink;
 
-    @NameInMap("SourceKeyVersionId")
-    public String sourceKeyVersionId;
+    @NameInMap("DestinationKeyId")
+    public String destinationKeyId;
 
     @NameInMap("SourceEncryptionAlgorithm")
     public String sourceEncryptionAlgorithm;
@@ -19,11 +19,11 @@ public class ReEncryptShrinkRequest extends TeaModel {
     @NameInMap("SourceEncryptionContext")
     public String sourceEncryptionContextShrink;
 
-    @NameInMap("DestinationKeyId")
-    public String destinationKeyId;
+    @NameInMap("SourceKeyId")
+    public String sourceKeyId;
 
-    @NameInMap("DestinationEncryptionContext")
-    public String destinationEncryptionContextShrink;
+    @NameInMap("SourceKeyVersionId")
+    public String sourceKeyVersionId;
 
     public static ReEncryptShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ReEncryptShrinkRequest self = new ReEncryptShrinkRequest();
@@ -38,20 +38,20 @@ public class ReEncryptShrinkRequest extends TeaModel {
         return this.ciphertextBlob;
     }
 
-    public ReEncryptShrinkRequest setSourceKeyId(String sourceKeyId) {
-        this.sourceKeyId = sourceKeyId;
+    public ReEncryptShrinkRequest setDestinationEncryptionContextShrink(String destinationEncryptionContextShrink) {
+        this.destinationEncryptionContextShrink = destinationEncryptionContextShrink;
         return this;
     }
-    public String getSourceKeyId() {
-        return this.sourceKeyId;
+    public String getDestinationEncryptionContextShrink() {
+        return this.destinationEncryptionContextShrink;
     }
 
-    public ReEncryptShrinkRequest setSourceKeyVersionId(String sourceKeyVersionId) {
-        this.sourceKeyVersionId = sourceKeyVersionId;
+    public ReEncryptShrinkRequest setDestinationKeyId(String destinationKeyId) {
+        this.destinationKeyId = destinationKeyId;
         return this;
     }
-    public String getSourceKeyVersionId() {
-        return this.sourceKeyVersionId;
+    public String getDestinationKeyId() {
+        return this.destinationKeyId;
     }
 
     public ReEncryptShrinkRequest setSourceEncryptionAlgorithm(String sourceEncryptionAlgorithm) {
@@ -70,20 +70,20 @@ public class ReEncryptShrinkRequest extends TeaModel {
         return this.sourceEncryptionContextShrink;
     }
 
-    public ReEncryptShrinkRequest setDestinationKeyId(String destinationKeyId) {
-        this.destinationKeyId = destinationKeyId;
+    public ReEncryptShrinkRequest setSourceKeyId(String sourceKeyId) {
+        this.sourceKeyId = sourceKeyId;
         return this;
     }
-    public String getDestinationKeyId() {
-        return this.destinationKeyId;
+    public String getSourceKeyId() {
+        return this.sourceKeyId;
     }
 
-    public ReEncryptShrinkRequest setDestinationEncryptionContextShrink(String destinationEncryptionContextShrink) {
-        this.destinationEncryptionContextShrink = destinationEncryptionContextShrink;
+    public ReEncryptShrinkRequest setSourceKeyVersionId(String sourceKeyVersionId) {
+        this.sourceKeyVersionId = sourceKeyVersionId;
         return this;
     }
-    public String getDestinationEncryptionContextShrink() {
-        return this.destinationEncryptionContextShrink;
+    public String getSourceKeyVersionId() {
+        return this.sourceKeyVersionId;
     }
 
 }

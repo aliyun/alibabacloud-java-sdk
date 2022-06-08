@@ -4,6 +4,9 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GenerateDataKeyWithoutPlaintextShrinkRequest extends TeaModel {
+    @NameInMap("EncryptionContext")
+    public String encryptionContextShrink;
+
     @NameInMap("KeyId")
     public String keyId;
 
@@ -13,12 +16,17 @@ public class GenerateDataKeyWithoutPlaintextShrinkRequest extends TeaModel {
     @NameInMap("NumberOfBytes")
     public Integer numberOfBytes;
 
-    @NameInMap("EncryptionContext")
-    public String encryptionContextShrink;
-
     public static GenerateDataKeyWithoutPlaintextShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateDataKeyWithoutPlaintextShrinkRequest self = new GenerateDataKeyWithoutPlaintextShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GenerateDataKeyWithoutPlaintextShrinkRequest setEncryptionContextShrink(String encryptionContextShrink) {
+        this.encryptionContextShrink = encryptionContextShrink;
+        return this;
+    }
+    public String getEncryptionContextShrink() {
+        return this.encryptionContextShrink;
     }
 
     public GenerateDataKeyWithoutPlaintextShrinkRequest setKeyId(String keyId) {
@@ -43,14 +51,6 @@ public class GenerateDataKeyWithoutPlaintextShrinkRequest extends TeaModel {
     }
     public Integer getNumberOfBytes() {
         return this.numberOfBytes;
-    }
-
-    public GenerateDataKeyWithoutPlaintextShrinkRequest setEncryptionContextShrink(String encryptionContextShrink) {
-        this.encryptionContextShrink = encryptionContextShrink;
-        return this;
-    }
-    public String getEncryptionContextShrink() {
-        return this.encryptionContextShrink;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class UpdateSecretVersionStageResponseBody extends TeaModel {
-    @NameInMap("SecretName")
-    public String secretName;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SecretName")
+    public String secretName;
 
     public static UpdateSecretVersionStageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateSecretVersionStageResponseBody self = new UpdateSecretVersionStageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateSecretVersionStageResponseBody setSecretName(String secretName) {
-        this.secretName = secretName;
-        return this;
-    }
-    public String getSecretName() {
-        return this.secretName;
     }
 
     public UpdateSecretVersionStageResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class UpdateSecretVersionStageResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpdateSecretVersionStageResponseBody setSecretName(String secretName) {
+        this.secretName = secretName;
+        return this;
+    }
+    public String getSecretName() {
+        return this.secretName;
     }
 
 }

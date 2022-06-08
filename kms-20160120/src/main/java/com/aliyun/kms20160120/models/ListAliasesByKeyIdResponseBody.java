@@ -4,56 +4,24 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListAliasesByKeyIdResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("Aliases")
+    public ListAliasesByKeyIdResponseBodyAliases aliases;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("Aliases")
-    public ListAliasesByKeyIdResponseBodyAliases aliases;
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListAliasesByKeyIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAliasesByKeyIdResponseBody self = new ListAliasesByKeyIdResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAliasesByKeyIdResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListAliasesByKeyIdResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListAliasesByKeyIdResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListAliasesByKeyIdResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public ListAliasesByKeyIdResponseBody setAliases(ListAliasesByKeyIdResponseBodyAliases aliases) {
@@ -64,15 +32,47 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
         return this.aliases;
     }
 
+    public ListAliasesByKeyIdResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListAliasesByKeyIdResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListAliasesByKeyIdResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListAliasesByKeyIdResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListAliasesByKeyIdResponseBodyAliasesAlias extends TeaModel {
         @NameInMap("AliasArn")
         public String aliasArn;
 
-        @NameInMap("KeyId")
-        public String keyId;
-
         @NameInMap("AliasName")
         public String aliasName;
+
+        @NameInMap("KeyId")
+        public String keyId;
 
         public static ListAliasesByKeyIdResponseBodyAliasesAlias build(java.util.Map<String, ?> map) throws Exception {
             ListAliasesByKeyIdResponseBodyAliasesAlias self = new ListAliasesByKeyIdResponseBodyAliasesAlias();
@@ -87,20 +87,20 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
             return this.aliasArn;
         }
 
-        public ListAliasesByKeyIdResponseBodyAliasesAlias setKeyId(String keyId) {
-            this.keyId = keyId;
-            return this;
-        }
-        public String getKeyId() {
-            return this.keyId;
-        }
-
         public ListAliasesByKeyIdResponseBodyAliasesAlias setAliasName(String aliasName) {
             this.aliasName = aliasName;
             return this;
         }
         public String getAliasName() {
             return this.aliasName;
+        }
+
+        public ListAliasesByKeyIdResponseBodyAliasesAlias setKeyId(String keyId) {
+            this.keyId = keyId;
+            return this;
+        }
+        public String getKeyId() {
+            return this.keyId;
         }
 
     }

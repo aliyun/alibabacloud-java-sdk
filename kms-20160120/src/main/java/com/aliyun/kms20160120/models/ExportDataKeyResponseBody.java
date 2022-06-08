@@ -4,9 +4,6 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ExportDataKeyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ExportedDataKey")
     public String exportedDataKey;
 
@@ -16,17 +13,12 @@ public class ExportDataKeyResponseBody extends TeaModel {
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ExportDataKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ExportDataKeyResponseBody self = new ExportDataKeyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ExportDataKeyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ExportDataKeyResponseBody setExportedDataKey(String exportedDataKey) {
@@ -51,6 +43,14 @@ public class ExportDataKeyResponseBody extends TeaModel {
     }
     public String getKeyVersionId() {
         return this.keyVersionId;
+    }
+
+    public ExportDataKeyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

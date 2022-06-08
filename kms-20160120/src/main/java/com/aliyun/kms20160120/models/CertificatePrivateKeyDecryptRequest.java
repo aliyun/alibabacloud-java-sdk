@@ -4,11 +4,11 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CertificatePrivateKeyDecryptRequest extends TeaModel {
-    @NameInMap("CertificateId")
-    public String certificateId;
-
     @NameInMap("Algorithm")
     public String algorithm;
+
+    @NameInMap("CertificateId")
+    public String certificateId;
 
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
@@ -18,20 +18,20 @@ public class CertificatePrivateKeyDecryptRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CertificatePrivateKeyDecryptRequest setCertificateId(String certificateId) {
-        this.certificateId = certificateId;
-        return this;
-    }
-    public String getCertificateId() {
-        return this.certificateId;
-    }
-
     public CertificatePrivateKeyDecryptRequest setAlgorithm(String algorithm) {
         this.algorithm = algorithm;
         return this;
     }
     public String getAlgorithm() {
         return this.algorithm;
+    }
+
+    public CertificatePrivateKeyDecryptRequest setCertificateId(String certificateId) {
+        this.certificateId = certificateId;
+        return this;
+    }
+    public String getCertificateId() {
+        return this.certificateId;
     }
 
     public CertificatePrivateKeyDecryptRequest setCiphertextBlob(String ciphertextBlob) {

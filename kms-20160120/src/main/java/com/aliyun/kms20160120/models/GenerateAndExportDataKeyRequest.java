@@ -4,6 +4,9 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GenerateAndExportDataKeyRequest extends TeaModel {
+    @NameInMap("EncryptionContext")
+    public java.util.Map<String, ?> encryptionContext;
+
     @NameInMap("KeyId")
     public String keyId;
 
@@ -13,21 +16,26 @@ public class GenerateAndExportDataKeyRequest extends TeaModel {
     @NameInMap("NumberOfBytes")
     public Integer numberOfBytes;
 
-    @NameInMap("EncryptionContext")
-    public java.util.Map<String, ?> encryptionContext;
-
     @NameInMap("PublicKeyBlob")
     public String publicKeyBlob;
-
-    @NameInMap("WrappingKeySpec")
-    public String wrappingKeySpec;
 
     @NameInMap("WrappingAlgorithm")
     public String wrappingAlgorithm;
 
+    @NameInMap("WrappingKeySpec")
+    public String wrappingKeySpec;
+
     public static GenerateAndExportDataKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateAndExportDataKeyRequest self = new GenerateAndExportDataKeyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GenerateAndExportDataKeyRequest setEncryptionContext(java.util.Map<String, ?> encryptionContext) {
+        this.encryptionContext = encryptionContext;
+        return this;
+    }
+    public java.util.Map<String, ?> getEncryptionContext() {
+        return this.encryptionContext;
     }
 
     public GenerateAndExportDataKeyRequest setKeyId(String keyId) {
@@ -54,14 +62,6 @@ public class GenerateAndExportDataKeyRequest extends TeaModel {
         return this.numberOfBytes;
     }
 
-    public GenerateAndExportDataKeyRequest setEncryptionContext(java.util.Map<String, ?> encryptionContext) {
-        this.encryptionContext = encryptionContext;
-        return this;
-    }
-    public java.util.Map<String, ?> getEncryptionContext() {
-        return this.encryptionContext;
-    }
-
     public GenerateAndExportDataKeyRequest setPublicKeyBlob(String publicKeyBlob) {
         this.publicKeyBlob = publicKeyBlob;
         return this;
@@ -70,20 +70,20 @@ public class GenerateAndExportDataKeyRequest extends TeaModel {
         return this.publicKeyBlob;
     }
 
-    public GenerateAndExportDataKeyRequest setWrappingKeySpec(String wrappingKeySpec) {
-        this.wrappingKeySpec = wrappingKeySpec;
-        return this;
-    }
-    public String getWrappingKeySpec() {
-        return this.wrappingKeySpec;
-    }
-
     public GenerateAndExportDataKeyRequest setWrappingAlgorithm(String wrappingAlgorithm) {
         this.wrappingAlgorithm = wrappingAlgorithm;
         return this;
     }
     public String getWrappingAlgorithm() {
         return this.wrappingAlgorithm;
+    }
+
+    public GenerateAndExportDataKeyRequest setWrappingKeySpec(String wrappingKeySpec) {
+        this.wrappingKeySpec = wrappingKeySpec;
+        return this;
+    }
+    public String getWrappingKeySpec() {
+        return this.wrappingKeySpec;
     }
 
 }

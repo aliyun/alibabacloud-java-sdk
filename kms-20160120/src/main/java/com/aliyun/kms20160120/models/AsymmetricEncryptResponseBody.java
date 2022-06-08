@@ -4,9 +4,6 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class AsymmetricEncryptResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
 
@@ -16,17 +13,12 @@ public class AsymmetricEncryptResponseBody extends TeaModel {
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static AsymmetricEncryptResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AsymmetricEncryptResponseBody self = new AsymmetricEncryptResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AsymmetricEncryptResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AsymmetricEncryptResponseBody setCiphertextBlob(String ciphertextBlob) {
@@ -51,6 +43,14 @@ public class AsymmetricEncryptResponseBody extends TeaModel {
     }
     public String getKeyVersionId() {
         return this.keyVersionId;
+    }
+
+    public AsymmetricEncryptResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

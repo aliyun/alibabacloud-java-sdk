@@ -4,8 +4,11 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListKeysResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("Keys")
+    public ListKeysResponseBodyKeys keys;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class ListKeysResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Keys")
-    public ListKeysResponseBodyKeys keys;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListKeysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListKeysResponseBody self = new ListKeysResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListKeysResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListKeysResponseBody setKeys(ListKeysResponseBodyKeys keys) {
+        this.keys = keys;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public ListKeysResponseBodyKeys getKeys() {
+        return this.keys;
+    }
+
+    public ListKeysResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListKeysResponseBody setPageSize(Integer pageSize) {
@@ -48,20 +56,12 @@ public class ListKeysResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListKeysResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListKeysResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListKeysResponseBody setKeys(ListKeysResponseBodyKeys keys) {
-        this.keys = keys;
-        return this;
-    }
-    public ListKeysResponseBodyKeys getKeys() {
-        return this.keys;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListKeysResponseBodyKeysKey extends TeaModel {
