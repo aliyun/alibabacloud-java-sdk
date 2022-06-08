@@ -107,6 +107,9 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
         @NameInMap("EstimateAffectRows")
         public Long estimateAffectRows;
 
+        @NameInMap("ExecMode")
+        public String execMode;
+
         @NameInMap("ExecSQL")
         public String execSQL;
 
@@ -157,6 +160,14 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
         }
         public Long getEstimateAffectRows() {
             return this.estimateAffectRows;
+        }
+
+        public CreateDataCorrectOrderRequestParam setExecMode(String execMode) {
+            this.execMode = execMode;
+            return this;
+        }
+        public String getExecMode() {
+            return this.execMode;
         }
 
         public CreateDataCorrectOrderRequestParam setExecSQL(String execSQL) {

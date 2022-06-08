@@ -104,6 +104,9 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
         @NameInMap("DbItemList")
         public java.util.List<CreateFreeLockCorrectOrderRequestParamDbItemList> dbItemList;
 
+        @NameInMap("ExecMode")
+        public String execMode;
+
         @NameInMap("ExecSQL")
         public String execSQL;
 
@@ -146,6 +149,14 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
         }
         public java.util.List<CreateFreeLockCorrectOrderRequestParamDbItemList> getDbItemList() {
             return this.dbItemList;
+        }
+
+        public CreateFreeLockCorrectOrderRequestParam setExecMode(String execMode) {
+            this.execMode = execMode;
+            return this;
+        }
+        public String getExecMode() {
+            return this.execMode;
         }
 
         public CreateFreeLockCorrectOrderRequestParam setExecSQL(String execSQL) {
