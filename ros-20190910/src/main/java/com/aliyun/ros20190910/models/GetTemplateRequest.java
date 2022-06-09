@@ -10,6 +10,9 @@ public class GetTemplateRequest extends TeaModel {
     @NameInMap("IncludePermission")
     public String includePermission;
 
+    @NameInMap("IncludeTags")
+    public String includeTags;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -47,6 +50,14 @@ public class GetTemplateRequest extends TeaModel {
     }
     public String getIncludePermission() {
         return this.includePermission;
+    }
+
+    public GetTemplateRequest setIncludeTags(String includeTags) {
+        this.includeTags = includeTags;
+        return this;
+    }
+    public String getIncludeTags() {
+        return this.includeTags;
     }
 
     public GetTemplateRequest setRegionId(String regionId) {

@@ -7,6 +7,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceCleaner")
+    public GetFeatureDetailsResponseBodyResourceCleaner resourceCleaner;
+
     @NameInMap("TemplateScratch")
     public GetFeatureDetailsResponseBodyTemplateScratch templateScratch;
 
@@ -26,6 +29,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetFeatureDetailsResponseBody setResourceCleaner(GetFeatureDetailsResponseBodyResourceCleaner resourceCleaner) {
+        this.resourceCleaner = resourceCleaner;
+        return this;
+    }
+    public GetFeatureDetailsResponseBodyResourceCleaner getResourceCleaner() {
+        return this.resourceCleaner;
+    }
+
     public GetFeatureDetailsResponseBody setTemplateScratch(GetFeatureDetailsResponseBodyTemplateScratch templateScratch) {
         this.templateScratch = templateScratch;
         return this;
@@ -40,6 +51,66 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     }
     public GetFeatureDetailsResponseBodyTerraform getTerraform() {
         return this.terraform;
+    }
+
+    public static class GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes extends TeaModel {
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("SideEffects")
+        public java.util.List<String> sideEffects;
+
+        @NameInMap("SupportedFilters")
+        public java.util.List<String> supportedFilters;
+
+        public static GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes build(java.util.Map<String, ?> map) throws Exception {
+            GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes self = new GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes setSideEffects(java.util.List<String> sideEffects) {
+            this.sideEffects = sideEffects;
+            return this;
+        }
+        public java.util.List<String> getSideEffects() {
+            return this.sideEffects;
+        }
+
+        public GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes setSupportedFilters(java.util.List<String> supportedFilters) {
+            this.supportedFilters = supportedFilters;
+            return this;
+        }
+        public java.util.List<String> getSupportedFilters() {
+            return this.supportedFilters;
+        }
+
+    }
+
+    public static class GetFeatureDetailsResponseBodyResourceCleaner extends TeaModel {
+        @NameInMap("SupportedResourceTypes")
+        public java.util.List<GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes> supportedResourceTypes;
+
+        public static GetFeatureDetailsResponseBodyResourceCleaner build(java.util.Map<String, ?> map) throws Exception {
+            GetFeatureDetailsResponseBodyResourceCleaner self = new GetFeatureDetailsResponseBodyResourceCleaner();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFeatureDetailsResponseBodyResourceCleaner setSupportedResourceTypes(java.util.List<GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes> supportedResourceTypes) {
+            this.supportedResourceTypes = supportedResourceTypes;
+            return this;
+        }
+        public java.util.List<GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes> getSupportedResourceTypes() {
+            return this.supportedResourceTypes;
+        }
+
     }
 
     public static class GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes extends TeaModel {

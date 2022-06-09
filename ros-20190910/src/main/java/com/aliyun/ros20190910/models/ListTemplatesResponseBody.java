@@ -64,6 +64,36 @@ public class ListTemplatesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListTemplatesResponseBodyTemplatesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListTemplatesResponseBodyTemplatesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListTemplatesResponseBodyTemplatesTags self = new ListTemplatesResponseBodyTemplatesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTemplatesResponseBodyTemplatesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTemplatesResponseBodyTemplatesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListTemplatesResponseBodyTemplates extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
@@ -79,6 +109,9 @@ public class ListTemplatesResponseBody extends TeaModel {
 
         @NameInMap("ShareType")
         public String shareType;
+
+        @NameInMap("Tags")
+        public java.util.List<ListTemplatesResponseBodyTemplatesTags> tags;
 
         @NameInMap("TemplateARN")
         public String templateARN;
@@ -138,6 +171,14 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
         public String getShareType() {
             return this.shareType;
+        }
+
+        public ListTemplatesResponseBodyTemplates setTags(java.util.List<ListTemplatesResponseBodyTemplatesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListTemplatesResponseBodyTemplatesTags> getTags() {
+            return this.tags;
         }
 
         public ListTemplatesResponseBodyTemplates setTemplateARN(String templateARN) {
