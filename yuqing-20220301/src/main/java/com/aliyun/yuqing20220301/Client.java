@@ -77,14 +77,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ConsoleApiProxyResponse consoleApiProxyWithOptions(ConsoleApiProxyRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
-            body.put("body", request.body);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.body)))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ConsoleApiProxy"),
