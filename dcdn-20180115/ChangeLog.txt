@@ -1,3 +1,6 @@
+2022-06-09 Version: 1.0.13
+ - Update DescribeDcdnSLSRealtimeLogDelivery.
+
 2022-05-26 Version: 1.0.12
  - Add SetDcdnFullDomainsBlockIP.
 

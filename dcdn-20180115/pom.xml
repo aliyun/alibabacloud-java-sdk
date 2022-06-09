@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dcdn20180115</artifactId>
-  <version>1.0.12</version>
+  <version>1.0.13</version>
   <packaging>jar</packaging>
   <name>dcdn20180115</name>
   <description>Alibaba Cloud dcdn (20180115) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.2</version>
+      <version>0.2.5</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
