@@ -137,6 +137,9 @@ public class AppUseTimeReportRequest extends TeaModel {
         @NameInMap("VipType")
         public Integer vipType;
 
+        @NameInMap("originUuid")
+        public String originUuid;
+
         public static AppUseTimeReportRequestPayload build(java.util.Map<String, ?> map) throws Exception {
             AppUseTimeReportRequestPayload self = new AppUseTimeReportRequestPayload();
             return TeaModel.build(map, self);
@@ -188,6 +191,14 @@ public class AppUseTimeReportRequest extends TeaModel {
         }
         public Integer getVipType() {
             return this.vipType;
+        }
+
+        public AppUseTimeReportRequestPayload setOriginUuid(String originUuid) {
+            this.originUuid = originUuid;
+            return this;
+        }
+        public String getOriginUuid() {
+            return this.originUuid;
         }
 
     }
