@@ -90,7 +90,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ConsoleApiProxy"),
             new TeaPair("version", "2022-03-01"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/aliyun/openApi/"),
+            new TeaPair("pathname", "/openapi/aliyun/consoleApiProxy.json"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
