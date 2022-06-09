@@ -1144,6 +1144,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("URLList", request.URLList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.verbose)) {
+            body.put("Verbose", request.verbose);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));

@@ -19,6 +19,9 @@ public class ScreenChestCTRequest extends TeaModel {
     @NameInMap("URLList")
     public java.util.List<ScreenChestCTRequestURLList> URLList;
 
+    @NameInMap("Verbose")
+    public Long verbose;
+
     public static ScreenChestCTRequest build(java.util.Map<String, ?> map) throws Exception {
         ScreenChestCTRequest self = new ScreenChestCTRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ScreenChestCTRequest extends TeaModel {
     }
     public java.util.List<ScreenChestCTRequestURLList> getURLList() {
         return this.URLList;
+    }
+
+    public ScreenChestCTRequest setVerbose(Long verbose) {
+        this.verbose = verbose;
+        return this;
+    }
+    public Long getVerbose() {
+        return this.verbose;
     }
 
     public static class ScreenChestCTRequestURLList extends TeaModel {

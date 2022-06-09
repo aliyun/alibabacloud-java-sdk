@@ -724,6 +724,9 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("LungNodule")
         public ScreenChestCTResponseBodyDataLungNodule lungNodule;
 
+        @NameInMap("URLList")
+        public java.util.Map<String, ?> URLList;
+
         public static ScreenChestCTResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ScreenChestCTResponseBodyData self = new ScreenChestCTResponseBodyData();
             return TeaModel.build(map, self);
@@ -775,6 +778,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public ScreenChestCTResponseBodyDataLungNodule getLungNodule() {
             return this.lungNodule;
+        }
+
+        public ScreenChestCTResponseBodyData setURLList(java.util.Map<String, ?> URLList) {
+            this.URLList = URLList;
+            return this;
+        }
+        public java.util.Map<String, ?> getURLList() {
+            return this.URLList;
         }
 
     }
