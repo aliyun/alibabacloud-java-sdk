@@ -1662,6 +1662,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IncludePermission", request.includePermission);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeTags)) {
+            query.put("IncludeTags", request.includeTags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -2653,6 +2657,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTemplatesResponse listTemplatesWithOptions(ListTemplatesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.includeTags)) {
+            query.put("IncludeTags", request.includeTags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }

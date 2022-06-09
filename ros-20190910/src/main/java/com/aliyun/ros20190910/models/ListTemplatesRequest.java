@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
+    @NameInMap("IncludeTags")
+    public String includeTags;
+
     @NameInMap("PageNumber")
     public Long pageNumber;
 
@@ -25,6 +28,14 @@ public class ListTemplatesRequest extends TeaModel {
     public static ListTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTemplatesRequest self = new ListTemplatesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTemplatesRequest setIncludeTags(String includeTags) {
+        this.includeTags = includeTags;
+        return this;
+    }
+    public String getIncludeTags() {
+        return this.includeTags;
     }
 
     public ListTemplatesRequest setPageNumber(Long pageNumber) {

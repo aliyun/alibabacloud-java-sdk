@@ -40,6 +40,9 @@ public class GetTemplateResponseBody extends TeaModel {
     @NameInMap("StackId")
     public String stackId;
 
+    @NameInMap("Tags")
+    public java.util.List<GetTemplateResponseBodyTags> tags;
+
     @NameInMap("TemplateARN")
     public String templateARN;
 
@@ -159,6 +162,14 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.stackId;
     }
 
+    public GetTemplateResponseBody setTags(java.util.List<GetTemplateResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetTemplateResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public GetTemplateResponseBody setTemplateARN(String templateARN) {
         this.templateARN = templateARN;
         return this;
@@ -266,6 +277,36 @@ public class GetTemplateResponseBody extends TeaModel {
         }
         public String getVersionOption() {
             return this.versionOption;
+        }
+
+    }
+
+    public static class GetTemplateResponseBodyTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetTemplateResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetTemplateResponseBodyTags self = new GetTemplateResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTemplateResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetTemplateResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
