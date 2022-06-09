@@ -113,9 +113,20 @@ public class PullCashierRequest extends TeaModel {
     }
 
     public static class PullCashierRequestPayload extends TeaModel {
+        @NameInMap("originUuid")
+        public String originUuid;
+
         public static PullCashierRequestPayload build(java.util.Map<String, ?> map) throws Exception {
             PullCashierRequestPayload self = new PullCashierRequestPayload();
             return TeaModel.build(map, self);
+        }
+
+        public PullCashierRequestPayload setOriginUuid(String originUuid) {
+            this.originUuid = originUuid;
+            return this;
+        }
+        public String getOriginUuid() {
+            return this.originUuid;
         }
 
     }

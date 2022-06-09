@@ -125,6 +125,9 @@ public class VideoAppReportRequest extends TeaModel {
         @NameInMap("loginNick")
         public String loginNick;
 
+        @NameInMap("originUuid")
+        public String originUuid;
+
         @NameInMap("phone")
         public String phone;
 
@@ -169,6 +172,14 @@ public class VideoAppReportRequest extends TeaModel {
         }
         public String getLoginNick() {
             return this.loginNick;
+        }
+
+        public VideoAppReportRequestPayload setOriginUuid(String originUuid) {
+            this.originUuid = originUuid;
+            return this;
+        }
+        public String getOriginUuid() {
+            return this.originUuid;
         }
 
         public VideoAppReportRequestPayload setPhone(String phone) {
