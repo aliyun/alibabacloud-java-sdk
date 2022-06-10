@@ -8,6 +8,10 @@ public class DeleteItemLimitRuleResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public DeleteItemLimitRuleResponseBody body;
@@ -23,6 +27,14 @@ public class DeleteItemLimitRuleResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DeleteItemLimitRuleResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public DeleteItemLimitRuleResponse setBody(DeleteItemLimitRuleResponseBody body) {

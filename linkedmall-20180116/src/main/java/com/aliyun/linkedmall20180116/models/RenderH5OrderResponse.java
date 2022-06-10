@@ -8,6 +8,10 @@ public class RenderH5OrderResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public RenderH5OrderResponseBody body;
@@ -23,6 +27,14 @@ public class RenderH5OrderResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public RenderH5OrderResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public RenderH5OrderResponse setBody(RenderH5OrderResponseBody body) {

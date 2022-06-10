@@ -1,3 +1,9 @@
+2022-06-10 Version: 1.0.15
+- Add DownloadCpsBillFile.
+- Add DownloadItemBillFile.
+- Add CreateOrderTransactionDetailFile.
+- Add DownloadOrderTransactionDetailFile.
+
 2022-04-20 Version: 1.0.14
 - Add RefreshSettleOrderAccount.
 - Modify RegisterSettleAccount, support currency and country or area code.
