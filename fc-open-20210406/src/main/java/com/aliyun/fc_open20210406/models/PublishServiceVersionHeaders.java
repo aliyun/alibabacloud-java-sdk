@@ -7,6 +7,7 @@ public class PublishServiceVersionHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    // 服务的ETag，可通过GetService接口获得。若发布版本时服务的ETag与传入的不一致，则发布版本会失败。
     @NameInMap("If-Match")
     public String ifMatch;
 
