@@ -76,6 +76,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeFlowLogsResponseBodyFlowLogsFlowLog extends TeaModel {
+        @NameInMap("AggregationInterval")
+        public Integer aggregationInterval;
+
+        @NameInMap("BusinessStatus")
+        public String businessStatus;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -112,6 +118,22 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public static DescribeFlowLogsResponseBodyFlowLogsFlowLog build(java.util.Map<String, ?> map) throws Exception {
             DescribeFlowLogsResponseBodyFlowLogsFlowLog self = new DescribeFlowLogsResponseBodyFlowLogsFlowLog();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setAggregationInterval(Integer aggregationInterval) {
+            this.aggregationInterval = aggregationInterval;
+            return this;
+        }
+        public Integer getAggregationInterval() {
+            return this.aggregationInterval;
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setBusinessStatus(String businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
         public DescribeFlowLogsResponseBodyFlowLogsFlowLog setCreationTime(String creationTime) {

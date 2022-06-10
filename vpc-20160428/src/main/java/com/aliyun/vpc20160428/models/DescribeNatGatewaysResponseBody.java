@@ -103,6 +103,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     }
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpListsIpList extends TeaModel {
+        @NameInMap("AllocationId")
+        public String allocationId;
+
         @NameInMap("IpAddress")
         public String ipAddress;
 
@@ -112,9 +115,20 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("SnatEntryEnabled")
         public Boolean snatEntryEnabled;
 
+        @NameInMap("UsingStatus")
+        public String usingStatus;
+
         public static DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpListsIpList build(java.util.Map<String, ?> map) throws Exception {
             DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpListsIpList self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpListsIpList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpListsIpList setAllocationId(String allocationId) {
+            this.allocationId = allocationId;
+            return this;
+        }
+        public String getAllocationId() {
+            return this.allocationId;
         }
 
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpListsIpList setIpAddress(String ipAddress) {
@@ -139,6 +153,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
         public Boolean getSnatEntryEnabled() {
             return this.snatEntryEnabled;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpListsIpList setUsingStatus(String usingStatus) {
+            this.usingStatus = usingStatus;
+            return this;
+        }
+        public String getUsingStatus() {
+            return this.usingStatus;
         }
 
     }
@@ -174,6 +196,12 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
         @NameInMap("MaxBandwidth")
         public Integer maxBandwidth;
+
+        @NameInMap("MaxSessionEstablishRate")
+        public Integer maxSessionEstablishRate;
+
+        @NameInMap("MaxSessionQuota")
+        public Integer maxSessionQuota;
 
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
@@ -218,6 +246,22 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.maxBandwidth;
         }
 
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo setMaxSessionEstablishRate(Integer maxSessionEstablishRate) {
+            this.maxSessionEstablishRate = maxSessionEstablishRate;
+            return this;
+        }
+        public Integer getMaxSessionEstablishRate() {
+            return this.maxSessionEstablishRate;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo setMaxSessionQuota(Integer maxSessionQuota) {
+            this.maxSessionQuota = maxSessionQuota;
+            return this;
+        }
+        public Integer getMaxSessionQuota() {
+            return this.maxSessionQuota;
+        }
+
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo setPrivateIpAddress(String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
@@ -256,6 +300,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     }
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGateway extends TeaModel {
+        @NameInMap("AutoPay")
+        public Boolean autoPay;
+
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
@@ -339,6 +386,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public static DescribeNatGatewaysResponseBodyNatGatewaysNatGateway build(java.util.Map<String, ?> map) throws Exception {
             DescribeNatGatewaysResponseBodyNatGatewaysNatGateway self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGateway();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setAutoPay(Boolean autoPay) {
+            this.autoPay = autoPay;
+            return this;
+        }
+        public Boolean getAutoPay() {
+            return this.autoPay;
         }
 
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setBusinessStatus(String businessStatus) {

@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AssociateVpcCidrBlockRequest extends TeaModel {
+    @NameInMap("IPv6CidrBlock")
+    public String IPv6CidrBlock;
+
     @NameInMap("IpVersion")
     public String ipVersion;
 
@@ -34,6 +37,14 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     public static AssociateVpcCidrBlockRequest build(java.util.Map<String, ?> map) throws Exception {
         AssociateVpcCidrBlockRequest self = new AssociateVpcCidrBlockRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AssociateVpcCidrBlockRequest setIPv6CidrBlock(String IPv6CidrBlock) {
+        this.IPv6CidrBlock = IPv6CidrBlock;
+        return this;
+    }
+    public String getIPv6CidrBlock() {
+        return this.IPv6CidrBlock;
     }
 
     public AssociateVpcCidrBlockRequest setIpVersion(String ipVersion) {

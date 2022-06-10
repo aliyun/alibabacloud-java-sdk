@@ -8,6 +8,10 @@ public class ModifyIpv6GatewayAttributeResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public ModifyIpv6GatewayAttributeResponseBody body;
@@ -23,6 +27,14 @@ public class ModifyIpv6GatewayAttributeResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public ModifyIpv6GatewayAttributeResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public ModifyIpv6GatewayAttributeResponse setBody(ModifyIpv6GatewayAttributeResponseBody body) {

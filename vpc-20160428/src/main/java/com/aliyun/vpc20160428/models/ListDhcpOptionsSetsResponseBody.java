@@ -49,6 +49,12 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         @NameInMap("DomainNameServers")
         public String domainNameServers;
 
+        @NameInMap("Ipv6LeaseTime")
+        public String ipv6LeaseTime;
+
+        @NameInMap("LeaseTime")
+        public String leaseTime;
+
         public static ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions build(java.util.Map<String, ?> map) throws Exception {
             ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions self = new ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions();
             return TeaModel.build(map, self);
@@ -68,6 +74,22 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         }
         public String getDomainNameServers() {
             return this.domainNameServers;
+        }
+
+        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions setIpv6LeaseTime(String ipv6LeaseTime) {
+            this.ipv6LeaseTime = ipv6LeaseTime;
+            return this;
+        }
+        public String getIpv6LeaseTime() {
+            return this.ipv6LeaseTime;
+        }
+
+        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions setLeaseTime(String leaseTime) {
+            this.leaseTime = leaseTime;
+            return this;
+        }
+        public String getLeaseTime() {
+            return this.leaseTime;
         }
 
     }

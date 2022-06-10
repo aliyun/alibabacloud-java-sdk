@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateFlowLogRequest extends TeaModel {
+    @NameInMap("AggregationInterval")
+    public Integer aggregationInterval;
+
     @NameInMap("Description")
     public String description;
 
@@ -43,6 +46,14 @@ public class CreateFlowLogRequest extends TeaModel {
     public static CreateFlowLogRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFlowLogRequest self = new CreateFlowLogRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateFlowLogRequest setAggregationInterval(Integer aggregationInterval) {
+        this.aggregationInterval = aggregationInterval;
+        return this;
+    }
+    public Integer getAggregationInterval() {
+        return this.aggregationInterval;
     }
 
     public CreateFlowLogRequest setDescription(String description) {

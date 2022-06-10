@@ -8,6 +8,10 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public ListEnhanhcedNatGatewayAvailableZonesResponseBody body;
@@ -23,6 +27,14 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public ListEnhanhcedNatGatewayAvailableZonesResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public ListEnhanhcedNatGatewayAvailableZonesResponse setBody(ListEnhanhcedNatGatewayAvailableZonesResponseBody body) {

@@ -3,16 +3,16 @@ package com.aliyun.vpc20160428.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteExpressConnectResponseBody extends TeaModel {
+public class DeletePublicIpAddressPoolResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteExpressConnectResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteExpressConnectResponseBody self = new DeleteExpressConnectResponseBody();
+    public static DeletePublicIpAddressPoolResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeletePublicIpAddressPoolResponseBody self = new DeletePublicIpAddressPoolResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteExpressConnectResponseBody setRequestId(String requestId) {
+    public DeletePublicIpAddressPoolResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

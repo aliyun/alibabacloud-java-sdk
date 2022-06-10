@@ -65,6 +65,9 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
     }
 
     public static class DescribeBgpPeersResponseBodyBgpPeersBgpPeer extends TeaModel {
+        @NameInMap("AdvertisedRouteCount")
+        public Integer advertisedRouteCount;
+
         @NameInMap("AuthKey")
         public String authKey;
 
@@ -86,6 +89,9 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         @NameInMap("EnableBfd")
         public Boolean enableBfd;
 
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
         @NameInMap("Hold")
         public String hold;
 
@@ -93,7 +99,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         public String ipVersion;
 
         @NameInMap("IsFake")
-        public String isFake;
+        public Boolean isFake;
 
         @NameInMap("Keepalive")
         public String keepalive;
@@ -110,6 +116,9 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         @NameInMap("PeerIpAddress")
         public String peerIpAddress;
 
+        @NameInMap("ReceivedRouteCount")
+        public Integer receivedRouteCount;
+
         @NameInMap("RegionId")
         public String regionId;
 
@@ -125,6 +134,14 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         public static DescribeBgpPeersResponseBodyBgpPeersBgpPeer build(java.util.Map<String, ?> map) throws Exception {
             DescribeBgpPeersResponseBodyBgpPeersBgpPeer self = new DescribeBgpPeersResponseBodyBgpPeersBgpPeer();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setAdvertisedRouteCount(Integer advertisedRouteCount) {
+            this.advertisedRouteCount = advertisedRouteCount;
+            return this;
+        }
+        public Integer getAdvertisedRouteCount() {
+            return this.advertisedRouteCount;
         }
 
         public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setAuthKey(String authKey) {
@@ -183,6 +200,14 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             return this.enableBfd;
         }
 
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
         public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setHold(String hold) {
             this.hold = hold;
             return this;
@@ -199,11 +224,11 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             return this.ipVersion;
         }
 
-        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setIsFake(String isFake) {
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setIsFake(Boolean isFake) {
             this.isFake = isFake;
             return this;
         }
-        public String getIsFake() {
+        public Boolean getIsFake() {
             return this.isFake;
         }
 
@@ -245,6 +270,14 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         }
         public String getPeerIpAddress() {
             return this.peerIpAddress;
+        }
+
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setReceivedRouteCount(Integer receivedRouteCount) {
+            this.receivedRouteCount = receivedRouteCount;
+            return this;
+        }
+        public Integer getReceivedRouteCount() {
+            return this.receivedRouteCount;
         }
 
         public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setRegionId(String regionId) {

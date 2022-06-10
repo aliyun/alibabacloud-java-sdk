@@ -8,6 +8,10 @@ public class UpdateVirtualPhysicalConnectionRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    // ExpectSpec
+    @NameInMap("ExpectSpec")
+    public String expectSpec;
+
     // Vpconn的实例ID
     @NameInMap("InstanceId")
     public String instanceId;
@@ -34,6 +38,14 @@ public class UpdateVirtualPhysicalConnectionRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public UpdateVirtualPhysicalConnectionRequest setExpectSpec(String expectSpec) {
+        this.expectSpec = expectSpec;
+        return this;
+    }
+    public String getExpectSpec() {
+        return this.expectSpec;
     }
 
     public UpdateVirtualPhysicalConnectionRequest setInstanceId(String instanceId) {

@@ -137,6 +137,12 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         @NameInMap("DomainNameServers")
         public String domainNameServers;
 
+        @NameInMap("Ipv6LeaseTime")
+        public String ipv6LeaseTime;
+
+        @NameInMap("LeaseTime")
+        public String leaseTime;
+
         @NameInMap("TFTPServerName")
         public String TFTPServerName;
 
@@ -167,6 +173,22 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
         public String getDomainNameServers() {
             return this.domainNameServers;
+        }
+
+        public GetDhcpOptionsSetResponseBodyDhcpOptions setIpv6LeaseTime(String ipv6LeaseTime) {
+            this.ipv6LeaseTime = ipv6LeaseTime;
+            return this;
+        }
+        public String getIpv6LeaseTime() {
+            return this.ipv6LeaseTime;
+        }
+
+        public GetDhcpOptionsSetResponseBodyDhcpOptions setLeaseTime(String leaseTime) {
+            this.leaseTime = leaseTime;
+            return this;
+        }
+        public String getLeaseTime() {
+            return this.leaseTime;
         }
 
         public GetDhcpOptionsSetResponseBodyDhcpOptions setTFTPServerName(String TFTPServerName) {

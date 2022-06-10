@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
+    @NameInMap("CreateTime")
+    public String createTime;
+
     @NameInMap("Enabled")
     public Boolean enabled;
 
@@ -31,6 +34,14 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     public static GetIpv4GatewayAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetIpv4GatewayAttributeResponseBody self = new GetIpv4GatewayAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetIpv4GatewayAttributeResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
     }
 
     public GetIpv4GatewayAttributeResponseBody setEnabled(Boolean enabled) {

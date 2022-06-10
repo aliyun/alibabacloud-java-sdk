@@ -3,18 +3,21 @@ package com.aliyun.vpc20160428.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteExpressConnectRequest extends TeaModel {
+public class DeletePublicIpAddressPoolRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("Force")
-    public Boolean force;
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PublicIpAddressPoolId")
+    public String publicIpAddressPoolId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -25,15 +28,12 @@ public class DeleteExpressConnectRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RouterInterfaceId")
-    public String routerInterfaceId;
-
-    public static DeleteExpressConnectRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteExpressConnectRequest self = new DeleteExpressConnectRequest();
+    public static DeletePublicIpAddressPoolRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeletePublicIpAddressPoolRequest self = new DeletePublicIpAddressPoolRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteExpressConnectRequest setClientToken(String clientToken) {
+    public DeletePublicIpAddressPoolRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -41,15 +41,15 @@ public class DeleteExpressConnectRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public DeleteExpressConnectRequest setForce(Boolean force) {
-        this.force = force;
+    public DeletePublicIpAddressPoolRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
         return this;
     }
-    public Boolean getForce() {
-        return this.force;
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
-    public DeleteExpressConnectRequest setOwnerAccount(String ownerAccount) {
+    public DeletePublicIpAddressPoolRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -57,7 +57,7 @@ public class DeleteExpressConnectRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DeleteExpressConnectRequest setOwnerId(Long ownerId) {
+    public DeletePublicIpAddressPoolRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -65,7 +65,15 @@ public class DeleteExpressConnectRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DeleteExpressConnectRequest setRegionId(String regionId) {
+    public DeletePublicIpAddressPoolRequest setPublicIpAddressPoolId(String publicIpAddressPoolId) {
+        this.publicIpAddressPoolId = publicIpAddressPoolId;
+        return this;
+    }
+    public String getPublicIpAddressPoolId() {
+        return this.publicIpAddressPoolId;
+    }
+
+    public DeletePublicIpAddressPoolRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -73,7 +81,7 @@ public class DeleteExpressConnectRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DeleteExpressConnectRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DeletePublicIpAddressPoolRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -81,20 +89,12 @@ public class DeleteExpressConnectRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DeleteExpressConnectRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DeletePublicIpAddressPoolRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteExpressConnectRequest setRouterInterfaceId(String routerInterfaceId) {
-        this.routerInterfaceId = routerInterfaceId;
-        return this;
-    }
-    public String getRouterInterfaceId() {
-        return this.routerInterfaceId;
     }
 
 }

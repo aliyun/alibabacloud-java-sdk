@@ -8,7 +8,7 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
     public String code;
 
     @NameInMap("HttpStatusCode")
-    public String httpStatusCode;
+    public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
@@ -32,11 +32,11 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
         return this.code;
     }
 
-    public UpdateVirtualBorderBandwidthResponseBody setHttpStatusCode(String httpStatusCode) {
+    public UpdateVirtualBorderBandwidthResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
-    public String getHttpStatusCode() {
+    public Integer getHttpStatusCode() {
         return this.httpStatusCode;
     }
 
