@@ -46,6 +46,14 @@ public class UpdateTriggerResponseBody extends TeaModel {
     @NameInMap("triggerType")
     public String triggerType;
 
+    // 公网域名地址。在互联网可以通过HTTP协议或者HTTPS协议访问HTTP Trigger。
+    @NameInMap("urlInternet")
+    public String urlInternet;
+
+    // 私网域名地址。在VPC可以通过HTTP协议或者HTTPS协议访问HTTP Trigger。
+    @NameInMap("urlIntranet")
+    public String urlIntranet;
+
     public static UpdateTriggerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateTriggerResponseBody self = new UpdateTriggerResponseBody();
         return TeaModel.build(map, self);
@@ -137,6 +145,22 @@ public class UpdateTriggerResponseBody extends TeaModel {
     }
     public String getTriggerType() {
         return this.triggerType;
+    }
+
+    public UpdateTriggerResponseBody setUrlInternet(String urlInternet) {
+        this.urlInternet = urlInternet;
+        return this;
+    }
+    public String getUrlInternet() {
+        return this.urlInternet;
+    }
+
+    public UpdateTriggerResponseBody setUrlIntranet(String urlIntranet) {
+        this.urlIntranet = urlIntranet;
+        return this;
+    }
+    public String getUrlIntranet() {
+        return this.urlIntranet;
     }
 
 }

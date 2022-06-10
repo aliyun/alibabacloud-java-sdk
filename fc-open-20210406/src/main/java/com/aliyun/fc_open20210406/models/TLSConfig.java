@@ -8,6 +8,10 @@ public class TLSConfig extends TeaModel {
     @NameInMap("cipherSuites")
     public java.util.List<String> cipherSuites;
 
+    // TLS最大版本号
+    @NameInMap("maxVersion")
+    public String maxVersion;
+
     // TLS最小版本号
     @NameInMap("minVersion")
     public String minVersion;
@@ -23,6 +27,14 @@ public class TLSConfig extends TeaModel {
     }
     public java.util.List<String> getCipherSuites() {
         return this.cipherSuites;
+    }
+
+    public TLSConfig setMaxVersion(String maxVersion) {
+        this.maxVersion = maxVersion;
+        return this;
+    }
+    public String getMaxVersion() {
+        return this.maxVersion;
     }
 
     public TLSConfig setMinVersion(String minVersion) {

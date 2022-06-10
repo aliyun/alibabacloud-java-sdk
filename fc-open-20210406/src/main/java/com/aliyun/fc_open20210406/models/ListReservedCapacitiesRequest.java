@@ -4,6 +4,7 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListReservedCapacitiesRequest extends TeaModel {
+    // 一次返回的数量，取值范围[1, 100]
     @NameInMap("limit")
     public String limit;
 

@@ -10,7 +10,7 @@ public class ListTriggersRequest extends TeaModel {
 
     // 用来返回更多结果。第一次查询不需要提供这个参数，后续查询的token从返回结果中获取
     @NameInMap("nextToken")
-    public Integer nextToken;
+    public String nextToken;
 
     // 限定返回的资源名称必须以prefix作为前缀
     @NameInMap("prefix")
@@ -33,11 +33,11 @@ public class ListTriggersRequest extends TeaModel {
         return this.limit;
     }
 
-    public ListTriggersRequest setNextToken(Integer nextToken) {
+    public ListTriggersRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
-    public Integer getNextToken() {
+    public String getNextToken() {
         return this.nextToken;
     }
 

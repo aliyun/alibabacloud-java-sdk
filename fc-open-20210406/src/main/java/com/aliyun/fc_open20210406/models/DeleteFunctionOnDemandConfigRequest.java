@@ -4,6 +4,7 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class DeleteFunctionOnDemandConfigRequest extends TeaModel {
+    // 服务别名或LATEST，不支持版本。
     @NameInMap("qualifier")
     public String qualifier;
 

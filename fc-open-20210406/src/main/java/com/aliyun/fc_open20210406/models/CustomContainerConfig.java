@@ -4,7 +4,7 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class CustomContainerConfig extends TeaModel {
-    // 镜像加速类型，取值Default为开启加速，None为关闭加速，默认关闭
+    // 镜像加速类型，取值Default为开启加速，None为关闭加速，默认开启
     @NameInMap("accelerationType")
     public String accelerationType;
 
@@ -19,6 +19,10 @@ public class CustomContainerConfig extends TeaModel {
     // 容器镜像地址，实例值： registry-vpc.cn-hangzhou.aliyuncs.com/fc-demo/helloworld:v1beta1
     @NameInMap("image")
     public String image;
+
+    // ACR企业版镜像仓库ID，使用ACR企业版镜像时须传入
+    @NameInMap("instanceID")
+    public String instanceID;
 
     public static CustomContainerConfig build(java.util.Map<String, ?> map) throws Exception {
         CustomContainerConfig self = new CustomContainerConfig();
@@ -55,6 +59,14 @@ public class CustomContainerConfig extends TeaModel {
     }
     public String getImage() {
         return this.image;
+    }
+
+    public CustomContainerConfig setInstanceID(String instanceID) {
+        this.instanceID = instanceID;
+        return this;
+    }
+    public String getInstanceID() {
+        return this.instanceID;
     }
 
 }
