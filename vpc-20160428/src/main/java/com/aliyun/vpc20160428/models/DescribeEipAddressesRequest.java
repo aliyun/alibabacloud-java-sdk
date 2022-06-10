@@ -49,6 +49,9 @@ public class DescribeEipAddressesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PublicIpAddressPoolId")
+    public String publicIpAddressPoolId;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -194,6 +197,14 @@ public class DescribeEipAddressesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeEipAddressesRequest setPublicIpAddressPoolId(String publicIpAddressPoolId) {
+        this.publicIpAddressPoolId = publicIpAddressPoolId;
+        return this;
+    }
+    public String getPublicIpAddressPoolId() {
+        return this.publicIpAddressPoolId;
     }
 
     public DescribeEipAddressesRequest setRegionId(String regionId) {

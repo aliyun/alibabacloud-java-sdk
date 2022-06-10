@@ -98,6 +98,9 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("ExpectSpec")
+        public String expectSpec;
+
         @NameInMap("HasReservationData")
         public String hasReservationData;
 
@@ -255,6 +258,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setExpectSpec(String expectSpec) {
+            this.expectSpec = expectSpec;
+            return this;
+        }
+        public String getExpectSpec() {
+            return this.expectSpec;
         }
 
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setHasReservationData(String hasReservationData) {

@@ -19,9 +19,6 @@ public class CreateBgpGroupRequest extends TeaModel {
     @NameInMap("IsFakeAsn")
     public Boolean isFakeAsn;
 
-    @NameInMap("LocalAsn")
-    public Long localAsn;
-
     @NameInMap("Name")
     public String name;
 
@@ -89,14 +86,6 @@ public class CreateBgpGroupRequest extends TeaModel {
     }
     public Boolean getIsFakeAsn() {
         return this.isFakeAsn;
-    }
-
-    public CreateBgpGroupRequest setLocalAsn(Long localAsn) {
-        this.localAsn = localAsn;
-        return this;
-    }
-    public Long getLocalAsn() {
-        return this.localAsn;
     }
 
     public CreateBgpGroupRequest setName(String name) {

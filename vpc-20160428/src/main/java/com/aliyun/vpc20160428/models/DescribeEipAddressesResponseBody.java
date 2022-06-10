@@ -140,6 +140,33 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeEipAddressesResponseBodyEipAddressesEipAddressTagsTag extends TeaModel {
+        public static DescribeEipAddressesResponseBodyEipAddressesEipAddressTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEipAddressesResponseBodyEipAddressesEipAddressTagsTag self = new DescribeEipAddressesResponseBodyEipAddressesEipAddressTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+    }
+
+    public static class DescribeEipAddressesResponseBodyEipAddressesEipAddressTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeEipAddressesResponseBodyEipAddressesEipAddressTagsTag> tag;
+
+        public static DescribeEipAddressesResponseBodyEipAddressesEipAddressTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEipAddressesResponseBodyEipAddressesEipAddressTags self = new DescribeEipAddressesResponseBodyEipAddressesEipAddressTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddressTags setTag(java.util.List<DescribeEipAddressesResponseBodyEipAddressesEipAddressTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeEipAddressesResponseBodyEipAddressesEipAddressTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeEipAddressesResponseBodyEipAddressesEipAddress extends TeaModel {
         @NameInMap("AllocationId")
         public String allocationId;
@@ -171,8 +198,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
-        @NameInMap("Descritpion")
-        public String descritpion;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("EipBandwidth")
         public String eipBandwidth;
@@ -213,6 +240,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @NameInMap("OperationLocks")
         public DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks operationLocks;
 
+        @NameInMap("PublicIpAddressPoolId")
+        public String publicIpAddressPoolId;
+
         @NameInMap("RegionId")
         public String regionId;
 
@@ -245,6 +275,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddressTags tags;
 
         public static DescribeEipAddressesResponseBodyEipAddressesEipAddress build(java.util.Map<String, ?> map) throws Exception {
             DescribeEipAddressesResponseBodyEipAddressesEipAddress self = new DescribeEipAddressesResponseBodyEipAddressesEipAddress();
@@ -331,12 +364,12 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             return this.deletionProtection;
         }
 
-        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setDescritpion(String descritpion) {
-            this.descritpion = descritpion;
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getDescritpion() {
-            return this.descritpion;
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeEipAddressesResponseBodyEipAddressesEipAddress setEipBandwidth(String eipBandwidth) {
@@ -443,6 +476,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             return this.operationLocks;
         }
 
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setPublicIpAddressPoolId(String publicIpAddressPoolId) {
+            this.publicIpAddressPoolId = publicIpAddressPoolId;
+            return this;
+        }
+        public String getPublicIpAddressPoolId() {
+            return this.publicIpAddressPoolId;
+        }
+
         public DescribeEipAddressesResponseBodyEipAddressesEipAddress setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -529,6 +570,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setTags(DescribeEipAddressesResponseBodyEipAddressesEipAddressTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddressTags getTags() {
+            return this.tags;
         }
 
     }

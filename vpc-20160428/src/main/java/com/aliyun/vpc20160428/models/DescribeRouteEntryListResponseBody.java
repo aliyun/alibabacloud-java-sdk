@@ -183,6 +183,9 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
         @NameInMap("IpVersion")
         public String ipVersion;
 
@@ -223,6 +226,14 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         }
         public String getDestinationCidrBlock() {
             return this.destinationCidrBlock;
+        }
+
+        public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntry setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
         }
 
         public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntry setIpVersion(String ipVersion) {

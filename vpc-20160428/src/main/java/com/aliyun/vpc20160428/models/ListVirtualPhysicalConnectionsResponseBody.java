@@ -102,6 +102,9 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("ExpectSpec")
+        public String expectSpec;
+
         @NameInMap("LineOperator")
         public String lineOperator;
 
@@ -244,6 +247,14 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnections setExpectSpec(String expectSpec) {
+            this.expectSpec = expectSpec;
+            return this;
+        }
+        public String getExpectSpec() {
+            return this.expectSpec;
         }
 
         public ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnections setLineOperator(String lineOperator) {

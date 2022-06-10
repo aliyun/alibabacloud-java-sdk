@@ -43,6 +43,9 @@ public class AllocateEipAddressProRequest extends TeaModel {
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    @NameInMap("PublicIpAddressPoolId")
+    public String publicIpAddressPoolId;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -165,6 +168,14 @@ public class AllocateEipAddressProRequest extends TeaModel {
     }
     public String getPricingCycle() {
         return this.pricingCycle;
+    }
+
+    public AllocateEipAddressProRequest setPublicIpAddressPoolId(String publicIpAddressPoolId) {
+        this.publicIpAddressPoolId = publicIpAddressPoolId;
+        return this;
+    }
+    public String getPublicIpAddressPoolId() {
+        return this.publicIpAddressPoolId;
     }
 
     public AllocateEipAddressProRequest setRegionId(String regionId) {

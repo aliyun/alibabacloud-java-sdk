@@ -28,6 +28,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     @NameInMap("DhcpOptionsSetStatus")
     public String dhcpOptionsSetStatus;
 
+    @NameInMap("Ipv4GatewayId")
+    public String ipv4GatewayId;
+
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
 
@@ -54,6 +57,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("SupportIpv4Gateway")
+    public Boolean supportIpv4Gateway;
 
     @NameInMap("UserCidrs")
     public DescribeVpcAttributeResponseBodyUserCidrs userCidrs;
@@ -139,6 +145,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         return this.dhcpOptionsSetStatus;
     }
 
+    public DescribeVpcAttributeResponseBody setIpv4GatewayId(String ipv4GatewayId) {
+        this.ipv4GatewayId = ipv4GatewayId;
+        return this;
+    }
+    public String getIpv4GatewayId() {
+        return this.ipv4GatewayId;
+    }
+
     public DescribeVpcAttributeResponseBody setIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         return this;
@@ -209,6 +223,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeVpcAttributeResponseBody setSupportIpv4Gateway(Boolean supportIpv4Gateway) {
+        this.supportIpv4Gateway = supportIpv4Gateway;
+        return this;
+    }
+    public Boolean getSupportIpv4Gateway() {
+        return this.supportIpv4Gateway;
     }
 
     public DescribeVpcAttributeResponseBody setUserCidrs(DescribeVpcAttributeResponseBodyUserCidrs userCidrs) {

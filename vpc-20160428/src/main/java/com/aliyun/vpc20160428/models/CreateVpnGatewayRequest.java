@@ -25,6 +25,9 @@ public class CreateVpnGatewayRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("NetworkType")
+    public String networkType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -114,6 +117,14 @@ public class CreateVpnGatewayRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateVpnGatewayRequest setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
     }
 
     public CreateVpnGatewayRequest setOwnerAccount(String ownerAccount) {

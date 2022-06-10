@@ -8,6 +8,10 @@ public class ModifyCommonBandwidthPackageAttributeResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public ModifyCommonBandwidthPackageAttributeResponseBody body;
@@ -23,6 +27,14 @@ public class ModifyCommonBandwidthPackageAttributeResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public ModifyCommonBandwidthPackageAttributeResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public ModifyCommonBandwidthPackageAttributeResponse setBody(ModifyCommonBandwidthPackageAttributeResponseBody body) {

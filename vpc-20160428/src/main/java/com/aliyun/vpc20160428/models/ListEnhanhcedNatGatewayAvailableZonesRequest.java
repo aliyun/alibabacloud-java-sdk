@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListEnhanhcedNatGatewayAvailableZonesRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -22,6 +25,14 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends TeaModel {
     public static ListEnhanhcedNatGatewayAvailableZonesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEnhanhcedNatGatewayAvailableZonesRequest self = new ListEnhanhcedNatGatewayAvailableZonesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListEnhanhcedNatGatewayAvailableZonesRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public ListEnhanhcedNatGatewayAvailableZonesRequest setOwnerAccount(String ownerAccount) {

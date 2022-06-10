@@ -8,6 +8,10 @@ public class CreateIPv6TranslatorEntryResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public CreateIPv6TranslatorEntryResponseBody body;
@@ -23,6 +27,14 @@ public class CreateIPv6TranslatorEntryResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public CreateIPv6TranslatorEntryResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public CreateIPv6TranslatorEntryResponse setBody(CreateIPv6TranslatorEntryResponseBody body) {
