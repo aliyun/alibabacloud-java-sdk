@@ -3,7 +3,7 @@ package com.aliyun.arms20190808.models;
 
 import com.aliyun.tea.*;
 
-public class GetASMIntegrationStateResponse extends TeaModel {
+public class ListDashboardsByNameResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetASMIntegrationStateResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetASMIntegrationStateResponseBody body;
+    public ListDashboardsByNameResponseBody body;
 
-    public static GetASMIntegrationStateResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetASMIntegrationStateResponse self = new GetASMIntegrationStateResponse();
+    public static ListDashboardsByNameResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListDashboardsByNameResponse self = new ListDashboardsByNameResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetASMIntegrationStateResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListDashboardsByNameResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetASMIntegrationStateResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetASMIntegrationStateResponse setStatusCode(Integer statusCode) {
+    public ListDashboardsByNameResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetASMIntegrationStateResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetASMIntegrationStateResponse setBody(GetASMIntegrationStateResponseBody body) {
+    public ListDashboardsByNameResponse setBody(ListDashboardsByNameResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetASMIntegrationStateResponseBody getBody() {
+    public ListDashboardsByNameResponseBody getBody() {
         return this.body;
     }
 

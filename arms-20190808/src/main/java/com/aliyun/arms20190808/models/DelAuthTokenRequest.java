@@ -3,19 +3,19 @@ package com.aliyun.arms20190808.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteASMIntegrationRequest extends TeaModel {
+public class DelAuthTokenRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    public static DeleteASMIntegrationRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteASMIntegrationRequest self = new DeleteASMIntegrationRequest();
+    public static DelAuthTokenRequest build(java.util.Map<String, ?> map) throws Exception {
+        DelAuthTokenRequest self = new DelAuthTokenRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteASMIntegrationRequest setClusterId(String clusterId) {
+    public DelAuthTokenRequest setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
@@ -23,7 +23,7 @@ public class DeleteASMIntegrationRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public DeleteASMIntegrationRequest setRegionId(String regionId) {
+    public DelAuthTokenRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

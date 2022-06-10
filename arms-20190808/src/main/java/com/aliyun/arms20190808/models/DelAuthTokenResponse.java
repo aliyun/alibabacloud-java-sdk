@@ -3,7 +3,7 @@ package com.aliyun.arms20190808.models;
 
 import com.aliyun.tea.*;
 
-public class ExploreTraceResponse extends TeaModel {
+public class DelAuthTokenResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ExploreTraceResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ExploreTraceResponseBody body;
+    public DelAuthTokenResponseBody body;
 
-    public static ExploreTraceResponse build(java.util.Map<String, ?> map) throws Exception {
-        ExploreTraceResponse self = new ExploreTraceResponse();
+    public static DelAuthTokenResponse build(java.util.Map<String, ?> map) throws Exception {
+        DelAuthTokenResponse self = new DelAuthTokenResponse();
         return TeaModel.build(map, self);
     }
 
-    public ExploreTraceResponse setHeaders(java.util.Map<String, String> headers) {
+    public DelAuthTokenResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ExploreTraceResponse extends TeaModel {
         return this.headers;
     }
 
-    public ExploreTraceResponse setStatusCode(Integer statusCode) {
+    public DelAuthTokenResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ExploreTraceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ExploreTraceResponse setBody(ExploreTraceResponseBody body) {
+    public DelAuthTokenResponse setBody(DelAuthTokenResponseBody body) {
         this.body = body;
         return this;
     }
-    public ExploreTraceResponseBody getBody() {
+    public DelAuthTokenResponseBody getBody() {
         return this.body;
     }
 
