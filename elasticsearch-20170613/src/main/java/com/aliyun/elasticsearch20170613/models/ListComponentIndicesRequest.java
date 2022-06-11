@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListComponentIndicesRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("name")
     public String name;
 
@@ -16,6 +19,14 @@ public class ListComponentIndicesRequest extends TeaModel {
     public static ListComponentIndicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListComponentIndicesRequest self = new ListComponentIndicesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListComponentIndicesRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public ListComponentIndicesRequest setName(String name) {

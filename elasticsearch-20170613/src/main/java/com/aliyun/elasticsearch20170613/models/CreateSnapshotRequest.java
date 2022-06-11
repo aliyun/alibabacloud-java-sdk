@@ -7,6 +7,9 @@ public class CreateSnapshotRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("body")
+    public String body;
+
     public static CreateSnapshotRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSnapshotRequest self = new CreateSnapshotRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class CreateSnapshotRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateSnapshotRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

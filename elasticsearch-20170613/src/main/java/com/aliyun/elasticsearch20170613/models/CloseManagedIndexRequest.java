@@ -7,6 +7,9 @@ public class CloseManagedIndexRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("body")
+    public String body;
+
     public static CloseManagedIndexRequest build(java.util.Map<String, ?> map) throws Exception {
         CloseManagedIndexRequest self = new CloseManagedIndexRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class CloseManagedIndexRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CloseManagedIndexRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

@@ -7,6 +7,9 @@ public class ValidateSlrPermissionRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("rolename")
     public String rolename;
 
@@ -21,6 +24,14 @@ public class ValidateSlrPermissionRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ValidateSlrPermissionRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public ValidateSlrPermissionRequest setRolename(String rolename) {

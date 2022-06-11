@@ -7,6 +7,9 @@ public class ListLogstashLogRequest extends TeaModel {
     @NameInMap("beginTime")
     public Long beginTime;
 
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("endTime")
     public Long endTime;
 
@@ -33,6 +36,14 @@ public class ListLogstashLogRequest extends TeaModel {
     }
     public Long getBeginTime() {
         return this.beginTime;
+    }
+
+    public ListLogstashLogRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public ListLogstashLogRequest setEndTime(Long endTime) {

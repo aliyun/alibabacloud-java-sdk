@@ -7,6 +7,9 @@ public class OpenDiagnosisRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("lang")
     public String lang;
 
@@ -21,6 +24,14 @@ public class OpenDiagnosisRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public OpenDiagnosisRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public OpenDiagnosisRequest setLang(String lang) {

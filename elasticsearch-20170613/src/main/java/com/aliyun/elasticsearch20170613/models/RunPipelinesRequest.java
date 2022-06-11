@@ -7,6 +7,9 @@ public class RunPipelinesRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("body")
+    public String body;
+
     public static RunPipelinesRequest build(java.util.Map<String, ?> map) throws Exception {
         RunPipelinesRequest self = new RunPipelinesRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class RunPipelinesRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public RunPipelinesRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

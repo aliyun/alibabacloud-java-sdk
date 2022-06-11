@@ -7,6 +7,9 @@ public class ListSearchLogRequest extends TeaModel {
     @NameInMap("beginTime")
     public Long beginTime;
 
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("endTime")
     public Long endTime;
 
@@ -33,6 +36,14 @@ public class ListSearchLogRequest extends TeaModel {
     }
     public Long getBeginTime() {
         return this.beginTime;
+    }
+
+    public ListSearchLogRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public ListSearchLogRequest setEndTime(Long endTime) {

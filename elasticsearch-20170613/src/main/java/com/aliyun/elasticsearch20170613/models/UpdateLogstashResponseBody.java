@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLogstashResponseBody extends TeaModel {
     @NameInMap("RequestId")
-    public Logstash requestId;
+    public String requestId;
 
     @NameInMap("Result")
     public Boolean result;
@@ -15,11 +15,11 @@ public class UpdateLogstashResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateLogstashResponseBody setRequestId(Logstash requestId) {
+    public UpdateLogstashResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
-    public Logstash getRequestId() {
+    public String getRequestId() {
         return this.requestId;
     }
 

@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class GetSuggestShrinkableNodesRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("count")
     public Integer count;
 
@@ -16,6 +19,14 @@ public class GetSuggestShrinkableNodesRequest extends TeaModel {
     public static GetSuggestShrinkableNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSuggestShrinkableNodesRequest self = new GetSuggestShrinkableNodesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetSuggestShrinkableNodesRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public GetSuggestShrinkableNodesRequest setCount(Integer count) {

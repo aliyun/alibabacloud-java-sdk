@@ -4,11 +4,11 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("clientToken")
     public String clientToken;
-
-    @NameInMap("ignoreStatus")
-    public Boolean ignoreStatus;
 
     @NameInMap("orderActionType")
     public String orderActionType;
@@ -18,20 +18,20 @@ public class UpdateInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateInstanceRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
+    }
+
     public UpdateInstanceRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    public UpdateInstanceRequest setIgnoreStatus(Boolean ignoreStatus) {
-        this.ignoreStatus = ignoreStatus;
-        return this;
-    }
-    public Boolean getIgnoreStatus() {
-        return this.ignoreStatus;
     }
 
     public UpdateInstanceRequest setOrderActionType(String orderActionType) {

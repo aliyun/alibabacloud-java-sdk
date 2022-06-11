@@ -31,58 +31,6 @@ public class UpdateInstanceResponseBody extends TeaModel {
         return this.result;
     }
 
-    public static class UpdateInstanceResponseBodyResultDictList extends TeaModel {
-        @NameInMap("fileSize")
-        public Long fileSize;
-
-        @NameInMap("name")
-        public String name;
-
-        @NameInMap("sourceType")
-        public String sourceType;
-
-        @NameInMap("type")
-        public String type;
-
-        public static UpdateInstanceResponseBodyResultDictList build(java.util.Map<String, ?> map) throws Exception {
-            UpdateInstanceResponseBodyResultDictList self = new UpdateInstanceResponseBodyResultDictList();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateInstanceResponseBodyResultDictList setFileSize(Long fileSize) {
-            this.fileSize = fileSize;
-            return this;
-        }
-        public Long getFileSize() {
-            return this.fileSize;
-        }
-
-        public UpdateInstanceResponseBodyResultDictList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public UpdateInstanceResponseBodyResultDictList setSourceType(String sourceType) {
-            this.sourceType = sourceType;
-            return this;
-        }
-        public String getSourceType() {
-            return this.sourceType;
-        }
-
-        public UpdateInstanceResponseBodyResultDictList setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
     public static class UpdateInstanceResponseBodyResultKibanaConfiguration extends TeaModel {
         @NameInMap("amount")
         public Integer amount;
@@ -187,58 +135,6 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     }
 
-    public static class UpdateInstanceResponseBodyResultNetworkConfig extends TeaModel {
-        @NameInMap("type")
-        public String type;
-
-        @NameInMap("vpcId")
-        public String vpcId;
-
-        @NameInMap("vsArea")
-        public String vsArea;
-
-        @NameInMap("vswitchId")
-        public String vswitchId;
-
-        public static UpdateInstanceResponseBodyResultNetworkConfig build(java.util.Map<String, ?> map) throws Exception {
-            UpdateInstanceResponseBodyResultNetworkConfig self = new UpdateInstanceResponseBodyResultNetworkConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateInstanceResponseBodyResultNetworkConfig setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public UpdateInstanceResponseBodyResultNetworkConfig setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public UpdateInstanceResponseBodyResultNetworkConfig setVsArea(String vsArea) {
-            this.vsArea = vsArea;
-            return this;
-        }
-        public String getVsArea() {
-            return this.vsArea;
-        }
-
-        public UpdateInstanceResponseBodyResultNetworkConfig setVswitchId(String vswitchId) {
-            this.vswitchId = vswitchId;
-            return this;
-        }
-        public String getVswitchId() {
-            return this.vswitchId;
-        }
-
-    }
-
     public static class UpdateInstanceResponseBodyResultNodeSpec extends TeaModel {
         @NameInMap("disk")
         public Integer disk;
@@ -280,67 +176,12 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     }
 
-    public static class UpdateInstanceResponseBodyResultSynonymsDicts extends TeaModel {
-        @NameInMap("fileSize")
-        public Long fileSize;
-
-        @NameInMap("name")
-        public String name;
-
-        @NameInMap("sourceType")
-        public String sourceType;
-
-        @NameInMap("type")
-        public String type;
-
-        public static UpdateInstanceResponseBodyResultSynonymsDicts build(java.util.Map<String, ?> map) throws Exception {
-            UpdateInstanceResponseBodyResultSynonymsDicts self = new UpdateInstanceResponseBodyResultSynonymsDicts();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateInstanceResponseBodyResultSynonymsDicts setFileSize(Long fileSize) {
-            this.fileSize = fileSize;
-            return this;
-        }
-        public Long getFileSize() {
-            return this.fileSize;
-        }
-
-        public UpdateInstanceResponseBodyResultSynonymsDicts setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public UpdateInstanceResponseBodyResultSynonymsDicts setSourceType(String sourceType) {
-            this.sourceType = sourceType;
-            return this;
-        }
-        public String getSourceType() {
-            return this.sourceType;
-        }
-
-        public UpdateInstanceResponseBodyResultSynonymsDicts setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
     public static class UpdateInstanceResponseBodyResult extends TeaModel {
         @NameInMap("createdAt")
         public String createdAt;
 
         @NameInMap("description")
         public String description;
-
-        @NameInMap("dictList")
-        public java.util.List<UpdateInstanceResponseBodyResultDictList> dictList;
 
         @NameInMap("domain")
         public String domain;
@@ -354,17 +195,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
         @NameInMap("kibanaConfiguration")
         public UpdateInstanceResponseBodyResultKibanaConfiguration kibanaConfiguration;
 
-        @NameInMap("kibanaDomain")
-        public String kibanaDomain;
-
-        @NameInMap("kibanaPort")
-        public Integer kibanaPort;
-
         @NameInMap("masterConfiguration")
         public UpdateInstanceResponseBodyResultMasterConfiguration masterConfiguration;
-
-        @NameInMap("networkConfig")
-        public UpdateInstanceResponseBodyResultNetworkConfig networkConfig;
 
         @NameInMap("nodeAmount")
         public Integer nodeAmount;
@@ -375,20 +207,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
         @NameInMap("paymentType")
         public String paymentType;
 
-        @NameInMap("publicDomain")
-        public String publicDomain;
-
-        @NameInMap("publicPort")
-        public Integer publicPort;
-
         @NameInMap("status")
         public String status;
-
-        @NameInMap("synonymsDicts")
-        public java.util.List<UpdateInstanceResponseBodyResultSynonymsDicts> synonymsDicts;
-
-        @NameInMap("updatedAt")
-        public String updatedAt;
 
         public static UpdateInstanceResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             UpdateInstanceResponseBodyResult self = new UpdateInstanceResponseBodyResult();
@@ -409,14 +229,6 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public UpdateInstanceResponseBodyResult setDictList(java.util.List<UpdateInstanceResponseBodyResultDictList> dictList) {
-            this.dictList = dictList;
-            return this;
-        }
-        public java.util.List<UpdateInstanceResponseBodyResultDictList> getDictList() {
-            return this.dictList;
         }
 
         public UpdateInstanceResponseBodyResult setDomain(String domain) {
@@ -451,36 +263,12 @@ public class UpdateInstanceResponseBody extends TeaModel {
             return this.kibanaConfiguration;
         }
 
-        public UpdateInstanceResponseBodyResult setKibanaDomain(String kibanaDomain) {
-            this.kibanaDomain = kibanaDomain;
-            return this;
-        }
-        public String getKibanaDomain() {
-            return this.kibanaDomain;
-        }
-
-        public UpdateInstanceResponseBodyResult setKibanaPort(Integer kibanaPort) {
-            this.kibanaPort = kibanaPort;
-            return this;
-        }
-        public Integer getKibanaPort() {
-            return this.kibanaPort;
-        }
-
         public UpdateInstanceResponseBodyResult setMasterConfiguration(UpdateInstanceResponseBodyResultMasterConfiguration masterConfiguration) {
             this.masterConfiguration = masterConfiguration;
             return this;
         }
         public UpdateInstanceResponseBodyResultMasterConfiguration getMasterConfiguration() {
             return this.masterConfiguration;
-        }
-
-        public UpdateInstanceResponseBodyResult setNetworkConfig(UpdateInstanceResponseBodyResultNetworkConfig networkConfig) {
-            this.networkConfig = networkConfig;
-            return this;
-        }
-        public UpdateInstanceResponseBodyResultNetworkConfig getNetworkConfig() {
-            return this.networkConfig;
         }
 
         public UpdateInstanceResponseBodyResult setNodeAmount(Integer nodeAmount) {
@@ -507,44 +295,12 @@ public class UpdateInstanceResponseBody extends TeaModel {
             return this.paymentType;
         }
 
-        public UpdateInstanceResponseBodyResult setPublicDomain(String publicDomain) {
-            this.publicDomain = publicDomain;
-            return this;
-        }
-        public String getPublicDomain() {
-            return this.publicDomain;
-        }
-
-        public UpdateInstanceResponseBodyResult setPublicPort(Integer publicPort) {
-            this.publicPort = publicPort;
-            return this;
-        }
-        public Integer getPublicPort() {
-            return this.publicPort;
-        }
-
         public UpdateInstanceResponseBodyResult setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public UpdateInstanceResponseBodyResult setSynonymsDicts(java.util.List<UpdateInstanceResponseBodyResultSynonymsDicts> synonymsDicts) {
-            this.synonymsDicts = synonymsDicts;
-            return this;
-        }
-        public java.util.List<UpdateInstanceResponseBodyResultSynonymsDicts> getSynonymsDicts() {
-            return this.synonymsDicts;
-        }
-
-        public UpdateInstanceResponseBodyResult setUpdatedAt(String updatedAt) {
-            this.updatedAt = updatedAt;
-            return this;
-        }
-        public String getUpdatedAt() {
-            return this.updatedAt;
         }
 
     }

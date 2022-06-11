@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateKibanaWhiteIpsRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("clientToken")
     public String clientToken;
 
@@ -13,6 +16,14 @@ public class UpdateKibanaWhiteIpsRequest extends TeaModel {
     public static UpdateKibanaWhiteIpsRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateKibanaWhiteIpsRequest self = new UpdateKibanaWhiteIpsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateKibanaWhiteIpsRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public UpdateKibanaWhiteIpsRequest setClientToken(String clientToken) {

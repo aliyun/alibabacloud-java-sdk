@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListAckClustersRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("page")
     public Integer page;
 
@@ -16,6 +19,14 @@ public class ListAckClustersRequest extends TeaModel {
     public static ListAckClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAckClustersRequest self = new ListAckClustersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListAckClustersRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public ListAckClustersRequest setPage(Integer page) {

@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class RestartInstanceRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("clientToken")
     public String clientToken;
 
@@ -13,6 +16,14 @@ public class RestartInstanceRequest extends TeaModel {
     public static RestartInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RestartInstanceRequest self = new RestartInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RestartInstanceRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public RestartInstanceRequest setClientToken(String clientToken) {

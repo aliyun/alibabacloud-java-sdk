@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDeprecatedTemplatesRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("name")
     public String name;
 
@@ -16,6 +19,14 @@ public class ListDeprecatedTemplatesRequest extends TeaModel {
     public static ListDeprecatedTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeprecatedTemplatesRequest self = new ListDeprecatedTemplatesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDeprecatedTemplatesRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public ListDeprecatedTemplatesRequest setName(String name) {

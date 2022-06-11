@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdatePipelinesRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("clientToken")
     public String clientToken;
 
@@ -13,6 +16,14 @@ public class UpdatePipelinesRequest extends TeaModel {
     public static UpdatePipelinesRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePipelinesRequest self = new UpdatePipelinesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdatePipelinesRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public UpdatePipelinesRequest setClientToken(String clientToken) {

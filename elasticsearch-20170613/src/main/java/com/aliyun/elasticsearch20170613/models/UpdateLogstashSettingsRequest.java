@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLogstashSettingsRequest extends TeaModel {
     @NameInMap("body")
-    public java.util.Map<String, ?> body;
+    public String body;
 
     @NameInMap("clientToken")
     public String clientToken;
@@ -15,11 +15,11 @@ public class UpdateLogstashSettingsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateLogstashSettingsRequest setBody(java.util.Map<String, ?> body) {
+    public UpdateLogstashSettingsRequest setBody(String body) {
         this.body = body;
         return this;
     }
-    public java.util.Map<String, ?> getBody() {
+    public String getBody() {
         return this.body;
     }
 

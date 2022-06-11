@@ -7,6 +7,9 @@ public class ListDictsRequest extends TeaModel {
     @NameInMap("analyzerType")
     public String analyzerType;
 
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("name")
     public String name;
 
@@ -21,6 +24,14 @@ public class ListDictsRequest extends TeaModel {
     }
     public String getAnalyzerType() {
         return this.analyzerType;
+    }
+
+    public ListDictsRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public ListDictsRequest setName(String name) {

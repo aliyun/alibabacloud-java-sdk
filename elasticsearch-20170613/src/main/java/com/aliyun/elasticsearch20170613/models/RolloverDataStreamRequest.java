@@ -7,6 +7,9 @@ public class RolloverDataStreamRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("body")
+    public String body;
+
     public static RolloverDataStreamRequest build(java.util.Map<String, ?> map) throws Exception {
         RolloverDataStreamRequest self = new RolloverDataStreamRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class RolloverDataStreamRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public RolloverDataStreamRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }
