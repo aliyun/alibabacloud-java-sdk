@@ -7,6 +7,9 @@ public class ModifyInstanceMaintainTimeRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("body")
+    public String body;
+
     public static ModifyInstanceMaintainTimeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceMaintainTimeRequest self = new ModifyInstanceMaintainTimeRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class ModifyInstanceMaintainTimeRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyInstanceMaintainTimeRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

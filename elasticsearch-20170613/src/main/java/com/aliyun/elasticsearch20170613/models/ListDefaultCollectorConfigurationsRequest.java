@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDefaultCollectorConfigurationsRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("resType")
     public String resType;
 
@@ -16,6 +19,14 @@ public class ListDefaultCollectorConfigurationsRequest extends TeaModel {
     public static ListDefaultCollectorConfigurationsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDefaultCollectorConfigurationsRequest self = new ListDefaultCollectorConfigurationsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDefaultCollectorConfigurationsRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public ListDefaultCollectorConfigurationsRequest setResType(String resType) {

@@ -16,6 +16,9 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("TagKeys")
     public String tagKeys;
 
+    @NameInMap("body")
+    public String body;
+
     public static UntagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         UntagResourcesRequest self = new UntagResourcesRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class UntagResourcesRequest extends TeaModel {
     }
     public String getTagKeys() {
         return this.tagKeys;
+    }
+
+    public UntagResourcesRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

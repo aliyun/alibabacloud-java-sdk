@@ -7,6 +7,9 @@ public class ListAlternativeSnapshotReposRequest extends TeaModel {
     @NameInMap("alreadySetItems")
     public Boolean alreadySetItems;
 
+    @NameInMap("body")
+    public String body;
+
     public static ListAlternativeSnapshotReposRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAlternativeSnapshotReposRequest self = new ListAlternativeSnapshotReposRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class ListAlternativeSnapshotReposRequest extends TeaModel {
     }
     public Boolean getAlreadySetItems() {
         return this.alreadySetItems;
+    }
+
+    public ListAlternativeSnapshotReposRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

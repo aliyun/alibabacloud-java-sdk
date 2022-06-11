@@ -7,6 +7,9 @@ public class CreateDataStreamRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("body")
+    public String body;
+
     public static CreateDataStreamRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataStreamRequest self = new CreateDataStreamRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class CreateDataStreamRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateDataStreamRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

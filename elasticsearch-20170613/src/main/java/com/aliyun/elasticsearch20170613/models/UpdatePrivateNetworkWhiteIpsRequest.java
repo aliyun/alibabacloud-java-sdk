@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdatePrivateNetworkWhiteIpsRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("clientToken")
     public String clientToken;
 
@@ -13,6 +16,14 @@ public class UpdatePrivateNetworkWhiteIpsRequest extends TeaModel {
     public static UpdatePrivateNetworkWhiteIpsRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePrivateNetworkWhiteIpsRequest self = new UpdatePrivateNetworkWhiteIpsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdatePrivateNetworkWhiteIpsRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public UpdatePrivateNetworkWhiteIpsRequest setClientToken(String clientToken) {

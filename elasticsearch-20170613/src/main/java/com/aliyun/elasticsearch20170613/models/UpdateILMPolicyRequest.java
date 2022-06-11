@@ -7,6 +7,9 @@ public class UpdateILMPolicyRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("body")
+    public String body;
+
     public static UpdateILMPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateILMPolicyRequest self = new UpdateILMPolicyRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class UpdateILMPolicyRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateILMPolicyRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

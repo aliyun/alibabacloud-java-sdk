@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DeleteLogstashRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("clientToken")
     public String clientToken;
 
@@ -13,6 +16,14 @@ public class DeleteLogstashRequest extends TeaModel {
     public static DeleteLogstashRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLogstashRequest self = new DeleteLogstashRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteLogstashRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public DeleteLogstashRequest setClientToken(String clientToken) {

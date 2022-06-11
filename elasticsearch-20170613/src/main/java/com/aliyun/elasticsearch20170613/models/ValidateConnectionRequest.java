@@ -7,6 +7,9 @@ public class ValidateConnectionRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("body")
+    public String body;
+
     public static ValidateConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         ValidateConnectionRequest self = new ValidateConnectionRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class ValidateConnectionRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ValidateConnectionRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

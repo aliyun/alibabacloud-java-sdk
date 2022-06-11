@@ -7,6 +7,9 @@ public class DeleteDataStreamRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("body")
+    public String body;
+
     public static DeleteDataStreamRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDataStreamRequest self = new DeleteDataStreamRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DeleteDataStreamRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public DeleteDataStreamRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

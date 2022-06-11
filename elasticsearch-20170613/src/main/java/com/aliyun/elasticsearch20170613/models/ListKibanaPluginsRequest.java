@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListKibanaPluginsRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("page")
     public String page;
 
@@ -13,6 +16,14 @@ public class ListKibanaPluginsRequest extends TeaModel {
     public static ListKibanaPluginsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListKibanaPluginsRequest self = new ListKibanaPluginsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListKibanaPluginsRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public ListKibanaPluginsRequest setPage(String page) {

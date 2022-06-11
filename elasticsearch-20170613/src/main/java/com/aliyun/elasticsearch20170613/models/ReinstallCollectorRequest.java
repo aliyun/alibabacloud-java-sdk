@@ -7,6 +7,9 @@ public class ReinstallCollectorRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("body")
+    public String body;
+
     public static ReinstallCollectorRequest build(java.util.Map<String, ?> map) throws Exception {
         ReinstallCollectorRequest self = new ReinstallCollectorRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class ReinstallCollectorRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ReinstallCollectorRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

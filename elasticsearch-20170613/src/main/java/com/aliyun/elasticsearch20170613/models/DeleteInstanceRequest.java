@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("clientToken")
     public String clientToken;
 
@@ -13,6 +16,14 @@ public class DeleteInstanceRequest extends TeaModel {
     public static DeleteInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteInstanceRequest self = new DeleteInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteInstanceRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public DeleteInstanceRequest setClientToken(String clientToken) {

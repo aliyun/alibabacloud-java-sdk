@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDataStreamsRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("isManaged")
     public Boolean isManaged;
 
@@ -13,6 +16,14 @@ public class ListDataStreamsRequest extends TeaModel {
     public static ListDataStreamsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDataStreamsRequest self = new ListDataStreamsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDataStreamsRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public ListDataStreamsRequest setIsManaged(Boolean isManaged) {

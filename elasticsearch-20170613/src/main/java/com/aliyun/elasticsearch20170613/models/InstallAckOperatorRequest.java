@@ -7,6 +7,9 @@ public class InstallAckOperatorRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("body")
+    public String body;
+
     public static InstallAckOperatorRequest build(java.util.Map<String, ?> map) throws Exception {
         InstallAckOperatorRequest self = new InstallAckOperatorRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class InstallAckOperatorRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public InstallAckOperatorRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

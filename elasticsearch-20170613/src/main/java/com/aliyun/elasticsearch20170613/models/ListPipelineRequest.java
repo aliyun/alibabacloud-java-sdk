@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListPipelineRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("page")
     public Integer page;
 
@@ -16,6 +19,14 @@ public class ListPipelineRequest extends TeaModel {
     public static ListPipelineRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPipelineRequest self = new ListPipelineRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPipelineRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public ListPipelineRequest setPage(Integer page) {

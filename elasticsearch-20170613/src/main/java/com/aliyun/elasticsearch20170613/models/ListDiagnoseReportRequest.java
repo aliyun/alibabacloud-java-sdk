@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDiagnoseReportRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("detail")
     public Boolean detail;
 
@@ -28,6 +31,14 @@ public class ListDiagnoseReportRequest extends TeaModel {
     public static ListDiagnoseReportRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDiagnoseReportRequest self = new ListDiagnoseReportRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDiagnoseReportRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public ListDiagnoseReportRequest setDetail(Boolean detail) {

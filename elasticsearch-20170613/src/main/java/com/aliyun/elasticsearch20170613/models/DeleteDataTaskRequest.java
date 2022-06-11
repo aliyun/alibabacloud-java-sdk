@@ -7,6 +7,9 @@ public class DeleteDataTaskRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("taskId")
     public String taskId;
 
@@ -21,6 +24,14 @@ public class DeleteDataTaskRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public DeleteDataTaskRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public DeleteDataTaskRequest setTaskId(String taskId) {

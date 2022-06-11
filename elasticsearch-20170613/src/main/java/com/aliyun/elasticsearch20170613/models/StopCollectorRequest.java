@@ -7,6 +7,9 @@ public class StopCollectorRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("body")
+    public String body;
+
     public static StopCollectorRequest build(java.util.Map<String, ?> map) throws Exception {
         StopCollectorRequest self = new StopCollectorRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class StopCollectorRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public StopCollectorRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

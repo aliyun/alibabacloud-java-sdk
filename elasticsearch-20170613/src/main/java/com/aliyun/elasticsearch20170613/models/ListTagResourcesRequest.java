@@ -22,6 +22,9 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("Tags")
     public String tags;
 
+    @NameInMap("body")
+    public String body;
+
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class ListTagResourcesRequest extends TeaModel {
     }
     public String getTags() {
         return this.tags;
+    }
+
+    public ListTagResourcesRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

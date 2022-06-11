@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListLogstashPluginsRequest extends TeaModel {
+    @NameInMap("body")
+    public String body;
+
     @NameInMap("name")
     public String name;
 
@@ -19,6 +22,14 @@ public class ListLogstashPluginsRequest extends TeaModel {
     public static ListLogstashPluginsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListLogstashPluginsRequest self = new ListLogstashPluginsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListLogstashPluginsRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public ListLogstashPluginsRequest setName(String name) {
