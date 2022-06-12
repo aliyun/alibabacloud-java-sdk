@@ -172,41 +172,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.huichengTestGrayFifthWithOptions(request, runtime);
     }
 
-    public HuichengTestGrayFourthResponse huichengTestGrayFourthWithOptions(HuichengTestGrayFourthRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        HuichengTestGrayFourthShrinkRequest request = new HuichengTestGrayFourthShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.home))) {
-            request.homeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.home), "Home", "json");
-        }
-
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.homeShrink)) {
-            query.put("Home", request.homeShrink);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "HuichengTestGrayFourth"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new HuichengTestGrayFourthResponse());
-    }
-
-    public HuichengTestGrayFourthResponse huichengTestGrayFourth(HuichengTestGrayFourthRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.huichengTestGrayFourthWithOptions(request, runtime);
-    }
-
     public HuichengTestGrayNineResponse huichengTestGrayNineWithOptions(HuichengTestGrayNineRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         HuichengTestGrayNineShrinkRequest request = new HuichengTestGrayNineShrinkRequest();
@@ -438,8 +403,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.huichengTestResourceOwnerIdWithOptions(runtime);
     }
 
-    public HuichengetResponse huichengetWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
+    public HuichengetResponse huichengetWithOptions(HuichengetRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.add)) {
+            query.put("Add", request.add);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.address)) {
+            query.put("Address", request.address);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.apple)) {
+            query.put("Apple", request.apple);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newName)) {
+            query.put("NewName", request.newName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tea)) {
+            query.put("Tea", request.tea);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.two)) {
+            query.put("Two", request.two);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "Huichenget"),
             new TeaPair("version", "2020-12-30"),
@@ -454,9 +447,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new HuichengetResponse());
     }
 
-    public HuichengetResponse huichenget() throws Exception {
+    public HuichengetResponse huichenget(HuichengetRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.huichengetWithOptions(runtime);
+        return this.huichengetWithOptions(request, runtime);
     }
 
     public HuichengetestResponse huichengetestWithOptions(RuntimeOptions runtime) throws Exception {
