@@ -7,6 +7,9 @@ public class HuichengetResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Context")
+    public String context;
+
     @NameInMap("InstanceId4")
     public String instanceId4;
 
@@ -27,6 +30,14 @@ public class HuichengetResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public HuichengetResponseBody setContext(String context) {
+        this.context = context;
+        return this;
+    }
+    public String getContext() {
+        return this.context;
     }
 
     public HuichengetResponseBody setInstanceId4(String instanceId4) {
