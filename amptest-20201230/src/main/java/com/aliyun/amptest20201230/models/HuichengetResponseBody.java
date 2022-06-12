@@ -4,6 +4,9 @@ package com.aliyun.amptest20201230.models;
 import com.aliyun.tea.*;
 
 public class HuichengetResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("InstanceId4")
     public String instanceId4;
 
@@ -16,6 +19,14 @@ public class HuichengetResponseBody extends TeaModel {
     public static HuichengetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         HuichengetResponseBody self = new HuichengetResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public HuichengetResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public HuichengetResponseBody setInstanceId4(String instanceId4) {
