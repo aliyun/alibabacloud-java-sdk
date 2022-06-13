@@ -74,6 +74,9 @@ public class ListCardsResponseBody extends TeaModel {
         @NameInMap("ActivatedTime")
         public String activatedTime;
 
+        @NameInMap("BusinessStatus")
+        public String businessStatus;
+
         @NameInMap("Description")
         public String description;
 
@@ -134,6 +137,14 @@ public class ListCardsResponseBody extends TeaModel {
         }
         public String getActivatedTime() {
             return this.activatedTime;
+        }
+
+        public ListCardsResponseBodyCards setBusinessStatus(String businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
         public ListCardsResponseBodyCards setDescription(String description) {

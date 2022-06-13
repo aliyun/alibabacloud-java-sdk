@@ -10,6 +10,9 @@ public class ListCardsRequest extends TeaModel {
     @NameInMap("DestinationType")
     public String destinationType;
 
+    @NameInMap("Iccid")
+    public String iccid;
+
     @NameInMap("Iccids")
     public java.util.List<String> iccids;
 
@@ -59,6 +62,14 @@ public class ListCardsRequest extends TeaModel {
     }
     public String getDestinationType() {
         return this.destinationType;
+    }
+
+    public ListCardsRequest setIccid(String iccid) {
+        this.iccid = iccid;
+        return this;
+    }
+    public String getIccid() {
+        return this.iccid;
     }
 
     public ListCardsRequest setIccids(java.util.List<String> iccids) {
