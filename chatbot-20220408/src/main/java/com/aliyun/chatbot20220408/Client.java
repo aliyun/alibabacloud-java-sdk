@@ -1951,6 +1951,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RobotEnv", request.robotEnv);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
             query.put("Tags", request.tags);
         }
