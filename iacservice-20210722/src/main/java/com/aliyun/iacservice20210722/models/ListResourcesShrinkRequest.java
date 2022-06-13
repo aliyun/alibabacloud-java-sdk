@@ -4,6 +4,9 @@ package com.aliyun.iacservice20210722.models;
 import com.aliyun.tea.*;
 
 public class ListResourcesShrinkRequest extends TeaModel {
+    @NameInMap("dataType")
+    public String dataType;
+
     @NameInMap("filter")
     public String filterShrink;
 
@@ -25,6 +28,14 @@ public class ListResourcesShrinkRequest extends TeaModel {
     public static ListResourcesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourcesShrinkRequest self = new ListResourcesShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListResourcesShrinkRequest setDataType(String dataType) {
+        this.dataType = dataType;
+        return this;
+    }
+    public String getDataType() {
+        return this.dataType;
     }
 
     public ListResourcesShrinkRequest setFilterShrink(String filterShrink) {

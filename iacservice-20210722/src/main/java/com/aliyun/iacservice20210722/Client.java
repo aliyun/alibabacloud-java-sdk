@@ -312,6 +312,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataType)) {
+            query.put("dataType", request.dataType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
             query.put("filter", request.filterShrink);
         }
@@ -374,7 +378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ListTasksShrinkRequest request = new ListTasksShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.taskIds)) {
-            request.taskIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskIds, "taskIds", "json");
+            request.taskIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.taskIds, "taskIds", "simple");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();

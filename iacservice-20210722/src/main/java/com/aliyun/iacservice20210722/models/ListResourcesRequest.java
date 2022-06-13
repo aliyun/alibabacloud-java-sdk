@@ -4,6 +4,9 @@ package com.aliyun.iacservice20210722.models;
 import com.aliyun.tea.*;
 
 public class ListResourcesRequest extends TeaModel {
+    @NameInMap("dataType")
+    public String dataType;
+
     @NameInMap("filter")
     public java.util.Map<String, ?> filter;
 
@@ -25,6 +28,14 @@ public class ListResourcesRequest extends TeaModel {
     public static ListResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourcesRequest self = new ListResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListResourcesRequest setDataType(String dataType) {
+        this.dataType = dataType;
+        return this;
+    }
+    public String getDataType() {
+        return this.dataType;
     }
 
     public ListResourcesRequest setFilter(java.util.Map<String, ?> filter) {
