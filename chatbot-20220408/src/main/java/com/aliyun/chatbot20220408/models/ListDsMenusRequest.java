@@ -16,6 +16,11 @@ public class ListDsMenusRequest extends TeaModel {
     @NameInMap("RobotEnv")
     public Integer robotEnv;
 
+    // 业务来源标识：
+    // 1-集团内部aliyun域名；2-外部使用4service域名（默认）
+    @NameInMap("Source")
+    public Integer source;
+
     // 功能标识，为空表示所有；支持的tag有：Dialog / Intent / Entity / Var / TaskCenter；传入多个时通过英文逗号分隔
     @NameInMap("Tags")
     public String tags;
@@ -47,6 +52,14 @@ public class ListDsMenusRequest extends TeaModel {
     }
     public Integer getRobotEnv() {
         return this.robotEnv;
+    }
+
+    public ListDsMenusRequest setSource(Integer source) {
+        this.source = source;
+        return this;
+    }
+    public Integer getSource() {
+        return this.source;
     }
 
     public ListDsMenusRequest setTags(String tags) {
