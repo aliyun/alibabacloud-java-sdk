@@ -79,6 +79,9 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("SendChannel")
     public String sendChannel;
 
+    @NameInMap("Status")
+    public Integer status;
+
     @NameInMap("TaskAttemptInterval")
     public Integer taskAttemptInterval;
 
@@ -303,6 +306,14 @@ public class CreateJobRequest extends TeaModel {
     }
     public String getSendChannel() {
         return this.sendChannel;
+    }
+
+    public CreateJobRequest setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
     }
 
     public CreateJobRequest setTaskAttemptInterval(Integer taskAttemptInterval) {
