@@ -231,16 +231,71 @@ public class ScreenChestCTResponseBody extends TeaModel {
 
     }
 
+    public static class ScreenChestCTResponseBodyDataCACSDetections extends TeaModel {
+        @NameInMap("CalciumId")
+        public Long calciumId;
+
+        @NameInMap("CalciumScore")
+        public Float calciumScore;
+
+        @NameInMap("CalciumVolume")
+        public Float calciumVolume;
+
+        public static ScreenChestCTResponseBodyDataCACSDetections build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataCACSDetections self = new ScreenChestCTResponseBodyDataCACSDetections();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataCACSDetections setCalciumId(Long calciumId) {
+            this.calciumId = calciumId;
+            return this;
+        }
+        public Long getCalciumId() {
+            return this.calciumId;
+        }
+
+        public ScreenChestCTResponseBodyDataCACSDetections setCalciumScore(Float calciumScore) {
+            this.calciumScore = calciumScore;
+            return this;
+        }
+        public Float getCalciumScore() {
+            return this.calciumScore;
+        }
+
+        public ScreenChestCTResponseBodyDataCACSDetections setCalciumVolume(Float calciumVolume) {
+            this.calciumVolume = calciumVolume;
+            return this;
+        }
+        public Float getCalciumVolume() {
+            return this.calciumVolume;
+        }
+
+    }
+
     public static class ScreenChestCTResponseBodyDataCACS extends TeaModel {
+        @NameInMap("Detections")
+        public java.util.List<ScreenChestCTResponseBodyDataCACSDetections> detections;
+
         @NameInMap("ResultUrl")
         public String resultUrl;
 
         @NameInMap("Score")
         public String score;
 
+        @NameInMap("VolumeScore")
+        public String volumeScore;
+
         public static ScreenChestCTResponseBodyDataCACS build(java.util.Map<String, ?> map) throws Exception {
             ScreenChestCTResponseBodyDataCACS self = new ScreenChestCTResponseBodyDataCACS();
             return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataCACS setDetections(java.util.List<ScreenChestCTResponseBodyDataCACSDetections> detections) {
+            this.detections = detections;
+            return this;
+        }
+        public java.util.List<ScreenChestCTResponseBodyDataCACSDetections> getDetections() {
+            return this.detections;
         }
 
         public ScreenChestCTResponseBodyDataCACS setResultUrl(String resultUrl) {
@@ -257,6 +312,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public String getScore() {
             return this.score;
+        }
+
+        public ScreenChestCTResponseBodyDataCACS setVolumeScore(String volumeScore) {
+            this.volumeScore = volumeScore;
+            return this;
+        }
+        public String getVolumeScore() {
+            return this.volumeScore;
         }
 
     }
@@ -320,6 +383,170 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public String getOtherProbability() {
             return this.otherProbability;
+        }
+
+    }
+
+    public static class ScreenChestCTResponseBodyDataDetectLymphLesions extends TeaModel {
+        @NameInMap("Boxes")
+        public java.util.List<Float> boxes;
+
+        @NameInMap("Diametermm")
+        public java.util.List<Float> diametermm;
+
+        @NameInMap("KeySlice")
+        public Long keySlice;
+
+        @NameInMap("Recist")
+        public java.util.List<java.util.List<Float>> recist;
+
+        @NameInMap("Score")
+        public Float score;
+
+        public static ScreenChestCTResponseBodyDataDetectLymphLesions build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataDetectLymphLesions self = new ScreenChestCTResponseBodyDataDetectLymphLesions();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLymphLesions setBoxes(java.util.List<Float> boxes) {
+            this.boxes = boxes;
+            return this;
+        }
+        public java.util.List<Float> getBoxes() {
+            return this.boxes;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLymphLesions setDiametermm(java.util.List<Float> diametermm) {
+            this.diametermm = diametermm;
+            return this;
+        }
+        public java.util.List<Float> getDiametermm() {
+            return this.diametermm;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLymphLesions setKeySlice(Long keySlice) {
+            this.keySlice = keySlice;
+            return this;
+        }
+        public Long getKeySlice() {
+            return this.keySlice;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLymphLesions setRecist(java.util.List<java.util.List<Float>> recist) {
+            this.recist = recist;
+            return this;
+        }
+        public java.util.List<java.util.List<Float>> getRecist() {
+            return this.recist;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLymphLesions setScore(Float score) {
+            this.score = score;
+            return this;
+        }
+        public Float getScore() {
+            return this.score;
+        }
+
+    }
+
+    public static class ScreenChestCTResponseBodyDataDetectLymph extends TeaModel {
+        @NameInMap("Lesions")
+        public java.util.List<ScreenChestCTResponseBodyDataDetectLymphLesions> lesions;
+
+        public static ScreenChestCTResponseBodyDataDetectLymph build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataDetectLymph self = new ScreenChestCTResponseBodyDataDetectLymph();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLymph setLesions(java.util.List<ScreenChestCTResponseBodyDataDetectLymphLesions> lesions) {
+            this.lesions = lesions;
+            return this;
+        }
+        public java.util.List<ScreenChestCTResponseBodyDataDetectLymphLesions> getLesions() {
+            return this.lesions;
+        }
+
+    }
+
+    public static class ScreenChestCTResponseBodyDataDetectPdacLesion extends TeaModel {
+        @NameInMap("Mask")
+        public String mask;
+
+        @NameInMap("NonPdacVol")
+        public String nonPdacVol;
+
+        @NameInMap("PancVol")
+        public String pancVol;
+
+        @NameInMap("PdacVol")
+        public String pdacVol;
+
+        @NameInMap("Possibilities")
+        public java.util.List<String> possibilities;
+
+        public static ScreenChestCTResponseBodyDataDetectPdacLesion build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataDetectPdacLesion self = new ScreenChestCTResponseBodyDataDetectPdacLesion();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataDetectPdacLesion setMask(String mask) {
+            this.mask = mask;
+            return this;
+        }
+        public String getMask() {
+            return this.mask;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectPdacLesion setNonPdacVol(String nonPdacVol) {
+            this.nonPdacVol = nonPdacVol;
+            return this;
+        }
+        public String getNonPdacVol() {
+            return this.nonPdacVol;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectPdacLesion setPancVol(String pancVol) {
+            this.pancVol = pancVol;
+            return this;
+        }
+        public String getPancVol() {
+            return this.pancVol;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectPdacLesion setPdacVol(String pdacVol) {
+            this.pdacVol = pdacVol;
+            return this;
+        }
+        public String getPdacVol() {
+            return this.pdacVol;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectPdacLesion setPossibilities(java.util.List<String> possibilities) {
+            this.possibilities = possibilities;
+            return this;
+        }
+        public java.util.List<String> getPossibilities() {
+            return this.possibilities;
+        }
+
+    }
+
+    public static class ScreenChestCTResponseBodyDataDetectPdac extends TeaModel {
+        @NameInMap("Lesion")
+        public ScreenChestCTResponseBodyDataDetectPdacLesion lesion;
+
+        public static ScreenChestCTResponseBodyDataDetectPdac build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataDetectPdac self = new ScreenChestCTResponseBodyDataDetectPdac();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataDetectPdac setLesion(ScreenChestCTResponseBodyDataDetectPdacLesion lesion) {
+            this.lesion = lesion;
+            return this;
+        }
+        public ScreenChestCTResponseBodyDataDetectPdacLesion getLesion() {
+            return this.lesion;
         }
 
     }
@@ -715,6 +942,12 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("Covid")
         public ScreenChestCTResponseBodyDataCovid covid;
 
+        @NameInMap("DetectLymph")
+        public ScreenChestCTResponseBodyDataDetectLymph detectLymph;
+
+        @NameInMap("DetectPdac")
+        public ScreenChestCTResponseBodyDataDetectPdac detectPdac;
+
         @NameInMap("DetectRibFracture")
         public ScreenChestCTResponseBodyDataDetectRibFracture detectRibFracture;
 
@@ -754,6 +987,22 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public ScreenChestCTResponseBodyDataCovid getCovid() {
             return this.covid;
+        }
+
+        public ScreenChestCTResponseBodyData setDetectLymph(ScreenChestCTResponseBodyDataDetectLymph detectLymph) {
+            this.detectLymph = detectLymph;
+            return this;
+        }
+        public ScreenChestCTResponseBodyDataDetectLymph getDetectLymph() {
+            return this.detectLymph;
+        }
+
+        public ScreenChestCTResponseBodyData setDetectPdac(ScreenChestCTResponseBodyDataDetectPdac detectPdac) {
+            this.detectPdac = detectPdac;
+            return this;
+        }
+        public ScreenChestCTResponseBodyDataDetectPdac getDetectPdac() {
+            return this.detectPdac;
         }
 
         public ScreenChestCTResponseBodyData setDetectRibFracture(ScreenChestCTResponseBodyDataDetectRibFracture detectRibFracture) {
