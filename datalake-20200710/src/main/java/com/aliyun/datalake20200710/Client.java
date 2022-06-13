@@ -3015,6 +3015,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UnLockResponse());
     }
 
+    public UpdateBlueprintInstanceResponse updateBlueprintInstance(UpdateBlueprintInstanceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateBlueprintInstanceWithOptions(request, headers, runtime);
+    }
+
+    public UpdateBlueprintInstanceResponse updateBlueprintInstanceWithOptions(UpdateBlueprintInstanceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.executeCapacity)) {
+            body.put("ExecuteCapacity", request.executeCapacity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executeConcurrency)) {
+            body.put("ExecuteConcurrency", request.executeConcurrency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executeParameters)) {
+            body.put("ExecuteParameters", request.executeParameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executeType)) {
+            body.put("ExecuteType", request.executeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateBlueprintInstance"),
+            new TeaPair("version", "2020-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/webapi/blueprintinstance/update"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateBlueprintInstanceResponse());
+    }
+
     public UpdateCatalogSettingsResponse updateCatalogSettings(UpdateCatalogSettingsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
