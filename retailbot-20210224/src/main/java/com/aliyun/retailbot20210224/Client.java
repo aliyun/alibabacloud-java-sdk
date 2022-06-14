@@ -901,6 +901,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.enableSceneWithOptions(request, runtime);
     }
 
+    public GenerateTokenResponse generateTokenWithOptions(GenerateTokenRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateToken"),
+            new TeaPair("version", "2021-02-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateTokenResponse());
+    }
+
+    public GenerateTokenResponse generateToken(GenerateTokenRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.generateTokenWithOptions(request, runtime);
+    }
+
     public GetActiveGroupResponse getActiveGroupWithOptions(GetActiveGroupRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetActiveGroupShrinkRequest request = new GetActiveGroupShrinkRequest();
