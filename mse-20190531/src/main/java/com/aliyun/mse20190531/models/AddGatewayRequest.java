@@ -7,6 +7,18 @@ public class AddGatewayRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // 是否开启硬件加速
+    @NameInMap("EnableHardwareAcceleration")
+    public Boolean enableHardwareAcceleration;
+
+    // 是否开启SLS日志投递
+    @NameInMap("EnableSls")
+    public Boolean enableSls;
+
+    // 是否开启xtrace
+    @NameInMap("EnableXtrace")
+    public Boolean enableXtrace;
+
     // 是否企业安全组类型
     @NameInMap("EnterpriseSecurityGroup")
     public Boolean enterpriseSecurityGroup;
@@ -47,6 +59,10 @@ public class AddGatewayRequest extends TeaModel {
     @NameInMap("Vpc")
     public String vpc;
 
+    // xtrace采样率，取值[0,100]
+    @NameInMap("XtraceRatio")
+    public String xtraceRatio;
+
     public static AddGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         AddGatewayRequest self = new AddGatewayRequest();
         return TeaModel.build(map, self);
@@ -58,6 +74,30 @@ public class AddGatewayRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public AddGatewayRequest setEnableHardwareAcceleration(Boolean enableHardwareAcceleration) {
+        this.enableHardwareAcceleration = enableHardwareAcceleration;
+        return this;
+    }
+    public Boolean getEnableHardwareAcceleration() {
+        return this.enableHardwareAcceleration;
+    }
+
+    public AddGatewayRequest setEnableSls(Boolean enableSls) {
+        this.enableSls = enableSls;
+        return this;
+    }
+    public Boolean getEnableSls() {
+        return this.enableSls;
+    }
+
+    public AddGatewayRequest setEnableXtrace(Boolean enableXtrace) {
+        this.enableXtrace = enableXtrace;
+        return this;
+    }
+    public Boolean getEnableXtrace() {
+        return this.enableXtrace;
     }
 
     public AddGatewayRequest setEnterpriseSecurityGroup(Boolean enterpriseSecurityGroup) {
@@ -138,6 +178,14 @@ public class AddGatewayRequest extends TeaModel {
     }
     public String getVpc() {
         return this.vpc;
+    }
+
+    public AddGatewayRequest setXtraceRatio(String xtraceRatio) {
+        this.xtraceRatio = xtraceRatio;
+        return this;
+    }
+    public String getXtraceRatio() {
+        return this.xtraceRatio;
     }
 
 }

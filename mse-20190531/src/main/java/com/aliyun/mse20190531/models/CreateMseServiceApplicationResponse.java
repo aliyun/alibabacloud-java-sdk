@@ -3,7 +3,7 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class ListClusterDetailFeatureResponse extends TeaModel {
+public class CreateMseServiceApplicationResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListClusterDetailFeatureResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListClusterDetailFeatureResponseBody body;
+    public CreateMseServiceApplicationResponseBody body;
 
-    public static ListClusterDetailFeatureResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListClusterDetailFeatureResponse self = new ListClusterDetailFeatureResponse();
+    public static CreateMseServiceApplicationResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateMseServiceApplicationResponse self = new CreateMseServiceApplicationResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListClusterDetailFeatureResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateMseServiceApplicationResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListClusterDetailFeatureResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListClusterDetailFeatureResponse setStatusCode(Integer statusCode) {
+    public CreateMseServiceApplicationResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListClusterDetailFeatureResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListClusterDetailFeatureResponse setBody(ListClusterDetailFeatureResponseBody body) {
+    public CreateMseServiceApplicationResponse setBody(CreateMseServiceApplicationResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListClusterDetailFeatureResponseBody getBody() {
+    public CreateMseServiceApplicationResponseBody getBody() {
         return this.body;
     }
 

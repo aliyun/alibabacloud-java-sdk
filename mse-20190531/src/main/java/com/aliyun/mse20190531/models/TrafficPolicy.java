@@ -130,6 +130,10 @@ public class TrafficPolicy extends TeaModel {
         @NameInMap("LoadbalancerType")
         public String loadbalancerType;
 
+        // 预热时间(单位/s)
+        @NameInMap("WarmupDuration")
+        public Long warmupDuration;
+
         public static TrafficPolicyLoadBalancerSettings build(java.util.Map<String, ?> map) throws Exception {
             TrafficPolicyLoadBalancerSettings self = new TrafficPolicyLoadBalancerSettings();
             return TeaModel.build(map, self);
@@ -149,6 +153,14 @@ public class TrafficPolicy extends TeaModel {
         }
         public String getLoadbalancerType() {
             return this.loadbalancerType;
+        }
+
+        public TrafficPolicyLoadBalancerSettings setWarmupDuration(Long warmupDuration) {
+            this.warmupDuration = warmupDuration;
+            return this;
+        }
+        public Long getWarmupDuration() {
+            return this.warmupDuration;
         }
 
     }

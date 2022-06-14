@@ -193,6 +193,9 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        @NameInMap("StatusDesc")
+        public String statusDesc;
+
         @NameInMap("Vpc")
         public String vpc;
 
@@ -328,6 +331,14 @@ public class GetGatewayResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public GetGatewayResponseBodyData setStatusDesc(String statusDesc) {
+            this.statusDesc = statusDesc;
+            return this;
+        }
+        public String getStatusDesc() {
+            return this.statusDesc;
         }
 
         public GetGatewayResponseBodyData setVpc(String vpc) {

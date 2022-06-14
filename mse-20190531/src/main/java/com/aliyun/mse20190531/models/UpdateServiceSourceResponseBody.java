@@ -3,12 +3,12 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class RestartSeataServerResponseBody extends TeaModel {
+public class UpdateServiceSourceResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
-    public String data;
+    public Long data;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -23,12 +23,12 @@ public class RestartSeataServerResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static RestartSeataServerResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        RestartSeataServerResponseBody self = new RestartSeataServerResponseBody();
+    public static UpdateServiceSourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateServiceSourceResponseBody self = new UpdateServiceSourceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public RestartSeataServerResponseBody setCode(Integer code) {
+    public UpdateServiceSourceResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -36,15 +36,15 @@ public class RestartSeataServerResponseBody extends TeaModel {
         return this.code;
     }
 
-    public RestartSeataServerResponseBody setData(String data) {
+    public UpdateServiceSourceResponseBody setData(Long data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public Long getData() {
         return this.data;
     }
 
-    public RestartSeataServerResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public UpdateServiceSourceResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -52,7 +52,7 @@ public class RestartSeataServerResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public RestartSeataServerResponseBody setMessage(String message) {
+    public UpdateServiceSourceResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -60,7 +60,7 @@ public class RestartSeataServerResponseBody extends TeaModel {
         return this.message;
     }
 
-    public RestartSeataServerResponseBody setRequestId(String requestId) {
+    public UpdateServiceSourceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -68,7 +68,7 @@ public class RestartSeataServerResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public RestartSeataServerResponseBody setSuccess(Boolean success) {
+    public UpdateServiceSourceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

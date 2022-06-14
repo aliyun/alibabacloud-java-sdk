@@ -334,6 +334,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        @NameInMap("GatewayVersion")
+        public String gatewayVersion;
+
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
@@ -369,6 +372,9 @@ public class ListGatewayResponseBody extends TeaModel {
 
         @NameInMap("Replica")
         public Integer replica;
+
+        @NameInMap("RollBack")
+        public Boolean rollBack;
 
         @NameInMap("Slb")
         public java.util.List<ListGatewayResponseBodyDataResultSlb> slb;
@@ -461,6 +467,14 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public String getGatewayUniqueId() {
             return this.gatewayUniqueId;
+        }
+
+        public ListGatewayResponseBodyDataResult setGatewayVersion(String gatewayVersion) {
+            this.gatewayVersion = gatewayVersion;
+            return this;
+        }
+        public String getGatewayVersion() {
+            return this.gatewayVersion;
         }
 
         public ListGatewayResponseBodyDataResult setGmtCreate(String gmtCreate) {
@@ -557,6 +571,14 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public Integer getReplica() {
             return this.replica;
+        }
+
+        public ListGatewayResponseBodyDataResult setRollBack(Boolean rollBack) {
+            this.rollBack = rollBack;
+            return this;
+        }
+        public Boolean getRollBack() {
+            return this.rollBack;
         }
 
         public ListGatewayResponseBodyDataResult setSlb(java.util.List<ListGatewayResponseBodyDataResultSlb> slb) {
