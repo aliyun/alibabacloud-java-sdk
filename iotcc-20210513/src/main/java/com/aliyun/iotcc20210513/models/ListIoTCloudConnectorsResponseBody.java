@@ -104,6 +104,9 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
         @NameInMap("RateLimit")
         public Long rateLimit;
 
+        @NameInMap("Type")
+        public String type;
+
         @NameInMap("VSwitchList")
         public java.util.List<String> vSwitchList;
 
@@ -220,6 +223,14 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
         }
         public Long getRateLimit() {
             return this.rateLimit;
+        }
+
+        public ListIoTCloudConnectorsResponseBodyIoTCloudConnectors setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public ListIoTCloudConnectorsResponseBodyIoTCloudConnectors setVSwitchList(java.util.List<String> vSwitchList) {

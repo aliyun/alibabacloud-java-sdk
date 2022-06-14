@@ -168,6 +168,9 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Type")
+        public String type;
+
         public static ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroups build(java.util.Map<String, ?> map) throws Exception {
             ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroups self = new ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroups();
             return TeaModel.build(map, self);
@@ -219,6 +222,14 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroups setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

@@ -34,6 +34,9 @@ public class CreateGroupAuthorizationRuleRequest extends TeaModel {
     @NameInMap("SourceCidrs")
     public java.util.List<String> sourceCidrs;
 
+    @NameInMap("Type")
+    public String type;
+
     public static CreateGroupAuthorizationRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupAuthorizationRuleRequest self = new CreateGroupAuthorizationRuleRequest();
         return TeaModel.build(map, self);
@@ -117,6 +120,14 @@ public class CreateGroupAuthorizationRuleRequest extends TeaModel {
     }
     public java.util.List<String> getSourceCidrs() {
         return this.sourceCidrs;
+    }
+
+    public CreateGroupAuthorizationRuleRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

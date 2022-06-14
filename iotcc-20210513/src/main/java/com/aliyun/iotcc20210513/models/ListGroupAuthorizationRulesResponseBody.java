@@ -92,6 +92,9 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
         @NameInMap("SourceCidrs")
         public java.util.List<String> sourceCidrs;
 
+        @NameInMap("Type")
+        public String type;
+
         public static ListGroupAuthorizationRulesResponseBodyGroupAuthorizationRules build(java.util.Map<String, ?> map) throws Exception {
             ListGroupAuthorizationRulesResponseBodyGroupAuthorizationRules self = new ListGroupAuthorizationRulesResponseBodyGroupAuthorizationRules();
             return TeaModel.build(map, self);
@@ -167,6 +170,14 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
         }
         public java.util.List<String> getSourceCidrs() {
             return this.sourceCidrs;
+        }
+
+        public ListGroupAuthorizationRulesResponseBodyGroupAuthorizationRules setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

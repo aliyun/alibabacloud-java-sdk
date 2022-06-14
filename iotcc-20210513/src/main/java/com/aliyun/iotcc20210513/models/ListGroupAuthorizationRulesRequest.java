@@ -34,6 +34,9 @@ public class ListGroupAuthorizationRulesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Type")
+    public String type;
+
     public static ListGroupAuthorizationRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGroupAuthorizationRulesRequest self = new ListGroupAuthorizationRulesRequest();
         return TeaModel.build(map, self);
@@ -117,6 +120,14 @@ public class ListGroupAuthorizationRulesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListGroupAuthorizationRulesRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

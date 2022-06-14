@@ -22,6 +22,9 @@ public class ListIoTCloudConnectorGroupsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Type")
+    public String type;
+
     public static ListIoTCloudConnectorGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListIoTCloudConnectorGroupsRequest self = new ListIoTCloudConnectorGroupsRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class ListIoTCloudConnectorGroupsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListIoTCloudConnectorGroupsRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }
