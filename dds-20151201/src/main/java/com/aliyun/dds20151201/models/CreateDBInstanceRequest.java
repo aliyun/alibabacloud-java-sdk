@@ -91,6 +91,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("StorageEngine")
     public String storageEngine;
 
+    @NameInMap("StorageType")
+    public String storageType;
+
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
@@ -335,6 +338,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getStorageEngine() {
         return this.storageEngine;
+    }
+
+    public CreateDBInstanceRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public CreateDBInstanceRequest setVSwitchId(String vSwitchId) {
