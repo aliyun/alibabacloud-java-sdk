@@ -1,3 +1,6 @@
+2022-06-14 Version: 2.0.8
+- Add some new features.
+
 2022-06-13 Version: 2.0.7
 - Add some new features.
 

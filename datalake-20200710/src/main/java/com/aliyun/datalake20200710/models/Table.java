@@ -56,6 +56,10 @@ public class Table extends TeaModel {
     @NameInMap("Sd")
     public StorageDescriptor sd;
 
+    // TableId
+    @NameInMap("TableId")
+    public String tableId;
+
     // TableName
     @NameInMap("TableName")
     public String tableName;
@@ -63,6 +67,10 @@ public class Table extends TeaModel {
     // TableType
     @NameInMap("TableType")
     public String tableType;
+
+    // TableVersion
+    @NameInMap("TableVersion")
+    public TableVersion tableVersion;
 
     // Temporary
     @NameInMap("Temporary")
@@ -197,6 +205,14 @@ public class Table extends TeaModel {
         return this.sd;
     }
 
+    public Table setTableId(String tableId) {
+        this.tableId = tableId;
+        return this;
+    }
+    public String getTableId() {
+        return this.tableId;
+    }
+
     public Table setTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -211,6 +227,14 @@ public class Table extends TeaModel {
     }
     public String getTableType() {
         return this.tableType;
+    }
+
+    public Table setTableVersion(TableVersion tableVersion) {
+        this.tableVersion = tableVersion;
+        return this;
+    }
+    public TableVersion getTableVersion() {
+        return this.tableVersion;
     }
 
     public Table setTemporary(Boolean temporary) {
