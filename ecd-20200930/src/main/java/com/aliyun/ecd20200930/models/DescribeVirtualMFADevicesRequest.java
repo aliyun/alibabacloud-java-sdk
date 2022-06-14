@@ -4,9 +4,6 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeVirtualMFADevicesRequest extends TeaModel {
-    @NameInMap("DirectoryId")
-    public String directoryId;
-
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
@@ -25,14 +22,6 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
     public static DescribeVirtualMFADevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVirtualMFADevicesRequest self = new DescribeVirtualMFADevicesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVirtualMFADevicesRequest setDirectoryId(String directoryId) {
-        this.directoryId = directoryId;
-        return this;
-    }
-    public String getDirectoryId() {
-        return this.directoryId;
     }
 
     public DescribeVirtualMFADevicesRequest setEndUserId(java.util.List<String> endUserId) {

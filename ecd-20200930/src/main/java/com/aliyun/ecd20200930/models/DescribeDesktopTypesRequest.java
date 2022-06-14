@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopTypesRequest extends TeaModel {
+    @NameInMap("AppliedScope")
+    public String appliedScope;
+
     @NameInMap("CpuCount")
     public Integer cpuCount;
 
@@ -31,6 +34,14 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     public static DescribeDesktopTypesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDesktopTypesRequest self = new DescribeDesktopTypesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDesktopTypesRequest setAppliedScope(String appliedScope) {
+        this.appliedScope = appliedScope;
+        return this;
+    }
+    public String getAppliedScope() {
+        return this.appliedScope;
     }
 
     public DescribeDesktopTypesRequest setCpuCount(Integer cpuCount) {

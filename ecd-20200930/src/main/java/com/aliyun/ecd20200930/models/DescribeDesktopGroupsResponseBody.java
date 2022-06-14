@@ -70,12 +70,6 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
 
-        @NameInMap("DirectoryId")
-        public String directoryId;
-
-        @NameInMap("DirectoryType")
-        public String directoryType;
-
         @NameInMap("EndUserCount")
         public Integer endUserCount;
 
@@ -144,6 +138,12 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
 
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
+
+        @NameInMap("VolumeEncryptionEnabled")
+        public Boolean volumeEncryptionEnabled;
+
+        @NameInMap("VolumeEncryptionKey")
+        public String volumeEncryptionKey;
 
         public static DescribeDesktopGroupsResponseBodyDesktopGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeDesktopGroupsResponseBodyDesktopGroups self = new DescribeDesktopGroupsResponseBodyDesktopGroups();
@@ -220,22 +220,6 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public String getDesktopGroupName() {
             return this.desktopGroupName;
-        }
-
-        public DescribeDesktopGroupsResponseBodyDesktopGroups setDirectoryId(String directoryId) {
-            this.directoryId = directoryId;
-            return this;
-        }
-        public String getDirectoryId() {
-            return this.directoryId;
-        }
-
-        public DescribeDesktopGroupsResponseBodyDesktopGroups setDirectoryType(String directoryType) {
-            this.directoryType = directoryType;
-            return this;
-        }
-        public String getDirectoryType() {
-            return this.directoryType;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setEndUserCount(Integer endUserCount) {
@@ -420,6 +404,22 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public Integer getSystemDiskSize() {
             return this.systemDiskSize;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+            this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+            return this;
+        }
+        public Boolean getVolumeEncryptionEnabled() {
+            return this.volumeEncryptionEnabled;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setVolumeEncryptionKey(String volumeEncryptionKey) {
+            this.volumeEncryptionKey = volumeEncryptionKey;
+            return this;
+        }
+        public String getVolumeEncryptionKey() {
+            return this.volumeEncryptionKey;
         }
 
     }

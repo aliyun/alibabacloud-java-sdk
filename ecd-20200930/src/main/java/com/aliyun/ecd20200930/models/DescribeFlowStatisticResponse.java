@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyNetworkPackageResponse extends TeaModel {
+public class DescribeFlowStatisticResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ModifyNetworkPackageResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ModifyNetworkPackageResponseBody body;
+    public DescribeFlowStatisticResponseBody body;
 
-    public static ModifyNetworkPackageResponse build(java.util.Map<String, ?> map) throws Exception {
-        ModifyNetworkPackageResponse self = new ModifyNetworkPackageResponse();
+    public static DescribeFlowStatisticResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeFlowStatisticResponse self = new DescribeFlowStatisticResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyNetworkPackageResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeFlowStatisticResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ModifyNetworkPackageResponse extends TeaModel {
         return this.headers;
     }
 
-    public ModifyNetworkPackageResponse setStatusCode(Integer statusCode) {
+    public DescribeFlowStatisticResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ModifyNetworkPackageResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ModifyNetworkPackageResponse setBody(ModifyNetworkPackageResponseBody body) {
+    public DescribeFlowStatisticResponse setBody(DescribeFlowStatisticResponseBody body) {
         this.body = body;
         return this;
     }
-    public ModifyNetworkPackageResponseBody getBody() {
+    public DescribeFlowStatisticResponseBody getBody() {
         return this.body;
     }
 

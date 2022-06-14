@@ -82,6 +82,12 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("ScaleStrategyId")
     public String scaleStrategyId;
 
+    @NameInMap("VolumeEncryptionEnabled")
+    public Boolean volumeEncryptionEnabled;
+
+    @NameInMap("VolumeEncryptionKey")
+    public String volumeEncryptionKey;
+
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -296,6 +302,22 @@ public class CreateDesktopGroupRequest extends TeaModel {
     }
     public String getScaleStrategyId() {
         return this.scaleStrategyId;
+    }
+
+    public CreateDesktopGroupRequest setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+        this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+        return this;
+    }
+    public Boolean getVolumeEncryptionEnabled() {
+        return this.volumeEncryptionEnabled;
+    }
+
+    public CreateDesktopGroupRequest setVolumeEncryptionKey(String volumeEncryptionKey) {
+        this.volumeEncryptionKey = volumeEncryptionKey;
+        return this;
+    }
+    public String getVolumeEncryptionKey() {
+        return this.volumeEncryptionKey;
     }
 
     public CreateDesktopGroupRequest setVpcId(String vpcId) {

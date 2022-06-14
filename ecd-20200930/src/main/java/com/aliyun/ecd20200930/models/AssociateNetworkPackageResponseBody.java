@@ -3,16 +3,16 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateUserTagsResponseBody extends TeaModel {
+public class AssociateNetworkPackageResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreateUserTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateUserTagsResponseBody self = new CreateUserTagsResponseBody();
+    public static AssociateNetworkPackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        AssociateNetworkPackageResponseBody self = new AssociateNetworkPackageResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateUserTagsResponseBody setRequestId(String requestId) {
+    public AssociateNetworkPackageResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

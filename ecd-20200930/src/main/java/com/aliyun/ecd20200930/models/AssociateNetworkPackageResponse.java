@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateOrderForHardwareResponse extends TeaModel {
+public class AssociateNetworkPackageResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CreateOrderForHardwareResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateOrderForHardwareResponseBody body;
+    public AssociateNetworkPackageResponseBody body;
 
-    public static CreateOrderForHardwareResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateOrderForHardwareResponse self = new CreateOrderForHardwareResponse();
+    public static AssociateNetworkPackageResponse build(java.util.Map<String, ?> map) throws Exception {
+        AssociateNetworkPackageResponse self = new AssociateNetworkPackageResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateOrderForHardwareResponse setHeaders(java.util.Map<String, String> headers) {
+    public AssociateNetworkPackageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CreateOrderForHardwareResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateOrderForHardwareResponse setStatusCode(Integer statusCode) {
+    public AssociateNetworkPackageResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CreateOrderForHardwareResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateOrderForHardwareResponse setBody(CreateOrderForHardwareResponseBody body) {
+    public AssociateNetworkPackageResponse setBody(AssociateNetworkPackageResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateOrderForHardwareResponseBody getBody() {
+    public AssociateNetworkPackageResponseBody getBody() {
         return this.body;
     }
 

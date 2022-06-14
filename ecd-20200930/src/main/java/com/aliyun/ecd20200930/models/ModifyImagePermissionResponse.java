@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateBandwidthResourcePackagesResponse extends TeaModel {
+public class ModifyImagePermissionResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CreateBandwidthResourcePackagesResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateBandwidthResourcePackagesResponseBody body;
+    public ModifyImagePermissionResponseBody body;
 
-    public static CreateBandwidthResourcePackagesResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateBandwidthResourcePackagesResponse self = new CreateBandwidthResourcePackagesResponse();
+    public static ModifyImagePermissionResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyImagePermissionResponse self = new ModifyImagePermissionResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateBandwidthResourcePackagesResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyImagePermissionResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CreateBandwidthResourcePackagesResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateBandwidthResourcePackagesResponse setStatusCode(Integer statusCode) {
+    public ModifyImagePermissionResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CreateBandwidthResourcePackagesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateBandwidthResourcePackagesResponse setBody(CreateBandwidthResourcePackagesResponseBody body) {
+    public ModifyImagePermissionResponse setBody(ModifyImagePermissionResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateBandwidthResourcePackagesResponseBody getBody() {
+    public ModifyImagePermissionResponseBody getBody() {
         return this.body;
     }
 

@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeModificationPriceResponse extends TeaModel {
+public class CopyImageResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeModificationPriceResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeModificationPriceResponseBody body;
+    public CopyImageResponseBody body;
 
-    public static DescribeModificationPriceResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeModificationPriceResponse self = new DescribeModificationPriceResponse();
+    public static CopyImageResponse build(java.util.Map<String, ?> map) throws Exception {
+        CopyImageResponse self = new CopyImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeModificationPriceResponse setHeaders(java.util.Map<String, String> headers) {
+    public CopyImageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeModificationPriceResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeModificationPriceResponse setStatusCode(Integer statusCode) {
+    public CopyImageResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeModificationPriceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeModificationPriceResponse setBody(DescribeModificationPriceResponseBody body) {
+    public CopyImageResponse setBody(CopyImageResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeModificationPriceResponseBody getBody() {
+    public CopyImageResponseBody getBody() {
         return this.body;
     }
 

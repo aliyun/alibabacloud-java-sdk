@@ -10,6 +10,9 @@ public class UploadImageRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EnableSecurityCheck")
+    public Boolean enableSecurityCheck;
+
     @NameInMap("GpuCategory")
     public Boolean gpuCategory;
 
@@ -53,6 +56,14 @@ public class UploadImageRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UploadImageRequest setEnableSecurityCheck(Boolean enableSecurityCheck) {
+        this.enableSecurityCheck = enableSecurityCheck;
+        return this;
+    }
+    public Boolean getEnableSecurityCheck() {
+        return this.enableSecurityCheck;
     }
 
     public UploadImageRequest setGpuCategory(Boolean gpuCategory) {

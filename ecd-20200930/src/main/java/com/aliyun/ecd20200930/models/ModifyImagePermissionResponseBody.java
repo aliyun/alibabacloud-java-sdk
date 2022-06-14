@@ -3,16 +3,16 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteUserTagsResponseBody extends TeaModel {
+public class ModifyImagePermissionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteUserTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteUserTagsResponseBody self = new DeleteUserTagsResponseBody();
+    public static ModifyImagePermissionResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifyImagePermissionResponseBody self = new ModifyImagePermissionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteUserTagsResponseBody setRequestId(String requestId) {
+    public ModifyImagePermissionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

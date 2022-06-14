@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DownloadRecordingsResponse extends TeaModel {
+public class ResetDesktopsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DownloadRecordingsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DownloadRecordingsResponseBody body;
+    public ResetDesktopsResponseBody body;
 
-    public static DownloadRecordingsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DownloadRecordingsResponse self = new DownloadRecordingsResponse();
+    public static ResetDesktopsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ResetDesktopsResponse self = new ResetDesktopsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DownloadRecordingsResponse setHeaders(java.util.Map<String, String> headers) {
+    public ResetDesktopsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DownloadRecordingsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DownloadRecordingsResponse setStatusCode(Integer statusCode) {
+    public ResetDesktopsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DownloadRecordingsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DownloadRecordingsResponse setBody(DownloadRecordingsResponseBody body) {
+    public ResetDesktopsResponse setBody(ResetDesktopsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DownloadRecordingsResponseBody getBody() {
+    public ResetDesktopsResponseBody getBody() {
         return this.body;
     }
 

@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeHardwareTerminalsResponse extends TeaModel {
+public class CancelCopyImageResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeHardwareTerminalsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeHardwareTerminalsResponseBody body;
+    public CancelCopyImageResponseBody body;
 
-    public static DescribeHardwareTerminalsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeHardwareTerminalsResponse self = new DescribeHardwareTerminalsResponse();
+    public static CancelCopyImageResponse build(java.util.Map<String, ?> map) throws Exception {
+        CancelCopyImageResponse self = new CancelCopyImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeHardwareTerminalsResponse setHeaders(java.util.Map<String, String> headers) {
+    public CancelCopyImageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeHardwareTerminalsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeHardwareTerminalsResponse setStatusCode(Integer statusCode) {
+    public CancelCopyImageResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeHardwareTerminalsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeHardwareTerminalsResponse setBody(DescribeHardwareTerminalsResponseBody body) {
+    public CancelCopyImageResponse setBody(CancelCopyImageResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeHardwareTerminalsResponseBody getBody() {
+    public CancelCopyImageResponseBody getBody() {
         return this.body;
     }
 
