@@ -38,6 +38,9 @@ public class UploadReportRequest extends TeaModel {
     @NameInMap("RoomId")
     public String roomId;
 
+    @NameInMap("RtcRecordId")
+    public String rtcRecordId;
+
     @NameInMap("Type")
     public String type;
 
@@ -138,6 +141,14 @@ public class UploadReportRequest extends TeaModel {
     }
     public String getRoomId() {
         return this.roomId;
+    }
+
+    public UploadReportRequest setRtcRecordId(String rtcRecordId) {
+        this.rtcRecordId = rtcRecordId;
+        return this;
+    }
+    public String getRtcRecordId() {
+        return this.rtcRecordId;
     }
 
     public UploadReportRequest setType(String type) {

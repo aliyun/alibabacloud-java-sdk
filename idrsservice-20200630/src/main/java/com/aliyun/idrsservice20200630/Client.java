@@ -440,19 +440,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createUserDepartmentsWithOptions(request, runtime);
     }
 
-    public CreateVideoMergeTaskResponse createVideoMergeTaskWithOptions(CreateVideoMergeTaskRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateVideoMergeTaskResponse createVideoMergeTaskWithOptions(CreateVideoMergeTaskRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateVideoMergeTaskShrinkRequest request = new CreateVideoMergeTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.videoMergeRequest))) {
+            request.videoMergeRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.videoMergeRequest), "VideoMergeRequest", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.videoList)) {
-            body.put("VideoList", request.videoList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.watermarkText)) {
-            body.put("WatermarkText", request.watermarkText);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.watermarkTime)) {
-            body.put("WatermarkTime", request.watermarkTime);
+        if (!com.aliyun.teautil.Common.isUnset(request.videoMergeRequestShrink)) {
+            body.put("VideoMergeRequest", request.videoMergeRequestShrink);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -2019,6 +2017,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.roomId)) {
             query.put("RoomId", request.roomId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rtcRecordId)) {
+            query.put("RtcRecordId", request.rtcRecordId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
