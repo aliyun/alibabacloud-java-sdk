@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class CheckUserTagsResponse extends TeaModel {
+public class DescribeImagePermissionResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CheckUserTagsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CheckUserTagsResponseBody body;
+    public DescribeImagePermissionResponseBody body;
 
-    public static CheckUserTagsResponse build(java.util.Map<String, ?> map) throws Exception {
-        CheckUserTagsResponse self = new CheckUserTagsResponse();
+    public static DescribeImagePermissionResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeImagePermissionResponse self = new DescribeImagePermissionResponse();
         return TeaModel.build(map, self);
     }
 
-    public CheckUserTagsResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeImagePermissionResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CheckUserTagsResponse extends TeaModel {
         return this.headers;
     }
 
-    public CheckUserTagsResponse setStatusCode(Integer statusCode) {
+    public DescribeImagePermissionResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CheckUserTagsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CheckUserTagsResponse setBody(CheckUserTagsResponseBody body) {
+    public DescribeImagePermissionResponse setBody(DescribeImagePermissionResponseBody body) {
         this.body = body;
         return this;
     }
-    public CheckUserTagsResponseBody getBody() {
+    public DescribeImagePermissionResponseBody getBody() {
         return this.body;
     }
 

@@ -82,9 +82,6 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("Watermark")
     public String watermark;
 
-    @NameInMap("WatermarkCustomText")
-    public String watermarkCustomText;
-
     @NameInMap("WatermarkTransparency")
     public String watermarkTransparency;
 
@@ -302,14 +299,6 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
     public String getWatermark() {
         return this.watermark;
-    }
-
-    public ModifyPolicyGroupRequest setWatermarkCustomText(String watermarkCustomText) {
-        this.watermarkCustomText = watermarkCustomText;
-        return this;
-    }
-    public String getWatermarkCustomText() {
-        return this.watermarkCustomText;
     }
 
     public ModifyPolicyGroupRequest setWatermarkTransparency(String watermarkTransparency) {

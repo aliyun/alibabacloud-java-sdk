@@ -16,9 +16,6 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     @NameInMap("DesktopStatus")
     public String desktopStatus;
 
-    @NameInMap("DirectoryId")
-    public String directoryId;
-
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
@@ -84,14 +81,6 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     }
     public String getDesktopStatus() {
         return this.desktopStatus;
-    }
-
-    public ExportDesktopListInfoRequest setDirectoryId(String directoryId) {
-        this.directoryId = directoryId;
-        return this;
-    }
-    public String getDirectoryId() {
-        return this.directoryId;
     }
 
     public ExportDesktopListInfoRequest setEndUserId(java.util.List<String> endUserId) {

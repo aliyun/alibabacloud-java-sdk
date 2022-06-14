@@ -79,6 +79,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        @NameInMap("SharedCount")
+        public Integer sharedCount;
+
         @NameInMap("Size")
         public Integer size;
 
@@ -87,6 +90,12 @@ public class DescribeImagesResponseBody extends TeaModel {
 
         @NameInMap("SupportedLanguages")
         public java.util.List<String> supportedLanguages;
+
+        @NameInMap("VolumeEncryptionEnabled")
+        public Boolean volumeEncryptionEnabled;
+
+        @NameInMap("VolumeEncryptionKey")
+        public String volumeEncryptionKey;
 
         public static DescribeImagesResponseBodyImages build(java.util.Map<String, ?> map) throws Exception {
             DescribeImagesResponseBodyImages self = new DescribeImagesResponseBodyImages();
@@ -189,6 +198,14 @@ public class DescribeImagesResponseBody extends TeaModel {
             return this.protocolType;
         }
 
+        public DescribeImagesResponseBodyImages setSharedCount(Integer sharedCount) {
+            this.sharedCount = sharedCount;
+            return this;
+        }
+        public Integer getSharedCount() {
+            return this.sharedCount;
+        }
+
         public DescribeImagesResponseBodyImages setSize(Integer size) {
             this.size = size;
             return this;
@@ -211,6 +228,22 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
         public java.util.List<String> getSupportedLanguages() {
             return this.supportedLanguages;
+        }
+
+        public DescribeImagesResponseBodyImages setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+            this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+            return this;
+        }
+        public Boolean getVolumeEncryptionEnabled() {
+            return this.volumeEncryptionEnabled;
+        }
+
+        public DescribeImagesResponseBodyImages setVolumeEncryptionKey(String volumeEncryptionKey) {
+            this.volumeEncryptionKey = volumeEncryptionKey;
+            return this;
+        }
+        public String getVolumeEncryptionKey() {
+            return this.volumeEncryptionKey;
         }
 
     }

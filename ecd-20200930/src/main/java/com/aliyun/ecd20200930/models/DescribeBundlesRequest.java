@@ -43,6 +43,9 @@ public class DescribeBundlesRequest extends TeaModel {
     @NameInMap("SupportMultiSession")
     public Boolean supportMultiSession;
 
+    @NameInMap("VolumeEncryptionEnabled")
+    public Boolean volumeEncryptionEnabled;
+
     public static DescribeBundlesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBundlesRequest self = new DescribeBundlesRequest();
         return TeaModel.build(map, self);
@@ -150,6 +153,14 @@ public class DescribeBundlesRequest extends TeaModel {
     }
     public Boolean getSupportMultiSession() {
         return this.supportMultiSession;
+    }
+
+    public DescribeBundlesRequest setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+        this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+        return this;
+    }
+    public Boolean getVolumeEncryptionEnabled() {
+        return this.volumeEncryptionEnabled;
     }
 
 }

@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeRenewalPriceResponse extends TeaModel {
+public class DescribeKmsKeysResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeRenewalPriceResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeRenewalPriceResponseBody body;
+    public DescribeKmsKeysResponseBody body;
 
-    public static DescribeRenewalPriceResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeRenewalPriceResponse self = new DescribeRenewalPriceResponse();
+    public static DescribeKmsKeysResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeKmsKeysResponse self = new DescribeKmsKeysResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRenewalPriceResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeKmsKeysResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeRenewalPriceResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeRenewalPriceResponse setStatusCode(Integer statusCode) {
+    public DescribeKmsKeysResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeRenewalPriceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeRenewalPriceResponse setBody(DescribeRenewalPriceResponseBody body) {
+    public DescribeKmsKeysResponse setBody(DescribeKmsKeysResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeRenewalPriceResponseBody getBody() {
+    public DescribeKmsKeysResponseBody getBody() {
         return this.body;
     }
 

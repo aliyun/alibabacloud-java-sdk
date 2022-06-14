@@ -64,6 +64,140 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         return this.usersCount;
     }
 
+    public static class DescribeUsersInGroupResponseBodyEndUsersExternalInfo extends TeaModel {
+        @NameInMap("ExternalName")
+        public String externalName;
+
+        @NameInMap("JobNumber")
+        public String jobNumber;
+
+        public static DescribeUsersInGroupResponseBodyEndUsersExternalInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeUsersInGroupResponseBodyEndUsersExternalInfo self = new DescribeUsersInGroupResponseBodyEndUsersExternalInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsersExternalInfo setExternalName(String externalName) {
+            this.externalName = externalName;
+            return this;
+        }
+        public String getExternalName() {
+            return this.externalName;
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsersExternalInfo setJobNumber(String jobNumber) {
+            this.jobNumber = jobNumber;
+            return this;
+        }
+        public String getJobNumber() {
+            return this.jobNumber;
+        }
+
+    }
+
+    public static class DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModelsPropertyValues extends TeaModel {
+        @NameInMap("PropertyValue")
+        public String propertyValue;
+
+        @NameInMap("PropertyValueId")
+        public Long propertyValueId;
+
+        public static DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModelsPropertyValues build(java.util.Map<String, ?> map) throws Exception {
+            DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModelsPropertyValues self = new DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModelsPropertyValues();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModelsPropertyValues setPropertyValue(String propertyValue) {
+            this.propertyValue = propertyValue;
+            return this;
+        }
+        public String getPropertyValue() {
+            return this.propertyValue;
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModelsPropertyValues setPropertyValueId(Long propertyValueId) {
+            this.propertyValueId = propertyValueId;
+            return this;
+        }
+        public Long getPropertyValueId() {
+            return this.propertyValueId;
+        }
+
+    }
+
+    public static class DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels extends TeaModel {
+        @NameInMap("PropertyId")
+        public Long propertyId;
+
+        @NameInMap("PropertyKey")
+        public String propertyKey;
+
+        @NameInMap("PropertyType")
+        public Integer propertyType;
+
+        @NameInMap("PropertyValues")
+        public java.util.List<DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModelsPropertyValues> propertyValues;
+
+        @NameInMap("UserId")
+        public Long userId;
+
+        @NameInMap("UserName")
+        public String userName;
+
+        public static DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels build(java.util.Map<String, ?> map) throws Exception {
+            DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels self = new DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels setPropertyId(Long propertyId) {
+            this.propertyId = propertyId;
+            return this;
+        }
+        public Long getPropertyId() {
+            return this.propertyId;
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels setPropertyKey(String propertyKey) {
+            this.propertyKey = propertyKey;
+            return this;
+        }
+        public String getPropertyKey() {
+            return this.propertyKey;
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels setPropertyType(Integer propertyType) {
+            this.propertyType = propertyType;
+            return this;
+        }
+        public Integer getPropertyType() {
+            return this.propertyType;
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels setPropertyValues(java.util.List<DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModelsPropertyValues> propertyValues) {
+            this.propertyValues = propertyValues;
+            return this;
+        }
+        public java.util.List<DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModelsPropertyValues> getPropertyValues() {
+            return this.propertyValues;
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels setUserId(Long userId) {
+            this.userId = userId;
+            return this;
+        }
+        public Long getUserId() {
+            return this.userId;
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
+        }
+
+    }
+
     public static class DescribeUsersInGroupResponseBodyEndUsers extends TeaModel {
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
@@ -88,6 +222,12 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
 
         @NameInMap("EndUserType")
         public String endUserType;
+
+        @NameInMap("ExternalInfo")
+        public DescribeUsersInGroupResponseBodyEndUsersExternalInfo externalInfo;
+
+        @NameInMap("UserSetPropertiesModels")
+        public java.util.List<DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels> userSetPropertiesModels;
 
         public static DescribeUsersInGroupResponseBodyEndUsers build(java.util.Map<String, ?> map) throws Exception {
             DescribeUsersInGroupResponseBodyEndUsers self = new DescribeUsersInGroupResponseBodyEndUsers();
@@ -156,6 +296,22 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
         public String getEndUserType() {
             return this.endUserType;
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsers setExternalInfo(DescribeUsersInGroupResponseBodyEndUsersExternalInfo externalInfo) {
+            this.externalInfo = externalInfo;
+            return this;
+        }
+        public DescribeUsersInGroupResponseBodyEndUsersExternalInfo getExternalInfo() {
+            return this.externalInfo;
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsers setUserSetPropertiesModels(java.util.List<DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels> userSetPropertiesModels) {
+            this.userSetPropertiesModels = userSetPropertiesModels;
+            return this;
+        }
+        public java.util.List<DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels> getUserSetPropertiesModels() {
+            return this.userSetPropertiesModels;
         }
 
     }

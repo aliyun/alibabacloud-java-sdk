@@ -64,6 +64,12 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("UserName")
     public String userName;
 
+    @NameInMap("VolumeEncryptionEnabled")
+    public Boolean volumeEncryptionEnabled;
+
+    @NameInMap("VolumeEncryptionKey")
+    public String volumeEncryptionKey;
+
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -230,6 +236,22 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public String getUserName() {
         return this.userName;
+    }
+
+    public CreateDesktopsRequest setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+        this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+        return this;
+    }
+    public Boolean getVolumeEncryptionEnabled() {
+        return this.volumeEncryptionEnabled;
+    }
+
+    public CreateDesktopsRequest setVolumeEncryptionKey(String volumeEncryptionKey) {
+        this.volumeEncryptionKey = volumeEncryptionKey;
+        return this;
+    }
+    public String getVolumeEncryptionKey() {
+        return this.volumeEncryptionKey;
     }
 
     public CreateDesktopsRequest setVpcId(String vpcId) {

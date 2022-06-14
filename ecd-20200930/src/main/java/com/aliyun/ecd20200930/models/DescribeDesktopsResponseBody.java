@@ -367,6 +367,12 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<DescribeDesktopsResponseBodyDesktopsTags> tags;
 
+        @NameInMap("VolumeEncryptionEnabled")
+        public Boolean volumeEncryptionEnabled;
+
+        @NameInMap("VolumeEncryptionKey")
+        public String volumeEncryptionKey;
+
         @NameInMap("ZoneType")
         public String zoneType;
 
@@ -741,6 +747,22 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDesktopsResponseBodyDesktopsTags> getTags() {
             return this.tags;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+            this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+            return this;
+        }
+        public Boolean getVolumeEncryptionEnabled() {
+            return this.volumeEncryptionEnabled;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setVolumeEncryptionKey(String volumeEncryptionKey) {
+            this.volumeEncryptionKey = volumeEncryptionKey;
+            return this;
+        }
+        public String getVolumeEncryptionKey() {
+            return this.volumeEncryptionKey;
         }
 
         public DescribeDesktopsResponseBodyDesktops setZoneType(String zoneType) {

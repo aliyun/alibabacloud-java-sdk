@@ -31,51 +31,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribeDesktopTypesResponseBodyDesktopTypesAllowDiskSize extends TeaModel {
-        @NameInMap("DataDiskSize")
-        public Integer dataDiskSize;
-
-        @NameInMap("DefaultDataDiskSize")
-        public Integer defaultDataDiskSize;
-
-        @NameInMap("SystemDiskSize")
-        public Integer systemDiskSize;
-
-        public static DescribeDesktopTypesResponseBodyDesktopTypesAllowDiskSize build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDesktopTypesResponseBodyDesktopTypesAllowDiskSize self = new DescribeDesktopTypesResponseBodyDesktopTypesAllowDiskSize();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDesktopTypesResponseBodyDesktopTypesAllowDiskSize setDataDiskSize(Integer dataDiskSize) {
-            this.dataDiskSize = dataDiskSize;
-            return this;
-        }
-        public Integer getDataDiskSize() {
-            return this.dataDiskSize;
-        }
-
-        public DescribeDesktopTypesResponseBodyDesktopTypesAllowDiskSize setDefaultDataDiskSize(Integer defaultDataDiskSize) {
-            this.defaultDataDiskSize = defaultDataDiskSize;
-            return this;
-        }
-        public Integer getDefaultDataDiskSize() {
-            return this.defaultDataDiskSize;
-        }
-
-        public DescribeDesktopTypesResponseBodyDesktopTypesAllowDiskSize setSystemDiskSize(Integer systemDiskSize) {
-            this.systemDiskSize = systemDiskSize;
-            return this;
-        }
-        public Integer getSystemDiskSize() {
-            return this.systemDiskSize;
-        }
-
-    }
-
     public static class DescribeDesktopTypesResponseBodyDesktopTypes extends TeaModel {
-        @NameInMap("AllowDiskSize")
-        public java.util.List<DescribeDesktopTypesResponseBodyDesktopTypesAllowDiskSize> allowDiskSize;
-
         @NameInMap("CpuCount")
         public String cpuCount;
 
@@ -106,14 +62,6 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public static DescribeDesktopTypesResponseBodyDesktopTypes build(java.util.Map<String, ?> map) throws Exception {
             DescribeDesktopTypesResponseBodyDesktopTypes self = new DescribeDesktopTypesResponseBodyDesktopTypes();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDesktopTypesResponseBodyDesktopTypes setAllowDiskSize(java.util.List<DescribeDesktopTypesResponseBodyDesktopTypesAllowDiskSize> allowDiskSize) {
-            this.allowDiskSize = allowDiskSize;
-            return this;
-        }
-        public java.util.List<DescribeDesktopTypesResponseBodyDesktopTypesAllowDiskSize> getAllowDiskSize() {
-            return this.allowDiskSize;
         }
 
         public DescribeDesktopTypesResponseBodyDesktopTypes setCpuCount(String cpuCount) {

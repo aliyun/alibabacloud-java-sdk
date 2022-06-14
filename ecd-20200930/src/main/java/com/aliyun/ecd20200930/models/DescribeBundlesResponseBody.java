@@ -184,6 +184,12 @@ public class DescribeBundlesResponseBody extends TeaModel {
         @NameInMap("StockState")
         public String stockState;
 
+        @NameInMap("VolumeEncryptionEnabled")
+        public Boolean volumeEncryptionEnabled;
+
+        @NameInMap("VolumeEncryptionKey")
+        public String volumeEncryptionKey;
+
         public static DescribeBundlesResponseBodyBundles build(java.util.Map<String, ?> map) throws Exception {
             DescribeBundlesResponseBodyBundles self = new DescribeBundlesResponseBodyBundles();
             return TeaModel.build(map, self);
@@ -315,6 +321,22 @@ public class DescribeBundlesResponseBody extends TeaModel {
         }
         public String getStockState() {
             return this.stockState;
+        }
+
+        public DescribeBundlesResponseBodyBundles setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+            this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+            return this;
+        }
+        public Boolean getVolumeEncryptionEnabled() {
+            return this.volumeEncryptionEnabled;
+        }
+
+        public DescribeBundlesResponseBodyBundles setVolumeEncryptionKey(String volumeEncryptionKey) {
+            this.volumeEncryptionKey = volumeEncryptionKey;
+            return this;
+        }
+        public String getVolumeEncryptionKey() {
+            return this.volumeEncryptionKey;
         }
 
     }

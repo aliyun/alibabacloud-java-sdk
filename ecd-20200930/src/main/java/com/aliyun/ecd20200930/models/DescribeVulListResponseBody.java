@@ -150,6 +150,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("AliasName")
         public String aliasName;
 
+        @NameInMap("DesktopGroupId")
+        public String desktopGroupId;
+
         @NameInMap("DesktopId")
         public String desktopId;
 
@@ -179,6 +182,9 @@ public class DescribeVulListResponseBody extends TeaModel {
 
         @NameInMap("OsVersion")
         public String osVersion;
+
+        @NameInMap("Progress")
+        public Integer progress;
 
         @NameInMap("Related")
         public String related;
@@ -212,6 +218,14 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
         public String getAliasName() {
             return this.aliasName;
+        }
+
+        public DescribeVulListResponseBodyVulRecords setDesktopGroupId(String desktopGroupId) {
+            this.desktopGroupId = desktopGroupId;
+            return this;
+        }
+        public String getDesktopGroupId() {
+            return this.desktopGroupId;
         }
 
         public DescribeVulListResponseBodyVulRecords setDesktopId(String desktopId) {
@@ -292,6 +306,14 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
         public String getOsVersion() {
             return this.osVersion;
+        }
+
+        public DescribeVulListResponseBodyVulRecords setProgress(Integer progress) {
+            this.progress = progress;
+            return this;
+        }
+        public Integer getProgress() {
+            return this.progress;
         }
 
         public DescribeVulListResponseBodyVulRecords setRelated(String related) {

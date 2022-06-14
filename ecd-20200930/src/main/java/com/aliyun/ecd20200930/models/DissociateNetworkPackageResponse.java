@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteUserTagsResponse extends TeaModel {
+public class DissociateNetworkPackageResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DeleteUserTagsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DeleteUserTagsResponseBody body;
+    public DissociateNetworkPackageResponseBody body;
 
-    public static DeleteUserTagsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteUserTagsResponse self = new DeleteUserTagsResponse();
+    public static DissociateNetworkPackageResponse build(java.util.Map<String, ?> map) throws Exception {
+        DissociateNetworkPackageResponse self = new DissociateNetworkPackageResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteUserTagsResponse setHeaders(java.util.Map<String, String> headers) {
+    public DissociateNetworkPackageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DeleteUserTagsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteUserTagsResponse setStatusCode(Integer statusCode) {
+    public DissociateNetworkPackageResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DeleteUserTagsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteUserTagsResponse setBody(DeleteUserTagsResponseBody body) {
+    public DissociateNetworkPackageResponse setBody(DissociateNetworkPackageResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteUserTagsResponseBody getBody() {
+    public DissociateNetworkPackageResponseBody getBody() {
         return this.body;
     }
 

@@ -76,6 +76,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("VolumeEncryptionEnabled")
+        public Boolean volumeEncryptionEnabled;
+
+        @NameInMap("VolumeEncryptionKey")
+        public String volumeEncryptionKey;
+
         public static DescribeSnapshotsResponseBodySnapshots build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnapshotsResponseBodySnapshots self = new DescribeSnapshotsResponseBodySnapshots();
             return TeaModel.build(map, self);
@@ -167,6 +173,22 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+            this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+            return this;
+        }
+        public Boolean getVolumeEncryptionEnabled() {
+            return this.volumeEncryptionEnabled;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setVolumeEncryptionKey(String volumeEncryptionKey) {
+            this.volumeEncryptionKey = volumeEncryptionKey;
+            return this;
+        }
+        public String getVolumeEncryptionKey() {
+            return this.volumeEncryptionKey;
         }
 
     }

@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DescribePriceResponse extends TeaModel {
+public class CreateDiskEncryptionServiceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribePriceResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribePriceResponseBody body;
+    public CreateDiskEncryptionServiceResponseBody body;
 
-    public static DescribePriceResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribePriceResponse self = new DescribePriceResponse();
+    public static CreateDiskEncryptionServiceResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateDiskEncryptionServiceResponse self = new CreateDiskEncryptionServiceResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribePriceResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateDiskEncryptionServiceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribePriceResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribePriceResponse setStatusCode(Integer statusCode) {
+    public CreateDiskEncryptionServiceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribePriceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribePriceResponse setBody(DescribePriceResponseBody body) {
+    public CreateDiskEncryptionServiceResponse setBody(CreateDiskEncryptionServiceResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribePriceResponseBody getBody() {
+    public CreateDiskEncryptionServiceResponseBody getBody() {
         return this.body;
     }
 
