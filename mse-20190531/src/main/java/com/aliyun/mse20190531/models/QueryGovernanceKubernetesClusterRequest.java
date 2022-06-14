@@ -7,15 +7,19 @@ public class QueryGovernanceKubernetesClusterRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    // Kubernetes集群Id
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // Kubernetes集群名
     @NameInMap("ClusterName")
     public String clusterName;
 
+    // 当前页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // 每页元素数量
     @NameInMap("PageSize")
     public Integer pageSize;
 

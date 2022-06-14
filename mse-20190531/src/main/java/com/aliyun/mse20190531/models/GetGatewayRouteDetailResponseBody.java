@@ -764,6 +764,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayRouteDetailResponseBodyData extends TeaModel {
+        @NameInMap("AhasStatus")
+        public Integer ahasStatus;
+
         @NameInMap("Cors")
         public GetGatewayRouteDetailResponseBodyDataCors cors;
 
@@ -848,6 +851,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public static GetGatewayRouteDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetGatewayRouteDetailResponseBodyData self = new GetGatewayRouteDetailResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetGatewayRouteDetailResponseBodyData setAhasStatus(Integer ahasStatus) {
+            this.ahasStatus = ahasStatus;
+            return this;
+        }
+        public Integer getAhasStatus() {
+            return this.ahasStatus;
         }
 
         public GetGatewayRouteDetailResponseBodyData setCors(GetGatewayRouteDetailResponseBodyDataCors cors) {

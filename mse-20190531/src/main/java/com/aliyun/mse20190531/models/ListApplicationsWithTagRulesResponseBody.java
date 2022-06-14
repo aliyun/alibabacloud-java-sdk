@@ -83,7 +83,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public Boolean enable;
 
         @NameInMap("GmtModified")
-        public Long gmtModified;
+        public String gmtModified;
 
         @NameInMap("Id")
         public Long id;
@@ -130,11 +130,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             return this.enable;
         }
 
-        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRules setGmtModified(Long gmtModified) {
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRules setGmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
             return this;
         }
-        public Long getGmtModified() {
+        public String getGmtModified() {
             return this.gmtModified;
         }
 

@@ -4,6 +4,7 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
+    // 后端状态码
     @NameInMap("Code")
     public Integer code;
 
@@ -19,6 +20,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +78,27 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class QueryGovernanceKubernetesClusterResponseBodyDataResult extends TeaModel {
+        // Kubernetes集群Id
         @NameInMap("ClusterId")
         public String clusterId;
 
+        // Kubernetes集群名
         @NameInMap("ClusterName")
         public String clusterName;
 
+        // Kubernetes集群版本
         @NameInMap("K8sVersion")
         public String k8sVersion;
 
+        // Kubernetes集群命名空间信息（json格式）
         @NameInMap("NamespaceInfos")
         public String namespaceInfos;
 
+        // pilot启动时间
         @NameInMap("PilotStartTime")
         public String pilotStartTime;
 
+        // Kubernetes集群所在的地域
         @NameInMap("Region")
         public String region;
 
@@ -150,15 +158,18 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class QueryGovernanceKubernetesClusterResponseBodyData extends TeaModel {
+        // 当前页码
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        // 页大小
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("Result")
         public java.util.List<QueryGovernanceKubernetesClusterResponseBodyDataResult> result;
 
+        // 页码总数
         @NameInMap("TotalSize")
         public Integer totalSize;
 

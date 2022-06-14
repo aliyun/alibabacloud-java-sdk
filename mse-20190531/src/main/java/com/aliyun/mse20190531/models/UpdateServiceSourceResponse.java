@@ -3,7 +3,7 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class AddTestResponse extends TeaModel {
+public class UpdateServiceSourceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class AddTestResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public AddTestResponseBody body;
+    public UpdateServiceSourceResponseBody body;
 
-    public static AddTestResponse build(java.util.Map<String, ?> map) throws Exception {
-        AddTestResponse self = new AddTestResponse();
+    public static UpdateServiceSourceResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateServiceSourceResponse self = new UpdateServiceSourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddTestResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateServiceSourceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class AddTestResponse extends TeaModel {
         return this.headers;
     }
 
-    public AddTestResponse setStatusCode(Integer statusCode) {
+    public UpdateServiceSourceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class AddTestResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public AddTestResponse setBody(AddTestResponseBody body) {
+    public UpdateServiceSourceResponse setBody(UpdateServiceSourceResponseBody body) {
         this.body = body;
         return this;
     }
-    public AddTestResponseBody getBody() {
+    public UpdateServiceSourceResponseBody getBody() {
         return this.body;
     }
 
