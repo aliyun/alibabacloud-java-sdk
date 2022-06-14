@@ -31,7 +31,51 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         return this.supportedDBTypes;
     }
 
+    public static class DBInstanceStorageRange extends TeaModel {
+        @NameInMap("Max")
+        public Integer max;
+
+        @NameInMap("Min")
+        public Integer min;
+
+        @NameInMap("Step")
+        public Integer step;
+
+        public static DBInstanceStorageRange build(java.util.Map<String, ?> map) throws Exception {
+            DBInstanceStorageRange self = new DBInstanceStorageRange();
+            return TeaModel.build(map, self);
+        }
+
+        public DBInstanceStorageRange setMax(Integer max) {
+            this.max = max;
+            return this;
+        }
+        public Integer getMax() {
+            return this.max;
+        }
+
+        public DBInstanceStorageRange setMin(Integer min) {
+            this.min = min;
+            return this;
+        }
+        public Integer getMin() {
+            return this.min;
+        }
+
+        public DBInstanceStorageRange setStep(Integer step) {
+            this.step = step;
+            return this;
+        }
+        public Integer getStep() {
+            return this.step;
+        }
+
+    }
+
     public static class AvailableResource extends TeaModel {
+        @NameInMap("DBInstanceStorageRange")
+        public DBInstanceStorageRange DBInstanceStorageRange;
+
         @NameInMap("InstanceClass")
         public String instanceClass;
 
@@ -41,6 +85,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public static AvailableResource build(java.util.Map<String, ?> map) throws Exception {
             AvailableResource self = new AvailableResource();
             return TeaModel.build(map, self);
+        }
+
+        public AvailableResource setDBInstanceStorageRange(DBInstanceStorageRange DBInstanceStorageRange) {
+            this.DBInstanceStorageRange = DBInstanceStorageRange;
+            return this;
+        }
+        public DBInstanceStorageRange getDBInstanceStorageRange() {
+            return this.DBInstanceStorageRange;
         }
 
         public AvailableResource setInstanceClass(String instanceClass) {

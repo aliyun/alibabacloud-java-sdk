@@ -35,6 +35,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @NameInMap("VpcEnabled")
         public Boolean vpcEnabled;
 
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         @NameInMap("ZoneName")
         public String zoneName;
 
@@ -49,6 +52,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public Boolean getVpcEnabled() {
             return this.vpcEnabled;
+        }
+
+        public DescribeRegionsResponseBodyRegionsDdsRegionZonesZone setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         public DescribeRegionsResponseBodyRegionsDdsRegionZonesZone setZoneName(String zoneName) {

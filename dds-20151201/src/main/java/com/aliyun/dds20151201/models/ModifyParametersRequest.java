@@ -22,6 +22,9 @@ public class ModifyParametersRequest extends TeaModel {
     @NameInMap("Parameters")
     public String parameters;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -82,6 +85,14 @@ public class ModifyParametersRequest extends TeaModel {
     }
     public String getParameters() {
         return this.parameters;
+    }
+
+    public ModifyParametersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyParametersRequest setResourceOwnerAccount(String resourceOwnerAccount) {

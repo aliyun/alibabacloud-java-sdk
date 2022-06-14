@@ -322,6 +322,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("ShardList")
         public DescribeDBInstancesResponseBodyDBInstancesDBInstanceShardList shardList;
 
+        @NameInMap("StorageType")
+        public String storageType;
+
         @NameInMap("Tags")
         public DescribeDBInstancesResponseBodyDBInstancesDBInstanceTags tags;
 
@@ -510,6 +513,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public DescribeDBInstancesResponseBodyDBInstancesDBInstanceShardList getShardList() {
             return this.shardList;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstancesDBInstance setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
         public DescribeDBInstancesResponseBodyDBInstancesDBInstance setTags(DescribeDBInstancesResponseBodyDBInstancesDBInstanceTags tags) {
