@@ -256,6 +256,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.adminTestSeviceWithOptions(request, runtime);
     }
 
+    public AppGrayListBatchRemoveResponse appGrayListBatchRemoveWithOptions(AppGrayListBatchRemoveRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appCode)) {
+            query.put("AppCode", request.appCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            query.put("Content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AppGrayListBatchRemove"),
+            new TeaPair("version", "2021-02-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AppGrayListBatchRemoveResponse());
+    }
+
+    public AppGrayListBatchRemoveResponse appGrayListBatchRemove(AppGrayListBatchRemoveRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.appGrayListBatchRemoveWithOptions(request, runtime);
+    }
+
+    public AppGrayListBatchSaveResponse appGrayListBatchSaveWithOptions(AppGrayListBatchSaveRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appCode)) {
+            query.put("AppCode", request.appCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            query.put("Content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AppGrayListBatchSave"),
+            new TeaPair("version", "2021-02-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AppGrayListBatchSaveResponse());
+    }
+
+    public AppGrayListBatchSaveResponse appGrayListBatchSave(AppGrayListBatchSaveRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.appGrayListBatchSaveWithOptions(request, runtime);
+    }
+
     public CanRefundResponse canRefundWithOptions(CanRefundRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();

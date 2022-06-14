@@ -9,7 +9,7 @@ public class GenerateTokenRequest extends TeaModel {
     public Integer expireTime;
 
     @NameInMap("TenantId")
-    public String tenantId;
+    public Long tenantId;
 
     @NameInMap("UserDto")
     public GenerateTokenRequestUserDto userDto;
@@ -27,11 +27,11 @@ public class GenerateTokenRequest extends TeaModel {
         return this.expireTime;
     }
 
-    public GenerateTokenRequest setTenantId(String tenantId) {
+    public GenerateTokenRequest setTenantId(Long tenantId) {
         this.tenantId = tenantId;
         return this;
     }
-    public String getTenantId() {
+    public Long getTenantId() {
         return this.tenantId;
     }
 
