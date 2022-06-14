@@ -13,6 +13,9 @@ public class ListImagesRequest extends TeaModel {
     @NameInMap("ImageName")
     public String imageName;
 
+    @NameInMap("InstanceType")
+    public String instanceType;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -64,6 +67,14 @@ public class ListImagesRequest extends TeaModel {
     }
     public String getImageName() {
         return this.imageName;
+    }
+
+    public ListImagesRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public ListImagesRequest setMaxResults(Integer maxResults) {

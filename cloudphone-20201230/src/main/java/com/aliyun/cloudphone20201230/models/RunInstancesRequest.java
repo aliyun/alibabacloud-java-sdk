@@ -49,6 +49,9 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    @NameInMap("PrivateIpAddress")
+    public String privateIpAddress;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -191,6 +194,14 @@ public class RunInstancesRequest extends TeaModel {
     }
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    public RunInstancesRequest setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
     }
 
     public RunInstancesRequest setRegionId(String regionId) {

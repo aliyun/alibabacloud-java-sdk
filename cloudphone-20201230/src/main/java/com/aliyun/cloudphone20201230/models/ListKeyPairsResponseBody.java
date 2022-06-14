@@ -74,6 +74,9 @@ public class ListKeyPairsResponseBody extends TeaModel {
         @NameInMap("KeyPairName")
         public String keyPairName;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         public static ListKeyPairsResponseBodyKeyPairsKeyPair build(java.util.Map<String, ?> map) throws Exception {
             ListKeyPairsResponseBodyKeyPairsKeyPair self = new ListKeyPairsResponseBodyKeyPairsKeyPair();
             return TeaModel.build(map, self);
@@ -101,6 +104,14 @@ public class ListKeyPairsResponseBody extends TeaModel {
         }
         public String getKeyPairName() {
             return this.keyPairName;
+        }
+
+        public ListKeyPairsResponseBodyKeyPairsKeyPair setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
     }
