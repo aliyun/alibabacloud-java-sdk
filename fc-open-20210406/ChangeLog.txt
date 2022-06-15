@@ -1,3 +1,8 @@
+2022-06-15 Version: 1.1.4
+- Fix missing ListInstances.
+- Fix some missing TriggerConfig structures.
+- Fix HTTP invocations respond 403 with empty path.
+
 2022-06-10 Version: 1.1.2
 - Add http trigger url.
 
