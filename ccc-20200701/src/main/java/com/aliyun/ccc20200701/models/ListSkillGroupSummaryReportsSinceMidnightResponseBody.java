@@ -97,11 +97,20 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @NameInMap("AverageWorkTime")
         public Long averageWorkTime;
 
+        @NameInMap("CallsAttendedTransferOut")
+        public Long callsAttendedTransferOut;
+
+        @NameInMap("CallsBlindTransferOut")
+        public Long callsBlindTransferOut;
+
         @NameInMap("CallsHandled")
         public Long callsHandled;
 
         @NameInMap("CallsOffered")
         public Long callsOffered;
+
+        @NameInMap("CallsServiceLevel10")
+        public Long callsServiceLevel10;
 
         @NameInMap("CallsServiceLevel20")
         public Long callsServiceLevel20;
@@ -218,6 +227,22 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             return this.averageWorkTime;
         }
 
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsAttendedTransferOut(Long callsAttendedTransferOut) {
+            this.callsAttendedTransferOut = callsAttendedTransferOut;
+            return this;
+        }
+        public Long getCallsAttendedTransferOut() {
+            return this.callsAttendedTransferOut;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsBlindTransferOut(Long callsBlindTransferOut) {
+            this.callsBlindTransferOut = callsBlindTransferOut;
+            return this;
+        }
+        public Long getCallsBlindTransferOut() {
+            return this.callsBlindTransferOut;
+        }
+
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsHandled(Long callsHandled) {
             this.callsHandled = callsHandled;
             return this;
@@ -232,6 +257,14 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         }
         public Long getCallsOffered() {
             return this.callsOffered;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsServiceLevel10(Long callsServiceLevel10) {
+            this.callsServiceLevel10 = callsServiceLevel10;
+            return this;
+        }
+        public Long getCallsServiceLevel10() {
+            return this.callsServiceLevel10;
         }
 
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsServiceLevel20(Long callsServiceLevel20) {
