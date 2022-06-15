@@ -28,6 +28,9 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
+    @NameInMap("OrderId")
+    public Long orderId;
+
     @NameInMap("Port")
     public Integer port;
 
@@ -113,6 +116,14 @@ public class CreateTairInstanceResponseBody extends TeaModel {
     }
     public String getInstanceStatus() {
         return this.instanceStatus;
+    }
+
+    public CreateTairInstanceResponseBody setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public CreateTairInstanceResponseBody setPort(Integer port) {

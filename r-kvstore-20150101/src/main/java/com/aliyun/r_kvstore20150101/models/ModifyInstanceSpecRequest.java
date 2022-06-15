@@ -40,6 +40,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ReadOnlyCount")
+    public Integer readOnlyCount;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -154,6 +157,14 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyInstanceSpecRequest setReadOnlyCount(Integer readOnlyCount) {
+        this.readOnlyCount = readOnlyCount;
+        return this;
+    }
+    public Integer getReadOnlyCount() {
+        return this.readOnlyCount;
     }
 
     public ModifyInstanceSpecRequest setRegionId(String regionId) {

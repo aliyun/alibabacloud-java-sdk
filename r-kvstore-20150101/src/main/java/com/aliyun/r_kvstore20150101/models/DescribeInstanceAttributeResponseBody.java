@@ -177,6 +177,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("QPS")
         public Long QPS;
 
+        @NameInMap("ReadOnlyCount")
+        public Integer readOnlyCount;
+
         @NameInMap("RegionId")
         public String regionId;
 
@@ -478,6 +481,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
         public Long getQPS() {
             return this.QPS;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setReadOnlyCount(Integer readOnlyCount) {
+            this.readOnlyCount = readOnlyCount;
+            return this;
+        }
+        public Integer getReadOnlyCount() {
+            return this.readOnlyCount;
         }
 
         public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setRegionId(String regionId) {

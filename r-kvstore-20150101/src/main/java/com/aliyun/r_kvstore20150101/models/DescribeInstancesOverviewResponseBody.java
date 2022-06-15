@@ -55,9 +55,6 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         @NameInMap("ConnectionDomain")
         public String connectionDomain;
 
-        @NameInMap("ConnectionMode")
-        public String connectionMode;
-
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -87,9 +84,6 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
 
         @NameInMap("NetworkType")
         public String networkType;
-
-        @NameInMap("Port")
-        public Long port;
 
         @NameInMap("PrivateIp")
         public String privateIp;
@@ -144,14 +138,6 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         }
         public String getConnectionDomain() {
             return this.connectionDomain;
-        }
-
-        public DescribeInstancesOverviewResponseBodyInstances setConnectionMode(String connectionMode) {
-            this.connectionMode = connectionMode;
-            return this;
-        }
-        public String getConnectionMode() {
-            return this.connectionMode;
         }
 
         public DescribeInstancesOverviewResponseBodyInstances setCreateTime(String createTime) {
@@ -232,14 +218,6 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         }
         public String getNetworkType() {
             return this.networkType;
-        }
-
-        public DescribeInstancesOverviewResponseBodyInstances setPort(Long port) {
-            this.port = port;
-            return this;
-        }
-        public Long getPort() {
-            return this.port;
         }
 
         public DescribeInstancesOverviewResponseBodyInstances setPrivateIp(String privateIp) {

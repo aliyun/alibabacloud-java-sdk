@@ -147,6 +147,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("DestroyTime")
         public String destroyTime;
 
+        @NameInMap("EditionType")
+        public String editionType;
+
         @NameInMap("EndTime")
         public String endTime;
 
@@ -203,9 +206,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
-
-        @NameInMap("SearchKey")
-        public String searchKey;
 
         @NameInMap("SecondaryZoneId")
         public String secondaryZoneId;
@@ -319,6 +319,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getDestroyTime() {
             return this.destroyTime;
+        }
+
+        public DescribeInstancesResponseBodyInstancesKVStoreInstance setEditionType(String editionType) {
+            this.editionType = editionType;
+            return this;
+        }
+        public String getEditionType() {
+            return this.editionType;
         }
 
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setEndTime(String endTime) {
@@ -471,14 +479,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesKVStoreInstance setSearchKey(String searchKey) {
-            this.searchKey = searchKey;
-            return this;
-        }
-        public String getSearchKey() {
-            return this.searchKey;
         }
 
         public DescribeInstancesResponseBodyInstancesKVStoreInstance setSecondaryZoneId(String secondaryZoneId) {
