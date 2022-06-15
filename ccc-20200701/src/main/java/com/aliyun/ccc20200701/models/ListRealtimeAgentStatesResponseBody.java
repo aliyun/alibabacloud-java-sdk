@@ -80,6 +80,9 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("OutboundScenario")
+        public Boolean outboundScenario;
+
         @NameInMap("SkillGroupIdList")
         public java.util.List<String> skillGroupIdList;
 
@@ -94,6 +97,9 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
 
         @NameInMap("StateTime")
         public Long stateTime;
+
+        @NameInMap("WorkMode")
+        public String workMode;
 
         public static ListRealtimeAgentStatesResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListRealtimeAgentStatesResponseBodyDataList self = new ListRealtimeAgentStatesResponseBodyDataList();
@@ -140,6 +146,14 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public ListRealtimeAgentStatesResponseBodyDataList setOutboundScenario(Boolean outboundScenario) {
+            this.outboundScenario = outboundScenario;
+            return this;
+        }
+        public Boolean getOutboundScenario() {
+            return this.outboundScenario;
+        }
+
         public ListRealtimeAgentStatesResponseBodyDataList setSkillGroupIdList(java.util.List<String> skillGroupIdList) {
             this.skillGroupIdList = skillGroupIdList;
             return this;
@@ -178,6 +192,14 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         }
         public Long getStateTime() {
             return this.stateTime;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyDataList setWorkMode(String workMode) {
+            this.workMode = workMode;
+            return this;
+        }
+        public String getWorkMode() {
+            return this.workMode;
         }
 
     }

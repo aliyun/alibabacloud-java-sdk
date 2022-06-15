@@ -13,6 +13,9 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("OutboundScenario")
+    public Boolean outboundScenario;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -24,6 +27,9 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
 
     @NameInMap("StateList")
     public String stateList;
+
+    @NameInMap("WorkModeList")
+    public String workModeList;
 
     public static ListRealtimeAgentStatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRealtimeAgentStatesRequest self = new ListRealtimeAgentStatesRequest();
@@ -52,6 +58,14 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListRealtimeAgentStatesRequest setOutboundScenario(Boolean outboundScenario) {
+        this.outboundScenario = outboundScenario;
+        return this;
+    }
+    public Boolean getOutboundScenario() {
+        return this.outboundScenario;
     }
 
     public ListRealtimeAgentStatesRequest setPageNumber(Integer pageNumber) {
@@ -84,6 +98,14 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     }
     public String getStateList() {
         return this.stateList;
+    }
+
+    public ListRealtimeAgentStatesRequest setWorkModeList(String workModeList) {
+        this.workModeList = workModeList;
+        return this;
+    }
+    public String getWorkModeList() {
+        return this.workModeList;
     }
 
 }

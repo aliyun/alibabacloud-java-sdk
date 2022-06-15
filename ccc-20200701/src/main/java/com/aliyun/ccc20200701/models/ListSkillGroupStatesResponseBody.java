@@ -76,6 +76,9 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
     }
 
     public static class ListSkillGroupStatesResponseBodyDataList extends TeaModel {
+        @NameInMap("AverageWaitingTime")
+        public Long averageWaitingTime;
+
         @NameInMap("BreakingAgents")
         public Long breakingAgents;
 
@@ -103,12 +106,29 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         @NameInMap("WaitingCalls")
         public Long waitingCalls;
 
+        @NameInMap("WaitingCallsLevel10")
+        public Long waitingCallsLevel10;
+
+        @NameInMap("WaitingCallsLevel20")
+        public Long waitingCallsLevel20;
+
+        @NameInMap("WaitingCallsLevel30")
+        public Long waitingCallsLevel30;
+
         @NameInMap("WorkingAgents")
         public Long workingAgents;
 
         public static ListSkillGroupStatesResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListSkillGroupStatesResponseBodyDataList self = new ListSkillGroupStatesResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public ListSkillGroupStatesResponseBodyDataList setAverageWaitingTime(Long averageWaitingTime) {
+            this.averageWaitingTime = averageWaitingTime;
+            return this;
+        }
+        public Long getAverageWaitingTime() {
+            return this.averageWaitingTime;
         }
 
         public ListSkillGroupStatesResponseBodyDataList setBreakingAgents(Long breakingAgents) {
@@ -181,6 +201,30 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         }
         public Long getWaitingCalls() {
             return this.waitingCalls;
+        }
+
+        public ListSkillGroupStatesResponseBodyDataList setWaitingCallsLevel10(Long waitingCallsLevel10) {
+            this.waitingCallsLevel10 = waitingCallsLevel10;
+            return this;
+        }
+        public Long getWaitingCallsLevel10() {
+            return this.waitingCallsLevel10;
+        }
+
+        public ListSkillGroupStatesResponseBodyDataList setWaitingCallsLevel20(Long waitingCallsLevel20) {
+            this.waitingCallsLevel20 = waitingCallsLevel20;
+            return this;
+        }
+        public Long getWaitingCallsLevel20() {
+            return this.waitingCallsLevel20;
+        }
+
+        public ListSkillGroupStatesResponseBodyDataList setWaitingCallsLevel30(Long waitingCallsLevel30) {
+            this.waitingCallsLevel30 = waitingCallsLevel30;
+            return this;
+        }
+        public Long getWaitingCallsLevel30() {
+            return this.waitingCallsLevel30;
         }
 
         public ListSkillGroupStatesResponseBodyDataList setWorkingAgents(Long workingAgents) {
