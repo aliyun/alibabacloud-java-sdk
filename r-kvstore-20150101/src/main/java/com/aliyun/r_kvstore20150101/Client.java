@@ -106,6 +106,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.readOnlyCount)) {
+            query.put("ReadOnlyCount", request.readOnlyCount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -658,6 +662,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityToken", request.securityToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.shardCount)) {
+            query.put("ShardCount", request.shardCount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.srcDBInstanceId)) {
             query.put("SrcDBInstanceId", request.srcDBInstanceId);
         }
@@ -1065,6 +1073,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.readOnlyCount)) {
+            query.put("ReadOnlyCount", request.readOnlyCount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -4910,6 +4922,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.readOnlyCount)) {
+            query.put("ReadOnlyCount", request.readOnlyCount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

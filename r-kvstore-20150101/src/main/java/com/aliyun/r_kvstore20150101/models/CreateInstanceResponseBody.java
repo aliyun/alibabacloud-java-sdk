@@ -40,6 +40,9 @@ public class CreateInstanceResponseBody extends TeaModel {
     @NameInMap("NodeType")
     public String nodeType;
 
+    @NameInMap("OrderId")
+    public Long orderId;
+
     @NameInMap("Port")
     public Integer port;
 
@@ -166,6 +169,14 @@ public class CreateInstanceResponseBody extends TeaModel {
     }
     public String getNodeType() {
         return this.nodeType;
+    }
+
+    public CreateInstanceResponseBody setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public CreateInstanceResponseBody setPort(Integer port) {

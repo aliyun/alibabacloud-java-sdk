@@ -94,6 +94,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("ShardCount")
+    public Integer shardCount;
+
     @NameInMap("SrcDBInstanceId")
     public String srcDBInstanceId;
 
@@ -355,6 +358,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public CreateInstanceRequest setShardCount(Integer shardCount) {
+        this.shardCount = shardCount;
+        return this;
+    }
+    public Integer getShardCount() {
+        return this.shardCount;
     }
 
     public CreateInstanceRequest setSrcDBInstanceId(String srcDBInstanceId) {
