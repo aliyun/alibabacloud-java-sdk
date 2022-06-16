@@ -16,6 +16,9 @@ public class DescribeApisByAppRequest extends TeaModel {
     @NameInMap("AppId")
     public Long appId;
 
+    @NameInMap("Description")
+    public String description;
+
     // API的请求HTTP Method
     @NameInMap("Method")
     public String method;
@@ -62,6 +65,14 @@ public class DescribeApisByAppRequest extends TeaModel {
     }
     public Long getAppId() {
         return this.appId;
+    }
+
+    public DescribeApisByAppRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public DescribeApisByAppRequest setMethod(String method) {
