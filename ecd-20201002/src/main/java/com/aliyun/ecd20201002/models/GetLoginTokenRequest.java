@@ -13,6 +13,9 @@ public class GetLoginTokenRequest extends TeaModel {
     @NameInMap("ClientOS")
     public String clientOS;
 
+    @NameInMap("ClientType")
+    public String clientType;
+
     @NameInMap("ClientVersion")
     public String clientVersion;
 
@@ -64,6 +67,9 @@ public class GetLoginTokenRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
+    @NameInMap("SsoExtendsCookies")
+    public String ssoExtendsCookies;
+
     @NameInMap("SsoSessionToken")
     public String ssoSessionToken;
 
@@ -103,6 +109,14 @@ public class GetLoginTokenRequest extends TeaModel {
     }
     public String getClientOS() {
         return this.clientOS;
+    }
+
+    public GetLoginTokenRequest setClientType(String clientType) {
+        this.clientType = clientType;
+        return this;
+    }
+    public String getClientType() {
+        return this.clientType;
     }
 
     public GetLoginTokenRequest setClientVersion(String clientVersion) {
@@ -239,6 +253,14 @@ public class GetLoginTokenRequest extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public GetLoginTokenRequest setSsoExtendsCookies(String ssoExtendsCookies) {
+        this.ssoExtendsCookies = ssoExtendsCookies;
+        return this;
+    }
+    public String getSsoExtendsCookies() {
+        return this.ssoExtendsCookies;
     }
 
     public GetLoginTokenRequest setSsoSessionToken(String ssoSessionToken) {

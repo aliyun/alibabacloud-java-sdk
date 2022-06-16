@@ -7,6 +7,9 @@ public class DeleteFingerPrintTemplateRequest extends TeaModel {
     @NameInMap("ClientId")
     public String clientId;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("Index")
     public Integer index;
 
@@ -30,6 +33,14 @@ public class DeleteFingerPrintTemplateRequest extends TeaModel {
     }
     public String getClientId() {
         return this.clientId;
+    }
+
+    public DeleteFingerPrintTemplateRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DeleteFingerPrintTemplateRequest setIndex(Integer index) {

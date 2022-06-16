@@ -10,6 +10,9 @@ public class StartDesktopsRequest extends TeaModel {
     @NameInMap("ClientOS")
     public String clientOS;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("ClientVersion")
     public String clientVersion;
 
@@ -44,6 +47,14 @@ public class StartDesktopsRequest extends TeaModel {
     }
     public String getClientOS() {
         return this.clientOS;
+    }
+
+    public StartDesktopsRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public StartDesktopsRequest setClientVersion(String clientVersion) {

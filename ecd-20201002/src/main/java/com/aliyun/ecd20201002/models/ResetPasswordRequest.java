@@ -7,6 +7,9 @@ public class ResetPasswordRequest extends TeaModel {
     @NameInMap("ClientId")
     public String clientId;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("Email")
     public String email;
 
@@ -33,6 +36,14 @@ public class ResetPasswordRequest extends TeaModel {
     }
     public String getClientId() {
         return this.clientId;
+    }
+
+    public ResetPasswordRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ResetPasswordRequest setEmail(String email) {
