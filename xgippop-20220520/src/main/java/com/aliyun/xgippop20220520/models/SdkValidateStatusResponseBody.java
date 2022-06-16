@@ -3,14 +3,14 @@ package com.aliyun.xgippop20220520.models;
 
 import com.aliyun.tea.*;
 
-public class ValidateStatusResponseBody extends TeaModel {
+public class SdkValidateStatusResponseBody extends TeaModel {
     // 结果码
     @NameInMap("Code")
     public String code;
 
     // 结果
     @NameInMap("Data")
-    public ValidateStatusResponseBodyData data;
+    public SdkValidateStatusResponseBodyData data;
 
     // 结果描述
     @NameInMap("Message")
@@ -28,12 +28,12 @@ public class ValidateStatusResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static ValidateStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ValidateStatusResponseBody self = new ValidateStatusResponseBody();
+    public static SdkValidateStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SdkValidateStatusResponseBody self = new SdkValidateStatusResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ValidateStatusResponseBody setCode(String code) {
+    public SdkValidateStatusResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -41,15 +41,15 @@ public class ValidateStatusResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ValidateStatusResponseBody setData(ValidateStatusResponseBodyData data) {
+    public SdkValidateStatusResponseBody setData(SdkValidateStatusResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public ValidateStatusResponseBodyData getData() {
+    public SdkValidateStatusResponseBodyData getData() {
         return this.data;
     }
 
-    public ValidateStatusResponseBody setMessage(String message) {
+    public SdkValidateStatusResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -57,7 +57,7 @@ public class ValidateStatusResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ValidateStatusResponseBody setRequestId(String requestId) {
+    public SdkValidateStatusResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -65,7 +65,7 @@ public class ValidateStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ValidateStatusResponseBody setRt(Long rt) {
+    public SdkValidateStatusResponseBody setRt(Long rt) {
         this.rt = rt;
         return this;
     }
@@ -73,7 +73,7 @@ public class ValidateStatusResponseBody extends TeaModel {
         return this.rt;
     }
 
-    public ValidateStatusResponseBody setSuccess(Boolean success) {
+    public SdkValidateStatusResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -182,116 +182,6 @@ public class ValidateStatusResponseBody extends TeaModel {
         }
 
         public SdkValidateStatusResponseBodyData setPseudoCode(String pseudoCode) {
-            this.pseudoCode = pseudoCode;
-            return this;
-        }
-        public String getPseudoCode() {
-            return this.pseudoCode;
-        }
-
-    }
-
-    public static class ValidateStatusResponseBodyDataAppExtPopList extends TeaModel {
-        @NameInMap("ExtId")
-        public Long extId;
-
-        // cdn ip
-        @NameInMap("FlowIp")
-        public java.util.List<String> flowIp;
-
-        // cdn 域名信息
-        @NameInMap("FlowUrl")
-        public java.util.List<String> flowUrl;
-
-        // 业务方ip集合
-        @NameInMap("OriginalIpList")
-        public java.util.List<String> originalIpList;
-
-        // 业务方域名集合
-        @NameInMap("OriginalUrlList")
-        public java.util.List<String> originalUrlList;
-
-        public static ValidateStatusResponseBodyDataAppExtPopList build(java.util.Map<String, ?> map) throws Exception {
-            ValidateStatusResponseBodyDataAppExtPopList self = new ValidateStatusResponseBodyDataAppExtPopList();
-            return TeaModel.build(map, self);
-        }
-
-        public ValidateStatusResponseBodyDataAppExtPopList setExtId(Long extId) {
-            this.extId = extId;
-            return this;
-        }
-        public Long getExtId() {
-            return this.extId;
-        }
-
-        public ValidateStatusResponseBodyDataAppExtPopList setFlowIp(java.util.List<String> flowIp) {
-            this.flowIp = flowIp;
-            return this;
-        }
-        public java.util.List<String> getFlowIp() {
-            return this.flowIp;
-        }
-
-        public ValidateStatusResponseBodyDataAppExtPopList setFlowUrl(java.util.List<String> flowUrl) {
-            this.flowUrl = flowUrl;
-            return this;
-        }
-        public java.util.List<String> getFlowUrl() {
-            return this.flowUrl;
-        }
-
-        public ValidateStatusResponseBodyDataAppExtPopList setOriginalIpList(java.util.List<String> originalIpList) {
-            this.originalIpList = originalIpList;
-            return this;
-        }
-        public java.util.List<String> getOriginalIpList() {
-            return this.originalIpList;
-        }
-
-        public ValidateStatusResponseBodyDataAppExtPopList setOriginalUrlList(java.util.List<String> originalUrlList) {
-            this.originalUrlList = originalUrlList;
-            return this;
-        }
-        public java.util.List<String> getOriginalUrlList() {
-            return this.originalUrlList;
-        }
-
-    }
-
-    public static class ValidateStatusResponseBodyData extends TeaModel {
-        @NameInMap("AppExtPopList")
-        public java.util.List<ValidateStatusResponseBodyDataAppExtPopList> appExtPopList;
-
-        // 是否处于免流状态，取值范围为true/false
-        @NameInMap("FreeFlow")
-        public Boolean freeFlow;
-
-        // 伪码
-        @NameInMap("PseudoCode")
-        public String pseudoCode;
-
-        public static ValidateStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            ValidateStatusResponseBodyData self = new ValidateStatusResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public ValidateStatusResponseBodyData setAppExtPopList(java.util.List<ValidateStatusResponseBodyDataAppExtPopList> appExtPopList) {
-            this.appExtPopList = appExtPopList;
-            return this;
-        }
-        public java.util.List<ValidateStatusResponseBodyDataAppExtPopList> getAppExtPopList() {
-            return this.appExtPopList;
-        }
-
-        public ValidateStatusResponseBodyData setFreeFlow(Boolean freeFlow) {
-            this.freeFlow = freeFlow;
-            return this;
-        }
-        public Boolean getFreeFlow() {
-            return this.freeFlow;
-        }
-
-        public ValidateStatusResponseBodyData setPseudoCode(String pseudoCode) {
             this.pseudoCode = pseudoCode;
             return this;
         }

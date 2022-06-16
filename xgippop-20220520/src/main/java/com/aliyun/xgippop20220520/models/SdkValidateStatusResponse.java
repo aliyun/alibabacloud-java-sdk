@@ -3,7 +3,7 @@ package com.aliyun.xgippop20220520.models;
 
 import com.aliyun.tea.*;
 
-public class GetFreeFlowStatusResponse extends TeaModel {
+public class SdkValidateStatusResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetFreeFlowStatusResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetFreeFlowStatusResponseBody body;
+    public SdkValidateStatusResponseBody body;
 
-    public static GetFreeFlowStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetFreeFlowStatusResponse self = new GetFreeFlowStatusResponse();
+    public static SdkValidateStatusResponse build(java.util.Map<String, ?> map) throws Exception {
+        SdkValidateStatusResponse self = new SdkValidateStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetFreeFlowStatusResponse setHeaders(java.util.Map<String, String> headers) {
+    public SdkValidateStatusResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetFreeFlowStatusResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetFreeFlowStatusResponse setStatusCode(Integer statusCode) {
+    public SdkValidateStatusResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetFreeFlowStatusResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetFreeFlowStatusResponse setBody(GetFreeFlowStatusResponseBody body) {
+    public SdkValidateStatusResponse setBody(SdkValidateStatusResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetFreeFlowStatusResponseBody getBody() {
+    public SdkValidateStatusResponseBody getBody() {
         return this.body;
     }
 
