@@ -412,6 +412,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.phoneNumberEncryptWithOptions(request, runtime);
     }
 
+    public PvrCallbackFCUResponse pvrCallbackFCUWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PvrCallbackFCU"),
+            new TeaPair("version", "2020-02-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PvrCallbackFCUResponse());
+    }
+
+    public PvrCallbackFCUResponse pvrCallbackFCU() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.pvrCallbackFCUWithOptions(runtime);
+    }
+
     public ThreeElementsVerificationResponse threeElementsVerificationWithOptions(ThreeElementsVerificationRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
