@@ -3,7 +3,7 @@ package com.aliyun.dytnsapi20200217.models;
 
 import com.aliyun.tea.*;
 
-public class DescribePhoneNumberOnlineTimeResponse extends TeaModel {
+public class TwoElementsVerificationResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribePhoneNumberOnlineTimeResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribePhoneNumberOnlineTimeResponseBody body;
+    public TwoElementsVerificationResponseBody body;
 
-    public static DescribePhoneNumberOnlineTimeResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribePhoneNumberOnlineTimeResponse self = new DescribePhoneNumberOnlineTimeResponse();
+    public static TwoElementsVerificationResponse build(java.util.Map<String, ?> map) throws Exception {
+        TwoElementsVerificationResponse self = new TwoElementsVerificationResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribePhoneNumberOnlineTimeResponse setHeaders(java.util.Map<String, String> headers) {
+    public TwoElementsVerificationResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribePhoneNumberOnlineTimeResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribePhoneNumberOnlineTimeResponse setStatusCode(Integer statusCode) {
+    public TwoElementsVerificationResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribePhoneNumberOnlineTimeResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribePhoneNumberOnlineTimeResponse setBody(DescribePhoneNumberOnlineTimeResponseBody body) {
+    public TwoElementsVerificationResponse setBody(TwoElementsVerificationResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribePhoneNumberOnlineTimeResponseBody getBody() {
+    public TwoElementsVerificationResponseBody getBody() {
         return this.body;
     }
 
