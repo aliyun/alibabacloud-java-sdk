@@ -14,6 +14,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(Config config) throws Exception {
         super(config);
+        this._signatureAlgorithm = "v2";
         this._endpointRule = "";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("xgippop", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -126,6 +127,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createApplicationInfoWithOptions(request, runtime);
     }
 
+    public GetAliyunXgipTokenResponse getAliyunXgipTokenWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAliyunXgipToken"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAliyunXgipTokenResponse());
+    }
+
+    public GetAliyunXgipTokenResponse getAliyunXgipToken() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getAliyunXgipTokenWithOptions(runtime);
+    }
+
     public GetApplicationResponse getApplicationWithOptions(GetApplicationRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -199,31 +221,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetFreeFlowProductListResponse getFreeFlowProductList(GetFreeFlowProductListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getFreeFlowProductListWithOptions(request, runtime);
-    }
-
-    public GetFreeFlowStatusResponse getFreeFlowStatusWithOptions(GetFreeFlowStatusRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetFreeFlowStatus"),
-            new TeaPair("version", "2022-05-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFreeFlowStatusResponse());
-    }
-
-    public GetFreeFlowStatusResponse getFreeFlowStatus(GetFreeFlowStatusRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getFreeFlowStatusWithOptions(request, runtime);
     }
 
     public GetFreeFlowUsageResponse getFreeFlowUsageWithOptions(GetFreeFlowUsageRequest request, RuntimeOptions runtime) throws Exception {
@@ -458,6 +455,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SaveApplicationInfoResponse saveApplicationInfo(SaveApplicationInfoRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.saveApplicationInfoWithOptions(request, runtime);
+    }
+
+    public SdkValidateStatusResponse sdkValidateStatusWithOptions(SdkValidateStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SdkValidateStatus"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SdkValidateStatusResponse());
+    }
+
+    public SdkValidateStatusResponse sdkValidateStatus(SdkValidateStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.sdkValidateStatusWithOptions(request, runtime);
     }
 
     public ValidateStatusResponse validateStatusWithOptions(ValidateStatusRequest request, RuntimeOptions runtime) throws Exception {

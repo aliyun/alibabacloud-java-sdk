@@ -3,14 +3,14 @@ package com.aliyun.xgippop20220520.models;
 
 import com.aliyun.tea.*;
 
-public class GetFreeFlowStatusResponseBody extends TeaModel {
+public class GetAliyunXgipTokenResponseBody extends TeaModel {
     // 结果码
     @NameInMap("Code")
     public String code;
 
     // 结果
     @NameInMap("Data")
-    public Object data;
+    public String data;
 
     // 结果描述
     @NameInMap("Message")
@@ -28,12 +28,12 @@ public class GetFreeFlowStatusResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static GetFreeFlowStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetFreeFlowStatusResponseBody self = new GetFreeFlowStatusResponseBody();
+    public static GetAliyunXgipTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetAliyunXgipTokenResponseBody self = new GetAliyunXgipTokenResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetFreeFlowStatusResponseBody setCode(String code) {
+    public GetAliyunXgipTokenResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -41,15 +41,15 @@ public class GetFreeFlowStatusResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetFreeFlowStatusResponseBody setData(Object data) {
+    public GetAliyunXgipTokenResponseBody setData(String data) {
         this.data = data;
         return this;
     }
-    public Object getData() {
+    public String getData() {
         return this.data;
     }
 
-    public GetFreeFlowStatusResponseBody setMessage(String message) {
+    public GetAliyunXgipTokenResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -57,7 +57,7 @@ public class GetFreeFlowStatusResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetFreeFlowStatusResponseBody setRequestId(String requestId) {
+    public GetAliyunXgipTokenResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -65,7 +65,7 @@ public class GetFreeFlowStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetFreeFlowStatusResponseBody setRt(Long rt) {
+    public GetAliyunXgipTokenResponseBody setRt(Long rt) {
         this.rt = rt;
         return this;
     }
@@ -73,7 +73,7 @@ public class GetFreeFlowStatusResponseBody extends TeaModel {
         return this.rt;
     }
 
-    public GetFreeFlowStatusResponseBody setSuccess(Boolean success) {
+    public GetAliyunXgipTokenResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
