@@ -10,6 +10,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
     @NameInMap("EndUserId")
     public String endUserId;
 
+    @NameInMap("Industry")
+    public String industry;
+
     @NameInMap("KeepAliveToken")
     public String keepAliveToken;
 
@@ -24,6 +27,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
 
     @NameInMap("Phone")
     public String phone;
+
+    @NameInMap("Props")
+    public java.util.Map<String, String> props;
 
     @NameInMap("QrCodePng")
     public String qrCodePng;
@@ -59,6 +65,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
     }
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    public GetLoginTokenResponseBody setIndustry(String industry) {
+        this.industry = industry;
+        return this;
+    }
+    public String getIndustry() {
+        return this.industry;
     }
 
     public GetLoginTokenResponseBody setKeepAliveToken(String keepAliveToken) {
@@ -99,6 +113,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
     }
     public String getPhone() {
         return this.phone;
+    }
+
+    public GetLoginTokenResponseBody setProps(java.util.Map<String, String> props) {
+        this.props = props;
+        return this;
+    }
+    public java.util.Map<String, String> getProps() {
+        return this.props;
     }
 
     public GetLoginTokenResponseBody setQrCodePng(String qrCodePng) {

@@ -7,6 +7,9 @@ public class SetFingerPrintTemplateDescriptionRequest extends TeaModel {
     @NameInMap("ClientId")
     public String clientId;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("Description")
     public String description;
 
@@ -33,6 +36,14 @@ public class SetFingerPrintTemplateDescriptionRequest extends TeaModel {
     }
     public String getClientId() {
         return this.clientId;
+    }
+
+    public SetFingerPrintTemplateDescriptionRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public SetFingerPrintTemplateDescriptionRequest setDescription(String description) {

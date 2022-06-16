@@ -43,6 +43,9 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("ProtocolType")
     public String protocolType;
 
+    @NameInMap("QueryFotaUpdate")
+    public Boolean queryFotaUpdate;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -159,6 +162,14 @@ public class DescribeDesktopsRequest extends TeaModel {
     }
     public String getProtocolType() {
         return this.protocolType;
+    }
+
+    public DescribeDesktopsRequest setQueryFotaUpdate(Boolean queryFotaUpdate) {
+        this.queryFotaUpdate = queryFotaUpdate;
+        return this;
+    }
+    public Boolean getQueryFotaUpdate() {
+        return this.queryFotaUpdate;
     }
 
     public DescribeDesktopsRequest setRegionId(String regionId) {

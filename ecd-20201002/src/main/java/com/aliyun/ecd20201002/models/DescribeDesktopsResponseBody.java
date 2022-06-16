@@ -83,6 +83,58 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDesktopsResponseBodyDesktopsFotaUpdate extends TeaModel {
+        @NameInMap("CurrentAppVersion")
+        public String currentAppVersion;
+
+        @NameInMap("NewAppVersion")
+        public String newAppVersion;
+
+        @NameInMap("ReleaseNote")
+        public String releaseNote;
+
+        @NameInMap("Size")
+        public Long size;
+
+        public static DescribeDesktopsResponseBodyDesktopsFotaUpdate build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDesktopsResponseBodyDesktopsFotaUpdate self = new DescribeDesktopsResponseBodyDesktopsFotaUpdate();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsFotaUpdate setCurrentAppVersion(String currentAppVersion) {
+            this.currentAppVersion = currentAppVersion;
+            return this;
+        }
+        public String getCurrentAppVersion() {
+            return this.currentAppVersion;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsFotaUpdate setNewAppVersion(String newAppVersion) {
+            this.newAppVersion = newAppVersion;
+            return this;
+        }
+        public String getNewAppVersion() {
+            return this.newAppVersion;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsFotaUpdate setReleaseNote(String releaseNote) {
+            this.releaseNote = releaseNote;
+            return this;
+        }
+        public String getReleaseNote() {
+            return this.releaseNote;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsFotaUpdate setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
+    }
+
     public static class DescribeDesktopsResponseBodyDesktopsSessions extends TeaModel {
         @NameInMap("EndUserId")
         public String endUserId;
@@ -159,8 +211,11 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        @NameInMap("GpuCount")
-        public Float gpuCount;
+        @NameInMap("FotaUpdate")
+        public DescribeDesktopsResponseBodyDesktopsFotaUpdate fotaUpdate;
+
+        @NameInMap("GpuMemory")
+        public Integer gpuMemory;
 
         @NameInMap("ImageId")
         public String imageId;
@@ -174,6 +229,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
+        @NameInMap("NetworkInterfaceIp")
+        public String networkInterfaceIp;
+
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
@@ -185,6 +243,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         @NameInMap("ProtocolType")
         public String protocolType;
+
+        @NameInMap("RealDesktopId")
+        public String realDesktopId;
 
         @NameInMap("Sessions")
         public java.util.List<DescribeDesktopsResponseBodyDesktopsSessions> sessions;
@@ -320,12 +381,20 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
-        public DescribeDesktopsResponseBodyDesktops setGpuCount(Float gpuCount) {
-            this.gpuCount = gpuCount;
+        public DescribeDesktopsResponseBodyDesktops setFotaUpdate(DescribeDesktopsResponseBodyDesktopsFotaUpdate fotaUpdate) {
+            this.fotaUpdate = fotaUpdate;
             return this;
         }
-        public Float getGpuCount() {
-            return this.gpuCount;
+        public DescribeDesktopsResponseBodyDesktopsFotaUpdate getFotaUpdate() {
+            return this.fotaUpdate;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setGpuMemory(Integer gpuMemory) {
+            this.gpuMemory = gpuMemory;
+            return this;
+        }
+        public Integer getGpuMemory() {
+            return this.gpuMemory;
         }
 
         public DescribeDesktopsResponseBodyDesktops setImageId(String imageId) {
@@ -360,6 +429,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             return this.networkInterfaceId;
         }
 
+        public DescribeDesktopsResponseBodyDesktops setNetworkInterfaceIp(String networkInterfaceIp) {
+            this.networkInterfaceIp = networkInterfaceIp;
+            return this;
+        }
+        public String getNetworkInterfaceIp() {
+            return this.networkInterfaceIp;
+        }
+
         public DescribeDesktopsResponseBodyDesktops setOfficeSiteId(String officeSiteId) {
             this.officeSiteId = officeSiteId;
             return this;
@@ -390,6 +467,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getProtocolType() {
             return this.protocolType;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setRealDesktopId(String realDesktopId) {
+            this.realDesktopId = realDesktopId;
+            return this;
+        }
+        public String getRealDesktopId() {
+            return this.realDesktopId;
         }
 
         public DescribeDesktopsResponseBodyDesktops setSessions(java.util.List<DescribeDesktopsResponseBodyDesktopsSessions> sessions) {
