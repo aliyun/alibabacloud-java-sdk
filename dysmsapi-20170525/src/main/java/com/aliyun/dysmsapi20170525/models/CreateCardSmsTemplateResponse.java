@@ -3,7 +3,7 @@ package com.aliyun.dysmsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class SendSmsResponse extends TeaModel {
+public class CreateCardSmsTemplateResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class SendSmsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public SendSmsResponseBody body;
+    public CreateCardSmsTemplateResponseBody body;
 
-    public static SendSmsResponse build(java.util.Map<String, ?> map) throws Exception {
-        SendSmsResponse self = new SendSmsResponse();
+    public static CreateCardSmsTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateCardSmsTemplateResponse self = new CreateCardSmsTemplateResponse();
         return TeaModel.build(map, self);
     }
 
-    public SendSmsResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateCardSmsTemplateResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class SendSmsResponse extends TeaModel {
         return this.headers;
     }
 
-    public SendSmsResponse setStatusCode(Integer statusCode) {
+    public CreateCardSmsTemplateResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class SendSmsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SendSmsResponse setBody(SendSmsResponseBody body) {
+    public CreateCardSmsTemplateResponse setBody(CreateCardSmsTemplateResponseBody body) {
         this.body = body;
         return this;
     }
-    public SendSmsResponseBody getBody() {
+    public CreateCardSmsTemplateResponseBody getBody() {
         return this.body;
     }
 

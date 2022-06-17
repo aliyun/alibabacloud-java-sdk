@@ -197,6 +197,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addSmsTemplateWithOptions(request, runtime);
     }
 
+    public CheckMobilesCardSupportResponse checkMobilesCardSupportWithOptions(CheckMobilesCardSupportRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mobiles)) {
+            query.put("Mobiles", request.mobiles);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            query.put("TemplateCode", request.templateCode);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckMobilesCardSupport"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckMobilesCardSupportResponse());
+    }
+
+    public CheckMobilesCardSupportResponse checkMobilesCardSupport(CheckMobilesCardSupportRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.checkMobilesCardSupportWithOptions(request, runtime);
+    }
+
+    public CreateCardSmsTemplateResponse createCardSmsTemplateWithOptions(CreateCardSmsTemplateRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateCardSmsTemplateShrinkRequest request = new CreateCardSmsTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.template)) {
+            request.templateShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.template, "Template", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.memo)) {
+            query.put("Memo", request.memo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateShrink)) {
+            query.put("Template", request.templateShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCardSmsTemplate"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCardSmsTemplateResponse());
+    }
+
+    public CreateCardSmsTemplateResponse createCardSmsTemplate(CreateCardSmsTemplateRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createCardSmsTemplateWithOptions(request, runtime);
+    }
+
     public DeleteShortUrlResponse deleteShortUrlWithOptions(DeleteShortUrlRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -320,6 +396,117 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSmsTemplateResponse deleteSmsTemplate(DeleteSmsTemplateRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteSmsTemplateWithOptions(request, runtime);
+    }
+
+    public GetCardSmsLinkResponse getCardSmsLinkWithOptions(GetCardSmsLinkRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cardTemplateCode)) {
+            query.put("CardTemplateCode", request.cardTemplateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cardTemplateParamJson)) {
+            query.put("CardTemplateParamJson", request.cardTemplateParamJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneNumberJson)) {
+            query.put("PhoneNumberJson", request.phoneNumberJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signNameJson)) {
+            query.put("SignNameJson", request.signNameJson);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCardSmsLink"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCardSmsLinkResponse());
+    }
+
+    public GetCardSmsLinkResponse getCardSmsLink(GetCardSmsLinkRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getCardSmsLinkWithOptions(request, runtime);
+    }
+
+    public GetMediaResourceIdResponse getMediaResourceIdWithOptions(GetMediaResourceIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extendInfo)) {
+            query.put("ExtendInfo", request.extendInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSize)) {
+            query.put("FileSize", request.fileSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memo)) {
+            query.put("Memo", request.memo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossKey)) {
+            query.put("OssKey", request.ossKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMediaResourceId"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMediaResourceIdResponse());
+    }
+
+    public GetMediaResourceIdResponse getMediaResourceId(GetMediaResourceIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getMediaResourceIdWithOptions(request, runtime);
+    }
+
+    public GetOSSInfoForCardTemplateResponse getOSSInfoForCardTemplateWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetOSSInfoForCardTemplate"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOSSInfoForCardTemplateResponse());
+    }
+
+    public GetOSSInfoForCardTemplateResponse getOSSInfoForCardTemplate() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getOSSInfoForCardTemplateWithOptions(runtime);
     }
 
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, RuntimeOptions runtime) throws Exception {
@@ -497,6 +684,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifySmsTemplateResponse modifySmsTemplate(ModifySmsTemplateRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.modifySmsTemplateWithOptions(request, runtime);
+    }
+
+    public QueryCardSmsTemplateResponse queryCardSmsTemplateWithOptions(QueryCardSmsTemplateRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            query.put("TemplateCode", request.templateCode);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryCardSmsTemplate"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCardSmsTemplateResponse());
+    }
+
+    public QueryCardSmsTemplateResponse queryCardSmsTemplate(QueryCardSmsTemplateRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryCardSmsTemplateWithOptions(request, runtime);
+    }
+
+    public QueryCardSmsTemplateReportResponse queryCardSmsTemplateReportWithOptions(QueryCardSmsTemplateReportRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCodes)) {
+            query.put("TemplateCodes", request.templateCodes);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryCardSmsTemplateReport"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCardSmsTemplateReportResponse());
+    }
+
+    public QueryCardSmsTemplateReportResponse queryCardSmsTemplateReport(QueryCardSmsTemplateReportRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryCardSmsTemplateReportWithOptions(request, runtime);
     }
 
     public QuerySendDetailsResponse querySendDetailsWithOptions(QuerySendDetailsRequest request, RuntimeOptions runtime) throws Exception {
@@ -828,6 +1081,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.querySmsTemplateListWithOptions(request, runtime);
     }
 
+    public SendBatchCardSmsResponse sendBatchCardSmsWithOptions(SendBatchCardSmsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cardTemplateCode)) {
+            query.put("CardTemplateCode", request.cardTemplateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cardTemplateParamJson)) {
+            query.put("CardTemplateParamJson", request.cardTemplateParamJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.digitalTemplateCode)) {
+            query.put("DigitalTemplateCode", request.digitalTemplateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.digitalTemplateParamJson)) {
+            query.put("DigitalTemplateParamJson", request.digitalTemplateParamJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallbackType)) {
+            query.put("FallbackType", request.fallbackType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneNumberJson)) {
+            query.put("PhoneNumberJson", request.phoneNumberJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signNameJson)) {
+            query.put("SignNameJson", request.signNameJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smsTemplateCode)) {
+            query.put("SmsTemplateCode", request.smsTemplateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smsTemplateParamJson)) {
+            query.put("SmsTemplateParamJson", request.smsTemplateParamJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smsUpExtendCodeJson)) {
+            query.put("SmsUpExtendCodeJson", request.smsUpExtendCodeJson);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendBatchCardSms"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendBatchCardSmsResponse());
+    }
+
+    public SendBatchCardSmsResponse sendBatchCardSms(SendBatchCardSmsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.sendBatchCardSmsWithOptions(request, runtime);
+    }
+
     public SendBatchSmsResponse sendBatchSmsWithOptions(SendBatchSmsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -883,6 +1205,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SendBatchSmsResponse sendBatchSms(SendBatchSmsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.sendBatchSmsWithOptions(request, runtime);
+    }
+
+    public SendCardSmsResponse sendCardSmsWithOptions(SendCardSmsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cardObjects)) {
+            query.put("CardObjects", request.cardObjects);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cardTemplateCode)) {
+            query.put("CardTemplateCode", request.cardTemplateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.digitalTemplateCode)) {
+            query.put("DigitalTemplateCode", request.digitalTemplateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.digitalTemplateParam)) {
+            query.put("DigitalTemplateParam", request.digitalTemplateParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallbackType)) {
+            query.put("FallbackType", request.fallbackType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smsTemplateCode)) {
+            query.put("SmsTemplateCode", request.smsTemplateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smsTemplateParam)) {
+            query.put("SmsTemplateParam", request.smsTemplateParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smsUpExtendCode)) {
+            query.put("SmsUpExtendCode", request.smsUpExtendCode);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendCardSms"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendCardSmsResponse());
+    }
+
+    public SendCardSmsResponse sendCardSms(SendCardSmsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.sendCardSmsWithOptions(request, runtime);
     }
 
     public SendSmsResponse sendSmsWithOptions(SendSmsRequest request, RuntimeOptions runtime) throws Exception {
