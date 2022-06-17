@@ -65,7 +65,65 @@ public class GetTaskDetailResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetTaskDetailResponseBodyResponseDeduplicateProcessInfos extends TeaModel {
+        @NameInMap("Flag")
+        public Boolean flag;
+
+        @NameInMap("JsonNum")
+        public Integer jsonNum;
+
+        @NameInMap("ResultNum")
+        public Integer resultNum;
+
+        @NameInMap("VideoName")
+        public String videoName;
+
+        public static GetTaskDetailResponseBodyResponseDeduplicateProcessInfos build(java.util.Map<String, ?> map) throws Exception {
+            GetTaskDetailResponseBodyResponseDeduplicateProcessInfos self = new GetTaskDetailResponseBodyResponseDeduplicateProcessInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTaskDetailResponseBodyResponseDeduplicateProcessInfos setFlag(Boolean flag) {
+            this.flag = flag;
+            return this;
+        }
+        public Boolean getFlag() {
+            return this.flag;
+        }
+
+        public GetTaskDetailResponseBodyResponseDeduplicateProcessInfos setJsonNum(Integer jsonNum) {
+            this.jsonNum = jsonNum;
+            return this;
+        }
+        public Integer getJsonNum() {
+            return this.jsonNum;
+        }
+
+        public GetTaskDetailResponseBodyResponseDeduplicateProcessInfos setResultNum(Integer resultNum) {
+            this.resultNum = resultNum;
+            return this;
+        }
+        public Integer getResultNum() {
+            return this.resultNum;
+        }
+
+        public GetTaskDetailResponseBodyResponseDeduplicateProcessInfos setVideoName(String videoName) {
+            this.videoName = videoName;
+            return this;
+        }
+        public String getVideoName() {
+            return this.videoName;
+        }
+
+    }
+
     public static class GetTaskDetailResponseBodyResponse extends TeaModel {
+        @NameInMap("DeduplicateProcessInfos")
+        public java.util.List<GetTaskDetailResponseBodyResponseDeduplicateProcessInfos> deduplicateProcessInfos;
+
+        @NameInMap("DeduplicateResultOssPath")
+        public String deduplicateResultOssPath;
+
         @NameInMap("ErrorCode")
         public Integer errorCode;
 
@@ -86,6 +144,9 @@ public class GetTaskDetailResponseBody extends TeaModel {
 
         @NameInMap("Level")
         public Integer level;
+
+        @NameInMap("MidResultOssPath")
+        public String midResultOssPath;
 
         @NameInMap("MqAccessKey")
         public String mqAccessKey;
@@ -138,6 +199,22 @@ public class GetTaskDetailResponseBody extends TeaModel {
         public static GetTaskDetailResponseBodyResponse build(java.util.Map<String, ?> map) throws Exception {
             GetTaskDetailResponseBodyResponse self = new GetTaskDetailResponseBodyResponse();
             return TeaModel.build(map, self);
+        }
+
+        public GetTaskDetailResponseBodyResponse setDeduplicateProcessInfos(java.util.List<GetTaskDetailResponseBodyResponseDeduplicateProcessInfos> deduplicateProcessInfos) {
+            this.deduplicateProcessInfos = deduplicateProcessInfos;
+            return this;
+        }
+        public java.util.List<GetTaskDetailResponseBodyResponseDeduplicateProcessInfos> getDeduplicateProcessInfos() {
+            return this.deduplicateProcessInfos;
+        }
+
+        public GetTaskDetailResponseBodyResponse setDeduplicateResultOssPath(String deduplicateResultOssPath) {
+            this.deduplicateResultOssPath = deduplicateResultOssPath;
+            return this;
+        }
+        public String getDeduplicateResultOssPath() {
+            return this.deduplicateResultOssPath;
         }
 
         public GetTaskDetailResponseBodyResponse setErrorCode(Integer errorCode) {
@@ -194,6 +271,14 @@ public class GetTaskDetailResponseBody extends TeaModel {
         }
         public Integer getLevel() {
             return this.level;
+        }
+
+        public GetTaskDetailResponseBodyResponse setMidResultOssPath(String midResultOssPath) {
+            this.midResultOssPath = midResultOssPath;
+            return this;
+        }
+        public String getMidResultOssPath() {
+            return this.midResultOssPath;
         }
 
         public GetTaskDetailResponseBodyResponse setMqAccessKey(String mqAccessKey) {
