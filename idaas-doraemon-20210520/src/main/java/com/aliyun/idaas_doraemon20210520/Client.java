@@ -483,6 +483,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListOrderConsumeStatisticRecordsResponse listOrderConsumeStatisticRecordsWithOptions(ListOrderConsumeStatisticRecordsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aliOrderCode)) {
+            query.put("AliOrderCode", request.aliOrderCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }

@@ -4,18 +4,23 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ListOrderConsumeStatisticRecordsResponseBody extends TeaModel {
+    // 数据项列表
     @NameInMap("Items")
     public java.util.List<ListOrderConsumeStatisticRecordsResponseBodyItems> items;
 
+    // 每页记录数
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // 请求 ID
     @NameInMap("RequestId")
     public String requestId;
 
+    // 总记录数
     @NameInMap("TotalElements")
     public Long totalElements;
 
+    // 总页数
     @NameInMap("TotalPages")
     public Long totalPages;
 
@@ -69,25 +74,27 @@ public class ListOrderConsumeStatisticRecordsResponseBody extends TeaModel {
         @NameInMap("AliOrderCode")
         public String aliOrderCode;
 
+        // 应用外部标志
         @NameInMap("ApplicationExternalId")
         public String applicationExternalId;
 
-        // 过期时间
+        // 计费数目
         @NameInMap("ChargedCount")
         public Long chargedCount;
 
+        // 服务码
         @NameInMap("ServiceCode")
         public String serviceCode;
 
-        // 创建时间
+        // 统计日期，时间戳，精确到秒
         @NameInMap("StatisticTime")
         public Long statisticTime;
 
-        // 退款时间，毫秒时间戳，退款时才有值
+        // 总价
         @NameInMap("TotalPrice")
         public Long totalPrice;
 
-        // 已用 CU 值，单位厘，实际使用 CU 乘以 1000
+        // 单价
         @NameInMap("UnitPrice")
         public Long unitPrice;
 
