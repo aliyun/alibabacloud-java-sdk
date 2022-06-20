@@ -4,23 +4,15 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class GenerateDynamicImageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public GenerateDynamicImageResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GenerateDynamicImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenerateDynamicImageResponseBody self = new GenerateDynamicImageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GenerateDynamicImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GenerateDynamicImageResponseBody setData(GenerateDynamicImageResponseBodyData data) {
@@ -29,6 +21,14 @@ public class GenerateDynamicImageResponseBody extends TeaModel {
     }
     public GenerateDynamicImageResponseBodyData getData() {
         return this.data;
+    }
+
+    public GenerateDynamicImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GenerateDynamicImageResponseBodyData extends TeaModel {

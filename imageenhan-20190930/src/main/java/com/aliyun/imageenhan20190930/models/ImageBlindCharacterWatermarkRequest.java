@@ -7,11 +7,8 @@ public class ImageBlindCharacterWatermarkRequest extends TeaModel {
     @NameInMap("FunctionType")
     public String functionType;
 
-    @NameInMap("Text")
-    public String text;
-
-    @NameInMap("WatermarkImageURL")
-    public String watermarkImageURL;
+    @NameInMap("OriginImageURL")
+    public String originImageURL;
 
     @NameInMap("OutputFileType")
     public String outputFileType;
@@ -19,8 +16,11 @@ public class ImageBlindCharacterWatermarkRequest extends TeaModel {
     @NameInMap("QualityFactor")
     public Integer qualityFactor;
 
-    @NameInMap("OriginImageURL")
-    public String originImageURL;
+    @NameInMap("Text")
+    public String text;
+
+    @NameInMap("WatermarkImageURL")
+    public String watermarkImageURL;
 
     public static ImageBlindCharacterWatermarkRequest build(java.util.Map<String, ?> map) throws Exception {
         ImageBlindCharacterWatermarkRequest self = new ImageBlindCharacterWatermarkRequest();
@@ -35,20 +35,12 @@ public class ImageBlindCharacterWatermarkRequest extends TeaModel {
         return this.functionType;
     }
 
-    public ImageBlindCharacterWatermarkRequest setText(String text) {
-        this.text = text;
+    public ImageBlindCharacterWatermarkRequest setOriginImageURL(String originImageURL) {
+        this.originImageURL = originImageURL;
         return this;
     }
-    public String getText() {
-        return this.text;
-    }
-
-    public ImageBlindCharacterWatermarkRequest setWatermarkImageURL(String watermarkImageURL) {
-        this.watermarkImageURL = watermarkImageURL;
-        return this;
-    }
-    public String getWatermarkImageURL() {
-        return this.watermarkImageURL;
+    public String getOriginImageURL() {
+        return this.originImageURL;
     }
 
     public ImageBlindCharacterWatermarkRequest setOutputFileType(String outputFileType) {
@@ -67,12 +59,20 @@ public class ImageBlindCharacterWatermarkRequest extends TeaModel {
         return this.qualityFactor;
     }
 
-    public ImageBlindCharacterWatermarkRequest setOriginImageURL(String originImageURL) {
-        this.originImageURL = originImageURL;
+    public ImageBlindCharacterWatermarkRequest setText(String text) {
+        this.text = text;
         return this;
     }
-    public String getOriginImageURL() {
-        return this.originImageURL;
+    public String getText() {
+        return this.text;
+    }
+
+    public ImageBlindCharacterWatermarkRequest setWatermarkImageURL(String watermarkImageURL) {
+        this.watermarkImageURL = watermarkImageURL;
+        return this;
+    }
+    public String getWatermarkImageURL() {
+        return this.watermarkImageURL;
     }
 
 }

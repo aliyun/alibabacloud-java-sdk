@@ -4,23 +4,15 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class ExtendImageStyleRequest extends TeaModel {
-    @NameInMap("StyleUrl")
-    public String styleUrl;
-
     @NameInMap("MajorUrl")
     public String majorUrl;
+
+    @NameInMap("StyleUrl")
+    public String styleUrl;
 
     public static ExtendImageStyleRequest build(java.util.Map<String, ?> map) throws Exception {
         ExtendImageStyleRequest self = new ExtendImageStyleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ExtendImageStyleRequest setStyleUrl(String styleUrl) {
-        this.styleUrl = styleUrl;
-        return this;
-    }
-    public String getStyleUrl() {
-        return this.styleUrl;
     }
 
     public ExtendImageStyleRequest setMajorUrl(String majorUrl) {
@@ -29,6 +21,14 @@ public class ExtendImageStyleRequest extends TeaModel {
     }
     public String getMajorUrl() {
         return this.majorUrl;
+    }
+
+    public ExtendImageStyleRequest setStyleUrl(String styleUrl) {
+        this.styleUrl = styleUrl;
+        return this;
+    }
+    public String getStyleUrl() {
+        return this.styleUrl;
     }
 
 }

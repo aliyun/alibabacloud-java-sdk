@@ -4,23 +4,15 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class MakeSuperResolutionImageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public MakeSuperResolutionImageResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static MakeSuperResolutionImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         MakeSuperResolutionImageResponseBody self = new MakeSuperResolutionImageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public MakeSuperResolutionImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public MakeSuperResolutionImageResponseBody setData(MakeSuperResolutionImageResponseBodyData data) {
@@ -29,6 +21,14 @@ public class MakeSuperResolutionImageResponseBody extends TeaModel {
     }
     public MakeSuperResolutionImageResponseBodyData getData() {
         return this.data;
+    }
+
+    public MakeSuperResolutionImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class MakeSuperResolutionImageResponseBodyData extends TeaModel {

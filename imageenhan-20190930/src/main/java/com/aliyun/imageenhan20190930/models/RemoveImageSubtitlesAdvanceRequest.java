@@ -8,17 +8,17 @@ public class RemoveImageSubtitlesAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
+    @NameInMap("BH")
+    public Float BH;
+
+    @NameInMap("BW")
+    public Float BW;
+
     @NameInMap("BX")
     public Float BX;
 
     @NameInMap("BY")
     public Float BY;
-
-    @NameInMap("BW")
-    public Float BW;
-
-    @NameInMap("BH")
-    public Float BH;
 
     public static RemoveImageSubtitlesAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveImageSubtitlesAdvanceRequest self = new RemoveImageSubtitlesAdvanceRequest();
@@ -31,6 +31,22 @@ public class RemoveImageSubtitlesAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageURLObject() {
         return this.imageURLObject;
+    }
+
+    public RemoveImageSubtitlesAdvanceRequest setBH(Float BH) {
+        this.BH = BH;
+        return this;
+    }
+    public Float getBH() {
+        return this.BH;
+    }
+
+    public RemoveImageSubtitlesAdvanceRequest setBW(Float BW) {
+        this.BW = BW;
+        return this;
+    }
+    public Float getBW() {
+        return this.BW;
     }
 
     public RemoveImageSubtitlesAdvanceRequest setBX(Float BX) {
@@ -47,22 +63,6 @@ public class RemoveImageSubtitlesAdvanceRequest extends TeaModel {
     }
     public Float getBY() {
         return this.BY;
-    }
-
-    public RemoveImageSubtitlesAdvanceRequest setBW(Float BW) {
-        this.BW = BW;
-        return this;
-    }
-    public Float getBW() {
-        return this.BW;
-    }
-
-    public RemoveImageSubtitlesAdvanceRequest setBH(Float BH) {
-        this.BH = BH;
-        return this;
-    }
-    public Float getBH() {
-        return this.BH;
     }
 
 }
