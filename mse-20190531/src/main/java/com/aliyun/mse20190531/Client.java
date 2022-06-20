@@ -2782,7 +2782,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetMseSourceResponse getMseSourceWithOptions(GetMseSourceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
+            query.put("GatewayUniqueId", request.gatewayUniqueId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2791,7 +2799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2019-05-31"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -4679,7 +4687,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public SelectGatewaySlbResponse selectGatewaySlbWithOptions(SelectGatewaySlbRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
+            query.put("GatewayUniqueId", request.gatewayUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -4688,7 +4712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2019-05-31"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -4835,6 +4859,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateClusterResponse updateCluster(UpdateClusterRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateClusterWithOptions(request, runtime);
+    }
+
+    public UpdateClusterSpecResponse updateClusterSpecWithOptions(UpdateClusterSpecRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterSpecification)) {
+            query.put("ClusterSpecification", request.clusterSpecification);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceCount)) {
+            query.put("InstanceCount", request.instanceCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateClusterSpec"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateClusterSpecResponse());
+    }
+
+    public UpdateClusterSpecResponse updateClusterSpec(UpdateClusterSpecRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateClusterSpecWithOptions(request, runtime);
     }
 
     public UpdateConfigResponse updateConfigWithOptions(UpdateConfigRequest request, RuntimeOptions runtime) throws Exception {
@@ -5599,6 +5668,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateGatewayServiceVersionResponse updateGatewayServiceVersion(UpdateGatewayServiceVersionRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateGatewayServiceVersionWithOptions(request, runtime);
+    }
+
+    public UpdateGatewaySpecResponse updateGatewaySpecWithOptions(UpdateGatewaySpecRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
+            query.put("GatewayUniqueId", request.gatewayUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.replica)) {
+            query.put("Replica", request.replica);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spec)) {
+            query.put("Spec", request.spec);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateGatewaySpec"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateGatewaySpecResponse());
+    }
+
+    public UpdateGatewaySpecResponse updateGatewaySpec(UpdateGatewaySpecRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateGatewaySpecWithOptions(request, runtime);
     }
 
     public UpdateImageResponse updateImageWithOptions(UpdateImageRequest request, RuntimeOptions runtime) throws Exception {

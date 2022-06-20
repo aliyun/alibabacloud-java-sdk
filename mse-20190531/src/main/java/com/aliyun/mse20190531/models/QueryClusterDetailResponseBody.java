@@ -248,6 +248,9 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("NetType")
         public String netType;
 
+        @NameInMap("OrderClusterVersion")
+        public String orderClusterVersion;
+
         @NameInMap("PayInfo")
         public String payInfo;
 
@@ -498,6 +501,14 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         }
         public String getNetType() {
             return this.netType;
+        }
+
+        public QueryClusterDetailResponseBodyData setOrderClusterVersion(String orderClusterVersion) {
+            this.orderClusterVersion = orderClusterVersion;
+            return this;
+        }
+        public String getOrderClusterVersion() {
+            return this.orderClusterVersion;
         }
 
         public QueryClusterDetailResponseBodyData setPayInfo(String payInfo) {
