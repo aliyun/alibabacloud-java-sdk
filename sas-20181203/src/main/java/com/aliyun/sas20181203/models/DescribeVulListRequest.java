@@ -22,6 +22,9 @@ public class DescribeVulListRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("Necessity")
     public String necessity;
 
@@ -91,6 +94,14 @@ public class DescribeVulListRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeVulListRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public DescribeVulListRequest setNecessity(String necessity) {

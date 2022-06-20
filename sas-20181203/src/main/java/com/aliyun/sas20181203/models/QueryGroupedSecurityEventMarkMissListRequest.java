@@ -7,6 +7,10 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    // 加白方式
+    @NameInMap("DisposalWay")
+    public String disposalWay;
+
     // 告警事件名称（子类型）
     @NameInMap("EventName")
     public String eventName;
@@ -38,6 +42,14 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public QueryGroupedSecurityEventMarkMissListRequest setDisposalWay(String disposalWay) {
+        this.disposalWay = disposalWay;
+        return this;
+    }
+    public String getDisposalWay() {
+        return this.disposalWay;
     }
 
     public QueryGroupedSecurityEventMarkMissListRequest setEventName(String eventName) {

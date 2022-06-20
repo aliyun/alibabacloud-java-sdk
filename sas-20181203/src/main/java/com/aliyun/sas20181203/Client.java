@@ -5568,6 +5568,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Lang", request.lang);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.necessity)) {
             query.put("Necessity", request.necessity);
         }
@@ -7732,6 +7736,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.operateVulsWithOptions(request, runtime);
     }
 
+    public OperationCancelIgnoreSuspEventResponse operationCancelIgnoreSuspEventWithOptions(OperationCancelIgnoreSuspEventRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.securityEventIds)) {
+            query.put("SecurityEventIds", request.securityEventIds);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "OperationCancelIgnoreSuspEvent"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OperationCancelIgnoreSuspEventResponse());
+    }
+
+    public OperationCancelIgnoreSuspEventResponse operationCancelIgnoreSuspEvent(OperationCancelIgnoreSuspEventRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.operationCancelIgnoreSuspEventWithOptions(request, runtime);
+    }
+
     public OperationSuspEventsResponse operationSuspEventsWithOptions(OperationSuspEventsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8005,6 +8038,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryGroupedSecurityEventMarkMissListResponse queryGroupedSecurityEventMarkMissListWithOptions(QueryGroupedSecurityEventMarkMissListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.disposalWay)) {
+            query.put("DisposalWay", request.disposalWay);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
             query.put("SourceIp", request.sourceIp);
         }
