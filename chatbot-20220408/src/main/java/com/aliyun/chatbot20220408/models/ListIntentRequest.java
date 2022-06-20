@@ -16,6 +16,12 @@ public class ListIntentRequest extends TeaModel {
     @NameInMap("IntentName")
     public String intentName;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     public static ListIntentRequest build(java.util.Map<String, ?> map) throws Exception {
         ListIntentRequest self = new ListIntentRequest();
         return TeaModel.build(map, self);
@@ -43,6 +49,22 @@ public class ListIntentRequest extends TeaModel {
     }
     public String getIntentName() {
         return this.intentName;
+    }
+
+    public ListIntentRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListIntentRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }
