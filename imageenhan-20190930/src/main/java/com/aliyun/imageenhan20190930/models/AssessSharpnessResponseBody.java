@@ -4,23 +4,15 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class AssessSharpnessResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public AssessSharpnessResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AssessSharpnessResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AssessSharpnessResponseBody self = new AssessSharpnessResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AssessSharpnessResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AssessSharpnessResponseBody setData(AssessSharpnessResponseBodyData data) {
@@ -29,6 +21,14 @@ public class AssessSharpnessResponseBody extends TeaModel {
     }
     public AssessSharpnessResponseBodyData getData() {
         return this.data;
+    }
+
+    public AssessSharpnessResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class AssessSharpnessResponseBodyData extends TeaModel {

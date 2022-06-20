@@ -10,8 +10,8 @@ public class ImageBlindPicWatermarkRequest extends TeaModel {
     @NameInMap("LogoURL")
     public String logoURL;
 
-    @NameInMap("WatermarkImageURL")
-    public String watermarkImageURL;
+    @NameInMap("OriginImageURL")
+    public String originImageURL;
 
     @NameInMap("OutputFileType")
     public String outputFileType;
@@ -19,8 +19,8 @@ public class ImageBlindPicWatermarkRequest extends TeaModel {
     @NameInMap("QualityFactor")
     public Integer qualityFactor;
 
-    @NameInMap("OriginImageURL")
-    public String originImageURL;
+    @NameInMap("WatermarkImageURL")
+    public String watermarkImageURL;
 
     public static ImageBlindPicWatermarkRequest build(java.util.Map<String, ?> map) throws Exception {
         ImageBlindPicWatermarkRequest self = new ImageBlindPicWatermarkRequest();
@@ -43,12 +43,12 @@ public class ImageBlindPicWatermarkRequest extends TeaModel {
         return this.logoURL;
     }
 
-    public ImageBlindPicWatermarkRequest setWatermarkImageURL(String watermarkImageURL) {
-        this.watermarkImageURL = watermarkImageURL;
+    public ImageBlindPicWatermarkRequest setOriginImageURL(String originImageURL) {
+        this.originImageURL = originImageURL;
         return this;
     }
-    public String getWatermarkImageURL() {
-        return this.watermarkImageURL;
+    public String getOriginImageURL() {
+        return this.originImageURL;
     }
 
     public ImageBlindPicWatermarkRequest setOutputFileType(String outputFileType) {
@@ -67,12 +67,12 @@ public class ImageBlindPicWatermarkRequest extends TeaModel {
         return this.qualityFactor;
     }
 
-    public ImageBlindPicWatermarkRequest setOriginImageURL(String originImageURL) {
-        this.originImageURL = originImageURL;
+    public ImageBlindPicWatermarkRequest setWatermarkImageURL(String watermarkImageURL) {
+        this.watermarkImageURL = watermarkImageURL;
         return this;
     }
-    public String getOriginImageURL() {
-        return this.originImageURL;
+    public String getWatermarkImageURL() {
+        return this.watermarkImageURL;
     }
 
 }

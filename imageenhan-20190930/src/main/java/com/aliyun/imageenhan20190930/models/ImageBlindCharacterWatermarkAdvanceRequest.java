@@ -11,17 +11,17 @@ public class ImageBlindCharacterWatermarkAdvanceRequest extends TeaModel {
     @NameInMap("FunctionType")
     public String functionType;
 
-    @NameInMap("Text")
-    public String text;
-
-    @NameInMap("WatermarkImageURL")
-    public String watermarkImageURL;
-
     @NameInMap("OutputFileType")
     public String outputFileType;
 
     @NameInMap("QualityFactor")
     public Integer qualityFactor;
+
+    @NameInMap("Text")
+    public String text;
+
+    @NameInMap("WatermarkImageURL")
+    public String watermarkImageURL;
 
     public static ImageBlindCharacterWatermarkAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ImageBlindCharacterWatermarkAdvanceRequest self = new ImageBlindCharacterWatermarkAdvanceRequest();
@@ -44,22 +44,6 @@ public class ImageBlindCharacterWatermarkAdvanceRequest extends TeaModel {
         return this.functionType;
     }
 
-    public ImageBlindCharacterWatermarkAdvanceRequest setText(String text) {
-        this.text = text;
-        return this;
-    }
-    public String getText() {
-        return this.text;
-    }
-
-    public ImageBlindCharacterWatermarkAdvanceRequest setWatermarkImageURL(String watermarkImageURL) {
-        this.watermarkImageURL = watermarkImageURL;
-        return this;
-    }
-    public String getWatermarkImageURL() {
-        return this.watermarkImageURL;
-    }
-
     public ImageBlindCharacterWatermarkAdvanceRequest setOutputFileType(String outputFileType) {
         this.outputFileType = outputFileType;
         return this;
@@ -74,6 +58,22 @@ public class ImageBlindCharacterWatermarkAdvanceRequest extends TeaModel {
     }
     public Integer getQualityFactor() {
         return this.qualityFactor;
+    }
+
+    public ImageBlindCharacterWatermarkAdvanceRequest setText(String text) {
+        this.text = text;
+        return this;
+    }
+    public String getText() {
+        return this.text;
+    }
+
+    public ImageBlindCharacterWatermarkAdvanceRequest setWatermarkImageURL(String watermarkImageURL) {
+        this.watermarkImageURL = watermarkImageURL;
+        return this;
+    }
+    public String getWatermarkImageURL() {
+        return this.watermarkImageURL;
     }
 
 }

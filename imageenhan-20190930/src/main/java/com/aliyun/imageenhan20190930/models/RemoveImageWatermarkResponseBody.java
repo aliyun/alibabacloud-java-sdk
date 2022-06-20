@@ -4,23 +4,15 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class RemoveImageWatermarkResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RemoveImageWatermarkResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RemoveImageWatermarkResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveImageWatermarkResponseBody self = new RemoveImageWatermarkResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveImageWatermarkResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RemoveImageWatermarkResponseBody setData(RemoveImageWatermarkResponseBodyData data) {
@@ -29,6 +21,14 @@ public class RemoveImageWatermarkResponseBody extends TeaModel {
     }
     public RemoveImageWatermarkResponseBodyData getData() {
         return this.data;
+    }
+
+    public RemoveImageWatermarkResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RemoveImageWatermarkResponseBodyData extends TeaModel {

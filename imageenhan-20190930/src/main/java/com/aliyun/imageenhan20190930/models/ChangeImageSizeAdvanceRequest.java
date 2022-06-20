@@ -8,11 +8,11 @@ public class ChangeImageSizeAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream urlObject;
 
-    @NameInMap("Width")
-    public Integer width;
-
     @NameInMap("Height")
     public Integer height;
+
+    @NameInMap("Width")
+    public Integer width;
 
     public static ChangeImageSizeAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeImageSizeAdvanceRequest self = new ChangeImageSizeAdvanceRequest();
@@ -27,20 +27,20 @@ public class ChangeImageSizeAdvanceRequest extends TeaModel {
         return this.urlObject;
     }
 
-    public ChangeImageSizeAdvanceRequest setWidth(Integer width) {
-        this.width = width;
-        return this;
-    }
-    public Integer getWidth() {
-        return this.width;
-    }
-
     public ChangeImageSizeAdvanceRequest setHeight(Integer height) {
         this.height = height;
         return this;
     }
     public Integer getHeight() {
         return this.height;
+    }
+
+    public ChangeImageSizeAdvanceRequest setWidth(Integer width) {
+        this.width = width;
+        return this;
+    }
+    public Integer getWidth() {
+        return this.width;
     }
 
 }

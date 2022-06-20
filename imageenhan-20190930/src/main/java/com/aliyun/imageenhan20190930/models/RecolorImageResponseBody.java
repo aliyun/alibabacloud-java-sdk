@@ -4,23 +4,15 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class RecolorImageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecolorImageResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecolorImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecolorImageResponseBody self = new RecolorImageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecolorImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecolorImageResponseBody setData(RecolorImageResponseBodyData data) {
@@ -29,6 +21,14 @@ public class RecolorImageResponseBody extends TeaModel {
     }
     public RecolorImageResponseBodyData getData() {
         return this.data;
+    }
+
+    public RecolorImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RecolorImageResponseBodyData extends TeaModel {

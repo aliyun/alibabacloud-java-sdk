@@ -4,8 +4,11 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class RecolorImageRequest extends TeaModel {
-    @NameInMap("Url")
-    public String url;
+    @NameInMap("ColorCount")
+    public Integer colorCount;
+
+    @NameInMap("ColorTemplate")
+    public java.util.List<RecolorImageRequestColorTemplate> colorTemplate;
 
     @NameInMap("Mode")
     public String mode;
@@ -13,23 +16,28 @@ public class RecolorImageRequest extends TeaModel {
     @NameInMap("RefUrl")
     public String refUrl;
 
-    @NameInMap("ColorCount")
-    public Integer colorCount;
-
-    @NameInMap("ColorTemplate")
-    public java.util.List<RecolorImageRequestColorTemplate> colorTemplate;
+    @NameInMap("Url")
+    public String url;
 
     public static RecolorImageRequest build(java.util.Map<String, ?> map) throws Exception {
         RecolorImageRequest self = new RecolorImageRequest();
         return TeaModel.build(map, self);
     }
 
-    public RecolorImageRequest setUrl(String url) {
-        this.url = url;
+    public RecolorImageRequest setColorCount(Integer colorCount) {
+        this.colorCount = colorCount;
         return this;
     }
-    public String getUrl() {
-        return this.url;
+    public Integer getColorCount() {
+        return this.colorCount;
+    }
+
+    public RecolorImageRequest setColorTemplate(java.util.List<RecolorImageRequestColorTemplate> colorTemplate) {
+        this.colorTemplate = colorTemplate;
+        return this;
+    }
+    public java.util.List<RecolorImageRequestColorTemplate> getColorTemplate() {
+        return this.colorTemplate;
     }
 
     public RecolorImageRequest setMode(String mode) {
@@ -48,20 +56,12 @@ public class RecolorImageRequest extends TeaModel {
         return this.refUrl;
     }
 
-    public RecolorImageRequest setColorCount(Integer colorCount) {
-        this.colorCount = colorCount;
+    public RecolorImageRequest setUrl(String url) {
+        this.url = url;
         return this;
     }
-    public Integer getColorCount() {
-        return this.colorCount;
-    }
-
-    public RecolorImageRequest setColorTemplate(java.util.List<RecolorImageRequestColorTemplate> colorTemplate) {
-        this.colorTemplate = colorTemplate;
-        return this;
-    }
-    public java.util.List<RecolorImageRequestColorTemplate> getColorTemplate() {
-        return this.colorTemplate;
+    public String getUrl() {
+        return this.url;
     }
 
     public static class RecolorImageRequestColorTemplate extends TeaModel {

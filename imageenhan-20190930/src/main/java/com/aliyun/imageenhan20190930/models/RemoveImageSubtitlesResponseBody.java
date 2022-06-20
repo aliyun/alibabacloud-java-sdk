@@ -4,23 +4,15 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class RemoveImageSubtitlesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RemoveImageSubtitlesResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RemoveImageSubtitlesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveImageSubtitlesResponseBody self = new RemoveImageSubtitlesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveImageSubtitlesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RemoveImageSubtitlesResponseBody setData(RemoveImageSubtitlesResponseBodyData data) {
@@ -29,6 +21,14 @@ public class RemoveImageSubtitlesResponseBody extends TeaModel {
     }
     public RemoveImageSubtitlesResponseBodyData getData() {
         return this.data;
+    }
+
+    public RemoveImageSubtitlesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RemoveImageSubtitlesResponseBodyData extends TeaModel {

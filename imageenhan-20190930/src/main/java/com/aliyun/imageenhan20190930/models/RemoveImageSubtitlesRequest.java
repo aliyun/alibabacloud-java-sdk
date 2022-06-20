@@ -4,8 +4,11 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class RemoveImageSubtitlesRequest extends TeaModel {
-    @NameInMap("ImageURL")
-    public String imageURL;
+    @NameInMap("BH")
+    public Float BH;
+
+    @NameInMap("BW")
+    public Float BW;
 
     @NameInMap("BX")
     public Float BX;
@@ -13,23 +16,28 @@ public class RemoveImageSubtitlesRequest extends TeaModel {
     @NameInMap("BY")
     public Float BY;
 
-    @NameInMap("BW")
-    public Float BW;
-
-    @NameInMap("BH")
-    public Float BH;
+    @NameInMap("ImageURL")
+    public String imageURL;
 
     public static RemoveImageSubtitlesRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveImageSubtitlesRequest self = new RemoveImageSubtitlesRequest();
         return TeaModel.build(map, self);
     }
 
-    public RemoveImageSubtitlesRequest setImageURL(String imageURL) {
-        this.imageURL = imageURL;
+    public RemoveImageSubtitlesRequest setBH(Float BH) {
+        this.BH = BH;
         return this;
     }
-    public String getImageURL() {
-        return this.imageURL;
+    public Float getBH() {
+        return this.BH;
+    }
+
+    public RemoveImageSubtitlesRequest setBW(Float BW) {
+        this.BW = BW;
+        return this;
+    }
+    public Float getBW() {
+        return this.BW;
     }
 
     public RemoveImageSubtitlesRequest setBX(Float BX) {
@@ -48,20 +56,12 @@ public class RemoveImageSubtitlesRequest extends TeaModel {
         return this.BY;
     }
 
-    public RemoveImageSubtitlesRequest setBW(Float BW) {
-        this.BW = BW;
+    public RemoveImageSubtitlesRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
         return this;
     }
-    public Float getBW() {
-        return this.BW;
-    }
-
-    public RemoveImageSubtitlesRequest setBH(Float BH) {
-        this.BH = BH;
-        return this;
-    }
-    public Float getBH() {
-        return this.BH;
+    public String getImageURL() {
+        return this.imageURL;
     }
 
 }

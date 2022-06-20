@@ -4,23 +4,15 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class ImageBlindCharacterWatermarkResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ImageBlindCharacterWatermarkResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ImageBlindCharacterWatermarkResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ImageBlindCharacterWatermarkResponseBody self = new ImageBlindCharacterWatermarkResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ImageBlindCharacterWatermarkResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ImageBlindCharacterWatermarkResponseBody setData(ImageBlindCharacterWatermarkResponseBodyData data) {
@@ -31,24 +23,24 @@ public class ImageBlindCharacterWatermarkResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class ImageBlindCharacterWatermarkResponseBodyData extends TeaModel {
-        @NameInMap("WatermarkImageURL")
-        public String watermarkImageURL;
+    public ImageBlindCharacterWatermarkResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ImageBlindCharacterWatermarkResponseBodyData extends TeaModel {
         @NameInMap("TextImageURL")
         public String textImageURL;
+
+        @NameInMap("WatermarkImageURL")
+        public String watermarkImageURL;
 
         public static ImageBlindCharacterWatermarkResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ImageBlindCharacterWatermarkResponseBodyData self = new ImageBlindCharacterWatermarkResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ImageBlindCharacterWatermarkResponseBodyData setWatermarkImageURL(String watermarkImageURL) {
-            this.watermarkImageURL = watermarkImageURL;
-            return this;
-        }
-        public String getWatermarkImageURL() {
-            return this.watermarkImageURL;
         }
 
         public ImageBlindCharacterWatermarkResponseBodyData setTextImageURL(String textImageURL) {
@@ -57,6 +49,14 @@ public class ImageBlindCharacterWatermarkResponseBody extends TeaModel {
         }
         public String getTextImageURL() {
             return this.textImageURL;
+        }
+
+        public ImageBlindCharacterWatermarkResponseBodyData setWatermarkImageURL(String watermarkImageURL) {
+            this.watermarkImageURL = watermarkImageURL;
+            return this;
+        }
+        public String getWatermarkImageURL() {
+            return this.watermarkImageURL;
         }
 
     }

@@ -11,6 +11,12 @@ public class MakeSuperResolutionImageAdvanceRequest extends TeaModel {
     @NameInMap("Mode")
     public String mode;
 
+    @NameInMap("OutputFormat")
+    public String outputFormat;
+
+    @NameInMap("OutputQuality")
+    public Long outputQuality;
+
     @NameInMap("UpscaleFactor")
     public Long upscaleFactor;
 
@@ -33,6 +39,22 @@ public class MakeSuperResolutionImageAdvanceRequest extends TeaModel {
     }
     public String getMode() {
         return this.mode;
+    }
+
+    public MakeSuperResolutionImageAdvanceRequest setOutputFormat(String outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    public String getOutputFormat() {
+        return this.outputFormat;
+    }
+
+    public MakeSuperResolutionImageAdvanceRequest setOutputQuality(Long outputQuality) {
+        this.outputQuality = outputQuality;
+        return this;
+    }
+    public Long getOutputQuality() {
+        return this.outputQuality;
     }
 
     public MakeSuperResolutionImageAdvanceRequest setUpscaleFactor(Long upscaleFactor) {

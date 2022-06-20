@@ -8,11 +8,11 @@ public class EnhanceImageColorAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
-    @NameInMap("OutputFormat")
-    public String outputFormat;
-
     @NameInMap("Mode")
     public String mode;
+
+    @NameInMap("OutputFormat")
+    public String outputFormat;
 
     public static EnhanceImageColorAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         EnhanceImageColorAdvanceRequest self = new EnhanceImageColorAdvanceRequest();
@@ -27,20 +27,20 @@ public class EnhanceImageColorAdvanceRequest extends TeaModel {
         return this.imageURLObject;
     }
 
-    public EnhanceImageColorAdvanceRequest setOutputFormat(String outputFormat) {
-        this.outputFormat = outputFormat;
-        return this;
-    }
-    public String getOutputFormat() {
-        return this.outputFormat;
-    }
-
     public EnhanceImageColorAdvanceRequest setMode(String mode) {
         this.mode = mode;
         return this;
     }
     public String getMode() {
         return this.mode;
+    }
+
+    public EnhanceImageColorAdvanceRequest setOutputFormat(String outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    public String getOutputFormat() {
+        return this.outputFormat;
     }
 
 }

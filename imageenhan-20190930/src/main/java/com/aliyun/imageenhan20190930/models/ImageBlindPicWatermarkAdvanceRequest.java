@@ -14,14 +14,14 @@ public class ImageBlindPicWatermarkAdvanceRequest extends TeaModel {
     @NameInMap("LogoURL")
     public String logoURL;
 
-    @NameInMap("WatermarkImageURL")
-    public String watermarkImageURL;
-
     @NameInMap("OutputFileType")
     public String outputFileType;
 
     @NameInMap("QualityFactor")
     public Integer qualityFactor;
+
+    @NameInMap("WatermarkImageURL")
+    public String watermarkImageURL;
 
     public static ImageBlindPicWatermarkAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ImageBlindPicWatermarkAdvanceRequest self = new ImageBlindPicWatermarkAdvanceRequest();
@@ -52,14 +52,6 @@ public class ImageBlindPicWatermarkAdvanceRequest extends TeaModel {
         return this.logoURL;
     }
 
-    public ImageBlindPicWatermarkAdvanceRequest setWatermarkImageURL(String watermarkImageURL) {
-        this.watermarkImageURL = watermarkImageURL;
-        return this;
-    }
-    public String getWatermarkImageURL() {
-        return this.watermarkImageURL;
-    }
-
     public ImageBlindPicWatermarkAdvanceRequest setOutputFileType(String outputFileType) {
         this.outputFileType = outputFileType;
         return this;
@@ -74,6 +66,14 @@ public class ImageBlindPicWatermarkAdvanceRequest extends TeaModel {
     }
     public Integer getQualityFactor() {
         return this.qualityFactor;
+    }
+
+    public ImageBlindPicWatermarkAdvanceRequest setWatermarkImageURL(String watermarkImageURL) {
+        this.watermarkImageURL = watermarkImageURL;
+        return this;
+    }
+    public String getWatermarkImageURL() {
+        return this.watermarkImageURL;
     }
 
 }

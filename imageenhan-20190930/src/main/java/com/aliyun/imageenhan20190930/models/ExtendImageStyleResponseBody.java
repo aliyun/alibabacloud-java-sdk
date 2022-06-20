@@ -4,23 +4,15 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class ExtendImageStyleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ExtendImageStyleResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ExtendImageStyleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ExtendImageStyleResponseBody self = new ExtendImageStyleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ExtendImageStyleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ExtendImageStyleResponseBody setData(ExtendImageStyleResponseBodyData data) {
@@ -31,24 +23,24 @@ public class ExtendImageStyleResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class ExtendImageStyleResponseBodyData extends TeaModel {
-        @NameInMap("Url")
-        public String url;
+    public ExtendImageStyleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ExtendImageStyleResponseBodyData extends TeaModel {
         @NameInMap("MajorUrl")
         public String majorUrl;
+
+        @NameInMap("Url")
+        public String url;
 
         public static ExtendImageStyleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ExtendImageStyleResponseBodyData self = new ExtendImageStyleResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ExtendImageStyleResponseBodyData setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
         }
 
         public ExtendImageStyleResponseBodyData setMajorUrl(String majorUrl) {
@@ -57,6 +49,14 @@ public class ExtendImageStyleResponseBody extends TeaModel {
         }
         public String getMajorUrl() {
             return this.majorUrl;
+        }
+
+        public ExtendImageStyleResponseBodyData setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }
