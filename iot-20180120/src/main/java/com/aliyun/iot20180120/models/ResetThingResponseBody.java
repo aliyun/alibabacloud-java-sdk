@@ -10,6 +10,9 @@ public class ResetThingResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("JobId")
+    public String jobId;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,6 +38,14 @@ public class ResetThingResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public ResetThingResponseBody setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
     public ResetThingResponseBody setRequestId(String requestId) {

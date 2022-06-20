@@ -7,6 +7,9 @@ public class PubRequest extends TeaModel {
     @NameInMap("CorrelationData")
     public String correlationData;
 
+    @NameInMap("DeviceName")
+    public String deviceName;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -39,6 +42,14 @@ public class PubRequest extends TeaModel {
     }
     public String getCorrelationData() {
         return this.correlationData;
+    }
+
+    public PubRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
     }
 
     public PubRequest setIotInstanceId(String iotInstanceId) {

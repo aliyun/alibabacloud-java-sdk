@@ -8,6 +8,10 @@ public class CreateEdgeInstanceMessageRoutingResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public CreateEdgeInstanceMessageRoutingResponseBody body;
@@ -23,6 +27,14 @@ public class CreateEdgeInstanceMessageRoutingResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public CreateEdgeInstanceMessageRoutingResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public CreateEdgeInstanceMessageRoutingResponse setBody(CreateEdgeInstanceMessageRoutingResponseBody body) {
