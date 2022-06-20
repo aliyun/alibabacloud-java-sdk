@@ -69,50 +69,6 @@ public class ChatResponseBody extends TeaModel {
         return this.sessionId;
     }
 
-    public static class ChatResponseBodyMessagesCardList extends TeaModel {
-        // 区分答案类型：cardAnswer
-        @NameInMap("AnswerSource")
-        public String answerSource;
-
-        // 消息类型：card
-        @NameInMap("MsgType")
-        public String msgType;
-
-        // 平台类型：beebot
-        @NameInMap("Platform")
-        public String platform;
-
-        public static ChatResponseBodyMessagesCardList build(java.util.Map<String, ?> map) throws Exception {
-            ChatResponseBodyMessagesCardList self = new ChatResponseBodyMessagesCardList();
-            return TeaModel.build(map, self);
-        }
-
-        public ChatResponseBodyMessagesCardList setAnswerSource(String answerSource) {
-            this.answerSource = answerSource;
-            return this;
-        }
-        public String getAnswerSource() {
-            return this.answerSource;
-        }
-
-        public ChatResponseBodyMessagesCardList setMsgType(String msgType) {
-            this.msgType = msgType;
-            return this;
-        }
-        public String getMsgType() {
-            return this.msgType;
-        }
-
-        public ChatResponseBodyMessagesCardList setPlatform(String platform) {
-            this.platform = platform;
-            return this;
-        }
-        public String getPlatform() {
-            return this.platform;
-        }
-
-    }
-
     public static class ChatResponseBodyMessagesKnowledgeRelatedKnowledges extends TeaModel {
         // 知识关联知识的ID
         @NameInMap("KnowledgeId")
@@ -593,10 +549,6 @@ public class ChatResponseBody extends TeaModel {
         @NameInMap("AnswerType")
         public String answerType;
 
-        // 当AnswerType为CardAnswer时，此字段包含机器人返回的Card的列表
-        @NameInMap("CardList")
-        public java.util.List<ChatResponseBodyMessagesCardList> cardList;
-
         // 当AnswerType为Knowledge时，此字段包含机器人返回的Knowledge对象
         @NameInMap("Knowledge")
         public ChatResponseBodyMessagesKnowledge knowledge;
@@ -636,14 +588,6 @@ public class ChatResponseBody extends TeaModel {
         }
         public String getAnswerType() {
             return this.answerType;
-        }
-
-        public ChatResponseBodyMessages setCardList(java.util.List<ChatResponseBodyMessagesCardList> cardList) {
-            this.cardList = cardList;
-            return this;
-        }
-        public java.util.List<ChatResponseBodyMessagesCardList> getCardList() {
-            return this.cardList;
         }
 
         public ChatResponseBodyMessages setKnowledge(ChatResponseBodyMessagesKnowledge knowledge) {
