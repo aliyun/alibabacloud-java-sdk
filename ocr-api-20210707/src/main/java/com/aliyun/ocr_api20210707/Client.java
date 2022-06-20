@@ -593,6 +593,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RecognizeCovidTestReportResponse recognizeCovidTestReportWithOptions(RecognizeCovidTestReportRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.multipleResult)) {
+            query.put("MultipleResult", request.multipleResult);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.url)) {
             query.put("Url", request.url);
         }
