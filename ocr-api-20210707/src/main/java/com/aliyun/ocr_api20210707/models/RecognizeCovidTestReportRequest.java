@@ -4,6 +4,9 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeCovidTestReportRequest extends TeaModel {
+    @NameInMap("MultipleResult")
+    public Boolean multipleResult;
+
     // 图片链接（长度不超 2048，不支持 base64）
     @NameInMap("Url")
     public String url;
@@ -15,6 +18,14 @@ public class RecognizeCovidTestReportRequest extends TeaModel {
     public static RecognizeCovidTestReportRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeCovidTestReportRequest self = new RecognizeCovidTestReportRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RecognizeCovidTestReportRequest setMultipleResult(Boolean multipleResult) {
+        this.multipleResult = multipleResult;
+        return this;
+    }
+    public Boolean getMultipleResult() {
+        return this.multipleResult;
     }
 
     public RecognizeCovidTestReportRequest setUrl(String url) {
