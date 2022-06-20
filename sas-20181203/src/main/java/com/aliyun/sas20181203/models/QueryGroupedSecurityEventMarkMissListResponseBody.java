@@ -80,6 +80,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         @NameInMap("AliUid")
         public Long aliUid;
 
+        // 处置方式
+        @NameInMap("DisposalWay")
+        public String disposalWay;
+
         // 告警事件名称（子类型）
         @NameInMap("EventName")
         public String eventName;
@@ -127,6 +131,14 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         }
         public Long getAliUid() {
             return this.aliUid;
+        }
+
+        public QueryGroupedSecurityEventMarkMissListResponseBodyList setDisposalWay(String disposalWay) {
+            this.disposalWay = disposalWay;
+            return this;
+        }
+        public String getDisposalWay() {
+            return this.disposalWay;
         }
 
         public QueryGroupedSecurityEventMarkMissListResponseBodyList setEventName(String eventName) {

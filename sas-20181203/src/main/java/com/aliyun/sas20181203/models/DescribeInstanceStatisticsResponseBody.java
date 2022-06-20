@@ -68,6 +68,9 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         @NameInMap("Vul")
         public Integer vul;
 
+        @NameInMap("WeakPWNum")
+        public Integer weakPWNum;
+
         public static DescribeInstanceStatisticsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceStatisticsResponseBodyData self = new DescribeInstanceStatisticsResponseBodyData();
             return TeaModel.build(map, self);
@@ -167,6 +170,14 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         }
         public Integer getVul() {
             return this.vul;
+        }
+
+        public DescribeInstanceStatisticsResponseBodyData setWeakPWNum(Integer weakPWNum) {
+            this.weakPWNum = weakPWNum;
+            return this;
+        }
+        public Integer getWeakPWNum() {
+            return this.weakPWNum;
         }
 
     }
