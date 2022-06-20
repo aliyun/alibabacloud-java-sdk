@@ -32,6 +32,9 @@ public class CalcCACSResponseBody extends TeaModel {
     }
 
     public static class CalcCACSResponseBodyDataDetections extends TeaModel {
+        @NameInMap("CalciumCenter")
+        public java.util.List<Long> calciumCenter;
+
         @NameInMap("CalciumId")
         public Long calciumId;
 
@@ -44,6 +47,14 @@ public class CalcCACSResponseBody extends TeaModel {
         public static CalcCACSResponseBodyDataDetections build(java.util.Map<String, ?> map) throws Exception {
             CalcCACSResponseBodyDataDetections self = new CalcCACSResponseBodyDataDetections();
             return TeaModel.build(map, self);
+        }
+
+        public CalcCACSResponseBodyDataDetections setCalciumCenter(java.util.List<Long> calciumCenter) {
+            this.calciumCenter = calciumCenter;
+            return this;
+        }
+        public java.util.List<Long> getCalciumCenter() {
+            return this.calciumCenter;
         }
 
         public CalcCACSResponseBodyDataDetections setCalciumId(Long calciumId) {
