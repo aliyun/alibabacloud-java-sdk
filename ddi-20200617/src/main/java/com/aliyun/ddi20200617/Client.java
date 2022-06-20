@@ -1445,6 +1445,111 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTagResourcesWithOptions(request, runtime);
     }
 
+    public ModifyFlowForWebResponse modifyFlowForWebWithOptions(ModifyFlowForWebRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertConf)) {
+            query.put("AlertConf", request.alertConf);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertDingDingGroupBizId)) {
+            query.put("AlertDingDingGroupBizId", request.alertDingDingGroupBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertUserGroupBizId)) {
+            query.put("AlertUserGroupBizId", request.alertUserGroupBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createCluster)) {
+            query.put("CreateCluster", request.createCluster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cronExpr)) {
+            query.put("CronExpr", request.cronExpr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endSchedule)) {
+            query.put("EndSchedule", request.endSchedule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.graph)) {
+            query.put("Graph", request.graph);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hostName)) {
+            query.put("HostName", request.hostName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentCategory)) {
+            query.put("ParentCategory", request.parentCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentFlowList)) {
+            query.put("ParentFlowList", request.parentFlowList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodic)) {
+            query.put("Periodic", request.periodic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startSchedule)) {
+            query.put("StartSchedule", request.startSchedule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyFlowForWeb"),
+            new TeaPair("version", "2020-06-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyFlowForWebResponse());
+    }
+
+    public ModifyFlowForWebResponse modifyFlowForWeb(ModifyFlowForWebRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyFlowForWebWithOptions(request, runtime);
+    }
+
     public ModifyFlowJobResponse modifyFlowJobWithOptions(ModifyFlowJobRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
