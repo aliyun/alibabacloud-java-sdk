@@ -70,6 +70,10 @@ public class UpdateRobotRequest extends TeaModel {
         @NameInMap("ExpireDate")
         public Long expireDate;
 
+        // sass实例id
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         // 机器人code
         @NameInMap("RobotCode")
         public String robotCode;
@@ -82,6 +86,7 @@ public class UpdateRobotRequest extends TeaModel {
         @NameInMap("SellerNick")
         public String sellerNick;
 
+        // 店铺id
         @NameInMap("ShopId")
         public String shopId;
 
@@ -100,6 +105,14 @@ public class UpdateRobotRequest extends TeaModel {
         }
         public Long getExpireDate() {
             return this.expireDate;
+        }
+
+        public UpdateRobotRequestRobotDTO setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public UpdateRobotRequestRobotDTO setRobotCode(String robotCode) {
