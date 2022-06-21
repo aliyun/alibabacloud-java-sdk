@@ -133,6 +133,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addNetworkInterfaceToInstanceWithOptions(request, runtime);
     }
 
+    public AssignPrivateIpAddressesResponse assignPrivateIpAddressesWithOptions(AssignPrivateIpAddressesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceId)) {
+            query.put("NetworkInterfaceId", request.networkInterfaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AssignPrivateIpAddresses"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssignPrivateIpAddressesResponse());
+    }
+
+    public AssignPrivateIpAddressesResponse assignPrivateIpAddresses(AssignPrivateIpAddressesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.assignPrivateIpAddressesWithOptions(request, runtime);
+    }
+
     public AssociateEnsEipAddressResponse associateEnsEipAddressWithOptions(AssociateEnsEipAddressRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -216,10 +249,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.scripts)) {
             query.put("Scripts", request.scripts);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
-            query.put("Version", request.version);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -389,6 +418,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateApplicationResponse createApplication(CreateApplicationRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createApplicationWithOptions(request, runtime);
+    }
+
+    public CreateClassicNetworkResponse createClassicNetworkWithOptions(CreateClassicNetworkRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cidrBlock)) {
+            query.put("CidrBlock", request.cidrBlock);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ensRegionId)) {
+            query.put("EnsRegionId", request.ensRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkName)) {
+            query.put("NetworkName", request.networkName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateClassicNetwork"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateClassicNetworkResponse());
+    }
+
+    public CreateClassicNetworkResponse createClassicNetwork(CreateClassicNetworkRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createClassicNetworkWithOptions(request, runtime);
     }
 
     public CreateDiskResponse createDiskWithOptions(CreateDiskRequest request, RuntimeOptions runtime) throws Exception {
@@ -1474,10 +1544,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchName)) {
             query.put("VSwitchName", request.vSwitchName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
-            query.put("Version", request.version);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -4713,10 +4779,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityGroupId", request.securityGroupId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
-            query.put("Version", request.version);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -5346,10 +5408,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
             query.put("UserData", request.userData);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
-            query.put("Version", request.version);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -6120,6 +6178,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PrivateIpAddress", request.privateIpAddress);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.publicIpIdentification)) {
+            query.put("PublicIpIdentification", request.publicIpIdentification);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scheduleAreaLevel)) {
             query.put("ScheduleAreaLevel", request.scheduleAreaLevel);
         }
@@ -6880,6 +6942,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UnAssociateEnsEipAddressResponse unAssociateEnsEipAddress(UnAssociateEnsEipAddressRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.unAssociateEnsEipAddressWithOptions(request, runtime);
+    }
+
+    public UnassignPrivateIpAddressesResponse unassignPrivateIpAddressesWithOptions(UnassignPrivateIpAddressesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceId)) {
+            query.put("NetworkInterfaceId", request.networkInterfaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privateIpAddress)) {
+            query.put("PrivateIpAddress", request.privateIpAddress);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnassignPrivateIpAddresses"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnassignPrivateIpAddressesResponse());
+    }
+
+    public UnassignPrivateIpAddressesResponse unassignPrivateIpAddresses(UnassignPrivateIpAddressesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.unassignPrivateIpAddressesWithOptions(request, runtime);
     }
 
     public UpgradeApplicationResponse upgradeApplicationWithOptions(UpgradeApplicationRequest request, RuntimeOptions runtime) throws Exception {

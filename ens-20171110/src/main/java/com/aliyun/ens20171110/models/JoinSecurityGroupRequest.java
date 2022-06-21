@@ -10,9 +10,6 @@ public class JoinSecurityGroupRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
-    @NameInMap("Version")
-    public String version;
-
     public static JoinSecurityGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         JoinSecurityGroupRequest self = new JoinSecurityGroupRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class JoinSecurityGroupRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
-    }
-
-    public JoinSecurityGroupRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

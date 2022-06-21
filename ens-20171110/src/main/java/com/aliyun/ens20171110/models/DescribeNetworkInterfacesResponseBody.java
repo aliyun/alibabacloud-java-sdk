@@ -64,6 +64,55 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet extends TeaModel {
+        @NameInMap("Primary")
+        public Boolean primary;
+
+        @NameInMap("PrivateIpAddress")
+        public String privateIpAddress;
+
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet setPrimary(Boolean primary) {
+            this.primary = primary;
+            return this;
+        }
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet setPrivateIpAddress(String privateIpAddress) {
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets extends TeaModel {
+        @NameInMap("PrivateIpSet")
+        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet> privateIpSet;
+
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets setPrivateIpSet(java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet> privateIpSet) {
+            this.privateIpSet = privateIpSet;
+            return this;
+        }
+        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet> getPrivateIpSet() {
+            return this.privateIpSet;
+        }
+
+    }
+
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
@@ -85,6 +134,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
         @NameInMap("PrimaryIpType")
         public String primaryIpType;
+
+        @NameInMap("PrivateIpSets")
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets privateIpSets;
 
         @NameInMap("Status")
         public String status;
@@ -151,6 +203,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
         public String getPrimaryIpType() {
             return this.primaryIpType;
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setPrivateIpSets(DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets privateIpSets) {
+            this.privateIpSets = privateIpSets;
+            return this;
+        }
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets getPrivateIpSets() {
+            return this.privateIpSets;
         }
 
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setStatus(String status) {

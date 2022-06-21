@@ -10,9 +10,6 @@ public class AttachEnsInstancesRequest extends TeaModel {
     @NameInMap("Scripts")
     public String scripts;
 
-    @NameInMap("Version")
-    public String version;
-
     public static AttachEnsInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachEnsInstancesRequest self = new AttachEnsInstancesRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class AttachEnsInstancesRequest extends TeaModel {
     }
     public String getScripts() {
         return this.scripts;
-    }
-
-    public AttachEnsInstancesRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

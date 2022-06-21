@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ens20171110</artifactId>
-  <version>3.0.3</version>
+  <version>3.0.4</version>
   <packaging>jar</packaging>
   <name>ens20171110</name>
   <description>Alibaba Cloud edge node service (20171110) SDK for Java
@@ -51,7 +51,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>endpoint-util</artifactId>
-      <version>0.0.6</version>
+      <version>0.0.7</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -61,7 +61,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.2</version>
+      <version>0.2.5</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

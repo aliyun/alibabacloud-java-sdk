@@ -19,9 +19,6 @@ public class CreateVSwitchRequest extends TeaModel {
     @NameInMap("VSwitchName")
     public String vSwitchName;
 
-    @NameInMap("Version")
-    public String version;
-
     public static CreateVSwitchRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVSwitchRequest self = new CreateVSwitchRequest();
         return TeaModel.build(map, self);
@@ -65,14 +62,6 @@ public class CreateVSwitchRequest extends TeaModel {
     }
     public String getVSwitchName() {
         return this.vSwitchName;
-    }
-
-    public CreateVSwitchRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }
