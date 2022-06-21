@@ -46,9 +46,6 @@ public class PreCreateEnsServiceRequest extends TeaModel {
     @NameInMap("UserData")
     public String userData;
 
-    @NameInMap("Version")
-    public String version;
-
     public static PreCreateEnsServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         PreCreateEnsServiceRequest self = new PreCreateEnsServiceRequest();
         return TeaModel.build(map, self);
@@ -164,14 +161,6 @@ public class PreCreateEnsServiceRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
-    }
-
-    public PreCreateEnsServiceRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

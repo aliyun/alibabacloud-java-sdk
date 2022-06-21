@@ -82,6 +82,9 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
+    @NameInMap("PublicIpIdentification")
+    public Boolean publicIpIdentification;
+
     // 调度层级
     @NameInMap("ScheduleAreaLevel")
     public String scheduleAreaLevel;
@@ -269,6 +272,14 @@ public class RunInstancesRequest extends TeaModel {
     }
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
+    }
+
+    public RunInstancesRequest setPublicIpIdentification(Boolean publicIpIdentification) {
+        this.publicIpIdentification = publicIpIdentification;
+        return this;
+    }
+    public Boolean getPublicIpIdentification() {
+        return this.publicIpIdentification;
     }
 
     public RunInstancesRequest setScheduleAreaLevel(String scheduleAreaLevel) {

@@ -82,6 +82,9 @@ public class RunInstancesShrinkRequest extends TeaModel {
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
+    @NameInMap("PublicIpIdentification")
+    public Boolean publicIpIdentification;
+
     // 调度层级
     @NameInMap("ScheduleAreaLevel")
     public String scheduleAreaLevel;
@@ -269,6 +272,14 @@ public class RunInstancesShrinkRequest extends TeaModel {
     }
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
+    }
+
+    public RunInstancesShrinkRequest setPublicIpIdentification(Boolean publicIpIdentification) {
+        this.publicIpIdentification = publicIpIdentification;
+        return this;
+    }
+    public Boolean getPublicIpIdentification() {
+        return this.publicIpIdentification;
     }
 
     public RunInstancesShrinkRequest setScheduleAreaLevel(String scheduleAreaLevel) {
