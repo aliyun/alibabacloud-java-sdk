@@ -418,16 +418,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Apple", request.apple);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.blue)) {
+            query.put("Blue", request.blue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enight)) {
+            query.put("Enight", request.enight);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.five)) {
+            query.put("Five", request.five);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.four)) {
             query.put("Four", request.four);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.list)) {
+            query.put("List", request.list);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.newName)) {
             query.put("NewName", request.newName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nigh)) {
+            query.put("Nigh", request.nigh);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.now)) {
+            query.put("Now", request.now);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.red)) {
+            query.put("Red", request.red);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.six)) {
+            query.put("Six", request.six);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tea)) {
             query.put("Tea", request.tea);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ten)) {
+            query.put("Ten", request.ten);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.three)) {
@@ -436,6 +472,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.two)) {
             query.put("Two", request.two);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.white)) {
+            query.put("White", request.white);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

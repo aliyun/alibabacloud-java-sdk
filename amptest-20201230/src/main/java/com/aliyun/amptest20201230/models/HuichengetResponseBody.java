@@ -25,6 +25,12 @@ public class HuichengetResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Seven")
+    public String seven;
+
+    @NameInMap("Six")
+    public String six;
+
     public static HuichengetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         HuichengetResponseBody self = new HuichengetResponseBody();
         return TeaModel.build(map, self);
@@ -84,6 +90,22 @@ public class HuichengetResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public HuichengetResponseBody setSeven(String seven) {
+        this.seven = seven;
+        return this;
+    }
+    public String getSeven() {
+        return this.seven;
+    }
+
+    public HuichengetResponseBody setSix(String six) {
+        this.six = six;
+        return this;
+    }
+    public String getSix() {
+        return this.six;
     }
 
 }
