@@ -3697,6 +3697,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listGatewaySlbWithOptions(request, runtime);
     }
 
+    public ListInstancesResponse listInstancesWithOptions(ListInstancesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstances"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesResponse());
+    }
+
+    public ListInstancesResponse listInstances(ListInstancesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listInstancesWithOptions(request, runtime);
+    }
+
     public ListListenersByConfigResponse listListenersByConfigWithOptions(ListListenersByConfigRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4051,6 +4076,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListServiceSourceResponse listServiceSource(ListServiceSourceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listServiceSourceWithOptions(request, runtime);
+    }
+
+    public ListVgroupsResponse listVgroupsWithOptions(ListVgroupsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVgroups"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVgroupsResponse());
+    }
+
+    public ListVgroupsResponse listVgroups(ListVgroupsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listVgroupsWithOptions(request, runtime);
     }
 
     public ListZnodeChildrenResponse listZnodeChildrenWithOptions(ListZnodeChildrenRequest request, RuntimeOptions runtime) throws Exception {
