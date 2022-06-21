@@ -3,12 +3,12 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class ListInstancesResponseBody extends TeaModel {
+public class ListUserInstancesResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
-    public java.util.List<ListInstancesResponseBodyData> data;
+    public java.util.List<ListUserInstancesResponseBodyData> data;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -23,12 +23,12 @@ public class ListInstancesResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static ListInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListInstancesResponseBody self = new ListInstancesResponseBody();
+    public static ListUserInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListUserInstancesResponseBody self = new ListUserInstancesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListInstancesResponseBody setCode(Integer code) {
+    public ListUserInstancesResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -36,15 +36,15 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListInstancesResponseBody setData(java.util.List<ListInstancesResponseBodyData> data) {
+    public ListUserInstancesResponseBody setData(java.util.List<ListUserInstancesResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public java.util.List<ListInstancesResponseBodyData> getData() {
+    public java.util.List<ListUserInstancesResponseBodyData> getData() {
         return this.data;
     }
 
-    public ListInstancesResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public ListUserInstancesResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -52,7 +52,7 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public ListInstancesResponseBody setMessage(String message) {
+    public ListUserInstancesResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -60,7 +60,7 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ListInstancesResponseBody setRequestId(String requestId) {
+    public ListUserInstancesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -68,7 +68,7 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListInstancesResponseBody setSuccess(Boolean success) {
+    public ListUserInstancesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -76,7 +76,7 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ListInstancesResponseBodyData extends TeaModel {
+    public static class ListUserInstancesResponseBodyData extends TeaModel {
         @NameInMap("AppClusterId")
         public String appClusterId;
 
@@ -116,9 +116,6 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("IsCreatedRedis")
         public Boolean isCreatedRedis;
 
-        @NameInMap("IsCreatedSlb")
-        public Boolean isCreatedSlb;
-
         @NameInMap("K8sResourceId")
         public Long k8sResourceId;
 
@@ -127,9 +124,6 @@ public class ListInstancesResponseBody extends TeaModel {
 
         @NameInMap("NameServer")
         public String nameServer;
-
-        @NameInMap("NameServerPublic")
-        public String nameServerPublic;
 
         @NameInMap("OrderId")
         public String orderId;
@@ -176,12 +170,12 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("ZoneId")
         public String zoneId;
 
-        public static ListInstancesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            ListInstancesResponseBodyData self = new ListInstancesResponseBodyData();
+        public static ListUserInstancesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ListUserInstancesResponseBodyData self = new ListUserInstancesResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public ListInstancesResponseBodyData setAppClusterId(String appClusterId) {
+        public ListUserInstancesResponseBodyData setAppClusterId(String appClusterId) {
             this.appClusterId = appClusterId;
             return this;
         }
@@ -189,7 +183,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.appClusterId;
         }
 
-        public ListInstancesResponseBodyData setAppVersion(String appVersion) {
+        public ListUserInstancesResponseBodyData setAppVersion(String appVersion) {
             this.appVersion = appVersion;
             return this;
         }
@@ -197,7 +191,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.appVersion;
         }
 
-        public ListInstancesResponseBodyData setDbPassword(String dbPassword) {
+        public ListUserInstancesResponseBodyData setDbPassword(String dbPassword) {
             this.dbPassword = dbPassword;
             return this;
         }
@@ -205,7 +199,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.dbPassword;
         }
 
-        public ListInstancesResponseBodyData setDbUrl(String dbUrl) {
+        public ListUserInstancesResponseBodyData setDbUrl(String dbUrl) {
             this.dbUrl = dbUrl;
             return this;
         }
@@ -213,7 +207,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.dbUrl;
         }
 
-        public ListInstancesResponseBodyData setDbUserName(String dbUserName) {
+        public ListUserInstancesResponseBodyData setDbUserName(String dbUserName) {
             this.dbUserName = dbUserName;
             return this;
         }
@@ -221,7 +215,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.dbUserName;
         }
 
-        public ListInstancesResponseBodyData setEndDate(String endDate) {
+        public ListUserInstancesResponseBodyData setEndDate(String endDate) {
             this.endDate = endDate;
             return this;
         }
@@ -229,7 +223,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.endDate;
         }
 
-        public ListInstancesResponseBodyData setEnvironmentId(Long environmentId) {
+        public ListUserInstancesResponseBodyData setEnvironmentId(Long environmentId) {
             this.environmentId = environmentId;
             return this;
         }
@@ -237,7 +231,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.environmentId;
         }
 
-        public ListInstancesResponseBodyData setGmtCreate(String gmtCreate) {
+        public ListUserInstancesResponseBodyData setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
@@ -245,7 +239,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public ListInstancesResponseBodyData setGmtModified(String gmtModified) {
+        public ListUserInstancesResponseBodyData setGmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
             return this;
         }
@@ -253,7 +247,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public ListInstancesResponseBodyData setId(Long id) {
+        public ListUserInstancesResponseBodyData setId(Long id) {
             this.id = id;
             return this;
         }
@@ -261,7 +255,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ListInstancesResponseBodyData setImageVersion(String imageVersion) {
+        public ListUserInstancesResponseBodyData setImageVersion(String imageVersion) {
             this.imageVersion = imageVersion;
             return this;
         }
@@ -269,7 +263,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.imageVersion;
         }
 
-        public ListInstancesResponseBodyData setInstanceId(String instanceId) {
+        public ListUserInstancesResponseBodyData setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -277,7 +271,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListInstancesResponseBodyData setIsCreatedRedis(Boolean isCreatedRedis) {
+        public ListUserInstancesResponseBodyData setIsCreatedRedis(Boolean isCreatedRedis) {
             this.isCreatedRedis = isCreatedRedis;
             return this;
         }
@@ -285,15 +279,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.isCreatedRedis;
         }
 
-        public ListInstancesResponseBodyData setIsCreatedSlb(Boolean isCreatedSlb) {
-            this.isCreatedSlb = isCreatedSlb;
-            return this;
-        }
-        public Boolean getIsCreatedSlb() {
-            return this.isCreatedSlb;
-        }
-
-        public ListInstancesResponseBodyData setK8sResourceId(Long k8sResourceId) {
+        public ListUserInstancesResponseBodyData setK8sResourceId(Long k8sResourceId) {
             this.k8sResourceId = k8sResourceId;
             return this;
         }
@@ -301,7 +287,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.k8sResourceId;
         }
 
-        public ListInstancesResponseBodyData setName(String name) {
+        public ListUserInstancesResponseBodyData setName(String name) {
             this.name = name;
             return this;
         }
@@ -309,7 +295,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListInstancesResponseBodyData setNameServer(String nameServer) {
+        public ListUserInstancesResponseBodyData setNameServer(String nameServer) {
             this.nameServer = nameServer;
             return this;
         }
@@ -317,15 +303,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.nameServer;
         }
 
-        public ListInstancesResponseBodyData setNameServerPublic(String nameServerPublic) {
-            this.nameServerPublic = nameServerPublic;
-            return this;
-        }
-        public String getNameServerPublic() {
-            return this.nameServerPublic;
-        }
-
-        public ListInstancesResponseBodyData setOrderId(String orderId) {
+        public ListUserInstancesResponseBodyData setOrderId(String orderId) {
             this.orderId = orderId;
             return this;
         }
@@ -333,7 +311,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.orderId;
         }
 
-        public ListInstancesResponseBodyData setPodCidr(String podCidr) {
+        public ListUserInstancesResponseBodyData setPodCidr(String podCidr) {
             this.podCidr = podCidr;
             return this;
         }
@@ -341,7 +319,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.podCidr;
         }
 
-        public ListInstancesResponseBodyData setPrimaryUser(String primaryUser) {
+        public ListUserInstancesResponseBodyData setPrimaryUser(String primaryUser) {
             this.primaryUser = primaryUser;
             return this;
         }
@@ -349,7 +327,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.primaryUser;
         }
 
-        public ListInstancesResponseBodyData setRegion(String region) {
+        public ListUserInstancesResponseBodyData setRegion(String region) {
             this.region = region;
             return this;
         }
@@ -357,7 +335,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.region;
         }
 
-        public ListInstancesResponseBodyData setReplica(Long replica) {
+        public ListUserInstancesResponseBodyData setReplica(Long replica) {
             this.replica = replica;
             return this;
         }
@@ -365,7 +343,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.replica;
         }
 
-        public ListInstancesResponseBodyData setSeataServerUniqueId(String seataServerUniqueId) {
+        public ListUserInstancesResponseBodyData setSeataServerUniqueId(String seataServerUniqueId) {
             this.seataServerUniqueId = seataServerUniqueId;
             return this;
         }
@@ -373,7 +351,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.seataServerUniqueId;
         }
 
-        public ListInstancesResponseBodyData setSecurityGroup(String securityGroup) {
+        public ListUserInstancesResponseBodyData setSecurityGroup(String securityGroup) {
             this.securityGroup = securityGroup;
             return this;
         }
@@ -381,7 +359,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.securityGroup;
         }
 
-        public ListInstancesResponseBodyData setSpec(String spec) {
+        public ListUserInstancesResponseBodyData setSpec(String spec) {
             this.spec = spec;
             return this;
         }
@@ -389,7 +367,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.spec;
         }
 
-        public ListInstancesResponseBodyData setStartDate(String startDate) {
+        public ListUserInstancesResponseBodyData setStartDate(String startDate) {
             this.startDate = startDate;
             return this;
         }
@@ -397,7 +375,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.startDate;
         }
 
-        public ListInstancesResponseBodyData setStatus(Long status) {
+        public ListUserInstancesResponseBodyData setStatus(Long status) {
             this.status = status;
             return this;
         }
@@ -405,7 +383,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListInstancesResponseBodyData setStatusDesc(String statusDesc) {
+        public ListUserInstancesResponseBodyData setStatusDesc(String statusDesc) {
             this.statusDesc = statusDesc;
             return this;
         }
@@ -413,7 +391,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.statusDesc;
         }
 
-        public ListInstancesResponseBodyData setStoreMode(String storeMode) {
+        public ListUserInstancesResponseBodyData setStoreMode(String storeMode) {
             this.storeMode = storeMode;
             return this;
         }
@@ -421,7 +399,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.storeMode;
         }
 
-        public ListInstancesResponseBodyData setVpc(String vpc) {
+        public ListUserInstancesResponseBodyData setVpc(String vpc) {
             this.vpc = vpc;
             return this;
         }
@@ -429,7 +407,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.vpc;
         }
 
-        public ListInstancesResponseBodyData setVswitch(String vswitch) {
+        public ListUserInstancesResponseBodyData setVswitch(String vswitch) {
             this.vswitch = vswitch;
             return this;
         }
@@ -437,7 +415,7 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.vswitch;
         }
 
-        public ListInstancesResponseBodyData setZoneId(String zoneId) {
+        public ListUserInstancesResponseBodyData setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
