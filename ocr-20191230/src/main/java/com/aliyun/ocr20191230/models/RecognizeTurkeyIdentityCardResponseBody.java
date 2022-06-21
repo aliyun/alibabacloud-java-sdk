@@ -4,14 +4,8 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeTurkeyIdentityCardResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Data")
     public RecognizeTurkeyIdentityCardResponseBodyData data;
-
-    @NameInMap("Message")
-    public String message;
 
     // Id of the request
     @NameInMap("RequestId")
@@ -22,28 +16,12 @@ public class RecognizeTurkeyIdentityCardResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RecognizeTurkeyIdentityCardResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public RecognizeTurkeyIdentityCardResponseBody setData(RecognizeTurkeyIdentityCardResponseBodyData data) {
         this.data = data;
         return this;
     }
     public RecognizeTurkeyIdentityCardResponseBodyData getData() {
         return this.data;
-    }
-
-    public RecognizeTurkeyIdentityCardResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public RecognizeTurkeyIdentityCardResponseBody setRequestId(String requestId) {
