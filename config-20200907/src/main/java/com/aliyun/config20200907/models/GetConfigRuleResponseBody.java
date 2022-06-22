@@ -31,6 +31,36 @@ public class GetConfigRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetConfigRuleResponseBodyConfigRuleCompliance extends TeaModel {
+        @NameInMap("ComplianceType")
+        public String complianceType;
+
+        @NameInMap("Count")
+        public Integer count;
+
+        public static GetConfigRuleResponseBodyConfigRuleCompliance build(java.util.Map<String, ?> map) throws Exception {
+            GetConfigRuleResponseBodyConfigRuleCompliance self = new GetConfigRuleResponseBodyConfigRuleCompliance();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleCompliance setComplianceType(String complianceType) {
+            this.complianceType = complianceType;
+            return this;
+        }
+        public String getComplianceType() {
+            return this.complianceType;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleCompliance setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+    }
+
     public static class GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus extends TeaModel {
         @NameInMap("FirstActivatedTimestamp")
         public Long firstActivatedTimestamp;
@@ -388,6 +418,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetConfigRuleResponseBodyConfigRule extends TeaModel {
+        @NameInMap("AccountId")
+        public Long accountId;
+
+        @NameInMap("Compliance")
+        public GetConfigRuleResponseBodyConfigRuleCompliance compliance;
+
         @NameInMap("ConfigRuleArn")
         public String configRuleArn;
 
@@ -457,6 +493,22 @@ public class GetConfigRuleResponseBody extends TeaModel {
         public static GetConfigRuleResponseBodyConfigRule build(java.util.Map<String, ?> map) throws Exception {
             GetConfigRuleResponseBodyConfigRule self = new GetConfigRuleResponseBodyConfigRule();
             return TeaModel.build(map, self);
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setAccountId(Long accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public Long getAccountId() {
+            return this.accountId;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setCompliance(GetConfigRuleResponseBodyConfigRuleCompliance compliance) {
+            this.compliance = compliance;
+            return this;
+        }
+        public GetConfigRuleResponseBodyConfigRuleCompliance getCompliance() {
+            return this.compliance;
         }
 
         public GetConfigRuleResponseBodyConfigRule setConfigRuleArn(String configRuleArn) {
