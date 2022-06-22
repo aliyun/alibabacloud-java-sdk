@@ -31,6 +31,36 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetAggregateConfigRuleResponseBodyConfigRuleCompliance extends TeaModel {
+        @NameInMap("ComplianceType")
+        public String complianceType;
+
+        @NameInMap("Count")
+        public Integer count;
+
+        public static GetAggregateConfigRuleResponseBodyConfigRuleCompliance build(java.util.Map<String, ?> map) throws Exception {
+            GetAggregateConfigRuleResponseBodyConfigRuleCompliance self = new GetAggregateConfigRuleResponseBodyConfigRuleCompliance();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAggregateConfigRuleResponseBodyConfigRuleCompliance setComplianceType(String complianceType) {
+            this.complianceType = complianceType;
+            return this;
+        }
+        public String getComplianceType() {
+            return this.complianceType;
+        }
+
+        public GetAggregateConfigRuleResponseBodyConfigRuleCompliance setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+    }
+
     public static class GetAggregateConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus extends TeaModel {
         @NameInMap("FirstActivatedTimestamp")
         public Long firstActivatedTimestamp;
@@ -421,6 +451,12 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetAggregateConfigRuleResponseBodyConfigRule extends TeaModel {
+        @NameInMap("AccountId")
+        public Long accountId;
+
+        @NameInMap("Compliance")
+        public GetAggregateConfigRuleResponseBodyConfigRuleCompliance compliance;
+
         @NameInMap("ConfigRuleArn")
         public String configRuleArn;
 
@@ -499,6 +535,22 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public static GetAggregateConfigRuleResponseBodyConfigRule build(java.util.Map<String, ?> map) throws Exception {
             GetAggregateConfigRuleResponseBodyConfigRule self = new GetAggregateConfigRuleResponseBodyConfigRule();
             return TeaModel.build(map, self);
+        }
+
+        public GetAggregateConfigRuleResponseBodyConfigRule setAccountId(Long accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public Long getAccountId() {
+            return this.accountId;
+        }
+
+        public GetAggregateConfigRuleResponseBodyConfigRule setCompliance(GetAggregateConfigRuleResponseBodyConfigRuleCompliance compliance) {
+            this.compliance = compliance;
+            return this;
+        }
+        public GetAggregateConfigRuleResponseBodyConfigRuleCompliance getCompliance() {
+            return this.compliance;
         }
 
         public GetAggregateConfigRuleResponseBodyConfigRule setConfigRuleArn(String configRuleArn) {
