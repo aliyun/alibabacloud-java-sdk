@@ -119,6 +119,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         resourceTypeCode = com.aliyun.openapiutil.Client.getEncodeParam(resourceTypeCode);
         resourceId = com.aliyun.openapiutil.Client.getEncodeParam(resourceId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataType)) {
+            query.put("dataType", request.dataType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("regionId", request.regionId);
         }
