@@ -50,6 +50,9 @@ public class HuichengetRequest extends TeaModel {
     @NameInMap("Params3")
     public String params3;
 
+    @NameInMap("Params4")
+    public String params4;
+
     @NameInMap("Red")
     public String red;
 
@@ -194,6 +197,14 @@ public class HuichengetRequest extends TeaModel {
     }
     public String getParams3() {
         return this.params3;
+    }
+
+    public HuichengetRequest setParams4(String params4) {
+        this.params4 = params4;
+        return this;
+    }
+    public String getParams4() {
+        return this.params4;
     }
 
     public HuichengetRequest setRed(String red) {
