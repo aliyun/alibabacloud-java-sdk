@@ -32,12 +32,34 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeAssetSummaryResponseBodyAssetsSummary extends TeaModel {
+        @NameInMap("TotalAssetAllRegion")
+        public Integer totalAssetAllRegion;
+
+        @NameInMap("TotalCoreAllRegion")
+        public Integer totalCoreAllRegion;
+
         @NameInMap("TotalCoreNum")
         public Integer totalCoreNum;
 
         public static DescribeAssetSummaryResponseBodyAssetsSummary build(java.util.Map<String, ?> map) throws Exception {
             DescribeAssetSummaryResponseBodyAssetsSummary self = new DescribeAssetSummaryResponseBodyAssetsSummary();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAssetSummaryResponseBodyAssetsSummary setTotalAssetAllRegion(Integer totalAssetAllRegion) {
+            this.totalAssetAllRegion = totalAssetAllRegion;
+            return this;
+        }
+        public Integer getTotalAssetAllRegion() {
+            return this.totalAssetAllRegion;
+        }
+
+        public DescribeAssetSummaryResponseBodyAssetsSummary setTotalCoreAllRegion(Integer totalCoreAllRegion) {
+            this.totalCoreAllRegion = totalCoreAllRegion;
+            return this;
+        }
+        public Integer getTotalCoreAllRegion() {
+            return this.totalCoreAllRegion;
         }
 
         public DescribeAssetSummaryResponseBodyAssetsSummary setTotalCoreNum(Integer totalCoreNum) {

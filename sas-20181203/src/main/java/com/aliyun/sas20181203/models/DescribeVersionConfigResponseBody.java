@@ -28,6 +28,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("IsNewContainerVersion")
+    public Boolean isNewContainerVersion;
+
     @NameInMap("IsOverBalance")
     public Boolean isOverBalance;
 
@@ -42,6 +45,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
 
     @NameInMap("MVUnusedAuthCount")
     public Integer MVUnusedAuthCount;
+
+    @NameInMap("OpenTime")
+    public Long openTime;
 
     @NameInMap("ReleaseTime")
     public Long releaseTime;
@@ -142,6 +148,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         return this.instanceId;
     }
 
+    public DescribeVersionConfigResponseBody setIsNewContainerVersion(Boolean isNewContainerVersion) {
+        this.isNewContainerVersion = isNewContainerVersion;
+        return this;
+    }
+    public Boolean getIsNewContainerVersion() {
+        return this.isNewContainerVersion;
+    }
+
     public DescribeVersionConfigResponseBody setIsOverBalance(Boolean isOverBalance) {
         this.isOverBalance = isOverBalance;
         return this;
@@ -180,6 +194,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Integer getMVUnusedAuthCount() {
         return this.MVUnusedAuthCount;
+    }
+
+    public DescribeVersionConfigResponseBody setOpenTime(Long openTime) {
+        this.openTime = openTime;
+        return this;
+    }
+    public Long getOpenTime() {
+        return this.openTime;
     }
 
     public DescribeVersionConfigResponseBody setReleaseTime(Long releaseTime) {

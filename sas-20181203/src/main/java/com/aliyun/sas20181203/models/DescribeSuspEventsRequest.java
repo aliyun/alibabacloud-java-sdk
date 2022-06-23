@@ -46,6 +46,14 @@ public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("OperateErrorCodeList")
     public java.util.List<String> operateErrorCodeList;
 
+    // 处理时间结束时间
+    @NameInMap("OperateTimeEnd")
+    public Long operateTimeEnd;
+
+    // 处理时间开始时间
+    @NameInMap("OperateTimeStart")
+    public Long operateTimeStart;
+
     @NameInMap("PageSize")
     public String pageSize;
 
@@ -191,6 +199,22 @@ public class DescribeSuspEventsRequest extends TeaModel {
     }
     public java.util.List<String> getOperateErrorCodeList() {
         return this.operateErrorCodeList;
+    }
+
+    public DescribeSuspEventsRequest setOperateTimeEnd(Long operateTimeEnd) {
+        this.operateTimeEnd = operateTimeEnd;
+        return this;
+    }
+    public Long getOperateTimeEnd() {
+        return this.operateTimeEnd;
+    }
+
+    public DescribeSuspEventsRequest setOperateTimeStart(Long operateTimeStart) {
+        this.operateTimeStart = operateTimeStart;
+        return this;
+    }
+    public Long getOperateTimeStart() {
+        return this.operateTimeStart;
     }
 
     public DescribeSuspEventsRequest setPageSize(String pageSize) {
