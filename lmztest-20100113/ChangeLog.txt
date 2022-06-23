@@ -1,0 +1,3 @@
+2022-06-23 Version: 0.0.1-SNAPSHOT
+- Automatically generate sdk tasks.
+
