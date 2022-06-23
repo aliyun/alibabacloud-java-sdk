@@ -116,6 +116,9 @@ public class GetAccountForAppRequest extends TeaModel {
         @NameInMap("Phone")
         public String phone;
 
+        @NameInMap("originUuid")
+        public String originUuid;
+
         public static GetAccountForAppRequestPayload build(java.util.Map<String, ?> map) throws Exception {
             GetAccountForAppRequestPayload self = new GetAccountForAppRequestPayload();
             return TeaModel.build(map, self);
@@ -127,6 +130,14 @@ public class GetAccountForAppRequest extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public GetAccountForAppRequestPayload setOriginUuid(String originUuid) {
+            this.originUuid = originUuid;
+            return this;
+        }
+        public String getOriginUuid() {
+            return this.originUuid;
         }
 
     }
