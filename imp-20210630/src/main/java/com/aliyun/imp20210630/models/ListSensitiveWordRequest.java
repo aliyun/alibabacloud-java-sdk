@@ -8,6 +8,12 @@ public class ListSensitiveWordRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     public static ListSensitiveWordRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSensitiveWordRequest self = new ListSensitiveWordRequest();
         return TeaModel.build(map, self);
@@ -19,6 +25,22 @@ public class ListSensitiveWordRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public ListSensitiveWordRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public ListSensitiveWordRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

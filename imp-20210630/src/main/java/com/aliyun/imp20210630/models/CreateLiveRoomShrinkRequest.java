@@ -20,6 +20,10 @@ public class CreateLiveRoomShrinkRequest extends TeaModel {
     @NameInMap("CoverUrl")
     public String coverUrl;
 
+    // 是否开启连麦。
+    @NameInMap("EnableLinkMic")
+    public Boolean enableLinkMic;
+
     // 拓展字段，按需传递，需要额外记录的房间属性。最大支持4096个字节。
     @NameInMap("Extension")
     public String extensionShrink;
@@ -71,6 +75,14 @@ public class CreateLiveRoomShrinkRequest extends TeaModel {
     }
     public String getCoverUrl() {
         return this.coverUrl;
+    }
+
+    public CreateLiveRoomShrinkRequest setEnableLinkMic(Boolean enableLinkMic) {
+        this.enableLinkMic = enableLinkMic;
+        return this;
+    }
+    public Boolean getEnableLinkMic() {
+        return this.enableLinkMic;
     }
 
     public CreateLiveRoomShrinkRequest setExtensionShrink(String extensionShrink) {

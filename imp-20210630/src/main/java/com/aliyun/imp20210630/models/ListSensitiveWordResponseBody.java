@@ -34,12 +34,23 @@ public class ListSensitiveWordResponseBody extends TeaModel {
     }
 
     public static class ListSensitiveWordResponseBodyResult extends TeaModel {
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
         @NameInMap("WordList")
         public java.util.List<String> wordList;
 
         public static ListSensitiveWordResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListSensitiveWordResponseBodyResult self = new ListSensitiveWordResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListSensitiveWordResponseBodyResult setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
         public ListSensitiveWordResponseBodyResult setWordList(java.util.List<String> wordList) {
