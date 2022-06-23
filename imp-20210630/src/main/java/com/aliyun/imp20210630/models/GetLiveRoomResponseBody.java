@@ -142,6 +142,10 @@ public class GetLiveRoomResponseBody extends TeaModel {
         @NameInMap("ChatId")
         public String chatId;
 
+        // 连麦会议唯一标识。
+        @NameInMap("ConfId")
+        public String confId;
+
         // 封面。
         @NameInMap("CoverUrl")
         public String coverUrl;
@@ -149,6 +153,10 @@ public class GetLiveRoomResponseBody extends TeaModel {
         // 直播创建时间，单位：毫秒。
         @NameInMap("CreateTime")
         public Long createTime;
+
+        // 是否开启连麦。
+        @NameInMap("EnableLinkMic")
+        public Boolean enableLinkMic;
 
         // 直播结束时间，单位：毫秒。
         @NameInMap("EndTime")
@@ -275,6 +283,14 @@ public class GetLiveRoomResponseBody extends TeaModel {
             return this.chatId;
         }
 
+        public GetLiveRoomResponseBodyResult setConfId(String confId) {
+            this.confId = confId;
+            return this;
+        }
+        public String getConfId() {
+            return this.confId;
+        }
+
         public GetLiveRoomResponseBodyResult setCoverUrl(String coverUrl) {
             this.coverUrl = coverUrl;
             return this;
@@ -289,6 +305,14 @@ public class GetLiveRoomResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public GetLiveRoomResponseBodyResult setEnableLinkMic(Boolean enableLinkMic) {
+            this.enableLinkMic = enableLinkMic;
+            return this;
+        }
+        public Boolean getEnableLinkMic() {
+            return this.enableLinkMic;
         }
 
         public GetLiveRoomResponseBodyResult setEndTime(Long endTime) {
