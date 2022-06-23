@@ -294,6 +294,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createBackupPolicyWithOptions(request, runtime);
     }
 
+    public CreateFileDetectResponse createFileDetectWithOptions(CreateFileDetectRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hashKey)) {
+            query.put("HashKey", request.hashKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossKey)) {
+            query.put("OssKey", request.ossKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFileDetect"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFileDetectResponse());
+    }
+
+    public CreateFileDetectResponse createFileDetect(CreateFileDetectRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createFileDetectWithOptions(request, runtime);
+    }
+
+    public CreateFileDetectUploadUrlResponse createFileDetectUploadUrlWithOptions(CreateFileDetectUploadUrlRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hashKeyList)) {
+            query.put("HashKeyList", request.hashKeyList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFileDetectUploadUrl"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFileDetectUploadUrlResponse());
+    }
+
+    public CreateFileDetectUploadUrlResponse createFileDetectUploadUrl(CreateFileDetectUploadUrlRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createFileDetectUploadUrlWithOptions(request, runtime);
+    }
+
     public CreateOrUpdateAssetGroupResponse createOrUpdateAssetGroupWithOptions(CreateOrUpdateAssetGroupRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -959,6 +1033,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.uniqueInfo)) {
             query.put("UniqueInfo", request.uniqueInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuids)) {
+            query.put("Uuids", request.uuids);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -5074,6 +5152,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OperateErrorCodeList", request.operateErrorCodeList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.operateTimeEnd)) {
+            query.put("OperateTimeEnd", request.operateTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operateTimeStart)) {
+            query.put("OperateTimeStart", request.operateTimeStart);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
         }
@@ -6045,6 +6131,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetBackupStorageCountResponse getBackupStorageCount() throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getBackupStorageCountWithOptions(runtime);
+    }
+
+    public GetFileDetectResultResponse getFileDetectResultWithOptions(GetFileDetectResultRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hashKeyList)) {
+            query.put("HashKeyList", request.hashKeyList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFileDetectResult"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFileDetectResultResponse());
+    }
+
+    public GetFileDetectResultResponse getFileDetectResult(GetFileDetectResultRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getFileDetectResultWithOptions(request, runtime);
     }
 
     public GetSuspiciousStatisticsResponse getSuspiciousStatisticsWithOptions(GetSuspiciousStatisticsRequest request, RuntimeOptions runtime) throws Exception {
