@@ -466,6 +466,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Params3", request.params3);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.params4)) {
+            query.put("Params4", request.params4);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.red)) {
             query.put("Red", request.red);
         }
