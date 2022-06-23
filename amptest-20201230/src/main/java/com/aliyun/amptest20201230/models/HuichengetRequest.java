@@ -31,11 +31,21 @@ public class HuichengetRequest extends TeaModel {
     @NameInMap("NewName")
     public String newName;
 
+    // 发阿迪
     @NameInMap("Nigh")
     public String nigh;
 
     @NameInMap("Now")
     public String now;
+
+    @NameInMap("Params")
+    public String params;
+
+    @NameInMap("Params1")
+    public String params1;
+
+    @NameInMap("Params2")
+    public String params2;
 
     @NameInMap("Red")
     public String red;
@@ -149,6 +159,30 @@ public class HuichengetRequest extends TeaModel {
     }
     public String getNow() {
         return this.now;
+    }
+
+    public HuichengetRequest setParams(String params) {
+        this.params = params;
+        return this;
+    }
+    public String getParams() {
+        return this.params;
+    }
+
+    public HuichengetRequest setParams1(String params1) {
+        this.params1 = params1;
+        return this;
+    }
+    public String getParams1() {
+        return this.params1;
+    }
+
+    public HuichengetRequest setParams2(String params2) {
+        this.params2 = params2;
+        return this;
+    }
+    public String getParams2() {
+        return this.params2;
     }
 
     public HuichengetRequest setRed(String red) {

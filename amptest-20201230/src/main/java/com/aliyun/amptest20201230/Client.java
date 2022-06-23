@@ -450,6 +450,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Now", request.now);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            query.put("Params", request.params);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.params1)) {
+            query.put("Params1", request.params1);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.params2)) {
+            query.put("Params2", request.params2);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.red)) {
             query.put("Red", request.red);
         }
