@@ -77,6 +77,9 @@ public class QuerySentinelAppSummaryMetricOverviewResponseBody extends TeaModel 
         @NameInMap("exception")
         public Float exception;
 
+        @NameInMap("grayQps")
+        public Float grayQps;
+
         @NameInMap("namespace")
         public String namespace;
 
@@ -139,6 +142,14 @@ public class QuerySentinelAppSummaryMetricOverviewResponseBody extends TeaModel 
         }
         public Float getException() {
             return this.exception;
+        }
+
+        public QuerySentinelAppSummaryMetricOverviewResponseBodyDataCurMetics setGrayQps(Float grayQps) {
+            this.grayQps = grayQps;
+            return this;
+        }
+        public Float getGrayQps() {
+            return this.grayQps;
         }
 
         public QuerySentinelAppSummaryMetricOverviewResponseBodyDataCurMetics setNamespace(String namespace) {
