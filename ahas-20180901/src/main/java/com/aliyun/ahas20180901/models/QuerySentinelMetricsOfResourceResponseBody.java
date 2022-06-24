@@ -128,6 +128,30 @@ public class QuerySentinelMetricsOfResourceResponseBody extends TeaModel {
         @NameInMap("flowRuleQPS")
         public Float flowRuleQPS;
 
+        @NameInMap("grayQps")
+        public Float grayQps;
+
+        @NameInMap("grayQpsAvg")
+        public Float grayQpsAvg;
+
+        @NameInMap("grayQpsMax")
+        public Float grayQpsMax;
+
+        @NameInMap("grayQpsMin")
+        public Float grayQpsMin;
+
+        @NameInMap("grayQpsP75")
+        public Float grayQpsP75;
+
+        @NameInMap("grayQpsP95")
+        public Float grayQpsP95;
+
+        @NameInMap("grayQpsP99")
+        public Float grayQpsP99;
+
+        @NameInMap("grayQpsStd")
+        public Float grayQpsStd;
+
         @NameInMap("manualDegradeRuleId")
         public Float manualDegradeRuleId;
 
@@ -416,6 +440,70 @@ public class QuerySentinelMetricsOfResourceResponseBody extends TeaModel {
         }
         public Float getFlowRuleQPS() {
             return this.flowRuleQPS;
+        }
+
+        public QuerySentinelMetricsOfResourceResponseBodyDataInnerMetrics setGrayQps(Float grayQps) {
+            this.grayQps = grayQps;
+            return this;
+        }
+        public Float getGrayQps() {
+            return this.grayQps;
+        }
+
+        public QuerySentinelMetricsOfResourceResponseBodyDataInnerMetrics setGrayQpsAvg(Float grayQpsAvg) {
+            this.grayQpsAvg = grayQpsAvg;
+            return this;
+        }
+        public Float getGrayQpsAvg() {
+            return this.grayQpsAvg;
+        }
+
+        public QuerySentinelMetricsOfResourceResponseBodyDataInnerMetrics setGrayQpsMax(Float grayQpsMax) {
+            this.grayQpsMax = grayQpsMax;
+            return this;
+        }
+        public Float getGrayQpsMax() {
+            return this.grayQpsMax;
+        }
+
+        public QuerySentinelMetricsOfResourceResponseBodyDataInnerMetrics setGrayQpsMin(Float grayQpsMin) {
+            this.grayQpsMin = grayQpsMin;
+            return this;
+        }
+        public Float getGrayQpsMin() {
+            return this.grayQpsMin;
+        }
+
+        public QuerySentinelMetricsOfResourceResponseBodyDataInnerMetrics setGrayQpsP75(Float grayQpsP75) {
+            this.grayQpsP75 = grayQpsP75;
+            return this;
+        }
+        public Float getGrayQpsP75() {
+            return this.grayQpsP75;
+        }
+
+        public QuerySentinelMetricsOfResourceResponseBodyDataInnerMetrics setGrayQpsP95(Float grayQpsP95) {
+            this.grayQpsP95 = grayQpsP95;
+            return this;
+        }
+        public Float getGrayQpsP95() {
+            return this.grayQpsP95;
+        }
+
+        public QuerySentinelMetricsOfResourceResponseBodyDataInnerMetrics setGrayQpsP99(Float grayQpsP99) {
+            this.grayQpsP99 = grayQpsP99;
+            return this;
+        }
+        public Float getGrayQpsP99() {
+            return this.grayQpsP99;
+        }
+
+        public QuerySentinelMetricsOfResourceResponseBodyDataInnerMetrics setGrayQpsStd(Float grayQpsStd) {
+            this.grayQpsStd = grayQpsStd;
+            return this;
+        }
+        public Float getGrayQpsStd() {
+            return this.grayQpsStd;
         }
 
         public QuerySentinelMetricsOfResourceResponseBodyDataInnerMetrics setManualDegradeRuleId(Float manualDegradeRuleId) {

@@ -89,6 +89,9 @@ public class QuerySentinelMacMetricsOfResourceResponseBody extends TeaModel {
         @NameInMap("flowRuleQPS")
         public Float flowRuleQPS;
 
+        @NameInMap("grayQps")
+        public Float grayQps;
+
         @NameInMap("manualDegradeRuleId")
         public Float manualDegradeRuleId;
 
@@ -198,6 +201,14 @@ public class QuerySentinelMacMetricsOfResourceResponseBody extends TeaModel {
         }
         public Float getFlowRuleQPS() {
             return this.flowRuleQPS;
+        }
+
+        public QuerySentinelMacMetricsOfResourceResponseBodyDataInnerMetrics setGrayQps(Float grayQps) {
+            this.grayQps = grayQps;
+            return this;
+        }
+        public Float getGrayQps() {
+            return this.grayQps;
         }
 
         public QuerySentinelMacMetricsOfResourceResponseBodyDataInnerMetrics setManualDegradeRuleId(Float manualDegradeRuleId) {
@@ -330,6 +341,9 @@ public class QuerySentinelMacMetricsOfResourceResponseBody extends TeaModel {
         @NameInMap("exception")
         public Float exception;
 
+        @NameInMap("grayQps")
+        public Float grayQps;
+
         @NameInMap("hostname")
         public String hostname;
 
@@ -409,6 +423,14 @@ public class QuerySentinelMacMetricsOfResourceResponseBody extends TeaModel {
         }
         public Float getException() {
             return this.exception;
+        }
+
+        public QuerySentinelMacMetricsOfResourceResponseBodyData setGrayQps(Float grayQps) {
+            this.grayQps = grayQps;
+            return this;
+        }
+        public Float getGrayQps() {
+            return this.grayQps;
         }
 
         public QuerySentinelMacMetricsOfResourceResponseBodyData setHostname(String hostname) {

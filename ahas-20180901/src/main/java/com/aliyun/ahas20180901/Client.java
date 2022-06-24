@@ -2060,6 +2060,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.countFunctionInvocationWithOptions(request, runtime);
     }
 
+    public CreateAppsRelationshipResponse createAppsRelationshipWithOptions(CreateAppsRelationshipRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ahasRegionId)) {
+            query.put("AhasRegionId", request.ahasRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authId)) {
+            query.put("AuthId", request.authId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.edges)) {
+            query.put("Edges", request.edges);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAppsRelationship"),
+            new TeaPair("version", "2018-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppsRelationshipResponse());
+    }
+
+    public CreateAppsRelationshipResponse createAppsRelationship(CreateAppsRelationshipRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createAppsRelationshipWithOptions(request, runtime);
+    }
+
     public CreateAttackSuiteResponse createAttackSuiteWithOptions(CreateAttackSuiteRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2285,6 +2330,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateExpertiseResponse createExpertise(CreateExpertiseRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createExpertiseWithOptions(request, runtime);
+    }
+
+    public CreateFreeLicenseKeyResponse createFreeLicenseKeyWithOptions(CreateFreeLicenseKeyRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ahasRegionId)) {
+            query.put("AhasRegionId", request.ahasRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authId)) {
+            query.put("AuthId", request.authId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFreeLicenseKey"),
+            new TeaPair("version", "2018-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFreeLicenseKeyResponse());
+    }
+
+    public CreateFreeLicenseKeyResponse createFreeLicenseKey(CreateFreeLicenseKeyRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createFreeLicenseKeyWithOptions(request, runtime);
     }
 
     public CreateInspectJobResponse createInspectJobWithOptions(CreateInspectJobRequest request, RuntimeOptions runtime) throws Exception {
