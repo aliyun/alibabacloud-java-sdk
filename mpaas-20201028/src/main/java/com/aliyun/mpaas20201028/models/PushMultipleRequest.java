@@ -7,6 +7,9 @@ public class PushMultipleRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("Classification")
+    public String classification;
+
     @NameInMap("DeliveryType")
     public Long deliveryType;
 
@@ -54,6 +57,14 @@ public class PushMultipleRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public PushMultipleRequest setClassification(String classification) {
+        this.classification = classification;
+        return this;
+    }
+    public String getClassification() {
+        return this.classification;
     }
 
     public PushMultipleRequest setDeliveryType(Long deliveryType) {

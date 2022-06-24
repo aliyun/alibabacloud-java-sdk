@@ -7,6 +7,9 @@ public class PushTemplateRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("Classification")
+    public String classification;
+
     @NameInMap("DeliveryType")
     public Long deliveryType;
 
@@ -69,6 +72,14 @@ public class PushTemplateRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public PushTemplateRequest setClassification(String classification) {
+        this.classification = classification;
+        return this;
+    }
+    public String getClassification() {
+        return this.classification;
     }
 
     public PushTemplateRequest setDeliveryType(Long deliveryType) {
