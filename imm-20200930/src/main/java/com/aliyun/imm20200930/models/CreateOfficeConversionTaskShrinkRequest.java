@@ -115,6 +115,10 @@ public class CreateOfficeConversionTaskShrinkRequest extends TeaModel {
     @NameInMap("TargetType")
     public String targetType;
 
+    // 文档转换输出地址模式
+    @NameInMap("TargetURI")
+    public String targetURI;
+
     // 文档转换输出文件地址前缀
     @NameInMap("TargetURIPrefix")
     public String targetURIPrefix;
@@ -354,6 +358,14 @@ public class CreateOfficeConversionTaskShrinkRequest extends TeaModel {
     }
     public String getTargetType() {
         return this.targetType;
+    }
+
+    public CreateOfficeConversionTaskShrinkRequest setTargetURI(String targetURI) {
+        this.targetURI = targetURI;
+        return this;
+    }
+    public String getTargetURI() {
+        return this.targetURI;
     }
 
     public CreateOfficeConversionTaskShrinkRequest setTargetURIPrefix(String targetURIPrefix) {
