@@ -114,6 +114,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceAttribute extends TeaModel {
+        @NameInMap("AclId")
+        public String aclId;
+
+        @NameInMap("AclName")
+        public String aclName;
+
+        @NameInMap("AclStatus")
+        public String aclStatus;
+
+        @NameInMap("AclType")
+        public String aclType;
+
         @NameInMap("ClassicEgressAddress")
         public String classicEgressAddress;
 
@@ -192,6 +204,38 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static DescribeInstancesResponseBodyInstancesInstanceAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesInstanceAttribute self = new DescribeInstancesResponseBodyInstancesInstanceAttribute();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setAclId(String aclId) {
+            this.aclId = aclId;
+            return this;
+        }
+        public String getAclId() {
+            return this.aclId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setAclName(String aclName) {
+            this.aclName = aclName;
+            return this;
+        }
+        public String getAclName() {
+            return this.aclName;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setAclStatus(String aclStatus) {
+            this.aclStatus = aclStatus;
+            return this;
+        }
+        public String getAclStatus() {
+            return this.aclStatus;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setAclType(String aclType) {
+            this.aclType = aclType;
+            return this;
+        }
+        public String getAclType() {
+            return this.aclType;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceAttribute setClassicEgressAddress(String classicEgressAddress) {

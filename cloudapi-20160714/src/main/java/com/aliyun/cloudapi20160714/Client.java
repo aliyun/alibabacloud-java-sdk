@@ -99,6 +99,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.abolishApiWithOptions(request, runtime);
     }
 
+    public AddAccessControlListEntryResponse addAccessControlListEntryWithOptions(AddAccessControlListEntryRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclEntrys)) {
+            query.put("AclEntrys", request.aclEntrys);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aclId)) {
+            query.put("AclId", request.aclId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddAccessControlListEntry"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddAccessControlListEntryResponse());
+    }
+
+    public AddAccessControlListEntryResponse addAccessControlListEntry(AddAccessControlListEntryRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addAccessControlListEntryWithOptions(request, runtime);
+    }
+
     public AddIpControlPolicyItemResponse addIpControlPolicyItemWithOptions(AddIpControlPolicyItemRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -306,6 +343,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BatchDeployApisResponse batchDeployApis(BatchDeployApisRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.batchDeployApisWithOptions(request, runtime);
+    }
+
+    public CreateAccessControlListResponse createAccessControlListWithOptions(CreateAccessControlListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclName)) {
+            query.put("AclName", request.aclName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAccessControlList"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAccessControlListResponse());
+    }
+
+    public CreateAccessControlListResponse createAccessControlList(CreateAccessControlListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createAccessControlListWithOptions(request, runtime);
     }
 
     public CreateApiResponse createApiWithOptions(CreateApiRequest request, RuntimeOptions runtime) throws Exception {
@@ -1087,6 +1157,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createTrafficControlWithOptions(request, runtime);
     }
 
+    public DeleteAccessControlListResponse deleteAccessControlListWithOptions(DeleteAccessControlListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclId)) {
+            query.put("AclId", request.aclId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAccessControlList"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAccessControlListResponse());
+    }
+
+    public DeleteAccessControlListResponse deleteAccessControlList(DeleteAccessControlListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteAccessControlListWithOptions(request, runtime);
+    }
+
     public DeleteAllTrafficSpecialControlResponse deleteAllTrafficSpecialControlWithOptions(DeleteAllTrafficSpecialControlRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1813,6 +1916,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAbolishApiTaskResponse describeAbolishApiTask(DescribeAbolishApiTaskRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeAbolishApiTaskWithOptions(request, runtime);
+    }
+
+    public DescribeAccessControlListAttributeResponse describeAccessControlListAttributeWithOptions(DescribeAccessControlListAttributeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclId)) {
+            query.put("AclId", request.aclId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAccessControlListAttribute"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAccessControlListAttributeResponse());
+    }
+
+    public DescribeAccessControlListAttributeResponse describeAccessControlListAttribute(DescribeAccessControlListAttributeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeAccessControlListAttributeWithOptions(request, runtime);
+    }
+
+    public DescribeAccessControlListsResponse describeAccessControlListsWithOptions(DescribeAccessControlListsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclName)) {
+            query.put("AclName", request.aclName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAccessControlLists"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAccessControlListsResponse());
+    }
+
+    public DescribeAccessControlListsResponse describeAccessControlLists(DescribeAccessControlListsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeAccessControlListsWithOptions(request, runtime);
     }
 
     public DescribeApiResponse describeApiWithOptions(DescribeApiRequest request, RuntimeOptions runtime) throws Exception {
@@ -4320,6 +4497,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detachPluginWithOptions(request, runtime);
     }
 
+    public DisableInstanceAccessControlResponse disableInstanceAccessControlWithOptions(DisableInstanceAccessControlRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclId)) {
+            query.put("AclId", request.aclId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableInstanceAccessControl"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableInstanceAccessControlResponse());
+    }
+
+    public DisableInstanceAccessControlResponse disableInstanceAccessControl(DisableInstanceAccessControlRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.disableInstanceAccessControlWithOptions(request, runtime);
+    }
+
     public DryRunSwaggerResponse dryRunSwaggerWithOptions(DryRunSwaggerRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DryRunSwaggerShrinkRequest request = new DryRunSwaggerShrinkRequest();
@@ -4375,6 +4589,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DryRunSwaggerResponse dryRunSwagger(DryRunSwaggerRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.dryRunSwaggerWithOptions(request, runtime);
+    }
+
+    public EnableInstanceAccessControlResponse enableInstanceAccessControlWithOptions(EnableInstanceAccessControlRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclId)) {
+            query.put("AclId", request.aclId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aclType)) {
+            query.put("AclType", request.aclType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableInstanceAccessControl"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableInstanceAccessControlResponse());
+    }
+
+    public EnableInstanceAccessControlResponse enableInstanceAccessControl(EnableInstanceAccessControlRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.enableInstanceAccessControlWithOptions(request, runtime);
     }
 
     public ImportSwaggerResponse importSwaggerWithOptions(ImportSwaggerRequest tmpReq, RuntimeOptions runtime) throws Exception {
@@ -5462,6 +5717,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ReactivateDomainResponse reactivateDomain(ReactivateDomainRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.reactivateDomainWithOptions(request, runtime);
+    }
+
+    public RemoveAccessControlListEntryResponse removeAccessControlListEntryWithOptions(RemoveAccessControlListEntryRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclEntrys)) {
+            query.put("AclEntrys", request.aclEntrys);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aclId)) {
+            query.put("AclId", request.aclId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveAccessControlListEntry"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveAccessControlListEntryResponse());
+    }
+
+    public RemoveAccessControlListEntryResponse removeAccessControlListEntry(RemoveAccessControlListEntryRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.removeAccessControlListEntryWithOptions(request, runtime);
     }
 
     public RemoveApisAuthoritiesResponse removeApisAuthoritiesWithOptions(RemoveApisAuthoritiesRequest request, RuntimeOptions runtime) throws Exception {
