@@ -35,9 +35,6 @@ public class UpdateJobShrinkRequest extends TeaModel {
         @NameInMap("AppCode")
         public String appCode;
 
-        @NameInMap("AppVersion")
-        public String appVersion;
-
         @NameInMap("Config")
         public String config;
 
@@ -73,14 +70,6 @@ public class UpdateJobShrinkRequest extends TeaModel {
         }
         public String getAppCode() {
             return this.appCode;
-        }
-
-        public UpdateJobShrinkRequestActiveJobDTO setAppVersion(String appVersion) {
-            this.appVersion = appVersion;
-            return this;
-        }
-        public String getAppVersion() {
-            return this.appVersion;
         }
 
         public UpdateJobShrinkRequestActiveJobDTO setConfig(String config) {

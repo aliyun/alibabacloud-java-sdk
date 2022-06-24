@@ -4,18 +4,19 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class DeleteJobRequest extends TeaModel {
+    // 应用Code
     @NameInMap("AppCode")
     public String appCode;
 
-    @NameInMap("AppVersion")
-    public String appVersion;
-
+    // 实例Id
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 任务ID
     @NameInMap("JobId")
     public Long jobId;
 
+    // 店铺Code
     @NameInMap("ShopId")
     public String shopId;
 
@@ -33,14 +34,6 @@ public class DeleteJobRequest extends TeaModel {
     }
     public String getAppCode() {
         return this.appCode;
-    }
-
-    public DeleteJobRequest setAppVersion(String appVersion) {
-        this.appVersion = appVersion;
-        return this;
-    }
-    public String getAppVersion() {
-        return this.appVersion;
     }
 
     public DeleteJobRequest setInstanceId(String instanceId) {
@@ -76,6 +69,7 @@ public class DeleteJobRequest extends TeaModel {
     }
 
     public static class DeleteJobRequestUserProfile extends TeaModel {
+        // 租户Id
         @NameInMap("TenantId")
         public Long tenantId;
 

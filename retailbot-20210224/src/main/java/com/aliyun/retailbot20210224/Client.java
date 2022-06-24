@@ -1465,10 +1465,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppCode", request.appCode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.appVersion)) {
-            query.put("AppVersion", request.appVersion);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }

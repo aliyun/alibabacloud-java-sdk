@@ -4,18 +4,19 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class GetJobShrinkRequest extends TeaModel {
+    // 应用Code
     @NameInMap("AppCode")
     public String appCode;
 
-    @NameInMap("AppVersion")
-    public String appVersion;
-
+    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 任务ID
     @NameInMap("JobId")
     public Long jobId;
 
+    // 店铺Id
     @NameInMap("ShopId")
     public String shopId;
 
@@ -33,14 +34,6 @@ public class GetJobShrinkRequest extends TeaModel {
     }
     public String getAppCode() {
         return this.appCode;
-    }
-
-    public GetJobShrinkRequest setAppVersion(String appVersion) {
-        this.appVersion = appVersion;
-        return this;
-    }
-    public String getAppVersion() {
-        return this.appVersion;
     }
 
     public GetJobShrinkRequest setInstanceId(String instanceId) {
