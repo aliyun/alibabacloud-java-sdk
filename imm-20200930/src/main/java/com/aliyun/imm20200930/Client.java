@@ -814,6 +814,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TargetType", request.targetType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetURI)) {
+            query.put("TargetURI", request.targetURI);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.targetURIPrefix)) {
             query.put("TargetURIPrefix", request.targetURIPrefix);
         }
