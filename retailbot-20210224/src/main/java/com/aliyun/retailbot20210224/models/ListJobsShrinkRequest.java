@@ -7,9 +7,6 @@ public class ListJobsShrinkRequest extends TeaModel {
     @NameInMap("AppCode")
     public String appCode;
 
-    @NameInMap("AppVersion")
-    public String appVersion;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -36,14 +33,6 @@ public class ListJobsShrinkRequest extends TeaModel {
     }
     public String getAppCode() {
         return this.appCode;
-    }
-
-    public ListJobsShrinkRequest setAppVersion(String appVersion) {
-        this.appVersion = appVersion;
-        return this;
-    }
-    public String getAppVersion() {
-        return this.appVersion;
     }
 
     public ListJobsShrinkRequest setInstanceId(String instanceId) {

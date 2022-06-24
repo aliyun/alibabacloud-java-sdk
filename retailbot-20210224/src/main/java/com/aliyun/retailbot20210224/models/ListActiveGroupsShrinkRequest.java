@@ -4,14 +4,15 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListActiveGroupsShrinkRequest extends TeaModel {
+    // 应用code
     @NameInMap("AppCode")
     public String appCode;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token。
+    // 人群圈选配置所属的版本，如果不指定则系统自动选择默认版本
     @NameInMap("AppVersion")
     public String appVersion;
 
-    // 查询过滤参数，多个过滤参数之间是且的关系。例如:过滤实例名称为i-a123、i-b123，且实例状态为Stopped：&Filter.1.Name=InstanceName&Filter.1.Value.1=i-a123&Filter.1.Value.2=i-b123&Filter.2.Name=Status&Filter.2.Value=Stopped。
+    // 实例Id
     @NameInMap("InstanceId")
     public String instanceId;
 

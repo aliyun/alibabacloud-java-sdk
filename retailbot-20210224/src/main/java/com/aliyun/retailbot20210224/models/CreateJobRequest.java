@@ -32,27 +32,35 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestActiveJobDTO extends TeaModel {
+        // 应用Code
         @NameInMap("AppCode")
         public String appCode;
 
+        // 人群圈选配置所属的版本，如果不指定则系统自动选择默认版本
         @NameInMap("AppVersion")
         public String appVersion;
 
+        // 任务配置
         @NameInMap("Config")
         public String config;
 
+        // 任务截止时间
         @NameInMap("EndTime")
         public Long endTime;
 
+        // 实例ID
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // 任务名
         @NameInMap("JobName")
         public String jobName;
 
+        // 店铺ID
         @NameInMap("ShopId")
         public String shopId;
 
+        // 任务起始时间
         @NameInMap("StartTime")
         public Long startTime;
 

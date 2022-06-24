@@ -18,7 +18,7 @@ public class GenerateTokenResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Success")
-    public String success;
+    public Boolean success;
 
     public static GenerateTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenerateTokenResponseBody self = new GenerateTokenResponseBody();
@@ -57,11 +57,11 @@ public class GenerateTokenResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GenerateTokenResponseBody setSuccess(String success) {
+    public GenerateTokenResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 

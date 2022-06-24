@@ -4,20 +4,23 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class GetActiveGroupRequest extends TeaModel {
+    // 应用Code
     @NameInMap("AppCode")
     public String appCode;
 
+    // 人群圈选配置所属的版本，如果不指定则系统自动选择默认版本
     @NameInMap("AppVersion")
     public String appVersion;
 
+    // 人群ID
     @NameInMap("GroupId")
     public Long groupId;
 
-    // A short description of struct
+    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 实例 ID。
+    // 店铺ID
     @NameInMap("ShopId")
     public String shopId;
 
@@ -78,6 +81,7 @@ public class GetActiveGroupRequest extends TeaModel {
     }
 
     public static class GetActiveGroupRequestUserProfile extends TeaModel {
+        // 租户ID
         @NameInMap("TenantId")
         public Long tenantId;
 
