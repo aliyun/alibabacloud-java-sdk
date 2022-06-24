@@ -139,8 +139,8 @@ public class QueryTicketListResponseBody extends TeaModel {
         public Integer status;
 
         // 工单提交时间-必填
-        @NameInMap("SubmitData")
-        public String submitData;
+        @NameInMap("SubmitDate")
+        public Long submitDate;
 
         // 工单ID-必填
         @NameInMap("TicketId")
@@ -195,12 +195,12 @@ public class QueryTicketListResponseBody extends TeaModel {
             return this.status;
         }
 
-        public QueryTicketListResponseBodyData setSubmitData(String submitData) {
-            this.submitData = submitData;
+        public QueryTicketListResponseBodyData setSubmitDate(Long submitDate) {
+            this.submitDate = submitDate;
             return this;
         }
-        public String getSubmitData() {
-            return this.submitData;
+        public Long getSubmitDate() {
+            return this.submitDate;
         }
 
         public QueryTicketListResponseBodyData setTicketId(String ticketId) {
