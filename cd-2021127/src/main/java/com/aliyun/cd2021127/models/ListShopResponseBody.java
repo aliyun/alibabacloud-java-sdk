@@ -118,6 +118,10 @@ public class ListShopResponseBody extends TeaModel {
     }
 
     public static class ListShopResponseBodyData extends TeaModel {
+        // 门店营业状态: 1-营业，2-待营业
+        @NameInMap("BusinessStatus")
+        public Integer businessStatus;
+
         // 设备列表(查询结果)
         @NameInMap("DeviceMacList")
         public java.util.List<String> deviceMacList;
@@ -185,6 +189,14 @@ public class ListShopResponseBody extends TeaModel {
         public static ListShopResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListShopResponseBodyData self = new ListShopResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListShopResponseBodyData setBusinessStatus(Integer businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public Integer getBusinessStatus() {
+            return this.businessStatus;
         }
 
         public ListShopResponseBodyData setDeviceMacList(java.util.List<String> deviceMacList) {

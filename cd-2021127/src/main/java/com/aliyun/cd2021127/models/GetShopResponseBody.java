@@ -4,6 +4,10 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class GetShopResponseBody extends TeaModel {
+    // 门店营业状态: 1-营业，2-待营业
+    @NameInMap("BusinessStatus")
+    public Integer businessStatus;
+
     // 状态码
     @NameInMap("Code")
     public String code;
@@ -91,6 +95,14 @@ public class GetShopResponseBody extends TeaModel {
     public static GetShopResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetShopResponseBody self = new GetShopResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetShopResponseBody setBusinessStatus(Integer businessStatus) {
+        this.businessStatus = businessStatus;
+        return this;
+    }
+    public Integer getBusinessStatus() {
+        return this.businessStatus;
     }
 
     public GetShopResponseBody setCode(String code) {

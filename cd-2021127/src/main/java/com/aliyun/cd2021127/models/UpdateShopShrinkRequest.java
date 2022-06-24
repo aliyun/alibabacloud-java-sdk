@@ -4,6 +4,10 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class UpdateShopShrinkRequest extends TeaModel {
+    // 门店营业状态: 1-营业，2-待营业
+    @NameInMap("BusinessStatus")
+    public Integer businessStatus;
+
     // 地理纬度-选填
     @NameInMap("Latitude")
     public String latitude;
@@ -59,6 +63,14 @@ public class UpdateShopShrinkRequest extends TeaModel {
     public static UpdateShopShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateShopShrinkRequest self = new UpdateShopShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateShopShrinkRequest setBusinessStatus(Integer businessStatus) {
+        this.businessStatus = businessStatus;
+        return this;
+    }
+    public Integer getBusinessStatus() {
+        return this.businessStatus;
     }
 
     public UpdateShopShrinkRequest setLatitude(String latitude) {
