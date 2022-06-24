@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>mpaas20201028</artifactId>
-  <version>2.1.8</version>
+  <version>3.0.8</version>
   <packaging>jar</packaging>
   <name>mpaas20201028</name>
   <description>Alibaba Cloud Mobile PaaS (20201028) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.2</version>
+      <version>0.2.5</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -56,7 +56,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>endpoint-util</artifactId>
-      <version>0.0.6</version>
+      <version>0.0.7</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

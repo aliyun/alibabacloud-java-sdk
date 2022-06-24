@@ -13,6 +13,9 @@ public class PushBroadcastRequest extends TeaModel {
     @NameInMap("BindPeriod")
     public Integer bindPeriod;
 
+    @NameInMap("Classification")
+    public String classification;
+
     @NameInMap("DeliveryType")
     public Long deliveryType;
 
@@ -85,6 +88,14 @@ public class PushBroadcastRequest extends TeaModel {
     }
     public Integer getBindPeriod() {
         return this.bindPeriod;
+    }
+
+    public PushBroadcastRequest setClassification(String classification) {
+        this.classification = classification;
+        return this;
+    }
+    public String getClassification() {
+        return this.classification;
     }
 
     public PushBroadcastRequest setDeliveryType(Long deliveryType) {

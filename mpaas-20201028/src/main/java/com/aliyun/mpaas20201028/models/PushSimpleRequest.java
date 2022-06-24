@@ -7,6 +7,9 @@ public class PushSimpleRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("Classification")
+    public String classification;
+
     @NameInMap("Content")
     public String content;
 
@@ -81,6 +84,14 @@ public class PushSimpleRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public PushSimpleRequest setClassification(String classification) {
+        this.classification = classification;
+        return this;
+    }
+    public String getClassification() {
+        return this.classification;
     }
 
     public PushSimpleRequest setContent(String content) {
