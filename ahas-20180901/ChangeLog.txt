@@ -1,3 +1,6 @@
+2022-06-24 Version: 1.0.3
+- For MSE Gateway.
+
 2022-06-24 Version: 1.0.2
 - For MSE Gateway.
 
