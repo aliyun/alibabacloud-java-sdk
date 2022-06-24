@@ -21,6 +21,10 @@ public class CreateShopRequest extends TeaModel {
     }
 
     public static class BatchCreateShopRequestShopList extends TeaModel {
+        // 门店营业状态: 1-营业，2-待营业
+        @NameInMap("BusinessStatus")
+        public Integer businessStatus;
+
         // 地理纬度-必填
         @NameInMap("Latitude")
         public String latitude;
@@ -76,6 +80,14 @@ public class CreateShopRequest extends TeaModel {
         public static BatchCreateShopRequestShopList build(java.util.Map<String, ?> map) throws Exception {
             BatchCreateShopRequestShopList self = new BatchCreateShopRequestShopList();
             return TeaModel.build(map, self);
+        }
+
+        public BatchCreateShopRequestShopList setBusinessStatus(Integer businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public Integer getBusinessStatus() {
+            return this.businessStatus;
         }
 
         public BatchCreateShopRequestShopList setLatitude(String latitude) {
@@ -185,6 +197,10 @@ public class CreateShopRequest extends TeaModel {
     }
 
     public static class CreateShopRequestShopList extends TeaModel {
+        // 门店营业状态: 1-营业，2-待营业
+        @NameInMap("BusinessStatus")
+        public Integer businessStatus;
+
         // 地理纬度-选填
         @NameInMap("Latitude")
         public String latitude;
@@ -240,6 +256,14 @@ public class CreateShopRequest extends TeaModel {
         public static CreateShopRequestShopList build(java.util.Map<String, ?> map) throws Exception {
             CreateShopRequestShopList self = new CreateShopRequestShopList();
             return TeaModel.build(map, self);
+        }
+
+        public CreateShopRequestShopList setBusinessStatus(Integer businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public Integer getBusinessStatus() {
+            return this.businessStatus;
         }
 
         public CreateShopRequestShopList setLatitude(String latitude) {

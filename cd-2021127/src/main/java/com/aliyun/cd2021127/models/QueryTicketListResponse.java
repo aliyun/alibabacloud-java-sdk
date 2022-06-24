@@ -3,7 +3,7 @@ package com.aliyun.cd2021127.models;
 
 import com.aliyun.tea.*;
 
-public class GetShopResponse extends TeaModel {
+public class QueryTicketListResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetShopResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetShopResponseBody body;
+    public QueryTicketListResponseBody body;
 
-    public static GetShopResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetShopResponse self = new GetShopResponse();
+    public static QueryTicketListResponse build(java.util.Map<String, ?> map) throws Exception {
+        QueryTicketListResponse self = new QueryTicketListResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetShopResponse setHeaders(java.util.Map<String, String> headers) {
+    public QueryTicketListResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetShopResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetShopResponse setStatusCode(Integer statusCode) {
+    public QueryTicketListResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetShopResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetShopResponse setBody(GetShopResponseBody body) {
+    public QueryTicketListResponse setBody(QueryTicketListResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetShopResponseBody getBody() {
+    public QueryTicketListResponseBody getBody() {
         return this.body;
     }
 
