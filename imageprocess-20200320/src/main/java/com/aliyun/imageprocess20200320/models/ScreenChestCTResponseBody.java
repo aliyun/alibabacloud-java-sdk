@@ -651,11 +651,17 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("Detections")
         public java.util.List<ScreenChestCTResponseBodyDataDetectRibFractureDetections> detections;
 
+        @NameInMap("FractureMaskURL")
+        public String fractureMaskURL;
+
         @NameInMap("Origin")
         public java.util.List<Float> origin;
 
         @NameInMap("ResultURL")
         public String resultURL;
+
+        @NameInMap("RibSegmentMaskURL")
+        public String ribSegmentMaskURL;
 
         @NameInMap("Spacing")
         public java.util.List<Float> spacing;
@@ -673,6 +679,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
             return this.detections;
         }
 
+        public ScreenChestCTResponseBodyDataDetectRibFracture setFractureMaskURL(String fractureMaskURL) {
+            this.fractureMaskURL = fractureMaskURL;
+            return this;
+        }
+        public String getFractureMaskURL() {
+            return this.fractureMaskURL;
+        }
+
         public ScreenChestCTResponseBodyDataDetectRibFracture setOrigin(java.util.List<Float> origin) {
             this.origin = origin;
             return this;
@@ -687,6 +701,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public String getResultURL() {
             return this.resultURL;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectRibFracture setRibSegmentMaskURL(String ribSegmentMaskURL) {
+            this.ribSegmentMaskURL = ribSegmentMaskURL;
+            return this;
+        }
+        public String getRibSegmentMaskURL() {
+            return this.ribSegmentMaskURL;
         }
 
         public ScreenChestCTResponseBodyDataDetectRibFracture setSpacing(java.util.List<Float> spacing) {
