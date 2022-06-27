@@ -192,6 +192,66 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeHealthStatusResponseBodyStatusAdbpgMasterStatus extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Value")
+        public Float value;
+
+        public static DescribeHealthStatusResponseBodyStatusAdbpgMasterStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHealthStatusResponseBodyStatusAdbpgMasterStatus self = new DescribeHealthStatusResponseBodyStatusAdbpgMasterStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHealthStatusResponseBodyStatusAdbpgMasterStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeHealthStatusResponseBodyStatusAdbpgMasterStatus setValue(Float value) {
+            this.value = value;
+            return this;
+        }
+        public Float getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeHealthStatusResponseBodyStatusAdbpgSegmentStatus extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Value")
+        public Float value;
+
+        public static DescribeHealthStatusResponseBodyStatusAdbpgSegmentStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHealthStatusResponseBodyStatusAdbpgSegmentStatus self = new DescribeHealthStatusResponseBodyStatusAdbpgSegmentStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHealthStatusResponseBodyStatusAdbpgSegmentStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeHealthStatusResponseBodyStatusAdbpgSegmentStatus setValue(Float value) {
+            this.value = value;
+            return this;
+        }
+        public Float getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeHealthStatusResponseBodyStatusAdbpgStatus extends TeaModel {
         @NameInMap("Status")
         public String status;
@@ -358,6 +418,12 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         @NameInMap("adbpg_master_disk_usage_percent_max")
         public DescribeHealthStatusResponseBodyStatusAdbpgMasterDiskUsagePercentMax adbpgMasterDiskUsagePercentMax;
 
+        @NameInMap("adbpg_master_status")
+        public DescribeHealthStatusResponseBodyStatusAdbpgMasterStatus adbpgMasterStatus;
+
+        @NameInMap("adbpg_segment_status")
+        public DescribeHealthStatusResponseBodyStatusAdbpgSegmentStatus adbpgSegmentStatus;
+
         @NameInMap("adbpg_status")
         public DescribeHealthStatusResponseBodyStatusAdbpgStatus adbpgStatus;
 
@@ -416,6 +482,22 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         }
         public DescribeHealthStatusResponseBodyStatusAdbpgMasterDiskUsagePercentMax getAdbpgMasterDiskUsagePercentMax() {
             return this.adbpgMasterDiskUsagePercentMax;
+        }
+
+        public DescribeHealthStatusResponseBodyStatus setAdbpgMasterStatus(DescribeHealthStatusResponseBodyStatusAdbpgMasterStatus adbpgMasterStatus) {
+            this.adbpgMasterStatus = adbpgMasterStatus;
+            return this;
+        }
+        public DescribeHealthStatusResponseBodyStatusAdbpgMasterStatus getAdbpgMasterStatus() {
+            return this.adbpgMasterStatus;
+        }
+
+        public DescribeHealthStatusResponseBodyStatus setAdbpgSegmentStatus(DescribeHealthStatusResponseBodyStatusAdbpgSegmentStatus adbpgSegmentStatus) {
+            this.adbpgSegmentStatus = adbpgSegmentStatus;
+            return this;
+        }
+        public DescribeHealthStatusResponseBodyStatusAdbpgSegmentStatus getAdbpgSegmentStatus() {
+            return this.adbpgSegmentStatus;
         }
 
         public DescribeHealthStatusResponseBodyStatus setAdbpgStatus(DescribeHealthStatusResponseBodyStatusAdbpgStatus adbpgStatus) {

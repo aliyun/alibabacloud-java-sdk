@@ -204,6 +204,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("RunningTime")
+        public String runningTime;
+
         @NameInMap("SecurityIPList")
         public String securityIPList;
 
@@ -212,6 +215,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @NameInMap("SegmentCounts")
         public Integer segmentCounts;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         @NameInMap("StoragePerNode")
         public Integer storagePerNode;
@@ -573,6 +579,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setRunningTime(String runningTime) {
+            this.runningTime = runningTime;
+            return this;
+        }
+        public String getRunningTime() {
+            return this.runningTime;
+        }
+
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setSecurityIPList(String securityIPList) {
             this.securityIPList = securityIPList;
             return this;
@@ -595,6 +609,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Integer getSegmentCounts() {
             return this.segmentCounts;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setStoragePerNode(Integer storagePerNode) {
