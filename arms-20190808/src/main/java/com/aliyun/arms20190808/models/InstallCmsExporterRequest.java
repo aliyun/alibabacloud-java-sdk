@@ -7,8 +7,13 @@ public class InstallCmsExporterRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    // 云监控接入方式支持的参数，多个产品名用#分隔
     @NameInMap("CmsArgs")
     public String cmsArgs;
+
+    // 一方接入方式支持的参数，多个产品名用#分隔
+    @NameInMap("DirectArgs")
+    public String directArgs;
 
     @NameInMap("EnableTag")
     public Boolean enableTag;
@@ -35,6 +40,14 @@ public class InstallCmsExporterRequest extends TeaModel {
     }
     public String getCmsArgs() {
         return this.cmsArgs;
+    }
+
+    public InstallCmsExporterRequest setDirectArgs(String directArgs) {
+        this.directArgs = directArgs;
+        return this;
+    }
+    public String getDirectArgs() {
+        return this.directArgs;
     }
 
     public InstallCmsExporterRequest setEnableTag(Boolean enableTag) {

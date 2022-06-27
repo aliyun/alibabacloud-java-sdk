@@ -3,21 +3,19 @@ package com.aliyun.arms20190808.models;
 
 import com.aliyun.tea.*;
 
-public class GetEstimateFeeInfoResponseBody extends TeaModel {
-    // data
+public class GetClusterAllUrlResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    public static GetEstimateFeeInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetEstimateFeeInfoResponseBody self = new GetEstimateFeeInfoResponseBody();
+    public static GetClusterAllUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetClusterAllUrlResponseBody self = new GetClusterAllUrlResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetEstimateFeeInfoResponseBody setData(String data) {
+    public GetClusterAllUrlResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -25,7 +23,7 @@ public class GetEstimateFeeInfoResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GetEstimateFeeInfoResponseBody setRequestId(String requestId) {
+    public GetClusterAllUrlResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
