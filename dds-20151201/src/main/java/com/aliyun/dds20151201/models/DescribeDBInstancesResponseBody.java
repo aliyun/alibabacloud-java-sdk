@@ -295,6 +295,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        @NameInMap("HiddenZoneId")
+        public String hiddenZoneId;
+
         @NameInMap("KindCode")
         public String kindCode;
 
@@ -318,6 +321,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("SecondaryZoneId")
+        public String secondaryZoneId;
 
         @NameInMap("ShardList")
         public DescribeDBInstancesResponseBodyDBInstancesDBInstanceShardList shardList;
@@ -443,6 +449,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.expireTime;
         }
 
+        public DescribeDBInstancesResponseBodyDBInstancesDBInstance setHiddenZoneId(String hiddenZoneId) {
+            this.hiddenZoneId = hiddenZoneId;
+            return this;
+        }
+        public String getHiddenZoneId() {
+            return this.hiddenZoneId;
+        }
+
         public DescribeDBInstancesResponseBodyDBInstancesDBInstance setKindCode(String kindCode) {
             this.kindCode = kindCode;
             return this;
@@ -505,6 +519,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstancesDBInstance setSecondaryZoneId(String secondaryZoneId) {
+            this.secondaryZoneId = secondaryZoneId;
+            return this;
+        }
+        public String getSecondaryZoneId() {
+            return this.secondaryZoneId;
         }
 
         public DescribeDBInstancesResponseBodyDBInstancesDBInstance setShardList(DescribeDBInstancesResponseBodyDBInstancesDBInstanceShardList shardList) {

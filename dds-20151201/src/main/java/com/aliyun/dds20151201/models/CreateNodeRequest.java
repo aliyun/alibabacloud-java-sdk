@@ -4,6 +4,12 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CreateNodeRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
+    @NameInMap("AccountPassword")
+    public String accountPassword;
+
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
@@ -46,9 +52,28 @@ public class CreateNodeRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("ShardDirect")
+    public Boolean shardDirect;
+
     public static CreateNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNodeRequest self = new CreateNodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateNodeRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
+    }
+
+    public CreateNodeRequest setAccountPassword(String accountPassword) {
+        this.accountPassword = accountPassword;
+        return this;
+    }
+    public String getAccountPassword() {
+        return this.accountPassword;
     }
 
     public CreateNodeRequest setAutoPay(Boolean autoPay) {
@@ -161,6 +186,14 @@ public class CreateNodeRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public CreateNodeRequest setShardDirect(Boolean shardDirect) {
+        this.shardDirect = shardDirect;
+        return this;
+    }
+    public Boolean getShardDirect() {
+        return this.shardDirect;
     }
 
 }

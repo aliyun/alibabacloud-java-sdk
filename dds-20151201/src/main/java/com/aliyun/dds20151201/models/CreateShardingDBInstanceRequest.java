@@ -28,6 +28,9 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    @NameInMap("HiddenZoneId")
+    public String hiddenZoneId;
+
     @NameInMap("Mongos")
     public java.util.List<CreateShardingDBInstanceRequestMongos> mongos;
 
@@ -63,6 +66,9 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
 
     @NameInMap("RestoreTime")
     public String restoreTime;
+
+    @NameInMap("SecondaryZoneId")
+    public String secondaryZoneId;
 
     @NameInMap("SecurityIPList")
     public String securityIPList;
@@ -152,6 +158,14 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     }
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    public CreateShardingDBInstanceRequest setHiddenZoneId(String hiddenZoneId) {
+        this.hiddenZoneId = hiddenZoneId;
+        return this;
+    }
+    public String getHiddenZoneId() {
+        return this.hiddenZoneId;
     }
 
     public CreateShardingDBInstanceRequest setMongos(java.util.List<CreateShardingDBInstanceRequestMongos> mongos) {
@@ -248,6 +262,14 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     }
     public String getRestoreTime() {
         return this.restoreTime;
+    }
+
+    public CreateShardingDBInstanceRequest setSecondaryZoneId(String secondaryZoneId) {
+        this.secondaryZoneId = secondaryZoneId;
+        return this;
+    }
+    public String getSecondaryZoneId() {
+        return this.secondaryZoneId;
     }
 
     public CreateShardingDBInstanceRequest setSecurityIPList(String securityIPList) {
