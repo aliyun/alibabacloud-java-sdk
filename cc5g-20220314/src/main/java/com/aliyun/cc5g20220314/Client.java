@@ -535,6 +535,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getWirelessCloudConnectorWithOptions(request, runtime);
     }
 
+    public InnerLimitRateCardsResponse innerLimitRateCardsWithOptions(InnerLimitRateCardsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iccids)) {
+            query.put("Iccids", request.iccids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.innerApi)) {
+            query.put("InnerApi", request.innerApi);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.task)) {
+            query.put("Task", request.task);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InnerLimitRateCards"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InnerLimitRateCardsResponse());
+    }
+
+    public InnerLimitRateCardsResponse innerLimitRateCards(InnerLimitRateCardsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.innerLimitRateCardsWithOptions(request, runtime);
+    }
+
+    public InnerStopCardsResponse innerStopCardsWithOptions(InnerStopCardsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iccids)) {
+            query.put("Iccids", request.iccids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.innerApi)) {
+            query.put("InnerApi", request.innerApi);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.task)) {
+            query.put("Task", request.task);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InnerStopCards"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InnerStopCardsResponse());
+    }
+
+    public InnerStopCardsResponse innerStopCards(InnerStopCardsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.innerStopCardsWithOptions(request, runtime);
+    }
+
     public ListAuthorizationRulesResponse listAuthorizationRulesWithOptions(ListAuthorizationRulesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
