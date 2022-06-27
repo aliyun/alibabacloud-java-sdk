@@ -3,7 +3,7 @@ package com.aliyun.arms20190808.models;
 
 import com.aliyun.tea.*;
 
-public class GetEstimateFeeInfoResponse extends TeaModel {
+public class ListIntegrationResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetEstimateFeeInfoResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetEstimateFeeInfoResponseBody body;
+    public ListIntegrationResponseBody body;
 
-    public static GetEstimateFeeInfoResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetEstimateFeeInfoResponse self = new GetEstimateFeeInfoResponse();
+    public static ListIntegrationResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListIntegrationResponse self = new ListIntegrationResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetEstimateFeeInfoResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListIntegrationResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetEstimateFeeInfoResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetEstimateFeeInfoResponse setStatusCode(Integer statusCode) {
+    public ListIntegrationResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetEstimateFeeInfoResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetEstimateFeeInfoResponse setBody(GetEstimateFeeInfoResponseBody body) {
+    public ListIntegrationResponse setBody(ListIntegrationResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetEstimateFeeInfoResponseBody getBody() {
+    public ListIntegrationResponseBody getBody() {
         return this.body;
     }
 

@@ -3,7 +3,7 @@ package com.aliyun.arms20190808.models;
 
 import com.aliyun.tea.*;
 
-public class QueryDatasetResponse extends TeaModel {
+public class UpdateIntegrationResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class QueryDatasetResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public QueryDatasetResponseBody body;
+    public UpdateIntegrationResponseBody body;
 
-    public static QueryDatasetResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryDatasetResponse self = new QueryDatasetResponse();
+    public static UpdateIntegrationResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateIntegrationResponse self = new UpdateIntegrationResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryDatasetResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateIntegrationResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class QueryDatasetResponse extends TeaModel {
         return this.headers;
     }
 
-    public QueryDatasetResponse setStatusCode(Integer statusCode) {
+    public UpdateIntegrationResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class QueryDatasetResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public QueryDatasetResponse setBody(QueryDatasetResponseBody body) {
+    public UpdateIntegrationResponse setBody(UpdateIntegrationResponseBody body) {
         this.body = body;
         return this;
     }
-    public QueryDatasetResponseBody getBody() {
+    public UpdateIntegrationResponseBody getBody() {
         return this.body;
     }
 

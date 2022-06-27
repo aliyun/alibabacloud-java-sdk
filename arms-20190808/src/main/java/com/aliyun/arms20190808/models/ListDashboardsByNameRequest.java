@@ -22,6 +22,9 @@ public class ListDashboardsByNameRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    @NameInMap("OnlyQuery")
+    public Boolean onlyQuery;
+
     @NameInMap("ProductCode")
     public String productCode;
 
@@ -79,6 +82,14 @@ public class ListDashboardsByNameRequest extends TeaModel {
     }
     public String getGroupName() {
         return this.groupName;
+    }
+
+    public ListDashboardsByNameRequest setOnlyQuery(Boolean onlyQuery) {
+        this.onlyQuery = onlyQuery;
+        return this;
+    }
+    public Boolean getOnlyQuery() {
+        return this.onlyQuery;
     }
 
     public ListDashboardsByNameRequest setProductCode(String productCode) {

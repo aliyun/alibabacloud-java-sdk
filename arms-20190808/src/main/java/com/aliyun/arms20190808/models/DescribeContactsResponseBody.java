@@ -54,6 +54,10 @@ public class DescribeContactsResponseBody extends TeaModel {
         @NameInMap("Phone")
         public String phone;
 
+        // 电话通知失败补发类型：0. 不补发   1. 重复拨打一次电话   2. 发送短信通知   3. 使用全局默认值（当前为不补发）
+        @NameInMap("ReissueSendNotice")
+        public Long reissueSendNotice;
+
         public static DescribeContactsResponseBodyPageBeanAlertContacts build(java.util.Map<String, ?> map) throws Exception {
             DescribeContactsResponseBodyPageBeanAlertContacts self = new DescribeContactsResponseBodyPageBeanAlertContacts();
             return TeaModel.build(map, self);
@@ -97,6 +101,14 @@ public class DescribeContactsResponseBody extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public DescribeContactsResponseBodyPageBeanAlertContacts setReissueSendNotice(Long reissueSendNotice) {
+            this.reissueSendNotice = reissueSendNotice;
+            return this;
+        }
+        public Long getReissueSendNotice() {
+            return this.reissueSendNotice;
         }
 
     }

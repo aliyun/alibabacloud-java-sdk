@@ -3,7 +3,7 @@ package com.aliyun.arms20190808.models;
 
 import com.aliyun.tea.*;
 
-public class CMonitorAlertEventResponse extends TeaModel {
+public class CreateIntegrationResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CMonitorAlertEventResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CMonitorAlertEventResponseBody body;
+    public CreateIntegrationResponseBody body;
 
-    public static CMonitorAlertEventResponse build(java.util.Map<String, ?> map) throws Exception {
-        CMonitorAlertEventResponse self = new CMonitorAlertEventResponse();
+    public static CreateIntegrationResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateIntegrationResponse self = new CreateIntegrationResponse();
         return TeaModel.build(map, self);
     }
 
-    public CMonitorAlertEventResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateIntegrationResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CMonitorAlertEventResponse extends TeaModel {
         return this.headers;
     }
 
-    public CMonitorAlertEventResponse setStatusCode(Integer statusCode) {
+    public CreateIntegrationResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CMonitorAlertEventResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CMonitorAlertEventResponse setBody(CMonitorAlertEventResponseBody body) {
+    public CreateIntegrationResponse setBody(CreateIntegrationResponseBody body) {
         this.body = body;
         return this;
     }
-    public CMonitorAlertEventResponseBody getBody() {
+    public CreateIntegrationResponseBody getBody() {
         return this.body;
     }
 

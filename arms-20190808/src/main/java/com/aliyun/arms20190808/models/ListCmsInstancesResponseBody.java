@@ -48,6 +48,9 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         @NameInMap("Prod")
         public String prod;
 
+        @NameInMap("Source")
+        public String source;
+
         @NameInMap("State")
         public String state;
 
@@ -103,6 +106,14 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         }
         public String getProd() {
             return this.prod;
+        }
+
+        public ListCmsInstancesResponseBodyDataProducts setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
         }
 
         public ListCmsInstancesResponseBodyDataProducts setState(String state) {
