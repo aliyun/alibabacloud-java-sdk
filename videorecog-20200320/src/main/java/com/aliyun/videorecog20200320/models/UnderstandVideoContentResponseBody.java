@@ -4,24 +4,16 @@ package com.aliyun.videorecog20200320.models;
 import com.aliyun.tea.*;
 
 public class UnderstandVideoContentResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public UnderstandVideoContentResponseBodyData data;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public UnderstandVideoContentResponseBodyData data;
-
     public static UnderstandVideoContentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UnderstandVideoContentResponseBody self = new UnderstandVideoContentResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UnderstandVideoContentResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UnderstandVideoContentResponseBody setData(UnderstandVideoContentResponseBodyData data) {
@@ -32,38 +24,30 @@ public class UnderstandVideoContentResponseBody extends TeaModel {
         return this.data;
     }
 
+    public UnderstandVideoContentResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class UnderstandVideoContentResponseBodyDataVideoInfo extends TeaModel {
-        @NameInMap("Width")
-        public Long width;
-
-        @NameInMap("Height")
-        public Long height;
-
         @NameInMap("Duration")
         public Long duration;
 
         @NameInMap("Fps")
         public Float fps;
 
+        @NameInMap("Height")
+        public Long height;
+
+        @NameInMap("Width")
+        public Long width;
+
         public static UnderstandVideoContentResponseBodyDataVideoInfo build(java.util.Map<String, ?> map) throws Exception {
             UnderstandVideoContentResponseBodyDataVideoInfo self = new UnderstandVideoContentResponseBodyDataVideoInfo();
             return TeaModel.build(map, self);
-        }
-
-        public UnderstandVideoContentResponseBodyDataVideoInfo setWidth(Long width) {
-            this.width = width;
-            return this;
-        }
-        public Long getWidth() {
-            return this.width;
-        }
-
-        public UnderstandVideoContentResponseBodyDataVideoInfo setHeight(Long height) {
-            this.height = height;
-            return this;
-        }
-        public Long getHeight() {
-            return this.height;
         }
 
         public UnderstandVideoContentResponseBodyDataVideoInfo setDuration(Long duration) {
@@ -80,6 +64,22 @@ public class UnderstandVideoContentResponseBody extends TeaModel {
         }
         public Float getFps() {
             return this.fps;
+        }
+
+        public UnderstandVideoContentResponseBodyDataVideoInfo setHeight(Long height) {
+            this.height = height;
+            return this;
+        }
+        public Long getHeight() {
+            return this.height;
+        }
+
+        public UnderstandVideoContentResponseBodyDataVideoInfo setWidth(Long width) {
+            this.width = width;
+            return this;
+        }
+        public Long getWidth() {
+            return this.width;
         }
 
     }

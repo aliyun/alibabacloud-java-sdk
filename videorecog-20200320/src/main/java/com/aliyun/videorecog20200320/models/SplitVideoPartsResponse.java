@@ -3,7 +3,7 @@ package com.aliyun.videorecog20200320.models;
 
 import com.aliyun.tea.*;
 
-public class DetectVideoShotResponse extends TeaModel {
+public class SplitVideoPartsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DetectVideoShotResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DetectVideoShotResponseBody body;
+    public SplitVideoPartsResponseBody body;
 
-    public static DetectVideoShotResponse build(java.util.Map<String, ?> map) throws Exception {
-        DetectVideoShotResponse self = new DetectVideoShotResponse();
+    public static SplitVideoPartsResponse build(java.util.Map<String, ?> map) throws Exception {
+        SplitVideoPartsResponse self = new SplitVideoPartsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DetectVideoShotResponse setHeaders(java.util.Map<String, String> headers) {
+    public SplitVideoPartsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DetectVideoShotResponse extends TeaModel {
         return this.headers;
     }
 
-    public DetectVideoShotResponse setStatusCode(Integer statusCode) {
+    public SplitVideoPartsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DetectVideoShotResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DetectVideoShotResponse setBody(DetectVideoShotResponseBody body) {
+    public SplitVideoPartsResponse setBody(SplitVideoPartsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DetectVideoShotResponseBody getBody() {
+    public SplitVideoPartsResponseBody getBody() {
         return this.body;
     }
 
