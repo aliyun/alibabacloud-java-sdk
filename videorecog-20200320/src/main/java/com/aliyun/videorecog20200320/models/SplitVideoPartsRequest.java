@@ -3,16 +3,16 @@ package com.aliyun.videorecog20200320.models;
 
 import com.aliyun.tea.*;
 
-public class DetectVideoShotRequest extends TeaModel {
+public class SplitVideoPartsRequest extends TeaModel {
     @NameInMap("VideoUrl")
     public String videoUrl;
 
-    public static DetectVideoShotRequest build(java.util.Map<String, ?> map) throws Exception {
-        DetectVideoShotRequest self = new DetectVideoShotRequest();
+    public static SplitVideoPartsRequest build(java.util.Map<String, ?> map) throws Exception {
+        SplitVideoPartsRequest self = new SplitVideoPartsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DetectVideoShotRequest setVideoUrl(String videoUrl) {
+    public SplitVideoPartsRequest setVideoUrl(String videoUrl) {
         this.videoUrl = videoUrl;
         return this;
     }

@@ -3,17 +3,17 @@ package com.aliyun.videorecog20200320.models;
 
 import com.aliyun.tea.*;
 
-public class DetectVideoShotAdvanceRequest extends TeaModel {
+public class SplitVideoPartsAdvanceRequest extends TeaModel {
     @NameInMap("VideoUrlObject")
     @Validation(required = true)
     public java.io.InputStream videoUrlObject;
 
-    public static DetectVideoShotAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        DetectVideoShotAdvanceRequest self = new DetectVideoShotAdvanceRequest();
+    public static SplitVideoPartsAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        SplitVideoPartsAdvanceRequest self = new SplitVideoPartsAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public DetectVideoShotAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
+    public SplitVideoPartsAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
         this.videoUrlObject = videoUrlObject;
         return this;
     }

@@ -8,9 +8,6 @@ public class UnderstandVideoContentRequest extends TeaModel {
     @NameInMap("VideoURL")
     public String videoURL;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     public static UnderstandVideoContentRequest build(java.util.Map<String, ?> map) throws Exception {
         UnderstandVideoContentRequest self = new UnderstandVideoContentRequest();
         return TeaModel.build(map, self);
@@ -22,14 +19,6 @@ public class UnderstandVideoContentRequest extends TeaModel {
     }
     public String getVideoURL() {
         return this.videoURL;
-    }
-
-    public UnderstandVideoContentRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
 }
