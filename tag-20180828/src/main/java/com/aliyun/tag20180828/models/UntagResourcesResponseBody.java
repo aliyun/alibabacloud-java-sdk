@@ -4,23 +4,15 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("FailedResources")
     public UntagResourcesResponseBodyFailedResources failedResources;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UntagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UntagResourcesResponseBody self = new UntagResourcesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UntagResourcesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UntagResourcesResponseBody setFailedResources(UntagResourcesResponseBodyFailedResources failedResources) {
@@ -29,6 +21,14 @@ public class UntagResourcesResponseBody extends TeaModel {
     }
     public UntagResourcesResponseBodyFailedResources getFailedResources() {
         return this.failedResources;
+    }
+
+    public UntagResourcesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class UntagResourcesResponseBodyFailedResourcesFailedResourceResult extends TeaModel {

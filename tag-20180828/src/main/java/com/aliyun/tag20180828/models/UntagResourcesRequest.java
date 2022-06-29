@@ -4,20 +4,20 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
     @NameInMap("OwnerAccount")
     public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceARN")
     public java.util.List<String> resourceARN;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
@@ -27,28 +27,20 @@ public class UntagResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UntagResourcesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public UntagResourcesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
     public UntagResourcesRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public UntagResourcesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UntagResourcesRequest setRegionId(String regionId) {
@@ -65,6 +57,14 @@ public class UntagResourcesRequest extends TeaModel {
     }
     public java.util.List<String> getResourceARN() {
         return this.resourceARN;
+    }
+
+    public UntagResourcesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     public UntagResourcesRequest setTagKey(java.util.List<String> tagKey) {

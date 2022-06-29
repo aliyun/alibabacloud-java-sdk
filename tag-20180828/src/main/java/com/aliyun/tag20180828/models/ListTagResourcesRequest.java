@@ -4,14 +4,20 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("Category")
+    public String category;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -19,21 +25,39 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceARN")
     public java.util.List<String> resourceARN;
 
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
     @NameInMap("Tags")
     public String tags;
 
-    @NameInMap("Category")
-    public String category;
-
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTagResourcesRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
+    }
+
+    public ListTagResourcesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListTagResourcesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ListTagResourcesRequest setOwnerId(Long ownerId) {
@@ -44,20 +68,12 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ListTagResourcesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public ListTagResourcesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ListTagResourcesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListTagResourcesRequest setRegionId(String regionId) {
@@ -76,20 +92,12 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.resourceARN;
     }
 
-    public ListTagResourcesRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public ListTagResourcesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ListTagResourcesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     public ListTagResourcesRequest setTags(String tags) {
@@ -98,14 +106,6 @@ public class ListTagResourcesRequest extends TeaModel {
     }
     public String getTags() {
         return this.tags;
-    }
-
-    public ListTagResourcesRequest setCategory(String category) {
-        this.category = category;
-        return this;
-    }
-    public String getCategory() {
-        return this.category;
     }
 
 }

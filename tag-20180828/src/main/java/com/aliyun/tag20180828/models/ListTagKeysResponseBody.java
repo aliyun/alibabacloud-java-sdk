@@ -4,18 +4,26 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysResponseBody extends TeaModel {
+    @NameInMap("Keys")
+    public ListTagKeysResponseBodyKeys keys;
+
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Keys")
-    public ListTagKeysResponseBodyKeys keys;
-
     public static ListTagKeysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTagKeysResponseBody self = new ListTagKeysResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListTagKeysResponseBody setKeys(ListTagKeysResponseBodyKeys keys) {
+        this.keys = keys;
+        return this;
+    }
+    public ListTagKeysResponseBodyKeys getKeys() {
+        return this.keys;
     }
 
     public ListTagKeysResponseBody setNextToken(String nextToken) {
@@ -34,35 +42,19 @@ public class ListTagKeysResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTagKeysResponseBody setKeys(ListTagKeysResponseBodyKeys keys) {
-        this.keys = keys;
-        return this;
-    }
-    public ListTagKeysResponseBodyKeys getKeys() {
-        return this.keys;
-    }
-
     public static class ListTagKeysResponseBodyKeysKey extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
         @NameInMap("Category")
         public String category;
 
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Key")
+        public String key;
+
         public static ListTagKeysResponseBodyKeysKey build(java.util.Map<String, ?> map) throws Exception {
             ListTagKeysResponseBodyKeysKey self = new ListTagKeysResponseBodyKeysKey();
             return TeaModel.build(map, self);
-        }
-
-        public ListTagKeysResponseBodyKeysKey setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
         }
 
         public ListTagKeysResponseBodyKeysKey setCategory(String category) {
@@ -79,6 +71,14 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListTagKeysResponseBodyKeysKey setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
     }
