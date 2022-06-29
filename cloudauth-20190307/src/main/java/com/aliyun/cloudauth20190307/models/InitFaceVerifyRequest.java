@@ -31,6 +31,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("Crop")
     public String crop;
 
+    @NameInMap("EncryptType")
+    public String encryptType;
+
     @NameInMap("FaceContrastPicture")
     public String faceContrastPicture;
 
@@ -145,6 +148,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getCrop() {
         return this.crop;
+    }
+
+    public InitFaceVerifyRequest setEncryptType(String encryptType) {
+        this.encryptType = encryptType;
+        return this;
+    }
+    public String getEncryptType() {
+        return this.encryptType;
     }
 
     public InitFaceVerifyRequest setFaceContrastPicture(String faceContrastPicture) {
