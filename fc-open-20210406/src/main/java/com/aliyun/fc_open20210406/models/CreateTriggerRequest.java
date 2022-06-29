@@ -19,9 +19,8 @@ public class CreateTriggerRequest extends TeaModel {
     @NameInMap("sourceArn")
     public String sourceArn;
 
-    // trigger配置，针对不同的trigger类型，trigger配置会有所不同
     @NameInMap("triggerConfig")
-    public String triggerConfig;
+    public Object triggerConfig;
 
     // trigger名称
     @NameInMap("triggerName")
@@ -68,11 +67,11 @@ public class CreateTriggerRequest extends TeaModel {
         return this.sourceArn;
     }
 
-    public CreateTriggerRequest setTriggerConfig(String triggerConfig) {
+    public CreateTriggerRequest setTriggerConfig(Object triggerConfig) {
         this.triggerConfig = triggerConfig;
         return this;
     }
-    public String getTriggerConfig() {
+    public Object getTriggerConfig() {
         return this.triggerConfig;
     }
 
