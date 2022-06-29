@@ -89,6 +89,9 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("OwnerId")
+        public Long ownerId;
+
         @NameInMap("SavingsType")
         public String savingsType;
 
@@ -165,6 +168,14 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public QuerySavingsPlansDeductLogResponseBodyDataItems setOwnerId(Long ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+        public Long getOwnerId() {
+            return this.ownerId;
         }
 
         public QuerySavingsPlansDeductLogResponseBodyDataItems setSavingsType(String savingsType) {
