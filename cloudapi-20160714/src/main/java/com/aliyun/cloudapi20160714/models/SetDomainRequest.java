@@ -19,6 +19,9 @@ public class SetDomainRequest extends TeaModel {
     @NameInMap("IsForce")
     public Boolean isForce;
 
+    @NameInMap("IsHttpRedirectToHttps")
+    public Boolean isHttpRedirectToHttps;
+
     public static SetDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDomainRequest self = new SetDomainRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class SetDomainRequest extends TeaModel {
     }
     public Boolean getIsForce() {
         return this.isForce;
+    }
+
+    public SetDomainRequest setIsHttpRedirectToHttps(Boolean isHttpRedirectToHttps) {
+        this.isHttpRedirectToHttps = isHttpRedirectToHttps;
+        return this;
+    }
+    public Boolean getIsHttpRedirectToHttps() {
+        return this.isHttpRedirectToHttps;
     }
 
 }

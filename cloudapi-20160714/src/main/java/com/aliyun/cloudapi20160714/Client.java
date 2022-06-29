@@ -6418,6 +6418,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IsForce", request.isForce);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isHttpRedirectToHttps)) {
+            query.put("IsHttpRedirectToHttps", request.isHttpRedirectToHttps);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
