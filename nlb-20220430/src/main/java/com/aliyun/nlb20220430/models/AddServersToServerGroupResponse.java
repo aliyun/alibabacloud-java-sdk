@@ -1,0 +1,48 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.nlb20220430.models;
+
+import com.aliyun.tea.*;
+
+public class AddServersToServerGroupResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public AddServersToServerGroupResponseBody body;
+
+    public static AddServersToServerGroupResponse build(java.util.Map<String, ?> map) throws Exception {
+        AddServersToServerGroupResponse self = new AddServersToServerGroupResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public AddServersToServerGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public AddServersToServerGroupResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public AddServersToServerGroupResponse setBody(AddServersToServerGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddServersToServerGroupResponseBody getBody() {
+        return this.body;
+    }
+
+}
