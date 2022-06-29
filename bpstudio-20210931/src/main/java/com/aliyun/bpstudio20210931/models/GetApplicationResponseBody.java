@@ -188,6 +188,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        @NameInMap("Remark")
+        public String remark;
+
         // 产品code
         @NameInMap("ResourceCode")
         public String resourceCode;
@@ -279,6 +282,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public GetApplicationResponseBodyDataPriceList setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public GetApplicationResponseBodyDataPriceList setResourceCode(String resourceCode) {
