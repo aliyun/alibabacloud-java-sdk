@@ -7,14 +7,23 @@ public class QuerySmsSignListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SmsSignList")
     public java.util.List<QuerySmsSignListResponseBodySmsSignList> smsSignList;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static QuerySmsSignListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySmsSignListResponseBody self = new QuerySmsSignListResponseBody();
@@ -29,12 +38,28 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         return this.code;
     }
 
+    public QuerySmsSignListResponseBody setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
     public QuerySmsSignListResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public QuerySmsSignListResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public QuerySmsSignListResponseBody setRequestId(String requestId) {
@@ -51,6 +76,14 @@ public class QuerySmsSignListResponseBody extends TeaModel {
     }
     public java.util.List<QuerySmsSignListResponseBodySmsSignList> getSmsSignList() {
         return this.smsSignList;
+    }
+
+    public QuerySmsSignListResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class QuerySmsSignListResponseBodySmsSignListReason extends TeaModel {
