@@ -4,23 +4,15 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("FailedResources")
     public TagResourcesResponseBodyFailedResources failedResources;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static TagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TagResourcesResponseBody self = new TagResourcesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public TagResourcesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public TagResourcesResponseBody setFailedResources(TagResourcesResponseBodyFailedResources failedResources) {
@@ -31,19 +23,35 @@ public class TagResourcesResponseBody extends TeaModel {
         return this.failedResources;
     }
 
+    public TagResourcesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListTagResourcesResponseBodyTagResourcesTags extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
         @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")
         public String value;
 
-        @NameInMap("Category")
-        public String category;
-
         public static ListTagResourcesResponseBodyTagResourcesTags build(java.util.Map<String, ?> map) throws Exception {
             ListTagResourcesResponseBodyTagResourcesTags self = new ListTagResourcesResponseBodyTagResourcesTags();
             return TeaModel.build(map, self);
+        }
+
+        public ListTagResourcesResponseBodyTagResourcesTags setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public ListTagResourcesResponseBodyTagResourcesTags setKey(String key) {
@@ -60,14 +68,6 @@ public class TagResourcesResponseBody extends TeaModel {
         }
         public String getValue() {
             return this.value;
-        }
-
-        public ListTagResourcesResponseBodyTagResourcesTags setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
         }
 
     }

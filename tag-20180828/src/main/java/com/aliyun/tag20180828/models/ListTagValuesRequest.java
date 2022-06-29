@@ -4,17 +4,11 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class ListTagValuesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("TagFilter")
+    public ListTagValuesRequestTagFilter tagFilter;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("FuzzyType")
+    public String fuzzyType;
 
     @NameInMap("Key")
     public String key;
@@ -22,50 +16,46 @@ public class ListTagValuesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("ResourceType")
-    public String resourceType;
-
     @NameInMap("QueryType")
     public String queryType;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     public static ListTagValuesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagValuesRequest self = new ListTagValuesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListTagValuesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ListTagValuesRequest setTagFilter(ListTagValuesRequestTagFilter tagFilter) {
+        this.tagFilter = tagFilter;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public ListTagValuesRequestTagFilter getTagFilter() {
+        return this.tagFilter;
     }
 
-    public ListTagValuesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public ListTagValuesRequest setFuzzyType(String fuzzyType) {
+        this.fuzzyType = fuzzyType;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ListTagValuesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ListTagValuesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getFuzzyType() {
+        return this.fuzzyType;
     }
 
     public ListTagValuesRequest setKey(String key) {
@@ -84,12 +74,52 @@ public class ListTagValuesRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public ListTagValuesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ListTagValuesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ListTagValuesRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListTagValuesRequest setQueryType(String queryType) {
+        this.queryType = queryType;
+        return this;
+    }
+    public String getQueryType() {
+        return this.queryType;
+    }
+
+    public ListTagValuesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListTagValuesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     public ListTagValuesRequest setResourceType(String resourceType) {
@@ -100,12 +130,23 @@ public class ListTagValuesRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public ListTagValuesRequest setQueryType(String queryType) {
-        this.queryType = queryType;
-        return this;
-    }
-    public String getQueryType() {
-        return this.queryType;
+    public static class ListTagValuesRequestTagFilter extends TeaModel {
+        @NameInMap("Value")
+        public String value;
+
+        public static ListTagValuesRequestTagFilter build(java.util.Map<String, ?> map) throws Exception {
+            ListTagValuesRequestTagFilter self = new ListTagValuesRequestTagFilter();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTagValuesRequestTagFilter setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

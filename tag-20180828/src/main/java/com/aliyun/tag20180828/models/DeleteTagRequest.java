@@ -4,20 +4,20 @@ package com.aliyun.tag20180828.models;
 import com.aliyun.tea.*;
 
 public class DeleteTagRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("Key")
+    public String key;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("Key")
-    public String key;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
     @NameInMap("Value")
     public String value;
@@ -27,20 +27,12 @@ public class DeleteTagRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteTagRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DeleteTagRequest setKey(String key) {
+        this.key = key;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DeleteTagRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public String getKey() {
+        return this.key;
     }
 
     public DeleteTagRequest setOwnerAccount(String ownerAccount) {
@@ -51,6 +43,14 @@ public class DeleteTagRequest extends TeaModel {
         return this.ownerAccount;
     }
 
+    public DeleteTagRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public DeleteTagRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -59,12 +59,12 @@ public class DeleteTagRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DeleteTagRequest setKey(String key) {
-        this.key = key;
+    public DeleteTagRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getKey() {
-        return this.key;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
     public DeleteTagRequest setValue(String value) {
