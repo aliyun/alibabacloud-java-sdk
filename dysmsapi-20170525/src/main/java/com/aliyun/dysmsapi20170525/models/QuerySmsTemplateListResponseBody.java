@@ -7,14 +7,23 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SmsTemplateList")
     public java.util.List<QuerySmsTemplateListResponseBodySmsTemplateList> smsTemplateList;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static QuerySmsTemplateListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySmsTemplateListResponseBody self = new QuerySmsTemplateListResponseBody();
@@ -29,12 +38,28 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         return this.code;
     }
 
+    public QuerySmsTemplateListResponseBody setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
     public QuerySmsTemplateListResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public QuerySmsTemplateListResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public QuerySmsTemplateListResponseBody setRequestId(String requestId) {
@@ -51,6 +76,14 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
     }
     public java.util.List<QuerySmsTemplateListResponseBodySmsTemplateList> getSmsTemplateList() {
         return this.smsTemplateList;
+    }
+
+    public QuerySmsTemplateListResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class QuerySmsTemplateListResponseBodySmsTemplateListReason extends TeaModel {
