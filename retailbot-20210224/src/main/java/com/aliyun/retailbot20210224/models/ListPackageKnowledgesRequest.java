@@ -20,6 +20,9 @@ public class ListPackageKnowledgesRequest extends TeaModel {
     @NameInMap("PackageVersion")
     public String packageVersion;
 
+    @NameInMap("RobotCode")
+    public String robotCode;
+
     public static ListPackageKnowledgesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPackageKnowledgesRequest self = new ListPackageKnowledgesRequest();
         return TeaModel.build(map, self);
@@ -55,6 +58,14 @@ public class ListPackageKnowledgesRequest extends TeaModel {
     }
     public String getPackageVersion() {
         return this.packageVersion;
+    }
+
+    public ListPackageKnowledgesRequest setRobotCode(String robotCode) {
+        this.robotCode = robotCode;
+        return this;
+    }
+    public String getRobotCode() {
+        return this.robotCode;
     }
 
 }

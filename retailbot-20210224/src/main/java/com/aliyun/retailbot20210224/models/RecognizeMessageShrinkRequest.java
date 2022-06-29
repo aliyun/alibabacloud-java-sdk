@@ -48,6 +48,9 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
     @NameInMap("Packages")
     public String packagesShrink;
 
+    @NameInMap("PlatformCode")
+    public String platformCode;
+
     // 机器人ID
     @NameInMap("RobotCode")
     public String robotCode;
@@ -91,6 +94,9 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
     // 买家nick
     @NameInMap("UserNick")
     public String userNick;
+
+    @NameInMap("Variables")
+    public String variablesShrink;
 
     public static RecognizeMessageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeMessageShrinkRequest self = new RecognizeMessageShrinkRequest();
@@ -185,6 +191,14 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.packagesShrink;
     }
 
+    public RecognizeMessageShrinkRequest setPlatformCode(String platformCode) {
+        this.platformCode = platformCode;
+        return this;
+    }
+    public String getPlatformCode() {
+        return this.platformCode;
+    }
+
     public RecognizeMessageShrinkRequest setRobotCode(String robotCode) {
         this.robotCode = robotCode;
         return this;
@@ -271,6 +285,14 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
     }
     public String getUserNick() {
         return this.userNick;
+    }
+
+    public RecognizeMessageShrinkRequest setVariablesShrink(String variablesShrink) {
+        this.variablesShrink = variablesShrink;
+        return this;
+    }
+    public String getVariablesShrink() {
+        return this.variablesShrink;
     }
 
 }
