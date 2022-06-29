@@ -48,6 +48,9 @@ public class RecognizeMessageRequest extends TeaModel {
     @NameInMap("Packages")
     public java.util.List<RecognizeMessageRequestPackages> packages;
 
+    @NameInMap("PlatformCode")
+    public String platformCode;
+
     // 机器人ID
     @NameInMap("RobotCode")
     public String robotCode;
@@ -91,6 +94,9 @@ public class RecognizeMessageRequest extends TeaModel {
     // 买家nick
     @NameInMap("UserNick")
     public String userNick;
+
+    @NameInMap("Variables")
+    public java.util.Map<String, ?> variables;
 
     public static RecognizeMessageRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeMessageRequest self = new RecognizeMessageRequest();
@@ -185,6 +191,14 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.packages;
     }
 
+    public RecognizeMessageRequest setPlatformCode(String platformCode) {
+        this.platformCode = platformCode;
+        return this;
+    }
+    public String getPlatformCode() {
+        return this.platformCode;
+    }
+
     public RecognizeMessageRequest setRobotCode(String robotCode) {
         this.robotCode = robotCode;
         return this;
@@ -271,6 +285,14 @@ public class RecognizeMessageRequest extends TeaModel {
     }
     public String getUserNick() {
         return this.userNick;
+    }
+
+    public RecognizeMessageRequest setVariables(java.util.Map<String, ?> variables) {
+        this.variables = variables;
+        return this;
+    }
+    public java.util.Map<String, ?> getVariables() {
+        return this.variables;
     }
 
     public static class RecognizeMessageRequestClientInfo extends TeaModel {

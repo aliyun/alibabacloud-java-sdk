@@ -18,7 +18,7 @@ public class AppGrayListBatchSaveResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Success")
-    public String success;
+    public Boolean success;
 
     public static AppGrayListBatchSaveResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AppGrayListBatchSaveResponseBody self = new AppGrayListBatchSaveResponseBody();
@@ -57,11 +57,11 @@ public class AppGrayListBatchSaveResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AppGrayListBatchSaveResponseBody setSuccess(String success) {
+    public AppGrayListBatchSaveResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 

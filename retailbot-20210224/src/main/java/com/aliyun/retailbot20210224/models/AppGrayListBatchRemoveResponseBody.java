@@ -18,7 +18,7 @@ public class AppGrayListBatchRemoveResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Success")
-    public String success;
+    public Boolean success;
 
     public static AppGrayListBatchRemoveResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AppGrayListBatchRemoveResponseBody self = new AppGrayListBatchRemoveResponseBody();
@@ -57,11 +57,11 @@ public class AppGrayListBatchRemoveResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AppGrayListBatchRemoveResponseBody setSuccess(String success) {
+    public AppGrayListBatchRemoveResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 

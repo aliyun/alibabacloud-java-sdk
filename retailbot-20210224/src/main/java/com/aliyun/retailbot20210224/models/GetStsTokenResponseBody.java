@@ -60,6 +60,12 @@ public class GetStsTokenResponseBody extends TeaModel {
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
+        @NameInMap("AliyunUid")
+        public Long aliyunUid;
+
+        @NameInMap("BizCode")
+        public String bizCode;
+
         @NameInMap("Expiration")
         public String expiration;
 
@@ -85,6 +91,22 @@ public class GetStsTokenResponseBody extends TeaModel {
         }
         public String getAccessKeySecret() {
             return this.accessKeySecret;
+        }
+
+        public GetStsTokenResponseBodyData setAliyunUid(Long aliyunUid) {
+            this.aliyunUid = aliyunUid;
+            return this;
+        }
+        public Long getAliyunUid() {
+            return this.aliyunUid;
+        }
+
+        public GetStsTokenResponseBodyData setBizCode(String bizCode) {
+            this.bizCode = bizCode;
+            return this;
+        }
+        public String getBizCode() {
+            return this.bizCode;
         }
 
         public GetStsTokenResponseBodyData setExpiration(String expiration) {

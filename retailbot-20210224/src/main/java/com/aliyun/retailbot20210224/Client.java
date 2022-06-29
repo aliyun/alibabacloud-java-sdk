@@ -1526,6 +1526,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PackageVersion", request.packageVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.robotCode)) {
+            body.put("RobotCode", request.robotCode);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -2217,6 +2221,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.packagesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.packages, "Packages", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.variables)) {
+            request.variablesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.variables, "Variables", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.chatId)) {
             body.put("ChatId", request.chatId);
@@ -2262,6 +2270,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Packages", request.packagesShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.platformCode)) {
+            body.put("PlatformCode", request.platformCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.robotCode)) {
             body.put("RobotCode", request.robotCode);
         }
@@ -2304,6 +2316,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.userNick)) {
             body.put("UserNick", request.userNick);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.variablesShrink)) {
+            body.put("Variables", request.variablesShrink);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
