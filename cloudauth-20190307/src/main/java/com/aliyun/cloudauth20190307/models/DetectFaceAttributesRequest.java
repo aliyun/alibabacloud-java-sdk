@@ -8,7 +8,6 @@ public class DetectFaceAttributesRequest extends TeaModel {
     public String bizType;
 
     @NameInMap("MaterialValue")
-    @Validation(required = true)
     public String materialValue;
 
     public static DetectFaceAttributesRequest build(java.util.Map<String, ?> map) throws Exception {

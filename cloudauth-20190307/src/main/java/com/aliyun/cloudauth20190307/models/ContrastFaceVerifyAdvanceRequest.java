@@ -26,6 +26,9 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     @NameInMap("DeviceToken")
     public String deviceToken;
 
+    @NameInMap("EncryptType")
+    public String encryptType;
+
     @NameInMap("FaceContrastPicture")
     public String faceContrastPicture;
 
@@ -118,6 +121,14 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     }
     public String getDeviceToken() {
         return this.deviceToken;
+    }
+
+    public ContrastFaceVerifyAdvanceRequest setEncryptType(String encryptType) {
+        this.encryptType = encryptType;
+        return this;
+    }
+    public String getEncryptType() {
+        return this.encryptType;
     }
 
     public ContrastFaceVerifyAdvanceRequest setFaceContrastPicture(String faceContrastPicture) {
