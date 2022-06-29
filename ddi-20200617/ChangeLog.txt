@@ -1,3 +1,6 @@
+2022-06-29 Version: 1.1.2
+- Add library api.
+
 2022-06-20 Version: 1.1.1
 - Add modifyFlowForWeb.
 
