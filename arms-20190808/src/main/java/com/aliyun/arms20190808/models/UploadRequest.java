@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UploadRequest extends TeaModel {
+    @NameInMap("Edition")
+    public String edition;
+
     @NameInMap("File")
     public String file;
 
@@ -22,6 +25,14 @@ public class UploadRequest extends TeaModel {
     public static UploadRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadRequest self = new UploadRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UploadRequest setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public UploadRequest setFile(String file) {
