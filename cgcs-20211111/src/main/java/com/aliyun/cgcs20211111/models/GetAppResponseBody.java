@@ -13,26 +13,14 @@ public class GetAppResponseBody extends TeaModel {
     @NameInMap("AppType")
     public String appType;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    @NameInMap("HttpCode")
-    public Integer httpCode;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     @NameInMap("VersionAdaptNum")
     public Long versionAdaptNum;
@@ -69,14 +57,6 @@ public class GetAppResponseBody extends TeaModel {
         return this.appType;
     }
 
-    public GetAppResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetAppResponseBody setGmtCreate(String gmtCreate) {
         this.gmtCreate = gmtCreate;
         return this;
@@ -93,36 +73,12 @@ public class GetAppResponseBody extends TeaModel {
         return this.gmtModified;
     }
 
-    public GetAppResponseBody setHttpCode(Integer httpCode) {
-        this.httpCode = httpCode;
-        return this;
-    }
-    public Integer getHttpCode() {
-        return this.httpCode;
-    }
-
-    public GetAppResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public GetAppResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetAppResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public GetAppResponseBody setVersionAdaptNum(Long versionAdaptNum) {

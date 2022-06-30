@@ -7,20 +7,8 @@ public class ListAppResponseBody extends TeaModel {
     @NameInMap("Apps")
     public java.util.List<ListAppResponseBodyApps> apps;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("HttpCode")
-    public Integer httpCode;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     @NameInMap("Total")
     public Long total;
@@ -38,44 +26,12 @@ public class ListAppResponseBody extends TeaModel {
         return this.apps;
     }
 
-    public ListAppResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListAppResponseBody setHttpCode(Integer httpCode) {
-        this.httpCode = httpCode;
-        return this;
-    }
-    public Integer getHttpCode() {
-        return this.httpCode;
-    }
-
-    public ListAppResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public ListAppResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ListAppResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public ListAppResponseBody setTotal(Long total) {

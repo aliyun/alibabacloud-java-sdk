@@ -19,9 +19,6 @@ public class GetAppVersionResponseBody extends TeaModel {
     @NameInMap("AppVersionStatusMemo")
     public String appVersionStatusMemo;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("ConsumeCu")
     public Double consumeCu;
 
@@ -43,17 +40,8 @@ public class GetAppVersionResponseBody extends TeaModel {
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    @NameInMap("HttpCode")
-    public Integer httpCode;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static GetAppVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAppVersionResponseBody self = new GetAppVersionResponseBody();
@@ -98,14 +86,6 @@ public class GetAppVersionResponseBody extends TeaModel {
     }
     public String getAppVersionStatusMemo() {
         return this.appVersionStatusMemo;
-    }
-
-    public GetAppVersionResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetAppVersionResponseBody setConsumeCu(Double consumeCu) {
@@ -164,36 +144,12 @@ public class GetAppVersionResponseBody extends TeaModel {
         return this.gmtModified;
     }
 
-    public GetAppVersionResponseBody setHttpCode(Integer httpCode) {
-        this.httpCode = httpCode;
-        return this;
-    }
-    public Integer getHttpCode() {
-        return this.httpCode;
-    }
-
-    public GetAppVersionResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public GetAppVersionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetAppVersionResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
 }
