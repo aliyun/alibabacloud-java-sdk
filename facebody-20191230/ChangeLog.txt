@@ -1,3 +1,6 @@
+2022-06-30 Version: 2.0.2
+- Update ListFaceDbs.
+
 2022-01-24 Version: 2.0.1
 - Update DetectFace.
 
