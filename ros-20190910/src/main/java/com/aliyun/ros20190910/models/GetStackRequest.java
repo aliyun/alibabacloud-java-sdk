@@ -7,6 +7,9 @@ public class GetStackRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("LogOption")
+    public String logOption;
+
     @NameInMap("OutputOption")
     public String outputOption;
 
@@ -30,6 +33,14 @@ public class GetStackRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public GetStackRequest setLogOption(String logOption) {
+        this.logOption = logOption;
+        return this;
+    }
+    public String getLogOption() {
+        return this.logOption;
     }
 
     public GetStackRequest setOutputOption(String outputOption) {

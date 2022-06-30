@@ -372,6 +372,66 @@ public class GetStackResponseBody extends TeaModel {
         return this.updateTime;
     }
 
+    public static class GetStackResponseBodyLogResourceLogsLogs extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("Keys")
+        public java.util.List<String> keys;
+
+        public static GetStackResponseBodyLogResourceLogsLogs build(java.util.Map<String, ?> map) throws Exception {
+            GetStackResponseBodyLogResourceLogsLogs self = new GetStackResponseBodyLogResourceLogsLogs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetStackResponseBodyLogResourceLogsLogs setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public GetStackResponseBodyLogResourceLogsLogs setKeys(java.util.List<String> keys) {
+            this.keys = keys;
+            return this;
+        }
+        public java.util.List<String> getKeys() {
+            return this.keys;
+        }
+
+    }
+
+    public static class GetStackResponseBodyLogResourceLogs extends TeaModel {
+        @NameInMap("Logs")
+        public java.util.List<GetStackResponseBodyLogResourceLogsLogs> logs;
+
+        @NameInMap("ResourceName")
+        public String resourceName;
+
+        public static GetStackResponseBodyLogResourceLogs build(java.util.Map<String, ?> map) throws Exception {
+            GetStackResponseBodyLogResourceLogs self = new GetStackResponseBodyLogResourceLogs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetStackResponseBodyLogResourceLogs setLogs(java.util.List<GetStackResponseBodyLogResourceLogsLogs> logs) {
+            this.logs = logs;
+            return this;
+        }
+        public java.util.List<GetStackResponseBodyLogResourceLogsLogs> getLogs() {
+            return this.logs;
+        }
+
+        public GetStackResponseBodyLogResourceLogs setResourceName(String resourceName) {
+            this.resourceName = resourceName;
+            return this;
+        }
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+    }
+
     public static class GetStackResponseBodyLogTerraformLogs extends TeaModel {
         @NameInMap("Command")
         public String command;
@@ -414,12 +474,23 @@ public class GetStackResponseBody extends TeaModel {
     }
 
     public static class GetStackResponseBodyLog extends TeaModel {
+        @NameInMap("ResourceLogs")
+        public java.util.List<GetStackResponseBodyLogResourceLogs> resourceLogs;
+
         @NameInMap("TerraformLogs")
         public java.util.List<GetStackResponseBodyLogTerraformLogs> terraformLogs;
 
         public static GetStackResponseBodyLog build(java.util.Map<String, ?> map) throws Exception {
             GetStackResponseBodyLog self = new GetStackResponseBodyLog();
             return TeaModel.build(map, self);
+        }
+
+        public GetStackResponseBodyLog setResourceLogs(java.util.List<GetStackResponseBodyLogResourceLogs> resourceLogs) {
+            this.resourceLogs = resourceLogs;
+            return this;
+        }
+        public java.util.List<GetStackResponseBodyLogResourceLogs> getResourceLogs() {
+            return this.resourceLogs;
         }
 
         public GetStackResponseBodyLog setTerraformLogs(java.util.List<GetStackResponseBodyLogTerraformLogs> terraformLogs) {

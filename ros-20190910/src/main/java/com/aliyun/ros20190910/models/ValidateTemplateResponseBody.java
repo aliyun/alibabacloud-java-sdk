@@ -16,6 +16,9 @@ public class ValidateTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceTypes")
+    public ValidateTemplateResponseBodyResourceTypes resourceTypes;
+
     public static ValidateTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ValidateTemplateResponseBody self = new ValidateTemplateResponseBody();
         return TeaModel.build(map, self);
@@ -53,6 +56,14 @@ public class ValidateTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ValidateTemplateResponseBody setResourceTypes(ValidateTemplateResponseBodyResourceTypes resourceTypes) {
+        this.resourceTypes = resourceTypes;
+        return this;
+    }
+    public ValidateTemplateResponseBodyResourceTypes getResourceTypes() {
+        return this.resourceTypes;
+    }
+
     public static class ValidateTemplateResponseBodyOutputs extends TeaModel {
         @NameInMap("Description")
         public String description;
@@ -79,6 +90,36 @@ public class ValidateTemplateResponseBody extends TeaModel {
         }
         public String getOutputKey() {
             return this.outputKey;
+        }
+
+    }
+
+    public static class ValidateTemplateResponseBodyResourceTypes extends TeaModel {
+        @NameInMap("DataSources")
+        public java.util.List<String> dataSources;
+
+        @NameInMap("Resources")
+        public java.util.List<String> resources;
+
+        public static ValidateTemplateResponseBodyResourceTypes build(java.util.Map<String, ?> map) throws Exception {
+            ValidateTemplateResponseBodyResourceTypes self = new ValidateTemplateResponseBodyResourceTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public ValidateTemplateResponseBodyResourceTypes setDataSources(java.util.List<String> dataSources) {
+            this.dataSources = dataSources;
+            return this;
+        }
+        public java.util.List<String> getDataSources() {
+            return this.dataSources;
+        }
+
+        public ValidateTemplateResponseBodyResourceTypes setResources(java.util.List<String> resources) {
+            this.resources = resources;
+            return this;
+        }
+        public java.util.List<String> getResources() {
+            return this.resources;
         }
 
     }
