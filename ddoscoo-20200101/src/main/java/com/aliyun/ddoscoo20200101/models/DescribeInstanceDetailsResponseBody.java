@@ -32,23 +32,21 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("Eip")
         public String eip;
+
+        @NameInMap("IpMode")
+        public String ipMode;
+
+        @NameInMap("IpVersion")
+        public String ipVersion;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos self = new DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos setEip(String eip) {
@@ -59,29 +57,53 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             return this.eip;
         }
 
+        public DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos setIpMode(String ipMode) {
+            this.ipMode = ipMode;
+            return this;
+        }
+        public String getIpMode() {
+            return this.ipMode;
+        }
+
+        public DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos setIpVersion(String ipVersion) {
+            this.ipVersion = ipVersion;
+            return this;
+        }
+        public String getIpVersion() {
+            return this.ipVersion;
+        }
+
+        public DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class DescribeInstanceDetailsResponseBodyInstanceDetails extends TeaModel {
-        @NameInMap("Line")
-        public String line;
+        @NameInMap("EipInfos")
+        public java.util.List<DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos> eipInfos;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("EipInfos")
-        public java.util.List<DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos> eipInfos;
+        @NameInMap("Line")
+        public String line;
 
         public static DescribeInstanceDetailsResponseBodyInstanceDetails build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceDetailsResponseBodyInstanceDetails self = new DescribeInstanceDetailsResponseBodyInstanceDetails();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceDetailsResponseBodyInstanceDetails setLine(String line) {
-            this.line = line;
+        public DescribeInstanceDetailsResponseBodyInstanceDetails setEipInfos(java.util.List<DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos> eipInfos) {
+            this.eipInfos = eipInfos;
             return this;
         }
-        public String getLine() {
-            return this.line;
+        public java.util.List<DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos> getEipInfos() {
+            return this.eipInfos;
         }
 
         public DescribeInstanceDetailsResponseBodyInstanceDetails setInstanceId(String instanceId) {
@@ -92,12 +114,12 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeInstanceDetailsResponseBodyInstanceDetails setEipInfos(java.util.List<DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos> eipInfos) {
-            this.eipInfos = eipInfos;
+        public DescribeInstanceDetailsResponseBodyInstanceDetails setLine(String line) {
+            this.line = line;
             return this;
         }
-        public java.util.List<DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos> getEipInfos() {
-            return this.eipInfos;
+        public String getLine() {
+            return this.line;
         }
 
     }

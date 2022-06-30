@@ -4,26 +4,26 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainOverviewResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("MaxHttp")
+    public Long maxHttp;
 
     @NameInMap("MaxHttps")
     public Long maxHttps;
 
-    @NameInMap("MaxHttp")
-    public Long maxHttp;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDomainOverviewResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainOverviewResponseBody self = new DescribeDomainOverviewResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainOverviewResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDomainOverviewResponseBody setMaxHttp(Long maxHttp) {
+        this.maxHttp = maxHttp;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Long getMaxHttp() {
+        return this.maxHttp;
     }
 
     public DescribeDomainOverviewResponseBody setMaxHttps(Long maxHttps) {
@@ -34,12 +34,12 @@ public class DescribeDomainOverviewResponseBody extends TeaModel {
         return this.maxHttps;
     }
 
-    public DescribeDomainOverviewResponseBody setMaxHttp(Long maxHttp) {
-        this.maxHttp = maxHttp;
+    public DescribeDomainOverviewResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Long getMaxHttp() {
-        return this.maxHttp;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

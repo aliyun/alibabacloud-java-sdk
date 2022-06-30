@@ -4,15 +4,6 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyBlockStatusRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("Status")
-    public String status;
-
     @NameInMap("Duration")
     public Integer duration;
 
@@ -22,33 +13,12 @@ public class ModifyBlockStatusRequest extends TeaModel {
     @NameInMap("Lines")
     public java.util.List<String> lines;
 
+    @NameInMap("Status")
+    public String status;
+
     public static ModifyBlockStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBlockStatusRequest self = new ModifyBlockStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyBlockStatusRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ModifyBlockStatusRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public ModifyBlockStatusRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
     }
 
     public ModifyBlockStatusRequest setDuration(Integer duration) {
@@ -73,6 +43,14 @@ public class ModifyBlockStatusRequest extends TeaModel {
     }
     public java.util.List<String> getLines() {
         return this.lines;
+    }
+
+    public ModifyBlockStatusRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

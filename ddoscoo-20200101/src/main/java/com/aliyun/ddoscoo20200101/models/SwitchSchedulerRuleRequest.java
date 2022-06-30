@@ -4,9 +4,6 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class SwitchSchedulerRuleRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("RuleName")
     public String ruleName;
 
@@ -19,14 +16,6 @@ public class SwitchSchedulerRuleRequest extends TeaModel {
     public static SwitchSchedulerRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         SwitchSchedulerRuleRequest self = new SwitchSchedulerRuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SwitchSchedulerRuleRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public SwitchSchedulerRuleRequest setRuleName(String ruleName) {

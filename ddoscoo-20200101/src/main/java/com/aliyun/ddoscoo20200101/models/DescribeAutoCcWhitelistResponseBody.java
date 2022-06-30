@@ -7,11 +7,11 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
     @NameInMap("AutoCcWhitelist")
     public java.util.List<DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist> autoCcWhitelist;
 
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeAutoCcWhitelistResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutoCcWhitelistResponseBody self = new DescribeAutoCcWhitelistResponseBody();
@@ -26,14 +26,6 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
         return this.autoCcWhitelist;
     }
 
-    public DescribeAutoCcWhitelistResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
     public DescribeAutoCcWhitelistResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -42,9 +34,17 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeAutoCcWhitelistResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("DestIp")
+        public String destIp;
 
         @NameInMap("EndTime")
         public Long endTime;
@@ -52,20 +52,20 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
         @NameInMap("SourceIp")
         public String sourceIp;
 
-        @NameInMap("DestIp")
-        public String destIp;
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist build(java.util.Map<String, ?> map) throws Exception {
             DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist self = new DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist setType(String type) {
-            this.type = type;
+        public DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist setDestIp(String destIp) {
+            this.destIp = destIp;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getDestIp() {
+            return this.destIp;
         }
 
         public DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist setEndTime(Long endTime) {
@@ -84,12 +84,12 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
             return this.sourceIp;
         }
 
-        public DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist setDestIp(String destIp) {
-            this.destIp = destIp;
+        public DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getDestIp() {
-            return this.destIp;
+        public String getType() {
+            return this.type;
         }
 
     }

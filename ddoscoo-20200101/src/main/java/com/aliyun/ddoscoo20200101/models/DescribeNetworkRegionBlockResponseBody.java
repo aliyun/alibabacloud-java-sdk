@@ -4,23 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Config")
     public DescribeNetworkRegionBlockResponseBodyConfig config;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeNetworkRegionBlockResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkRegionBlockResponseBody self = new DescribeNetworkRegionBlockResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeNetworkRegionBlockResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeNetworkRegionBlockResponseBody setConfig(DescribeNetworkRegionBlockResponseBodyConfig config) {
@@ -31,27 +23,35 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
         return this.config;
     }
 
+    public DescribeNetworkRegionBlockResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeNetworkRegionBlockResponseBodyConfig extends TeaModel {
-        @NameInMap("RegionBlockSwitch")
-        public String regionBlockSwitch;
+        @NameInMap("Countries")
+        public java.util.List<String> countries;
 
         @NameInMap("Provinces")
         public java.util.List<String> provinces;
 
-        @NameInMap("Countries")
-        public java.util.List<String> countries;
+        @NameInMap("RegionBlockSwitch")
+        public String regionBlockSwitch;
 
         public static DescribeNetworkRegionBlockResponseBodyConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkRegionBlockResponseBodyConfig self = new DescribeNetworkRegionBlockResponseBodyConfig();
             return TeaModel.build(map, self);
         }
 
-        public DescribeNetworkRegionBlockResponseBodyConfig setRegionBlockSwitch(String regionBlockSwitch) {
-            this.regionBlockSwitch = regionBlockSwitch;
+        public DescribeNetworkRegionBlockResponseBodyConfig setCountries(java.util.List<String> countries) {
+            this.countries = countries;
             return this;
         }
-        public String getRegionBlockSwitch() {
-            return this.regionBlockSwitch;
+        public java.util.List<String> getCountries() {
+            return this.countries;
         }
 
         public DescribeNetworkRegionBlockResponseBodyConfig setProvinces(java.util.List<String> provinces) {
@@ -62,12 +62,12 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
             return this.provinces;
         }
 
-        public DescribeNetworkRegionBlockResponseBodyConfig setCountries(java.util.List<String> countries) {
-            this.countries = countries;
+        public DescribeNetworkRegionBlockResponseBodyConfig setRegionBlockSwitch(String regionBlockSwitch) {
+            this.regionBlockSwitch = regionBlockSwitch;
             return this;
         }
-        public java.util.List<String> getCountries() {
-            return this.countries;
+        public String getRegionBlockSwitch() {
+            return this.regionBlockSwitch;
         }
 
     }

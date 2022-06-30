@@ -32,11 +32,11 @@ public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainViewTopCostTimeResponseBodyUrlList extends TeaModel {
-        @NameInMap("Domain")
-        public String domain;
-
         @NameInMap("CostTime")
         public Float costTime;
+
+        @NameInMap("Domain")
+        public String domain;
 
         @NameInMap("Url")
         public String url;
@@ -46,20 +46,20 @@ public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDomainViewTopCostTimeResponseBodyUrlList setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
         public DescribeDomainViewTopCostTimeResponseBodyUrlList setCostTime(Float costTime) {
             this.costTime = costTime;
             return this;
         }
         public Float getCostTime() {
             return this.costTime;
+        }
+
+        public DescribeDomainViewTopCostTimeResponseBodyUrlList setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
         }
 
         public DescribeDomainViewTopCostTimeResponseBodyUrlList setUrl(String url) {

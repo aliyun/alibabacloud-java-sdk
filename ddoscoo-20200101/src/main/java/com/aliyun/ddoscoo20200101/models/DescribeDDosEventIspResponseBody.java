@@ -4,23 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDDosEventIspResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Isps")
     public java.util.List<DescribeDDosEventIspResponseBodyIsps> isps;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDDosEventIspResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDDosEventIspResponseBody self = new DescribeDDosEventIspResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDDosEventIspResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDDosEventIspResponseBody setIsps(java.util.List<DescribeDDosEventIspResponseBodyIsps> isps) {
@@ -29,6 +21,14 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
     }
     public java.util.List<DescribeDDosEventIspResponseBodyIsps> getIsps() {
         return this.isps;
+    }
+
+    public DescribeDDosEventIspResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeDDosEventIspResponseBodyIsps extends TeaModel {

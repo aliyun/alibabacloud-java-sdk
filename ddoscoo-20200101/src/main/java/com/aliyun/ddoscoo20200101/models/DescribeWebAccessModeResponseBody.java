@@ -4,23 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebAccessModeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DomainModes")
     public java.util.List<DescribeWebAccessModeResponseBodyDomainModes> domainModes;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeWebAccessModeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeWebAccessModeResponseBody self = new DescribeWebAccessModeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeWebAccessModeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeWebAccessModeResponseBody setDomainModes(java.util.List<DescribeWebAccessModeResponseBodyDomainModes> domainModes) {
@@ -29,6 +21,14 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
     }
     public java.util.List<DescribeWebAccessModeResponseBodyDomainModes> getDomainModes() {
         return this.domainModes;
+    }
+
+    public DescribeWebAccessModeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeWebAccessModeResponseBodyDomainModes extends TeaModel {

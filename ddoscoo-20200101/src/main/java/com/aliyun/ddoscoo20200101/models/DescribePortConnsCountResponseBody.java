@@ -4,11 +4,11 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePortConnsCountResponseBody extends TeaModel {
+    @NameInMap("ActConns")
+    public Long actConns;
+
     @NameInMap("Conns")
     public Long conns;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Cps")
     public Long cps;
@@ -16,12 +16,20 @@ public class DescribePortConnsCountResponseBody extends TeaModel {
     @NameInMap("InActConns")
     public Long inActConns;
 
-    @NameInMap("ActConns")
-    public Long actConns;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribePortConnsCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePortConnsCountResponseBody self = new DescribePortConnsCountResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePortConnsCountResponseBody setActConns(Long actConns) {
+        this.actConns = actConns;
+        return this;
+    }
+    public Long getActConns() {
+        return this.actConns;
     }
 
     public DescribePortConnsCountResponseBody setConns(Long conns) {
@@ -30,14 +38,6 @@ public class DescribePortConnsCountResponseBody extends TeaModel {
     }
     public Long getConns() {
         return this.conns;
-    }
-
-    public DescribePortConnsCountResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribePortConnsCountResponseBody setCps(Long cps) {
@@ -56,12 +56,12 @@ public class DescribePortConnsCountResponseBody extends TeaModel {
         return this.inActConns;
     }
 
-    public DescribePortConnsCountResponseBody setActConns(Long actConns) {
-        this.actConns = actConns;
+    public DescribePortConnsCountResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Long getActConns() {
-        return this.actConns;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

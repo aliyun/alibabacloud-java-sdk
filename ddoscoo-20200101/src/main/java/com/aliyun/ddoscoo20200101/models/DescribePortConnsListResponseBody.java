@@ -35,20 +35,17 @@ public class DescribePortConnsListResponseBody extends TeaModel {
         @NameInMap("ActConns")
         public Long actConns;
 
+        @NameInMap("Conns")
+        public Long conns;
+
+        @NameInMap("Cps")
+        public Long cps;
+
         @NameInMap("InActConns")
         public Long inActConns;
 
         @NameInMap("Index")
         public Long index;
-
-        @NameInMap("Time")
-        public Long time;
-
-        @NameInMap("Cps")
-        public Long cps;
-
-        @NameInMap("Conns")
-        public Long conns;
 
         public static DescribePortConnsListResponseBodyConnsList build(java.util.Map<String, ?> map) throws Exception {
             DescribePortConnsListResponseBodyConnsList self = new DescribePortConnsListResponseBodyConnsList();
@@ -61,6 +58,22 @@ public class DescribePortConnsListResponseBody extends TeaModel {
         }
         public Long getActConns() {
             return this.actConns;
+        }
+
+        public DescribePortConnsListResponseBodyConnsList setConns(Long conns) {
+            this.conns = conns;
+            return this;
+        }
+        public Long getConns() {
+            return this.conns;
+        }
+
+        public DescribePortConnsListResponseBodyConnsList setCps(Long cps) {
+            this.cps = cps;
+            return this;
+        }
+        public Long getCps() {
+            return this.cps;
         }
 
         public DescribePortConnsListResponseBodyConnsList setInActConns(Long inActConns) {
@@ -77,30 +90,6 @@ public class DescribePortConnsListResponseBody extends TeaModel {
         }
         public Long getIndex() {
             return this.index;
-        }
-
-        public DescribePortConnsListResponseBodyConnsList setTime(Long time) {
-            this.time = time;
-            return this;
-        }
-        public Long getTime() {
-            return this.time;
-        }
-
-        public DescribePortConnsListResponseBodyConnsList setCps(Long cps) {
-            this.cps = cps;
-            return this;
-        }
-        public Long getCps() {
-            return this.cps;
-        }
-
-        public DescribePortConnsListResponseBodyConnsList setConns(Long conns) {
-            this.conns = conns;
-            return this;
-        }
-        public Long getConns() {
-            return this.conns;
         }
 
     }

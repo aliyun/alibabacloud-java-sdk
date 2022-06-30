@@ -4,17 +4,14 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebRulesRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("Cname")
+    public String cname;
 
     @NameInMap("Domain")
     public String domain;
 
-    @NameInMap("QueryDomainPattern")
-    public String queryDomainPattern;
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -22,28 +19,23 @@ public class DescribeWebRulesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("InstanceIds")
-    public java.util.List<String> instanceIds;
+    @NameInMap("QueryDomainPattern")
+    public String queryDomainPattern;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static DescribeWebRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeWebRulesRequest self = new DescribeWebRulesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeWebRulesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeWebRulesRequest setCname(String cname) {
+        this.cname = cname;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeWebRulesRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getCname() {
+        return this.cname;
     }
 
     public DescribeWebRulesRequest setDomain(String domain) {
@@ -54,12 +46,12 @@ public class DescribeWebRulesRequest extends TeaModel {
         return this.domain;
     }
 
-    public DescribeWebRulesRequest setQueryDomainPattern(String queryDomainPattern) {
-        this.queryDomainPattern = queryDomainPattern;
+    public DescribeWebRulesRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
         return this;
     }
-    public String getQueryDomainPattern() {
-        return this.queryDomainPattern;
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public DescribeWebRulesRequest setPageNumber(Integer pageNumber) {
@@ -78,12 +70,20 @@ public class DescribeWebRulesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeWebRulesRequest setInstanceIds(java.util.List<String> instanceIds) {
-        this.instanceIds = instanceIds;
+    public DescribeWebRulesRequest setQueryDomainPattern(String queryDomainPattern) {
+        this.queryDomainPattern = queryDomainPattern;
         return this;
     }
-    public java.util.List<String> getInstanceIds() {
-        return this.instanceIds;
+    public String getQueryDomainPattern() {
+        return this.queryDomainPattern;
+    }
+
+    public DescribeWebRulesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

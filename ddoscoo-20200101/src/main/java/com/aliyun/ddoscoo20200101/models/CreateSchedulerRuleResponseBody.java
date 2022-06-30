@@ -4,11 +4,11 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateSchedulerRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Cname")
     public String cname;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("RuleName")
     public String ruleName;
@@ -18,20 +18,20 @@ public class CreateSchedulerRuleResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateSchedulerRuleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateSchedulerRuleResponseBody setCname(String cname) {
         this.cname = cname;
         return this;
     }
     public String getCname() {
         return this.cname;
+    }
+
+    public CreateSchedulerRuleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateSchedulerRuleResponseBody setRuleName(String ruleName) {

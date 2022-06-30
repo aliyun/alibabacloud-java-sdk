@@ -4,23 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSpecsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceSpecs")
     public java.util.List<DescribeInstanceSpecsResponseBodyInstanceSpecs> instanceSpecs;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeInstanceSpecsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceSpecsResponseBody self = new DescribeInstanceSpecsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceSpecsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeInstanceSpecsResponseBody setInstanceSpecs(java.util.List<DescribeInstanceSpecsResponseBodyInstanceSpecs> instanceSpecs) {
@@ -31,27 +23,32 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         return this.instanceSpecs;
     }
 
+    public DescribeInstanceSpecsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeInstanceSpecsResponseBodyInstanceSpecs extends TeaModel {
-        @NameInMap("BaseBandwidth")
-        public Integer baseBandwidth;
-
-        @NameInMap("QpsLimit")
-        public Integer qpsLimit;
-
         @NameInMap("BandwidthMbps")
         public Integer bandwidthMbps;
+
+        @NameInMap("BaseBandwidth")
+        public Integer baseBandwidth;
 
         @NameInMap("DefenseCount")
         public Integer defenseCount;
 
-        @NameInMap("SiteLimit")
-        public Integer siteLimit;
-
-        @NameInMap("PortLimit")
-        public Integer portLimit;
+        @NameInMap("DomainLimit")
+        public Integer domainLimit;
 
         @NameInMap("ElasticBandwidth")
         public Integer elasticBandwidth;
+
+        @NameInMap("ElasticBw")
+        public Integer elasticBw;
 
         @NameInMap("FunctionVersion")
         public String functionVersion;
@@ -59,28 +56,18 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("DomainLimit")
-        public Integer domainLimit;
+        @NameInMap("PortLimit")
+        public Integer portLimit;
+
+        @NameInMap("QpsLimit")
+        public Integer qpsLimit;
+
+        @NameInMap("SiteLimit")
+        public Integer siteLimit;
 
         public static DescribeInstanceSpecsResponseBodyInstanceSpecs build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceSpecsResponseBodyInstanceSpecs self = new DescribeInstanceSpecsResponseBodyInstanceSpecs();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceSpecsResponseBodyInstanceSpecs setBaseBandwidth(Integer baseBandwidth) {
-            this.baseBandwidth = baseBandwidth;
-            return this;
-        }
-        public Integer getBaseBandwidth() {
-            return this.baseBandwidth;
-        }
-
-        public DescribeInstanceSpecsResponseBodyInstanceSpecs setQpsLimit(Integer qpsLimit) {
-            this.qpsLimit = qpsLimit;
-            return this;
-        }
-        public Integer getQpsLimit() {
-            return this.qpsLimit;
         }
 
         public DescribeInstanceSpecsResponseBodyInstanceSpecs setBandwidthMbps(Integer bandwidthMbps) {
@@ -91,6 +78,14 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             return this.bandwidthMbps;
         }
 
+        public DescribeInstanceSpecsResponseBodyInstanceSpecs setBaseBandwidth(Integer baseBandwidth) {
+            this.baseBandwidth = baseBandwidth;
+            return this;
+        }
+        public Integer getBaseBandwidth() {
+            return this.baseBandwidth;
+        }
+
         public DescribeInstanceSpecsResponseBodyInstanceSpecs setDefenseCount(Integer defenseCount) {
             this.defenseCount = defenseCount;
             return this;
@@ -99,20 +94,12 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             return this.defenseCount;
         }
 
-        public DescribeInstanceSpecsResponseBodyInstanceSpecs setSiteLimit(Integer siteLimit) {
-            this.siteLimit = siteLimit;
+        public DescribeInstanceSpecsResponseBodyInstanceSpecs setDomainLimit(Integer domainLimit) {
+            this.domainLimit = domainLimit;
             return this;
         }
-        public Integer getSiteLimit() {
-            return this.siteLimit;
-        }
-
-        public DescribeInstanceSpecsResponseBodyInstanceSpecs setPortLimit(Integer portLimit) {
-            this.portLimit = portLimit;
-            return this;
-        }
-        public Integer getPortLimit() {
-            return this.portLimit;
+        public Integer getDomainLimit() {
+            return this.domainLimit;
         }
 
         public DescribeInstanceSpecsResponseBodyInstanceSpecs setElasticBandwidth(Integer elasticBandwidth) {
@@ -121,6 +108,14 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         }
         public Integer getElasticBandwidth() {
             return this.elasticBandwidth;
+        }
+
+        public DescribeInstanceSpecsResponseBodyInstanceSpecs setElasticBw(Integer elasticBw) {
+            this.elasticBw = elasticBw;
+            return this;
+        }
+        public Integer getElasticBw() {
+            return this.elasticBw;
         }
 
         public DescribeInstanceSpecsResponseBodyInstanceSpecs setFunctionVersion(String functionVersion) {
@@ -139,12 +134,28 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeInstanceSpecsResponseBodyInstanceSpecs setDomainLimit(Integer domainLimit) {
-            this.domainLimit = domainLimit;
+        public DescribeInstanceSpecsResponseBodyInstanceSpecs setPortLimit(Integer portLimit) {
+            this.portLimit = portLimit;
             return this;
         }
-        public Integer getDomainLimit() {
-            return this.domainLimit;
+        public Integer getPortLimit() {
+            return this.portLimit;
+        }
+
+        public DescribeInstanceSpecsResponseBodyInstanceSpecs setQpsLimit(Integer qpsLimit) {
+            this.qpsLimit = qpsLimit;
+            return this;
+        }
+        public Integer getQpsLimit() {
+            return this.qpsLimit;
+        }
+
+        public DescribeInstanceSpecsResponseBodyInstanceSpecs setSiteLimit(Integer siteLimit) {
+            this.siteLimit = siteLimit;
+            return this;
+        }
+        public Integer getSiteLimit() {
+            return this.siteLimit;
         }
 
     }

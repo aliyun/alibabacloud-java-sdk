@@ -43,37 +43,21 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        @NameInMap("ResourceType")
-        public String resourceType;
-
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("ResourceId")
         public String resourceId;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
 
         @NameInMap("TagKey")
         public String tagKey;
 
+        @NameInMap("TagValue")
+        public String tagValue;
+
         public static DescribeTagResourcesResponseBodyTagResourcesTagResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeTagResourcesResponseBodyTagResourcesTagResource self = new DescribeTagResourcesResponseBodyTagResourcesTagResource();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeTagResourcesResponseBodyTagResourcesTagResource setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
-        }
-
-        public DescribeTagResourcesResponseBodyTagResourcesTagResource setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public DescribeTagResourcesResponseBodyTagResourcesTagResource setResourceId(String resourceId) {
@@ -84,12 +68,28 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             return this.resourceId;
         }
 
+        public DescribeTagResourcesResponseBodyTagResourcesTagResource setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
         public DescribeTagResourcesResponseBodyTagResourcesTagResource setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public DescribeTagResourcesResponseBodyTagResourcesTagResource setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

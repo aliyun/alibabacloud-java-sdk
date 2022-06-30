@@ -32,45 +32,21 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeBlockStatusResponseBodyStatusListBlockStatusList extends TeaModel {
+        @NameInMap("BlockStatus")
+        public String blockStatus;
+
         @NameInMap("EndTime")
         public Long endTime;
-
-        @NameInMap("StartTime")
-        public Long startTime;
 
         @NameInMap("Line")
         public String line;
 
-        @NameInMap("BlockStatus")
-        public String blockStatus;
+        @NameInMap("StartTime")
+        public Long startTime;
 
         public static DescribeBlockStatusResponseBodyStatusListBlockStatusList build(java.util.Map<String, ?> map) throws Exception {
             DescribeBlockStatusResponseBodyStatusListBlockStatusList self = new DescribeBlockStatusResponseBodyStatusListBlockStatusList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBlockStatusResponseBodyStatusListBlockStatusList setEndTime(Long endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public Long getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeBlockStatusResponseBodyStatusListBlockStatusList setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeBlockStatusResponseBodyStatusListBlockStatusList setLine(String line) {
-            this.line = line;
-            return this;
-        }
-        public String getLine() {
-            return this.line;
         }
 
         public DescribeBlockStatusResponseBodyStatusListBlockStatusList setBlockStatus(String blockStatus) {
@@ -81,26 +57,42 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             return this.blockStatus;
         }
 
+        public DescribeBlockStatusResponseBodyStatusListBlockStatusList setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribeBlockStatusResponseBodyStatusListBlockStatusList setLine(String line) {
+            this.line = line;
+            return this;
+        }
+        public String getLine() {
+            return this.line;
+        }
+
+        public DescribeBlockStatusResponseBodyStatusListBlockStatusList setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
     }
 
     public static class DescribeBlockStatusResponseBodyStatusList extends TeaModel {
-        @NameInMap("Ip")
-        public String ip;
-
         @NameInMap("BlockStatusList")
         public java.util.List<DescribeBlockStatusResponseBodyStatusListBlockStatusList> blockStatusList;
+
+        @NameInMap("Ip")
+        public String ip;
 
         public static DescribeBlockStatusResponseBodyStatusList build(java.util.Map<String, ?> map) throws Exception {
             DescribeBlockStatusResponseBodyStatusList self = new DescribeBlockStatusResponseBodyStatusList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBlockStatusResponseBodyStatusList setIp(String ip) {
-            this.ip = ip;
-            return this;
-        }
-        public String getIp() {
-            return this.ip;
         }
 
         public DescribeBlockStatusResponseBodyStatusList setBlockStatusList(java.util.List<DescribeBlockStatusResponseBodyStatusListBlockStatusList> blockStatusList) {
@@ -109,6 +101,14 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         }
         public java.util.List<DescribeBlockStatusResponseBodyStatusListBlockStatusList> getBlockStatusList() {
             return this.blockStatusList;
+        }
+
+        public DescribeBlockStatusResponseBodyStatusList setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
         }
 
     }

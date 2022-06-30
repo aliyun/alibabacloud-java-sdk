@@ -4,26 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SlsConfigStatus")
     public java.util.List<DescribeWebAccessLogDispatchStatusResponseBodySlsConfigStatus> slsConfigStatus;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static DescribeWebAccessLogDispatchStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeWebAccessLogDispatchStatusResponseBody self = new DescribeWebAccessLogDispatchStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeWebAccessLogDispatchStatusResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeWebAccessLogDispatchStatusResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
     }
     public java.util.List<DescribeWebAccessLogDispatchStatusResponseBodySlsConfigStatus> getSlsConfigStatus() {
         return this.slsConfigStatus;
+    }
+
+    public DescribeWebAccessLogDispatchStatusResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeWebAccessLogDispatchStatusResponseBodySlsConfigStatus extends TeaModel {

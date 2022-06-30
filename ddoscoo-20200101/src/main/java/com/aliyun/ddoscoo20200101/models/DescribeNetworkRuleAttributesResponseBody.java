@@ -32,37 +32,29 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCcSblack extends TeaModel {
-        @NameInMap("Type")
-        public Integer type;
-
-        @NameInMap("Expires")
-        public Integer expires;
+        @NameInMap("Cnt")
+        public Integer cnt;
 
         @NameInMap("During")
         public Integer during;
 
-        @NameInMap("Cnt")
-        public Integer cnt;
+        @NameInMap("Expires")
+        public Integer expires;
+
+        @NameInMap("Type")
+        public Integer type;
 
         public static DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCcSblack build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCcSblack self = new DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCcSblack();
             return TeaModel.build(map, self);
         }
 
-        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCcSblack setType(Integer type) {
-            this.type = type;
+        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCcSblack setCnt(Integer cnt) {
+            this.cnt = cnt;
             return this;
         }
-        public Integer getType() {
-            return this.type;
-        }
-
-        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCcSblack setExpires(Integer expires) {
-            this.expires = expires;
-            return this;
-        }
-        public Integer getExpires() {
-            return this.expires;
+        public Integer getCnt() {
+            return this.cnt;
         }
 
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCcSblack setDuring(Integer during) {
@@ -73,12 +65,20 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             return this.during;
         }
 
-        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCcSblack setCnt(Integer cnt) {
-            this.cnt = cnt;
+        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCcSblack setExpires(Integer expires) {
+            this.expires = expires;
             return this;
         }
-        public Integer getCnt() {
-            return this.cnt;
+        public Integer getExpires() {
+            return this.expires;
+        }
+
+        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCcSblack setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
         }
 
     }
@@ -133,37 +133,21 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSla extends TeaModel {
-        @NameInMap("MaxconnEnable")
-        public Integer maxconnEnable;
+        @NameInMap("Cps")
+        public Integer cps;
 
         @NameInMap("CpsEnable")
         public Integer cpsEnable;
 
-        @NameInMap("Cps")
-        public Integer cps;
-
         @NameInMap("Maxconn")
         public Integer maxconn;
+
+        @NameInMap("MaxconnEnable")
+        public Integer maxconnEnable;
 
         public static DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSla build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSla self = new DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSla();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSla setMaxconnEnable(Integer maxconnEnable) {
-            this.maxconnEnable = maxconnEnable;
-            return this;
-        }
-        public Integer getMaxconnEnable() {
-            return this.maxconnEnable;
-        }
-
-        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSla setCpsEnable(Integer cpsEnable) {
-            this.cpsEnable = cpsEnable;
-            return this;
-        }
-        public Integer getCpsEnable() {
-            return this.cpsEnable;
         }
 
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSla setCps(Integer cps) {
@@ -174,6 +158,14 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             return this.cps;
         }
 
+        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSla setCpsEnable(Integer cpsEnable) {
+            this.cpsEnable = cpsEnable;
+            return this;
+        }
+        public Integer getCpsEnable() {
+            return this.cpsEnable;
+        }
+
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSla setMaxconn(Integer maxconn) {
             this.maxconn = maxconn;
             return this;
@@ -182,36 +174,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             return this.maxconn;
         }
 
-    }
-
-    public static class DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit extends TeaModel {
-        @NameInMap("MaxconnEnable")
-        public Integer maxconnEnable;
-
-        @NameInMap("CpsEnable")
-        public Integer cpsEnable;
-
-        @NameInMap("Cps")
-        public Integer cps;
-
-        @NameInMap("Pps")
-        public Long pps;
-
-        @NameInMap("Bps")
-        public Long bps;
-
-        @NameInMap("Maxconn")
-        public Integer maxconn;
-
-        @NameInMap("CpsMode")
-        public Integer cpsMode;
-
-        public static DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit self = new DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit setMaxconnEnable(Integer maxconnEnable) {
+        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSla setMaxconnEnable(Integer maxconnEnable) {
             this.maxconnEnable = maxconnEnable;
             return this;
         }
@@ -219,28 +182,33 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             return this.maxconnEnable;
         }
 
-        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit setCpsEnable(Integer cpsEnable) {
-            this.cpsEnable = cpsEnable;
-            return this;
-        }
-        public Integer getCpsEnable() {
-            return this.cpsEnable;
-        }
+    }
 
-        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit setCps(Integer cps) {
-            this.cps = cps;
-            return this;
-        }
-        public Integer getCps() {
-            return this.cps;
-        }
+    public static class DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit extends TeaModel {
+        @NameInMap("Bps")
+        public Long bps;
 
-        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit setPps(Long pps) {
-            this.pps = pps;
-            return this;
-        }
-        public Long getPps() {
-            return this.pps;
+        @NameInMap("Cps")
+        public Integer cps;
+
+        @NameInMap("CpsEnable")
+        public Integer cpsEnable;
+
+        @NameInMap("CpsMode")
+        public Integer cpsMode;
+
+        @NameInMap("Maxconn")
+        public Integer maxconn;
+
+        @NameInMap("MaxconnEnable")
+        public Integer maxconnEnable;
+
+        @NameInMap("Pps")
+        public Long pps;
+
+        public static DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit self = new DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit();
+            return TeaModel.build(map, self);
         }
 
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit setBps(Long bps) {
@@ -251,12 +219,20 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             return this.bps;
         }
 
-        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit setMaxconn(Integer maxconn) {
-            this.maxconn = maxconn;
+        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit setCps(Integer cps) {
+            this.cps = cps;
             return this;
         }
-        public Integer getMaxconn() {
-            return this.maxconn;
+        public Integer getCps() {
+            return this.cps;
+        }
+
+        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit setCpsEnable(Integer cpsEnable) {
+            this.cpsEnable = cpsEnable;
+            return this;
+        }
+        public Integer getCpsEnable() {
+            return this.cpsEnable;
         }
 
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit setCpsMode(Integer cpsMode) {
@@ -267,11 +243,38 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             return this.cpsMode;
         }
 
+        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit setMaxconn(Integer maxconn) {
+            this.maxconn = maxconn;
+            return this;
+        }
+        public Integer getMaxconn() {
+            return this.maxconn;
+        }
+
+        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit setMaxconnEnable(Integer maxconnEnable) {
+            this.maxconnEnable = maxconnEnable;
+            return this;
+        }
+        public Integer getMaxconnEnable() {
+            return this.maxconnEnable;
+        }
+
+        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit setPps(Long pps) {
+            this.pps = pps;
+            return this;
+        }
+        public Long getPps() {
+            return this.pps;
+        }
+
     }
 
     public static class DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfig extends TeaModel {
         @NameInMap("Cc")
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCc cc;
+
+        @NameInMap("NodataConn")
+        public String nodataConn;
 
         @NameInMap("PayloadLen")
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigPayloadLen payloadLen;
@@ -284,9 +287,6 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
 
         @NameInMap("Slimit")
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit slimit;
-
-        @NameInMap("NodataConn")
-        public String nodataConn;
 
         @NameInMap("Synproxy")
         public String synproxy;
@@ -302,6 +302,14 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
         }
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCc getCc() {
             return this.cc;
+        }
+
+        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfig setNodataConn(String nodataConn) {
+            this.nodataConn = nodataConn;
+            return this;
+        }
+        public String getNodataConn() {
+            return this.nodataConn;
         }
 
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfig setPayloadLen(DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigPayloadLen payloadLen) {
@@ -336,14 +344,6 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             return this.slimit;
         }
 
-        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfig setNodataConn(String nodataConn) {
-            this.nodataConn = nodataConn;
-            return this;
-        }
-        public String getNodataConn() {
-            return this.nodataConn;
-        }
-
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfig setSynproxy(String synproxy) {
             this.synproxy = synproxy;
             return this;
@@ -355,21 +355,29 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributes extends TeaModel {
+        @NameInMap("Config")
+        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfig config;
+
         @NameInMap("FrontendPort")
         public Integer frontendPort;
-
-        @NameInMap("Protocol")
-        public String protocol;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("Config")
-        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfig config;
+        @NameInMap("Protocol")
+        public String protocol;
 
         public static DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributes build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributes self = new DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributes();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributes setConfig(DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfig config) {
+            this.config = config;
+            return this;
+        }
+        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfig getConfig() {
+            return this.config;
         }
 
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributes setFrontendPort(Integer frontendPort) {
@@ -380,14 +388,6 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             return this.frontendPort;
         }
 
-        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributes setProtocol(String protocol) {
-            this.protocol = protocol;
-            return this;
-        }
-        public String getProtocol() {
-            return this.protocol;
-        }
-
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributes setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -396,12 +396,12 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributes setConfig(DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfig config) {
-            this.config = config;
+        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributes setProtocol(String protocol) {
+            this.protocol = protocol;
             return this;
         }
-        public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfig getConfig() {
-            return this.config;
+        public String getProtocol() {
+            return this.protocol;
         }
 
     }

@@ -32,37 +32,21 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList extends TeaModel {
-        @NameInMap("MatchMethod")
-        public String matchMethod;
+        @NameInMap("Content")
+        public String content;
 
         @NameInMap("Field")
         public String field;
 
-        @NameInMap("Content")
-        public String content;
-
         @NameInMap("HeaderName")
         public String headerName;
+
+        @NameInMap("MatchMethod")
+        public String matchMethod;
 
         public static DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList build(java.util.Map<String, ?> map) throws Exception {
             DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList self = new DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList setMatchMethod(String matchMethod) {
-            this.matchMethod = matchMethod;
-            return this;
-        }
-        public String getMatchMethod() {
-            return this.matchMethod;
-        }
-
-        public DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList setField(String field) {
-            this.field = field;
-            return this;
-        }
-        public String getField() {
-            return this.field;
         }
 
         public DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList setContent(String content) {
@@ -73,6 +57,14 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             return this.content;
         }
 
+        public DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList setField(String field) {
+            this.field = field;
+            return this;
+        }
+        public String getField() {
+            return this.field;
+        }
+
         public DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList setHeaderName(String headerName) {
             this.headerName = headerName;
             return this;
@@ -81,14 +73,22 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             return this.headerName;
         }
 
+        public DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList setMatchMethod(String matchMethod) {
+            this.matchMethod = matchMethod;
+            return this;
+        }
+        public String getMatchMethod() {
+            return this.matchMethod;
+        }
+
     }
 
     public static class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList extends TeaModel {
         @NameInMap("Action")
         public String action;
 
-        @NameInMap("Owner")
-        public String owner;
+        @NameInMap("ConditionList")
+        public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList> conditionList;
 
         @NameInMap("Expires")
         public Long expires;
@@ -96,8 +96,8 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("ConditionList")
-        public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList> conditionList;
+        @NameInMap("Owner")
+        public String owner;
 
         public static DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList build(java.util.Map<String, ?> map) throws Exception {
             DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList self = new DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList();
@@ -112,12 +112,12 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             return this.action;
         }
 
-        public DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList setOwner(String owner) {
-            this.owner = owner;
+        public DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList setConditionList(java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList> conditionList) {
+            this.conditionList = conditionList;
             return this;
         }
-        public String getOwner() {
-            return this.owner;
+        public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList> getConditionList() {
+            return this.conditionList;
         }
 
         public DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList setExpires(Long expires) {
@@ -136,12 +136,12 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList setConditionList(java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList> conditionList) {
-            this.conditionList = conditionList;
+        public DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList setOwner(String owner) {
+            this.owner = owner;
             return this;
         }
-        public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList> getConditionList() {
-            return this.conditionList;
+        public String getOwner() {
+            return this.owner;
         }
 
     }

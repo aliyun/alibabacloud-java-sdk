@@ -4,26 +4,26 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeUnBlockCountResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("RemainCount")
+    public Integer remainCount;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("RemainCount")
-    public Integer remainCount;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeUnBlockCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUnBlockCountResponseBody self = new DescribeUnBlockCountResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeUnBlockCountResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeUnBlockCountResponseBody setRemainCount(Integer remainCount) {
+        this.remainCount = remainCount;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getRemainCount() {
+        return this.remainCount;
     }
 
     public DescribeUnBlockCountResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DescribeUnBlockCountResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeUnBlockCountResponseBody setRemainCount(Integer remainCount) {
-        this.remainCount = remainCount;
+    public DescribeUnBlockCountResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getRemainCount() {
-        return this.remainCount;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
 }

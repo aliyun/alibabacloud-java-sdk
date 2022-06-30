@@ -4,20 +4,17 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateTagResourcesRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("ResourceType")
-    public String resourceType;
-
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     @NameInMap("Tags")
     public java.util.List<CreateTagResourcesRequestTags> tags;
@@ -25,14 +22,6 @@ public class CreateTagResourcesRequest extends TeaModel {
     public static CreateTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTagResourcesRequest self = new CreateTagResourcesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateTagResourcesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public CreateTagResourcesRequest setRegionId(String regionId) {
@@ -51,20 +40,20 @@ public class CreateTagResourcesRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateTagResourcesRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
     public CreateTagResourcesRequest setResourceIds(java.util.List<String> resourceIds) {
         this.resourceIds = resourceIds;
         return this;
     }
     public java.util.List<String> getResourceIds() {
         return this.resourceIds;
+    }
+
+    public CreateTagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public CreateTagResourcesRequest setTags(java.util.List<CreateTagResourcesRequestTags> tags) {

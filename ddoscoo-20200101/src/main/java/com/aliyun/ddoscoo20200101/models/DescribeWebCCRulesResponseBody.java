@@ -4,11 +4,11 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebCCRulesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     @NameInMap("WebCCRules")
     public java.util.List<DescribeWebCCRulesResponseBodyWebCCRules> webCCRules;
@@ -18,20 +18,20 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeWebCCRulesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
     public DescribeWebCCRulesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeWebCCRulesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeWebCCRulesResponseBody setWebCCRules(java.util.List<DescribeWebCCRulesResponseBodyWebCCRules> webCCRules) {
@@ -43,11 +43,11 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCCRulesResponseBodyWebCCRules extends TeaModel {
-        @NameInMap("Ttl")
-        public Integer ttl;
-
         @NameInMap("Act")
         public String act;
+
+        @NameInMap("Count")
+        public Integer count;
 
         @NameInMap("Interval")
         public Integer interval;
@@ -58,23 +58,15 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Ttl")
+        public Integer ttl;
+
         @NameInMap("Uri")
         public String uri;
-
-        @NameInMap("Count")
-        public Integer count;
 
         public static DescribeWebCCRulesResponseBodyWebCCRules build(java.util.Map<String, ?> map) throws Exception {
             DescribeWebCCRulesResponseBodyWebCCRules self = new DescribeWebCCRulesResponseBodyWebCCRules();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeWebCCRulesResponseBodyWebCCRules setTtl(Integer ttl) {
-            this.ttl = ttl;
-            return this;
-        }
-        public Integer getTtl() {
-            return this.ttl;
         }
 
         public DescribeWebCCRulesResponseBodyWebCCRules setAct(String act) {
@@ -83,6 +75,14 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
         }
         public String getAct() {
             return this.act;
+        }
+
+        public DescribeWebCCRulesResponseBodyWebCCRules setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
         }
 
         public DescribeWebCCRulesResponseBodyWebCCRules setInterval(Integer interval) {
@@ -109,20 +109,20 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
             return this.name;
         }
 
+        public DescribeWebCCRulesResponseBodyWebCCRules setTtl(Integer ttl) {
+            this.ttl = ttl;
+            return this;
+        }
+        public Integer getTtl() {
+            return this.ttl;
+        }
+
         public DescribeWebCCRulesResponseBodyWebCCRules setUri(String uri) {
             this.uri = uri;
             return this;
         }
         public String getUri() {
             return this.uri;
-        }
-
-        public DescribeWebCCRulesResponseBodyWebCCRules setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
         }
 
     }

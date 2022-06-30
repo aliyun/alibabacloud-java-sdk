@@ -4,14 +4,11 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebCacheCustomRuleRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Domain")
+    public String domain;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("Domain")
-    public String domain;
 
     @NameInMap("Rules")
     public String rules;
@@ -21,12 +18,12 @@ public class ModifyWebCacheCustomRuleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyWebCacheCustomRuleRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public ModifyWebCacheCustomRuleRequest setDomain(String domain) {
+        this.domain = domain;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getDomain() {
+        return this.domain;
     }
 
     public ModifyWebCacheCustomRuleRequest setResourceGroupId(String resourceGroupId) {
@@ -35,14 +32,6 @@ public class ModifyWebCacheCustomRuleRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public ModifyWebCacheCustomRuleRequest setDomain(String domain) {
-        this.domain = domain;
-        return this;
-    }
-    public String getDomain() {
-        return this.domain;
     }
 
     public ModifyWebCacheCustomRuleRequest setRules(String rules) {

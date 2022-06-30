@@ -4,8 +4,8 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagResourcesRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -13,14 +13,11 @@ public class DescribeTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("ResourceType")
-    public String resourceType;
-
-    @NameInMap("NextToken")
-    public String nextToken;
-
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     @NameInMap("Tags")
     public java.util.List<DescribeTagResourcesRequestTags> tags;
@@ -30,12 +27,12 @@ public class DescribeTagResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeTagResourcesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeTagResourcesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeTagResourcesRequest setRegionId(String regionId) {
@@ -54,28 +51,20 @@ public class DescribeTagResourcesRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribeTagResourcesRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
-    public DescribeTagResourcesRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
     public DescribeTagResourcesRequest setResourceIds(java.util.List<String> resourceIds) {
         this.resourceIds = resourceIds;
         return this;
     }
     public java.util.List<String> getResourceIds() {
         return this.resourceIds;
+    }
+
+    public DescribeTagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public DescribeTagResourcesRequest setTags(java.util.List<DescribeTagResourcesRequestTags> tags) {

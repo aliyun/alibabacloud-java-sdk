@@ -4,23 +4,12 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ConfigNetworkRulesRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("NetworkRules")
     public String networkRules;
 
     public static ConfigNetworkRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigNetworkRulesRequest self = new ConfigNetworkRulesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ConfigNetworkRulesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public ConfigNetworkRulesRequest setNetworkRules(String networkRules) {

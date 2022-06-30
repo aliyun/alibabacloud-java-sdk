@@ -32,14 +32,17 @@ public class DescribeCertsResponseBody extends TeaModel {
     }
 
     public static class DescribeCertsResponseBodyCerts extends TeaModel {
-        @NameInMap("EndDate")
-        public String endDate;
+        @NameInMap("Common")
+        public String common;
 
         @NameInMap("DomainRelated")
         public Boolean domainRelated;
 
-        @NameInMap("StartDate")
-        public String startDate;
+        @NameInMap("EndDate")
+        public String endDate;
+
+        @NameInMap("Id")
+        public Integer id;
 
         @NameInMap("Issuer")
         public String issuer;
@@ -47,23 +50,20 @@ public class DescribeCertsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Common")
-        public String common;
-
-        @NameInMap("Id")
-        public Integer id;
+        @NameInMap("StartDate")
+        public String startDate;
 
         public static DescribeCertsResponseBodyCerts build(java.util.Map<String, ?> map) throws Exception {
             DescribeCertsResponseBodyCerts self = new DescribeCertsResponseBodyCerts();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCertsResponseBodyCerts setEndDate(String endDate) {
-            this.endDate = endDate;
+        public DescribeCertsResponseBodyCerts setCommon(String common) {
+            this.common = common;
             return this;
         }
-        public String getEndDate() {
-            return this.endDate;
+        public String getCommon() {
+            return this.common;
         }
 
         public DescribeCertsResponseBodyCerts setDomainRelated(Boolean domainRelated) {
@@ -74,12 +74,20 @@ public class DescribeCertsResponseBody extends TeaModel {
             return this.domainRelated;
         }
 
-        public DescribeCertsResponseBodyCerts setStartDate(String startDate) {
-            this.startDate = startDate;
+        public DescribeCertsResponseBodyCerts setEndDate(String endDate) {
+            this.endDate = endDate;
             return this;
         }
-        public String getStartDate() {
-            return this.startDate;
+        public String getEndDate() {
+            return this.endDate;
+        }
+
+        public DescribeCertsResponseBodyCerts setId(Integer id) {
+            this.id = id;
+            return this;
+        }
+        public Integer getId() {
+            return this.id;
         }
 
         public DescribeCertsResponseBodyCerts setIssuer(String issuer) {
@@ -98,20 +106,12 @@ public class DescribeCertsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeCertsResponseBodyCerts setCommon(String common) {
-            this.common = common;
+        public DescribeCertsResponseBodyCerts setStartDate(String startDate) {
+            this.startDate = startDate;
             return this;
         }
-        public String getCommon() {
-            return this.common;
-        }
-
-        public DescribeCertsResponseBodyCerts setId(Integer id) {
-            this.id = id;
-            return this;
-        }
-        public Integer getId() {
-            return this.id;
+        public String getStartDate() {
+            return this.startDate;
         }
 
     }

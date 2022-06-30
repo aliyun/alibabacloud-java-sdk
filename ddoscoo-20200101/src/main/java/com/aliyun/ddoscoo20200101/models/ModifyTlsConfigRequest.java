@@ -4,37 +4,26 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyTlsConfigRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("Config")
+    public String config;
 
     @NameInMap("Domain")
     public String domain;
 
-    @NameInMap("Config")
-    public String config;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static ModifyTlsConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyTlsConfigRequest self = new ModifyTlsConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyTlsConfigRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public ModifyTlsConfigRequest setConfig(String config) {
+        this.config = config;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ModifyTlsConfigRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getConfig() {
+        return this.config;
     }
 
     public ModifyTlsConfigRequest setDomain(String domain) {
@@ -45,12 +34,12 @@ public class ModifyTlsConfigRequest extends TeaModel {
         return this.domain;
     }
 
-    public ModifyTlsConfigRequest setConfig(String config) {
-        this.config = config;
+    public ModifyTlsConfigRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public String getConfig() {
-        return this.config;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

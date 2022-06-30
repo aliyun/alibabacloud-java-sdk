@@ -4,14 +4,20 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateWebRuleRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("DefenseId")
+    public String defenseId;
 
     @NameInMap("Domain")
     public String domain;
+
+    @NameInMap("HttpsExt")
+    public String httpsExt;
+
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("RsType")
     public Integer rsType;
@@ -19,34 +25,17 @@ public class CreateWebRuleRequest extends TeaModel {
     @NameInMap("Rules")
     public String rules;
 
-    @NameInMap("HttpsExt")
-    public String httpsExt;
-
-    @NameInMap("DefenseId")
-    public String defenseId;
-
-    @NameInMap("InstanceIds")
-    public java.util.List<String> instanceIds;
-
     public static CreateWebRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWebRuleRequest self = new CreateWebRuleRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateWebRuleRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public CreateWebRuleRequest setDefenseId(String defenseId) {
+        this.defenseId = defenseId;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public CreateWebRuleRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getDefenseId() {
+        return this.defenseId;
     }
 
     public CreateWebRuleRequest setDomain(String domain) {
@@ -55,6 +44,30 @@ public class CreateWebRuleRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public CreateWebRuleRequest setHttpsExt(String httpsExt) {
+        this.httpsExt = httpsExt;
+        return this;
+    }
+    public String getHttpsExt() {
+        return this.httpsExt;
+    }
+
+    public CreateWebRuleRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    public CreateWebRuleRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateWebRuleRequest setRsType(Integer rsType) {
@@ -71,30 +84,6 @@ public class CreateWebRuleRequest extends TeaModel {
     }
     public String getRules() {
         return this.rules;
-    }
-
-    public CreateWebRuleRequest setHttpsExt(String httpsExt) {
-        this.httpsExt = httpsExt;
-        return this;
-    }
-    public String getHttpsExt() {
-        return this.httpsExt;
-    }
-
-    public CreateWebRuleRequest setDefenseId(String defenseId) {
-        this.defenseId = defenseId;
-        return this;
-    }
-    public String getDefenseId() {
-        return this.defenseId;
-    }
-
-    public CreateWebRuleRequest setInstanceIds(java.util.List<String> instanceIds) {
-        this.instanceIds = instanceIds;
-        return this;
-    }
-    public java.util.List<String> getInstanceIds() {
-        return this.instanceIds;
     }
 
 }

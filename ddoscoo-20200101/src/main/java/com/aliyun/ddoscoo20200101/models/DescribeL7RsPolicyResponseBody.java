@@ -4,26 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeL7RsPolicyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Attributes")
     public java.util.List<DescribeL7RsPolicyResponseBodyAttributes> attributes;
 
     @NameInMap("ProxyMode")
     public String proxyMode;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeL7RsPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeL7RsPolicyResponseBody self = new DescribeL7RsPolicyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeL7RsPolicyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeL7RsPolicyResponseBody setAttributes(java.util.List<DescribeL7RsPolicyResponseBodyAttributes> attributes) {
@@ -40,6 +32,14 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
     }
     public String getProxyMode() {
         return this.proxyMode;
+    }
+
+    public DescribeL7RsPolicyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeL7RsPolicyResponseBodyAttributesAttribute extends TeaModel {
@@ -62,26 +62,18 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
     }
 
     public static class DescribeL7RsPolicyResponseBodyAttributes extends TeaModel {
-        @NameInMap("RsType")
-        public Integer rsType;
-
         @NameInMap("Attribute")
         public DescribeL7RsPolicyResponseBodyAttributesAttribute attribute;
 
         @NameInMap("RealServer")
         public String realServer;
 
+        @NameInMap("RsType")
+        public Integer rsType;
+
         public static DescribeL7RsPolicyResponseBodyAttributes build(java.util.Map<String, ?> map) throws Exception {
             DescribeL7RsPolicyResponseBodyAttributes self = new DescribeL7RsPolicyResponseBodyAttributes();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeL7RsPolicyResponseBodyAttributes setRsType(Integer rsType) {
-            this.rsType = rsType;
-            return this;
-        }
-        public Integer getRsType() {
-            return this.rsType;
         }
 
         public DescribeL7RsPolicyResponseBodyAttributes setAttribute(DescribeL7RsPolicyResponseBodyAttributesAttribute attribute) {
@@ -98,6 +90,14 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         }
         public String getRealServer() {
             return this.realServer;
+        }
+
+        public DescribeL7RsPolicyResponseBodyAttributes setRsType(Integer rsType) {
+            this.rsType = rsType;
+            return this;
+        }
+        public Integer getRsType() {
+            return this.rsType;
         }
 
     }

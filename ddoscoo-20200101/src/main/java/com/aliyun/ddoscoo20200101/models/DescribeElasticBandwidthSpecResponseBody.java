@@ -4,23 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticBandwidthSpecResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ElasticBandwidthSpec")
     public java.util.List<String> elasticBandwidthSpec;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeElasticBandwidthSpecResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeElasticBandwidthSpecResponseBody self = new DescribeElasticBandwidthSpecResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeElasticBandwidthSpecResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeElasticBandwidthSpecResponseBody setElasticBandwidthSpec(java.util.List<String> elasticBandwidthSpec) {
@@ -29,6 +21,14 @@ public class DescribeElasticBandwidthSpecResponseBody extends TeaModel {
     }
     public java.util.List<String> getElasticBandwidthSpec() {
         return this.elasticBandwidthSpec;
+    }
+
+    public DescribeElasticBandwidthSpecResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -4,9 +4,6 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,14 +13,6 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     public static DescribeInstanceStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceStatusRequest self = new DescribeInstanceStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceStatusRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeInstanceStatusRequest setInstanceId(String instanceId) {

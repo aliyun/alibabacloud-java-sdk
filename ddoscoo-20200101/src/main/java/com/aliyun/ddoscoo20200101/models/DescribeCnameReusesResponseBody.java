@@ -4,23 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCnameReusesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CnameReuses")
     public java.util.List<DescribeCnameReusesResponseBodyCnameReuses> cnameReuses;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeCnameReusesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCnameReusesResponseBody self = new DescribeCnameReusesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCnameReusesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeCnameReusesResponseBody setCnameReuses(java.util.List<DescribeCnameReusesResponseBodyCnameReuses> cnameReuses) {
@@ -31,12 +23,20 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
         return this.cnameReuses;
     }
 
-    public static class DescribeCnameReusesResponseBodyCnameReuses extends TeaModel {
-        @NameInMap("Domain")
-        public String domain;
+    public DescribeCnameReusesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeCnameReusesResponseBodyCnameReuses extends TeaModel {
         @NameInMap("Cname")
         public String cname;
+
+        @NameInMap("Domain")
+        public String domain;
 
         @NameInMap("Enable")
         public Integer enable;
@@ -46,20 +46,20 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeCnameReusesResponseBodyCnameReuses setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
         public DescribeCnameReusesResponseBodyCnameReuses setCname(String cname) {
             this.cname = cname;
             return this;
         }
         public String getCname() {
             return this.cname;
+        }
+
+        public DescribeCnameReusesResponseBodyCnameReuses setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
         }
 
         public DescribeCnameReusesResponseBodyCnameReuses setEnable(Integer enable) {

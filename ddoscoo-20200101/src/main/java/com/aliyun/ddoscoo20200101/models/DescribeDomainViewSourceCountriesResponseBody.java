@@ -32,23 +32,15 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainViewSourceCountriesResponseBodySourceCountrys extends TeaModel {
-        @NameInMap("CountryId")
-        public String countryId;
-
         @NameInMap("Count")
         public Long count;
+
+        @NameInMap("CountryId")
+        public String countryId;
 
         public static DescribeDomainViewSourceCountriesResponseBodySourceCountrys build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainViewSourceCountriesResponseBodySourceCountrys self = new DescribeDomainViewSourceCountriesResponseBodySourceCountrys();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainViewSourceCountriesResponseBodySourceCountrys setCountryId(String countryId) {
-            this.countryId = countryId;
-            return this;
-        }
-        public String getCountryId() {
-            return this.countryId;
         }
 
         public DescribeDomainViewSourceCountriesResponseBodySourceCountrys setCount(Long count) {
@@ -57,6 +49,14 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
         }
         public Long getCount() {
             return this.count;
+        }
+
+        public DescribeDomainViewSourceCountriesResponseBodySourceCountrys setCountryId(String countryId) {
+            this.countryId = countryId;
+            return this;
+        }
+        public String getCountryId() {
+            return this.countryId;
         }
 
     }

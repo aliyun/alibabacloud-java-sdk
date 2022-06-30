@@ -4,9 +4,6 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoCcListCountRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,14 +13,6 @@ public class DescribeAutoCcListCountRequest extends TeaModel {
     public static DescribeAutoCcListCountRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutoCcListCountRequest self = new DescribeAutoCcListCountRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAutoCcListCountRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeAutoCcListCountRequest setInstanceId(String instanceId) {

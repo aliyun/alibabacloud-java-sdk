@@ -4,37 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ConfigL7RsPolicyRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("Domain")
     public String domain;
 
     @NameInMap("Policy")
     public String policy;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static ConfigL7RsPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigL7RsPolicyRequest self = new ConfigL7RsPolicyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ConfigL7RsPolicyRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ConfigL7RsPolicyRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public ConfigL7RsPolicyRequest setDomain(String domain) {
@@ -51,6 +32,14 @@ public class ConfigL7RsPolicyRequest extends TeaModel {
     }
     public String getPolicy() {
         return this.policy;
+    }
+
+    public ConfigL7RsPolicyRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

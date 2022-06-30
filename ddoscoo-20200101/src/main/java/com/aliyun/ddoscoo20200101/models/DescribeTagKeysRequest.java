@@ -4,8 +4,11 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagKeysRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -16,23 +19,25 @@ public class DescribeTagKeysRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     public static DescribeTagKeysRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTagKeysRequest self = new DescribeTagKeysRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeTagKeysRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeTagKeysRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeTagKeysRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeTagKeysRequest setRegionId(String regionId) {
@@ -57,22 +62,6 @@ public class DescribeTagKeysRequest extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
-    }
-
-    public DescribeTagKeysRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeTagKeysRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
 }

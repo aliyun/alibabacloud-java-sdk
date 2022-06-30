@@ -4,9 +4,6 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteAutoCcWhitelistRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,14 +13,6 @@ public class DeleteAutoCcWhitelistRequest extends TeaModel {
     public static DeleteAutoCcWhitelistRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAutoCcWhitelistRequest self = new DeleteAutoCcWhitelistRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteAutoCcWhitelistRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DeleteAutoCcWhitelistRequest setInstanceId(String instanceId) {

@@ -4,14 +4,8 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDDosEventSrcIpRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("EventType")
     public String eventType;
-
-    @NameInMap("StartTime")
-    public Long startTime;
 
     @NameInMap("Ip")
     public String ip;
@@ -19,17 +13,12 @@ public class DescribeDDosEventSrcIpRequest extends TeaModel {
     @NameInMap("Range")
     public Long range;
 
+    @NameInMap("StartTime")
+    public Long startTime;
+
     public static DescribeDDosEventSrcIpRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDDosEventSrcIpRequest self = new DescribeDDosEventSrcIpRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDDosEventSrcIpRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeDDosEventSrcIpRequest setEventType(String eventType) {
@@ -38,14 +27,6 @@ public class DescribeDDosEventSrcIpRequest extends TeaModel {
     }
     public String getEventType() {
         return this.eventType;
-    }
-
-    public DescribeDDosEventSrcIpRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDDosEventSrcIpRequest setIp(String ip) {
@@ -62,6 +43,14 @@ public class DescribeDDosEventSrcIpRequest extends TeaModel {
     }
     public Long getRange() {
         return this.range;
+    }
+
+    public DescribeDDosEventSrcIpRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }
