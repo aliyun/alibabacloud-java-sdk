@@ -81,6 +81,9 @@ public class GetTrendIndexResponseBody extends TeaModel {
         @NameInMap("SocialIndex")
         public Float socialIndex;
 
+        @NameInMap("TrendIndex")
+        public Float trendIndex;
+
         @NameInMap("YearMonth")
         public String yearMonth;
 
@@ -127,6 +130,14 @@ public class GetTrendIndexResponseBody extends TeaModel {
         }
         public Float getSocialIndex() {
             return this.socialIndex;
+        }
+
+        public GetTrendIndexResponseBodyData setTrendIndex(Float trendIndex) {
+            this.trendIndex = trendIndex;
+            return this;
+        }
+        public Float getTrendIndex() {
+            return this.trendIndex;
         }
 
         public GetTrendIndexResponseBodyData setYearMonth(String yearMonth) {
