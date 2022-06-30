@@ -2514,6 +2514,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AgentIds", request.agentIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeOfflineUsers)) {
+            query.put("ExcludeOfflineUsers", request.excludeOfflineUsers);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -3845,6 +3849,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AgentName", request.agentName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.callTypeList)) {
+            query.put("CallTypeList", request.callTypeList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -3859,6 +3867,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.skillGroupId)) {

@@ -82,6 +82,9 @@ public class ListAgentStatesResponseBody extends TeaModel {
         @NameInMap("AgentName")
         public String agentName;
 
+        @NameInMap("BreakCode")
+        public String breakCode;
+
         @NameInMap("Dn")
         public String dn;
 
@@ -116,6 +119,14 @@ public class ListAgentStatesResponseBody extends TeaModel {
         }
         public String getAgentName() {
             return this.agentName;
+        }
+
+        public ListAgentStatesResponseBodyDataList setBreakCode(String breakCode) {
+            this.breakCode = breakCode;
+            return this;
+        }
+        public String getBreakCode() {
+            return this.breakCode;
         }
 
         public ListAgentStatesResponseBodyDataList setDn(String dn) {
