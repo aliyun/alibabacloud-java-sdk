@@ -16,6 +16,10 @@ public class CreateAIInstanceRequest extends TeaModel {
     @NameInMap("ComputeType")
     public String computeType;
 
+    // 实例类型
+    @NameInMap("ContainerType")
+    public String containerType;
+
     // 数据来源
     @NameInMap("DataSource")
     public String dataSource;
@@ -27,6 +31,10 @@ public class CreateAIInstanceRequest extends TeaModel {
     // 数据类型
     @NameInMap("DataType")
     public String dataType;
+
+    // 多少秒抽取1帧，取值范围[0, 3600]。 0表示不抽帧。
+    @NameInMap("Fps")
+    public Long fps;
 
     // 实例名称
     @NameInMap("InstanceName")
@@ -85,6 +93,14 @@ public class CreateAIInstanceRequest extends TeaModel {
         return this.computeType;
     }
 
+    public CreateAIInstanceRequest setContainerType(String containerType) {
+        this.containerType = containerType;
+        return this;
+    }
+    public String getContainerType() {
+        return this.containerType;
+    }
+
     public CreateAIInstanceRequest setDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -107,6 +123,14 @@ public class CreateAIInstanceRequest extends TeaModel {
     }
     public String getDataType() {
         return this.dataType;
+    }
+
+    public CreateAIInstanceRequest setFps(Long fps) {
+        this.fps = fps;
+        return this;
+    }
+    public Long getFps() {
+        return this.fps;
     }
 
     public CreateAIInstanceRequest setInstanceName(String instanceName) {
@@ -220,6 +244,70 @@ public class CreateAIInstanceRequest extends TeaModel {
         }
 
         public CreateAIInstanceRequestScheduleTimes setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
+    public static class TryCreateAIInstanceRequestDataSourceTimes extends TeaModel {
+        // 视频结束时间
+        @NameInMap("EndTime")
+        public String endTime;
+
+        // 视频开始时间
+        @NameInMap("StartTime")
+        public String startTime;
+
+        public static TryCreateAIInstanceRequestDataSourceTimes build(java.util.Map<String, ?> map) throws Exception {
+            TryCreateAIInstanceRequestDataSourceTimes self = new TryCreateAIInstanceRequestDataSourceTimes();
+            return TeaModel.build(map, self);
+        }
+
+        public TryCreateAIInstanceRequestDataSourceTimes setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public TryCreateAIInstanceRequestDataSourceTimes setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
+    public static class TryCreateAIInstanceRequestScheduleTimes extends TeaModel {
+        // 结束执行时间
+        @NameInMap("EndTime")
+        public String endTime;
+
+        // 开始执行时间
+        @NameInMap("StartTime")
+        public String startTime;
+
+        public static TryCreateAIInstanceRequestScheduleTimes build(java.util.Map<String, ?> map) throws Exception {
+            TryCreateAIInstanceRequestScheduleTimes self = new TryCreateAIInstanceRequestScheduleTimes();
+            return TeaModel.build(map, self);
+        }
+
+        public TryCreateAIInstanceRequestScheduleTimes setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public TryCreateAIInstanceRequestScheduleTimes setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }

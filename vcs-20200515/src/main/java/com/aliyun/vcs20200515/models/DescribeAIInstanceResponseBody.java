@@ -78,6 +78,9 @@ public class DescribeAIInstanceResponseBody extends TeaModel {
         @NameInMap("ComputeType")
         public String computeType;
 
+        @NameInMap("ContainerType")
+        public String containerType;
+
         // 实例创建时间
         @NameInMap("CreateDateTime")
         public String createDateTime;
@@ -93,6 +96,10 @@ public class DescribeAIInstanceResponseBody extends TeaModel {
         // 数据类型
         @NameInMap("DataType")
         public String dataType;
+
+        // 多少秒抽取1帧，取值范围[0, 3600]。 0表示不抽帧。
+        @NameInMap("Fps")
+        public Long fps;
 
         // 实例ID
         @NameInMap("InstanceId")
@@ -174,6 +181,14 @@ public class DescribeAIInstanceResponseBody extends TeaModel {
             return this.computeType;
         }
 
+        public DescribeAIInstanceResponseBodyDataRecords setContainerType(String containerType) {
+            this.containerType = containerType;
+            return this;
+        }
+        public String getContainerType() {
+            return this.containerType;
+        }
+
         public DescribeAIInstanceResponseBodyDataRecords setCreateDateTime(String createDateTime) {
             this.createDateTime = createDateTime;
             return this;
@@ -204,6 +219,14 @@ public class DescribeAIInstanceResponseBody extends TeaModel {
         }
         public String getDataType() {
             return this.dataType;
+        }
+
+        public DescribeAIInstanceResponseBodyDataRecords setFps(Long fps) {
+            this.fps = fps;
+            return this;
+        }
+        public Long getFps() {
+            return this.fps;
         }
 
         public DescribeAIInstanceResponseBodyDataRecords setInstanceId(String instanceId) {

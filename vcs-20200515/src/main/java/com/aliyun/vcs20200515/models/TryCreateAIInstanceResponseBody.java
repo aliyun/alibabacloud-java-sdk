@@ -1,0 +1,91 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.vcs20200515.models;
+
+import com.aliyun.tea.*;
+
+public class TryCreateAIInstanceResponseBody extends TeaModel {
+    // 返回code码
+    @NameInMap("Code")
+    public String code;
+
+    // 返回数据
+    @NameInMap("Data")
+    public TryCreateAIInstanceResponseBodyData data;
+
+    // 错误信息
+    @NameInMap("Message")
+    public String message;
+
+    // 请求id
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static TryCreateAIInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        TryCreateAIInstanceResponseBody self = new TryCreateAIInstanceResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public TryCreateAIInstanceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public TryCreateAIInstanceResponseBody setData(TryCreateAIInstanceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public TryCreateAIInstanceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public TryCreateAIInstanceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public TryCreateAIInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class TryCreateAIInstanceResponseBodyData extends TeaModel {
+        // 当前实例ACU使用量
+        @NameInMap("AcuUsed")
+        public Long acuUsed;
+
+        @NameInMap("Storage")
+        public String storage;
+
+        public static TryCreateAIInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            TryCreateAIInstanceResponseBodyData self = new TryCreateAIInstanceResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public TryCreateAIInstanceResponseBodyData setAcuUsed(Long acuUsed) {
+            this.acuUsed = acuUsed;
+            return this;
+        }
+        public Long getAcuUsed() {
+            return this.acuUsed;
+        }
+
+        public TryCreateAIInstanceResponseBodyData setStorage(String storage) {
+            this.storage = storage;
+            return this;
+        }
+        public String getStorage() {
+            return this.storage;
+        }
+
+    }
+
+}
