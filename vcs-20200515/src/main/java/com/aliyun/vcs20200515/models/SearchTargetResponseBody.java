@@ -66,6 +66,9 @@ public class SearchTargetResponseBody extends TeaModel {
     }
 
     public static class SearchTargetResponseBodyDataRecords extends TeaModel {
+        @NameInMap("DataDetail")
+        public String dataDetail;
+
         @NameInMap("DeviceId")
         public String deviceId;
 
@@ -81,11 +84,17 @@ public class SearchTargetResponseBody extends TeaModel {
         @NameInMap("RightBottomY")
         public Long rightBottomY;
 
+        @NameInMap("SourceImageFullUrl")
+        public String sourceImageFullUrl;
+
         @NameInMap("SourceImageUrl")
         public String sourceImageUrl;
 
         @NameInMap("TargetAttributes")
         public String targetAttributes;
+
+        @NameInMap("TargetImageFullUrl")
+        public String targetImageFullUrl;
 
         @NameInMap("TargetImageSimilarity")
         public Double targetImageSimilarity;
@@ -102,6 +111,14 @@ public class SearchTargetResponseBody extends TeaModel {
         public static SearchTargetResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             SearchTargetResponseBodyDataRecords self = new SearchTargetResponseBodyDataRecords();
             return TeaModel.build(map, self);
+        }
+
+        public SearchTargetResponseBodyDataRecords setDataDetail(String dataDetail) {
+            this.dataDetail = dataDetail;
+            return this;
+        }
+        public String getDataDetail() {
+            return this.dataDetail;
         }
 
         public SearchTargetResponseBodyDataRecords setDeviceId(String deviceId) {
@@ -144,6 +161,14 @@ public class SearchTargetResponseBody extends TeaModel {
             return this.rightBottomY;
         }
 
+        public SearchTargetResponseBodyDataRecords setSourceImageFullUrl(String sourceImageFullUrl) {
+            this.sourceImageFullUrl = sourceImageFullUrl;
+            return this;
+        }
+        public String getSourceImageFullUrl() {
+            return this.sourceImageFullUrl;
+        }
+
         public SearchTargetResponseBodyDataRecords setSourceImageUrl(String sourceImageUrl) {
             this.sourceImageUrl = sourceImageUrl;
             return this;
@@ -158,6 +183,14 @@ public class SearchTargetResponseBody extends TeaModel {
         }
         public String getTargetAttributes() {
             return this.targetAttributes;
+        }
+
+        public SearchTargetResponseBodyDataRecords setTargetImageFullUrl(String targetImageFullUrl) {
+            this.targetImageFullUrl = targetImageFullUrl;
+            return this;
+        }
+        public String getTargetImageFullUrl() {
+            return this.targetImageFullUrl;
         }
 
         public SearchTargetResponseBodyDataRecords setTargetImageSimilarity(Double targetImageSimilarity) {

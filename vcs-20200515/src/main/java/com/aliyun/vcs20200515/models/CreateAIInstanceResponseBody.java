@@ -62,9 +62,11 @@ public class CreateAIInstanceResponseBody extends TeaModel {
         @NameInMap("AcuUsed")
         public Long acuUsed;
 
-        // 实例Id
         @NameInMap("InstanceId")
-        public String instanceId;
+        public Double instanceId;
+
+        @NameInMap("Storage")
+        public String storage;
 
         public static CreateAIInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateAIInstanceResponseBodyData self = new CreateAIInstanceResponseBodyData();
@@ -79,12 +81,51 @@ public class CreateAIInstanceResponseBody extends TeaModel {
             return this.acuUsed;
         }
 
-        public CreateAIInstanceResponseBodyData setInstanceId(String instanceId) {
+        public CreateAIInstanceResponseBodyData setInstanceId(Double instanceId) {
             this.instanceId = instanceId;
             return this;
         }
-        public String getInstanceId() {
+        public Double getInstanceId() {
             return this.instanceId;
+        }
+
+        public CreateAIInstanceResponseBodyData setStorage(String storage) {
+            this.storage = storage;
+            return this;
+        }
+        public String getStorage() {
+            return this.storage;
+        }
+
+    }
+
+    public static class TryCreateAIInstanceResponseBodyData extends TeaModel {
+        // 当前实例ACU使用量
+        @NameInMap("AcuUsed")
+        public Long acuUsed;
+
+        @NameInMap("Storage")
+        public String storage;
+
+        public static TryCreateAIInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            TryCreateAIInstanceResponseBodyData self = new TryCreateAIInstanceResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public TryCreateAIInstanceResponseBodyData setAcuUsed(Long acuUsed) {
+            this.acuUsed = acuUsed;
+            return this;
+        }
+        public Long getAcuUsed() {
+            return this.acuUsed;
+        }
+
+        public TryCreateAIInstanceResponseBodyData setStorage(String storage) {
+            this.storage = storage;
+            return this;
+        }
+        public String getStorage() {
+            return this.storage;
         }
 
     }

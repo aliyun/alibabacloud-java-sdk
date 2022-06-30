@@ -16,6 +16,10 @@ public class CreateAIInstanceShrinkRequest extends TeaModel {
     @NameInMap("ComputeType")
     public String computeType;
 
+    // 实例类型
+    @NameInMap("ContainerType")
+    public String containerType;
+
     // 数据来源
     @NameInMap("DataSource")
     public String dataSource;
@@ -27,6 +31,10 @@ public class CreateAIInstanceShrinkRequest extends TeaModel {
     // 数据类型
     @NameInMap("DataType")
     public String dataType;
+
+    // 多少秒抽取1帧，取值范围[0, 3600]。 0表示不抽帧。
+    @NameInMap("Fps")
+    public Long fps;
 
     // 实例名称
     @NameInMap("InstanceName")
@@ -85,6 +93,14 @@ public class CreateAIInstanceShrinkRequest extends TeaModel {
         return this.computeType;
     }
 
+    public CreateAIInstanceShrinkRequest setContainerType(String containerType) {
+        this.containerType = containerType;
+        return this;
+    }
+    public String getContainerType() {
+        return this.containerType;
+    }
+
     public CreateAIInstanceShrinkRequest setDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -107,6 +123,14 @@ public class CreateAIInstanceShrinkRequest extends TeaModel {
     }
     public String getDataType() {
         return this.dataType;
+    }
+
+    public CreateAIInstanceShrinkRequest setFps(Long fps) {
+        this.fps = fps;
+        return this;
+    }
+    public Long getFps() {
+        return this.fps;
     }
 
     public CreateAIInstanceShrinkRequest setInstanceName(String instanceName) {
