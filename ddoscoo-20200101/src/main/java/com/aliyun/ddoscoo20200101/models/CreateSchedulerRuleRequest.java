@@ -4,14 +4,11 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateSchedulerRuleRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Param")
+    public String param;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("Rules")
-    public String rules;
 
     @NameInMap("RuleName")
     public String ruleName;
@@ -19,20 +16,20 @@ public class CreateSchedulerRuleRequest extends TeaModel {
     @NameInMap("RuleType")
     public Integer ruleType;
 
-    @NameInMap("Param")
-    public String param;
+    @NameInMap("Rules")
+    public String rules;
 
     public static CreateSchedulerRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSchedulerRuleRequest self = new CreateSchedulerRuleRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateSchedulerRuleRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public CreateSchedulerRuleRequest setParam(String param) {
+        this.param = param;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getParam() {
+        return this.param;
     }
 
     public CreateSchedulerRuleRequest setResourceGroupId(String resourceGroupId) {
@@ -41,14 +38,6 @@ public class CreateSchedulerRuleRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public CreateSchedulerRuleRequest setRules(String rules) {
-        this.rules = rules;
-        return this;
-    }
-    public String getRules() {
-        return this.rules;
     }
 
     public CreateSchedulerRuleRequest setRuleName(String ruleName) {
@@ -67,12 +56,12 @@ public class CreateSchedulerRuleRequest extends TeaModel {
         return this.ruleType;
     }
 
-    public CreateSchedulerRuleRequest setParam(String param) {
-        this.param = param;
+    public CreateSchedulerRuleRequest setRules(String rules) {
+        this.rules = rules;
         return this;
     }
-    public String getParam() {
-        return this.param;
+    public String getRules() {
+        return this.rules;
     }
 
 }

@@ -4,14 +4,11 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteWebPreciseAccessRuleRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Domain")
+    public String domain;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("Domain")
-    public String domain;
 
     @NameInMap("RuleNames")
     public java.util.List<String> ruleNames;
@@ -21,12 +18,12 @@ public class DeleteWebPreciseAccessRuleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteWebPreciseAccessRuleRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DeleteWebPreciseAccessRuleRequest setDomain(String domain) {
+        this.domain = domain;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getDomain() {
+        return this.domain;
     }
 
     public DeleteWebPreciseAccessRuleRequest setResourceGroupId(String resourceGroupId) {
@@ -35,14 +32,6 @@ public class DeleteWebPreciseAccessRuleRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DeleteWebPreciseAccessRuleRequest setDomain(String domain) {
-        this.domain = domain;
-        return this;
-    }
-    public String getDomain() {
-        return this.domain;
     }
 
     public DeleteWebPreciseAccessRuleRequest setRuleNames(java.util.List<String> ruleNames) {

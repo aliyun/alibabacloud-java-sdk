@@ -4,8 +4,8 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class AddAutoCcWhitelistRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("ExpireTime")
+    public Integer expireTime;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -13,20 +13,17 @@ public class AddAutoCcWhitelistRequest extends TeaModel {
     @NameInMap("Whitelist")
     public String whitelist;
 
-    @NameInMap("ExpireTime")
-    public Integer expireTime;
-
     public static AddAutoCcWhitelistRequest build(java.util.Map<String, ?> map) throws Exception {
         AddAutoCcWhitelistRequest self = new AddAutoCcWhitelistRequest();
         return TeaModel.build(map, self);
     }
 
-    public AddAutoCcWhitelistRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public AddAutoCcWhitelistRequest setExpireTime(Integer expireTime) {
+        this.expireTime = expireTime;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public Integer getExpireTime() {
+        return this.expireTime;
     }
 
     public AddAutoCcWhitelistRequest setInstanceId(String instanceId) {
@@ -43,14 +40,6 @@ public class AddAutoCcWhitelistRequest extends TeaModel {
     }
     public String getWhitelist() {
         return this.whitelist;
-    }
-
-    public AddAutoCcWhitelistRequest setExpireTime(Integer expireTime) {
-        this.expireTime = expireTime;
-        return this;
-    }
-    public Integer getExpireTime() {
-        return this.expireTime;
     }
 
 }

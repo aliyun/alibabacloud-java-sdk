@@ -4,43 +4,32 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifySceneDefensePolicyRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("PolicyId")
-    public String policyId;
+    @NameInMap("EndTime")
+    public Long endTime;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Template")
-    public String template;
+    @NameInMap("PolicyId")
+    public String policyId;
 
     @NameInMap("StartTime")
     public Long startTime;
 
-    @NameInMap("EndTime")
-    public Long endTime;
+    @NameInMap("Template")
+    public String template;
 
     public static ModifySceneDefensePolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySceneDefensePolicyRequest self = new ModifySceneDefensePolicyRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifySceneDefensePolicyRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public ModifySceneDefensePolicyRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ModifySceneDefensePolicyRequest setPolicyId(String policyId) {
-        this.policyId = policyId;
-        return this;
-    }
-    public String getPolicyId() {
-        return this.policyId;
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public ModifySceneDefensePolicyRequest setName(String name) {
@@ -51,12 +40,12 @@ public class ModifySceneDefensePolicyRequest extends TeaModel {
         return this.name;
     }
 
-    public ModifySceneDefensePolicyRequest setTemplate(String template) {
-        this.template = template;
+    public ModifySceneDefensePolicyRequest setPolicyId(String policyId) {
+        this.policyId = policyId;
         return this;
     }
-    public String getTemplate() {
-        return this.template;
+    public String getPolicyId() {
+        return this.policyId;
     }
 
     public ModifySceneDefensePolicyRequest setStartTime(Long startTime) {
@@ -67,12 +56,12 @@ public class ModifySceneDefensePolicyRequest extends TeaModel {
         return this.startTime;
     }
 
-    public ModifySceneDefensePolicyRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
+    public ModifySceneDefensePolicyRequest setTemplate(String template) {
+        this.template = template;
         return this;
     }
-    public Long getEndTime() {
-        return this.endTime;
+    public String getTemplate() {
+        return this.template;
     }
 
 }

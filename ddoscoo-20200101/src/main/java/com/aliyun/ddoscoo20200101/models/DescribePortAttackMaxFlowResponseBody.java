@@ -4,18 +4,26 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePortAttackMaxFlowResponseBody extends TeaModel {
+    @NameInMap("Bps")
+    public Long bps;
+
     @NameInMap("Pps")
     public Long pps;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Bps")
-    public Long bps;
-
     public static DescribePortAttackMaxFlowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePortAttackMaxFlowResponseBody self = new DescribePortAttackMaxFlowResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePortAttackMaxFlowResponseBody setBps(Long bps) {
+        this.bps = bps;
+        return this;
+    }
+    public Long getBps() {
+        return this.bps;
     }
 
     public DescribePortAttackMaxFlowResponseBody setPps(Long pps) {
@@ -32,14 +40,6 @@ public class DescribePortAttackMaxFlowResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribePortAttackMaxFlowResponseBody setBps(Long bps) {
-        this.bps = bps;
-        return this;
-    }
-    public Long getBps() {
-        return this.bps;
     }
 
 }

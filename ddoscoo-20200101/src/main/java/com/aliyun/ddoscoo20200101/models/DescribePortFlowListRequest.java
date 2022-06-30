@@ -4,43 +4,24 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePortFlowListRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("EndTime")
     public Long endTime;
-
-    @NameInMap("StartTime")
-    public Long startTime;
-
-    @NameInMap("Interval")
-    public Integer interval;
 
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    @NameInMap("Interval")
+    public Integer interval;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("StartTime")
+    public Long startTime;
+
     public static DescribePortFlowListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePortFlowListRequest self = new DescribePortFlowListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePortFlowListRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribePortFlowListRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public DescribePortFlowListRequest setEndTime(Long endTime) {
@@ -51,12 +32,12 @@ public class DescribePortFlowListRequest extends TeaModel {
         return this.endTime;
     }
 
-    public DescribePortFlowListRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
+    public DescribePortFlowListRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
         return this;
     }
-    public Long getStartTime() {
-        return this.startTime;
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public DescribePortFlowListRequest setInterval(Integer interval) {
@@ -67,12 +48,20 @@ public class DescribePortFlowListRequest extends TeaModel {
         return this.interval;
     }
 
-    public DescribePortFlowListRequest setInstanceIds(java.util.List<String> instanceIds) {
-        this.instanceIds = instanceIds;
+    public DescribePortFlowListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public java.util.List<String> getInstanceIds() {
-        return this.instanceIds;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribePortFlowListRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

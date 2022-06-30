@@ -4,9 +4,6 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoCcBlacklistRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -22,14 +19,6 @@ public class DescribeAutoCcBlacklistRequest extends TeaModel {
     public static DescribeAutoCcBlacklistRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutoCcBlacklistRequest self = new DescribeAutoCcBlacklistRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAutoCcBlacklistRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeAutoCcBlacklistRequest setInstanceId(String instanceId) {

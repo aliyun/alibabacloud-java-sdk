@@ -4,8 +4,8 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteTagResourcesRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("All")
+    public Boolean all;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -13,14 +13,11 @@ public class DeleteTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("ResourceType")
-    public String resourceType;
-
-    @NameInMap("All")
-    public Boolean all;
-
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
@@ -30,12 +27,12 @@ public class DeleteTagResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteTagResourcesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DeleteTagResourcesRequest setAll(Boolean all) {
+        this.all = all;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public Boolean getAll() {
+        return this.all;
     }
 
     public DeleteTagResourcesRequest setRegionId(String regionId) {
@@ -54,28 +51,20 @@ public class DeleteTagResourcesRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DeleteTagResourcesRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
-    public DeleteTagResourcesRequest setAll(Boolean all) {
-        this.all = all;
-        return this;
-    }
-    public Boolean getAll() {
-        return this.all;
-    }
-
     public DeleteTagResourcesRequest setResourceIds(java.util.List<String> resourceIds) {
         this.resourceIds = resourceIds;
         return this;
     }
     public java.util.List<String> getResourceIds() {
         return this.resourceIds;
+    }
+
+    public DeleteTagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public DeleteTagResourcesRequest setTagKey(java.util.List<String> tagKey) {

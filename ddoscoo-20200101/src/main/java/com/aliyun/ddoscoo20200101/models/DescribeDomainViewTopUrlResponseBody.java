@@ -32,18 +32,26 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainViewTopUrlResponseBodyUrlList extends TeaModel {
+        @NameInMap("Count")
+        public Long count;
+
         @NameInMap("Domain")
         public String domain;
 
         @NameInMap("Url")
         public String url;
 
-        @NameInMap("Count")
-        public Long count;
-
         public static DescribeDomainViewTopUrlResponseBodyUrlList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainViewTopUrlResponseBodyUrlList self = new DescribeDomainViewTopUrlResponseBodyUrlList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainViewTopUrlResponseBodyUrlList setCount(Long count) {
+            this.count = count;
+            return this;
+        }
+        public Long getCount() {
+            return this.count;
         }
 
         public DescribeDomainViewTopUrlResponseBodyUrlList setDomain(String domain) {
@@ -60,14 +68,6 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
         }
         public String getUrl() {
             return this.url;
-        }
-
-        public DescribeDomainViewTopUrlResponseBodyUrlList setCount(Long count) {
-            this.count = count;
-            return this;
-        }
-        public Long getCount() {
-            return this.count;
         }
 
     }

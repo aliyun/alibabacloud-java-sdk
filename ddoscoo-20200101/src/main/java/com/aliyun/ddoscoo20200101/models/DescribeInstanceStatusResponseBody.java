@@ -4,26 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("InstanceStatus")
     public Integer instanceStatus;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeInstanceStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceStatusResponseBody self = new DescribeInstanceStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeInstanceStatusResponseBody setInstanceId(String instanceId) {
@@ -40,6 +32,14 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
     }
     public Integer getInstanceStatus() {
         return this.instanceStatus;
+    }
+
+    public DescribeInstanceStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

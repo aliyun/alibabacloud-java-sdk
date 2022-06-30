@@ -4,26 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSchedulerRulesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public String totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SchedulerRules")
     public java.util.List<DescribeSchedulerRulesResponseBodySchedulerRules> schedulerRules;
 
+    @NameInMap("TotalCount")
+    public String totalCount;
+
     public static DescribeSchedulerRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSchedulerRulesResponseBody self = new DescribeSchedulerRulesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSchedulerRulesResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeSchedulerRulesResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
     }
     public java.util.List<DescribeSchedulerRulesResponseBodySchedulerRules> getSchedulerRules() {
         return this.schedulerRules;
+    }
+
+    public DescribeSchedulerRulesResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeSchedulerRulesResponseBodySchedulerRulesParamParamData extends TeaModel {
@@ -92,11 +92,20 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeSchedulerRulesResponseBodySchedulerRulesRules extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("RestoreDelay")
+        public Integer restoreDelay;
 
         @NameInMap("Status")
         public Integer status;
+
+        @NameInMap("Type")
+        public String type;
 
         @NameInMap("Value")
         public String value;
@@ -104,26 +113,33 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         @NameInMap("ValueType")
         public Integer valueType;
 
-        @NameInMap("Priority")
-        public Integer priority;
-
-        @NameInMap("RestoreDelay")
-        public Integer restoreDelay;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
         public static DescribeSchedulerRulesResponseBodySchedulerRulesRules build(java.util.Map<String, ?> map) throws Exception {
             DescribeSchedulerRulesResponseBodySchedulerRulesRules self = new DescribeSchedulerRulesResponseBodySchedulerRulesRules();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSchedulerRulesResponseBodySchedulerRulesRules setType(String type) {
-            this.type = type;
+        public DescribeSchedulerRulesResponseBodySchedulerRulesRules setPriority(Integer priority) {
+            this.priority = priority;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public DescribeSchedulerRulesResponseBodySchedulerRulesRules setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeSchedulerRulesResponseBodySchedulerRulesRules setRestoreDelay(Integer restoreDelay) {
+            this.restoreDelay = restoreDelay;
+            return this;
+        }
+        public Integer getRestoreDelay() {
+            return this.restoreDelay;
         }
 
         public DescribeSchedulerRulesResponseBodySchedulerRulesRules setStatus(Integer status) {
@@ -132,6 +148,14 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public DescribeSchedulerRulesResponseBodySchedulerRulesRules setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public DescribeSchedulerRulesResponseBodySchedulerRulesRules setValue(String value) {
@@ -150,67 +174,27 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             return this.valueType;
         }
 
-        public DescribeSchedulerRulesResponseBodySchedulerRulesRules setPriority(Integer priority) {
-            this.priority = priority;
-            return this;
-        }
-        public Integer getPriority() {
-            return this.priority;
-        }
-
-        public DescribeSchedulerRulesResponseBodySchedulerRulesRules setRestoreDelay(Integer restoreDelay) {
-            this.restoreDelay = restoreDelay;
-            return this;
-        }
-        public Integer getRestoreDelay() {
-            return this.restoreDelay;
-        }
-
-        public DescribeSchedulerRulesResponseBodySchedulerRulesRules setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
     }
 
     public static class DescribeSchedulerRulesResponseBodySchedulerRules extends TeaModel {
-        @NameInMap("RuleType")
-        public String ruleType;
+        @NameInMap("Cname")
+        public String cname;
 
         @NameInMap("Param")
         public DescribeSchedulerRulesResponseBodySchedulerRulesParam param;
 
-        @NameInMap("Cname")
-        public String cname;
+        @NameInMap("RuleName")
+        public String ruleName;
+
+        @NameInMap("RuleType")
+        public String ruleType;
 
         @NameInMap("Rules")
         public java.util.List<DescribeSchedulerRulesResponseBodySchedulerRulesRules> rules;
 
-        @NameInMap("RuleName")
-        public String ruleName;
-
         public static DescribeSchedulerRulesResponseBodySchedulerRules build(java.util.Map<String, ?> map) throws Exception {
             DescribeSchedulerRulesResponseBodySchedulerRules self = new DescribeSchedulerRulesResponseBodySchedulerRules();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSchedulerRulesResponseBodySchedulerRules setRuleType(String ruleType) {
-            this.ruleType = ruleType;
-            return this;
-        }
-        public String getRuleType() {
-            return this.ruleType;
-        }
-
-        public DescribeSchedulerRulesResponseBodySchedulerRules setParam(DescribeSchedulerRulesResponseBodySchedulerRulesParam param) {
-            this.param = param;
-            return this;
-        }
-        public DescribeSchedulerRulesResponseBodySchedulerRulesParam getParam() {
-            return this.param;
         }
 
         public DescribeSchedulerRulesResponseBodySchedulerRules setCname(String cname) {
@@ -221,12 +205,12 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             return this.cname;
         }
 
-        public DescribeSchedulerRulesResponseBodySchedulerRules setRules(java.util.List<DescribeSchedulerRulesResponseBodySchedulerRulesRules> rules) {
-            this.rules = rules;
+        public DescribeSchedulerRulesResponseBodySchedulerRules setParam(DescribeSchedulerRulesResponseBodySchedulerRulesParam param) {
+            this.param = param;
             return this;
         }
-        public java.util.List<DescribeSchedulerRulesResponseBodySchedulerRulesRules> getRules() {
-            return this.rules;
+        public DescribeSchedulerRulesResponseBodySchedulerRulesParam getParam() {
+            return this.param;
         }
 
         public DescribeSchedulerRulesResponseBodySchedulerRules setRuleName(String ruleName) {
@@ -235,6 +219,22 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         }
         public String getRuleName() {
             return this.ruleName;
+        }
+
+        public DescribeSchedulerRulesResponseBodySchedulerRules setRuleType(String ruleType) {
+            this.ruleType = ruleType;
+            return this;
+        }
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        public DescribeSchedulerRulesResponseBodySchedulerRules setRules(java.util.List<DescribeSchedulerRulesResponseBodySchedulerRulesRules> rules) {
+            this.rules = rules;
+            return this;
+        }
+        public java.util.List<DescribeSchedulerRulesResponseBodySchedulerRulesRules> getRules() {
+            return this.rules;
         }
 
     }

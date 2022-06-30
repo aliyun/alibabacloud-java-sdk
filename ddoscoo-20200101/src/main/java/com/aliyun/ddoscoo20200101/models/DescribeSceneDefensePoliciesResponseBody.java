@@ -43,37 +43,21 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
     }
 
     public static class DescribeSceneDefensePoliciesResponseBodyPoliciesRuntimePolicies extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("oldValue")
-        public String oldValue;
-
         @NameInMap("NewValue")
         public String newValue;
 
         @NameInMap("PolicyType")
         public Integer policyType;
 
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("oldValue")
+        public String oldValue;
+
         public static DescribeSceneDefensePoliciesResponseBodyPoliciesRuntimePolicies build(java.util.Map<String, ?> map) throws Exception {
             DescribeSceneDefensePoliciesResponseBodyPoliciesRuntimePolicies self = new DescribeSceneDefensePoliciesResponseBodyPoliciesRuntimePolicies();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSceneDefensePoliciesResponseBodyPoliciesRuntimePolicies setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public DescribeSceneDefensePoliciesResponseBodyPoliciesRuntimePolicies setOldValue(String oldValue) {
-            this.oldValue = oldValue;
-            return this;
-        }
-        public String getOldValue() {
-            return this.oldValue;
         }
 
         public DescribeSceneDefensePoliciesResponseBodyPoliciesRuntimePolicies setNewValue(String newValue) {
@@ -92,6 +76,22 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             return this.policyType;
         }
 
+        public DescribeSceneDefensePoliciesResponseBodyPoliciesRuntimePolicies setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public DescribeSceneDefensePoliciesResponseBodyPoliciesRuntimePolicies setOldValue(String oldValue) {
+            this.oldValue = oldValue;
+            return this;
+        }
+        public String getOldValue() {
+            return this.oldValue;
+        }
+
     }
 
     public static class DescribeSceneDefensePoliciesResponseBodyPolicies extends TeaModel {
@@ -101,26 +101,26 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
 
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("StartTime")
-        public Long startTime;
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("ObjectCount")
         public Integer objectCount;
 
-        @NameInMap("Template")
-        public String template;
-
         @NameInMap("PolicyId")
         public String policyId;
 
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("RuntimePolicies")
         public java.util.List<DescribeSceneDefensePoliciesResponseBodyPoliciesRuntimePolicies> runtimePolicies;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("Template")
+        public String template;
 
         public static DescribeSceneDefensePoliciesResponseBodyPolicies build(java.util.Map<String, ?> map) throws Exception {
             DescribeSceneDefensePoliciesResponseBodyPolicies self = new DescribeSceneDefensePoliciesResponseBodyPolicies();
@@ -143,20 +143,12 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public DescribeSceneDefensePoliciesResponseBodyPolicies setStatus(Integer status) {
-            this.status = status;
+        public DescribeSceneDefensePoliciesResponseBodyPolicies setName(String name) {
+            this.name = name;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public DescribeSceneDefensePoliciesResponseBodyPolicies setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
+        public String getName() {
+            return this.name;
         }
 
         public DescribeSceneDefensePoliciesResponseBodyPolicies setObjectCount(Integer objectCount) {
@@ -167,14 +159,6 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             return this.objectCount;
         }
 
-        public DescribeSceneDefensePoliciesResponseBodyPolicies setTemplate(String template) {
-            this.template = template;
-            return this;
-        }
-        public String getTemplate() {
-            return this.template;
-        }
-
         public DescribeSceneDefensePoliciesResponseBodyPolicies setPolicyId(String policyId) {
             this.policyId = policyId;
             return this;
@@ -183,20 +167,36 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             return this.policyId;
         }
 
-        public DescribeSceneDefensePoliciesResponseBodyPolicies setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public DescribeSceneDefensePoliciesResponseBodyPolicies setRuntimePolicies(java.util.List<DescribeSceneDefensePoliciesResponseBodyPoliciesRuntimePolicies> runtimePolicies) {
             this.runtimePolicies = runtimePolicies;
             return this;
         }
         public java.util.List<DescribeSceneDefensePoliciesResponseBodyPoliciesRuntimePolicies> getRuntimePolicies() {
             return this.runtimePolicies;
+        }
+
+        public DescribeSceneDefensePoliciesResponseBodyPolicies setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeSceneDefensePoliciesResponseBodyPolicies setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public DescribeSceneDefensePoliciesResponseBodyPolicies setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
         }
 
     }

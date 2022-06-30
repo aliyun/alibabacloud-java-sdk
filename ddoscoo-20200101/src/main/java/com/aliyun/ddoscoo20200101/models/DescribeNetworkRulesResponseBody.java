@@ -4,26 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkRulesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("NetworkRules")
     public java.util.List<DescribeNetworkRulesResponseBodyNetworkRules> networkRules;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     public static DescribeNetworkRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkRulesResponseBody self = new DescribeNetworkRulesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeNetworkRulesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeNetworkRulesResponseBody setNetworkRules(java.util.List<DescribeNetworkRulesResponseBodyNetworkRules> networkRules) {
@@ -42,9 +34,23 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeNetworkRulesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeNetworkRulesResponseBodyNetworkRules extends TeaModel {
+        @NameInMap("BackendPort")
+        public Integer backendPort;
+
         @NameInMap("FrontendPort")
         public Integer frontendPort;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("IsAutoCreate")
         public Boolean isAutoCreate;
@@ -55,15 +61,17 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         @NameInMap("RealServers")
         public java.util.List<String> realServers;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("BackendPort")
-        public Integer backendPort;
-
         public static DescribeNetworkRulesResponseBodyNetworkRules build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkRulesResponseBodyNetworkRules self = new DescribeNetworkRulesResponseBodyNetworkRules();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkRulesResponseBodyNetworkRules setBackendPort(Integer backendPort) {
+            this.backendPort = backendPort;
+            return this;
+        }
+        public Integer getBackendPort() {
+            return this.backendPort;
         }
 
         public DescribeNetworkRulesResponseBodyNetworkRules setFrontendPort(Integer frontendPort) {
@@ -72,6 +80,14 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         }
         public Integer getFrontendPort() {
             return this.frontendPort;
+        }
+
+        public DescribeNetworkRulesResponseBodyNetworkRules setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DescribeNetworkRulesResponseBodyNetworkRules setIsAutoCreate(Boolean isAutoCreate) {
@@ -96,22 +112,6 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         }
         public java.util.List<String> getRealServers() {
             return this.realServers;
-        }
-
-        public DescribeNetworkRulesResponseBodyNetworkRules setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeNetworkRulesResponseBodyNetworkRules setBackendPort(Integer backendPort) {
-            this.backendPort = backendPort;
-            return this;
-        }
-        public Integer getBackendPort() {
-            return this.backendPort;
         }
 
     }

@@ -4,11 +4,11 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Objects")
     public java.util.List<DescribeSceneDefenseObjectsResponseBodyObjects> objects;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -18,20 +18,20 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeSceneDefenseObjectsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeSceneDefenseObjectsResponseBody setObjects(java.util.List<DescribeSceneDefenseObjectsResponseBodyObjects> objects) {
         this.objects = objects;
         return this;
     }
     public java.util.List<DescribeSceneDefenseObjectsResponseBodyObjects> getObjects() {
         return this.objects;
+    }
+
+    public DescribeSceneDefenseObjectsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeSceneDefenseObjectsResponseBody setSuccess(Boolean success) {

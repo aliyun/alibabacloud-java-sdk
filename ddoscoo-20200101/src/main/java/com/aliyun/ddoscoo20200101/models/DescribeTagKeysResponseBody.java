@@ -4,48 +4,24 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagKeysResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TagKeys")
     public java.util.List<DescribeTagKeysResponseBodyTagKeys> tagKeys;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static DescribeTagKeysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTagKeysResponseBody self = new DescribeTagKeysResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTagKeysResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeTagKeysResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeTagKeysResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public DescribeTagKeysResponseBody setPageNumber(Integer pageNumber) {
@@ -56,12 +32,36 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeTagKeysResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeTagKeysResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeTagKeysResponseBody setTagKeys(java.util.List<DescribeTagKeysResponseBodyTagKeys> tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     public java.util.List<DescribeTagKeysResponseBodyTagKeys> getTagKeys() {
         return this.tagKeys;
+    }
+
+    public DescribeTagKeysResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeTagKeysResponseBodyTagKeys extends TeaModel {

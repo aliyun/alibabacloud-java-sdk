@@ -4,18 +4,26 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDDosAllEventListResponseBody extends TeaModel {
+    @NameInMap("AttackEvents")
+    public java.util.List<DescribeDDosAllEventListResponseBodyAttackEvents> attackEvents;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Total")
     public Long total;
 
-    @NameInMap("AttackEvents")
-    public java.util.List<DescribeDDosAllEventListResponseBodyAttackEvents> attackEvents;
-
     public static DescribeDDosAllEventListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDDosAllEventListResponseBody self = new DescribeDDosAllEventListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDDosAllEventListResponseBody setAttackEvents(java.util.List<DescribeDDosAllEventListResponseBodyAttackEvents> attackEvents) {
+        this.attackEvents = attackEvents;
+        return this;
+    }
+    public java.util.List<DescribeDDosAllEventListResponseBodyAttackEvents> getAttackEvents() {
+        return this.attackEvents;
     }
 
     public DescribeDDosAllEventListResponseBody setRequestId(String requestId) {
@@ -34,29 +42,21 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
         return this.total;
     }
 
-    public DescribeDDosAllEventListResponseBody setAttackEvents(java.util.List<DescribeDDosAllEventListResponseBodyAttackEvents> attackEvents) {
-        this.attackEvents = attackEvents;
-        return this;
-    }
-    public java.util.List<DescribeDDosAllEventListResponseBodyAttackEvents> getAttackEvents() {
-        return this.attackEvents;
-    }
-
     public static class DescribeDDosAllEventListResponseBodyAttackEvents extends TeaModel {
+        @NameInMap("Area")
+        public String area;
+
         @NameInMap("EndTime")
         public Long endTime;
-
-        @NameInMap("StartTime")
-        public Long startTime;
 
         @NameInMap("EventType")
         public String eventType;
 
-        @NameInMap("Mbps")
-        public Long mbps;
-
         @NameInMap("Ip")
         public String ip;
+
+        @NameInMap("Mbps")
+        public Long mbps;
 
         @NameInMap("Port")
         public String port;
@@ -64,9 +64,20 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
         @NameInMap("Pps")
         public Long pps;
 
+        @NameInMap("StartTime")
+        public Long startTime;
+
         public static DescribeDDosAllEventListResponseBodyAttackEvents build(java.util.Map<String, ?> map) throws Exception {
             DescribeDDosAllEventListResponseBodyAttackEvents self = new DescribeDDosAllEventListResponseBodyAttackEvents();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDDosAllEventListResponseBodyAttackEvents setArea(String area) {
+            this.area = area;
+            return this;
+        }
+        public String getArea() {
+            return this.area;
         }
 
         public DescribeDDosAllEventListResponseBodyAttackEvents setEndTime(Long endTime) {
@@ -77,14 +88,6 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public DescribeDDosAllEventListResponseBodyAttackEvents setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
-        }
-
         public DescribeDDosAllEventListResponseBodyAttackEvents setEventType(String eventType) {
             this.eventType = eventType;
             return this;
@@ -93,20 +96,20 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
             return this.eventType;
         }
 
-        public DescribeDDosAllEventListResponseBodyAttackEvents setMbps(Long mbps) {
-            this.mbps = mbps;
-            return this;
-        }
-        public Long getMbps() {
-            return this.mbps;
-        }
-
         public DescribeDDosAllEventListResponseBodyAttackEvents setIp(String ip) {
             this.ip = ip;
             return this;
         }
         public String getIp() {
             return this.ip;
+        }
+
+        public DescribeDDosAllEventListResponseBodyAttackEvents setMbps(Long mbps) {
+            this.mbps = mbps;
+            return this;
+        }
+        public Long getMbps() {
+            return this.mbps;
         }
 
         public DescribeDDosAllEventListResponseBodyAttackEvents setPort(String port) {
@@ -123,6 +126,14 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
         }
         public Long getPps() {
             return this.pps;
+        }
+
+        public DescribeDDosAllEventListResponseBodyAttackEvents setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
         }
 
     }

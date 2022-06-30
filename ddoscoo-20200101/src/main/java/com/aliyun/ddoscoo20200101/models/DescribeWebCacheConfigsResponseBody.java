@@ -4,23 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebCacheConfigsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DomainCacheConfigs")
     public java.util.List<DescribeWebCacheConfigsResponseBodyDomainCacheConfigs> domainCacheConfigs;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeWebCacheConfigsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeWebCacheConfigsResponseBody self = new DescribeWebCacheConfigsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeWebCacheConfigsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeWebCacheConfigsResponseBody setDomainCacheConfigs(java.util.List<DescribeWebCacheConfigsResponseBodyDomainCacheConfigs> domainCacheConfigs) {
@@ -29,6 +21,14 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
     }
     public java.util.List<DescribeWebCacheConfigsResponseBodyDomainCacheConfigs> getDomainCacheConfigs() {
         return this.domainCacheConfigs;
+    }
+
+    public DescribeWebCacheConfigsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeWebCacheConfigsResponseBodyDomainCacheConfigsCustomRules extends TeaModel {
@@ -84,29 +84,21 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCacheConfigsResponseBodyDomainCacheConfigs extends TeaModel {
-        @NameInMap("Domain")
-        public String domain;
-
         @NameInMap("CustomRules")
         public java.util.List<DescribeWebCacheConfigsResponseBodyDomainCacheConfigsCustomRules> customRules;
 
-        @NameInMap("Mode")
-        public String mode;
+        @NameInMap("Domain")
+        public String domain;
 
         @NameInMap("Enable")
         public Integer enable;
 
+        @NameInMap("Mode")
+        public String mode;
+
         public static DescribeWebCacheConfigsResponseBodyDomainCacheConfigs build(java.util.Map<String, ?> map) throws Exception {
             DescribeWebCacheConfigsResponseBodyDomainCacheConfigs self = new DescribeWebCacheConfigsResponseBodyDomainCacheConfigs();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeWebCacheConfigsResponseBodyDomainCacheConfigs setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
         }
 
         public DescribeWebCacheConfigsResponseBodyDomainCacheConfigs setCustomRules(java.util.List<DescribeWebCacheConfigsResponseBodyDomainCacheConfigsCustomRules> customRules) {
@@ -117,12 +109,12 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             return this.customRules;
         }
 
-        public DescribeWebCacheConfigsResponseBodyDomainCacheConfigs setMode(String mode) {
-            this.mode = mode;
+        public DescribeWebCacheConfigsResponseBodyDomainCacheConfigs setDomain(String domain) {
+            this.domain = domain;
             return this;
         }
-        public String getMode() {
-            return this.mode;
+        public String getDomain() {
+            return this.domain;
         }
 
         public DescribeWebCacheConfigsResponseBodyDomainCacheConfigs setEnable(Integer enable) {
@@ -131,6 +123,14 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
         }
         public Integer getEnable() {
             return this.enable;
+        }
+
+        public DescribeWebCacheConfigsResponseBodyDomainCacheConfigs setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
         }
 
     }

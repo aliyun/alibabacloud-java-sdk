@@ -4,20 +4,17 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainViewTopCostTimeRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Domain")
+    public String domain;
+
+    @NameInMap("EndTime")
+    public Long endTime;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("StartTime")
     public Long startTime;
-
-    @NameInMap("EndTime")
-    public Long endTime;
-
-    @NameInMap("Domain")
-    public String domain;
 
     @NameInMap("Top")
     public Integer top;
@@ -27,12 +24,20 @@ public class DescribeDomainViewTopCostTimeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainViewTopCostTimeRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeDomainViewTopCostTimeRequest setDomain(String domain) {
+        this.domain = domain;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getDomain() {
+        return this.domain;
+    }
+
+    public DescribeDomainViewTopCostTimeRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public DescribeDomainViewTopCostTimeRequest setResourceGroupId(String resourceGroupId) {
@@ -49,22 +54,6 @@ public class DescribeDomainViewTopCostTimeRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeDomainViewTopCostTimeRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDomainViewTopCostTimeRequest setDomain(String domain) {
-        this.domain = domain;
-        return this;
-    }
-    public String getDomain() {
-        return this.domain;
     }
 
     public DescribeDomainViewTopCostTimeRequest setTop(Integer top) {

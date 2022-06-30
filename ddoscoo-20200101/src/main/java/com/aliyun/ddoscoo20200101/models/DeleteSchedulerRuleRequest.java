@@ -4,9 +4,6 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteSchedulerRuleRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -16,14 +13,6 @@ public class DeleteSchedulerRuleRequest extends TeaModel {
     public static DeleteSchedulerRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSchedulerRuleRequest self = new DeleteSchedulerRuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteSchedulerRuleRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DeleteSchedulerRuleRequest setResourceGroupId(String resourceGroupId) {

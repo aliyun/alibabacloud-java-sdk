@@ -4,23 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogStoreExistStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ExistStatus")
     public Boolean existStatus;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLogStoreExistStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogStoreExistStatusResponseBody self = new DescribeLogStoreExistStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLogStoreExistStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLogStoreExistStatusResponseBody setExistStatus(Boolean existStatus) {
@@ -29,6 +21,14 @@ public class DescribeLogStoreExistStatusResponseBody extends TeaModel {
     }
     public Boolean getExistStatus() {
         return this.existStatus;
+    }
+
+    public DescribeLogStoreExistStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

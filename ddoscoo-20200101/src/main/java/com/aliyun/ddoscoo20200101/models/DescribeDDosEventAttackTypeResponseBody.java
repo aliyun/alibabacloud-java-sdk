@@ -4,23 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDDosEventAttackTypeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AttackTypes")
     public java.util.List<DescribeDDosEventAttackTypeResponseBodyAttackTypes> attackTypes;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDDosEventAttackTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDDosEventAttackTypeResponseBody self = new DescribeDDosEventAttackTypeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDDosEventAttackTypeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDDosEventAttackTypeResponseBody setAttackTypes(java.util.List<DescribeDDosEventAttackTypeResponseBodyAttackTypes> attackTypes) {
@@ -29,6 +21,14 @@ public class DescribeDDosEventAttackTypeResponseBody extends TeaModel {
     }
     public java.util.List<DescribeDDosEventAttackTypeResponseBodyAttackTypes> getAttackTypes() {
         return this.attackTypes;
+    }
+
+    public DescribeDDosEventAttackTypeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeDDosEventAttackTypeResponseBodyAttackTypes extends TeaModel {

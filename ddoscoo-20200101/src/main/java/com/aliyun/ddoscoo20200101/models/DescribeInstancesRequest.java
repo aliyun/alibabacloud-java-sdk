@@ -4,11 +4,23 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Edition")
+    public Integer edition;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("Enabled")
+    public Integer enabled;
+
+    @NameInMap("ExpireEndTime")
+    public Long expireEndTime;
+
+    @NameInMap("ExpireStartTime")
+    public Long expireStartTime;
+
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
+
+    @NameInMap("Ip")
+    public String ip;
 
     @NameInMap("PageNumber")
     public String pageNumber;
@@ -16,26 +28,11 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    @NameInMap("Ip")
-    public String ip;
-
     @NameInMap("Remark")
     public String remark;
 
-    @NameInMap("Edition")
-    public Integer edition;
-
-    @NameInMap("Enabled")
-    public Integer enabled;
-
-    @NameInMap("ExpireStartTime")
-    public Long expireStartTime;
-
-    @NameInMap("ExpireEndTime")
-    public Long expireEndTime;
-
-    @NameInMap("InstanceIds")
-    public java.util.List<String> instanceIds;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("Status")
     public java.util.List<Integer> status;
@@ -46,54 +43,6 @@ public class DescribeInstancesRequest extends TeaModel {
     public static DescribeInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesRequest self = new DescribeInstancesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstancesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeInstancesRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public DescribeInstancesRequest setPageNumber(String pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public String getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeInstancesRequest setPageSize(String pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public String getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeInstancesRequest setIp(String ip) {
-        this.ip = ip;
-        return this;
-    }
-    public String getIp() {
-        return this.ip;
-    }
-
-    public DescribeInstancesRequest setRemark(String remark) {
-        this.remark = remark;
-        return this;
-    }
-    public String getRemark() {
-        return this.remark;
     }
 
     public DescribeInstancesRequest setEdition(Integer edition) {
@@ -112,14 +61,6 @@ public class DescribeInstancesRequest extends TeaModel {
         return this.enabled;
     }
 
-    public DescribeInstancesRequest setExpireStartTime(Long expireStartTime) {
-        this.expireStartTime = expireStartTime;
-        return this;
-    }
-    public Long getExpireStartTime() {
-        return this.expireStartTime;
-    }
-
     public DescribeInstancesRequest setExpireEndTime(Long expireEndTime) {
         this.expireEndTime = expireEndTime;
         return this;
@@ -128,12 +69,60 @@ public class DescribeInstancesRequest extends TeaModel {
         return this.expireEndTime;
     }
 
+    public DescribeInstancesRequest setExpireStartTime(Long expireStartTime) {
+        this.expireStartTime = expireStartTime;
+        return this;
+    }
+    public Long getExpireStartTime() {
+        return this.expireStartTime;
+    }
+
     public DescribeInstancesRequest setInstanceIds(java.util.List<String> instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
     public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public DescribeInstancesRequest setIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
+    public String getIp() {
+        return this.ip;
+    }
+
+    public DescribeInstancesRequest setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeInstancesRequest setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeInstancesRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
+    }
+
+    public DescribeInstancesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeInstancesRequest setStatus(java.util.List<Integer> status) {

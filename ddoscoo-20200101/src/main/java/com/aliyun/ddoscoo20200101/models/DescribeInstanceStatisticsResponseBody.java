@@ -32,32 +32,24 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceStatisticsResponseBodyInstanceStatistics extends TeaModel {
-        @NameInMap("DomainUsage")
-        public Integer domainUsage;
-
         @NameInMap("DefenseCountUsage")
         public Integer defenseCountUsage;
+
+        @NameInMap("DomainUsage")
+        public Integer domainUsage;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("SiteUsage")
-        public Integer siteUsage;
-
         @NameInMap("PortUsage")
         public Integer portUsage;
+
+        @NameInMap("SiteUsage")
+        public Integer siteUsage;
 
         public static DescribeInstanceStatisticsResponseBodyInstanceStatistics build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceStatisticsResponseBodyInstanceStatistics self = new DescribeInstanceStatisticsResponseBodyInstanceStatistics();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceStatisticsResponseBodyInstanceStatistics setDomainUsage(Integer domainUsage) {
-            this.domainUsage = domainUsage;
-            return this;
-        }
-        public Integer getDomainUsage() {
-            return this.domainUsage;
         }
 
         public DescribeInstanceStatisticsResponseBodyInstanceStatistics setDefenseCountUsage(Integer defenseCountUsage) {
@@ -68,6 +60,14 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             return this.defenseCountUsage;
         }
 
+        public DescribeInstanceStatisticsResponseBodyInstanceStatistics setDomainUsage(Integer domainUsage) {
+            this.domainUsage = domainUsage;
+            return this;
+        }
+        public Integer getDomainUsage() {
+            return this.domainUsage;
+        }
+
         public DescribeInstanceStatisticsResponseBodyInstanceStatistics setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -76,20 +76,20 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeInstanceStatisticsResponseBodyInstanceStatistics setSiteUsage(Integer siteUsage) {
-            this.siteUsage = siteUsage;
-            return this;
-        }
-        public Integer getSiteUsage() {
-            return this.siteUsage;
-        }
-
         public DescribeInstanceStatisticsResponseBodyInstanceStatistics setPortUsage(Integer portUsage) {
             this.portUsage = portUsage;
             return this;
         }
         public Integer getPortUsage() {
             return this.portUsage;
+        }
+
+        public DescribeInstanceStatisticsResponseBodyInstanceStatistics setSiteUsage(Integer siteUsage) {
+            this.siteUsage = siteUsage;
+            return this;
+        }
+        public Integer getSiteUsage() {
+            return this.siteUsage;
         }
 
     }

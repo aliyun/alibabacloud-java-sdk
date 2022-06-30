@@ -4,26 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDefenseRecordsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("DefenseRecords")
     public java.util.List<DescribeDefenseRecordsResponseBodyDefenseRecords> defenseRecords;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     public static DescribeDefenseRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDefenseRecordsResponseBody self = new DescribeDefenseRecordsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDefenseRecordsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeDefenseRecordsResponseBody setDefenseRecords(java.util.List<DescribeDefenseRecordsResponseBodyDefenseRecords> defenseRecords) {
@@ -42,15 +34,20 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeDefenseRecordsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeDefenseRecordsResponseBodyDefenseRecords extends TeaModel {
+        @NameInMap("AttackPeak")
+        public Long attackPeak;
+
         @NameInMap("EndTime")
         public Long endTime;
-
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("StartTime")
-        public Long startTime;
 
         @NameInMap("EventCount")
         public Integer eventCount;
@@ -58,12 +55,23 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("AttackPeak")
-        public Long attackPeak;
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        @NameInMap("Status")
+        public Integer status;
 
         public static DescribeDefenseRecordsResponseBodyDefenseRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeDefenseRecordsResponseBodyDefenseRecords self = new DescribeDefenseRecordsResponseBodyDefenseRecords();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDefenseRecordsResponseBodyDefenseRecords setAttackPeak(Long attackPeak) {
+            this.attackPeak = attackPeak;
+            return this;
+        }
+        public Long getAttackPeak() {
+            return this.attackPeak;
         }
 
         public DescribeDefenseRecordsResponseBodyDefenseRecords setEndTime(Long endTime) {
@@ -72,22 +80,6 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
         }
         public Long getEndTime() {
             return this.endTime;
-        }
-
-        public DescribeDefenseRecordsResponseBodyDefenseRecords setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public DescribeDefenseRecordsResponseBodyDefenseRecords setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
         }
 
         public DescribeDefenseRecordsResponseBodyDefenseRecords setEventCount(Integer eventCount) {
@@ -106,12 +98,20 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeDefenseRecordsResponseBodyDefenseRecords setAttackPeak(Long attackPeak) {
-            this.attackPeak = attackPeak;
+        public DescribeDefenseRecordsResponseBodyDefenseRecords setStartTime(Long startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public Long getAttackPeak() {
-            return this.attackPeak;
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeDefenseRecordsResponseBodyDefenseRecords setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
     }

@@ -4,9 +4,6 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyBlackholeStatusRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("BlackholeStatus")
     public String blackholeStatus;
 
@@ -16,14 +13,6 @@ public class ModifyBlackholeStatusRequest extends TeaModel {
     public static ModifyBlackholeStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBlackholeStatusRequest self = new ModifyBlackholeStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyBlackholeStatusRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public ModifyBlackholeStatusRequest setBlackholeStatus(String blackholeStatus) {

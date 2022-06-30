@@ -4,23 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHealthCheckListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("HealthCheckList")
     public java.util.List<DescribeHealthCheckListResponseBodyHealthCheckList> healthCheckList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeHealthCheckListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeHealthCheckListResponseBody self = new DescribeHealthCheckListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeHealthCheckListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeHealthCheckListResponseBody setHealthCheckList(java.util.List<DescribeHealthCheckListResponseBodyHealthCheckList> healthCheckList) {
@@ -31,27 +23,35 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
         return this.healthCheckList;
     }
 
+    public DescribeHealthCheckListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck extends TeaModel {
+        @NameInMap("Domain")
+        public String domain;
+
+        @NameInMap("Down")
+        public Integer down;
+
+        @NameInMap("Interval")
+        public Integer interval;
+
+        @NameInMap("Port")
+        public Integer port;
+
         @NameInMap("Timeout")
         public Integer timeout;
 
         @NameInMap("Type")
         public String type;
 
-        @NameInMap("Domain")
-        public String domain;
-
-        @NameInMap("Interval")
-        public Integer interval;
-
         @NameInMap("Up")
         public Integer up;
-
-        @NameInMap("Down")
-        public Integer down;
-
-        @NameInMap("Port")
-        public Integer port;
 
         @NameInMap("Uri")
         public String uri;
@@ -59,6 +59,38 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
         public static DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck build(java.util.Map<String, ?> map) throws Exception {
             DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck self = new DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck setDown(Integer down) {
+            this.down = down;
+            return this;
+        }
+        public Integer getDown() {
+            return this.down;
+        }
+
+        public DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck setInterval(Integer interval) {
+            this.interval = interval;
+            return this;
+        }
+        public Integer getInterval() {
+            return this.interval;
+        }
+
+        public DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
         }
 
         public DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck setTimeout(Integer timeout) {
@@ -77,44 +109,12 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             return this.type;
         }
 
-        public DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
-        public DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck setInterval(Integer interval) {
-            this.interval = interval;
-            return this;
-        }
-        public Integer getInterval() {
-            return this.interval;
-        }
-
         public DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck setUp(Integer up) {
             this.up = up;
             return this;
         }
         public Integer getUp() {
             return this.up;
-        }
-
-        public DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck setDown(Integer down) {
-            this.down = down;
-            return this;
-        }
-        public Integer getDown() {
-            return this.down;
-        }
-
-        public DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
         }
 
         public DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck setUri(String uri) {
@@ -131,14 +131,14 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
         @NameInMap("FrontendPort")
         public Integer frontendPort;
 
-        @NameInMap("Protocol")
-        public String protocol;
+        @NameInMap("HealthCheck")
+        public DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck healthCheck;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("HealthCheck")
-        public DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck healthCheck;
+        @NameInMap("Protocol")
+        public String protocol;
 
         public static DescribeHealthCheckListResponseBodyHealthCheckList build(java.util.Map<String, ?> map) throws Exception {
             DescribeHealthCheckListResponseBodyHealthCheckList self = new DescribeHealthCheckListResponseBodyHealthCheckList();
@@ -153,12 +153,12 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             return this.frontendPort;
         }
 
-        public DescribeHealthCheckListResponseBodyHealthCheckList setProtocol(String protocol) {
-            this.protocol = protocol;
+        public DescribeHealthCheckListResponseBodyHealthCheckList setHealthCheck(DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck healthCheck) {
+            this.healthCheck = healthCheck;
             return this;
         }
-        public String getProtocol() {
-            return this.protocol;
+        public DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck getHealthCheck() {
+            return this.healthCheck;
         }
 
         public DescribeHealthCheckListResponseBodyHealthCheckList setInstanceId(String instanceId) {
@@ -169,12 +169,12 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeHealthCheckListResponseBodyHealthCheckList setHealthCheck(DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck healthCheck) {
-            this.healthCheck = healthCheck;
+        public DescribeHealthCheckListResponseBodyHealthCheckList setProtocol(String protocol) {
+            this.protocol = protocol;
             return this;
         }
-        public DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck getHealthCheck() {
-            return this.healthCheck;
+        public String getProtocol() {
+            return this.protocol;
         }
 
     }

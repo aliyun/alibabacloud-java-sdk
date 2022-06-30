@@ -4,37 +4,26 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebAIProtectSwitchRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("Config")
+    public String config;
 
     @NameInMap("Domain")
     public String domain;
 
-    @NameInMap("Config")
-    public String config;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static ModifyWebAIProtectSwitchRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyWebAIProtectSwitchRequest self = new ModifyWebAIProtectSwitchRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyWebAIProtectSwitchRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public ModifyWebAIProtectSwitchRequest setConfig(String config) {
+        this.config = config;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ModifyWebAIProtectSwitchRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getConfig() {
+        return this.config;
     }
 
     public ModifyWebAIProtectSwitchRequest setDomain(String domain) {
@@ -45,12 +34,12 @@ public class ModifyWebAIProtectSwitchRequest extends TeaModel {
         return this.domain;
     }
 
-    public ModifyWebAIProtectSwitchRequest setConfig(String config) {
-        this.config = config;
+    public ModifyWebAIProtectSwitchRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public String getConfig() {
-        return this.config;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

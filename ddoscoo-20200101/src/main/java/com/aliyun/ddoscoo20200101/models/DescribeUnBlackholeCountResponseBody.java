@@ -4,26 +4,26 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeUnBlackholeCountResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("RemainCount")
+    public Integer remainCount;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("RemainCount")
-    public Integer remainCount;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeUnBlackholeCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUnBlackholeCountResponseBody self = new DescribeUnBlackholeCountResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeUnBlackholeCountResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeUnBlackholeCountResponseBody setRemainCount(Integer remainCount) {
+        this.remainCount = remainCount;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getRemainCount() {
+        return this.remainCount;
     }
 
     public DescribeUnBlackholeCountResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DescribeUnBlackholeCountResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeUnBlackholeCountResponseBody setRemainCount(Integer remainCount) {
-        this.remainCount = remainCount;
+    public DescribeUnBlackholeCountResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getRemainCount() {
-        return this.remainCount;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
 }
