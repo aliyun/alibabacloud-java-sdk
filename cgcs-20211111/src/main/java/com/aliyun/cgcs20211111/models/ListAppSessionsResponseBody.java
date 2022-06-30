@@ -65,6 +65,36 @@ public class ListAppSessionsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListAppSessionsResponseBodyAppSessionsBizInfo extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static ListAppSessionsResponseBodyAppSessionsBizInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListAppSessionsResponseBodyAppSessionsBizInfo self = new ListAppSessionsResponseBodyAppSessionsBizInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppSessionsResponseBodyAppSessionsBizInfo setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAppSessionsResponseBodyAppSessionsBizInfo setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListAppSessionsResponseBodyAppSessions extends TeaModel {
         // 应用id
         @NameInMap("AppId")
@@ -73,6 +103,9 @@ public class ListAppSessionsResponseBody extends TeaModel {
         // 应用版本
         @NameInMap("AppVersion")
         public String appVersion;
+
+        @NameInMap("BizInfo")
+        public java.util.List<ListAppSessionsResponseBodyAppSessionsBizInfo> bizInfo;
 
         // 自定义会话id
         @NameInMap("CustomSessionId")
@@ -105,6 +138,14 @@ public class ListAppSessionsResponseBody extends TeaModel {
         }
         public String getAppVersion() {
             return this.appVersion;
+        }
+
+        public ListAppSessionsResponseBodyAppSessions setBizInfo(java.util.List<ListAppSessionsResponseBodyAppSessionsBizInfo> bizInfo) {
+            this.bizInfo = bizInfo;
+            return this;
+        }
+        public java.util.List<ListAppSessionsResponseBodyAppSessionsBizInfo> getBizInfo() {
+            return this.bizInfo;
         }
 
         public ListAppSessionsResponseBodyAppSessions setCustomSessionId(String customSessionId) {
