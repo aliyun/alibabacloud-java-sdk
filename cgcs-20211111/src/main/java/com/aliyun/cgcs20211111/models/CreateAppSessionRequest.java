@@ -24,12 +24,21 @@ public class CreateAppSessionRequest extends TeaModel {
     @NameInMap("CustomUserId")
     public String customUserId;
 
+    @NameInMap("DatasetId")
+    public String datasetId;
+
     @NameInMap("EnablePostpaid")
     public Boolean enablePostpaid;
+
+    @NameInMap("ResultStore")
+    public CreateAppSessionRequestResultStore resultStore;
 
     // 启动参数
     @NameInMap("StartParameters")
     public java.util.List<CreateAppSessionRequestStartParameters> startParameters;
+
+    @NameInMap("StartParametersV2")
+    public java.util.List<CreateAppSessionRequestStartParametersV2> startParametersV2;
 
     // 系统信息：如端侧机型等信息
     @NameInMap("SystemInfo")
@@ -83,6 +92,14 @@ public class CreateAppSessionRequest extends TeaModel {
         return this.customUserId;
     }
 
+    public CreateAppSessionRequest setDatasetId(String datasetId) {
+        this.datasetId = datasetId;
+        return this;
+    }
+    public String getDatasetId() {
+        return this.datasetId;
+    }
+
     public CreateAppSessionRequest setEnablePostpaid(Boolean enablePostpaid) {
         this.enablePostpaid = enablePostpaid;
         return this;
@@ -91,12 +108,28 @@ public class CreateAppSessionRequest extends TeaModel {
         return this.enablePostpaid;
     }
 
+    public CreateAppSessionRequest setResultStore(CreateAppSessionRequestResultStore resultStore) {
+        this.resultStore = resultStore;
+        return this;
+    }
+    public CreateAppSessionRequestResultStore getResultStore() {
+        return this.resultStore;
+    }
+
     public CreateAppSessionRequest setStartParameters(java.util.List<CreateAppSessionRequestStartParameters> startParameters) {
         this.startParameters = startParameters;
         return this;
     }
     public java.util.List<CreateAppSessionRequestStartParameters> getStartParameters() {
         return this.startParameters;
+    }
+
+    public CreateAppSessionRequest setStartParametersV2(java.util.List<CreateAppSessionRequestStartParametersV2> startParametersV2) {
+        this.startParametersV2 = startParametersV2;
+        return this;
+    }
+    public java.util.List<CreateAppSessionRequestStartParametersV2> getStartParametersV2() {
+        return this.startParametersV2;
     }
 
     public CreateAppSessionRequest setSystemInfo(java.util.List<CreateAppSessionRequestSystemInfo> systemInfo) {
@@ -115,12 +148,82 @@ public class CreateAppSessionRequest extends TeaModel {
         return this.timeout;
     }
 
+    public static class CreateAppSessionRequestResultStoreStoreInfo extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateAppSessionRequestResultStoreStoreInfo build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppSessionRequestResultStoreStoreInfo self = new CreateAppSessionRequestResultStoreStoreInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppSessionRequestResultStoreStoreInfo setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateAppSessionRequestResultStoreStoreInfo setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateAppSessionRequestResultStore extends TeaModel {
+        @NameInMap("Need")
+        public Boolean need;
+
+        @NameInMap("StoreInfo")
+        public java.util.List<CreateAppSessionRequestResultStoreStoreInfo> storeInfo;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static CreateAppSessionRequestResultStore build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppSessionRequestResultStore self = new CreateAppSessionRequestResultStore();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppSessionRequestResultStore setNeed(Boolean need) {
+            this.need = need;
+            return this;
+        }
+        public Boolean getNeed() {
+            return this.need;
+        }
+
+        public CreateAppSessionRequestResultStore setStoreInfo(java.util.List<CreateAppSessionRequestResultStoreStoreInfo> storeInfo) {
+            this.storeInfo = storeInfo;
+            return this;
+        }
+        public java.util.List<CreateAppSessionRequestResultStoreStoreInfo> getStoreInfo() {
+            return this.storeInfo;
+        }
+
+        public CreateAppSessionRequestResultStore setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class CreateAppSessionRequestStartParameters extends TeaModel {
         // key
         @NameInMap("Key")
         public String key;
 
-        // value
         @NameInMap("Value")
         public String value;
 
@@ -142,6 +245,36 @@ public class CreateAppSessionRequest extends TeaModel {
             return this;
         }
         public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateAppSessionRequestStartParametersV2 extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public Object value;
+
+        public static CreateAppSessionRequestStartParametersV2 build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppSessionRequestStartParametersV2 self = new CreateAppSessionRequestStartParametersV2();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppSessionRequestStartParametersV2 setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateAppSessionRequestStartParametersV2 setValue(Object value) {
+            this.value = value;
+            return this;
+        }
+        public Object getValue() {
             return this.value;
         }
 

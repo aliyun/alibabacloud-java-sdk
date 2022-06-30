@@ -12,6 +12,9 @@ public class GetAppSessionResponseBody extends TeaModel {
     @NameInMap("AppVersion")
     public String appVersion;
 
+    @NameInMap("BizInfo")
+    public java.util.List<GetAppSessionResponseBodyBizInfo> bizInfo;
+
     // 自定义会话id
     @NameInMap("CustomSessionId")
     public String customSessionId;
@@ -49,6 +52,14 @@ public class GetAppSessionResponseBody extends TeaModel {
         return this.appVersion;
     }
 
+    public GetAppSessionResponseBody setBizInfo(java.util.List<GetAppSessionResponseBodyBizInfo> bizInfo) {
+        this.bizInfo = bizInfo;
+        return this;
+    }
+    public java.util.List<GetAppSessionResponseBodyBizInfo> getBizInfo() {
+        return this.bizInfo;
+    }
+
     public GetAppSessionResponseBody setCustomSessionId(String customSessionId) {
         this.customSessionId = customSessionId;
         return this;
@@ -79,6 +90,36 @@ public class GetAppSessionResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public static class GetAppSessionResponseBodyBizInfo extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static GetAppSessionResponseBodyBizInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetAppSessionResponseBodyBizInfo self = new GetAppSessionResponseBodyBizInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAppSessionResponseBodyBizInfo setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetAppSessionResponseBodyBizInfo setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
