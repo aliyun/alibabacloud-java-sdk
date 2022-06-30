@@ -3526,8 +3526,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listBodyPersonWithOptions(request, runtime);
     }
 
-    public ListFaceDbsResponse listFaceDbsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
+    public ListFaceDbsResponse listFaceDbsWithOptions(ListFaceDbsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            body.put("Offset", request.offset);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListFaceDbs"),
             new TeaPair("version", "2019-12-30"),
@@ -3542,9 +3554,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListFaceDbsResponse());
     }
 
-    public ListFaceDbsResponse listFaceDbs() throws Exception {
+    public ListFaceDbsResponse listFaceDbs(ListFaceDbsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listFaceDbsWithOptions(runtime);
+        return this.listFaceDbsWithOptions(request, runtime);
     }
 
     public ListFaceEntitiesResponse listFaceEntitiesWithOptions(ListFaceEntitiesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
