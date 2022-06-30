@@ -71,14 +71,23 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         @NameInMap("AgentName")
         public String agentName;
 
+        @NameInMap("CallType")
+        public String callType;
+
         @NameInMap("CounterParty")
         public String counterParty;
+
+        @NameInMap("Duration")
+        public Long duration;
 
         @NameInMap("Extension")
         public String extension;
 
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("Mobile")
+        public String mobile;
 
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
@@ -122,12 +131,28 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
             return this.agentName;
         }
 
+        public ListRealtimeAgentStatesResponseBodyDataList setCallType(String callType) {
+            this.callType = callType;
+            return this;
+        }
+        public String getCallType() {
+            return this.callType;
+        }
+
         public ListRealtimeAgentStatesResponseBodyDataList setCounterParty(String counterParty) {
             this.counterParty = counterParty;
             return this;
         }
         public String getCounterParty() {
             return this.counterParty;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyDataList setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
         }
 
         public ListRealtimeAgentStatesResponseBodyDataList setExtension(String extension) {
@@ -144,6 +169,14 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyDataList setMobile(String mobile) {
+            this.mobile = mobile;
+            return this;
+        }
+        public String getMobile() {
+            return this.mobile;
         }
 
         public ListRealtimeAgentStatesResponseBodyDataList setOutboundScenario(Boolean outboundScenario) {

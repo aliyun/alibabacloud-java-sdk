@@ -10,6 +10,9 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     @NameInMap("AgentName")
     public String agentName;
 
+    @NameInMap("CallTypeList")
+    public String callTypeList;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -21,6 +24,9 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("Query")
+    public String query;
 
     @NameInMap("SkillGroupId")
     public String skillGroupId;
@@ -50,6 +56,14 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     }
     public String getAgentName() {
         return this.agentName;
+    }
+
+    public ListRealtimeAgentStatesRequest setCallTypeList(String callTypeList) {
+        this.callTypeList = callTypeList;
+        return this;
+    }
+    public String getCallTypeList() {
+        return this.callTypeList;
     }
 
     public ListRealtimeAgentStatesRequest setInstanceId(String instanceId) {
@@ -82,6 +96,14 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListRealtimeAgentStatesRequest setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    public String getQuery() {
+        return this.query;
     }
 
     public ListRealtimeAgentStatesRequest setSkillGroupId(String skillGroupId) {

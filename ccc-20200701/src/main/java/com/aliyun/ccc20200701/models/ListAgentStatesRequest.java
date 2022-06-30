@@ -7,6 +7,9 @@ public class ListAgentStatesRequest extends TeaModel {
     @NameInMap("AgentIds")
     public String agentIds;
 
+    @NameInMap("ExcludeOfflineUsers")
+    public Boolean excludeOfflineUsers;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -33,6 +36,14 @@ public class ListAgentStatesRequest extends TeaModel {
     }
     public String getAgentIds() {
         return this.agentIds;
+    }
+
+    public ListAgentStatesRequest setExcludeOfflineUsers(Boolean excludeOfflineUsers) {
+        this.excludeOfflineUsers = excludeOfflineUsers;
+        return this;
+    }
+    public Boolean getExcludeOfflineUsers() {
+        return this.excludeOfflineUsers;
     }
 
     public ListAgentStatesRequest setInstanceId(String instanceId) {
