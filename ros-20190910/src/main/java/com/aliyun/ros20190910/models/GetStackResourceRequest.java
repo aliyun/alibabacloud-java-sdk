@@ -13,6 +13,9 @@ public class GetStackResourceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceAttributes")
+    public java.util.List<String> resourceAttributes;
+
     @NameInMap("ShowResourceAttributes")
     public Boolean showResourceAttributes;
 
@@ -46,6 +49,14 @@ public class GetStackResourceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetStackResourceRequest setResourceAttributes(java.util.List<String> resourceAttributes) {
+        this.resourceAttributes = resourceAttributes;
+        return this;
+    }
+    public java.util.List<String> getResourceAttributes() {
+        return this.resourceAttributes;
     }
 
     public GetStackResourceRequest setShowResourceAttributes(Boolean showResourceAttributes) {
