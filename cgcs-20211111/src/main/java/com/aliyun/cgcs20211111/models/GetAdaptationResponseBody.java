@@ -16,26 +16,14 @@ public class GetAdaptationResponseBody extends TeaModel {
     @NameInMap("AppVersionId")
     public String appVersionId;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    @NameInMap("HttpCode")
-    public Integer httpCode;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static GetAdaptationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAdaptationResponseBody self = new GetAdaptationResponseBody();
@@ -74,14 +62,6 @@ public class GetAdaptationResponseBody extends TeaModel {
         return this.appVersionId;
     }
 
-    public GetAdaptationResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetAdaptationResponseBody setGmtCreate(String gmtCreate) {
         this.gmtCreate = gmtCreate;
         return this;
@@ -98,36 +78,12 @@ public class GetAdaptationResponseBody extends TeaModel {
         return this.gmtModified;
     }
 
-    public GetAdaptationResponseBody setHttpCode(Integer httpCode) {
-        this.httpCode = httpCode;
-        return this;
-    }
-    public Integer getHttpCode() {
-        return this.httpCode;
-    }
-
-    public GetAdaptationResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public GetAdaptationResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetAdaptationResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class GetAdaptationResponseBodyAdaptTarget extends TeaModel {

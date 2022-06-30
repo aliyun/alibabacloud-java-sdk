@@ -4,20 +4,8 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class ListAppVersionResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("HttpCode")
-    public Integer httpCode;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     @NameInMap("Total")
     public Long total;
@@ -30,44 +18,12 @@ public class ListAppVersionResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListAppVersionResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListAppVersionResponseBody setHttpCode(Integer httpCode) {
-        this.httpCode = httpCode;
-        return this;
-    }
-    public Integer getHttpCode() {
-        return this.httpCode;
-    }
-
-    public ListAppVersionResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public ListAppVersionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ListAppVersionResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public ListAppVersionResponseBody setTotal(Long total) {
@@ -122,9 +78,6 @@ public class ListAppVersionResponseBody extends TeaModel {
 
         @NameInMap("GmtModified")
         public String gmtModified;
-
-        @NameInMap("TenantId")
-        public Long tenantId;
 
         public static ListAppVersionResponseBodyVersions build(java.util.Map<String, ?> map) throws Exception {
             ListAppVersionResponseBodyVersions self = new ListAppVersionResponseBodyVersions();
@@ -225,14 +178,6 @@ public class ListAppVersionResponseBody extends TeaModel {
         }
         public String getGmtModified() {
             return this.gmtModified;
-        }
-
-        public ListAppVersionResponseBodyVersions setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public Long getTenantId() {
-            return this.tenantId;
         }
 
     }
