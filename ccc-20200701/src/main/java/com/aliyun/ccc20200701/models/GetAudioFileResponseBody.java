@@ -13,14 +13,8 @@ public class GetAudioFileResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    @NameInMap("MainFlow")
-    public Boolean mainFlow;
-
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("Published")
-    public Boolean published;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -54,28 +48,12 @@ public class GetAudioFileResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public GetAudioFileResponseBody setMainFlow(Boolean mainFlow) {
-        this.mainFlow = mainFlow;
-        return this;
-    }
-    public Boolean getMainFlow() {
-        return this.mainFlow;
-    }
-
     public GetAudioFileResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
-    }
-
-    public GetAudioFileResponseBody setPublished(Boolean published) {
-        this.published = published;
-        return this;
-    }
-    public Boolean getPublished() {
-        return this.published;
     }
 
     public GetAudioFileResponseBody setRequestId(String requestId) {

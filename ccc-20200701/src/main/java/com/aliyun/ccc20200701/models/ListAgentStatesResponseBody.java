@@ -94,6 +94,9 @@ public class ListAgentStatesResponseBody extends TeaModel {
         @NameInMap("LoginName")
         public String loginName;
 
+        @NameInMap("OutboundScenario")
+        public Boolean outboundScenario;
+
         @NameInMap("State")
         public String state;
 
@@ -151,6 +154,14 @@ public class ListAgentStatesResponseBody extends TeaModel {
         }
         public String getLoginName() {
             return this.loginName;
+        }
+
+        public ListAgentStatesResponseBodyDataList setOutboundScenario(Boolean outboundScenario) {
+            this.outboundScenario = outboundScenario;
+            return this;
+        }
+        public Boolean getOutboundScenario() {
+            return this.outboundScenario;
         }
 
         public ListAgentStatesResponseBodyDataList setState(String state) {
