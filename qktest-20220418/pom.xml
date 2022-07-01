@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>qktest20220418</artifactId>
-  <version>1.3.8</version>
+  <version>1.3.9</version>
   <packaging>jar</packaging>
   <name>qktest20220418</name>
   <description>Alibaba Cloud QKTest (20220418) SDK for Java
