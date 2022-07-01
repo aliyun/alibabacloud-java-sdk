@@ -65,9 +65,6 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
     }
 
     public static class ListUnassignedNumbersResponseBodyDataList extends TeaModel {
-        @NameInMap("Active")
-        public Boolean active;
-
         @NameInMap("City")
         public String city;
 
@@ -77,20 +74,9 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
         @NameInMap("Province")
         public String province;
 
-        @NameInMap("Usage")
-        public Boolean usage;
-
         public static ListUnassignedNumbersResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListUnassignedNumbersResponseBodyDataList self = new ListUnassignedNumbersResponseBodyDataList();
             return TeaModel.build(map, self);
-        }
-
-        public ListUnassignedNumbersResponseBodyDataList setActive(Boolean active) {
-            this.active = active;
-            return this;
-        }
-        public Boolean getActive() {
-            return this.active;
         }
 
         public ListUnassignedNumbersResponseBodyDataList setCity(String city) {
@@ -115,14 +101,6 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
         }
         public String getProvince() {
             return this.province;
-        }
-
-        public ListUnassignedNumbersResponseBodyDataList setUsage(Boolean usage) {
-            this.usage = usage;
-            return this;
-        }
-        public Boolean getUsage() {
-            return this.usage;
         }
 
     }

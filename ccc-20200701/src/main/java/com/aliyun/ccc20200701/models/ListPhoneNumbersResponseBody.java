@@ -16,12 +16,6 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -60,22 +54,6 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
-    }
-
-    public ListPhoneNumbersResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListPhoneNumbersResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public ListPhoneNumbersResponseBody setRequestId(String requestId) {
