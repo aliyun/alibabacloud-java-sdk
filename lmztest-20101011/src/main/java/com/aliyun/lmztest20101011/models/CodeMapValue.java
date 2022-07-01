@@ -4,10 +4,10 @@ package com.aliyun.lmztest20101011.models;
 import com.aliyun.tea.*;
 
 public class CodeMapValue extends TeaModel {
-    @NameInMap("id")
+    @NameInMap("Id")
     public String id;
 
-    @NameInMap("name")
+    @NameInMap("Name")
     public String name;
 
     public static CodeMapValue build(java.util.Map<String, ?> map) throws Exception {

@@ -236,20 +236,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DemoHsfSixTestShrinkRequest request = new DemoHsfSixTestShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.data)) {
+            request.dataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.data, "Data", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.map)) {
+            request.mapShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.map, "Map", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.strListMap)) {
+            request.strListMapShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.strListMap, "StrListMap", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.codeMap)) {
             request.codeMapShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.codeMap, "codeMap", "json");
         }
 
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.codeMapShrink)) {
+            query.put("codeMap", request.codeMapShrink);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataShrink)) {
+            body.put("Data", request.dataShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mapShrink)) {
+            body.put("Map", request.mapShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strListMapShrink)) {
+            body.put("StrListMap", request.strListMapShrink);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DemoHsfSixTest"),
             new TeaPair("version", "2010-10-11"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
