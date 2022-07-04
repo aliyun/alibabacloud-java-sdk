@@ -1,3 +1,6 @@
+2022-07-04 Version: 1.0.6
+- Init amp.
+
 2021-12-06 Version: 1.0.5
 - Init amp.
 

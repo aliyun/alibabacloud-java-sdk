@@ -3,12 +3,12 @@ package com.aliyun.antiddos_public20170518.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeCapRequest extends TeaModel {
-    @NameInMap("BegTime")
-    public Long begTime;
-
+public class DescribeIpDdosThresholdRequest extends TeaModel {
     @NameInMap("DdosRegionId")
     public String ddosRegionId;
+
+    @NameInMap("DdosType")
+    public String ddosType;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -19,20 +19,12 @@ public class DescribeCapRequest extends TeaModel {
     @NameInMap("InternetIp")
     public String internetIp;
 
-    public static DescribeCapRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeCapRequest self = new DescribeCapRequest();
+    public static DescribeIpDdosThresholdRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeIpDdosThresholdRequest self = new DescribeIpDdosThresholdRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCapRequest setBegTime(Long begTime) {
-        this.begTime = begTime;
-        return this;
-    }
-    public Long getBegTime() {
-        return this.begTime;
-    }
-
-    public DescribeCapRequest setDdosRegionId(String ddosRegionId) {
+    public DescribeIpDdosThresholdRequest setDdosRegionId(String ddosRegionId) {
         this.ddosRegionId = ddosRegionId;
         return this;
     }
@@ -40,7 +32,15 @@ public class DescribeCapRequest extends TeaModel {
         return this.ddosRegionId;
     }
 
-    public DescribeCapRequest setInstanceId(String instanceId) {
+    public DescribeIpDdosThresholdRequest setDdosType(String ddosType) {
+        this.ddosType = ddosType;
+        return this;
+    }
+    public String getDdosType() {
+        return this.ddosType;
+    }
+
+    public DescribeIpDdosThresholdRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -48,7 +48,7 @@ public class DescribeCapRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeCapRequest setInstanceType(String instanceType) {
+    public DescribeIpDdosThresholdRequest setInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
     }
@@ -56,7 +56,7 @@ public class DescribeCapRequest extends TeaModel {
         return this.instanceType;
     }
 
-    public DescribeCapRequest setInternetIp(String internetIp) {
+    public DescribeIpDdosThresholdRequest setInternetIp(String internetIp) {
         this.internetIp = internetIp;
         return this;
     }

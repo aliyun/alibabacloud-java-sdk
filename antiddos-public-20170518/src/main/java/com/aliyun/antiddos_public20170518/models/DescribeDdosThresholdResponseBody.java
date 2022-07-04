@@ -44,6 +44,9 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("InternetIp")
+        public String internetIp;
+
         @NameInMap("IsAuto")
         public Boolean isAuto;
 
@@ -91,6 +94,14 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeDdosThresholdResponseBodyThresholdsThreshold setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
+            return this;
+        }
+        public String getInternetIp() {
+            return this.internetIp;
         }
 
         public DescribeDdosThresholdResponseBodyThresholdsThreshold setIsAuto(Boolean isAuto) {
