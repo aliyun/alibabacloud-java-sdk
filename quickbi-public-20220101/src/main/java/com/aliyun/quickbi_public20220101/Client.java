@@ -1580,35 +1580,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryEmbeddedInfoWithOptions(runtime);
     }
 
-    public QueryEmbeddedStausResponse queryEmbeddedStausWithOptions(QueryEmbeddedStausRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.worksId)) {
-            query.put("WorksId", request.worksId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "QueryEmbeddedStaus"),
-            new TeaPair("version", "2022-01-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryEmbeddedStausResponse());
-    }
-
-    public QueryEmbeddedStausResponse queryEmbeddedStaus(QueryEmbeddedStausRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.queryEmbeddedStausWithOptions(request, runtime);
-    }
-
     public QueryOrganizationWorkspaceListResponse queryOrganizationWorkspaceListWithOptions(QueryOrganizationWorkspaceListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
