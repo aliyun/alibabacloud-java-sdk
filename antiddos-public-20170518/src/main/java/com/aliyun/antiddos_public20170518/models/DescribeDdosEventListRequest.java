@@ -16,6 +16,9 @@ public class DescribeDdosEventListRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("InternetIp")
+    public String internetIp;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -54,6 +57,14 @@ public class DescribeDdosEventListRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public DescribeDdosEventListRequest setInternetIp(String internetIp) {
+        this.internetIp = internetIp;
+        return this;
+    }
+    public String getInternetIp() {
+        return this.internetIp;
     }
 
     public DescribeDdosEventListRequest setPageSize(Integer pageSize) {

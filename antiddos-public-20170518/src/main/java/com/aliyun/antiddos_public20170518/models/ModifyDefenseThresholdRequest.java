@@ -16,6 +16,9 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("InternetIp")
+    public String internetIp;
+
     @NameInMap("IsAuto")
     public Boolean isAuto;
 
@@ -57,6 +60,14 @@ public class ModifyDefenseThresholdRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public ModifyDefenseThresholdRequest setInternetIp(String internetIp) {
+        this.internetIp = internetIp;
+        return this;
+    }
+    public String getInternetIp() {
+        return this.internetIp;
     }
 
     public ModifyDefenseThresholdRequest setIsAuto(Boolean isAuto) {
