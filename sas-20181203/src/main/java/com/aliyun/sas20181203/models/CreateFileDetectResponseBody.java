@@ -7,7 +7,6 @@ public class CreateFileDetectResponseBody extends TeaModel {
     @NameInMap("HashKey")
     public String hashKey;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
