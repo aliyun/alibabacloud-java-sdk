@@ -10,14 +10,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("AddressType")
     public String addressType;
 
+    @NameInMap("BandwidthPackageId")
+    public String bandwidthPackageId;
+
     @NameInMap("CapacityUnitCount")
     public Long capacityUnitCount;
 
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("CommonBandwidthPackageId")
-    public String commonBandwidthPackageId;
 
     @NameInMap("Cps")
     public Integer cps;
@@ -111,6 +111,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         return this.addressType;
     }
 
+    public GetLoadBalancerAttributeResponseBody setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
+        return this;
+    }
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
+    }
+
     public GetLoadBalancerAttributeResponseBody setCapacityUnitCount(Long capacityUnitCount) {
         this.capacityUnitCount = capacityUnitCount;
         return this;
@@ -125,14 +133,6 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public GetLoadBalancerAttributeResponseBody setCommonBandwidthPackageId(String commonBandwidthPackageId) {
-        this.commonBandwidthPackageId = commonBandwidthPackageId;
-        return this;
-    }
-    public String getCommonBandwidthPackageId() {
-        return this.commonBandwidthPackageId;
     }
 
     public GetLoadBalancerAttributeResponseBody setCps(Integer cps) {
@@ -369,13 +369,16 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
 
     }
 
-    public static class GetLoadBalancerAttributeResponseBodyZoneMappings extends TeaModel {
+    public static class GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses extends TeaModel {
         // 公网ipId
         @NameInMap("AllocationId")
         public String allocationId;
 
         @NameInMap("EniId")
         public String eniId;
+
+        @NameInMap("Ipv6Address")
+        public String ipv6Address;
 
         // 私网ip
         @NameInMap("PrivateIPv4Address")
@@ -384,6 +387,57 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         // 公网ip地址：仅Get的时候有值
         @NameInMap("PublicIPv4Address")
         public String publicIPv4Address;
+
+        public static GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses build(java.util.Map<String, ?> map) throws Exception {
+            GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses self = new GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses();
+            return TeaModel.build(map, self);
+        }
+
+        public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setAllocationId(String allocationId) {
+            this.allocationId = allocationId;
+            return this;
+        }
+        public String getAllocationId() {
+            return this.allocationId;
+        }
+
+        public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setEniId(String eniId) {
+            this.eniId = eniId;
+            return this;
+        }
+        public String getEniId() {
+            return this.eniId;
+        }
+
+        public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setIpv6Address(String ipv6Address) {
+            this.ipv6Address = ipv6Address;
+            return this;
+        }
+        public String getIpv6Address() {
+            return this.ipv6Address;
+        }
+
+        public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setPrivateIPv4Address(String privateIPv4Address) {
+            this.privateIPv4Address = privateIPv4Address;
+            return this;
+        }
+        public String getPrivateIPv4Address() {
+            return this.privateIPv4Address;
+        }
+
+        public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setPublicIPv4Address(String publicIPv4Address) {
+            this.publicIPv4Address = publicIPv4Address;
+            return this;
+        }
+        public String getPublicIPv4Address() {
+            return this.publicIPv4Address;
+        }
+
+    }
+
+    public static class GetLoadBalancerAttributeResponseBodyZoneMappings extends TeaModel {
+        @NameInMap("LoadBalancerAddresses")
+        public java.util.List<GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses> loadBalancerAddresses;
 
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -396,36 +450,12 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetLoadBalancerAttributeResponseBodyZoneMappings setAllocationId(String allocationId) {
-            this.allocationId = allocationId;
+        public GetLoadBalancerAttributeResponseBodyZoneMappings setLoadBalancerAddresses(java.util.List<GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses> loadBalancerAddresses) {
+            this.loadBalancerAddresses = loadBalancerAddresses;
             return this;
         }
-        public String getAllocationId() {
-            return this.allocationId;
-        }
-
-        public GetLoadBalancerAttributeResponseBodyZoneMappings setEniId(String eniId) {
-            this.eniId = eniId;
-            return this;
-        }
-        public String getEniId() {
-            return this.eniId;
-        }
-
-        public GetLoadBalancerAttributeResponseBodyZoneMappings setPrivateIPv4Address(String privateIPv4Address) {
-            this.privateIPv4Address = privateIPv4Address;
-            return this;
-        }
-        public String getPrivateIPv4Address() {
-            return this.privateIPv4Address;
-        }
-
-        public GetLoadBalancerAttributeResponseBodyZoneMappings setPublicIPv4Address(String publicIPv4Address) {
-            this.publicIPv4Address = publicIPv4Address;
-            return this;
-        }
-        public String getPublicIPv4Address() {
-            return this.publicIPv4Address;
+        public java.util.List<GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses> getLoadBalancerAddresses() {
+            return this.loadBalancerAddresses;
         }
 
         public GetLoadBalancerAttributeResponseBodyZoneMappings setVSwitchId(String vSwitchId) {

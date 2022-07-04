@@ -37,6 +37,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    // anyPort监听结束端口
+    @NameInMap("EndPort")
+    public String endPort;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -90,6 +94,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     // servergroupId
     @NameInMap("ServerGroupId")
     public String serverGroupId;
+
+    // anyPort监听起始端口
+    @NameInMap("StartPort")
+    public String startPort;
 
     @NameInMap("Success")
     public Boolean success;
@@ -177,6 +185,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
     public String getDynamicMessage() {
         return this.dynamicMessage;
+    }
+
+    public GetListenerAttributeResponseBody setEndPort(String endPort) {
+        this.endPort = endPort;
+        return this;
+    }
+    public String getEndPort() {
+        return this.endPort;
     }
 
     public GetListenerAttributeResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -297,6 +313,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
     public String getServerGroupId() {
         return this.serverGroupId;
+    }
+
+    public GetListenerAttributeResponseBody setStartPort(String startPort) {
+        this.startPort = startPort;
+        return this;
+    }
+    public String getStartPort() {
+        return this.startPort;
     }
 
     public GetListenerAttributeResponseBody setSuccess(Boolean success) {

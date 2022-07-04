@@ -242,9 +242,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AddressType", request.addressType);
         }
 
-        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.billingConfig))) {
-            bodyFlat.put("BillingConfig", request.billingConfig);
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidthPackageId)) {
+            body.put("BandwidthPackageId", request.bandwidthPackageId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.bizFlag)) {
@@ -255,16 +254,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ClientToken", request.clientToken);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.commonBandwidthPackageId)) {
-            body.put("CommonBandwidthPackageId", request.commonBandwidthPackageId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.crossZoneEnabled)) {
             body.put("CrossZoneEnabled", request.crossZoneEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             body.put("DryRun", request.dryRun);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.loadBalancerBillingConfig))) {
+            bodyFlat.put("LoadBalancerBillingConfig", request.loadBalancerBillingConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerName)) {
@@ -283,8 +283,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ResourceGroupId", request.resourceGroupId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.securityGroups)) {
-            body.put("SecurityGroups", request.securityGroups);
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupIds)) {
+            body.put("SecurityGroupIds", request.securityGroupIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.trafficAffinityEnabled)) {
@@ -1904,8 +1904,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("RegionId", request.regionId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.securityGroups)) {
-            body.put("SecurityGroups", request.securityGroups);
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupIds)) {
+            body.put("SecurityGroupIds", request.securityGroupIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.trafficAffinityEnabled)) {

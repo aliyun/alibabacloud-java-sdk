@@ -152,6 +152,10 @@ public class ListListenersResponseBody extends TeaModel {
         @NameInMap("CertificateIds")
         public java.util.List<String> certificateIds;
 
+        // anyPort监听结束端口
+        @NameInMap("EndPort")
+        public String endPort;
+
         // 空闲超时时间
         @NameInMap("IdleTimeout")
         public Integer idleTimeout;
@@ -195,6 +199,10 @@ public class ListListenersResponseBody extends TeaModel {
         // servergroupId
         @NameInMap("ServerGroupId")
         public String serverGroupId;
+
+        // anyPort监听起始端口
+        @NameInMap("StartPort")
+        public String startPort;
 
         public static ListListenersResponseBodyListeners build(java.util.Map<String, ?> map) throws Exception {
             ListListenersResponseBodyListeners self = new ListListenersResponseBodyListeners();
@@ -247,6 +255,14 @@ public class ListListenersResponseBody extends TeaModel {
         }
         public java.util.List<String> getCertificateIds() {
             return this.certificateIds;
+        }
+
+        public ListListenersResponseBodyListeners setEndPort(String endPort) {
+            this.endPort = endPort;
+            return this;
+        }
+        public String getEndPort() {
+            return this.endPort;
         }
 
         public ListListenersResponseBodyListeners setIdleTimeout(Integer idleTimeout) {
@@ -343,6 +359,14 @@ public class ListListenersResponseBody extends TeaModel {
         }
         public String getServerGroupId() {
             return this.serverGroupId;
+        }
+
+        public ListListenersResponseBodyListeners setStartPort(String startPort) {
+            this.startPort = startPort;
+            return this;
+        }
+        public String getStartPort() {
+            return this.startPort;
         }
 
     }
