@@ -239,6 +239,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.factorys)) {
+            query.put("Factorys", request.factorys);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.memo)) {
             query.put("Memo", request.memo);
         }
@@ -401,12 +405,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCardSmsLinkResponse getCardSmsLinkWithOptions(GetCardSmsLinkRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cardCodeType)) {
+            query.put("CardCodeType", request.cardCodeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cardLinkType)) {
+            query.put("CardLinkType", request.cardLinkType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cardTemplateCode)) {
             query.put("CardTemplateCode", request.cardTemplateCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.cardTemplateParamJson)) {
             query.put("CardTemplateParamJson", request.cardTemplateParamJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customShortCodeJson)) {
+            query.put("CustomShortCodeJson", request.customShortCodeJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
