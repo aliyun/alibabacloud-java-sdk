@@ -14,7 +14,7 @@ import com.aliyun.openapiutil.*;
 public class Client extends com.aliyun.teaopenapi.Client {
 
     public com.aliyun.gateway.spi.Client _client;
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._client = new com.aliyun.gateway.sls.Client();
         this._spi = _client;
@@ -75,6 +75,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateConsumerGroupResponse());
     }
 
+    public CreateIndexResponse createIndex(String project, String logstore, CreateIndexRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createIndexWithOptions(project, logstore, request, headers, runtime);
+    }
+
+    public CreateIndexResponse createIndexWithOptions(String project, String logstore, CreateIndexRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        logstore = com.aliyun.openapiutil.Client.getEncodeParam(logstore);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keys)) {
+            body.put("keys", request.keys);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.line))) {
+            body.put("line", request.line);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logReduce)) {
+            body.put("log_reduce", request.logReduce);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logReduceBlackList)) {
+            body.put("log_reduce_black_list", request.logReduceBlackList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logReduceWhiteList)) {
+            body.put("log_reduce_white_list", request.logReduceWhiteList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxTextLen)) {
+            body.put("max_text_len", request.maxTextLen);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
+            body.put("ttl", request.ttl);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateIndex"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/logstores/" + logstore + "/index"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateIndexResponse());
+    }
+
     public CreateLogStoreResponse createLogStore(String project, CreateLogStoreRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -102,6 +161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("encrypt_conf", request.encryptConf);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hotTtl)) {
+            body.put("hot_ttl", request.hotTtl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.logstoreName)) {
             body.put("logstoreName", request.logstoreName);
         }
@@ -112,6 +175,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.shardCount)) {
             body.put("shardCount", request.shardCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telemetryType)) {
+            body.put("telemetryType", request.telemetryType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
@@ -132,7 +199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
+            new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateLogStoreResponse());
     }
@@ -167,19 +234,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
+            new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateProjectResponse());
     }
 
-    public CreateSavedSearchResponse createSavedSearch(CreateSavedSearchRequest request) throws Exception {
+    public CreateSavedSearchResponse createSavedSearch(String project, CreateSavedSearchRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createSavedSearchWithOptions(request, headers, runtime);
+        return this.createSavedSearchWithOptions(project, request, headers, runtime);
     }
 
-    public CreateSavedSearchResponse createSavedSearchWithOptions(CreateSavedSearchRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public CreateSavedSearchResponse createSavedSearchWithOptions(String project, CreateSavedSearchRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
             body.put("displayName", request.displayName);
@@ -202,6 +271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -214,7 +284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
+            new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateSavedSearchResponse());
     }
@@ -243,9 +313,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
+            new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteConsumerGroupResponse());
+    }
+
+    public DeleteIndexResponse deleteIndex(String project, String logstore) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteIndexWithOptions(project, logstore, headers, runtime);
+    }
+
+    public DeleteIndexResponse deleteIndexWithOptions(String project, String logstore, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        logstore = com.aliyun.openapiutil.Client.getEncodeParam(logstore);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteIndex"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/logstores/" + logstore + "/index"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteIndexResponse());
+    }
+
+    public DeleteLogStoreResponse deleteLogStore(String project, String logstore) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteLogStoreWithOptions(project, logstore, headers, runtime);
+    }
+
+    public DeleteLogStoreResponse deleteLogStoreWithOptions(String project, String logstore, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        logstore = com.aliyun.openapiutil.Client.getEncodeParam(logstore);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteLogStore"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/logstores/" + logstore + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteLogStoreResponse());
     }
 
     public DeleteProjectResponse deleteProject(String project) throws Exception {
@@ -270,37 +396,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
+            new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteProjectResponse());
     }
 
-    public DeleteSavedSearchResponse deleteSavedSearch(String project, String savedsearchName) throws Exception {
+    public GetHistogramsResponse getHistograms(String project, String logstore, GetHistogramsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteSavedSearchWithOptions(project, savedsearchName, headers, runtime);
+        return this.getHistogramsWithOptions(project, logstore, request, headers, runtime);
     }
 
-    public DeleteSavedSearchResponse deleteSavedSearchWithOptions(String project, String savedsearchName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetHistogramsResponse getHistogramsWithOptions(String project, String logstore, GetHistogramsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
-        savedsearchName = com.aliyun.openapiutil.Client.getEncodeParam(savedsearchName);
+        logstore = com.aliyun.openapiutil.Client.getEncodeParam(logstore);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
+            query.put("from", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.to)) {
+            query.put("to", request.to);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            query.put("topic", request.topic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetHistograms"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/logstores/" + logstore + "/index"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "array")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetHistogramsResponse());
+    }
+
+    public GetIndexResponse getIndex(String project, String logstore) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getIndexWithOptions(project, logstore, headers, runtime);
+    }
+
+    public GetIndexResponse getIndexWithOptions(String project, String logstore, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        logstore = com.aliyun.openapiutil.Client.getEncodeParam(logstore);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
         Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteSavedSearch"),
+            new TeaPair("action", "GetIndex"),
             new TeaPair("version", "2020-12-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/savedsearches/" + savedsearchName + ""),
-            new TeaPair("method", "DELETE"),
+            new TeaPair("pathname", "/logstores/" + logstore + "/index"),
+            new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteSavedSearchResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetIndexResponse());
     }
 
     public GetLogStoreResponse getLogStore(String project, String logstore) throws Exception {
@@ -356,6 +533,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new GetProjectResponse());
+    }
+
+    public GetProjectLogsResponse getProjectLogs(String project, GetProjectLogsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getProjectLogsWithOptions(project, request, headers, runtime);
+    }
+
+    public GetProjectLogsResponse getProjectLogsWithOptions(String project, GetProjectLogsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.powerSql)) {
+            query.put("powerSql", request.powerSql);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("query", request.query);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProjectLogs"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/logs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "array")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetProjectLogsResponse());
     }
 
     public GetSavedSearchResponse getSavedSearch(String project, String savedsearchName) throws Exception {
@@ -572,9 +787,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
+            new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateConsumerGroupResponse());
+    }
+
+    public UpdateIndexResponse updateIndex(String project, String logstore, UpdateIndexRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateIndexWithOptions(project, logstore, request, headers, runtime);
+    }
+
+    public UpdateIndexResponse updateIndexWithOptions(String project, String logstore, UpdateIndexRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        logstore = com.aliyun.openapiutil.Client.getEncodeParam(logstore);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keys)) {
+            body.put("keys", request.keys);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.line))) {
+            body.put("line", request.line);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logReduce)) {
+            body.put("log_reduce", request.logReduce);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logReduceBlackList)) {
+            body.put("log_reduce_black_list", request.logReduceBlackList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logReduceWhiteList)) {
+            body.put("log_reduce_white_list", request.logReduceWhiteList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxTextLen)) {
+            body.put("max_text_len", request.maxTextLen);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
+            body.put("ttl", request.ttl);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateIndex"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/logstores/" + logstore + "/index"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateIndexResponse());
     }
 
     public UpdateLogStoreResponse updateLogStore(String project, String logstore, UpdateLogStoreRequest request) throws Exception {
@@ -605,8 +879,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("encrypt_conf", request.encryptConf);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.logstore)) {
-            body.put("logstore", request.logstore);
+        if (!com.aliyun.teautil.Common.isUnset(request.hotTtl)) {
+            body.put("hot_ttl", request.hotTtl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.logstoreName)) {
@@ -619,6 +893,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.shardCount)) {
             body.put("shardCount", request.shardCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telemetryType)) {
+            body.put("telemetryType", request.telemetryType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
@@ -639,7 +917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
+            new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateLogStoreResponse());
     }
@@ -673,8 +951,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
+            new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateProjectResponse());
+    }
+
+    public UpdateSavedSearchResponse updateSavedSearch(String project, String savedsearchName, UpdateSavedSearchRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateSavedSearchWithOptions(project, savedsearchName, request, headers, runtime);
+    }
+
+    public UpdateSavedSearchResponse updateSavedSearchWithOptions(String project, String savedsearchName, UpdateSavedSearchRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        savedsearchName = com.aliyun.openapiutil.Client.getEncodeParam(savedsearchName);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logstore)) {
+            body.put("logstore", request.logstore);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.savedsearchName)) {
+            body.put("savedsearchName", request.savedsearchName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchQuery)) {
+            body.put("searchQuery", request.searchQuery);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topic)) {
+            body.put("topic", request.topic);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSavedSearch"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/savedsearches/" + savedsearchName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateSavedSearchResponse());
     }
 }

@@ -3,7 +3,7 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateProjectResponse extends TeaModel {
+public class GetIndexResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -12,12 +12,16 @@ public class UpdateProjectResponse extends TeaModel {
     @Validation(required = true)
     public Integer statusCode;
 
-    public static UpdateProjectResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateProjectResponse self = new UpdateProjectResponse();
+    @NameInMap("body")
+    @Validation(required = true)
+    public GetIndexResponseBody body;
+
+    public static GetIndexResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetIndexResponse self = new GetIndexResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateProjectResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetIndexResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,12 +29,20 @@ public class UpdateProjectResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateProjectResponse setStatusCode(Integer statusCode) {
+    public GetIndexResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     public Integer getStatusCode() {
         return this.statusCode;
+    }
+
+    public GetIndexResponse setBody(GetIndexResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetIndexResponseBody getBody() {
+        return this.body;
     }
 
 }

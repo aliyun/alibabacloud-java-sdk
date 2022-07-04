@@ -3,7 +3,7 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateProjectResponse extends TeaModel {
+public class DeleteIndexResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -12,12 +12,12 @@ public class UpdateProjectResponse extends TeaModel {
     @Validation(required = true)
     public Integer statusCode;
 
-    public static UpdateProjectResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateProjectResponse self = new UpdateProjectResponse();
+    public static DeleteIndexResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteIndexResponse self = new DeleteIndexResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateProjectResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteIndexResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,7 +25,7 @@ public class UpdateProjectResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateProjectResponse setStatusCode(Integer statusCode) {
+    public DeleteIndexResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }

@@ -4,19 +4,19 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class Logstore extends TeaModel {
-    // append client ip and receive time
+    // 接收日志后，自动添加客户端外网IP和日志到达时间
     @NameInMap("appendMeta")
     public Boolean appendMeta;
 
-    // auto spilt shard
+    // 是否开启 shard 自动分裂。当写入数据量超过已有分区（Shard）写入服务能力且持续5分钟以上时，开启自动分裂功能可自动根据数据量增加分区数量
     @NameInMap("autoSplit")
     public Boolean autoSplit;
 
-    // create time
+    // 创建时间。
     @NameInMap("createTime")
     public Integer createTime;
 
-    // enable web tracking
+    // WebTracking功能支持快速采集各种浏览器以及iOS/Android/APP访问信息，默认关闭
     @NameInMap("enable_tracking")
     public Boolean enableTracking;
 
@@ -24,19 +24,23 @@ public class Logstore extends TeaModel {
     @NameInMap("encrypt_conf")
     public EncryptConf encryptConf;
 
-    // last modify time
+    // 必须在 (30, ttl) 之间
+    @NameInMap("hot_ttl")
+    public Integer hotTtl;
+
+    // 最后修改时间。
     @NameInMap("lastModifyTime")
     public Integer lastModifyTime;
 
-    // logstore name
+    // logstore 的名称。
     @NameInMap("logstoreName")
     public String logstoreName;
 
-    // max split shard
+    // 最大 shard 数量。
     @NameInMap("maxSplitShard")
     public Integer maxSplitShard;
 
-    // shard count
+    // shard 数量。
     @NameInMap("shardCount")
     public Integer shardCount;
 
@@ -44,7 +48,7 @@ public class Logstore extends TeaModel {
     @NameInMap("telemetryType")
     public String telemetryType;
 
-    // ttl
+    // 数据保存的天数。
     @NameInMap("ttl")
     public Integer ttl;
 
@@ -91,6 +95,14 @@ public class Logstore extends TeaModel {
     }
     public EncryptConf getEncryptConf() {
         return this.encryptConf;
+    }
+
+    public Logstore setHotTtl(Integer hotTtl) {
+        this.hotTtl = hotTtl;
+        return this;
+    }
+    public Integer getHotTtl() {
+        return this.hotTtl;
     }
 
     public Logstore setLastModifyTime(Integer lastModifyTime) {
