@@ -4,6 +4,9 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateCardSmsTemplateShrinkRequest extends TeaModel {
+    @NameInMap("Factorys")
+    public String factorys;
+
     @NameInMap("Memo")
     public String memo;
 
@@ -16,6 +19,14 @@ public class CreateCardSmsTemplateShrinkRequest extends TeaModel {
     public static CreateCardSmsTemplateShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCardSmsTemplateShrinkRequest self = new CreateCardSmsTemplateShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCardSmsTemplateShrinkRequest setFactorys(String factorys) {
+        this.factorys = factorys;
+        return this;
+    }
+    public String getFactorys() {
+        return this.factorys;
     }
 
     public CreateCardSmsTemplateShrinkRequest setMemo(String memo) {

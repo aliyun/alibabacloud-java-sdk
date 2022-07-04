@@ -4,11 +4,23 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetCardSmsLinkRequest extends TeaModel {
+    @NameInMap("CardCodeType")
+    public Integer cardCodeType;
+
+    @NameInMap("CardLinkType")
+    public Integer cardLinkType;
+
     @NameInMap("CardTemplateCode")
     public String cardTemplateCode;
 
     @NameInMap("CardTemplateParamJson")
     public String cardTemplateParamJson;
+
+    @NameInMap("CustomShortCodeJson")
+    public String customShortCodeJson;
+
+    @NameInMap("Domain")
+    public String domain;
 
     @NameInMap("OutId")
     public String outId;
@@ -22,6 +34,22 @@ public class GetCardSmsLinkRequest extends TeaModel {
     public static GetCardSmsLinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetCardSmsLinkRequest self = new GetCardSmsLinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetCardSmsLinkRequest setCardCodeType(Integer cardCodeType) {
+        this.cardCodeType = cardCodeType;
+        return this;
+    }
+    public Integer getCardCodeType() {
+        return this.cardCodeType;
+    }
+
+    public GetCardSmsLinkRequest setCardLinkType(Integer cardLinkType) {
+        this.cardLinkType = cardLinkType;
+        return this;
+    }
+    public Integer getCardLinkType() {
+        return this.cardLinkType;
     }
 
     public GetCardSmsLinkRequest setCardTemplateCode(String cardTemplateCode) {
@@ -38,6 +66,22 @@ public class GetCardSmsLinkRequest extends TeaModel {
     }
     public String getCardTemplateParamJson() {
         return this.cardTemplateParamJson;
+    }
+
+    public GetCardSmsLinkRequest setCustomShortCodeJson(String customShortCodeJson) {
+        this.customShortCodeJson = customShortCodeJson;
+        return this;
+    }
+    public String getCustomShortCodeJson() {
+        return this.customShortCodeJson;
+    }
+
+    public GetCardSmsLinkRequest setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
     }
 
     public GetCardSmsLinkRequest setOutId(String outId) {
