@@ -91,6 +91,9 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         @NameInMap("LongestCall")
         public Long longestCall;
 
+        @NameInMap("OutboundScenarioReadyAgents")
+        public Long outboundScenarioReadyAgents;
+
         @NameInMap("ReadyAgents")
         public Long readyAgents;
 
@@ -161,6 +164,14 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         }
         public Long getLongestCall() {
             return this.longestCall;
+        }
+
+        public ListSkillGroupStatesResponseBodyDataList setOutboundScenarioReadyAgents(Long outboundScenarioReadyAgents) {
+            this.outboundScenarioReadyAgents = outboundScenarioReadyAgents;
+            return this;
+        }
+        public Long getOutboundScenarioReadyAgents() {
+            return this.outboundScenarioReadyAgents;
         }
 
         public ListSkillGroupStatesResponseBodyDataList setReadyAgents(Long readyAgents) {
