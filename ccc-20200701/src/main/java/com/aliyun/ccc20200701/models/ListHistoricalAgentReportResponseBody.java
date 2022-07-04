@@ -932,6 +932,12 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         @NameInMap("Overall")
         public ListHistoricalAgentReportResponseBodyDataListOverall overall;
 
+        @NameInMap("SkillGroupIds")
+        public String skillGroupIds;
+
+        @NameInMap("SkillGroupNames")
+        public String skillGroupNames;
+
         public static ListHistoricalAgentReportResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListHistoricalAgentReportResponseBodyDataList self = new ListHistoricalAgentReportResponseBodyDataList();
             return TeaModel.build(map, self);
@@ -983,6 +989,22 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         }
         public ListHistoricalAgentReportResponseBodyDataListOverall getOverall() {
             return this.overall;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataList setSkillGroupIds(String skillGroupIds) {
+            this.skillGroupIds = skillGroupIds;
+            return this;
+        }
+        public String getSkillGroupIds() {
+            return this.skillGroupIds;
+        }
+
+        public ListHistoricalAgentReportResponseBodyDataList setSkillGroupNames(String skillGroupNames) {
+            this.skillGroupNames = skillGroupNames;
+            return this;
+        }
+        public String getSkillGroupNames() {
+            return this.skillGroupNames;
         }
 
     }
