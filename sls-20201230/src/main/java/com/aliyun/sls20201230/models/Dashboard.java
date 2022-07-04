@@ -1,0 +1,72 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sls20201230.models;
+
+import com.aliyun.tea.*;
+
+public class Dashboard extends TeaModel {
+    // 属性值
+    @NameInMap("attribute")
+    public java.util.Map<String, String> attribute;
+
+    // 包含的图表
+    @NameInMap("charts")
+    public java.util.List<Chart> charts;
+
+    // 内部名称
+    @NameInMap("dashboardName")
+    public String dashboardName;
+
+    // 描述信息
+    @NameInMap("description")
+    public String description;
+
+    // 展示名称
+    @NameInMap("displayName")
+    public String displayName;
+
+    public static Dashboard build(java.util.Map<String, ?> map) throws Exception {
+        Dashboard self = new Dashboard();
+        return TeaModel.build(map, self);
+    }
+
+    public Dashboard setAttribute(java.util.Map<String, String> attribute) {
+        this.attribute = attribute;
+        return this;
+    }
+    public java.util.Map<String, String> getAttribute() {
+        return this.attribute;
+    }
+
+    public Dashboard setCharts(java.util.List<Chart> charts) {
+        this.charts = charts;
+        return this;
+    }
+    public java.util.List<Chart> getCharts() {
+        return this.charts;
+    }
+
+    public Dashboard setDashboardName(String dashboardName) {
+        this.dashboardName = dashboardName;
+        return this;
+    }
+    public String getDashboardName() {
+        return this.dashboardName;
+    }
+
+    public Dashboard setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public Dashboard setDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    public String getDisplayName() {
+        return this.displayName;
+    }
+
+}

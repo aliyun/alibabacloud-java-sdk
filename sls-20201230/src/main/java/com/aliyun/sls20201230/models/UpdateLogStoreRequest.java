@@ -16,8 +16,8 @@ public class UpdateLogStoreRequest extends TeaModel {
     @NameInMap("encrypt_conf")
     public EncryptConf encryptConf;
 
-    @NameInMap("logstore")
-    public String logstore;
+    @NameInMap("hot_ttl")
+    public Integer hotTtl;
 
     @NameInMap("logstoreName")
     public String logstoreName;
@@ -27,6 +27,9 @@ public class UpdateLogStoreRequest extends TeaModel {
 
     @NameInMap("shardCount")
     public Integer shardCount;
+
+    @NameInMap("telemetryType")
+    public String telemetryType;
 
     @NameInMap("ttl")
     public Integer ttl;
@@ -68,12 +71,12 @@ public class UpdateLogStoreRequest extends TeaModel {
         return this.encryptConf;
     }
 
-    public UpdateLogStoreRequest setLogstore(String logstore) {
-        this.logstore = logstore;
+    public UpdateLogStoreRequest setHotTtl(Integer hotTtl) {
+        this.hotTtl = hotTtl;
         return this;
     }
-    public String getLogstore() {
-        return this.logstore;
+    public Integer getHotTtl() {
+        return this.hotTtl;
     }
 
     public UpdateLogStoreRequest setLogstoreName(String logstoreName) {
@@ -98,6 +101,14 @@ public class UpdateLogStoreRequest extends TeaModel {
     }
     public Integer getShardCount() {
         return this.shardCount;
+    }
+
+    public UpdateLogStoreRequest setTelemetryType(String telemetryType) {
+        this.telemetryType = telemetryType;
+        return this;
+    }
+    public String getTelemetryType() {
+        return this.telemetryType;
     }
 
     public UpdateLogStoreRequest setTtl(Integer ttl) {

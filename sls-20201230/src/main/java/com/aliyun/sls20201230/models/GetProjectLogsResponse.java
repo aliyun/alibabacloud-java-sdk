@@ -3,7 +3,7 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class ListSavedSearchResponse extends TeaModel {
+public class GetProjectLogsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListSavedSearchResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListSavedSearchResponseBody body;
+    public java.util.List<java.util.Map<String, String>> body;
 
-    public static ListSavedSearchResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListSavedSearchResponse self = new ListSavedSearchResponse();
+    public static GetProjectLogsResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetProjectLogsResponse self = new GetProjectLogsResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListSavedSearchResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetProjectLogsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListSavedSearchResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListSavedSearchResponse setStatusCode(Integer statusCode) {
+    public GetProjectLogsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListSavedSearchResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListSavedSearchResponse setBody(ListSavedSearchResponseBody body) {
+    public GetProjectLogsResponse setBody(java.util.List<java.util.Map<String, String>> body) {
         this.body = body;
         return this;
     }
-    public ListSavedSearchResponseBody getBody() {
+    public java.util.List<java.util.Map<String, String>> getBody() {
         return this.body;
     }
 

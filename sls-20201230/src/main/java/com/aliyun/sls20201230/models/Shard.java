@@ -4,23 +4,23 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class Shard extends TeaModel {
-    // createTime
+    // Shard的创建时间。Unix时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
     @NameInMap("createTime")
     public Integer createTime;
 
-    // exclusiveEndKey
+    // 指定Shard范围的结束值，Shard范围中不包含该值。即 shard 包含MD5值在 [inclusiveBeginKey, exclusiveEndKey) 之间的日志。
     @NameInMap("exclusiveEndKey")
     public String exclusiveEndKey;
 
-    // inclusiveBeginKey
+    // 指定Shard范围的起始值，Shard范围中包含该值。即 shard 包含MD5值在 [inclusiveBeginKey, exclusiveEndKey) 之间的日志。
     @NameInMap("inclusiveBeginKey")
     public String inclusiveBeginKey;
 
     // shard id
-    @NameInMap("shardId")
-    public Integer shardId;
+    @NameInMap("shardID")
+    public Integer shardID;
 
-    // status
+    // shard 的读写状态，readwrite 或者 readonly。
     @NameInMap("status")
     public String status;
 
@@ -53,12 +53,12 @@ public class Shard extends TeaModel {
         return this.inclusiveBeginKey;
     }
 
-    public Shard setShardId(Integer shardId) {
-        this.shardId = shardId;
+    public Shard setShardID(Integer shardID) {
+        this.shardID = shardID;
         return this;
     }
-    public Integer getShardId() {
-        return this.shardId;
+    public Integer getShardID() {
+        return this.shardID;
     }
 
     public Shard setStatus(String status) {
