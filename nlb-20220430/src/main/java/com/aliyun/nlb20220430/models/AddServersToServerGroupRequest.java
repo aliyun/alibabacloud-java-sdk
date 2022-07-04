@@ -89,10 +89,6 @@ public class AddServersToServerGroupRequest extends TeaModel {
         @NameInMap("Weight")
         public Integer weight;
 
-        // 服务器对应的zoneId
-        @NameInMap("ZoneId")
-        public String zoneId;
-
         public static AddServersToServerGroupRequestServers build(java.util.Map<String, ?> map) throws Exception {
             AddServersToServerGroupRequestServers self = new AddServersToServerGroupRequestServers();
             return TeaModel.build(map, self);
@@ -144,14 +140,6 @@ public class AddServersToServerGroupRequest extends TeaModel {
         }
         public Integer getWeight() {
             return this.weight;
-        }
-
-        public AddServersToServerGroupRequestServers setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
     }

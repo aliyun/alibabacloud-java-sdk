@@ -25,8 +25,8 @@ public class UpdateLoadBalancerAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("SecurityGroups")
-    public java.util.List<String> securityGroups;
+    @NameInMap("SecurityGroupIds")
+    public java.util.List<String> securityGroupIds;
 
     @NameInMap("TrafficAffinityEnabled")
     public Boolean trafficAffinityEnabled;
@@ -92,12 +92,12 @@ public class UpdateLoadBalancerAttributeRequest extends TeaModel {
         return this.regionId;
     }
 
-    public UpdateLoadBalancerAttributeRequest setSecurityGroups(java.util.List<String> securityGroups) {
-        this.securityGroups = securityGroups;
+    public UpdateLoadBalancerAttributeRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
         return this;
     }
-    public java.util.List<String> getSecurityGroups() {
-        return this.securityGroups;
+    public java.util.List<String> getSecurityGroupIds() {
+        return this.securityGroupIds;
     }
 
     public UpdateLoadBalancerAttributeRequest setTrafficAffinityEnabled(Boolean trafficAffinityEnabled) {

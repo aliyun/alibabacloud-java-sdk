@@ -10,8 +10,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("AddressType")
     public String addressType;
 
-    @NameInMap("BillingConfig")
-    public CreateLoadBalancerRequestBillingConfig billingConfig;
+    @NameInMap("BandwidthPackageId")
+    public String bandwidthPackageId;
 
     @NameInMap("BizFlag")
     public String bizFlag;
@@ -19,14 +19,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("CommonBandwidthPackageId")
-    public String commonBandwidthPackageId;
-
     @NameInMap("CrossZoneEnabled")
     public Boolean crossZoneEnabled;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
+
+    @NameInMap("LoadBalancerBillingConfig")
+    public CreateLoadBalancerRequestLoadBalancerBillingConfig loadBalancerBillingConfig;
 
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
@@ -40,8 +40,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("SecurityGroups")
-    public java.util.List<String> securityGroups;
+    @NameInMap("SecurityGroupIds")
+    public java.util.List<String> securityGroupIds;
 
     @NameInMap("TrafficAffinityEnabled")
     public Boolean trafficAffinityEnabled;
@@ -73,12 +73,12 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.addressType;
     }
 
-    public CreateLoadBalancerRequest setBillingConfig(CreateLoadBalancerRequestBillingConfig billingConfig) {
-        this.billingConfig = billingConfig;
+    public CreateLoadBalancerRequest setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
         return this;
     }
-    public CreateLoadBalancerRequestBillingConfig getBillingConfig() {
-        return this.billingConfig;
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
     }
 
     public CreateLoadBalancerRequest setBizFlag(String bizFlag) {
@@ -97,14 +97,6 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateLoadBalancerRequest setCommonBandwidthPackageId(String commonBandwidthPackageId) {
-        this.commonBandwidthPackageId = commonBandwidthPackageId;
-        return this;
-    }
-    public String getCommonBandwidthPackageId() {
-        return this.commonBandwidthPackageId;
-    }
-
     public CreateLoadBalancerRequest setCrossZoneEnabled(Boolean crossZoneEnabled) {
         this.crossZoneEnabled = crossZoneEnabled;
         return this;
@@ -119,6 +111,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public CreateLoadBalancerRequest setLoadBalancerBillingConfig(CreateLoadBalancerRequestLoadBalancerBillingConfig loadBalancerBillingConfig) {
+        this.loadBalancerBillingConfig = loadBalancerBillingConfig;
+        return this;
+    }
+    public CreateLoadBalancerRequestLoadBalancerBillingConfig getLoadBalancerBillingConfig() {
+        return this.loadBalancerBillingConfig;
     }
 
     public CreateLoadBalancerRequest setLoadBalancerName(String loadBalancerName) {
@@ -153,12 +153,12 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateLoadBalancerRequest setSecurityGroups(java.util.List<String> securityGroups) {
-        this.securityGroups = securityGroups;
+    public CreateLoadBalancerRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
         return this;
     }
-    public java.util.List<String> getSecurityGroups() {
-        return this.securityGroups;
+    public java.util.List<String> getSecurityGroupIds() {
+        return this.securityGroupIds;
     }
 
     public CreateLoadBalancerRequest setTrafficAffinityEnabled(Boolean trafficAffinityEnabled) {
@@ -185,79 +185,22 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.zoneMappings;
     }
 
-    public static class CreateLoadBalancerRequestBillingConfig extends TeaModel {
-        @NameInMap("AutoPay")
-        public Boolean autoPay;
-
-        // PayByTraffic, PayByBandwidth, PayByLcu, PayBy95, PayByOld95, PayBy96
-        @NameInMap("InternetChargeType")
-        public String internetChargeType;
-
+    public static class CreateLoadBalancerRequestLoadBalancerBillingConfig extends TeaModel {
         // PrePay, PostPay
         @NameInMap("PayType")
         public String payType;
 
-        @NameInMap("Period")
-        public Integer period;
-
-        // Month, Year, Day
-        @NameInMap("PricingCycle")
-        public String pricingCycle;
-
-        @NameInMap("Specification")
-        public String specification;
-
-        public static CreateLoadBalancerRequestBillingConfig build(java.util.Map<String, ?> map) throws Exception {
-            CreateLoadBalancerRequestBillingConfig self = new CreateLoadBalancerRequestBillingConfig();
+        public static CreateLoadBalancerRequestLoadBalancerBillingConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateLoadBalancerRequestLoadBalancerBillingConfig self = new CreateLoadBalancerRequestLoadBalancerBillingConfig();
             return TeaModel.build(map, self);
         }
 
-        public CreateLoadBalancerRequestBillingConfig setAutoPay(Boolean autoPay) {
-            this.autoPay = autoPay;
-            return this;
-        }
-        public Boolean getAutoPay() {
-            return this.autoPay;
-        }
-
-        public CreateLoadBalancerRequestBillingConfig setInternetChargeType(String internetChargeType) {
-            this.internetChargeType = internetChargeType;
-            return this;
-        }
-        public String getInternetChargeType() {
-            return this.internetChargeType;
-        }
-
-        public CreateLoadBalancerRequestBillingConfig setPayType(String payType) {
+        public CreateLoadBalancerRequestLoadBalancerBillingConfig setPayType(String payType) {
             this.payType = payType;
             return this;
         }
         public String getPayType() {
             return this.payType;
-        }
-
-        public CreateLoadBalancerRequestBillingConfig setPeriod(Integer period) {
-            this.period = period;
-            return this;
-        }
-        public Integer getPeriod() {
-            return this.period;
-        }
-
-        public CreateLoadBalancerRequestBillingConfig setPricingCycle(String pricingCycle) {
-            this.pricingCycle = pricingCycle;
-            return this;
-        }
-        public String getPricingCycle() {
-            return this.pricingCycle;
-        }
-
-        public CreateLoadBalancerRequestBillingConfig setSpecification(String specification) {
-            this.specification = specification;
-            return this;
-        }
-        public String getSpecification() {
-            return this.specification;
         }
 
     }
