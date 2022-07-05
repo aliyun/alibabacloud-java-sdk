@@ -1040,6 +1040,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
+            body.put("BusinessType", request.businessType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             body.put("Region", request.region);
         }
@@ -1265,10 +1269,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDcdnRealTimeLogProjectResponse deleteDcdnRealTimeLogProjectWithOptions(DeleteDcdnRealTimeLogProjectRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
-            query.put("BusinessType", request.businessType);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
@@ -4538,13 +4538,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDcdnReportListWithOptions(request, runtime);
     }
 
+    public DescribeDcdnSLSRealTimeLogTypeResponse describeDcdnSLSRealTimeLogTypeWithOptions(DescribeDcdnSLSRealTimeLogTypeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDcdnSLSRealTimeLogType"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnSLSRealTimeLogTypeResponse());
+    }
+
+    public DescribeDcdnSLSRealTimeLogTypeResponse describeDcdnSLSRealTimeLogType(DescribeDcdnSLSRealTimeLogTypeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeDcdnSLSRealTimeLogTypeWithOptions(request, runtime);
+    }
+
     public DescribeDcdnSLSRealtimeLogDeliveryResponse describeDcdnSLSRealtimeLogDeliveryWithOptions(DescribeDcdnSLSRealtimeLogDeliveryRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
-            query.put("BusinessType", request.businessType);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
