@@ -70,7 +70,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
+            new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateConsumerGroupResponse());
     }
@@ -129,7 +129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
+            new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateIndexResponse());
     }
