@@ -59,6 +59,9 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         @NameInMap("SamplingRate")
         public String samplingRate;
 
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("Type")
         public String type;
 
@@ -137,6 +140,14 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         }
         public String getSamplingRate() {
             return this.samplingRate;
+        }
+
+        public DescribeDcdnSLSRealtimeLogDeliveryResponseBodyContent setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeDcdnSLSRealtimeLogDeliveryResponseBodyContent setType(String type) {

@@ -4,9 +4,6 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DeleteDcdnRealTimeLogProjectRequest extends TeaModel {
-    @NameInMap("BusinessType")
-    public String businessType;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,14 +13,6 @@ public class DeleteDcdnRealTimeLogProjectRequest extends TeaModel {
     public static DeleteDcdnRealTimeLogProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDcdnRealTimeLogProjectRequest self = new DeleteDcdnRealTimeLogProjectRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteDcdnRealTimeLogProjectRequest setBusinessType(String businessType) {
-        this.businessType = businessType;
-        return this;
-    }
-    public String getBusinessType() {
-        return this.businessType;
     }
 
     public DeleteDcdnRealTimeLogProjectRequest setOwnerId(Long ownerId) {
