@@ -117,6 +117,9 @@ public class UploadReportResponseBody extends TeaModel {
         @NameInMap("ResultUrl")
         public String resultUrl;
 
+        @NameInMap("RtcRecordId")
+        public String rtcRecordId;
+
         // 视频地址
         @NameInMap("VideoUrl")
         public String videoUrl;
@@ -172,6 +175,14 @@ public class UploadReportResponseBody extends TeaModel {
         }
         public String getResultUrl() {
             return this.resultUrl;
+        }
+
+        public UploadReportResponseBodyData setRtcRecordId(String rtcRecordId) {
+            this.rtcRecordId = rtcRecordId;
+            return this;
+        }
+        public String getRtcRecordId() {
+            return this.rtcRecordId;
         }
 
         public UploadReportResponseBodyData setVideoUrl(String videoUrl) {

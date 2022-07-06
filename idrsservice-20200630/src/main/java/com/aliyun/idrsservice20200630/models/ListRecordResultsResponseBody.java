@@ -133,6 +133,9 @@ public class ListRecordResultsResponseBody extends TeaModel {
         @NameInMap("RoomId")
         public String roomId;
 
+        @NameInMap("RtcRecordId")
+        public String rtcRecordId;
+
         // 检测状态
         @NameInMap("Status")
         public String status;
@@ -224,6 +227,14 @@ public class ListRecordResultsResponseBody extends TeaModel {
         }
         public String getRoomId() {
             return this.roomId;
+        }
+
+        public ListRecordResultsResponseBodyDataItems setRtcRecordId(String rtcRecordId) {
+            this.rtcRecordId = rtcRecordId;
+            return this;
+        }
+        public String getRtcRecordId() {
+            return this.rtcRecordId;
         }
 
         public ListRecordResultsResponseBodyDataItems setStatus(String status) {
