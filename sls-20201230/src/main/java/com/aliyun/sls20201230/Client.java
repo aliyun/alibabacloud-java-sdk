@@ -14,7 +14,7 @@ import com.aliyun.openapiutil.*;
 public class Client extends com.aliyun.teaopenapi.Client {
 
     public com.aliyun.gateway.spi.Client _client;
-    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
+    public Client(Config config) throws Exception {
         super(config);
         this._client = new com.aliyun.gateway.sls.Client();
         this._spi = _client;
