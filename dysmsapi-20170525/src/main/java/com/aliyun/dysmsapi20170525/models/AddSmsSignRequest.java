@@ -16,6 +16,9 @@ public class AddSmsSignRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SceneType")
+    public Integer sceneType;
+
     @NameInMap("SignFileList")
     public java.util.List<AddSmsSignRequestSignFileList> signFileList;
 
@@ -60,6 +63,14 @@ public class AddSmsSignRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public AddSmsSignRequest setSceneType(Integer sceneType) {
+        this.sceneType = sceneType;
+        return this;
+    }
+    public Integer getSceneType() {
+        return this.sceneType;
     }
 
     public AddSmsSignRequest setSignFileList(java.util.List<AddSmsSignRequestSignFileList> signFileList) {
