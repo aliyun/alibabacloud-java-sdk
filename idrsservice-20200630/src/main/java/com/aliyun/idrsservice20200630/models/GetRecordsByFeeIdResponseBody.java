@@ -3,18 +3,18 @@ package com.aliyun.idrsservice20200630.models;
 
 import com.aliyun.tea.*;
 
-public class GetRecordResultResponseBody extends TeaModel {
+public class GetRecordsByFeeIdResponseBody extends TeaModel {
     // code
     @NameInMap("Code")
     public String code;
 
     // 数据
     @NameInMap("Data")
-    public GetRecordResultResponseBodyData data;
+    public java.util.List<GetRecordsByFeeIdResponseBodyData> data;
 
     // 错误列表
     @NameInMap("Errors")
-    public java.util.List<GetRecordResultResponseBodyErrors> errors;
+    public java.util.List<GetRecordsByFeeIdResponseBodyErrors> errors;
 
     @NameInMap("HttpCode")
     public Integer httpCode;
@@ -31,12 +31,12 @@ public class GetRecordResultResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static GetRecordResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetRecordResultResponseBody self = new GetRecordResultResponseBody();
+    public static GetRecordsByFeeIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetRecordsByFeeIdResponseBody self = new GetRecordsByFeeIdResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetRecordResultResponseBody setCode(String code) {
+    public GetRecordsByFeeIdResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -44,23 +44,23 @@ public class GetRecordResultResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetRecordResultResponseBody setData(GetRecordResultResponseBodyData data) {
+    public GetRecordsByFeeIdResponseBody setData(java.util.List<GetRecordsByFeeIdResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public GetRecordResultResponseBodyData getData() {
+    public java.util.List<GetRecordsByFeeIdResponseBodyData> getData() {
         return this.data;
     }
 
-    public GetRecordResultResponseBody setErrors(java.util.List<GetRecordResultResponseBodyErrors> errors) {
+    public GetRecordsByFeeIdResponseBody setErrors(java.util.List<GetRecordsByFeeIdResponseBodyErrors> errors) {
         this.errors = errors;
         return this;
     }
-    public java.util.List<GetRecordResultResponseBodyErrors> getErrors() {
+    public java.util.List<GetRecordsByFeeIdResponseBodyErrors> getErrors() {
         return this.errors;
     }
 
-    public GetRecordResultResponseBody setHttpCode(Integer httpCode) {
+    public GetRecordsByFeeIdResponseBody setHttpCode(Integer httpCode) {
         this.httpCode = httpCode;
         return this;
     }
@@ -68,7 +68,7 @@ public class GetRecordResultResponseBody extends TeaModel {
         return this.httpCode;
     }
 
-    public GetRecordResultResponseBody setMessage(String message) {
+    public GetRecordsByFeeIdResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -76,7 +76,7 @@ public class GetRecordResultResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetRecordResultResponseBody setRequestId(String requestId) {
+    public GetRecordsByFeeIdResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -84,7 +84,7 @@ public class GetRecordResultResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetRecordResultResponseBody setSuccess(Boolean success) {
+    public GetRecordsByFeeIdResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -92,7 +92,7 @@ public class GetRecordResultResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetRecordResultResponseBodyDataRecordRoomList extends TeaModel {
+    public static class GetRecordsByFeeIdResponseBodyDataRecordRoomList extends TeaModel {
         // 录制视频类型
         @NameInMap("RecordType")
         public String recordType;
@@ -124,12 +124,12 @@ public class GetRecordResultResponseBody extends TeaModel {
         @NameInMap("RtcRecordId")
         public String rtcRecordId;
 
-        public static GetRecordResultResponseBodyDataRecordRoomList build(java.util.Map<String, ?> map) throws Exception {
-            GetRecordResultResponseBodyDataRecordRoomList self = new GetRecordResultResponseBodyDataRecordRoomList();
+        public static GetRecordsByFeeIdResponseBodyDataRecordRoomList build(java.util.Map<String, ?> map) throws Exception {
+            GetRecordsByFeeIdResponseBodyDataRecordRoomList self = new GetRecordsByFeeIdResponseBodyDataRecordRoomList();
             return TeaModel.build(map, self);
         }
 
-        public GetRecordResultResponseBodyDataRecordRoomList setRecordType(String recordType) {
+        public GetRecordsByFeeIdResponseBodyDataRecordRoomList setRecordType(String recordType) {
             this.recordType = recordType;
             return this;
         }
@@ -137,7 +137,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.recordType;
         }
 
-        public GetRecordResultResponseBodyDataRecordRoomList setRole(String role) {
+        public GetRecordsByFeeIdResponseBodyDataRecordRoomList setRole(String role) {
             this.role = role;
             return this;
         }
@@ -145,7 +145,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.role;
         }
 
-        public GetRecordResultResponseBodyDataRecordRoomList setRoomMetaUrl(String roomMetaUrl) {
+        public GetRecordsByFeeIdResponseBodyDataRecordRoomList setRoomMetaUrl(String roomMetaUrl) {
             this.roomMetaUrl = roomMetaUrl;
             return this;
         }
@@ -153,7 +153,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.roomMetaUrl;
         }
 
-        public GetRecordResultResponseBodyDataRecordRoomList setRoomRecordAt(String roomRecordAt) {
+        public GetRecordsByFeeIdResponseBodyDataRecordRoomList setRoomRecordAt(String roomRecordAt) {
             this.roomRecordAt = roomRecordAt;
             return this;
         }
@@ -161,7 +161,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.roomRecordAt;
         }
 
-        public GetRecordResultResponseBodyDataRecordRoomList setRoomResultUrl(String roomResultUrl) {
+        public GetRecordsByFeeIdResponseBodyDataRecordRoomList setRoomResultUrl(String roomResultUrl) {
             this.roomResultUrl = roomResultUrl;
             return this;
         }
@@ -169,7 +169,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.roomResultUrl;
         }
 
-        public GetRecordResultResponseBodyDataRecordRoomList setRoomStatus(String roomStatus) {
+        public GetRecordsByFeeIdResponseBodyDataRecordRoomList setRoomStatus(String roomStatus) {
             this.roomStatus = roomStatus;
             return this;
         }
@@ -177,7 +177,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.roomStatus;
         }
 
-        public GetRecordResultResponseBodyDataRecordRoomList setRoomVideoUrl(String roomVideoUrl) {
+        public GetRecordsByFeeIdResponseBodyDataRecordRoomList setRoomVideoUrl(String roomVideoUrl) {
             this.roomVideoUrl = roomVideoUrl;
             return this;
         }
@@ -185,7 +185,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.roomVideoUrl;
         }
 
-        public GetRecordResultResponseBodyDataRecordRoomList setRtcRecordId(String rtcRecordId) {
+        public GetRecordsByFeeIdResponseBodyDataRecordRoomList setRtcRecordId(String rtcRecordId) {
             this.rtcRecordId = rtcRecordId;
             return this;
         }
@@ -195,7 +195,7 @@ public class GetRecordResultResponseBody extends TeaModel {
 
     }
 
-    public static class GetRecordResultResponseBodyData extends TeaModel {
+    public static class GetRecordsByFeeIdResponseBodyData extends TeaModel {
         // 应用名
         @NameInMap("AppName")
         public String appName;
@@ -230,7 +230,7 @@ public class GetRecordResultResponseBody extends TeaModel {
 
         // 远程双录文件地址列表
         @NameInMap("RecordRoomList")
-        public java.util.List<GetRecordResultResponseBodyDataRecordRoomList> recordRoomList;
+        public java.util.List<GetRecordsByFeeIdResponseBodyDataRecordRoomList> recordRoomList;
 
         // 结果地址
         @NameInMap("ResultUrl")
@@ -248,12 +248,12 @@ public class GetRecordResultResponseBody extends TeaModel {
         @NameInMap("VideoUrl")
         public String videoUrl;
 
-        public static GetRecordResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            GetRecordResultResponseBodyData self = new GetRecordResultResponseBodyData();
+        public static GetRecordsByFeeIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetRecordsByFeeIdResponseBodyData self = new GetRecordsByFeeIdResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetRecordResultResponseBodyData setAppName(String appName) {
+        public GetRecordsByFeeIdResponseBodyData setAppName(String appName) {
             this.appName = appName;
             return this;
         }
@@ -261,7 +261,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public GetRecordResultResponseBodyData setCreatedAt(String createdAt) {
+        public GetRecordsByFeeIdResponseBodyData setCreatedAt(String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
@@ -269,7 +269,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.createdAt;
         }
 
-        public GetRecordResultResponseBodyData setDepartmentName(String departmentName) {
+        public GetRecordsByFeeIdResponseBodyData setDepartmentName(String departmentName) {
             this.departmentName = departmentName;
             return this;
         }
@@ -277,7 +277,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.departmentName;
         }
 
-        public GetRecordResultResponseBodyData setDetectProcessName(String detectProcessName) {
+        public GetRecordsByFeeIdResponseBodyData setDetectProcessName(String detectProcessName) {
             this.detectProcessName = detectProcessName;
             return this;
         }
@@ -285,7 +285,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.detectProcessName;
         }
 
-        public GetRecordResultResponseBodyData setDuration(Long duration) {
+        public GetRecordsByFeeIdResponseBodyData setDuration(Long duration) {
             this.duration = duration;
             return this;
         }
@@ -293,7 +293,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.duration;
         }
 
-        public GetRecordResultResponseBodyData setId(String id) {
+        public GetRecordsByFeeIdResponseBodyData setId(String id) {
             this.id = id;
             return this;
         }
@@ -301,7 +301,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.id;
         }
 
-        public GetRecordResultResponseBodyData setMetaUrl(String metaUrl) {
+        public GetRecordsByFeeIdResponseBodyData setMetaUrl(String metaUrl) {
             this.metaUrl = metaUrl;
             return this;
         }
@@ -309,7 +309,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.metaUrl;
         }
 
-        public GetRecordResultResponseBodyData setRecordAt(String recordAt) {
+        public GetRecordsByFeeIdResponseBodyData setRecordAt(String recordAt) {
             this.recordAt = recordAt;
             return this;
         }
@@ -317,15 +317,15 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.recordAt;
         }
 
-        public GetRecordResultResponseBodyData setRecordRoomList(java.util.List<GetRecordResultResponseBodyDataRecordRoomList> recordRoomList) {
+        public GetRecordsByFeeIdResponseBodyData setRecordRoomList(java.util.List<GetRecordsByFeeIdResponseBodyDataRecordRoomList> recordRoomList) {
             this.recordRoomList = recordRoomList;
             return this;
         }
-        public java.util.List<GetRecordResultResponseBodyDataRecordRoomList> getRecordRoomList() {
+        public java.util.List<GetRecordsByFeeIdResponseBodyDataRecordRoomList> getRecordRoomList() {
             return this.recordRoomList;
         }
 
-        public GetRecordResultResponseBodyData setResultUrl(String resultUrl) {
+        public GetRecordsByFeeIdResponseBodyData setResultUrl(String resultUrl) {
             this.resultUrl = resultUrl;
             return this;
         }
@@ -333,7 +333,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.resultUrl;
         }
 
-        public GetRecordResultResponseBodyData setRoomId(String roomId) {
+        public GetRecordsByFeeIdResponseBodyData setRoomId(String roomId) {
             this.roomId = roomId;
             return this;
         }
@@ -341,7 +341,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.roomId;
         }
 
-        public GetRecordResultResponseBodyData setStatus(String status) {
+        public GetRecordsByFeeIdResponseBodyData setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -349,7 +349,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetRecordResultResponseBodyData setVideoUrl(String videoUrl) {
+        public GetRecordsByFeeIdResponseBodyData setVideoUrl(String videoUrl) {
             this.videoUrl = videoUrl;
             return this;
         }
@@ -359,19 +359,19 @@ public class GetRecordResultResponseBody extends TeaModel {
 
     }
 
-    public static class GetRecordResultResponseBodyErrors extends TeaModel {
+    public static class GetRecordsByFeeIdResponseBodyErrors extends TeaModel {
         @NameInMap("Field")
         public String field;
 
         @NameInMap("Message")
         public String message;
 
-        public static GetRecordResultResponseBodyErrors build(java.util.Map<String, ?> map) throws Exception {
-            GetRecordResultResponseBodyErrors self = new GetRecordResultResponseBodyErrors();
+        public static GetRecordsByFeeIdResponseBodyErrors build(java.util.Map<String, ?> map) throws Exception {
+            GetRecordsByFeeIdResponseBodyErrors self = new GetRecordsByFeeIdResponseBodyErrors();
             return TeaModel.build(map, self);
         }
 
-        public GetRecordResultResponseBodyErrors setField(String field) {
+        public GetRecordsByFeeIdResponseBodyErrors setField(String field) {
             this.field = field;
             return this;
         }
@@ -379,7 +379,7 @@ public class GetRecordResultResponseBody extends TeaModel {
             return this.field;
         }
 
-        public GetRecordResultResponseBodyErrors setMessage(String message) {
+        public GetRecordsByFeeIdResponseBodyErrors setMessage(String message) {
             this.message = message;
             return this;
         }
