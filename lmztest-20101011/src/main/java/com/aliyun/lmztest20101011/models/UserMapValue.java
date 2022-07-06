@@ -13,6 +13,9 @@ public class UserMapValue extends TeaModel {
     @NameInMap("Uas")
     public String uas;
 
+    @NameInMap("Uaa")
+    public String uaa;
+
     public static UserMapValue build(java.util.Map<String, ?> map) throws Exception {
         UserMapValue self = new UserMapValue();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class UserMapValue extends TeaModel {
     }
     public String getUas() {
         return this.uas;
+    }
+
+    public UserMapValue setUaa(String uaa) {
+        this.uaa = uaa;
+        return this;
+    }
+    public String getUaa() {
+        return this.uaa;
     }
 
 }
