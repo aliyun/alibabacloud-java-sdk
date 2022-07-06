@@ -32,6 +32,93 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public CreateDeviceResponse createDeviceWithOptions(CreateDeviceRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDeviceShrinkRequest request = new CreateDeviceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extraMap)) {
+            request.extraMapShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extraMap, "ExtraMap", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            body.put("ChannelId", request.channelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.city)) {
+            body.put("City", request.city);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceModelNumber)) {
+            body.put("DeviceModelNumber", request.deviceModelNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            body.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceType)) {
+            body.put("DeviceType", request.deviceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.district)) {
+            body.put("District", request.district);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraMapShrink)) {
+            body.put("ExtraMap", request.extraMapShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firstScene)) {
+            body.put("FirstScene", request.firstScene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.floor)) {
+            body.put("Floor", request.floor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationName)) {
+            body.put("LocationName", request.locationName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            body.put("MediaId", request.mediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outerCode)) {
+            body.put("OuterCode", request.outerCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.province)) {
+            body.put("Province", request.province);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secondScene)) {
+            body.put("SecondScene", request.secondScene);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDevice"),
+            new TeaPair("version", "2022-07-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDeviceResponse());
+    }
+
+    public CreateDeviceResponse createDevice(CreateDeviceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createDeviceWithOptions(request, runtime);
+    }
+
     public GetUserFinishedAdResponse getUserFinishedAdWithOptions(GetUserFinishedAdRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
