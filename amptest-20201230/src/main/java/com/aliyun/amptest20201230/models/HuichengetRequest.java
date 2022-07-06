@@ -16,6 +16,9 @@ public class HuichengetRequest extends TeaModel {
     @NameInMap("Blue")
     public String blue;
 
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Enight")
     public String enight;
 
@@ -109,6 +112,14 @@ public class HuichengetRequest extends TeaModel {
     }
     public String getBlue() {
         return this.blue;
+    }
+
+    public HuichengetRequest setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public HuichengetRequest setEnight(String enight) {

@@ -422,6 +422,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Blue", request.blue);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
+            query.put("Code", request.code);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enight)) {
             query.put("Enight", request.enight);
         }

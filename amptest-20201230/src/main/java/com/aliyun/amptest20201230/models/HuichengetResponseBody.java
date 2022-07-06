@@ -10,8 +10,14 @@ public class HuichengetResponseBody extends TeaModel {
     @NameInMap("Apple")
     public String apple;
 
+    @NameInMap("Blue")
+    public String blue;
+
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("Even")
+    public String even;
 
     @NameInMap("Five")
     public String five;
@@ -21,6 +27,9 @@ public class HuichengetResponseBody extends TeaModel {
 
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("Night")
+    public String night;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -52,12 +61,28 @@ public class HuichengetResponseBody extends TeaModel {
         return this.apple;
     }
 
+    public HuichengetResponseBody setBlue(String blue) {
+        this.blue = blue;
+        return this;
+    }
+    public String getBlue() {
+        return this.blue;
+    }
+
     public HuichengetResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public HuichengetResponseBody setEven(String even) {
+        this.even = even;
+        return this;
+    }
+    public String getEven() {
+        return this.even;
     }
 
     public HuichengetResponseBody setFive(String five) {
@@ -82,6 +107,14 @@ public class HuichengetResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public HuichengetResponseBody setNight(String night) {
+        this.night = night;
+        return this;
+    }
+    public String getNight() {
+        return this.night;
     }
 
     public HuichengetResponseBody setRequestId(String requestId) {
