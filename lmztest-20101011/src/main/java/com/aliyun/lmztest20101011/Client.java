@@ -202,6 +202,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DemoHsfNineResponseResponse demoHsfNineResponseWithOptions(DemoHsfNineResponseRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.testF1)) {
+            query.put("TestF1", request.testF1);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("name", request.name);
         }
