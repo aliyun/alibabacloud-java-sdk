@@ -108,16 +108,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.sceneType)) {
-            query.put("SceneType", request.sceneType);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
             query.put("SignName", request.signName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.signSource)) {
             query.put("SignSource", request.signSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signType)) {
+            query.put("SignType", request.signType);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -617,16 +617,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.sceneType)) {
-            query.put("SceneType", request.sceneType);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
             query.put("SignName", request.signName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.signSource)) {
             query.put("SignSource", request.signSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signType)) {
+            query.put("SignType", request.signType);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
