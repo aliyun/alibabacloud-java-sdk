@@ -3,7 +3,7 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class Config extends TeaModel {
+public class LogtailConfig extends TeaModel {
     // configName
     @NameInMap("configName")
     public String configName;
@@ -14,7 +14,7 @@ public class Config extends TeaModel {
 
     // inputDetail
     @NameInMap("inputDetail")
-    public ConfigInputDetail inputDetail;
+    public LogtailConfigInputDetail inputDetail;
 
     // inputType
     @NameInMap("inputType")
@@ -30,18 +30,18 @@ public class Config extends TeaModel {
 
     // outputDetail
     @NameInMap("outputDetail")
-    public ConfigOutputDetail outputDetail;
+    public LogtailConfigOutputDetail outputDetail;
 
     // outputType
     @NameInMap("outputType")
     public String outputType;
 
-    public static Config build(java.util.Map<String, ?> map) throws Exception {
-        Config self = new Config();
+    public static LogtailConfig build(java.util.Map<String, ?> map) throws Exception {
+        LogtailConfig self = new LogtailConfig();
         return TeaModel.build(map, self);
     }
 
-    public Config setConfigName(String configName) {
+    public LogtailConfig setConfigName(String configName) {
         this.configName = configName;
         return this;
     }
@@ -49,7 +49,7 @@ public class Config extends TeaModel {
         return this.configName;
     }
 
-    public Config setCreateTime(Long createTime) {
+    public LogtailConfig setCreateTime(Long createTime) {
         this.createTime = createTime;
         return this;
     }
@@ -57,15 +57,15 @@ public class Config extends TeaModel {
         return this.createTime;
     }
 
-    public Config setInputDetail(ConfigInputDetail inputDetail) {
+    public LogtailConfig setInputDetail(LogtailConfigInputDetail inputDetail) {
         this.inputDetail = inputDetail;
         return this;
     }
-    public ConfigInputDetail getInputDetail() {
+    public LogtailConfigInputDetail getInputDetail() {
         return this.inputDetail;
     }
 
-    public Config setInputType(String inputType) {
+    public LogtailConfig setInputType(String inputType) {
         this.inputType = inputType;
         return this;
     }
@@ -73,7 +73,7 @@ public class Config extends TeaModel {
         return this.inputType;
     }
 
-    public Config setLastModifyTime(Long lastModifyTime) {
+    public LogtailConfig setLastModifyTime(Long lastModifyTime) {
         this.lastModifyTime = lastModifyTime;
         return this;
     }
@@ -81,7 +81,7 @@ public class Config extends TeaModel {
         return this.lastModifyTime;
     }
 
-    public Config setLogSample(String logSample) {
+    public LogtailConfig setLogSample(String logSample) {
         this.logSample = logSample;
         return this;
     }
@@ -89,15 +89,15 @@ public class Config extends TeaModel {
         return this.logSample;
     }
 
-    public Config setOutputDetail(ConfigOutputDetail outputDetail) {
+    public LogtailConfig setOutputDetail(LogtailConfigOutputDetail outputDetail) {
         this.outputDetail = outputDetail;
         return this;
     }
-    public ConfigOutputDetail getOutputDetail() {
+    public LogtailConfigOutputDetail getOutputDetail() {
         return this.outputDetail;
     }
 
-    public Config setOutputType(String outputType) {
+    public LogtailConfig setOutputType(String outputType) {
         this.outputType = outputType;
         return this;
     }
@@ -105,7 +105,7 @@ public class Config extends TeaModel {
         return this.outputType;
     }
 
-    public static class ConfigInputDetailSensitiveKeys extends TeaModel {
+    public static class LogtailConfigInputDetailSensitiveKeys extends TeaModel {
         // all
         @NameInMap("all")
         public Boolean all;
@@ -126,12 +126,12 @@ public class Config extends TeaModel {
         @NameInMap("type")
         public String type;
 
-        public static ConfigInputDetailSensitiveKeys build(java.util.Map<String, ?> map) throws Exception {
-            ConfigInputDetailSensitiveKeys self = new ConfigInputDetailSensitiveKeys();
+        public static LogtailConfigInputDetailSensitiveKeys build(java.util.Map<String, ?> map) throws Exception {
+            LogtailConfigInputDetailSensitiveKeys self = new LogtailConfigInputDetailSensitiveKeys();
             return TeaModel.build(map, self);
         }
 
-        public ConfigInputDetailSensitiveKeys setAll(Boolean all) {
+        public LogtailConfigInputDetailSensitiveKeys setAll(Boolean all) {
             this.all = all;
             return this;
         }
@@ -139,7 +139,7 @@ public class Config extends TeaModel {
             return this.all;
         }
 
-        public ConfigInputDetailSensitiveKeys setKey(String key) {
+        public LogtailConfigInputDetailSensitiveKeys setKey(String key) {
             this.key = key;
             return this;
         }
@@ -147,7 +147,7 @@ public class Config extends TeaModel {
             return this.key;
         }
 
-        public ConfigInputDetailSensitiveKeys setRegexBegin(String regexBegin) {
+        public LogtailConfigInputDetailSensitiveKeys setRegexBegin(String regexBegin) {
             this.regexBegin = regexBegin;
             return this;
         }
@@ -155,7 +155,7 @@ public class Config extends TeaModel {
             return this.regexBegin;
         }
 
-        public ConfigInputDetailSensitiveKeys setRegexContent(String regexContent) {
+        public LogtailConfigInputDetailSensitiveKeys setRegexContent(String regexContent) {
             this.regexContent = regexContent;
             return this;
         }
@@ -163,7 +163,7 @@ public class Config extends TeaModel {
             return this.regexContent;
         }
 
-        public ConfigInputDetailSensitiveKeys setType(String type) {
+        public LogtailConfigInputDetailSensitiveKeys setType(String type) {
             this.type = type;
             return this;
         }
@@ -173,7 +173,7 @@ public class Config extends TeaModel {
 
     }
 
-    public static class ConfigInputDetail extends TeaModel {
+    public static class LogtailConfigInputDetail extends TeaModel {
         // adjustTimezone
         @NameInMap("adjustTimezone")
         public Boolean adjustTimezone;
@@ -236,7 +236,7 @@ public class Config extends TeaModel {
 
         // sensitive_keys
         @NameInMap("sensitive_keys")
-        public java.util.List<ConfigInputDetailSensitiveKeys> sensitiveKeys;
+        public java.util.List<LogtailConfigInputDetailSensitiveKeys> sensitiveKeys;
 
         // shardHashKey
         @NameInMap("shardHashKey")
@@ -250,12 +250,12 @@ public class Config extends TeaModel {
         @NameInMap("topicFormat")
         public String topicFormat;
 
-        public static ConfigInputDetail build(java.util.Map<String, ?> map) throws Exception {
-            ConfigInputDetail self = new ConfigInputDetail();
+        public static LogtailConfigInputDetail build(java.util.Map<String, ?> map) throws Exception {
+            LogtailConfigInputDetail self = new LogtailConfigInputDetail();
             return TeaModel.build(map, self);
         }
 
-        public ConfigInputDetail setAdjustTimezone(Boolean adjustTimezone) {
+        public LogtailConfigInputDetail setAdjustTimezone(Boolean adjustTimezone) {
             this.adjustTimezone = adjustTimezone;
             return this;
         }
@@ -263,7 +263,7 @@ public class Config extends TeaModel {
             return this.adjustTimezone;
         }
 
-        public ConfigInputDetail setDelayAlarmBytes(Long delayAlarmBytes) {
+        public LogtailConfigInputDetail setDelayAlarmBytes(Long delayAlarmBytes) {
             this.delayAlarmBytes = delayAlarmBytes;
             return this;
         }
@@ -271,7 +271,7 @@ public class Config extends TeaModel {
             return this.delayAlarmBytes;
         }
 
-        public ConfigInputDetail setEnableTag(Boolean enableTag) {
+        public LogtailConfigInputDetail setEnableTag(Boolean enableTag) {
             this.enableTag = enableTag;
             return this;
         }
@@ -279,7 +279,7 @@ public class Config extends TeaModel {
             return this.enableTag;
         }
 
-        public ConfigInputDetail setFilePattern(String filePattern) {
+        public LogtailConfigInputDetail setFilePattern(String filePattern) {
             this.filePattern = filePattern;
             return this;
         }
@@ -287,7 +287,7 @@ public class Config extends TeaModel {
             return this.filePattern;
         }
 
-        public ConfigInputDetail setFilterKey(java.util.List<String> filterKey) {
+        public LogtailConfigInputDetail setFilterKey(java.util.List<String> filterKey) {
             this.filterKey = filterKey;
             return this;
         }
@@ -295,7 +295,7 @@ public class Config extends TeaModel {
             return this.filterKey;
         }
 
-        public ConfigInputDetail setFilterRegex(java.util.List<String> filterRegex) {
+        public LogtailConfigInputDetail setFilterRegex(java.util.List<String> filterRegex) {
             this.filterRegex = filterRegex;
             return this;
         }
@@ -303,7 +303,7 @@ public class Config extends TeaModel {
             return this.filterRegex;
         }
 
-        public ConfigInputDetail setLocalStorage(Boolean localStorage) {
+        public LogtailConfigInputDetail setLocalStorage(Boolean localStorage) {
             this.localStorage = localStorage;
             return this;
         }
@@ -311,7 +311,7 @@ public class Config extends TeaModel {
             return this.localStorage;
         }
 
-        public ConfigInputDetail setLogBeginRegex(String logBeginRegex) {
+        public LogtailConfigInputDetail setLogBeginRegex(String logBeginRegex) {
             this.logBeginRegex = logBeginRegex;
             return this;
         }
@@ -319,7 +319,7 @@ public class Config extends TeaModel {
             return this.logBeginRegex;
         }
 
-        public ConfigInputDetail setLogPath(String logPath) {
+        public LogtailConfigInputDetail setLogPath(String logPath) {
             this.logPath = logPath;
             return this;
         }
@@ -327,7 +327,7 @@ public class Config extends TeaModel {
             return this.logPath;
         }
 
-        public ConfigInputDetail setLogTimezone(String logTimezone) {
+        public LogtailConfigInputDetail setLogTimezone(String logTimezone) {
             this.logTimezone = logTimezone;
             return this;
         }
@@ -335,7 +335,7 @@ public class Config extends TeaModel {
             return this.logTimezone;
         }
 
-        public ConfigInputDetail setLogType(String logType) {
+        public LogtailConfigInputDetail setLogType(String logType) {
             this.logType = logType;
             return this;
         }
@@ -343,7 +343,7 @@ public class Config extends TeaModel {
             return this.logType;
         }
 
-        public ConfigInputDetail setMaxSendRate(Integer maxSendRate) {
+        public LogtailConfigInputDetail setMaxSendRate(Integer maxSendRate) {
             this.maxSendRate = maxSendRate;
             return this;
         }
@@ -351,7 +351,7 @@ public class Config extends TeaModel {
             return this.maxSendRate;
         }
 
-        public ConfigInputDetail setMergeType(String mergeType) {
+        public LogtailConfigInputDetail setMergeType(String mergeType) {
             this.mergeType = mergeType;
             return this;
         }
@@ -359,7 +359,7 @@ public class Config extends TeaModel {
             return this.mergeType;
         }
 
-        public ConfigInputDetail setPriority(Integer priority) {
+        public LogtailConfigInputDetail setPriority(Integer priority) {
             this.priority = priority;
             return this;
         }
@@ -367,7 +367,7 @@ public class Config extends TeaModel {
             return this.priority;
         }
 
-        public ConfigInputDetail setSendRateExpire(Integer sendRateExpire) {
+        public LogtailConfigInputDetail setSendRateExpire(Integer sendRateExpire) {
             this.sendRateExpire = sendRateExpire;
             return this;
         }
@@ -375,15 +375,15 @@ public class Config extends TeaModel {
             return this.sendRateExpire;
         }
 
-        public ConfigInputDetail setSensitiveKeys(java.util.List<ConfigInputDetailSensitiveKeys> sensitiveKeys) {
+        public LogtailConfigInputDetail setSensitiveKeys(java.util.List<LogtailConfigInputDetailSensitiveKeys> sensitiveKeys) {
             this.sensitiveKeys = sensitiveKeys;
             return this;
         }
-        public java.util.List<ConfigInputDetailSensitiveKeys> getSensitiveKeys() {
+        public java.util.List<LogtailConfigInputDetailSensitiveKeys> getSensitiveKeys() {
             return this.sensitiveKeys;
         }
 
-        public ConfigInputDetail setShardHashKey(java.util.List<String> shardHashKey) {
+        public LogtailConfigInputDetail setShardHashKey(java.util.List<String> shardHashKey) {
             this.shardHashKey = shardHashKey;
             return this;
         }
@@ -391,7 +391,7 @@ public class Config extends TeaModel {
             return this.shardHashKey;
         }
 
-        public ConfigInputDetail setTimeFormat(String timeFormat) {
+        public LogtailConfigInputDetail setTimeFormat(String timeFormat) {
             this.timeFormat = timeFormat;
             return this;
         }
@@ -399,7 +399,7 @@ public class Config extends TeaModel {
             return this.timeFormat;
         }
 
-        public ConfigInputDetail setTopicFormat(String topicFormat) {
+        public LogtailConfigInputDetail setTopicFormat(String topicFormat) {
             this.topicFormat = topicFormat;
             return this;
         }
@@ -409,7 +409,7 @@ public class Config extends TeaModel {
 
     }
 
-    public static class ConfigOutputDetail extends TeaModel {
+    public static class LogtailConfigOutputDetail extends TeaModel {
         // endpoint
         @NameInMap("endpoint")
         public String endpoint;
@@ -418,12 +418,12 @@ public class Config extends TeaModel {
         @NameInMap("logstore")
         public String logstore;
 
-        public static ConfigOutputDetail build(java.util.Map<String, ?> map) throws Exception {
-            ConfigOutputDetail self = new ConfigOutputDetail();
+        public static LogtailConfigOutputDetail build(java.util.Map<String, ?> map) throws Exception {
+            LogtailConfigOutputDetail self = new LogtailConfigOutputDetail();
             return TeaModel.build(map, self);
         }
 
-        public ConfigOutputDetail setEndpoint(String endpoint) {
+        public LogtailConfigOutputDetail setEndpoint(String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
@@ -431,7 +431,7 @@ public class Config extends TeaModel {
             return this.endpoint;
         }
 
-        public ConfigOutputDetail setLogstore(String logstore) {
+        public LogtailConfigOutputDetail setLogstore(String logstore) {
             this.logstore = logstore;
             return this;
         }
