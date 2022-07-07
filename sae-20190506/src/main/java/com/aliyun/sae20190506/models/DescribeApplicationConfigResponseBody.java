@@ -343,6 +343,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("MseApplicationId")
         public String mseApplicationId;
 
+        @NameInMap("MseFeatureConfig")
+        public String mseFeatureConfig;
+
         @NameInMap("NamespaceId")
         public String namespaceId;
 
@@ -657,6 +660,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getMseApplicationId() {
             return this.mseApplicationId;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setMseFeatureConfig(String mseFeatureConfig) {
+            this.mseFeatureConfig = mseFeatureConfig;
+            return this;
+        }
+        public String getMseFeatureConfig() {
+            return this.mseFeatureConfig;
         }
 
         public DescribeApplicationConfigResponseBodyData setNamespaceId(String namespaceId) {

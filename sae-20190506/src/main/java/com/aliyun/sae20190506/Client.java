@@ -435,6 +435,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("WebContainer", request.webContainer);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mseFeatureConfig)) {
+            query.put("mseFeatureConfig", request.mseFeatureConfig);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acrInstanceId)) {
             body.put("AcrInstanceId", request.acrInstanceId);
@@ -1035,6 +1039,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.mountHost)) {
             query.put("MountHost", request.mountHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mseFeatureConfig)) {
+            query.put("MseFeatureConfig", request.mseFeatureConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nasId)) {

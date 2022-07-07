@@ -165,6 +165,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("WebContainer")
     public String webContainer;
 
+    @NameInMap("mseFeatureConfig")
+    public String mseFeatureConfig;
+
     public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationRequest self = new CreateApplicationRequest();
         return TeaModel.build(map, self);
@@ -584,6 +587,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getWebContainer() {
         return this.webContainer;
+    }
+
+    public CreateApplicationRequest setMseFeatureConfig(String mseFeatureConfig) {
+        this.mseFeatureConfig = mseFeatureConfig;
+        return this;
+    }
+    public String getMseFeatureConfig() {
+        return this.mseFeatureConfig;
     }
 
 }

@@ -91,6 +91,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("MountHost")
     public String mountHost;
 
+    @NameInMap("MseFeatureConfig")
+    public String mseFeatureConfig;
+
     @NameInMap("NasId")
     public String nasId;
 
@@ -381,6 +384,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getMountHost() {
         return this.mountHost;
+    }
+
+    public DeployApplicationRequest setMseFeatureConfig(String mseFeatureConfig) {
+        this.mseFeatureConfig = mseFeatureConfig;
+        return this;
+    }
+    public String getMseFeatureConfig() {
+        return this.mseFeatureConfig;
     }
 
     public DeployApplicationRequest setNasId(String nasId) {
