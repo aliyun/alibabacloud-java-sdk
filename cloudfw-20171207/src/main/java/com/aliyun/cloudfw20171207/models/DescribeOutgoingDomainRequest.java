@@ -1,0 +1,183 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cloudfw20171207.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeOutgoingDomainRequest extends TeaModel {
+    // ACL覆盖情况, 枚举值.
+    // 默认值: 空
+    // 可选值: 
+    // All (全部情况, 等同于空)
+    // FullCoverage ( 已覆盖)
+    // Uncovered (未覆盖)
+    @NameInMap("AclCoverage")
+    public String aclCoverage;
+
+    // 分类, 枚举值.
+    // 默认值: 空
+    // 可选值: 
+    // All (全部分类)
+    // RiskDomain (风险域名分类)
+    // RiskIP (风险IP分类)
+    // AliYun (云产品分类)
+    // NotAliYun (非云产品分类)
+    @NameInMap("CategoryId")
+    public String categoryId;
+
+    // 当前页
+    @NameInMap("CurrentPage")
+    public String currentPage;
+
+    // 域名
+    @NameInMap("Domain")
+    public String domain;
+
+    // 结束时间,Unix timestamp, 精确到秒
+    @NameInMap("EndTime")
+    public String endTime;
+
+    // 语言, 枚举值.
+    // 默认值: zh
+    // 可选值: en
+    @NameInMap("Lang")
+    public String lang;
+
+    // 排序字段, 枚举值.
+    // 默认值: SessionCount
+    // 可选值: InBytes, OutBytes,TotalBytes,SessionCount
+    @NameInMap("Order")
+    public String order;
+
+    // 每页条数, 不得超过100, 超过100会设置为100
+    @NameInMap("PageSize")
+    public String pageSize;
+
+    // 公网IP
+    @NameInMap("PublicIP")
+    public String publicIP;
+
+    // 安全建议, 枚举值: pass, alert, drop. 默认值为空
+    @NameInMap("SecuritySuggest")
+    public String securitySuggest;
+
+    // 顺序, 枚举值, 可选:asc, desc
+    @NameInMap("Sort")
+    public String sort;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
+    // 开始时间,Unix timestamp, 精确到秒
+    @NameInMap("StartTime")
+    public String startTime;
+
+    public static DescribeOutgoingDomainRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeOutgoingDomainRequest self = new DescribeOutgoingDomainRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeOutgoingDomainRequest setAclCoverage(String aclCoverage) {
+        this.aclCoverage = aclCoverage;
+        return this;
+    }
+    public String getAclCoverage() {
+        return this.aclCoverage;
+    }
+
+    public DescribeOutgoingDomainRequest setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    public String getCategoryId() {
+        return this.categoryId;
+    }
+
+    public DescribeOutgoingDomainRequest setCurrentPage(String currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public String getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public DescribeOutgoingDomainRequest setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
+    }
+
+    public DescribeOutgoingDomainRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeOutgoingDomainRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public DescribeOutgoingDomainRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
+    public DescribeOutgoingDomainRequest setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeOutgoingDomainRequest setPublicIP(String publicIP) {
+        this.publicIP = publicIP;
+        return this;
+    }
+    public String getPublicIP() {
+        return this.publicIP;
+    }
+
+    public DescribeOutgoingDomainRequest setSecuritySuggest(String securitySuggest) {
+        this.securitySuggest = securitySuggest;
+        return this;
+    }
+    public String getSecuritySuggest() {
+        return this.securitySuggest;
+    }
+
+    public DescribeOutgoingDomainRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
+    }
+
+    public DescribeOutgoingDomainRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public DescribeOutgoingDomainRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+}
