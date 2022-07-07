@@ -144,9 +144,6 @@ public class ListAppGroupsResponseBody extends TeaModel {
         @NameInMap("quota")
         public ListAppGroupsResponseBodyResultQuota quota;
 
-        @NameInMap("resourceGroupId")
-        public String resourceGroupId;
-
         @NameInMap("secondRankAlgoDeploymentId")
         public Integer secondRankAlgoDeploymentId;
 
@@ -325,14 +322,6 @@ public class ListAppGroupsResponseBody extends TeaModel {
         }
         public ListAppGroupsResponseBodyResultQuota getQuota() {
             return this.quota;
-        }
-
-        public ListAppGroupsResponseBodyResult setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
         }
 
         public ListAppGroupsResponseBodyResult setSecondRankAlgoDeploymentId(Integer secondRankAlgoDeploymentId) {
