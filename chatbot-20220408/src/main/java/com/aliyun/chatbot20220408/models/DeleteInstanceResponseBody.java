@@ -30,7 +30,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
 
     // 请求Id
     @NameInMap("RequestId")
-    public byte[] requestId;
+    public String requestId;
 
     // 任务id
     @NameInMap("Response")
@@ -93,11 +93,11 @@ public class DeleteInstanceResponseBody extends TeaModel {
         return this.id;
     }
 
-    public DeleteInstanceResponseBody setRequestId(byte[] requestId) {
+    public DeleteInstanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
-    public byte[] getRequestId() {
+    public String getRequestId() {
         return this.requestId;
     }
 
