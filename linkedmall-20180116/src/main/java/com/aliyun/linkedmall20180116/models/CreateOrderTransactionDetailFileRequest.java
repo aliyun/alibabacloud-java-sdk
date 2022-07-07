@@ -4,25 +4,6 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreateOrderTransactionDetailFileRequest extends TeaModel {
-    // 下单账号类型：
-    @NameInMap("AccountType")
-    public String accountType;
-
-    @NameInMap("AliyunBid")
-    public Long aliyunBid;
-
-    @NameInMap("AliyunCallerType")
-    public String aliyunCallerType;
-
-    @NameInMap("AliyunId")
-    public String aliyunId;
-
-    @NameInMap("AliyunPid")
-    public Long aliyunPid;
-
-    @NameInMap("AliyunUid")
-    public Long aliyunUid;
-
     @NameInMap("BizId")
     public String bizId;
 
@@ -49,9 +30,6 @@ public class CreateOrderTransactionDetailFileRequest extends TeaModel {
     @NameInMap("LmShopId")
     public String lmShopId;
 
-    @NameInMap("LmUserId")
-    public Long lmUserId;
-
     // 订单状态
     @NameInMap("OrderStatus")
     public String orderStatus;
@@ -63,12 +41,6 @@ public class CreateOrderTransactionDetailFileRequest extends TeaModel {
     // PO单号
     @NameInMap("PoCode")
     public String poCode;
-
-    @NameInMap("ProxyOriginalSourceIp")
-    public String proxyOriginalSourceIp;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("SellerId")
     public String sellerId;
@@ -84,80 +56,15 @@ public class CreateOrderTransactionDetailFileRequest extends TeaModel {
     @NameInMap("ShopName")
     public String shopName;
 
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("TbNick")
-    public String tbNick;
-
     @NameInMap("TenantId")
     public String tenantId;
 
     @NameInMap("TenantName")
     public String tenantName;
 
-    // 企业侧用户ID
-    @NameInMap("ThirdPartyUserId")
-    public String thirdPartyUserId;
-
-    @NameInMap("UscTbId")
-    public String uscTbId;
-
-    // 是否使用匿名（USC）淘宝ID
-    @NameInMap("UseAnonymousTbAccount")
-    public Boolean useAnonymousTbAccount;
-
     public static CreateOrderTransactionDetailFileRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrderTransactionDetailFileRequest self = new CreateOrderTransactionDetailFileRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateOrderTransactionDetailFileRequest setAccountType(String accountType) {
-        this.accountType = accountType;
-        return this;
-    }
-    public String getAccountType() {
-        return this.accountType;
-    }
-
-    public CreateOrderTransactionDetailFileRequest setAliyunBid(Long aliyunBid) {
-        this.aliyunBid = aliyunBid;
-        return this;
-    }
-    public Long getAliyunBid() {
-        return this.aliyunBid;
-    }
-
-    public CreateOrderTransactionDetailFileRequest setAliyunCallerType(String aliyunCallerType) {
-        this.aliyunCallerType = aliyunCallerType;
-        return this;
-    }
-    public String getAliyunCallerType() {
-        return this.aliyunCallerType;
-    }
-
-    public CreateOrderTransactionDetailFileRequest setAliyunId(String aliyunId) {
-        this.aliyunId = aliyunId;
-        return this;
-    }
-    public String getAliyunId() {
-        return this.aliyunId;
-    }
-
-    public CreateOrderTransactionDetailFileRequest setAliyunPid(Long aliyunPid) {
-        this.aliyunPid = aliyunPid;
-        return this;
-    }
-    public Long getAliyunPid() {
-        return this.aliyunPid;
-    }
-
-    public CreateOrderTransactionDetailFileRequest setAliyunUid(Long aliyunUid) {
-        this.aliyunUid = aliyunUid;
-        return this;
-    }
-    public Long getAliyunUid() {
-        return this.aliyunUid;
     }
 
     public CreateOrderTransactionDetailFileRequest setBizId(String bizId) {
@@ -216,14 +123,6 @@ public class CreateOrderTransactionDetailFileRequest extends TeaModel {
         return this.lmShopId;
     }
 
-    public CreateOrderTransactionDetailFileRequest setLmUserId(Long lmUserId) {
-        this.lmUserId = lmUserId;
-        return this;
-    }
-    public Long getLmUserId() {
-        return this.lmUserId;
-    }
-
     public CreateOrderTransactionDetailFileRequest setOrderStatus(String orderStatus) {
         this.orderStatus = orderStatus;
         return this;
@@ -246,22 +145,6 @@ public class CreateOrderTransactionDetailFileRequest extends TeaModel {
     }
     public String getPoCode() {
         return this.poCode;
-    }
-
-    public CreateOrderTransactionDetailFileRequest setProxyOriginalSourceIp(String proxyOriginalSourceIp) {
-        this.proxyOriginalSourceIp = proxyOriginalSourceIp;
-        return this;
-    }
-    public String getProxyOriginalSourceIp() {
-        return this.proxyOriginalSourceIp;
-    }
-
-    public CreateOrderTransactionDetailFileRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateOrderTransactionDetailFileRequest setSellerId(String sellerId) {
@@ -296,22 +179,6 @@ public class CreateOrderTransactionDetailFileRequest extends TeaModel {
         return this.shopName;
     }
 
-    public CreateOrderTransactionDetailFileRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public CreateOrderTransactionDetailFileRequest setTbNick(String tbNick) {
-        this.tbNick = tbNick;
-        return this;
-    }
-    public String getTbNick() {
-        return this.tbNick;
-    }
-
     public CreateOrderTransactionDetailFileRequest setTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
@@ -326,30 +193,6 @@ public class CreateOrderTransactionDetailFileRequest extends TeaModel {
     }
     public String getTenantName() {
         return this.tenantName;
-    }
-
-    public CreateOrderTransactionDetailFileRequest setThirdPartyUserId(String thirdPartyUserId) {
-        this.thirdPartyUserId = thirdPartyUserId;
-        return this;
-    }
-    public String getThirdPartyUserId() {
-        return this.thirdPartyUserId;
-    }
-
-    public CreateOrderTransactionDetailFileRequest setUscTbId(String uscTbId) {
-        this.uscTbId = uscTbId;
-        return this;
-    }
-    public String getUscTbId() {
-        return this.uscTbId;
-    }
-
-    public CreateOrderTransactionDetailFileRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
-        this.useAnonymousTbAccount = useAnonymousTbAccount;
-        return this;
-    }
-    public Boolean getUseAnonymousTbAccount() {
-        return this.useAnonymousTbAccount;
     }
 
 }

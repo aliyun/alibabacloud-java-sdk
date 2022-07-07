@@ -319,6 +319,9 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         @NameInMap("DescPath")
         public String descPath;
 
+        @NameInMap("FirstPicUrl")
+        public String firstPicUrl;
+
         @NameInMap("IforestProps")
         public java.util.List<java.util.Map<String, ?>> iforestProps;
 
@@ -444,6 +447,14 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         }
         public String getDescPath() {
             return this.descPath;
+        }
+
+        public QueryItemDetailInnerResponseBodyItem setFirstPicUrl(String firstPicUrl) {
+            this.firstPicUrl = firstPicUrl;
+            return this;
+        }
+        public String getFirstPicUrl() {
+            return this.firstPicUrl;
         }
 
         public QueryItemDetailInnerResponseBodyItem setIforestProps(java.util.List<java.util.Map<String, ?>> iforestProps) {
