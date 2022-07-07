@@ -410,16 +410,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInterventionDictionaryResponse());
     }
 
-    public CreateModelResponse createModel(String appGroupIdentity) throws Exception {
+    public CreateModelResponse createModel(String appGroupIdentity, CreateModelRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createModelWithOptions(appGroupIdentity, headers, runtime);
+        return this.createModelWithOptions(appGroupIdentity, request, headers, runtime);
     }
 
-    public CreateModelResponse createModelWithOptions(String appGroupIdentity, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public CreateModelResponse createModelWithOptions(String appGroupIdentity, CreateModelRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         appGroupIdentity = com.aliyun.openapiutil.Client.getEncodeParam(appGroupIdentity);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            body.put("body", request.body);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateModel"),
