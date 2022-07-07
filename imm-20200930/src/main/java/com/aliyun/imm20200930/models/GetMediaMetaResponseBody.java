@@ -52,6 +52,9 @@ public class GetMediaMetaResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Size")
+    public Long size;
+
     @NameInMap("StartTime")
     public Double startTime;
 
@@ -66,9 +69,6 @@ public class GetMediaMetaResponseBody extends TeaModel {
 
     @NameInMap("VideoHeight")
     public Long videoHeight;
-
-    @NameInMap("VideoStartTime")
-    public Double videoStartTime;
 
     @NameInMap("VideoStreams")
     public java.util.List<VideoStream> videoStreams;
@@ -209,6 +209,14 @@ public class GetMediaMetaResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetMediaMetaResponseBody setSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    public Long getSize() {
+        return this.size;
+    }
+
     public GetMediaMetaResponseBody setStartTime(Double startTime) {
         this.startTime = startTime;
         return this;
@@ -247,14 +255,6 @@ public class GetMediaMetaResponseBody extends TeaModel {
     }
     public Long getVideoHeight() {
         return this.videoHeight;
-    }
-
-    public GetMediaMetaResponseBody setVideoStartTime(Double videoStartTime) {
-        this.videoStartTime = videoStartTime;
-        return this;
-    }
-    public Double getVideoStartTime() {
-        return this.videoStartTime;
     }
 
     public GetMediaMetaResponseBody setVideoStreams(java.util.List<VideoStream> videoStreams) {

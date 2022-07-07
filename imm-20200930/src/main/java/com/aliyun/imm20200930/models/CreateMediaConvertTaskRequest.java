@@ -102,7 +102,7 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public String language;
 
         @NameInMap("TimeOffset")
-        public Float timeOffset;
+        public Double timeOffset;
 
         @NameInMap("URI")
         public String URI;
@@ -120,11 +120,11 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
             return this.language;
         }
 
-        public CreateMediaConvertTaskRequestSourcesSubtitles setTimeOffset(Float timeOffset) {
+        public CreateMediaConvertTaskRequestSourcesSubtitles setTimeOffset(Double timeOffset) {
             this.timeOffset = timeOffset;
             return this;
         }
-        public Float getTimeOffset() {
+        public Double getTimeOffset() {
             return this.timeOffset;
         }
 
@@ -140,10 +140,10 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
 
     public static class CreateMediaConvertTaskRequestSources extends TeaModel {
         @NameInMap("Duration")
-        public Float duration;
+        public Double duration;
 
         @NameInMap("StartTime")
-        public Float startTime;
+        public Double startTime;
 
         @NameInMap("Subtitles")
         public java.util.List<CreateMediaConvertTaskRequestSourcesSubtitles> subtitles;
@@ -156,19 +156,19 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateMediaConvertTaskRequestSources setDuration(Float duration) {
+        public CreateMediaConvertTaskRequestSources setDuration(Double duration) {
             this.duration = duration;
             return this;
         }
-        public Float getDuration() {
+        public Double getDuration() {
             return this.duration;
         }
 
-        public CreateMediaConvertTaskRequestSources setStartTime(Float startTime) {
+        public CreateMediaConvertTaskRequestSources setStartTime(Double startTime) {
             this.startTime = startTime;
             return this;
         }
-        public Float getStartTime() {
+        public Double getStartTime() {
             return this.startTime;
         }
 
@@ -343,7 +343,7 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public Integer height;
 
         @NameInMap("Interval")
-        public Float interval;
+        public Double interval;
 
         @NameInMap("Number")
         public Integer number;
@@ -352,7 +352,7 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public String scaleType;
 
         @NameInMap("StartTime")
-        public Float startTime;
+        public Double startTime;
 
         @NameInMap("URI")
         public String URI;
@@ -381,11 +381,11 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
             return this.height;
         }
 
-        public CreateMediaConvertTaskRequestTargetsImageSnapshots setInterval(Float interval) {
+        public CreateMediaConvertTaskRequestTargetsImageSnapshots setInterval(Double interval) {
             this.interval = interval;
             return this;
         }
-        public Float getInterval() {
+        public Double getInterval() {
             return this.interval;
         }
 
@@ -405,11 +405,11 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
             return this.scaleType;
         }
 
-        public CreateMediaConvertTaskRequestTargetsImageSnapshots setStartTime(Float startTime) {
+        public CreateMediaConvertTaskRequestTargetsImageSnapshots setStartTime(Double startTime) {
             this.startTime = startTime;
             return this;
         }
-        public Float getStartTime() {
+        public Double getStartTime() {
             return this.startTime;
         }
 
@@ -436,7 +436,7 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public String format;
 
         @NameInMap("Interval")
-        public Float interval;
+        public Double interval;
 
         @NameInMap("Margin")
         public Integer margin;
@@ -457,7 +457,7 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public Float scaleWidth;
 
         @NameInMap("StartTime")
-        public Float startTime;
+        public Double startTime;
 
         @NameInMap("TileHeight")
         public Integer tileHeight;
@@ -481,11 +481,11 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
             return this.format;
         }
 
-        public CreateMediaConvertTaskRequestTargetsImageSprites setInterval(Float interval) {
+        public CreateMediaConvertTaskRequestTargetsImageSprites setInterval(Double interval) {
             this.interval = interval;
             return this;
         }
-        public Float getInterval() {
+        public Double getInterval() {
             return this.interval;
         }
 
@@ -537,11 +537,11 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
             return this.scaleWidth;
         }
 
-        public CreateMediaConvertTaskRequestTargetsImageSprites setStartTime(Float startTime) {
+        public CreateMediaConvertTaskRequestTargetsImageSprites setStartTime(Double startTime) {
             this.startTime = startTime;
             return this;
         }
-        public Float getStartTime() {
+        public Double getStartTime() {
             return this.startTime;
         }
 
@@ -603,7 +603,7 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
 
     public static class CreateMediaConvertTaskRequestTargetsSegment extends TeaModel {
         @NameInMap("Duration")
-        public Float duration;
+        public Double duration;
 
         @NameInMap("Format")
         public String format;
@@ -616,11 +616,11 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateMediaConvertTaskRequestTargetsSegment setDuration(Float duration) {
+        public CreateMediaConvertTaskRequestTargetsSegment setDuration(Double duration) {
             this.duration = duration;
             return this;
         }
-        public Float getDuration() {
+        public Double getDuration() {
             return this.duration;
         }
 
@@ -703,8 +703,8 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     }
 
     public static class CreateMediaConvertTaskRequestTargetsVideoFilterVideoDelogos extends TeaModel {
-        @NameInMap("Durtion")
-        public Float durtion;
+        @NameInMap("Duration")
+        public Double duration;
 
         @NameInMap("Dx")
         public Float dx;
@@ -719,7 +719,7 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public String referPos;
 
         @NameInMap("StartTime")
-        public Float startTime;
+        public Double startTime;
 
         @NameInMap("Width")
         public Float width;
@@ -729,12 +729,12 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateMediaConvertTaskRequestTargetsVideoFilterVideoDelogos setDurtion(Float durtion) {
-            this.durtion = durtion;
+        public CreateMediaConvertTaskRequestTargetsVideoFilterVideoDelogos setDuration(Double duration) {
+            this.duration = duration;
             return this;
         }
-        public Float getDurtion() {
-            return this.durtion;
+        public Double getDuration() {
+            return this.duration;
         }
 
         public CreateMediaConvertTaskRequestTargetsVideoFilterVideoDelogos setDx(Float dx) {
@@ -769,11 +769,11 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
             return this.referPos;
         }
 
-        public CreateMediaConvertTaskRequestTargetsVideoFilterVideoDelogos setStartTime(Float startTime) {
+        public CreateMediaConvertTaskRequestTargetsVideoFilterVideoDelogos setStartTime(Double startTime) {
             this.startTime = startTime;
             return this;
         }
-        public Float getStartTime() {
+        public Double getStartTime() {
             return this.startTime;
         }
 
@@ -798,7 +798,7 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public String content;
 
         @NameInMap("Duration")
-        public Float duration;
+        public Double duration;
 
         @NameInMap("Dx")
         public Float dx;
@@ -825,7 +825,7 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public String referPos;
 
         @NameInMap("StartTime")
-        public Float startTime;
+        public Double startTime;
 
         @NameInMap("Type")
         public String type;
@@ -865,11 +865,11 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
             return this.content;
         }
 
-        public CreateMediaConvertTaskRequestTargetsVideoFilterVideoWatermarks setDuration(Float duration) {
+        public CreateMediaConvertTaskRequestTargetsVideoFilterVideoWatermarks setDuration(Double duration) {
             this.duration = duration;
             return this;
         }
-        public Float getDuration() {
+        public Double getDuration() {
             return this.duration;
         }
 
@@ -937,11 +937,11 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
             return this.referPos;
         }
 
-        public CreateMediaConvertTaskRequestTargetsVideoFilterVideoWatermarks setStartTime(Float startTime) {
+        public CreateMediaConvertTaskRequestTargetsVideoFilterVideoWatermarks setStartTime(Double startTime) {
             this.startTime = startTime;
             return this;
         }
-        public Float getStartTime() {
+        public Double getStartTime() {
             return this.startTime;
         }
 

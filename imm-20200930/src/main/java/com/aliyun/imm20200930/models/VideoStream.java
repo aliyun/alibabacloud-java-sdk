@@ -58,7 +58,7 @@ public class VideoStream extends TeaModel {
 
     // Duration
     @NameInMap("Duration")
-    public Float duration;
+    public Double duration;
 
     // FrameCount
     @NameInMap("FrameCount")
@@ -106,7 +106,7 @@ public class VideoStream extends TeaModel {
 
     // StartTime
     @NameInMap("StartTime")
-    public Float startTime;
+    public Double startTime;
 
     // TimeBase
     @NameInMap("TimeBase")
@@ -225,11 +225,11 @@ public class VideoStream extends TeaModel {
         return this.displayAspectRatio;
     }
 
-    public VideoStream setDuration(Float duration) {
+    public VideoStream setDuration(Double duration) {
         this.duration = duration;
         return this;
     }
-    public Float getDuration() {
+    public Double getDuration() {
         return this.duration;
     }
 
@@ -321,11 +321,11 @@ public class VideoStream extends TeaModel {
         return this.sampleAspectRatio;
     }
 
-    public VideoStream setStartTime(Float startTime) {
+    public VideoStream setStartTime(Double startTime) {
         this.startTime = startTime;
         return this;
     }
-    public Float getStartTime() {
+    public Double getStartTime() {
         return this.startTime;
     }
 
