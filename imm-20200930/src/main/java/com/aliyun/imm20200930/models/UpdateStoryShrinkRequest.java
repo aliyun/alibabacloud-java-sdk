@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class UpdateStoryShrinkRequest extends TeaModel {
+    @NameInMap("Cover")
+    public String coverShrink;
+
     @NameInMap("CustomId")
     public String customId;
 
@@ -25,6 +28,14 @@ public class UpdateStoryShrinkRequest extends TeaModel {
     public static UpdateStoryShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStoryShrinkRequest self = new UpdateStoryShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateStoryShrinkRequest setCoverShrink(String coverShrink) {
+        this.coverShrink = coverShrink;
+        return this;
+    }
+    public String getCoverShrink() {
+        return this.coverShrink;
     }
 
     public UpdateStoryShrinkRequest setCustomId(String customId) {

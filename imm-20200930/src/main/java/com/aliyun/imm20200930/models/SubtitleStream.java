@@ -30,7 +30,7 @@ public class SubtitleStream extends TeaModel {
 
     // Duration
     @NameInMap("Duration")
-    public Float duration;
+    public Double duration;
 
     // Height
     @NameInMap("Height")
@@ -46,7 +46,7 @@ public class SubtitleStream extends TeaModel {
 
     // StartTime
     @NameInMap("StartTime")
-    public Float startTime;
+    public Double startTime;
 
     // Width
     @NameInMap("Width")
@@ -105,11 +105,11 @@ public class SubtitleStream extends TeaModel {
         return this.content;
     }
 
-    public SubtitleStream setDuration(Float duration) {
+    public SubtitleStream setDuration(Double duration) {
         this.duration = duration;
         return this;
     }
-    public Float getDuration() {
+    public Double getDuration() {
         return this.duration;
     }
 
@@ -137,11 +137,11 @@ public class SubtitleStream extends TeaModel {
         return this.language;
     }
 
-    public SubtitleStream setStartTime(Float startTime) {
+    public SubtitleStream setStartTime(Double startTime) {
         this.startTime = startTime;
         return this;
     }
-    public Float getStartTime() {
+    public Double getStartTime() {
         return this.startTime;
     }
 

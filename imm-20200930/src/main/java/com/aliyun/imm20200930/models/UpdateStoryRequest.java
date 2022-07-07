@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class UpdateStoryRequest extends TeaModel {
+    @NameInMap("Cover")
+    public UpdateStoryRequestCover cover;
+
     @NameInMap("CustomId")
     public String customId;
 
@@ -25,6 +28,14 @@ public class UpdateStoryRequest extends TeaModel {
     public static UpdateStoryRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStoryRequest self = new UpdateStoryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateStoryRequest setCover(UpdateStoryRequestCover cover) {
+        this.cover = cover;
+        return this;
+    }
+    public UpdateStoryRequestCover getCover() {
+        return this.cover;
     }
 
     public UpdateStoryRequest setCustomId(String customId) {
@@ -73,6 +84,25 @@ public class UpdateStoryRequest extends TeaModel {
     }
     public String getStoryName() {
         return this.storyName;
+    }
+
+    public static class UpdateStoryRequestCover extends TeaModel {
+        @NameInMap("URI")
+        public String URI;
+
+        public static UpdateStoryRequestCover build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStoryRequestCover self = new UpdateStoryRequestCover();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateStoryRequestCover setURI(String URI) {
+            this.URI = URI;
+            return this;
+        }
+        public String getURI() {
+            return this.URI;
+        }
+
     }
 
 }

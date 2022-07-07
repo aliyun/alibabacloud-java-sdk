@@ -277,7 +277,7 @@ public class File extends TeaModel {
 
     // StartTime
     @NameInMap("StartTime")
-    public String startTime;
+    public Double startTime;
 
     // StreamCount
     @NameInMap("StreamCount")
@@ -310,10 +310,6 @@ public class File extends TeaModel {
     // VideoHeight
     @NameInMap("VideoHeight")
     public Long videoHeight;
-
-    // VideoStartTime
-    @NameInMap("VideoStartTime")
-    public Float videoStartTime;
 
     // VideoStreams
     @NameInMap("VideoStreams")
@@ -872,11 +868,11 @@ public class File extends TeaModel {
         return this.size;
     }
 
-    public File setStartTime(String startTime) {
+    public File setStartTime(Double startTime) {
         this.startTime = startTime;
         return this;
     }
-    public String getStartTime() {
+    public Double getStartTime() {
         return this.startTime;
     }
 
@@ -942,14 +938,6 @@ public class File extends TeaModel {
     }
     public Long getVideoHeight() {
         return this.videoHeight;
-    }
-
-    public File setVideoStartTime(Float videoStartTime) {
-        this.videoStartTime = videoStartTime;
-        return this;
-    }
-    public Float getVideoStartTime() {
-        return this.videoStartTime;
     }
 
     public File setVideoStreams(java.util.List<VideoStream> videoStreams) {

@@ -38,7 +38,7 @@ public class AudioStream extends TeaModel {
 
     // Duration
     @NameInMap("Duration")
-    public Float duration;
+    public Double duration;
 
     // FrameCount
     @NameInMap("FrameCount")
@@ -66,7 +66,7 @@ public class AudioStream extends TeaModel {
 
     // StartTime
     @NameInMap("StartTime")
-    public Float startTime;
+    public Double startTime;
 
     // TimeBase
     @NameInMap("TimeBase")
@@ -141,11 +141,11 @@ public class AudioStream extends TeaModel {
         return this.codecTimeBase;
     }
 
-    public AudioStream setDuration(Float duration) {
+    public AudioStream setDuration(Double duration) {
         this.duration = duration;
         return this;
     }
-    public Float getDuration() {
+    public Double getDuration() {
         return this.duration;
     }
 
@@ -197,11 +197,11 @@ public class AudioStream extends TeaModel {
         return this.sampleRate;
     }
 
-    public AudioStream setStartTime(Float startTime) {
+    public AudioStream setStartTime(Double startTime) {
         this.startTime = startTime;
         return this;
     }
-    public Float getStartTime() {
+    public Double getStartTime() {
         return this.startTime;
     }
 
