@@ -3,7 +3,7 @@ package com.aliyun.cloudfw20171207.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeVpcFirewallPolicyPriorUsedResponse extends TeaModel {
+public class DescribeInvadeEventListResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeVpcFirewallPolicyPriorUsedResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeVpcFirewallPolicyPriorUsedResponseBody body;
+    public DescribeInvadeEventListResponseBody body;
 
-    public static DescribeVpcFirewallPolicyPriorUsedResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeVpcFirewallPolicyPriorUsedResponse self = new DescribeVpcFirewallPolicyPriorUsedResponse();
+    public static DescribeInvadeEventListResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeInvadeEventListResponse self = new DescribeInvadeEventListResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeVpcFirewallPolicyPriorUsedResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeInvadeEventListResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeVpcFirewallPolicyPriorUsedResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeVpcFirewallPolicyPriorUsedResponse setStatusCode(Integer statusCode) {
+    public DescribeInvadeEventListResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeVpcFirewallPolicyPriorUsedResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeVpcFirewallPolicyPriorUsedResponse setBody(DescribeVpcFirewallPolicyPriorUsedResponseBody body) {
+    public DescribeInvadeEventListResponse setBody(DescribeInvadeEventListResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeVpcFirewallPolicyPriorUsedResponseBody getBody() {
+    public DescribeInvadeEventListResponseBody getBody() {
         return this.body;
     }
 

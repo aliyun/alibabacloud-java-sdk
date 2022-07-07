@@ -1,3 +1,6 @@
+2022-07-07 Version: 1.8.14
+- Auto release new SDK.
+
 2022-04-29 Version: 1.8.13
 - 更新防火墙sdk
 
