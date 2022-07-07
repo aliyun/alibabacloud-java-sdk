@@ -90,6 +90,9 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
+        @NameInMap("DebugStatus")
+        public Boolean debugStatus;
+
         @NameInMap("Eip")
         public String eip;
 
@@ -134,6 +137,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
         public Long getCreateTimeStamp() {
             return this.createTimeStamp;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstances setDebugStatus(Boolean debugStatus) {
+            this.debugStatus = debugStatus;
+            return this;
+        }
+        public Boolean getDebugStatus() {
+            return this.debugStatus;
         }
 
         public DescribeApplicationInstancesResponseBodyDataInstances setEip(String eip) {

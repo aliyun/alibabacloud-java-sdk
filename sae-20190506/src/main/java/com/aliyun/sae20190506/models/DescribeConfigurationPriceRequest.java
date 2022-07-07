@@ -10,6 +10,9 @@ public class DescribeConfigurationPriceRequest extends TeaModel {
     @NameInMap("Memory")
     public Integer memory;
 
+    @NameInMap("Workload")
+    public String workload;
+
     public static DescribeConfigurationPriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeConfigurationPriceRequest self = new DescribeConfigurationPriceRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DescribeConfigurationPriceRequest extends TeaModel {
     }
     public Integer getMemory() {
         return this.memory;
+    }
+
+    public DescribeConfigurationPriceRequest setWorkload(String workload) {
+        this.workload = workload;
+        return this;
+    }
+    public String getWorkload() {
+        return this.workload;
     }
 
 }
