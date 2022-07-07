@@ -3,7 +3,7 @@ package com.aliyun.onsmqtt20200420.models;
 
 import com.aliyun.tea.*;
 
-public class QuerySessionByClientIdResponse extends TeaModel {
+public class UnregisterCaCertificateResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class QuerySessionByClientIdResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public QuerySessionByClientIdResponseBody body;
+    public UnregisterCaCertificateResponseBody body;
 
-    public static QuerySessionByClientIdResponse build(java.util.Map<String, ?> map) throws Exception {
-        QuerySessionByClientIdResponse self = new QuerySessionByClientIdResponse();
+    public static UnregisterCaCertificateResponse build(java.util.Map<String, ?> map) throws Exception {
+        UnregisterCaCertificateResponse self = new UnregisterCaCertificateResponse();
         return TeaModel.build(map, self);
     }
 
-    public QuerySessionByClientIdResponse setHeaders(java.util.Map<String, String> headers) {
+    public UnregisterCaCertificateResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class QuerySessionByClientIdResponse extends TeaModel {
         return this.headers;
     }
 
-    public QuerySessionByClientIdResponse setStatusCode(Integer statusCode) {
+    public UnregisterCaCertificateResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class QuerySessionByClientIdResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public QuerySessionByClientIdResponse setBody(QuerySessionByClientIdResponseBody body) {
+    public UnregisterCaCertificateResponse setBody(UnregisterCaCertificateResponseBody body) {
         this.body = body;
         return this;
     }
-    public QuerySessionByClientIdResponseBody getBody() {
+    public UnregisterCaCertificateResponseBody getBody() {
         return this.body;
     }
 

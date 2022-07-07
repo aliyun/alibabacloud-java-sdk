@@ -4,23 +4,15 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class QueryTokenRequest extends TeaModel {
-    @NameInMap("Token")
-    public String token;
-
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("Token")
+    public String token;
 
     public static QueryTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTokenRequest self = new QueryTokenRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryTokenRequest setToken(String token) {
-        this.token = token;
-        return this;
-    }
-    public String getToken() {
-        return this.token;
     }
 
     public QueryTokenRequest setInstanceId(String instanceId) {
@@ -29,6 +21,14 @@ public class QueryTokenRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public QueryTokenRequest setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
     }
 
 }

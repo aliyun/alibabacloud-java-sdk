@@ -7,17 +7,17 @@ public class QueryMqttTraceMessageOfClientResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("MessageOfClientList")
+    public java.util.List<QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList> messageOfClientList;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Total")
     public Long total;
-
-    @NameInMap("MessageOfClientList")
-    public java.util.List<QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList> messageOfClientList;
 
     public static QueryMqttTraceMessageOfClientResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMqttTraceMessageOfClientResponseBody self = new QueryMqttTraceMessageOfClientResponseBody();
@@ -32,12 +32,12 @@ public class QueryMqttTraceMessageOfClientResponseBody extends TeaModel {
         return this.currentPage;
     }
 
-    public QueryMqttTraceMessageOfClientResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryMqttTraceMessageOfClientResponseBody setMessageOfClientList(java.util.List<QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList> messageOfClientList) {
+        this.messageOfClientList = messageOfClientList;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList> getMessageOfClientList() {
+        return this.messageOfClientList;
     }
 
     public QueryMqttTraceMessageOfClientResponseBody setPageSize(Integer pageSize) {
@@ -48,6 +48,14 @@ public class QueryMqttTraceMessageOfClientResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public QueryMqttTraceMessageOfClientResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryMqttTraceMessageOfClientResponseBody setTotal(Long total) {
         this.total = total;
         return this;
@@ -56,18 +64,7 @@ public class QueryMqttTraceMessageOfClientResponseBody extends TeaModel {
         return this.total;
     }
 
-    public QueryMqttTraceMessageOfClientResponseBody setMessageOfClientList(java.util.List<QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList> messageOfClientList) {
-        this.messageOfClientList = messageOfClientList;
-        return this;
-    }
-    public java.util.List<QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList> getMessageOfClientList() {
-        return this.messageOfClientList;
-    }
-
     public static class QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList extends TeaModel {
-        @NameInMap("Time")
-        public String time;
-
         @NameInMap("Action")
         public String action;
 
@@ -77,23 +74,18 @@ public class QueryMqttTraceMessageOfClientResponseBody extends TeaModel {
         @NameInMap("ActionInfo")
         public String actionInfo;
 
+        @NameInMap("ClientId")
+        public String clientId;
+
         @NameInMap("MsgId")
         public String msgId;
 
-        @NameInMap("ClientId")
-        public String clientId;
+        @NameInMap("Time")
+        public String time;
 
         public static QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList build(java.util.Map<String, ?> map) throws Exception {
             QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList self = new QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList setTime(String time) {
-            this.time = time;
-            return this;
-        }
-        public String getTime() {
-            return this.time;
         }
 
         public QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList setAction(String action) {
@@ -120,6 +112,14 @@ public class QueryMqttTraceMessageOfClientResponseBody extends TeaModel {
             return this.actionInfo;
         }
 
+        public QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList setClientId(String clientId) {
+            this.clientId = clientId;
+            return this;
+        }
+        public String getClientId() {
+            return this.clientId;
+        }
+
         public QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList setMsgId(String msgId) {
             this.msgId = msgId;
             return this;
@@ -128,12 +128,12 @@ public class QueryMqttTraceMessageOfClientResponseBody extends TeaModel {
             return this.msgId;
         }
 
-        public QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList setClientId(String clientId) {
-            this.clientId = clientId;
+        public QueryMqttTraceMessageOfClientResponseBodyMessageOfClientList setTime(String time) {
+            this.time = time;
             return this;
         }
-        public String getClientId() {
-            return this.clientId;
+        public String getTime() {
+            return this.time;
         }
 
     }

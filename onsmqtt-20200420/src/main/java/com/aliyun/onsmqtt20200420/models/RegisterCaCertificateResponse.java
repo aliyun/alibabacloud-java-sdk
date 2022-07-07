@@ -3,7 +3,7 @@ package com.aliyun.onsmqtt20200420.models;
 
 import com.aliyun.tea.*;
 
-public class QuerySessionByClientIdResponse extends TeaModel {
+public class RegisterCaCertificateResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class QuerySessionByClientIdResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public QuerySessionByClientIdResponseBody body;
+    public RegisterCaCertificateResponseBody body;
 
-    public static QuerySessionByClientIdResponse build(java.util.Map<String, ?> map) throws Exception {
-        QuerySessionByClientIdResponse self = new QuerySessionByClientIdResponse();
+    public static RegisterCaCertificateResponse build(java.util.Map<String, ?> map) throws Exception {
+        RegisterCaCertificateResponse self = new RegisterCaCertificateResponse();
         return TeaModel.build(map, self);
     }
 
-    public QuerySessionByClientIdResponse setHeaders(java.util.Map<String, String> headers) {
+    public RegisterCaCertificateResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class QuerySessionByClientIdResponse extends TeaModel {
         return this.headers;
     }
 
-    public QuerySessionByClientIdResponse setStatusCode(Integer statusCode) {
+    public RegisterCaCertificateResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class QuerySessionByClientIdResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public QuerySessionByClientIdResponse setBody(QuerySessionByClientIdResponseBody body) {
+    public RegisterCaCertificateResponse setBody(RegisterCaCertificateResponseBody body) {
         this.body = body;
         return this;
     }
-    public QuerySessionByClientIdResponseBody getBody() {
+    public RegisterCaCertificateResponseBody getBody() {
         return this.body;
     }
 

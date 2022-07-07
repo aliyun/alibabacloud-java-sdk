@@ -4,23 +4,23 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class QueryMqttTraceMessageOfClientRequest extends TeaModel {
-    @NameInMap("MqttRegionId")
-    public String mqttRegionId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("BeginTime")
+    public Long beginTime;
 
     @NameInMap("ClientId")
     public String clientId;
 
-    @NameInMap("BeginTime")
-    public Long beginTime;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("EndTime")
     public Long endTime;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("MqttRegionId")
+    public String mqttRegionId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -33,20 +33,12 @@ public class QueryMqttTraceMessageOfClientRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryMqttTraceMessageOfClientRequest setMqttRegionId(String mqttRegionId) {
-        this.mqttRegionId = mqttRegionId;
+    public QueryMqttTraceMessageOfClientRequest setBeginTime(Long beginTime) {
+        this.beginTime = beginTime;
         return this;
     }
-    public String getMqttRegionId() {
-        return this.mqttRegionId;
-    }
-
-    public QueryMqttTraceMessageOfClientRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
+    public Long getBeginTime() {
+        return this.beginTime;
     }
 
     public QueryMqttTraceMessageOfClientRequest setClientId(String clientId) {
@@ -57,12 +49,12 @@ public class QueryMqttTraceMessageOfClientRequest extends TeaModel {
         return this.clientId;
     }
 
-    public QueryMqttTraceMessageOfClientRequest setBeginTime(Long beginTime) {
-        this.beginTime = beginTime;
+    public QueryMqttTraceMessageOfClientRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public Long getBeginTime() {
-        return this.beginTime;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public QueryMqttTraceMessageOfClientRequest setEndTime(Long endTime) {
@@ -73,12 +65,20 @@ public class QueryMqttTraceMessageOfClientRequest extends TeaModel {
         return this.endTime;
     }
 
-    public QueryMqttTraceMessageOfClientRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public QueryMqttTraceMessageOfClientRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public QueryMqttTraceMessageOfClientRequest setMqttRegionId(String mqttRegionId) {
+        this.mqttRegionId = mqttRegionId;
+        return this;
+    }
+    public String getMqttRegionId() {
+        return this.mqttRegionId;
     }
 
     public QueryMqttTraceMessageOfClientRequest setPageSize(Integer pageSize) {
