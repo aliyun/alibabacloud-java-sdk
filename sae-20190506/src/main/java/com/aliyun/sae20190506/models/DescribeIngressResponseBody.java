@@ -93,6 +93,9 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("BackendProtocol")
+        public String backendProtocol;
+
         @NameInMap("ContainerPort")
         public Integer containerPort;
 
@@ -117,6 +120,14 @@ public class DescribeIngressResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public DescribeIngressResponseBodyDataDefaultRule setBackendProtocol(String backendProtocol) {
+            this.backendProtocol = backendProtocol;
+            return this;
+        }
+        public String getBackendProtocol() {
+            return this.backendProtocol;
+        }
+
         public DescribeIngressResponseBodyDataDefaultRule setContainerPort(Integer containerPort) {
             this.containerPort = containerPort;
             return this;
@@ -133,6 +144,9 @@ public class DescribeIngressResponseBody extends TeaModel {
 
         @NameInMap("AppName")
         public String appName;
+
+        @NameInMap("BackendProtocol")
+        public String backendProtocol;
 
         @NameInMap("ContainerPort")
         public Integer containerPort;
@@ -162,6 +176,14 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public DescribeIngressResponseBodyDataRules setBackendProtocol(String backendProtocol) {
+            this.backendProtocol = backendProtocol;
+            return this;
+        }
+        public String getBackendProtocol() {
+            return this.backendProtocol;
         }
 
         public DescribeIngressResponseBodyDataRules setContainerPort(Integer containerPort) {

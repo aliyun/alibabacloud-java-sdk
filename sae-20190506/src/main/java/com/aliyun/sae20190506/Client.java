@@ -1594,6 +1594,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Memory", request.memory);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.workload)) {
+            query.put("Workload", request.workload);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -2008,6 +2012,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnableApplicationScalingRuleResponse());
+    }
+
+    public ExecJobResponse execJob(ExecJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.execJobWithOptions(request, headers, runtime);
+    }
+
+    public ExecJobResponse execJobWithOptions(ExecJobRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.command)) {
+            query.put("Command", request.command);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.commandArgs)) {
+            query.put("CommandArgs", request.commandArgs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envs)) {
+            query.put("Envs", request.envs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jarStartArgs)) {
+            query.put("JarStartArgs", request.jarStartArgs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jarStartOptions)) {
+            query.put("JarStartOptions", request.jarStartOptions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.warStartOptions)) {
+            query.put("WarStartOptions", request.warStartOptions);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecJob"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v1/sam/job/execJob"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecJobResponse());
     }
 
     public ListAppEventsResponse listAppEvents(ListAppEventsRequest request) throws Exception {
