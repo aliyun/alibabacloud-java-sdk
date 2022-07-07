@@ -8,7 +8,7 @@ public class ExecJobResponseBody extends TeaModel {
     public String code;
 
     @NameInMap("Data")
-    public String data;
+    public ExecJobResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -38,11 +38,11 @@ public class ExecJobResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ExecJobResponseBody setData(String data) {
+    public ExecJobResponseBody setData(ExecJobResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public ExecJobResponseBodyData getData() {
         return this.data;
     }
 
@@ -84,6 +84,58 @@ public class ExecJobResponseBody extends TeaModel {
     }
     public String getTraceId() {
         return this.traceId;
+    }
+
+    public static class ExecJobResponseBodyData extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("Data")
+        public String data;
+
+        @NameInMap("Msg")
+        public String msg;
+
+        @NameInMap("Success")
+        public String success;
+
+        public static ExecJobResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ExecJobResponseBodyData self = new ExecJobResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ExecJobResponseBodyData setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public ExecJobResponseBodyData setData(String data) {
+            this.data = data;
+            return this;
+        }
+        public String getData() {
+            return this.data;
+        }
+
+        public ExecJobResponseBodyData setMsg(String msg) {
+            this.msg = msg;
+            return this;
+        }
+        public String getMsg() {
+            return this.msg;
+        }
+
+        public ExecJobResponseBodyData setSuccess(String success) {
+            this.success = success;
+            return this;
+        }
+        public String getSuccess() {
+            return this.success;
+        }
+
     }
 
 }
