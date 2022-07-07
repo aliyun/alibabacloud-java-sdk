@@ -695,30 +695,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateOrderTransactionDetailFileResponse createOrderTransactionDetailFileWithOptions(CreateOrderTransactionDetailFileRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.accountType)) {
-            body.put("AccountType", request.accountType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunBid)) {
-            body.put("AliyunBid", request.aliyunBid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunCallerType)) {
-            body.put("AliyunCallerType", request.aliyunCallerType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunId)) {
-            body.put("AliyunId", request.aliyunId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunPid)) {
-            body.put("AliyunPid", request.aliyunPid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunUid)) {
-            body.put("AliyunUid", request.aliyunUid);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
             body.put("BizId", request.bizId);
         }
@@ -747,10 +723,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("LmShopId", request.lmShopId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.lmUserId)) {
-            body.put("LmUserId", request.lmUserId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.orderStatus)) {
             body.put("OrderStatus", request.orderStatus);
         }
@@ -761,14 +733,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.poCode)) {
             body.put("PoCode", request.poCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.proxyOriginalSourceIp)) {
-            body.put("ProxyOriginalSourceIp", request.proxyOriginalSourceIp);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sellerId)) {
@@ -787,32 +751,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ShopName", request.shopName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
-            body.put("SourceIp", request.sourceIp);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tbNick)) {
-            body.put("TbNick", request.tbNick);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
             body.put("TenantId", request.tenantId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantName)) {
             body.put("TenantName", request.tenantName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.thirdPartyUserId)) {
-            body.put("ThirdPartyUserId", request.thirdPartyUserId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.uscTbId)) {
-            body.put("UscTbId", request.uscTbId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.useAnonymousTbAccount)) {
-            body.put("UseAnonymousTbAccount", request.useAnonymousTbAccount);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1330,64 +1274,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DownloadCpsBillFileResponse downloadCpsBillFileWithOptions(DownloadCpsBillFileRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.accountType)) {
-            body.put("AccountType", request.accountType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunBid)) {
-            body.put("AliyunBid", request.aliyunBid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunCallerType)) {
-            body.put("AliyunCallerType", request.aliyunCallerType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunPid)) {
-            body.put("AliyunPid", request.aliyunPid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunUid)) {
-            body.put("AliyunUid", request.aliyunUid);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.billId)) {
             body.put("BillId", request.billId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
             body.put("BizId", request.bizId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.lmUserId)) {
-            body.put("LmUserId", request.lmUserId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.proxyOriginalSourceIp)) {
-            body.put("ProxyOriginalSourceIp", request.proxyOriginalSourceIp);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
-            body.put("SourceIp", request.sourceIp);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tbNick)) {
-            body.put("TbNick", request.tbNick);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.thirdPartyUserId)) {
-            body.put("ThirdPartyUserId", request.thirdPartyUserId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.uscTbId)) {
-            body.put("UscTbId", request.uscTbId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.useAnonymousTbAccount)) {
-            body.put("UseAnonymousTbAccount", request.useAnonymousTbAccount);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1415,64 +1307,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DownloadItemBillFileResponse downloadItemBillFileWithOptions(DownloadItemBillFileRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.accountType)) {
-            body.put("AccountType", request.accountType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunBid)) {
-            body.put("AliyunBid", request.aliyunBid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunCallerType)) {
-            body.put("AliyunCallerType", request.aliyunCallerType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunPid)) {
-            body.put("AliyunPid", request.aliyunPid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunUid)) {
-            body.put("AliyunUid", request.aliyunUid);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.billId)) {
             body.put("BillId", request.billId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
             body.put("BizId", request.bizId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.lmUserId)) {
-            body.put("LmUserId", request.lmUserId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.proxyOriginalSourceIp)) {
-            body.put("ProxyOriginalSourceIp", request.proxyOriginalSourceIp);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
-            body.put("SourceIp", request.sourceIp);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tbNick)) {
-            body.put("TbNick", request.tbNick);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.thirdPartyUserId)) {
-            body.put("ThirdPartyUserId", request.thirdPartyUserId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.uscTbId)) {
-            body.put("UscTbId", request.uscTbId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.useAnonymousTbAccount)) {
-            body.put("UseAnonymousTbAccount", request.useAnonymousTbAccount);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1500,64 +1340,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DownloadOrderTransactionDetailFileResponse downloadOrderTransactionDetailFileWithOptions(DownloadOrderTransactionDetailFileRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.accountType)) {
-            body.put("AccountType", request.accountType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunBid)) {
-            body.put("AliyunBid", request.aliyunBid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunCallerType)) {
-            body.put("AliyunCallerType", request.aliyunCallerType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunPid)) {
-            body.put("AliyunPid", request.aliyunPid);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aliyunUid)) {
-            body.put("AliyunUid", request.aliyunUid);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
             body.put("BizId", request.bizId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.lmUserId)) {
-            body.put("LmUserId", request.lmUserId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.proxyOriginalSourceIp)) {
-            body.put("ProxyOriginalSourceIp", request.proxyOriginalSourceIp);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.recordId)) {
             body.put("RecordId", request.recordId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
-            body.put("SourceIp", request.sourceIp);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tbNick)) {
-            body.put("TbNick", request.tbNick);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.thirdPartyUserId)) {
-            body.put("ThirdPartyUserId", request.thirdPartyUserId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.uscTbId)) {
-            body.put("UscTbId", request.uscTbId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.useAnonymousTbAccount)) {
-            body.put("UseAnonymousTbAccount", request.useAnonymousTbAccount);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
