@@ -1763,9 +1763,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.skipTrialPolicyWithOptions(request, runtime);
     }
 
-    public StartGameLiveResponse startGameLiveWithOptions(StartGameLiveRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public StartGameLiveResponse startGameLiveWithOptions(StartGameLiveRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        StartGameLiveShrinkRequest request = new StartGameLiveShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extension)) {
+            request.extensionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extension, "Extension", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extensionShrink)) {
+            query.put("Extension", request.extensionShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gameSession)) {
             query.put("GameSession", request.gameSession);
         }

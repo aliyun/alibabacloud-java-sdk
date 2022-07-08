@@ -3,9 +3,9 @@ package com.aliyun.cloudgameapi20200728.models;
 
 import com.aliyun.tea.*;
 
-public class StartGameLiveRequest extends TeaModel {
+public class StartGameLiveShrinkRequest extends TeaModel {
     @NameInMap("Extension")
-    public java.util.Map<String, String> extension;
+    public String extensionShrink;
 
     @NameInMap("GameSession")
     public String gameSession;
@@ -13,20 +13,20 @@ public class StartGameLiveRequest extends TeaModel {
     @NameInMap("VideoPushAddress")
     public String videoPushAddress;
 
-    public static StartGameLiveRequest build(java.util.Map<String, ?> map) throws Exception {
-        StartGameLiveRequest self = new StartGameLiveRequest();
+    public static StartGameLiveShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        StartGameLiveShrinkRequest self = new StartGameLiveShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public StartGameLiveRequest setExtension(java.util.Map<String, String> extension) {
-        this.extension = extension;
+    public StartGameLiveShrinkRequest setExtensionShrink(String extensionShrink) {
+        this.extensionShrink = extensionShrink;
         return this;
     }
-    public java.util.Map<String, String> getExtension() {
-        return this.extension;
+    public String getExtensionShrink() {
+        return this.extensionShrink;
     }
 
-    public StartGameLiveRequest setGameSession(String gameSession) {
+    public StartGameLiveShrinkRequest setGameSession(String gameSession) {
         this.gameSession = gameSession;
         return this;
     }
@@ -34,7 +34,7 @@ public class StartGameLiveRequest extends TeaModel {
         return this.gameSession;
     }
 
-    public StartGameLiveRequest setVideoPushAddress(String videoPushAddress) {
+    public StartGameLiveShrinkRequest setVideoPushAddress(String videoPushAddress) {
         this.videoPushAddress = videoPushAddress;
         return this;
     }
