@@ -34,6 +34,12 @@ public class DescribeAlarmEventListRequest extends TeaModel {
     @NameInMap("OperateErrorCodeList")
     public java.util.List<String> operateErrorCodeList;
 
+    @NameInMap("OperateTimeEnd")
+    public String operateTimeEnd;
+
+    @NameInMap("OperateTimeStart")
+    public String operateTimeStart;
+
     @NameInMap("PageSize")
     public String pageSize;
 
@@ -45,6 +51,12 @@ public class DescribeAlarmEventListRequest extends TeaModel {
 
     @NameInMap("TacticId")
     public String tacticId;
+
+    @NameInMap("TimeEnd")
+    public String timeEnd;
+
+    @NameInMap("TimeStart")
+    public String timeStart;
 
     @NameInMap("UniqueInfo")
     public String uniqueInfo;
@@ -137,6 +149,22 @@ public class DescribeAlarmEventListRequest extends TeaModel {
         return this.operateErrorCodeList;
     }
 
+    public DescribeAlarmEventListRequest setOperateTimeEnd(String operateTimeEnd) {
+        this.operateTimeEnd = operateTimeEnd;
+        return this;
+    }
+    public String getOperateTimeEnd() {
+        return this.operateTimeEnd;
+    }
+
+    public DescribeAlarmEventListRequest setOperateTimeStart(String operateTimeStart) {
+        this.operateTimeStart = operateTimeStart;
+        return this;
+    }
+    public String getOperateTimeStart() {
+        return this.operateTimeStart;
+    }
+
     public DescribeAlarmEventListRequest setPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -167,6 +195,22 @@ public class DescribeAlarmEventListRequest extends TeaModel {
     }
     public String getTacticId() {
         return this.tacticId;
+    }
+
+    public DescribeAlarmEventListRequest setTimeEnd(String timeEnd) {
+        this.timeEnd = timeEnd;
+        return this;
+    }
+    public String getTimeEnd() {
+        return this.timeEnd;
+    }
+
+    public DescribeAlarmEventListRequest setTimeStart(String timeStart) {
+        this.timeStart = timeStart;
+        return this;
+    }
+    public String getTimeStart() {
+        return this.timeStart;
     }
 
     public DescribeAlarmEventListRequest setUniqueInfo(String uniqueInfo) {
