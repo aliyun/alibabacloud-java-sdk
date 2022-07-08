@@ -48,11 +48,11 @@ public class DescribeSuspEventsRequest extends TeaModel {
 
     // 处理时间结束时间
     @NameInMap("OperateTimeEnd")
-    public Long operateTimeEnd;
+    public String operateTimeEnd;
 
     // 处理时间开始时间
     @NameInMap("OperateTimeStart")
-    public Long operateTimeStart;
+    public String operateTimeStart;
 
     @NameInMap("PageSize")
     public String pageSize;
@@ -77,6 +77,14 @@ public class DescribeSuspEventsRequest extends TeaModel {
 
     @NameInMap("TargetType")
     public String targetType;
+
+    // 最新发生结束时间
+    @NameInMap("TimeEnd")
+    public String timeEnd;
+
+    // 最新发生开始时间
+    @NameInMap("TimeStart")
+    public String timeStart;
 
     @NameInMap("UniqueInfo")
     public String uniqueInfo;
@@ -201,19 +209,19 @@ public class DescribeSuspEventsRequest extends TeaModel {
         return this.operateErrorCodeList;
     }
 
-    public DescribeSuspEventsRequest setOperateTimeEnd(Long operateTimeEnd) {
+    public DescribeSuspEventsRequest setOperateTimeEnd(String operateTimeEnd) {
         this.operateTimeEnd = operateTimeEnd;
         return this;
     }
-    public Long getOperateTimeEnd() {
+    public String getOperateTimeEnd() {
         return this.operateTimeEnd;
     }
 
-    public DescribeSuspEventsRequest setOperateTimeStart(Long operateTimeStart) {
+    public DescribeSuspEventsRequest setOperateTimeStart(String operateTimeStart) {
         this.operateTimeStart = operateTimeStart;
         return this;
     }
-    public Long getOperateTimeStart() {
+    public String getOperateTimeStart() {
         return this.operateTimeStart;
     }
 
@@ -279,6 +287,22 @@ public class DescribeSuspEventsRequest extends TeaModel {
     }
     public String getTargetType() {
         return this.targetType;
+    }
+
+    public DescribeSuspEventsRequest setTimeEnd(String timeEnd) {
+        this.timeEnd = timeEnd;
+        return this;
+    }
+    public String getTimeEnd() {
+        return this.timeEnd;
+    }
+
+    public DescribeSuspEventsRequest setTimeStart(String timeStart) {
+        this.timeStart = timeStart;
+        return this;
+    }
+    public String getTimeStart() {
+        return this.timeStart;
     }
 
     public DescribeSuspEventsRequest setUniqueInfo(String uniqueInfo) {
