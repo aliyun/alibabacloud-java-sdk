@@ -84,6 +84,12 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("Email")
         public String email;
 
+        @NameInMap("EnablePortCheck")
+        public Boolean enablePortCheck;
+
+        @NameInMap("EnableUrlCheck")
+        public Boolean enableUrlCheck;
+
         @NameInMap("ExtSlbId")
         public String extSlbId;
 
@@ -221,6 +227,22 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public GetApplicationResponseBodyApplication setEnablePortCheck(Boolean enablePortCheck) {
+            this.enablePortCheck = enablePortCheck;
+            return this;
+        }
+        public Boolean getEnablePortCheck() {
+            return this.enablePortCheck;
+        }
+
+        public GetApplicationResponseBodyApplication setEnableUrlCheck(Boolean enableUrlCheck) {
+            this.enableUrlCheck = enableUrlCheck;
+            return this;
+        }
+        public Boolean getEnableUrlCheck() {
+            return this.enableUrlCheck;
         }
 
         public GetApplicationResponseBodyApplication setExtSlbId(String extSlbId) {

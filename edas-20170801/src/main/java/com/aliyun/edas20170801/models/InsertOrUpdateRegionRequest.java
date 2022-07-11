@@ -13,11 +13,21 @@ public class InsertOrUpdateRegionRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    // MSE注册中心实例ID
+    @NameInMap("MseInstanceId")
+    public String mseInstanceId;
+
     @NameInMap("RegionName")
     public String regionName;
 
     @NameInMap("RegionTag")
     public String regionTag;
+
+    // 注册中心类型：
+    // - default，EDAS共享注册中心
+    // - exclusive_mse，MSE Nacos注册中心
+    @NameInMap("RegistryType")
+    public String registryType;
 
     public static InsertOrUpdateRegionRequest build(java.util.Map<String, ?> map) throws Exception {
         InsertOrUpdateRegionRequest self = new InsertOrUpdateRegionRequest();
@@ -48,6 +58,14 @@ public class InsertOrUpdateRegionRequest extends TeaModel {
         return this.id;
     }
 
+    public InsertOrUpdateRegionRequest setMseInstanceId(String mseInstanceId) {
+        this.mseInstanceId = mseInstanceId;
+        return this;
+    }
+    public String getMseInstanceId() {
+        return this.mseInstanceId;
+    }
+
     public InsertOrUpdateRegionRequest setRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -62,6 +80,14 @@ public class InsertOrUpdateRegionRequest extends TeaModel {
     }
     public String getRegionTag() {
         return this.regionTag;
+    }
+
+    public InsertOrUpdateRegionRequest setRegistryType(String registryType) {
+        this.registryType = registryType;
+        return this;
+    }
+    public String getRegistryType() {
+        return this.registryType;
     }
 
 }

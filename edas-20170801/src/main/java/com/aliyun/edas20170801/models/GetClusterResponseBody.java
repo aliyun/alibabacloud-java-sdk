@@ -102,6 +102,12 @@ public class GetClusterResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        // K8S类型集群的子类型：ManagedKubernetes为阿里云ACK集群类型，
+        // Ask为阿里云ASK集群类型，
+        // ExternalKubernetes为外部集群类型
+        @NameInMap("SubClusterType")
+        public String subClusterType;
+
         @NameInMap("UpdateTime")
         public Long updateTime;
 
@@ -239,6 +245,14 @@ public class GetClusterResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetClusterResponseBodyCluster setSubClusterType(String subClusterType) {
+            this.subClusterType = subClusterType;
+            return this;
+        }
+        public String getSubClusterType() {
+            return this.subClusterType;
         }
 
         public GetClusterResponseBodyCluster setUpdateTime(Long updateTime) {

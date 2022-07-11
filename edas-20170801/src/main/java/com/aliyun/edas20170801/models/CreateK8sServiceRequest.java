@@ -7,6 +7,9 @@ public class CreateK8sServiceRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("ExternalTrafficPolicy")
+    public String externalTrafficPolicy;
+
     @NameInMap("Name")
     public String name;
 
@@ -27,6 +30,14 @@ public class CreateK8sServiceRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public CreateK8sServiceRequest setExternalTrafficPolicy(String externalTrafficPolicy) {
+        this.externalTrafficPolicy = externalTrafficPolicy;
+        return this;
+    }
+    public String getExternalTrafficPolicy() {
+        return this.externalTrafficPolicy;
     }
 
     public CreateK8sServiceRequest setName(String name) {
