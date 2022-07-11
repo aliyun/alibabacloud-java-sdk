@@ -13,9 +13,6 @@ public class DownloadDataResponseBody extends TeaModel {
     @NameInMap("Finished")
     public Boolean finished;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Status")
     public String status;
 
@@ -46,14 +43,6 @@ public class DownloadDataResponseBody extends TeaModel {
     }
     public Boolean getFinished() {
         return this.finished;
-    }
-
-    public DownloadDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DownloadDataResponseBody setStatus(String status) {
