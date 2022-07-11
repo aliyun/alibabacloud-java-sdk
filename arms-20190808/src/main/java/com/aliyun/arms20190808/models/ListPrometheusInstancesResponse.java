@@ -3,7 +3,7 @@ package com.aliyun.arms20190808.models;
 
 import com.aliyun.tea.*;
 
-public class ListInsightsEventsResponse extends TeaModel {
+public class ListPrometheusInstancesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListInsightsEventsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListInsightsEventsResponseBody body;
+    public ListPrometheusInstancesResponseBody body;
 
-    public static ListInsightsEventsResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListInsightsEventsResponse self = new ListInsightsEventsResponse();
+    public static ListPrometheusInstancesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListPrometheusInstancesResponse self = new ListPrometheusInstancesResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListInsightsEventsResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListPrometheusInstancesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListInsightsEventsResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListInsightsEventsResponse setStatusCode(Integer statusCode) {
+    public ListPrometheusInstancesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListInsightsEventsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListInsightsEventsResponse setBody(ListInsightsEventsResponseBody body) {
+    public ListPrometheusInstancesResponse setBody(ListPrometheusInstancesResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListInsightsEventsResponseBody getBody() {
+    public ListPrometheusInstancesResponseBody getBody() {
         return this.body;
     }
 
