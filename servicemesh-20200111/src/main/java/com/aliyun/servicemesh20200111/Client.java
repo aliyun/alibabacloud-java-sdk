@@ -1348,39 +1348,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeIstioGatewayRoutesWithOptions(request, runtime);
     }
 
-    public DescribeMeshWorkloadVersionStatusResponse describeMeshWorkloadVersionStatusWithOptions(DescribeMeshWorkloadVersionStatusRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
-            body.put("Namespace", request.namespace);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
-            body.put("ServiceMeshId", request.serviceMeshId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeMeshWorkloadVersionStatus"),
-            new TeaPair("version", "2020-01-11"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMeshWorkloadVersionStatusResponse());
-    }
-
-    public DescribeMeshWorkloadVersionStatusResponse describeMeshWorkloadVersionStatus(DescribeMeshWorkloadVersionStatusRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeMeshWorkloadVersionStatusWithOptions(request, runtime);
-    }
-
     public DescribeNamespaceScopeSidecarConfigResponse describeNamespaceScopeSidecarConfigWithOptions(DescribeNamespaceScopeSidecarConfigRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1666,43 +1633,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeServiceMeshProxyStatusResponse describeServiceMeshProxyStatus(DescribeServiceMeshProxyStatusRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeServiceMeshProxyStatusWithOptions(request, runtime);
-    }
-
-    public DescribeServiceMeshServiceLabelResponse describeServiceMeshServiceLabelWithOptions(DescribeServiceMeshServiceLabelRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
-            body.put("ServiceMeshId", request.serviceMeshId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.serviceNames)) {
-            body.put("ServiceNames", request.serviceNames);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.serviceNamespaces)) {
-            body.put("ServiceNamespaces", request.serviceNamespaces);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeServiceMeshServiceLabel"),
-            new TeaPair("version", "2020-01-11"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeServiceMeshServiceLabelResponse());
-    }
-
-    public DescribeServiceMeshServiceLabelResponse describeServiceMeshServiceLabel(DescribeServiceMeshServiceLabelRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeServiceMeshServiceLabelWithOptions(request, runtime);
     }
 
     public DescribeServiceMeshUpgradeStatusResponse describeServiceMeshUpgradeStatusWithOptions(DescribeServiceMeshUpgradeStatusRequest request, RuntimeOptions runtime) throws Exception {
@@ -2459,6 +2389,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateASMGatewayImportedServicesWithOptions(request, runtime);
     }
 
+    public UpdateASMNamespaceFromGuestClusterResponse updateASMNamespaceFromGuestClusterWithOptions(UpdateASMNamespaceFromGuestClusterRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.k8sClusterId)) {
+            body.put("K8sClusterId", request.k8sClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
+            body.put("ServiceMeshId", request.serviceMeshId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateASMNamespaceFromGuestCluster"),
+            new TeaPair("version", "2020-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateASMNamespaceFromGuestClusterResponse());
+    }
+
+    public UpdateASMNamespaceFromGuestClusterResponse updateASMNamespaceFromGuestCluster(UpdateASMNamespaceFromGuestClusterRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateASMNamespaceFromGuestClusterWithOptions(request, runtime);
+    }
+
     public UpdateIstioGatewayRoutesResponse updateIstioGatewayRoutesWithOptions(UpdateIstioGatewayRoutesRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateIstioGatewayRoutesShrinkRequest request = new UpdateIstioGatewayRoutesShrinkRequest();
@@ -2785,6 +2748,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("MysqlFilterEnabled", request.mysqlFilterEnabled);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.NFDEnabled)) {
+            body.put("NFDEnabled", request.NFDEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.NFDLabelPruned)) {
+            body.put("NFDLabelPruned", request.NFDLabelPruned);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.OPAInjectorCPULimit)) {
             body.put("OPAInjectorCPULimit", request.OPAInjectorCPULimit);
         }
@@ -2919,6 +2890,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tracing)) {
             body.put("Tracing", request.tracing);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tracingOnExtZipkinLimitCPU)) {
+            body.put("TracingOnExtZipkinLimitCPU", request.tracingOnExtZipkinLimitCPU);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tracingOnExtZipkinLimitMemory)) {
+            body.put("TracingOnExtZipkinLimitMemory", request.tracingOnExtZipkinLimitMemory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tracingOnExtZipkinRequestCPU)) {
+            body.put("TracingOnExtZipkinRequestCPU", request.tracingOnExtZipkinRequestCPU);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tracingOnExtZipkinRequestMemory)) {
+            body.put("TracingOnExtZipkinRequestMemory", request.tracingOnExtZipkinRequestMemory);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.webAssemblyFilterEnabled)) {

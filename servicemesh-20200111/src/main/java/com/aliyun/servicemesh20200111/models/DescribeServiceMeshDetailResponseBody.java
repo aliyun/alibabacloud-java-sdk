@@ -826,6 +826,36 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationNFDConfiguration extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("NFDLabelPruned")
+        public Boolean NFDLabelPruned;
+
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationNFDConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationNFDConfiguration self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationNFDConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationNFDConfiguration setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationNFDConfiguration setNFDLabelPruned(Boolean NFDLabelPruned) {
+            this.NFDLabelPruned = NFDLabelPruned;
+            return this;
+        }
+        public Boolean getNFDLabelPruned() {
+            return this.NFDLabelPruned;
+        }
+
+    }
+
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection extends TeaModel {
         @NameInMap("OPAScopeInjected")
         public Boolean OPAScopeInjected;
@@ -943,6 +973,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         @NameInMap("MultiBuffer")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationMultiBuffer multiBuffer;
 
+        @NameInMap("NFDConfiguration")
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationNFDConfiguration NFDConfiguration;
+
         @NameInMap("OPAScopeInjection")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection OPAScopeInjection;
 
@@ -1009,6 +1042,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationMultiBuffer getMultiBuffer() {
             return this.multiBuffer;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setNFDConfiguration(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationNFDConfiguration NFDConfiguration) {
+            this.NFDConfiguration = NFDConfiguration;
+            return this;
+        }
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationNFDConfiguration getNFDConfiguration() {
+            return this.NFDConfiguration;
         }
 
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setOPAScopeInjection(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationOPAScopeInjection OPAScopeInjection) {
