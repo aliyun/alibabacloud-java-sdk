@@ -13,6 +13,9 @@ public class ImportImageRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DetectionStrategy")
+    public String detectionStrategy;
+
     @NameInMap("DiskDeviceMapping")
     public java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping;
 
@@ -76,6 +79,14 @@ public class ImportImageRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ImportImageRequest setDetectionStrategy(String detectionStrategy) {
+        this.detectionStrategy = detectionStrategy;
+        return this;
+    }
+    public String getDetectionStrategy() {
+        return this.detectionStrategy;
     }
 
     public ImportImageRequest setDiskDeviceMapping(java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping) {

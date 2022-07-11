@@ -75,6 +75,107 @@ public class DescribeImagesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("RiskCode")
+        public String riskCode;
+
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem self = new DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem setRiskCode(String riskCode) {
+            this.riskCode = riskCode;
+            return this;
+        }
+        public String getRiskCode() {
+            return this.riskCode;
+        }
+
+        public DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeImagesResponseBodyImagesImageDetectionOptionsItems extends TeaModel {
+        @NameInMap("Item")
+        public java.util.List<DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem> item;
+
+        public static DescribeImagesResponseBodyImagesImageDetectionOptionsItems build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagesResponseBodyImagesImageDetectionOptionsItems self = new DescribeImagesResponseBodyImagesImageDetectionOptionsItems();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagesResponseBodyImagesImageDetectionOptionsItems setItem(java.util.List<DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem> item) {
+            this.item = item;
+            return this;
+        }
+        public java.util.List<DescribeImagesResponseBodyImagesImageDetectionOptionsItemsItem> getItem() {
+            return this.item;
+        }
+
+    }
+
+    public static class DescribeImagesResponseBodyImagesImageDetectionOptions extends TeaModel {
+        @NameInMap("Items")
+        public DescribeImagesResponseBodyImagesImageDetectionOptionsItems items;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeImagesResponseBodyImagesImageDetectionOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagesResponseBodyImagesImageDetectionOptions self = new DescribeImagesResponseBodyImagesImageDetectionOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagesResponseBodyImagesImageDetectionOptions setItems(DescribeImagesResponseBodyImagesImageDetectionOptionsItems items) {
+            this.items = items;
+            return this;
+        }
+        public DescribeImagesResponseBodyImagesImageDetectionOptionsItems getItems() {
+            return this.items;
+        }
+
+        public DescribeImagesResponseBodyImagesImageDetectionOptions setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
         @NameInMap("Device")
         public String device;
@@ -201,6 +302,25 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeImagesResponseBodyImagesImageFeatures extends TeaModel {
+        @NameInMap("NvmeSupport")
+        public String nvmeSupport;
+
+        public static DescribeImagesResponseBodyImagesImageFeatures build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagesResponseBodyImagesImageFeatures self = new DescribeImagesResponseBodyImagesImageFeatures();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagesResponseBodyImagesImageFeatures setNvmeSupport(String nvmeSupport) {
+            this.nvmeSupport = nvmeSupport;
+            return this;
+        }
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
+        }
+
+    }
+
     public static class DescribeImagesResponseBodyImagesImageTagsTag extends TeaModel {
         @NameInMap("TagKey")
         public String tagKey;
@@ -254,17 +374,20 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("Architecture")
         public String architecture;
 
-        @NameInMap("BootMode")
-        public String bootMode;
-
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DetectionOptions")
+        public DescribeImagesResponseBodyImagesImageDetectionOptions detectionOptions;
+
         @NameInMap("DiskDeviceMappings")
         public DescribeImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings;
+
+        @NameInMap("Features")
+        public DescribeImagesResponseBodyImagesImageFeatures features;
 
         @NameInMap("ImageFamily")
         public String imageFamily;
@@ -354,14 +477,6 @@ public class DescribeImagesResponseBody extends TeaModel {
             return this.architecture;
         }
 
-        public DescribeImagesResponseBodyImagesImage setBootMode(String bootMode) {
-            this.bootMode = bootMode;
-            return this;
-        }
-        public String getBootMode() {
-            return this.bootMode;
-        }
-
         public DescribeImagesResponseBodyImagesImage setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
@@ -378,12 +493,28 @@ public class DescribeImagesResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeImagesResponseBodyImagesImage setDetectionOptions(DescribeImagesResponseBodyImagesImageDetectionOptions detectionOptions) {
+            this.detectionOptions = detectionOptions;
+            return this;
+        }
+        public DescribeImagesResponseBodyImagesImageDetectionOptions getDetectionOptions() {
+            return this.detectionOptions;
+        }
+
         public DescribeImagesResponseBodyImagesImage setDiskDeviceMappings(DescribeImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings) {
             this.diskDeviceMappings = diskDeviceMappings;
             return this;
         }
         public DescribeImagesResponseBodyImagesImageDiskDeviceMappings getDiskDeviceMappings() {
             return this.diskDeviceMappings;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setFeatures(DescribeImagesResponseBodyImagesImageFeatures features) {
+            this.features = features;
+            return this;
+        }
+        public DescribeImagesResponseBodyImagesImageFeatures getFeatures() {
+            return this.features;
         }
 
         public DescribeImagesResponseBodyImagesImage setImageFamily(String imageFamily) {

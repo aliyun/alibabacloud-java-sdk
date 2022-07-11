@@ -13,6 +13,9 @@ public class DescribeCommandsRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Latest")
+    public Boolean latest;
+
     @NameInMap("Name")
     public String name;
 
@@ -70,6 +73,14 @@ public class DescribeCommandsRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DescribeCommandsRequest setLatest(Boolean latest) {
+        this.latest = latest;
+        return this;
+    }
+    public Boolean getLatest() {
+        return this.latest;
     }
 
     public DescribeCommandsRequest setName(String name) {

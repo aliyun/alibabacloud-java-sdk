@@ -40,6 +40,9 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RemoveFromDeploymentSet")
+    public Boolean removeFromDeploymentSet;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -148,6 +151,14 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyInstanceDeploymentRequest setRemoveFromDeploymentSet(Boolean removeFromDeploymentSet) {
+        this.removeFromDeploymentSet = removeFromDeploymentSet;
+        return this;
+    }
+    public Boolean getRemoveFromDeploymentSet() {
+        return this.removeFromDeploymentSet;
     }
 
     public ModifyInstanceDeploymentRequest setResourceOwnerAccount(String resourceOwnerAccount) {

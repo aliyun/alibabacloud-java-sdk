@@ -65,6 +65,12 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
     }
 
     public static class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk extends TeaModel {
+        @NameInMap("AutoSnapshotPolicyId")
+        public String autoSnapshotPolicyId;
+
+        @NameInMap("BurstingEnabled")
+        public Boolean burstingEnabled;
+
         @NameInMap("Category")
         public String category;
 
@@ -83,12 +89,31 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        @NameInMap("ProvisionedIops")
+        public Long provisionedIops;
+
         @NameInMap("Size")
         public Integer size;
 
         public static DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk build(java.util.Map<String, ?> map) throws Exception {
             DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk self = new DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+            return this;
+        }
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk setBurstingEnabled(Boolean burstingEnabled) {
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk setCategory(String category) {
@@ -139,6 +164,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             return this.performanceLevel;
         }
 
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk setProvisionedIops(Long provisionedIops) {
+            this.provisionedIops = provisionedIops;
+            return this;
+        }
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk setSize(Integer size) {
             this.size = size;
             return this;
@@ -150,6 +183,12 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
     }
 
     public static class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk extends TeaModel {
+        @NameInMap("AutoSnapshotPolicyId")
+        public String autoSnapshotPolicyId;
+
+        @NameInMap("BurstingEnabled")
+        public Boolean burstingEnabled;
+
         @NameInMap("Category")
         public String category;
 
@@ -171,6 +210,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        @NameInMap("ProvisionedIops")
+        public Long provisionedIops;
+
         @NameInMap("Size")
         public Integer size;
 
@@ -180,6 +222,22 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public static DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk build(java.util.Map<String, ?> map) throws Exception {
             DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk self = new DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+            return this;
+        }
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk setBurstingEnabled(Boolean burstingEnabled) {
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk setCategory(String category) {
@@ -236,6 +294,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
         public String getPerformanceLevel() {
             return this.performanceLevel;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk setProvisionedIops(Long provisionedIops) {
+            this.provisionedIops = provisionedIops;
+            return this;
+        }
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
         }
 
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk setSize(Integer size) {
@@ -298,8 +364,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("InstanceType")
+        public String instanceType;
+
         @NameInMap("NetworkInterfaceName")
         public String networkInterfaceName;
+
+        @NameInMap("NetworkInterfaceTrafficMode")
+        public String networkInterfaceTrafficMode;
 
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;
@@ -326,12 +398,28 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface setNetworkInterfaceName(String networkInterfaceName) {
             this.networkInterfaceName = networkInterfaceName;
             return this;
         }
         public String getNetworkInterfaceName() {
             return this.networkInterfaceName;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface setNetworkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+            this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+            return this;
+        }
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
         }
 
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface setPrimaryIpAddress(String primaryIpAddress) {

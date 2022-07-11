@@ -8,6 +8,10 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponse extends Te
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody body;
@@ -23,6 +27,14 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponse extends Te
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DescribeDeploymentSetSupportedInstanceTypeFamilyResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public DescribeDeploymentSetSupportedInstanceTypeFamilyResponse setBody(DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody body) {

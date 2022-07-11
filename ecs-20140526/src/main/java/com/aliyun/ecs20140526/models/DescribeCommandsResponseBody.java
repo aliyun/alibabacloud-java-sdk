@@ -64,6 +64,107 @@ public class DescribeCommandsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues extends TeaModel {
+        @NameInMap("PossibleValue")
+        public java.util.List<String> possibleValue;
+
+        public static DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues self = new DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues setPossibleValue(java.util.List<String> possibleValue) {
+            this.possibleValue = possibleValue;
+            return this;
+        }
+        public java.util.List<String> getPossibleValue() {
+            return this.possibleValue;
+        }
+
+    }
+
+    public static class DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition extends TeaModel {
+        @NameInMap("DefaultValue")
+        public String defaultValue;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("ParameterName")
+        public String parameterName;
+
+        @NameInMap("PossibleValues")
+        public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues possibleValues;
+
+        @NameInMap("Required")
+        public Boolean required;
+
+        public static DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition self = new DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition setDefaultValue(String defaultValue) {
+            this.defaultValue = defaultValue;
+            return this;
+        }
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition setParameterName(String parameterName) {
+            this.parameterName = parameterName;
+            return this;
+        }
+        public String getParameterName() {
+            return this.parameterName;
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition setPossibleValues(DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues possibleValues) {
+            this.possibleValues = possibleValues;
+            return this;
+        }
+        public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues getPossibleValues() {
+            return this.possibleValues;
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
+        }
+
+    }
+
+    public static class DescribeCommandsResponseBodyCommandsCommandParameterDefinitions extends TeaModel {
+        @NameInMap("ParameterDefinition")
+        public java.util.List<DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition> parameterDefinition;
+
+        public static DescribeCommandsResponseBodyCommandsCommandParameterDefinitions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCommandsResponseBodyCommandsCommandParameterDefinitions self = new DescribeCommandsResponseBodyCommandsCommandParameterDefinitions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommandParameterDefinitions setParameterDefinition(java.util.List<DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition> parameterDefinition) {
+            this.parameterDefinition = parameterDefinition;
+            return this;
+        }
+        public java.util.List<DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition> getParameterDefinition() {
+            return this.parameterDefinition;
+        }
+
+    }
+
     public static class DescribeCommandsResponseBodyCommandsCommandParameterNames extends TeaModel {
         @NameInMap("ParameterName")
         public java.util.List<String> parameterName;
@@ -110,6 +211,9 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("ParameterDefinitions")
+        public DescribeCommandsResponseBodyCommandsCommandParameterDefinitions parameterDefinitions;
 
         @NameInMap("ParameterNames")
         public DescribeCommandsResponseBodyCommandsCommandParameterNames parameterNames;
@@ -204,6 +308,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommand setParameterDefinitions(DescribeCommandsResponseBodyCommandsCommandParameterDefinitions parameterDefinitions) {
+            this.parameterDefinitions = parameterDefinitions;
+            return this;
+        }
+        public DescribeCommandsResponseBodyCommandsCommandParameterDefinitions getParameterDefinitions() {
+            return this.parameterDefinitions;
         }
 
         public DescribeCommandsResponseBodyCommandsCommand setParameterNames(DescribeCommandsResponseBodyCommandsCommandParameterNames parameterNames) {

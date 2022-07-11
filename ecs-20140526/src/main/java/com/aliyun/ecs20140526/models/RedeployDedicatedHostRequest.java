@@ -22,9 +22,6 @@ public class RedeployDedicatedHostRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("WaiveLocalDiskData")
-    public Boolean waiveLocalDiskData;
-
     public static RedeployDedicatedHostRequest build(java.util.Map<String, ?> map) throws Exception {
         RedeployDedicatedHostRequest self = new RedeployDedicatedHostRequest();
         return TeaModel.build(map, self);
@@ -76,14 +73,6 @@ public class RedeployDedicatedHostRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public RedeployDedicatedHostRequest setWaiveLocalDiskData(Boolean waiveLocalDiskData) {
-        this.waiveLocalDiskData = waiveLocalDiskData;
-        return this;
-    }
-    public Boolean getWaiveLocalDiskData() {
-        return this.waiveLocalDiskData;
     }
 
 }

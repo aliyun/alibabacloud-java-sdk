@@ -494,6 +494,12 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     }
 
     public static class CreateLaunchTemplateVersionRequestSystemDisk extends TeaModel {
+        @NameInMap("AutoSnapshotPolicyId")
+        public String autoSnapshotPolicyId;
+
+        @NameInMap("BurstingEnabled")
+        public Boolean burstingEnabled;
+
         @NameInMap("Category")
         public String category;
 
@@ -512,12 +518,31 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        @NameInMap("ProvisionedIops")
+        public Long provisionedIops;
+
         @NameInMap("Size")
         public Integer size;
 
         public static CreateLaunchTemplateVersionRequestSystemDisk build(java.util.Map<String, ?> map) throws Exception {
             CreateLaunchTemplateVersionRequestSystemDisk self = new CreateLaunchTemplateVersionRequestSystemDisk();
             return TeaModel.build(map, self);
+        }
+
+        public CreateLaunchTemplateVersionRequestSystemDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+            return this;
+        }
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
+        }
+
+        public CreateLaunchTemplateVersionRequestSystemDisk setBurstingEnabled(Boolean burstingEnabled) {
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         public CreateLaunchTemplateVersionRequestSystemDisk setCategory(String category) {
@@ -568,6 +593,14 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
             return this.performanceLevel;
         }
 
+        public CreateLaunchTemplateVersionRequestSystemDisk setProvisionedIops(Long provisionedIops) {
+            this.provisionedIops = provisionedIops;
+            return this;
+        }
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
         public CreateLaunchTemplateVersionRequestSystemDisk setSize(Integer size) {
             this.size = size;
             return this;
@@ -579,6 +612,12 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     }
 
     public static class CreateLaunchTemplateVersionRequestDataDisk extends TeaModel {
+        @NameInMap("AutoSnapshotPolicyId")
+        public String autoSnapshotPolicyId;
+
+        @NameInMap("BurstingEnabled")
+        public Boolean burstingEnabled;
+
         @NameInMap("Category")
         public String category;
 
@@ -600,6 +639,9 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        @NameInMap("ProvisionedIops")
+        public Long provisionedIops;
+
         @NameInMap("Size")
         public Integer size;
 
@@ -609,6 +651,22 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public static CreateLaunchTemplateVersionRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
             CreateLaunchTemplateVersionRequestDataDisk self = new CreateLaunchTemplateVersionRequestDataDisk();
             return TeaModel.build(map, self);
+        }
+
+        public CreateLaunchTemplateVersionRequestDataDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+            return this;
+        }
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
+        }
+
+        public CreateLaunchTemplateVersionRequestDataDisk setBurstingEnabled(Boolean burstingEnabled) {
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         public CreateLaunchTemplateVersionRequestDataDisk setCategory(String category) {
@@ -667,6 +725,14 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
             return this.performanceLevel;
         }
 
+        public CreateLaunchTemplateVersionRequestDataDisk setProvisionedIops(Long provisionedIops) {
+            this.provisionedIops = provisionedIops;
+            return this;
+        }
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
         public CreateLaunchTemplateVersionRequestDataDisk setSize(Integer size) {
             this.size = size;
             return this;
@@ -689,8 +755,14 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("InstanceType")
+        public String instanceType;
+
         @NameInMap("NetworkInterfaceName")
         public String networkInterfaceName;
+
+        @NameInMap("NetworkInterfaceTrafficMode")
+        public String networkInterfaceTrafficMode;
 
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;
@@ -717,12 +789,28 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
             return this.description;
         }
 
+        public CreateLaunchTemplateVersionRequestNetworkInterface setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
         public CreateLaunchTemplateVersionRequestNetworkInterface setNetworkInterfaceName(String networkInterfaceName) {
             this.networkInterfaceName = networkInterfaceName;
             return this;
         }
         public String getNetworkInterfaceName() {
             return this.networkInterfaceName;
+        }
+
+        public CreateLaunchTemplateVersionRequestNetworkInterface setNetworkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+            this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+            return this;
+        }
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
         }
 
         public CreateLaunchTemplateVersionRequestNetworkInterface setPrimaryIpAddress(String primaryIpAddress) {

@@ -8,6 +8,10 @@ public class DescribeSendFileResultsResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public DescribeSendFileResultsResponseBody body;
@@ -23,6 +27,14 @@ public class DescribeSendFileResultsResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DescribeSendFileResultsResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public DescribeSendFileResultsResponse setBody(DescribeSendFileResultsResponseBody body) {
