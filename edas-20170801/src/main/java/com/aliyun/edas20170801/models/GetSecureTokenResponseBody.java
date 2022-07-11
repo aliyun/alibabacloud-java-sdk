@@ -72,6 +72,18 @@ public class GetSecureTokenResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("MseInstanceId")
+        public String mseInstanceId;
+
+        @NameInMap("MseInternetAddress")
+        public String mseInternetAddress;
+
+        @NameInMap("MseIntranetAddress")
+        public String mseIntranetAddress;
+
+        @NameInMap("MseRegistryType")
+        public String mseRegistryType;
+
         @NameInMap("RegionId")
         public String regionId;
 
@@ -138,6 +150,38 @@ public class GetSecureTokenResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public GetSecureTokenResponseBodySecureToken setMseInstanceId(String mseInstanceId) {
+            this.mseInstanceId = mseInstanceId;
+            return this;
+        }
+        public String getMseInstanceId() {
+            return this.mseInstanceId;
+        }
+
+        public GetSecureTokenResponseBodySecureToken setMseInternetAddress(String mseInternetAddress) {
+            this.mseInternetAddress = mseInternetAddress;
+            return this;
+        }
+        public String getMseInternetAddress() {
+            return this.mseInternetAddress;
+        }
+
+        public GetSecureTokenResponseBodySecureToken setMseIntranetAddress(String mseIntranetAddress) {
+            this.mseIntranetAddress = mseIntranetAddress;
+            return this;
+        }
+        public String getMseIntranetAddress() {
+            return this.mseIntranetAddress;
+        }
+
+        public GetSecureTokenResponseBodySecureToken setMseRegistryType(String mseRegistryType) {
+            this.mseRegistryType = mseRegistryType;
+            return this;
+        }
+        public String getMseRegistryType() {
+            return this.mseRegistryType;
         }
 
         public GetSecureTokenResponseBodySecureToken setRegionId(String regionId) {

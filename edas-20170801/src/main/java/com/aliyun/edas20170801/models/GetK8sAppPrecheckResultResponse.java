@@ -3,7 +3,7 @@ package com.aliyun.edas20170801.models;
 
 import com.aliyun.tea.*;
 
-public class RemoveMockRuleResponse extends TeaModel {
+public class GetK8sAppPrecheckResultResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class RemoveMockRuleResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public RemoveMockRuleResponseBody body;
+    public GetK8sAppPrecheckResultResponseBody body;
 
-    public static RemoveMockRuleResponse build(java.util.Map<String, ?> map) throws Exception {
-        RemoveMockRuleResponse self = new RemoveMockRuleResponse();
+    public static GetK8sAppPrecheckResultResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetK8sAppPrecheckResultResponse self = new GetK8sAppPrecheckResultResponse();
         return TeaModel.build(map, self);
     }
 
-    public RemoveMockRuleResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetK8sAppPrecheckResultResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class RemoveMockRuleResponse extends TeaModel {
         return this.headers;
     }
 
-    public RemoveMockRuleResponse setStatusCode(Integer statusCode) {
+    public GetK8sAppPrecheckResultResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class RemoveMockRuleResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RemoveMockRuleResponse setBody(RemoveMockRuleResponseBody body) {
+    public GetK8sAppPrecheckResultResponse setBody(GetK8sAppPrecheckResultResponseBody body) {
         this.body = body;
         return this;
     }
-    public RemoveMockRuleResponseBody getBody() {
+    public GetK8sAppPrecheckResultResponseBody getBody() {
         return this.body;
     }
 

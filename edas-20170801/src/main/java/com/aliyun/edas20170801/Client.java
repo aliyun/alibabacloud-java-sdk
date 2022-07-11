@@ -173,81 +173,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddLogPathResponse());
     }
 
-    public AddMockRuleResponse addMockRule(AddMockRuleRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.addMockRuleWithOptions(request, headers, runtime);
-    }
-
-    public AddMockRuleResponse addMockRuleWithOptions(AddMockRuleRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.consumerAppsJson)) {
-            query.put("ConsumerAppsJson", request.consumerAppsJson);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dubboMockItemJson)) {
-            query.put("DubboMockItemJson", request.dubboMockItemJson);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
-            query.put("Enable", request.enable);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.extraJson)) {
-            query.put("ExtraJson", request.extraJson);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mockType)) {
-            query.put("MockType", request.mockType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            query.put("Name", request.name);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
-            query.put("Namespace", request.namespace);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.providerAppId)) {
-            query.put("ProviderAppId", request.providerAppId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.providerAppName)) {
-            query.put("ProviderAppName", request.providerAppName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
-            query.put("Region", request.region);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.scMockItemJson)) {
-            query.put("ScMockItemJson", request.scMockItemJson);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
-            query.put("Source", request.source);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "AddMockRule"),
-            new TeaPair("version", "2017-08-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/pop/sp/api/mock/addMockRule"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AddMockRuleResponse());
-    }
-
     public AuthorizeApplicationResponse authorizeApplication(AuthorizeApplicationRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -940,6 +865,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.externalTrafficPolicy)) {
+            query.put("ExternalTrafficPolicy", request.externalTrafficPolicy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -1967,37 +1896,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisableApplicationScalingRuleResponse());
     }
 
-    public DisableMockRuleResponse disableMockRule(DisableMockRuleRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.disableMockRuleWithOptions(request, headers, runtime);
-    }
-
-    public DisableMockRuleResponse disableMockRuleWithOptions(DisableMockRuleRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
-            query.put("Id", request.id);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DisableMockRule"),
-            new TeaPair("version", "2017-08-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/pop/sp/api/mock/disableMockRule"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableMockRuleResponse());
-    }
-
     public EnableApplicationScalingRuleResponse enableApplicationScalingRule(EnableApplicationScalingRuleRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2031,96 +1929,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnableApplicationScalingRuleResponse());
-    }
-
-    public EnableMockRuleResponse enableMockRule(EnableMockRuleRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.enableMockRuleWithOptions(request, headers, runtime);
-    }
-
-    public EnableMockRuleResponse enableMockRuleWithOptions(EnableMockRuleRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
-            query.put("Id", request.id);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "EnableMockRule"),
-            new TeaPair("version", "2017-08-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/pop/sp/api/mock/enableMockRule"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableMockRuleResponse());
-    }
-
-    public GetAccountMockRuleResponse getAccountMockRule(GetAccountMockRuleRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getAccountMockRuleWithOptions(request, headers, runtime);
-    }
-
-    public GetAccountMockRuleResponse getAccountMockRuleWithOptions(GetAccountMockRuleRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.consumerAppName)) {
-            query.put("ConsumerAppName", request.consumerAppName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mockType)) {
-            query.put("MockType", request.mockType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            query.put("Name", request.name);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
-            query.put("Namespace", request.namespace);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            query.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.providerAppName)) {
-            query.put("ProviderAppName", request.providerAppName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
-            query.put("Region", request.region);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetAccountMockRule"),
-            new TeaPair("version", "2017-08-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/pop/sp/api/mock/getAccountMockRule"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountMockRuleResponse());
     }
 
     public GetAppDeploymentResponse getAppDeployment(GetAppDeploymentRequest request) throws Exception {
@@ -2348,6 +2156,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetJvmConfigurationResponse());
     }
 
+    public GetK8sAppPrecheckResultResponse getK8sAppPrecheckResult(GetK8sAppPrecheckResultRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getK8sAppPrecheckResultWithOptions(request, headers, runtime);
+    }
+
+    public GetK8sAppPrecheckResultResponse getK8sAppPrecheckResultWithOptions(GetK8sAppPrecheckResultRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetK8sAppPrecheckResult"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v5/k8s/app_precheck"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetK8sAppPrecheckResultResponse());
+    }
+
     public GetK8sApplicationResponse getK8sApplication(GetK8sApplicationRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2455,76 +2302,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetK8sServicesResponse());
-    }
-
-    public GetMockRuleByConsumerAppIdResponse getMockRuleByConsumerAppId(GetMockRuleByConsumerAppIdRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getMockRuleByConsumerAppIdWithOptions(request, headers, runtime);
-    }
-
-    public GetMockRuleByConsumerAppIdResponse getMockRuleByConsumerAppIdWithOptions(GetMockRuleByConsumerAppIdRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.consumerAppId)) {
-            query.put("ConsumerAppId", request.consumerAppId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
-            query.put("Region", request.region);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetMockRuleByConsumerAppId"),
-            new TeaPair("version", "2017-08-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/pop/sp/api/mock/getMockRuleByConsumerAppId"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMockRuleByConsumerAppIdResponse());
-    }
-
-    public GetMockRuleByProviderAppIdResponse getMockRuleByProviderAppId(GetMockRuleByProviderAppIdRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getMockRuleByProviderAppIdWithOptions(request, headers, runtime);
-    }
-
-    public GetMockRuleByProviderAppIdResponse getMockRuleByProviderAppIdWithOptions(GetMockRuleByProviderAppIdRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.providerAppId)) {
-            query.put("ProviderAppId", request.providerAppId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
-            query.put("Region", request.region);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetMockRuleByProviderAppId"),
-            new TeaPair("version", "2017-08-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/pop/sp/api/mock/getMockRuleByProviderAppId"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMockRuleByProviderAppIdResponse());
     }
 
     public GetPackageStorageCredentialResponse getPackageStorageCredential() throws Exception {
@@ -3359,8 +3136,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Annotations", request.annotations);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.appConfig)) {
+            query.put("AppConfig", request.appConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appTemplateName)) {
+            query.put("AppTemplateName", request.appTemplateName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.applicationDescription)) {
@@ -3603,6 +3388,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RuntimeClassName", request.runtimeClassName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceConfigs)) {
+            query.put("ServiceConfigs", request.serviceConfigs);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.slsConfigs)) {
             query.put("SlsConfigs", request.slsConfigs);
         }
@@ -3670,12 +3459,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Id", request.id);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mseInstanceId)) {
+            query.put("MseInstanceId", request.mseInstanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionName)) {
             query.put("RegionName", request.regionName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionTag)) {
             query.put("RegionTag", request.regionTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registryType)) {
+            query.put("RegistryType", request.registryType);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -4623,41 +4420,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListRoleResponse());
     }
 
-    public ListRootStacksResponse listRootStacks(ListRootStacksRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listRootStacksWithOptions(request, headers, runtime);
-    }
-
-    public ListRootStacksResponse listRootStacksWithOptions(ListRootStacksRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
-            query.put("CurrentPage", request.currentPage);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListRootStacks"),
-            new TeaPair("version", "2017-08-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/pop/v5/s2i/list_root_stack"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRootStacksResponse());
-    }
-
     public ListScaleOutEcuResponse listScaleOutEcu(ListScaleOutEcuRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -5256,37 +5018,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySlsLogStoreListResponse());
     }
 
-    public RemoveMockRuleResponse removeMockRule(RemoveMockRuleRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.removeMockRuleWithOptions(request, headers, runtime);
-    }
-
-    public RemoveMockRuleResponse removeMockRuleWithOptions(RemoveMockRuleRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
-            query.put("Id", request.id);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "RemoveMockRule"),
-            new TeaPair("version", "2017-08-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/pop/sp/api/mock/removeMockRule"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveMockRuleResponse());
-    }
-
     public ResetApplicationResponse resetApplication(ResetApplicationRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -5734,6 +5465,125 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartApplicationResponse());
+    }
+
+    public StartK8sAppPrecheckResponse startK8sAppPrecheck(StartK8sAppPrecheckRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startK8sAppPrecheckWithOptions(request, headers, runtime);
+    }
+
+    public StartK8sAppPrecheckResponse startK8sAppPrecheckWithOptions(StartK8sAppPrecheckRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.annotations)) {
+            query.put("Annotations", request.annotations);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configMountDescs)) {
+            query.put("ConfigMountDescs", request.configMountDescs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.emptyDirs)) {
+            query.put("EmptyDirs", request.emptyDirs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envFroms)) {
+            query.put("EnvFroms", request.envFroms);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envs)) {
+            query.put("Envs", request.envs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            query.put("ImageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.javaStartUpConfig)) {
+            query.put("JavaStartUpConfig", request.javaStartUpConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
+            query.put("Labels", request.labels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limitEphemeralStorage)) {
+            query.put("LimitEphemeralStorage", request.limitEphemeralStorage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limitMem)) {
+            query.put("LimitMem", request.limitMem);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limitmCpu)) {
+            query.put("LimitmCpu", request.limitmCpu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.localVolume)) {
+            query.put("LocalVolume", request.localVolume);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageUrl)) {
+            query.put("PackageUrl", request.packageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pvcMountDescs)) {
+            query.put("PvcMountDescs", request.pvcMountDescs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.replicas)) {
+            query.put("Replicas", request.replicas);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestsEphemeralStorage)) {
+            query.put("RequestsEphemeralStorage", request.requestsEphemeralStorage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestsMem)) {
+            query.put("RequestsMem", request.requestsMem);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestsmCpu)) {
+            query.put("RequestsmCpu", request.requestsmCpu);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartK8sAppPrecheck"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v5/k8s/app_precheck"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartK8sAppPrecheckResponse());
     }
 
     public StartK8sApplicationResponse startK8sApplication(StartK8sApplicationRequest request) throws Exception {
@@ -6601,6 +6451,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CpuRequest", request.cpuRequest);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ephemeralStorageLimit)) {
+            query.put("EphemeralStorageLimit", request.ephemeralStorageLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ephemeralStorageRequest)) {
+            query.put("EphemeralStorageRequest", request.ephemeralStorageRequest);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mcpuLimit)) {
             query.put("McpuLimit", request.mcpuLimit);
         }
@@ -6834,6 +6692,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.externalTrafficPolicy)) {
+            query.put("ExternalTrafficPolicy", request.externalTrafficPolicy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {

@@ -7,8 +7,16 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("Annotations")
     public String annotations;
 
+    // 使用应用模版时的应用配置，JSON格式字符串
+    @NameInMap("AppConfig")
+    public String appConfig;
+
     @NameInMap("AppName")
     public String appName;
+
+    // 创建应用使用的应用模版名称，若创建应用时指定应用模版，则将优先使用应用模版和AppConfig参数确定应用配置，忽略其他配置
+    @NameInMap("AppTemplateName")
+    public String appTemplateName;
 
     @NameInMap("ApplicationDescription")
     public String applicationDescription;
@@ -197,6 +205,10 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("RuntimeClassName")
     public String runtimeClassName;
 
+    // 应用K8s服务信息
+    @NameInMap("ServiceConfigs")
+    public String serviceConfigs;
+
     @NameInMap("SlsConfigs")
     public String slsConfigs;
 
@@ -231,12 +243,28 @@ public class InsertK8sApplicationRequest extends TeaModel {
         return this.annotations;
     }
 
+    public InsertK8sApplicationRequest setAppConfig(String appConfig) {
+        this.appConfig = appConfig;
+        return this;
+    }
+    public String getAppConfig() {
+        return this.appConfig;
+    }
+
     public InsertK8sApplicationRequest setAppName(String appName) {
         this.appName = appName;
         return this;
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public InsertK8sApplicationRequest setAppTemplateName(String appTemplateName) {
+        this.appTemplateName = appTemplateName;
+        return this;
+    }
+    public String getAppTemplateName() {
+        return this.appTemplateName;
     }
 
     public InsertK8sApplicationRequest setApplicationDescription(String applicationDescription) {
@@ -717,6 +745,14 @@ public class InsertK8sApplicationRequest extends TeaModel {
     }
     public String getRuntimeClassName() {
         return this.runtimeClassName;
+    }
+
+    public InsertK8sApplicationRequest setServiceConfigs(String serviceConfigs) {
+        this.serviceConfigs = serviceConfigs;
+        return this;
+    }
+    public String getServiceConfigs() {
+        return this.serviceConfigs;
     }
 
     public InsertK8sApplicationRequest setSlsConfigs(String slsConfigs) {

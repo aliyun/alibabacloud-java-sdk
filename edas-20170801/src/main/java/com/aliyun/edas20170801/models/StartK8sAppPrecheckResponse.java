@@ -3,7 +3,7 @@ package com.aliyun.edas20170801.models;
 
 import com.aliyun.tea.*;
 
-public class GetMockRuleByProviderAppIdResponse extends TeaModel {
+public class StartK8sAppPrecheckResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetMockRuleByProviderAppIdResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetMockRuleByProviderAppIdResponseBody body;
+    public StartK8sAppPrecheckResponseBody body;
 
-    public static GetMockRuleByProviderAppIdResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetMockRuleByProviderAppIdResponse self = new GetMockRuleByProviderAppIdResponse();
+    public static StartK8sAppPrecheckResponse build(java.util.Map<String, ?> map) throws Exception {
+        StartK8sAppPrecheckResponse self = new StartK8sAppPrecheckResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetMockRuleByProviderAppIdResponse setHeaders(java.util.Map<String, String> headers) {
+    public StartK8sAppPrecheckResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetMockRuleByProviderAppIdResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetMockRuleByProviderAppIdResponse setStatusCode(Integer statusCode) {
+    public StartK8sAppPrecheckResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetMockRuleByProviderAppIdResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetMockRuleByProviderAppIdResponse setBody(GetMockRuleByProviderAppIdResponseBody body) {
+    public StartK8sAppPrecheckResponse setBody(StartK8sAppPrecheckResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetMockRuleByProviderAppIdResponseBody getBody() {
+    public StartK8sAppPrecheckResponseBody getBody() {
         return this.body;
     }
 

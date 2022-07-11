@@ -1,3 +1,7 @@
+2022-07-11 Version: 1.0.7
+- Supported StartK8sAppPrecheck
+- Supported GetK8sAppPrecheckResult
+
 2022-06-02 Version: 1.0.6
 - Add ListK8sNamespaces.
 

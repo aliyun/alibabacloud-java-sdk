@@ -16,6 +16,12 @@ public class UpdateK8sApplicationConfigRequest extends TeaModel {
     @NameInMap("CpuRequest")
     public String cpuRequest;
 
+    @NameInMap("EphemeralStorageLimit")
+    public String ephemeralStorageLimit;
+
+    @NameInMap("EphemeralStorageRequest")
+    public String ephemeralStorageRequest;
+
     @NameInMap("McpuLimit")
     public String mcpuLimit;
 
@@ -66,6 +72,22 @@ public class UpdateK8sApplicationConfigRequest extends TeaModel {
     }
     public String getCpuRequest() {
         return this.cpuRequest;
+    }
+
+    public UpdateK8sApplicationConfigRequest setEphemeralStorageLimit(String ephemeralStorageLimit) {
+        this.ephemeralStorageLimit = ephemeralStorageLimit;
+        return this;
+    }
+    public String getEphemeralStorageLimit() {
+        return this.ephemeralStorageLimit;
+    }
+
+    public UpdateK8sApplicationConfigRequest setEphemeralStorageRequest(String ephemeralStorageRequest) {
+        this.ephemeralStorageRequest = ephemeralStorageRequest;
+        return this;
+    }
+    public String getEphemeralStorageRequest() {
+        return this.ephemeralStorageRequest;
     }
 
     public UpdateK8sApplicationConfigRequest setMcpuLimit(String mcpuLimit) {
