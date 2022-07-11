@@ -4,9 +4,6 @@ package com.aliyun.mseap20210118.models;
 import com.aliyun.tea.*;
 
 public class BusinessLicenseOcrRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("BizCode")
     public String bizCode;
 
@@ -16,17 +13,12 @@ public class BusinessLicenseOcrRequest extends TeaModel {
     @NameInMap("FileStoreType")
     public String fileStoreType;
 
+    @NameInMap("Lang")
+    public String lang;
+
     public static BusinessLicenseOcrRequest build(java.util.Map<String, ?> map) throws Exception {
         BusinessLicenseOcrRequest self = new BusinessLicenseOcrRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BusinessLicenseOcrRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public BusinessLicenseOcrRequest setBizCode(String bizCode) {
@@ -51,6 +43,14 @@ public class BusinessLicenseOcrRequest extends TeaModel {
     }
     public String getFileStoreType() {
         return this.fileStoreType;
+    }
+
+    public BusinessLicenseOcrRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
 }

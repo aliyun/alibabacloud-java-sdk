@@ -3,7 +3,7 @@ package com.aliyun.mseap20210118.models;
 
 import com.aliyun.tea.*;
 
-public class BusinessLicenseOcrResponse extends TeaModel {
+public class GetRedisValueResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class BusinessLicenseOcrResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public BusinessLicenseOcrResponseBody body;
+    public GetRedisValueResponseBody body;
 
-    public static BusinessLicenseOcrResponse build(java.util.Map<String, ?> map) throws Exception {
-        BusinessLicenseOcrResponse self = new BusinessLicenseOcrResponse();
+    public static GetRedisValueResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetRedisValueResponse self = new GetRedisValueResponse();
         return TeaModel.build(map, self);
     }
 
-    public BusinessLicenseOcrResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetRedisValueResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class BusinessLicenseOcrResponse extends TeaModel {
         return this.headers;
     }
 
-    public BusinessLicenseOcrResponse setStatusCode(Integer statusCode) {
+    public GetRedisValueResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class BusinessLicenseOcrResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public BusinessLicenseOcrResponse setBody(BusinessLicenseOcrResponseBody body) {
+    public GetRedisValueResponse setBody(GetRedisValueResponseBody body) {
         this.body = body;
         return this;
     }
-    public BusinessLicenseOcrResponseBody getBody() {
+    public GetRedisValueResponseBody getBody() {
         return this.body;
     }
 
