@@ -13,9 +13,6 @@ public class ListDatasResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,14 +43,6 @@ public class ListDatasResponseBody extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListDatasResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListDatasResponseBody setTotalCount(Long totalCount) {

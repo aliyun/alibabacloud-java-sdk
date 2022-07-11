@@ -8,7 +8,7 @@ public class ListDatasShrinkRequest extends TeaModel {
     @NameInMap("CloudageMax")
     public Integer cloudageMax;
 
-    // 云量下限
+    // 云量下限，注意modis数据云量为0
     @NameInMap("CloudageMin")
     public Integer cloudageMin;
 
@@ -37,7 +37,19 @@ public class ListDatasShrinkRequest extends TeaModel {
     //     landsat5,
     //     landsat7,
     //     landsat8,
-    //     landsat9
+    //     landsat9,
+    //     MODIS_MCD12Q1_006,
+    //     MODIS_MCD15A3H_006,
+    //     MODIS_MOD14A2_006,
+    //     MODIS_MOD13Q1_006,
+    //     MODIS_MOD09GQ_006,
+    //     MODIS_MOD11A1_006,
+    //     MODIS_MOD17A2H_006,
+    //     MODIS_MOD17A3HGF_006,
+    //     MODIS_MCD64A1_006,
+    //     MODIS_MOD08_M3_006,
+    //     MODIS_MOD10A1_006,
+    //     MODIS_MCD43A4_006
     @NameInMap("SourceTypeList")
     public String sourceTypeListShrink;
 
