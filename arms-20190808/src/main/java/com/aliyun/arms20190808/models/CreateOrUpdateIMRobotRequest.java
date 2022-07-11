@@ -12,6 +12,9 @@ public class CreateOrUpdateIMRobotRequest extends TeaModel {
     @NameInMap("DailyNocTime")
     public String dailyNocTime;
 
+    @NameInMap("EnableOutgoing")
+    public Boolean enableOutgoing;
+
     // 告警机器人地址
     @NameInMap("RobotAddress")
     public String robotAddress;
@@ -23,6 +26,9 @@ public class CreateOrUpdateIMRobotRequest extends TeaModel {
     // 告警机器人名称
     @NameInMap("RobotName")
     public String robotName;
+
+    @NameInMap("Token")
+    public String token;
 
     // 告警机器人类型:dingding/wechat
     @NameInMap("Type")
@@ -49,6 +55,14 @@ public class CreateOrUpdateIMRobotRequest extends TeaModel {
         return this.dailyNocTime;
     }
 
+    public CreateOrUpdateIMRobotRequest setEnableOutgoing(Boolean enableOutgoing) {
+        this.enableOutgoing = enableOutgoing;
+        return this;
+    }
+    public Boolean getEnableOutgoing() {
+        return this.enableOutgoing;
+    }
+
     public CreateOrUpdateIMRobotRequest setRobotAddress(String robotAddress) {
         this.robotAddress = robotAddress;
         return this;
@@ -71,6 +85,14 @@ public class CreateOrUpdateIMRobotRequest extends TeaModel {
     }
     public String getRobotName() {
         return this.robotName;
+    }
+
+    public CreateOrUpdateIMRobotRequest setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
     }
 
     public CreateOrUpdateIMRobotRequest setType(String type) {
