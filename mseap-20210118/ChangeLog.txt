@@ -1,3 +1,6 @@
+2022-07-11 Version: 1.2.2
+- Added param for ActivateLicenseResponse .
+
 2021-03-15 Version: 1.0.3
 - Supported image quality check for certificate.
 - Supported ocr for certificate.
