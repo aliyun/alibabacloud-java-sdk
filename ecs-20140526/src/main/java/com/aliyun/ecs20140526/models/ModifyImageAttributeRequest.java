@@ -10,6 +10,9 @@ public class ModifyImageAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Features")
+    public ModifyImageAttributeRequestFeatures features;
+
     @NameInMap("ImageFamily")
     public String imageFamily;
 
@@ -59,6 +62,14 @@ public class ModifyImageAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyImageAttributeRequest setFeatures(ModifyImageAttributeRequestFeatures features) {
+        this.features = features;
+        return this;
+    }
+    public ModifyImageAttributeRequestFeatures getFeatures() {
+        return this.features;
     }
 
     public ModifyImageAttributeRequest setImageFamily(String imageFamily) {
@@ -139,6 +150,25 @@ public class ModifyImageAttributeRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public static class ModifyImageAttributeRequestFeatures extends TeaModel {
+        @NameInMap("NvmeSupport")
+        public String nvmeSupport;
+
+        public static ModifyImageAttributeRequestFeatures build(java.util.Map<String, ?> map) throws Exception {
+            ModifyImageAttributeRequestFeatures self = new ModifyImageAttributeRequestFeatures();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyImageAttributeRequestFeatures setNvmeSupport(String nvmeSupport) {
+            this.nvmeSupport = nvmeSupport;
+            return this;
+        }
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
+        }
+
     }
 
 }

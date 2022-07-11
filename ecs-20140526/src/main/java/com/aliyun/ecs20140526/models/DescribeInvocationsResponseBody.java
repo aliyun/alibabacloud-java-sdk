@@ -260,6 +260,9 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("CommandContent")
         public String commandContent;
 
+        @NameInMap("CommandDescription")
+        public String commandDescription;
+
         @NameInMap("CommandId")
         public String commandId;
 
@@ -296,8 +299,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("Timed")
         public Boolean timed;
 
+        @NameInMap("Timeout")
+        public Long timeout;
+
         @NameInMap("Username")
         public String username;
+
+        @NameInMap("WorkingDir")
+        public String workingDir;
 
         public static DescribeInvocationsResponseBodyInvocationsInvocation build(java.util.Map<String, ?> map) throws Exception {
             DescribeInvocationsResponseBodyInvocationsInvocation self = new DescribeInvocationsResponseBodyInvocationsInvocation();
@@ -310,6 +319,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
         public String getCommandContent() {
             return this.commandContent;
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocation setCommandDescription(String commandDescription) {
+            this.commandDescription = commandDescription;
+            return this;
+        }
+        public String getCommandDescription() {
+            return this.commandDescription;
         }
 
         public DescribeInvocationsResponseBodyInvocationsInvocation setCommandId(String commandId) {
@@ -408,12 +425,28 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.timed;
         }
 
+        public DescribeInvocationsResponseBodyInvocationsInvocation setTimeout(Long timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public Long getTimeout() {
+            return this.timeout;
+        }
+
         public DescribeInvocationsResponseBodyInvocationsInvocation setUsername(String username) {
             this.username = username;
             return this;
         }
         public String getUsername() {
             return this.username;
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocation setWorkingDir(String workingDir) {
+            this.workingDir = workingDir;
+            return this;
+        }
+        public String getWorkingDir() {
+            return this.workingDir;
         }
 
     }

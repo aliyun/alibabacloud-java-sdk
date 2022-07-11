@@ -7,6 +7,9 @@ public class CreateCommandRequest extends TeaModel {
     @NameInMap("CommandContent")
     public String commandContent;
 
+    @NameInMap("ContentEncoding")
+    public String contentEncoding;
+
     @NameInMap("Description")
     public String description;
 
@@ -51,6 +54,14 @@ public class CreateCommandRequest extends TeaModel {
     }
     public String getCommandContent() {
         return this.commandContent;
+    }
+
+    public CreateCommandRequest setContentEncoding(String contentEncoding) {
+        this.contentEncoding = contentEncoding;
+        return this;
+    }
+    public String getContentEncoding() {
+        return this.contentEncoding;
     }
 
     public CreateCommandRequest setDescription(String description) {

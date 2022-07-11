@@ -19,9 +19,6 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
-    @NameInMap("InstanceFeatureOptions")
-    public java.util.List<String> instanceFeatureOptions;
-
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -30,9 +27,6 @@ public class DescribeAvailableResourceRequest extends TeaModel {
 
     @NameInMap("Memory")
     public Float memory;
-
-    @NameInMap("NeedInventoryScore")
-    public Boolean needInventoryScore;
 
     @NameInMap("NetworkCategory")
     public String networkCategory;
@@ -115,14 +109,6 @@ public class DescribeAvailableResourceRequest extends TeaModel {
         return this.instanceChargeType;
     }
 
-    public DescribeAvailableResourceRequest setInstanceFeatureOptions(java.util.List<String> instanceFeatureOptions) {
-        this.instanceFeatureOptions = instanceFeatureOptions;
-        return this;
-    }
-    public java.util.List<String> getInstanceFeatureOptions() {
-        return this.instanceFeatureOptions;
-    }
-
     public DescribeAvailableResourceRequest setInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -145,14 +131,6 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     }
     public Float getMemory() {
         return this.memory;
-    }
-
-    public DescribeAvailableResourceRequest setNeedInventoryScore(Boolean needInventoryScore) {
-        this.needInventoryScore = needInventoryScore;
-        return this;
-    }
-    public Boolean getNeedInventoryScore() {
-        return this.needInventoryScore;
     }
 
     public DescribeAvailableResourceRequest setNetworkCategory(String networkCategory) {

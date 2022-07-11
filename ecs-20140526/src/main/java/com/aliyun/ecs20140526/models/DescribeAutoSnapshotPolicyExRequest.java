@@ -7,6 +7,9 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     @NameInMap("AutoSnapshotPolicyId")
     public String autoSnapshotPolicyId;
 
+    @NameInMap("AutoSnapshotPolicyName")
+    public String autoSnapshotPolicyName;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -45,6 +48,14 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     }
     public String getAutoSnapshotPolicyId() {
         return this.autoSnapshotPolicyId;
+    }
+
+    public DescribeAutoSnapshotPolicyExRequest setAutoSnapshotPolicyName(String autoSnapshotPolicyName) {
+        this.autoSnapshotPolicyName = autoSnapshotPolicyName;
+        return this;
+    }
+    public String getAutoSnapshotPolicyName() {
+        return this.autoSnapshotPolicyName;
     }
 
     public DescribeAutoSnapshotPolicyExRequest setOwnerAccount(String ownerAccount) {

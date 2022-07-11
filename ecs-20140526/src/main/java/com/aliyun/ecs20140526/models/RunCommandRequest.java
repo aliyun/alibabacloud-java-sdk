@@ -13,9 +13,6 @@ public class RunCommandRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
     @NameInMap("EnableParameter")
     public Boolean enableParameter;
 
@@ -97,14 +94,6 @@ public class RunCommandRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public RunCommandRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
-        return this;
-    }
-    public Boolean getDryRun() {
-        return this.dryRun;
     }
 
     public RunCommandRequest setEnableParameter(Boolean enableParameter) {

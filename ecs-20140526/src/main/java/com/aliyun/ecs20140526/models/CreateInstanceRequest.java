@@ -745,15 +745,6 @@ public class CreateInstanceRequest extends TeaModel {
         @NameInMap("Size")
         public Integer size;
 
-        @NameInMap("EncryptAlgorithm")
-        public String encryptAlgorithm;
-
-        @NameInMap("Encrypted")
-        public Boolean encrypted;
-
-        @NameInMap("KMSKeyId")
-        public String KMSKeyId;
-
         @NameInMap("StorageClusterId")
         public String storageClusterId;
 
@@ -800,30 +791,6 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public Integer getSize() {
             return this.size;
-        }
-
-        public CreateInstanceRequestSystemDisk setEncryptAlgorithm(String encryptAlgorithm) {
-            this.encryptAlgorithm = encryptAlgorithm;
-            return this;
-        }
-        public String getEncryptAlgorithm() {
-            return this.encryptAlgorithm;
-        }
-
-        public CreateInstanceRequestSystemDisk setEncrypted(Boolean encrypted) {
-            this.encrypted = encrypted;
-            return this;
-        }
-        public Boolean getEncrypted() {
-            return this.encrypted;
-        }
-
-        public CreateInstanceRequestSystemDisk setKMSKeyId(String KMSKeyId) {
-            this.KMSKeyId = KMSKeyId;
-            return this;
-        }
-        public String getKMSKeyId() {
-            return this.KMSKeyId;
         }
 
         public CreateInstanceRequestSystemDisk setStorageClusterId(String storageClusterId) {
