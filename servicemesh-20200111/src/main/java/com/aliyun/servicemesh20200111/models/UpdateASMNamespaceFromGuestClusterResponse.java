@@ -3,7 +3,7 @@ package com.aliyun.servicemesh20200111.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeMeshWorkloadVersionStatusResponse extends TeaModel {
+public class UpdateASMNamespaceFromGuestClusterResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeMeshWorkloadVersionStatusResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeMeshWorkloadVersionStatusResponseBody body;
+    public UpdateASMNamespaceFromGuestClusterResponseBody body;
 
-    public static DescribeMeshWorkloadVersionStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeMeshWorkloadVersionStatusResponse self = new DescribeMeshWorkloadVersionStatusResponse();
+    public static UpdateASMNamespaceFromGuestClusterResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateASMNamespaceFromGuestClusterResponse self = new UpdateASMNamespaceFromGuestClusterResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeMeshWorkloadVersionStatusResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateASMNamespaceFromGuestClusterResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeMeshWorkloadVersionStatusResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeMeshWorkloadVersionStatusResponse setStatusCode(Integer statusCode) {
+    public UpdateASMNamespaceFromGuestClusterResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeMeshWorkloadVersionStatusResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeMeshWorkloadVersionStatusResponse setBody(DescribeMeshWorkloadVersionStatusResponseBody body) {
+    public UpdateASMNamespaceFromGuestClusterResponse setBody(UpdateASMNamespaceFromGuestClusterResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeMeshWorkloadVersionStatusResponseBody getBody() {
+    public UpdateASMNamespaceFromGuestClusterResponseBody getBody() {
         return this.body;
     }
 

@@ -130,6 +130,12 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("MysqlFilterEnabled")
     public Boolean mysqlFilterEnabled;
 
+    @NameInMap("NFDEnabled")
+    public Boolean NFDEnabled;
+
+    @NameInMap("NFDLabelPruned")
+    public Boolean NFDLabelPruned;
+
     @NameInMap("OPAInjectorCPULimit")
     public String OPAInjectorCPULimit;
 
@@ -231,6 +237,18 @@ public class UpdateMeshFeatureRequest extends TeaModel {
 
     @NameInMap("Tracing")
     public Boolean tracing;
+
+    @NameInMap("TracingOnExtZipkinLimitCPU")
+    public String tracingOnExtZipkinLimitCPU;
+
+    @NameInMap("TracingOnExtZipkinLimitMemory")
+    public String tracingOnExtZipkinLimitMemory;
+
+    @NameInMap("TracingOnExtZipkinRequestCPU")
+    public String tracingOnExtZipkinRequestCPU;
+
+    @NameInMap("TracingOnExtZipkinRequestMemory")
+    public String tracingOnExtZipkinRequestMemory;
 
     @NameInMap("WebAssemblyFilterEnabled")
     public Boolean webAssemblyFilterEnabled;
@@ -576,6 +594,22 @@ public class UpdateMeshFeatureRequest extends TeaModel {
         return this.mysqlFilterEnabled;
     }
 
+    public UpdateMeshFeatureRequest setNFDEnabled(Boolean NFDEnabled) {
+        this.NFDEnabled = NFDEnabled;
+        return this;
+    }
+    public Boolean getNFDEnabled() {
+        return this.NFDEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setNFDLabelPruned(Boolean NFDLabelPruned) {
+        this.NFDLabelPruned = NFDLabelPruned;
+        return this;
+    }
+    public Boolean getNFDLabelPruned() {
+        return this.NFDLabelPruned;
+    }
+
     public UpdateMeshFeatureRequest setOPAInjectorCPULimit(String OPAInjectorCPULimit) {
         this.OPAInjectorCPULimit = OPAInjectorCPULimit;
         return this;
@@ -846,6 +880,38 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public Boolean getTracing() {
         return this.tracing;
+    }
+
+    public UpdateMeshFeatureRequest setTracingOnExtZipkinLimitCPU(String tracingOnExtZipkinLimitCPU) {
+        this.tracingOnExtZipkinLimitCPU = tracingOnExtZipkinLimitCPU;
+        return this;
+    }
+    public String getTracingOnExtZipkinLimitCPU() {
+        return this.tracingOnExtZipkinLimitCPU;
+    }
+
+    public UpdateMeshFeatureRequest setTracingOnExtZipkinLimitMemory(String tracingOnExtZipkinLimitMemory) {
+        this.tracingOnExtZipkinLimitMemory = tracingOnExtZipkinLimitMemory;
+        return this;
+    }
+    public String getTracingOnExtZipkinLimitMemory() {
+        return this.tracingOnExtZipkinLimitMemory;
+    }
+
+    public UpdateMeshFeatureRequest setTracingOnExtZipkinRequestCPU(String tracingOnExtZipkinRequestCPU) {
+        this.tracingOnExtZipkinRequestCPU = tracingOnExtZipkinRequestCPU;
+        return this;
+    }
+    public String getTracingOnExtZipkinRequestCPU() {
+        return this.tracingOnExtZipkinRequestCPU;
+    }
+
+    public UpdateMeshFeatureRequest setTracingOnExtZipkinRequestMemory(String tracingOnExtZipkinRequestMemory) {
+        this.tracingOnExtZipkinRequestMemory = tracingOnExtZipkinRequestMemory;
+        return this;
+    }
+    public String getTracingOnExtZipkinRequestMemory() {
+        return this.tracingOnExtZipkinRequestMemory;
     }
 
     public UpdateMeshFeatureRequest setWebAssemblyFilterEnabled(Boolean webAssemblyFilterEnabled) {
