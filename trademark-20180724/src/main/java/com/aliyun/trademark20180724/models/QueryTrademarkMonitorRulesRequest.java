@@ -7,9 +7,6 @@ public class QueryTrademarkMonitorRulesRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
-    @NameInMap("RuleName")
-    public String ruleName;
-
     @NameInMap("NotifyUpdate")
     public Integer notifyUpdate;
 
@@ -18,6 +15,9 @@ public class QueryTrademarkMonitorRulesRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RuleName")
+    public String ruleName;
 
     public static QueryTrademarkMonitorRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTrademarkMonitorRulesRequest self = new QueryTrademarkMonitorRulesRequest();
@@ -30,14 +30,6 @@ public class QueryTrademarkMonitorRulesRequest extends TeaModel {
     }
     public String getId() {
         return this.id;
-    }
-
-    public QueryTrademarkMonitorRulesRequest setRuleName(String ruleName) {
-        this.ruleName = ruleName;
-        return this;
-    }
-    public String getRuleName() {
-        return this.ruleName;
     }
 
     public QueryTrademarkMonitorRulesRequest setNotifyUpdate(Integer notifyUpdate) {
@@ -62,6 +54,14 @@ public class QueryTrademarkMonitorRulesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryTrademarkMonitorRulesRequest setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+    public String getRuleName() {
+        return this.ruleName;
     }
 
 }

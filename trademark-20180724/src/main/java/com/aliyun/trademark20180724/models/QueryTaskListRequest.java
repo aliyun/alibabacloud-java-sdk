@@ -7,11 +7,11 @@ public class QueryTaskListRequest extends TeaModel {
     @NameInMap("BizType")
     public String bizType;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("PageNum")
     public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static QueryTaskListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTaskListRequest self = new QueryTaskListRequest();
@@ -26,20 +26,20 @@ public class QueryTaskListRequest extends TeaModel {
         return this.bizType;
     }
 
-    public QueryTaskListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public QueryTaskListRequest setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
         return this;
     }
     public Integer getPageNum() {
         return this.pageNum;
+    }
+
+    public QueryTaskListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

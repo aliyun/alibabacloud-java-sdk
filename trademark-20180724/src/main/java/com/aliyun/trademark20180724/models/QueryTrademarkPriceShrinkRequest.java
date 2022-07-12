@@ -4,40 +4,32 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class QueryTrademarkPriceShrinkRequest extends TeaModel {
-    @NameInMap("UserId")
-    public Long userId;
-
-    @NameInMap("TmName")
-    public String tmName;
+    @NameInMap("OrderData")
+    public String orderDataShrink;
 
     @NameInMap("TmIcon")
     public String tmIcon;
 
+    @NameInMap("TmName")
+    public String tmName;
+
     @NameInMap("Type")
     public Integer type;
 
-    @NameInMap("OrderData")
-    public String orderDataShrink;
+    @NameInMap("UserId")
+    public Long userId;
 
     public static QueryTrademarkPriceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTrademarkPriceShrinkRequest self = new QueryTrademarkPriceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryTrademarkPriceShrinkRequest setUserId(Long userId) {
-        this.userId = userId;
+    public QueryTrademarkPriceShrinkRequest setOrderDataShrink(String orderDataShrink) {
+        this.orderDataShrink = orderDataShrink;
         return this;
     }
-    public Long getUserId() {
-        return this.userId;
-    }
-
-    public QueryTrademarkPriceShrinkRequest setTmName(String tmName) {
-        this.tmName = tmName;
-        return this;
-    }
-    public String getTmName() {
-        return this.tmName;
+    public String getOrderDataShrink() {
+        return this.orderDataShrink;
     }
 
     public QueryTrademarkPriceShrinkRequest setTmIcon(String tmIcon) {
@@ -48,6 +40,14 @@ public class QueryTrademarkPriceShrinkRequest extends TeaModel {
         return this.tmIcon;
     }
 
+    public QueryTrademarkPriceShrinkRequest setTmName(String tmName) {
+        this.tmName = tmName;
+        return this;
+    }
+    public String getTmName() {
+        return this.tmName;
+    }
+
     public QueryTrademarkPriceShrinkRequest setType(Integer type) {
         this.type = type;
         return this;
@@ -56,12 +56,12 @@ public class QueryTrademarkPriceShrinkRequest extends TeaModel {
         return this.type;
     }
 
-    public QueryTrademarkPriceShrinkRequest setOrderDataShrink(String orderDataShrink) {
-        this.orderDataShrink = orderDataShrink;
+    public QueryTrademarkPriceShrinkRequest setUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
-    public String getOrderDataShrink() {
-        return this.orderDataShrink;
+    public Long getUserId() {
+        return this.userId;
     }
 
 }

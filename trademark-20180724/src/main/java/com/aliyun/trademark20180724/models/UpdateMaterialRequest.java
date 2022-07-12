@@ -4,11 +4,32 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class UpdateMaterialRequest extends TeaModel {
-    @NameInMap("LoaId")
-    public Long loaId;
+    @NameInMap("Address")
+    public String address;
+
+    @NameInMap("BusinessLicenceOssKey")
+    public String businessLicenceOssKey;
+
+    @NameInMap("CardNumber")
+    public String cardNumber;
+
+    @NameInMap("City")
+    public String city;
 
     @NameInMap("ContactAddress")
     public String contactAddress;
+
+    @NameInMap("ContactCity")
+    public String contactCity;
+
+    @NameInMap("ContactCounty")
+    public String contactCounty;
+
+    @NameInMap("ContactDistrict")
+    public String contactDistrict;
+
+    @NameInMap("ContactEmail")
+    public String contactEmail;
 
     @NameInMap("ContactName")
     public String contactName;
@@ -16,77 +37,89 @@ public class UpdateMaterialRequest extends TeaModel {
     @NameInMap("ContactNumber")
     public String contactNumber;
 
-    @NameInMap("ContactEmail")
-    public String contactEmail;
-
-    @NameInMap("Id")
-    public Long id;
+    @NameInMap("ContactProvince")
+    public String contactProvince;
 
     @NameInMap("ContactZipcode")
     public String contactZipcode;
 
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("CardNumber")
-    public String cardNumber;
-
-    @NameInMap("Province")
-    public String province;
-
-    @NameInMap("City")
-    public String city;
-
-    @NameInMap("Town")
-    public String town;
-
-    @NameInMap("Address")
-    public String address;
+    @NameInMap("EAddress")
+    public String EAddress;
 
     @NameInMap("EName")
     public String EName;
 
-    @NameInMap("EAddress")
-    public String EAddress;
+    @NameInMap("Id")
+    public Long id;
+
+    @NameInMap("IdCardName")
+    public String idCardName;
+
+    @NameInMap("IdCardNumber")
+    public String idCardNumber;
 
     @NameInMap("IdCardOssKey")
     public String idCardOssKey;
 
-    @NameInMap("BusinessLicenceOssKey")
-    public String businessLicenceOssKey;
+    @NameInMap("LegalNoticeOssKey")
+    public String legalNoticeOssKey;
 
-    @NameInMap("PassportOssKey")
-    public String passportOssKey;
+    @NameInMap("LoaId")
+    public Long loaId;
 
     @NameInMap("LoaOssKey")
     public String loaOssKey;
 
-    @NameInMap("LegalNoticeOssKey")
-    public String legalNoticeOssKey;
+    @NameInMap("Name")
+    public String name;
 
-    @NameInMap("ContactProvince")
-    public String contactProvince;
+    @NameInMap("PassportOssKey")
+    public String passportOssKey;
 
-    @NameInMap("ContactCity")
-    public String contactCity;
+    @NameInMap("PersonalType")
+    public Long personalType;
 
-    @NameInMap("ContactDistrict")
-    public String contactDistrict;
+    @NameInMap("Province")
+    public String province;
 
-    @NameInMap("ContactCounty")
-    public String contactCounty;
+    @NameInMap("Town")
+    public String town;
 
     public static UpdateMaterialRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMaterialRequest self = new UpdateMaterialRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateMaterialRequest setLoaId(Long loaId) {
-        this.loaId = loaId;
+    public UpdateMaterialRequest setAddress(String address) {
+        this.address = address;
         return this;
     }
-    public Long getLoaId() {
-        return this.loaId;
+    public String getAddress() {
+        return this.address;
+    }
+
+    public UpdateMaterialRequest setBusinessLicenceOssKey(String businessLicenceOssKey) {
+        this.businessLicenceOssKey = businessLicenceOssKey;
+        return this;
+    }
+    public String getBusinessLicenceOssKey() {
+        return this.businessLicenceOssKey;
+    }
+
+    public UpdateMaterialRequest setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
+        return this;
+    }
+    public String getCardNumber() {
+        return this.cardNumber;
+    }
+
+    public UpdateMaterialRequest setCity(String city) {
+        this.city = city;
+        return this;
+    }
+    public String getCity() {
+        return this.city;
     }
 
     public UpdateMaterialRequest setContactAddress(String contactAddress) {
@@ -95,6 +128,38 @@ public class UpdateMaterialRequest extends TeaModel {
     }
     public String getContactAddress() {
         return this.contactAddress;
+    }
+
+    public UpdateMaterialRequest setContactCity(String contactCity) {
+        this.contactCity = contactCity;
+        return this;
+    }
+    public String getContactCity() {
+        return this.contactCity;
+    }
+
+    public UpdateMaterialRequest setContactCounty(String contactCounty) {
+        this.contactCounty = contactCounty;
+        return this;
+    }
+    public String getContactCounty() {
+        return this.contactCounty;
+    }
+
+    public UpdateMaterialRequest setContactDistrict(String contactDistrict) {
+        this.contactDistrict = contactDistrict;
+        return this;
+    }
+    public String getContactDistrict() {
+        return this.contactDistrict;
+    }
+
+    public UpdateMaterialRequest setContactEmail(String contactEmail) {
+        this.contactEmail = contactEmail;
+        return this;
+    }
+    public String getContactEmail() {
+        return this.contactEmail;
     }
 
     public UpdateMaterialRequest setContactName(String contactName) {
@@ -113,20 +178,12 @@ public class UpdateMaterialRequest extends TeaModel {
         return this.contactNumber;
     }
 
-    public UpdateMaterialRequest setContactEmail(String contactEmail) {
-        this.contactEmail = contactEmail;
+    public UpdateMaterialRequest setContactProvince(String contactProvince) {
+        this.contactProvince = contactProvince;
         return this;
     }
-    public String getContactEmail() {
-        return this.contactEmail;
-    }
-
-    public UpdateMaterialRequest setId(Long id) {
-        this.id = id;
-        return this;
-    }
-    public Long getId() {
-        return this.id;
+    public String getContactProvince() {
+        return this.contactProvince;
     }
 
     public UpdateMaterialRequest setContactZipcode(String contactZipcode) {
@@ -137,52 +194,12 @@ public class UpdateMaterialRequest extends TeaModel {
         return this.contactZipcode;
     }
 
-    public UpdateMaterialRequest setName(String name) {
-        this.name = name;
+    public UpdateMaterialRequest setEAddress(String EAddress) {
+        this.EAddress = EAddress;
         return this;
     }
-    public String getName() {
-        return this.name;
-    }
-
-    public UpdateMaterialRequest setCardNumber(String cardNumber) {
-        this.cardNumber = cardNumber;
-        return this;
-    }
-    public String getCardNumber() {
-        return this.cardNumber;
-    }
-
-    public UpdateMaterialRequest setProvince(String province) {
-        this.province = province;
-        return this;
-    }
-    public String getProvince() {
-        return this.province;
-    }
-
-    public UpdateMaterialRequest setCity(String city) {
-        this.city = city;
-        return this;
-    }
-    public String getCity() {
-        return this.city;
-    }
-
-    public UpdateMaterialRequest setTown(String town) {
-        this.town = town;
-        return this;
-    }
-    public String getTown() {
-        return this.town;
-    }
-
-    public UpdateMaterialRequest setAddress(String address) {
-        this.address = address;
-        return this;
-    }
-    public String getAddress() {
-        return this.address;
+    public String getEAddress() {
+        return this.EAddress;
     }
 
     public UpdateMaterialRequest setEName(String EName) {
@@ -193,12 +210,28 @@ public class UpdateMaterialRequest extends TeaModel {
         return this.EName;
     }
 
-    public UpdateMaterialRequest setEAddress(String EAddress) {
-        this.EAddress = EAddress;
+    public UpdateMaterialRequest setId(Long id) {
+        this.id = id;
         return this;
     }
-    public String getEAddress() {
-        return this.EAddress;
+    public Long getId() {
+        return this.id;
+    }
+
+    public UpdateMaterialRequest setIdCardName(String idCardName) {
+        this.idCardName = idCardName;
+        return this;
+    }
+    public String getIdCardName() {
+        return this.idCardName;
+    }
+
+    public UpdateMaterialRequest setIdCardNumber(String idCardNumber) {
+        this.idCardNumber = idCardNumber;
+        return this;
+    }
+    public String getIdCardNumber() {
+        return this.idCardNumber;
     }
 
     public UpdateMaterialRequest setIdCardOssKey(String idCardOssKey) {
@@ -209,20 +242,20 @@ public class UpdateMaterialRequest extends TeaModel {
         return this.idCardOssKey;
     }
 
-    public UpdateMaterialRequest setBusinessLicenceOssKey(String businessLicenceOssKey) {
-        this.businessLicenceOssKey = businessLicenceOssKey;
+    public UpdateMaterialRequest setLegalNoticeOssKey(String legalNoticeOssKey) {
+        this.legalNoticeOssKey = legalNoticeOssKey;
         return this;
     }
-    public String getBusinessLicenceOssKey() {
-        return this.businessLicenceOssKey;
+    public String getLegalNoticeOssKey() {
+        return this.legalNoticeOssKey;
     }
 
-    public UpdateMaterialRequest setPassportOssKey(String passportOssKey) {
-        this.passportOssKey = passportOssKey;
+    public UpdateMaterialRequest setLoaId(Long loaId) {
+        this.loaId = loaId;
         return this;
     }
-    public String getPassportOssKey() {
-        return this.passportOssKey;
+    public Long getLoaId() {
+        return this.loaId;
     }
 
     public UpdateMaterialRequest setLoaOssKey(String loaOssKey) {
@@ -233,44 +266,44 @@ public class UpdateMaterialRequest extends TeaModel {
         return this.loaOssKey;
     }
 
-    public UpdateMaterialRequest setLegalNoticeOssKey(String legalNoticeOssKey) {
-        this.legalNoticeOssKey = legalNoticeOssKey;
+    public UpdateMaterialRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getLegalNoticeOssKey() {
-        return this.legalNoticeOssKey;
+    public String getName() {
+        return this.name;
     }
 
-    public UpdateMaterialRequest setContactProvince(String contactProvince) {
-        this.contactProvince = contactProvince;
+    public UpdateMaterialRequest setPassportOssKey(String passportOssKey) {
+        this.passportOssKey = passportOssKey;
         return this;
     }
-    public String getContactProvince() {
-        return this.contactProvince;
+    public String getPassportOssKey() {
+        return this.passportOssKey;
     }
 
-    public UpdateMaterialRequest setContactCity(String contactCity) {
-        this.contactCity = contactCity;
+    public UpdateMaterialRequest setPersonalType(Long personalType) {
+        this.personalType = personalType;
         return this;
     }
-    public String getContactCity() {
-        return this.contactCity;
+    public Long getPersonalType() {
+        return this.personalType;
     }
 
-    public UpdateMaterialRequest setContactDistrict(String contactDistrict) {
-        this.contactDistrict = contactDistrict;
+    public UpdateMaterialRequest setProvince(String province) {
+        this.province = province;
         return this;
     }
-    public String getContactDistrict() {
-        return this.contactDistrict;
+    public String getProvince() {
+        return this.province;
     }
 
-    public UpdateMaterialRequest setContactCounty(String contactCounty) {
-        this.contactCounty = contactCounty;
+    public UpdateMaterialRequest setTown(String town) {
+        this.town = town;
         return this;
     }
-    public String getContactCounty() {
-        return this.contactCounty;
+    public String getTown() {
+        return this.town;
     }
 
 }

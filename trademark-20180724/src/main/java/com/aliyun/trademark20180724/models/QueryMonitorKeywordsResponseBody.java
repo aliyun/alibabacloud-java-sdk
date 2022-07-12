@@ -4,23 +4,15 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class QueryMonitorKeywordsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public QueryMonitorKeywordsResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryMonitorKeywordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMonitorKeywordsResponseBody self = new QueryMonitorKeywordsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryMonitorKeywordsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryMonitorKeywordsResponseBody setData(QueryMonitorKeywordsResponseBodyData data) {
@@ -29,6 +21,14 @@ public class QueryMonitorKeywordsResponseBody extends TeaModel {
     }
     public QueryMonitorKeywordsResponseBodyData getData() {
         return this.data;
+    }
+
+    public QueryMonitorKeywordsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class QueryMonitorKeywordsResponseBodyData extends TeaModel {

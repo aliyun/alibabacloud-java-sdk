@@ -4,8 +4,17 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class GenerateUploadFilePolicyResponseBody extends TeaModel {
-    @NameInMap("Signature")
-    public String signature;
+    @NameInMap("AccessId")
+    public String accessId;
+
+    @NameInMap("EncodedPolicy")
+    public String encodedPolicy;
+
+    @NameInMap("ExpireTime")
+    public Long expireTime;
+
+    @NameInMap("FileDir")
+    public String fileDir;
 
     @NameInMap("Host")
     public String host;
@@ -13,29 +22,44 @@ public class GenerateUploadFilePolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ExpireTime")
-    public Long expireTime;
-
-    @NameInMap("EncodedPolicy")
-    public String encodedPolicy;
-
-    @NameInMap("FileDir")
-    public String fileDir;
-
-    @NameInMap("AccessId")
-    public String accessId;
+    @NameInMap("Signature")
+    public String signature;
 
     public static GenerateUploadFilePolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenerateUploadFilePolicyResponseBody self = new GenerateUploadFilePolicyResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GenerateUploadFilePolicyResponseBody setSignature(String signature) {
-        this.signature = signature;
+    public GenerateUploadFilePolicyResponseBody setAccessId(String accessId) {
+        this.accessId = accessId;
         return this;
     }
-    public String getSignature() {
-        return this.signature;
+    public String getAccessId() {
+        return this.accessId;
+    }
+
+    public GenerateUploadFilePolicyResponseBody setEncodedPolicy(String encodedPolicy) {
+        this.encodedPolicy = encodedPolicy;
+        return this;
+    }
+    public String getEncodedPolicy() {
+        return this.encodedPolicy;
+    }
+
+    public GenerateUploadFilePolicyResponseBody setExpireTime(Long expireTime) {
+        this.expireTime = expireTime;
+        return this;
+    }
+    public Long getExpireTime() {
+        return this.expireTime;
+    }
+
+    public GenerateUploadFilePolicyResponseBody setFileDir(String fileDir) {
+        this.fileDir = fileDir;
+        return this;
+    }
+    public String getFileDir() {
+        return this.fileDir;
     }
 
     public GenerateUploadFilePolicyResponseBody setHost(String host) {
@@ -54,36 +78,12 @@ public class GenerateUploadFilePolicyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GenerateUploadFilePolicyResponseBody setExpireTime(Long expireTime) {
-        this.expireTime = expireTime;
+    public GenerateUploadFilePolicyResponseBody setSignature(String signature) {
+        this.signature = signature;
         return this;
     }
-    public Long getExpireTime() {
-        return this.expireTime;
-    }
-
-    public GenerateUploadFilePolicyResponseBody setEncodedPolicy(String encodedPolicy) {
-        this.encodedPolicy = encodedPolicy;
-        return this;
-    }
-    public String getEncodedPolicy() {
-        return this.encodedPolicy;
-    }
-
-    public GenerateUploadFilePolicyResponseBody setFileDir(String fileDir) {
-        this.fileDir = fileDir;
-        return this;
-    }
-    public String getFileDir() {
-        return this.fileDir;
-    }
-
-    public GenerateUploadFilePolicyResponseBody setAccessId(String accessId) {
-        this.accessId = accessId;
-        return this;
-    }
-    public String getAccessId() {
-        return this.accessId;
+    public String getSignature() {
+        return this.signature;
     }
 
 }

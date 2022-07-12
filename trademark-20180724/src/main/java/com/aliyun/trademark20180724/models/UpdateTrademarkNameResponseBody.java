@@ -4,15 +4,15 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class UpdateTrademarkNameResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMsg")
     public String errorMsg;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -20,14 +20,6 @@ public class UpdateTrademarkNameResponseBody extends TeaModel {
     public static UpdateTrademarkNameResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateTrademarkNameResponseBody self = new UpdateTrademarkNameResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateTrademarkNameResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateTrademarkNameResponseBody setErrorCode(String errorCode) {
@@ -44,6 +36,14 @@ public class UpdateTrademarkNameResponseBody extends TeaModel {
     }
     public String getErrorMsg() {
         return this.errorMsg;
+    }
+
+    public UpdateTrademarkNameResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public UpdateTrademarkNameResponseBody setSuccess(Boolean success) {

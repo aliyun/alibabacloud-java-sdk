@@ -7,11 +7,11 @@ public class AcceptPartnerNotificationRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
-    @NameInMap("Operation")
-    public String operation;
-
     @NameInMap("Material")
     public String material;
+
+    @NameInMap("Operation")
+    public String operation;
 
     @NameInMap("Remark")
     public String remark;
@@ -29,20 +29,20 @@ public class AcceptPartnerNotificationRequest extends TeaModel {
         return this.bizId;
     }
 
-    public AcceptPartnerNotificationRequest setOperation(String operation) {
-        this.operation = operation;
-        return this;
-    }
-    public String getOperation() {
-        return this.operation;
-    }
-
     public AcceptPartnerNotificationRequest setMaterial(String material) {
         this.material = material;
         return this;
     }
     public String getMaterial() {
         return this.material;
+    }
+
+    public AcceptPartnerNotificationRequest setOperation(String operation) {
+        this.operation = operation;
+        return this;
+    }
+    public String getOperation() {
+        return this.operation;
     }
 
     public AcceptPartnerNotificationRequest setRemark(String remark) {

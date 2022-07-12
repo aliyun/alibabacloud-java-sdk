@@ -4,65 +4,33 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class QueryTrademarkMonitorRulesResponseBody extends TeaModel {
-    @NameInMap("NextPage")
-    public Boolean nextPage;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PrePage")
-    public Boolean prePage;
-
-    @NameInMap("TotalItemNum")
-    public Integer totalItemNum;
-
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
-
-    @NameInMap("TotalPageNum")
-    public Integer totalPageNum;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
 
     @NameInMap("Data")
     public QueryTrademarkMonitorRulesResponseBodyData data;
 
+    @NameInMap("NextPage")
+    public Boolean nextPage;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("PrePage")
+    public Boolean prePage;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalItemNum")
+    public Integer totalItemNum;
+
+    @NameInMap("TotalPageNum")
+    public Integer totalPageNum;
+
     public static QueryTrademarkMonitorRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTrademarkMonitorRulesResponseBody self = new QueryTrademarkMonitorRulesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryTrademarkMonitorRulesResponseBody setNextPage(Boolean nextPage) {
-        this.nextPage = nextPage;
-        return this;
-    }
-    public Boolean getNextPage() {
-        return this.nextPage;
-    }
-
-    public QueryTrademarkMonitorRulesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryTrademarkMonitorRulesResponseBody setPrePage(Boolean prePage) {
-        this.prePage = prePage;
-        return this;
-    }
-    public Boolean getPrePage() {
-        return this.prePage;
-    }
-
-    public QueryTrademarkMonitorRulesResponseBody setTotalItemNum(Integer totalItemNum) {
-        this.totalItemNum = totalItemNum;
-        return this;
-    }
-    public Integer getTotalItemNum() {
-        return this.totalItemNum;
     }
 
     public QueryTrademarkMonitorRulesResponseBody setCurrentPageNum(Integer currentPageNum) {
@@ -73,12 +41,20 @@ public class QueryTrademarkMonitorRulesResponseBody extends TeaModel {
         return this.currentPageNum;
     }
 
-    public QueryTrademarkMonitorRulesResponseBody setTotalPageNum(Integer totalPageNum) {
-        this.totalPageNum = totalPageNum;
+    public QueryTrademarkMonitorRulesResponseBody setData(QueryTrademarkMonitorRulesResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getTotalPageNum() {
-        return this.totalPageNum;
+    public QueryTrademarkMonitorRulesResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryTrademarkMonitorRulesResponseBody setNextPage(Boolean nextPage) {
+        this.nextPage = nextPage;
+        return this;
+    }
+    public Boolean getNextPage() {
+        return this.nextPage;
     }
 
     public QueryTrademarkMonitorRulesResponseBody setPageSize(Integer pageSize) {
@@ -89,62 +65,59 @@ public class QueryTrademarkMonitorRulesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryTrademarkMonitorRulesResponseBody setData(QueryTrademarkMonitorRulesResponseBodyData data) {
-        this.data = data;
+    public QueryTrademarkMonitorRulesResponseBody setPrePage(Boolean prePage) {
+        this.prePage = prePage;
         return this;
     }
-    public QueryTrademarkMonitorRulesResponseBodyData getData() {
-        return this.data;
+    public Boolean getPrePage() {
+        return this.prePage;
+    }
+
+    public QueryTrademarkMonitorRulesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryTrademarkMonitorRulesResponseBody setTotalItemNum(Integer totalItemNum) {
+        this.totalItemNum = totalItemNum;
+        return this;
+    }
+    public Integer getTotalItemNum() {
+        return this.totalItemNum;
+    }
+
+    public QueryTrademarkMonitorRulesResponseBody setTotalPageNum(Integer totalPageNum) {
+        this.totalPageNum = totalPageNum;
+        return this;
+    }
+    public Integer getTotalPageNum() {
+        return this.totalPageNum;
     }
 
     public static class QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule extends TeaModel {
-        @NameInMap("RuleStatus")
-        public String ruleStatus;
-
-        @NameInMap("LastFinishTime")
-        public String lastFinishTime;
-
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
-        @NameInMap("RuleType")
-        public Integer ruleType;
-
         @NameInMap("CreateTime")
         public String createTime;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("RuleExtend")
-        public String ruleExtend;
-
-        @NameInMap("RuleName")
-        public String ruleName;
 
         @NameInMap("EndTime")
         public String endTime;
 
-        @NameInMap("StartTime")
-        public String startTime;
+        @NameInMap("Env")
+        public String env;
 
-        @NameInMap("RuleKeyword")
-        public String ruleKeyword;
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("LastFinishTime")
+        public String lastFinishTime;
 
         @NameInMap("LastRunTime")
         public String lastRunTime;
 
-        @NameInMap("Version")
-        public Integer version;
-
-        @NameInMap("RuleSource")
-        public String ruleSource;
-
         @NameInMap("LastUpdateTime")
         public String lastUpdateTime;
-
-        @NameInMap("Env")
-        public String env;
 
         @NameInMap("NotifyUpdate")
         public Integer notifyUpdate;
@@ -152,44 +125,39 @@ public class QueryTrademarkMonitorRulesResponseBody extends TeaModel {
         @NameInMap("RuleDetail")
         public String ruleDetail;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("RuleExtend")
+        public String ruleExtend;
+
+        @NameInMap("RuleKeyword")
+        public String ruleKeyword;
+
+        @NameInMap("RuleName")
+        public String ruleName;
+
+        @NameInMap("RuleSource")
+        public String ruleSource;
+
+        @NameInMap("RuleStatus")
+        public String ruleStatus;
+
+        @NameInMap("RuleType")
+        public Integer ruleType;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("Version")
+        public Integer version;
 
         public static QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule build(java.util.Map<String, ?> map) throws Exception {
             QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule self = new QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule();
             return TeaModel.build(map, self);
-        }
-
-        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setRuleStatus(String ruleStatus) {
-            this.ruleStatus = ruleStatus;
-            return this;
-        }
-        public String getRuleStatus() {
-            return this.ruleStatus;
-        }
-
-        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setLastFinishTime(String lastFinishTime) {
-            this.lastFinishTime = lastFinishTime;
-            return this;
-        }
-        public String getLastFinishTime() {
-            return this.lastFinishTime;
-        }
-
-        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setRuleType(Integer ruleType) {
-            this.ruleType = ruleType;
-            return this;
-        }
-        public Integer getRuleType() {
-            return this.ruleType;
         }
 
         public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setCreateTime(String createTime) {
@@ -200,30 +168,6 @@ public class QueryTrademarkMonitorRulesResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setRuleExtend(String ruleExtend) {
-            this.ruleExtend = ruleExtend;
-            return this;
-        }
-        public String getRuleExtend() {
-            return this.ruleExtend;
-        }
-
-        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setRuleName(String ruleName) {
-            this.ruleName = ruleName;
-            return this;
-        }
-        public String getRuleName() {
-            return this.ruleName;
-        }
-
         public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
@@ -232,20 +176,28 @@ public class QueryTrademarkMonitorRulesResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setStartTime(String startTime) {
-            this.startTime = startTime;
+        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setEnv(String env) {
+            this.env = env;
             return this;
         }
-        public String getStartTime() {
-            return this.startTime;
+        public String getEnv() {
+            return this.env;
         }
 
-        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setRuleKeyword(String ruleKeyword) {
-            this.ruleKeyword = ruleKeyword;
+        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getRuleKeyword() {
-            return this.ruleKeyword;
+        public String getId() {
+            return this.id;
+        }
+
+        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setLastFinishTime(String lastFinishTime) {
+            this.lastFinishTime = lastFinishTime;
+            return this;
+        }
+        public String getLastFinishTime() {
+            return this.lastFinishTime;
         }
 
         public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setLastRunTime(String lastRunTime) {
@@ -256,36 +208,12 @@ public class QueryTrademarkMonitorRulesResponseBody extends TeaModel {
             return this.lastRunTime;
         }
 
-        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setVersion(Integer version) {
-            this.version = version;
-            return this;
-        }
-        public Integer getVersion() {
-            return this.version;
-        }
-
-        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setRuleSource(String ruleSource) {
-            this.ruleSource = ruleSource;
-            return this;
-        }
-        public String getRuleSource() {
-            return this.ruleSource;
-        }
-
         public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setLastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = lastUpdateTime;
             return this;
         }
         public String getLastUpdateTime() {
             return this.lastUpdateTime;
-        }
-
-        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setEnv(String env) {
-            this.env = env;
-            return this;
-        }
-        public String getEnv() {
-            return this.env;
         }
 
         public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setNotifyUpdate(Integer notifyUpdate) {
@@ -304,12 +232,84 @@ public class QueryTrademarkMonitorRulesResponseBody extends TeaModel {
             return this.ruleDetail;
         }
 
-        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setId(String id) {
-            this.id = id;
+        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setRuleExtend(String ruleExtend) {
+            this.ruleExtend = ruleExtend;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getRuleExtend() {
+            return this.ruleExtend;
+        }
+
+        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setRuleKeyword(String ruleKeyword) {
+            this.ruleKeyword = ruleKeyword;
+            return this;
+        }
+        public String getRuleKeyword() {
+            return this.ruleKeyword;
+        }
+
+        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setRuleSource(String ruleSource) {
+            this.ruleSource = ruleSource;
+            return this;
+        }
+        public String getRuleSource() {
+            return this.ruleSource;
+        }
+
+        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setRuleStatus(String ruleStatus) {
+            this.ruleStatus = ruleStatus;
+            return this;
+        }
+        public String getRuleStatus() {
+            return this.ruleStatus;
+        }
+
+        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setRuleType(Integer ruleType) {
+            this.ruleType = ruleType;
+            return this;
+        }
+        public Integer getRuleType() {
+            return this.ruleType;
+        }
+
+        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public QueryTrademarkMonitorRulesResponseBodyDataTmMonitorRule setVersion(Integer version) {
+            this.version = version;
+            return this;
+        }
+        public Integer getVersion() {
+            return this.version;
         }
 
     }

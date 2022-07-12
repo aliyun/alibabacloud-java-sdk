@@ -4,23 +4,11 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class QueryTrademarkMonitorResultsRequest extends TeaModel {
-    @NameInMap("RuleId")
-    public Long ruleId;
-
     @NameInMap("ActionType")
     public Integer actionType;
 
-    @NameInMap("ProcedureStatus")
-    public Integer procedureStatus;
-
-    @NameInMap("TmName")
-    public String tmName;
-
     @NameInMap("ApplyYear")
     public String applyYear;
-
-    @NameInMap("RegistrationNumber")
-    public String registrationNumber;
 
     @NameInMap("Classification")
     public String classification;
@@ -31,17 +19,21 @@ public class QueryTrademarkMonitorResultsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProcedureStatus")
+    public Integer procedureStatus;
+
+    @NameInMap("RegistrationNumber")
+    public String registrationNumber;
+
+    @NameInMap("RuleId")
+    public Long ruleId;
+
+    @NameInMap("TmName")
+    public String tmName;
+
     public static QueryTrademarkMonitorResultsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTrademarkMonitorResultsRequest self = new QueryTrademarkMonitorResultsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryTrademarkMonitorResultsRequest setRuleId(Long ruleId) {
-        this.ruleId = ruleId;
-        return this;
-    }
-    public Long getRuleId() {
-        return this.ruleId;
     }
 
     public QueryTrademarkMonitorResultsRequest setActionType(Integer actionType) {
@@ -52,36 +44,12 @@ public class QueryTrademarkMonitorResultsRequest extends TeaModel {
         return this.actionType;
     }
 
-    public QueryTrademarkMonitorResultsRequest setProcedureStatus(Integer procedureStatus) {
-        this.procedureStatus = procedureStatus;
-        return this;
-    }
-    public Integer getProcedureStatus() {
-        return this.procedureStatus;
-    }
-
-    public QueryTrademarkMonitorResultsRequest setTmName(String tmName) {
-        this.tmName = tmName;
-        return this;
-    }
-    public String getTmName() {
-        return this.tmName;
-    }
-
     public QueryTrademarkMonitorResultsRequest setApplyYear(String applyYear) {
         this.applyYear = applyYear;
         return this;
     }
     public String getApplyYear() {
         return this.applyYear;
-    }
-
-    public QueryTrademarkMonitorResultsRequest setRegistrationNumber(String registrationNumber) {
-        this.registrationNumber = registrationNumber;
-        return this;
-    }
-    public String getRegistrationNumber() {
-        return this.registrationNumber;
     }
 
     public QueryTrademarkMonitorResultsRequest setClassification(String classification) {
@@ -106,6 +74,38 @@ public class QueryTrademarkMonitorResultsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryTrademarkMonitorResultsRequest setProcedureStatus(Integer procedureStatus) {
+        this.procedureStatus = procedureStatus;
+        return this;
+    }
+    public Integer getProcedureStatus() {
+        return this.procedureStatus;
+    }
+
+    public QueryTrademarkMonitorResultsRequest setRegistrationNumber(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
+        return this;
+    }
+    public String getRegistrationNumber() {
+        return this.registrationNumber;
+    }
+
+    public QueryTrademarkMonitorResultsRequest setRuleId(Long ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public Long getRuleId() {
+        return this.ruleId;
+    }
+
+    public QueryTrademarkMonitorResultsRequest setTmName(String tmName) {
+        this.tmName = tmName;
+        return this;
+    }
+    public String getTmName() {
+        return this.tmName;
     }
 
 }

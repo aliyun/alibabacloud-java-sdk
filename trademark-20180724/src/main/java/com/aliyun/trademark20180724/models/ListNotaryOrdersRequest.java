@@ -4,8 +4,11 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class ListNotaryOrdersRequest extends TeaModel {
-    @NameInMap("StartOrderDate")
-    public Long startOrderDate;
+    @NameInMap("AliyunOrderId")
+    public String aliyunOrderId;
+
+    @NameInMap("BizId")
+    public String bizId;
 
     @NameInMap("EndOrderDate")
     public Long endOrderDate;
@@ -13,14 +16,8 @@ public class ListNotaryOrdersRequest extends TeaModel {
     @NameInMap("NotaryStatus")
     public Integer notaryStatus;
 
-    @NameInMap("AliyunOrderId")
-    public String aliyunOrderId;
-
-    @NameInMap("SortByType")
-    public String sortByType;
-
-    @NameInMap("SortKeyType")
-    public Integer sortKeyType;
+    @NameInMap("NotaryType")
+    public Integer notaryType;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -28,23 +25,34 @@ public class ListNotaryOrdersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("BizId")
-    public String bizId;
+    @NameInMap("SortByType")
+    public String sortByType;
 
-    @NameInMap("NotaryType")
-    public Integer notaryType;
+    @NameInMap("SortKeyType")
+    public Integer sortKeyType;
+
+    @NameInMap("StartOrderDate")
+    public Long startOrderDate;
 
     public static ListNotaryOrdersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNotaryOrdersRequest self = new ListNotaryOrdersRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListNotaryOrdersRequest setStartOrderDate(Long startOrderDate) {
-        this.startOrderDate = startOrderDate;
+    public ListNotaryOrdersRequest setAliyunOrderId(String aliyunOrderId) {
+        this.aliyunOrderId = aliyunOrderId;
         return this;
     }
-    public Long getStartOrderDate() {
-        return this.startOrderDate;
+    public String getAliyunOrderId() {
+        return this.aliyunOrderId;
+    }
+
+    public ListNotaryOrdersRequest setBizId(String bizId) {
+        this.bizId = bizId;
+        return this;
+    }
+    public String getBizId() {
+        return this.bizId;
     }
 
     public ListNotaryOrdersRequest setEndOrderDate(Long endOrderDate) {
@@ -63,28 +71,12 @@ public class ListNotaryOrdersRequest extends TeaModel {
         return this.notaryStatus;
     }
 
-    public ListNotaryOrdersRequest setAliyunOrderId(String aliyunOrderId) {
-        this.aliyunOrderId = aliyunOrderId;
+    public ListNotaryOrdersRequest setNotaryType(Integer notaryType) {
+        this.notaryType = notaryType;
         return this;
     }
-    public String getAliyunOrderId() {
-        return this.aliyunOrderId;
-    }
-
-    public ListNotaryOrdersRequest setSortByType(String sortByType) {
-        this.sortByType = sortByType;
-        return this;
-    }
-    public String getSortByType() {
-        return this.sortByType;
-    }
-
-    public ListNotaryOrdersRequest setSortKeyType(Integer sortKeyType) {
-        this.sortKeyType = sortKeyType;
-        return this;
-    }
-    public Integer getSortKeyType() {
-        return this.sortKeyType;
+    public Integer getNotaryType() {
+        return this.notaryType;
     }
 
     public ListNotaryOrdersRequest setPageNum(Integer pageNum) {
@@ -103,20 +95,28 @@ public class ListNotaryOrdersRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListNotaryOrdersRequest setBizId(String bizId) {
-        this.bizId = bizId;
+    public ListNotaryOrdersRequest setSortByType(String sortByType) {
+        this.sortByType = sortByType;
         return this;
     }
-    public String getBizId() {
-        return this.bizId;
+    public String getSortByType() {
+        return this.sortByType;
     }
 
-    public ListNotaryOrdersRequest setNotaryType(Integer notaryType) {
-        this.notaryType = notaryType;
+    public ListNotaryOrdersRequest setSortKeyType(Integer sortKeyType) {
+        this.sortKeyType = sortKeyType;
         return this;
     }
-    public Integer getNotaryType() {
-        return this.notaryType;
+    public Integer getSortKeyType() {
+        return this.sortKeyType;
+    }
+
+    public ListNotaryOrdersRequest setStartOrderDate(Long startOrderDate) {
+        this.startOrderDate = startOrderDate;
+        return this;
+    }
+    public Long getStartOrderDate() {
+        return this.startOrderDate;
     }
 
 }

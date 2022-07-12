@@ -4,23 +4,15 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class QueryCommunicationLogsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public QueryCommunicationLogsResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryCommunicationLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryCommunicationLogsResponseBody self = new QueryCommunicationLogsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryCommunicationLogsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryCommunicationLogsResponseBody setData(QueryCommunicationLogsResponseBodyData data) {
@@ -31,33 +23,33 @@ public class QueryCommunicationLogsResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class QueryCommunicationLogsResponseBodyDataTaskList extends TeaModel {
-        @NameInMap("Note")
-        public String note;
+    public QueryCommunicationLogsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class QueryCommunicationLogsResponseBodyDataTaskList extends TeaModel {
         @NameInMap("BizId")
         public String bizId;
-
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
-        @NameInMap("PartnerCode")
-        public String partnerCode;
 
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("Note")
+        public String note;
+
+        @NameInMap("PartnerCode")
+        public String partnerCode;
+
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
         public static QueryCommunicationLogsResponseBodyDataTaskList build(java.util.Map<String, ?> map) throws Exception {
             QueryCommunicationLogsResponseBodyDataTaskList self = new QueryCommunicationLogsResponseBodyDataTaskList();
             return TeaModel.build(map, self);
-        }
-
-        public QueryCommunicationLogsResponseBodyDataTaskList setNote(String note) {
-            this.note = note;
-            return this;
-        }
-        public String getNote() {
-            return this.note;
         }
 
         public QueryCommunicationLogsResponseBodyDataTaskList setBizId(String bizId) {
@@ -68,12 +60,20 @@ public class QueryCommunicationLogsResponseBody extends TeaModel {
             return this.bizId;
         }
 
-        public QueryCommunicationLogsResponseBodyDataTaskList setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
+        public QueryCommunicationLogsResponseBodyDataTaskList setCreateTime(Long createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public Long getUpdateTime() {
-            return this.updateTime;
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public QueryCommunicationLogsResponseBodyDataTaskList setNote(String note) {
+            this.note = note;
+            return this;
+        }
+        public String getNote() {
+            return this.note;
         }
 
         public QueryCommunicationLogsResponseBodyDataTaskList setPartnerCode(String partnerCode) {
@@ -84,12 +84,12 @@ public class QueryCommunicationLogsResponseBody extends TeaModel {
             return this.partnerCode;
         }
 
-        public QueryCommunicationLogsResponseBodyDataTaskList setCreateTime(Long createTime) {
-            this.createTime = createTime;
+        public QueryCommunicationLogsResponseBodyDataTaskList setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public Long getCreateTime() {
-            return this.createTime;
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }

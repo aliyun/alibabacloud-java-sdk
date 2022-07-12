@@ -4,51 +4,27 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class QueryTrademarkPriceResponseBody extends TeaModel {
-    @NameInMap("OriginalPrice")
-    public Float originalPrice;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Currency")
+    public String currency;
 
     @NameInMap("DiscountPrice")
     public Float discountPrice;
 
-    @NameInMap("Currency")
-    public String currency;
-
-    @NameInMap("TradePrice")
-    public Float tradePrice;
+    @NameInMap("OriginalPrice")
+    public Float originalPrice;
 
     @NameInMap("Prices")
     public QueryTrademarkPriceResponseBodyPrices prices;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TradePrice")
+    public Float tradePrice;
+
     public static QueryTrademarkPriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTrademarkPriceResponseBody self = new QueryTrademarkPriceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryTrademarkPriceResponseBody setOriginalPrice(Float originalPrice) {
-        this.originalPrice = originalPrice;
-        return this;
-    }
-    public Float getOriginalPrice() {
-        return this.originalPrice;
-    }
-
-    public QueryTrademarkPriceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryTrademarkPriceResponseBody setDiscountPrice(Float discountPrice) {
-        this.discountPrice = discountPrice;
-        return this;
-    }
-    public Float getDiscountPrice() {
-        return this.discountPrice;
     }
 
     public QueryTrademarkPriceResponseBody setCurrency(String currency) {
@@ -59,12 +35,20 @@ public class QueryTrademarkPriceResponseBody extends TeaModel {
         return this.currency;
     }
 
-    public QueryTrademarkPriceResponseBody setTradePrice(Float tradePrice) {
-        this.tradePrice = tradePrice;
+    public QueryTrademarkPriceResponseBody setDiscountPrice(Float discountPrice) {
+        this.discountPrice = discountPrice;
         return this;
     }
-    public Float getTradePrice() {
-        return this.tradePrice;
+    public Float getDiscountPrice() {
+        return this.discountPrice;
+    }
+
+    public QueryTrademarkPriceResponseBody setOriginalPrice(Float originalPrice) {
+        this.originalPrice = originalPrice;
+        return this;
+    }
+    public Float getOriginalPrice() {
+        return this.originalPrice;
     }
 
     public QueryTrademarkPriceResponseBody setPrices(QueryTrademarkPriceResponseBodyPrices prices) {
@@ -75,41 +59,49 @@ public class QueryTrademarkPriceResponseBody extends TeaModel {
         return this.prices;
     }
 
-    public static class QueryTrademarkPriceResponseBodyPricesPrices extends TeaModel {
-        @NameInMap("OriginalPrice")
-        public Float originalPrice;
+    public QueryTrademarkPriceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("DiscountPrice")
-        public Float discountPrice;
+    public QueryTrademarkPriceResponseBody setTradePrice(Float tradePrice) {
+        this.tradePrice = tradePrice;
+        return this;
+    }
+    public Float getTradePrice() {
+        return this.tradePrice;
+    }
+
+    public static class QueryTrademarkPriceResponseBodyPricesPrices extends TeaModel {
+        @NameInMap("ClassificationCode")
+        public String classificationCode;
 
         @NameInMap("Currency")
         public String currency;
 
+        @NameInMap("DiscountPrice")
+        public Float discountPrice;
+
+        @NameInMap("OriginalPrice")
+        public Float originalPrice;
+
         @NameInMap("TradePrice")
         public Float tradePrice;
-
-        @NameInMap("ClassificationCode")
-        public String classificationCode;
 
         public static QueryTrademarkPriceResponseBodyPricesPrices build(java.util.Map<String, ?> map) throws Exception {
             QueryTrademarkPriceResponseBodyPricesPrices self = new QueryTrademarkPriceResponseBodyPricesPrices();
             return TeaModel.build(map, self);
         }
 
-        public QueryTrademarkPriceResponseBodyPricesPrices setOriginalPrice(Float originalPrice) {
-            this.originalPrice = originalPrice;
+        public QueryTrademarkPriceResponseBodyPricesPrices setClassificationCode(String classificationCode) {
+            this.classificationCode = classificationCode;
             return this;
         }
-        public Float getOriginalPrice() {
-            return this.originalPrice;
-        }
-
-        public QueryTrademarkPriceResponseBodyPricesPrices setDiscountPrice(Float discountPrice) {
-            this.discountPrice = discountPrice;
-            return this;
-        }
-        public Float getDiscountPrice() {
-            return this.discountPrice;
+        public String getClassificationCode() {
+            return this.classificationCode;
         }
 
         public QueryTrademarkPriceResponseBodyPricesPrices setCurrency(String currency) {
@@ -120,20 +112,28 @@ public class QueryTrademarkPriceResponseBody extends TeaModel {
             return this.currency;
         }
 
+        public QueryTrademarkPriceResponseBodyPricesPrices setDiscountPrice(Float discountPrice) {
+            this.discountPrice = discountPrice;
+            return this;
+        }
+        public Float getDiscountPrice() {
+            return this.discountPrice;
+        }
+
+        public QueryTrademarkPriceResponseBodyPricesPrices setOriginalPrice(Float originalPrice) {
+            this.originalPrice = originalPrice;
+            return this;
+        }
+        public Float getOriginalPrice() {
+            return this.originalPrice;
+        }
+
         public QueryTrademarkPriceResponseBodyPricesPrices setTradePrice(Float tradePrice) {
             this.tradePrice = tradePrice;
             return this;
         }
         public Float getTradePrice() {
             return this.tradePrice;
-        }
-
-        public QueryTrademarkPriceResponseBodyPricesPrices setClassificationCode(String classificationCode) {
-            this.classificationCode = classificationCode;
-            return this;
-        }
-        public String getClassificationCode() {
-            return this.classificationCode;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class ApplyNotaryPostResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
@@ -13,12 +16,17 @@ public class ApplyNotaryPostResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     public static ApplyNotaryPostResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ApplyNotaryPostResponseBody self = new ApplyNotaryPostResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ApplyNotaryPostResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ApplyNotaryPostResponseBody setErrorMsg(String errorMsg) {
@@ -43,14 +51,6 @@ public class ApplyNotaryPostResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public ApplyNotaryPostResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
 }

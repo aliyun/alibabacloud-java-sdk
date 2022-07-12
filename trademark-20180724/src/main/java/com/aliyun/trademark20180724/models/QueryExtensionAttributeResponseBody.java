@@ -4,6 +4,9 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class QueryExtensionAttributeResponseBody extends TeaModel {
+    @NameInMap("AttributeValue")
+    public String attributeValue;
+
     @NameInMap("Code")
     public String code;
 
@@ -16,12 +19,17 @@ public class QueryExtensionAttributeResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("AttributeValue")
-    public String attributeValue;
-
     public static QueryExtensionAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryExtensionAttributeResponseBody self = new QueryExtensionAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryExtensionAttributeResponseBody setAttributeValue(String attributeValue) {
+        this.attributeValue = attributeValue;
+        return this;
+    }
+    public String getAttributeValue() {
+        return this.attributeValue;
     }
 
     public QueryExtensionAttributeResponseBody setCode(String code) {
@@ -54,14 +62,6 @@ public class QueryExtensionAttributeResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public QueryExtensionAttributeResponseBody setAttributeValue(String attributeValue) {
-        this.attributeValue = attributeValue;
-        return this;
-    }
-    public String getAttributeValue() {
-        return this.attributeValue;
     }
 
 }

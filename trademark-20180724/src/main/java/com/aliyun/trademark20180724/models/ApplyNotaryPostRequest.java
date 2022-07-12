@@ -7,11 +7,11 @@ public class ApplyNotaryPostRequest extends TeaModel {
     @NameInMap("NotaryOrderId")
     public Long notaryOrderId;
 
-    @NameInMap("ReceiverName")
-    public String receiverName;
-
     @NameInMap("ReceiverAddress")
     public String receiverAddress;
+
+    @NameInMap("ReceiverName")
+    public String receiverName;
 
     @NameInMap("ReceiverPhone")
     public String receiverPhone;
@@ -29,20 +29,20 @@ public class ApplyNotaryPostRequest extends TeaModel {
         return this.notaryOrderId;
     }
 
-    public ApplyNotaryPostRequest setReceiverName(String receiverName) {
-        this.receiverName = receiverName;
-        return this;
-    }
-    public String getReceiverName() {
-        return this.receiverName;
-    }
-
     public ApplyNotaryPostRequest setReceiverAddress(String receiverAddress) {
         this.receiverAddress = receiverAddress;
         return this;
     }
     public String getReceiverAddress() {
         return this.receiverAddress;
+    }
+
+    public ApplyNotaryPostRequest setReceiverName(String receiverName) {
+        this.receiverName = receiverName;
+        return this;
+    }
+    public String getReceiverName() {
+        return this.receiverName;
     }
 
     public ApplyNotaryPostRequest setReceiverPhone(String receiverPhone) {

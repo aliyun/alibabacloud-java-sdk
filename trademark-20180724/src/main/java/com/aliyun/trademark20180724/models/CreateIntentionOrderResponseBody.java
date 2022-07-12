@@ -4,6 +4,9 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class CreateIntentionOrderResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public CreateIntentionOrderResponseBodyData data;
+
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
@@ -13,12 +16,17 @@ public class CreateIntentionOrderResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Data")
-    public CreateIntentionOrderResponseBodyData data;
-
     public static CreateIntentionOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateIntentionOrderResponseBody self = new CreateIntentionOrderResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateIntentionOrderResponseBody setData(CreateIntentionOrderResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateIntentionOrderResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateIntentionOrderResponseBody setErrorMsg(String errorMsg) {
@@ -43,14 +51,6 @@ public class CreateIntentionOrderResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateIntentionOrderResponseBody setData(CreateIntentionOrderResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateIntentionOrderResponseBodyData getData() {
-        return this.data;
     }
 
     public static class CreateIntentionOrderResponseBodyData extends TeaModel {

@@ -7,20 +7,20 @@ public class QueryTradeIntentionUserListResponseBody extends TeaModel {
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
-    @NameInMap("TotalPageNum")
-    public Integer totalPageNum;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Data")
+    public QueryTradeIntentionUserListResponseBodyData data;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
-    @NameInMap("Data")
-    public QueryTradeIntentionUserListResponseBodyData data;
+    @NameInMap("TotalPageNum")
+    public Integer totalPageNum;
 
     public static QueryTradeIntentionUserListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTradeIntentionUserListResponseBody self = new QueryTradeIntentionUserListResponseBody();
@@ -35,20 +35,12 @@ public class QueryTradeIntentionUserListResponseBody extends TeaModel {
         return this.currentPageNum;
     }
 
-    public QueryTradeIntentionUserListResponseBody setTotalPageNum(Integer totalPageNum) {
-        this.totalPageNum = totalPageNum;
+    public QueryTradeIntentionUserListResponseBody setData(QueryTradeIntentionUserListResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getTotalPageNum() {
-        return this.totalPageNum;
-    }
-
-    public QueryTradeIntentionUserListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public QueryTradeIntentionUserListResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryTradeIntentionUserListResponseBody setPageSize(Integer pageSize) {
@@ -59,6 +51,14 @@ public class QueryTradeIntentionUserListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public QueryTradeIntentionUserListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryTradeIntentionUserListResponseBody setTotalItemNum(Integer totalItemNum) {
         this.totalItemNum = totalItemNum;
         return this;
@@ -67,23 +67,32 @@ public class QueryTradeIntentionUserListResponseBody extends TeaModel {
         return this.totalItemNum;
     }
 
-    public QueryTradeIntentionUserListResponseBody setData(QueryTradeIntentionUserListResponseBodyData data) {
-        this.data = data;
+    public QueryTradeIntentionUserListResponseBody setTotalPageNum(Integer totalPageNum) {
+        this.totalPageNum = totalPageNum;
         return this;
     }
-    public QueryTradeIntentionUserListResponseBodyData getData() {
-        return this.data;
+    public Integer getTotalPageNum() {
+        return this.totalPageNum;
     }
 
     public static class QueryTradeIntentionUserListResponseBodyDataTrademark extends TeaModel {
-        @NameInMap("Type")
-        public Integer type;
+        @NameInMap("BizId")
+        public String bizId;
 
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("Classification")
+        public String classification;
 
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("DocumentDate")
+        public String documentDate;
+
+        @NameInMap("DocumentName")
+        public String documentName;
+
+        @NameInMap("DocumentUrl")
+        public String documentUrl;
 
         @NameInMap("Mobile")
         public String mobile;
@@ -91,11 +100,11 @@ public class QueryTradeIntentionUserListResponseBody extends TeaModel {
         @NameInMap("RegisterNumber")
         public String registerNumber;
 
-        @NameInMap("BizId")
-        public String bizId;
+        @NameInMap("Status")
+        public Integer status;
 
-        @NameInMap("Classification")
-        public String classification;
+        @NameInMap("Type")
+        public Integer type;
 
         @NameInMap("UserName")
         public String userName;
@@ -105,20 +114,20 @@ public class QueryTradeIntentionUserListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryTradeIntentionUserListResponseBodyDataTrademark setType(Integer type) {
-            this.type = type;
+        public QueryTradeIntentionUserListResponseBodyDataTrademark setBizId(String bizId) {
+            this.bizId = bizId;
             return this;
         }
-        public Integer getType() {
-            return this.type;
+        public String getBizId() {
+            return this.bizId;
         }
 
-        public QueryTradeIntentionUserListResponseBodyDataTrademark setStatus(Integer status) {
-            this.status = status;
+        public QueryTradeIntentionUserListResponseBodyDataTrademark setClassification(String classification) {
+            this.classification = classification;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
+        public String getClassification() {
+            return this.classification;
         }
 
         public QueryTradeIntentionUserListResponseBodyDataTrademark setDescription(String description) {
@@ -127,6 +136,30 @@ public class QueryTradeIntentionUserListResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public QueryTradeIntentionUserListResponseBodyDataTrademark setDocumentDate(String documentDate) {
+            this.documentDate = documentDate;
+            return this;
+        }
+        public String getDocumentDate() {
+            return this.documentDate;
+        }
+
+        public QueryTradeIntentionUserListResponseBodyDataTrademark setDocumentName(String documentName) {
+            this.documentName = documentName;
+            return this;
+        }
+        public String getDocumentName() {
+            return this.documentName;
+        }
+
+        public QueryTradeIntentionUserListResponseBodyDataTrademark setDocumentUrl(String documentUrl) {
+            this.documentUrl = documentUrl;
+            return this;
+        }
+        public String getDocumentUrl() {
+            return this.documentUrl;
         }
 
         public QueryTradeIntentionUserListResponseBodyDataTrademark setMobile(String mobile) {
@@ -145,20 +178,20 @@ public class QueryTradeIntentionUserListResponseBody extends TeaModel {
             return this.registerNumber;
         }
 
-        public QueryTradeIntentionUserListResponseBodyDataTrademark setBizId(String bizId) {
-            this.bizId = bizId;
+        public QueryTradeIntentionUserListResponseBodyDataTrademark setStatus(Integer status) {
+            this.status = status;
             return this;
         }
-        public String getBizId() {
-            return this.bizId;
+        public Integer getStatus() {
+            return this.status;
         }
 
-        public QueryTradeIntentionUserListResponseBodyDataTrademark setClassification(String classification) {
-            this.classification = classification;
+        public QueryTradeIntentionUserListResponseBodyDataTrademark setType(Integer type) {
+            this.type = type;
             return this;
         }
-        public String getClassification() {
-            return this.classification;
+        public Integer getType() {
+            return this.type;
         }
 
         public QueryTradeIntentionUserListResponseBodyDataTrademark setUserName(String userName) {

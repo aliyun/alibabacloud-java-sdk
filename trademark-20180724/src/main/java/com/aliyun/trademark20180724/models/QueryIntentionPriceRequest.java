@@ -4,23 +4,15 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class QueryIntentionPriceRequest extends TeaModel {
-    @NameInMap("IntentionBizId")
-    public String intentionBizId;
-
     @NameInMap("Channel")
     public String channel;
+
+    @NameInMap("IntentionBizId")
+    public String intentionBizId;
 
     public static QueryIntentionPriceRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryIntentionPriceRequest self = new QueryIntentionPriceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryIntentionPriceRequest setIntentionBizId(String intentionBizId) {
-        this.intentionBizId = intentionBizId;
-        return this;
-    }
-    public String getIntentionBizId() {
-        return this.intentionBizId;
     }
 
     public QueryIntentionPriceRequest setChannel(String channel) {
@@ -29,6 +21,14 @@ public class QueryIntentionPriceRequest extends TeaModel {
     }
     public String getChannel() {
         return this.channel;
+    }
+
+    public QueryIntentionPriceRequest setIntentionBizId(String intentionBizId) {
+        this.intentionBizId = intentionBizId;
+        return this;
+    }
+    public String getIntentionBizId() {
+        return this.intentionBizId;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class InsertTmMonitorRuleResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
@@ -13,12 +16,17 @@ public class InsertTmMonitorRuleResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     public static InsertTmMonitorRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InsertTmMonitorRuleResponseBody self = new InsertTmMonitorRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public InsertTmMonitorRuleResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public InsertTmMonitorRuleResponseBody setErrorMsg(String errorMsg) {
@@ -43,14 +51,6 @@ public class InsertTmMonitorRuleResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public InsertTmMonitorRuleResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
 }

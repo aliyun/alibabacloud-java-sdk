@@ -4,24 +4,24 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class UpdateTrademarkNameRequest extends TeaModel {
-    // 幂等参数
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     // 业务id
     @NameInMap("BizId")
     public String bizId;
 
-    // 商标名称
-    @NameInMap("TmName")
-    public String tmName;
+    // 幂等参数
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("TmComment")
+    public String tmComment;
 
     // 商标图片
     @NameInMap("TmIcon")
     public String tmIcon;
 
-    @NameInMap("TmComment")
-    public String tmComment;
+    // 商标名称
+    @NameInMap("TmName")
+    public String tmName;
 
     // 商标类型
     @NameInMap("Type")
@@ -32,14 +32,6 @@ public class UpdateTrademarkNameRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateTrademarkNameRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
     public UpdateTrademarkNameRequest setBizId(String bizId) {
         this.bizId = bizId;
         return this;
@@ -48,12 +40,20 @@ public class UpdateTrademarkNameRequest extends TeaModel {
         return this.bizId;
     }
 
-    public UpdateTrademarkNameRequest setTmName(String tmName) {
-        this.tmName = tmName;
+    public UpdateTrademarkNameRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getTmName() {
-        return this.tmName;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public UpdateTrademarkNameRequest setTmComment(String tmComment) {
+        this.tmComment = tmComment;
+        return this;
+    }
+    public String getTmComment() {
+        return this.tmComment;
     }
 
     public UpdateTrademarkNameRequest setTmIcon(String tmIcon) {
@@ -64,12 +64,12 @@ public class UpdateTrademarkNameRequest extends TeaModel {
         return this.tmIcon;
     }
 
-    public UpdateTrademarkNameRequest setTmComment(String tmComment) {
-        this.tmComment = tmComment;
+    public UpdateTrademarkNameRequest setTmName(String tmName) {
+        this.tmName = tmName;
         return this;
     }
-    public String getTmComment() {
-        return this.tmComment;
+    public String getTmName() {
+        return this.tmName;
     }
 
     public UpdateTrademarkNameRequest setType(Long type) {

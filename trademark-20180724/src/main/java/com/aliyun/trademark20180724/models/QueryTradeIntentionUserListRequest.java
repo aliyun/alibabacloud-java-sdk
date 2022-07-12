@@ -7,17 +7,17 @@ public class QueryTradeIntentionUserListRequest extends TeaModel {
     @NameInMap("Begin")
     public Long begin;
 
+    @NameInMap("BizId")
+    public String bizId;
+
     @NameInMap("End")
     public Long end;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
 
     @NameInMap("PageNum")
     public Integer pageNum;
 
-    @NameInMap("BizId")
-    public String bizId;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("Status")
     public Integer status;
@@ -35,20 +35,20 @@ public class QueryTradeIntentionUserListRequest extends TeaModel {
         return this.begin;
     }
 
+    public QueryTradeIntentionUserListRequest setBizId(String bizId) {
+        this.bizId = bizId;
+        return this;
+    }
+    public String getBizId() {
+        return this.bizId;
+    }
+
     public QueryTradeIntentionUserListRequest setEnd(Long end) {
         this.end = end;
         return this;
     }
     public Long getEnd() {
         return this.end;
-    }
-
-    public QueryTradeIntentionUserListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public QueryTradeIntentionUserListRequest setPageNum(Integer pageNum) {
@@ -59,12 +59,12 @@ public class QueryTradeIntentionUserListRequest extends TeaModel {
         return this.pageNum;
     }
 
-    public QueryTradeIntentionUserListRequest setBizId(String bizId) {
-        this.bizId = bizId;
+    public QueryTradeIntentionUserListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getBizId() {
-        return this.bizId;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public QueryTradeIntentionUserListRequest setStatus(Integer status) {

@@ -4,6 +4,9 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class ConfirmAdditionalMaterialResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
@@ -13,12 +16,17 @@ public class ConfirmAdditionalMaterialResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     public static ConfirmAdditionalMaterialResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ConfirmAdditionalMaterialResponseBody self = new ConfirmAdditionalMaterialResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ConfirmAdditionalMaterialResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ConfirmAdditionalMaterialResponseBody setErrorMsg(String errorMsg) {
@@ -43,14 +51,6 @@ public class ConfirmAdditionalMaterialResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public ConfirmAdditionalMaterialResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
 }
