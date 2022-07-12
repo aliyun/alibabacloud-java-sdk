@@ -37,6 +37,9 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("NetRedirect")
+    public String netRedirect;
+
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
@@ -179,6 +182,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ModifyPolicyGroupRequest setNetRedirect(String netRedirect) {
+        this.netRedirect = netRedirect;
+        return this;
+    }
+    public String getNetRedirect() {
+        return this.netRedirect;
     }
 
     public ModifyPolicyGroupRequest setPolicyGroupId(String policyGroupId) {

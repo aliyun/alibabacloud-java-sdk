@@ -4,11 +4,17 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
+    @NameInMap("AutoCleanUserdata")
+    public Boolean autoCleanUserdata;
+
     @NameInMap("Description")
     public String description;
 
     @NameInMap("DesktopId")
     public String desktopId;
+
+    @NameInMap("DiskType")
+    public String diskType;
 
     @NameInMap("ImageName")
     public String imageName;
@@ -30,6 +36,14 @@ public class CreateImageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateImageRequest setAutoCleanUserdata(Boolean autoCleanUserdata) {
+        this.autoCleanUserdata = autoCleanUserdata;
+        return this;
+    }
+    public Boolean getAutoCleanUserdata() {
+        return this.autoCleanUserdata;
+    }
+
     public CreateImageRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +58,14 @@ public class CreateImageRequest extends TeaModel {
     }
     public String getDesktopId() {
         return this.desktopId;
+    }
+
+    public CreateImageRequest setDiskType(String diskType) {
+        this.diskType = diskType;
+        return this;
+    }
+    public String getDiskType() {
+        return this.diskType;
     }
 
     public CreateImageRequest setImageName(String imageName) {

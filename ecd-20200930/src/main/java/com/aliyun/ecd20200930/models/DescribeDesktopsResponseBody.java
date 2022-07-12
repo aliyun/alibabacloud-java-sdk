@@ -352,6 +352,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        @NameInMap("SessionType")
+        public String sessionType;
+
         @NameInMap("Sessions")
         public java.util.List<DescribeDesktopsResponseBodyDesktopsSessions> sessions;
 
@@ -707,6 +710,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getProtocolType() {
             return this.protocolType;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setSessionType(String sessionType) {
+            this.sessionType = sessionType;
+            return this;
+        }
+        public String getSessionType() {
+            return this.sessionType;
         }
 
         public DescribeDesktopsResponseBodyDesktops setSessions(java.util.List<DescribeDesktopsResponseBodyDesktopsSessions> sessions) {

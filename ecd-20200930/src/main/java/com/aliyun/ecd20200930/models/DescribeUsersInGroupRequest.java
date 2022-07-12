@@ -13,6 +13,9 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     @NameInMap("EndUserId")
     public String endUserId;
 
+    @NameInMap("Filter")
+    public String filter;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -52,6 +55,14 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     }
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    public DescribeUsersInGroupRequest setFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    public String getFilter() {
+        return this.filter;
     }
 
     public DescribeUsersInGroupRequest setMaxResults(Integer maxResults) {
