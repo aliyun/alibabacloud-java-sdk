@@ -7,6 +7,9 @@ public class CreateProvisionedProductPlanResponseBody extends TeaModel {
     @NameInMap("PlanId")
     public String planId;
 
+    @NameInMap("ProvisionedProductId")
+    public String provisionedProductId;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -22,6 +25,14 @@ public class CreateProvisionedProductPlanResponseBody extends TeaModel {
     }
     public String getPlanId() {
         return this.planId;
+    }
+
+    public CreateProvisionedProductPlanResponseBody setProvisionedProductId(String provisionedProductId) {
+        this.provisionedProductId = provisionedProductId;
+        return this;
+    }
+    public String getProvisionedProductId() {
+        return this.provisionedProductId;
     }
 
     public CreateProvisionedProductPlanResponseBody setRequestId(String requestId) {

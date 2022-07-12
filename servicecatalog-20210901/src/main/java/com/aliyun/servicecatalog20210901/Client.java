@@ -494,6 +494,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteProductVersionWithOptions(request, runtime);
     }
 
+    public DeleteProvisionedProductPlanResponse deleteProvisionedProductPlanWithOptions(DeleteProvisionedProductPlanRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.planId)) {
+            body.put("PlanId", request.planId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteProvisionedProductPlan"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProvisionedProductPlanResponse());
+    }
+
+    public DeleteProvisionedProductPlanResponse deleteProvisionedProductPlan(DeleteProvisionedProductPlanRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteProvisionedProductPlanWithOptions(request, runtime);
+    }
+
     public DisassociatePrincipalFromPortfolioResponse disassociatePrincipalFromPortfolioWithOptions(DisassociatePrincipalFromPortfolioRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
