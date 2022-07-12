@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class Chart extends TeaModel {
     // action
     @NameInMap("action")
-    public java.util.Map<String, String> action;
+    public java.util.Map<String, ?> action;
 
     // 图表的显示配置
     @NameInMap("display")
@@ -16,11 +16,11 @@ public class Chart extends TeaModel {
     @NameInMap("search")
     public ChartSearch search;
 
-    // 图表标题
+    // 图表标题。支持大小写英文字母、数字、下划线_、连字符-，连字符与下划线不能作为名称开头与结尾，长度必须在[2,64] 之间。
     @NameInMap("title")
     public String title;
 
-    // 图标类型
+    // 图表的类型。
     @NameInMap("type")
     public String type;
 
@@ -29,11 +29,11 @@ public class Chart extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public Chart setAction(java.util.Map<String, String> action) {
+    public Chart setAction(java.util.Map<String, ?> action) {
         this.action = action;
         return this;
     }
-    public java.util.Map<String, String> getAction() {
+    public java.util.Map<String, ?> getAction() {
         return this.action;
     }
 

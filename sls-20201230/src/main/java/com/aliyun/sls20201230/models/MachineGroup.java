@@ -12,7 +12,7 @@ public class MachineGroup extends TeaModel {
     @NameInMap("groupName")
     public String groupName;
 
-    // 机器组种类。
+    // 机器组种类。目前固定为空字符串。
     @NameInMap("groupType")
     public String groupType;
 

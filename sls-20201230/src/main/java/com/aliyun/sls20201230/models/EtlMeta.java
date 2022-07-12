@@ -22,7 +22,7 @@ public class EtlMeta extends TeaModel {
 
     // value
     @NameInMap("etlMetaValue")
-    public java.util.Map<String, String> etlMetaValue;
+    public String etlMetaValue;
 
     public static EtlMeta build(java.util.Map<String, ?> map) throws Exception {
         EtlMeta self = new EtlMeta();
@@ -61,11 +61,11 @@ public class EtlMeta extends TeaModel {
         return this.etlMetaTag;
     }
 
-    public EtlMeta setEtlMetaValue(java.util.Map<String, String> etlMetaValue) {
+    public EtlMeta setEtlMetaValue(String etlMetaValue) {
         this.etlMetaValue = etlMetaValue;
         return this;
     }
-    public java.util.Map<String, String> getEtlMetaValue() {
+    public String getEtlMetaValue() {
         return this.etlMetaValue;
     }
 

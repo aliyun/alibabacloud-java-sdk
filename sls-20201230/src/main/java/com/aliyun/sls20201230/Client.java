@@ -19,16 +19,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._client = new com.aliyun.gateway.sls.Client();
         this._spi = _client;
         this._endpointRule = "central";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("ap-southeast-1", "sls.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "sls.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "sls.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "sls.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "sls.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "sls.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "sls.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("eu-central-1", "sls.eu-central-1.aliyuncs.com")
-        );
     }
 
 
@@ -59,6 +49,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new ApplyConfigToMachineGroupResponse());
+    }
+
+    public BatchCreateEtlMetaResponse batchCreateEtlMeta(String project, BatchCreateEtlMetaRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchCreateEtlMetaWithOptions(project, request, headers, runtime);
+    }
+
+    public BatchCreateEtlMetaResponse batchCreateEtlMetaWithOptions(String project, BatchCreateEtlMetaRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaList)) {
+            body.put("etlMetaList", request.etlMetaList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchCreateEtlMeta"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/etlmetas"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new BatchCreateEtlMetaResponse());
+    }
+
+    public BatchModifyEtlMetaStatusResponse batchModifyEtlMetaStatus(String project, BatchModifyEtlMetaStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchModifyEtlMetaStatusWithOptions(project, request, headers, runtime);
+    }
+
+    public BatchModifyEtlMetaStatusResponse batchModifyEtlMetaStatusWithOptions(String project, BatchModifyEtlMetaStatusRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaKeyList)) {
+            body.put("etlMetaKeyList", request.etlMetaKeyList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaName)) {
+            body.put("etlMetaName", request.etlMetaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaTag)) {
+            body.put("etlMetaTag", request.etlMetaTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.range)) {
+            body.put("range", request.range);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchModifyEtlMetaStatus"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/etlmetas"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new BatchModifyEtlMetaStatusResponse());
+    }
+
+    public BatchUpdateEtlMetaResponse batchUpdateEtlMeta(String project, BatchUpdateEtlMetaRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchUpdateEtlMetaWithOptions(project, request, headers, runtime);
+    }
+
+    public BatchUpdateEtlMetaResponse batchUpdateEtlMetaWithOptions(String project, BatchUpdateEtlMetaRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.etlMetaList))) {
+            body.put("etlMetaList", request.etlMetaList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchUpdateEtlMeta"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/etlmetas"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new BatchUpdateEtlMetaResponse());
     }
 
     public CreateConsumerGroupResponse createConsumerGroup(String project, String logstore, CreateConsumerGroupRequest request) throws Exception {
@@ -136,6 +246,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateDomainResponse());
+    }
+
+    public CreateEtlMetaResponse createEtlMeta(String project, CreateEtlMetaRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createEtlMetaWithOptions(project, request, headers, runtime);
+    }
+
+    public CreateEtlMetaResponse createEtlMetaWithOptions(String project, CreateEtlMetaRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            body.put("enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaKey)) {
+            body.put("etlMetaKey", request.etlMetaKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaName)) {
+            body.put("etlMetaName", request.etlMetaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaTag)) {
+            body.put("etlMetaTag", request.etlMetaTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaValue)) {
+            body.put("etlMetaValue", request.etlMetaValue);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateEtlMeta"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/etlmetas"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateEtlMetaResponse());
     }
 
     public CreateIndexResponse createIndex(String project, String logstore, CreateIndexRequest request) throws Exception {
@@ -497,6 +657,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteDomainResponse());
     }
 
+    public DeleteEtlMetaResponse deleteEtlMeta(String project, DeleteEtlMetaRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteEtlMetaWithOptions(project, request, headers, runtime);
+    }
+
+    public DeleteEtlMetaResponse deleteEtlMetaWithOptions(String project, DeleteEtlMetaRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaKey)) {
+            query.put("etlMetaKey", request.etlMetaKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaName)) {
+            query.put("etlMetaName", request.etlMetaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaTag)) {
+            query.put("etlMetaTag", request.etlMetaTag);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEtlMeta"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/etlmetas"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteEtlMetaResponse());
+    }
+
     public DeleteIndexResponse deleteIndex(String project, String logstore) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -633,6 +835,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteProjectResponse());
+    }
+
+    public DeleteSavedSearchResponse deleteSavedSearch(String project, String savedsearchName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteSavedSearchWithOptions(project, savedsearchName, headers, runtime);
+    }
+
+    public DeleteSavedSearchResponse deleteSavedSearchWithOptions(String project, String savedsearchName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        savedsearchName = com.aliyun.openapiutil.Client.getEncodeParam(savedsearchName);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSavedSearch"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/savedsearches/" + savedsearchName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteSavedSearchResponse());
     }
 
     public GetAppliedConfigsResponse getAppliedConfigs(String project, String machineGroup) throws Exception {
@@ -828,6 +1058,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new GetCursorTimeResponse());
+    }
+
+    public GetEtlMetaResponse getEtlMeta(String project, GetEtlMetaRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getEtlMetaWithOptions(project, request, headers, runtime);
+    }
+
+    public GetEtlMetaResponse getEtlMetaWithOptions(String project, GetEtlMetaRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.elMetaName)) {
+            query.put("elMetaName", request.elMetaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaKey)) {
+            query.put("etlMetaKey", request.etlMetaKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaTag)) {
+            query.put("etlMetaTag", request.etlMetaTag);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEtlMeta"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/etlmetas"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetEtlMetaResponse());
     }
 
     public GetHistogramsResponse getHistograms(String project, String logstore, GetHistogramsRequest request) throws Exception {
@@ -1220,6 +1492,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new ListDomainsResponse());
+    }
+
+    public ListEtlMetaResponse listEtlMeta(String project, ListEtlMetaRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listEtlMetaWithOptions(project, request, headers, runtime);
+    }
+
+    public ListEtlMetaResponse listEtlMetaWithOptions(String project, ListEtlMetaRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaKey)) {
+            query.put("etlMetaKey", request.etlMetaKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaName)) {
+            query.put("etlMetaName", request.etlMetaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaTag)) {
+            query.put("etlMetaTag", request.etlMetaTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEtlMeta"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/etlmetas"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListEtlMetaResponse());
+    }
+
+    public ListEtlMetaNameResponse listEtlMetaName(String project, ListEtlMetaNameRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listEtlMetaNameWithOptions(project, request, headers, runtime);
+    }
+
+    public ListEtlMetaNameResponse listEtlMetaNameWithOptions(String project, ListEtlMetaNameRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEtlMetaName"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/etlmetanames"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListEtlMetaNameResponse());
     }
 
     public ListLogStoresResponse listLogStores(String project, ListLogStoresRequest request) throws Exception {
@@ -1788,6 +2148,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateConsumerGroupResponse());
     }
 
+    public UpdateEtlMetaResponse updateEtlMeta(String project, UpdateEtlMetaRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateEtlMetaWithOptions(project, request, headers, runtime);
+    }
+
+    public UpdateEtlMetaResponse updateEtlMetaWithOptions(String project, UpdateEtlMetaRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            body.put("enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaKey)) {
+            body.put("etlMetaKey", request.etlMetaKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaName)) {
+            body.put("etlMetaName", request.etlMetaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaTag)) {
+            body.put("etlMetaTag", request.etlMetaTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.etlMetaValue)) {
+            body.put("etlMetaValue", request.etlMetaValue);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateEtlMeta"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/etlmetas"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateEtlMetaResponse());
+    }
+
     public UpdateIndexResponse updateIndex(String project, String logstore, UpdateIndexRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1956,17 +2366,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateLoggingResponse());
     }
 
-    public UpdateMachineGroupResponse updateMachineGroup(String project, String machineGroup, UpdateMachineGroupRequest request) throws Exception {
+    public UpdateMachineGroupResponse updateMachineGroup(String project, String groupName, UpdateMachineGroupRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateMachineGroupWithOptions(project, machineGroup, request, headers, runtime);
+        return this.updateMachineGroupWithOptions(project, groupName, request, headers, runtime);
     }
 
-    public UpdateMachineGroupResponse updateMachineGroupWithOptions(String project, String machineGroup, UpdateMachineGroupRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public UpdateMachineGroupResponse updateMachineGroupWithOptions(String project, String groupName, UpdateMachineGroupRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
-        machineGroup = com.aliyun.openapiutil.Client.getEncodeParam(machineGroup);
+        groupName = com.aliyun.openapiutil.Client.getEncodeParam(groupName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.groupAttribute))) {
             body.put("groupAttribute", request.groupAttribute);
@@ -1997,7 +2407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateMachineGroup"),
             new TeaPair("version", "2020-12-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/machinegroups/" + machineGroup + ""),
+            new TeaPair("pathname", "/machinegroups/" + groupName + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
