@@ -18,7 +18,7 @@ public class EtlJob extends TeaModel {
 
     // 参数列表
     @NameInMap("functionParameter")
-    public java.util.Map<String, String> functionParameter;
+    public java.util.Map<String, ?> functionParameter;
 
     // 日志配置
     @NameInMap("logConfig")
@@ -61,11 +61,11 @@ public class EtlJob extends TeaModel {
         return this.functionConfig;
     }
 
-    public EtlJob setFunctionParameter(java.util.Map<String, String> functionParameter) {
+    public EtlJob setFunctionParameter(java.util.Map<String, ?> functionParameter) {
         this.functionParameter = functionParameter;
         return this;
     }
-    public java.util.Map<String, String> getFunctionParameter() {
+    public java.util.Map<String, ?> getFunctionParameter() {
         return this.functionParameter;
     }
 
@@ -106,7 +106,7 @@ public class EtlJob extends TeaModel {
         @NameInMap("functionName")
         public String functionName;
 
-        // 函数 provider
+        // 函数 provider，可选值为 FunctionCompute 、CloudProdLogDispatch。当值为 FunctionCompute 时，endpoint、accountid 、regionName 、serviceName 、functionName 必选。
         @NameInMap("functionProvider")
         public String functionProvider;
 
@@ -250,7 +250,7 @@ public class EtlJob extends TeaModel {
     }
 
     public static class EtlJobTriggerConfig extends TeaModel {
-        // 最大重试次数
+        // 最大重试次数，必须在[0,100] 之间
         @NameInMap("maxRetryTime")
         public Integer maxRetryTime;
 
@@ -258,7 +258,7 @@ public class EtlJob extends TeaModel {
         @NameInMap("roleArn")
         public String roleArn;
 
-        // 开始位置
+        // 开始位置，可选 latest、at-unixtime， 默认 latest。
         @NameInMap("startingPosition")
         public String startingPosition;
 
@@ -266,7 +266,7 @@ public class EtlJob extends TeaModel {
         @NameInMap("startingUnixtime")
         public Long startingUnixtime;
 
-        // 触发间隔
+        // 触发间隔，单位为秒，必须在 [3,600] 之间
         @NameInMap("triggerInterval")
         public Integer triggerInterval;
 

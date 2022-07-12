@@ -4,19 +4,19 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class Machine extends TeaModel {
-    // ip 地址
+    // 机器 ip 地址。
     @NameInMap("ip")
     public String ip;
 
-    // 上次心跳时间
+    // 最后一次心跳时间。Unix时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
     @NameInMap("lastHeartbeatTime")
     public Long lastHeartbeatTime;
 
-    // 机器的唯一标识
+    // 机器的唯一标识。
     @NameInMap("machine-uniqueid")
     public String machineUniqueid;
 
-    // 用户自定义标识
+    // 机器的用户自定义标识。
     @NameInMap("userdefined-id")
     public String userdefinedId;
 

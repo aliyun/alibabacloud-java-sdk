@@ -4,23 +4,23 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class Dashboard extends TeaModel {
-    // 属性值
+    // 属性值，可用于修改仪表盘的布局等属性，例如 "type": "free" 自由布局， "type":"grid" 网格布局。
     @NameInMap("attribute")
     public java.util.Map<String, String> attribute;
 
-    // 包含的图表
+    // 仪表盘内包含的图表。
     @NameInMap("charts")
     public java.util.List<Chart> charts;
 
-    // 内部名称
+    // 仪表盘ID。同一个Project下，仪表盘ID唯一，不可重复。
     @NameInMap("dashboardName")
     public String dashboardName;
 
-    // 描述信息
+    // 描述信息。
     @NameInMap("description")
     public String description;
 
-    // 展示名称
+    // 仪表盘的展示名称。
     @NameInMap("displayName")
     public String displayName;
 
