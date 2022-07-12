@@ -8,7 +8,7 @@ public class TwoElementsVerificationResponseBody extends TeaModel {
     public String code;
 
     @NameInMap("Data")
-    public java.util.List<TwoElementsVerificationResponseBodyData> data;
+    public TwoElementsVerificationResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
@@ -29,11 +29,11 @@ public class TwoElementsVerificationResponseBody extends TeaModel {
         return this.code;
     }
 
-    public TwoElementsVerificationResponseBody setData(java.util.List<TwoElementsVerificationResponseBodyData> data) {
+    public TwoElementsVerificationResponseBody setData(TwoElementsVerificationResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<TwoElementsVerificationResponseBodyData> getData() {
+    public TwoElementsVerificationResponseBodyData getData() {
         return this.data;
     }
 
