@@ -13,6 +13,9 @@ public class ModifyDdosStatusRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("InternetIp")
+    public String internetIp;
+
     public static ModifyDdosStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDdosStatusRequest self = new ModifyDdosStatusRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ModifyDdosStatusRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public ModifyDdosStatusRequest setInternetIp(String internetIp) {
+        this.internetIp = internetIp;
+        return this;
+    }
+    public String getInternetIp() {
+        return this.internetIp;
     }
 
 }

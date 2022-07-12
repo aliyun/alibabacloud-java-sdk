@@ -1,3 +1,6 @@
+2022-07-12 Version: 1.0.7
+- Automatically generate sdk tasks.
+
 2022-07-04 Version: 1.0.6
 - Init amp.
 
