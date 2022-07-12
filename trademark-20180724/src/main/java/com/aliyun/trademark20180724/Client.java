@@ -4588,6 +4588,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateSendMaterialNumWithOptions(request, runtime);
     }
 
+    public UpdateTmMonitorRuleResponse updateTmMonitorRuleWithOptions(UpdateTmMonitorRuleRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyStatus)) {
+            query.put("NotifyStatus", request.notifyStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateTmMonitorRule"),
+            new TeaPair("version", "2018-07-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTmMonitorRuleResponse());
+    }
+
+    public UpdateTmMonitorRuleResponse updateTmMonitorRule(UpdateTmMonitorRuleRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateTmMonitorRuleWithOptions(request, runtime);
+    }
+
     public UpdateTrademarkNameResponse updateTrademarkNameWithOptions(UpdateTrademarkNameRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
