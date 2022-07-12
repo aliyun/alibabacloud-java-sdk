@@ -1,3 +1,6 @@
+2022-07-12 Version: 3.2.12
+- AddCollection.
+
 2022-07-12 Version: 3.2.10
 - AddCollection.
 
