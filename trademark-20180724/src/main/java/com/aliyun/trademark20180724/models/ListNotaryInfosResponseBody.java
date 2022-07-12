@@ -4,8 +4,26 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class ListNotaryInfosResponseBody extends TeaModel {
+    @NameInMap("CurrentPageNum")
+    public Integer currentPageNum;
+
+    @NameInMap("Data")
+    public ListNotaryInfosResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMsg")
+    public String errorMsg;
+
     @NameInMap("NextPage")
     public Boolean nextPage;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("PrePage")
+    public Boolean prePage;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,33 +31,47 @@ public class ListNotaryInfosResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
-
-    @NameInMap("PrePage")
-    public Boolean prePage;
-
-    @NameInMap("CurrentPageNum")
-    public Integer currentPageNum;
-
-    @NameInMap("ErrorMsg")
-    public String errorMsg;
 
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("Data")
-    public ListNotaryInfosResponseBodyData data;
-
     public static ListNotaryInfosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListNotaryInfosResponseBody self = new ListNotaryInfosResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListNotaryInfosResponseBody setCurrentPageNum(Integer currentPageNum) {
+        this.currentPageNum = currentPageNum;
+        return this;
+    }
+    public Integer getCurrentPageNum() {
+        return this.currentPageNum;
+    }
+
+    public ListNotaryInfosResponseBody setData(ListNotaryInfosResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListNotaryInfosResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListNotaryInfosResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListNotaryInfosResponseBody setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
+        return this;
+    }
+    public String getErrorMsg() {
+        return this.errorMsg;
     }
 
     public ListNotaryInfosResponseBody setNextPage(Boolean nextPage) {
@@ -48,6 +80,22 @@ public class ListNotaryInfosResponseBody extends TeaModel {
     }
     public Boolean getNextPage() {
         return this.nextPage;
+    }
+
+    public ListNotaryInfosResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListNotaryInfosResponseBody setPrePage(Boolean prePage) {
+        this.prePage = prePage;
+        return this;
+    }
+    public Boolean getPrePage() {
+        return this.prePage;
     }
 
     public ListNotaryInfosResponseBody setRequestId(String requestId) {
@@ -66,44 +114,12 @@ public class ListNotaryInfosResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListNotaryInfosResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public ListNotaryInfosResponseBody setTotalItemNum(Integer totalItemNum) {
         this.totalItemNum = totalItemNum;
         return this;
     }
     public Integer getTotalItemNum() {
         return this.totalItemNum;
-    }
-
-    public ListNotaryInfosResponseBody setPrePage(Boolean prePage) {
-        this.prePage = prePage;
-        return this;
-    }
-    public Boolean getPrePage() {
-        return this.prePage;
-    }
-
-    public ListNotaryInfosResponseBody setCurrentPageNum(Integer currentPageNum) {
-        this.currentPageNum = currentPageNum;
-        return this;
-    }
-    public Integer getCurrentPageNum() {
-        return this.currentPageNum;
-    }
-
-    public ListNotaryInfosResponseBody setErrorMsg(String errorMsg) {
-        this.errorMsg = errorMsg;
-        return this;
-    }
-    public String getErrorMsg() {
-        return this.errorMsg;
     }
 
     public ListNotaryInfosResponseBody setTotalPageNum(Integer totalPageNum) {
@@ -114,79 +130,39 @@ public class ListNotaryInfosResponseBody extends TeaModel {
         return this.totalPageNum;
     }
 
-    public ListNotaryInfosResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListNotaryInfosResponseBody setData(ListNotaryInfosResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListNotaryInfosResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListNotaryInfosResponseBodyDataNotaryInfo extends TeaModel {
-        @NameInMap("Token")
-        public String token;
-
-        @NameInMap("TmRegisterNo")
-        public String tmRegisterNo;
-
-        @NameInMap("TmClassification")
-        public String tmClassification;
-
-        @NameInMap("NotaryFailedReason")
-        public String notaryFailedReason;
+        @NameInMap("BizOrderNo")
+        public String bizOrderNo;
 
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        @NameInMap("NotaryFailedReason")
+        public String notaryFailedReason;
+
         @NameInMap("NotaryStatus")
         public Integer notaryStatus;
 
-        @NameInMap("BizOrderNo")
-        public String bizOrderNo;
+        @NameInMap("TmClassification")
+        public String tmClassification;
+
+        @NameInMap("TmRegisterNo")
+        public String tmRegisterNo;
+
+        @NameInMap("Token")
+        public String token;
 
         public static ListNotaryInfosResponseBodyDataNotaryInfo build(java.util.Map<String, ?> map) throws Exception {
             ListNotaryInfosResponseBodyDataNotaryInfo self = new ListNotaryInfosResponseBodyDataNotaryInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListNotaryInfosResponseBodyDataNotaryInfo setToken(String token) {
-            this.token = token;
+        public ListNotaryInfosResponseBodyDataNotaryInfo setBizOrderNo(String bizOrderNo) {
+            this.bizOrderNo = bizOrderNo;
             return this;
         }
-        public String getToken() {
-            return this.token;
-        }
-
-        public ListNotaryInfosResponseBodyDataNotaryInfo setTmRegisterNo(String tmRegisterNo) {
-            this.tmRegisterNo = tmRegisterNo;
-            return this;
-        }
-        public String getTmRegisterNo() {
-            return this.tmRegisterNo;
-        }
-
-        public ListNotaryInfosResponseBodyDataNotaryInfo setTmClassification(String tmClassification) {
-            this.tmClassification = tmClassification;
-            return this;
-        }
-        public String getTmClassification() {
-            return this.tmClassification;
-        }
-
-        public ListNotaryInfosResponseBodyDataNotaryInfo setNotaryFailedReason(String notaryFailedReason) {
-            this.notaryFailedReason = notaryFailedReason;
-            return this;
-        }
-        public String getNotaryFailedReason() {
-            return this.notaryFailedReason;
+        public String getBizOrderNo() {
+            return this.bizOrderNo;
         }
 
         public ListNotaryInfosResponseBodyDataNotaryInfo setGmtModified(Long gmtModified) {
@@ -197,6 +173,14 @@ public class ListNotaryInfosResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
+        public ListNotaryInfosResponseBodyDataNotaryInfo setNotaryFailedReason(String notaryFailedReason) {
+            this.notaryFailedReason = notaryFailedReason;
+            return this;
+        }
+        public String getNotaryFailedReason() {
+            return this.notaryFailedReason;
+        }
+
         public ListNotaryInfosResponseBodyDataNotaryInfo setNotaryStatus(Integer notaryStatus) {
             this.notaryStatus = notaryStatus;
             return this;
@@ -205,12 +189,28 @@ public class ListNotaryInfosResponseBody extends TeaModel {
             return this.notaryStatus;
         }
 
-        public ListNotaryInfosResponseBodyDataNotaryInfo setBizOrderNo(String bizOrderNo) {
-            this.bizOrderNo = bizOrderNo;
+        public ListNotaryInfosResponseBodyDataNotaryInfo setTmClassification(String tmClassification) {
+            this.tmClassification = tmClassification;
             return this;
         }
-        public String getBizOrderNo() {
-            return this.bizOrderNo;
+        public String getTmClassification() {
+            return this.tmClassification;
+        }
+
+        public ListNotaryInfosResponseBodyDataNotaryInfo setTmRegisterNo(String tmRegisterNo) {
+            this.tmRegisterNo = tmRegisterNo;
+            return this;
+        }
+        public String getTmRegisterNo() {
+            return this.tmRegisterNo;
+        }
+
+        public ListNotaryInfosResponseBodyDataNotaryInfo setToken(String token) {
+            this.token = token;
+            return this;
+        }
+        public String getToken() {
+            return this.token;
         }
 
     }

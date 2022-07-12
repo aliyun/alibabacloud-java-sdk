@@ -7,20 +7,20 @@ public class QueryIntentionPriceResponseBody extends TeaModel {
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
-    @NameInMap("TotalPageNum")
-    public Integer totalPageNum;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Data")
+    public QueryIntentionPriceResponseBodyData data;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
-    @NameInMap("Data")
-    public QueryIntentionPriceResponseBodyData data;
+    @NameInMap("TotalPageNum")
+    public Integer totalPageNum;
 
     public static QueryIntentionPriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryIntentionPriceResponseBody self = new QueryIntentionPriceResponseBody();
@@ -35,20 +35,12 @@ public class QueryIntentionPriceResponseBody extends TeaModel {
         return this.currentPageNum;
     }
 
-    public QueryIntentionPriceResponseBody setTotalPageNum(Integer totalPageNum) {
-        this.totalPageNum = totalPageNum;
+    public QueryIntentionPriceResponseBody setData(QueryIntentionPriceResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getTotalPageNum() {
-        return this.totalPageNum;
-    }
-
-    public QueryIntentionPriceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public QueryIntentionPriceResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryIntentionPriceResponseBody setPageSize(Integer pageSize) {
@@ -59,6 +51,14 @@ public class QueryIntentionPriceResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public QueryIntentionPriceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryIntentionPriceResponseBody setTotalItemNum(Integer totalItemNum) {
         this.totalItemNum = totalItemNum;
         return this;
@@ -67,32 +67,54 @@ public class QueryIntentionPriceResponseBody extends TeaModel {
         return this.totalItemNum;
     }
 
-    public QueryIntentionPriceResponseBody setData(QueryIntentionPriceResponseBodyData data) {
-        this.data = data;
+    public QueryIntentionPriceResponseBody setTotalPageNum(Integer totalPageNum) {
+        this.totalPageNum = totalPageNum;
         return this;
     }
-    public QueryIntentionPriceResponseBodyData getData() {
-        return this.data;
+    public Integer getTotalPageNum() {
+        return this.totalPageNum;
     }
 
-    public static class QueryIntentionPriceResponseBodyDataTmProducesThirdClassificationThirdClassifications extends TeaModel {
-        @NameInMap("ClassificationName")
-        public String classificationName;
-
+    public static class QueryIntentionPriceResponseBodyDataTmProducesFirstClassification extends TeaModel {
         @NameInMap("ClassificationCode")
         public String classificationCode;
 
-        public static QueryIntentionPriceResponseBodyDataTmProducesThirdClassificationThirdClassifications build(java.util.Map<String, ?> map) throws Exception {
-            QueryIntentionPriceResponseBodyDataTmProducesThirdClassificationThirdClassifications self = new QueryIntentionPriceResponseBodyDataTmProducesThirdClassificationThirdClassifications();
+        @NameInMap("ClassificationName")
+        public String classificationName;
+
+        public static QueryIntentionPriceResponseBodyDataTmProducesFirstClassification build(java.util.Map<String, ?> map) throws Exception {
+            QueryIntentionPriceResponseBodyDataTmProducesFirstClassification self = new QueryIntentionPriceResponseBodyDataTmProducesFirstClassification();
             return TeaModel.build(map, self);
         }
 
-        public QueryIntentionPriceResponseBodyDataTmProducesThirdClassificationThirdClassifications setClassificationName(String classificationName) {
+        public QueryIntentionPriceResponseBodyDataTmProducesFirstClassification setClassificationCode(String classificationCode) {
+            this.classificationCode = classificationCode;
+            return this;
+        }
+        public String getClassificationCode() {
+            return this.classificationCode;
+        }
+
+        public QueryIntentionPriceResponseBodyDataTmProducesFirstClassification setClassificationName(String classificationName) {
             this.classificationName = classificationName;
             return this;
         }
         public String getClassificationName() {
             return this.classificationName;
+        }
+
+    }
+
+    public static class QueryIntentionPriceResponseBodyDataTmProducesThirdClassificationThirdClassifications extends TeaModel {
+        @NameInMap("ClassificationCode")
+        public String classificationCode;
+
+        @NameInMap("ClassificationName")
+        public String classificationName;
+
+        public static QueryIntentionPriceResponseBodyDataTmProducesThirdClassificationThirdClassifications build(java.util.Map<String, ?> map) throws Exception {
+            QueryIntentionPriceResponseBodyDataTmProducesThirdClassificationThirdClassifications self = new QueryIntentionPriceResponseBodyDataTmProducesThirdClassificationThirdClassifications();
+            return TeaModel.build(map, self);
         }
 
         public QueryIntentionPriceResponseBodyDataTmProducesThirdClassificationThirdClassifications setClassificationCode(String classificationCode) {
@@ -101,6 +123,14 @@ public class QueryIntentionPriceResponseBody extends TeaModel {
         }
         public String getClassificationCode() {
             return this.classificationCode;
+        }
+
+        public QueryIntentionPriceResponseBodyDataTmProducesThirdClassificationThirdClassifications setClassificationName(String classificationName) {
+            this.classificationName = classificationName;
+            return this;
+        }
+        public String getClassificationName() {
+            return this.classificationName;
         }
 
     }
@@ -124,60 +154,45 @@ public class QueryIntentionPriceResponseBody extends TeaModel {
 
     }
 
-    public static class QueryIntentionPriceResponseBodyDataTmProducesFirstClassification extends TeaModel {
-        @NameInMap("ClassificationName")
-        public String classificationName;
-
-        @NameInMap("ClassificationCode")
-        public String classificationCode;
-
-        public static QueryIntentionPriceResponseBodyDataTmProducesFirstClassification build(java.util.Map<String, ?> map) throws Exception {
-            QueryIntentionPriceResponseBodyDataTmProducesFirstClassification self = new QueryIntentionPriceResponseBodyDataTmProducesFirstClassification();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryIntentionPriceResponseBodyDataTmProducesFirstClassification setClassificationName(String classificationName) {
-            this.classificationName = classificationName;
-            return this;
-        }
-        public String getClassificationName() {
-            return this.classificationName;
-        }
-
-        public QueryIntentionPriceResponseBodyDataTmProducesFirstClassification setClassificationCode(String classificationCode) {
-            this.classificationCode = classificationCode;
-            return this;
-        }
-        public String getClassificationCode() {
-            return this.classificationCode;
-        }
-
-    }
-
     public static class QueryIntentionPriceResponseBodyDataTmProduces extends TeaModel {
-        @NameInMap("Type")
-        public Integer type;
-
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("OrderPrice")
-        public Float orderPrice;
-
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
-        @NameInMap("MaterialName")
-        public String materialName;
+        @NameInMap("BizId")
+        public String bizId;
 
         @NameInMap("CreateTime")
         public Long createTime;
 
-        @NameInMap("BizId")
-        public String bizId;
+        @NameInMap("FirstClassification")
+        public QueryIntentionPriceResponseBodyDataTmProducesFirstClassification firstClassification;
+
+        @NameInMap("LoaUrl")
+        public String loaUrl;
+
+        @NameInMap("MaterialId")
+        public String materialId;
+
+        @NameInMap("MaterialName")
+        public String materialName;
+
+        @NameInMap("Note")
+        public String note;
+
+        @NameInMap("OrderPrice")
+        public Float orderPrice;
 
         @NameInMap("ServicePrice")
         public Float servicePrice;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("SupplementId")
+        public Long supplementId;
+
+        @NameInMap("SupplementStatus")
+        public Integer supplementStatus;
+
+        @NameInMap("ThirdClassification")
+        public QueryIntentionPriceResponseBodyDataTmProducesThirdClassification thirdClassification;
 
         @NameInMap("TmIcon")
         public String tmIcon;
@@ -185,84 +200,21 @@ public class QueryIntentionPriceResponseBody extends TeaModel {
         @NameInMap("TmName")
         public String tmName;
 
-        @NameInMap("MaterialId")
-        public String materialId;
-
-        @NameInMap("SupplementId")
-        public Long supplementId;
-
-        @NameInMap("LoaUrl")
-        public String loaUrl;
-
         @NameInMap("TmNumber")
         public String tmNumber;
-
-        @NameInMap("Note")
-        public String note;
-
-        @NameInMap("SupplementStatus")
-        public Integer supplementStatus;
 
         @NameInMap("TotalPrice")
         public Float totalPrice;
 
-        @NameInMap("ThirdClassification")
-        public QueryIntentionPriceResponseBodyDataTmProducesThirdClassification thirdClassification;
+        @NameInMap("Type")
+        public Integer type;
 
-        @NameInMap("FirstClassification")
-        public QueryIntentionPriceResponseBodyDataTmProducesFirstClassification firstClassification;
+        @NameInMap("UpdateTime")
+        public Long updateTime;
 
         public static QueryIntentionPriceResponseBodyDataTmProduces build(java.util.Map<String, ?> map) throws Exception {
             QueryIntentionPriceResponseBodyDataTmProduces self = new QueryIntentionPriceResponseBodyDataTmProduces();
             return TeaModel.build(map, self);
-        }
-
-        public QueryIntentionPriceResponseBodyDataTmProduces setType(Integer type) {
-            this.type = type;
-            return this;
-        }
-        public Integer getType() {
-            return this.type;
-        }
-
-        public QueryIntentionPriceResponseBodyDataTmProduces setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public QueryIntentionPriceResponseBodyDataTmProduces setOrderPrice(Float orderPrice) {
-            this.orderPrice = orderPrice;
-            return this;
-        }
-        public Float getOrderPrice() {
-            return this.orderPrice;
-        }
-
-        public QueryIntentionPriceResponseBodyDataTmProduces setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public QueryIntentionPriceResponseBodyDataTmProduces setMaterialName(String materialName) {
-            this.materialName = materialName;
-            return this;
-        }
-        public String getMaterialName() {
-            return this.materialName;
-        }
-
-        public QueryIntentionPriceResponseBodyDataTmProduces setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
         }
 
         public QueryIntentionPriceResponseBodyDataTmProduces setBizId(String bizId) {
@@ -273,12 +225,100 @@ public class QueryIntentionPriceResponseBody extends TeaModel {
             return this.bizId;
         }
 
+        public QueryIntentionPriceResponseBodyDataTmProduces setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public QueryIntentionPriceResponseBodyDataTmProduces setFirstClassification(QueryIntentionPriceResponseBodyDataTmProducesFirstClassification firstClassification) {
+            this.firstClassification = firstClassification;
+            return this;
+        }
+        public QueryIntentionPriceResponseBodyDataTmProducesFirstClassification getFirstClassification() {
+            return this.firstClassification;
+        }
+
+        public QueryIntentionPriceResponseBodyDataTmProduces setLoaUrl(String loaUrl) {
+            this.loaUrl = loaUrl;
+            return this;
+        }
+        public String getLoaUrl() {
+            return this.loaUrl;
+        }
+
+        public QueryIntentionPriceResponseBodyDataTmProduces setMaterialId(String materialId) {
+            this.materialId = materialId;
+            return this;
+        }
+        public String getMaterialId() {
+            return this.materialId;
+        }
+
+        public QueryIntentionPriceResponseBodyDataTmProduces setMaterialName(String materialName) {
+            this.materialName = materialName;
+            return this;
+        }
+        public String getMaterialName() {
+            return this.materialName;
+        }
+
+        public QueryIntentionPriceResponseBodyDataTmProduces setNote(String note) {
+            this.note = note;
+            return this;
+        }
+        public String getNote() {
+            return this.note;
+        }
+
+        public QueryIntentionPriceResponseBodyDataTmProduces setOrderPrice(Float orderPrice) {
+            this.orderPrice = orderPrice;
+            return this;
+        }
+        public Float getOrderPrice() {
+            return this.orderPrice;
+        }
+
         public QueryIntentionPriceResponseBodyDataTmProduces setServicePrice(Float servicePrice) {
             this.servicePrice = servicePrice;
             return this;
         }
         public Float getServicePrice() {
             return this.servicePrice;
+        }
+
+        public QueryIntentionPriceResponseBodyDataTmProduces setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public QueryIntentionPriceResponseBodyDataTmProduces setSupplementId(Long supplementId) {
+            this.supplementId = supplementId;
+            return this;
+        }
+        public Long getSupplementId() {
+            return this.supplementId;
+        }
+
+        public QueryIntentionPriceResponseBodyDataTmProduces setSupplementStatus(Integer supplementStatus) {
+            this.supplementStatus = supplementStatus;
+            return this;
+        }
+        public Integer getSupplementStatus() {
+            return this.supplementStatus;
+        }
+
+        public QueryIntentionPriceResponseBodyDataTmProduces setThirdClassification(QueryIntentionPriceResponseBodyDataTmProducesThirdClassification thirdClassification) {
+            this.thirdClassification = thirdClassification;
+            return this;
+        }
+        public QueryIntentionPriceResponseBodyDataTmProducesThirdClassification getThirdClassification() {
+            return this.thirdClassification;
         }
 
         public QueryIntentionPriceResponseBodyDataTmProduces setTmIcon(String tmIcon) {
@@ -297,52 +337,12 @@ public class QueryIntentionPriceResponseBody extends TeaModel {
             return this.tmName;
         }
 
-        public QueryIntentionPriceResponseBodyDataTmProduces setMaterialId(String materialId) {
-            this.materialId = materialId;
-            return this;
-        }
-        public String getMaterialId() {
-            return this.materialId;
-        }
-
-        public QueryIntentionPriceResponseBodyDataTmProduces setSupplementId(Long supplementId) {
-            this.supplementId = supplementId;
-            return this;
-        }
-        public Long getSupplementId() {
-            return this.supplementId;
-        }
-
-        public QueryIntentionPriceResponseBodyDataTmProduces setLoaUrl(String loaUrl) {
-            this.loaUrl = loaUrl;
-            return this;
-        }
-        public String getLoaUrl() {
-            return this.loaUrl;
-        }
-
         public QueryIntentionPriceResponseBodyDataTmProduces setTmNumber(String tmNumber) {
             this.tmNumber = tmNumber;
             return this;
         }
         public String getTmNumber() {
             return this.tmNumber;
-        }
-
-        public QueryIntentionPriceResponseBodyDataTmProduces setNote(String note) {
-            this.note = note;
-            return this;
-        }
-        public String getNote() {
-            return this.note;
-        }
-
-        public QueryIntentionPriceResponseBodyDataTmProduces setSupplementStatus(Integer supplementStatus) {
-            this.supplementStatus = supplementStatus;
-            return this;
-        }
-        public Integer getSupplementStatus() {
-            return this.supplementStatus;
         }
 
         public QueryIntentionPriceResponseBodyDataTmProduces setTotalPrice(Float totalPrice) {
@@ -353,20 +353,20 @@ public class QueryIntentionPriceResponseBody extends TeaModel {
             return this.totalPrice;
         }
 
-        public QueryIntentionPriceResponseBodyDataTmProduces setThirdClassification(QueryIntentionPriceResponseBodyDataTmProducesThirdClassification thirdClassification) {
-            this.thirdClassification = thirdClassification;
+        public QueryIntentionPriceResponseBodyDataTmProduces setType(Integer type) {
+            this.type = type;
             return this;
         }
-        public QueryIntentionPriceResponseBodyDataTmProducesThirdClassification getThirdClassification() {
-            return this.thirdClassification;
+        public Integer getType() {
+            return this.type;
         }
 
-        public QueryIntentionPriceResponseBodyDataTmProduces setFirstClassification(QueryIntentionPriceResponseBodyDataTmProducesFirstClassification firstClassification) {
-            this.firstClassification = firstClassification;
+        public QueryIntentionPriceResponseBodyDataTmProduces setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public QueryIntentionPriceResponseBodyDataTmProducesFirstClassification getFirstClassification() {
-            return this.firstClassification;
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }

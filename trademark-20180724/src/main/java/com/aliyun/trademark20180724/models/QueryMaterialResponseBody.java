@@ -4,251 +4,162 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class QueryMaterialResponseBody extends TeaModel {
-    @NameInMap("Type")
-    public Integer type;
-
-    @NameInMap("Status")
-    public Integer status;
-
-    @NameInMap("ReviewApplicationFile")
-    public String reviewApplicationFile;
-
-    @NameInMap("ContactDistrict")
-    public String contactDistrict;
+    @NameInMap("Address")
+    public String address;
 
     @NameInMap("BusinessLicenceUrl")
     public String businessLicenceUrl;
 
-    @NameInMap("PassportUrl")
-    public String passportUrl;
-
-    @NameInMap("ContactProvince")
-    public String contactProvince;
-
-    @NameInMap("LegalNoticeUrl")
-    public String legalNoticeUrl;
+    @NameInMap("CardNumber")
+    public String cardNumber;
 
     @NameInMap("City")
     public String city;
 
-    @NameInMap("EAddress")
-    public String EAddress;
-
-    @NameInMap("ContactCounty")
-    public String contactCounty;
-
-    @NameInMap("ContactEmail")
-    public String contactEmail;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ContactAddress")
+    public String contactAddress;
 
     @NameInMap("ContactCity")
     public String contactCity;
 
-    @NameInMap("Region")
-    public Integer region;
+    @NameInMap("ContactCounty")
+    public String contactCounty;
 
-    @NameInMap("LoaUrl")
-    public String loaUrl;
+    @NameInMap("ContactDistrict")
+    public String contactDistrict;
 
-    @NameInMap("Address")
-    public String address;
-
-    @NameInMap("Note")
-    public String note;
-
-    @NameInMap("PrincipalName")
-    public Integer principalName;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("PrincipalDescription")
-    public String principalDescription;
-
-    @NameInMap("ContactNumber")
-    public String contactNumber;
-
-    @NameInMap("ContactAddress")
-    public String contactAddress;
-
-    @NameInMap("ContactZipcode")
-    public String contactZipcode;
+    @NameInMap("ContactEmail")
+    public String contactEmail;
 
     @NameInMap("ContactName")
     public String contactName;
 
-    @NameInMap("EName")
-    public String EName;
+    @NameInMap("ContactNumber")
+    public String contactNumber;
 
-    @NameInMap("ValidDate")
-    public Long validDate;
+    @NameInMap("ContactProvince")
+    public String contactProvince;
 
-    @NameInMap("IdCardUrl")
-    public String idCardUrl;
-
-    @NameInMap("ExpirationDate")
-    public Long expirationDate;
-
-    @NameInMap("CardNumber")
-    public String cardNumber;
+    @NameInMap("ContactZipcode")
+    public String contactZipcode;
 
     @NameInMap("Country")
     public String country;
 
-    @NameInMap("Town")
-    public String town;
+    @NameInMap("EAddress")
+    public String EAddress;
 
-    @NameInMap("LoaStatus")
-    public Integer loaStatus;
+    @NameInMap("EName")
+    public String EName;
 
-    @NameInMap("Reason")
-    public String reason;
+    @NameInMap("EvidenceCatalogPath")
+    public String evidenceCatalogPath;
+
+    @NameInMap("EvidenceOfservicePath")
+    public String evidenceOfservicePath;
+
+    @NameInMap("EvidencePath")
+    public String evidencePath;
+
+    @NameInMap("ExpirationDate")
+    public Long expirationDate;
+
+    @NameInMap("FactandreasonPdfPath")
+    public String factandreasonPdfPath;
+
+    @NameInMap("FgsqPath")
+    public String fgsqPath;
+
+    @NameInMap("FileBgPath")
+    public String fileBgPath;
+
+    @NameInMap("FileFsSqPath")
+    public String fileFsSqPath;
+
+    @NameInMap("FileGtPath")
+    public String fileGtPath;
+
+    @NameInMap("FileYgPath")
+    public String fileYgPath;
 
     @NameInMap("Id")
     public Long id;
 
-    @NameInMap("Province")
-    public String province;
+    @NameInMap("IdCardName")
+    public String idCardName;
+
+    @NameInMap("IdCardNumber")
+    public String idCardNumber;
+
+    @NameInMap("IdCardUrl")
+    public String idCardUrl;
 
     @NameInMap("LegalNoticeKey")
     public String legalNoticeKey;
 
+    @NameInMap("LegalNoticeUrl")
+    public String legalNoticeUrl;
+
+    @NameInMap("LoaStatus")
+    public Integer loaStatus;
+
+    @NameInMap("LoaUrl")
+    public String loaUrl;
+
+    @NameInMap("MaterialVersion")
+    public String materialVersion;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("Note")
+    public String note;
+
+    @NameInMap("PassportUrl")
+    public String passportUrl;
+
+    @NameInMap("PersonalType")
+    public Long personalType;
+
+    @NameInMap("PrincipalDescription")
+    public String principalDescription;
+
+    @NameInMap("PrincipalName")
+    public Integer principalName;
+
+    @NameInMap("Province")
+    public String province;
+
+    @NameInMap("Reason")
+    public String reason;
+
+    @NameInMap("Region")
+    public Integer region;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("ReviewAdditionalFiles")
     public QueryMaterialResponseBodyReviewAdditionalFiles reviewAdditionalFiles;
+
+    @NameInMap("ReviewApplicationFile")
+    public String reviewApplicationFile;
+
+    @NameInMap("Status")
+    public Integer status;
+
+    @NameInMap("Town")
+    public String town;
+
+    @NameInMap("Type")
+    public Integer type;
+
+    @NameInMap("ValidDate")
+    public Long validDate;
 
     public static QueryMaterialResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMaterialResponseBody self = new QueryMaterialResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryMaterialResponseBody setType(Integer type) {
-        this.type = type;
-        return this;
-    }
-    public Integer getType() {
-        return this.type;
-    }
-
-    public QueryMaterialResponseBody setStatus(Integer status) {
-        this.status = status;
-        return this;
-    }
-    public Integer getStatus() {
-        return this.status;
-    }
-
-    public QueryMaterialResponseBody setReviewApplicationFile(String reviewApplicationFile) {
-        this.reviewApplicationFile = reviewApplicationFile;
-        return this;
-    }
-    public String getReviewApplicationFile() {
-        return this.reviewApplicationFile;
-    }
-
-    public QueryMaterialResponseBody setContactDistrict(String contactDistrict) {
-        this.contactDistrict = contactDistrict;
-        return this;
-    }
-    public String getContactDistrict() {
-        return this.contactDistrict;
-    }
-
-    public QueryMaterialResponseBody setBusinessLicenceUrl(String businessLicenceUrl) {
-        this.businessLicenceUrl = businessLicenceUrl;
-        return this;
-    }
-    public String getBusinessLicenceUrl() {
-        return this.businessLicenceUrl;
-    }
-
-    public QueryMaterialResponseBody setPassportUrl(String passportUrl) {
-        this.passportUrl = passportUrl;
-        return this;
-    }
-    public String getPassportUrl() {
-        return this.passportUrl;
-    }
-
-    public QueryMaterialResponseBody setContactProvince(String contactProvince) {
-        this.contactProvince = contactProvince;
-        return this;
-    }
-    public String getContactProvince() {
-        return this.contactProvince;
-    }
-
-    public QueryMaterialResponseBody setLegalNoticeUrl(String legalNoticeUrl) {
-        this.legalNoticeUrl = legalNoticeUrl;
-        return this;
-    }
-    public String getLegalNoticeUrl() {
-        return this.legalNoticeUrl;
-    }
-
-    public QueryMaterialResponseBody setCity(String city) {
-        this.city = city;
-        return this;
-    }
-    public String getCity() {
-        return this.city;
-    }
-
-    public QueryMaterialResponseBody setEAddress(String EAddress) {
-        this.EAddress = EAddress;
-        return this;
-    }
-    public String getEAddress() {
-        return this.EAddress;
-    }
-
-    public QueryMaterialResponseBody setContactCounty(String contactCounty) {
-        this.contactCounty = contactCounty;
-        return this;
-    }
-    public String getContactCounty() {
-        return this.contactCounty;
-    }
-
-    public QueryMaterialResponseBody setContactEmail(String contactEmail) {
-        this.contactEmail = contactEmail;
-        return this;
-    }
-    public String getContactEmail() {
-        return this.contactEmail;
-    }
-
-    public QueryMaterialResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryMaterialResponseBody setContactCity(String contactCity) {
-        this.contactCity = contactCity;
-        return this;
-    }
-    public String getContactCity() {
-        return this.contactCity;
-    }
-
-    public QueryMaterialResponseBody setRegion(Integer region) {
-        this.region = region;
-        return this;
-    }
-    public Integer getRegion() {
-        return this.region;
-    }
-
-    public QueryMaterialResponseBody setLoaUrl(String loaUrl) {
-        this.loaUrl = loaUrl;
-        return this;
-    }
-    public String getLoaUrl() {
-        return this.loaUrl;
     }
 
     public QueryMaterialResponseBody setAddress(String address) {
@@ -259,100 +170,12 @@ public class QueryMaterialResponseBody extends TeaModel {
         return this.address;
     }
 
-    public QueryMaterialResponseBody setNote(String note) {
-        this.note = note;
+    public QueryMaterialResponseBody setBusinessLicenceUrl(String businessLicenceUrl) {
+        this.businessLicenceUrl = businessLicenceUrl;
         return this;
     }
-    public String getNote() {
-        return this.note;
-    }
-
-    public QueryMaterialResponseBody setPrincipalName(Integer principalName) {
-        this.principalName = principalName;
-        return this;
-    }
-    public Integer getPrincipalName() {
-        return this.principalName;
-    }
-
-    public QueryMaterialResponseBody setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public QueryMaterialResponseBody setPrincipalDescription(String principalDescription) {
-        this.principalDescription = principalDescription;
-        return this;
-    }
-    public String getPrincipalDescription() {
-        return this.principalDescription;
-    }
-
-    public QueryMaterialResponseBody setContactNumber(String contactNumber) {
-        this.contactNumber = contactNumber;
-        return this;
-    }
-    public String getContactNumber() {
-        return this.contactNumber;
-    }
-
-    public QueryMaterialResponseBody setContactAddress(String contactAddress) {
-        this.contactAddress = contactAddress;
-        return this;
-    }
-    public String getContactAddress() {
-        return this.contactAddress;
-    }
-
-    public QueryMaterialResponseBody setContactZipcode(String contactZipcode) {
-        this.contactZipcode = contactZipcode;
-        return this;
-    }
-    public String getContactZipcode() {
-        return this.contactZipcode;
-    }
-
-    public QueryMaterialResponseBody setContactName(String contactName) {
-        this.contactName = contactName;
-        return this;
-    }
-    public String getContactName() {
-        return this.contactName;
-    }
-
-    public QueryMaterialResponseBody setEName(String EName) {
-        this.EName = EName;
-        return this;
-    }
-    public String getEName() {
-        return this.EName;
-    }
-
-    public QueryMaterialResponseBody setValidDate(Long validDate) {
-        this.validDate = validDate;
-        return this;
-    }
-    public Long getValidDate() {
-        return this.validDate;
-    }
-
-    public QueryMaterialResponseBody setIdCardUrl(String idCardUrl) {
-        this.idCardUrl = idCardUrl;
-        return this;
-    }
-    public String getIdCardUrl() {
-        return this.idCardUrl;
-    }
-
-    public QueryMaterialResponseBody setExpirationDate(Long expirationDate) {
-        this.expirationDate = expirationDate;
-        return this;
-    }
-    public Long getExpirationDate() {
-        return this.expirationDate;
+    public String getBusinessLicenceUrl() {
+        return this.businessLicenceUrl;
     }
 
     public QueryMaterialResponseBody setCardNumber(String cardNumber) {
@@ -363,6 +186,86 @@ public class QueryMaterialResponseBody extends TeaModel {
         return this.cardNumber;
     }
 
+    public QueryMaterialResponseBody setCity(String city) {
+        this.city = city;
+        return this;
+    }
+    public String getCity() {
+        return this.city;
+    }
+
+    public QueryMaterialResponseBody setContactAddress(String contactAddress) {
+        this.contactAddress = contactAddress;
+        return this;
+    }
+    public String getContactAddress() {
+        return this.contactAddress;
+    }
+
+    public QueryMaterialResponseBody setContactCity(String contactCity) {
+        this.contactCity = contactCity;
+        return this;
+    }
+    public String getContactCity() {
+        return this.contactCity;
+    }
+
+    public QueryMaterialResponseBody setContactCounty(String contactCounty) {
+        this.contactCounty = contactCounty;
+        return this;
+    }
+    public String getContactCounty() {
+        return this.contactCounty;
+    }
+
+    public QueryMaterialResponseBody setContactDistrict(String contactDistrict) {
+        this.contactDistrict = contactDistrict;
+        return this;
+    }
+    public String getContactDistrict() {
+        return this.contactDistrict;
+    }
+
+    public QueryMaterialResponseBody setContactEmail(String contactEmail) {
+        this.contactEmail = contactEmail;
+        return this;
+    }
+    public String getContactEmail() {
+        return this.contactEmail;
+    }
+
+    public QueryMaterialResponseBody setContactName(String contactName) {
+        this.contactName = contactName;
+        return this;
+    }
+    public String getContactName() {
+        return this.contactName;
+    }
+
+    public QueryMaterialResponseBody setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
+        return this;
+    }
+    public String getContactNumber() {
+        return this.contactNumber;
+    }
+
+    public QueryMaterialResponseBody setContactProvince(String contactProvince) {
+        this.contactProvince = contactProvince;
+        return this;
+    }
+    public String getContactProvince() {
+        return this.contactProvince;
+    }
+
+    public QueryMaterialResponseBody setContactZipcode(String contactZipcode) {
+        this.contactZipcode = contactZipcode;
+        return this;
+    }
+    public String getContactZipcode() {
+        return this.contactZipcode;
+    }
+
     public QueryMaterialResponseBody setCountry(String country) {
         this.country = country;
         return this;
@@ -371,28 +274,100 @@ public class QueryMaterialResponseBody extends TeaModel {
         return this.country;
     }
 
-    public QueryMaterialResponseBody setTown(String town) {
-        this.town = town;
+    public QueryMaterialResponseBody setEAddress(String EAddress) {
+        this.EAddress = EAddress;
         return this;
     }
-    public String getTown() {
-        return this.town;
+    public String getEAddress() {
+        return this.EAddress;
     }
 
-    public QueryMaterialResponseBody setLoaStatus(Integer loaStatus) {
-        this.loaStatus = loaStatus;
+    public QueryMaterialResponseBody setEName(String EName) {
+        this.EName = EName;
         return this;
     }
-    public Integer getLoaStatus() {
-        return this.loaStatus;
+    public String getEName() {
+        return this.EName;
     }
 
-    public QueryMaterialResponseBody setReason(String reason) {
-        this.reason = reason;
+    public QueryMaterialResponseBody setEvidenceCatalogPath(String evidenceCatalogPath) {
+        this.evidenceCatalogPath = evidenceCatalogPath;
         return this;
     }
-    public String getReason() {
-        return this.reason;
+    public String getEvidenceCatalogPath() {
+        return this.evidenceCatalogPath;
+    }
+
+    public QueryMaterialResponseBody setEvidenceOfservicePath(String evidenceOfservicePath) {
+        this.evidenceOfservicePath = evidenceOfservicePath;
+        return this;
+    }
+    public String getEvidenceOfservicePath() {
+        return this.evidenceOfservicePath;
+    }
+
+    public QueryMaterialResponseBody setEvidencePath(String evidencePath) {
+        this.evidencePath = evidencePath;
+        return this;
+    }
+    public String getEvidencePath() {
+        return this.evidencePath;
+    }
+
+    public QueryMaterialResponseBody setExpirationDate(Long expirationDate) {
+        this.expirationDate = expirationDate;
+        return this;
+    }
+    public Long getExpirationDate() {
+        return this.expirationDate;
+    }
+
+    public QueryMaterialResponseBody setFactandreasonPdfPath(String factandreasonPdfPath) {
+        this.factandreasonPdfPath = factandreasonPdfPath;
+        return this;
+    }
+    public String getFactandreasonPdfPath() {
+        return this.factandreasonPdfPath;
+    }
+
+    public QueryMaterialResponseBody setFgsqPath(String fgsqPath) {
+        this.fgsqPath = fgsqPath;
+        return this;
+    }
+    public String getFgsqPath() {
+        return this.fgsqPath;
+    }
+
+    public QueryMaterialResponseBody setFileBgPath(String fileBgPath) {
+        this.fileBgPath = fileBgPath;
+        return this;
+    }
+    public String getFileBgPath() {
+        return this.fileBgPath;
+    }
+
+    public QueryMaterialResponseBody setFileFsSqPath(String fileFsSqPath) {
+        this.fileFsSqPath = fileFsSqPath;
+        return this;
+    }
+    public String getFileFsSqPath() {
+        return this.fileFsSqPath;
+    }
+
+    public QueryMaterialResponseBody setFileGtPath(String fileGtPath) {
+        this.fileGtPath = fileGtPath;
+        return this;
+    }
+    public String getFileGtPath() {
+        return this.fileGtPath;
+    }
+
+    public QueryMaterialResponseBody setFileYgPath(String fileYgPath) {
+        this.fileYgPath = fileYgPath;
+        return this;
+    }
+    public String getFileYgPath() {
+        return this.fileYgPath;
     }
 
     public QueryMaterialResponseBody setId(Long id) {
@@ -403,12 +378,28 @@ public class QueryMaterialResponseBody extends TeaModel {
         return this.id;
     }
 
-    public QueryMaterialResponseBody setProvince(String province) {
-        this.province = province;
+    public QueryMaterialResponseBody setIdCardName(String idCardName) {
+        this.idCardName = idCardName;
         return this;
     }
-    public String getProvince() {
-        return this.province;
+    public String getIdCardName() {
+        return this.idCardName;
+    }
+
+    public QueryMaterialResponseBody setIdCardNumber(String idCardNumber) {
+        this.idCardNumber = idCardNumber;
+        return this;
+    }
+    public String getIdCardNumber() {
+        return this.idCardNumber;
+    }
+
+    public QueryMaterialResponseBody setIdCardUrl(String idCardUrl) {
+        this.idCardUrl = idCardUrl;
+        return this;
+    }
+    public String getIdCardUrl() {
+        return this.idCardUrl;
     }
 
     public QueryMaterialResponseBody setLegalNoticeKey(String legalNoticeKey) {
@@ -419,12 +410,164 @@ public class QueryMaterialResponseBody extends TeaModel {
         return this.legalNoticeKey;
     }
 
+    public QueryMaterialResponseBody setLegalNoticeUrl(String legalNoticeUrl) {
+        this.legalNoticeUrl = legalNoticeUrl;
+        return this;
+    }
+    public String getLegalNoticeUrl() {
+        return this.legalNoticeUrl;
+    }
+
+    public QueryMaterialResponseBody setLoaStatus(Integer loaStatus) {
+        this.loaStatus = loaStatus;
+        return this;
+    }
+    public Integer getLoaStatus() {
+        return this.loaStatus;
+    }
+
+    public QueryMaterialResponseBody setLoaUrl(String loaUrl) {
+        this.loaUrl = loaUrl;
+        return this;
+    }
+    public String getLoaUrl() {
+        return this.loaUrl;
+    }
+
+    public QueryMaterialResponseBody setMaterialVersion(String materialVersion) {
+        this.materialVersion = materialVersion;
+        return this;
+    }
+    public String getMaterialVersion() {
+        return this.materialVersion;
+    }
+
+    public QueryMaterialResponseBody setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public QueryMaterialResponseBody setNote(String note) {
+        this.note = note;
+        return this;
+    }
+    public String getNote() {
+        return this.note;
+    }
+
+    public QueryMaterialResponseBody setPassportUrl(String passportUrl) {
+        this.passportUrl = passportUrl;
+        return this;
+    }
+    public String getPassportUrl() {
+        return this.passportUrl;
+    }
+
+    public QueryMaterialResponseBody setPersonalType(Long personalType) {
+        this.personalType = personalType;
+        return this;
+    }
+    public Long getPersonalType() {
+        return this.personalType;
+    }
+
+    public QueryMaterialResponseBody setPrincipalDescription(String principalDescription) {
+        this.principalDescription = principalDescription;
+        return this;
+    }
+    public String getPrincipalDescription() {
+        return this.principalDescription;
+    }
+
+    public QueryMaterialResponseBody setPrincipalName(Integer principalName) {
+        this.principalName = principalName;
+        return this;
+    }
+    public Integer getPrincipalName() {
+        return this.principalName;
+    }
+
+    public QueryMaterialResponseBody setProvince(String province) {
+        this.province = province;
+        return this;
+    }
+    public String getProvince() {
+        return this.province;
+    }
+
+    public QueryMaterialResponseBody setReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    public String getReason() {
+        return this.reason;
+    }
+
+    public QueryMaterialResponseBody setRegion(Integer region) {
+        this.region = region;
+        return this;
+    }
+    public Integer getRegion() {
+        return this.region;
+    }
+
+    public QueryMaterialResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryMaterialResponseBody setReviewAdditionalFiles(QueryMaterialResponseBodyReviewAdditionalFiles reviewAdditionalFiles) {
         this.reviewAdditionalFiles = reviewAdditionalFiles;
         return this;
     }
     public QueryMaterialResponseBodyReviewAdditionalFiles getReviewAdditionalFiles() {
         return this.reviewAdditionalFiles;
+    }
+
+    public QueryMaterialResponseBody setReviewApplicationFile(String reviewApplicationFile) {
+        this.reviewApplicationFile = reviewApplicationFile;
+        return this;
+    }
+    public String getReviewApplicationFile() {
+        return this.reviewApplicationFile;
+    }
+
+    public QueryMaterialResponseBody setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
+    }
+
+    public QueryMaterialResponseBody setTown(String town) {
+        this.town = town;
+        return this;
+    }
+    public String getTown() {
+        return this.town;
+    }
+
+    public QueryMaterialResponseBody setType(Integer type) {
+        this.type = type;
+        return this;
+    }
+    public Integer getType() {
+        return this.type;
+    }
+
+    public QueryMaterialResponseBody setValidDate(Long validDate) {
+        this.validDate = validDate;
+        return this;
+    }
+    public Long getValidDate() {
+        return this.validDate;
     }
 
     public static class QueryMaterialResponseBodyReviewAdditionalFiles extends TeaModel {

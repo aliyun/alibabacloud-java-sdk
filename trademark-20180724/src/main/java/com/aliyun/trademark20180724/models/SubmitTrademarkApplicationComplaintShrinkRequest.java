@@ -7,11 +7,11 @@ public class SubmitTrademarkApplicationComplaintShrinkRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
-    @NameInMap("Files")
-    public String filesShrink;
-
     @NameInMap("Content")
     public String content;
+
+    @NameInMap("Files")
+    public String filesShrink;
 
     public static SubmitTrademarkApplicationComplaintShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitTrademarkApplicationComplaintShrinkRequest self = new SubmitTrademarkApplicationComplaintShrinkRequest();
@@ -26,20 +26,20 @@ public class SubmitTrademarkApplicationComplaintShrinkRequest extends TeaModel {
         return this.bizId;
     }
 
-    public SubmitTrademarkApplicationComplaintShrinkRequest setFilesShrink(String filesShrink) {
-        this.filesShrink = filesShrink;
-        return this;
-    }
-    public String getFilesShrink() {
-        return this.filesShrink;
-    }
-
     public SubmitTrademarkApplicationComplaintShrinkRequest setContent(String content) {
         this.content = content;
         return this;
     }
     public String getContent() {
         return this.content;
+    }
+
+    public SubmitTrademarkApplicationComplaintShrinkRequest setFilesShrink(String filesShrink) {
+        this.filesShrink = filesShrink;
+        return this;
+    }
+    public String getFilesShrink() {
+        return this.filesShrink;
     }
 
 }

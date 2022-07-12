@@ -4,23 +4,15 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class QueryCredentialsInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CredentialsInfo")
     public QueryCredentialsInfoResponseBodyCredentialsInfo credentialsInfo;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryCredentialsInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryCredentialsInfoResponseBody self = new QueryCredentialsInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryCredentialsInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryCredentialsInfoResponseBody setCredentialsInfo(QueryCredentialsInfoResponseBodyCredentialsInfo credentialsInfo) {
@@ -31,12 +23,23 @@ public class QueryCredentialsInfoResponseBody extends TeaModel {
         return this.credentialsInfo;
     }
 
+    public QueryCredentialsInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class QueryCredentialsInfoResponseBodyCredentialsInfo extends TeaModel {
+        @NameInMap("Address")
+        public String address;
+
         @NameInMap("CardNumber")
         public String cardNumber;
 
-        @NameInMap("Address")
-        public String address;
+        @NameInMap("CompanyName")
+        public String companyName;
 
         @NameInMap("PersonName")
         public String personName;
@@ -44,12 +47,17 @@ public class QueryCredentialsInfoResponseBody extends TeaModel {
         @NameInMap("Province")
         public String province;
 
-        @NameInMap("CompanyName")
-        public String companyName;
-
         public static QueryCredentialsInfoResponseBodyCredentialsInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryCredentialsInfoResponseBodyCredentialsInfo self = new QueryCredentialsInfoResponseBodyCredentialsInfo();
             return TeaModel.build(map, self);
+        }
+
+        public QueryCredentialsInfoResponseBodyCredentialsInfo setAddress(String address) {
+            this.address = address;
+            return this;
+        }
+        public String getAddress() {
+            return this.address;
         }
 
         public QueryCredentialsInfoResponseBodyCredentialsInfo setCardNumber(String cardNumber) {
@@ -60,12 +68,12 @@ public class QueryCredentialsInfoResponseBody extends TeaModel {
             return this.cardNumber;
         }
 
-        public QueryCredentialsInfoResponseBodyCredentialsInfo setAddress(String address) {
-            this.address = address;
+        public QueryCredentialsInfoResponseBodyCredentialsInfo setCompanyName(String companyName) {
+            this.companyName = companyName;
             return this;
         }
-        public String getAddress() {
-            return this.address;
+        public String getCompanyName() {
+            return this.companyName;
         }
 
         public QueryCredentialsInfoResponseBodyCredentialsInfo setPersonName(String personName) {
@@ -82,14 +90,6 @@ public class QueryCredentialsInfoResponseBody extends TeaModel {
         }
         public String getProvince() {
             return this.province;
-        }
-
-        public QueryCredentialsInfoResponseBodyCredentialsInfo setCompanyName(String companyName) {
-            this.companyName = companyName;
-            return this;
-        }
-        public String getCompanyName() {
-            return this.companyName;
         }
 
     }

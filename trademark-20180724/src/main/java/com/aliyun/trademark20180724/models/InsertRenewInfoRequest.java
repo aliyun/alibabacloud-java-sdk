@@ -4,17 +4,17 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class InsertRenewInfoRequest extends TeaModel {
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("EngName")
-    public String engName;
-
     @NameInMap("Address")
     public String address;
 
     @NameInMap("EngAddress")
     public String engAddress;
+
+    @NameInMap("EngName")
+    public String engName;
+
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("RegisterTime")
     public Long registerTime;
@@ -22,22 +22,6 @@ public class InsertRenewInfoRequest extends TeaModel {
     public static InsertRenewInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         InsertRenewInfoRequest self = new InsertRenewInfoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public InsertRenewInfoRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public InsertRenewInfoRequest setEngName(String engName) {
-        this.engName = engName;
-        return this;
-    }
-    public String getEngName() {
-        return this.engName;
     }
 
     public InsertRenewInfoRequest setAddress(String address) {
@@ -54,6 +38,22 @@ public class InsertRenewInfoRequest extends TeaModel {
     }
     public String getEngAddress() {
         return this.engAddress;
+    }
+
+    public InsertRenewInfoRequest setEngName(String engName) {
+        this.engName = engName;
+        return this;
+    }
+    public String getEngName() {
+        return this.engName;
+    }
+
+    public InsertRenewInfoRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public InsertRenewInfoRequest setRegisterTime(Long registerTime) {

@@ -7,14 +7,14 @@ public class CreateTrademarkOrderResponseBody extends TeaModel {
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    @NameInMap("OrderId")
+    public Long orderId;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("OrderId")
-    public Long orderId;
 
     public static CreateTrademarkOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateTrademarkOrderResponseBody self = new CreateTrademarkOrderResponseBody();
@@ -27,6 +27,14 @@ public class CreateTrademarkOrderResponseBody extends TeaModel {
     }
     public String getErrorMsg() {
         return this.errorMsg;
+    }
+
+    public CreateTrademarkOrderResponseBody setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public CreateTrademarkOrderResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class CreateTrademarkOrderResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateTrademarkOrderResponseBody setOrderId(Long orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public Long getOrderId() {
-        return this.orderId;
     }
 
 }

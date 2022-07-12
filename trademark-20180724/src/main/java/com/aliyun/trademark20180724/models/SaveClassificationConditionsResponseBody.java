@@ -7,17 +7,17 @@ public class SaveClassificationConditionsResponseBody extends TeaModel {
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    @NameInMap("InvalidList")
+    public java.util.List<SaveClassificationConditionsResponseBodyInvalidList> invalidList;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("TagName")
-    public String tagName;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("InvalidList")
-    public java.util.List<SaveClassificationConditionsResponseBodyInvalidList> invalidList;
+    @NameInMap("TagName")
+    public String tagName;
 
     public static SaveClassificationConditionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SaveClassificationConditionsResponseBody self = new SaveClassificationConditionsResponseBody();
@@ -32,20 +32,20 @@ public class SaveClassificationConditionsResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
+    public SaveClassificationConditionsResponseBody setInvalidList(java.util.List<SaveClassificationConditionsResponseBodyInvalidList> invalidList) {
+        this.invalidList = invalidList;
+        return this;
+    }
+    public java.util.List<SaveClassificationConditionsResponseBodyInvalidList> getInvalidList() {
+        return this.invalidList;
+    }
+
     public SaveClassificationConditionsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public SaveClassificationConditionsResponseBody setTagName(String tagName) {
-        this.tagName = tagName;
-        return this;
-    }
-    public String getTagName() {
-        return this.tagName;
     }
 
     public SaveClassificationConditionsResponseBody setSuccess(Boolean success) {
@@ -56,46 +56,38 @@ public class SaveClassificationConditionsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public SaveClassificationConditionsResponseBody setInvalidList(java.util.List<SaveClassificationConditionsResponseBodyInvalidList> invalidList) {
-        this.invalidList = invalidList;
+    public SaveClassificationConditionsResponseBody setTagName(String tagName) {
+        this.tagName = tagName;
         return this;
     }
-    public java.util.List<SaveClassificationConditionsResponseBodyInvalidList> getInvalidList() {
-        return this.invalidList;
+    public String getTagName() {
+        return this.tagName;
     }
 
     public static class SaveClassificationConditionsResponseBodyInvalidList extends TeaModel {
-        @NameInMap("ParentCode")
-        public String parentCode;
-
-        @NameInMap("OfficialCode")
-        public String officialCode;
+        @NameInMap("ClassificationCode")
+        public String classificationCode;
 
         @NameInMap("ClassificationName")
         public String classificationName;
 
-        @NameInMap("ClassificationCode")
-        public String classificationCode;
+        @NameInMap("OfficialCode")
+        public String officialCode;
+
+        @NameInMap("ParentCode")
+        public String parentCode;
 
         public static SaveClassificationConditionsResponseBodyInvalidList build(java.util.Map<String, ?> map) throws Exception {
             SaveClassificationConditionsResponseBodyInvalidList self = new SaveClassificationConditionsResponseBodyInvalidList();
             return TeaModel.build(map, self);
         }
 
-        public SaveClassificationConditionsResponseBodyInvalidList setParentCode(String parentCode) {
-            this.parentCode = parentCode;
+        public SaveClassificationConditionsResponseBodyInvalidList setClassificationCode(String classificationCode) {
+            this.classificationCode = classificationCode;
             return this;
         }
-        public String getParentCode() {
-            return this.parentCode;
-        }
-
-        public SaveClassificationConditionsResponseBodyInvalidList setOfficialCode(String officialCode) {
-            this.officialCode = officialCode;
-            return this;
-        }
-        public String getOfficialCode() {
-            return this.officialCode;
+        public String getClassificationCode() {
+            return this.classificationCode;
         }
 
         public SaveClassificationConditionsResponseBodyInvalidList setClassificationName(String classificationName) {
@@ -106,12 +98,20 @@ public class SaveClassificationConditionsResponseBody extends TeaModel {
             return this.classificationName;
         }
 
-        public SaveClassificationConditionsResponseBodyInvalidList setClassificationCode(String classificationCode) {
-            this.classificationCode = classificationCode;
+        public SaveClassificationConditionsResponseBodyInvalidList setOfficialCode(String officialCode) {
+            this.officialCode = officialCode;
             return this;
         }
-        public String getClassificationCode() {
-            return this.classificationCode;
+        public String getOfficialCode() {
+            return this.officialCode;
+        }
+
+        public SaveClassificationConditionsResponseBodyInvalidList setParentCode(String parentCode) {
+            this.parentCode = parentCode;
+            return this;
+        }
+        public String getParentCode() {
+            return this.parentCode;
         }
 
     }

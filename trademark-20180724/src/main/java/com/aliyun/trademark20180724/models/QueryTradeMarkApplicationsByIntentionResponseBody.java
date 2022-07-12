@@ -7,20 +7,20 @@ public class QueryTradeMarkApplicationsByIntentionResponseBody extends TeaModel 
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
-    @NameInMap("TotalPageNum")
-    public Integer totalPageNum;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Data")
+    public QueryTradeMarkApplicationsByIntentionResponseBodyData data;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
-    @NameInMap("Data")
-    public QueryTradeMarkApplicationsByIntentionResponseBodyData data;
+    @NameInMap("TotalPageNum")
+    public Integer totalPageNum;
 
     public static QueryTradeMarkApplicationsByIntentionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTradeMarkApplicationsByIntentionResponseBody self = new QueryTradeMarkApplicationsByIntentionResponseBody();
@@ -35,20 +35,12 @@ public class QueryTradeMarkApplicationsByIntentionResponseBody extends TeaModel 
         return this.currentPageNum;
     }
 
-    public QueryTradeMarkApplicationsByIntentionResponseBody setTotalPageNum(Integer totalPageNum) {
-        this.totalPageNum = totalPageNum;
+    public QueryTradeMarkApplicationsByIntentionResponseBody setData(QueryTradeMarkApplicationsByIntentionResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getTotalPageNum() {
-        return this.totalPageNum;
-    }
-
-    public QueryTradeMarkApplicationsByIntentionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public QueryTradeMarkApplicationsByIntentionResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryTradeMarkApplicationsByIntentionResponseBody setPageSize(Integer pageSize) {
@@ -59,6 +51,14 @@ public class QueryTradeMarkApplicationsByIntentionResponseBody extends TeaModel 
         return this.pageSize;
     }
 
+    public QueryTradeMarkApplicationsByIntentionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryTradeMarkApplicationsByIntentionResponseBody setTotalItemNum(Integer totalItemNum) {
         this.totalItemNum = totalItemNum;
         return this;
@@ -67,32 +67,54 @@ public class QueryTradeMarkApplicationsByIntentionResponseBody extends TeaModel 
         return this.totalItemNum;
     }
 
-    public QueryTradeMarkApplicationsByIntentionResponseBody setData(QueryTradeMarkApplicationsByIntentionResponseBodyData data) {
-        this.data = data;
+    public QueryTradeMarkApplicationsByIntentionResponseBody setTotalPageNum(Integer totalPageNum) {
+        this.totalPageNum = totalPageNum;
         return this;
     }
-    public QueryTradeMarkApplicationsByIntentionResponseBodyData getData() {
-        return this.data;
+    public Integer getTotalPageNum() {
+        return this.totalPageNum;
     }
 
-    public static class QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassificationThirdClassifications extends TeaModel {
-        @NameInMap("ClassificationName")
-        public String classificationName;
-
+    public static class QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification extends TeaModel {
         @NameInMap("ClassificationCode")
         public String classificationCode;
 
-        public static QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassificationThirdClassifications build(java.util.Map<String, ?> map) throws Exception {
-            QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassificationThirdClassifications self = new QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassificationThirdClassifications();
+        @NameInMap("ClassificationName")
+        public String classificationName;
+
+        public static QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification build(java.util.Map<String, ?> map) throws Exception {
+            QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification self = new QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification();
             return TeaModel.build(map, self);
         }
 
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassificationThirdClassifications setClassificationName(String classificationName) {
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification setClassificationCode(String classificationCode) {
+            this.classificationCode = classificationCode;
+            return this;
+        }
+        public String getClassificationCode() {
+            return this.classificationCode;
+        }
+
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification setClassificationName(String classificationName) {
             this.classificationName = classificationName;
             return this;
         }
         public String getClassificationName() {
             return this.classificationName;
+        }
+
+    }
+
+    public static class QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassificationThirdClassifications extends TeaModel {
+        @NameInMap("ClassificationCode")
+        public String classificationCode;
+
+        @NameInMap("ClassificationName")
+        public String classificationName;
+
+        public static QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassificationThirdClassifications build(java.util.Map<String, ?> map) throws Exception {
+            QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassificationThirdClassifications self = new QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassificationThirdClassifications();
+            return TeaModel.build(map, self);
         }
 
         public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassificationThirdClassifications setClassificationCode(String classificationCode) {
@@ -101,6 +123,14 @@ public class QueryTradeMarkApplicationsByIntentionResponseBody extends TeaModel 
         }
         public String getClassificationCode() {
             return this.classificationCode;
+        }
+
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassificationThirdClassifications setClassificationName(String classificationName) {
+            this.classificationName = classificationName;
+            return this;
+        }
+        public String getClassificationName() {
+            return this.classificationName;
         }
 
     }
@@ -124,66 +154,51 @@ public class QueryTradeMarkApplicationsByIntentionResponseBody extends TeaModel 
 
     }
 
-    public static class QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification extends TeaModel {
-        @NameInMap("ClassificationName")
-        public String classificationName;
-
-        @NameInMap("ClassificationCode")
-        public String classificationCode;
-
-        public static QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification build(java.util.Map<String, ?> map) throws Exception {
-            QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification self = new QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification setClassificationName(String classificationName) {
-            this.classificationName = classificationName;
-            return this;
-        }
-        public String getClassificationName() {
-            return this.classificationName;
-        }
-
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification setClassificationCode(String classificationCode) {
-            this.classificationCode = classificationCode;
-            return this;
-        }
-        public String getClassificationCode() {
-            return this.classificationCode;
-        }
-
-    }
-
     public static class QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces extends TeaModel {
-        @NameInMap("PrincipalDescription")
-        public String principalDescription;
-
-        @NameInMap("Type")
-        public Integer type;
-
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("OrderPrice")
-        public Float orderPrice;
-
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
-        @NameInMap("MaterialName")
-        public String materialName;
-
-        @NameInMap("PrincipalValue")
-        public Integer principalValue;
+        @NameInMap("BizId")
+        public String bizId;
 
         @NameInMap("CreateTime")
         public Long createTime;
 
-        @NameInMap("BizId")
-        public String bizId;
+        @NameInMap("FirstClassification")
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification firstClassification;
+
+        @NameInMap("LoaUrl")
+        public String loaUrl;
+
+        @NameInMap("MaterialId")
+        public String materialId;
+
+        @NameInMap("MaterialName")
+        public String materialName;
+
+        @NameInMap("Note")
+        public String note;
+
+        @NameInMap("OrderPrice")
+        public Float orderPrice;
+
+        @NameInMap("PrincipalDescription")
+        public String principalDescription;
+
+        @NameInMap("PrincipalValue")
+        public Integer principalValue;
 
         @NameInMap("ServicePrice")
         public Float servicePrice;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("SupplementId")
+        public Long supplementId;
+
+        @NameInMap("SupplementStatus")
+        public Integer supplementStatus;
+
+        @NameInMap("ThirdClassification")
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassification thirdClassification;
 
         @NameInMap("TmIcon")
         public String tmIcon;
@@ -191,100 +206,21 @@ public class QueryTradeMarkApplicationsByIntentionResponseBody extends TeaModel 
         @NameInMap("TmName")
         public String tmName;
 
-        @NameInMap("MaterialId")
-        public String materialId;
-
-        @NameInMap("SupplementId")
-        public Long supplementId;
-
-        @NameInMap("LoaUrl")
-        public String loaUrl;
-
         @NameInMap("TmNumber")
         public String tmNumber;
-
-        @NameInMap("Note")
-        public String note;
-
-        @NameInMap("SupplementStatus")
-        public Integer supplementStatus;
 
         @NameInMap("TotalPrice")
         public Float totalPrice;
 
-        @NameInMap("ThirdClassification")
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassification thirdClassification;
+        @NameInMap("Type")
+        public Integer type;
 
-        @NameInMap("FirstClassification")
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification firstClassification;
+        @NameInMap("UpdateTime")
+        public Long updateTime;
 
         public static QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces build(java.util.Map<String, ?> map) throws Exception {
             QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces self = new QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces();
             return TeaModel.build(map, self);
-        }
-
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setPrincipalDescription(String principalDescription) {
-            this.principalDescription = principalDescription;
-            return this;
-        }
-        public String getPrincipalDescription() {
-            return this.principalDescription;
-        }
-
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setType(Integer type) {
-            this.type = type;
-            return this;
-        }
-        public Integer getType() {
-            return this.type;
-        }
-
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setOrderPrice(Float orderPrice) {
-            this.orderPrice = orderPrice;
-            return this;
-        }
-        public Float getOrderPrice() {
-            return this.orderPrice;
-        }
-
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setMaterialName(String materialName) {
-            this.materialName = materialName;
-            return this;
-        }
-        public String getMaterialName() {
-            return this.materialName;
-        }
-
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setPrincipalValue(Integer principalValue) {
-            this.principalValue = principalValue;
-            return this;
-        }
-        public Integer getPrincipalValue() {
-            return this.principalValue;
-        }
-
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
         }
 
         public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setBizId(String bizId) {
@@ -295,12 +231,116 @@ public class QueryTradeMarkApplicationsByIntentionResponseBody extends TeaModel 
             return this.bizId;
         }
 
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setFirstClassification(QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification firstClassification) {
+            this.firstClassification = firstClassification;
+            return this;
+        }
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification getFirstClassification() {
+            return this.firstClassification;
+        }
+
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setLoaUrl(String loaUrl) {
+            this.loaUrl = loaUrl;
+            return this;
+        }
+        public String getLoaUrl() {
+            return this.loaUrl;
+        }
+
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setMaterialId(String materialId) {
+            this.materialId = materialId;
+            return this;
+        }
+        public String getMaterialId() {
+            return this.materialId;
+        }
+
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setMaterialName(String materialName) {
+            this.materialName = materialName;
+            return this;
+        }
+        public String getMaterialName() {
+            return this.materialName;
+        }
+
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setNote(String note) {
+            this.note = note;
+            return this;
+        }
+        public String getNote() {
+            return this.note;
+        }
+
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setOrderPrice(Float orderPrice) {
+            this.orderPrice = orderPrice;
+            return this;
+        }
+        public Float getOrderPrice() {
+            return this.orderPrice;
+        }
+
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setPrincipalDescription(String principalDescription) {
+            this.principalDescription = principalDescription;
+            return this;
+        }
+        public String getPrincipalDescription() {
+            return this.principalDescription;
+        }
+
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setPrincipalValue(Integer principalValue) {
+            this.principalValue = principalValue;
+            return this;
+        }
+        public Integer getPrincipalValue() {
+            return this.principalValue;
+        }
+
         public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setServicePrice(Float servicePrice) {
             this.servicePrice = servicePrice;
             return this;
         }
         public Float getServicePrice() {
             return this.servicePrice;
+        }
+
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setSupplementId(Long supplementId) {
+            this.supplementId = supplementId;
+            return this;
+        }
+        public Long getSupplementId() {
+            return this.supplementId;
+        }
+
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setSupplementStatus(Integer supplementStatus) {
+            this.supplementStatus = supplementStatus;
+            return this;
+        }
+        public Integer getSupplementStatus() {
+            return this.supplementStatus;
+        }
+
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setThirdClassification(QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassification thirdClassification) {
+            this.thirdClassification = thirdClassification;
+            return this;
+        }
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassification getThirdClassification() {
+            return this.thirdClassification;
         }
 
         public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setTmIcon(String tmIcon) {
@@ -319,52 +359,12 @@ public class QueryTradeMarkApplicationsByIntentionResponseBody extends TeaModel 
             return this.tmName;
         }
 
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setMaterialId(String materialId) {
-            this.materialId = materialId;
-            return this;
-        }
-        public String getMaterialId() {
-            return this.materialId;
-        }
-
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setSupplementId(Long supplementId) {
-            this.supplementId = supplementId;
-            return this;
-        }
-        public Long getSupplementId() {
-            return this.supplementId;
-        }
-
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setLoaUrl(String loaUrl) {
-            this.loaUrl = loaUrl;
-            return this;
-        }
-        public String getLoaUrl() {
-            return this.loaUrl;
-        }
-
         public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setTmNumber(String tmNumber) {
             this.tmNumber = tmNumber;
             return this;
         }
         public String getTmNumber() {
             return this.tmNumber;
-        }
-
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setNote(String note) {
-            this.note = note;
-            return this;
-        }
-        public String getNote() {
-            return this.note;
-        }
-
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setSupplementStatus(Integer supplementStatus) {
-            this.supplementStatus = supplementStatus;
-            return this;
-        }
-        public Integer getSupplementStatus() {
-            return this.supplementStatus;
         }
 
         public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setTotalPrice(Float totalPrice) {
@@ -375,20 +375,20 @@ public class QueryTradeMarkApplicationsByIntentionResponseBody extends TeaModel 
             return this.totalPrice;
         }
 
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setThirdClassification(QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassification thirdClassification) {
-            this.thirdClassification = thirdClassification;
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setType(Integer type) {
+            this.type = type;
             return this;
         }
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesThirdClassification getThirdClassification() {
-            return this.thirdClassification;
+        public Integer getType() {
+            return this.type;
         }
 
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setFirstClassification(QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification firstClassification) {
-            this.firstClassification = firstClassification;
+        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProduces setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public QueryTradeMarkApplicationsByIntentionResponseBodyDataTmProducesFirstClassification getFirstClassification() {
-            return this.firstClassification;
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }

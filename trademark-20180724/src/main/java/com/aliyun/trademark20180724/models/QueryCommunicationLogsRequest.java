@@ -7,14 +7,14 @@ public class QueryCommunicationLogsRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
-    @NameInMap("Type")
-    public Integer type;
-
     @NameInMap("PageNum")
     public Integer pageNum;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("Type")
+    public Integer type;
 
     public static QueryCommunicationLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCommunicationLogsRequest self = new QueryCommunicationLogsRequest();
@@ -27,14 +27,6 @@ public class QueryCommunicationLogsRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
-    }
-
-    public QueryCommunicationLogsRequest setType(Integer type) {
-        this.type = type;
-        return this;
-    }
-    public Integer getType() {
-        return this.type;
     }
 
     public QueryCommunicationLogsRequest setPageNum(Integer pageNum) {
@@ -51,6 +43,14 @@ public class QueryCommunicationLogsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryCommunicationLogsRequest setType(Integer type) {
+        this.type = type;
+        return this;
+    }
+    public Integer getType() {
+        return this.type;
     }
 
 }

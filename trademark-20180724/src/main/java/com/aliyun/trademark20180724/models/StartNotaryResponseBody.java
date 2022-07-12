@@ -4,8 +4,14 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class StartNotaryResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMsg")
     public String errorMsg;
+
+    @NameInMap("NotaryUrl")
+    public String notaryUrl;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,15 +19,17 @@ public class StartNotaryResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("NotaryUrl")
-    public String notaryUrl;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     public static StartNotaryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartNotaryResponseBody self = new StartNotaryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public StartNotaryResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public StartNotaryResponseBody setErrorMsg(String errorMsg) {
@@ -30,6 +38,14 @@ public class StartNotaryResponseBody extends TeaModel {
     }
     public String getErrorMsg() {
         return this.errorMsg;
+    }
+
+    public StartNotaryResponseBody setNotaryUrl(String notaryUrl) {
+        this.notaryUrl = notaryUrl;
+        return this;
+    }
+    public String getNotaryUrl() {
+        return this.notaryUrl;
     }
 
     public StartNotaryResponseBody setRequestId(String requestId) {
@@ -46,22 +62,6 @@ public class StartNotaryResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public StartNotaryResponseBody setNotaryUrl(String notaryUrl) {
-        this.notaryUrl = notaryUrl;
-        return this;
-    }
-    public String getNotaryUrl() {
-        return this.notaryUrl;
-    }
-
-    public StartNotaryResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
 }

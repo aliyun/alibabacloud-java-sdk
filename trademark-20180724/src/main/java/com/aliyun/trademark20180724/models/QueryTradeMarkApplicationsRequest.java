@@ -4,8 +4,26 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class QueryTradeMarkApplicationsRequest extends TeaModel {
-    @NameInMap("TmName")
-    public String tmName;
+    @NameInMap("BizId")
+    public String bizId;
+
+    @NameInMap("ClassificationCode")
+    public String classificationCode;
+
+    @NameInMap("Hidden")
+    public Integer hidden;
+
+    @NameInMap("IntentionBizId")
+    public String intentionBizId;
+
+    @NameInMap("LogisticsNo")
+    public String logisticsNo;
+
+    @NameInMap("MaterialName")
+    public String materialName;
+
+    @NameInMap("OrderId")
+    public String orderId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -13,14 +31,14 @@ public class QueryTradeMarkApplicationsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("MaterialName")
-    public String materialName;
+    @NameInMap("ProductType")
+    public Integer productType;
 
-    @NameInMap("TmNumber")
-    public String tmNumber;
+    @NameInMap("SortFiled")
+    public String sortFiled;
 
-    @NameInMap("OrderId")
-    public String orderId;
+    @NameInMap("SortOrder")
+    public String sortOrder;
 
     @NameInMap("Status")
     public Integer status;
@@ -28,44 +46,74 @@ public class QueryTradeMarkApplicationsRequest extends TeaModel {
     @NameInMap("SupplementStatus")
     public Integer supplementStatus;
 
-    @NameInMap("SortOrder")
-    public String sortOrder;
+    @NameInMap("TmName")
+    public String tmName;
+
+    @NameInMap("TmNumber")
+    public String tmNumber;
 
     @NameInMap("Type")
     public String type;
-
-    @NameInMap("BizId")
-    public String bizId;
-
-    @NameInMap("IntentionBizId")
-    public String intentionBizId;
-
-    @NameInMap("Hidden")
-    public Integer hidden;
-
-    @NameInMap("ProductType")
-    public Integer productType;
-
-    @NameInMap("LogisticsNo")
-    public String logisticsNo;
-
-    @NameInMap("ClassificationCode")
-    public String classificationCode;
-
-    @NameInMap("SortFiled")
-    public String sortFiled;
 
     public static QueryTradeMarkApplicationsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTradeMarkApplicationsRequest self = new QueryTradeMarkApplicationsRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryTradeMarkApplicationsRequest setTmName(String tmName) {
-        this.tmName = tmName;
+    public QueryTradeMarkApplicationsRequest setBizId(String bizId) {
+        this.bizId = bizId;
         return this;
     }
-    public String getTmName() {
-        return this.tmName;
+    public String getBizId() {
+        return this.bizId;
+    }
+
+    public QueryTradeMarkApplicationsRequest setClassificationCode(String classificationCode) {
+        this.classificationCode = classificationCode;
+        return this;
+    }
+    public String getClassificationCode() {
+        return this.classificationCode;
+    }
+
+    public QueryTradeMarkApplicationsRequest setHidden(Integer hidden) {
+        this.hidden = hidden;
+        return this;
+    }
+    public Integer getHidden() {
+        return this.hidden;
+    }
+
+    public QueryTradeMarkApplicationsRequest setIntentionBizId(String intentionBizId) {
+        this.intentionBizId = intentionBizId;
+        return this;
+    }
+    public String getIntentionBizId() {
+        return this.intentionBizId;
+    }
+
+    public QueryTradeMarkApplicationsRequest setLogisticsNo(String logisticsNo) {
+        this.logisticsNo = logisticsNo;
+        return this;
+    }
+    public String getLogisticsNo() {
+        return this.logisticsNo;
+    }
+
+    public QueryTradeMarkApplicationsRequest setMaterialName(String materialName) {
+        this.materialName = materialName;
+        return this;
+    }
+    public String getMaterialName() {
+        return this.materialName;
+    }
+
+    public QueryTradeMarkApplicationsRequest setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
     public QueryTradeMarkApplicationsRequest setPageNum(Integer pageNum) {
@@ -84,28 +132,28 @@ public class QueryTradeMarkApplicationsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryTradeMarkApplicationsRequest setMaterialName(String materialName) {
-        this.materialName = materialName;
+    public QueryTradeMarkApplicationsRequest setProductType(Integer productType) {
+        this.productType = productType;
         return this;
     }
-    public String getMaterialName() {
-        return this.materialName;
+    public Integer getProductType() {
+        return this.productType;
     }
 
-    public QueryTradeMarkApplicationsRequest setTmNumber(String tmNumber) {
-        this.tmNumber = tmNumber;
+    public QueryTradeMarkApplicationsRequest setSortFiled(String sortFiled) {
+        this.sortFiled = sortFiled;
         return this;
     }
-    public String getTmNumber() {
-        return this.tmNumber;
+    public String getSortFiled() {
+        return this.sortFiled;
     }
 
-    public QueryTradeMarkApplicationsRequest setOrderId(String orderId) {
-        this.orderId = orderId;
+    public QueryTradeMarkApplicationsRequest setSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
+    public String getSortOrder() {
+        return this.sortOrder;
     }
 
     public QueryTradeMarkApplicationsRequest setStatus(Integer status) {
@@ -124,12 +172,20 @@ public class QueryTradeMarkApplicationsRequest extends TeaModel {
         return this.supplementStatus;
     }
 
-    public QueryTradeMarkApplicationsRequest setSortOrder(String sortOrder) {
-        this.sortOrder = sortOrder;
+    public QueryTradeMarkApplicationsRequest setTmName(String tmName) {
+        this.tmName = tmName;
         return this;
     }
-    public String getSortOrder() {
-        return this.sortOrder;
+    public String getTmName() {
+        return this.tmName;
+    }
+
+    public QueryTradeMarkApplicationsRequest setTmNumber(String tmNumber) {
+        this.tmNumber = tmNumber;
+        return this;
+    }
+    public String getTmNumber() {
+        return this.tmNumber;
     }
 
     public QueryTradeMarkApplicationsRequest setType(String type) {
@@ -138,62 +194,6 @@ public class QueryTradeMarkApplicationsRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public QueryTradeMarkApplicationsRequest setBizId(String bizId) {
-        this.bizId = bizId;
-        return this;
-    }
-    public String getBizId() {
-        return this.bizId;
-    }
-
-    public QueryTradeMarkApplicationsRequest setIntentionBizId(String intentionBizId) {
-        this.intentionBizId = intentionBizId;
-        return this;
-    }
-    public String getIntentionBizId() {
-        return this.intentionBizId;
-    }
-
-    public QueryTradeMarkApplicationsRequest setHidden(Integer hidden) {
-        this.hidden = hidden;
-        return this;
-    }
-    public Integer getHidden() {
-        return this.hidden;
-    }
-
-    public QueryTradeMarkApplicationsRequest setProductType(Integer productType) {
-        this.productType = productType;
-        return this;
-    }
-    public Integer getProductType() {
-        return this.productType;
-    }
-
-    public QueryTradeMarkApplicationsRequest setLogisticsNo(String logisticsNo) {
-        this.logisticsNo = logisticsNo;
-        return this;
-    }
-    public String getLogisticsNo() {
-        return this.logisticsNo;
-    }
-
-    public QueryTradeMarkApplicationsRequest setClassificationCode(String classificationCode) {
-        this.classificationCode = classificationCode;
-        return this;
-    }
-    public String getClassificationCode() {
-        return this.classificationCode;
-    }
-
-    public QueryTradeMarkApplicationsRequest setSortFiled(String sortFiled) {
-        this.sortFiled = sortFiled;
-        return this;
-    }
-    public String getSortFiled() {
-        return this.sortFiled;
     }
 
 }

@@ -4,17 +4,29 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class SaveTradeMarkReviewMaterialDetailRequest extends TeaModel {
+    @NameInMap("AdditionalOssKeyList")
+    public java.util.Map<String, ?> additionalOssKeyList;
+
+    @NameInMap("Address")
+    public String address;
+
+    @NameInMap("ApplicationOssKey")
+    public String applicationOssKey;
+
     @NameInMap("BizId")
     public String bizId;
 
-    @NameInMap("Type")
-    public Integer type;
+    @NameInMap("BusinessLicenceOssKey")
+    public String businessLicenceOssKey;
 
-    @NameInMap("Region")
-    public Integer region;
+    @NameInMap("CardNumber")
+    public String cardNumber;
 
-    @NameInMap("Country")
-    public String country;
+    @NameInMap("ContactAddress")
+    public String contactAddress;
+
+    @NameInMap("ContactEmail")
+    public String contactEmail;
 
     @NameInMap("ContactName")
     public String contactName;
@@ -22,11 +34,20 @@ public class SaveTradeMarkReviewMaterialDetailRequest extends TeaModel {
     @NameInMap("ContactNumber")
     public String contactNumber;
 
-    @NameInMap("ContactEmail")
-    public String contactEmail;
+    @NameInMap("Country")
+    public String country;
 
-    @NameInMap("ContactAddress")
-    public String contactAddress;
+    @NameInMap("EngAddress")
+    public String engAddress;
+
+    @NameInMap("EngName")
+    public String engName;
+
+    @NameInMap("IdCardOssKey")
+    public String idCardOssKey;
+
+    @NameInMap("LegalNoticeOssKey")
+    public String legalNoticeOssKey;
 
     @NameInMap("LoaOssKey")
     public String loaOssKey;
@@ -34,45 +55,57 @@ public class SaveTradeMarkReviewMaterialDetailRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("CardNumber")
-    public String cardNumber;
+    @NameInMap("PassportOssKey")
+    public String passportOssKey;
 
     @NameInMap("Province")
     public String province;
 
-    @NameInMap("Address")
-    public String address;
+    @NameInMap("Region")
+    public Integer region;
 
-    @NameInMap("EngName")
-    public String engName;
+    @NameInMap("ReviewMaterialAdditionalJson")
+    public String reviewMaterialAdditionalJson;
 
-    @NameInMap("EngAddress")
-    public String engAddress;
+    @NameInMap("Separate")
+    public Boolean separate;
 
-    @NameInMap("IdCardOssKey")
-    public String idCardOssKey;
-
-    @NameInMap("BusinessLicenceOssKey")
-    public String businessLicenceOssKey;
-
-    @NameInMap("PassportOssKey")
-    public String passportOssKey;
-
-    @NameInMap("LegalNoticeOssKey")
-    public String legalNoticeOssKey;
-
-    @NameInMap("ApplicationOssKey")
-    public String applicationOssKey;
-
-    @NameInMap("AdditionalOssKeyList")
-    public java.util.Map<String, ?> additionalOssKeyList;
+    @NameInMap("SubmitOnline")
+    public Boolean submitOnline;
 
     @NameInMap("SubmitType")
     public Integer submitType;
 
+    @NameInMap("Type")
+    public Integer type;
+
     public static SaveTradeMarkReviewMaterialDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveTradeMarkReviewMaterialDetailRequest self = new SaveTradeMarkReviewMaterialDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SaveTradeMarkReviewMaterialDetailRequest setAdditionalOssKeyList(java.util.Map<String, ?> additionalOssKeyList) {
+        this.additionalOssKeyList = additionalOssKeyList;
+        return this;
+    }
+    public java.util.Map<String, ?> getAdditionalOssKeyList() {
+        return this.additionalOssKeyList;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailRequest setAddress(String address) {
+        this.address = address;
+        return this;
+    }
+    public String getAddress() {
+        return this.address;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailRequest setApplicationOssKey(String applicationOssKey) {
+        this.applicationOssKey = applicationOssKey;
+        return this;
+    }
+    public String getApplicationOssKey() {
+        return this.applicationOssKey;
     }
 
     public SaveTradeMarkReviewMaterialDetailRequest setBizId(String bizId) {
@@ -83,28 +116,36 @@ public class SaveTradeMarkReviewMaterialDetailRequest extends TeaModel {
         return this.bizId;
     }
 
-    public SaveTradeMarkReviewMaterialDetailRequest setType(Integer type) {
-        this.type = type;
+    public SaveTradeMarkReviewMaterialDetailRequest setBusinessLicenceOssKey(String businessLicenceOssKey) {
+        this.businessLicenceOssKey = businessLicenceOssKey;
         return this;
     }
-    public Integer getType() {
-        return this.type;
+    public String getBusinessLicenceOssKey() {
+        return this.businessLicenceOssKey;
     }
 
-    public SaveTradeMarkReviewMaterialDetailRequest setRegion(Integer region) {
-        this.region = region;
+    public SaveTradeMarkReviewMaterialDetailRequest setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
         return this;
     }
-    public Integer getRegion() {
-        return this.region;
+    public String getCardNumber() {
+        return this.cardNumber;
     }
 
-    public SaveTradeMarkReviewMaterialDetailRequest setCountry(String country) {
-        this.country = country;
+    public SaveTradeMarkReviewMaterialDetailRequest setContactAddress(String contactAddress) {
+        this.contactAddress = contactAddress;
         return this;
     }
-    public String getCountry() {
-        return this.country;
+    public String getContactAddress() {
+        return this.contactAddress;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailRequest setContactEmail(String contactEmail) {
+        this.contactEmail = contactEmail;
+        return this;
+    }
+    public String getContactEmail() {
+        return this.contactEmail;
     }
 
     public SaveTradeMarkReviewMaterialDetailRequest setContactName(String contactName) {
@@ -123,20 +164,44 @@ public class SaveTradeMarkReviewMaterialDetailRequest extends TeaModel {
         return this.contactNumber;
     }
 
-    public SaveTradeMarkReviewMaterialDetailRequest setContactEmail(String contactEmail) {
-        this.contactEmail = contactEmail;
+    public SaveTradeMarkReviewMaterialDetailRequest setCountry(String country) {
+        this.country = country;
         return this;
     }
-    public String getContactEmail() {
-        return this.contactEmail;
+    public String getCountry() {
+        return this.country;
     }
 
-    public SaveTradeMarkReviewMaterialDetailRequest setContactAddress(String contactAddress) {
-        this.contactAddress = contactAddress;
+    public SaveTradeMarkReviewMaterialDetailRequest setEngAddress(String engAddress) {
+        this.engAddress = engAddress;
         return this;
     }
-    public String getContactAddress() {
-        return this.contactAddress;
+    public String getEngAddress() {
+        return this.engAddress;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailRequest setEngName(String engName) {
+        this.engName = engName;
+        return this;
+    }
+    public String getEngName() {
+        return this.engName;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailRequest setIdCardOssKey(String idCardOssKey) {
+        this.idCardOssKey = idCardOssKey;
+        return this;
+    }
+    public String getIdCardOssKey() {
+        return this.idCardOssKey;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailRequest setLegalNoticeOssKey(String legalNoticeOssKey) {
+        this.legalNoticeOssKey = legalNoticeOssKey;
+        return this;
+    }
+    public String getLegalNoticeOssKey() {
+        return this.legalNoticeOssKey;
     }
 
     public SaveTradeMarkReviewMaterialDetailRequest setLoaOssKey(String loaOssKey) {
@@ -155,12 +220,12 @@ public class SaveTradeMarkReviewMaterialDetailRequest extends TeaModel {
         return this.name;
     }
 
-    public SaveTradeMarkReviewMaterialDetailRequest setCardNumber(String cardNumber) {
-        this.cardNumber = cardNumber;
+    public SaveTradeMarkReviewMaterialDetailRequest setPassportOssKey(String passportOssKey) {
+        this.passportOssKey = passportOssKey;
         return this;
     }
-    public String getCardNumber() {
-        return this.cardNumber;
+    public String getPassportOssKey() {
+        return this.passportOssKey;
     }
 
     public SaveTradeMarkReviewMaterialDetailRequest setProvince(String province) {
@@ -171,76 +236,36 @@ public class SaveTradeMarkReviewMaterialDetailRequest extends TeaModel {
         return this.province;
     }
 
-    public SaveTradeMarkReviewMaterialDetailRequest setAddress(String address) {
-        this.address = address;
+    public SaveTradeMarkReviewMaterialDetailRequest setRegion(Integer region) {
+        this.region = region;
         return this;
     }
-    public String getAddress() {
-        return this.address;
+    public Integer getRegion() {
+        return this.region;
     }
 
-    public SaveTradeMarkReviewMaterialDetailRequest setEngName(String engName) {
-        this.engName = engName;
+    public SaveTradeMarkReviewMaterialDetailRequest setReviewMaterialAdditionalJson(String reviewMaterialAdditionalJson) {
+        this.reviewMaterialAdditionalJson = reviewMaterialAdditionalJson;
         return this;
     }
-    public String getEngName() {
-        return this.engName;
+    public String getReviewMaterialAdditionalJson() {
+        return this.reviewMaterialAdditionalJson;
     }
 
-    public SaveTradeMarkReviewMaterialDetailRequest setEngAddress(String engAddress) {
-        this.engAddress = engAddress;
+    public SaveTradeMarkReviewMaterialDetailRequest setSeparate(Boolean separate) {
+        this.separate = separate;
         return this;
     }
-    public String getEngAddress() {
-        return this.engAddress;
+    public Boolean getSeparate() {
+        return this.separate;
     }
 
-    public SaveTradeMarkReviewMaterialDetailRequest setIdCardOssKey(String idCardOssKey) {
-        this.idCardOssKey = idCardOssKey;
+    public SaveTradeMarkReviewMaterialDetailRequest setSubmitOnline(Boolean submitOnline) {
+        this.submitOnline = submitOnline;
         return this;
     }
-    public String getIdCardOssKey() {
-        return this.idCardOssKey;
-    }
-
-    public SaveTradeMarkReviewMaterialDetailRequest setBusinessLicenceOssKey(String businessLicenceOssKey) {
-        this.businessLicenceOssKey = businessLicenceOssKey;
-        return this;
-    }
-    public String getBusinessLicenceOssKey() {
-        return this.businessLicenceOssKey;
-    }
-
-    public SaveTradeMarkReviewMaterialDetailRequest setPassportOssKey(String passportOssKey) {
-        this.passportOssKey = passportOssKey;
-        return this;
-    }
-    public String getPassportOssKey() {
-        return this.passportOssKey;
-    }
-
-    public SaveTradeMarkReviewMaterialDetailRequest setLegalNoticeOssKey(String legalNoticeOssKey) {
-        this.legalNoticeOssKey = legalNoticeOssKey;
-        return this;
-    }
-    public String getLegalNoticeOssKey() {
-        return this.legalNoticeOssKey;
-    }
-
-    public SaveTradeMarkReviewMaterialDetailRequest setApplicationOssKey(String applicationOssKey) {
-        this.applicationOssKey = applicationOssKey;
-        return this;
-    }
-    public String getApplicationOssKey() {
-        return this.applicationOssKey;
-    }
-
-    public SaveTradeMarkReviewMaterialDetailRequest setAdditionalOssKeyList(java.util.Map<String, ?> additionalOssKeyList) {
-        this.additionalOssKeyList = additionalOssKeyList;
-        return this;
-    }
-    public java.util.Map<String, ?> getAdditionalOssKeyList() {
-        return this.additionalOssKeyList;
+    public Boolean getSubmitOnline() {
+        return this.submitOnline;
     }
 
     public SaveTradeMarkReviewMaterialDetailRequest setSubmitType(Integer submitType) {
@@ -249,6 +274,14 @@ public class SaveTradeMarkReviewMaterialDetailRequest extends TeaModel {
     }
     public Integer getSubmitType() {
         return this.submitType;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailRequest setType(Integer type) {
+        this.type = type;
+        return this;
+    }
+    public Integer getType() {
+        return this.type;
     }
 
 }

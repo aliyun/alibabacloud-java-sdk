@@ -4,17 +4,29 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class SaveTradeMarkReviewMaterialDetailShrinkRequest extends TeaModel {
+    @NameInMap("AdditionalOssKeyList")
+    public String additionalOssKeyListShrink;
+
+    @NameInMap("Address")
+    public String address;
+
+    @NameInMap("ApplicationOssKey")
+    public String applicationOssKey;
+
     @NameInMap("BizId")
     public String bizId;
 
-    @NameInMap("Type")
-    public Integer type;
+    @NameInMap("BusinessLicenceOssKey")
+    public String businessLicenceOssKey;
 
-    @NameInMap("Region")
-    public Integer region;
+    @NameInMap("CardNumber")
+    public String cardNumber;
 
-    @NameInMap("Country")
-    public String country;
+    @NameInMap("ContactAddress")
+    public String contactAddress;
+
+    @NameInMap("ContactEmail")
+    public String contactEmail;
 
     @NameInMap("ContactName")
     public String contactName;
@@ -22,11 +34,20 @@ public class SaveTradeMarkReviewMaterialDetailShrinkRequest extends TeaModel {
     @NameInMap("ContactNumber")
     public String contactNumber;
 
-    @NameInMap("ContactEmail")
-    public String contactEmail;
+    @NameInMap("Country")
+    public String country;
 
-    @NameInMap("ContactAddress")
-    public String contactAddress;
+    @NameInMap("EngAddress")
+    public String engAddress;
+
+    @NameInMap("EngName")
+    public String engName;
+
+    @NameInMap("IdCardOssKey")
+    public String idCardOssKey;
+
+    @NameInMap("LegalNoticeOssKey")
+    public String legalNoticeOssKey;
 
     @NameInMap("LoaOssKey")
     public String loaOssKey;
@@ -34,45 +55,57 @@ public class SaveTradeMarkReviewMaterialDetailShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("CardNumber")
-    public String cardNumber;
+    @NameInMap("PassportOssKey")
+    public String passportOssKey;
 
     @NameInMap("Province")
     public String province;
 
-    @NameInMap("Address")
-    public String address;
+    @NameInMap("Region")
+    public Integer region;
 
-    @NameInMap("EngName")
-    public String engName;
+    @NameInMap("ReviewMaterialAdditionalJson")
+    public String reviewMaterialAdditionalJson;
 
-    @NameInMap("EngAddress")
-    public String engAddress;
+    @NameInMap("Separate")
+    public Boolean separate;
 
-    @NameInMap("IdCardOssKey")
-    public String idCardOssKey;
-
-    @NameInMap("BusinessLicenceOssKey")
-    public String businessLicenceOssKey;
-
-    @NameInMap("PassportOssKey")
-    public String passportOssKey;
-
-    @NameInMap("LegalNoticeOssKey")
-    public String legalNoticeOssKey;
-
-    @NameInMap("ApplicationOssKey")
-    public String applicationOssKey;
-
-    @NameInMap("AdditionalOssKeyList")
-    public String additionalOssKeyListShrink;
+    @NameInMap("SubmitOnline")
+    public Boolean submitOnline;
 
     @NameInMap("SubmitType")
     public Integer submitType;
 
+    @NameInMap("Type")
+    public Integer type;
+
     public static SaveTradeMarkReviewMaterialDetailShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveTradeMarkReviewMaterialDetailShrinkRequest self = new SaveTradeMarkReviewMaterialDetailShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setAdditionalOssKeyListShrink(String additionalOssKeyListShrink) {
+        this.additionalOssKeyListShrink = additionalOssKeyListShrink;
+        return this;
+    }
+    public String getAdditionalOssKeyListShrink() {
+        return this.additionalOssKeyListShrink;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setAddress(String address) {
+        this.address = address;
+        return this;
+    }
+    public String getAddress() {
+        return this.address;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setApplicationOssKey(String applicationOssKey) {
+        this.applicationOssKey = applicationOssKey;
+        return this;
+    }
+    public String getApplicationOssKey() {
+        return this.applicationOssKey;
     }
 
     public SaveTradeMarkReviewMaterialDetailShrinkRequest setBizId(String bizId) {
@@ -83,28 +116,36 @@ public class SaveTradeMarkReviewMaterialDetailShrinkRequest extends TeaModel {
         return this.bizId;
     }
 
-    public SaveTradeMarkReviewMaterialDetailShrinkRequest setType(Integer type) {
-        this.type = type;
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setBusinessLicenceOssKey(String businessLicenceOssKey) {
+        this.businessLicenceOssKey = businessLicenceOssKey;
         return this;
     }
-    public Integer getType() {
-        return this.type;
+    public String getBusinessLicenceOssKey() {
+        return this.businessLicenceOssKey;
     }
 
-    public SaveTradeMarkReviewMaterialDetailShrinkRequest setRegion(Integer region) {
-        this.region = region;
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
         return this;
     }
-    public Integer getRegion() {
-        return this.region;
+    public String getCardNumber() {
+        return this.cardNumber;
     }
 
-    public SaveTradeMarkReviewMaterialDetailShrinkRequest setCountry(String country) {
-        this.country = country;
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setContactAddress(String contactAddress) {
+        this.contactAddress = contactAddress;
         return this;
     }
-    public String getCountry() {
-        return this.country;
+    public String getContactAddress() {
+        return this.contactAddress;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setContactEmail(String contactEmail) {
+        this.contactEmail = contactEmail;
+        return this;
+    }
+    public String getContactEmail() {
+        return this.contactEmail;
     }
 
     public SaveTradeMarkReviewMaterialDetailShrinkRequest setContactName(String contactName) {
@@ -123,20 +164,44 @@ public class SaveTradeMarkReviewMaterialDetailShrinkRequest extends TeaModel {
         return this.contactNumber;
     }
 
-    public SaveTradeMarkReviewMaterialDetailShrinkRequest setContactEmail(String contactEmail) {
-        this.contactEmail = contactEmail;
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setCountry(String country) {
+        this.country = country;
         return this;
     }
-    public String getContactEmail() {
-        return this.contactEmail;
+    public String getCountry() {
+        return this.country;
     }
 
-    public SaveTradeMarkReviewMaterialDetailShrinkRequest setContactAddress(String contactAddress) {
-        this.contactAddress = contactAddress;
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setEngAddress(String engAddress) {
+        this.engAddress = engAddress;
         return this;
     }
-    public String getContactAddress() {
-        return this.contactAddress;
+    public String getEngAddress() {
+        return this.engAddress;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setEngName(String engName) {
+        this.engName = engName;
+        return this;
+    }
+    public String getEngName() {
+        return this.engName;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setIdCardOssKey(String idCardOssKey) {
+        this.idCardOssKey = idCardOssKey;
+        return this;
+    }
+    public String getIdCardOssKey() {
+        return this.idCardOssKey;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setLegalNoticeOssKey(String legalNoticeOssKey) {
+        this.legalNoticeOssKey = legalNoticeOssKey;
+        return this;
+    }
+    public String getLegalNoticeOssKey() {
+        return this.legalNoticeOssKey;
     }
 
     public SaveTradeMarkReviewMaterialDetailShrinkRequest setLoaOssKey(String loaOssKey) {
@@ -155,12 +220,12 @@ public class SaveTradeMarkReviewMaterialDetailShrinkRequest extends TeaModel {
         return this.name;
     }
 
-    public SaveTradeMarkReviewMaterialDetailShrinkRequest setCardNumber(String cardNumber) {
-        this.cardNumber = cardNumber;
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setPassportOssKey(String passportOssKey) {
+        this.passportOssKey = passportOssKey;
         return this;
     }
-    public String getCardNumber() {
-        return this.cardNumber;
+    public String getPassportOssKey() {
+        return this.passportOssKey;
     }
 
     public SaveTradeMarkReviewMaterialDetailShrinkRequest setProvince(String province) {
@@ -171,76 +236,36 @@ public class SaveTradeMarkReviewMaterialDetailShrinkRequest extends TeaModel {
         return this.province;
     }
 
-    public SaveTradeMarkReviewMaterialDetailShrinkRequest setAddress(String address) {
-        this.address = address;
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setRegion(Integer region) {
+        this.region = region;
         return this;
     }
-    public String getAddress() {
-        return this.address;
+    public Integer getRegion() {
+        return this.region;
     }
 
-    public SaveTradeMarkReviewMaterialDetailShrinkRequest setEngName(String engName) {
-        this.engName = engName;
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setReviewMaterialAdditionalJson(String reviewMaterialAdditionalJson) {
+        this.reviewMaterialAdditionalJson = reviewMaterialAdditionalJson;
         return this;
     }
-    public String getEngName() {
-        return this.engName;
+    public String getReviewMaterialAdditionalJson() {
+        return this.reviewMaterialAdditionalJson;
     }
 
-    public SaveTradeMarkReviewMaterialDetailShrinkRequest setEngAddress(String engAddress) {
-        this.engAddress = engAddress;
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setSeparate(Boolean separate) {
+        this.separate = separate;
         return this;
     }
-    public String getEngAddress() {
-        return this.engAddress;
+    public Boolean getSeparate() {
+        return this.separate;
     }
 
-    public SaveTradeMarkReviewMaterialDetailShrinkRequest setIdCardOssKey(String idCardOssKey) {
-        this.idCardOssKey = idCardOssKey;
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setSubmitOnline(Boolean submitOnline) {
+        this.submitOnline = submitOnline;
         return this;
     }
-    public String getIdCardOssKey() {
-        return this.idCardOssKey;
-    }
-
-    public SaveTradeMarkReviewMaterialDetailShrinkRequest setBusinessLicenceOssKey(String businessLicenceOssKey) {
-        this.businessLicenceOssKey = businessLicenceOssKey;
-        return this;
-    }
-    public String getBusinessLicenceOssKey() {
-        return this.businessLicenceOssKey;
-    }
-
-    public SaveTradeMarkReviewMaterialDetailShrinkRequest setPassportOssKey(String passportOssKey) {
-        this.passportOssKey = passportOssKey;
-        return this;
-    }
-    public String getPassportOssKey() {
-        return this.passportOssKey;
-    }
-
-    public SaveTradeMarkReviewMaterialDetailShrinkRequest setLegalNoticeOssKey(String legalNoticeOssKey) {
-        this.legalNoticeOssKey = legalNoticeOssKey;
-        return this;
-    }
-    public String getLegalNoticeOssKey() {
-        return this.legalNoticeOssKey;
-    }
-
-    public SaveTradeMarkReviewMaterialDetailShrinkRequest setApplicationOssKey(String applicationOssKey) {
-        this.applicationOssKey = applicationOssKey;
-        return this;
-    }
-    public String getApplicationOssKey() {
-        return this.applicationOssKey;
-    }
-
-    public SaveTradeMarkReviewMaterialDetailShrinkRequest setAdditionalOssKeyListShrink(String additionalOssKeyListShrink) {
-        this.additionalOssKeyListShrink = additionalOssKeyListShrink;
-        return this;
-    }
-    public String getAdditionalOssKeyListShrink() {
-        return this.additionalOssKeyListShrink;
+    public Boolean getSubmitOnline() {
+        return this.submitOnline;
     }
 
     public SaveTradeMarkReviewMaterialDetailShrinkRequest setSubmitType(Integer submitType) {
@@ -249,6 +274,14 @@ public class SaveTradeMarkReviewMaterialDetailShrinkRequest extends TeaModel {
     }
     public Integer getSubmitType() {
         return this.submitType;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setType(Integer type) {
+        this.type = type;
+        return this;
+    }
+    public Integer getType() {
+        return this.type;
     }
 
 }

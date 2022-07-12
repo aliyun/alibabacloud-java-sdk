@@ -7,20 +7,20 @@ public class QueryTradeProduceListResponseBody extends TeaModel {
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
-    @NameInMap("TotalPageNum")
-    public Integer totalPageNum;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Data")
+    public QueryTradeProduceListResponseBodyData data;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
-    @NameInMap("Data")
-    public QueryTradeProduceListResponseBodyData data;
+    @NameInMap("TotalPageNum")
+    public Integer totalPageNum;
 
     public static QueryTradeProduceListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTradeProduceListResponseBody self = new QueryTradeProduceListResponseBody();
@@ -35,20 +35,12 @@ public class QueryTradeProduceListResponseBody extends TeaModel {
         return this.currentPageNum;
     }
 
-    public QueryTradeProduceListResponseBody setTotalPageNum(Integer totalPageNum) {
-        this.totalPageNum = totalPageNum;
+    public QueryTradeProduceListResponseBody setData(QueryTradeProduceListResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getTotalPageNum() {
-        return this.totalPageNum;
-    }
-
-    public QueryTradeProduceListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public QueryTradeProduceListResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryTradeProduceListResponseBody setPageSize(Integer pageSize) {
@@ -59,6 +51,14 @@ public class QueryTradeProduceListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public QueryTradeProduceListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryTradeProduceListResponseBody setTotalItemNum(Integer totalItemNum) {
         this.totalItemNum = totalItemNum;
         return this;
@@ -67,143 +67,63 @@ public class QueryTradeProduceListResponseBody extends TeaModel {
         return this.totalItemNum;
     }
 
-    public QueryTradeProduceListResponseBody setData(QueryTradeProduceListResponseBodyData data) {
-        this.data = data;
+    public QueryTradeProduceListResponseBody setTotalPageNum(Integer totalPageNum) {
+        this.totalPageNum = totalPageNum;
         return this;
     }
-    public QueryTradeProduceListResponseBodyData getData() {
-        return this.data;
+    public Integer getTotalPageNum() {
+        return this.totalPageNum;
     }
 
     public static class QueryTradeProduceListResponseBodyDataTradeProduces extends TeaModel {
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
-        @NameInMap("PreAmount")
-        public Float preAmount;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
-
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("AllowCancel")
+        public Boolean allowCancel;
 
         @NameInMap("BizId")
         public String bizId;
 
-        @NameInMap("Icon")
-        public String icon;
-
         @NameInMap("BuyerStatus")
         public Integer buyerStatus;
-
-        @NameInMap("Source")
-        public Integer source;
-
-        @NameInMap("OperateNote")
-        public String operateNote;
-
-        @NameInMap("PreOrderId")
-        public String preOrderId;
-
-        @NameInMap("AllowCancel")
-        public Boolean allowCancel;
-
-        @NameInMap("RegisterNumber")
-        public String registerNumber;
 
         @NameInMap("Classification")
         public String classification;
 
-        @NameInMap("FinalAmount")
-        public Float finalAmount;
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("FailReason")
         public Integer failReason;
 
+        @NameInMap("FinalAmount")
+        public Float finalAmount;
+
+        @NameInMap("Icon")
+        public String icon;
+
+        @NameInMap("OperateNote")
+        public String operateNote;
+
+        @NameInMap("PreAmount")
+        public Float preAmount;
+
+        @NameInMap("PreOrderId")
+        public String preOrderId;
+
+        @NameInMap("RegisterNumber")
+        public String registerNumber;
+
+        @NameInMap("Source")
+        public Integer source;
+
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
+        @NameInMap("UserId")
+        public String userId;
+
         public static QueryTradeProduceListResponseBodyDataTradeProduces build(java.util.Map<String, ?> map) throws Exception {
             QueryTradeProduceListResponseBodyDataTradeProduces self = new QueryTradeProduceListResponseBodyDataTradeProduces();
             return TeaModel.build(map, self);
-        }
-
-        public QueryTradeProduceListResponseBodyDataTradeProduces setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public QueryTradeProduceListResponseBodyDataTradeProduces setPreAmount(Float preAmount) {
-            this.preAmount = preAmount;
-            return this;
-        }
-        public Float getPreAmount() {
-            return this.preAmount;
-        }
-
-        public QueryTradeProduceListResponseBodyDataTradeProduces setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
-        public QueryTradeProduceListResponseBodyDataTradeProduces setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public QueryTradeProduceListResponseBodyDataTradeProduces setBizId(String bizId) {
-            this.bizId = bizId;
-            return this;
-        }
-        public String getBizId() {
-            return this.bizId;
-        }
-
-        public QueryTradeProduceListResponseBodyDataTradeProduces setIcon(String icon) {
-            this.icon = icon;
-            return this;
-        }
-        public String getIcon() {
-            return this.icon;
-        }
-
-        public QueryTradeProduceListResponseBodyDataTradeProduces setBuyerStatus(Integer buyerStatus) {
-            this.buyerStatus = buyerStatus;
-            return this;
-        }
-        public Integer getBuyerStatus() {
-            return this.buyerStatus;
-        }
-
-        public QueryTradeProduceListResponseBodyDataTradeProduces setSource(Integer source) {
-            this.source = source;
-            return this;
-        }
-        public Integer getSource() {
-            return this.source;
-        }
-
-        public QueryTradeProduceListResponseBodyDataTradeProduces setOperateNote(String operateNote) {
-            this.operateNote = operateNote;
-            return this;
-        }
-        public String getOperateNote() {
-            return this.operateNote;
-        }
-
-        public QueryTradeProduceListResponseBodyDataTradeProduces setPreOrderId(String preOrderId) {
-            this.preOrderId = preOrderId;
-            return this;
-        }
-        public String getPreOrderId() {
-            return this.preOrderId;
         }
 
         public QueryTradeProduceListResponseBodyDataTradeProduces setAllowCancel(Boolean allowCancel) {
@@ -214,12 +134,20 @@ public class QueryTradeProduceListResponseBody extends TeaModel {
             return this.allowCancel;
         }
 
-        public QueryTradeProduceListResponseBodyDataTradeProduces setRegisterNumber(String registerNumber) {
-            this.registerNumber = registerNumber;
+        public QueryTradeProduceListResponseBodyDataTradeProduces setBizId(String bizId) {
+            this.bizId = bizId;
             return this;
         }
-        public String getRegisterNumber() {
-            return this.registerNumber;
+        public String getBizId() {
+            return this.bizId;
+        }
+
+        public QueryTradeProduceListResponseBodyDataTradeProduces setBuyerStatus(Integer buyerStatus) {
+            this.buyerStatus = buyerStatus;
+            return this;
+        }
+        public Integer getBuyerStatus() {
+            return this.buyerStatus;
         }
 
         public QueryTradeProduceListResponseBodyDataTradeProduces setClassification(String classification) {
@@ -230,12 +158,12 @@ public class QueryTradeProduceListResponseBody extends TeaModel {
             return this.classification;
         }
 
-        public QueryTradeProduceListResponseBodyDataTradeProduces setFinalAmount(Float finalAmount) {
-            this.finalAmount = finalAmount;
+        public QueryTradeProduceListResponseBodyDataTradeProduces setCreateTime(Long createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public Float getFinalAmount() {
-            return this.finalAmount;
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public QueryTradeProduceListResponseBodyDataTradeProduces setFailReason(Integer failReason) {
@@ -244,6 +172,78 @@ public class QueryTradeProduceListResponseBody extends TeaModel {
         }
         public Integer getFailReason() {
             return this.failReason;
+        }
+
+        public QueryTradeProduceListResponseBodyDataTradeProduces setFinalAmount(Float finalAmount) {
+            this.finalAmount = finalAmount;
+            return this;
+        }
+        public Float getFinalAmount() {
+            return this.finalAmount;
+        }
+
+        public QueryTradeProduceListResponseBodyDataTradeProduces setIcon(String icon) {
+            this.icon = icon;
+            return this;
+        }
+        public String getIcon() {
+            return this.icon;
+        }
+
+        public QueryTradeProduceListResponseBodyDataTradeProduces setOperateNote(String operateNote) {
+            this.operateNote = operateNote;
+            return this;
+        }
+        public String getOperateNote() {
+            return this.operateNote;
+        }
+
+        public QueryTradeProduceListResponseBodyDataTradeProduces setPreAmount(Float preAmount) {
+            this.preAmount = preAmount;
+            return this;
+        }
+        public Float getPreAmount() {
+            return this.preAmount;
+        }
+
+        public QueryTradeProduceListResponseBodyDataTradeProduces setPreOrderId(String preOrderId) {
+            this.preOrderId = preOrderId;
+            return this;
+        }
+        public String getPreOrderId() {
+            return this.preOrderId;
+        }
+
+        public QueryTradeProduceListResponseBodyDataTradeProduces setRegisterNumber(String registerNumber) {
+            this.registerNumber = registerNumber;
+            return this;
+        }
+        public String getRegisterNumber() {
+            return this.registerNumber;
+        }
+
+        public QueryTradeProduceListResponseBodyDataTradeProduces setSource(Integer source) {
+            this.source = source;
+            return this;
+        }
+        public Integer getSource() {
+            return this.source;
+        }
+
+        public QueryTradeProduceListResponseBodyDataTradeProduces setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public QueryTradeProduceListResponseBodyDataTradeProduces setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

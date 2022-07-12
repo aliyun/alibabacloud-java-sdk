@@ -7,20 +7,20 @@ public class QueryTaskListResponseBody extends TeaModel {
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
-    @NameInMap("TotalPageNum")
-    public Integer totalPageNum;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Data")
+    public QueryTaskListResponseBodyData data;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
-    @NameInMap("Data")
-    public QueryTaskListResponseBodyData data;
+    @NameInMap("TotalPageNum")
+    public Integer totalPageNum;
 
     public static QueryTaskListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTaskListResponseBody self = new QueryTaskListResponseBody();
@@ -35,20 +35,12 @@ public class QueryTaskListResponseBody extends TeaModel {
         return this.currentPageNum;
     }
 
-    public QueryTaskListResponseBody setTotalPageNum(Integer totalPageNum) {
-        this.totalPageNum = totalPageNum;
+    public QueryTaskListResponseBody setData(QueryTaskListResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getTotalPageNum() {
-        return this.totalPageNum;
-    }
-
-    public QueryTaskListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public QueryTaskListResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryTaskListResponseBody setPageSize(Integer pageSize) {
@@ -59,6 +51,14 @@ public class QueryTaskListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public QueryTaskListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryTaskListResponseBody setTotalItemNum(Integer totalItemNum) {
         this.totalItemNum = totalItemNum;
         return this;
@@ -67,24 +67,15 @@ public class QueryTaskListResponseBody extends TeaModel {
         return this.totalItemNum;
     }
 
-    public QueryTaskListResponseBody setData(QueryTaskListResponseBodyData data) {
-        this.data = data;
+    public QueryTaskListResponseBody setTotalPageNum(Integer totalPageNum) {
+        this.totalPageNum = totalPageNum;
         return this;
     }
-    public QueryTaskListResponseBodyData getData() {
-        return this.data;
+    public Integer getTotalPageNum() {
+        return this.totalPageNum;
     }
 
     public static class QueryTaskListResponseBodyDataTaskList extends TeaModel {
-        @NameInMap("TaskType")
-        public String taskType;
-
-        @NameInMap("Result")
-        public String result;
-
-        @NameInMap("TaskStatus")
-        public String taskStatus;
-
         @NameInMap("CompleteTime")
         public Long completeTime;
 
@@ -97,33 +88,18 @@ public class QueryTaskListResponseBody extends TeaModel {
         @NameInMap("FileName")
         public String fileName;
 
+        @NameInMap("Result")
+        public String result;
+
+        @NameInMap("TaskStatus")
+        public String taskStatus;
+
+        @NameInMap("TaskType")
+        public String taskType;
+
         public static QueryTaskListResponseBodyDataTaskList build(java.util.Map<String, ?> map) throws Exception {
             QueryTaskListResponseBodyDataTaskList self = new QueryTaskListResponseBodyDataTaskList();
             return TeaModel.build(map, self);
-        }
-
-        public QueryTaskListResponseBodyDataTaskList setTaskType(String taskType) {
-            this.taskType = taskType;
-            return this;
-        }
-        public String getTaskType() {
-            return this.taskType;
-        }
-
-        public QueryTaskListResponseBodyDataTaskList setResult(String result) {
-            this.result = result;
-            return this;
-        }
-        public String getResult() {
-            return this.result;
-        }
-
-        public QueryTaskListResponseBodyDataTaskList setTaskStatus(String taskStatus) {
-            this.taskStatus = taskStatus;
-            return this;
-        }
-        public String getTaskStatus() {
-            return this.taskStatus;
         }
 
         public QueryTaskListResponseBodyDataTaskList setCompleteTime(Long completeTime) {
@@ -156,6 +132,30 @@ public class QueryTaskListResponseBody extends TeaModel {
         }
         public String getFileName() {
             return this.fileName;
+        }
+
+        public QueryTaskListResponseBodyDataTaskList setResult(String result) {
+            this.result = result;
+            return this;
+        }
+        public String getResult() {
+            return this.result;
+        }
+
+        public QueryTaskListResponseBodyDataTaskList setTaskStatus(String taskStatus) {
+            this.taskStatus = taskStatus;
+            return this;
+        }
+        public String getTaskStatus() {
+            return this.taskStatus;
+        }
+
+        public QueryTaskListResponseBodyDataTaskList setTaskType(String taskType) {
+            this.taskType = taskType;
+            return this;
+        }
+        public String getTaskType() {
+            return this.taskType;
         }
 
     }

@@ -4,26 +4,26 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class GenerateQrCodeRequest extends TeaModel {
-    @NameInMap("Uuid")
-    public String uuid;
+    @NameInMap("FieldKey")
+    public String fieldKey;
 
     @NameInMap("OssKey")
     public String ossKey;
 
-    @NameInMap("FieldKey")
-    public String fieldKey;
+    @NameInMap("Uuid")
+    public String uuid;
 
     public static GenerateQrCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateQrCodeRequest self = new GenerateQrCodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public GenerateQrCodeRequest setUuid(String uuid) {
-        this.uuid = uuid;
+    public GenerateQrCodeRequest setFieldKey(String fieldKey) {
+        this.fieldKey = fieldKey;
         return this;
     }
-    public String getUuid() {
-        return this.uuid;
+    public String getFieldKey() {
+        return this.fieldKey;
     }
 
     public GenerateQrCodeRequest setOssKey(String ossKey) {
@@ -34,12 +34,12 @@ public class GenerateQrCodeRequest extends TeaModel {
         return this.ossKey;
     }
 
-    public GenerateQrCodeRequest setFieldKey(String fieldKey) {
-        this.fieldKey = fieldKey;
+    public GenerateQrCodeRequest setUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
-    public String getFieldKey() {
-        return this.fieldKey;
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

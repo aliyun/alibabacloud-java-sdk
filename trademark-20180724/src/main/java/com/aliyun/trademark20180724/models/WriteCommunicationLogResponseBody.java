@@ -4,6 +4,9 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class WriteCommunicationLogResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
@@ -13,12 +16,17 @@ public class WriteCommunicationLogResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     public static WriteCommunicationLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         WriteCommunicationLogResponseBody self = new WriteCommunicationLogResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public WriteCommunicationLogResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public WriteCommunicationLogResponseBody setErrorMsg(String errorMsg) {
@@ -43,14 +51,6 @@ public class WriteCommunicationLogResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public WriteCommunicationLogResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
 }

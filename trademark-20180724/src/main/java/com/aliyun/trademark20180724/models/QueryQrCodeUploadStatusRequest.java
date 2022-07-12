@@ -4,11 +4,11 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class QueryQrCodeUploadStatusRequest extends TeaModel {
-    @NameInMap("OssKey")
-    public String ossKey;
-
     @NameInMap("FieldKey")
     public String fieldKey;
+
+    @NameInMap("OssKey")
+    public String ossKey;
 
     @NameInMap("Uuid")
     public String uuid;
@@ -18,20 +18,20 @@ public class QueryQrCodeUploadStatusRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryQrCodeUploadStatusRequest setOssKey(String ossKey) {
-        this.ossKey = ossKey;
-        return this;
-    }
-    public String getOssKey() {
-        return this.ossKey;
-    }
-
     public QueryQrCodeUploadStatusRequest setFieldKey(String fieldKey) {
         this.fieldKey = fieldKey;
         return this;
     }
     public String getFieldKey() {
         return this.fieldKey;
+    }
+
+    public QueryQrCodeUploadStatusRequest setOssKey(String ossKey) {
+        this.ossKey = ossKey;
+        return this;
+    }
+    public String getOssKey() {
+        return this.ossKey;
     }
 
     public QueryQrCodeUploadStatusRequest setUuid(String uuid) {

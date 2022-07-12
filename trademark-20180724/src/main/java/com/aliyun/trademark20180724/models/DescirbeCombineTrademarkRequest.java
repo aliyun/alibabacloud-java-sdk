@@ -4,8 +4,11 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class DescirbeCombineTrademarkRequest extends TeaModel {
-    @NameInMap("RegistrationNumber")
-    public String registrationNumber;
+    @NameInMap("AccurateMatch")
+    public Boolean accurateMatch;
+
+    @NameInMap("Classification")
+    public String classification;
 
     @NameInMap("Name")
     public String name;
@@ -13,20 +16,17 @@ public class DescirbeCombineTrademarkRequest extends TeaModel {
     @NameInMap("OwnerName")
     public String ownerName;
 
-    @NameInMap("Products")
-    public String products;
-
-    @NameInMap("AccurateMatch")
-    public Boolean accurateMatch;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Classification")
-    public String classification;
+    @NameInMap("Products")
+    public String products;
+
+    @NameInMap("RegistrationNumber")
+    public String registrationNumber;
 
     @NameInMap("SimilarGroups")
     public String similarGroups;
@@ -36,12 +36,20 @@ public class DescirbeCombineTrademarkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescirbeCombineTrademarkRequest setRegistrationNumber(String registrationNumber) {
-        this.registrationNumber = registrationNumber;
+    public DescirbeCombineTrademarkRequest setAccurateMatch(Boolean accurateMatch) {
+        this.accurateMatch = accurateMatch;
         return this;
     }
-    public String getRegistrationNumber() {
-        return this.registrationNumber;
+    public Boolean getAccurateMatch() {
+        return this.accurateMatch;
+    }
+
+    public DescirbeCombineTrademarkRequest setClassification(String classification) {
+        this.classification = classification;
+        return this;
+    }
+    public String getClassification() {
+        return this.classification;
     }
 
     public DescirbeCombineTrademarkRequest setName(String name) {
@@ -60,22 +68,6 @@ public class DescirbeCombineTrademarkRequest extends TeaModel {
         return this.ownerName;
     }
 
-    public DescirbeCombineTrademarkRequest setProducts(String products) {
-        this.products = products;
-        return this;
-    }
-    public String getProducts() {
-        return this.products;
-    }
-
-    public DescirbeCombineTrademarkRequest setAccurateMatch(Boolean accurateMatch) {
-        this.accurateMatch = accurateMatch;
-        return this;
-    }
-    public Boolean getAccurateMatch() {
-        return this.accurateMatch;
-    }
-
     public DescirbeCombineTrademarkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -92,12 +84,20 @@ public class DescirbeCombineTrademarkRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescirbeCombineTrademarkRequest setClassification(String classification) {
-        this.classification = classification;
+    public DescirbeCombineTrademarkRequest setProducts(String products) {
+        this.products = products;
         return this;
     }
-    public String getClassification() {
-        return this.classification;
+    public String getProducts() {
+        return this.products;
+    }
+
+    public DescirbeCombineTrademarkRequest setRegistrationNumber(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
+        return this;
+    }
+    public String getRegistrationNumber() {
+        return this.registrationNumber;
     }
 
     public DescirbeCombineTrademarkRequest setSimilarGroups(String similarGroups) {

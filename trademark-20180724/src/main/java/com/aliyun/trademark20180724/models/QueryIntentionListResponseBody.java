@@ -7,20 +7,20 @@ public class QueryIntentionListResponseBody extends TeaModel {
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
-    @NameInMap("TotalPageNum")
-    public Integer totalPageNum;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Data")
+    public QueryIntentionListResponseBodyData data;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
-    @NameInMap("Data")
-    public QueryIntentionListResponseBodyData data;
+    @NameInMap("TotalPageNum")
+    public Integer totalPageNum;
 
     public static QueryIntentionListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryIntentionListResponseBody self = new QueryIntentionListResponseBody();
@@ -35,20 +35,12 @@ public class QueryIntentionListResponseBody extends TeaModel {
         return this.currentPageNum;
     }
 
-    public QueryIntentionListResponseBody setTotalPageNum(Integer totalPageNum) {
-        this.totalPageNum = totalPageNum;
+    public QueryIntentionListResponseBody setData(QueryIntentionListResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getTotalPageNum() {
-        return this.totalPageNum;
-    }
-
-    public QueryIntentionListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public QueryIntentionListResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryIntentionListResponseBody setPageSize(Integer pageSize) {
@@ -59,6 +51,14 @@ public class QueryIntentionListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public QueryIntentionListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryIntentionListResponseBody setTotalItemNum(Integer totalItemNum) {
         this.totalItemNum = totalItemNum;
         return this;
@@ -67,23 +67,23 @@ public class QueryIntentionListResponseBody extends TeaModel {
         return this.totalItemNum;
     }
 
-    public QueryIntentionListResponseBody setData(QueryIntentionListResponseBodyData data) {
-        this.data = data;
+    public QueryIntentionListResponseBody setTotalPageNum(Integer totalPageNum) {
+        this.totalPageNum = totalPageNum;
         return this;
     }
-    public QueryIntentionListResponseBodyData getData() {
-        return this.data;
+    public Integer getTotalPageNum() {
+        return this.totalPageNum;
     }
 
     public static class QueryIntentionListResponseBodyDataIntention extends TeaModel {
-        @NameInMap("Type")
-        public Integer type;
+        @NameInMap("BizId")
+        public String bizId;
 
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("Classification")
+        public String classification;
 
-        @NameInMap("UpdateTime")
-        public Long updateTime;
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("Description")
         public String description;
@@ -91,45 +91,45 @@ public class QueryIntentionListResponseBody extends TeaModel {
         @NameInMap("RegisterNumber")
         public String registerNumber;
 
-        @NameInMap("CreateTime")
-        public Long createTime;
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("Type")
+        public Integer type;
+
+        @NameInMap("UpdateTime")
+        public Long updateTime;
 
         @NameInMap("UserId")
         public String userId;
-
-        @NameInMap("BizId")
-        public String bizId;
-
-        @NameInMap("Classification")
-        public String classification;
 
         public static QueryIntentionListResponseBodyDataIntention build(java.util.Map<String, ?> map) throws Exception {
             QueryIntentionListResponseBodyDataIntention self = new QueryIntentionListResponseBodyDataIntention();
             return TeaModel.build(map, self);
         }
 
-        public QueryIntentionListResponseBodyDataIntention setType(Integer type) {
-            this.type = type;
+        public QueryIntentionListResponseBodyDataIntention setBizId(String bizId) {
+            this.bizId = bizId;
             return this;
         }
-        public Integer getType() {
-            return this.type;
+        public String getBizId() {
+            return this.bizId;
         }
 
-        public QueryIntentionListResponseBodyDataIntention setStatus(Integer status) {
-            this.status = status;
+        public QueryIntentionListResponseBodyDataIntention setClassification(String classification) {
+            this.classification = classification;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
+        public String getClassification() {
+            return this.classification;
         }
 
-        public QueryIntentionListResponseBodyDataIntention setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
+        public QueryIntentionListResponseBodyDataIntention setCreateTime(Long createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public Long getUpdateTime() {
-            return this.updateTime;
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public QueryIntentionListResponseBodyDataIntention setDescription(String description) {
@@ -148,12 +148,28 @@ public class QueryIntentionListResponseBody extends TeaModel {
             return this.registerNumber;
         }
 
-        public QueryIntentionListResponseBodyDataIntention setCreateTime(Long createTime) {
-            this.createTime = createTime;
+        public QueryIntentionListResponseBodyDataIntention setStatus(Integer status) {
+            this.status = status;
             return this;
         }
-        public Long getCreateTime() {
-            return this.createTime;
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public QueryIntentionListResponseBodyDataIntention setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+        public QueryIntentionListResponseBodyDataIntention setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
         public QueryIntentionListResponseBodyDataIntention setUserId(String userId) {
@@ -162,22 +178,6 @@ public class QueryIntentionListResponseBody extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
-        }
-
-        public QueryIntentionListResponseBodyDataIntention setBizId(String bizId) {
-            this.bizId = bizId;
-            return this;
-        }
-        public String getBizId() {
-            return this.bizId;
-        }
-
-        public QueryIntentionListResponseBodyDataIntention setClassification(String classification) {
-            this.classification = classification;
-            return this;
-        }
-        public String getClassification() {
-            return this.classification;
         }
 
     }

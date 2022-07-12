@@ -4,23 +4,15 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class QueryOssResourcesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public QueryOssResourcesResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryOssResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryOssResourcesResponseBody self = new QueryOssResourcesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryOssResourcesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryOssResourcesResponseBody setData(QueryOssResourcesResponseBodyData data) {
@@ -31,21 +23,29 @@ public class QueryOssResourcesResponseBody extends TeaModel {
         return this.data;
     }
 
+    public QueryOssResourcesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class QueryOssResourcesResponseBodyDataTaskList extends TeaModel {
         @NameInMap("BizId")
         public String bizId;
 
-        @NameInMap("UpdateTime")
-        public Long updateTime;
-
-        @NameInMap("OssUrl")
-        public String ossUrl;
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("CreateTime")
-        public Long createTime;
+        @NameInMap("OssUrl")
+        public String ossUrl;
+
+        @NameInMap("UpdateTime")
+        public Long updateTime;
 
         public static QueryOssResourcesResponseBodyDataTaskList build(java.util.Map<String, ?> map) throws Exception {
             QueryOssResourcesResponseBodyDataTaskList self = new QueryOssResourcesResponseBodyDataTaskList();
@@ -60,20 +60,12 @@ public class QueryOssResourcesResponseBody extends TeaModel {
             return this.bizId;
         }
 
-        public QueryOssResourcesResponseBodyDataTaskList setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
+        public QueryOssResourcesResponseBodyDataTaskList setCreateTime(Long createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public QueryOssResourcesResponseBodyDataTaskList setOssUrl(String ossUrl) {
-            this.ossUrl = ossUrl;
-            return this;
-        }
-        public String getOssUrl() {
-            return this.ossUrl;
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public QueryOssResourcesResponseBodyDataTaskList setName(String name) {
@@ -84,12 +76,20 @@ public class QueryOssResourcesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public QueryOssResourcesResponseBodyDataTaskList setCreateTime(Long createTime) {
-            this.createTime = createTime;
+        public QueryOssResourcesResponseBodyDataTaskList setOssUrl(String ossUrl) {
+            this.ossUrl = ossUrl;
             return this;
         }
-        public Long getCreateTime() {
-            return this.createTime;
+        public String getOssUrl() {
+            return this.ossUrl;
+        }
+
+        public QueryOssResourcesResponseBodyDataTaskList setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }

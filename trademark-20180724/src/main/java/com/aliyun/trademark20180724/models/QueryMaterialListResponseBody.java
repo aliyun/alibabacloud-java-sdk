@@ -7,20 +7,20 @@ public class QueryMaterialListResponseBody extends TeaModel {
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
-    @NameInMap("TotalPageNum")
-    public Integer totalPageNum;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Data")
+    public QueryMaterialListResponseBodyData data;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
-    @NameInMap("Data")
-    public QueryMaterialListResponseBodyData data;
+    @NameInMap("TotalPageNum")
+    public Integer totalPageNum;
 
     public static QueryMaterialListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMaterialListResponseBody self = new QueryMaterialListResponseBody();
@@ -35,20 +35,12 @@ public class QueryMaterialListResponseBody extends TeaModel {
         return this.currentPageNum;
     }
 
-    public QueryMaterialListResponseBody setTotalPageNum(Integer totalPageNum) {
-        this.totalPageNum = totalPageNum;
+    public QueryMaterialListResponseBody setData(QueryMaterialListResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getTotalPageNum() {
-        return this.totalPageNum;
-    }
-
-    public QueryMaterialListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public QueryMaterialListResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryMaterialListResponseBody setPageSize(Integer pageSize) {
@@ -59,6 +51,14 @@ public class QueryMaterialListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public QueryMaterialListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryMaterialListResponseBody setTotalItemNum(Integer totalItemNum) {
         this.totalItemNum = totalItemNum;
         return this;
@@ -67,17 +67,47 @@ public class QueryMaterialListResponseBody extends TeaModel {
         return this.totalItemNum;
     }
 
-    public QueryMaterialListResponseBody setData(QueryMaterialListResponseBodyData data) {
-        this.data = data;
+    public QueryMaterialListResponseBody setTotalPageNum(Integer totalPageNum) {
+        this.totalPageNum = totalPageNum;
         return this;
     }
-    public QueryMaterialListResponseBodyData getData() {
-        return this.data;
+    public Integer getTotalPageNum() {
+        return this.totalPageNum;
     }
 
     public static class QueryMaterialListResponseBodyDataTrademark extends TeaModel {
+        @NameInMap("CardNumber")
+        public String cardNumber;
+
+        @NameInMap("ContactName")
+        public String contactName;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("LoaKey")
+        public String loaKey;
+
+        @NameInMap("LoaStatus")
+        public Integer loaStatus;
+
+        @NameInMap("MaterialVersion")
+        public String materialVersion;
+
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("PrincipalDescription")
         public String principalDescription;
+
+        @NameInMap("PrincipalName")
+        public Integer principalName;
+
+        @NameInMap("Reason")
+        public String reason;
+
+        @NameInMap("Region")
+        public Integer region;
 
         @NameInMap("Status")
         public Integer status;
@@ -85,39 +115,68 @@ public class QueryMaterialListResponseBody extends TeaModel {
         @NameInMap("Type")
         public Integer type;
 
-        @NameInMap("ContactName")
-        public String contactName;
-
-        @NameInMap("CardNumber")
-        public String cardNumber;
-
         @NameInMap("ValidDate")
         public Long validDate;
-
-        @NameInMap("Region")
-        public Integer region;
-
-        @NameInMap("PrincipalName")
-        public Integer principalName;
-
-        @NameInMap("LoaStatus")
-        public Integer loaStatus;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("LoaKey")
-        public String loaKey;
-
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("Reason")
-        public String reason;
 
         public static QueryMaterialListResponseBodyDataTrademark build(java.util.Map<String, ?> map) throws Exception {
             QueryMaterialListResponseBodyDataTrademark self = new QueryMaterialListResponseBodyDataTrademark();
             return TeaModel.build(map, self);
+        }
+
+        public QueryMaterialListResponseBodyDataTrademark setCardNumber(String cardNumber) {
+            this.cardNumber = cardNumber;
+            return this;
+        }
+        public String getCardNumber() {
+            return this.cardNumber;
+        }
+
+        public QueryMaterialListResponseBodyDataTrademark setContactName(String contactName) {
+            this.contactName = contactName;
+            return this;
+        }
+        public String getContactName() {
+            return this.contactName;
+        }
+
+        public QueryMaterialListResponseBodyDataTrademark setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public QueryMaterialListResponseBodyDataTrademark setLoaKey(String loaKey) {
+            this.loaKey = loaKey;
+            return this;
+        }
+        public String getLoaKey() {
+            return this.loaKey;
+        }
+
+        public QueryMaterialListResponseBodyDataTrademark setLoaStatus(Integer loaStatus) {
+            this.loaStatus = loaStatus;
+            return this;
+        }
+        public Integer getLoaStatus() {
+            return this.loaStatus;
+        }
+
+        public QueryMaterialListResponseBodyDataTrademark setMaterialVersion(String materialVersion) {
+            this.materialVersion = materialVersion;
+            return this;
+        }
+        public String getMaterialVersion() {
+            return this.materialVersion;
+        }
+
+        public QueryMaterialListResponseBodyDataTrademark setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public QueryMaterialListResponseBodyDataTrademark setPrincipalDescription(String principalDescription) {
@@ -126,6 +185,30 @@ public class QueryMaterialListResponseBody extends TeaModel {
         }
         public String getPrincipalDescription() {
             return this.principalDescription;
+        }
+
+        public QueryMaterialListResponseBodyDataTrademark setPrincipalName(Integer principalName) {
+            this.principalName = principalName;
+            return this;
+        }
+        public Integer getPrincipalName() {
+            return this.principalName;
+        }
+
+        public QueryMaterialListResponseBodyDataTrademark setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
+        public QueryMaterialListResponseBodyDataTrademark setRegion(Integer region) {
+            this.region = region;
+            return this;
+        }
+        public Integer getRegion() {
+            return this.region;
         }
 
         public QueryMaterialListResponseBodyDataTrademark setStatus(Integer status) {
@@ -144,84 +227,12 @@ public class QueryMaterialListResponseBody extends TeaModel {
             return this.type;
         }
 
-        public QueryMaterialListResponseBodyDataTrademark setContactName(String contactName) {
-            this.contactName = contactName;
-            return this;
-        }
-        public String getContactName() {
-            return this.contactName;
-        }
-
-        public QueryMaterialListResponseBodyDataTrademark setCardNumber(String cardNumber) {
-            this.cardNumber = cardNumber;
-            return this;
-        }
-        public String getCardNumber() {
-            return this.cardNumber;
-        }
-
         public QueryMaterialListResponseBodyDataTrademark setValidDate(Long validDate) {
             this.validDate = validDate;
             return this;
         }
         public Long getValidDate() {
             return this.validDate;
-        }
-
-        public QueryMaterialListResponseBodyDataTrademark setRegion(Integer region) {
-            this.region = region;
-            return this;
-        }
-        public Integer getRegion() {
-            return this.region;
-        }
-
-        public QueryMaterialListResponseBodyDataTrademark setPrincipalName(Integer principalName) {
-            this.principalName = principalName;
-            return this;
-        }
-        public Integer getPrincipalName() {
-            return this.principalName;
-        }
-
-        public QueryMaterialListResponseBodyDataTrademark setLoaStatus(Integer loaStatus) {
-            this.loaStatus = loaStatus;
-            return this;
-        }
-        public Integer getLoaStatus() {
-            return this.loaStatus;
-        }
-
-        public QueryMaterialListResponseBodyDataTrademark setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public QueryMaterialListResponseBodyDataTrademark setLoaKey(String loaKey) {
-            this.loaKey = loaKey;
-            return this;
-        }
-        public String getLoaKey() {
-            return this.loaKey;
-        }
-
-        public QueryMaterialListResponseBodyDataTrademark setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public QueryMaterialListResponseBodyDataTrademark setReason(String reason) {
-            this.reason = reason;
-            return this;
-        }
-        public String getReason() {
-            return this.reason;
         }
 
     }

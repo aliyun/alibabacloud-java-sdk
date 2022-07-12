@@ -7,11 +7,11 @@ public class SubmitTrademarkApplicationComplaintRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
-    @NameInMap("Files")
-    public java.util.Map<String, ?> files;
-
     @NameInMap("Content")
     public String content;
+
+    @NameInMap("Files")
+    public java.util.Map<String, ?> files;
 
     public static SubmitTrademarkApplicationComplaintRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitTrademarkApplicationComplaintRequest self = new SubmitTrademarkApplicationComplaintRequest();
@@ -26,20 +26,20 @@ public class SubmitTrademarkApplicationComplaintRequest extends TeaModel {
         return this.bizId;
     }
 
-    public SubmitTrademarkApplicationComplaintRequest setFiles(java.util.Map<String, ?> files) {
-        this.files = files;
-        return this;
-    }
-    public java.util.Map<String, ?> getFiles() {
-        return this.files;
-    }
-
     public SubmitTrademarkApplicationComplaintRequest setContent(String content) {
         this.content = content;
         return this;
     }
     public String getContent() {
         return this.content;
+    }
+
+    public SubmitTrademarkApplicationComplaintRequest setFiles(java.util.Map<String, ?> files) {
+        this.files = files;
+        return this;
+    }
+    public java.util.Map<String, ?> getFiles() {
+        return this.files;
     }
 
 }
