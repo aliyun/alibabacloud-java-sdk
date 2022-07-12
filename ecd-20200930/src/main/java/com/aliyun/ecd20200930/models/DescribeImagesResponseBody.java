@@ -79,6 +79,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        @NameInMap("SessionType")
+        public String sessionType;
+
         @NameInMap("SharedCount")
         public Integer sharedCount;
 
@@ -196,6 +199,14 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
         public String getProtocolType() {
             return this.protocolType;
+        }
+
+        public DescribeImagesResponseBodyImages setSessionType(String sessionType) {
+            this.sessionType = sessionType;
+            return this;
+        }
+        public String getSessionType() {
+            return this.sessionType;
         }
 
         public DescribeImagesResponseBodyImages setSharedCount(Integer sharedCount) {

@@ -28,6 +28,9 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
+    @NameInMap("Uuid")
+    public String uuid;
+
     public static GetConnectionTicketRequest build(java.util.Map<String, ?> map) throws Exception {
         GetConnectionTicketRequest self = new GetConnectionTicketRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class GetConnectionTicketRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public GetConnectionTicketRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

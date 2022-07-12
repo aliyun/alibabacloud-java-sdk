@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class GetDirectorySsoStatusResponse extends TeaModel {
+public class ModifyDiskSpecResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetDirectorySsoStatusResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetDirectorySsoStatusResponseBody body;
+    public ModifyDiskSpecResponseBody body;
 
-    public static GetDirectorySsoStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetDirectorySsoStatusResponse self = new GetDirectorySsoStatusResponse();
+    public static ModifyDiskSpecResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyDiskSpecResponse self = new ModifyDiskSpecResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDirectorySsoStatusResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyDiskSpecResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetDirectorySsoStatusResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetDirectorySsoStatusResponse setStatusCode(Integer statusCode) {
+    public ModifyDiskSpecResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetDirectorySsoStatusResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetDirectorySsoStatusResponse setBody(GetDirectorySsoStatusResponseBody body) {
+    public ModifyDiskSpecResponse setBody(ModifyDiskSpecResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetDirectorySsoStatusResponseBody getBody() {
+    public ModifyDiskSpecResponseBody getBody() {
         return this.body;
     }
 

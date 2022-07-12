@@ -19,6 +19,9 @@ public class DescribeBundlesRequest extends TeaModel {
     @NameInMap("DesktopTypeFamily")
     public String desktopTypeFamily;
 
+    @NameInMap("FotaChannel")
+    public String fotaChannel;
+
     @NameInMap("FromDesktopGroup")
     public Boolean fromDesktopGroup;
 
@@ -89,6 +92,14 @@ public class DescribeBundlesRequest extends TeaModel {
     }
     public String getDesktopTypeFamily() {
         return this.desktopTypeFamily;
+    }
+
+    public DescribeBundlesRequest setFotaChannel(String fotaChannel) {
+        this.fotaChannel = fotaChannel;
+        return this;
+    }
+    public String getFotaChannel() {
+        return this.fotaChannel;
     }
 
     public DescribeBundlesRequest setFromDesktopGroup(Boolean fromDesktopGroup) {

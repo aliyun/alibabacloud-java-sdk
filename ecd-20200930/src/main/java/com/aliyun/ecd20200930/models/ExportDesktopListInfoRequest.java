@@ -43,6 +43,9 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Tag")
+    public java.util.List<ExportDesktopListInfoRequestTag> tag;
+
     @NameInMap("UserName")
     public String userName;
 
@@ -155,12 +158,50 @@ public class ExportDesktopListInfoRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ExportDesktopListInfoRequest setTag(java.util.List<ExportDesktopListInfoRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ExportDesktopListInfoRequestTag> getTag() {
+        return this.tag;
+    }
+
     public ExportDesktopListInfoRequest setUserName(String userName) {
         this.userName = userName;
         return this;
     }
     public String getUserName() {
         return this.userName;
+    }
+
+    public static class ExportDesktopListInfoRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ExportDesktopListInfoRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ExportDesktopListInfoRequestTag self = new ExportDesktopListInfoRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ExportDesktopListInfoRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ExportDesktopListInfoRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

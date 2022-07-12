@@ -61,6 +61,9 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeDesktopsRequestTag> tag;
+
     @NameInMap("UserName")
     public String userName;
 
@@ -221,12 +224,50 @@ public class DescribeDesktopsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeDesktopsRequest setTag(java.util.List<DescribeDesktopsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDesktopsRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeDesktopsRequest setUserName(String userName) {
         this.userName = userName;
         return this;
     }
     public String getUserName() {
         return this.userName;
+    }
+
+    public static class DescribeDesktopsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeDesktopsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDesktopsRequestTag self = new DescribeDesktopsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDesktopsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeDesktopsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

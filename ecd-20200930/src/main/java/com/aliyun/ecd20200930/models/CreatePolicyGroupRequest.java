@@ -37,6 +37,9 @@ public class CreatePolicyGroupRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("NetRedirect")
+    public String netRedirect;
+
     @NameInMap("PreemptLogin")
     public String preemptLogin;
 
@@ -170,6 +173,14 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreatePolicyGroupRequest setNetRedirect(String netRedirect) {
+        this.netRedirect = netRedirect;
+        return this;
+    }
+    public String getNetRedirect() {
+        return this.netRedirect;
     }
 
     public CreatePolicyGroupRequest setPreemptLogin(String preemptLogin) {

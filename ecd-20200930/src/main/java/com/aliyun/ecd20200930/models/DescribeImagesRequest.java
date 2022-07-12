@@ -7,6 +7,9 @@ public class DescribeImagesRequest extends TeaModel {
     @NameInMap("DesktopInstanceType")
     public String desktopInstanceType;
 
+    @NameInMap("FotaChannel")
+    public String fotaChannel;
+
     @NameInMap("GpuCategory")
     public Boolean gpuCategory;
 
@@ -51,6 +54,14 @@ public class DescribeImagesRequest extends TeaModel {
     }
     public String getDesktopInstanceType() {
         return this.desktopInstanceType;
+    }
+
+    public DescribeImagesRequest setFotaChannel(String fotaChannel) {
+        this.fotaChannel = fotaChannel;
+        return this;
+    }
+    public String getFotaChannel() {
+        return this.fotaChannel;
     }
 
     public DescribeImagesRequest setGpuCategory(Boolean gpuCategory) {

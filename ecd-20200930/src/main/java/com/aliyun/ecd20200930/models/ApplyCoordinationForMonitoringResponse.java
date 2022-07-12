@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class SetDirectorySsoStatusResponse extends TeaModel {
+public class ApplyCoordinationForMonitoringResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class SetDirectorySsoStatusResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public SetDirectorySsoStatusResponseBody body;
+    public ApplyCoordinationForMonitoringResponseBody body;
 
-    public static SetDirectorySsoStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        SetDirectorySsoStatusResponse self = new SetDirectorySsoStatusResponse();
+    public static ApplyCoordinationForMonitoringResponse build(java.util.Map<String, ?> map) throws Exception {
+        ApplyCoordinationForMonitoringResponse self = new ApplyCoordinationForMonitoringResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetDirectorySsoStatusResponse setHeaders(java.util.Map<String, String> headers) {
+    public ApplyCoordinationForMonitoringResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class SetDirectorySsoStatusResponse extends TeaModel {
         return this.headers;
     }
 
-    public SetDirectorySsoStatusResponse setStatusCode(Integer statusCode) {
+    public ApplyCoordinationForMonitoringResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class SetDirectorySsoStatusResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SetDirectorySsoStatusResponse setBody(SetDirectorySsoStatusResponseBody body) {
+    public ApplyCoordinationForMonitoringResponse setBody(ApplyCoordinationForMonitoringResponseBody body) {
         this.body = body;
         return this;
     }
-    public SetDirectorySsoStatusResponseBody getBody() {
+    public ApplyCoordinationForMonitoringResponseBody getBody() {
         return this.body;
     }
 

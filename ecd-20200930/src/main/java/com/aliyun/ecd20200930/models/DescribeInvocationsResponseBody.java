@@ -203,6 +203,9 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("EndUserId")
+        public String endUserId;
+
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
@@ -239,6 +242,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeInvocationsResponseBodyInvocations setEndUserId(String endUserId) {
+            this.endUserId = endUserId;
+            return this;
+        }
+        public String getEndUserId() {
+            return this.endUserId;
         }
 
         public DescribeInvocationsResponseBodyInvocations setInvocationStatus(String invocationStatus) {
