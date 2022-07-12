@@ -8,7 +8,7 @@ public class ThreeElementsVerificationResponseBody extends TeaModel {
     public String code;
 
     @NameInMap("Data")
-    public java.util.List<ThreeElementsVerificationResponseBodyData> data;
+    public ThreeElementsVerificationResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
@@ -29,11 +29,11 @@ public class ThreeElementsVerificationResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ThreeElementsVerificationResponseBody setData(java.util.List<ThreeElementsVerificationResponseBodyData> data) {
+    public ThreeElementsVerificationResponseBody setData(ThreeElementsVerificationResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<ThreeElementsVerificationResponseBodyData> getData() {
+    public ThreeElementsVerificationResponseBodyData getData() {
         return this.data;
     }
 
