@@ -4,15 +4,29 @@ package com.aliyun.antiddos_public20170518.models;
 import com.aliyun.tea.*;
 
 public class DescribeBgpPackByIpResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("DdosbgpInfo")
     public DescribeBgpPackByIpResponseBodyDdosbgpInfo ddosbgpInfo;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeBgpPackByIpResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBgpPackByIpResponseBody self = new DescribeBgpPackByIpResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBgpPackByIpResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public DescribeBgpPackByIpResponseBody setDdosbgpInfo(DescribeBgpPackByIpResponseBodyDdosbgpInfo ddosbgpInfo) {
@@ -29,6 +43,14 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeBgpPackByIpResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DescribeBgpPackByIpResponseBodyDdosbgpInfo extends TeaModel {
