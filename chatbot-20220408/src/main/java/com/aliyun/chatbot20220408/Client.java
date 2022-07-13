@@ -1595,6 +1595,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.feedbackWithOptions(request, runtime);
     }
 
+    public GenerateUserAccessTokenResponse generateUserAccessTokenWithOptions(GenerateUserAccessTokenRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireTime)) {
+            query.put("ExpireTime", request.expireTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
+            query.put("ExtraInfo", request.extraInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.foreignId)) {
+            query.put("ForeignId", request.foreignId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nick)) {
+            query.put("Nick", request.nick);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telephone)) {
+            query.put("Telephone", request.telephone);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateUserAccessToken"),
+            new TeaPair("version", "2022-04-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateUserAccessTokenResponse());
+    }
+
+    public GenerateUserAccessTokenResponse generateUserAccessToken(GenerateUserAccessTokenRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.generateUserAccessTokenWithOptions(request, runtime);
+    }
+
     public GetAsyncResultResponse getAsyncResultWithOptions(GetAsyncResultRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
