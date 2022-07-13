@@ -8,17 +8,17 @@ public class UpdateAgingRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
-    // sass实例id
-    @NameInMap("InstanceId")
-    public String instanceId;
+    // 时效id
+    @NameInMap("Id")
+    public Long id;
 
     // 时效名称
     @NameInMap("Name")
     public String name;
 
-    // 店铺id
-    @NameInMap("ShopId")
-    public String shopId;
+    // 机器人code
+    @NameInMap("RobotCode")
+    public String robotCode;
 
     // 开始时间
     @NameInMap("StartTime")
@@ -48,12 +48,12 @@ public class UpdateAgingRequest extends TeaModel {
         return this.endTime;
     }
 
-    public UpdateAgingRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public UpdateAgingRequest setId(Long id) {
+        this.id = id;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public Long getId() {
+        return this.id;
     }
 
     public UpdateAgingRequest setName(String name) {
@@ -64,12 +64,12 @@ public class UpdateAgingRequest extends TeaModel {
         return this.name;
     }
 
-    public UpdateAgingRequest setShopId(String shopId) {
-        this.shopId = shopId;
+    public UpdateAgingRequest setRobotCode(String robotCode) {
+        this.robotCode = robotCode;
         return this;
     }
-    public String getShopId() {
-        return this.shopId;
+    public String getRobotCode() {
+        return this.robotCode;
     }
 
     public UpdateAgingRequest setStartTime(Long startTime) {

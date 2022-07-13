@@ -1,3 +1,6 @@
+2022-07-13 Version: 2.8.25
+- ListSlots add.
+
 2022-07-11 Version: 2.8.24
 - ListSlots add.
 

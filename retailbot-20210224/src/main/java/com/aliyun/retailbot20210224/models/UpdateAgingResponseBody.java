@@ -4,9 +4,11 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UpdateAgingResponseBody extends TeaModel {
+    // 返回code
     @NameInMap("Code")
     public String code;
 
+    // 返回code
     @NameInMap("Message")
     public String message;
 
@@ -14,6 +16,7 @@ public class UpdateAgingResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // 是否成功标示
     @NameInMap("Success")
     public Boolean success;
 
