@@ -3,7 +3,7 @@ package com.aliyun.das20200116.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteAutoScalePolicyResponseBody extends TeaModel {
+public class KillInstanceAllSessionResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -19,12 +19,12 @@ public class DeleteAutoScalePolicyResponseBody extends TeaModel {
     @NameInMap("Success")
     public String success;
 
-    public static DeleteAutoScalePolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteAutoScalePolicyResponseBody self = new DeleteAutoScalePolicyResponseBody();
+    public static KillInstanceAllSessionResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        KillInstanceAllSessionResponseBody self = new KillInstanceAllSessionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAutoScalePolicyResponseBody setCode(String code) {
+    public KillInstanceAllSessionResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,7 +32,7 @@ public class DeleteAutoScalePolicyResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteAutoScalePolicyResponseBody setData(String data) {
+    public KillInstanceAllSessionResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -40,7 +40,7 @@ public class DeleteAutoScalePolicyResponseBody extends TeaModel {
         return this.data;
     }
 
-    public DeleteAutoScalePolicyResponseBody setMessage(String message) {
+    public KillInstanceAllSessionResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -48,7 +48,7 @@ public class DeleteAutoScalePolicyResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteAutoScalePolicyResponseBody setRequestId(String requestId) {
+    public KillInstanceAllSessionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +56,7 @@ public class DeleteAutoScalePolicyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteAutoScalePolicyResponseBody setSuccess(String success) {
+    public KillInstanceAllSessionResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
