@@ -19,6 +19,9 @@ public class PreviewStackRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("StackId")
+    public String stackId;
+
     @NameInMap("StackName")
     public String stackName;
 
@@ -92,6 +95,14 @@ public class PreviewStackRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public PreviewStackRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
     }
 
     public PreviewStackRequest setStackName(String stackName) {

@@ -2779,6 +2779,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.stackId)) {
+            query.put("StackId", request.stackId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.stackName)) {
             query.put("StackName", request.stackName);
         }

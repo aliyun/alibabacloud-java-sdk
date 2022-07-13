@@ -122,6 +122,9 @@ public class PreviewStackResponseBody extends TeaModel {
     }
 
     public static class PreviewStackResponseBodyStackResources extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
         @NameInMap("Description")
         public String description;
 
@@ -130,6 +133,9 @@ public class PreviewStackResponseBody extends TeaModel {
 
         @NameInMap("Properties")
         public java.util.Map<String, ?> properties;
+
+        @NameInMap("Replacement")
+        public String replacement;
 
         @NameInMap("RequiredBy")
         public java.util.List<String> requiredBy;
@@ -143,6 +149,14 @@ public class PreviewStackResponseBody extends TeaModel {
         public static PreviewStackResponseBodyStackResources build(java.util.Map<String, ?> map) throws Exception {
             PreviewStackResponseBodyStackResources self = new PreviewStackResponseBodyStackResources();
             return TeaModel.build(map, self);
+        }
+
+        public PreviewStackResponseBodyStackResources setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
         }
 
         public PreviewStackResponseBodyStackResources setDescription(String description) {
@@ -167,6 +181,14 @@ public class PreviewStackResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getProperties() {
             return this.properties;
+        }
+
+        public PreviewStackResponseBodyStackResources setReplacement(String replacement) {
+            this.replacement = replacement;
+            return this;
+        }
+        public String getReplacement() {
+            return this.replacement;
         }
 
         public PreviewStackResponseBodyStackResources setRequiredBy(java.util.List<String> requiredBy) {
