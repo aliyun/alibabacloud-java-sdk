@@ -8,13 +8,9 @@ public class DeleteAgingRequest extends TeaModel {
     @NameInMap("AgingIds")
     public java.util.List<Long> agingIds;
 
-    // sass实例id
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    // 店铺id
-    @NameInMap("ShopId")
-    public String shopId;
+    // 机器人code
+    @NameInMap("RobotCode")
+    public String robotCode;
 
     public static DeleteAgingRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAgingRequest self = new DeleteAgingRequest();
@@ -29,20 +25,12 @@ public class DeleteAgingRequest extends TeaModel {
         return this.agingIds;
     }
 
-    public DeleteAgingRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public DeleteAgingRequest setRobotCode(String robotCode) {
+        this.robotCode = robotCode;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DeleteAgingRequest setShopId(String shopId) {
-        this.shopId = shopId;
-        return this;
-    }
-    public String getShopId() {
-        return this.shopId;
+    public String getRobotCode() {
+        return this.robotCode;
     }
 
 }

@@ -8,17 +8,13 @@ public class CreateAgingRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
-    // sass实例ID
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     // 名称
     @NameInMap("Name")
     public String name;
 
-    // 店铺ID
-    @NameInMap("ShopId")
-    public String shopId;
+    // 机器人Code
+    @NameInMap("RobotCode")
+    public String robotCode;
 
     // 开始时间
     @NameInMap("StartTime")
@@ -48,14 +44,6 @@ public class CreateAgingRequest extends TeaModel {
         return this.endTime;
     }
 
-    public CreateAgingRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public CreateAgingRequest setName(String name) {
         this.name = name;
         return this;
@@ -64,12 +52,12 @@ public class CreateAgingRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateAgingRequest setShopId(String shopId) {
-        this.shopId = shopId;
+    public CreateAgingRequest setRobotCode(String robotCode) {
+        this.robotCode = robotCode;
         return this;
     }
-    public String getShopId() {
-        return this.shopId;
+    public String getRobotCode() {
+        return this.robotCode;
     }
 
     public CreateAgingRequest setStartTime(Long startTime) {

@@ -403,16 +403,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("EndTime", request.endTime);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            body.put("InstanceId", request.instanceId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.shopId)) {
-            body.put("ShopId", request.shopId);
+        if (!com.aliyun.teautil.Common.isUnset(request.robotCode)) {
+            body.put("RobotCode", request.robotCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
@@ -677,12 +673,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             bodyFlat.put("AgingIds", request.agingIds);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            body.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.shopId)) {
-            body.put("ShopId", request.shopId);
+        if (!com.aliyun.teautil.Common.isUnset(request.robotCode)) {
+            body.put("RobotCode", request.robotCode);
         }
 
         body = TeaConverter.merge(Object.class,
@@ -2933,16 +2925,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("EndTime", request.endTime);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            body.put("InstanceId", request.instanceId);
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.shopId)) {
-            body.put("ShopId", request.shopId);
+        if (!com.aliyun.teautil.Common.isUnset(request.robotCode)) {
+            body.put("RobotCode", request.robotCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
