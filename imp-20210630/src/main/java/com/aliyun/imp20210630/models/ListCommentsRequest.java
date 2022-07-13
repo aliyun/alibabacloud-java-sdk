@@ -8,6 +8,10 @@ public class ListCommentsRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    // 弹幕创建者ID。
+    @NameInMap("CreatorId")
+    public String creatorId;
+
     // 查询弹幕消息列表的分页页数。应该从1开始，每次分页拉取时递增。
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -39,6 +43,14 @@ public class ListCommentsRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public ListCommentsRequest setCreatorId(String creatorId) {
+        this.creatorId = creatorId;
+        return this;
+    }
+    public String getCreatorId() {
+        return this.creatorId;
     }
 
     public ListCommentsRequest setPageNum(Integer pageNum) {

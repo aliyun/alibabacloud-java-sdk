@@ -327,6 +327,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createLiveWithOptions(request, runtime);
     }
 
+    public CreateLiveRecordSliceFileResponse createLiveRecordSliceFileWithOptions(CreateLiveRecordSliceFileRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            body.put("FileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.liveId)) {
+            body.put("LiveId", request.liveId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLiveRecordSliceFile"),
+            new TeaPair("version", "2021-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLiveRecordSliceFileResponse());
+    }
+
+    public CreateLiveRecordSliceFileResponse createLiveRecordSliceFile(CreateLiveRecordSliceFileRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createLiveRecordSliceFileWithOptions(request, runtime);
+    }
+
     public CreateLiveRoomResponse createLiveRoomWithOptions(CreateLiveRoomRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateLiveRoomShrinkRequest request = new CreateLiveRoomShrinkRequest();
@@ -541,6 +586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             bodyFlat.put("CommentIdList", request.commentIdList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.creatorId)) {
+            body.put("CreatorId", request.creatorId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.roomId)) {
             body.put("RoomId", request.roomId);
         }
@@ -573,6 +622,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCommentResponse deleteComment(DeleteCommentRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteCommentWithOptions(request, runtime);
+    }
+
+    public DeleteCommentByCreatorIdResponse deleteCommentByCreatorIdWithOptions(DeleteCommentByCreatorIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.commentIdList)) {
+            bodyFlat.put("CommentIdList", request.commentIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.creatorId)) {
+            body.put("CreatorId", request.creatorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roomId)) {
+            body.put("RoomId", request.roomId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCommentByCreatorId"),
+            new TeaPair("version", "2021-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCommentByCreatorIdResponse());
+    }
+
+    public DeleteCommentByCreatorIdResponse deleteCommentByCreatorId(DeleteCommentByCreatorIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteCommentByCreatorIdWithOptions(request, runtime);
     }
 
     public DeleteConferenceResponse deleteConferenceWithOptions(DeleteConferenceRequest request, RuntimeOptions runtime) throws Exception {
@@ -680,6 +779,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteLiveRoomResponse deleteLiveRoom(DeleteLiveRoomRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteLiveRoomWithOptions(request, runtime);
+    }
+
+    public DeleteRecordFileInfoResponse deleteRecordFileInfoWithOptions(DeleteRecordFileInfoRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRecordFileInfo"),
+            new TeaPair("version", "2021-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRecordFileInfoResponse());
+    }
+
+    public DeleteRecordFileInfoResponse deleteRecordFileInfo(DeleteRecordFileInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteRecordFileInfoWithOptions(request, runtime);
     }
 
     public DeleteRoomResponse deleteRoomWithOptions(DeleteRoomRequest request, RuntimeOptions runtime) throws Exception {
@@ -1145,6 +1281,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getLiveRoomUserStatisticsWithOptions(request, runtime);
     }
 
+    public GetRecordFileInfoResponse getRecordFileInfoWithOptions(GetRecordFileInfoRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRecordFileInfo"),
+            new TeaPair("version", "2021-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRecordFileInfoResponse());
+    }
+
+    public GetRecordFileInfoResponse getRecordFileInfo(GetRecordFileInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getRecordFileInfoWithOptions(request, runtime);
+    }
+
     public GetRoomResponse getRoomWithOptions(GetRoomRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1324,6 +1497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AppId", request.appId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.creatorId)) {
+            body.put("CreatorId", request.creatorId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
             body.put("PageNum", request.pageNum);
         }
@@ -1401,6 +1578,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListConferenceUsersResponse listConferenceUsers(ListConferenceUsersRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listConferenceUsersWithOptions(request, runtime);
+    }
+
+    public ListLiveFilesResponse listLiveFilesWithOptions(ListLiveFilesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.liveId)) {
+            query.put("LiveId", request.liveId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLiveFiles"),
+            new TeaPair("version", "2021-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLiveFilesResponse());
+    }
+
+    public ListLiveFilesResponse listLiveFiles(ListLiveFilesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listLiveFilesWithOptions(request, runtime);
     }
 
     public ListLiveRoomsResponse listLiveRoomsWithOptions(ListLiveRoomsRequest request, RuntimeOptions runtime) throws Exception {
