@@ -19,6 +19,9 @@ public class ListVpcEndpointServiceUsersRequest extends TeaModel {
     @NameInMap("UserId")
     public Long userId;
 
+    @NameInMap("UserListType")
+    public String userListType;
+
     public static ListVpcEndpointServiceUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListVpcEndpointServiceUsersRequest self = new ListVpcEndpointServiceUsersRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ListVpcEndpointServiceUsersRequest extends TeaModel {
     }
     public Long getUserId() {
         return this.userId;
+    }
+
+    public ListVpcEndpointServiceUsersRequest setUserListType(String userListType) {
+        this.userListType = userListType;
+        return this;
+    }
+    public String getUserListType() {
+        return this.userListType;
     }
 
 }
