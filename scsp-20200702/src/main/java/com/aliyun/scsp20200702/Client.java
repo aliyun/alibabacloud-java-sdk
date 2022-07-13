@@ -195,6 +195,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.assignTicketWithOptions(request, runtime);
     }
 
+    public BindAgentHotlinePhoneResponse bindAgentHotlinePhoneWithOptions(BindAgentHotlinePhoneRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            body.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            body.put("Phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verifyCode)) {
+            body.put("VerifyCode", request.verifyCode);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BindAgentHotlinePhone"),
+            new TeaPair("version", "2020-07-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BindAgentHotlinePhoneResponse());
+    }
+
+    public BindAgentHotlinePhoneResponse bindAgentHotlinePhone(BindAgentHotlinePhoneRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.bindAgentHotlinePhoneWithOptions(request, runtime);
+    }
+
     public ChangeChatAgentStatusResponse changeChatAgentStatusWithOptions(ChangeChatAgentStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1297,6 +1342,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.finishHotlineServiceWithOptions(request, runtime);
     }
 
+    public FinishHotlineServiceNewResponse finishHotlineServiceNewWithOptions(FinishHotlineServiceNewRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            body.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FinishHotlineServiceNew"),
+            new TeaPair("version", "2020-07-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FinishHotlineServiceNewResponse());
+    }
+
+    public FinishHotlineServiceNewResponse finishHotlineServiceNew(FinishHotlineServiceNewRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.finishHotlineServiceNewWithOptions(request, runtime);
+    }
+
     public GenerateWebSocketSignResponse generateWebSocketSignWithOptions(GenerateWebSocketSignRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1429,6 +1511,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAgentDetailReportWithOptions(request, runtime);
     }
 
+    public GetAgentHotlineResponse getAgentHotlineWithOptions(GetAgentHotlineRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            body.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentHotline"),
+            new TeaPair("version", "2020-07-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentHotlineResponse());
+    }
+
+    public GetAgentHotlineResponse getAgentHotline(GetAgentHotlineRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getAgentHotlineWithOptions(request, runtime);
+    }
+
+    public GetAgentHotlinePhoneResponse getAgentHotlinePhoneWithOptions(GetAgentHotlinePhoneRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            body.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentHotlinePhone"),
+            new TeaPair("version", "2020-07-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentHotlinePhoneResponse());
+    }
+
+    public GetAgentHotlinePhoneResponse getAgentHotlinePhone(GetAgentHotlinePhoneRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getAgentHotlinePhoneWithOptions(request, runtime);
+    }
+
     public GetAgentServiceStatusResponse getAgentServiceStatusWithOptions(GetAgentServiceStatusRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetAgentServiceStatusShrinkRequest request = new GetAgentServiceStatusShrinkRequest();
@@ -1497,6 +1653,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAgentStatisticsResponse getAgentStatistics(GetAgentStatisticsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getAgentStatisticsWithOptions(request, runtime);
+    }
+
+    public GetAgentWorkStatusResponse getAgentWorkStatusWithOptions(GetAgentWorkStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            body.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentWorkStatus"),
+            new TeaPair("version", "2020-07-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentWorkStatusResponse());
+    }
+
+    public GetAgentWorkStatusResponse getAgentWorkStatus(GetAgentWorkStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getAgentWorkStatusWithOptions(request, runtime);
     }
 
     public GetAllDepartmentResponse getAllDepartmentWithOptions(GetAllDepartmentRequest request, RuntimeOptions runtime) throws Exception {
@@ -2039,6 +2232,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetHotlineAgentDetailReportResponse getHotlineAgentDetailReport(GetHotlineAgentDetailReportRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getHotlineAgentDetailReportWithOptions(request, runtime);
+    }
+
+    public GetHotlineAgentDetailWithChannelResponse getHotlineAgentDetailWithChannelWithOptions(GetHotlineAgentDetailWithChannelRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetHotlineAgentDetailWithChannel"),
+            new TeaPair("version", "2020-07-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotlineAgentDetailWithChannelResponse());
+    }
+
+    public GetHotlineAgentDetailWithChannelResponse getHotlineAgentDetailWithChannel(GetHotlineAgentDetailWithChannelRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getHotlineAgentDetailWithChannelWithOptions(request, runtime);
     }
 
     public GetHotlineAgentStatusResponse getHotlineAgentStatusWithOptions(GetHotlineAgentStatusRequest request, RuntimeOptions runtime) throws Exception {
@@ -4173,6 +4391,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.sendOutboundCommandWithOptions(request, runtime);
     }
 
+    public SendVerificationCodeResponse sendVerificationCodeWithOptions(SendVerificationCodeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            body.put("Phone", request.phone);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendVerificationCode"),
+            new TeaPair("version", "2020-07-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendVerificationCodeResponse());
+    }
+
+    public SendVerificationCodeResponse sendVerificationCode(SendVerificationCodeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.sendVerificationCodeWithOptions(request, runtime);
+    }
+
     public StartAgentMonitorResponse startAgentMonitorWithOptions(StartAgentMonitorRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -4360,6 +4615,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartHotlineServiceResponse startHotlineService(StartHotlineServiceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.startHotlineServiceWithOptions(request, runtime);
+    }
+
+    public StartHotlineWorkResponse startHotlineWorkWithOptions(StartHotlineWorkRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            body.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillGroups)) {
+            body.put("SkillGroups", request.skillGroups);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workChannel)) {
+            body.put("WorkChannel", request.workChannel);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartHotlineWork"),
+            new TeaPair("version", "2020-07-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartHotlineWorkResponse());
+    }
+
+    public StartHotlineWorkResponse startHotlineWork(StartHotlineWorkRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.startHotlineWorkWithOptions(request, runtime);
     }
 
     public SuspendHotlineServiceResponse suspendHotlineServiceWithOptions(SuspendHotlineServiceRequest request, RuntimeOptions runtime) throws Exception {
@@ -4661,6 +4961,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TransferToThirdCallResponse transferToThirdCall(TransferToThirdCallRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.transferToThirdCallWithOptions(request, runtime);
+    }
+
+    public UnbindAgentHotlinePhoneResponse unbindAgentHotlinePhoneWithOptions(UnbindAgentHotlinePhoneRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            body.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnbindAgentHotlinePhone"),
+            new TeaPair("version", "2020-07-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindAgentHotlinePhoneResponse());
+    }
+
+    public UnbindAgentHotlinePhoneResponse unbindAgentHotlinePhone(UnbindAgentHotlinePhoneRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.unbindAgentHotlinePhoneWithOptions(request, runtime);
     }
 
     public UpdateAgentResponse updateAgentWithOptions(UpdateAgentRequest request, RuntimeOptions runtime) throws Exception {
