@@ -1,3 +1,6 @@
+2022-07-13 Version: 1.0.12
+- Unirest java v13 for user.
+
 2022-06-23 Version: 1.0.11
 - Unirest java v12 for user.
 

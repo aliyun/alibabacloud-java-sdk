@@ -145,6 +145,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceResponse());
     }
 
+    public GetResourceTypeResponse getResourceType(String provider, String productCode, String resourceTypeCode, GetResourceTypeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getResourceTypeWithOptions(provider, productCode, resourceTypeCode, request, headers, runtime);
+    }
+
+    public GetResourceTypeResponse getResourceTypeWithOptions(String provider, String productCode, String resourceTypeCode, GetResourceTypeRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        provider = com.aliyun.openapiutil.Client.getEncodeParam(provider);
+        productCode = com.aliyun.openapiutil.Client.getEncodeParam(productCode);
+        resourceTypeCode = com.aliyun.openapiutil.Client.getEncodeParam(resourceTypeCode);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypeVersion)) {
+            query.put("resourceTypeVersion", request.resourceTypeVersion);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetResourceType"),
+            new TeaPair("version", "2021-07-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/providers/" + provider + "/products/" + productCode + "/resourceTypes/" + resourceTypeCode + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceTypeResponse());
+    }
+
     public GetTaskResponse getTask(String taskId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
