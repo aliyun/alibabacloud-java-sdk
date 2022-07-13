@@ -3,7 +3,7 @@ package com.aliyun.das20200116.models;
 
 import com.aliyun.tea.*;
 
-public class GetPartitionsHeatmapResponse extends TeaModel {
+public class KillInstanceAllSessionResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetPartitionsHeatmapResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetPartitionsHeatmapResponseBody body;
+    public KillInstanceAllSessionResponseBody body;
 
-    public static GetPartitionsHeatmapResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetPartitionsHeatmapResponse self = new GetPartitionsHeatmapResponse();
+    public static KillInstanceAllSessionResponse build(java.util.Map<String, ?> map) throws Exception {
+        KillInstanceAllSessionResponse self = new KillInstanceAllSessionResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetPartitionsHeatmapResponse setHeaders(java.util.Map<String, String> headers) {
+    public KillInstanceAllSessionResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetPartitionsHeatmapResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetPartitionsHeatmapResponse setStatusCode(Integer statusCode) {
+    public KillInstanceAllSessionResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetPartitionsHeatmapResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetPartitionsHeatmapResponse setBody(GetPartitionsHeatmapResponseBody body) {
+    public KillInstanceAllSessionResponse setBody(KillInstanceAllSessionResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetPartitionsHeatmapResponseBody getBody() {
+    public KillInstanceAllSessionResponseBody getBody() {
         return this.body;
     }
 

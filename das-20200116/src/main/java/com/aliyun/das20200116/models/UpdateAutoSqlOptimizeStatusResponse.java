@@ -3,7 +3,7 @@ package com.aliyun.das20200116.models;
 
 import com.aliyun.tea.*;
 
-public class GetEventLatencyInfoResponse extends TeaModel {
+public class UpdateAutoSqlOptimizeStatusResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetEventLatencyInfoResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetEventLatencyInfoResponseBody body;
+    public UpdateAutoSqlOptimizeStatusResponseBody body;
 
-    public static GetEventLatencyInfoResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetEventLatencyInfoResponse self = new GetEventLatencyInfoResponse();
+    public static UpdateAutoSqlOptimizeStatusResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateAutoSqlOptimizeStatusResponse self = new UpdateAutoSqlOptimizeStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetEventLatencyInfoResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateAutoSqlOptimizeStatusResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetEventLatencyInfoResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetEventLatencyInfoResponse setStatusCode(Integer statusCode) {
+    public UpdateAutoSqlOptimizeStatusResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetEventLatencyInfoResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetEventLatencyInfoResponse setBody(GetEventLatencyInfoResponseBody body) {
+    public UpdateAutoSqlOptimizeStatusResponse setBody(UpdateAutoSqlOptimizeStatusResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetEventLatencyInfoResponseBody getBody() {
+    public UpdateAutoSqlOptimizeStatusResponseBody getBody() {
         return this.body;
     }
 
