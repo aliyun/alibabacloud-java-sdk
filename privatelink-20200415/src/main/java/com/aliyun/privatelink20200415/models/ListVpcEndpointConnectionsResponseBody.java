@@ -54,6 +54,12 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointConnectionsResponseBodyConnectionsZones extends TeaModel {
+        @NameInMap("ConnectionId")
+        public Long connectionId;
+
+        @NameInMap("ConnectionStringId")
+        public String connectionStringId;
+
         @NameInMap("EniId")
         public String eniId;
 
@@ -81,6 +87,22 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         public static ListVpcEndpointConnectionsResponseBodyConnectionsZones build(java.util.Map<String, ?> map) throws Exception {
             ListVpcEndpointConnectionsResponseBodyConnectionsZones self = new ListVpcEndpointConnectionsResponseBodyConnectionsZones();
             return TeaModel.build(map, self);
+        }
+
+        public ListVpcEndpointConnectionsResponseBodyConnectionsZones setConnectionId(Long connectionId) {
+            this.connectionId = connectionId;
+            return this;
+        }
+        public Long getConnectionId() {
+            return this.connectionId;
+        }
+
+        public ListVpcEndpointConnectionsResponseBodyConnectionsZones setConnectionStringId(String connectionStringId) {
+            this.connectionStringId = connectionStringId;
+            return this;
+        }
+        public String getConnectionStringId() {
+            return this.connectionStringId;
         }
 
         public ListVpcEndpointConnectionsResponseBodyConnectionsZones setEniId(String eniId) {

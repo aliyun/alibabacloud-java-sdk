@@ -31,6 +31,9 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     @NameInMap("ServiceStatus")
     public String serviceStatus;
 
+    @NameInMap("ServiceSupportIPv6")
+    public Boolean serviceSupportIPv6;
+
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;
 
@@ -109,6 +112,14 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     }
     public String getServiceStatus() {
         return this.serviceStatus;
+    }
+
+    public CreateVpcEndpointServiceResponseBody setServiceSupportIPv6(Boolean serviceSupportIPv6) {
+        this.serviceSupportIPv6 = serviceSupportIPv6;
+        return this;
+    }
+    public Boolean getServiceSupportIPv6() {
+        return this.serviceSupportIPv6;
     }
 
     public CreateVpcEndpointServiceResponseBody setZoneAffinityEnabled(Boolean zoneAffinityEnabled) {

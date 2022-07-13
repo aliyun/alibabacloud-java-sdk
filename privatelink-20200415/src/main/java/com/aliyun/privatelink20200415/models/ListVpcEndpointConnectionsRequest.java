@@ -4,6 +4,9 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointConnectionsRequest extends TeaModel {
+    @NameInMap("ConnectionId")
+    public Long connectionId;
+
     @NameInMap("ConnectionStatus")
     public String connectionStatus;
 
@@ -37,6 +40,14 @@ public class ListVpcEndpointConnectionsRequest extends TeaModel {
     public static ListVpcEndpointConnectionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListVpcEndpointConnectionsRequest self = new ListVpcEndpointConnectionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListVpcEndpointConnectionsRequest setConnectionId(Long connectionId) {
+        this.connectionId = connectionId;
+        return this;
+    }
+    public Long getConnectionId() {
+        return this.connectionId;
     }
 
     public ListVpcEndpointConnectionsRequest setConnectionStatus(String connectionStatus) {

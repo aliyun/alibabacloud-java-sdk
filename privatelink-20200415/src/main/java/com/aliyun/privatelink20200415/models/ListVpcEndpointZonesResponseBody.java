@@ -60,6 +60,12 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         @NameInMap("EniIp")
         public String eniIp;
 
+        @NameInMap("NsiIndex")
+        public Long nsiIndex;
+
+        @NameInMap("NsiIndexString")
+        public String nsiIndexString;
+
         @NameInMap("RegionId")
         public String regionId;
 
@@ -74,6 +80,9 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
 
         @NameInMap("ZoneId")
         public String zoneId;
+
+        @NameInMap("ZoneIpv6Address")
+        public String zoneIpv6Address;
 
         @NameInMap("ZoneStatus")
         public String zoneStatus;
@@ -97,6 +106,22 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         }
         public String getEniIp() {
             return this.eniIp;
+        }
+
+        public ListVpcEndpointZonesResponseBodyZones setNsiIndex(Long nsiIndex) {
+            this.nsiIndex = nsiIndex;
+            return this;
+        }
+        public Long getNsiIndex() {
+            return this.nsiIndex;
+        }
+
+        public ListVpcEndpointZonesResponseBodyZones setNsiIndexString(String nsiIndexString) {
+            this.nsiIndexString = nsiIndexString;
+            return this;
+        }
+        public String getNsiIndexString() {
+            return this.nsiIndexString;
         }
 
         public ListVpcEndpointZonesResponseBodyZones setRegionId(String regionId) {
@@ -137,6 +162,14 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public ListVpcEndpointZonesResponseBodyZones setZoneIpv6Address(String zoneIpv6Address) {
+            this.zoneIpv6Address = zoneIpv6Address;
+            return this;
+        }
+        public String getZoneIpv6Address() {
+            return this.zoneIpv6Address;
         }
 
         public ListVpcEndpointZonesResponseBodyZones setZoneStatus(String zoneStatus) {

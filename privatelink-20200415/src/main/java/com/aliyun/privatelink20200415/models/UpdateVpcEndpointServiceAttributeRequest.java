@@ -25,6 +25,9 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     @NameInMap("ServiceId")
     public String serviceId;
 
+    @NameInMap("ServiceSupportIpv6")
+    public Boolean serviceSupportIpv6;
+
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;
 
@@ -87,6 +90,14 @@ public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     }
     public String getServiceId() {
         return this.serviceId;
+    }
+
+    public UpdateVpcEndpointServiceAttributeRequest setServiceSupportIpv6(Boolean serviceSupportIpv6) {
+        this.serviceSupportIpv6 = serviceSupportIpv6;
+        return this;
+    }
+    public Boolean getServiceSupportIpv6() {
+        return this.serviceSupportIpv6;
     }
 
     public UpdateVpcEndpointServiceAttributeRequest setZoneAffinityEnabled(Boolean zoneAffinityEnabled) {

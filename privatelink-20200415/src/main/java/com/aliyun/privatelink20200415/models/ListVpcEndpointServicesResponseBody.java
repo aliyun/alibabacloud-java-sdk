@@ -96,6 +96,9 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         @NameInMap("ServiceStatus")
         public String serviceStatus;
 
+        @NameInMap("ServiceSupportIpv6")
+        public String serviceSupportIpv6;
+
         @NameInMap("ServiceType")
         public String serviceType;
 
@@ -217,6 +220,14 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         }
         public String getServiceStatus() {
             return this.serviceStatus;
+        }
+
+        public ListVpcEndpointServicesResponseBodyServices setServiceSupportIpv6(String serviceSupportIpv6) {
+            this.serviceSupportIpv6 = serviceSupportIpv6;
+            return this;
+        }
+        public String getServiceSupportIpv6() {
+            return this.serviceSupportIpv6;
         }
 
         public ListVpcEndpointServicesResponseBodyServices setServiceType(String serviceType) {

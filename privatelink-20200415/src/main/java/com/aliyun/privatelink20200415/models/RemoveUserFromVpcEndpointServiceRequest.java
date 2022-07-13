@@ -16,6 +16,9 @@ public class RemoveUserFromVpcEndpointServiceRequest extends TeaModel {
     @NameInMap("ServiceId")
     public String serviceId;
 
+    @NameInMap("UserARN")
+    public String userARN;
+
     @NameInMap("UserId")
     public Long userId;
 
@@ -54,6 +57,14 @@ public class RemoveUserFromVpcEndpointServiceRequest extends TeaModel {
     }
     public String getServiceId() {
         return this.serviceId;
+    }
+
+    public RemoveUserFromVpcEndpointServiceRequest setUserARN(String userARN) {
+        this.userARN = userARN;
+        return this;
+    }
+    public String getUserARN() {
+        return this.userARN;
     }
 
     public RemoveUserFromVpcEndpointServiceRequest setUserId(Long userId) {

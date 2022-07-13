@@ -13,6 +13,9 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("UserARNs")
+    public java.util.List<ListVpcEndpointServiceUsersResponseBodyUserARNs> userARNs;
+
     @NameInMap("Users")
     public java.util.List<ListVpcEndpointServiceUsersResponseBodyUsers> users;
 
@@ -45,12 +48,39 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListVpcEndpointServiceUsersResponseBody setUserARNs(java.util.List<ListVpcEndpointServiceUsersResponseBodyUserARNs> userARNs) {
+        this.userARNs = userARNs;
+        return this;
+    }
+    public java.util.List<ListVpcEndpointServiceUsersResponseBodyUserARNs> getUserARNs() {
+        return this.userARNs;
+    }
+
     public ListVpcEndpointServiceUsersResponseBody setUsers(java.util.List<ListVpcEndpointServiceUsersResponseBodyUsers> users) {
         this.users = users;
         return this;
     }
     public java.util.List<ListVpcEndpointServiceUsersResponseBodyUsers> getUsers() {
         return this.users;
+    }
+
+    public static class ListVpcEndpointServiceUsersResponseBodyUserARNs extends TeaModel {
+        @NameInMap("UserARN")
+        public String userARN;
+
+        public static ListVpcEndpointServiceUsersResponseBodyUserARNs build(java.util.Map<String, ?> map) throws Exception {
+            ListVpcEndpointServiceUsersResponseBodyUserARNs self = new ListVpcEndpointServiceUsersResponseBodyUserARNs();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVpcEndpointServiceUsersResponseBodyUserARNs setUserARN(String userARN) {
+            this.userARN = userARN;
+            return this;
+        }
+        public String getUserARN() {
+            return this.userARN;
+        }
+
     }
 
     public static class ListVpcEndpointServiceUsersResponseBodyUsers extends TeaModel {
