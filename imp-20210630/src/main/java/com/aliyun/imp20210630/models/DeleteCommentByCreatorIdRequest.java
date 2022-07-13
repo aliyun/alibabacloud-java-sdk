@@ -3,7 +3,7 @@ package com.aliyun.imp20210630.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteCommentRequest extends TeaModel {
+public class DeleteCommentByCreatorIdRequest extends TeaModel {
     // 应用唯一标识，可以包含小写字母、数字，长度为6个字符。
     @NameInMap("AppId")
     public String appId;
@@ -24,12 +24,12 @@ public class DeleteCommentRequest extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
-    public static DeleteCommentRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteCommentRequest self = new DeleteCommentRequest();
+    public static DeleteCommentByCreatorIdRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteCommentByCreatorIdRequest self = new DeleteCommentByCreatorIdRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteCommentRequest setAppId(String appId) {
+    public DeleteCommentByCreatorIdRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -37,7 +37,7 @@ public class DeleteCommentRequest extends TeaModel {
         return this.appId;
     }
 
-    public DeleteCommentRequest setCommentIdList(java.util.List<String> commentIdList) {
+    public DeleteCommentByCreatorIdRequest setCommentIdList(java.util.List<String> commentIdList) {
         this.commentIdList = commentIdList;
         return this;
     }
@@ -45,7 +45,7 @@ public class DeleteCommentRequest extends TeaModel {
         return this.commentIdList;
     }
 
-    public DeleteCommentRequest setCreatorId(String creatorId) {
+    public DeleteCommentByCreatorIdRequest setCreatorId(String creatorId) {
         this.creatorId = creatorId;
         return this;
     }
@@ -53,7 +53,7 @@ public class DeleteCommentRequest extends TeaModel {
         return this.creatorId;
     }
 
-    public DeleteCommentRequest setRoomId(String roomId) {
+    public DeleteCommentByCreatorIdRequest setRoomId(String roomId) {
         this.roomId = roomId;
         return this;
     }
@@ -61,7 +61,7 @@ public class DeleteCommentRequest extends TeaModel {
         return this.roomId;
     }
 
-    public DeleteCommentRequest setUserId(String userId) {
+    public DeleteCommentByCreatorIdRequest setUserId(String userId) {
         this.userId = userId;
         return this;
     }

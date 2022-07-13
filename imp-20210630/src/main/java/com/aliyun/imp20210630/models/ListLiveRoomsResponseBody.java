@@ -54,6 +54,14 @@ public class ListLiveRoomsResponseBody extends TeaModel {
         @NameInMap("CoverUrl")
         public String coverUrl;
 
+        // 直播的创建时间。单位为ms。
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        // 直播的结束时间。单位为ms。
+        @NameInMap("EndTime")
+        public Long endTime;
+
         // 直播拓展字段。
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
@@ -77,6 +85,10 @@ public class ListLiveRoomsResponseBody extends TeaModel {
         // 房间ID。
         @NameInMap("RoomId")
         public String roomId;
+
+        // 直播的开始时间。单位为ms。
+        @NameInMap("StartTime")
+        public Long startTime;
 
         // 直播状态，0-在播 1-下播。
         @NameInMap("Status")
@@ -135,6 +147,22 @@ public class ListLiveRoomsResponseBody extends TeaModel {
             return this.coverUrl;
         }
 
+        public ListLiveRoomsResponseBodyResultLiveList setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListLiveRoomsResponseBodyResultLiveList setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
         public ListLiveRoomsResponseBodyResultLiveList setExtension(java.util.Map<String, String> extension) {
             this.extension = extension;
             return this;
@@ -181,6 +209,14 @@ public class ListLiveRoomsResponseBody extends TeaModel {
         }
         public String getRoomId() {
             return this.roomId;
+        }
+
+        public ListLiveRoomsResponseBodyResultLiveList setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
         }
 
         public ListLiveRoomsResponseBodyResultLiveList setStatus(Integer status) {
