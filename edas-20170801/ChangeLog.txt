@@ -1,3 +1,6 @@
+2022-07-14 Version: 1.0.8
+- Supported SubClusterType in GetK8sCluster.
+
 2022-07-11 Version: 1.0.7
 - Supported StartK8sAppPrecheck
 - Supported GetK8sAppPrecheckResult

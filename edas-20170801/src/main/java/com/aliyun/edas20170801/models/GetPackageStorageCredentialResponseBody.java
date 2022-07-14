@@ -69,6 +69,15 @@ public class GetPackageStorageCredentialResponseBody extends TeaModel {
         @NameInMap("KeyPrefix")
         public String keyPrefix;
 
+        @NameInMap("OssInternalEndpoint")
+        public String ossInternalEndpoint;
+
+        @NameInMap("OssPublicEndpoint")
+        public String ossPublicEndpoint;
+
+        @NameInMap("OssVpcEndpoint")
+        public String ossVpcEndpoint;
+
         @NameInMap("RegionId")
         public String regionId;
 
@@ -118,6 +127,30 @@ public class GetPackageStorageCredentialResponseBody extends TeaModel {
         }
         public String getKeyPrefix() {
             return this.keyPrefix;
+        }
+
+        public GetPackageStorageCredentialResponseBodyCredential setOssInternalEndpoint(String ossInternalEndpoint) {
+            this.ossInternalEndpoint = ossInternalEndpoint;
+            return this;
+        }
+        public String getOssInternalEndpoint() {
+            return this.ossInternalEndpoint;
+        }
+
+        public GetPackageStorageCredentialResponseBodyCredential setOssPublicEndpoint(String ossPublicEndpoint) {
+            this.ossPublicEndpoint = ossPublicEndpoint;
+            return this;
+        }
+        public String getOssPublicEndpoint() {
+            return this.ossPublicEndpoint;
+        }
+
+        public GetPackageStorageCredentialResponseBodyCredential setOssVpcEndpoint(String ossVpcEndpoint) {
+            this.ossVpcEndpoint = ossVpcEndpoint;
+            return this;
+        }
+        public String getOssVpcEndpoint() {
+            return this.ossVpcEndpoint;
         }
 
         public GetPackageStorageCredentialResponseBodyCredential setRegionId(String regionId) {
