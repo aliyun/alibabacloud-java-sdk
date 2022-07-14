@@ -33,7 +33,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
 
     public static class DescribeRiskCheckItemResultResponseBodyPageContentResource extends TeaModel {
         @NameInMap("ContentResource")
-        public String contentResource;
+        public java.util.Map<String, ?> contentResource;
 
         @NameInMap("Count")
         public Integer count;
@@ -55,11 +55,11 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeRiskCheckItemResultResponseBodyPageContentResource setContentResource(String contentResource) {
+        public DescribeRiskCheckItemResultResponseBodyPageContentResource setContentResource(java.util.Map<String, ?> contentResource) {
             this.contentResource = contentResource;
             return this;
         }
-        public String getContentResource() {
+        public java.util.Map<String, ?> getContentResource() {
             return this.contentResource;
         }
 

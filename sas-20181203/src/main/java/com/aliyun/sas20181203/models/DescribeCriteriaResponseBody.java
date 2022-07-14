@@ -32,6 +32,9 @@ public class DescribeCriteriaResponseBody extends TeaModel {
     }
 
     public static class DescribeCriteriaResponseBodyCriteriaList extends TeaModel {
+        @NameInMap("MultiValues")
+        public String multiValues;
+
         @NameInMap("Name")
         public String name;
 
@@ -44,6 +47,14 @@ public class DescribeCriteriaResponseBody extends TeaModel {
         public static DescribeCriteriaResponseBodyCriteriaList build(java.util.Map<String, ?> map) throws Exception {
             DescribeCriteriaResponseBodyCriteriaList self = new DescribeCriteriaResponseBodyCriteriaList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCriteriaResponseBodyCriteriaList setMultiValues(String multiValues) {
+            this.multiValues = multiValues;
+            return this;
+        }
+        public String getMultiValues() {
+            return this.multiValues;
         }
 
         public DescribeCriteriaResponseBodyCriteriaList setName(String name) {
