@@ -7,9 +7,6 @@ public class UnbindInputBucketRequest extends TeaModel {
     @NameInMap("Bucket")
     public String bucket;
 
-    @NameInMap("DepositorCredentials")
-    public String depositorCredentials;
-
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -36,14 +33,6 @@ public class UnbindInputBucketRequest extends TeaModel {
     }
     public String getBucket() {
         return this.bucket;
-    }
-
-    public UnbindInputBucketRequest setDepositorCredentials(String depositorCredentials) {
-        this.depositorCredentials = depositorCredentials;
-        return this;
-    }
-    public String getDepositorCredentials() {
-        return this.depositorCredentials;
     }
 
     public UnbindInputBucketRequest setOwnerAccount(String ownerAccount) {
