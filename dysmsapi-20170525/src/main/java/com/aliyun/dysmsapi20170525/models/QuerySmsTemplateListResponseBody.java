@@ -137,6 +137,9 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         @NameInMap("OrderId")
         public String orderId;
 
+        @NameInMap("OuterTemplateType")
+        public Integer outerTemplateType;
+
         @NameInMap("Reason")
         public QuerySmsTemplateListResponseBodySmsTemplateListReason reason;
 
@@ -179,6 +182,14 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
         public String getOrderId() {
             return this.orderId;
+        }
+
+        public QuerySmsTemplateListResponseBodySmsTemplateList setOuterTemplateType(Integer outerTemplateType) {
+            this.outerTemplateType = outerTemplateType;
+            return this;
+        }
+        public Integer getOuterTemplateType() {
+            return this.outerTemplateType;
         }
 
         public QuerySmsTemplateListResponseBodySmsTemplateList setReason(QuerySmsTemplateListResponseBodySmsTemplateListReason reason) {
