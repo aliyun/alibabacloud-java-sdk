@@ -11,6 +11,9 @@ public class ListAdvertisingShrinkRequest extends TeaModel {
     @NameInMap("Dealtype")
     public Integer dealtype;
 
+    @NameInMap("Device")
+    public String deviceShrink;
+
     @NameInMap("Ext")
     public String extShrink;
 
@@ -49,6 +52,14 @@ public class ListAdvertisingShrinkRequest extends TeaModel {
     }
     public Integer getDealtype() {
         return this.dealtype;
+    }
+
+    public ListAdvertisingShrinkRequest setDeviceShrink(String deviceShrink) {
+        this.deviceShrink = deviceShrink;
+        return this;
+    }
+    public String getDeviceShrink() {
+        return this.deviceShrink;
     }
 
     public ListAdvertisingShrinkRequest setExtShrink(String extShrink) {
