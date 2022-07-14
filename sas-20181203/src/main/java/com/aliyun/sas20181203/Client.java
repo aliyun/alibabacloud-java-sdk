@@ -17,62 +17,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-hangzhou", "tds.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "tds.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "tds.aliyuncs.com"),
-            new TeaPair("ap-northeast-2-pop", "tds.aliyuncs.com"),
-            new TeaPair("ap-south-1", "tds.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "tds.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "tds.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "tds.aliyuncs.com"),
-            new TeaPair("cn-beijing", "tds.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-pop", "tds.aliyuncs.com"),
-            new TeaPair("cn-beijing-gov-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-beijing-nu16-b01", "tds.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "tds.aliyuncs.com"),
-            new TeaPair("cn-edge-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-fujian", "tds.aliyuncs.com"),
-            new TeaPair("cn-haidian-cm12-c01", "tds.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-bj-b01", "tds.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "tds.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-prod-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-2", "tds.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-3", "tds.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-test-306", "tds.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "tds.aliyuncs.com"),
-            new TeaPair("cn-hongkong-finance-pop", "tds.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "tds.aliyuncs.com"),
-            new TeaPair("cn-huhehaote-nebula-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "tds.aliyuncs.com"),
-            new TeaPair("cn-qingdao-nebula", "tds.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "tds.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et15-b01", "tds.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et2-b01", "tds.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-shanghai-inner", "tds.aliyuncs.com"),
-            new TeaPair("cn-shanghai-internal-test-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "tds.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "tds.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-inner", "tds.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-st4-d01", "tds.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-su18-b01", "tds.aliyuncs.com"),
-            new TeaPair("cn-wuhan", "tds.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "tds.aliyuncs.com"),
-            new TeaPair("cn-yushanfang", "tds.aliyuncs.com"),
-            new TeaPair("cn-zhangbei", "tds.aliyuncs.com"),
-            new TeaPair("cn-zhangbei-na61-b01", "tds.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "tds.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou-na62-a01", "tds.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-nebula-1", "tds.aliyuncs.com"),
-            new TeaPair("eu-central-1", "tds.aliyuncs.com"),
-            new TeaPair("eu-west-1", "tds.aliyuncs.com"),
-            new TeaPair("eu-west-1-oxs", "tds.aliyuncs.com"),
-            new TeaPair("me-east-1", "tds.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "tds.aliyuncs.com"),
-            new TeaPair("us-east-1", "tds.aliyuncs.com"),
-            new TeaPair("us-west-1", "tds.aliyuncs.com")
+            new TeaPair("ap-southeast-3", "tds.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "sas.aliyuncs.com"),
+            new TeaPair("ap-northeast-2-pop", "sas.aliyuncs.com"),
+            new TeaPair("ap-south-1", "sas.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "sas.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "sas.aliyuncs.com"),
+            new TeaPair("cn-beijing", "sas.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "sas.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "sas.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "sas.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-fujian", "sas.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "sas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "sas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "sas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "sas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "sas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "sas.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "sas.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "sas.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "sas.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "sas.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "sas.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "sas.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "sas.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "sas.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "sas.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "sas.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "sas.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "sas.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "sas.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "sas.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "sas.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "sas.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "sas.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "sas.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "sas.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "sas.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "sas.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "sas.aliyuncs.com"),
+            new TeaPair("eu-central-1", "sas.aliyuncs.com"),
+            new TeaPair("eu-west-1", "sas.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "sas.aliyuncs.com"),
+            new TeaPair("me-east-1", "sas.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "sas.aliyuncs.com"),
+            new TeaPair("us-east-1", "sas.aliyuncs.com"),
+            new TeaPair("us-west-1", "sas.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("sas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -3264,6 +3264,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeInstanceAntiBruteForceRulesResponse describeInstanceAntiBruteForceRules(DescribeInstanceAntiBruteForceRulesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeInstanceAntiBruteForceRulesWithOptions(request, runtime);
+    }
+
+    public DescribeInstanceRebootStatusResponse describeInstanceRebootStatusWithOptions(DescribeInstanceRebootStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.uuids)) {
+            query.put("Uuids", request.uuids);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInstanceRebootStatus"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceRebootStatusResponse());
+    }
+
+    public DescribeInstanceRebootStatusResponse describeInstanceRebootStatus(DescribeInstanceRebootStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeInstanceRebootStatusWithOptions(request, runtime);
     }
 
     public DescribeInstanceStatisticsResponse describeInstanceStatisticsWithOptions(DescribeInstanceStatisticsRequest request, RuntimeOptions runtime) throws Exception {
@@ -8268,6 +8297,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryGroupedSecurityEventMarkMissListResponse queryGroupedSecurityEventMarkMissList(QueryGroupedSecurityEventMarkMissListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryGroupedSecurityEventMarkMissListWithOptions(request, runtime);
+    }
+
+    public RebootMachineResponse rebootMachineWithOptions(RebootMachineRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RebootMachine"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RebootMachineResponse());
+    }
+
+    public RebootMachineResponse rebootMachine(RebootMachineRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.rebootMachineWithOptions(request, runtime);
     }
 
     public RefreshAssetsResponse refreshAssetsWithOptions(RefreshAssetsRequest request, RuntimeOptions runtime) throws Exception {
