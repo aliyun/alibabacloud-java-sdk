@@ -93,6 +93,9 @@ public class GetK8sClusterResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("SubClusterType")
+        public String subClusterType;
+
         @NameInMap("SubNetCidr")
         public String subNetCidr;
 
@@ -209,6 +212,14 @@ public class GetK8sClusterResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetK8sClusterResponseBodyClusterPageClusterListCluster setSubClusterType(String subClusterType) {
+            this.subClusterType = subClusterType;
+            return this;
+        }
+        public String getSubClusterType() {
+            return this.subClusterType;
         }
 
         public GetK8sClusterResponseBodyClusterPageClusterListCluster setSubNetCidr(String subNetCidr) {
