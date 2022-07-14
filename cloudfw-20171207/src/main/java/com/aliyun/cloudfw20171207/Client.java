@@ -1041,10 +1041,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.processStatus)) {
-            query.put("ProcessStatus", request.processStatus);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.processStatusList)) {
             query.put("ProcessStatusList", request.processStatusList);
         }
@@ -1086,18 +1082,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeOutgoingDestinationIPResponse describeOutgoingDestinationIPWithOptions(DescribeOutgoingDestinationIPRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.aclCoverage)) {
-            query.put("AclCoverage", request.aclCoverage);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.applicationName)) {
-            query.put("ApplicationName", request.applicationName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
-            query.put("CategoryId", request.categoryId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
         }
@@ -1134,16 +1118,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PublicIP", request.publicIP);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.securitySuggest)) {
-            query.put("SecuritySuggest", request.securitySuggest);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.sort)) {
             query.put("Sort", request.sort);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
-            query.put("SourceIp", request.sourceIp);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
@@ -1175,10 +1151,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeOutgoingDomainResponse describeOutgoingDomainWithOptions(DescribeOutgoingDomainRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.aclCoverage)) {
-            query.put("AclCoverage", request.aclCoverage);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
             query.put("CategoryId", request.categoryId);
         }
@@ -1211,16 +1183,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PublicIP", request.publicIP);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.securitySuggest)) {
-            query.put("SecuritySuggest", request.securitySuggest);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.sort)) {
             query.put("Sort", request.sort);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
-            query.put("SourceIp", request.sourceIp);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {

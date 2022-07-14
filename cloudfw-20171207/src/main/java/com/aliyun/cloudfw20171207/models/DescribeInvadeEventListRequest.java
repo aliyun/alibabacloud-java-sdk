@@ -52,10 +52,6 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    // 处理状态
-    @NameInMap("ProcessStatus")
-    public String processStatus;
-
     // 处理状态列表
     @NameInMap("ProcessStatusList")
     public java.util.List<Integer> processStatusList;
@@ -171,14 +167,6 @@ public class DescribeInvadeEventListRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribeInvadeEventListRequest setProcessStatus(String processStatus) {
-        this.processStatus = processStatus;
-        return this;
-    }
-    public String getProcessStatus() {
-        return this.processStatus;
     }
 
     public DescribeInvadeEventListRequest setProcessStatusList(java.util.List<Integer> processStatusList) {

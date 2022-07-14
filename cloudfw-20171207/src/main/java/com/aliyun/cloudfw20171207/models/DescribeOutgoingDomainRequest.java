@@ -4,15 +4,6 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutgoingDomainRequest extends TeaModel {
-    // ACL覆盖情况, 枚举值.
-    // 默认值: 空
-    // 可选值: 
-    // All (全部情况, 等同于空)
-    // FullCoverage ( 已覆盖)
-    // Uncovered (未覆盖)
-    @NameInMap("AclCoverage")
-    public String aclCoverage;
-
     // 分类, 枚举值.
     // 默认值: 空
     // 可选值: 
@@ -56,16 +47,9 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     @NameInMap("PublicIP")
     public String publicIP;
 
-    // 安全建议, 枚举值: pass, alert, drop. 默认值为空
-    @NameInMap("SecuritySuggest")
-    public String securitySuggest;
-
     // 顺序, 枚举值, 可选:asc, desc
     @NameInMap("Sort")
     public String sort;
-
-    @NameInMap("SourceIp")
-    public String sourceIp;
 
     // 开始时间,Unix timestamp, 精确到秒
     @NameInMap("StartTime")
@@ -74,14 +58,6 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public static DescribeOutgoingDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeOutgoingDomainRequest self = new DescribeOutgoingDomainRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeOutgoingDomainRequest setAclCoverage(String aclCoverage) {
-        this.aclCoverage = aclCoverage;
-        return this;
-    }
-    public String getAclCoverage() {
-        return this.aclCoverage;
     }
 
     public DescribeOutgoingDomainRequest setCategoryId(String categoryId) {
@@ -148,28 +124,12 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
         return this.publicIP;
     }
 
-    public DescribeOutgoingDomainRequest setSecuritySuggest(String securitySuggest) {
-        this.securitySuggest = securitySuggest;
-        return this;
-    }
-    public String getSecuritySuggest() {
-        return this.securitySuggest;
-    }
-
     public DescribeOutgoingDomainRequest setSort(String sort) {
         this.sort = sort;
         return this;
     }
     public String getSort() {
         return this.sort;
-    }
-
-    public DescribeOutgoingDomainRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeOutgoingDomainRequest setStartTime(String startTime) {
