@@ -71,6 +71,9 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        @NameInMap("ProcessMessage")
+        public String processMessage;
+
         @NameInMap("Status")
         public String status;
 
@@ -152,6 +155,14 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
         }
         public String getPipelineId() {
             return this.pipelineId;
+        }
+
+        public ListFpShotImportJobResponseBodyFpShotImportJobList setProcessMessage(String processMessage) {
+            this.processMessage = processMessage;
+            return this;
+        }
+        public String getProcessMessage() {
+            return this.processMessage;
         }
 
         public ListFpShotImportJobResponseBodyFpShotImportJobList setStatus(String status) {

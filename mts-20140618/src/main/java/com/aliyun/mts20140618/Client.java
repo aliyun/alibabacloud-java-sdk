@@ -571,10 +571,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Bucket", request.bucket);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.depositorCredentials)) {
-            query.put("DepositorCredentials", request.depositorCredentials);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -626,10 +622,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bucket)) {
             query.put("Bucket", request.bucket);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.depositorCredentials)) {
-            query.put("DepositorCredentials", request.depositorCredentials);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -3814,10 +3806,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bucket)) {
             query.put("Bucket", request.bucket);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.depositorCredentials)) {
-            query.put("DepositorCredentials", request.depositorCredentials);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
