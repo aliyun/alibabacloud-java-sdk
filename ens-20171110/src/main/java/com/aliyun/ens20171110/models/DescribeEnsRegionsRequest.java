@@ -7,9 +7,6 @@ public class DescribeEnsRegionsRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
-    @NameInMap("Version")
-    public String version;
-
     public static DescribeEnsRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEnsRegionsRequest self = new DescribeEnsRegionsRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class DescribeEnsRegionsRequest extends TeaModel {
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
-    }
-
-    public DescribeEnsRegionsRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }
