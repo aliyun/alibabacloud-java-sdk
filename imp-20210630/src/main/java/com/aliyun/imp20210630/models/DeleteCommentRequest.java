@@ -12,10 +12,6 @@ public class DeleteCommentRequest extends TeaModel {
     @NameInMap("CommentIdList")
     public java.util.List<String> commentIdList;
 
-    // 弹幕的创建者ID。
-    @NameInMap("CreatorId")
-    public String creatorId;
-
     // 直播间唯一标识，在调用CreateRoom返回。
     @NameInMap("RoomId")
     public String roomId;
@@ -43,14 +39,6 @@ public class DeleteCommentRequest extends TeaModel {
     }
     public java.util.List<String> getCommentIdList() {
         return this.commentIdList;
-    }
-
-    public DeleteCommentRequest setCreatorId(String creatorId) {
-        this.creatorId = creatorId;
-        return this;
-    }
-    public String getCreatorId() {
-        return this.creatorId;
     }
 
     public DeleteCommentRequest setRoomId(String roomId) {
