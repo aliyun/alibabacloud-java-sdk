@@ -72,8 +72,8 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
         @NameInMap("ResourceId")
         public String resourceId;
 
-        @NameInMap("ResourceSupportIpv6")
-        public String resourceSupportIpv6;
+        @NameInMap("ResourceSupportIPv6")
+        public Boolean resourceSupportIPv6;
 
         @NameInMap("ResourceType")
         public String resourceType;
@@ -140,12 +140,12 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
             return this.resourceId;
         }
 
-        public ListVpcEndpointServiceResourcesResponseBodyResources setResourceSupportIpv6(String resourceSupportIpv6) {
-            this.resourceSupportIpv6 = resourceSupportIpv6;
+        public ListVpcEndpointServiceResourcesResponseBodyResources setResourceSupportIPv6(Boolean resourceSupportIPv6) {
+            this.resourceSupportIPv6 = resourceSupportIPv6;
             return this;
         }
-        public String getResourceSupportIpv6() {
-            return this.resourceSupportIpv6;
+        public Boolean getResourceSupportIPv6() {
+            return this.resourceSupportIPv6;
         }
 
         public ListVpcEndpointServiceResourcesResponseBodyResources setResourceType(String resourceType) {

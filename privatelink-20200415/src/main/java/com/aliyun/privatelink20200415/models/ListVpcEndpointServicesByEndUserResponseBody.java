@@ -67,7 +67,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         public String serviceName;
 
         @NameInMap("ServiceSupportIPv6")
-        public String serviceSupportIPv6;
+        public Boolean serviceSupportIPv6;
 
         @NameInMap("ServiceType")
         public String serviceType;
@@ -112,11 +112,11 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             return this.serviceName;
         }
 
-        public ListVpcEndpointServicesByEndUserResponseBodyServices setServiceSupportIPv6(String serviceSupportIPv6) {
+        public ListVpcEndpointServicesByEndUserResponseBodyServices setServiceSupportIPv6(Boolean serviceSupportIPv6) {
             this.serviceSupportIPv6 = serviceSupportIPv6;
             return this;
         }
-        public String getServiceSupportIPv6() {
+        public Boolean getServiceSupportIPv6() {
             return this.serviceSupportIPv6;
         }
 
