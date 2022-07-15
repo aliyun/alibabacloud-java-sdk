@@ -1471,6 +1471,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ServiceName", request.serviceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
             query.put("VpcId", request.vpcId);
         }
@@ -1810,8 +1814,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ServiceId", request.serviceId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.serviceSupportIpv6)) {
-            query.put("ServiceSupportIpv6", request.serviceSupportIpv6);
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceSupportIPv6)) {
+            query.put("ServiceSupportIPv6", request.serviceSupportIPv6);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.zoneAffinityEnabled)) {

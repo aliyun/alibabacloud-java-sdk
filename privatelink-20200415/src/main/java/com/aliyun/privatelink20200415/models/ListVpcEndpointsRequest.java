@@ -31,6 +31,9 @@ public class ListVpcEndpointsRequest extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    @NameInMap("Tag")
+    public java.util.List<ListVpcEndpointsRequestTag> tag;
+
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -111,12 +114,50 @@ public class ListVpcEndpointsRequest extends TeaModel {
         return this.serviceName;
     }
 
+    public ListVpcEndpointsRequest setTag(java.util.List<ListVpcEndpointsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListVpcEndpointsRequestTag> getTag() {
+        return this.tag;
+    }
+
     public ListVpcEndpointsRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class ListVpcEndpointsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListVpcEndpointsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListVpcEndpointsRequestTag self = new ListVpcEndpointsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVpcEndpointsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListVpcEndpointsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

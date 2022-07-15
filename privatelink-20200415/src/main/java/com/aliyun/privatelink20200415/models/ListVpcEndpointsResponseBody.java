@@ -53,6 +53,36 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListVpcEndpointsResponseBodyEndpointsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListVpcEndpointsResponseBodyEndpointsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListVpcEndpointsResponseBodyEndpointsTags self = new ListVpcEndpointsResponseBodyEndpointsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVpcEndpointsResponseBodyEndpointsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListVpcEndpointsResponseBodyEndpointsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListVpcEndpointsResponseBodyEndpoints extends TeaModel {
         @NameInMap("Bandwidth")
         public Long bandwidth;
@@ -95,6 +125,9 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
 
         @NameInMap("ServiceName")
         public String serviceName;
+
+        @NameInMap("Tags")
+        public java.util.List<ListVpcEndpointsResponseBodyEndpointsTags> tags;
 
         @NameInMap("VpcId")
         public String vpcId;
@@ -217,6 +250,14 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public ListVpcEndpointsResponseBodyEndpoints setTags(java.util.List<ListVpcEndpointsResponseBodyEndpointsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListVpcEndpointsResponseBodyEndpointsTags> getTags() {
+            return this.tags;
         }
 
         public ListVpcEndpointsResponseBodyEndpoints setVpcId(String vpcId) {
