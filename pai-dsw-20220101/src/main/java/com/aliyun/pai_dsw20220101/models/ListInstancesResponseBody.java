@@ -273,6 +273,74 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class ListInstancesResponseBodyInstancesRequestedResource extends TeaModel {
+        // cpu核数
+        @NameInMap("CPU")
+        public String CPU;
+
+        // gpu数量
+        @NameInMap("GPU")
+        public String GPU;
+
+        // gpu显卡类型
+        @NameInMap("GPUType")
+        public String GPUType;
+
+        // memory大小
+        @NameInMap("Memory")
+        public String memory;
+
+        // shared memory大小
+        @NameInMap("SharedMemory")
+        public String sharedMemory;
+
+        public static ListInstancesResponseBodyInstancesRequestedResource build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstancesRequestedResource self = new ListInstancesResponseBodyInstancesRequestedResource();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstancesRequestedResource setCPU(String CPU) {
+            this.CPU = CPU;
+            return this;
+        }
+        public String getCPU() {
+            return this.CPU;
+        }
+
+        public ListInstancesResponseBodyInstancesRequestedResource setGPU(String GPU) {
+            this.GPU = GPU;
+            return this;
+        }
+        public String getGPU() {
+            return this.GPU;
+        }
+
+        public ListInstancesResponseBodyInstancesRequestedResource setGPUType(String GPUType) {
+            this.GPUType = GPUType;
+            return this;
+        }
+        public String getGPUType() {
+            return this.GPUType;
+        }
+
+        public ListInstancesResponseBodyInstancesRequestedResource setMemory(String memory) {
+            this.memory = memory;
+            return this;
+        }
+        public String getMemory() {
+            return this.memory;
+        }
+
+        public ListInstancesResponseBodyInstancesRequestedResource setSharedMemory(String sharedMemory) {
+            this.sharedMemory = sharedMemory;
+            return this;
+        }
+        public String getSharedMemory() {
+            return this.sharedMemory;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyInstancesUserVpc extends TeaModel {
         // Security Group Id
         @NameInMap("SecurityGroupId")
@@ -390,6 +458,10 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("PaymentType")
         public String paymentType;
 
+        // 优先级，在分配资源给实例时，优先级越高的实例越优先
+        @NameInMap("Priority")
+        public Long priority;
+
         // 实例错误代码
         @NameInMap("ReasonCode")
         public String reasonCode;
@@ -397,6 +469,17 @@ public class ListInstancesResponseBody extends TeaModel {
         // 实例错误原因
         @NameInMap("ReasonMessage")
         public String reasonMessage;
+
+        // 资源配置，弹内或者轻量化时使用
+        @NameInMap("RequestedResource")
+        public ListInstancesResponseBodyInstancesRequestedResource requestedResource;
+
+        // 资源Id,预付费时填写
+        @NameInMap("ResourceId")
+        public String resourceId;
+
+        @NameInMap("ResourceName")
+        public String resourceName;
 
         // 实例状态
         @NameInMap("Status")
@@ -579,6 +662,14 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.paymentType;
         }
 
+        public ListInstancesResponseBodyInstances setPriority(Long priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Long getPriority() {
+            return this.priority;
+        }
+
         public ListInstancesResponseBodyInstances setReasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
             return this;
@@ -593,6 +684,30 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getReasonMessage() {
             return this.reasonMessage;
+        }
+
+        public ListInstancesResponseBodyInstances setRequestedResource(ListInstancesResponseBodyInstancesRequestedResource requestedResource) {
+            this.requestedResource = requestedResource;
+            return this;
+        }
+        public ListInstancesResponseBodyInstancesRequestedResource getRequestedResource() {
+            return this.requestedResource;
+        }
+
+        public ListInstancesResponseBodyInstances setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public ListInstancesResponseBodyInstances setResourceName(String resourceName) {
+            this.resourceName = resourceName;
+            return this;
+        }
+        public String getResourceName() {
+            return this.resourceName;
         }
 
         public ListInstancesResponseBodyInstances setStatus(String status) {

@@ -32,6 +32,18 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    // 优先级，在分配资源给实例时，优先级越高的实例越优先
+    @NameInMap("Priority")
+    public Long priority;
+
+    // 资源配置，弹内或者轻量化时使用
+    @NameInMap("RequestedResource")
+    public CreateInstanceRequestRequestedResource requestedResource;
+
+    // 资源Id,预付费时填写
+    @NameInMap("ResourceId")
+    public String resourceId;
+
     // user vpc配置
     @NameInMap("UserVpc")
     public CreateInstanceRequestUserVpc userVpc;
@@ -101,6 +113,30 @@ public class CreateInstanceRequest extends TeaModel {
         return this.instanceName;
     }
 
+    public CreateInstanceRequest setPriority(Long priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Long getPriority() {
+        return this.priority;
+    }
+
+    public CreateInstanceRequest setRequestedResource(CreateInstanceRequestRequestedResource requestedResource) {
+        this.requestedResource = requestedResource;
+        return this;
+    }
+    public CreateInstanceRequestRequestedResource getRequestedResource() {
+        return this.requestedResource;
+    }
+
+    public CreateInstanceRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
     public CreateInstanceRequest setUserVpc(CreateInstanceRequestUserVpc userVpc) {
         this.userVpc = userVpc;
         return this;
@@ -145,6 +181,74 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public String getMountPath() {
             return this.mountPath;
+        }
+
+    }
+
+    public static class CreateInstanceRequestRequestedResource extends TeaModel {
+        // cpu核数
+        @NameInMap("CPU")
+        public String CPU;
+
+        // gpu数量
+        @NameInMap("GPU")
+        public String GPU;
+
+        // gpu显卡类型
+        @NameInMap("GPUType")
+        public String GPUType;
+
+        // memory大小
+        @NameInMap("Memory")
+        public String memory;
+
+        // shared memory大小
+        @NameInMap("SharedMemory")
+        public String sharedMemory;
+
+        public static CreateInstanceRequestRequestedResource build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestRequestedResource self = new CreateInstanceRequestRequestedResource();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestRequestedResource setCPU(String CPU) {
+            this.CPU = CPU;
+            return this;
+        }
+        public String getCPU() {
+            return this.CPU;
+        }
+
+        public CreateInstanceRequestRequestedResource setGPU(String GPU) {
+            this.GPU = GPU;
+            return this;
+        }
+        public String getGPU() {
+            return this.GPU;
+        }
+
+        public CreateInstanceRequestRequestedResource setGPUType(String GPUType) {
+            this.GPUType = GPUType;
+            return this;
+        }
+        public String getGPUType() {
+            return this.GPUType;
+        }
+
+        public CreateInstanceRequestRequestedResource setMemory(String memory) {
+            this.memory = memory;
+            return this;
+        }
+        public String getMemory() {
+            return this.memory;
+        }
+
+        public CreateInstanceRequestRequestedResource setSharedMemory(String sharedMemory) {
+            this.sharedMemory = sharedMemory;
+            return this;
+        }
+        public String getSharedMemory() {
+            return this.sharedMemory;
         }
 
     }
