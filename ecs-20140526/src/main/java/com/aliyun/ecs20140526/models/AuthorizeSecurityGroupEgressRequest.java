@@ -43,6 +43,9 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("Permissions")
+    public java.util.List<AuthorizeSecurityGroupEgressRequestPermissions> permissions;
+
     @NameInMap("Policy")
     public String policy;
 
@@ -179,6 +182,14 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public AuthorizeSecurityGroupEgressRequest setPermissions(java.util.List<AuthorizeSecurityGroupEgressRequestPermissions> permissions) {
+        this.permissions = permissions;
+        return this;
+    }
+    public java.util.List<AuthorizeSecurityGroupEgressRequestPermissions> getPermissions() {
+        return this.permissions;
+    }
+
     public AuthorizeSecurityGroupEgressRequest setPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -249,6 +260,179 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     }
     public String getSourcePortRange() {
         return this.sourcePortRange;
+    }
+
+    public static class AuthorizeSecurityGroupEgressRequestPermissions extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("DestCidrIp")
+        public String destCidrIp;
+
+        @NameInMap("DestGroupId")
+        public String destGroupId;
+
+        @NameInMap("DestGroupOwnerAccount")
+        public String destGroupOwnerAccount;
+
+        @NameInMap("DestGroupOwnerId")
+        public Long destGroupOwnerId;
+
+        @NameInMap("DestPrefixListId")
+        public String destPrefixListId;
+
+        @NameInMap("IpProtocol")
+        public String ipProtocol;
+
+        @NameInMap("Ipv6DestCidrIp")
+        public String ipv6DestCidrIp;
+
+        @NameInMap("Ipv6SourceCidrIp")
+        public String ipv6SourceCidrIp;
+
+        @NameInMap("NicType")
+        public String nicType;
+
+        @NameInMap("Policy")
+        public String policy;
+
+        @NameInMap("PortRange")
+        public String portRange;
+
+        @NameInMap("Priority")
+        public String priority;
+
+        @NameInMap("SourceCidrIp")
+        public String sourceCidrIp;
+
+        @NameInMap("SourcePortRange")
+        public String sourcePortRange;
+
+        public static AuthorizeSecurityGroupEgressRequestPermissions build(java.util.Map<String, ?> map) throws Exception {
+            AuthorizeSecurityGroupEgressRequestPermissions self = new AuthorizeSecurityGroupEgressRequestPermissions();
+            return TeaModel.build(map, self);
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setDestCidrIp(String destCidrIp) {
+            this.destCidrIp = destCidrIp;
+            return this;
+        }
+        public String getDestCidrIp() {
+            return this.destCidrIp;
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setDestGroupId(String destGroupId) {
+            this.destGroupId = destGroupId;
+            return this;
+        }
+        public String getDestGroupId() {
+            return this.destGroupId;
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setDestGroupOwnerAccount(String destGroupOwnerAccount) {
+            this.destGroupOwnerAccount = destGroupOwnerAccount;
+            return this;
+        }
+        public String getDestGroupOwnerAccount() {
+            return this.destGroupOwnerAccount;
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setDestGroupOwnerId(Long destGroupOwnerId) {
+            this.destGroupOwnerId = destGroupOwnerId;
+            return this;
+        }
+        public Long getDestGroupOwnerId() {
+            return this.destGroupOwnerId;
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setDestPrefixListId(String destPrefixListId) {
+            this.destPrefixListId = destPrefixListId;
+            return this;
+        }
+        public String getDestPrefixListId() {
+            return this.destPrefixListId;
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setIpProtocol(String ipProtocol) {
+            this.ipProtocol = ipProtocol;
+            return this;
+        }
+        public String getIpProtocol() {
+            return this.ipProtocol;
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setIpv6DestCidrIp(String ipv6DestCidrIp) {
+            this.ipv6DestCidrIp = ipv6DestCidrIp;
+            return this;
+        }
+        public String getIpv6DestCidrIp() {
+            return this.ipv6DestCidrIp;
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setIpv6SourceCidrIp(String ipv6SourceCidrIp) {
+            this.ipv6SourceCidrIp = ipv6SourceCidrIp;
+            return this;
+        }
+        public String getIpv6SourceCidrIp() {
+            return this.ipv6SourceCidrIp;
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setNicType(String nicType) {
+            this.nicType = nicType;
+            return this;
+        }
+        public String getNicType() {
+            return this.nicType;
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setPortRange(String portRange) {
+            this.portRange = portRange;
+            return this;
+        }
+        public String getPortRange() {
+            return this.portRange;
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setPriority(String priority) {
+            this.priority = priority;
+            return this;
+        }
+        public String getPriority() {
+            return this.priority;
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setSourceCidrIp(String sourceCidrIp) {
+            this.sourceCidrIp = sourceCidrIp;
+            return this;
+        }
+        public String getSourceCidrIp() {
+            return this.sourceCidrIp;
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setSourcePortRange(String sourcePortRange) {
+            this.sourcePortRange = sourcePortRange;
+            return this;
+        }
+        public String getSourcePortRange() {
+            return this.sourcePortRange;
+        }
+
     }
 
 }
