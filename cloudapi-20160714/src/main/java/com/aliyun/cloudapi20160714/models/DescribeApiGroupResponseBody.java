@@ -381,6 +381,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         @NameInMap("DomainWebSocketStatus")
         public String domainWebSocketStatus;
 
+        @NameInMap("IsHttpRedirectToHttps")
+        public Boolean isHttpRedirectToHttps;
+
         @NameInMap("WildcardDomainPatterns")
         public String wildcardDomainPatterns;
 
@@ -467,6 +470,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
         public String getDomainWebSocketStatus() {
             return this.domainWebSocketStatus;
+        }
+
+        public DescribeApiGroupResponseBodyCustomDomainsDomainItem setIsHttpRedirectToHttps(Boolean isHttpRedirectToHttps) {
+            this.isHttpRedirectToHttps = isHttpRedirectToHttps;
+            return this;
+        }
+        public Boolean getIsHttpRedirectToHttps() {
+            return this.isHttpRedirectToHttps;
         }
 
         public DescribeApiGroupResponseBodyCustomDomainsDomainItem setWildcardDomainPatterns(String wildcardDomainPatterns) {

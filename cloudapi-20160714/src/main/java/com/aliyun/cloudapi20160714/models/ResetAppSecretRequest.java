@@ -7,6 +7,9 @@ public class ResetAppSecretRequest extends TeaModel {
     @NameInMap("AppKey")
     public String appKey;
 
+    @NameInMap("NewAppSecret")
+    public String newAppSecret;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -21,6 +24,14 @@ public class ResetAppSecretRequest extends TeaModel {
     }
     public String getAppKey() {
         return this.appKey;
+    }
+
+    public ResetAppSecretRequest setNewAppSecret(String newAppSecret) {
+        this.newAppSecret = newAppSecret;
+        return this;
+    }
+    public String getNewAppSecret() {
+        return this.newAppSecret;
     }
 
     public ResetAppSecretRequest setSecurityToken(String securityToken) {

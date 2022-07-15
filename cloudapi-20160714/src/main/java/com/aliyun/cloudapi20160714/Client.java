@@ -616,8 +616,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAppResponse createAppWithOptions(CreateAppRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appCode)) {
+            query.put("AppCode", request.appCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appKey)) {
+            query.put("AppKey", request.appKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appSecret)) {
+            query.put("AppSecret", request.appSecret);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -5312,6 +5324,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceSpec", request.instanceSpec);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyAction)) {
+            query.put("ModifyAction", request.modifyAction);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.token)) {
             query.put("Token", request.token);
         }
@@ -6119,6 +6135,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppCode", request.appCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.newAppCode)) {
+            query.put("NewAppCode", request.newAppCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
             query.put("SecurityToken", request.securityToken);
         }
@@ -6150,6 +6170,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appKey)) {
             query.put("AppKey", request.appKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newAppSecret)) {
+            query.put("NewAppSecret", request.newAppSecret);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
@@ -6287,6 +6311,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SdkGenerateByGroupResponse sdkGenerateByGroup(SdkGenerateByGroupRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.sdkGenerateByGroupWithOptions(request, runtime);
+    }
+
+    public SetAccessControlListAttributeResponse setAccessControlListAttributeWithOptions(SetAccessControlListAttributeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclId)) {
+            query.put("AclId", request.aclId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aclName)) {
+            query.put("AclName", request.aclName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetAccessControlListAttribute"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetAccessControlListAttributeResponse());
+    }
+
+    public SetAccessControlListAttributeResponse setAccessControlListAttribute(SetAccessControlListAttributeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.setAccessControlListAttributeWithOptions(request, runtime);
     }
 
     public SetApisAuthoritiesResponse setApisAuthoritiesWithOptions(SetApisAuthoritiesRequest request, RuntimeOptions runtime) throws Exception {
