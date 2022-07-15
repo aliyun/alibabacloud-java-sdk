@@ -29,6 +29,9 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("PaymentType")
     public String paymentType;
 
+    @NameInMap("ResourceId")
+    public String resourceId;
+
     // 排序字段
     @NameInMap("SortBy")
     public String sortBy;
@@ -100,6 +103,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public String getPaymentType() {
         return this.paymentType;
+    }
+
+    public ListInstancesRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     public ListInstancesRequest setSortBy(String sortBy) {

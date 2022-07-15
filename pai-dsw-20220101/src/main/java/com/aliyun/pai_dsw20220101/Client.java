@@ -69,6 +69,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("InstanceName", request.instanceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.requestedResource))) {
+            body.put("RequestedResource", request.requestedResource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            body.put("ResourceId", request.resourceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.userVpc))) {
             body.put("UserVpc", request.userVpc);
         }
@@ -571,6 +583,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.paymentType)) {
             query.put("PaymentType", request.paymentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {

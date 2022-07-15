@@ -88,6 +88,10 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("PaymentType")
     public String paymentType;
 
+    // 优先级，在分配资源给实例时，优先级越高的实例越优先
+    @NameInMap("Priority")
+    public Long priority;
+
     // 实例错误代码
     @NameInMap("ReasonCode")
     public String reasonCode;
@@ -99,6 +103,17 @@ public class GetInstanceResponseBody extends TeaModel {
     // 请求Id
     @NameInMap("RequestId")
     public String requestId;
+
+    // 资源配置，弹内或者轻量化时使用
+    @NameInMap("RequestedResource")
+    public GetInstanceResponseBodyRequestedResource requestedResource;
+
+    // 资源Id,预付费时填写
+    @NameInMap("ResourceId")
+    public String resourceId;
+
+    @NameInMap("ResourceName")
+    public String resourceName;
 
     // 实例状态
     @NameInMap("Status")
@@ -309,6 +324,14 @@ public class GetInstanceResponseBody extends TeaModel {
         return this.paymentType;
     }
 
+    public GetInstanceResponseBody setPriority(Long priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Long getPriority() {
+        return this.priority;
+    }
+
     public GetInstanceResponseBody setReasonCode(String reasonCode) {
         this.reasonCode = reasonCode;
         return this;
@@ -331,6 +354,30 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetInstanceResponseBody setRequestedResource(GetInstanceResponseBodyRequestedResource requestedResource) {
+        this.requestedResource = requestedResource;
+        return this;
+    }
+    public GetInstanceResponseBodyRequestedResource getRequestedResource() {
+        return this.requestedResource;
+    }
+
+    public GetInstanceResponseBody setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    public GetInstanceResponseBody setResourceName(String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+    }
+    public String getResourceName() {
+        return this.resourceName;
     }
 
     public GetInstanceResponseBody setStatus(String status) {
@@ -581,6 +628,74 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getRepositoryUrl() {
             return this.repositoryUrl;
+        }
+
+    }
+
+    public static class GetInstanceResponseBodyRequestedResource extends TeaModel {
+        // cpu核数
+        @NameInMap("CPU")
+        public String CPU;
+
+        // gpu数量
+        @NameInMap("GPU")
+        public String GPU;
+
+        // gpu显卡类型
+        @NameInMap("GPUType")
+        public String GPUType;
+
+        // memory大小
+        @NameInMap("Memory")
+        public String memory;
+
+        // shared memory大小
+        @NameInMap("SharedMemory")
+        public String sharedMemory;
+
+        public static GetInstanceResponseBodyRequestedResource build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyRequestedResource self = new GetInstanceResponseBodyRequestedResource();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyRequestedResource setCPU(String CPU) {
+            this.CPU = CPU;
+            return this;
+        }
+        public String getCPU() {
+            return this.CPU;
+        }
+
+        public GetInstanceResponseBodyRequestedResource setGPU(String GPU) {
+            this.GPU = GPU;
+            return this;
+        }
+        public String getGPU() {
+            return this.GPU;
+        }
+
+        public GetInstanceResponseBodyRequestedResource setGPUType(String GPUType) {
+            this.GPUType = GPUType;
+            return this;
+        }
+        public String getGPUType() {
+            return this.GPUType;
+        }
+
+        public GetInstanceResponseBodyRequestedResource setMemory(String memory) {
+            this.memory = memory;
+            return this;
+        }
+        public String getMemory() {
+            return this.memory;
+        }
+
+        public GetInstanceResponseBodyRequestedResource setSharedMemory(String sharedMemory) {
+            this.sharedMemory = sharedMemory;
+            return this;
+        }
+        public String getSharedMemory() {
+            return this.sharedMemory;
         }
 
     }
