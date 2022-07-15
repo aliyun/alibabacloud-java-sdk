@@ -76,6 +76,12 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
     }
 
     public static class DescribeWarningMachinesResponseBodyWarningMachines extends TeaModel {
+        @NameInMap("AuthVersion")
+        public Integer authVersion;
+
+        @NameInMap("Bind")
+        public Boolean bind;
+
         @NameInMap("HighWarningCount")
         public Integer highWarningCount;
 
@@ -115,6 +121,22 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         public static DescribeWarningMachinesResponseBodyWarningMachines build(java.util.Map<String, ?> map) throws Exception {
             DescribeWarningMachinesResponseBodyWarningMachines self = new DescribeWarningMachinesResponseBodyWarningMachines();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setAuthVersion(Integer authVersion) {
+            this.authVersion = authVersion;
+            return this;
+        }
+        public Integer getAuthVersion() {
+            return this.authVersion;
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setBind(Boolean bind) {
+            this.bind = bind;
+            return this;
+        }
+        public Boolean getBind() {
+            return this.bind;
         }
 
         public DescribeWarningMachinesResponseBodyWarningMachines setHighWarningCount(Integer highWarningCount) {

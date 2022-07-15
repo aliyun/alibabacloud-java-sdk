@@ -1697,6 +1697,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CheckId", request.checkId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.checkType)) {
+            query.put("CheckType", request.checkType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
         }

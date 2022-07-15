@@ -82,11 +82,17 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         @NameInMap("CheckWarningId")
         public Long checkWarningId;
 
+        @NameInMap("FixStatus")
+        public Integer fixStatus;
+
         @NameInMap("Item")
         public String item;
 
         @NameInMap("Level")
         public String level;
+
+        @NameInMap("Reason")
+        public String reason;
 
         @NameInMap("Status")
         public Integer status;
@@ -118,6 +124,14 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             return this.checkWarningId;
         }
 
+        public DescribeCheckWarningsResponseBodyCheckWarnings setFixStatus(Integer fixStatus) {
+            this.fixStatus = fixStatus;
+            return this;
+        }
+        public Integer getFixStatus() {
+            return this.fixStatus;
+        }
+
         public DescribeCheckWarningsResponseBodyCheckWarnings setItem(String item) {
             this.item = item;
             return this;
@@ -132,6 +146,14 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
         public String getLevel() {
             return this.level;
+        }
+
+        public DescribeCheckWarningsResponseBodyCheckWarnings setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
         }
 
         public DescribeCheckWarningsResponseBodyCheckWarnings setStatus(Integer status) {

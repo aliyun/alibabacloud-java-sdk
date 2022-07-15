@@ -7,6 +7,9 @@ public class DescribeCheckWarningsRequest extends TeaModel {
     @NameInMap("CheckId")
     public Long checkId;
 
+    @NameInMap("CheckType")
+    public String checkType;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -36,6 +39,14 @@ public class DescribeCheckWarningsRequest extends TeaModel {
     }
     public Long getCheckId() {
         return this.checkId;
+    }
+
+    public DescribeCheckWarningsRequest setCheckType(String checkType) {
+        this.checkType = checkType;
+        return this;
+    }
+    public String getCheckType() {
+        return this.checkType;
     }
 
     public DescribeCheckWarningsRequest setCurrentPage(Integer currentPage) {
