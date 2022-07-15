@@ -293,6 +293,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CustWabaId", request.custWabaId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.fallBackContent)) {
+            body.put("FallBackContent", request.fallBackContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallBackId)) {
+            body.put("FallBackId", request.fallBackId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
             body.put("From", request.from);
         }
