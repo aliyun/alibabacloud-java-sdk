@@ -66,6 +66,14 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         @NameInMap("PairNumber")
         public Long pairNumber;
 
+        // 复制组的初始源地域。
+        @NameInMap("PrimaryRegion")
+        public String primaryRegion;
+
+        // 复制组的初始源可用区。
+        @NameInMap("PrimaryZone")
+        public String primaryZone;
+
         @NameInMap("RPO")
         public Long RPO;
 
@@ -81,6 +89,14 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
 
         @NameInMap("SourceZoneId")
         public String sourceZoneId;
+
+        // 复制组的初始目的地域。
+        @NameInMap("StandbyRegion")
+        public String standbyRegion;
+
+        // 复制组的初始目的可用区。
+        @NameInMap("StandbyZone")
+        public String standbyZone;
 
         @NameInMap("Status")
         public String status;
@@ -146,6 +162,22 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             return this.pairNumber;
         }
 
+        public DescribeDiskReplicaGroupsResponseBodyReplicaGroups setPrimaryRegion(String primaryRegion) {
+            this.primaryRegion = primaryRegion;
+            return this;
+        }
+        public String getPrimaryRegion() {
+            return this.primaryRegion;
+        }
+
+        public DescribeDiskReplicaGroupsResponseBodyReplicaGroups setPrimaryZone(String primaryZone) {
+            this.primaryZone = primaryZone;
+            return this;
+        }
+        public String getPrimaryZone() {
+            return this.primaryZone;
+        }
+
         public DescribeDiskReplicaGroupsResponseBodyReplicaGroups setRPO(Long RPO) {
             this.RPO = RPO;
             return this;
@@ -184,6 +216,22 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
         public String getSourceZoneId() {
             return this.sourceZoneId;
+        }
+
+        public DescribeDiskReplicaGroupsResponseBodyReplicaGroups setStandbyRegion(String standbyRegion) {
+            this.standbyRegion = standbyRegion;
+            return this;
+        }
+        public String getStandbyRegion() {
+            return this.standbyRegion;
+        }
+
+        public DescribeDiskReplicaGroupsResponseBodyReplicaGroups setStandbyZone(String standbyZone) {
+            this.standbyZone = standbyZone;
+            return this;
+        }
+        public String getStandbyZone() {
+            return this.standbyZone;
         }
 
         public DescribeDiskReplicaGroupsResponseBodyReplicaGroups setStatus(String status) {

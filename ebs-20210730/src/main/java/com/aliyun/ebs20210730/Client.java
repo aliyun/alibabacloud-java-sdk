@@ -648,14 +648,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ReplicaGroupId", request.replicaGroupId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceRegionId)) {
-            query.put("SourceRegionId", request.sourceRegionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceZoneId)) {
-            query.put("SourceZoneId", request.sourceZoneId);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));

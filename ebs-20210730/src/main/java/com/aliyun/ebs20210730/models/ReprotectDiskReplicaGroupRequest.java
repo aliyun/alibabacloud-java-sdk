@@ -13,12 +13,6 @@ public class ReprotectDiskReplicaGroupRequest extends TeaModel {
     @NameInMap("ReplicaGroupId")
     public String replicaGroupId;
 
-    @NameInMap("SourceRegionId")
-    public String sourceRegionId;
-
-    @NameInMap("SourceZoneId")
-    public String sourceZoneId;
-
     public static ReprotectDiskReplicaGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ReprotectDiskReplicaGroupRequest self = new ReprotectDiskReplicaGroupRequest();
         return TeaModel.build(map, self);
@@ -46,22 +40,6 @@ public class ReprotectDiskReplicaGroupRequest extends TeaModel {
     }
     public String getReplicaGroupId() {
         return this.replicaGroupId;
-    }
-
-    public ReprotectDiskReplicaGroupRequest setSourceRegionId(String sourceRegionId) {
-        this.sourceRegionId = sourceRegionId;
-        return this;
-    }
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    public ReprotectDiskReplicaGroupRequest setSourceZoneId(String sourceZoneId) {
-        this.sourceZoneId = sourceZoneId;
-        return this;
-    }
-    public String getSourceZoneId() {
-        return this.sourceZoneId;
     }
 
 }
