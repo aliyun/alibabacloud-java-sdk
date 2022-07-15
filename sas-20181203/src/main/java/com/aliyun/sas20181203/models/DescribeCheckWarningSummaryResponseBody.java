@@ -79,6 +79,12 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         @NameInMap("CheckCount")
         public Integer checkCount;
 
+        @NameInMap("CheckExploit")
+        public Boolean checkExploit;
+
+        @NameInMap("DatabaseRisk")
+        public Boolean databaseRisk;
+
         @NameInMap("HighWarningCount")
         public Integer highWarningCount;
 
@@ -120,6 +126,22 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         }
         public Integer getCheckCount() {
             return this.checkCount;
+        }
+
+        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setCheckExploit(Boolean checkExploit) {
+            this.checkExploit = checkExploit;
+            return this;
+        }
+        public Boolean getCheckExploit() {
+            return this.checkExploit;
+        }
+
+        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setDatabaseRisk(Boolean databaseRisk) {
+            this.databaseRisk = databaseRisk;
+            return this;
+        }
+        public Boolean getDatabaseRisk() {
+            return this.databaseRisk;
         }
 
         public DescribeCheckWarningSummaryResponseBodyWarningSummarys setHighWarningCount(Integer highWarningCount) {
