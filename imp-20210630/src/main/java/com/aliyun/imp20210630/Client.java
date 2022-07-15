@@ -586,10 +586,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             bodyFlat.put("CommentIdList", request.commentIdList);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.creatorId)) {
-            body.put("CreatorId", request.creatorId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.roomId)) {
             body.put("RoomId", request.roomId);
         }
@@ -779,43 +775,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteLiveRoomResponse deleteLiveRoom(DeleteLiveRoomRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteLiveRoomWithOptions(request, runtime);
-    }
-
-    public DeleteRecordFileInfoResponse deleteRecordFileInfoWithOptions(DeleteRecordFileInfoRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            query.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
-            query.put("MaxResults", request.maxResults);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
-            query.put("NextToken", request.nextToken);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteRecordFileInfo"),
-            new TeaPair("version", "2021-06-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRecordFileInfoResponse());
-    }
-
-    public DeleteRecordFileInfoResponse deleteRecordFileInfo(DeleteRecordFileInfoRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.deleteRecordFileInfoWithOptions(request, runtime);
     }
 
     public DeleteRoomResponse deleteRoomWithOptions(DeleteRoomRequest request, RuntimeOptions runtime) throws Exception {
@@ -1281,43 +1240,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getLiveRoomUserStatisticsWithOptions(request, runtime);
     }
 
-    public GetRecordFileInfoResponse getRecordFileInfoWithOptions(GetRecordFileInfoRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            query.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
-            query.put("MaxResults", request.maxResults);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
-            query.put("NextToken", request.nextToken);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetRecordFileInfo"),
-            new TeaPair("version", "2021-06-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRecordFileInfoResponse());
-    }
-
-    public GetRecordFileInfoResponse getRecordFileInfo(GetRecordFileInfoRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getRecordFileInfoWithOptions(request, runtime);
-    }
-
     public GetRoomResponse getRoomWithOptions(GetRoomRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1578,55 +1500,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListConferenceUsersResponse listConferenceUsers(ListConferenceUsersRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listConferenceUsersWithOptions(request, runtime);
-    }
-
-    public ListLiveFilesResponse listLiveFilesWithOptions(ListLiveFilesRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            query.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.liveId)) {
-            query.put("LiveId", request.liveId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
-            query.put("MaxResults", request.maxResults);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
-            query.put("NextToken", request.nextToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            query.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListLiveFiles"),
-            new TeaPair("version", "2021-06-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLiveFilesResponse());
-    }
-
-    public ListLiveFilesResponse listLiveFiles(ListLiveFilesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.listLiveFilesWithOptions(request, runtime);
     }
 
     public ListLiveRoomsResponse listLiveRoomsWithOptions(ListLiveRoomsRequest request, RuntimeOptions runtime) throws Exception {
