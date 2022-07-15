@@ -7,6 +7,9 @@ public class ResetAppCodeRequest extends TeaModel {
     @NameInMap("AppCode")
     public String appCode;
 
+    @NameInMap("NewAppCode")
+    public String newAppCode;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -21,6 +24,14 @@ public class ResetAppCodeRequest extends TeaModel {
     }
     public String getAppCode() {
         return this.appCode;
+    }
+
+    public ResetAppCodeRequest setNewAppCode(String newAppCode) {
+        this.newAppCode = newAppCode;
+        return this;
+    }
+    public String getNewAppCode() {
+        return this.newAppCode;
     }
 
     public ResetAppCodeRequest setSecurityToken(String securityToken) {

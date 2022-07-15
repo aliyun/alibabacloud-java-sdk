@@ -13,6 +13,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
+    @NameInMap("ModifyAction")
+    public String modifyAction;
+
     @NameInMap("Token")
     public String token;
 
@@ -43,6 +46,14 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     }
     public String getInstanceSpec() {
         return this.instanceSpec;
+    }
+
+    public ModifyInstanceSpecRequest setModifyAction(String modifyAction) {
+        this.modifyAction = modifyAction;
+        return this;
+    }
+    public String getModifyAction() {
+        return this.modifyAction;
     }
 
     public ModifyInstanceSpecRequest setToken(String token) {

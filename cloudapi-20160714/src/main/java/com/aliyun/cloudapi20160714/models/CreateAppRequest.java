@@ -4,8 +4,17 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateAppRequest extends TeaModel {
+    @NameInMap("AppCode")
+    public String appCode;
+
+    @NameInMap("AppKey")
+    public String appKey;
+
     @NameInMap("AppName")
     public String appName;
+
+    @NameInMap("AppSecret")
+    public String appSecret;
 
     @NameInMap("Description")
     public String description;
@@ -24,12 +33,36 @@ public class CreateAppRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateAppRequest setAppCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+    public String getAppCode() {
+        return this.appCode;
+    }
+
+    public CreateAppRequest setAppKey(String appKey) {
+        this.appKey = appKey;
+        return this;
+    }
+    public String getAppKey() {
+        return this.appKey;
+    }
+
     public CreateAppRequest setAppName(String appName) {
         this.appName = appName;
         return this;
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public CreateAppRequest setAppSecret(String appSecret) {
+        this.appSecret = appSecret;
+        return this;
+    }
+    public String getAppSecret() {
+        return this.appSecret;
     }
 
     public CreateAppRequest setDescription(String description) {
