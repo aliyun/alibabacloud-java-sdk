@@ -16,6 +16,14 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     @NameInMap("CustWabaId")
     public String custWabaId;
 
+    // 回落消息内容
+    @NameInMap("FallBackContent")
+    public String fallBackContent;
+
+    // 回落策略ID，可在控制台创建策略并查看
+    @NameInMap("FallBackId")
+    public String fallBackId;
+
     // 发送方
     @NameInMap("From")
     public String from;
@@ -75,6 +83,22 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     }
     public String getCustWabaId() {
         return this.custWabaId;
+    }
+
+    public SendChatappMessageShrinkRequest setFallBackContent(String fallBackContent) {
+        this.fallBackContent = fallBackContent;
+        return this;
+    }
+    public String getFallBackContent() {
+        return this.fallBackContent;
+    }
+
+    public SendChatappMessageShrinkRequest setFallBackId(String fallBackId) {
+        this.fallBackId = fallBackId;
+        return this;
+    }
+    public String getFallBackId() {
+        return this.fallBackId;
     }
 
     public SendChatappMessageShrinkRequest setFrom(String from) {
