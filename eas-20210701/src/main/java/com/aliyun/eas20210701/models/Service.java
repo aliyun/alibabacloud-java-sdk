@@ -96,6 +96,10 @@ public class Service extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    // 服务的部署来源
+    @NameInMap("Source")
+    public String source;
+
     // 服务的状态
     @NameInMap("Status")
     public String status;
@@ -299,6 +303,14 @@ public class Service extends TeaModel {
     }
     public String getServiceName() {
         return this.serviceName;
+    }
+
+    public Service setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public Service setStatus(String status) {

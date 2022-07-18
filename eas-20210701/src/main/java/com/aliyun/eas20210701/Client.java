@@ -49,6 +49,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public CreateBenchmarkTaskResponse createBenchmarkTask(CreateBenchmarkTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createBenchmarkTaskWithOptions(request, headers, runtime);
+    }
+
+    public CreateBenchmarkTaskResponse createBenchmarkTaskWithOptions(CreateBenchmarkTaskRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", request.body)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateBenchmarkTask"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/benchmark-tasks"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBenchmarkTaskResponse());
+    }
+
     public CreateResourceResponse createResource(CreateResourceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -319,6 +345,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceMirrorResponse());
     }
 
+    public CreateStressResponse createStress(CreateStressRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createStressWithOptions(request, headers, runtime);
+    }
+
+    public CreateStressResponse createStressWithOptions(CreateStressRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", request.body)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateStress"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/stress"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateStressResponse());
+    }
+
+    public DeleteBenchmarkTaskResponse deleteBenchmarkTask(String ClusterId, String TaskName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteBenchmarkTaskWithOptions(ClusterId, TaskName, headers, runtime);
+    }
+
+    public DeleteBenchmarkTaskResponse deleteBenchmarkTaskWithOptions(String ClusterId, String TaskName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        TaskName = com.aliyun.openapiutil.Client.getEncodeParam(TaskName);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteBenchmarkTask"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteBenchmarkTaskResponse());
+    }
+
     public DeleteResourceResponse deleteResource(String ClusterId, String ResourceId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -571,28 +649,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceMirrorResponse());
     }
 
-    public DescribeRegionsResponse describeRegions() throws Exception {
+    public DeleteStressResponse deleteStress(String ClusterId, String StressName) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeRegionsWithOptions(headers, runtime);
+        return this.deleteStressWithOptions(ClusterId, StressName, headers, runtime);
     }
 
-    public DescribeRegionsResponse describeRegionsWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteStressResponse deleteStressWithOptions(String ClusterId, String StressName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        StressName = com.aliyun.openapiutil.Client.getEncodeParam(StressName);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
         Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeRegions"),
+            new TeaPair("action", "DeleteStress"),
             new TeaPair("version", "2021-07-01"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/regions"),
+            new TeaPair("pathname", "/api/v2/stress/" + ClusterId + "/" + StressName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteStressResponse());
+    }
+
+    public DescribeBenchmarkTaskResponse describeBenchmarkTask(String ClusterId, String TaskName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeBenchmarkTaskWithOptions(ClusterId, TaskName, headers, runtime);
+    }
+
+    public DescribeBenchmarkTaskResponse describeBenchmarkTaskWithOptions(String ClusterId, String TaskName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        TaskName = com.aliyun.openapiutil.Client.getEncodeParam(TaskName);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeBenchmarkTask"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBenchmarkTaskResponse());
+    }
+
+    public DescribeBenchmarkTaskReportResponse describeBenchmarkTaskReport(String ClusterId, String TaskName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeBenchmarkTaskReportWithOptions(ClusterId, TaskName, headers, runtime);
+    }
+
+    public DescribeBenchmarkTaskReportResponse describeBenchmarkTaskReportWithOptions(String ClusterId, String TaskName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        TaskName = com.aliyun.openapiutil.Client.getEncodeParam(TaskName);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeBenchmarkTaskReport"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName + "/report"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBenchmarkTaskReportResponse());
     }
 
     public DescribeResourceResponse describeResource(String ClusterId, String ResourceId) throws Exception {
@@ -830,6 +962,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeServiceMirrorResponse());
     }
 
+    public DescribeStressResponse describeStress(String ClusterId, String StressName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeStressWithOptions(ClusterId, StressName, headers, runtime);
+    }
+
+    public DescribeStressResponse describeStressWithOptions(String ClusterId, String StressName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        StressName = com.aliyun.openapiutil.Client.getEncodeParam(StressName);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeStress"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/stress/" + ClusterId + "/" + StressName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeStressResponse());
+    }
+
+    public ListBenchmarkTaskResponse listBenchmarkTask() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listBenchmarkTaskWithOptions(headers, runtime);
+    }
+
+    public ListBenchmarkTaskResponse listBenchmarkTaskWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBenchmarkTask"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/benchmark-tasks"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBenchmarkTaskResponse());
+    }
+
     public ListResourceInstanceWorkerResponse listResourceInstanceWorker(String ClusterId, String ResourceId, String InstanceName, ListResourceInstanceWorkerRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -879,6 +1061,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         ResourceId = com.aliyun.openapiutil.Client.getEncodeParam(ResourceId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
@@ -1061,6 +1247,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListServicesResponse());
     }
 
+    public ListStressesResponse listStresses() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listStressesWithOptions(headers, runtime);
+    }
+
+    public ListStressesResponse listStressesWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListStresses"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/stress"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListStressesResponse());
+    }
+
     public ReleaseServiceResponse releaseService(String ClusterId, String ServiceName, ReleaseServiceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1094,6 +1304,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseServiceResponse());
     }
 
+    public ReportStressResponse reportStress(String ClusterId, String StressName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.reportStressWithOptions(ClusterId, StressName, headers, runtime);
+    }
+
+    public ReportStressResponse reportStressWithOptions(String ClusterId, String StressName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        StressName = com.aliyun.openapiutil.Client.getEncodeParam(StressName);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReportStress"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/stress/" + ClusterId + "/" + StressName + "/report"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReportStressResponse());
+    }
+
+    public StartBenchmarkTaskResponse startBenchmarkTask(String ClusterId, String TaskName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startBenchmarkTaskWithOptions(ClusterId, TaskName, headers, runtime);
+    }
+
+    public StartBenchmarkTaskResponse startBenchmarkTaskWithOptions(String ClusterId, String TaskName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        TaskName = com.aliyun.openapiutil.Client.getEncodeParam(TaskName);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartBenchmarkTask"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName + "/start"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartBenchmarkTaskResponse());
+    }
+
     public StartServiceResponse startService(String ClusterId, String ServiceName) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1120,6 +1382,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartServiceResponse());
     }
 
+    public StartStressResponse startStress(String ClusterId, String StressName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startStressWithOptions(ClusterId, StressName, headers, runtime);
+    }
+
+    public StartStressResponse startStressWithOptions(String ClusterId, String StressName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        StressName = com.aliyun.openapiutil.Client.getEncodeParam(StressName);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartStress"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/stress/" + ClusterId + "/" + StressName + "/start"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartStressResponse());
+    }
+
+    public StopBenchmarkTaskResponse stopBenchmarkTask(String ClusterId, String TaskName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopBenchmarkTaskWithOptions(ClusterId, TaskName, headers, runtime);
+    }
+
+    public StopBenchmarkTaskResponse stopBenchmarkTaskWithOptions(String ClusterId, String TaskName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        TaskName = com.aliyun.openapiutil.Client.getEncodeParam(TaskName);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopBenchmarkTask"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName + "/stop"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopBenchmarkTaskResponse());
+    }
+
     public StopServiceResponse stopService(String ClusterId, String ServiceName) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1144,6 +1458,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopServiceResponse());
+    }
+
+    public StopStressResponse stopStress(String ClusterId, String StressName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopStressWithOptions(ClusterId, StressName, headers, runtime);
+    }
+
+    public StopStressResponse stopStressWithOptions(String ClusterId, String StressName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        StressName = com.aliyun.openapiutil.Client.getEncodeParam(StressName);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopStress"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/stress/" + ClusterId + "/" + StressName + "/stop"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopStressResponse());
+    }
+
+    public UpdateBenchmarkTaskResponse updateBenchmarkTask(String ClusterId, String TaskName, UpdateBenchmarkTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateBenchmarkTaskWithOptions(ClusterId, TaskName, request, headers, runtime);
+    }
+
+    public UpdateBenchmarkTaskResponse updateBenchmarkTaskWithOptions(String ClusterId, String TaskName, UpdateBenchmarkTaskRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        TaskName = com.aliyun.openapiutil.Client.getEncodeParam(TaskName);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", request.body)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateBenchmarkTask"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/benchmark-tasks/" + ClusterId + "/" + TaskName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateBenchmarkTaskResponse());
     }
 
     public UpdateResourceResponse updateResource(String ClusterId, String ResourceId, UpdateResourceRequest request) throws Exception {
@@ -1398,5 +1766,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceVersionResponse());
+    }
+
+    public UpdateStressResponse updateStress(String ClusterId, String StressName, UpdateStressRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateStressWithOptions(ClusterId, StressName, request, headers, runtime);
+    }
+
+    public UpdateStressResponse updateStressWithOptions(String ClusterId, String StressName, UpdateStressRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
+        StressName = com.aliyun.openapiutil.Client.getEncodeParam(StressName);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", request.body)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateStress"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/stress/" + ClusterId + "/" + StressName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateStressResponse());
     }
 }
