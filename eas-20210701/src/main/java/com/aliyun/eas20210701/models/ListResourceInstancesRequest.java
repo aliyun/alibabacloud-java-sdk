@@ -4,6 +4,12 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListResourceInstancesRequest extends TeaModel {
+    // 付费类型
+    // PrePaid预付费
+    // PostPaid后付费
+    @NameInMap("ChargeType")
+    public String chargeType;
+
     // 请求的页码（默认为1）
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -15,6 +21,14 @@ public class ListResourceInstancesRequest extends TeaModel {
     public static ListResourceInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceInstancesRequest self = new ListResourceInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListResourceInstancesRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public ListResourceInstancesRequest setPageNumber(Integer pageNumber) {
