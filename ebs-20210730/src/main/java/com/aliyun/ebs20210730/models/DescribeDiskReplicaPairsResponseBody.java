@@ -4,8 +4,17 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
+    // 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。如果设置了NextToken，则请求参数PageSize和PageNumber将失效，且返回数据中的TotalCount无效。
     @NameInMap("NextToken")
     public String nextToken;
+
+    // 参数页码。
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    // 参数页行数。
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("ReplicaPairs")
     public java.util.List<DescribeDiskReplicaPairsResponseBodyReplicaPairs> replicaPairs;
@@ -13,6 +22,10 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
+
+    // 分页查询时的结果总条数。
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeDiskReplicaPairsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDiskReplicaPairsResponseBody self = new DescribeDiskReplicaPairsResponseBody();
@@ -25,6 +38,22 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeDiskReplicaPairsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDiskReplicaPairsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeDiskReplicaPairsResponseBody setReplicaPairs(java.util.List<DescribeDiskReplicaPairsResponseBodyReplicaPairs> replicaPairs) {
@@ -41,6 +70,14 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDiskReplicaPairsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeDiskReplicaPairsResponseBodyReplicaPairs extends TeaModel {
