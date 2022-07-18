@@ -101,6 +101,15 @@ public class ListDataSourceItemResponseBody extends TeaModel {
         @NameInMap("DataSourceItemId")
         public Long dataSourceItemId;
 
+        @NameInMap("DeviceName")
+        public String deviceName;
+
+        @NameInMap("ProductKey")
+        public String productKey;
+
+        @NameInMap("ScopeType")
+        public String scopeType;
+
         @NameInMap("Topic")
         public String topic;
 
@@ -115,6 +124,30 @@ public class ListDataSourceItemResponseBody extends TeaModel {
         }
         public Long getDataSourceItemId() {
             return this.dataSourceItemId;
+        }
+
+        public ListDataSourceItemResponseBodyDataSourceItemsDataSourceItem setDeviceName(String deviceName) {
+            this.deviceName = deviceName;
+            return this;
+        }
+        public String getDeviceName() {
+            return this.deviceName;
+        }
+
+        public ListDataSourceItemResponseBodyDataSourceItemsDataSourceItem setProductKey(String productKey) {
+            this.productKey = productKey;
+            return this;
+        }
+        public String getProductKey() {
+            return this.productKey;
+        }
+
+        public ListDataSourceItemResponseBodyDataSourceItemsDataSourceItem setScopeType(String scopeType) {
+            this.scopeType = scopeType;
+            return this;
+        }
+        public String getScopeType() {
+            return this.scopeType;
         }
 
         public ListDataSourceItemResponseBodyDataSourceItemsDataSourceItem setTopic(String topic) {
