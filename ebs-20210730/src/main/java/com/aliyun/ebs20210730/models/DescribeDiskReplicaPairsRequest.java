@@ -10,9 +10,17 @@ public class DescribeDiskReplicaPairsRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。
+    // 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。如果设置了NextToken，则请求参数PageSize和PageNumber将失效，且返回数据中的TotalCount无效。
     @NameInMap("NextToken")
     public String nextToken;
+
+    // 分页查询时的页码。
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    // 分页查询时设置的每页行数。
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     // 异步复制关系ID列表。您可以指定一个或多个异步复制关系ID进行查询。格式为：pair-cn-dsa****,pair-cn-asd****。
     // 
@@ -27,7 +35,7 @@ public class DescribeDiskReplicaPairsRequest extends TeaModel {
     @NameInMap("ReplicaGroupId")
     public String replicaGroupId;
 
-    // production或backup，表示获取本地为主站点或备站点的复制对数据，默认为production。
+    // production或backup，表示获取本地为生产站点或灾备站点的复制对数据，默认为production。
     @NameInMap("Site")
     public String site;
 
@@ -50,6 +58,22 @@ public class DescribeDiskReplicaPairsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeDiskReplicaPairsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDiskReplicaPairsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeDiskReplicaPairsRequest setPairIds(String pairIds) {
