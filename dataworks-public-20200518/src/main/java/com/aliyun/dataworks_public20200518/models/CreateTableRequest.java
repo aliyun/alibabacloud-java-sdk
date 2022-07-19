@@ -52,6 +52,9 @@ public class CreateTableRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
+    @NameInMap("Schema")
+    public String schema;
+
     @NameInMap("TableName")
     public String tableName;
 
@@ -192,6 +195,14 @@ public class CreateTableRequest extends TeaModel {
     }
     public Long getProjectId() {
         return this.projectId;
+    }
+
+    public CreateTableRequest setSchema(String schema) {
+        this.schema = schema;
+        return this;
+    }
+    public String getSchema() {
+        return this.schema;
     }
 
     public CreateTableRequest setTableName(String tableName) {

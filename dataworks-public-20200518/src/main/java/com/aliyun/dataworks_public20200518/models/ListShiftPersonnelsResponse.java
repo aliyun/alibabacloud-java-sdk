@@ -3,7 +3,7 @@ package com.aliyun.dataworks_public20200518.models;
 
 import com.aliyun.tea.*;
 
-public class GetDutyRosterResponse extends TeaModel {
+public class ListShiftPersonnelsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetDutyRosterResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetDutyRosterResponseBody body;
+    public ListShiftPersonnelsResponseBody body;
 
-    public static GetDutyRosterResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetDutyRosterResponse self = new GetDutyRosterResponse();
+    public static ListShiftPersonnelsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListShiftPersonnelsResponse self = new ListShiftPersonnelsResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDutyRosterResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListShiftPersonnelsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetDutyRosterResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetDutyRosterResponse setStatusCode(Integer statusCode) {
+    public ListShiftPersonnelsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetDutyRosterResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetDutyRosterResponse setBody(GetDutyRosterResponseBody body) {
+    public ListShiftPersonnelsResponse setBody(ListShiftPersonnelsResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetDutyRosterResponseBody getBody() {
+    public ListShiftPersonnelsResponseBody getBody() {
         return this.body;
     }
 

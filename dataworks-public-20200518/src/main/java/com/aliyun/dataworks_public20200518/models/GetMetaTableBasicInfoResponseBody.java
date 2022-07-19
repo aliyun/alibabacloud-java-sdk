@@ -142,6 +142,9 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         @NameInMap("ReadCount")
         public Long readCount;
 
+        @NameInMap("Schema")
+        public String schema;
+
         @NameInMap("TableGuid")
         public String tableGuid;
 
@@ -333,6 +336,14 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         }
         public Long getReadCount() {
             return this.readCount;
+        }
+
+        public GetMetaTableBasicInfoResponseBodyData setSchema(String schema) {
+            this.schema = schema;
+            return this;
+        }
+        public String getSchema() {
+            return this.schema;
         }
 
         public GetMetaTableBasicInfoResponseBodyData setTableGuid(String tableGuid) {
