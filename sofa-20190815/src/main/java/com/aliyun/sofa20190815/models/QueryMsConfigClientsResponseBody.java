@@ -4,6 +4,15 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class QueryMsConfigClientsResponseBody extends TeaModel {
+    @NameInMap("Clients")
+    public java.util.List<QueryMsConfigClientsResponseBodyClients> clients;
+
+    @NameInMap("PageNum")
+    public Long pageNum;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,21 +22,36 @@ public class QueryMsConfigClientsResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("PageNum")
-    public Long pageNum;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
-
     @NameInMap("TotalCount")
     public Long totalCount;
-
-    @NameInMap("Clients")
-    public java.util.List<QueryMsConfigClientsResponseBodyClients> clients;
 
     public static QueryMsConfigClientsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMsConfigClientsResponseBody self = new QueryMsConfigClientsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMsConfigClientsResponseBody setClients(java.util.List<QueryMsConfigClientsResponseBodyClients> clients) {
+        this.clients = clients;
+        return this;
+    }
+    public java.util.List<QueryMsConfigClientsResponseBodyClients> getClients() {
+        return this.clients;
+    }
+
+    public QueryMsConfigClientsResponseBody setPageNum(Long pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Long getPageNum() {
+        return this.pageNum;
+    }
+
+    public QueryMsConfigClientsResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public QueryMsConfigClientsResponseBody setRequestId(String requestId) {
@@ -54,36 +78,12 @@ public class QueryMsConfigClientsResponseBody extends TeaModel {
         return this.resultMessage;
     }
 
-    public QueryMsConfigClientsResponseBody setPageNum(Long pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Long getPageNum() {
-        return this.pageNum;
-    }
-
-    public QueryMsConfigClientsResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
     public QueryMsConfigClientsResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Long getTotalCount() {
         return this.totalCount;
-    }
-
-    public QueryMsConfigClientsResponseBody setClients(java.util.List<QueryMsConfigClientsResponseBodyClients> clients) {
-        this.clients = clients;
-        return this;
-    }
-    public java.util.List<QueryMsConfigClientsResponseBodyClients> getClients() {
-        return this.clients;
     }
 
     public static class QueryMsConfigClientsResponseBodyClients extends TeaModel {

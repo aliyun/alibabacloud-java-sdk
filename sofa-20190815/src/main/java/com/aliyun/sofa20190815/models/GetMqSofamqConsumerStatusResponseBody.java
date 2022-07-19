@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class GetMqSofamqConsumerStatusResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public GetMqSofamqConsumerStatusResponseBodyData data;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class GetMqSofamqConsumerStatusResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("Data")
-    public GetMqSofamqConsumerStatusResponseBodyData data;
-
     public static GetMqSofamqConsumerStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMqSofamqConsumerStatusResponseBody self = new GetMqSofamqConsumerStatusResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMqSofamqConsumerStatusResponseBody setData(GetMqSofamqConsumerStatusResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetMqSofamqConsumerStatusResponseBodyData getData() {
+        return this.data;
     }
 
     public GetMqSofamqConsumerStatusResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class GetMqSofamqConsumerStatusResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public GetMqSofamqConsumerStatusResponseBody setData(GetMqSofamqConsumerStatusResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetMqSofamqConsumerStatusResponseBodyData getData() {
-        return this.data;
     }
 
     public static class GetMqSofamqConsumerStatusResponseBodyDataConnectionSet extends TeaModel {
@@ -238,11 +238,11 @@ public class GetMqSofamqConsumerStatusResponseBody extends TeaModel {
         @NameInMap("SubVersion")
         public Long subVersion;
 
-        @NameInMap("Topic")
-        public String topic;
-
         @NameInMap("TagsSet")
         public java.util.List<String> tagsSet;
+
+        @NameInMap("Topic")
+        public String topic;
 
         public static GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListSubscriptionSet build(java.util.Map<String, ?> map) throws Exception {
             GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListSubscriptionSet self = new GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListSubscriptionSet();
@@ -265,20 +265,20 @@ public class GetMqSofamqConsumerStatusResponseBody extends TeaModel {
             return this.subVersion;
         }
 
-        public GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListSubscriptionSet setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
-        }
-
         public GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListSubscriptionSet setTagsSet(java.util.List<String> tagsSet) {
             this.tagsSet = tagsSet;
             return this;
         }
         public java.util.List<String> getTagsSet() {
             return this.tagsSet;
+        }
+
+        public GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListSubscriptionSet setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
         }
 
     }
@@ -293,6 +293,9 @@ public class GetMqSofamqConsumerStatusResponseBody extends TeaModel {
         @NameInMap("ConsumeType")
         public String consumeType;
 
+        @NameInMap("Jstack")
+        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListJstack> jstack;
+
         @NameInMap("Language")
         public String language;
 
@@ -302,23 +305,20 @@ public class GetMqSofamqConsumerStatusResponseBody extends TeaModel {
         @NameInMap("MessageModel")
         public String messageModel;
 
+        @NameInMap("RunningDataList")
+        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListRunningDataList> runningDataList;
+
         @NameInMap("StartTimestamp")
         public Long startTimestamp;
+
+        @NameInMap("SubscriptionSet")
+        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListSubscriptionSet> subscriptionSet;
 
         @NameInMap("ThreadCount")
         public Long threadCount;
 
         @NameInMap("Version")
         public String version;
-
-        @NameInMap("Jstack")
-        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListJstack> jstack;
-
-        @NameInMap("RunningDataList")
-        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListRunningDataList> runningDataList;
-
-        @NameInMap("SubscriptionSet")
-        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListSubscriptionSet> subscriptionSet;
 
         public static GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList build(java.util.Map<String, ?> map) throws Exception {
             GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList self = new GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList();
@@ -349,6 +349,14 @@ public class GetMqSofamqConsumerStatusResponseBody extends TeaModel {
             return this.consumeType;
         }
 
+        public GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList setJstack(java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListJstack> jstack) {
+            this.jstack = jstack;
+            return this;
+        }
+        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListJstack> getJstack() {
+            return this.jstack;
+        }
+
         public GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList setLanguage(String language) {
             this.language = language;
             return this;
@@ -373,12 +381,28 @@ public class GetMqSofamqConsumerStatusResponseBody extends TeaModel {
             return this.messageModel;
         }
 
+        public GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList setRunningDataList(java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListRunningDataList> runningDataList) {
+            this.runningDataList = runningDataList;
+            return this;
+        }
+        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListRunningDataList> getRunningDataList() {
+            return this.runningDataList;
+        }
+
         public GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList setStartTimestamp(Long startTimestamp) {
             this.startTimestamp = startTimestamp;
             return this;
         }
         public Long getStartTimestamp() {
             return this.startTimestamp;
+        }
+
+        public GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList setSubscriptionSet(java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListSubscriptionSet> subscriptionSet) {
+            this.subscriptionSet = subscriptionSet;
+            return this;
+        }
+        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListSubscriptionSet> getSubscriptionSet() {
+            return this.subscriptionSet;
         }
 
         public GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList setThreadCount(Long threadCount) {
@@ -395,30 +419,6 @@ public class GetMqSofamqConsumerStatusResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
-        }
-
-        public GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList setJstack(java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListJstack> jstack) {
-            this.jstack = jstack;
-            return this;
-        }
-        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListJstack> getJstack() {
-            return this.jstack;
-        }
-
-        public GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList setRunningDataList(java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListRunningDataList> runningDataList) {
-            this.runningDataList = runningDataList;
-            return this;
-        }
-        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListRunningDataList> getRunningDataList() {
-            return this.runningDataList;
-        }
-
-        public GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList setSubscriptionSet(java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListSubscriptionSet> subscriptionSet) {
-            this.subscriptionSet = subscriptionSet;
-            return this;
-        }
-        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoListSubscriptionSet> getSubscriptionSet() {
-            return this.subscriptionSet;
         }
 
     }
@@ -476,14 +476,23 @@ public class GetMqSofamqConsumerStatusResponseBody extends TeaModel {
     }
 
     public static class GetMqSofamqConsumerStatusResponseBodyData extends TeaModel {
+        @NameInMap("ConnectionSet")
+        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConnectionSet> connectionSet;
+
         @NameInMap("ConsumeModel")
         public String consumeModel;
 
         @NameInMap("ConsumeTps")
         public String consumeTps;
 
+        @NameInMap("ConsumerConnectionInfoList")
+        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList> consumerConnectionInfoList;
+
         @NameInMap("DelayTime")
         public Long delayTime;
+
+        @NameInMap("DetailInTopicList")
+        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataDetailInTopicList> detailInTopicList;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -503,18 +512,17 @@ public class GetMqSofamqConsumerStatusResponseBody extends TeaModel {
         @NameInMap("TotalDiff")
         public Long totalDiff;
 
-        @NameInMap("ConnectionSet")
-        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConnectionSet> connectionSet;
-
-        @NameInMap("ConsumerConnectionInfoList")
-        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList> consumerConnectionInfoList;
-
-        @NameInMap("DetailInTopicList")
-        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataDetailInTopicList> detailInTopicList;
-
         public static GetMqSofamqConsumerStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMqSofamqConsumerStatusResponseBodyData self = new GetMqSofamqConsumerStatusResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetMqSofamqConsumerStatusResponseBodyData setConnectionSet(java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConnectionSet> connectionSet) {
+            this.connectionSet = connectionSet;
+            return this;
+        }
+        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConnectionSet> getConnectionSet() {
+            return this.connectionSet;
         }
 
         public GetMqSofamqConsumerStatusResponseBodyData setConsumeModel(String consumeModel) {
@@ -533,12 +541,28 @@ public class GetMqSofamqConsumerStatusResponseBody extends TeaModel {
             return this.consumeTps;
         }
 
+        public GetMqSofamqConsumerStatusResponseBodyData setConsumerConnectionInfoList(java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList> consumerConnectionInfoList) {
+            this.consumerConnectionInfoList = consumerConnectionInfoList;
+            return this;
+        }
+        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList> getConsumerConnectionInfoList() {
+            return this.consumerConnectionInfoList;
+        }
+
         public GetMqSofamqConsumerStatusResponseBodyData setDelayTime(Long delayTime) {
             this.delayTime = delayTime;
             return this;
         }
         public Long getDelayTime() {
             return this.delayTime;
+        }
+
+        public GetMqSofamqConsumerStatusResponseBodyData setDetailInTopicList(java.util.List<GetMqSofamqConsumerStatusResponseBodyDataDetailInTopicList> detailInTopicList) {
+            this.detailInTopicList = detailInTopicList;
+            return this;
+        }
+        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataDetailInTopicList> getDetailInTopicList() {
+            return this.detailInTopicList;
         }
 
         public GetMqSofamqConsumerStatusResponseBodyData setInstanceId(String instanceId) {
@@ -587,30 +611,6 @@ public class GetMqSofamqConsumerStatusResponseBody extends TeaModel {
         }
         public Long getTotalDiff() {
             return this.totalDiff;
-        }
-
-        public GetMqSofamqConsumerStatusResponseBodyData setConnectionSet(java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConnectionSet> connectionSet) {
-            this.connectionSet = connectionSet;
-            return this;
-        }
-        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConnectionSet> getConnectionSet() {
-            return this.connectionSet;
-        }
-
-        public GetMqSofamqConsumerStatusResponseBodyData setConsumerConnectionInfoList(java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList> consumerConnectionInfoList) {
-            this.consumerConnectionInfoList = consumerConnectionInfoList;
-            return this;
-        }
-        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataConsumerConnectionInfoList> getConsumerConnectionInfoList() {
-            return this.consumerConnectionInfoList;
-        }
-
-        public GetMqSofamqConsumerStatusResponseBodyData setDetailInTopicList(java.util.List<GetMqSofamqConsumerStatusResponseBodyDataDetailInTopicList> detailInTopicList) {
-            this.detailInTopicList = detailInTopicList;
-            return this;
-        }
-        public java.util.List<GetMqSofamqConsumerStatusResponseBodyDataDetailInTopicList> getDetailInTopicList() {
-            return this.detailInTopicList;
         }
 
     }

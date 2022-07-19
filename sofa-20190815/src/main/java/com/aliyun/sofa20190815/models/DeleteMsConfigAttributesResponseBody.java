@@ -7,11 +7,11 @@ public class DeleteMsConfigAttributesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ResultMessage")
-    public String resultMessage;
-
     @NameInMap("ResultCode")
     public String resultCode;
+
+    @NameInMap("ResultMessage")
+    public String resultMessage;
 
     public static DeleteMsConfigAttributesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMsConfigAttributesResponseBody self = new DeleteMsConfigAttributesResponseBody();
@@ -26,20 +26,20 @@ public class DeleteMsConfigAttributesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteMsConfigAttributesResponseBody setResultMessage(String resultMessage) {
-        this.resultMessage = resultMessage;
-        return this;
-    }
-    public String getResultMessage() {
-        return this.resultMessage;
-    }
-
     public DeleteMsConfigAttributesResponseBody setResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     public String getResultCode() {
         return this.resultCode;
+    }
+
+    public DeleteMsConfigAttributesResponseBody setResultMessage(String resultMessage) {
+        this.resultMessage = resultMessage;
+        return this;
+    }
+    public String getResultMessage() {
+        return this.resultMessage;
     }
 
 }

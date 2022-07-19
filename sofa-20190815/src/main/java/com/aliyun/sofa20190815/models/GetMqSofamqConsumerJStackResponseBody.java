@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class GetMqSofamqConsumerJStackResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public GetMqSofamqConsumerJStackResponseBodyData data;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class GetMqSofamqConsumerJStackResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("Data")
-    public GetMqSofamqConsumerJStackResponseBodyData data;
-
     public static GetMqSofamqConsumerJStackResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMqSofamqConsumerJStackResponseBody self = new GetMqSofamqConsumerJStackResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMqSofamqConsumerJStackResponseBody setData(GetMqSofamqConsumerJStackResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetMqSofamqConsumerJStackResponseBodyData getData() {
+        return this.data;
     }
 
     public GetMqSofamqConsumerJStackResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class GetMqSofamqConsumerJStackResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public GetMqSofamqConsumerJStackResponseBody setData(GetMqSofamqConsumerJStackResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetMqSofamqConsumerJStackResponseBodyData getData() {
-        return this.data;
     }
 
     public static class GetMqSofamqConsumerJStackResponseBodyDataJstack extends TeaModel {

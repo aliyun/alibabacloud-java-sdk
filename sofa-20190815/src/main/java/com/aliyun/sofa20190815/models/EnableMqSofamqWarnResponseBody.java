@@ -7,11 +7,11 @@ public class EnableMqSofamqWarnResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ResultMessage")
-    public String resultMessage;
-
     @NameInMap("ResultCode")
     public String resultCode;
+
+    @NameInMap("ResultMessage")
+    public String resultMessage;
 
     public static EnableMqSofamqWarnResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EnableMqSofamqWarnResponseBody self = new EnableMqSofamqWarnResponseBody();
@@ -26,20 +26,20 @@ public class EnableMqSofamqWarnResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public EnableMqSofamqWarnResponseBody setResultMessage(String resultMessage) {
-        this.resultMessage = resultMessage;
-        return this;
-    }
-    public String getResultMessage() {
-        return this.resultMessage;
-    }
-
     public EnableMqSofamqWarnResponseBody setResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     public String getResultCode() {
         return this.resultCode;
+    }
+
+    public EnableMqSofamqWarnResponseBody setResultMessage(String resultMessage) {
+        this.resultMessage = resultMessage;
+        return this;
+    }
+    public String getResultMessage() {
+        return this.resultMessage;
     }
 
 }

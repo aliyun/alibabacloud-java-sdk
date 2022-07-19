@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class QueryMsConfigAttributesResponseBody extends TeaModel {
+    @NameInMap("Attribute")
+    public QueryMsConfigAttributesResponseBodyAttribute attribute;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class QueryMsConfigAttributesResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("Attribute")
-    public QueryMsConfigAttributesResponseBodyAttribute attribute;
-
     public static QueryMsConfigAttributesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMsConfigAttributesResponseBody self = new QueryMsConfigAttributesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMsConfigAttributesResponseBody setAttribute(QueryMsConfigAttributesResponseBodyAttribute attribute) {
+        this.attribute = attribute;
+        return this;
+    }
+    public QueryMsConfigAttributesResponseBodyAttribute getAttribute() {
+        return this.attribute;
     }
 
     public QueryMsConfigAttributesResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class QueryMsConfigAttributesResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public QueryMsConfigAttributesResponseBody setAttribute(QueryMsConfigAttributesResponseBodyAttribute attribute) {
-        this.attribute = attribute;
-        return this;
-    }
-    public QueryMsConfigAttributesResponseBodyAttribute getAttribute() {
-        return this.attribute;
     }
 
     public static class QueryMsConfigAttributesResponseBodyAttribute extends TeaModel {

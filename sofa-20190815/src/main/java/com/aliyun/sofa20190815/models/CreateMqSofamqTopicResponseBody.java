@@ -7,11 +7,11 @@ public class CreateMqSofamqTopicResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ResultMessage")
-    public String resultMessage;
-
     @NameInMap("ResultCode")
     public String resultCode;
+
+    @NameInMap("ResultMessage")
+    public String resultMessage;
 
     public static CreateMqSofamqTopicResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateMqSofamqTopicResponseBody self = new CreateMqSofamqTopicResponseBody();
@@ -26,20 +26,20 @@ public class CreateMqSofamqTopicResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateMqSofamqTopicResponseBody setResultMessage(String resultMessage) {
-        this.resultMessage = resultMessage;
-        return this;
-    }
-    public String getResultMessage() {
-        return this.resultMessage;
-    }
-
     public CreateMqSofamqTopicResponseBody setResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     public String getResultCode() {
         return this.resultCode;
+    }
+
+    public CreateMqSofamqTopicResponseBody setResultMessage(String resultMessage) {
+        this.resultMessage = resultMessage;
+        return this;
+    }
+    public String getResultMessage() {
+        return this.resultMessage;
     }
 
 }

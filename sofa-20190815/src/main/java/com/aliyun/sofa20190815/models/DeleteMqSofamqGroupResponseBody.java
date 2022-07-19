@@ -7,11 +7,11 @@ public class DeleteMqSofamqGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ResultMessage")
-    public String resultMessage;
-
     @NameInMap("ResultCode")
     public String resultCode;
+
+    @NameInMap("ResultMessage")
+    public String resultMessage;
 
     public static DeleteMqSofamqGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMqSofamqGroupResponseBody self = new DeleteMqSofamqGroupResponseBody();
@@ -26,20 +26,20 @@ public class DeleteMqSofamqGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteMqSofamqGroupResponseBody setResultMessage(String resultMessage) {
-        this.resultMessage = resultMessage;
-        return this;
-    }
-    public String getResultMessage() {
-        return this.resultMessage;
-    }
-
     public DeleteMqSofamqGroupResponseBody setResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     public String getResultCode() {
         return this.resultCode;
+    }
+
+    public DeleteMqSofamqGroupResponseBody setResultMessage(String resultMessage) {
+        this.resultMessage = resultMessage;
+        return this;
+    }
+    public String getResultMessage() {
+        return this.resultMessage;
     }
 
 }

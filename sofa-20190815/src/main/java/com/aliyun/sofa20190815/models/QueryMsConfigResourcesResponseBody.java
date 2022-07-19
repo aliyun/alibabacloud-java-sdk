@@ -4,8 +4,17 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class QueryMsConfigResourcesResponseBody extends TeaModel {
+    @NameInMap("PageNum")
+    public Long pageNum;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Resources")
+    public java.util.List<QueryMsConfigResourcesResponseBodyResources> resources;
 
     @NameInMap("ResultCode")
     public String resultCode;
@@ -13,45 +22,12 @@ public class QueryMsConfigResourcesResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("PageNum")
-    public Long pageNum;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
-
     @NameInMap("TotalCount")
     public Long totalCount;
-
-    @NameInMap("Resources")
-    public java.util.List<QueryMsConfigResourcesResponseBodyResources> resources;
 
     public static QueryMsConfigResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMsConfigResourcesResponseBody self = new QueryMsConfigResourcesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryMsConfigResourcesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryMsConfigResourcesResponseBody setResultCode(String resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public String getResultCode() {
-        return this.resultCode;
-    }
-
-    public QueryMsConfigResourcesResponseBody setResultMessage(String resultMessage) {
-        this.resultMessage = resultMessage;
-        return this;
-    }
-    public String getResultMessage() {
-        return this.resultMessage;
     }
 
     public QueryMsConfigResourcesResponseBody setPageNum(Long pageNum) {
@@ -70,12 +46,12 @@ public class QueryMsConfigResourcesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryMsConfigResourcesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public QueryMsConfigResourcesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public QueryMsConfigResourcesResponseBody setResources(java.util.List<QueryMsConfigResourcesResponseBodyResources> resources) {
@@ -84,6 +60,30 @@ public class QueryMsConfigResourcesResponseBody extends TeaModel {
     }
     public java.util.List<QueryMsConfigResourcesResponseBodyResources> getResources() {
         return this.resources;
+    }
+
+    public QueryMsConfigResourcesResponseBody setResultCode(String resultCode) {
+        this.resultCode = resultCode;
+        return this;
+    }
+    public String getResultCode() {
+        return this.resultCode;
+    }
+
+    public QueryMsConfigResourcesResponseBody setResultMessage(String resultMessage) {
+        this.resultMessage = resultMessage;
+        return this;
+    }
+    public String getResultMessage() {
+        return this.resultMessage;
+    }
+
+    public QueryMsConfigResourcesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class QueryMsConfigResourcesResponseBodyResourcesAttributes extends TeaModel {
@@ -142,6 +142,9 @@ public class QueryMsConfigResourcesResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("Attributes")
+        public java.util.List<QueryMsConfigResourcesResponseBodyResourcesAttributes> attributes;
+
         @NameInMap("Desc")
         public String desc;
 
@@ -157,9 +160,6 @@ public class QueryMsConfigResourcesResponseBody extends TeaModel {
         @NameInMap("ResourceId")
         public String resourceId;
 
-        @NameInMap("Attributes")
-        public java.util.List<QueryMsConfigResourcesResponseBodyResourcesAttributes> attributes;
-
         public static QueryMsConfigResourcesResponseBodyResources build(java.util.Map<String, ?> map) throws Exception {
             QueryMsConfigResourcesResponseBodyResources self = new QueryMsConfigResourcesResponseBodyResources();
             return TeaModel.build(map, self);
@@ -171,6 +171,14 @@ public class QueryMsConfigResourcesResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public QueryMsConfigResourcesResponseBodyResources setAttributes(java.util.List<QueryMsConfigResourcesResponseBodyResourcesAttributes> attributes) {
+            this.attributes = attributes;
+            return this;
+        }
+        public java.util.List<QueryMsConfigResourcesResponseBodyResourcesAttributes> getAttributes() {
+            return this.attributes;
         }
 
         public QueryMsConfigResourcesResponseBodyResources setDesc(String desc) {
@@ -211,14 +219,6 @@ public class QueryMsConfigResourcesResponseBody extends TeaModel {
         }
         public String getResourceId() {
             return this.resourceId;
-        }
-
-        public QueryMsConfigResourcesResponseBodyResources setAttributes(java.util.List<QueryMsConfigResourcesResponseBodyResourcesAttributes> attributes) {
-            this.attributes = attributes;
-            return this;
-        }
-        public java.util.List<QueryMsConfigResourcesResponseBodyResourcesAttributes> getAttributes() {
-            return this.attributes;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class GetMsConfigAttributesResponseBody extends TeaModel {
+    @NameInMap("Attribute")
+    public GetMsConfigAttributesResponseBodyAttribute attribute;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class GetMsConfigAttributesResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("Attribute")
-    public GetMsConfigAttributesResponseBodyAttribute attribute;
-
     public static GetMsConfigAttributesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMsConfigAttributesResponseBody self = new GetMsConfigAttributesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMsConfigAttributesResponseBody setAttribute(GetMsConfigAttributesResponseBodyAttribute attribute) {
+        this.attribute = attribute;
+        return this;
+    }
+    public GetMsConfigAttributesResponseBodyAttribute getAttribute() {
+        return this.attribute;
     }
 
     public GetMsConfigAttributesResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class GetMsConfigAttributesResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public GetMsConfigAttributesResponseBody setAttribute(GetMsConfigAttributesResponseBodyAttribute attribute) {
-        this.attribute = attribute;
-        return this;
-    }
-    public GetMsConfigAttributesResponseBodyAttribute getAttribute() {
-        return this.attribute;
     }
 
     public static class GetMsConfigAttributesResponseBodyAttribute extends TeaModel {
