@@ -8,9 +8,17 @@ public class ListDistributionMallRequest extends TeaModel {
     @NameInMap("ChannelSupplierId")
     public String channelSupplierId;
 
+    // 分销商城id
+    @NameInMap("DistributionMallId")
+    public String distributionMallId;
+
     // 商城名称
     @NameInMap("DistributionMallName")
     public String distributionMallName;
+
+    // 分销商ID
+    @NameInMap("DistributorId")
+    public String distributorId;
 
     // 结束时间
     @NameInMap("EndDate")
@@ -28,6 +36,10 @@ public class ListDistributionMallRequest extends TeaModel {
     @NameInMap("StartDate")
     public String startDate;
 
+    // 租户Id
+    @NameInMap("TenantId")
+    public String tenantId;
+
     public static ListDistributionMallRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDistributionMallRequest self = new ListDistributionMallRequest();
         return TeaModel.build(map, self);
@@ -41,12 +53,28 @@ public class ListDistributionMallRequest extends TeaModel {
         return this.channelSupplierId;
     }
 
+    public ListDistributionMallRequest setDistributionMallId(String distributionMallId) {
+        this.distributionMallId = distributionMallId;
+        return this;
+    }
+    public String getDistributionMallId() {
+        return this.distributionMallId;
+    }
+
     public ListDistributionMallRequest setDistributionMallName(String distributionMallName) {
         this.distributionMallName = distributionMallName;
         return this;
     }
     public String getDistributionMallName() {
         return this.distributionMallName;
+    }
+
+    public ListDistributionMallRequest setDistributorId(String distributorId) {
+        this.distributorId = distributorId;
+        return this;
+    }
+    public String getDistributorId() {
+        return this.distributorId;
     }
 
     public ListDistributionMallRequest setEndDate(String endDate) {
@@ -79,6 +107,14 @@ public class ListDistributionMallRequest extends TeaModel {
     }
     public String getStartDate() {
         return this.startDate;
+    }
+
+    public ListDistributionMallRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }
