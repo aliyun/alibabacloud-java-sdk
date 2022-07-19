@@ -1,3 +1,7 @@
+2022-07-19 Version: 1.0.13
+- Unirest python v8 for user.
+- Unirest java v14 for user.
+
 2022-07-13 Version: 1.0.12
 - Unirest java v13 for user.
 

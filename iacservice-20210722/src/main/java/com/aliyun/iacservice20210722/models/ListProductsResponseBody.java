@@ -67,42 +67,12 @@ public class ListProductsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class ListProductsResponseBodyProductsProductName extends TeaModel {
-        @NameInMap("en_US")
-        public String enUS;
-
-        @NameInMap("zh_CN")
-        public String zhCN;
-
-        public static ListProductsResponseBodyProductsProductName build(java.util.Map<String, ?> map) throws Exception {
-            ListProductsResponseBodyProductsProductName self = new ListProductsResponseBodyProductsProductName();
-            return TeaModel.build(map, self);
-        }
-
-        public ListProductsResponseBodyProductsProductName setEnUS(String enUS) {
-            this.enUS = enUS;
-            return this;
-        }
-        public String getEnUS() {
-            return this.enUS;
-        }
-
-        public ListProductsResponseBodyProductsProductName setZhCN(String zhCN) {
-            this.zhCN = zhCN;
-            return this;
-        }
-        public String getZhCN() {
-            return this.zhCN;
-        }
-
-    }
-
     public static class ListProductsResponseBodyProducts extends TeaModel {
         @NameInMap("productCode")
         public String productCode;
 
         @NameInMap("productName")
-        public ListProductsResponseBodyProductsProductName productName;
+        public String productName;
 
         public static ListProductsResponseBodyProducts build(java.util.Map<String, ?> map) throws Exception {
             ListProductsResponseBodyProducts self = new ListProductsResponseBodyProducts();
@@ -117,11 +87,11 @@ public class ListProductsResponseBody extends TeaModel {
             return this.productCode;
         }
 
-        public ListProductsResponseBodyProducts setProductName(ListProductsResponseBodyProductsProductName productName) {
+        public ListProductsResponseBodyProducts setProductName(String productName) {
             this.productName = productName;
             return this;
         }
-        public ListProductsResponseBodyProductsProductName getProductName() {
+        public String getProductName() {
             return this.productName;
         }
 
