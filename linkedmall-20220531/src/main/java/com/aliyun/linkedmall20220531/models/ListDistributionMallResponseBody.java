@@ -4,10 +4,6 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class ListDistributionMallResponseBody extends TeaModel {
-    // 渠道公共数据
-    @NameInMap("BizViewData")
-    public java.util.Map<String, ?> bizViewData;
-
     // 返回的执行结果码， 正确为字符串 0000
     @NameInMap("Code")
     public String code;
@@ -22,7 +18,7 @@ public class ListDistributionMallResponseBody extends TeaModel {
 
     // 请求结果数据
     @NameInMap("Model")
-    public ListDistributionMallResponseBodyModel model;
+    public java.util.List<ListDistributionMallResponseBodyModel> model;
 
     // 当前页
     @NameInMap("PageNumber")
@@ -57,14 +53,6 @@ public class ListDistributionMallResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListDistributionMallResponseBody setBizViewData(java.util.Map<String, ?> bizViewData) {
-        this.bizViewData = bizViewData;
-        return this;
-    }
-    public java.util.Map<String, ?> getBizViewData() {
-        return this.bizViewData;
-    }
-
     public ListDistributionMallResponseBody setCode(String code) {
         this.code = code;
         return this;
@@ -89,11 +77,11 @@ public class ListDistributionMallResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ListDistributionMallResponseBody setModel(ListDistributionMallResponseBodyModel model) {
+    public ListDistributionMallResponseBody setModel(java.util.List<ListDistributionMallResponseBodyModel> model) {
         this.model = model;
         return this;
     }
-    public ListDistributionMallResponseBodyModel getModel() {
+    public java.util.List<ListDistributionMallResponseBodyModel> getModel() {
         return this.model;
     }
 

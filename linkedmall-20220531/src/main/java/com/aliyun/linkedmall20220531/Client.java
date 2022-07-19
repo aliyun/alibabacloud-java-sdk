@@ -493,8 +493,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ChannelSupplierId", request.channelSupplierId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
+            body.put("DistributionMallId", request.distributionMallId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.distributionMallName)) {
             body.put("DistributionMallName", request.distributionMallName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
+            body.put("DistributorId", request.distributorId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
@@ -511,6 +519,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
             body.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
