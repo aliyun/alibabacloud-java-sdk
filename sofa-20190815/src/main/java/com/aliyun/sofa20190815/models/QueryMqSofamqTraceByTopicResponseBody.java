@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class QueryMqSofamqTraceByTopicResponseBody extends TeaModel {
+    @NameInMap("QueryId")
+    public String queryId;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class QueryMqSofamqTraceByTopicResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("QueryId")
-    public String queryId;
-
     public static QueryMqSofamqTraceByTopicResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMqSofamqTraceByTopicResponseBody self = new QueryMqSofamqTraceByTopicResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMqSofamqTraceByTopicResponseBody setQueryId(String queryId) {
+        this.queryId = queryId;
+        return this;
+    }
+    public String getQueryId() {
+        return this.queryId;
     }
 
     public QueryMqSofamqTraceByTopicResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class QueryMqSofamqTraceByTopicResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public QueryMqSofamqTraceByTopicResponseBody setQueryId(String queryId) {
-        this.queryId = queryId;
-        return this;
-    }
-    public String getQueryId() {
-        return this.queryId;
     }
 
 }

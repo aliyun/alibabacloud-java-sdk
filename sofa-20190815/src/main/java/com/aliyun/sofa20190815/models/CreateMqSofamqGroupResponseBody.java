@@ -7,11 +7,11 @@ public class CreateMqSofamqGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ResultMessage")
-    public String resultMessage;
-
     @NameInMap("ResultCode")
     public String resultCode;
+
+    @NameInMap("ResultMessage")
+    public String resultMessage;
 
     public static CreateMqSofamqGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateMqSofamqGroupResponseBody self = new CreateMqSofamqGroupResponseBody();
@@ -26,20 +26,20 @@ public class CreateMqSofamqGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateMqSofamqGroupResponseBody setResultMessage(String resultMessage) {
-        this.resultMessage = resultMessage;
-        return this;
-    }
-    public String getResultMessage() {
-        return this.resultMessage;
-    }
-
     public CreateMqSofamqGroupResponseBody setResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     public String getResultCode() {
         return this.resultCode;
+    }
+
+    public CreateMqSofamqGroupResponseBody setResultMessage(String resultMessage) {
+        this.resultMessage = resultMessage;
+        return this;
+    }
+    public String getResultMessage() {
+        return this.resultMessage;
     }
 
 }

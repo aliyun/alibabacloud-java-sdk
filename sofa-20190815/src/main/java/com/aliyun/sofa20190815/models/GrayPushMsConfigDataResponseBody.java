@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class GrayPushMsConfigDataResponseBody extends TeaModel {
+    @NameInMap("PushResult")
+    public java.util.List<GrayPushMsConfigDataResponseBodyPushResult> pushResult;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class GrayPushMsConfigDataResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("PushResult")
-    public java.util.List<GrayPushMsConfigDataResponseBodyPushResult> pushResult;
-
     public static GrayPushMsConfigDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GrayPushMsConfigDataResponseBody self = new GrayPushMsConfigDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GrayPushMsConfigDataResponseBody setPushResult(java.util.List<GrayPushMsConfigDataResponseBodyPushResult> pushResult) {
+        this.pushResult = pushResult;
+        return this;
+    }
+    public java.util.List<GrayPushMsConfigDataResponseBodyPushResult> getPushResult() {
+        return this.pushResult;
     }
 
     public GrayPushMsConfigDataResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class GrayPushMsConfigDataResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public GrayPushMsConfigDataResponseBody setPushResult(java.util.List<GrayPushMsConfigDataResponseBodyPushResult> pushResult) {
-        this.pushResult = pushResult;
-        return this;
-    }
-    public java.util.List<GrayPushMsConfigDataResponseBodyPushResult> getPushResult() {
-        return this.pushResult;
     }
 
     public static class GrayPushMsConfigDataResponseBodyPushResult extends TeaModel {

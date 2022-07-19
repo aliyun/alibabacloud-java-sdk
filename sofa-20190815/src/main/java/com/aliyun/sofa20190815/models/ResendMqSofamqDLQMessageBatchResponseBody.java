@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class ResendMqSofamqDLQMessageBatchResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class ResendMqSofamqDLQMessageBatchResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("Data")
-    public String data;
-
     public static ResendMqSofamqDLQMessageBatchResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ResendMqSofamqDLQMessageBatchResponseBody self = new ResendMqSofamqDLQMessageBatchResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ResendMqSofamqDLQMessageBatchResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public ResendMqSofamqDLQMessageBatchResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class ResendMqSofamqDLQMessageBatchResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public ResendMqSofamqDLQMessageBatchResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class QueryMqSofamqDLQMessageByGroupIdResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public QueryMqSofamqDLQMessageByGroupIdResponseBodyData data;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class QueryMqSofamqDLQMessageByGroupIdResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("Data")
-    public QueryMqSofamqDLQMessageByGroupIdResponseBodyData data;
-
     public static QueryMqSofamqDLQMessageByGroupIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMqSofamqDLQMessageByGroupIdResponseBody self = new QueryMqSofamqDLQMessageByGroupIdResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMqSofamqDLQMessageByGroupIdResponseBody setData(QueryMqSofamqDLQMessageByGroupIdResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryMqSofamqDLQMessageByGroupIdResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryMqSofamqDLQMessageByGroupIdResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class QueryMqSofamqDLQMessageByGroupIdResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public QueryMqSofamqDLQMessageByGroupIdResponseBody setData(QueryMqSofamqDLQMessageByGroupIdResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryMqSofamqDLQMessageByGroupIdResponseBodyData getData() {
-        return this.data;
     }
 
     public static class QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContentPropertyList extends TeaModel {
@@ -102,6 +102,9 @@ public class QueryMqSofamqDLQMessageByGroupIdResponseBody extends TeaModel {
         @NameInMap("MsgId")
         public String msgId;
 
+        @NameInMap("PropertyList")
+        public java.util.List<QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContentPropertyList> propertyList;
+
         @NameInMap("ReconsumeTimes")
         public Long reconsumeTimes;
 
@@ -116,9 +119,6 @@ public class QueryMqSofamqDLQMessageByGroupIdResponseBody extends TeaModel {
 
         @NameInMap("Topic")
         public String topic;
-
-        @NameInMap("PropertyList")
-        public java.util.List<QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContentPropertyList> propertyList;
 
         public static QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContent build(java.util.Map<String, ?> map) throws Exception {
             QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContent self = new QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContent();
@@ -173,6 +173,14 @@ public class QueryMqSofamqDLQMessageByGroupIdResponseBody extends TeaModel {
             return this.msgId;
         }
 
+        public QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContent setPropertyList(java.util.List<QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContentPropertyList> propertyList) {
+            this.propertyList = propertyList;
+            return this;
+        }
+        public java.util.List<QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContentPropertyList> getPropertyList() {
+            return this.propertyList;
+        }
+
         public QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContent setReconsumeTimes(Long reconsumeTimes) {
             this.reconsumeTimes = reconsumeTimes;
             return this;
@@ -213,17 +221,12 @@ public class QueryMqSofamqDLQMessageByGroupIdResponseBody extends TeaModel {
             return this.topic;
         }
 
-        public QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContent setPropertyList(java.util.List<QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContentPropertyList> propertyList) {
-            this.propertyList = propertyList;
-            return this;
-        }
-        public java.util.List<QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContentPropertyList> getPropertyList() {
-            return this.propertyList;
-        }
-
     }
 
     public static class QueryMqSofamqDLQMessageByGroupIdResponseBodyData extends TeaModel {
+        @NameInMap("Content")
+        public java.util.List<QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContent> content;
+
         @NameInMap("PageNum")
         public Long pageNum;
 
@@ -236,12 +239,17 @@ public class QueryMqSofamqDLQMessageByGroupIdResponseBody extends TeaModel {
         @NameInMap("Total")
         public Long total;
 
-        @NameInMap("Content")
-        public java.util.List<QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContent> content;
-
         public static QueryMqSofamqDLQMessageByGroupIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryMqSofamqDLQMessageByGroupIdResponseBodyData self = new QueryMqSofamqDLQMessageByGroupIdResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryMqSofamqDLQMessageByGroupIdResponseBodyData setContent(java.util.List<QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContent> content) {
+            this.content = content;
+            return this;
+        }
+        public java.util.List<QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContent> getContent() {
+            return this.content;
         }
 
         public QueryMqSofamqDLQMessageByGroupIdResponseBodyData setPageNum(Long pageNum) {
@@ -274,14 +282,6 @@ public class QueryMqSofamqDLQMessageByGroupIdResponseBody extends TeaModel {
         }
         public Long getTotal() {
             return this.total;
-        }
-
-        public QueryMqSofamqDLQMessageByGroupIdResponseBodyData setContent(java.util.List<QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContent> content) {
-            this.content = content;
-            return this;
-        }
-        public java.util.List<QueryMqSofamqDLQMessageByGroupIdResponseBodyDataContent> getContent() {
-            return this.content;
         }
 
     }

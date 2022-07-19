@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class GetMqSofamqDLQMessageByIdResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public GetMqSofamqDLQMessageByIdResponseBodyData data;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class GetMqSofamqDLQMessageByIdResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("Data")
-    public GetMqSofamqDLQMessageByIdResponseBodyData data;
-
     public static GetMqSofamqDLQMessageByIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMqSofamqDLQMessageByIdResponseBody self = new GetMqSofamqDLQMessageByIdResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMqSofamqDLQMessageByIdResponseBody setData(GetMqSofamqDLQMessageByIdResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetMqSofamqDLQMessageByIdResponseBodyData getData() {
+        return this.data;
     }
 
     public GetMqSofamqDLQMessageByIdResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class GetMqSofamqDLQMessageByIdResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public GetMqSofamqDLQMessageByIdResponseBody setData(GetMqSofamqDLQMessageByIdResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetMqSofamqDLQMessageByIdResponseBodyData getData() {
-        return this.data;
     }
 
     public static class GetMqSofamqDLQMessageByIdResponseBodyDataPropertyList extends TeaModel {
@@ -102,6 +102,9 @@ public class GetMqSofamqDLQMessageByIdResponseBody extends TeaModel {
         @NameInMap("MsgId")
         public String msgId;
 
+        @NameInMap("PropertyList")
+        public java.util.List<GetMqSofamqDLQMessageByIdResponseBodyDataPropertyList> propertyList;
+
         @NameInMap("ReconsumeTimes")
         public Long reconsumeTimes;
 
@@ -116,9 +119,6 @@ public class GetMqSofamqDLQMessageByIdResponseBody extends TeaModel {
 
         @NameInMap("Topic")
         public String topic;
-
-        @NameInMap("PropertyList")
-        public java.util.List<GetMqSofamqDLQMessageByIdResponseBodyDataPropertyList> propertyList;
 
         public static GetMqSofamqDLQMessageByIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMqSofamqDLQMessageByIdResponseBodyData self = new GetMqSofamqDLQMessageByIdResponseBodyData();
@@ -173,6 +173,14 @@ public class GetMqSofamqDLQMessageByIdResponseBody extends TeaModel {
             return this.msgId;
         }
 
+        public GetMqSofamqDLQMessageByIdResponseBodyData setPropertyList(java.util.List<GetMqSofamqDLQMessageByIdResponseBodyDataPropertyList> propertyList) {
+            this.propertyList = propertyList;
+            return this;
+        }
+        public java.util.List<GetMqSofamqDLQMessageByIdResponseBodyDataPropertyList> getPropertyList() {
+            return this.propertyList;
+        }
+
         public GetMqSofamqDLQMessageByIdResponseBodyData setReconsumeTimes(Long reconsumeTimes) {
             this.reconsumeTimes = reconsumeTimes;
             return this;
@@ -211,14 +219,6 @@ public class GetMqSofamqDLQMessageByIdResponseBody extends TeaModel {
         }
         public String getTopic() {
             return this.topic;
-        }
-
-        public GetMqSofamqDLQMessageByIdResponseBodyData setPropertyList(java.util.List<GetMqSofamqDLQMessageByIdResponseBodyDataPropertyList> propertyList) {
-            this.propertyList = propertyList;
-            return this;
-        }
-        public java.util.List<GetMqSofamqDLQMessageByIdResponseBodyDataPropertyList> getPropertyList() {
-            return this.propertyList;
         }
 
     }

@@ -7,11 +7,11 @@ public class DeleteMqSofamqTopicResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ResultMessage")
-    public String resultMessage;
-
     @NameInMap("ResultCode")
     public String resultCode;
+
+    @NameInMap("ResultMessage")
+    public String resultMessage;
 
     public static DeleteMqSofamqTopicResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMqSofamqTopicResponseBody self = new DeleteMqSofamqTopicResponseBody();
@@ -26,20 +26,20 @@ public class DeleteMqSofamqTopicResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteMqSofamqTopicResponseBody setResultMessage(String resultMessage) {
-        this.resultMessage = resultMessage;
-        return this;
-    }
-    public String getResultMessage() {
-        return this.resultMessage;
-    }
-
     public DeleteMqSofamqTopicResponseBody setResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     public String getResultCode() {
         return this.resultCode;
+    }
+
+    public DeleteMqSofamqTopicResponseBody setResultMessage(String resultMessage) {
+        this.resultMessage = resultMessage;
+        return this;
+    }
+    public String getResultMessage() {
+        return this.resultMessage;
     }
 
 }

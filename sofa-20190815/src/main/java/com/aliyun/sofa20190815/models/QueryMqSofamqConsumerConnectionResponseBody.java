@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class QueryMqSofamqConsumerConnectionResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public QueryMqSofamqConsumerConnectionResponseBodyData data;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class QueryMqSofamqConsumerConnectionResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("Data")
-    public QueryMqSofamqConsumerConnectionResponseBodyData data;
-
     public static QueryMqSofamqConsumerConnectionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMqSofamqConsumerConnectionResponseBody self = new QueryMqSofamqConsumerConnectionResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMqSofamqConsumerConnectionResponseBody setData(QueryMqSofamqConsumerConnectionResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryMqSofamqConsumerConnectionResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryMqSofamqConsumerConnectionResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class QueryMqSofamqConsumerConnectionResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public QueryMqSofamqConsumerConnectionResponseBody setData(QueryMqSofamqConsumerConnectionResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryMqSofamqConsumerConnectionResponseBodyData getData() {
-        return this.data;
     }
 
     public static class QueryMqSofamqConsumerConnectionResponseBodyDataConnectionList extends TeaModel {

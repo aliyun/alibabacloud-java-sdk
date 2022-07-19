@@ -10,11 +10,11 @@ public class AddMsConfigResourcesResponseBody extends TeaModel {
     @NameInMap("Resource")
     public AddMsConfigResourcesResponseBodyResource resource;
 
-    @NameInMap("ResultMessage")
-    public String resultMessage;
-
     @NameInMap("ResultCode")
     public String resultCode;
+
+    @NameInMap("ResultMessage")
+    public String resultMessage;
 
     public static AddMsConfigResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddMsConfigResourcesResponseBody self = new AddMsConfigResourcesResponseBody();
@@ -37,14 +37,6 @@ public class AddMsConfigResourcesResponseBody extends TeaModel {
         return this.resource;
     }
 
-    public AddMsConfigResourcesResponseBody setResultMessage(String resultMessage) {
-        this.resultMessage = resultMessage;
-        return this;
-    }
-    public String getResultMessage() {
-        return this.resultMessage;
-    }
-
     public AddMsConfigResourcesResponseBody setResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -53,18 +45,26 @@ public class AddMsConfigResourcesResponseBody extends TeaModel {
         return this.resultCode;
     }
 
+    public AddMsConfigResourcesResponseBody setResultMessage(String resultMessage) {
+        this.resultMessage = resultMessage;
+        return this;
+    }
+    public String getResultMessage() {
+        return this.resultMessage;
+    }
+
     public static class AddMsConfigResourcesResponseBodyResourceAttributes extends TeaModel {
         @NameInMap("AttributeName")
         public String attributeName;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
+        @NameInMap("Desc")
+        public String desc;
 
         @NameInMap("Id")
         public Long id;
 
-        @NameInMap("Desc")
-        public String desc;
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         public static AddMsConfigResourcesResponseBodyResourceAttributes build(java.util.Map<String, ?> map) throws Exception {
             AddMsConfigResourcesResponseBodyResourceAttributes self = new AddMsConfigResourcesResponseBodyResourceAttributes();
@@ -79,12 +79,12 @@ public class AddMsConfigResourcesResponseBody extends TeaModel {
             return this.attributeName;
         }
 
-        public AddMsConfigResourcesResponseBodyResourceAttributes setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public AddMsConfigResourcesResponseBodyResourceAttributes setDesc(String desc) {
+            this.desc = desc;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
+        public String getDesc() {
+            return this.desc;
         }
 
         public AddMsConfigResourcesResponseBodyResourceAttributes setId(Long id) {
@@ -95,12 +95,12 @@ public class AddMsConfigResourcesResponseBody extends TeaModel {
             return this.id;
         }
 
-        public AddMsConfigResourcesResponseBodyResourceAttributes setDesc(String desc) {
-            this.desc = desc;
+        public AddMsConfigResourcesResponseBodyResourceAttributes setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public String getDesc() {
-            return this.desc;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
     }
@@ -109,23 +109,23 @@ public class AddMsConfigResourcesResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("Attributes")
         public java.util.List<AddMsConfigResourcesResponseBodyResourceAttributes> attributes;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("ResourceId")
-        public String resourceId;
+        @NameInMap("Desc")
+        public String desc;
 
         @NameInMap("Id")
         public Long id;
 
-        @NameInMap("Desc")
-        public String desc;
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("ResourceId")
+        public String resourceId;
 
         public static AddMsConfigResourcesResponseBodyResource build(java.util.Map<String, ?> map) throws Exception {
             AddMsConfigResourcesResponseBodyResource self = new AddMsConfigResourcesResponseBodyResource();
@@ -140,14 +140,6 @@ public class AddMsConfigResourcesResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public AddMsConfigResourcesResponseBodyResource setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
         public AddMsConfigResourcesResponseBodyResource setAttributes(java.util.List<AddMsConfigResourcesResponseBodyResourceAttributes> attributes) {
             this.attributes = attributes;
             return this;
@@ -156,20 +148,12 @@ public class AddMsConfigResourcesResponseBody extends TeaModel {
             return this.attributes;
         }
 
-        public AddMsConfigResourcesResponseBodyResource setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public AddMsConfigResourcesResponseBodyResource setDesc(String desc) {
+            this.desc = desc;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public AddMsConfigResourcesResponseBodyResource setResourceId(String resourceId) {
-            this.resourceId = resourceId;
-            return this;
-        }
-        public String getResourceId() {
-            return this.resourceId;
+        public String getDesc() {
+            return this.desc;
         }
 
         public AddMsConfigResourcesResponseBodyResource setId(Long id) {
@@ -180,12 +164,28 @@ public class AddMsConfigResourcesResponseBody extends TeaModel {
             return this.id;
         }
 
-        public AddMsConfigResourcesResponseBodyResource setDesc(String desc) {
-            this.desc = desc;
+        public AddMsConfigResourcesResponseBodyResource setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public String getDesc() {
-            return this.desc;
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public AddMsConfigResourcesResponseBodyResource setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public AddMsConfigResourcesResponseBodyResource setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
         }
 
     }

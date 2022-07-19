@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class ListMqSofamqWarnHistoryResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public ListMqSofamqWarnHistoryResponseBodyData data;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class ListMqSofamqWarnHistoryResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("Data")
-    public ListMqSofamqWarnHistoryResponseBodyData data;
-
     public static ListMqSofamqWarnHistoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListMqSofamqWarnHistoryResponseBody self = new ListMqSofamqWarnHistoryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListMqSofamqWarnHistoryResponseBody setData(ListMqSofamqWarnHistoryResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListMqSofamqWarnHistoryResponseBodyData getData() {
+        return this.data;
     }
 
     public ListMqSofamqWarnHistoryResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class ListMqSofamqWarnHistoryResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public ListMqSofamqWarnHistoryResponseBody setData(ListMqSofamqWarnHistoryResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListMqSofamqWarnHistoryResponseBodyData getData() {
-        return this.data;
     }
 
     public static class ListMqSofamqWarnHistoryResponseBodyDataContent extends TeaModel {
@@ -150,6 +150,9 @@ public class ListMqSofamqWarnHistoryResponseBody extends TeaModel {
     }
 
     public static class ListMqSofamqWarnHistoryResponseBodyData extends TeaModel {
+        @NameInMap("Content")
+        public java.util.List<ListMqSofamqWarnHistoryResponseBodyDataContent> content;
+
         @NameInMap("PageNum")
         public Long pageNum;
 
@@ -159,12 +162,17 @@ public class ListMqSofamqWarnHistoryResponseBody extends TeaModel {
         @NameInMap("Total")
         public Long total;
 
-        @NameInMap("Content")
-        public java.util.List<ListMqSofamqWarnHistoryResponseBodyDataContent> content;
-
         public static ListMqSofamqWarnHistoryResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListMqSofamqWarnHistoryResponseBodyData self = new ListMqSofamqWarnHistoryResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListMqSofamqWarnHistoryResponseBodyData setContent(java.util.List<ListMqSofamqWarnHistoryResponseBodyDataContent> content) {
+            this.content = content;
+            return this;
+        }
+        public java.util.List<ListMqSofamqWarnHistoryResponseBodyDataContent> getContent() {
+            return this.content;
         }
 
         public ListMqSofamqWarnHistoryResponseBodyData setPageNum(Long pageNum) {
@@ -189,14 +197,6 @@ public class ListMqSofamqWarnHistoryResponseBody extends TeaModel {
         }
         public Long getTotal() {
             return this.total;
-        }
-
-        public ListMqSofamqWarnHistoryResponseBodyData setContent(java.util.List<ListMqSofamqWarnHistoryResponseBodyDataContent> content) {
-            this.content = content;
-            return this;
-        }
-        public java.util.List<ListMqSofamqWarnHistoryResponseBodyDataContent> getContent() {
-            return this.content;
         }
 
     }

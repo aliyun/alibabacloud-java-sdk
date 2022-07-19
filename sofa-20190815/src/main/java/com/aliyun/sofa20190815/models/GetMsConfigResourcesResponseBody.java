@@ -7,14 +7,14 @@ public class GetMsConfigResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Resource")
+    public GetMsConfigResourcesResponseBodyResource resource;
+
     @NameInMap("ResultCode")
     public String resultCode;
 
     @NameInMap("ResultMessage")
     public String resultMessage;
-
-    @NameInMap("Resource")
-    public GetMsConfigResourcesResponseBodyResource resource;
 
     public static GetMsConfigResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMsConfigResourcesResponseBody self = new GetMsConfigResourcesResponseBody();
@@ -27,6 +27,14 @@ public class GetMsConfigResourcesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetMsConfigResourcesResponseBody setResource(GetMsConfigResourcesResponseBodyResource resource) {
+        this.resource = resource;
+        return this;
+    }
+    public GetMsConfigResourcesResponseBodyResource getResource() {
+        return this.resource;
     }
 
     public GetMsConfigResourcesResponseBody setResultCode(String resultCode) {
@@ -43,14 +51,6 @@ public class GetMsConfigResourcesResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public GetMsConfigResourcesResponseBody setResource(GetMsConfigResourcesResponseBodyResource resource) {
-        this.resource = resource;
-        return this;
-    }
-    public GetMsConfigResourcesResponseBodyResource getResource() {
-        return this.resource;
     }
 
     public static class GetMsConfigResourcesResponseBodyResourceAttributes extends TeaModel {
@@ -109,6 +109,9 @@ public class GetMsConfigResourcesResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("Attributes")
+        public java.util.List<GetMsConfigResourcesResponseBodyResourceAttributes> attributes;
+
         @NameInMap("Desc")
         public String desc;
 
@@ -124,9 +127,6 @@ public class GetMsConfigResourcesResponseBody extends TeaModel {
         @NameInMap("ResourceId")
         public String resourceId;
 
-        @NameInMap("Attributes")
-        public java.util.List<GetMsConfigResourcesResponseBodyResourceAttributes> attributes;
-
         public static GetMsConfigResourcesResponseBodyResource build(java.util.Map<String, ?> map) throws Exception {
             GetMsConfigResourcesResponseBodyResource self = new GetMsConfigResourcesResponseBodyResource();
             return TeaModel.build(map, self);
@@ -138,6 +138,14 @@ public class GetMsConfigResourcesResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public GetMsConfigResourcesResponseBodyResource setAttributes(java.util.List<GetMsConfigResourcesResponseBodyResourceAttributes> attributes) {
+            this.attributes = attributes;
+            return this;
+        }
+        public java.util.List<GetMsConfigResourcesResponseBodyResourceAttributes> getAttributes() {
+            return this.attributes;
         }
 
         public GetMsConfigResourcesResponseBodyResource setDesc(String desc) {
@@ -178,14 +186,6 @@ public class GetMsConfigResourcesResponseBody extends TeaModel {
         }
         public String getResourceId() {
             return this.resourceId;
-        }
-
-        public GetMsConfigResourcesResponseBodyResource setAttributes(java.util.List<GetMsConfigResourcesResponseBodyResourceAttributes> attributes) {
-            this.attributes = attributes;
-            return this;
-        }
-        public java.util.List<GetMsConfigResourcesResponseBodyResourceAttributes> getAttributes() {
-            return this.attributes;
         }
 
     }

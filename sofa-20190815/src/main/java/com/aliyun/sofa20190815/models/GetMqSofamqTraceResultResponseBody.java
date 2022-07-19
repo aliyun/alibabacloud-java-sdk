@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class GetMqSofamqTraceResultResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public GetMqSofamqTraceResultResponseBodyData data;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class GetMqSofamqTraceResultResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("Data")
-    public GetMqSofamqTraceResultResponseBodyData data;
-
     public static GetMqSofamqTraceResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMqSofamqTraceResultResponseBody self = new GetMqSofamqTraceResultResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMqSofamqTraceResultResponseBody setData(GetMqSofamqTraceResultResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetMqSofamqTraceResultResponseBodyData getData() {
+        return this.data;
     }
 
     public GetMqSofamqTraceResultResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class GetMqSofamqTraceResultResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public GetMqSofamqTraceResultResponseBody setData(GetMqSofamqTraceResultResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetMqSofamqTraceResultResponseBodyData getData() {
-        return this.data;
     }
 
     public static class GetMqSofamqTraceResultResponseBodyDataTraceListSubListClientList extends TeaModel {
@@ -131,6 +131,9 @@ public class GetMqSofamqTraceResultResponseBody extends TeaModel {
         @NameInMap("Cell")
         public String cell;
 
+        @NameInMap("ClientList")
+        public java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceListSubListClientList> clientList;
+
         @NameInMap("FailCount")
         public Long failCount;
 
@@ -139,9 +142,6 @@ public class GetMqSofamqTraceResultResponseBody extends TeaModel {
 
         @NameInMap("SuccessCount")
         public Long successCount;
-
-        @NameInMap("ClientList")
-        public java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceListSubListClientList> clientList;
 
         public static GetMqSofamqTraceResultResponseBodyDataTraceListSubList build(java.util.Map<String, ?> map) throws Exception {
             GetMqSofamqTraceResultResponseBodyDataTraceListSubList self = new GetMqSofamqTraceResultResponseBodyDataTraceListSubList();
@@ -154,6 +154,14 @@ public class GetMqSofamqTraceResultResponseBody extends TeaModel {
         }
         public String getCell() {
             return this.cell;
+        }
+
+        public GetMqSofamqTraceResultResponseBodyDataTraceListSubList setClientList(java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceListSubListClientList> clientList) {
+            this.clientList = clientList;
+            return this;
+        }
+        public java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceListSubListClientList> getClientList() {
+            return this.clientList;
         }
 
         public GetMqSofamqTraceResultResponseBodyDataTraceListSubList setFailCount(Long failCount) {
@@ -178,14 +186,6 @@ public class GetMqSofamqTraceResultResponseBody extends TeaModel {
         }
         public Long getSuccessCount() {
             return this.successCount;
-        }
-
-        public GetMqSofamqTraceResultResponseBodyDataTraceListSubList setClientList(java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceListSubListClientList> clientList) {
-            this.clientList = clientList;
-            return this;
-        }
-        public java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceListSubListClientList> getClientList() {
-            return this.clientList;
         }
 
     }
@@ -215,14 +215,14 @@ public class GetMqSofamqTraceResultResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("SubList")
+        public java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceListSubList> subList;
+
         @NameInMap("Tag")
         public String tag;
 
         @NameInMap("Topic")
         public String topic;
-
-        @NameInMap("SubList")
-        public java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceListSubList> subList;
 
         public static GetMqSofamqTraceResultResponseBodyDataTraceList build(java.util.Map<String, ?> map) throws Exception {
             GetMqSofamqTraceResultResponseBodyDataTraceList self = new GetMqSofamqTraceResultResponseBodyDataTraceList();
@@ -293,6 +293,14 @@ public class GetMqSofamqTraceResultResponseBody extends TeaModel {
             return this.status;
         }
 
+        public GetMqSofamqTraceResultResponseBodyDataTraceList setSubList(java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceListSubList> subList) {
+            this.subList = subList;
+            return this;
+        }
+        public java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceListSubList> getSubList() {
+            return this.subList;
+        }
+
         public GetMqSofamqTraceResultResponseBodyDataTraceList setTag(String tag) {
             this.tag = tag;
             return this;
@@ -307,14 +315,6 @@ public class GetMqSofamqTraceResultResponseBody extends TeaModel {
         }
         public String getTopic() {
             return this.topic;
-        }
-
-        public GetMqSofamqTraceResultResponseBodyDataTraceList setSubList(java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceListSubList> subList) {
-            this.subList = subList;
-            return this;
-        }
-        public java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceListSubList> getSubList() {
-            return this.subList;
         }
 
     }
@@ -341,14 +341,14 @@ public class GetMqSofamqTraceResultResponseBody extends TeaModel {
         @NameInMap("Topic")
         public String topic;
 
+        @NameInMap("TraceList")
+        public java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceList> traceList;
+
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         @NameInMap("UserId")
         public String userId;
-
-        @NameInMap("TraceList")
-        public java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceList> traceList;
 
         public static GetMqSofamqTraceResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMqSofamqTraceResultResponseBodyData self = new GetMqSofamqTraceResultResponseBodyData();
@@ -411,6 +411,14 @@ public class GetMqSofamqTraceResultResponseBody extends TeaModel {
             return this.topic;
         }
 
+        public GetMqSofamqTraceResultResponseBodyData setTraceList(java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceList> traceList) {
+            this.traceList = traceList;
+            return this;
+        }
+        public java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceList> getTraceList() {
+            return this.traceList;
+        }
+
         public GetMqSofamqTraceResultResponseBodyData setUpdateTime(Long updateTime) {
             this.updateTime = updateTime;
             return this;
@@ -425,14 +433,6 @@ public class GetMqSofamqTraceResultResponseBody extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
-        }
-
-        public GetMqSofamqTraceResultResponseBodyData setTraceList(java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceList> traceList) {
-            this.traceList = traceList;
-            return this;
-        }
-        public java.util.List<GetMqSofamqTraceResultResponseBodyDataTraceList> getTraceList() {
-            return this.traceList;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class QueryMqSofamqMessageByTopicResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public QueryMqSofamqMessageByTopicResponseBodyData data;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class QueryMqSofamqMessageByTopicResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("Data")
-    public QueryMqSofamqMessageByTopicResponseBodyData data;
-
     public static QueryMqSofamqMessageByTopicResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMqSofamqMessageByTopicResponseBody self = new QueryMqSofamqMessageByTopicResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMqSofamqMessageByTopicResponseBody setData(QueryMqSofamqMessageByTopicResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryMqSofamqMessageByTopicResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryMqSofamqMessageByTopicResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class QueryMqSofamqMessageByTopicResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public QueryMqSofamqMessageByTopicResponseBody setData(QueryMqSofamqMessageByTopicResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryMqSofamqMessageByTopicResponseBodyData getData() {
-        return this.data;
     }
 
     public static class QueryMqSofamqMessageByTopicResponseBodyDataContentPropertyList extends TeaModel {
@@ -102,6 +102,9 @@ public class QueryMqSofamqMessageByTopicResponseBody extends TeaModel {
         @NameInMap("MsgId")
         public String msgId;
 
+        @NameInMap("PropertyList")
+        public java.util.List<QueryMqSofamqMessageByTopicResponseBodyDataContentPropertyList> propertyList;
+
         @NameInMap("ReconsumeTimes")
         public Long reconsumeTimes;
 
@@ -116,9 +119,6 @@ public class QueryMqSofamqMessageByTopicResponseBody extends TeaModel {
 
         @NameInMap("Topic")
         public String topic;
-
-        @NameInMap("PropertyList")
-        public java.util.List<QueryMqSofamqMessageByTopicResponseBodyDataContentPropertyList> propertyList;
 
         public static QueryMqSofamqMessageByTopicResponseBodyDataContent build(java.util.Map<String, ?> map) throws Exception {
             QueryMqSofamqMessageByTopicResponseBodyDataContent self = new QueryMqSofamqMessageByTopicResponseBodyDataContent();
@@ -173,6 +173,14 @@ public class QueryMqSofamqMessageByTopicResponseBody extends TeaModel {
             return this.msgId;
         }
 
+        public QueryMqSofamqMessageByTopicResponseBodyDataContent setPropertyList(java.util.List<QueryMqSofamqMessageByTopicResponseBodyDataContentPropertyList> propertyList) {
+            this.propertyList = propertyList;
+            return this;
+        }
+        public java.util.List<QueryMqSofamqMessageByTopicResponseBodyDataContentPropertyList> getPropertyList() {
+            return this.propertyList;
+        }
+
         public QueryMqSofamqMessageByTopicResponseBodyDataContent setReconsumeTimes(Long reconsumeTimes) {
             this.reconsumeTimes = reconsumeTimes;
             return this;
@@ -213,17 +221,12 @@ public class QueryMqSofamqMessageByTopicResponseBody extends TeaModel {
             return this.topic;
         }
 
-        public QueryMqSofamqMessageByTopicResponseBodyDataContent setPropertyList(java.util.List<QueryMqSofamqMessageByTopicResponseBodyDataContentPropertyList> propertyList) {
-            this.propertyList = propertyList;
-            return this;
-        }
-        public java.util.List<QueryMqSofamqMessageByTopicResponseBodyDataContentPropertyList> getPropertyList() {
-            return this.propertyList;
-        }
-
     }
 
     public static class QueryMqSofamqMessageByTopicResponseBodyData extends TeaModel {
+        @NameInMap("Content")
+        public java.util.List<QueryMqSofamqMessageByTopicResponseBodyDataContent> content;
+
         @NameInMap("PageNum")
         public Long pageNum;
 
@@ -236,12 +239,17 @@ public class QueryMqSofamqMessageByTopicResponseBody extends TeaModel {
         @NameInMap("Total")
         public Long total;
 
-        @NameInMap("Content")
-        public java.util.List<QueryMqSofamqMessageByTopicResponseBodyDataContent> content;
-
         public static QueryMqSofamqMessageByTopicResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryMqSofamqMessageByTopicResponseBodyData self = new QueryMqSofamqMessageByTopicResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryMqSofamqMessageByTopicResponseBodyData setContent(java.util.List<QueryMqSofamqMessageByTopicResponseBodyDataContent> content) {
+            this.content = content;
+            return this;
+        }
+        public java.util.List<QueryMqSofamqMessageByTopicResponseBodyDataContent> getContent() {
+            return this.content;
         }
 
         public QueryMqSofamqMessageByTopicResponseBodyData setPageNum(Long pageNum) {
@@ -274,14 +282,6 @@ public class QueryMqSofamqMessageByTopicResponseBody extends TeaModel {
         }
         public Long getTotal() {
             return this.total;
-        }
-
-        public QueryMqSofamqMessageByTopicResponseBodyData setContent(java.util.List<QueryMqSofamqMessageByTopicResponseBodyDataContent> content) {
-            this.content = content;
-            return this;
-        }
-        public java.util.List<QueryMqSofamqMessageByTopicResponseBodyDataContent> getContent() {
-            return this.content;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class ListMqSofamqTopicResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public ListMqSofamqTopicResponseBodyData data;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class ListMqSofamqTopicResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("Data")
-    public ListMqSofamqTopicResponseBodyData data;
-
     public static ListMqSofamqTopicResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListMqSofamqTopicResponseBody self = new ListMqSofamqTopicResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListMqSofamqTopicResponseBody setData(ListMqSofamqTopicResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListMqSofamqTopicResponseBodyData getData() {
+        return this.data;
     }
 
     public ListMqSofamqTopicResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class ListMqSofamqTopicResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public ListMqSofamqTopicResponseBody setData(ListMqSofamqTopicResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListMqSofamqTopicResponseBodyData getData() {
-        return this.data;
     }
 
     public static class ListMqSofamqTopicResponseBodyDataContent extends TeaModel {
@@ -194,6 +194,9 @@ public class ListMqSofamqTopicResponseBody extends TeaModel {
     }
 
     public static class ListMqSofamqTopicResponseBodyData extends TeaModel {
+        @NameInMap("Content")
+        public java.util.List<ListMqSofamqTopicResponseBodyDataContent> content;
+
         @NameInMap("PageNum")
         public Long pageNum;
 
@@ -203,12 +206,17 @@ public class ListMqSofamqTopicResponseBody extends TeaModel {
         @NameInMap("Total")
         public Long total;
 
-        @NameInMap("Content")
-        public java.util.List<ListMqSofamqTopicResponseBodyDataContent> content;
-
         public static ListMqSofamqTopicResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListMqSofamqTopicResponseBodyData self = new ListMqSofamqTopicResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListMqSofamqTopicResponseBodyData setContent(java.util.List<ListMqSofamqTopicResponseBodyDataContent> content) {
+            this.content = content;
+            return this;
+        }
+        public java.util.List<ListMqSofamqTopicResponseBodyDataContent> getContent() {
+            return this.content;
         }
 
         public ListMqSofamqTopicResponseBodyData setPageNum(Long pageNum) {
@@ -233,14 +241,6 @@ public class ListMqSofamqTopicResponseBody extends TeaModel {
         }
         public Long getTotal() {
             return this.total;
-        }
-
-        public ListMqSofamqTopicResponseBodyData setContent(java.util.List<ListMqSofamqTopicResponseBodyDataContent> content) {
-            this.content = content;
-            return this;
-        }
-        public java.util.List<ListMqSofamqTopicResponseBodyDataContent> getContent() {
-            return this.content;
         }
 
     }

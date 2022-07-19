@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class QueryMsConfigDataResponseBody extends TeaModel {
+    @NameInMap("QueryResult")
+    public java.util.List<QueryMsConfigDataResponseBodyQueryResult> queryResult;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class QueryMsConfigDataResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("QueryResult")
-    public java.util.List<QueryMsConfigDataResponseBodyQueryResult> queryResult;
-
     public static QueryMsConfigDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMsConfigDataResponseBody self = new QueryMsConfigDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMsConfigDataResponseBody setQueryResult(java.util.List<QueryMsConfigDataResponseBodyQueryResult> queryResult) {
+        this.queryResult = queryResult;
+        return this;
+    }
+    public java.util.List<QueryMsConfigDataResponseBodyQueryResult> getQueryResult() {
+        return this.queryResult;
     }
 
     public QueryMsConfigDataResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class QueryMsConfigDataResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public QueryMsConfigDataResponseBody setQueryResult(java.util.List<QueryMsConfigDataResponseBodyQueryResult> queryResult) {
-        this.queryResult = queryResult;
-        return this;
-    }
-    public java.util.List<QueryMsConfigDataResponseBodyQueryResult> getQueryResult() {
-        return this.queryResult;
     }
 
     public static class QueryMsConfigDataResponseBodyQueryResult extends TeaModel {

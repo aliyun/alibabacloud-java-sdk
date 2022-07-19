@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class ListMqSofamqTraceResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public ListMqSofamqTraceResponseBodyData data;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class ListMqSofamqTraceResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("Data")
-    public ListMqSofamqTraceResponseBodyData data;
-
     public static ListMqSofamqTraceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListMqSofamqTraceResponseBody self = new ListMqSofamqTraceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListMqSofamqTraceResponseBody setData(ListMqSofamqTraceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListMqSofamqTraceResponseBodyData getData() {
+        return this.data;
     }
 
     public ListMqSofamqTraceResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class ListMqSofamqTraceResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public ListMqSofamqTraceResponseBody setData(ListMqSofamqTraceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListMqSofamqTraceResponseBodyData getData() {
-        return this.data;
     }
 
     public static class ListMqSofamqTraceResponseBodyDataContent extends TeaModel {
@@ -161,6 +161,9 @@ public class ListMqSofamqTraceResponseBody extends TeaModel {
     }
 
     public static class ListMqSofamqTraceResponseBodyData extends TeaModel {
+        @NameInMap("Content")
+        public java.util.List<ListMqSofamqTraceResponseBodyDataContent> content;
+
         @NameInMap("PageNum")
         public Long pageNum;
 
@@ -170,12 +173,17 @@ public class ListMqSofamqTraceResponseBody extends TeaModel {
         @NameInMap("Total")
         public Long total;
 
-        @NameInMap("Content")
-        public java.util.List<ListMqSofamqTraceResponseBodyDataContent> content;
-
         public static ListMqSofamqTraceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListMqSofamqTraceResponseBodyData self = new ListMqSofamqTraceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListMqSofamqTraceResponseBodyData setContent(java.util.List<ListMqSofamqTraceResponseBodyDataContent> content) {
+            this.content = content;
+            return this;
+        }
+        public java.util.List<ListMqSofamqTraceResponseBodyDataContent> getContent() {
+            return this.content;
         }
 
         public ListMqSofamqTraceResponseBodyData setPageNum(Long pageNum) {
@@ -200,14 +208,6 @@ public class ListMqSofamqTraceResponseBody extends TeaModel {
         }
         public Long getTotal() {
             return this.total;
-        }
-
-        public ListMqSofamqTraceResponseBodyData setContent(java.util.List<ListMqSofamqTraceResponseBodyDataContent> content) {
-            this.content = content;
-            return this;
-        }
-        public java.util.List<ListMqSofamqTraceResponseBodyDataContent> getContent() {
-            return this.content;
         }
 
     }

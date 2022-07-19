@@ -4,6 +4,9 @@ package com.aliyun.sofa20190815.models;
 import com.aliyun.tea.*;
 
 public class QueryMqSofamqMessageByKeyResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public java.util.List<QueryMqSofamqMessageByKeyResponseBodyData> data;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class QueryMqSofamqMessageByKeyResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    @NameInMap("Data")
-    public java.util.List<QueryMqSofamqMessageByKeyResponseBodyData> data;
-
     public static QueryMqSofamqMessageByKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMqSofamqMessageByKeyResponseBody self = new QueryMqSofamqMessageByKeyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMqSofamqMessageByKeyResponseBody setData(java.util.List<QueryMqSofamqMessageByKeyResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<QueryMqSofamqMessageByKeyResponseBodyData> getData() {
+        return this.data;
     }
 
     public QueryMqSofamqMessageByKeyResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class QueryMqSofamqMessageByKeyResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
-    }
-
-    public QueryMqSofamqMessageByKeyResponseBody setData(java.util.List<QueryMqSofamqMessageByKeyResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<QueryMqSofamqMessageByKeyResponseBodyData> getData() {
-        return this.data;
     }
 
     public static class QueryMqSofamqMessageByKeyResponseBodyDataPropertyList extends TeaModel {
@@ -102,6 +102,9 @@ public class QueryMqSofamqMessageByKeyResponseBody extends TeaModel {
         @NameInMap("MsgId")
         public String msgId;
 
+        @NameInMap("PropertyList")
+        public java.util.List<QueryMqSofamqMessageByKeyResponseBodyDataPropertyList> propertyList;
+
         @NameInMap("ReconsumeTimes")
         public Long reconsumeTimes;
 
@@ -116,9 +119,6 @@ public class QueryMqSofamqMessageByKeyResponseBody extends TeaModel {
 
         @NameInMap("Topic")
         public String topic;
-
-        @NameInMap("PropertyList")
-        public java.util.List<QueryMqSofamqMessageByKeyResponseBodyDataPropertyList> propertyList;
 
         public static QueryMqSofamqMessageByKeyResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryMqSofamqMessageByKeyResponseBodyData self = new QueryMqSofamqMessageByKeyResponseBodyData();
@@ -173,6 +173,14 @@ public class QueryMqSofamqMessageByKeyResponseBody extends TeaModel {
             return this.msgId;
         }
 
+        public QueryMqSofamqMessageByKeyResponseBodyData setPropertyList(java.util.List<QueryMqSofamqMessageByKeyResponseBodyDataPropertyList> propertyList) {
+            this.propertyList = propertyList;
+            return this;
+        }
+        public java.util.List<QueryMqSofamqMessageByKeyResponseBodyDataPropertyList> getPropertyList() {
+            return this.propertyList;
+        }
+
         public QueryMqSofamqMessageByKeyResponseBodyData setReconsumeTimes(Long reconsumeTimes) {
             this.reconsumeTimes = reconsumeTimes;
             return this;
@@ -211,14 +219,6 @@ public class QueryMqSofamqMessageByKeyResponseBody extends TeaModel {
         }
         public String getTopic() {
             return this.topic;
-        }
-
-        public QueryMqSofamqMessageByKeyResponseBodyData setPropertyList(java.util.List<QueryMqSofamqMessageByKeyResponseBodyDataPropertyList> propertyList) {
-            this.propertyList = propertyList;
-            return this;
-        }
-        public java.util.List<QueryMqSofamqMessageByKeyResponseBodyDataPropertyList> getPropertyList() {
-            return this.propertyList;
         }
 
     }
