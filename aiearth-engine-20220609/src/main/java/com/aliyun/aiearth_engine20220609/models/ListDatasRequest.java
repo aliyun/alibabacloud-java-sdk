@@ -32,24 +32,20 @@ public class ListDatasRequest extends TeaModel {
     @NameInMap("RegionWkt")
     public String regionWkt;
 
-    // 星源，可多选，枚举值如下：    sentinel1,
-    //     sentinel2,
-    //     landsat5,
-    //     landsat7,
-    //     landsat8,
-    //     landsat9,
-    //     MODIS_MCD12Q1_006,
-    //     MODIS_MCD15A3H_006,
-    //     MODIS_MOD14A2_006,
-    //     MODIS_MOD13Q1_006,
-    //     MODIS_MOD09GQ_006,
-    //     MODIS_MOD11A1_006,
-    //     MODIS_MOD17A2H_006,
-    //     MODIS_MOD17A3HGF_006,
-    //     MODIS_MCD64A1_006,
-    //     MODIS_MOD08_M3_006,
-    //     MODIS_MOD10A1_006,
-    //     MODIS_MCD43A4_006
+    // 星源，可多选，枚举值如下：LANDSAT_LC08_C02_T1_L2
+    // LANDSAT_LC09_C02_T1_L2
+    // LANDSAT_LE07_E02_T1_L2
+    // LANDSAT_LT05_T02_T1_L2
+    // SENTINEL_GRD
+    // SENTINEL_MSIL2A
+    // MODIS_MCD12Q1_006
+    // MODIS_MCD15A3H_006
+    // MODIS_MOD14A2_006
+    // MODIS_MOD13Q1_006
+    // MODIS_MOD17A2H_006
+    // MODIS_MOD17A3HGF_006
+    // MODIS_MCD64A1_006
+    // MODIS_MOD11A1_006
     @NameInMap("SourceTypeList")
     public java.util.List<String> sourceTypeList;
 

@@ -3,9 +3,9 @@ package com.aliyun.aiearth_engine20220609.models;
 
 import com.aliyun.tea.*;
 
-public class ListDatasResponseBody extends TeaModel {
+public class ListUserRasterDatasResponseBody extends TeaModel {
     @NameInMap("List")
-    public java.util.List<ListDatasResponseBodyList> list;
+    public java.util.List<ListUserRasterDatasResponseBodyList> list;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -19,20 +19,20 @@ public class ListDatasResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    public static ListDatasResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListDatasResponseBody self = new ListDatasResponseBody();
+    public static ListUserRasterDatasResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListUserRasterDatasResponseBody self = new ListUserRasterDatasResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListDatasResponseBody setList(java.util.List<ListDatasResponseBodyList> list) {
+    public ListUserRasterDatasResponseBody setList(java.util.List<ListUserRasterDatasResponseBodyList> list) {
         this.list = list;
         return this;
     }
-    public java.util.List<ListDatasResponseBodyList> getList() {
+    public java.util.List<ListUserRasterDatasResponseBodyList> getList() {
         return this.list;
     }
 
-    public ListDatasResponseBody setPageNumber(Integer pageNumber) {
+    public ListUserRasterDatasResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -40,7 +40,7 @@ public class ListDatasResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListDatasResponseBody setPageSize(Integer pageSize) {
+    public ListUserRasterDatasResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -48,7 +48,7 @@ public class ListDatasResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public ListDatasResponseBody setRequestId(String requestId) {
+    public ListUserRasterDatasResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +56,7 @@ public class ListDatasResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDatasResponseBody setTotalCount(Long totalCount) {
+    public ListUserRasterDatasResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
@@ -64,7 +64,7 @@ public class ListDatasResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class ListDatasResponseBodyListRasterBands extends TeaModel {
+    public static class ListUserRasterDatasResponseBodyListRasterBands extends TeaModel {
         @NameInMap("BandNo")
         public String bandNo;
 
@@ -77,12 +77,12 @@ public class ListDatasResponseBody extends TeaModel {
         @NameInMap("Width")
         public Integer width;
 
-        public static ListDatasResponseBodyListRasterBands build(java.util.Map<String, ?> map) throws Exception {
-            ListDatasResponseBodyListRasterBands self = new ListDatasResponseBodyListRasterBands();
+        public static ListUserRasterDatasResponseBodyListRasterBands build(java.util.Map<String, ?> map) throws Exception {
+            ListUserRasterDatasResponseBodyListRasterBands self = new ListUserRasterDatasResponseBodyListRasterBands();
             return TeaModel.build(map, self);
         }
 
-        public ListDatasResponseBodyListRasterBands setBandNo(String bandNo) {
+        public ListUserRasterDatasResponseBodyListRasterBands setBandNo(String bandNo) {
             this.bandNo = bandNo;
             return this;
         }
@@ -90,7 +90,7 @@ public class ListDatasResponseBody extends TeaModel {
             return this.bandNo;
         }
 
-        public ListDatasResponseBodyListRasterBands setHeight(Integer height) {
+        public ListUserRasterDatasResponseBodyListRasterBands setHeight(Integer height) {
             this.height = height;
             return this;
         }
@@ -98,7 +98,7 @@ public class ListDatasResponseBody extends TeaModel {
             return this.height;
         }
 
-        public ListDatasResponseBodyListRasterBands setResolution(Double resolution) {
+        public ListUserRasterDatasResponseBodyListRasterBands setResolution(Double resolution) {
             this.resolution = resolution;
             return this;
         }
@@ -106,7 +106,7 @@ public class ListDatasResponseBody extends TeaModel {
             return this.resolution;
         }
 
-        public ListDatasResponseBodyListRasterBands setWidth(Integer width) {
+        public ListUserRasterDatasResponseBodyListRasterBands setWidth(Integer width) {
             this.width = width;
             return this;
         }
@@ -116,7 +116,7 @@ public class ListDatasResponseBody extends TeaModel {
 
     }
 
-    public static class ListDatasResponseBodyListRaster extends TeaModel {
+    public static class ListUserRasterDatasResponseBodyListRaster extends TeaModel {
         @NameInMap("AcquisitionDateEnd")
         public String acquisitionDateEnd;
 
@@ -124,7 +124,7 @@ public class ListDatasResponseBody extends TeaModel {
         public String acquisitionDateStart;
 
         @NameInMap("Bands")
-        public java.util.List<ListDatasResponseBodyListRasterBands> bands;
+        public java.util.List<ListUserRasterDatasResponseBodyListRasterBands> bands;
 
         @NameInMap("Bbox")
         public java.util.List<Double> bbox;
@@ -141,12 +141,12 @@ public class ListDatasResponseBody extends TeaModel {
         @NameInMap("StacId")
         public String stacId;
 
-        public static ListDatasResponseBodyListRaster build(java.util.Map<String, ?> map) throws Exception {
-            ListDatasResponseBodyListRaster self = new ListDatasResponseBodyListRaster();
+        public static ListUserRasterDatasResponseBodyListRaster build(java.util.Map<String, ?> map) throws Exception {
+            ListUserRasterDatasResponseBodyListRaster self = new ListUserRasterDatasResponseBodyListRaster();
             return TeaModel.build(map, self);
         }
 
-        public ListDatasResponseBodyListRaster setAcquisitionDateEnd(String acquisitionDateEnd) {
+        public ListUserRasterDatasResponseBodyListRaster setAcquisitionDateEnd(String acquisitionDateEnd) {
             this.acquisitionDateEnd = acquisitionDateEnd;
             return this;
         }
@@ -154,7 +154,7 @@ public class ListDatasResponseBody extends TeaModel {
             return this.acquisitionDateEnd;
         }
 
-        public ListDatasResponseBodyListRaster setAcquisitionDateStart(String acquisitionDateStart) {
+        public ListUserRasterDatasResponseBodyListRaster setAcquisitionDateStart(String acquisitionDateStart) {
             this.acquisitionDateStart = acquisitionDateStart;
             return this;
         }
@@ -162,15 +162,15 @@ public class ListDatasResponseBody extends TeaModel {
             return this.acquisitionDateStart;
         }
 
-        public ListDatasResponseBodyListRaster setBands(java.util.List<ListDatasResponseBodyListRasterBands> bands) {
+        public ListUserRasterDatasResponseBodyListRaster setBands(java.util.List<ListUserRasterDatasResponseBodyListRasterBands> bands) {
             this.bands = bands;
             return this;
         }
-        public java.util.List<ListDatasResponseBodyListRasterBands> getBands() {
+        public java.util.List<ListUserRasterDatasResponseBodyListRasterBands> getBands() {
             return this.bands;
         }
 
-        public ListDatasResponseBodyListRaster setBbox(java.util.List<Double> bbox) {
+        public ListUserRasterDatasResponseBodyListRaster setBbox(java.util.List<Double> bbox) {
             this.bbox = bbox;
             return this;
         }
@@ -178,7 +178,7 @@ public class ListDatasResponseBody extends TeaModel {
             return this.bbox;
         }
 
-        public ListDatasResponseBodyListRaster setCloudCoverage(Integer cloudCoverage) {
+        public ListUserRasterDatasResponseBodyListRaster setCloudCoverage(Integer cloudCoverage) {
             this.cloudCoverage = cloudCoverage;
             return this;
         }
@@ -186,7 +186,7 @@ public class ListDatasResponseBody extends TeaModel {
             return this.cloudCoverage;
         }
 
-        public ListDatasResponseBodyListRaster setName(String name) {
+        public ListUserRasterDatasResponseBodyListRaster setName(String name) {
             this.name = name;
             return this;
         }
@@ -194,7 +194,7 @@ public class ListDatasResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListDatasResponseBodyListRaster setSourceType(String sourceType) {
+        public ListUserRasterDatasResponseBodyListRaster setSourceType(String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
@@ -202,7 +202,7 @@ public class ListDatasResponseBody extends TeaModel {
             return this.sourceType;
         }
 
-        public ListDatasResponseBodyListRaster setStacId(String stacId) {
+        public ListUserRasterDatasResponseBodyListRaster setStacId(String stacId) {
             this.stacId = stacId;
             return this;
         }
@@ -212,19 +212,19 @@ public class ListDatasResponseBody extends TeaModel {
 
     }
 
-    public static class ListDatasResponseBodyList extends TeaModel {
+    public static class ListUserRasterDatasResponseBodyList extends TeaModel {
         @NameInMap("DataId")
         public String dataId;
 
         @NameInMap("Raster")
-        public ListDatasResponseBodyListRaster raster;
+        public ListUserRasterDatasResponseBodyListRaster raster;
 
-        public static ListDatasResponseBodyList build(java.util.Map<String, ?> map) throws Exception {
-            ListDatasResponseBodyList self = new ListDatasResponseBodyList();
+        public static ListUserRasterDatasResponseBodyList build(java.util.Map<String, ?> map) throws Exception {
+            ListUserRasterDatasResponseBodyList self = new ListUserRasterDatasResponseBodyList();
             return TeaModel.build(map, self);
         }
 
-        public ListDatasResponseBodyList setDataId(String dataId) {
+        public ListUserRasterDatasResponseBodyList setDataId(String dataId) {
             this.dataId = dataId;
             return this;
         }
@@ -232,11 +232,11 @@ public class ListDatasResponseBody extends TeaModel {
             return this.dataId;
         }
 
-        public ListDatasResponseBodyList setRaster(ListDatasResponseBodyListRaster raster) {
+        public ListUserRasterDatasResponseBodyList setRaster(ListUserRasterDatasResponseBodyListRaster raster) {
             this.raster = raster;
             return this;
         }
-        public ListDatasResponseBodyListRaster getRaster() {
+        public ListUserRasterDatasResponseBodyListRaster getRaster() {
             return this.raster;
         }
 
