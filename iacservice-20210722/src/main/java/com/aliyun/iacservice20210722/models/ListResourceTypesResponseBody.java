@@ -67,94 +67,180 @@ public class ListResourceTypesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class ListResourceTypesResponseBodyResourceTypesIdentityDefinition extends TeaModel {
-        // 资源ARN
-        @NameInMap("arnPattern")
-        public String arnPattern;
+    public static class ListResourceTypesResponseBodyResourceTypesHandlersCreate extends TeaModel {
+        @NameInMap("permissions")
+        public java.util.List<String> permissions;
 
-        // 备选Id字段列表，有顺序
-        @NameInMap("secondUniqueKeyFields")
-        public java.util.List<String> secondUniqueKeyFields;
-
-        // uniqueKey的字段列表，有顺序
-        @NameInMap("uniqueKeyFields")
-        public java.util.List<String> uniqueKeyFields;
-
-        public static ListResourceTypesResponseBodyResourceTypesIdentityDefinition build(java.util.Map<String, ?> map) throws Exception {
-            ListResourceTypesResponseBodyResourceTypesIdentityDefinition self = new ListResourceTypesResponseBodyResourceTypesIdentityDefinition();
+        public static ListResourceTypesResponseBodyResourceTypesHandlersCreate build(java.util.Map<String, ?> map) throws Exception {
+            ListResourceTypesResponseBodyResourceTypesHandlersCreate self = new ListResourceTypesResponseBodyResourceTypesHandlersCreate();
             return TeaModel.build(map, self);
         }
 
-        public ListResourceTypesResponseBodyResourceTypesIdentityDefinition setArnPattern(String arnPattern) {
-            this.arnPattern = arnPattern;
+        public ListResourceTypesResponseBodyResourceTypesHandlersCreate setPermissions(java.util.List<String> permissions) {
+            this.permissions = permissions;
             return this;
         }
-        public String getArnPattern() {
-            return this.arnPattern;
+        public java.util.List<String> getPermissions() {
+            return this.permissions;
         }
 
-        public ListResourceTypesResponseBodyResourceTypesIdentityDefinition setSecondUniqueKeyFields(java.util.List<String> secondUniqueKeyFields) {
-            this.secondUniqueKeyFields = secondUniqueKeyFields;
-            return this;
-        }
-        public java.util.List<String> getSecondUniqueKeyFields() {
-            return this.secondUniqueKeyFields;
+    }
+
+    public static class ListResourceTypesResponseBodyResourceTypesHandlersDelete extends TeaModel {
+        @NameInMap("permissions")
+        public java.util.List<String> permissions;
+
+        public static ListResourceTypesResponseBodyResourceTypesHandlersDelete build(java.util.Map<String, ?> map) throws Exception {
+            ListResourceTypesResponseBodyResourceTypesHandlersDelete self = new ListResourceTypesResponseBodyResourceTypesHandlersDelete();
+            return TeaModel.build(map, self);
         }
 
-        public ListResourceTypesResponseBodyResourceTypesIdentityDefinition setUniqueKeyFields(java.util.List<String> uniqueKeyFields) {
-            this.uniqueKeyFields = uniqueKeyFields;
+        public ListResourceTypesResponseBodyResourceTypesHandlersDelete setPermissions(java.util.List<String> permissions) {
+            this.permissions = permissions;
             return this;
         }
-        public java.util.List<String> getUniqueKeyFields() {
-            return this.uniqueKeyFields;
+        public java.util.List<String> getPermissions() {
+            return this.permissions;
+        }
+
+    }
+
+    public static class ListResourceTypesResponseBodyResourceTypesHandlersGet extends TeaModel {
+        @NameInMap("permissions")
+        public java.util.List<String> permissions;
+
+        public static ListResourceTypesResponseBodyResourceTypesHandlersGet build(java.util.Map<String, ?> map) throws Exception {
+            ListResourceTypesResponseBodyResourceTypesHandlersGet self = new ListResourceTypesResponseBodyResourceTypesHandlersGet();
+            return TeaModel.build(map, self);
+        }
+
+        public ListResourceTypesResponseBodyResourceTypesHandlersGet setPermissions(java.util.List<String> permissions) {
+            this.permissions = permissions;
+            return this;
+        }
+        public java.util.List<String> getPermissions() {
+            return this.permissions;
+        }
+
+    }
+
+    public static class ListResourceTypesResponseBodyResourceTypesHandlersList extends TeaModel {
+        @NameInMap("permissions")
+        public java.util.List<String> permissions;
+
+        public static ListResourceTypesResponseBodyResourceTypesHandlersList build(java.util.Map<String, ?> map) throws Exception {
+            ListResourceTypesResponseBodyResourceTypesHandlersList self = new ListResourceTypesResponseBodyResourceTypesHandlersList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListResourceTypesResponseBodyResourceTypesHandlersList setPermissions(java.util.List<String> permissions) {
+            this.permissions = permissions;
+            return this;
+        }
+        public java.util.List<String> getPermissions() {
+            return this.permissions;
+        }
+
+    }
+
+    public static class ListResourceTypesResponseBodyResourceTypesHandlersUpdate extends TeaModel {
+        @NameInMap("permissions")
+        public java.util.List<String> permissions;
+
+        public static ListResourceTypesResponseBodyResourceTypesHandlersUpdate build(java.util.Map<String, ?> map) throws Exception {
+            ListResourceTypesResponseBodyResourceTypesHandlersUpdate self = new ListResourceTypesResponseBodyResourceTypesHandlersUpdate();
+            return TeaModel.build(map, self);
+        }
+
+        public ListResourceTypesResponseBodyResourceTypesHandlersUpdate setPermissions(java.util.List<String> permissions) {
+            this.permissions = permissions;
+            return this;
+        }
+        public java.util.List<String> getPermissions() {
+            return this.permissions;
+        }
+
+    }
+
+    public static class ListResourceTypesResponseBodyResourceTypesHandlers extends TeaModel {
+        @NameInMap("create")
+        public ListResourceTypesResponseBodyResourceTypesHandlersCreate create;
+
+        @NameInMap("delete")
+        public ListResourceTypesResponseBodyResourceTypesHandlersDelete delete;
+
+        @NameInMap("get")
+        public ListResourceTypesResponseBodyResourceTypesHandlersGet get;
+
+        @NameInMap("list")
+        public ListResourceTypesResponseBodyResourceTypesHandlersList list;
+
+        @NameInMap("update")
+        public ListResourceTypesResponseBodyResourceTypesHandlersUpdate update;
+
+        public static ListResourceTypesResponseBodyResourceTypesHandlers build(java.util.Map<String, ?> map) throws Exception {
+            ListResourceTypesResponseBodyResourceTypesHandlers self = new ListResourceTypesResponseBodyResourceTypesHandlers();
+            return TeaModel.build(map, self);
+        }
+
+        public ListResourceTypesResponseBodyResourceTypesHandlers setCreate(ListResourceTypesResponseBodyResourceTypesHandlersCreate create) {
+            this.create = create;
+            return this;
+        }
+        public ListResourceTypesResponseBodyResourceTypesHandlersCreate getCreate() {
+            return this.create;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypesHandlers setDelete(ListResourceTypesResponseBodyResourceTypesHandlersDelete delete) {
+            this.delete = delete;
+            return this;
+        }
+        public ListResourceTypesResponseBodyResourceTypesHandlersDelete getDelete() {
+            return this.delete;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypesHandlers setGet(ListResourceTypesResponseBodyResourceTypesHandlersGet get) {
+            this.get = get;
+            return this;
+        }
+        public ListResourceTypesResponseBodyResourceTypesHandlersGet getGet() {
+            return this.get;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypesHandlers setList(ListResourceTypesResponseBodyResourceTypesHandlersList list) {
+            this.list = list;
+            return this;
+        }
+        public ListResourceTypesResponseBodyResourceTypesHandlersList getList() {
+            return this.list;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypesHandlers setUpdate(ListResourceTypesResponseBodyResourceTypesHandlersUpdate update) {
+            this.update = update;
+            return this;
+        }
+        public ListResourceTypesResponseBodyResourceTypesHandlersUpdate getUpdate() {
+            return this.update;
         }
 
     }
 
     public static class ListResourceTypesResponseBodyResourceTypesInfo extends TeaModel {
-        // 允许资源展示的站点  枚举:china(中国站)/intl(国际站)/japan(日本站)
-        @NameInMap("availableSites")
-        public java.util.List<String> availableSites;
-
-        // 资源分类 枚举:normal(普通资源)/singleton(单例资源)/virtual(虚拟资源)/readonly(只读资源)
-        @NameInMap("category")
-        public String category;
-
-        // 付费形式  枚举:paid(付费)/free(免费)
         @NameInMap("chargeType")
         public String chargeType;
 
-        // 交付级别 枚举:center(中心化部署级别)/region(地域部署级别)/zone(可用区部署级别)
         @NameInMap("deliveryScope")
         public String deliveryScope;
 
-        // 描述
         @NameInMap("description")
         public String description;
 
-        // 资源类型的中文名称，如实例
         @NameInMap("title")
         public String title;
 
         public static ListResourceTypesResponseBodyResourceTypesInfo build(java.util.Map<String, ?> map) throws Exception {
             ListResourceTypesResponseBodyResourceTypesInfo self = new ListResourceTypesResponseBodyResourceTypesInfo();
             return TeaModel.build(map, self);
-        }
-
-        public ListResourceTypesResponseBodyResourceTypesInfo setAvailableSites(java.util.List<String> availableSites) {
-            this.availableSites = availableSites;
-            return this;
-        }
-        public java.util.List<String> getAvailableSites() {
-            return this.availableSites;
-        }
-
-        public ListResourceTypesResponseBodyResourceTypesInfo setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
         }
 
         public ListResourceTypesResponseBodyResourceTypesInfo setChargeType(String chargeType) {
@@ -191,139 +277,104 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
     }
 
-    public static class ListResourceTypesResponseBodyResourceTypesResourceRelations extends TeaModel {
-        // 资源关系描述 枚举：枚举:关联关系/依赖关系/子父关系
-        @NameInMap("description")
-        public String description;
-
-        // 云产品B
-        @NameInMap("product")
-        public String product;
-
-        // 资源关系  枚举:relevance(关联关系)/dependency(依赖关系)/childParent(子父关系)
-        @NameInMap("relation")
-        public String relation;
-
-        // 资源类型B
-        @NameInMap("resourceType")
-        public String resourceType;
-
-        public static ListResourceTypesResponseBodyResourceTypesResourceRelations build(java.util.Map<String, ?> map) throws Exception {
-            ListResourceTypesResponseBodyResourceTypesResourceRelations self = new ListResourceTypesResponseBodyResourceTypesResourceRelations();
-            return TeaModel.build(map, self);
-        }
-
-        public ListResourceTypesResponseBodyResourceTypesResourceRelations setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListResourceTypesResponseBodyResourceTypesResourceRelations setProduct(String product) {
-            this.product = product;
-            return this;
-        }
-        public String getProduct() {
-            return this.product;
-        }
-
-        public ListResourceTypesResponseBodyResourceTypesResourceRelations setRelation(String relation) {
-            this.relation = relation;
-            return this;
-        }
-        public String getRelation() {
-            return this.relation;
-        }
-
-        public ListResourceTypesResponseBodyResourceTypesResourceRelations setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
-        }
-
-    }
-
-    public static class ListResourceTypesResponseBodyResourceTypesStatusDefinition extends TeaModel {
-        // 状态code
-        @NameInMap("code")
-        public String code;
-
-        // 描述
-        @NameInMap("description")
-        public String description;
-
-        // 资源状态分类，必须对代表资源创建后的初始状态进行initial标识。枚举:initial(初始状态)
-        @NameInMap("type")
-        public String type;
-
-        public static ListResourceTypesResponseBodyResourceTypesStatusDefinition build(java.util.Map<String, ?> map) throws Exception {
-            ListResourceTypesResponseBodyResourceTypesStatusDefinition self = new ListResourceTypesResponseBodyResourceTypesStatusDefinition();
-            return TeaModel.build(map, self);
-        }
-
-        public ListResourceTypesResponseBodyResourceTypesStatusDefinition setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
-        public ListResourceTypesResponseBodyResourceTypesStatusDefinition setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListResourceTypesResponseBodyResourceTypesStatusDefinition setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
     public static class ListResourceTypesResponseBodyResourceTypes extends TeaModel {
-        @NameInMap("identityDefinition")
-        public ListResourceTypesResponseBodyResourceTypesIdentityDefinition identityDefinition;
+        @NameInMap("createOnlyProperties")
+        public java.util.List<String> createOnlyProperties;
+
+        @NameInMap("deleteOnlyProperties")
+        public java.util.List<String> deleteOnlyProperties;
+
+        @NameInMap("filterProperties")
+        public java.util.List<String> filterProperties;
+
+        @NameInMap("getOnlyProperties")
+        public java.util.List<String> getOnlyProperties;
+
+        @NameInMap("handlers")
+        public ListResourceTypesResponseBodyResourceTypesHandlers handlers;
 
         @NameInMap("info")
         public ListResourceTypesResponseBodyResourceTypesInfo info;
 
-        @NameInMap("productCode")
-        public String productCode;
+        @NameInMap("listOnlyProperties")
+        public java.util.List<String> listOnlyProperties;
 
-        @NameInMap("resourceProperties")
-        public String resourceProperties;
+        @NameInMap("primaryIdentifier")
+        public String primaryIdentifier;
 
-        @NameInMap("resourceRelations")
-        public java.util.List<ListResourceTypesResponseBodyResourceTypesResourceRelations> resourceRelations;
+        @NameInMap("product")
+        public String product;
 
-        @NameInMap("resourceTypeCode")
-        public String resourceTypeCode;
+        @NameInMap("properties")
+        public java.util.Map<String, ?> properties;
 
-        @NameInMap("statusDefinition")
-        public java.util.List<ListResourceTypesResponseBodyResourceTypesStatusDefinition> statusDefinition;
+        @NameInMap("publicProperties")
+        public java.util.List<String> publicProperties;
+
+        @NameInMap("readOnlyProperties")
+        public java.util.List<String> readOnlyProperties;
+
+        @NameInMap("required")
+        public java.util.List<String> required;
+
+        @NameInMap("resourceType")
+        public String resourceType;
+
+        @NameInMap("resourceTypeVersion")
+        public String resourceTypeVersion;
+
+        @NameInMap("sensitiveInfoProperties")
+        public java.util.List<String> sensitiveInfoProperties;
+
+        @NameInMap("updateOnlyProperties")
+        public java.util.List<String> updateOnlyProperties;
+
+        @NameInMap("updateTypeProperties")
+        public java.util.List<String> updateTypeProperties;
 
         public static ListResourceTypesResponseBodyResourceTypes build(java.util.Map<String, ?> map) throws Exception {
             ListResourceTypesResponseBodyResourceTypes self = new ListResourceTypesResponseBodyResourceTypes();
             return TeaModel.build(map, self);
         }
 
-        public ListResourceTypesResponseBodyResourceTypes setIdentityDefinition(ListResourceTypesResponseBodyResourceTypesIdentityDefinition identityDefinition) {
-            this.identityDefinition = identityDefinition;
+        public ListResourceTypesResponseBodyResourceTypes setCreateOnlyProperties(java.util.List<String> createOnlyProperties) {
+            this.createOnlyProperties = createOnlyProperties;
             return this;
         }
-        public ListResourceTypesResponseBodyResourceTypesIdentityDefinition getIdentityDefinition() {
-            return this.identityDefinition;
+        public java.util.List<String> getCreateOnlyProperties() {
+            return this.createOnlyProperties;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setDeleteOnlyProperties(java.util.List<String> deleteOnlyProperties) {
+            this.deleteOnlyProperties = deleteOnlyProperties;
+            return this;
+        }
+        public java.util.List<String> getDeleteOnlyProperties() {
+            return this.deleteOnlyProperties;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setFilterProperties(java.util.List<String> filterProperties) {
+            this.filterProperties = filterProperties;
+            return this;
+        }
+        public java.util.List<String> getFilterProperties() {
+            return this.filterProperties;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setGetOnlyProperties(java.util.List<String> getOnlyProperties) {
+            this.getOnlyProperties = getOnlyProperties;
+            return this;
+        }
+        public java.util.List<String> getGetOnlyProperties() {
+            return this.getOnlyProperties;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setHandlers(ListResourceTypesResponseBodyResourceTypesHandlers handlers) {
+            this.handlers = handlers;
+            return this;
+        }
+        public ListResourceTypesResponseBodyResourceTypesHandlers getHandlers() {
+            return this.handlers;
         }
 
         public ListResourceTypesResponseBodyResourceTypes setInfo(ListResourceTypesResponseBodyResourceTypesInfo info) {
@@ -334,44 +385,100 @@ public class ListResourceTypesResponseBody extends TeaModel {
             return this.info;
         }
 
-        public ListResourceTypesResponseBodyResourceTypes setProductCode(String productCode) {
-            this.productCode = productCode;
+        public ListResourceTypesResponseBodyResourceTypes setListOnlyProperties(java.util.List<String> listOnlyProperties) {
+            this.listOnlyProperties = listOnlyProperties;
             return this;
         }
-        public String getProductCode() {
-            return this.productCode;
+        public java.util.List<String> getListOnlyProperties() {
+            return this.listOnlyProperties;
         }
 
-        public ListResourceTypesResponseBodyResourceTypes setResourceProperties(String resourceProperties) {
-            this.resourceProperties = resourceProperties;
+        public ListResourceTypesResponseBodyResourceTypes setPrimaryIdentifier(String primaryIdentifier) {
+            this.primaryIdentifier = primaryIdentifier;
             return this;
         }
-        public String getResourceProperties() {
-            return this.resourceProperties;
+        public String getPrimaryIdentifier() {
+            return this.primaryIdentifier;
         }
 
-        public ListResourceTypesResponseBodyResourceTypes setResourceRelations(java.util.List<ListResourceTypesResponseBodyResourceTypesResourceRelations> resourceRelations) {
-            this.resourceRelations = resourceRelations;
+        public ListResourceTypesResponseBodyResourceTypes setProduct(String product) {
+            this.product = product;
             return this;
         }
-        public java.util.List<ListResourceTypesResponseBodyResourceTypesResourceRelations> getResourceRelations() {
-            return this.resourceRelations;
+        public String getProduct() {
+            return this.product;
         }
 
-        public ListResourceTypesResponseBodyResourceTypes setResourceTypeCode(String resourceTypeCode) {
-            this.resourceTypeCode = resourceTypeCode;
+        public ListResourceTypesResponseBodyResourceTypes setProperties(java.util.Map<String, ?> properties) {
+            this.properties = properties;
             return this;
         }
-        public String getResourceTypeCode() {
-            return this.resourceTypeCode;
+        public java.util.Map<String, ?> getProperties() {
+            return this.properties;
         }
 
-        public ListResourceTypesResponseBodyResourceTypes setStatusDefinition(java.util.List<ListResourceTypesResponseBodyResourceTypesStatusDefinition> statusDefinition) {
-            this.statusDefinition = statusDefinition;
+        public ListResourceTypesResponseBodyResourceTypes setPublicProperties(java.util.List<String> publicProperties) {
+            this.publicProperties = publicProperties;
             return this;
         }
-        public java.util.List<ListResourceTypesResponseBodyResourceTypesStatusDefinition> getStatusDefinition() {
-            return this.statusDefinition;
+        public java.util.List<String> getPublicProperties() {
+            return this.publicProperties;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setReadOnlyProperties(java.util.List<String> readOnlyProperties) {
+            this.readOnlyProperties = readOnlyProperties;
+            return this;
+        }
+        public java.util.List<String> getReadOnlyProperties() {
+            return this.readOnlyProperties;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setRequired(java.util.List<String> required) {
+            this.required = required;
+            return this;
+        }
+        public java.util.List<String> getRequired() {
+            return this.required;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setResourceTypeVersion(String resourceTypeVersion) {
+            this.resourceTypeVersion = resourceTypeVersion;
+            return this;
+        }
+        public String getResourceTypeVersion() {
+            return this.resourceTypeVersion;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setSensitiveInfoProperties(java.util.List<String> sensitiveInfoProperties) {
+            this.sensitiveInfoProperties = sensitiveInfoProperties;
+            return this;
+        }
+        public java.util.List<String> getSensitiveInfoProperties() {
+            return this.sensitiveInfoProperties;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setUpdateOnlyProperties(java.util.List<String> updateOnlyProperties) {
+            this.updateOnlyProperties = updateOnlyProperties;
+            return this;
+        }
+        public java.util.List<String> getUpdateOnlyProperties() {
+            return this.updateOnlyProperties;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setUpdateTypeProperties(java.util.List<String> updateTypeProperties) {
+            this.updateTypeProperties = updateTypeProperties;
+            return this;
+        }
+        public java.util.List<String> getUpdateTypeProperties() {
+            return this.updateTypeProperties;
         }
 
     }
