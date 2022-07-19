@@ -13,9 +13,6 @@ public class ListCheckResultRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
-    @NameInMap("InstanceSubTypes")
-    public java.util.List<String> instanceSubTypes;
-
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
@@ -70,14 +67,6 @@ public class ListCheckResultRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
-    }
-
-    public ListCheckResultRequest setInstanceSubTypes(java.util.List<String> instanceSubTypes) {
-        this.instanceSubTypes = instanceSubTypes;
-        return this;
-    }
-    public java.util.List<String> getInstanceSubTypes() {
-        return this.instanceSubTypes;
     }
 
     public ListCheckResultRequest setInstanceTypes(java.util.List<String> instanceTypes) {
