@@ -6570,10 +6570,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceIds", request.instanceIds);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceSubTypes)) {
-            query.put("InstanceSubTypes", request.instanceSubTypes);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.instanceTypes)) {
             query.put("InstanceTypes", request.instanceTypes);
         }
@@ -6861,6 +6857,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyBackupPolicyStatusResponse modifyBackupPolicyStatus(ModifyBackupPolicyStatusRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.modifyBackupPolicyStatusWithOptions(request, runtime);
+    }
+
+    public ModifyClearLogstoreStorageResponse modifyClearLogstoreStorageWithOptions(ModifyClearLogstoreStorageRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
+            query.put("From", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userLogStore)) {
+            query.put("UserLogStore", request.userLogStore);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userProject)) {
+            query.put("UserProject", request.userProject);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyClearLogstoreStorage"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyClearLogstoreStorageResponse());
+    }
+
+    public ModifyClearLogstoreStorageResponse modifyClearLogstoreStorage(ModifyClearLogstoreStorageRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyClearLogstoreStorageWithOptions(request, runtime);
     }
 
     public ModifyCreateVulWhitelistResponse modifyCreateVulWhitelistWithOptions(ModifyCreateVulWhitelistRequest request, RuntimeOptions runtime) throws Exception {
