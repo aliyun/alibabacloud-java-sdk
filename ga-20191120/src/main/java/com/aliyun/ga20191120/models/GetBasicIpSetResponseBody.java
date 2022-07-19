@@ -28,6 +28,10 @@ public class GetBasicIpSetResponseBody extends TeaModel {
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    // 公网质量类型
+    @NameInMap("IspType")
+    public String ispType;
+
     // 请求Id
     @NameInMap("RequestId")
     public String requestId;
@@ -87,6 +91,14 @@ public class GetBasicIpSetResponseBody extends TeaModel {
     }
     public String getIpVersion() {
         return this.ipVersion;
+    }
+
+    public GetBasicIpSetResponseBody setIspType(String ispType) {
+        this.ispType = ispType;
+        return this;
+    }
+    public String getIspType() {
+        return this.ispType;
     }
 
     public GetBasicIpSetResponseBody setRequestId(String requestId) {

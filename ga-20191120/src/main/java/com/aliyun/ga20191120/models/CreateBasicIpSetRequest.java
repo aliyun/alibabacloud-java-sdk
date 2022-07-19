@@ -16,6 +16,10 @@ public class CreateBasicIpSetRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // 公网质量类型
+    @NameInMap("IspType")
+    public String ispType;
+
     // RegionId
     @NameInMap("RegionId")
     public String regionId;
@@ -47,6 +51,14 @@ public class CreateBasicIpSetRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateBasicIpSetRequest setIspType(String ispType) {
+        this.ispType = ispType;
+        return this;
+    }
+    public String getIspType() {
+        return this.ispType;
     }
 
     public CreateBasicIpSetRequest setRegionId(String regionId) {
