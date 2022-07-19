@@ -97,6 +97,9 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         @NameInMap("ProjectName")
         public String projectName;
 
+        @NameInMap("Schema")
+        public String schema;
+
         @NameInMap("TableGuid")
         public String tableGuid;
 
@@ -165,6 +168,14 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         }
         public String getProjectName() {
             return this.projectName;
+        }
+
+        public SearchMetaTablesResponseBodyDataDataEntityList setSchema(String schema) {
+            this.schema = schema;
+            return this;
+        }
+        public String getSchema() {
+            return this.schema;
         }
 
         public SearchMetaTablesResponseBodyDataDataEntityList setTableGuid(String tableGuid) {

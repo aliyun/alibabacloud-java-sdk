@@ -1823,6 +1823,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProjectId", request.projectId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            query.put("Schema", request.schema);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
             query.put("TableName", request.tableName);
         }
@@ -2603,6 +2607,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
             query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            query.put("Schema", request.schema);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
@@ -3547,51 +3555,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetDeploymentResponse getDeployment(GetDeploymentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDeploymentWithOptions(request, runtime);
-    }
-
-    public GetDutyRosterResponse getDutyRosterWithOptions(GetDutyRosterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
-            body.put("BeginTime", request.beginTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dutyRosterIdentifier)) {
-            body.put("DutyRosterIdentifier", request.dutyRosterIdentifier);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
-            body.put("EndTime", request.endTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userType)) {
-            body.put("UserType", request.userType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.watchkeeper)) {
-            body.put("Watchkeeper", request.watchkeeper);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetDutyRoster"),
-            new TeaPair("version", "2020-05-18"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDutyRosterResponse());
-    }
-
-    public GetDutyRosterResponse getDutyRoster(GetDutyRosterRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getDutyRosterWithOptions(request, runtime);
     }
 
     public GetExtensionResponse getExtensionWithOptions(GetExtensionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -6257,47 +6220,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listDeploymentsWithOptions(request, runtime);
     }
 
-    public ListDutyRostersResponse listDutyRostersWithOptions(ListDutyRostersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.dutyRosterName)) {
-            body.put("DutyRosterName", request.dutyRosterName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dutyRosterOwner)) {
-            body.put("DutyRosterOwner", request.dutyRosterOwner);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            body.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListDutyRosters"),
-            new TeaPair("version", "2020-05-18"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDutyRostersResponse());
-    }
-
-    public ListDutyRostersResponse listDutyRosters(ListDutyRostersRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listDutyRostersWithOptions(request, runtime);
-    }
-
     public ListExtensionsResponse listExtensionsWithOptions(ListExtensionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -7498,6 +7420,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listResourceGroupsWithOptions(request, runtime);
     }
 
+    public ListShiftPersonnelsResponse listShiftPersonnelsWithOptions(ListShiftPersonnelsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
+            body.put("BeginTime", request.beginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shiftPersonUID)) {
+            body.put("ShiftPersonUID", request.shiftPersonUID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shiftScheduleIdentifier)) {
+            body.put("ShiftScheduleIdentifier", request.shiftScheduleIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userType)) {
+            body.put("UserType", request.userType);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListShiftPersonnels"),
+            new TeaPair("version", "2020-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListShiftPersonnelsResponse());
+    }
+
+    public ListShiftPersonnelsResponse listShiftPersonnels(ListShiftPersonnelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listShiftPersonnelsWithOptions(request, runtime);
+    }
+
+    public ListShiftSchedulesResponse listShiftSchedulesWithOptions(ListShiftSchedulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            body.put("Owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shiftScheduleName)) {
+            body.put("ShiftScheduleName", request.shiftScheduleName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListShiftSchedules"),
+            new TeaPair("version", "2020-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListShiftSchedulesResponse());
+    }
+
+    public ListShiftSchedulesResponse listShiftSchedules(ListShiftSchedulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listShiftSchedulesWithOptions(request, runtime);
+    }
+
     public ListSuccessInstanceAmountResponse listSuccessInstanceAmountWithOptions(ListSuccessInstanceAmountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -8257,6 +8265,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            query.put("Schema", request.schema);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -9382,6 +9394,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProjectId", request.projectId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            query.put("Schema", request.schema);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tableGuid)) {
             query.put("TableGuid", request.tableGuid);
         }
@@ -9827,6 +9843,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
             query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            query.put("Schema", request.schema);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {

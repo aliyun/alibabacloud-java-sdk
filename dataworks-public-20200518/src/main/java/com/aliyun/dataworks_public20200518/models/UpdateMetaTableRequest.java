@@ -25,6 +25,9 @@ public class UpdateMetaTableRequest extends TeaModel {
     @NameInMap("RemovedLabels")
     public String removedLabels;
 
+    @NameInMap("Schema")
+    public String schema;
+
     @NameInMap("TableGuid")
     public String tableGuid;
 
@@ -93,6 +96,14 @@ public class UpdateMetaTableRequest extends TeaModel {
     }
     public String getRemovedLabels() {
         return this.removedLabels;
+    }
+
+    public UpdateMetaTableRequest setSchema(String schema) {
+        this.schema = schema;
+        return this;
+    }
+    public String getSchema() {
+        return this.schema;
     }
 
     public UpdateMetaTableRequest setTableGuid(String tableGuid) {

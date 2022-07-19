@@ -234,6 +234,9 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         @NameInMap("ProjectName")
         public String projectName;
 
+        @NameInMap("Schema")
+        public String schema;
+
         @NameInMap("TableGuid")
         public String tableGuid;
 
@@ -385,6 +388,14 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         }
         public String getProjectName() {
             return this.projectName;
+        }
+
+        public GetMetaTableFullInfoResponseBodyData setSchema(String schema) {
+            this.schema = schema;
+            return this;
+        }
+        public String getSchema() {
+            return this.schema;
         }
 
         public GetMetaTableFullInfoResponseBodyData setTableGuid(String tableGuid) {

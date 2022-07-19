@@ -25,6 +25,9 @@ public class SearchMetaTablesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Schema")
+    public String schema;
+
     public static SearchMetaTablesRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchMetaTablesRequest self = new SearchMetaTablesRequest();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class SearchMetaTablesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public SearchMetaTablesRequest setSchema(String schema) {
+        this.schema = schema;
+        return this;
+    }
+    public String getSchema() {
+        return this.schema;
     }
 
 }
