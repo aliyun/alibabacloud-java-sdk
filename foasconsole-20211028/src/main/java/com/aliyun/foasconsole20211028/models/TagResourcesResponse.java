@@ -3,7 +3,7 @@ package com.aliyun.foasconsole20211028.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeInstancesResponse extends TeaModel {
+public class TagResourcesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeInstancesResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeInstancesResponseBody body;
+    public TagResourcesResponseBody body;
 
-    public static DescribeInstancesResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeInstancesResponse self = new DescribeInstancesResponse();
+    public static TagResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
+        TagResourcesResponse self = new TagResourcesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstancesResponse setHeaders(java.util.Map<String, String> headers) {
+    public TagResourcesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeInstancesResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeInstancesResponse setStatusCode(Integer statusCode) {
+    public TagResourcesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeInstancesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeInstancesResponse setBody(DescribeInstancesResponseBody body) {
+    public TagResourcesResponse setBody(TagResourcesResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeInstancesResponseBody getBody() {
+    public TagResourcesResponseBody getBody() {
         return this.body;
     }
 
