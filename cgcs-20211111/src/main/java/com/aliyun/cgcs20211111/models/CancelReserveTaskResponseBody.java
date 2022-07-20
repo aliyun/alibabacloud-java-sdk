@@ -3,21 +3,20 @@ package com.aliyun.cgcs20211111.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDatasetDeployTaskResponseBody extends TeaModel {
-    // 请求id
+public class CancelReserveTaskResponseBody extends TeaModel {
+    // pop的requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // 应用版本
     @NameInMap("TaskId")
     public String taskId;
 
-    public static CreateDatasetDeployTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateDatasetDeployTaskResponseBody self = new CreateDatasetDeployTaskResponseBody();
+    public static CancelReserveTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CancelReserveTaskResponseBody self = new CancelReserveTaskResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateDatasetDeployTaskResponseBody setRequestId(String requestId) {
+    public CancelReserveTaskResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -25,7 +24,7 @@ public class CreateDatasetDeployTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateDatasetDeployTaskResponseBody setTaskId(String taskId) {
+    public CancelReserveTaskResponseBody setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
