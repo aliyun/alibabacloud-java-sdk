@@ -20,7 +20,7 @@ public class StartHotlineWorkRequest extends TeaModel {
     @NameInMap("SkillGroups")
     public String skillGroups;
 
-    // 上班渠道，格式：(手机上班){"workChannel":"PSTN"} ;  (PC上班){"workChannel":"PC"}
+    // 上班渠道，枚举值：(手机上班)PSTN ;  (PC上班)PC
     @NameInMap("WorkChannel")
     public String workChannel;
 
