@@ -60,6 +60,12 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         @NameInMap("Result")
         public Integer result;
 
+        @NameInMap("Score")
+        public Integer score;
+
+        @NameInMap("VirusType")
+        public String virusType;
+
         public static GetFileDetectResultResponseBodyResultList build(java.util.Map<String, ?> map) throws Exception {
             GetFileDetectResultResponseBodyResultList self = new GetFileDetectResultResponseBodyResultList();
             return TeaModel.build(map, self);
@@ -87,6 +93,22 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         }
         public Integer getResult() {
             return this.result;
+        }
+
+        public GetFileDetectResultResponseBodyResultList setScore(Integer score) {
+            this.score = score;
+            return this;
+        }
+        public Integer getScore() {
+            return this.score;
+        }
+
+        public GetFileDetectResultResponseBodyResultList setVirusType(String virusType) {
+            this.virusType = virusType;
+            return this;
+        }
+        public String getVirusType() {
+            return this.virusType;
         }
 
     }
