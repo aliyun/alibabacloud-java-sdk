@@ -154,6 +154,38 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstancesResponseBodyInstancesTags extends TeaModel {
+        // 标签键
+        @NameInMap("Key")
+        public String key;
+
+        // 标签值
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeInstancesResponseBodyInstancesTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesTags self = new DescribeInstancesResponseBodyInstancesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeInstancesResponseBodyInstancesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstances extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
@@ -188,6 +220,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("Storage")
         public DescribeInstancesResponseBodyInstancesStorage storage;
+
+        // 资源列表
+        @NameInMap("Tags")
+        public java.util.List<DescribeInstancesResponseBodyInstancesTags> tags;
 
         @NameInMap("Uid")
         public String uid;
@@ -292,6 +328,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesStorage getStorage() {
             return this.storage;
+        }
+
+        public DescribeInstancesResponseBodyInstances setTags(java.util.List<DescribeInstancesResponseBodyInstancesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesTags> getTags() {
+            return this.tags;
         }
 
         public DescribeInstancesResponseBodyInstances setUid(String uid) {

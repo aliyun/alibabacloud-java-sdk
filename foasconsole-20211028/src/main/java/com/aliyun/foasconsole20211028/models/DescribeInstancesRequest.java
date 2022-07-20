@@ -20,6 +20,9 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    @NameInMap("Tags")
+    public java.util.List<DescribeInstancesRequestTags> tags;
+
     public static DescribeInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesRequest self = new DescribeInstancesRequest();
         return TeaModel.build(map, self);
@@ -63,6 +66,44 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public DescribeInstancesRequest setTags(java.util.List<DescribeInstancesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeInstancesRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class DescribeInstancesRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeInstancesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesRequestTags self = new DescribeInstancesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeInstancesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

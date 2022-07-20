@@ -148,6 +148,38 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeNamespacesResponseBodyNamespacesTags extends TeaModel {
+        // 标签键
+        @NameInMap("Key")
+        public String key;
+
+        // 标签值
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeNamespacesResponseBodyNamespacesTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNamespacesResponseBodyNamespacesTags self = new DescribeNamespacesResponseBodyNamespacesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNamespacesResponseBodyNamespacesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeNamespacesResponseBodyNamespacesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeNamespacesResponseBodyNamespaces extends TeaModel {
         @NameInMap("GmtCreate")
         public Long gmtCreate;
@@ -166,6 +198,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        // 资源列表
+        @NameInMap("Tags")
+        public java.util.List<DescribeNamespacesResponseBodyNamespacesTags> tags;
 
         public static DescribeNamespacesResponseBodyNamespaces build(java.util.Map<String, ?> map) throws Exception {
             DescribeNamespacesResponseBodyNamespaces self = new DescribeNamespacesResponseBodyNamespaces();
@@ -218,6 +254,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeNamespacesResponseBodyNamespaces setTags(java.util.List<DescribeNamespacesResponseBodyNamespacesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeNamespacesResponseBodyNamespacesTags> getTags() {
+            return this.tags;
         }
 
     }
