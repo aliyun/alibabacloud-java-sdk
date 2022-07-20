@@ -10,6 +10,9 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("HomeRegion")
+    public String homeRegion;
+
     @NameInMap("JobId")
     public Long jobId;
 
@@ -50,6 +53,14 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public GetDeliveryHistoryJobResponseBody setHomeRegion(String homeRegion) {
+        this.homeRegion = homeRegion;
+        return this;
+    }
+    public String getHomeRegion() {
+        return this.homeRegion;
     }
 
     public GetDeliveryHistoryJobResponseBody setJobId(Long jobId) {

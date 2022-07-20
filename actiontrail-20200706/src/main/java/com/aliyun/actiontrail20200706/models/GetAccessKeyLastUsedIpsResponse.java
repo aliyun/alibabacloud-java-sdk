@@ -3,7 +3,7 @@ package com.aliyun.actiontrail20200706.models;
 
 import com.aliyun.tea.*;
 
-public class StopLoggingResponse extends TeaModel {
+public class GetAccessKeyLastUsedIpsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class StopLoggingResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public StopLoggingResponseBody body;
+    public GetAccessKeyLastUsedIpsResponseBody body;
 
-    public static StopLoggingResponse build(java.util.Map<String, ?> map) throws Exception {
-        StopLoggingResponse self = new StopLoggingResponse();
+    public static GetAccessKeyLastUsedIpsResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetAccessKeyLastUsedIpsResponse self = new GetAccessKeyLastUsedIpsResponse();
         return TeaModel.build(map, self);
     }
 
-    public StopLoggingResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetAccessKeyLastUsedIpsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class StopLoggingResponse extends TeaModel {
         return this.headers;
     }
 
-    public StopLoggingResponse setStatusCode(Integer statusCode) {
+    public GetAccessKeyLastUsedIpsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class StopLoggingResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public StopLoggingResponse setBody(StopLoggingResponseBody body) {
+    public GetAccessKeyLastUsedIpsResponse setBody(GetAccessKeyLastUsedIpsResponseBody body) {
         this.body = body;
         return this;
     }
-    public StopLoggingResponseBody getBody() {
+    public GetAccessKeyLastUsedIpsResponseBody getBody() {
         return this.body;
     }
 
