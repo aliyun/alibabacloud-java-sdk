@@ -8,10 +8,6 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     @NameInMap("BusinessType")
     public String businessType;
 
-    // 分类
-    @NameInMap("Category")
-    public String category;
-
     // 结束时间
     @NameInMap("EndTime")
     public String endTime;
@@ -63,14 +59,6 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     }
     public String getBusinessType() {
         return this.businessType;
-    }
-
-    public ListMediaBasicInfosRequest setCategory(String category) {
-        this.category = category;
-        return this;
-    }
-    public String getCategory() {
-        return this.category;
     }
 
     public ListMediaBasicInfosRequest setEndTime(String endTime) {

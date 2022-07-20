@@ -32,70 +32,6 @@ public class GetMediaInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class GetMediaInfoResponseBodyMediaInfoAiRoughDataList extends TeaModel {
-        // AI原始结果
-        @NameInMap("Result")
-        public String result;
-
-        // AI类型
-        @NameInMap("Type")
-        public String type;
-
-        public static GetMediaInfoResponseBodyMediaInfoAiRoughDataList build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaInfoResponseBodyMediaInfoAiRoughDataList self = new GetMediaInfoResponseBodyMediaInfoAiRoughDataList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetMediaInfoResponseBodyMediaInfoAiRoughDataList setResult(String result) {
-            this.result = result;
-            return this;
-        }
-        public String getResult() {
-            return this.result;
-        }
-
-        public GetMediaInfoResponseBodyMediaInfoAiRoughDataList setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
-    public static class GetMediaInfoResponseBodyMediaInfoDynamicMetaData extends TeaModel {
-        // 元数据json
-        @NameInMap("Data")
-        public String data;
-
-        // 类型
-        @NameInMap("Type")
-        public String type;
-
-        public static GetMediaInfoResponseBodyMediaInfoDynamicMetaData build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaInfoResponseBodyMediaInfoDynamicMetaData self = new GetMediaInfoResponseBodyMediaInfoDynamicMetaData();
-            return TeaModel.build(map, self);
-        }
-
-        public GetMediaInfoResponseBodyMediaInfoDynamicMetaData setData(String data) {
-            this.data = data;
-            return this;
-        }
-        public String getData() {
-            return this.data;
-        }
-
-        public GetMediaInfoResponseBodyMediaInfoDynamicMetaData setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
     public static class GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList extends TeaModel {
         // 码率
         @NameInMap("Bitrate")
@@ -325,6 +261,9 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("Bitrate")
         public String bitrate;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
         // 时长
         @NameInMap("Duration")
         public String duration;
@@ -357,6 +296,9 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("Height")
         public String height;
 
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
+
         // 文件存储区域
         @NameInMap("Region")
         public String region;
@@ -376,6 +318,14 @@ public class GetMediaInfoResponseBody extends TeaModel {
         }
         public String getBitrate() {
             return this.bitrate;
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setDuration(String duration) {
@@ -440,6 +390,14 @@ public class GetMediaInfoResponseBody extends TeaModel {
         }
         public String getHeight() {
             return this.height;
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
         }
 
         public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setRegion(String region) {
@@ -941,9 +899,18 @@ public class GetMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetMediaInfoResponseBodyMediaInfoMediaBasicInfo extends TeaModel {
+        @NameInMap("Biz")
+        public String biz;
+
         // 媒资业务类型
         @NameInMap("BusinessType")
         public String businessType;
+
+        @NameInMap("CateId")
+        public Long cateId;
+
+        @NameInMap("CateName")
+        public String cateName;
 
         // 分类
         @NameInMap("Category")
@@ -1001,6 +968,9 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("Title")
         public String title;
 
+        @NameInMap("UploadSource")
+        public String uploadSource;
+
         // 用户数据
         @NameInMap("UserData")
         public String userData;
@@ -1010,12 +980,36 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setBiz(String biz) {
+            this.biz = biz;
+            return this;
+        }
+        public String getBiz() {
+            return this.biz;
+        }
+
         public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setBusinessType(String businessType) {
             this.businessType = businessType;
             return this;
         }
         public String getBusinessType() {
             return this.businessType;
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setCateId(Long cateId) {
+            this.cateId = cateId;
+            return this;
+        }
+        public Long getCateId() {
+            return this.cateId;
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setCateName(String cateName) {
+            this.cateName = cateName;
+            return this;
+        }
+        public String getCateName() {
+            return this.cateName;
         }
 
         public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setCategory(String category) {
@@ -1130,6 +1124,14 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.title;
         }
 
+        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setUploadSource(String uploadSource) {
+            this.uploadSource = uploadSource;
+            return this;
+        }
+        public String getUploadSource() {
+            return this.uploadSource;
+        }
+
         public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setUserData(String userData) {
             this.userData = userData;
             return this;
@@ -1141,14 +1143,6 @@ public class GetMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetMediaInfoResponseBodyMediaInfo extends TeaModel {
-        // AIMetadata
-        @NameInMap("AiRoughDataList")
-        public java.util.List<GetMediaInfoResponseBodyMediaInfoAiRoughDataList> aiRoughDataList;
-
-        // 其他元数据
-        @NameInMap("DynamicMetaData")
-        public GetMediaInfoResponseBodyMediaInfoDynamicMetaData dynamicMetaData;
-
         // FileInfos
         @NameInMap("FileInfoList")
         public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoList> fileInfoList;
@@ -1164,22 +1158,6 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public static GetMediaInfoResponseBodyMediaInfo build(java.util.Map<String, ?> map) throws Exception {
             GetMediaInfoResponseBodyMediaInfo self = new GetMediaInfoResponseBodyMediaInfo();
             return TeaModel.build(map, self);
-        }
-
-        public GetMediaInfoResponseBodyMediaInfo setAiRoughDataList(java.util.List<GetMediaInfoResponseBodyMediaInfoAiRoughDataList> aiRoughDataList) {
-            this.aiRoughDataList = aiRoughDataList;
-            return this;
-        }
-        public java.util.List<GetMediaInfoResponseBodyMediaInfoAiRoughDataList> getAiRoughDataList() {
-            return this.aiRoughDataList;
-        }
-
-        public GetMediaInfoResponseBodyMediaInfo setDynamicMetaData(GetMediaInfoResponseBodyMediaInfoDynamicMetaData dynamicMetaData) {
-            this.dynamicMetaData = dynamicMetaData;
-            return this;
-        }
-        public GetMediaInfoResponseBodyMediaInfoDynamicMetaData getDynamicMetaData() {
-            return this.dynamicMetaData;
         }
 
         public GetMediaInfoResponseBodyMediaInfo setFileInfoList(java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoList> fileInfoList) {

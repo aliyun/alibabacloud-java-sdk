@@ -8,9 +8,8 @@ public class RegisterMediaInfoRequest extends TeaModel {
     @NameInMap("BusinessType")
     public String businessType;
 
-    // 分类
-    @NameInMap("Category")
-    public String category;
+    @NameInMap("CateId")
+    public Long cateId;
 
     // 客户端token
     @NameInMap("ClientToken")
@@ -23,10 +22,6 @@ public class RegisterMediaInfoRequest extends TeaModel {
     // 描述
     @NameInMap("Description")
     public String description;
-
-    // 用户自定义元数据
-    @NameInMap("DynamicMetaDataList")
-    public String dynamicMetaDataList;
 
     // 媒资媒体url
     @NameInMap("InputURL")
@@ -69,12 +64,12 @@ public class RegisterMediaInfoRequest extends TeaModel {
         return this.businessType;
     }
 
-    public RegisterMediaInfoRequest setCategory(String category) {
-        this.category = category;
+    public RegisterMediaInfoRequest setCateId(Long cateId) {
+        this.cateId = cateId;
         return this;
     }
-    public String getCategory() {
-        return this.category;
+    public Long getCateId() {
+        return this.cateId;
     }
 
     public RegisterMediaInfoRequest setClientToken(String clientToken) {
@@ -99,14 +94,6 @@ public class RegisterMediaInfoRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public RegisterMediaInfoRequest setDynamicMetaDataList(String dynamicMetaDataList) {
-        this.dynamicMetaDataList = dynamicMetaDataList;
-        return this;
-    }
-    public String getDynamicMetaDataList() {
-        return this.dynamicMetaDataList;
     }
 
     public RegisterMediaInfoRequest setInputURL(String inputURL) {
