@@ -1,3 +1,6 @@
+2022-07-20 Version: 1.0.3
+- Support describe instance namespace tag.
+
 2022-07-20 Version: 1.0.2
 - Support tag.
 
