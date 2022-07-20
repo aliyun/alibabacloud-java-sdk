@@ -16,6 +16,9 @@ public class SubmitFileRequest extends TeaModel {
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;
 
+    @NameInMap("SkipAllDeployFileExtensions")
+    public Boolean skipAllDeployFileExtensions;
+
     public static SubmitFileRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitFileRequest self = new SubmitFileRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class SubmitFileRequest extends TeaModel {
     }
     public String getProjectIdentifier() {
         return this.projectIdentifier;
+    }
+
+    public SubmitFileRequest setSkipAllDeployFileExtensions(Boolean skipAllDeployFileExtensions) {
+        this.skipAllDeployFileExtensions = skipAllDeployFileExtensions;
+        return this;
+    }
+    public Boolean getSkipAllDeployFileExtensions() {
+        return this.skipAllDeployFileExtensions;
     }
 
 }

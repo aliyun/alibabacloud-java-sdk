@@ -8567,6 +8567,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ProjectIdentifier", request.projectIdentifier);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.skipAllDeployFileExtensions)) {
+            body.put("SkipAllDeployFileExtensions", request.skipAllDeployFileExtensions);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
