@@ -694,6 +694,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ImageFormat", request.imageFormat);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.margin)) {
+            query.put("Margin", request.margin);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.notifyEndpoint)) {
             query.put("NotifyEndpoint", request.notifyEndpoint);
         }
