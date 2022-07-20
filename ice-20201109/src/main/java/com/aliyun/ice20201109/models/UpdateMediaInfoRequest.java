@@ -4,10 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaInfoRequest extends TeaModel {
-    // 是否以append的形式更新DynamicMetaDataList字段
-    @NameInMap("AppendDynamicMeta")
-    public Boolean appendDynamicMeta;
-
     // 是否以append的形式更新Tags字段
     @NameInMap("AppendTags")
     public Boolean appendTags;
@@ -15,6 +11,9 @@ public class UpdateMediaInfoRequest extends TeaModel {
     // 媒资业务类型
     @NameInMap("BusinessType")
     public String businessType;
+
+    @NameInMap("CateId")
+    public Long cateId;
 
     // 分类
     @NameInMap("Category")
@@ -27,10 +26,6 @@ public class UpdateMediaInfoRequest extends TeaModel {
     // 描述
     @NameInMap("Description")
     public String description;
-
-    // 用户自定义元数据
-    @NameInMap("DynamicMetaDataList")
-    public String dynamicMetaDataList;
 
     // 媒资媒体类型
     @NameInMap("InputURL")
@@ -57,14 +52,6 @@ public class UpdateMediaInfoRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateMediaInfoRequest setAppendDynamicMeta(Boolean appendDynamicMeta) {
-        this.appendDynamicMeta = appendDynamicMeta;
-        return this;
-    }
-    public Boolean getAppendDynamicMeta() {
-        return this.appendDynamicMeta;
-    }
-
     public UpdateMediaInfoRequest setAppendTags(Boolean appendTags) {
         this.appendTags = appendTags;
         return this;
@@ -79,6 +66,14 @@ public class UpdateMediaInfoRequest extends TeaModel {
     }
     public String getBusinessType() {
         return this.businessType;
+    }
+
+    public UpdateMediaInfoRequest setCateId(Long cateId) {
+        this.cateId = cateId;
+        return this;
+    }
+    public Long getCateId() {
+        return this.cateId;
     }
 
     public UpdateMediaInfoRequest setCategory(String category) {
@@ -103,14 +98,6 @@ public class UpdateMediaInfoRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public UpdateMediaInfoRequest setDynamicMetaDataList(String dynamicMetaDataList) {
-        this.dynamicMetaDataList = dynamicMetaDataList;
-        return this;
-    }
-    public String getDynamicMetaDataList() {
-        return this.dynamicMetaDataList;
     }
 
     public UpdateMediaInfoRequest setInputURL(String inputURL) {

@@ -20,10 +20,6 @@ public class AddTemplateRequest extends TeaModel {
     @NameInMap("PreviewMedia")
     public String previewMedia;
 
-    // 模板相关素材，模板编辑器使用
-    @NameInMap("RelatedMediaids")
-    public String relatedMediaids;
-
     // 模板创建来源，默认OpenAPI
     @NameInMap("Source")
     public String source;
@@ -71,14 +67,6 @@ public class AddTemplateRequest extends TeaModel {
     }
     public String getPreviewMedia() {
         return this.previewMedia;
-    }
-
-    public AddTemplateRequest setRelatedMediaids(String relatedMediaids) {
-        this.relatedMediaids = relatedMediaids;
-        return this;
-    }
-    public String getRelatedMediaids() {
-        return this.relatedMediaids;
     }
 
     public AddTemplateRequest setSource(String source) {

@@ -72,6 +72,9 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
         @NameInMap("Bitrate")
         public String bitrate;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
         // 时长
         @NameInMap("Duration")
         public String duration;
@@ -88,7 +91,6 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
         @NameInMap("FileStatus")
         public String fileStatus;
 
-        // 文件类型
         @NameInMap("FileType")
         public String fileType;
 
@@ -103,6 +105,9 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
         // 高
         @NameInMap("Height")
         public String height;
+
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
 
         // 文件存储区域
         @NameInMap("Region")
@@ -123,6 +128,14 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
         }
         public String getBitrate() {
             return this.bitrate;
+        }
+
+        public ListMediaBasicInfosResponseBodyMediaInfosFileInfoListFileBasicInfo setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListMediaBasicInfosResponseBodyMediaInfosFileInfoListFileBasicInfo setDuration(String duration) {
@@ -189,6 +202,14 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
             return this.height;
         }
 
+        public ListMediaBasicInfosResponseBodyMediaInfosFileInfoListFileBasicInfo setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
+        }
+
         public ListMediaBasicInfosResponseBodyMediaInfosFileInfoListFileBasicInfo setRegion(String region) {
             this.region = region;
             return this;
@@ -228,9 +249,15 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
     }
 
     public static class ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo extends TeaModel {
+        @NameInMap("Biz")
+        public String biz;
+
         // 媒资业务类型
         @NameInMap("BusinessType")
         public String businessType;
+
+        @NameInMap("CateId")
+        public Long cateId;
 
         // 分类
         @NameInMap("Category")
@@ -296,6 +323,9 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
         @NameInMap("TranscodeStatus")
         public String transcodeStatus;
 
+        @NameInMap("UploadSource")
+        public String uploadSource;
+
         // 用户数据
         @NameInMap("UserData")
         public String userData;
@@ -305,12 +335,28 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo setBiz(String biz) {
+            this.biz = biz;
+            return this;
+        }
+        public String getBiz() {
+            return this.biz;
+        }
+
         public ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo setBusinessType(String businessType) {
             this.businessType = businessType;
             return this;
         }
         public String getBusinessType() {
             return this.businessType;
+        }
+
+        public ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo setCateId(Long cateId) {
+            this.cateId = cateId;
+            return this;
+        }
+        public Long getCateId() {
+            return this.cateId;
         }
 
         public ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo setCategory(String category) {
@@ -439,6 +485,14 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
         }
         public String getTranscodeStatus() {
             return this.transcodeStatus;
+        }
+
+        public ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo setUploadSource(String uploadSource) {
+            this.uploadSource = uploadSource;
+            return this;
+        }
+        public String getUploadSource() {
+            return this.uploadSource;
         }
 
         public ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo setUserData(String userData) {
