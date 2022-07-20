@@ -19,6 +19,9 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     @NameInMap("ImageFormat")
     public String imageFormat;
 
+    @NameInMap("Margin")
+    public Long margin;
+
     @NameInMap("NotifyEndpoint")
     public String notifyEndpoint;
 
@@ -93,6 +96,14 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     }
     public String getImageFormat() {
         return this.imageFormat;
+    }
+
+    public CreateImageSplicingTaskRequest setMargin(Long margin) {
+        this.margin = margin;
+        return this;
+    }
+    public Long getMargin() {
+        return this.margin;
     }
 
     public CreateImageSplicingTaskRequest setNotifyEndpoint(String notifyEndpoint) {
