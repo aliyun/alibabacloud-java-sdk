@@ -3,7 +3,7 @@ package com.aliyun.cgcs20211111.models;
 
 import com.aliyun.tea.*;
 
-public class GetDatasetResponse extends TeaModel {
+public class GetTenantResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetDatasetResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetDatasetResponseBody body;
+    public GetTenantResponseBody body;
 
-    public static GetDatasetResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetDatasetResponse self = new GetDatasetResponse();
+    public static GetTenantResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetTenantResponse self = new GetTenantResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDatasetResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetTenantResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetDatasetResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetDatasetResponse setStatusCode(Integer statusCode) {
+    public GetTenantResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetDatasetResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetDatasetResponse setBody(GetDatasetResponseBody body) {
+    public GetTenantResponse setBody(GetTenantResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetDatasetResponseBody getBody() {
+    public GetTenantResponseBody getBody() {
         return this.body;
     }
 
