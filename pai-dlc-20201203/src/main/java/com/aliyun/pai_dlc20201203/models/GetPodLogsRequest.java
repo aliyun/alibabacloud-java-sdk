@@ -16,6 +16,9 @@ public class GetPodLogsRequest extends TeaModel {
     @NameInMap("MaxLines")
     public Integer maxLines;
 
+    @NameInMap("PodUid")
+    public String podUid;
+
     // 查询的起始时间，默认值：7天前。
     @NameInMap("StartTime")
     public String startTime;
@@ -47,6 +50,14 @@ public class GetPodLogsRequest extends TeaModel {
     }
     public Integer getMaxLines() {
         return this.maxLines;
+    }
+
+    public GetPodLogsRequest setPodUid(String podUid) {
+        this.podUid = podUid;
+        return this;
+    }
+    public String getPodUid() {
+        return this.podUid;
     }
 
     public GetPodLogsRequest setStartTime(String startTime) {

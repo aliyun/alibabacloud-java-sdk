@@ -16,6 +16,9 @@ public class GetPodEventsResponseBody extends TeaModel {
     @NameInMap("PodId")
     public String podId;
 
+    @NameInMap("PodUid")
+    public String podUid;
+
     // 请求ID
     @NameInMap("RequestId")
     public String requestId;
@@ -47,6 +50,14 @@ public class GetPodEventsResponseBody extends TeaModel {
     }
     public String getPodId() {
         return this.podId;
+    }
+
+    public GetPodEventsResponseBody setPodUid(String podUid) {
+        this.podUid = podUid;
+        return this;
+    }
+    public String getPodUid() {
+        return this.podUid;
     }
 
     public GetPodEventsResponseBody setRequestId(String requestId) {

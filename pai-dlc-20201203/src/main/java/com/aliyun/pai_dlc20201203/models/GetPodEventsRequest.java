@@ -12,6 +12,10 @@ public class GetPodEventsRequest extends TeaModel {
     @NameInMap("MaxEventsNum")
     public Integer maxEventsNum;
 
+    // 运行实例UID
+    @NameInMap("PodUid")
+    public String podUid;
+
     // 起始时间
     @NameInMap("StartTime")
     public String startTime;
@@ -35,6 +39,14 @@ public class GetPodEventsRequest extends TeaModel {
     }
     public Integer getMaxEventsNum() {
         return this.maxEventsNum;
+    }
+
+    public GetPodEventsRequest setPodUid(String podUid) {
+        this.podUid = podUid;
+        return this;
+    }
+    public String getPodUid() {
+        return this.podUid;
     }
 
     public GetPodEventsRequest setStartTime(String startTime) {

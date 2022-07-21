@@ -20,6 +20,10 @@ public class JobItem extends TeaModel {
     @NameInMap("Duration")
     public Long duration;
 
+    // 是否开启了debugger分析
+    @NameInMap("EnabledDebugger")
+    public Boolean enabledDebugger;
+
     // 环境变量配置
     @NameInMap("Envs")
     public java.util.Map<String, String> envs;
@@ -55,6 +59,14 @@ public class JobItem extends TeaModel {
     // 作业运行所在的资源组ID
     @NameInMap("ResourceId")
     public String resourceId;
+
+    // 作业运行时的资源级别
+    @NameInMap("ResourceLevel")
+    public String resourceLevel;
+
+    // 作业运行的资源名称
+    @NameInMap("ResourceName")
+    public String resourceName;
 
     // 作业额外参数
     @NameInMap("Settings")
@@ -123,6 +135,14 @@ public class JobItem extends TeaModel {
     }
     public Long getDuration() {
         return this.duration;
+    }
+
+    public JobItem setEnabledDebugger(Boolean enabledDebugger) {
+        this.enabledDebugger = enabledDebugger;
+        return this;
+    }
+    public Boolean getEnabledDebugger() {
+        return this.enabledDebugger;
     }
 
     public JobItem setEnvs(java.util.Map<String, String> envs) {
@@ -195,6 +215,22 @@ public class JobItem extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public JobItem setResourceLevel(String resourceLevel) {
+        this.resourceLevel = resourceLevel;
+        return this;
+    }
+    public String getResourceLevel() {
+        return this.resourceLevel;
+    }
+
+    public JobItem setResourceName(String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+    }
+    public String getResourceName() {
+        return this.resourceName;
     }
 
     public JobItem setSettings(JobSettings settings) {

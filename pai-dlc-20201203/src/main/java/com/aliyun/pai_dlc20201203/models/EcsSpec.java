@@ -4,6 +4,10 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class EcsSpec extends TeaModel {
+    // 加速器类型
+    @NameInMap("AcceleratorType")
+    public String acceleratorType;
+
     // cpu数量
     @NameInMap("Cpu")
     public Integer cpu;
@@ -20,6 +24,10 @@ public class EcsSpec extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    // 是否有库存
+    @NameInMap("IsAvailable")
+    public Boolean isAvailable;
+
     // Memory数量
     @NameInMap("Memory")
     public Integer memory;
@@ -27,6 +35,14 @@ public class EcsSpec extends TeaModel {
     public static EcsSpec build(java.util.Map<String, ?> map) throws Exception {
         EcsSpec self = new EcsSpec();
         return TeaModel.build(map, self);
+    }
+
+    public EcsSpec setAcceleratorType(String acceleratorType) {
+        this.acceleratorType = acceleratorType;
+        return this;
+    }
+    public String getAcceleratorType() {
+        return this.acceleratorType;
     }
 
     public EcsSpec setCpu(Integer cpu) {
@@ -59,6 +75,14 @@ public class EcsSpec extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public EcsSpec setIsAvailable(Boolean isAvailable) {
+        this.isAvailable = isAvailable;
+        return this;
+    }
+    public Boolean getIsAvailable() {
+        return this.isAvailable;
     }
 
     public EcsSpec setMemory(Integer memory) {

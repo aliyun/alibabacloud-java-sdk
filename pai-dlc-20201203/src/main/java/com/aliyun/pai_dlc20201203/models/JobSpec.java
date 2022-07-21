@@ -28,6 +28,10 @@ public class JobSpec extends TeaModel {
     @NameInMap("Type")
     public String type;
 
+    // 是否使用竞价实例
+    @NameInMap("UseSpotInstance")
+    public Boolean useSpotInstance;
+
     public static JobSpec build(java.util.Map<String, ?> map) throws Exception {
         JobSpec self = new JobSpec();
         return TeaModel.build(map, self);
@@ -79,6 +83,14 @@ public class JobSpec extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public JobSpec setUseSpotInstance(Boolean useSpotInstance) {
+        this.useSpotInstance = useSpotInstance;
+        return this;
+    }
+    public Boolean getUseSpotInstance() {
+        return this.useSpotInstance;
     }
 
 }

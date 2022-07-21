@@ -3,21 +3,21 @@ package com.aliyun.pai_dlc20201203.models;
 
 import com.aliyun.tea.*;
 
-public class JobDispatchQueryResponseBody extends TeaModel {
-    // 作业Id
+public class UpdateJobResponseBody extends TeaModel {
+    // 作业ID
     @NameInMap("JobId")
     public String jobId;
 
-    // 请求Id
+    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    public static JobDispatchQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        JobDispatchQueryResponseBody self = new JobDispatchQueryResponseBody();
+    public static UpdateJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateJobResponseBody self = new UpdateJobResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public JobDispatchQueryResponseBody setJobId(String jobId) {
+    public UpdateJobResponseBody setJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
@@ -25,7 +25,7 @@ public class JobDispatchQueryResponseBody extends TeaModel {
         return this.jobId;
     }
 
-    public JobDispatchQueryResponseBody setRequestId(String requestId) {
+    public UpdateJobResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

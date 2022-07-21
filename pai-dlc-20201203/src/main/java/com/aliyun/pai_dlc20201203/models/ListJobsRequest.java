@@ -20,6 +20,9 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("FromAllWorkspaces")
+    public Boolean fromAllWorkspaces;
+
     // 作业类型
     @NameInMap("JobType")
     public String jobType;
@@ -103,6 +106,14 @@ public class ListJobsRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public ListJobsRequest setFromAllWorkspaces(Boolean fromAllWorkspaces) {
+        this.fromAllWorkspaces = fromAllWorkspaces;
+        return this;
+    }
+    public Boolean getFromAllWorkspaces() {
+        return this.fromAllWorkspaces;
     }
 
     public ListJobsRequest setJobType(String jobType) {

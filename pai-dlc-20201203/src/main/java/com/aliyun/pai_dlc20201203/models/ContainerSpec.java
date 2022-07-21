@@ -24,6 +24,10 @@ public class ContainerSpec extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    // 容器资源
+    @NameInMap("Resources")
+    public ResourceRequirements resources;
+
     // 容器内工作目录
     @NameInMap("WorkingDir")
     public String workingDir;
@@ -71,6 +75,14 @@ public class ContainerSpec extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ContainerSpec setResources(ResourceRequirements resources) {
+        this.resources = resources;
+        return this;
+    }
+    public ResourceRequirements getResources() {
+        return this.resources;
     }
 
     public ContainerSpec setWorkingDir(String workingDir) {
