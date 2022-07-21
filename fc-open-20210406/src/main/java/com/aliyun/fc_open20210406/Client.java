@@ -244,6 +244,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("instanceLifecycleConfig", request.instanceLifecycleConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceSoftConcurrency)) {
+            body.put("instanceSoftConcurrency", request.instanceSoftConcurrency);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
             body.put("instanceType", request.instanceType);
         }
@@ -2093,6 +2097,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -3463,6 +3475,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.instanceLifecycleConfig))) {
             body.put("instanceLifecycleConfig", request.instanceLifecycleConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceSoftConcurrency)) {
+            body.put("instanceSoftConcurrency", request.instanceSoftConcurrency);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {

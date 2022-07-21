@@ -48,6 +48,9 @@ public class UpdateFunctionRequest extends TeaModel {
     @NameInMap("instanceLifecycleConfig")
     public InstanceLifecycleConfig instanceLifecycleConfig;
 
+    @NameInMap("instanceSoftConcurrency")
+    public Integer instanceSoftConcurrency;
+
     @NameInMap("instanceType")
     public String instanceType;
 
@@ -165,6 +168,14 @@ public class UpdateFunctionRequest extends TeaModel {
     }
     public InstanceLifecycleConfig getInstanceLifecycleConfig() {
         return this.instanceLifecycleConfig;
+    }
+
+    public UpdateFunctionRequest setInstanceSoftConcurrency(Integer instanceSoftConcurrency) {
+        this.instanceSoftConcurrency = instanceSoftConcurrency;
+        return this;
+    }
+    public Integer getInstanceSoftConcurrency() {
+        return this.instanceSoftConcurrency;
     }
 
     public UpdateFunctionRequest setInstanceType(String instanceType) {

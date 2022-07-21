@@ -64,6 +64,9 @@ public class CreateFunctionResponseBody extends TeaModel {
     @NameInMap("instanceLifecycleConfig")
     public InstanceLifecycleConfig instanceLifecycleConfig;
 
+    @NameInMap("instanceSoftConcurrency")
+    public Integer instanceSoftConcurrency;
+
     @NameInMap("instanceType")
     public String instanceType;
 
@@ -217,6 +220,14 @@ public class CreateFunctionResponseBody extends TeaModel {
     }
     public InstanceLifecycleConfig getInstanceLifecycleConfig() {
         return this.instanceLifecycleConfig;
+    }
+
+    public CreateFunctionResponseBody setInstanceSoftConcurrency(Integer instanceSoftConcurrency) {
+        this.instanceSoftConcurrency = instanceSoftConcurrency;
+        return this;
+    }
+    public Integer getInstanceSoftConcurrency() {
+        return this.instanceSoftConcurrency;
     }
 
     public CreateFunctionResponseBody setInstanceType(String instanceType) {
