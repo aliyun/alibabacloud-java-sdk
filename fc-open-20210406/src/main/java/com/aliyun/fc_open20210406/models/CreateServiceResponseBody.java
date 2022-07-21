@@ -41,6 +41,9 @@ public class CreateServiceResponseBody extends TeaModel {
     @NameInMap("tracingConfig")
     public TracingConfig tracingConfig;
 
+    @NameInMap("vendorConfig")
+    public VendorConfig vendorConfig;
+
     @NameInMap("vpcConfig")
     public VPCConfig vpcConfig;
 
@@ -127,6 +130,14 @@ public class CreateServiceResponseBody extends TeaModel {
     }
     public TracingConfig getTracingConfig() {
         return this.tracingConfig;
+    }
+
+    public CreateServiceResponseBody setVendorConfig(VendorConfig vendorConfig) {
+        this.vendorConfig = vendorConfig;
+        return this;
+    }
+    public VendorConfig getVendorConfig() {
+        return this.vendorConfig;
     }
 
     public CreateServiceResponseBody setVpcConfig(VPCConfig vpcConfig) {
