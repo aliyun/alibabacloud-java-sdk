@@ -160,7 +160,7 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
         public String SLSGroupDescription;
 
         @NameInMap("SLSGroupName")
-        public Long SLSGroupName;
+        public String SLSGroupName;
 
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -194,11 +194,11 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
             return this.SLSGroupDescription;
         }
 
-        public DescribeHybridMonitorSLSGroupResponseBodyList setSLSGroupName(Long SLSGroupName) {
+        public DescribeHybridMonitorSLSGroupResponseBodyList setSLSGroupName(String SLSGroupName) {
             this.SLSGroupName = SLSGroupName;
             return this;
         }
-        public Long getSLSGroupName() {
+        public String getSLSGroupName() {
             return this.SLSGroupName;
         }
 

@@ -122,6 +122,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.applyMetricRuleTemplateWithOptions(request, runtime);
     }
 
+    public BatchCreateInstantSiteMonitorResponse batchCreateInstantSiteMonitorWithOptions(BatchCreateInstantSiteMonitorRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskList)) {
+            query.put("TaskList", request.taskList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchCreateInstantSiteMonitor"),
+            new TeaPair("version", "2019-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCreateInstantSiteMonitorResponse());
+    }
+
+    public BatchCreateInstantSiteMonitorResponse batchCreateInstantSiteMonitor(BatchCreateInstantSiteMonitorRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.batchCreateInstantSiteMonitorWithOptions(request, runtime);
+    }
+
     public BatchCreateIntantSiteMonitorResponse batchCreateIntantSiteMonitorWithOptions(BatchCreateIntantSiteMonitorRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -728,6 +757,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateInstantSiteMonitorResponse createInstantSiteMonitor(CreateInstantSiteMonitorRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createInstantSiteMonitorWithOptions(request, runtime);
+    }
+
+    public CreateMetricRuleBlackListResponse createMetricRuleBlackListWithOptions(CreateMetricRuleBlackListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            query.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTime)) {
+            query.put("EffectiveTime", request.effectiveTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableEndTime)) {
+            query.put("EnableEndTime", request.enableEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStartTime)) {
+            query.put("EnableStartTime", request.enableStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instances)) {
+            query.put("Instances", request.instances);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metrics)) {
+            query.put("Metrics", request.metrics);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeType)) {
+            query.put("ScopeType", request.scopeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeValue)) {
+            query.put("ScopeValue", request.scopeValue);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMetricRuleBlackList"),
+            new TeaPair("version", "2019-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMetricRuleBlackListResponse());
+    }
+
+    public CreateMetricRuleBlackListResponse createMetricRuleBlackList(CreateMetricRuleBlackListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createMetricRuleBlackListWithOptions(request, runtime);
     }
 
     public CreateMetricRuleResourcesResponse createMetricRuleResourcesWithOptions(CreateMetricRuleResourcesRequest request, RuntimeOptions runtime) throws Exception {
@@ -1521,6 +1615,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteLogMonitorWithOptions(request, runtime);
     }
 
+    public DeleteMetricRuleBlackListResponse deleteMetricRuleBlackListWithOptions(DeleteMetricRuleBlackListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMetricRuleBlackList"),
+            new TeaPair("version", "2019-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMetricRuleBlackListResponse());
+    }
+
+    public DeleteMetricRuleBlackListResponse deleteMetricRuleBlackList(DeleteMetricRuleBlackListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteMetricRuleBlackListWithOptions(request, runtime);
+    }
+
     public DeleteMetricRuleResourcesResponse deleteMetricRuleResourcesWithOptions(DeleteMetricRuleResourcesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1849,7 +1972,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeActiveMetricRuleListResponse describeActiveMetricRuleListWithOptions(DescribeActiveMetricRuleListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.product)) {
+            query.put("Product", request.product);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1858,7 +1985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2019-01-01"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -3006,6 +3133,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetUserId)) {
+            query.put("TargetUserId", request.targetUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             query.put("TaskId", request.taskId);
         }
@@ -3324,6 +3455,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeMetricMetaListResponse describeMetricMetaList(DescribeMetricMetaListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeMetricMetaListWithOptions(request, runtime);
+    }
+
+    public DescribeMetricRuleBlackListResponse describeMetricRuleBlackListWithOptions(DescribeMetricRuleBlackListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            query.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ids)) {
+            query.put("Ids", request.ids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMetricRuleBlackList"),
+            new TeaPair("version", "2019-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMetricRuleBlackListResponse());
+    }
+
+    public DescribeMetricRuleBlackListResponse describeMetricRuleBlackList(DescribeMetricRuleBlackListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeMetricRuleBlackListWithOptions(request, runtime);
     }
 
     public DescribeMetricRuleCountResponse describeMetricRuleCountWithOptions(DescribeMetricRuleCountRequest request, RuntimeOptions runtime) throws Exception {
@@ -4289,6 +4469,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Isp", request.isp);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.viewAll)) {
+            query.put("ViewAll", request.viewAll);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -5024,6 +5208,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.enableHostAvailabilityWithOptions(request, runtime);
     }
 
+    public EnableMetricRuleBlackListResponse enableMetricRuleBlackListWithOptions(EnableMetricRuleBlackListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isEnable)) {
+            query.put("IsEnable", request.isEnable);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableMetricRuleBlackList"),
+            new TeaPair("version", "2019-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableMetricRuleBlackListResponse());
+    }
+
+    public EnableMetricRuleBlackListResponse enableMetricRuleBlackList(EnableMetricRuleBlackListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.enableMetricRuleBlackListWithOptions(request, runtime);
+    }
+
     public EnableMetricRulesResponse enableMetricRulesWithOptions(EnableMetricRulesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5371,6 +5588,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyHybridMonitorTaskResponse modifyHybridMonitorTask(ModifyHybridMonitorTaskRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.modifyHybridMonitorTaskWithOptions(request, runtime);
+    }
+
+    public ModifyMetricRuleBlackListResponse modifyMetricRuleBlackListWithOptions(ModifyMetricRuleBlackListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            query.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTime)) {
+            query.put("EffectiveTime", request.effectiveTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableEndTime)) {
+            query.put("EnableEndTime", request.enableEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStartTime)) {
+            query.put("EnableStartTime", request.enableStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instances)) {
+            query.put("Instances", request.instances);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metrics)) {
+            query.put("Metrics", request.metrics);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeType)) {
+            query.put("ScopeType", request.scopeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeValue)) {
+            query.put("ScopeValue", request.scopeValue);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyMetricRuleBlackList"),
+            new TeaPair("version", "2019-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyMetricRuleBlackListResponse());
+    }
+
+    public ModifyMetricRuleBlackListResponse modifyMetricRuleBlackList(ModifyMetricRuleBlackListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyMetricRuleBlackListWithOptions(request, runtime);
     }
 
     public ModifyMetricRuleTemplateResponse modifyMetricRuleTemplateWithOptions(ModifyMetricRuleTemplateRequest request, RuntimeOptions runtime) throws Exception {

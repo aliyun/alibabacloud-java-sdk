@@ -168,6 +168,252 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigExpress extends TeaModel {
+        @NameInMap("Alias")
+        public String alias;
+
+        @NameInMap("Express")
+        public String express;
+
+        public static DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigExpress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigExpress self = new DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigExpress();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigExpress setAlias(String alias) {
+            this.alias = alias;
+            return this;
+        }
+        public String getAlias() {
+            return this.alias;
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigExpress setExpress(String express) {
+            this.express = express;
+            return this;
+        }
+        public String getExpress() {
+            return this.express;
+        }
+
+    }
+
+    public static class DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilterFilters extends TeaModel {
+        @NameInMap("Operator")
+        public String operator;
+
+        @NameInMap("SLSKeyName")
+        public String SLSKeyName;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilterFilters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilterFilters self = new DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilterFilters();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilterFilters setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilterFilters setSLSKeyName(String SLSKeyName) {
+            this.SLSKeyName = SLSKeyName;
+            return this;
+        }
+        public String getSLSKeyName() {
+            return this.SLSKeyName;
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilterFilters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilter extends TeaModel {
+        @NameInMap("Filters")
+        public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilterFilters> filters;
+
+        @NameInMap("Relation")
+        public String relation;
+
+        public static DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilter build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilter self = new DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilter();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilter setFilters(java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilterFilters> filters) {
+            this.filters = filters;
+            return this;
+        }
+        public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilterFilters> getFilters() {
+            return this.filters;
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilter setRelation(String relation) {
+            this.relation = relation;
+            return this;
+        }
+        public String getRelation() {
+            return this.relation;
+        }
+
+    }
+
+    public static class DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigGroupBy extends TeaModel {
+        @NameInMap("Alias")
+        public String alias;
+
+        @NameInMap("SLSKeyName")
+        public String SLSKeyName;
+
+        public static DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigGroupBy build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigGroupBy self = new DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigGroupBy();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigGroupBy setAlias(String alias) {
+            this.alias = alias;
+            return this;
+        }
+        public String getAlias() {
+            return this.alias;
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigGroupBy setSLSKeyName(String SLSKeyName) {
+            this.SLSKeyName = SLSKeyName;
+            return this;
+        }
+        public String getSLSKeyName() {
+            return this.SLSKeyName;
+        }
+
+    }
+
+    public static class DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigStatistics extends TeaModel {
+        @NameInMap("Alias")
+        public String alias;
+
+        @NameInMap("Function")
+        public String function;
+
+        @NameInMap("Parameter1")
+        public String parameter1;
+
+        @NameInMap("Parameter2")
+        public String parameter2;
+
+        @NameInMap("SLSKeyName")
+        public String SLSKeyName;
+
+        public static DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigStatistics build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigStatistics self = new DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigStatistics();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigStatistics setAlias(String alias) {
+            this.alias = alias;
+            return this;
+        }
+        public String getAlias() {
+            return this.alias;
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigStatistics setFunction(String function) {
+            this.function = function;
+            return this;
+        }
+        public String getFunction() {
+            return this.function;
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigStatistics setParameter1(String parameter1) {
+            this.parameter1 = parameter1;
+            return this;
+        }
+        public String getParameter1() {
+            return this.parameter1;
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigStatistics setParameter2(String parameter2) {
+            this.parameter2 = parameter2;
+            return this;
+        }
+        public String getParameter2() {
+            return this.parameter2;
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigStatistics setSLSKeyName(String SLSKeyName) {
+            this.SLSKeyName = SLSKeyName;
+            return this;
+        }
+        public String getSLSKeyName() {
+            return this.SLSKeyName;
+        }
+
+    }
+
+    public static class DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfig extends TeaModel {
+        @NameInMap("Express")
+        public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigExpress> express;
+
+        @NameInMap("Filter")
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilter filter;
+
+        @NameInMap("GroupBy")
+        public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigGroupBy> groupBy;
+
+        @NameInMap("Statistics")
+        public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigStatistics> statistics;
+
+        public static DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfig self = new DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfig setExpress(java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigExpress> express) {
+            this.express = express;
+            return this;
+        }
+        public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigExpress> getExpress() {
+            return this.express;
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfig setFilter(DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilter filter) {
+            this.filter = filter;
+            return this;
+        }
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilter getFilter() {
+            return this.filter;
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfig setGroupBy(java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigGroupBy> groupBy) {
+            this.groupBy = groupBy;
+            return this;
+        }
+        public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigGroupBy> getGroupBy() {
+            return this.groupBy;
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfig setStatistics(java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigStatistics> statistics) {
+            this.statistics = statistics;
+            return this;
+        }
+        public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigStatistics> getStatistics() {
+            return this.statistics;
+        }
+
+    }
+
     public static class DescribeHybridMonitorTaskListResponseBodyTaskList extends TeaModel {
         @NameInMap("AttachLabels")
         public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListAttachLabels> attachLabels;
@@ -228,6 +474,9 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
         @NameInMap("SLSProcess")
         public String SLSProcess;
+
+        @NameInMap("SLSProcessConfig")
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfig SLSProcessConfig;
 
         @NameInMap("TargetUserId")
         public String targetUserId;
@@ -410,6 +659,14 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
         }
         public String getSLSProcess() {
             return this.SLSProcess;
+        }
+
+        public DescribeHybridMonitorTaskListResponseBodyTaskList setSLSProcessConfig(DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfig SLSProcessConfig) {
+            this.SLSProcessConfig = SLSProcessConfig;
+            return this;
+        }
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfig getSLSProcessConfig() {
+            return this.SLSProcessConfig;
         }
 
         public DescribeHybridMonitorTaskListResponseBodyTaskList setTargetUserId(String targetUserId) {
