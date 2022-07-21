@@ -7,6 +7,12 @@ public class GetTemplateSummaryRequest extends TeaModel {
     @NameInMap("ChangeSetId")
     public String changeSetId;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Parameters")
+    public java.util.List<GetTemplateSummaryRequestParameters> parameters;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -39,6 +45,22 @@ public class GetTemplateSummaryRequest extends TeaModel {
     }
     public String getChangeSetId() {
         return this.changeSetId;
+    }
+
+    public GetTemplateSummaryRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public GetTemplateSummaryRequest setParameters(java.util.List<GetTemplateSummaryRequestParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<GetTemplateSummaryRequestParameters> getParameters() {
+        return this.parameters;
     }
 
     public GetTemplateSummaryRequest setRegionId(String regionId) {
@@ -95,6 +117,36 @@ public class GetTemplateSummaryRequest extends TeaModel {
     }
     public String getTemplateVersion() {
         return this.templateVersion;
+    }
+
+    public static class GetTemplateSummaryRequestParameters extends TeaModel {
+        @NameInMap("ParameterKey")
+        public String parameterKey;
+
+        @NameInMap("ParameterValue")
+        public String parameterValue;
+
+        public static GetTemplateSummaryRequestParameters build(java.util.Map<String, ?> map) throws Exception {
+            GetTemplateSummaryRequestParameters self = new GetTemplateSummaryRequestParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTemplateSummaryRequestParameters setParameterKey(String parameterKey) {
+            this.parameterKey = parameterKey;
+            return this;
+        }
+        public String getParameterKey() {
+            return this.parameterKey;
+        }
+
+        public GetTemplateSummaryRequestParameters setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
+        }
+
     }
 
 }
