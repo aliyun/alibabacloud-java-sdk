@@ -20,7 +20,7 @@ public class ListCodeSourcesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 用于排序的字段名，可选字段名：'DisplayName' 'GmtCreateTime' 'GmtModifyTime'
+    // 用于排序的字段名，可选字段名：DisplayName、GmtCreateTime、 GmtModifyTime
     @NameInMap("SortBy")
     public String sortBy;
 

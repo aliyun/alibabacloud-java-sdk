@@ -24,6 +24,10 @@ public class ListImagesRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
+    // 工作空间ID
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static ListImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListImagesRequest self = new ListImagesRequest();
         return TeaModel.build(map, self);
@@ -67,6 +71,14 @@ public class ListImagesRequest extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
+    }
+
+    public ListImagesRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

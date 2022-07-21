@@ -4,6 +4,10 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListEcsSpecsRequest extends TeaModel {
+    // 按加速器类型过滤
+    @NameInMap("AcceleratorType")
+    public String acceleratorType;
+
     // 排序顺序
     @NameInMap("Order")
     public String order;
@@ -23,6 +27,14 @@ public class ListEcsSpecsRequest extends TeaModel {
     public static ListEcsSpecsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEcsSpecsRequest self = new ListEcsSpecsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListEcsSpecsRequest setAcceleratorType(String acceleratorType) {
+        this.acceleratorType = acceleratorType;
+        return this;
+    }
+    public String getAcceleratorType() {
+        return this.acceleratorType;
     }
 
     public ListEcsSpecsRequest setOrder(String order) {

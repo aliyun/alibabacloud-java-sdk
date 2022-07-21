@@ -12,6 +12,10 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("DataSources")
     public java.util.List<CreateJobRequestDataSources> dataSources;
 
+    // debugger参数
+    @NameInMap("DebuggerConfigContent")
+    public String debuggerConfigContent;
+
     // 作业显示名称
     @NameInMap("DisplayName")
     public String displayName;
@@ -34,6 +38,9 @@ public class CreateJobRequest extends TeaModel {
     // 作业类型
     @NameInMap("JobType")
     public String jobType;
+
+    @NameInMap("Options")
+    public String options;
 
     // 作业优先级
     @NameInMap("Priority")
@@ -87,6 +94,14 @@ public class CreateJobRequest extends TeaModel {
         return this.dataSources;
     }
 
+    public CreateJobRequest setDebuggerConfigContent(String debuggerConfigContent) {
+        this.debuggerConfigContent = debuggerConfigContent;
+        return this;
+    }
+    public String getDebuggerConfigContent() {
+        return this.debuggerConfigContent;
+    }
+
     public CreateJobRequest setDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -133,6 +148,14 @@ public class CreateJobRequest extends TeaModel {
     }
     public String getJobType() {
         return this.jobType;
+    }
+
+    public CreateJobRequest setOptions(String options) {
+        this.options = options;
+        return this;
+    }
+    public String getOptions() {
+        return this.options;
     }
 
     public CreateJobRequest setPriority(Integer priority) {

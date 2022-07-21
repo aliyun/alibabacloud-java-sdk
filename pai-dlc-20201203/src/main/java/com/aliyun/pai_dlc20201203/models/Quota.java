@@ -12,6 +12,10 @@ public class Quota extends TeaModel {
     @NameInMap("ClusterName")
     public String clusterName;
 
+    // 是否允许使用潮汐资源
+    @NameInMap("EnableTideResource")
+    public Boolean enableTideResource;
+
     // 是否是独占Quota组
     @NameInMap("IsExclusiveQuota")
     public Boolean isExclusiveQuota;
@@ -28,13 +32,25 @@ public class Quota extends TeaModel {
     @NameInMap("QuotaType")
     public String quotaType;
 
+    // 资源组允许使用的潮汐资源级别
+    @NameInMap("ResourceLevel")
+    public String resourceLevel;
+
     // 资源总量
     @NameInMap("TotalQuota")
     public QuotaDetail totalQuota;
 
+    // 潮汐资源总量
+    @NameInMap("TotalTideQuota")
+    public QuotaDetail totalTideQuota;
+
     // 资源用量
     @NameInMap("UsedQuota")
     public QuotaDetail usedQuota;
+
+    // 潮汐资源用量
+    @NameInMap("UsedTideQuota")
+    public QuotaDetail usedTideQuota;
 
     public static Quota build(java.util.Map<String, ?> map) throws Exception {
         Quota self = new Quota();
@@ -55,6 +71,14 @@ public class Quota extends TeaModel {
     }
     public String getClusterName() {
         return this.clusterName;
+    }
+
+    public Quota setEnableTideResource(Boolean enableTideResource) {
+        this.enableTideResource = enableTideResource;
+        return this;
+    }
+    public Boolean getEnableTideResource() {
+        return this.enableTideResource;
     }
 
     public Quota setIsExclusiveQuota(Boolean isExclusiveQuota) {
@@ -89,6 +113,14 @@ public class Quota extends TeaModel {
         return this.quotaType;
     }
 
+    public Quota setResourceLevel(String resourceLevel) {
+        this.resourceLevel = resourceLevel;
+        return this;
+    }
+    public String getResourceLevel() {
+        return this.resourceLevel;
+    }
+
     public Quota setTotalQuota(QuotaDetail totalQuota) {
         this.totalQuota = totalQuota;
         return this;
@@ -97,12 +129,28 @@ public class Quota extends TeaModel {
         return this.totalQuota;
     }
 
+    public Quota setTotalTideQuota(QuotaDetail totalTideQuota) {
+        this.totalTideQuota = totalTideQuota;
+        return this;
+    }
+    public QuotaDetail getTotalTideQuota() {
+        return this.totalTideQuota;
+    }
+
     public Quota setUsedQuota(QuotaDetail usedQuota) {
         this.usedQuota = usedQuota;
         return this;
     }
     public QuotaDetail getUsedQuota() {
         return this.usedQuota;
+    }
+
+    public Quota setUsedTideQuota(QuotaDetail usedTideQuota) {
+        this.usedTideQuota = usedTideQuota;
+        return this;
+    }
+    public QuotaDetail getUsedTideQuota() {
+        return this.usedTideQuota;
     }
 
 }

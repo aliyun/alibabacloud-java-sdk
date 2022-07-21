@@ -8,6 +8,10 @@ public class ImageItem extends TeaModel {
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
+    // 镜像作者
+    @NameInMap("AuthorId")
+    public String authorId;
+
     // 镜像包含的框架类型
     @NameInMap("Framework")
     public String framework;
@@ -39,6 +43,14 @@ public class ImageItem extends TeaModel {
     }
     public String getAcceleratorType() {
         return this.acceleratorType;
+    }
+
+    public ImageItem setAuthorId(String authorId) {
+        this.authorId = authorId;
+        return this;
+    }
+    public String getAuthorId() {
+        return this.authorId;
     }
 
     public ImageItem setFramework(String framework) {

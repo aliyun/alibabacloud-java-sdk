@@ -28,6 +28,10 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("ElasticSpec")
     public JobElasticSpec elasticSpec;
 
+    // 是否开启debugger任务
+    @NameInMap("EnabledDebugger")
+    public Boolean enabledDebugger;
+
     // 环境变量配置
     @NameInMap("Envs")
     public java.util.Map<String, String> envs;
@@ -86,6 +90,10 @@ public class GetJobResponseBody extends TeaModel {
     // 作业运行所在的资源组ID
     @NameInMap("ResourceId")
     public String resourceId;
+
+    // 作业运行时使用的资源级别
+    @NameInMap("ResourceLevel")
+    public String resourceLevel;
 
     // 作业额外参数配置
     @NameInMap("Settings")
@@ -170,6 +178,14 @@ public class GetJobResponseBody extends TeaModel {
     }
     public JobElasticSpec getElasticSpec() {
         return this.elasticSpec;
+    }
+
+    public GetJobResponseBody setEnabledDebugger(Boolean enabledDebugger) {
+        this.enabledDebugger = enabledDebugger;
+        return this;
+    }
+    public Boolean getEnabledDebugger() {
+        return this.enabledDebugger;
     }
 
     public GetJobResponseBody setEnvs(java.util.Map<String, String> envs) {
@@ -298,6 +314,14 @@ public class GetJobResponseBody extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public GetJobResponseBody setResourceLevel(String resourceLevel) {
+        this.resourceLevel = resourceLevel;
+        return this;
+    }
+    public String getResourceLevel() {
+        return this.resourceLevel;
     }
 
     public GetJobResponseBody setSettings(JobSettings settings) {
@@ -452,7 +476,7 @@ public class GetJobResponseBody extends TeaModel {
 
     }
 
-    public static class GetJobResponseBodyPods extends TeaModel {
+    public static class GetJobResponseBodyPodsHistoryPods extends TeaModel {
         // Pod创建时间（UTC）
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
@@ -472,6 +496,118 @@ public class GetJobResponseBody extends TeaModel {
         // Pod Id
         @NameInMap("PodId")
         public String podId;
+
+        // Pod UId
+        @NameInMap("PodUid")
+        public String podUid;
+
+        // Pod状态
+        @NameInMap("Status")
+        public String status;
+
+        // Pod类型
+        @NameInMap("Type")
+        public String type;
+
+        public static GetJobResponseBodyPodsHistoryPods build(java.util.Map<String, ?> map) throws Exception {
+            GetJobResponseBodyPodsHistoryPods self = new GetJobResponseBodyPodsHistoryPods();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyPodsHistoryPods setGmtCreateTime(String gmtCreateTime) {
+            this.gmtCreateTime = gmtCreateTime;
+            return this;
+        }
+        public String getGmtCreateTime() {
+            return this.gmtCreateTime;
+        }
+
+        public GetJobResponseBodyPodsHistoryPods setGmtFinishTime(String gmtFinishTime) {
+            this.gmtFinishTime = gmtFinishTime;
+            return this;
+        }
+        public String getGmtFinishTime() {
+            return this.gmtFinishTime;
+        }
+
+        public GetJobResponseBodyPodsHistoryPods setGmtStartTime(String gmtStartTime) {
+            this.gmtStartTime = gmtStartTime;
+            return this;
+        }
+        public String getGmtStartTime() {
+            return this.gmtStartTime;
+        }
+
+        public GetJobResponseBodyPodsHistoryPods setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
+        }
+
+        public GetJobResponseBodyPodsHistoryPods setPodId(String podId) {
+            this.podId = podId;
+            return this;
+        }
+        public String getPodId() {
+            return this.podId;
+        }
+
+        public GetJobResponseBodyPodsHistoryPods setPodUid(String podUid) {
+            this.podUid = podUid;
+            return this;
+        }
+        public String getPodUid() {
+            return this.podUid;
+        }
+
+        public GetJobResponseBodyPodsHistoryPods setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetJobResponseBodyPodsHistoryPods setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetJobResponseBodyPods extends TeaModel {
+        // Pod创建时间（UTC）
+        @NameInMap("GmtCreateTime")
+        public String gmtCreateTime;
+
+        // Pod结束时间（UTC）
+        @NameInMap("GmtFinishTime")
+        public String gmtFinishTime;
+
+        // Pod启动时间（UTC）
+        @NameInMap("GmtStartTime")
+        public String gmtStartTime;
+
+        // 历史Pods
+        @NameInMap("HistoryPods")
+        public java.util.List<GetJobResponseBodyPodsHistoryPods> historyPods;
+
+        // Pod Ip
+        @NameInMap("Ip")
+        public String ip;
+
+        // Pod Id
+        @NameInMap("PodId")
+        public String podId;
+
+        // Pod UId
+        @NameInMap("PodUid")
+        public String podUid;
 
         // Pod状态
         @NameInMap("Status")
@@ -510,6 +646,14 @@ public class GetJobResponseBody extends TeaModel {
             return this.gmtStartTime;
         }
 
+        public GetJobResponseBodyPods setHistoryPods(java.util.List<GetJobResponseBodyPodsHistoryPods> historyPods) {
+            this.historyPods = historyPods;
+            return this;
+        }
+        public java.util.List<GetJobResponseBodyPodsHistoryPods> getHistoryPods() {
+            return this.historyPods;
+        }
+
         public GetJobResponseBodyPods setIp(String ip) {
             this.ip = ip;
             return this;
@@ -524,6 +668,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getPodId() {
             return this.podId;
+        }
+
+        public GetJobResponseBodyPods setPodUid(String podUid) {
+            this.podUid = podUid;
+            return this;
+        }
+        public String getPodUid() {
+            return this.podUid;
         }
 
         public GetJobResponseBodyPods setStatus(String status) {

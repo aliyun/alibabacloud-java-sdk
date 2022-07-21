@@ -3,7 +3,7 @@ package com.aliyun.pai_dlc20201203.models;
 
 import com.aliyun.tea.*;
 
-public class CreateCodeSourceResponse extends TeaModel {
+public class DeleteJobsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CreateCodeSourceResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateCodeSourceResponseBody body;
+    public DeleteJobsResponseBody body;
 
-    public static CreateCodeSourceResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateCodeSourceResponse self = new CreateCodeSourceResponse();
+    public static DeleteJobsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteJobsResponse self = new DeleteJobsResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateCodeSourceResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteJobsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CreateCodeSourceResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateCodeSourceResponse setStatusCode(Integer statusCode) {
+    public DeleteJobsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CreateCodeSourceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateCodeSourceResponse setBody(CreateCodeSourceResponseBody body) {
+    public DeleteJobsResponse setBody(DeleteJobsResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateCodeSourceResponseBody getBody() {
+    public DeleteJobsResponseBody getBody() {
         return this.body;
     }
 
