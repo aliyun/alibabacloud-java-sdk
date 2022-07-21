@@ -359,6 +359,12 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("cookie")
         public String cookie;
 
+        @NameInMap("diagnosis_mtr")
+        public Boolean diagnosisMtr;
+
+        @NameInMap("diagnosis_ping")
+        public Boolean diagnosisPing;
+
         @NameInMap("dns_match_rule")
         public String dnsMatchRule;
 
@@ -410,6 +416,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("response_format")
         public String responseFormat;
 
+        @NameInMap("retry_delay")
+        public Integer retryDelay;
+
         @NameInMap("time_out")
         public Long timeOut;
 
@@ -443,6 +452,22 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public String getCookie() {
             return this.cookie;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setDiagnosisMtr(Boolean diagnosisMtr) {
+            this.diagnosisMtr = diagnosisMtr;
+            return this;
+        }
+        public Boolean getDiagnosisMtr() {
+            return this.diagnosisMtr;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setDiagnosisPing(Boolean diagnosisPing) {
+            this.diagnosisPing = diagnosisPing;
+            return this;
+        }
+        public Boolean getDiagnosisPing() {
+            return this.diagnosisPing;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setDnsMatchRule(String dnsMatchRule) {
@@ -579,6 +604,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public String getResponseFormat() {
             return this.responseFormat;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setRetryDelay(Integer retryDelay) {
+            this.retryDelay = retryDelay;
+            return this;
+        }
+        public Integer getRetryDelay() {
+            return this.retryDelay;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setTimeOut(Long timeOut) {

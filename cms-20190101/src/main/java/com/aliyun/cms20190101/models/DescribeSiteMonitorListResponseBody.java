@@ -98,14 +98,26 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
     }
 
     public static class DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson extends TeaModel {
+        @NameInMap("acceptable_response_code")
+        public String acceptableResponseCode;
+
         @NameInMap("attempts")
         public Long attempts;
 
         @NameInMap("authentication")
         public Integer authentication;
 
+        @NameInMap("cert_verify")
+        public Boolean certVerify;
+
         @NameInMap("cookie")
         public String cookie;
+
+        @NameInMap("diagnosis_mtr")
+        public Boolean diagnosisMtr;
+
+        @NameInMap("diagnosis_ping")
+        public Boolean diagnosisPing;
 
         @NameInMap("dns_match_rule")
         public String dnsMatchRule;
@@ -116,6 +128,9 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         @NameInMap("dns_type")
         public String dnsType;
 
+        @NameInMap("enable_operator_dns")
+        public Boolean enableOperatorDns;
+
         @NameInMap("failure_rate")
         public Float failureRate;
 
@@ -124,6 +139,9 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
 
         @NameInMap("http_method")
         public String httpMethod;
+
+        @NameInMap("isBase64Encode")
+        public String isBase64Encode;
 
         @NameInMap("match_rule")
         public Integer matchRule;
@@ -140,6 +158,9 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         @NameInMap("protocol")
         public String protocol;
 
+        @NameInMap("proxy_protocol")
+        public Boolean proxyProtocol;
+
         @NameInMap("request_content")
         public String requestContent;
 
@@ -152,8 +173,14 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         @NameInMap("response_format")
         public String responseFormat;
 
+        @NameInMap("retry_delay")
+        public Integer retryDelay;
+
         @NameInMap("time_out")
         public Long timeOut;
+
+        @NameInMap("unfollow_redirect")
+        public Boolean unfollowRedirect;
 
         @NameInMap("username")
         public String username;
@@ -161,6 +188,14 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         public static DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson build(java.util.Map<String, ?> map) throws Exception {
             DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson self = new DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setAcceptableResponseCode(String acceptableResponseCode) {
+            this.acceptableResponseCode = acceptableResponseCode;
+            return this;
+        }
+        public String getAcceptableResponseCode() {
+            return this.acceptableResponseCode;
         }
 
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setAttempts(Long attempts) {
@@ -179,12 +214,36 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             return this.authentication;
         }
 
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setCertVerify(Boolean certVerify) {
+            this.certVerify = certVerify;
+            return this;
+        }
+        public Boolean getCertVerify() {
+            return this.certVerify;
+        }
+
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setCookie(String cookie) {
             this.cookie = cookie;
             return this;
         }
         public String getCookie() {
             return this.cookie;
+        }
+
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setDiagnosisMtr(Boolean diagnosisMtr) {
+            this.diagnosisMtr = diagnosisMtr;
+            return this;
+        }
+        public Boolean getDiagnosisMtr() {
+            return this.diagnosisMtr;
+        }
+
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setDiagnosisPing(Boolean diagnosisPing) {
+            this.diagnosisPing = diagnosisPing;
+            return this;
+        }
+        public Boolean getDiagnosisPing() {
+            return this.diagnosisPing;
         }
 
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setDnsMatchRule(String dnsMatchRule) {
@@ -211,6 +270,14 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             return this.dnsType;
         }
 
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setEnableOperatorDns(Boolean enableOperatorDns) {
+            this.enableOperatorDns = enableOperatorDns;
+            return this;
+        }
+        public Boolean getEnableOperatorDns() {
+            return this.enableOperatorDns;
+        }
+
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setFailureRate(Float failureRate) {
             this.failureRate = failureRate;
             return this;
@@ -233,6 +300,14 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
         public String getHttpMethod() {
             return this.httpMethod;
+        }
+
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setIsBase64Encode(String isBase64Encode) {
+            this.isBase64Encode = isBase64Encode;
+            return this;
+        }
+        public String getIsBase64Encode() {
+            return this.isBase64Encode;
         }
 
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setMatchRule(Integer matchRule) {
@@ -275,6 +350,14 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             return this.protocol;
         }
 
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setProxyProtocol(Boolean proxyProtocol) {
+            this.proxyProtocol = proxyProtocol;
+            return this;
+        }
+        public Boolean getProxyProtocol() {
+            return this.proxyProtocol;
+        }
+
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setRequestContent(String requestContent) {
             this.requestContent = requestContent;
             return this;
@@ -307,12 +390,28 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             return this.responseFormat;
         }
 
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setRetryDelay(Integer retryDelay) {
+            this.retryDelay = retryDelay;
+            return this;
+        }
+        public Integer getRetryDelay() {
+            return this.retryDelay;
+        }
+
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setTimeOut(Long timeOut) {
             this.timeOut = timeOut;
             return this;
         }
         public Long getTimeOut() {
             return this.timeOut;
+        }
+
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setUnfollowRedirect(Boolean unfollowRedirect) {
+            this.unfollowRedirect = unfollowRedirect;
+            return this;
+        }
+        public Boolean getUnfollowRedirect() {
+            return this.unfollowRedirect;
         }
 
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setUsername(String username) {

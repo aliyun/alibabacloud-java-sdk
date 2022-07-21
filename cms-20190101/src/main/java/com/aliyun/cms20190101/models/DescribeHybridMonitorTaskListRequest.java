@@ -25,6 +25,9 @@ public class DescribeHybridMonitorTaskListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("TargetUserId")
+    public Long targetUserId;
+
     @NameInMap("TaskId")
     public String taskId;
 
@@ -90,6 +93,14 @@ public class DescribeHybridMonitorTaskListRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeHybridMonitorTaskListRequest setTargetUserId(Long targetUserId) {
+        this.targetUserId = targetUserId;
+        return this;
+    }
+    public Long getTargetUserId() {
+        return this.targetUserId;
     }
 
     public DescribeHybridMonitorTaskListRequest setTaskId(String taskId) {

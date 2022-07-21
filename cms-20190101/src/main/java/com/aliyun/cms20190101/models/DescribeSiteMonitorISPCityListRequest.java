@@ -19,6 +19,9 @@ public class DescribeSiteMonitorISPCityListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ViewAll")
+    public Boolean viewAll;
+
     public static DescribeSiteMonitorISPCityListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSiteMonitorISPCityListRequest self = new DescribeSiteMonitorISPCityListRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class DescribeSiteMonitorISPCityListRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeSiteMonitorISPCityListRequest setViewAll(Boolean viewAll) {
+        this.viewAll = viewAll;
+        return this;
+    }
+    public Boolean getViewAll() {
+        return this.viewAll;
     }
 
 }

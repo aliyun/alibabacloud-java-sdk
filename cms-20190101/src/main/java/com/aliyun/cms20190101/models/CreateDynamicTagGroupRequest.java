@@ -109,6 +109,9 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     }
 
     public static class CreateDynamicTagGroupRequestMatchExpress extends TeaModel {
+        @NameInMap("TagName")
+        public String tagName;
+
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -118,6 +121,14 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
         public static CreateDynamicTagGroupRequestMatchExpress build(java.util.Map<String, ?> map) throws Exception {
             CreateDynamicTagGroupRequestMatchExpress self = new CreateDynamicTagGroupRequestMatchExpress();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDynamicTagGroupRequestMatchExpress setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
         }
 
         public CreateDynamicTagGroupRequestMatchExpress setTagValue(String tagValue) {

@@ -16,6 +16,9 @@ public class CreateHybridMonitorTaskResponseBody extends TeaModel {
     @NameInMap("Success")
     public String success;
 
+    @NameInMap("TaskId")
+    public Long taskId;
+
     public static CreateHybridMonitorTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateHybridMonitorTaskResponseBody self = new CreateHybridMonitorTaskResponseBody();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class CreateHybridMonitorTaskResponseBody extends TeaModel {
     }
     public String getSuccess() {
         return this.success;
+    }
+
+    public CreateHybridMonitorTaskResponseBody setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

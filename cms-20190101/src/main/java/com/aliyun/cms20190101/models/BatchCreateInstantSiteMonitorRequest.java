@@ -3,66 +3,19 @@ package com.aliyun.cms20190101.models;
 
 import com.aliyun.tea.*;
 
-public class CreateInstantSiteMonitorRequest extends TeaModel {
-    @NameInMap("Address")
-    public String address;
-
-    @NameInMap("IspCities")
-    public String ispCities;
-
-    @NameInMap("OptionsJson")
-    public String optionsJson;
-
-    @NameInMap("RandomIspCity")
-    public Integer randomIspCity;
-
+public class BatchCreateInstantSiteMonitorRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("TaskName")
-    public String taskName;
+    @NameInMap("TaskList")
+    public java.util.List<BatchCreateInstantSiteMonitorRequestTaskList> taskList;
 
-    @NameInMap("TaskType")
-    public String taskType;
-
-    public static CreateInstantSiteMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateInstantSiteMonitorRequest self = new CreateInstantSiteMonitorRequest();
+    public static BatchCreateInstantSiteMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
+        BatchCreateInstantSiteMonitorRequest self = new BatchCreateInstantSiteMonitorRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateInstantSiteMonitorRequest setAddress(String address) {
-        this.address = address;
-        return this;
-    }
-    public String getAddress() {
-        return this.address;
-    }
-
-    public CreateInstantSiteMonitorRequest setIspCities(String ispCities) {
-        this.ispCities = ispCities;
-        return this;
-    }
-    public String getIspCities() {
-        return this.ispCities;
-    }
-
-    public CreateInstantSiteMonitorRequest setOptionsJson(String optionsJson) {
-        this.optionsJson = optionsJson;
-        return this;
-    }
-    public String getOptionsJson() {
-        return this.optionsJson;
-    }
-
-    public CreateInstantSiteMonitorRequest setRandomIspCity(Integer randomIspCity) {
-        this.randomIspCity = randomIspCity;
-        return this;
-    }
-    public Integer getRandomIspCity() {
-        return this.randomIspCity;
-    }
-
-    public CreateInstantSiteMonitorRequest setRegionId(String regionId) {
+    public BatchCreateInstantSiteMonitorRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -70,20 +23,12 @@ public class CreateInstantSiteMonitorRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateInstantSiteMonitorRequest setTaskName(String taskName) {
-        this.taskName = taskName;
+    public BatchCreateInstantSiteMonitorRequest setTaskList(java.util.List<BatchCreateInstantSiteMonitorRequestTaskList> taskList) {
+        this.taskList = taskList;
         return this;
     }
-    public String getTaskName() {
-        return this.taskName;
-    }
-
-    public CreateInstantSiteMonitorRequest setTaskType(String taskType) {
-        this.taskType = taskType;
-        return this;
-    }
-    public String getTaskType() {
-        return this.taskType;
+    public java.util.List<BatchCreateInstantSiteMonitorRequestTaskList> getTaskList() {
+        return this.taskList;
     }
 
     public static class BatchCreateInstantSiteMonitorRequestTaskList extends TeaModel {
