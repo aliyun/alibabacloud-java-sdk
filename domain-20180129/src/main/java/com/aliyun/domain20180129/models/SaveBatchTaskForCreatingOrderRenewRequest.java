@@ -4,46 +4,30 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("CouponNo")
+    public String couponNo;
 
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("CouponNo")
-    public String couponNo;
-
-    @NameInMap("UseCoupon")
-    public Boolean useCoupon;
+    @NameInMap("OrderRenewParam")
+    public java.util.List<SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam> orderRenewParam;
 
     @NameInMap("PromotionNo")
     public String promotionNo;
 
+    @NameInMap("UseCoupon")
+    public Boolean useCoupon;
+
     @NameInMap("UsePromotion")
     public Boolean usePromotion;
 
-    @NameInMap("OrderRenewParam")
-    public java.util.List<SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam> orderRenewParam;
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static SaveBatchTaskForCreatingOrderRenewRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveBatchTaskForCreatingOrderRenewRequest self = new SaveBatchTaskForCreatingOrderRenewRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SaveBatchTaskForCreatingOrderRenewRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public SaveBatchTaskForCreatingOrderRenewRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public SaveBatchTaskForCreatingOrderRenewRequest setCouponNo(String couponNo) {
@@ -54,28 +38,12 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
         return this.couponNo;
     }
 
-    public SaveBatchTaskForCreatingOrderRenewRequest setUseCoupon(Boolean useCoupon) {
-        this.useCoupon = useCoupon;
+    public SaveBatchTaskForCreatingOrderRenewRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public Boolean getUseCoupon() {
-        return this.useCoupon;
-    }
-
-    public SaveBatchTaskForCreatingOrderRenewRequest setPromotionNo(String promotionNo) {
-        this.promotionNo = promotionNo;
-        return this;
-    }
-    public String getPromotionNo() {
-        return this.promotionNo;
-    }
-
-    public SaveBatchTaskForCreatingOrderRenewRequest setUsePromotion(Boolean usePromotion) {
-        this.usePromotion = usePromotion;
-        return this;
-    }
-    public Boolean getUsePromotion() {
-        return this.usePromotion;
+    public String getLang() {
+        return this.lang;
     }
 
     public SaveBatchTaskForCreatingOrderRenewRequest setOrderRenewParam(java.util.List<SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam> orderRenewParam) {
@@ -86,27 +54,59 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
         return this.orderRenewParam;
     }
 
+    public SaveBatchTaskForCreatingOrderRenewRequest setPromotionNo(String promotionNo) {
+        this.promotionNo = promotionNo;
+        return this;
+    }
+    public String getPromotionNo() {
+        return this.promotionNo;
+    }
+
+    public SaveBatchTaskForCreatingOrderRenewRequest setUseCoupon(Boolean useCoupon) {
+        this.useCoupon = useCoupon;
+        return this;
+    }
+    public Boolean getUseCoupon() {
+        return this.useCoupon;
+    }
+
+    public SaveBatchTaskForCreatingOrderRenewRequest setUsePromotion(Boolean usePromotion) {
+        this.usePromotion = usePromotion;
+        return this;
+    }
+    public Boolean getUsePromotion() {
+        return this.usePromotion;
+    }
+
+    public SaveBatchTaskForCreatingOrderRenewRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
+    }
+
     public static class SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam extends TeaModel {
-        @NameInMap("SubscriptionDuration")
-        public Integer subscriptionDuration;
+        @NameInMap("CurrentExpirationDate")
+        public Long currentExpirationDate;
 
         @NameInMap("DomainName")
         public String domainName;
 
-        @NameInMap("CurrentExpirationDate")
-        public Long currentExpirationDate;
+        @NameInMap("SubscriptionDuration")
+        public Integer subscriptionDuration;
 
         public static SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam build(java.util.Map<String, ?> map) throws Exception {
             SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam self = new SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam();
             return TeaModel.build(map, self);
         }
 
-        public SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam setSubscriptionDuration(Integer subscriptionDuration) {
-            this.subscriptionDuration = subscriptionDuration;
+        public SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam setCurrentExpirationDate(Long currentExpirationDate) {
+            this.currentExpirationDate = currentExpirationDate;
             return this;
         }
-        public Integer getSubscriptionDuration() {
-            return this.subscriptionDuration;
+        public Long getCurrentExpirationDate() {
+            return this.currentExpirationDate;
         }
 
         public SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam setDomainName(String domainName) {
@@ -117,12 +117,12 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends TeaModel {
             return this.domainName;
         }
 
-        public SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam setCurrentExpirationDate(Long currentExpirationDate) {
-            this.currentExpirationDate = currentExpirationDate;
+        public SaveBatchTaskForCreatingOrderRenewRequestOrderRenewParam setSubscriptionDuration(Integer subscriptionDuration) {
+            this.subscriptionDuration = subscriptionDuration;
             return this;
         }
-        public Long getCurrentExpirationDate() {
-            return this.currentExpirationDate;
+        public Integer getSubscriptionDuration() {
+            return this.subscriptionDuration;
         }
 
     }

@@ -10,20 +10,20 @@ public class SaveDomainGroupResponseBody extends TeaModel {
     @NameInMap("CreationDate")
     public String creationDate;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DomainGroupId")
+    public Long domainGroupId;
 
     @NameInMap("DomainGroupName")
     public String domainGroupName;
 
-    @NameInMap("ModificationDate")
-    public String modificationDate;
-
     @NameInMap("DomainGroupStatus")
     public String domainGroupStatus;
 
-    @NameInMap("DomainGroupId")
-    public Long domainGroupId;
+    @NameInMap("ModificationDate")
+    public String modificationDate;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TotalNumber")
     public Integer totalNumber;
@@ -49,12 +49,12 @@ public class SaveDomainGroupResponseBody extends TeaModel {
         return this.creationDate;
     }
 
-    public SaveDomainGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SaveDomainGroupResponseBody setDomainGroupId(Long domainGroupId) {
+        this.domainGroupId = domainGroupId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Long getDomainGroupId() {
+        return this.domainGroupId;
     }
 
     public SaveDomainGroupResponseBody setDomainGroupName(String domainGroupName) {
@@ -65,14 +65,6 @@ public class SaveDomainGroupResponseBody extends TeaModel {
         return this.domainGroupName;
     }
 
-    public SaveDomainGroupResponseBody setModificationDate(String modificationDate) {
-        this.modificationDate = modificationDate;
-        return this;
-    }
-    public String getModificationDate() {
-        return this.modificationDate;
-    }
-
     public SaveDomainGroupResponseBody setDomainGroupStatus(String domainGroupStatus) {
         this.domainGroupStatus = domainGroupStatus;
         return this;
@@ -81,12 +73,20 @@ public class SaveDomainGroupResponseBody extends TeaModel {
         return this.domainGroupStatus;
     }
 
-    public SaveDomainGroupResponseBody setDomainGroupId(Long domainGroupId) {
-        this.domainGroupId = domainGroupId;
+    public SaveDomainGroupResponseBody setModificationDate(String modificationDate) {
+        this.modificationDate = modificationDate;
         return this;
     }
-    public Long getDomainGroupId() {
-        return this.domainGroupId;
+    public String getModificationDate() {
+        return this.modificationDate;
+    }
+
+    public SaveDomainGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public SaveDomainGroupResponseBody setTotalNumber(Integer totalNumber) {

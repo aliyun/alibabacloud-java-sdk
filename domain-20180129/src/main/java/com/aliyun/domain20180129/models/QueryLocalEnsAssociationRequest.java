@@ -4,26 +4,18 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryLocalEnsAssociationRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     public static QueryLocalEnsAssociationRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryLocalEnsAssociationRequest self = new QueryLocalEnsAssociationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryLocalEnsAssociationRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public QueryLocalEnsAssociationRequest setDomainName(String domainName) {
@@ -40,6 +32,14 @@ public class QueryLocalEnsAssociationRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public QueryLocalEnsAssociationRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

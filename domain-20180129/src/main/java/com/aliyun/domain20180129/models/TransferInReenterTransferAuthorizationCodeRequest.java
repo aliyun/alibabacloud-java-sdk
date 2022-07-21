@@ -10,11 +10,11 @@ public class TransferInReenterTransferAuthorizationCodeRequest extends TeaModel 
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("TransferAuthorizationCode")
     public String transferAuthorizationCode;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static TransferInReenterTransferAuthorizationCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         TransferInReenterTransferAuthorizationCodeRequest self = new TransferInReenterTransferAuthorizationCodeRequest();
@@ -37,20 +37,20 @@ public class TransferInReenterTransferAuthorizationCodeRequest extends TeaModel 
         return this.lang;
     }
 
-    public TransferInReenterTransferAuthorizationCodeRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
     public TransferInReenterTransferAuthorizationCodeRequest setTransferAuthorizationCode(String transferAuthorizationCode) {
         this.transferAuthorizationCode = transferAuthorizationCode;
         return this;
     }
     public String getTransferAuthorizationCode() {
         return this.transferAuthorizationCode;
+    }
+
+    public TransferInReenterTransferAuthorizationCodeRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

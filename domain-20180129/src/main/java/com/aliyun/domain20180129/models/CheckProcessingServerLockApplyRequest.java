@@ -4,11 +4,11 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class CheckProcessingServerLockApplyRequest extends TeaModel {
-    @NameInMap("FeePeriod")
-    public Integer feePeriod;
-
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("FeePeriod")
+    public Integer feePeriod;
 
     @NameInMap("Lang")
     public String lang;
@@ -21,20 +21,20 @@ public class CheckProcessingServerLockApplyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CheckProcessingServerLockApplyRequest setFeePeriod(Integer feePeriod) {
-        this.feePeriod = feePeriod;
-        return this;
-    }
-    public Integer getFeePeriod() {
-        return this.feePeriod;
-    }
-
     public CheckProcessingServerLockApplyRequest setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public CheckProcessingServerLockApplyRequest setFeePeriod(Integer feePeriod) {
+        this.feePeriod = feePeriod;
+        return this;
+    }
+    public Integer getFeePeriod() {
+        return this.feePeriod;
     }
 
     public CheckProcessingServerLockApplyRequest setLang(String lang) {

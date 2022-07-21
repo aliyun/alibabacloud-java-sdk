@@ -4,8 +4,8 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForAssociatingEnsRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("Address")
+    public String address;
 
     @NameInMap("DomainName")
     public String domainName;
@@ -13,20 +13,20 @@ public class SaveSingleTaskForAssociatingEnsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("Address")
-    public String address;
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static SaveSingleTaskForAssociatingEnsRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveSingleTaskForAssociatingEnsRequest self = new SaveSingleTaskForAssociatingEnsRequest();
         return TeaModel.build(map, self);
     }
 
-    public SaveSingleTaskForAssociatingEnsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public SaveSingleTaskForAssociatingEnsRequest setAddress(String address) {
+        this.address = address;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public String getAddress() {
+        return this.address;
     }
 
     public SaveSingleTaskForAssociatingEnsRequest setDomainName(String domainName) {
@@ -45,12 +45,12 @@ public class SaveSingleTaskForAssociatingEnsRequest extends TeaModel {
         return this.lang;
     }
 
-    public SaveSingleTaskForAssociatingEnsRequest setAddress(String address) {
-        this.address = address;
+    public SaveSingleTaskForAssociatingEnsRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
         return this;
     }
-    public String getAddress() {
-        return this.address;
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

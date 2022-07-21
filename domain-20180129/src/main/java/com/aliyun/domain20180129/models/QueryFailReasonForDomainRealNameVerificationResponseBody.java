@@ -4,23 +4,15 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryFailReasonForDomainRealNameVerificationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public java.util.List<QueryFailReasonForDomainRealNameVerificationResponseBodyData> data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryFailReasonForDomainRealNameVerificationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryFailReasonForDomainRealNameVerificationResponseBody self = new QueryFailReasonForDomainRealNameVerificationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryFailReasonForDomainRealNameVerificationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryFailReasonForDomainRealNameVerificationResponseBody setData(java.util.List<QueryFailReasonForDomainRealNameVerificationResponseBodyData> data) {
@@ -31,15 +23,23 @@ public class QueryFailReasonForDomainRealNameVerificationResponseBody extends Te
         return this.data;
     }
 
+    public QueryFailReasonForDomainRealNameVerificationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class QueryFailReasonForDomainRealNameVerificationResponseBodyData extends TeaModel {
         @NameInMap("Date")
         public String date;
 
-        @NameInMap("FailReason")
-        public String failReason;
-
         @NameInMap("DomainNameVerificationStatus")
         public String domainNameVerificationStatus;
+
+        @NameInMap("FailReason")
+        public String failReason;
 
         public static QueryFailReasonForDomainRealNameVerificationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryFailReasonForDomainRealNameVerificationResponseBodyData self = new QueryFailReasonForDomainRealNameVerificationResponseBodyData();
@@ -54,20 +54,20 @@ public class QueryFailReasonForDomainRealNameVerificationResponseBody extends Te
             return this.date;
         }
 
-        public QueryFailReasonForDomainRealNameVerificationResponseBodyData setFailReason(String failReason) {
-            this.failReason = failReason;
-            return this;
-        }
-        public String getFailReason() {
-            return this.failReason;
-        }
-
         public QueryFailReasonForDomainRealNameVerificationResponseBodyData setDomainNameVerificationStatus(String domainNameVerificationStatus) {
             this.domainNameVerificationStatus = domainNameVerificationStatus;
             return this;
         }
         public String getDomainNameVerificationStatus() {
             return this.domainNameVerificationStatus;
+        }
+
+        public QueryFailReasonForDomainRealNameVerificationResponseBodyData setFailReason(String failReason) {
+            this.failReason = failReason;
+            return this;
+        }
+        public String getFailReason() {
+            return this.failReason;
         }
 
     }

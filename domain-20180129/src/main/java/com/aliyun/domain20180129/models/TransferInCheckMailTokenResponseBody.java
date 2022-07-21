@@ -4,18 +4,26 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class TransferInCheckMailTokenResponseBody extends TeaModel {
+    @NameInMap("FailList")
+    public TransferInCheckMailTokenResponseBodyFailList failList;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SuccessList")
     public TransferInCheckMailTokenResponseBodySuccessList successList;
 
-    @NameInMap("FailList")
-    public TransferInCheckMailTokenResponseBodyFailList failList;
-
     public static TransferInCheckMailTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TransferInCheckMailTokenResponseBody self = new TransferInCheckMailTokenResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public TransferInCheckMailTokenResponseBody setFailList(TransferInCheckMailTokenResponseBodyFailList failList) {
+        this.failList = failList;
+        return this;
+    }
+    public TransferInCheckMailTokenResponseBodyFailList getFailList() {
+        return this.failList;
     }
 
     public TransferInCheckMailTokenResponseBody setRequestId(String requestId) {
@@ -34,12 +42,23 @@ public class TransferInCheckMailTokenResponseBody extends TeaModel {
         return this.successList;
     }
 
-    public TransferInCheckMailTokenResponseBody setFailList(TransferInCheckMailTokenResponseBodyFailList failList) {
-        this.failList = failList;
-        return this;
-    }
-    public TransferInCheckMailTokenResponseBodyFailList getFailList() {
-        return this.failList;
+    public static class TransferInCheckMailTokenResponseBodyFailList extends TeaModel {
+        @NameInMap("FailDomain")
+        public java.util.List<String> failDomain;
+
+        public static TransferInCheckMailTokenResponseBodyFailList build(java.util.Map<String, ?> map) throws Exception {
+            TransferInCheckMailTokenResponseBodyFailList self = new TransferInCheckMailTokenResponseBodyFailList();
+            return TeaModel.build(map, self);
+        }
+
+        public TransferInCheckMailTokenResponseBodyFailList setFailDomain(java.util.List<String> failDomain) {
+            this.failDomain = failDomain;
+            return this;
+        }
+        public java.util.List<String> getFailDomain() {
+            return this.failDomain;
+        }
+
     }
 
     public static class TransferInCheckMailTokenResponseBodySuccessList extends TeaModel {
@@ -57,25 +76,6 @@ public class TransferInCheckMailTokenResponseBody extends TeaModel {
         }
         public java.util.List<String> getSuccessDomain() {
             return this.successDomain;
-        }
-
-    }
-
-    public static class TransferInCheckMailTokenResponseBodyFailList extends TeaModel {
-        @NameInMap("FailDomain")
-        public java.util.List<String> failDomain;
-
-        public static TransferInCheckMailTokenResponseBodyFailList build(java.util.Map<String, ?> map) throws Exception {
-            TransferInCheckMailTokenResponseBodyFailList self = new TransferInCheckMailTokenResponseBodyFailList();
-            return TeaModel.build(map, self);
-        }
-
-        public TransferInCheckMailTokenResponseBodyFailList setFailDomain(java.util.List<String> failDomain) {
-            this.failDomain = failDomain;
-            return this;
-        }
-        public java.util.List<String> getFailDomain() {
-            return this.failDomain;
         }
 
     }

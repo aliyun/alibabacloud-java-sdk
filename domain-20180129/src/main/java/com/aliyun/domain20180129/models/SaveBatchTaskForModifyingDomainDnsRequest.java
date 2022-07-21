@@ -4,12 +4,6 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveBatchTaskForModifyingDomainDnsRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("AliyunDns")
     public Boolean aliyunDns;
 
@@ -19,25 +13,15 @@ public class SaveBatchTaskForModifyingDomainDnsRequest extends TeaModel {
     @NameInMap("DomainNameServer")
     public java.util.List<String> domainNameServer;
 
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     public static SaveBatchTaskForModifyingDomainDnsRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveBatchTaskForModifyingDomainDnsRequest self = new SaveBatchTaskForModifyingDomainDnsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SaveBatchTaskForModifyingDomainDnsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public SaveBatchTaskForModifyingDomainDnsRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public SaveBatchTaskForModifyingDomainDnsRequest setAliyunDns(Boolean aliyunDns) {
@@ -62,6 +46,22 @@ public class SaveBatchTaskForModifyingDomainDnsRequest extends TeaModel {
     }
     public java.util.List<String> getDomainNameServer() {
         return this.domainNameServer;
+    }
+
+    public SaveBatchTaskForModifyingDomainDnsRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public SaveBatchTaskForModifyingDomainDnsRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

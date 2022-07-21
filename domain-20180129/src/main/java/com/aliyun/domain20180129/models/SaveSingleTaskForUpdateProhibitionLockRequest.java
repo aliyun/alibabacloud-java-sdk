@@ -4,37 +4,21 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForUpdateProhibitionLockRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("Status")
     public Boolean status;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static SaveSingleTaskForUpdateProhibitionLockRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveSingleTaskForUpdateProhibitionLockRequest self = new SaveSingleTaskForUpdateProhibitionLockRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SaveSingleTaskForUpdateProhibitionLockRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public SaveSingleTaskForUpdateProhibitionLockRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public SaveSingleTaskForUpdateProhibitionLockRequest setDomainName(String domainName) {
@@ -45,12 +29,28 @@ public class SaveSingleTaskForUpdateProhibitionLockRequest extends TeaModel {
         return this.domainName;
     }
 
+    public SaveSingleTaskForUpdateProhibitionLockRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
     public SaveSingleTaskForUpdateProhibitionLockRequest setStatus(Boolean status) {
         this.status = status;
         return this;
     }
     public Boolean getStatus() {
         return this.status;
+    }
+
+    public SaveSingleTaskForUpdateProhibitionLockRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

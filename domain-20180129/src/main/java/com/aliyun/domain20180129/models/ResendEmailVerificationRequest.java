@@ -4,11 +4,11 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class ResendEmailVerificationRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("Email")
     public String email;
+
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("UserClientIp")
     public String userClientIp;
@@ -18,20 +18,20 @@ public class ResendEmailVerificationRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ResendEmailVerificationRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
     public ResendEmailVerificationRequest setEmail(String email) {
         this.email = email;
         return this;
     }
     public String getEmail() {
         return this.email;
+    }
+
+    public ResendEmailVerificationRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public ResendEmailVerificationRequest setUserClientIp(String userClientIp) {

@@ -4,15 +4,6 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class RegistrantProfileRealNameVerificationRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("RegistrantProfileID")
-    public Long registrantProfileID;
-
     @NameInMap("IdentityCredential")
     public String identityCredential;
 
@@ -22,33 +13,18 @@ public class RegistrantProfileRealNameVerificationRequest extends TeaModel {
     @NameInMap("IdentityCredentialType")
     public String identityCredentialType;
 
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("RegistrantProfileID")
+    public Long registrantProfileID;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     public static RegistrantProfileRealNameVerificationRequest build(java.util.Map<String, ?> map) throws Exception {
         RegistrantProfileRealNameVerificationRequest self = new RegistrantProfileRealNameVerificationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RegistrantProfileRealNameVerificationRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public RegistrantProfileRealNameVerificationRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public RegistrantProfileRealNameVerificationRequest setRegistrantProfileID(Long registrantProfileID) {
-        this.registrantProfileID = registrantProfileID;
-        return this;
-    }
-    public Long getRegistrantProfileID() {
-        return this.registrantProfileID;
     }
 
     public RegistrantProfileRealNameVerificationRequest setIdentityCredential(String identityCredential) {
@@ -73,6 +49,30 @@ public class RegistrantProfileRealNameVerificationRequest extends TeaModel {
     }
     public String getIdentityCredentialType() {
         return this.identityCredentialType;
+    }
+
+    public RegistrantProfileRealNameVerificationRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public RegistrantProfileRealNameVerificationRequest setRegistrantProfileID(Long registrantProfileID) {
+        this.registrantProfileID = registrantProfileID;
+        return this;
+    }
+    public Long getRegistrantProfileID() {
+        return this.registrantProfileID;
+    }
+
+    public RegistrantProfileRealNameVerificationRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

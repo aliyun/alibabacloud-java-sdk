@@ -4,8 +4,8 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("DomainName")
+    public java.util.List<String> domainName;
 
     @NameInMap("Lang")
     public String lang;
@@ -16,20 +16,20 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest exten
     @NameInMap("TransferOutProhibited")
     public Boolean transferOutProhibited;
 
-    @NameInMap("DomainName")
-    public java.util.List<String> domainName;
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest self = new SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest();
         return TeaModel.build(map, self);
     }
 
-    public SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest setDomainName(java.util.List<String> domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public java.util.List<String> getDomainName() {
+        return this.domainName;
     }
 
     public SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest setLang(String lang) {
@@ -56,12 +56,12 @@ public class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest exten
         return this.transferOutProhibited;
     }
 
-    public SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest setDomainName(java.util.List<String> domainName) {
-        this.domainName = domainName;
+    public SaveTaskForUpdatingRegistrantInfoByRegistrantProfileIDRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
         return this;
     }
-    public java.util.List<String> getDomainName() {
-        return this.domainName;
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

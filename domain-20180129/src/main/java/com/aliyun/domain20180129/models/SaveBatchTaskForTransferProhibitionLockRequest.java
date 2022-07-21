@@ -4,8 +4,8 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveBatchTaskForTransferProhibitionLockRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("DomainName")
+    public java.util.List<String> domainName;
 
     @NameInMap("Lang")
     public String lang;
@@ -13,20 +13,20 @@ public class SaveBatchTaskForTransferProhibitionLockRequest extends TeaModel {
     @NameInMap("Status")
     public Boolean status;
 
-    @NameInMap("DomainName")
-    public java.util.List<String> domainName;
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static SaveBatchTaskForTransferProhibitionLockRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveBatchTaskForTransferProhibitionLockRequest self = new SaveBatchTaskForTransferProhibitionLockRequest();
         return TeaModel.build(map, self);
     }
 
-    public SaveBatchTaskForTransferProhibitionLockRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public SaveBatchTaskForTransferProhibitionLockRequest setDomainName(java.util.List<String> domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public java.util.List<String> getDomainName() {
+        return this.domainName;
     }
 
     public SaveBatchTaskForTransferProhibitionLockRequest setLang(String lang) {
@@ -45,12 +45,12 @@ public class SaveBatchTaskForTransferProhibitionLockRequest extends TeaModel {
         return this.status;
     }
 
-    public SaveBatchTaskForTransferProhibitionLockRequest setDomainName(java.util.List<String> domainName) {
-        this.domainName = domainName;
+    public SaveBatchTaskForTransferProhibitionLockRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
         return this;
     }
-    public java.util.List<String> getDomainName() {
-        return this.domainName;
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

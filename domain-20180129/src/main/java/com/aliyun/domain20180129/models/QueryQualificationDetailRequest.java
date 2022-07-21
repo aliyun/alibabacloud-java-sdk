@@ -7,14 +7,14 @@ public class QueryQualificationDetailRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("QualificationType")
     public String qualificationType;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static QueryQualificationDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryQualificationDetailRequest self = new QueryQualificationDetailRequest();
@@ -27,14 +27,6 @@ public class QueryQualificationDetailRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public QueryQualificationDetailRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public QueryQualificationDetailRequest setLang(String lang) {
@@ -51,6 +43,14 @@ public class QueryQualificationDetailRequest extends TeaModel {
     }
     public String getQualificationType() {
         return this.qualificationType;
+    }
+
+    public QueryQualificationDetailRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

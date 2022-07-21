@@ -4,23 +4,15 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDnsHostResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DnsHostList")
     public java.util.List<QueryDnsHostResponseBodyDnsHostList> dnsHostList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryDnsHostResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDnsHostResponseBody self = new QueryDnsHostResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDnsHostResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryDnsHostResponseBody setDnsHostList(java.util.List<QueryDnsHostResponseBodyDnsHostList> dnsHostList) {
@@ -29,6 +21,14 @@ public class QueryDnsHostResponseBody extends TeaModel {
     }
     public java.util.List<QueryDnsHostResponseBodyDnsHostList> getDnsHostList() {
         return this.dnsHostList;
+    }
+
+    public QueryDnsHostResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class QueryDnsHostResponseBodyDnsHostList extends TeaModel {

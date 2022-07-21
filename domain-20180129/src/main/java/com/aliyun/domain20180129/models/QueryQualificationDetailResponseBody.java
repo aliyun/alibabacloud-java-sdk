@@ -7,11 +7,11 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
     @NameInMap("AuditStatus")
     public Integer auditStatus;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Credentials")
     public QueryQualificationDetailResponseBodyCredentials credentials;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TrackId")
     public String trackId;
@@ -29,20 +29,20 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
         return this.auditStatus;
     }
 
-    public QueryQualificationDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public QueryQualificationDetailResponseBody setCredentials(QueryQualificationDetailResponseBodyCredentials credentials) {
         this.credentials = credentials;
         return this;
     }
     public QueryQualificationDetailResponseBodyCredentials getCredentials() {
         return this.credentials;
+    }
+
+    public QueryQualificationDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public QueryQualificationDetailResponseBody setTrackId(String trackId) {
@@ -54,11 +54,11 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
     }
 
     public static class QueryQualificationDetailResponseBodyCredentialsQualificationCredential extends TeaModel {
-        @NameInMap("CredentialType")
-        public String credentialType;
-
         @NameInMap("CredentialNo")
         public String credentialNo;
+
+        @NameInMap("CredentialType")
+        public String credentialType;
 
         @NameInMap("CredentialUrl")
         public String credentialUrl;
@@ -68,20 +68,20 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryQualificationDetailResponseBodyCredentialsQualificationCredential setCredentialType(String credentialType) {
-            this.credentialType = credentialType;
-            return this;
-        }
-        public String getCredentialType() {
-            return this.credentialType;
-        }
-
         public QueryQualificationDetailResponseBodyCredentialsQualificationCredential setCredentialNo(String credentialNo) {
             this.credentialNo = credentialNo;
             return this;
         }
         public String getCredentialNo() {
             return this.credentialNo;
+        }
+
+        public QueryQualificationDetailResponseBodyCredentialsQualificationCredential setCredentialType(String credentialType) {
+            this.credentialType = credentialType;
+            return this;
+        }
+        public String getCredentialType() {
+            return this.credentialType;
         }
 
         public QueryQualificationDetailResponseBodyCredentialsQualificationCredential setCredentialUrl(String credentialUrl) {

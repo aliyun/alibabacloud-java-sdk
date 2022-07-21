@@ -4,23 +4,15 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainAdminDivisionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AdminDivisions")
     public QueryDomainAdminDivisionResponseBodyAdminDivisions adminDivisions;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryDomainAdminDivisionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDomainAdminDivisionResponseBody self = new QueryDomainAdminDivisionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDomainAdminDivisionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryDomainAdminDivisionResponseBody setAdminDivisions(QueryDomainAdminDivisionResponseBodyAdminDivisions adminDivisions) {
@@ -29,6 +21,14 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
     }
     public QueryDomainAdminDivisionResponseBodyAdminDivisions getAdminDivisions() {
         return this.adminDivisions;
+    }
+
+    public QueryDomainAdminDivisionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivisionChildrenChildren extends TeaModel {
@@ -70,23 +70,15 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
     }
 
     public static class QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivision extends TeaModel {
-        @NameInMap("DivisionName")
-        public String divisionName;
-
         @NameInMap("Children")
         public QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivisionChildren children;
+
+        @NameInMap("DivisionName")
+        public String divisionName;
 
         public static QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivision build(java.util.Map<String, ?> map) throws Exception {
             QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivision self = new QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivision();
             return TeaModel.build(map, self);
-        }
-
-        public QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivision setDivisionName(String divisionName) {
-            this.divisionName = divisionName;
-            return this;
-        }
-        public String getDivisionName() {
-            return this.divisionName;
         }
 
         public QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivision setChildren(QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivisionChildren children) {
@@ -95,6 +87,14 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
         }
         public QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivisionChildren getChildren() {
             return this.children;
+        }
+
+        public QueryDomainAdminDivisionResponseBodyAdminDivisionsAdminDivision setDivisionName(String divisionName) {
+            this.divisionName = divisionName;
+            return this;
+        }
+        public String getDivisionName() {
+            return this.divisionName;
         }
 
     }

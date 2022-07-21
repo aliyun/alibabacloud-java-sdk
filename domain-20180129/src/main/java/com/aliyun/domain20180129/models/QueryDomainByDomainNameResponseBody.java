@@ -4,35 +4,29 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainByDomainNameResponseBody extends TeaModel {
-    @NameInMap("Email")
-    public String email;
+    @NameInMap("DnsList")
+    public QueryDomainByDomainNameResponseBodyDnsList dnsList;
 
-    @NameInMap("RegistrationDate")
-    public String registrationDate;
+    @NameInMap("DomainGroupId")
+    public Long domainGroupId;
 
-    @NameInMap("RegistrationDateLong")
-    public Long registrationDateLong;
+    @NameInMap("DomainGroupName")
+    public String domainGroupName;
 
-    @NameInMap("RealNameStatus")
-    public String realNameStatus;
+    @NameInMap("DomainName")
+    public String domainName;
 
-    @NameInMap("Premium")
-    public Boolean premium;
+    @NameInMap("DomainNameProxyService")
+    public Boolean domainNameProxyService;
 
     @NameInMap("DomainNameVerificationStatus")
     public String domainNameVerificationStatus;
 
-    @NameInMap("ExpirationDateLong")
-    public Long expirationDateLong;
+    @NameInMap("DomainType")
+    public String domainType;
 
-    @NameInMap("DnsList")
-    public QueryDomainByDomainNameResponseBodyDnsList dnsList;
-
-    @NameInMap("TransferOutStatus")
-    public String transferOutStatus;
-
-    @NameInMap("ZhRegistrantOrganization")
-    public String zhRegistrantOrganization;
+    @NameInMap("Email")
+    public String email;
 
     @NameInMap("EmailVerificationClientHold")
     public Boolean emailVerificationClientHold;
@@ -40,14 +34,32 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     @NameInMap("EmailVerificationStatus")
     public Integer emailVerificationStatus;
 
+    @NameInMap("ExpirationCurrDateDiff")
+    public Integer expirationCurrDateDiff;
+
+    @NameInMap("ExpirationDate")
+    public String expirationDate;
+
+    @NameInMap("ExpirationDateLong")
+    public Long expirationDateLong;
+
+    @NameInMap("ExpirationDateStatus")
+    public String expirationDateStatus;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("Premium")
+    public Boolean premium;
+
+    @NameInMap("RealNameStatus")
+    public String realNameStatus;
+
+    @NameInMap("RegistrantName")
+    public String registrantName;
+
     @NameInMap("RegistrantOrganization")
     public String registrantOrganization;
-
-    @NameInMap("TransferProhibitionLock")
-    public String transferProhibitionLock;
-
-    @NameInMap("DomainNameProxyService")
-    public Boolean domainNameProxyService;
 
     @NameInMap("RegistrantType")
     public String registrantType;
@@ -55,89 +67,42 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     @NameInMap("RegistrantUpdatingStatus")
     public String registrantUpdatingStatus;
 
+    @NameInMap("RegistrationDate")
+    public String registrationDate;
+
+    @NameInMap("RegistrationDateLong")
+    public Long registrationDateLong;
+
+    @NameInMap("Remark")
+    public String remark;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("TransferOutStatus")
+    public String transferOutStatus;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("ZhRegistrantName")
-    public String zhRegistrantName;
-
-    @NameInMap("ExpirationDate")
-    public String expirationDate;
-
-    @NameInMap("RegistrantName")
-    public String registrantName;
-
-    @NameInMap("UserId")
-    public String userId;
+    @NameInMap("TransferProhibitionLock")
+    public String transferProhibitionLock;
 
     @NameInMap("UpdateProhibitionLock")
     public String updateProhibitionLock;
 
+    @NameInMap("UserId")
+    public String userId;
+
+    @NameInMap("ZhRegistrantName")
+    public String zhRegistrantName;
+
+    @NameInMap("ZhRegistrantOrganization")
+    public String zhRegistrantOrganization;
+
+    @NameInMap("domainStatus")
+    public String domainStatus;
+
     public static QueryDomainByDomainNameResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDomainByDomainNameResponseBody self = new QueryDomainByDomainNameResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDomainByDomainNameResponseBody setEmail(String email) {
-        this.email = email;
-        return this;
-    }
-    public String getEmail() {
-        return this.email;
-    }
-
-    public QueryDomainByDomainNameResponseBody setRegistrationDate(String registrationDate) {
-        this.registrationDate = registrationDate;
-        return this;
-    }
-    public String getRegistrationDate() {
-        return this.registrationDate;
-    }
-
-    public QueryDomainByDomainNameResponseBody setRegistrationDateLong(Long registrationDateLong) {
-        this.registrationDateLong = registrationDateLong;
-        return this;
-    }
-    public Long getRegistrationDateLong() {
-        return this.registrationDateLong;
-    }
-
-    public QueryDomainByDomainNameResponseBody setRealNameStatus(String realNameStatus) {
-        this.realNameStatus = realNameStatus;
-        return this;
-    }
-    public String getRealNameStatus() {
-        return this.realNameStatus;
-    }
-
-    public QueryDomainByDomainNameResponseBody setPremium(Boolean premium) {
-        this.premium = premium;
-        return this;
-    }
-    public Boolean getPremium() {
-        return this.premium;
-    }
-
-    public QueryDomainByDomainNameResponseBody setDomainNameVerificationStatus(String domainNameVerificationStatus) {
-        this.domainNameVerificationStatus = domainNameVerificationStatus;
-        return this;
-    }
-    public String getDomainNameVerificationStatus() {
-        return this.domainNameVerificationStatus;
-    }
-
-    public QueryDomainByDomainNameResponseBody setExpirationDateLong(Long expirationDateLong) {
-        this.expirationDateLong = expirationDateLong;
-        return this;
-    }
-    public Long getExpirationDateLong() {
-        return this.expirationDateLong;
     }
 
     public QueryDomainByDomainNameResponseBody setDnsList(QueryDomainByDomainNameResponseBodyDnsList dnsList) {
@@ -148,20 +113,60 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         return this.dnsList;
     }
 
-    public QueryDomainByDomainNameResponseBody setTransferOutStatus(String transferOutStatus) {
-        this.transferOutStatus = transferOutStatus;
+    public QueryDomainByDomainNameResponseBody setDomainGroupId(Long domainGroupId) {
+        this.domainGroupId = domainGroupId;
         return this;
     }
-    public String getTransferOutStatus() {
-        return this.transferOutStatus;
+    public Long getDomainGroupId() {
+        return this.domainGroupId;
     }
 
-    public QueryDomainByDomainNameResponseBody setZhRegistrantOrganization(String zhRegistrantOrganization) {
-        this.zhRegistrantOrganization = zhRegistrantOrganization;
+    public QueryDomainByDomainNameResponseBody setDomainGroupName(String domainGroupName) {
+        this.domainGroupName = domainGroupName;
         return this;
     }
-    public String getZhRegistrantOrganization() {
-        return this.zhRegistrantOrganization;
+    public String getDomainGroupName() {
+        return this.domainGroupName;
+    }
+
+    public QueryDomainByDomainNameResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public QueryDomainByDomainNameResponseBody setDomainNameProxyService(Boolean domainNameProxyService) {
+        this.domainNameProxyService = domainNameProxyService;
+        return this;
+    }
+    public Boolean getDomainNameProxyService() {
+        return this.domainNameProxyService;
+    }
+
+    public QueryDomainByDomainNameResponseBody setDomainNameVerificationStatus(String domainNameVerificationStatus) {
+        this.domainNameVerificationStatus = domainNameVerificationStatus;
+        return this;
+    }
+    public String getDomainNameVerificationStatus() {
+        return this.domainNameVerificationStatus;
+    }
+
+    public QueryDomainByDomainNameResponseBody setDomainType(String domainType) {
+        this.domainType = domainType;
+        return this;
+    }
+    public String getDomainType() {
+        return this.domainType;
+    }
+
+    public QueryDomainByDomainNameResponseBody setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public String getEmail() {
+        return this.email;
     }
 
     public QueryDomainByDomainNameResponseBody setEmailVerificationClientHold(Boolean emailVerificationClientHold) {
@@ -180,28 +185,76 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         return this.emailVerificationStatus;
     }
 
+    public QueryDomainByDomainNameResponseBody setExpirationCurrDateDiff(Integer expirationCurrDateDiff) {
+        this.expirationCurrDateDiff = expirationCurrDateDiff;
+        return this;
+    }
+    public Integer getExpirationCurrDateDiff() {
+        return this.expirationCurrDateDiff;
+    }
+
+    public QueryDomainByDomainNameResponseBody setExpirationDate(String expirationDate) {
+        this.expirationDate = expirationDate;
+        return this;
+    }
+    public String getExpirationDate() {
+        return this.expirationDate;
+    }
+
+    public QueryDomainByDomainNameResponseBody setExpirationDateLong(Long expirationDateLong) {
+        this.expirationDateLong = expirationDateLong;
+        return this;
+    }
+    public Long getExpirationDateLong() {
+        return this.expirationDateLong;
+    }
+
+    public QueryDomainByDomainNameResponseBody setExpirationDateStatus(String expirationDateStatus) {
+        this.expirationDateStatus = expirationDateStatus;
+        return this;
+    }
+    public String getExpirationDateStatus() {
+        return this.expirationDateStatus;
+    }
+
+    public QueryDomainByDomainNameResponseBody setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public QueryDomainByDomainNameResponseBody setPremium(Boolean premium) {
+        this.premium = premium;
+        return this;
+    }
+    public Boolean getPremium() {
+        return this.premium;
+    }
+
+    public QueryDomainByDomainNameResponseBody setRealNameStatus(String realNameStatus) {
+        this.realNameStatus = realNameStatus;
+        return this;
+    }
+    public String getRealNameStatus() {
+        return this.realNameStatus;
+    }
+
+    public QueryDomainByDomainNameResponseBody setRegistrantName(String registrantName) {
+        this.registrantName = registrantName;
+        return this;
+    }
+    public String getRegistrantName() {
+        return this.registrantName;
+    }
+
     public QueryDomainByDomainNameResponseBody setRegistrantOrganization(String registrantOrganization) {
         this.registrantOrganization = registrantOrganization;
         return this;
     }
     public String getRegistrantOrganization() {
         return this.registrantOrganization;
-    }
-
-    public QueryDomainByDomainNameResponseBody setTransferProhibitionLock(String transferProhibitionLock) {
-        this.transferProhibitionLock = transferProhibitionLock;
-        return this;
-    }
-    public String getTransferProhibitionLock() {
-        return this.transferProhibitionLock;
-    }
-
-    public QueryDomainByDomainNameResponseBody setDomainNameProxyService(Boolean domainNameProxyService) {
-        this.domainNameProxyService = domainNameProxyService;
-        return this;
-    }
-    public Boolean getDomainNameProxyService() {
-        return this.domainNameProxyService;
     }
 
     public QueryDomainByDomainNameResponseBody setRegistrantType(String registrantType) {
@@ -220,6 +273,30 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         return this.registrantUpdatingStatus;
     }
 
+    public QueryDomainByDomainNameResponseBody setRegistrationDate(String registrationDate) {
+        this.registrationDate = registrationDate;
+        return this;
+    }
+    public String getRegistrationDate() {
+        return this.registrationDate;
+    }
+
+    public QueryDomainByDomainNameResponseBody setRegistrationDateLong(Long registrationDateLong) {
+        this.registrationDateLong = registrationDateLong;
+        return this;
+    }
+    public Long getRegistrationDateLong() {
+        return this.registrationDateLong;
+    }
+
+    public QueryDomainByDomainNameResponseBody setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
+    }
+
     public QueryDomainByDomainNameResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -228,44 +305,28 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryDomainByDomainNameResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
+    public QueryDomainByDomainNameResponseBody setTransferOutStatus(String transferOutStatus) {
+        this.transferOutStatus = transferOutStatus;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getTransferOutStatus() {
+        return this.transferOutStatus;
     }
 
-    public QueryDomainByDomainNameResponseBody setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public QueryDomainByDomainNameResponseBody setTransferProhibitionLock(String transferProhibitionLock) {
+        this.transferProhibitionLock = transferProhibitionLock;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getTransferProhibitionLock() {
+        return this.transferProhibitionLock;
     }
 
-    public QueryDomainByDomainNameResponseBody setZhRegistrantName(String zhRegistrantName) {
-        this.zhRegistrantName = zhRegistrantName;
+    public QueryDomainByDomainNameResponseBody setUpdateProhibitionLock(String updateProhibitionLock) {
+        this.updateProhibitionLock = updateProhibitionLock;
         return this;
     }
-    public String getZhRegistrantName() {
-        return this.zhRegistrantName;
-    }
-
-    public QueryDomainByDomainNameResponseBody setExpirationDate(String expirationDate) {
-        this.expirationDate = expirationDate;
-        return this;
-    }
-    public String getExpirationDate() {
-        return this.expirationDate;
-    }
-
-    public QueryDomainByDomainNameResponseBody setRegistrantName(String registrantName) {
-        this.registrantName = registrantName;
-        return this;
-    }
-    public String getRegistrantName() {
-        return this.registrantName;
+    public String getUpdateProhibitionLock() {
+        return this.updateProhibitionLock;
     }
 
     public QueryDomainByDomainNameResponseBody setUserId(String userId) {
@@ -276,12 +337,28 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         return this.userId;
     }
 
-    public QueryDomainByDomainNameResponseBody setUpdateProhibitionLock(String updateProhibitionLock) {
-        this.updateProhibitionLock = updateProhibitionLock;
+    public QueryDomainByDomainNameResponseBody setZhRegistrantName(String zhRegistrantName) {
+        this.zhRegistrantName = zhRegistrantName;
         return this;
     }
-    public String getUpdateProhibitionLock() {
-        return this.updateProhibitionLock;
+    public String getZhRegistrantName() {
+        return this.zhRegistrantName;
+    }
+
+    public QueryDomainByDomainNameResponseBody setZhRegistrantOrganization(String zhRegistrantOrganization) {
+        this.zhRegistrantOrganization = zhRegistrantOrganization;
+        return this;
+    }
+    public String getZhRegistrantOrganization() {
+        return this.zhRegistrantOrganization;
+    }
+
+    public QueryDomainByDomainNameResponseBody setDomainStatus(String domainStatus) {
+        this.domainStatus = domainStatus;
+        return this;
+    }
+    public String getDomainStatus() {
+        return this.domainStatus;
     }
 
     public static class QueryDomainByDomainNameResponseBodyDnsList extends TeaModel {

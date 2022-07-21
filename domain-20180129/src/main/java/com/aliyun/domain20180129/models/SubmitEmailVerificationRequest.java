@@ -4,11 +4,11 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SubmitEmailVerificationRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("Email")
     public String email;
+
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("SendIfExist")
     public Boolean sendIfExist;
@@ -21,20 +21,20 @@ public class SubmitEmailVerificationRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SubmitEmailVerificationRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
     public SubmitEmailVerificationRequest setEmail(String email) {
         this.email = email;
         return this;
     }
     public String getEmail() {
         return this.email;
+    }
+
+    public SubmitEmailVerificationRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public SubmitEmailVerificationRequest setSendIfExist(Boolean sendIfExist) {

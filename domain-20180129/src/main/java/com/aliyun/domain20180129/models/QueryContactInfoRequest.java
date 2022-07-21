@@ -4,37 +4,29 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryContactInfoRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("ContactType")
+    public String contactType;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("ContactType")
-    public String contactType;
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static QueryContactInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryContactInfoRequest self = new QueryContactInfoRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryContactInfoRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public QueryContactInfoRequest setContactType(String contactType) {
+        this.contactType = contactType;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public QueryContactInfoRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
+    public String getContactType() {
+        return this.contactType;
     }
 
     public QueryContactInfoRequest setDomainName(String domainName) {
@@ -45,12 +37,20 @@ public class QueryContactInfoRequest extends TeaModel {
         return this.domainName;
     }
 
-    public QueryContactInfoRequest setContactType(String contactType) {
-        this.contactType = contactType;
+    public QueryContactInfoRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getContactType() {
-        return this.contactType;
+    public String getLang() {
+        return this.lang;
+    }
+
+    public QueryContactInfoRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

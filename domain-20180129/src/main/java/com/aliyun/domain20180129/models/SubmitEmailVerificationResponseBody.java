@@ -4,29 +4,21 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SubmitEmailVerificationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ExistList")
     public java.util.List<SubmitEmailVerificationResponseBodyExistList> existList;
-
-    @NameInMap("SuccessList")
-    public java.util.List<SubmitEmailVerificationResponseBodySuccessList> successList;
 
     @NameInMap("FailList")
     public java.util.List<SubmitEmailVerificationResponseBodyFailList> failList;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SuccessList")
+    public java.util.List<SubmitEmailVerificationResponseBodySuccessList> successList;
+
     public static SubmitEmailVerificationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitEmailVerificationResponseBody self = new SubmitEmailVerificationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitEmailVerificationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SubmitEmailVerificationResponseBody setExistList(java.util.List<SubmitEmailVerificationResponseBodyExistList> existList) {
@@ -37,14 +29,6 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         return this.existList;
     }
 
-    public SubmitEmailVerificationResponseBody setSuccessList(java.util.List<SubmitEmailVerificationResponseBodySuccessList> successList) {
-        this.successList = successList;
-        return this;
-    }
-    public java.util.List<SubmitEmailVerificationResponseBodySuccessList> getSuccessList() {
-        return this.successList;
-    }
-
     public SubmitEmailVerificationResponseBody setFailList(java.util.List<SubmitEmailVerificationResponseBodyFailList> failList) {
         this.failList = failList;
         return this;
@@ -53,12 +37,28 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         return this.failList;
     }
 
-    public static class SubmitEmailVerificationResponseBodyExistList extends TeaModel {
-        @NameInMap("Email")
-        public String email;
+    public SubmitEmailVerificationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public SubmitEmailVerificationResponseBody setSuccessList(java.util.List<SubmitEmailVerificationResponseBodySuccessList> successList) {
+        this.successList = successList;
+        return this;
+    }
+    public java.util.List<SubmitEmailVerificationResponseBodySuccessList> getSuccessList() {
+        return this.successList;
+    }
+
+    public static class SubmitEmailVerificationResponseBodyExistList extends TeaModel {
         @NameInMap("Code")
         public String code;
+
+        @NameInMap("Email")
+        public String email;
 
         @NameInMap("Message")
         public String message;
@@ -68,20 +68,20 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public SubmitEmailVerificationResponseBodyExistList setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-        public String getEmail() {
-            return this.email;
-        }
-
         public SubmitEmailVerificationResponseBodyExistList setCode(String code) {
             this.code = code;
             return this;
         }
         public String getCode() {
             return this.code;
+        }
+
+        public SubmitEmailVerificationResponseBodyExistList setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
         }
 
         public SubmitEmailVerificationResponseBodyExistList setMessage(String message) {
@@ -94,53 +94,12 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
 
     }
 
-    public static class SubmitEmailVerificationResponseBodySuccessList extends TeaModel {
-        @NameInMap("Email")
-        public String email;
-
-        @NameInMap("Code")
-        public String code;
-
-        @NameInMap("Message")
-        public String message;
-
-        public static SubmitEmailVerificationResponseBodySuccessList build(java.util.Map<String, ?> map) throws Exception {
-            SubmitEmailVerificationResponseBodySuccessList self = new SubmitEmailVerificationResponseBodySuccessList();
-            return TeaModel.build(map, self);
-        }
-
-        public SubmitEmailVerificationResponseBodySuccessList setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-        public String getEmail() {
-            return this.email;
-        }
-
-        public SubmitEmailVerificationResponseBodySuccessList setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
-        public SubmitEmailVerificationResponseBodySuccessList setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
-    }
-
     public static class SubmitEmailVerificationResponseBodyFailList extends TeaModel {
-        @NameInMap("Email")
-        public String email;
-
         @NameInMap("Code")
         public String code;
+
+        @NameInMap("Email")
+        public String email;
 
         @NameInMap("Message")
         public String message;
@@ -148,14 +107,6 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         public static SubmitEmailVerificationResponseBodyFailList build(java.util.Map<String, ?> map) throws Exception {
             SubmitEmailVerificationResponseBodyFailList self = new SubmitEmailVerificationResponseBodyFailList();
             return TeaModel.build(map, self);
-        }
-
-        public SubmitEmailVerificationResponseBodyFailList setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-        public String getEmail() {
-            return this.email;
         }
 
         public SubmitEmailVerificationResponseBodyFailList setCode(String code) {
@@ -166,7 +117,56 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
             return this.code;
         }
 
+        public SubmitEmailVerificationResponseBodyFailList setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
+        }
+
         public SubmitEmailVerificationResponseBodyFailList setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+    }
+
+    public static class SubmitEmailVerificationResponseBodySuccessList extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("Email")
+        public String email;
+
+        @NameInMap("Message")
+        public String message;
+
+        public static SubmitEmailVerificationResponseBodySuccessList build(java.util.Map<String, ?> map) throws Exception {
+            SubmitEmailVerificationResponseBodySuccessList self = new SubmitEmailVerificationResponseBodySuccessList();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitEmailVerificationResponseBodySuccessList setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public SubmitEmailVerificationResponseBodySuccessList setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
+        }
+
+        public SubmitEmailVerificationResponseBodySuccessList setMessage(String message) {
             this.message = message;
             return this;
         }

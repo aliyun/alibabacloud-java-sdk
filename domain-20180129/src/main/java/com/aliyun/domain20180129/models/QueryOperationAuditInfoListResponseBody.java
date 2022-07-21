@@ -4,41 +4,33 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryOperationAuditInfoListResponseBody extends TeaModel {
-    @NameInMap("PrePage")
-    public Boolean prePage;
-
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("TotalPageNum")
-    public Integer totalPageNum;
 
     @NameInMap("Data")
     public java.util.List<QueryOperationAuditInfoListResponseBodyData> data;
 
+    @NameInMap("NextPage")
+    public Boolean nextPage;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("PrePage")
+    public Boolean prePage;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
-    @NameInMap("NextPage")
-    public Boolean nextPage;
+    @NameInMap("TotalPageNum")
+    public Integer totalPageNum;
 
     public static QueryOperationAuditInfoListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryOperationAuditInfoListResponseBody self = new QueryOperationAuditInfoListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryOperationAuditInfoListResponseBody setPrePage(Boolean prePage) {
-        this.prePage = prePage;
-        return this;
-    }
-    public Boolean getPrePage() {
-        return this.prePage;
     }
 
     public QueryOperationAuditInfoListResponseBody setCurrentPageNum(Integer currentPageNum) {
@@ -49,44 +41,12 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
         return this.currentPageNum;
     }
 
-    public QueryOperationAuditInfoListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryOperationAuditInfoListResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public QueryOperationAuditInfoListResponseBody setTotalPageNum(Integer totalPageNum) {
-        this.totalPageNum = totalPageNum;
-        return this;
-    }
-    public Integer getTotalPageNum() {
-        return this.totalPageNum;
-    }
-
     public QueryOperationAuditInfoListResponseBody setData(java.util.List<QueryOperationAuditInfoListResponseBodyData> data) {
         this.data = data;
         return this;
     }
     public java.util.List<QueryOperationAuditInfoListResponseBodyData> getData() {
         return this.data;
-    }
-
-    public QueryOperationAuditInfoListResponseBody setTotalItemNum(Integer totalItemNum) {
-        this.totalItemNum = totalItemNum;
-        return this;
-    }
-    public Integer getTotalItemNum() {
-        return this.totalItemNum;
     }
 
     public QueryOperationAuditInfoListResponseBody setNextPage(Boolean nextPage) {
@@ -97,15 +57,52 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
         return this.nextPage;
     }
 
+    public QueryOperationAuditInfoListResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public QueryOperationAuditInfoListResponseBody setPrePage(Boolean prePage) {
+        this.prePage = prePage;
+        return this;
+    }
+    public Boolean getPrePage() {
+        return this.prePage;
+    }
+
+    public QueryOperationAuditInfoListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryOperationAuditInfoListResponseBody setTotalItemNum(Integer totalItemNum) {
+        this.totalItemNum = totalItemNum;
+        return this;
+    }
+    public Integer getTotalItemNum() {
+        return this.totalItemNum;
+    }
+
+    public QueryOperationAuditInfoListResponseBody setTotalPageNum(Integer totalPageNum) {
+        this.totalPageNum = totalPageNum;
+        return this;
+    }
+    public Integer getTotalPageNum() {
+        return this.totalPageNum;
+    }
+
     public static class QueryOperationAuditInfoListResponseBodyData extends TeaModel {
-        @NameInMap("UpdateTime")
-        public Long updateTime;
+        @NameInMap("AuditInfo")
+        public String auditInfo;
 
-        @NameInMap("Remark")
-        public String remark;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
+        @NameInMap("AuditStatus")
+        public Integer auditStatus;
 
         @NameInMap("AuditType")
         public Integer auditType;
@@ -113,45 +110,40 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
         @NameInMap("BusinessName")
         public String businessName;
 
-        @NameInMap("AuditInfo")
-        public String auditInfo;
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("DomainName")
         public String domainName;
 
-        @NameInMap("AuditStatus")
-        public Integer auditStatus;
-
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("Remark")
+        public String remark;
+
+        @NameInMap("UpdateTime")
+        public Long updateTime;
 
         public static QueryOperationAuditInfoListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryOperationAuditInfoListResponseBodyData self = new QueryOperationAuditInfoListResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public QueryOperationAuditInfoListResponseBodyData setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
+        public QueryOperationAuditInfoListResponseBodyData setAuditInfo(String auditInfo) {
+            this.auditInfo = auditInfo;
             return this;
         }
-        public Long getUpdateTime() {
-            return this.updateTime;
+        public String getAuditInfo() {
+            return this.auditInfo;
         }
 
-        public QueryOperationAuditInfoListResponseBodyData setRemark(String remark) {
-            this.remark = remark;
+        public QueryOperationAuditInfoListResponseBodyData setAuditStatus(Integer auditStatus) {
+            this.auditStatus = auditStatus;
             return this;
         }
-        public String getRemark() {
-            return this.remark;
-        }
-
-        public QueryOperationAuditInfoListResponseBodyData setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
+        public Integer getAuditStatus() {
+            return this.auditStatus;
         }
 
         public QueryOperationAuditInfoListResponseBodyData setAuditType(Integer auditType) {
@@ -170,12 +162,12 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
             return this.businessName;
         }
 
-        public QueryOperationAuditInfoListResponseBodyData setAuditInfo(String auditInfo) {
-            this.auditInfo = auditInfo;
+        public QueryOperationAuditInfoListResponseBodyData setCreateTime(Long createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getAuditInfo() {
-            return this.auditInfo;
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public QueryOperationAuditInfoListResponseBodyData setDomainName(String domainName) {
@@ -186,20 +178,28 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
             return this.domainName;
         }
 
-        public QueryOperationAuditInfoListResponseBodyData setAuditStatus(Integer auditStatus) {
-            this.auditStatus = auditStatus;
-            return this;
-        }
-        public Integer getAuditStatus() {
-            return this.auditStatus;
-        }
-
         public QueryOperationAuditInfoListResponseBodyData setId(Long id) {
             this.id = id;
             return this;
         }
         public Long getId() {
             return this.id;
+        }
+
+        public QueryOperationAuditInfoListResponseBodyData setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public QueryOperationAuditInfoListResponseBodyData setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }

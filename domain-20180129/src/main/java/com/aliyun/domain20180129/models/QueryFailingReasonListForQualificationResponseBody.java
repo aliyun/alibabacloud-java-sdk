@@ -4,23 +4,15 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryFailingReasonListForQualificationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public java.util.List<QueryFailingReasonListForQualificationResponseBodyData> data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryFailingReasonListForQualificationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryFailingReasonListForQualificationResponseBody self = new QueryFailingReasonListForQualificationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryFailingReasonListForQualificationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryFailingReasonListForQualificationResponseBody setData(java.util.List<QueryFailingReasonListForQualificationResponseBodyData> data) {
@@ -29,6 +21,14 @@ public class QueryFailingReasonListForQualificationResponseBody extends TeaModel
     }
     public java.util.List<QueryFailingReasonListForQualificationResponseBodyData> getData() {
         return this.data;
+    }
+
+    public QueryFailingReasonListForQualificationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class QueryFailingReasonListForQualificationResponseBodyData extends TeaModel {

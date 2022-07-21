@@ -4,26 +4,26 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainByInstanceIdRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static QueryDomainByInstanceIdRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDomainByInstanceIdRequest self = new QueryDomainByInstanceIdRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryDomainByInstanceIdRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public QueryDomainByInstanceIdRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public QueryDomainByInstanceIdRequest setLang(String lang) {
@@ -34,12 +34,12 @@ public class QueryDomainByInstanceIdRequest extends TeaModel {
         return this.lang;
     }
 
-    public QueryDomainByInstanceIdRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public QueryDomainByInstanceIdRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

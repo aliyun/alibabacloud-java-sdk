@@ -7,17 +7,17 @@ public class CheckTransferInFeasibilityResponseBody extends TeaModel {
     @NameInMap("CanTransfer")
     public Boolean canTransfer;
 
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("ProductId")
     public String productId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CheckTransferInFeasibilityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CheckTransferInFeasibilityResponseBody self = new CheckTransferInFeasibilityResponseBody();
@@ -32,20 +32,20 @@ public class CheckTransferInFeasibilityResponseBody extends TeaModel {
         return this.canTransfer;
     }
 
+    public CheckTransferInFeasibilityResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
     public CheckTransferInFeasibilityResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
-    }
-
-    public CheckTransferInFeasibilityResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CheckTransferInFeasibilityResponseBody setProductId(String productId) {
@@ -56,12 +56,12 @@ public class CheckTransferInFeasibilityResponseBody extends TeaModel {
         return this.productId;
     }
 
-    public CheckTransferInFeasibilityResponseBody setCode(String code) {
-        this.code = code;
+    public CheckTransferInFeasibilityResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

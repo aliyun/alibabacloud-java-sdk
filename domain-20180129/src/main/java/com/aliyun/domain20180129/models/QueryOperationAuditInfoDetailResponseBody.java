@@ -10,29 +10,29 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
     @NameInMap("AuditStatus")
     public Integer auditStatus;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("AuditType")
+    public Integer auditType;
 
     @NameInMap("BusinessName")
     public String businessName;
 
-    @NameInMap("AuditType")
-    public Integer auditType;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("CreateTime")
     public Long createTime;
 
-    @NameInMap("UpdateTime")
-    public Long updateTime;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("Id")
     public String id;
 
     @NameInMap("Remark")
     public String remark;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("UpdateTime")
+    public Long updateTime;
 
     public static QueryOperationAuditInfoDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryOperationAuditInfoDetailResponseBody self = new QueryOperationAuditInfoDetailResponseBody();
@@ -55,12 +55,12 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
         return this.auditStatus;
     }
 
-    public QueryOperationAuditInfoDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryOperationAuditInfoDetailResponseBody setAuditType(Integer auditType) {
+        this.auditType = auditType;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getAuditType() {
+        return this.auditType;
     }
 
     public QueryOperationAuditInfoDetailResponseBody setBusinessName(String businessName) {
@@ -71,22 +71,6 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
         return this.businessName;
     }
 
-    public QueryOperationAuditInfoDetailResponseBody setAuditType(Integer auditType) {
-        this.auditType = auditType;
-        return this;
-    }
-    public Integer getAuditType() {
-        return this.auditType;
-    }
-
-    public QueryOperationAuditInfoDetailResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
     public QueryOperationAuditInfoDetailResponseBody setCreateTime(Long createTime) {
         this.createTime = createTime;
         return this;
@@ -95,12 +79,12 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public QueryOperationAuditInfoDetailResponseBody setUpdateTime(Long updateTime) {
-        this.updateTime = updateTime;
+    public QueryOperationAuditInfoDetailResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public Long getUpdateTime() {
-        return this.updateTime;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public QueryOperationAuditInfoDetailResponseBody setId(String id) {
@@ -117,6 +101,22 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public QueryOperationAuditInfoDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryOperationAuditInfoDetailResponseBody setUpdateTime(Long updateTime) {
+        this.updateTime = updateTime;
+        return this;
+    }
+    public Long getUpdateTime() {
+        return this.updateTime;
     }
 
 }

@@ -7,11 +7,11 @@ public class ResetQualificationVerificationRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("Lang")
     public String lang;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static ResetQualificationVerificationRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetQualificationVerificationRequest self = new ResetQualificationVerificationRequest();
@@ -26,20 +26,20 @@ public class ResetQualificationVerificationRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ResetQualificationVerificationRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
     public ResetQualificationVerificationRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ResetQualificationVerificationRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

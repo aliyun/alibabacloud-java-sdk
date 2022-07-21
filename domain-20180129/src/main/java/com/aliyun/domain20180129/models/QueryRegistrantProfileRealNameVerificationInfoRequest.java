@@ -4,8 +4,8 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryRegistrantProfileRealNameVerificationInfoRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("FetchImage")
+    public Boolean fetchImage;
 
     @NameInMap("Lang")
     public String lang;
@@ -13,20 +13,20 @@ public class QueryRegistrantProfileRealNameVerificationInfoRequest extends TeaMo
     @NameInMap("RegistrantProfileId")
     public Long registrantProfileId;
 
-    @NameInMap("FetchImage")
-    public Boolean fetchImage;
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static QueryRegistrantProfileRealNameVerificationInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryRegistrantProfileRealNameVerificationInfoRequest self = new QueryRegistrantProfileRealNameVerificationInfoRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryRegistrantProfileRealNameVerificationInfoRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public QueryRegistrantProfileRealNameVerificationInfoRequest setFetchImage(Boolean fetchImage) {
+        this.fetchImage = fetchImage;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public Boolean getFetchImage() {
+        return this.fetchImage;
     }
 
     public QueryRegistrantProfileRealNameVerificationInfoRequest setLang(String lang) {
@@ -45,12 +45,12 @@ public class QueryRegistrantProfileRealNameVerificationInfoRequest extends TeaMo
         return this.registrantProfileId;
     }
 
-    public QueryRegistrantProfileRealNameVerificationInfoRequest setFetchImage(Boolean fetchImage) {
-        this.fetchImage = fetchImage;
+    public QueryRegistrantProfileRealNameVerificationInfoRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
         return this;
     }
-    public Boolean getFetchImage() {
-        return this.fetchImage;
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

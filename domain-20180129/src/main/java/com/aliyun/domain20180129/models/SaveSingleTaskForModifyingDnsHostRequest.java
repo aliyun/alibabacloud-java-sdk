@@ -4,40 +4,24 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForModifyingDnsHostRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("DnsName")
     public String dnsName;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("Ip")
     public java.util.List<String> ip;
 
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     public static SaveSingleTaskForModifyingDnsHostRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveSingleTaskForModifyingDnsHostRequest self = new SaveSingleTaskForModifyingDnsHostRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SaveSingleTaskForModifyingDnsHostRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public SaveSingleTaskForModifyingDnsHostRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public SaveSingleTaskForModifyingDnsHostRequest setDnsName(String dnsName) {
@@ -48,12 +32,12 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends TeaModel {
         return this.dnsName;
     }
 
-    public SaveSingleTaskForModifyingDnsHostRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public SaveSingleTaskForModifyingDnsHostRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public SaveSingleTaskForModifyingDnsHostRequest setIp(java.util.List<String> ip) {
@@ -62,6 +46,22 @@ public class SaveSingleTaskForModifyingDnsHostRequest extends TeaModel {
     }
     public java.util.List<String> getIp() {
         return this.ip;
+    }
+
+    public SaveSingleTaskForModifyingDnsHostRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public SaveSingleTaskForModifyingDnsHostRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }
