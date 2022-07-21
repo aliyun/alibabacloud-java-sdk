@@ -4,14 +4,14 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryChangeLogListRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("EndDate")
+    public Long endDate;
 
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("DomainName")
-    public String domainName;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -22,28 +22,12 @@ public class QueryChangeLogListRequest extends TeaModel {
     @NameInMap("StartDate")
     public Long startDate;
 
-    @NameInMap("EndDate")
-    public Long endDate;
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static QueryChangeLogListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryChangeLogListRequest self = new QueryChangeLogListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryChangeLogListRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public QueryChangeLogListRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public QueryChangeLogListRequest setDomainName(String domainName) {
@@ -52,6 +36,22 @@ public class QueryChangeLogListRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public QueryChangeLogListRequest setEndDate(Long endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    public Long getEndDate() {
+        return this.endDate;
+    }
+
+    public QueryChangeLogListRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public QueryChangeLogListRequest setPageNum(Integer pageNum) {
@@ -78,12 +78,12 @@ public class QueryChangeLogListRequest extends TeaModel {
         return this.startDate;
     }
 
-    public QueryChangeLogListRequest setEndDate(Long endDate) {
-        this.endDate = endDate;
+    public QueryChangeLogListRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
         return this;
     }
-    public Long getEndDate() {
-        return this.endDate;
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

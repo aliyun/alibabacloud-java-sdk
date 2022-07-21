@@ -70,11 +70,11 @@ public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
     }
 
     public static class BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResult extends TeaModel {
-        @NameInMap("Keyword")
-        public String keyword;
-
         @NameInMap("Exist")
         public Boolean exist;
+
+        @NameInMap("Keyword")
+        public String keyword;
 
         @NameInMap("MatchedSentiveWords")
         public BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResultMatchedSentiveWords matchedSentiveWords;
@@ -84,20 +84,20 @@ public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResult setKeyword(String keyword) {
-            this.keyword = keyword;
-            return this;
-        }
-        public String getKeyword() {
-            return this.keyword;
-        }
-
         public BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResult setExist(Boolean exist) {
             this.exist = exist;
             return this;
         }
         public Boolean getExist() {
             return this.exist;
+        }
+
+        public BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResult setKeyword(String keyword) {
+            this.keyword = keyword;
+            return this;
+        }
+        public String getKeyword() {
+            return this.keyword;
         }
 
         public BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResult setMatchedSentiveWords(BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResultMatchedSentiveWords matchedSentiveWords) {

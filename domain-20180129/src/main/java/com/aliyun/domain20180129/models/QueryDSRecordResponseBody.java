@@ -4,23 +4,15 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDSRecordResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DSRecordList")
     public java.util.List<QueryDSRecordResponseBodyDSRecordList> DSRecordList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryDSRecordResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDSRecordResponseBody self = new QueryDSRecordResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDSRecordResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryDSRecordResponseBody setDSRecordList(java.util.List<QueryDSRecordResponseBodyDSRecordList> DSRecordList) {
@@ -31,15 +23,23 @@ public class QueryDSRecordResponseBody extends TeaModel {
         return this.DSRecordList;
     }
 
+    public QueryDSRecordResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class QueryDSRecordResponseBodyDSRecordList extends TeaModel {
-        @NameInMap("DigestType")
-        public Integer digestType;
+        @NameInMap("Algorithm")
+        public Integer algorithm;
 
         @NameInMap("Digest")
         public String digest;
 
-        @NameInMap("Algorithm")
-        public Integer algorithm;
+        @NameInMap("DigestType")
+        public Integer digestType;
 
         @NameInMap("KeyTag")
         public Integer keyTag;
@@ -49,12 +49,12 @@ public class QueryDSRecordResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryDSRecordResponseBodyDSRecordList setDigestType(Integer digestType) {
-            this.digestType = digestType;
+        public QueryDSRecordResponseBodyDSRecordList setAlgorithm(Integer algorithm) {
+            this.algorithm = algorithm;
             return this;
         }
-        public Integer getDigestType() {
-            return this.digestType;
+        public Integer getAlgorithm() {
+            return this.algorithm;
         }
 
         public QueryDSRecordResponseBodyDSRecordList setDigest(String digest) {
@@ -65,12 +65,12 @@ public class QueryDSRecordResponseBody extends TeaModel {
             return this.digest;
         }
 
-        public QueryDSRecordResponseBodyDSRecordList setAlgorithm(Integer algorithm) {
-            this.algorithm = algorithm;
+        public QueryDSRecordResponseBodyDSRecordList setDigestType(Integer digestType) {
+            this.digestType = digestType;
             return this;
         }
-        public Integer getAlgorithm() {
-            return this.algorithm;
+        public Integer getDigestType() {
+            return this.digestType;
         }
 
         public QueryDSRecordResponseBodyDSRecordList setKeyTag(Integer keyTag) {

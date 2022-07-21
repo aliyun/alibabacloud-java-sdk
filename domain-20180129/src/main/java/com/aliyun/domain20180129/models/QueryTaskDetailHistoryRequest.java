@@ -4,23 +4,14 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskDetailHistoryRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
-    @NameInMap("TaskNo")
-    public String taskNo;
-
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("DomainNameCursor")
     public String domainNameCursor;
 
-    @NameInMap("TaskStatus")
-    public Integer taskStatus;
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -28,33 +19,18 @@ public class QueryTaskDetailHistoryRequest extends TeaModel {
     @NameInMap("TaskDetailNoCursor")
     public String taskDetailNoCursor;
 
+    @NameInMap("TaskNo")
+    public String taskNo;
+
+    @NameInMap("TaskStatus")
+    public Integer taskStatus;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     public static QueryTaskDetailHistoryRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTaskDetailHistoryRequest self = new QueryTaskDetailHistoryRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryTaskDetailHistoryRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public QueryTaskDetailHistoryRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public QueryTaskDetailHistoryRequest setTaskNo(String taskNo) {
-        this.taskNo = taskNo;
-        return this;
-    }
-    public String getTaskNo() {
-        return this.taskNo;
     }
 
     public QueryTaskDetailHistoryRequest setDomainName(String domainName) {
@@ -73,12 +49,12 @@ public class QueryTaskDetailHistoryRequest extends TeaModel {
         return this.domainNameCursor;
     }
 
-    public QueryTaskDetailHistoryRequest setTaskStatus(Integer taskStatus) {
-        this.taskStatus = taskStatus;
+    public QueryTaskDetailHistoryRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public Integer getTaskStatus() {
-        return this.taskStatus;
+    public String getLang() {
+        return this.lang;
     }
 
     public QueryTaskDetailHistoryRequest setPageSize(Integer pageSize) {
@@ -95,6 +71,30 @@ public class QueryTaskDetailHistoryRequest extends TeaModel {
     }
     public String getTaskDetailNoCursor() {
         return this.taskDetailNoCursor;
+    }
+
+    public QueryTaskDetailHistoryRequest setTaskNo(String taskNo) {
+        this.taskNo = taskNo;
+        return this;
+    }
+    public String getTaskNo() {
+        return this.taskNo;
+    }
+
+    public QueryTaskDetailHistoryRequest setTaskStatus(Integer taskStatus) {
+        this.taskStatus = taskStatus;
+        return this;
+    }
+    public Integer getTaskStatus() {
+        return this.taskStatus;
+    }
+
+    public QueryTaskDetailHistoryRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

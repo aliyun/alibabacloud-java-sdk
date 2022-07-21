@@ -4,26 +4,18 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class AcknowledgeTaskResultRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("TaskDetailNo")
     public java.util.List<String> taskDetailNo;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     public static AcknowledgeTaskResultRequest build(java.util.Map<String, ?> map) throws Exception {
         AcknowledgeTaskResultRequest self = new AcknowledgeTaskResultRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AcknowledgeTaskResultRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public AcknowledgeTaskResultRequest setLang(String lang) {
@@ -40,6 +32,14 @@ public class AcknowledgeTaskResultRequest extends TeaModel {
     }
     public java.util.List<String> getTaskDetailNo() {
         return this.taskDetailNo;
+    }
+
+    public AcknowledgeTaskResultRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

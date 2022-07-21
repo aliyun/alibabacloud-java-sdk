@@ -4,23 +4,15 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainGroupListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public QueryDomainGroupListResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryDomainGroupListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDomainGroupListResponseBody self = new QueryDomainGroupListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDomainGroupListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryDomainGroupListResponseBody setData(QueryDomainGroupListResponseBodyData data) {
@@ -31,12 +23,20 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
         return this.data;
     }
 
+    public QueryDomainGroupListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class QueryDomainGroupListResponseBodyDataDomainGroup extends TeaModel {
         @NameInMap("BeingDeleted")
         public Boolean beingDeleted;
 
-        @NameInMap("DomainGroupStatus")
-        public String domainGroupStatus;
+        @NameInMap("CreationDate")
+        public String creationDate;
 
         @NameInMap("DomainGroupId")
         public String domainGroupId;
@@ -44,14 +44,14 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
         @NameInMap("DomainGroupName")
         public String domainGroupName;
 
+        @NameInMap("DomainGroupStatus")
+        public String domainGroupStatus;
+
         @NameInMap("ModificationDate")
         public String modificationDate;
 
         @NameInMap("TotalNumber")
         public Integer totalNumber;
-
-        @NameInMap("CreationDate")
-        public String creationDate;
 
         public static QueryDomainGroupListResponseBodyDataDomainGroup build(java.util.Map<String, ?> map) throws Exception {
             QueryDomainGroupListResponseBodyDataDomainGroup self = new QueryDomainGroupListResponseBodyDataDomainGroup();
@@ -66,12 +66,12 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
             return this.beingDeleted;
         }
 
-        public QueryDomainGroupListResponseBodyDataDomainGroup setDomainGroupStatus(String domainGroupStatus) {
-            this.domainGroupStatus = domainGroupStatus;
+        public QueryDomainGroupListResponseBodyDataDomainGroup setCreationDate(String creationDate) {
+            this.creationDate = creationDate;
             return this;
         }
-        public String getDomainGroupStatus() {
-            return this.domainGroupStatus;
+        public String getCreationDate() {
+            return this.creationDate;
         }
 
         public QueryDomainGroupListResponseBodyDataDomainGroup setDomainGroupId(String domainGroupId) {
@@ -90,6 +90,14 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
             return this.domainGroupName;
         }
 
+        public QueryDomainGroupListResponseBodyDataDomainGroup setDomainGroupStatus(String domainGroupStatus) {
+            this.domainGroupStatus = domainGroupStatus;
+            return this;
+        }
+        public String getDomainGroupStatus() {
+            return this.domainGroupStatus;
+        }
+
         public QueryDomainGroupListResponseBodyDataDomainGroup setModificationDate(String modificationDate) {
             this.modificationDate = modificationDate;
             return this;
@@ -104,14 +112,6 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
         }
         public Integer getTotalNumber() {
             return this.totalNumber;
-        }
-
-        public QueryDomainGroupListResponseBodyDataDomainGroup setCreationDate(String creationDate) {
-            this.creationDate = creationDate;
-            return this;
-        }
-        public String getCreationDate() {
-            return this.creationDate;
         }
 
     }

@@ -4,18 +4,26 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class ConfirmTransferInEmailResponseBody extends TeaModel {
+    @NameInMap("FailList")
+    public ConfirmTransferInEmailResponseBodyFailList failList;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SuccessList")
     public ConfirmTransferInEmailResponseBodySuccessList successList;
 
-    @NameInMap("FailList")
-    public ConfirmTransferInEmailResponseBodyFailList failList;
-
     public static ConfirmTransferInEmailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ConfirmTransferInEmailResponseBody self = new ConfirmTransferInEmailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ConfirmTransferInEmailResponseBody setFailList(ConfirmTransferInEmailResponseBodyFailList failList) {
+        this.failList = failList;
+        return this;
+    }
+    public ConfirmTransferInEmailResponseBodyFailList getFailList() {
+        return this.failList;
     }
 
     public ConfirmTransferInEmailResponseBody setRequestId(String requestId) {
@@ -34,12 +42,23 @@ public class ConfirmTransferInEmailResponseBody extends TeaModel {
         return this.successList;
     }
 
-    public ConfirmTransferInEmailResponseBody setFailList(ConfirmTransferInEmailResponseBodyFailList failList) {
-        this.failList = failList;
-        return this;
-    }
-    public ConfirmTransferInEmailResponseBodyFailList getFailList() {
-        return this.failList;
+    public static class ConfirmTransferInEmailResponseBodyFailList extends TeaModel {
+        @NameInMap("FailDomain")
+        public java.util.List<String> failDomain;
+
+        public static ConfirmTransferInEmailResponseBodyFailList build(java.util.Map<String, ?> map) throws Exception {
+            ConfirmTransferInEmailResponseBodyFailList self = new ConfirmTransferInEmailResponseBodyFailList();
+            return TeaModel.build(map, self);
+        }
+
+        public ConfirmTransferInEmailResponseBodyFailList setFailDomain(java.util.List<String> failDomain) {
+            this.failDomain = failDomain;
+            return this;
+        }
+        public java.util.List<String> getFailDomain() {
+            return this.failDomain;
+        }
+
     }
 
     public static class ConfirmTransferInEmailResponseBodySuccessList extends TeaModel {
@@ -57,25 +76,6 @@ public class ConfirmTransferInEmailResponseBody extends TeaModel {
         }
         public java.util.List<String> getSuccessDomain() {
             return this.successDomain;
-        }
-
-    }
-
-    public static class ConfirmTransferInEmailResponseBodyFailList extends TeaModel {
-        @NameInMap("FailDomain")
-        public java.util.List<String> failDomain;
-
-        public static ConfirmTransferInEmailResponseBodyFailList build(java.util.Map<String, ?> map) throws Exception {
-            ConfirmTransferInEmailResponseBodyFailList self = new ConfirmTransferInEmailResponseBodyFailList();
-            return TeaModel.build(map, self);
-        }
-
-        public ConfirmTransferInEmailResponseBodyFailList setFailDomain(java.util.List<String> failDomain) {
-            this.failDomain = failDomain;
-            return this;
-        }
-        public java.util.List<String> getFailDomain() {
-            return this.failDomain;
         }
 
     }

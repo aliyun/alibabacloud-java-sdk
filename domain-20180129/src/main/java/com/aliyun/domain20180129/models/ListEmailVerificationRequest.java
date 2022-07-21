@@ -4,20 +4,17 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class ListEmailVerificationRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("BeginCreateTime")
     public Long beginCreateTime;
-
-    @NameInMap("EndCreateTime")
-    public Long endCreateTime;
 
     @NameInMap("Email")
     public String email;
 
-    @NameInMap("VerificationStatus")
-    public Integer verificationStatus;
+    @NameInMap("EndCreateTime")
+    public Long endCreateTime;
+
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -28,17 +25,12 @@ public class ListEmailVerificationRequest extends TeaModel {
     @NameInMap("UserClientIp")
     public String userClientIp;
 
+    @NameInMap("VerificationStatus")
+    public Integer verificationStatus;
+
     public static ListEmailVerificationRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEmailVerificationRequest self = new ListEmailVerificationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListEmailVerificationRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public ListEmailVerificationRequest setBeginCreateTime(Long beginCreateTime) {
@@ -49,14 +41,6 @@ public class ListEmailVerificationRequest extends TeaModel {
         return this.beginCreateTime;
     }
 
-    public ListEmailVerificationRequest setEndCreateTime(Long endCreateTime) {
-        this.endCreateTime = endCreateTime;
-        return this;
-    }
-    public Long getEndCreateTime() {
-        return this.endCreateTime;
-    }
-
     public ListEmailVerificationRequest setEmail(String email) {
         this.email = email;
         return this;
@@ -65,12 +49,20 @@ public class ListEmailVerificationRequest extends TeaModel {
         return this.email;
     }
 
-    public ListEmailVerificationRequest setVerificationStatus(Integer verificationStatus) {
-        this.verificationStatus = verificationStatus;
+    public ListEmailVerificationRequest setEndCreateTime(Long endCreateTime) {
+        this.endCreateTime = endCreateTime;
         return this;
     }
-    public Integer getVerificationStatus() {
-        return this.verificationStatus;
+    public Long getEndCreateTime() {
+        return this.endCreateTime;
+    }
+
+    public ListEmailVerificationRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public ListEmailVerificationRequest setPageNum(Integer pageNum) {
@@ -95,6 +87,14 @@ public class ListEmailVerificationRequest extends TeaModel {
     }
     public String getUserClientIp() {
         return this.userClientIp;
+    }
+
+    public ListEmailVerificationRequest setVerificationStatus(Integer verificationStatus) {
+        this.verificationStatus = verificationStatus;
+        return this;
+    }
+    public Integer getVerificationStatus() {
+        return this.verificationStatus;
     }
 
 }

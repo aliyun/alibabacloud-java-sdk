@@ -4,23 +4,23 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryChangeLogListResponseBody extends TeaModel {
-    @NameInMap("PrePage")
-    public Boolean prePage;
-
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Data")
+    public QueryChangeLogListResponseBodyData data;
+
+    @NameInMap("NextPage")
+    public Boolean nextPage;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("TotalPageNum")
-    public Integer totalPageNum;
+    @NameInMap("PrePage")
+    public Boolean prePage;
 
-    @NameInMap("Data")
-    public QueryChangeLogListResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("ResultLimit")
     public Boolean resultLimit;
@@ -28,20 +28,12 @@ public class QueryChangeLogListResponseBody extends TeaModel {
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
-    @NameInMap("NextPage")
-    public Boolean nextPage;
+    @NameInMap("TotalPageNum")
+    public Integer totalPageNum;
 
     public static QueryChangeLogListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryChangeLogListResponseBody self = new QueryChangeLogListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryChangeLogListResponseBody setPrePage(Boolean prePage) {
-        this.prePage = prePage;
-        return this;
-    }
-    public Boolean getPrePage() {
-        return this.prePage;
     }
 
     public QueryChangeLogListResponseBody setCurrentPageNum(Integer currentPageNum) {
@@ -52,12 +44,20 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         return this.currentPageNum;
     }
 
-    public QueryChangeLogListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryChangeLogListResponseBody setData(QueryChangeLogListResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public QueryChangeLogListResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryChangeLogListResponseBody setNextPage(Boolean nextPage) {
+        this.nextPage = nextPage;
+        return this;
+    }
+    public Boolean getNextPage() {
+        return this.nextPage;
     }
 
     public QueryChangeLogListResponseBody setPageSize(Integer pageSize) {
@@ -68,20 +68,20 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryChangeLogListResponseBody setTotalPageNum(Integer totalPageNum) {
-        this.totalPageNum = totalPageNum;
+    public QueryChangeLogListResponseBody setPrePage(Boolean prePage) {
+        this.prePage = prePage;
         return this;
     }
-    public Integer getTotalPageNum() {
-        return this.totalPageNum;
+    public Boolean getPrePage() {
+        return this.prePage;
     }
 
-    public QueryChangeLogListResponseBody setData(QueryChangeLogListResponseBodyData data) {
-        this.data = data;
+    public QueryChangeLogListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public QueryChangeLogListResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public QueryChangeLogListResponseBody setResultLimit(Boolean resultLimit) {
@@ -100,60 +100,44 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         return this.totalItemNum;
     }
 
-    public QueryChangeLogListResponseBody setNextPage(Boolean nextPage) {
-        this.nextPage = nextPage;
+    public QueryChangeLogListResponseBody setTotalPageNum(Integer totalPageNum) {
+        this.totalPageNum = totalPageNum;
         return this;
     }
-    public Boolean getNextPage() {
-        return this.nextPage;
+    public Integer getTotalPageNum() {
+        return this.totalPageNum;
     }
 
     public static class QueryChangeLogListResponseBodyDataChangeLog extends TeaModel {
-        @NameInMap("Operation")
-        public String operation;
-
-        @NameInMap("Time")
-        public String time;
-
-        @NameInMap("Result")
-        public String result;
+        @NameInMap("Details")
+        public String details;
 
         @NameInMap("DomainName")
         public String domainName;
 
+        @NameInMap("Operation")
+        public String operation;
+
         @NameInMap("OperationIPAddress")
         public String operationIPAddress;
 
-        @NameInMap("Details")
-        public String details;
+        @NameInMap("Result")
+        public String result;
+
+        @NameInMap("Time")
+        public String time;
 
         public static QueryChangeLogListResponseBodyDataChangeLog build(java.util.Map<String, ?> map) throws Exception {
             QueryChangeLogListResponseBodyDataChangeLog self = new QueryChangeLogListResponseBodyDataChangeLog();
             return TeaModel.build(map, self);
         }
 
-        public QueryChangeLogListResponseBodyDataChangeLog setOperation(String operation) {
-            this.operation = operation;
+        public QueryChangeLogListResponseBodyDataChangeLog setDetails(String details) {
+            this.details = details;
             return this;
         }
-        public String getOperation() {
-            return this.operation;
-        }
-
-        public QueryChangeLogListResponseBodyDataChangeLog setTime(String time) {
-            this.time = time;
-            return this;
-        }
-        public String getTime() {
-            return this.time;
-        }
-
-        public QueryChangeLogListResponseBodyDataChangeLog setResult(String result) {
-            this.result = result;
-            return this;
-        }
-        public String getResult() {
-            return this.result;
+        public String getDetails() {
+            return this.details;
         }
 
         public QueryChangeLogListResponseBodyDataChangeLog setDomainName(String domainName) {
@@ -164,6 +148,14 @@ public class QueryChangeLogListResponseBody extends TeaModel {
             return this.domainName;
         }
 
+        public QueryChangeLogListResponseBodyDataChangeLog setOperation(String operation) {
+            this.operation = operation;
+            return this;
+        }
+        public String getOperation() {
+            return this.operation;
+        }
+
         public QueryChangeLogListResponseBodyDataChangeLog setOperationIPAddress(String operationIPAddress) {
             this.operationIPAddress = operationIPAddress;
             return this;
@@ -172,12 +164,20 @@ public class QueryChangeLogListResponseBody extends TeaModel {
             return this.operationIPAddress;
         }
 
-        public QueryChangeLogListResponseBodyDataChangeLog setDetails(String details) {
-            this.details = details;
+        public QueryChangeLogListResponseBodyDataChangeLog setResult(String result) {
+            this.result = result;
             return this;
         }
-        public String getDetails() {
-            return this.details;
+        public String getResult() {
+            return this.result;
+        }
+
+        public QueryChangeLogListResponseBodyDataChangeLog setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
         }
 
     }

@@ -4,37 +4,21 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainRealNameVerificationInfoRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("FetchImage")
     public Boolean fetchImage;
 
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     public static QueryDomainRealNameVerificationInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDomainRealNameVerificationInfoRequest self = new QueryDomainRealNameVerificationInfoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDomainRealNameVerificationInfoRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public QueryDomainRealNameVerificationInfoRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public QueryDomainRealNameVerificationInfoRequest setDomainName(String domainName) {
@@ -51,6 +35,22 @@ public class QueryDomainRealNameVerificationInfoRequest extends TeaModel {
     }
     public Boolean getFetchImage() {
         return this.fetchImage;
+    }
+
+    public QueryDomainRealNameVerificationInfoRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public QueryDomainRealNameVerificationInfoRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

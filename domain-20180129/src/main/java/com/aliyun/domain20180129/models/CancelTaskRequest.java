@@ -4,26 +4,18 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class CancelTaskRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("TaskNo")
     public String taskNo;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     public static CancelTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelTaskRequest self = new CancelTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CancelTaskRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public CancelTaskRequest setLang(String lang) {
@@ -40,6 +32,14 @@ public class CancelTaskRequest extends TeaModel {
     }
     public String getTaskNo() {
         return this.taskNo;
+    }
+
+    public CancelTaskRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

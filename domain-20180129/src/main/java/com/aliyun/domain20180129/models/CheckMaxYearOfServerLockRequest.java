@@ -4,6 +4,9 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class CheckMaxYearOfServerLockRequest extends TeaModel {
+    @NameInMap("CheckAction")
+    public String checkAction;
+
     @NameInMap("DomainName")
     public String domainName;
 
@@ -13,12 +16,17 @@ public class CheckMaxYearOfServerLockRequest extends TeaModel {
     @NameInMap("UserClientIp")
     public String userClientIp;
 
-    @NameInMap("CheckAction")
-    public String checkAction;
-
     public static CheckMaxYearOfServerLockRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckMaxYearOfServerLockRequest self = new CheckMaxYearOfServerLockRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CheckMaxYearOfServerLockRequest setCheckAction(String checkAction) {
+        this.checkAction = checkAction;
+        return this;
+    }
+    public String getCheckAction() {
+        return this.checkAction;
     }
 
     public CheckMaxYearOfServerLockRequest setDomainName(String domainName) {
@@ -43,14 +51,6 @@ public class CheckMaxYearOfServerLockRequest extends TeaModel {
     }
     public String getUserClientIp() {
         return this.userClientIp;
-    }
-
-    public CheckMaxYearOfServerLockRequest setCheckAction(String checkAction) {
-        this.checkAction = checkAction;
-        return this;
-    }
-    public String getCheckAction() {
-        return this.checkAction;
     }
 
 }

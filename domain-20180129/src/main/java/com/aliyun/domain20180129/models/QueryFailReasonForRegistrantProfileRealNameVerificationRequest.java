@@ -4,26 +4,18 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryFailReasonForRegistrantProfileRealNameVerificationRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("RegistrantProfileID")
     public Long registrantProfileID;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     public static QueryFailReasonForRegistrantProfileRealNameVerificationRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryFailReasonForRegistrantProfileRealNameVerificationRequest self = new QueryFailReasonForRegistrantProfileRealNameVerificationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryFailReasonForRegistrantProfileRealNameVerificationRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public QueryFailReasonForRegistrantProfileRealNameVerificationRequest setLang(String lang) {
@@ -40,6 +32,14 @@ public class QueryFailReasonForRegistrantProfileRealNameVerificationRequest exte
     }
     public Long getRegistrantProfileID() {
         return this.registrantProfileID;
+    }
+
+    public QueryFailReasonForRegistrantProfileRealNameVerificationRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

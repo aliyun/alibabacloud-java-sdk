@@ -4,11 +4,11 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryServerLockRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("UserClientIp")
     public String userClientIp;
@@ -18,20 +18,20 @@ public class QueryServerLockRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryServerLockRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
     public QueryServerLockRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public QueryServerLockRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public QueryServerLockRequest setUserClientIp(String userClientIp) {

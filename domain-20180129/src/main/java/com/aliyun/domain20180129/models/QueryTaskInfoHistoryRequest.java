@@ -4,46 +4,30 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskInfoHistoryRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("BeginCreateTime")
     public Long beginCreateTime;
-
-    @NameInMap("EndCreateTime")
-    public Long endCreateTime;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
 
     @NameInMap("CreateTimeCursor")
     public Long createTimeCursor;
 
+    @NameInMap("EndCreateTime")
+    public Long endCreateTime;
+
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("TaskNoCursor")
     public String taskNoCursor;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static QueryTaskInfoHistoryRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTaskInfoHistoryRequest self = new QueryTaskInfoHistoryRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryTaskInfoHistoryRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public QueryTaskInfoHistoryRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public QueryTaskInfoHistoryRequest setBeginCreateTime(Long beginCreateTime) {
@@ -54,12 +38,28 @@ public class QueryTaskInfoHistoryRequest extends TeaModel {
         return this.beginCreateTime;
     }
 
+    public QueryTaskInfoHistoryRequest setCreateTimeCursor(Long createTimeCursor) {
+        this.createTimeCursor = createTimeCursor;
+        return this;
+    }
+    public Long getCreateTimeCursor() {
+        return this.createTimeCursor;
+    }
+
     public QueryTaskInfoHistoryRequest setEndCreateTime(Long endCreateTime) {
         this.endCreateTime = endCreateTime;
         return this;
     }
     public Long getEndCreateTime() {
         return this.endCreateTime;
+    }
+
+    public QueryTaskInfoHistoryRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public QueryTaskInfoHistoryRequest setPageSize(Integer pageSize) {
@@ -70,20 +70,20 @@ public class QueryTaskInfoHistoryRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryTaskInfoHistoryRequest setCreateTimeCursor(Long createTimeCursor) {
-        this.createTimeCursor = createTimeCursor;
-        return this;
-    }
-    public Long getCreateTimeCursor() {
-        return this.createTimeCursor;
-    }
-
     public QueryTaskInfoHistoryRequest setTaskNoCursor(String taskNoCursor) {
         this.taskNoCursor = taskNoCursor;
         return this;
     }
     public String getTaskNoCursor() {
         return this.taskNoCursor;
+    }
+
+    public QueryTaskInfoHistoryRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

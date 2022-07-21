@@ -4,11 +4,8 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("DomainName")
+    public java.util.List<String> domainName;
 
     @NameInMap("IdentityCredential")
     public String identityCredential;
@@ -19,28 +16,23 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
     @NameInMap("IdentityCredentialType")
     public String identityCredentialType;
 
-    @NameInMap("DomainName")
-    public java.util.List<String> domainName;
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest self = new SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest();
         return TeaModel.build(map, self);
     }
 
-    public SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest setDomainName(java.util.List<String> domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
+    public java.util.List<String> getDomainName() {
+        return this.domainName;
     }
 
     public SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest setIdentityCredential(String identityCredential) {
@@ -67,12 +59,20 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
         return this.identityCredentialType;
     }
 
-    public SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest setDomainName(java.util.List<String> domainName) {
-        this.domainName = domainName;
+    public SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public java.util.List<String> getDomainName() {
-        return this.domainName;
+    public String getLang() {
+        return this.lang;
+    }
+
+    public SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

@@ -4,8 +4,8 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveBatchTaskForDomainNameProxyServiceRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("DomainName")
+    public java.util.List<String> domainName;
 
     @NameInMap("Lang")
     public String lang;
@@ -13,20 +13,20 @@ public class SaveBatchTaskForDomainNameProxyServiceRequest extends TeaModel {
     @NameInMap("Status")
     public Boolean status;
 
-    @NameInMap("DomainName")
-    public java.util.List<String> domainName;
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static SaveBatchTaskForDomainNameProxyServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveBatchTaskForDomainNameProxyServiceRequest self = new SaveBatchTaskForDomainNameProxyServiceRequest();
         return TeaModel.build(map, self);
     }
 
-    public SaveBatchTaskForDomainNameProxyServiceRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public SaveBatchTaskForDomainNameProxyServiceRequest setDomainName(java.util.List<String> domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public java.util.List<String> getDomainName() {
+        return this.domainName;
     }
 
     public SaveBatchTaskForDomainNameProxyServiceRequest setLang(String lang) {
@@ -45,12 +45,12 @@ public class SaveBatchTaskForDomainNameProxyServiceRequest extends TeaModel {
         return this.status;
     }
 
-    public SaveBatchTaskForDomainNameProxyServiceRequest setDomainName(java.util.List<String> domainName) {
-        this.domainName = domainName;
+    public SaveBatchTaskForDomainNameProxyServiceRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
         return this;
     }
-    public java.util.List<String> getDomainName() {
-        return this.domainName;
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

@@ -4,85 +4,45 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
-    @NameInMap("DomainName")
-    public String domainName;
-
-    @NameInMap("ObjectType")
-    public String objectType;
-
-    @NameInMap("MaterialsAndTechniques")
-    public String materialsAndTechniques;
+    @NameInMap("DateOrPeriod")
+    public String dateOrPeriod;
 
     @NameInMap("Dimensions")
     public String dimensions;
 
-    @NameInMap("Title")
-    public String title;
-
-    @NameInMap("DateOrPeriod")
-    public String dateOrPeriod;
-
-    @NameInMap("Maker")
-    public String maker;
-
-    @NameInMap("InscriptionsAndMarkings")
-    public String inscriptionsAndMarkings;
-
-    @NameInMap("Subject")
-    public String subject;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("Features")
     public String features;
 
-    @NameInMap("Reference")
-    public String reference;
+    @NameInMap("InscriptionsAndMarkings")
+    public String inscriptionsAndMarkings;
 
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("Maker")
+    public String maker;
+
+    @NameInMap("MaterialsAndTechniques")
+    public String materialsAndTechniques;
+
+    @NameInMap("ObjectType")
+    public String objectType;
+
+    @NameInMap("Reference")
+    public String reference;
+
+    @NameInMap("Subject")
+    public String subject;
+
+    @NameInMap("Title")
+    public String title;
+
     public static SaveSingleTaskForSaveArtExtensionRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveSingleTaskForSaveArtExtensionRequest self = new SaveSingleTaskForSaveArtExtensionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SaveSingleTaskForSaveArtExtensionRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public SaveSingleTaskForSaveArtExtensionRequest setObjectType(String objectType) {
-        this.objectType = objectType;
-        return this;
-    }
-    public String getObjectType() {
-        return this.objectType;
-    }
-
-    public SaveSingleTaskForSaveArtExtensionRequest setMaterialsAndTechniques(String materialsAndTechniques) {
-        this.materialsAndTechniques = materialsAndTechniques;
-        return this;
-    }
-    public String getMaterialsAndTechniques() {
-        return this.materialsAndTechniques;
-    }
-
-    public SaveSingleTaskForSaveArtExtensionRequest setDimensions(String dimensions) {
-        this.dimensions = dimensions;
-        return this;
-    }
-    public String getDimensions() {
-        return this.dimensions;
-    }
-
-    public SaveSingleTaskForSaveArtExtensionRequest setTitle(String title) {
-        this.title = title;
-        return this;
-    }
-    public String getTitle() {
-        return this.title;
     }
 
     public SaveSingleTaskForSaveArtExtensionRequest setDateOrPeriod(String dateOrPeriod) {
@@ -93,28 +53,20 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
         return this.dateOrPeriod;
     }
 
-    public SaveSingleTaskForSaveArtExtensionRequest setMaker(String maker) {
-        this.maker = maker;
+    public SaveSingleTaskForSaveArtExtensionRequest setDimensions(String dimensions) {
+        this.dimensions = dimensions;
         return this;
     }
-    public String getMaker() {
-        return this.maker;
+    public String getDimensions() {
+        return this.dimensions;
     }
 
-    public SaveSingleTaskForSaveArtExtensionRequest setInscriptionsAndMarkings(String inscriptionsAndMarkings) {
-        this.inscriptionsAndMarkings = inscriptionsAndMarkings;
+    public SaveSingleTaskForSaveArtExtensionRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getInscriptionsAndMarkings() {
-        return this.inscriptionsAndMarkings;
-    }
-
-    public SaveSingleTaskForSaveArtExtensionRequest setSubject(String subject) {
-        this.subject = subject;
-        return this;
-    }
-    public String getSubject() {
-        return this.subject;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public SaveSingleTaskForSaveArtExtensionRequest setFeatures(String features) {
@@ -125,12 +77,12 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
         return this.features;
     }
 
-    public SaveSingleTaskForSaveArtExtensionRequest setReference(String reference) {
-        this.reference = reference;
+    public SaveSingleTaskForSaveArtExtensionRequest setInscriptionsAndMarkings(String inscriptionsAndMarkings) {
+        this.inscriptionsAndMarkings = inscriptionsAndMarkings;
         return this;
     }
-    public String getReference() {
-        return this.reference;
+    public String getInscriptionsAndMarkings() {
+        return this.inscriptionsAndMarkings;
     }
 
     public SaveSingleTaskForSaveArtExtensionRequest setLang(String lang) {
@@ -139,6 +91,54 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public SaveSingleTaskForSaveArtExtensionRequest setMaker(String maker) {
+        this.maker = maker;
+        return this;
+    }
+    public String getMaker() {
+        return this.maker;
+    }
+
+    public SaveSingleTaskForSaveArtExtensionRequest setMaterialsAndTechniques(String materialsAndTechniques) {
+        this.materialsAndTechniques = materialsAndTechniques;
+        return this;
+    }
+    public String getMaterialsAndTechniques() {
+        return this.materialsAndTechniques;
+    }
+
+    public SaveSingleTaskForSaveArtExtensionRequest setObjectType(String objectType) {
+        this.objectType = objectType;
+        return this;
+    }
+    public String getObjectType() {
+        return this.objectType;
+    }
+
+    public SaveSingleTaskForSaveArtExtensionRequest setReference(String reference) {
+        this.reference = reference;
+        return this;
+    }
+    public String getReference() {
+        return this.reference;
+    }
+
+    public SaveSingleTaskForSaveArtExtensionRequest setSubject(String subject) {
+        this.subject = subject;
+        return this;
+    }
+    public String getSubject() {
+        return this.subject;
+    }
+
+    public SaveSingleTaskForSaveArtExtensionRequest setTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    public String getTitle() {
+        return this.title;
     }
 
 }

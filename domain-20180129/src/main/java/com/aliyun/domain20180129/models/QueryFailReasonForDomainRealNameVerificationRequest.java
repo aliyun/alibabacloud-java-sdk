@@ -4,37 +4,21 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryFailReasonForDomainRealNameVerificationRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("RealNameVerificationAction")
     public String realNameVerificationAction;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static QueryFailReasonForDomainRealNameVerificationRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryFailReasonForDomainRealNameVerificationRequest self = new QueryFailReasonForDomainRealNameVerificationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryFailReasonForDomainRealNameVerificationRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public QueryFailReasonForDomainRealNameVerificationRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public QueryFailReasonForDomainRealNameVerificationRequest setDomainName(String domainName) {
@@ -45,12 +29,28 @@ public class QueryFailReasonForDomainRealNameVerificationRequest extends TeaMode
         return this.domainName;
     }
 
+    public QueryFailReasonForDomainRealNameVerificationRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
     public QueryFailReasonForDomainRealNameVerificationRequest setRealNameVerificationAction(String realNameVerificationAction) {
         this.realNameVerificationAction = realNameVerificationAction;
         return this;
     }
     public String getRealNameVerificationAction() {
         return this.realNameVerificationAction;
+    }
+
+    public QueryFailReasonForDomainRealNameVerificationRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

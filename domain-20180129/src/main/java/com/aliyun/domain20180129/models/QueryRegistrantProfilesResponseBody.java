@@ -4,41 +4,33 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryRegistrantProfilesResponseBody extends TeaModel {
-    @NameInMap("PrePage")
-    public Boolean prePage;
-
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("TotalPageNum")
-    public Integer totalPageNum;
-
-    @NameInMap("RegistrantProfiles")
-    public QueryRegistrantProfilesResponseBodyRegistrantProfiles registrantProfiles;
-
-    @NameInMap("TotalItemNum")
-    public Integer totalItemNum;
 
     @NameInMap("NextPage")
     public Boolean nextPage;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("PrePage")
+    public Boolean prePage;
+
+    @NameInMap("RegistrantProfiles")
+    public QueryRegistrantProfilesResponseBodyRegistrantProfiles registrantProfiles;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalItemNum")
+    public Integer totalItemNum;
+
+    @NameInMap("TotalPageNum")
+    public Integer totalPageNum;
+
     public static QueryRegistrantProfilesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryRegistrantProfilesResponseBody self = new QueryRegistrantProfilesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryRegistrantProfilesResponseBody setPrePage(Boolean prePage) {
-        this.prePage = prePage;
-        return this;
-    }
-    public Boolean getPrePage() {
-        return this.prePage;
     }
 
     public QueryRegistrantProfilesResponseBody setCurrentPageNum(Integer currentPageNum) {
@@ -49,12 +41,12 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         return this.currentPageNum;
     }
 
-    public QueryRegistrantProfilesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryRegistrantProfilesResponseBody setNextPage(Boolean nextPage) {
+        this.nextPage = nextPage;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Boolean getNextPage() {
+        return this.nextPage;
     }
 
     public QueryRegistrantProfilesResponseBody setPageSize(Integer pageSize) {
@@ -65,12 +57,12 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryRegistrantProfilesResponseBody setTotalPageNum(Integer totalPageNum) {
-        this.totalPageNum = totalPageNum;
+    public QueryRegistrantProfilesResponseBody setPrePage(Boolean prePage) {
+        this.prePage = prePage;
         return this;
     }
-    public Integer getTotalPageNum() {
-        return this.totalPageNum;
+    public Boolean getPrePage() {
+        return this.prePage;
     }
 
     public QueryRegistrantProfilesResponseBody setRegistrantProfiles(QueryRegistrantProfilesResponseBodyRegistrantProfiles registrantProfiles) {
@@ -81,6 +73,14 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         return this.registrantProfiles;
     }
 
+    public QueryRegistrantProfilesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryRegistrantProfilesResponseBody setTotalItemNum(Integer totalItemNum) {
         this.totalItemNum = totalItemNum;
         return this;
@@ -89,162 +89,90 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         return this.totalItemNum;
     }
 
-    public QueryRegistrantProfilesResponseBody setNextPage(Boolean nextPage) {
-        this.nextPage = nextPage;
+    public QueryRegistrantProfilesResponseBody setTotalPageNum(Integer totalPageNum) {
+        this.totalPageNum = totalPageNum;
         return this;
     }
-    public Boolean getNextPage() {
-        return this.nextPage;
+    public Integer getTotalPageNum() {
+        return this.totalPageNum;
     }
 
     public static class QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile extends TeaModel {
-        @NameInMap("TelExt")
-        public String telExt;
-
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
-        @NameInMap("ZhProvince")
-        public String zhProvince;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("Telephone")
-        public String telephone;
-
-        @NameInMap("RegistrantOrganization")
-        public String registrantOrganization;
+        @NameInMap("Address")
+        public String address;
 
         @NameInMap("City")
         public String city;
 
-        @NameInMap("ZhCity")
-        public String zhCity;
+        @NameInMap("Country")
+        public String country;
 
-        @NameInMap("TelArea")
-        public String telArea;
-
-        @NameInMap("Address")
-        public String address;
-
-        @NameInMap("RealNameStatus")
-        public String realNameStatus;
-
-        @NameInMap("PostalCode")
-        public String postalCode;
-
-        @NameInMap("RegistrantProfileType")
-        public String registrantProfileType;
-
-        @NameInMap("RegistrantProfileId")
-        public Long registrantProfileId;
-
-        @NameInMap("ZhRegistrantOrganization")
-        public String zhRegistrantOrganization;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("DefaultRegistrantProfile")
         public Boolean defaultRegistrantProfile;
 
-        @NameInMap("ZhRegistrantName")
-        public String zhRegistrantName;
-
         @NameInMap("Email")
         public String email;
-
-        @NameInMap("RegistrantType")
-        public String registrantType;
-
-        @NameInMap("Country")
-        public String country;
-
-        @NameInMap("RegistrantName")
-        public String registrantName;
 
         @NameInMap("EmailVerificationStatus")
         public Integer emailVerificationStatus;
 
-        @NameInMap("ZhAddress")
-        public String zhAddress;
+        @NameInMap("PostalCode")
+        public String postalCode;
 
         @NameInMap("Province")
         public String province;
 
+        @NameInMap("RealNameStatus")
+        public String realNameStatus;
+
+        @NameInMap("RegistrantName")
+        public String registrantName;
+
+        @NameInMap("RegistrantOrganization")
+        public String registrantOrganization;
+
+        @NameInMap("RegistrantProfileId")
+        public Long registrantProfileId;
+
+        @NameInMap("RegistrantProfileType")
+        public String registrantProfileType;
+
+        @NameInMap("RegistrantType")
+        public String registrantType;
+
+        @NameInMap("TelArea")
+        public String telArea;
+
+        @NameInMap("TelExt")
+        public String telExt;
+
+        @NameInMap("Telephone")
+        public String telephone;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
+        @NameInMap("ZhAddress")
+        public String zhAddress;
+
+        @NameInMap("ZhCity")
+        public String zhCity;
+
+        @NameInMap("ZhProvince")
+        public String zhProvince;
+
+        @NameInMap("ZhRegistrantName")
+        public String zhRegistrantName;
+
+        @NameInMap("ZhRegistrantOrganization")
+        public String zhRegistrantOrganization;
+
         public static QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile build(java.util.Map<String, ?> map) throws Exception {
             QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile self = new QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile();
             return TeaModel.build(map, self);
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setTelExt(String telExt) {
-            this.telExt = telExt;
-            return this;
-        }
-        public String getTelExt() {
-            return this.telExt;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setZhProvince(String zhProvince) {
-            this.zhProvince = zhProvince;
-            return this;
-        }
-        public String getZhProvince() {
-            return this.zhProvince;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setTelephone(String telephone) {
-            this.telephone = telephone;
-            return this;
-        }
-        public String getTelephone() {
-            return this.telephone;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setRegistrantOrganization(String registrantOrganization) {
-            this.registrantOrganization = registrantOrganization;
-            return this;
-        }
-        public String getRegistrantOrganization() {
-            return this.registrantOrganization;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setCity(String city) {
-            this.city = city;
-            return this;
-        }
-        public String getCity() {
-            return this.city;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setZhCity(String zhCity) {
-            this.zhCity = zhCity;
-            return this;
-        }
-        public String getZhCity() {
-            return this.zhCity;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setTelArea(String telArea) {
-            this.telArea = telArea;
-            return this;
-        }
-        public String getTelArea() {
-            return this.telArea;
         }
 
         public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setAddress(String address) {
@@ -255,76 +183,12 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             return this.address;
         }
 
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setRealNameStatus(String realNameStatus) {
-            this.realNameStatus = realNameStatus;
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setCity(String city) {
+            this.city = city;
             return this;
         }
-        public String getRealNameStatus() {
-            return this.realNameStatus;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setPostalCode(String postalCode) {
-            this.postalCode = postalCode;
-            return this;
-        }
-        public String getPostalCode() {
-            return this.postalCode;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setRegistrantProfileType(String registrantProfileType) {
-            this.registrantProfileType = registrantProfileType;
-            return this;
-        }
-        public String getRegistrantProfileType() {
-            return this.registrantProfileType;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setRegistrantProfileId(Long registrantProfileId) {
-            this.registrantProfileId = registrantProfileId;
-            return this;
-        }
-        public Long getRegistrantProfileId() {
-            return this.registrantProfileId;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setZhRegistrantOrganization(String zhRegistrantOrganization) {
-            this.zhRegistrantOrganization = zhRegistrantOrganization;
-            return this;
-        }
-        public String getZhRegistrantOrganization() {
-            return this.zhRegistrantOrganization;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setDefaultRegistrantProfile(Boolean defaultRegistrantProfile) {
-            this.defaultRegistrantProfile = defaultRegistrantProfile;
-            return this;
-        }
-        public Boolean getDefaultRegistrantProfile() {
-            return this.defaultRegistrantProfile;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setZhRegistrantName(String zhRegistrantName) {
-            this.zhRegistrantName = zhRegistrantName;
-            return this;
-        }
-        public String getZhRegistrantName() {
-            return this.zhRegistrantName;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-        public String getEmail() {
-            return this.email;
-        }
-
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setRegistrantType(String registrantType) {
-            this.registrantType = registrantType;
-            return this;
-        }
-        public String getRegistrantType() {
-            return this.registrantType;
+        public String getCity() {
+            return this.city;
         }
 
         public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setCountry(String country) {
@@ -335,12 +199,28 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             return this.country;
         }
 
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setRegistrantName(String registrantName) {
-            this.registrantName = registrantName;
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getRegistrantName() {
-            return this.registrantName;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setDefaultRegistrantProfile(Boolean defaultRegistrantProfile) {
+            this.defaultRegistrantProfile = defaultRegistrantProfile;
+            return this;
+        }
+        public Boolean getDefaultRegistrantProfile() {
+            return this.defaultRegistrantProfile;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
         }
 
         public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setEmailVerificationStatus(Integer emailVerificationStatus) {
@@ -351,12 +231,12 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             return this.emailVerificationStatus;
         }
 
-        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setZhAddress(String zhAddress) {
-            this.zhAddress = zhAddress;
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setPostalCode(String postalCode) {
+            this.postalCode = postalCode;
             return this;
         }
-        public String getZhAddress() {
-            return this.zhAddress;
+        public String getPostalCode() {
+            return this.postalCode;
         }
 
         public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setProvince(String province) {
@@ -365,6 +245,126 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         }
         public String getProvince() {
             return this.province;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setRealNameStatus(String realNameStatus) {
+            this.realNameStatus = realNameStatus;
+            return this;
+        }
+        public String getRealNameStatus() {
+            return this.realNameStatus;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setRegistrantName(String registrantName) {
+            this.registrantName = registrantName;
+            return this;
+        }
+        public String getRegistrantName() {
+            return this.registrantName;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setRegistrantOrganization(String registrantOrganization) {
+            this.registrantOrganization = registrantOrganization;
+            return this;
+        }
+        public String getRegistrantOrganization() {
+            return this.registrantOrganization;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setRegistrantProfileId(Long registrantProfileId) {
+            this.registrantProfileId = registrantProfileId;
+            return this;
+        }
+        public Long getRegistrantProfileId() {
+            return this.registrantProfileId;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setRegistrantProfileType(String registrantProfileType) {
+            this.registrantProfileType = registrantProfileType;
+            return this;
+        }
+        public String getRegistrantProfileType() {
+            return this.registrantProfileType;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setRegistrantType(String registrantType) {
+            this.registrantType = registrantType;
+            return this;
+        }
+        public String getRegistrantType() {
+            return this.registrantType;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setTelArea(String telArea) {
+            this.telArea = telArea;
+            return this;
+        }
+        public String getTelArea() {
+            return this.telArea;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setTelExt(String telExt) {
+            this.telExt = telExt;
+            return this;
+        }
+        public String getTelExt() {
+            return this.telExt;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setTelephone(String telephone) {
+            this.telephone = telephone;
+            return this;
+        }
+        public String getTelephone() {
+            return this.telephone;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setZhAddress(String zhAddress) {
+            this.zhAddress = zhAddress;
+            return this;
+        }
+        public String getZhAddress() {
+            return this.zhAddress;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setZhCity(String zhCity) {
+            this.zhCity = zhCity;
+            return this;
+        }
+        public String getZhCity() {
+            return this.zhCity;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setZhProvince(String zhProvince) {
+            this.zhProvince = zhProvince;
+            return this;
+        }
+        public String getZhProvince() {
+            return this.zhProvince;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setZhRegistrantName(String zhRegistrantName) {
+            this.zhRegistrantName = zhRegistrantName;
+            return this;
+        }
+        public String getZhRegistrantName() {
+            return this.zhRegistrantName;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setZhRegistrantOrganization(String zhRegistrantOrganization) {
+            this.zhRegistrantOrganization = zhRegistrantOrganization;
+            return this;
+        }
+        public String getZhRegistrantOrganization() {
+            return this.zhRegistrantOrganization;
         }
 
     }

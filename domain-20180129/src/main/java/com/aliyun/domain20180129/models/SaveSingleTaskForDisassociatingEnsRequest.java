@@ -4,26 +4,18 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForDisassociatingEnsRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     public static SaveSingleTaskForDisassociatingEnsRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveSingleTaskForDisassociatingEnsRequest self = new SaveSingleTaskForDisassociatingEnsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SaveSingleTaskForDisassociatingEnsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public SaveSingleTaskForDisassociatingEnsRequest setDomainName(String domainName) {
@@ -40,6 +32,14 @@ public class SaveSingleTaskForDisassociatingEnsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public SaveSingleTaskForDisassociatingEnsRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

@@ -4,11 +4,11 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class TransferInCheckMailTokenRequest extends TeaModel {
-    @NameInMap("Token")
-    public String token;
-
     @NameInMap("Lang")
     public String lang;
+
+    @NameInMap("Token")
+    public String token;
 
     @NameInMap("UserClientIp")
     public String userClientIp;
@@ -18,20 +18,20 @@ public class TransferInCheckMailTokenRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public TransferInCheckMailTokenRequest setToken(String token) {
-        this.token = token;
-        return this;
-    }
-    public String getToken() {
-        return this.token;
-    }
-
     public TransferInCheckMailTokenRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public TransferInCheckMailTokenRequest setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
     }
 
     public TransferInCheckMailTokenRequest setUserClientIp(String userClientIp) {

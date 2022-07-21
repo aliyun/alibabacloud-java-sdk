@@ -4,23 +4,15 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public java.util.List<QueryFailReasonForRegistrantProfileRealNameVerificationResponseBodyData> data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody self = new QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody setData(java.util.List<QueryFailReasonForRegistrantProfileRealNameVerificationResponseBodyData> data) {
@@ -29,6 +21,14 @@ public class QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody
     }
     public java.util.List<QueryFailReasonForRegistrantProfileRealNameVerificationResponseBodyData> getData() {
         return this.data;
+    }
+
+    public QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class QueryFailReasonForRegistrantProfileRealNameVerificationResponseBodyData extends TeaModel {

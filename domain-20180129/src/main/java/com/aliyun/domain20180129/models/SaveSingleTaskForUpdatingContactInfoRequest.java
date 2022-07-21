@@ -4,11 +4,11 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForUpdatingContactInfoRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("AddTransferLock")
+    public Boolean addTransferLock;
 
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("ContactType")
+    public String contactType;
 
     @NameInMap("DomainName")
     public String domainName;
@@ -16,34 +16,34 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Lang")
+    public String lang;
+
     @NameInMap("RegistrantProfileId")
     public Long registrantProfileId;
 
-    @NameInMap("ContactType")
-    public String contactType;
-
-    @NameInMap("AddTransferLock")
-    public Boolean addTransferLock;
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static SaveSingleTaskForUpdatingContactInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveSingleTaskForUpdatingContactInfoRequest self = new SaveSingleTaskForUpdatingContactInfoRequest();
         return TeaModel.build(map, self);
     }
 
-    public SaveSingleTaskForUpdatingContactInfoRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public SaveSingleTaskForUpdatingContactInfoRequest setAddTransferLock(Boolean addTransferLock) {
+        this.addTransferLock = addTransferLock;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public Boolean getAddTransferLock() {
+        return this.addTransferLock;
     }
 
-    public SaveSingleTaskForUpdatingContactInfoRequest setLang(String lang) {
-        this.lang = lang;
+    public SaveSingleTaskForUpdatingContactInfoRequest setContactType(String contactType) {
+        this.contactType = contactType;
         return this;
     }
-    public String getLang() {
-        return this.lang;
+    public String getContactType() {
+        return this.contactType;
     }
 
     public SaveSingleTaskForUpdatingContactInfoRequest setDomainName(String domainName) {
@@ -62,6 +62,14 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public SaveSingleTaskForUpdatingContactInfoRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
     public SaveSingleTaskForUpdatingContactInfoRequest setRegistrantProfileId(Long registrantProfileId) {
         this.registrantProfileId = registrantProfileId;
         return this;
@@ -70,20 +78,12 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends TeaModel {
         return this.registrantProfileId;
     }
 
-    public SaveSingleTaskForUpdatingContactInfoRequest setContactType(String contactType) {
-        this.contactType = contactType;
+    public SaveSingleTaskForUpdatingContactInfoRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
         return this;
     }
-    public String getContactType() {
-        return this.contactType;
-    }
-
-    public SaveSingleTaskForUpdatingContactInfoRequest setAddTransferLock(Boolean addTransferLock) {
-        this.addTransferLock = addTransferLock;
-        return this;
-    }
-    public Boolean getAddTransferLock() {
-        return this.addTransferLock;
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

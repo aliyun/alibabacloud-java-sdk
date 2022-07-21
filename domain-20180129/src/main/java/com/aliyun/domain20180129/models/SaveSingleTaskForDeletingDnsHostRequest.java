@@ -4,14 +4,14 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForDeletingDnsHostRequest extends TeaModel {
+    @NameInMap("DnsName")
+    public String dnsName;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("DnsName")
-    public String dnsName;
 
     @NameInMap("UserClientIp")
     public String userClientIp;
@@ -19,6 +19,14 @@ public class SaveSingleTaskForDeletingDnsHostRequest extends TeaModel {
     public static SaveSingleTaskForDeletingDnsHostRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveSingleTaskForDeletingDnsHostRequest self = new SaveSingleTaskForDeletingDnsHostRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SaveSingleTaskForDeletingDnsHostRequest setDnsName(String dnsName) {
+        this.dnsName = dnsName;
+        return this;
+    }
+    public String getDnsName() {
+        return this.dnsName;
     }
 
     public SaveSingleTaskForDeletingDnsHostRequest setInstanceId(String instanceId) {
@@ -35,14 +43,6 @@ public class SaveSingleTaskForDeletingDnsHostRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public SaveSingleTaskForDeletingDnsHostRequest setDnsName(String dnsName) {
-        this.dnsName = dnsName;
-        return this;
-    }
-    public String getDnsName() {
-        return this.dnsName;
     }
 
     public SaveSingleTaskForDeletingDnsHostRequest setUserClientIp(String userClientIp) {

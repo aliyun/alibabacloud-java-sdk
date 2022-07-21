@@ -4,23 +4,11 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryTransferInListRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
-    @NameInMap("SubmissionStartDate")
-    public Long submissionStartDate;
-
-    @NameInMap("SubmissionEndDate")
-    public Long submissionEndDate;
-
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("SimpleTransferInStatus")
-    public String simpleTransferInStatus;
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -28,41 +16,21 @@ public class QueryTransferInListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SimpleTransferInStatus")
+    public String simpleTransferInStatus;
+
+    @NameInMap("SubmissionEndDate")
+    public Long submissionEndDate;
+
+    @NameInMap("SubmissionStartDate")
+    public Long submissionStartDate;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     public static QueryTransferInListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTransferInListRequest self = new QueryTransferInListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryTransferInListRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public QueryTransferInListRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public QueryTransferInListRequest setSubmissionStartDate(Long submissionStartDate) {
-        this.submissionStartDate = submissionStartDate;
-        return this;
-    }
-    public Long getSubmissionStartDate() {
-        return this.submissionStartDate;
-    }
-
-    public QueryTransferInListRequest setSubmissionEndDate(Long submissionEndDate) {
-        this.submissionEndDate = submissionEndDate;
-        return this;
-    }
-    public Long getSubmissionEndDate() {
-        return this.submissionEndDate;
     }
 
     public QueryTransferInListRequest setDomainName(String domainName) {
@@ -73,12 +41,12 @@ public class QueryTransferInListRequest extends TeaModel {
         return this.domainName;
     }
 
-    public QueryTransferInListRequest setSimpleTransferInStatus(String simpleTransferInStatus) {
-        this.simpleTransferInStatus = simpleTransferInStatus;
+    public QueryTransferInListRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getSimpleTransferInStatus() {
-        return this.simpleTransferInStatus;
+    public String getLang() {
+        return this.lang;
     }
 
     public QueryTransferInListRequest setPageNum(Integer pageNum) {
@@ -95,6 +63,38 @@ public class QueryTransferInListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryTransferInListRequest setSimpleTransferInStatus(String simpleTransferInStatus) {
+        this.simpleTransferInStatus = simpleTransferInStatus;
+        return this;
+    }
+    public String getSimpleTransferInStatus() {
+        return this.simpleTransferInStatus;
+    }
+
+    public QueryTransferInListRequest setSubmissionEndDate(Long submissionEndDate) {
+        this.submissionEndDate = submissionEndDate;
+        return this;
+    }
+    public Long getSubmissionEndDate() {
+        return this.submissionEndDate;
+    }
+
+    public QueryTransferInListRequest setSubmissionStartDate(Long submissionStartDate) {
+        this.submissionStartDate = submissionStartDate;
+        return this;
+    }
+    public Long getSubmissionStartDate() {
+        return this.submissionStartDate;
+    }
+
+    public QueryTransferInListRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

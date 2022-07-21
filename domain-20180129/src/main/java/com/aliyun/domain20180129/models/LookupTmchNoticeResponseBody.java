@@ -7,20 +7,20 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
     @NameInMap("Claims")
     public LookupTmchNoticeResponseBodyClaims claims;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Id")
+    public Long id;
 
     @NameInMap("Label")
     public String label;
 
-    @NameInMap("Id")
-    public Long id;
+    @NameInMap("NotAfter")
+    public String notAfter;
 
     @NameInMap("NotBefore")
     public String notBefore;
 
-    @NameInMap("NotAfter")
-    public String notAfter;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static LookupTmchNoticeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         LookupTmchNoticeResponseBody self = new LookupTmchNoticeResponseBody();
@@ -35,12 +35,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         return this.claims;
     }
 
-    public LookupTmchNoticeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public LookupTmchNoticeResponseBody setId(Long id) {
+        this.id = id;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Long getId() {
+        return this.id;
     }
 
     public LookupTmchNoticeResponseBody setLabel(String label) {
@@ -51,12 +51,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         return this.label;
     }
 
-    public LookupTmchNoticeResponseBody setId(Long id) {
-        this.id = id;
+    public LookupTmchNoticeResponseBody setNotAfter(String notAfter) {
+        this.notAfter = notAfter;
         return this;
     }
-    public Long getId() {
-        return this.id;
+    public String getNotAfter() {
+        return this.notAfter;
     }
 
     public LookupTmchNoticeResponseBody setNotBefore(String notBefore) {
@@ -67,198 +67,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         return this.notBefore;
     }
 
-    public LookupTmchNoticeResponseBody setNotAfter(String notAfter) {
-        this.notAfter = notAfter;
+    public LookupTmchNoticeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getNotAfter() {
-        return this.notAfter;
-    }
-
-    public static class LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet extends TeaModel {
-        @NameInMap("Street")
-        public java.util.List<String> street;
-
-        public static LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet build(java.util.Map<String, ?> map) throws Exception {
-            LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet self = new LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet();
-            return TeaModel.build(map, self);
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet setStreet(java.util.List<String> street) {
-            this.street = street;
-            return this;
-        }
-        public java.util.List<String> getStreet() {
-            return this.street;
-        }
-
-    }
-
-    public static class LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr extends TeaModel {
-        @NameInMap("Cc")
-        public String cc;
-
-        @NameInMap("Sp")
-        public String sp;
-
-        @NameInMap("Pc")
-        public String pc;
-
-        @NameInMap("City")
-        public String city;
-
-        @NameInMap("Street")
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet street;
-
-        public static LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr build(java.util.Map<String, ?> map) throws Exception {
-            LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr self = new LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr();
-            return TeaModel.build(map, self);
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr setCc(String cc) {
-            this.cc = cc;
-            return this;
-        }
-        public String getCc() {
-            return this.cc;
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr setSp(String sp) {
-            this.sp = sp;
-            return this;
-        }
-        public String getSp() {
-            return this.sp;
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr setPc(String pc) {
-            this.pc = pc;
-            return this;
-        }
-        public String getPc() {
-            return this.pc;
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr setCity(String city) {
-            this.city = city;
-            return this;
-        }
-        public String getCity() {
-            return this.city;
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr setStreet(LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet street) {
-            this.street = street;
-            return this;
-        }
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet getStreet() {
-            return this.street;
-        }
-
-    }
-
-    public static class LookupTmchNoticeResponseBodyClaimsClaimContactsContact extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Voice")
-        public String voice;
-
-        @NameInMap("Email")
-        public String email;
-
-        @NameInMap("Fax")
-        public String fax;
-
-        @NameInMap("Addr")
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr addr;
-
-        @NameInMap("Org")
-        public String org;
-
-        @NameInMap("Name")
-        public String name;
-
-        public static LookupTmchNoticeResponseBodyClaimsClaimContactsContact build(java.util.Map<String, ?> map) throws Exception {
-            LookupTmchNoticeResponseBodyClaimsClaimContactsContact self = new LookupTmchNoticeResponseBodyClaimsClaimContactsContact();
-            return TeaModel.build(map, self);
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContact setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContact setVoice(String voice) {
-            this.voice = voice;
-            return this;
-        }
-        public String getVoice() {
-            return this.voice;
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContact setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-        public String getEmail() {
-            return this.email;
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContact setFax(String fax) {
-            this.fax = fax;
-            return this;
-        }
-        public String getFax() {
-            return this.fax;
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContact setAddr(LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr addr) {
-            this.addr = addr;
-            return this;
-        }
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr getAddr() {
-            return this.addr;
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContact setOrg(String org) {
-            this.org = org;
-            return this;
-        }
-        public String getOrg() {
-            return this.org;
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaimContactsContact setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-    }
-
-    public static class LookupTmchNoticeResponseBodyClaimsClaimContacts extends TeaModel {
-        @NameInMap("Contact")
-        public java.util.List<LookupTmchNoticeResponseBodyClaimsClaimContactsContact> contact;
-
-        public static LookupTmchNoticeResponseBodyClaimsClaimContacts build(java.util.Map<String, ?> map) throws Exception {
-            LookupTmchNoticeResponseBodyClaimsClaimContacts self = new LookupTmchNoticeResponseBodyClaimsClaimContacts();
-            return TeaModel.build(map, self);
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaimContacts setContact(java.util.List<LookupTmchNoticeResponseBodyClaimsClaimContactsContact> contact) {
-            this.contact = contact;
-            return this;
-        }
-        public java.util.List<LookupTmchNoticeResponseBodyClaimsClaimContactsContact> getContact() {
-            return this.contact;
-        }
-
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class LookupTmchNoticeResponseBodyClaimsClaimClassDescsClassDesc extends TeaModel {
@@ -310,6 +124,192 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
 
     }
 
+    public static class LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet extends TeaModel {
+        @NameInMap("Street")
+        public java.util.List<String> street;
+
+        public static LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet build(java.util.Map<String, ?> map) throws Exception {
+            LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet self = new LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet();
+            return TeaModel.build(map, self);
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet setStreet(java.util.List<String> street) {
+            this.street = street;
+            return this;
+        }
+        public java.util.List<String> getStreet() {
+            return this.street;
+        }
+
+    }
+
+    public static class LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr extends TeaModel {
+        @NameInMap("Cc")
+        public String cc;
+
+        @NameInMap("City")
+        public String city;
+
+        @NameInMap("Pc")
+        public String pc;
+
+        @NameInMap("Sp")
+        public String sp;
+
+        @NameInMap("Street")
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet street;
+
+        public static LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr build(java.util.Map<String, ?> map) throws Exception {
+            LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr self = new LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr();
+            return TeaModel.build(map, self);
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr setCc(String cc) {
+            this.cc = cc;
+            return this;
+        }
+        public String getCc() {
+            return this.cc;
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr setCity(String city) {
+            this.city = city;
+            return this;
+        }
+        public String getCity() {
+            return this.city;
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr setPc(String pc) {
+            this.pc = pc;
+            return this;
+        }
+        public String getPc() {
+            return this.pc;
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr setSp(String sp) {
+            this.sp = sp;
+            return this;
+        }
+        public String getSp() {
+            return this.sp;
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr setStreet(LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet street) {
+            this.street = street;
+            return this;
+        }
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddrStreet getStreet() {
+            return this.street;
+        }
+
+    }
+
+    public static class LookupTmchNoticeResponseBodyClaimsClaimContactsContact extends TeaModel {
+        @NameInMap("Addr")
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr addr;
+
+        @NameInMap("Email")
+        public String email;
+
+        @NameInMap("Fax")
+        public String fax;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Org")
+        public String org;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Voice")
+        public String voice;
+
+        public static LookupTmchNoticeResponseBodyClaimsClaimContactsContact build(java.util.Map<String, ?> map) throws Exception {
+            LookupTmchNoticeResponseBodyClaimsClaimContactsContact self = new LookupTmchNoticeResponseBodyClaimsClaimContactsContact();
+            return TeaModel.build(map, self);
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContact setAddr(LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr addr) {
+            this.addr = addr;
+            return this;
+        }
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContactAddr getAddr() {
+            return this.addr;
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContact setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContact setFax(String fax) {
+            this.fax = fax;
+            return this;
+        }
+        public String getFax() {
+            return this.fax;
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContact setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContact setOrg(String org) {
+            this.org = org;
+            return this;
+        }
+        public String getOrg() {
+            return this.org;
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContact setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaimContactsContact setVoice(String voice) {
+            this.voice = voice;
+            return this;
+        }
+        public String getVoice() {
+            return this.voice;
+        }
+
+    }
+
+    public static class LookupTmchNoticeResponseBodyClaimsClaimContacts extends TeaModel {
+        @NameInMap("Contact")
+        public java.util.List<LookupTmchNoticeResponseBodyClaimsClaimContactsContact> contact;
+
+        public static LookupTmchNoticeResponseBodyClaimsClaimContacts build(java.util.Map<String, ?> map) throws Exception {
+            LookupTmchNoticeResponseBodyClaimsClaimContacts self = new LookupTmchNoticeResponseBodyClaimsClaimContacts();
+            return TeaModel.build(map, self);
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaimContacts setContact(java.util.List<LookupTmchNoticeResponseBodyClaimsClaimContactsContact> contact) {
+            this.contact = contact;
+            return this;
+        }
+        public java.util.List<LookupTmchNoticeResponseBodyClaimsClaimContactsContact> getContact() {
+            return this.contact;
+        }
+
+    }
+
     public static class LookupTmchNoticeResponseBodyClaimsClaimHoldersHolderAddrStreet extends TeaModel {
         @NameInMap("Street")
         public java.util.List<String> street;
@@ -333,14 +333,14 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         @NameInMap("Cc")
         public String cc;
 
-        @NameInMap("Sp")
-        public String sp;
+        @NameInMap("City")
+        public String city;
 
         @NameInMap("Pc")
         public String pc;
 
-        @NameInMap("City")
-        public String city;
+        @NameInMap("Sp")
+        public String sp;
 
         @NameInMap("Street")
         public LookupTmchNoticeResponseBodyClaimsClaimHoldersHolderAddrStreet street;
@@ -358,12 +358,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
             return this.cc;
         }
 
-        public LookupTmchNoticeResponseBodyClaimsClaimHoldersHolderAddr setSp(String sp) {
-            this.sp = sp;
+        public LookupTmchNoticeResponseBodyClaimsClaimHoldersHolderAddr setCity(String city) {
+            this.city = city;
             return this;
         }
-        public String getSp() {
-            return this.sp;
+        public String getCity() {
+            return this.city;
         }
 
         public LookupTmchNoticeResponseBodyClaimsClaimHoldersHolderAddr setPc(String pc) {
@@ -374,12 +374,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
             return this.pc;
         }
 
-        public LookupTmchNoticeResponseBodyClaimsClaimHoldersHolderAddr setCity(String city) {
-            this.city = city;
+        public LookupTmchNoticeResponseBodyClaimsClaimHoldersHolderAddr setSp(String sp) {
+            this.sp = sp;
             return this;
         }
-        public String getCity() {
-            return this.city;
+        public String getSp() {
+            return this.sp;
         }
 
         public LookupTmchNoticeResponseBodyClaimsClaimHoldersHolderAddr setStreet(LookupTmchNoticeResponseBodyClaimsClaimHoldersHolderAddrStreet street) {
@@ -393,11 +393,11 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
     }
 
     public static class LookupTmchNoticeResponseBodyClaimsClaimHoldersHolder extends TeaModel {
-        @NameInMap("Entitlement")
-        public String entitlement;
-
         @NameInMap("Addr")
         public LookupTmchNoticeResponseBodyClaimsClaimHoldersHolderAddr addr;
+
+        @NameInMap("Entitlement")
+        public String entitlement;
 
         @NameInMap("Org")
         public String org;
@@ -407,20 +407,20 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public LookupTmchNoticeResponseBodyClaimsClaimHoldersHolder setEntitlement(String entitlement) {
-            this.entitlement = entitlement;
-            return this;
-        }
-        public String getEntitlement() {
-            return this.entitlement;
-        }
-
         public LookupTmchNoticeResponseBodyClaimsClaimHoldersHolder setAddr(LookupTmchNoticeResponseBodyClaimsClaimHoldersHolderAddr addr) {
             this.addr = addr;
             return this;
         }
         public LookupTmchNoticeResponseBodyClaimsClaimHoldersHolderAddr getAddr() {
             return this.addr;
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaimHoldersHolder setEntitlement(String entitlement) {
+            this.entitlement = entitlement;
+            return this;
+        }
+        public String getEntitlement() {
+            return this.entitlement;
         }
 
         public LookupTmchNoticeResponseBodyClaimsClaimHoldersHolder setOrg(String org) {
@@ -453,23 +453,15 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
     }
 
     public static class LookupTmchNoticeResponseBodyClaimsClaimJurDesc extends TeaModel {
-        @NameInMap("JurCC")
-        public String jurCC;
-
         @NameInMap("Desc")
         public String desc;
+
+        @NameInMap("JurCC")
+        public String jurCC;
 
         public static LookupTmchNoticeResponseBodyClaimsClaimJurDesc build(java.util.Map<String, ?> map) throws Exception {
             LookupTmchNoticeResponseBodyClaimsClaimJurDesc self = new LookupTmchNoticeResponseBodyClaimsClaimJurDesc();
             return TeaModel.build(map, self);
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaimJurDesc setJurCC(String jurCC) {
-            this.jurCC = jurCC;
-            return this;
-        }
-        public String getJurCC() {
-            return this.jurCC;
         }
 
         public LookupTmchNoticeResponseBodyClaimsClaimJurDesc setDesc(String desc) {
@@ -480,20 +472,25 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
             return this.desc;
         }
 
+        public LookupTmchNoticeResponseBodyClaimsClaimJurDesc setJurCC(String jurCC) {
+            this.jurCC = jurCC;
+            return this;
+        }
+        public String getJurCC() {
+            return this.jurCC;
+        }
+
     }
 
     public static class LookupTmchNoticeResponseBodyClaimsClaim extends TeaModel {
-        @NameInMap("GoodsAndServices")
-        public String goodsAndServices;
+        @NameInMap("ClassDescs")
+        public LookupTmchNoticeResponseBodyClaimsClaimClassDescs classDescs;
 
         @NameInMap("Contacts")
         public LookupTmchNoticeResponseBodyClaimsClaimContacts contacts;
 
-        @NameInMap("MarkName")
-        public String markName;
-
-        @NameInMap("ClassDescs")
-        public LookupTmchNoticeResponseBodyClaimsClaimClassDescs classDescs;
+        @NameInMap("GoodsAndServices")
+        public String goodsAndServices;
 
         @NameInMap("Holders")
         public LookupTmchNoticeResponseBodyClaimsClaimHolders holders;
@@ -501,17 +498,20 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         @NameInMap("JurDesc")
         public LookupTmchNoticeResponseBodyClaimsClaimJurDesc jurDesc;
 
+        @NameInMap("MarkName")
+        public String markName;
+
         public static LookupTmchNoticeResponseBodyClaimsClaim build(java.util.Map<String, ?> map) throws Exception {
             LookupTmchNoticeResponseBodyClaimsClaim self = new LookupTmchNoticeResponseBodyClaimsClaim();
             return TeaModel.build(map, self);
         }
 
-        public LookupTmchNoticeResponseBodyClaimsClaim setGoodsAndServices(String goodsAndServices) {
-            this.goodsAndServices = goodsAndServices;
+        public LookupTmchNoticeResponseBodyClaimsClaim setClassDescs(LookupTmchNoticeResponseBodyClaimsClaimClassDescs classDescs) {
+            this.classDescs = classDescs;
             return this;
         }
-        public String getGoodsAndServices() {
-            return this.goodsAndServices;
+        public LookupTmchNoticeResponseBodyClaimsClaimClassDescs getClassDescs() {
+            return this.classDescs;
         }
 
         public LookupTmchNoticeResponseBodyClaimsClaim setContacts(LookupTmchNoticeResponseBodyClaimsClaimContacts contacts) {
@@ -522,20 +522,12 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
             return this.contacts;
         }
 
-        public LookupTmchNoticeResponseBodyClaimsClaim setMarkName(String markName) {
-            this.markName = markName;
+        public LookupTmchNoticeResponseBodyClaimsClaim setGoodsAndServices(String goodsAndServices) {
+            this.goodsAndServices = goodsAndServices;
             return this;
         }
-        public String getMarkName() {
-            return this.markName;
-        }
-
-        public LookupTmchNoticeResponseBodyClaimsClaim setClassDescs(LookupTmchNoticeResponseBodyClaimsClaimClassDescs classDescs) {
-            this.classDescs = classDescs;
-            return this;
-        }
-        public LookupTmchNoticeResponseBodyClaimsClaimClassDescs getClassDescs() {
-            return this.classDescs;
+        public String getGoodsAndServices() {
+            return this.goodsAndServices;
         }
 
         public LookupTmchNoticeResponseBodyClaimsClaim setHolders(LookupTmchNoticeResponseBodyClaimsClaimHolders holders) {
@@ -552,6 +544,14 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         }
         public LookupTmchNoticeResponseBodyClaimsClaimJurDesc getJurDesc() {
             return this.jurDesc;
+        }
+
+        public LookupTmchNoticeResponseBodyClaimsClaim setMarkName(String markName) {
+            this.markName = markName;
+            return this;
+        }
+        public String getMarkName() {
+            return this.markName;
         }
 
     }

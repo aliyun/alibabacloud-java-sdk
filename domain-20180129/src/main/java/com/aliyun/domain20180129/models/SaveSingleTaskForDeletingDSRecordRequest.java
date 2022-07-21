@@ -7,11 +7,11 @@ public class SaveSingleTaskForDeletingDSRecordRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("KeyTag")
     public Integer keyTag;
+
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("UserClientIp")
     public String userClientIp;
@@ -29,20 +29,20 @@ public class SaveSingleTaskForDeletingDSRecordRequest extends TeaModel {
         return this.domainName;
     }
 
-    public SaveSingleTaskForDeletingDSRecordRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
     public SaveSingleTaskForDeletingDSRecordRequest setKeyTag(Integer keyTag) {
         this.keyTag = keyTag;
         return this;
     }
     public Integer getKeyTag() {
         return this.keyTag;
+    }
+
+    public SaveSingleTaskForDeletingDSRecordRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public SaveSingleTaskForDeletingDSRecordRequest setUserClientIp(String userClientIp) {

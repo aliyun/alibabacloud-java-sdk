@@ -4,14 +4,8 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class SubmitOperationCredentialsRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("AuditRecordId")
     public Long auditRecordId;
-
-    @NameInMap("RegType")
-    public Integer regType;
 
     @NameInMap("AuditType")
     public Integer auditType;
@@ -19,17 +13,15 @@ public class SubmitOperationCredentialsRequest extends TeaModel {
     @NameInMap("Credentials")
     public String credentials;
 
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("RegType")
+    public Integer regType;
+
     public static SubmitOperationCredentialsRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitOperationCredentialsRequest self = new SubmitOperationCredentialsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitOperationCredentialsRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public SubmitOperationCredentialsRequest setAuditRecordId(Long auditRecordId) {
@@ -38,14 +30,6 @@ public class SubmitOperationCredentialsRequest extends TeaModel {
     }
     public Long getAuditRecordId() {
         return this.auditRecordId;
-    }
-
-    public SubmitOperationCredentialsRequest setRegType(Integer regType) {
-        this.regType = regType;
-        return this;
-    }
-    public Integer getRegType() {
-        return this.regType;
     }
 
     public SubmitOperationCredentialsRequest setAuditType(Integer auditType) {
@@ -62,6 +46,22 @@ public class SubmitOperationCredentialsRequest extends TeaModel {
     }
     public String getCredentials() {
         return this.credentials;
+    }
+
+    public SubmitOperationCredentialsRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public SubmitOperationCredentialsRequest setRegType(Integer regType) {
+        this.regType = regType;
+        return this;
+    }
+    public Integer getRegType() {
+        return this.regType;
     }
 
 }

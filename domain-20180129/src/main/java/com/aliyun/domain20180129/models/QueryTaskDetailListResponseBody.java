@@ -4,41 +4,33 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskDetailListResponseBody extends TeaModel {
-    @NameInMap("PrePage")
-    public Boolean prePage;
-
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("TotalPageNum")
-    public Integer totalPageNum;
 
     @NameInMap("Data")
     public QueryTaskDetailListResponseBodyData data;
 
+    @NameInMap("NextPage")
+    public Boolean nextPage;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("PrePage")
+    public Boolean prePage;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
-    @NameInMap("NextPage")
-    public Boolean nextPage;
+    @NameInMap("TotalPageNum")
+    public Integer totalPageNum;
 
     public static QueryTaskDetailListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTaskDetailListResponseBody self = new QueryTaskDetailListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryTaskDetailListResponseBody setPrePage(Boolean prePage) {
-        this.prePage = prePage;
-        return this;
-    }
-    public Boolean getPrePage() {
-        return this.prePage;
     }
 
     public QueryTaskDetailListResponseBody setCurrentPageNum(Integer currentPageNum) {
@@ -49,44 +41,12 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         return this.currentPageNum;
     }
 
-    public QueryTaskDetailListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryTaskDetailListResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public QueryTaskDetailListResponseBody setTotalPageNum(Integer totalPageNum) {
-        this.totalPageNum = totalPageNum;
-        return this;
-    }
-    public Integer getTotalPageNum() {
-        return this.totalPageNum;
-    }
-
     public QueryTaskDetailListResponseBody setData(QueryTaskDetailListResponseBodyData data) {
         this.data = data;
         return this;
     }
     public QueryTaskDetailListResponseBodyData getData() {
         return this.data;
-    }
-
-    public QueryTaskDetailListResponseBody setTotalItemNum(Integer totalItemNum) {
-        this.totalItemNum = totalItemNum;
-        return this;
-    }
-    public Integer getTotalItemNum() {
-        return this.totalItemNum;
     }
 
     public QueryTaskDetailListResponseBody setNextPage(Boolean nextPage) {
@@ -97,24 +57,61 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         return this.nextPage;
     }
 
+    public QueryTaskDetailListResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public QueryTaskDetailListResponseBody setPrePage(Boolean prePage) {
+        this.prePage = prePage;
+        return this;
+    }
+    public Boolean getPrePage() {
+        return this.prePage;
+    }
+
+    public QueryTaskDetailListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryTaskDetailListResponseBody setTotalItemNum(Integer totalItemNum) {
+        this.totalItemNum = totalItemNum;
+        return this;
+    }
+    public Integer getTotalItemNum() {
+        return this.totalItemNum;
+    }
+
+    public QueryTaskDetailListResponseBody setTotalPageNum(Integer totalPageNum) {
+        this.totalPageNum = totalPageNum;
+        return this;
+    }
+    public Integer getTotalPageNum() {
+        return this.totalPageNum;
+    }
+
     public static class QueryTaskDetailListResponseBodyDataTaskDetail extends TeaModel {
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
-        @NameInMap("TaskDetailNo")
-        public String taskDetailNo;
-
         @NameInMap("CreateTime")
         public String createTime;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
 
         @NameInMap("DomainName")
         public String domainName;
 
-        @NameInMap("TaskType")
-        public String taskType;
+        @NameInMap("ErrorMsg")
+        public String errorMsg;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("TaskDetailNo")
+        public String taskDetailNo;
 
         @NameInMap("TaskNo")
         public String taskNo;
@@ -122,11 +119,14 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         @NameInMap("TaskResult")
         public String taskResult;
 
+        @NameInMap("TaskStatus")
+        public String taskStatus;
+
         @NameInMap("TaskStatusCode")
         public Integer taskStatusCode;
 
-        @NameInMap("TaskStatus")
-        public String taskStatus;
+        @NameInMap("TaskType")
+        public String taskType;
 
         @NameInMap("TaskTypeDescription")
         public String taskTypeDescription;
@@ -134,28 +134,12 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
         @NameInMap("TryCount")
         public Integer tryCount;
 
-        @NameInMap("ErrorMsg")
-        public String errorMsg;
+        @NameInMap("UpdateTime")
+        public String updateTime;
 
         public static QueryTaskDetailListResponseBodyDataTaskDetail build(java.util.Map<String, ?> map) throws Exception {
             QueryTaskDetailListResponseBodyDataTaskDetail self = new QueryTaskDetailListResponseBodyDataTaskDetail();
             return TeaModel.build(map, self);
-        }
-
-        public QueryTaskDetailListResponseBodyDataTaskDetail setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public QueryTaskDetailListResponseBodyDataTaskDetail setTaskDetailNo(String taskDetailNo) {
-            this.taskDetailNo = taskDetailNo;
-            return this;
-        }
-        public String getTaskDetailNo() {
-            return this.taskDetailNo;
         }
 
         public QueryTaskDetailListResponseBodyDataTaskDetail setCreateTime(String createTime) {
@@ -166,14 +150,6 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public QueryTaskDetailListResponseBodyDataTaskDetail setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
         public QueryTaskDetailListResponseBodyDataTaskDetail setDomainName(String domainName) {
             this.domainName = domainName;
             return this;
@@ -182,12 +158,28 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             return this.domainName;
         }
 
-        public QueryTaskDetailListResponseBodyDataTaskDetail setTaskType(String taskType) {
-            this.taskType = taskType;
+        public QueryTaskDetailListResponseBodyDataTaskDetail setErrorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
             return this;
         }
-        public String getTaskType() {
-            return this.taskType;
+        public String getErrorMsg() {
+            return this.errorMsg;
+        }
+
+        public QueryTaskDetailListResponseBodyDataTaskDetail setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public QueryTaskDetailListResponseBodyDataTaskDetail setTaskDetailNo(String taskDetailNo) {
+            this.taskDetailNo = taskDetailNo;
+            return this;
+        }
+        public String getTaskDetailNo() {
+            return this.taskDetailNo;
         }
 
         public QueryTaskDetailListResponseBodyDataTaskDetail setTaskNo(String taskNo) {
@@ -206,6 +198,14 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             return this.taskResult;
         }
 
+        public QueryTaskDetailListResponseBodyDataTaskDetail setTaskStatus(String taskStatus) {
+            this.taskStatus = taskStatus;
+            return this;
+        }
+        public String getTaskStatus() {
+            return this.taskStatus;
+        }
+
         public QueryTaskDetailListResponseBodyDataTaskDetail setTaskStatusCode(Integer taskStatusCode) {
             this.taskStatusCode = taskStatusCode;
             return this;
@@ -214,12 +214,12 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             return this.taskStatusCode;
         }
 
-        public QueryTaskDetailListResponseBodyDataTaskDetail setTaskStatus(String taskStatus) {
-            this.taskStatus = taskStatus;
+        public QueryTaskDetailListResponseBodyDataTaskDetail setTaskType(String taskType) {
+            this.taskType = taskType;
             return this;
         }
-        public String getTaskStatus() {
-            return this.taskStatus;
+        public String getTaskType() {
+            return this.taskType;
         }
 
         public QueryTaskDetailListResponseBodyDataTaskDetail setTaskTypeDescription(String taskTypeDescription) {
@@ -238,12 +238,12 @@ public class QueryTaskDetailListResponseBody extends TeaModel {
             return this.tryCount;
         }
 
-        public QueryTaskDetailListResponseBodyDataTaskDetail setErrorMsg(String errorMsg) {
-            this.errorMsg = errorMsg;
+        public QueryTaskDetailListResponseBodyDataTaskDetail setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public String getErrorMsg() {
-            return this.errorMsg;
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

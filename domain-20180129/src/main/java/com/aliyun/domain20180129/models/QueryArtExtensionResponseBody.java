@@ -4,82 +4,42 @@ package com.aliyun.domain20180129.models;
 import com.aliyun.tea.*;
 
 public class QueryArtExtensionResponseBody extends TeaModel {
-    @NameInMap("ObjectType")
-    public String objectType;
-
-    @NameInMap("MaterialsAndTechniques")
-    public String materialsAndTechniques;
-
-    @NameInMap("InscriptionsAndMarkings")
-    public String inscriptionsAndMarkings;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Reference")
-    public String reference;
-
     @NameInMap("DateOrPeriod")
     public String dateOrPeriod;
 
     @NameInMap("Dimensions")
     public String dimensions;
 
-    @NameInMap("Title")
-    public String title;
-
     @NameInMap("Features")
     public String features;
 
-    @NameInMap("Subject")
-    public String subject;
+    @NameInMap("InscriptionsAndMarkings")
+    public String inscriptionsAndMarkings;
 
     @NameInMap("Maker")
     public String maker;
 
+    @NameInMap("MaterialsAndTechniques")
+    public String materialsAndTechniques;
+
+    @NameInMap("ObjectType")
+    public String objectType;
+
+    @NameInMap("Reference")
+    public String reference;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Subject")
+    public String subject;
+
+    @NameInMap("Title")
+    public String title;
+
     public static QueryArtExtensionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryArtExtensionResponseBody self = new QueryArtExtensionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryArtExtensionResponseBody setObjectType(String objectType) {
-        this.objectType = objectType;
-        return this;
-    }
-    public String getObjectType() {
-        return this.objectType;
-    }
-
-    public QueryArtExtensionResponseBody setMaterialsAndTechniques(String materialsAndTechniques) {
-        this.materialsAndTechniques = materialsAndTechniques;
-        return this;
-    }
-    public String getMaterialsAndTechniques() {
-        return this.materialsAndTechniques;
-    }
-
-    public QueryArtExtensionResponseBody setInscriptionsAndMarkings(String inscriptionsAndMarkings) {
-        this.inscriptionsAndMarkings = inscriptionsAndMarkings;
-        return this;
-    }
-    public String getInscriptionsAndMarkings() {
-        return this.inscriptionsAndMarkings;
-    }
-
-    public QueryArtExtensionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryArtExtensionResponseBody setReference(String reference) {
-        this.reference = reference;
-        return this;
-    }
-    public String getReference() {
-        return this.reference;
     }
 
     public QueryArtExtensionResponseBody setDateOrPeriod(String dateOrPeriod) {
@@ -98,20 +58,60 @@ public class QueryArtExtensionResponseBody extends TeaModel {
         return this.dimensions;
     }
 
-    public QueryArtExtensionResponseBody setTitle(String title) {
-        this.title = title;
-        return this;
-    }
-    public String getTitle() {
-        return this.title;
-    }
-
     public QueryArtExtensionResponseBody setFeatures(String features) {
         this.features = features;
         return this;
     }
     public String getFeatures() {
         return this.features;
+    }
+
+    public QueryArtExtensionResponseBody setInscriptionsAndMarkings(String inscriptionsAndMarkings) {
+        this.inscriptionsAndMarkings = inscriptionsAndMarkings;
+        return this;
+    }
+    public String getInscriptionsAndMarkings() {
+        return this.inscriptionsAndMarkings;
+    }
+
+    public QueryArtExtensionResponseBody setMaker(String maker) {
+        this.maker = maker;
+        return this;
+    }
+    public String getMaker() {
+        return this.maker;
+    }
+
+    public QueryArtExtensionResponseBody setMaterialsAndTechniques(String materialsAndTechniques) {
+        this.materialsAndTechniques = materialsAndTechniques;
+        return this;
+    }
+    public String getMaterialsAndTechniques() {
+        return this.materialsAndTechniques;
+    }
+
+    public QueryArtExtensionResponseBody setObjectType(String objectType) {
+        this.objectType = objectType;
+        return this;
+    }
+    public String getObjectType() {
+        return this.objectType;
+    }
+
+    public QueryArtExtensionResponseBody setReference(String reference) {
+        this.reference = reference;
+        return this;
+    }
+    public String getReference() {
+        return this.reference;
+    }
+
+    public QueryArtExtensionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public QueryArtExtensionResponseBody setSubject(String subject) {
@@ -122,12 +122,12 @@ public class QueryArtExtensionResponseBody extends TeaModel {
         return this.subject;
     }
 
-    public QueryArtExtensionResponseBody setMaker(String maker) {
-        this.maker = maker;
+    public QueryArtExtensionResponseBody setTitle(String title) {
+        this.title = title;
         return this;
     }
-    public String getMaker() {
-        return this.maker;
+    public String getTitle() {
+        return this.title;
     }
 
 }
