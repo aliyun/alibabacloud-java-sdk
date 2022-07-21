@@ -427,19 +427,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.initModifyRefund4DistributionWithOptions(request, runtime);
     }
 
-    public ListDistributionItemResponse listDistributionItemWithOptions(ListDistributionItemRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        ListDistributionItemShrinkRequest request = new ListDistributionItemShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.lmItemIds)) {
-            request.lmItemIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.lmItemIds, "LmItemIds", "json");
-        }
-
+    public ListDistributionItemResponse listDistributionItemWithOptions(ListDistributionItemRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
-            body.put("BizId", request.bizId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
             body.put("DistributionMallId", request.distributionMallId);
         }
@@ -452,8 +442,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ItemStatus", request.itemStatus);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.lmItemIdsShrink)) {
-            body.put("LmItemIds", request.lmItemIdsShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.lmItemId)) {
+            body.put("LmItemId", request.lmItemId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -462,6 +452,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -622,11 +616,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyRefund4DistributionWithOptions(request, runtime);
     }
 
+    public QueryChildDivisionCodeByIdResponse queryChildDivisionCodeByIdWithOptions(QueryChildDivisionCodeByIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
+            body.put("DistributorId", request.distributorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.divisionCode)) {
+            body.put("DivisionCode", request.divisionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryChildDivisionCodeById"),
+            new TeaPair("version", "2022-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryChildDivisionCodeByIdResponse());
+    }
+
+    public QueryChildDivisionCodeByIdResponse queryChildDivisionCodeById(QueryChildDivisionCodeByIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryChildDivisionCodeByIdWithOptions(request, runtime);
+    }
+
     public QueryDistributionMallResponse queryDistributionMallWithOptions(QueryDistributionMallRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
             body.put("DistributionMallId", request.distributionMallId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -701,6 +736,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
             body.put("DistributorId", request.distributorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lmItemId)) {
+            body.put("LmItemId", request.lmItemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

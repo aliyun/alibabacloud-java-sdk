@@ -12,6 +12,14 @@ public class QueryItemDetailRequest extends TeaModel {
     @NameInMap("DistributorId")
     public String distributorId;
 
+    // lm商品ID
+    @NameInMap("LmItemId")
+    public String lmItemId;
+
+    // 租户Id
+    @NameInMap("TenantId")
+    public String tenantId;
+
     public static QueryItemDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryItemDetailRequest self = new QueryItemDetailRequest();
         return TeaModel.build(map, self);
@@ -31,6 +39,22 @@ public class QueryItemDetailRequest extends TeaModel {
     }
     public String getDistributorId() {
         return this.distributorId;
+    }
+
+    public QueryItemDetailRequest setLmItemId(String lmItemId) {
+        this.lmItemId = lmItemId;
+        return this;
+    }
+    public String getLmItemId() {
+        return this.lmItemId;
+    }
+
+    public QueryItemDetailRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

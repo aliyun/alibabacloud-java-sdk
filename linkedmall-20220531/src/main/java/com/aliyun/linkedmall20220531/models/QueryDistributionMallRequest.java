@@ -8,6 +8,10 @@ public class QueryDistributionMallRequest extends TeaModel {
     @NameInMap("DistributionMallId")
     public String distributionMallId;
 
+    // 租户Id
+    @NameInMap("TenantId")
+    public String tenantId;
+
     public static QueryDistributionMallRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDistributionMallRequest self = new QueryDistributionMallRequest();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class QueryDistributionMallRequest extends TeaModel {
     }
     public String getDistributionMallId() {
         return this.distributionMallId;
+    }
+
+    public QueryDistributionMallRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }
