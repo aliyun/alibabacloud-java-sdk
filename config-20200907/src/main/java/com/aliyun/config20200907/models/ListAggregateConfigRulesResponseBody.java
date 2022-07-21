@@ -146,6 +146,36 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
 
     }
 
+    public static class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListTags build(java.util.Map<String, ?> map) throws Exception {
+            ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListTags self = new ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList extends TeaModel {
         @NameInMap("AccountId")
         public Long accountId;
@@ -182,6 +212,9 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
 
         @NameInMap("SourceOwner")
         public String sourceOwner;
+
+        @NameInMap("Tags")
+        public java.util.List<ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListTags> tags;
 
         public static ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList build(java.util.Map<String, ?> map) throws Exception {
             ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList self = new ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList();
@@ -282,6 +315,14 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         }
         public String getSourceOwner() {
             return this.sourceOwner;
+        }
+
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setTags(java.util.List<ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListTags> getTags() {
+            return this.tags;
         }
 
     }
