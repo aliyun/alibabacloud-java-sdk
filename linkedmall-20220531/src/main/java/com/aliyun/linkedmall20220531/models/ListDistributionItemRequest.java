@@ -4,10 +4,6 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class ListDistributionItemRequest extends TeaModel {
-    // 业务号
-    @NameInMap("BizId")
-    public String bizId;
-
     // 分销商商城id
     @NameInMap("DistributionMallId")
     public String distributionMallId;
@@ -21,8 +17,8 @@ public class ListDistributionItemRequest extends TeaModel {
     public Integer itemStatus;
 
     // 商品id
-    @NameInMap("LmItemIds")
-    public java.util.List<String> lmItemIds;
+    @NameInMap("LmItemId")
+    public String lmItemId;
 
     // 页码
     @NameInMap("PageNumber")
@@ -32,17 +28,13 @@ public class ListDistributionItemRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 租户Id
+    @NameInMap("TenantId")
+    public String tenantId;
+
     public static ListDistributionItemRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDistributionItemRequest self = new ListDistributionItemRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDistributionItemRequest setBizId(String bizId) {
-        this.bizId = bizId;
-        return this;
-    }
-    public String getBizId() {
-        return this.bizId;
     }
 
     public ListDistributionItemRequest setDistributionMallId(String distributionMallId) {
@@ -69,12 +61,12 @@ public class ListDistributionItemRequest extends TeaModel {
         return this.itemStatus;
     }
 
-    public ListDistributionItemRequest setLmItemIds(java.util.List<String> lmItemIds) {
-        this.lmItemIds = lmItemIds;
+    public ListDistributionItemRequest setLmItemId(String lmItemId) {
+        this.lmItemId = lmItemId;
         return this;
     }
-    public java.util.List<String> getLmItemIds() {
-        return this.lmItemIds;
+    public String getLmItemId() {
+        return this.lmItemId;
     }
 
     public ListDistributionItemRequest setPageNumber(Integer pageNumber) {
@@ -91,6 +83,14 @@ public class ListDistributionItemRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListDistributionItemRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

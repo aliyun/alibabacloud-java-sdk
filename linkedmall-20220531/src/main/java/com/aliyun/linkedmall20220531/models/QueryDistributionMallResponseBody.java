@@ -4,7 +4,6 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class QueryDistributionMallResponseBody extends TeaModel {
-    // 渠道公共数据
     @NameInMap("BizViewData")
     public java.util.Map<String, ?> bizViewData;
 
@@ -155,8 +154,8 @@ public class QueryDistributionMallResponseBody extends TeaModel {
 
     public static class QueryDistributionMallResponseBodyModel extends TeaModel {
         // 渠道供应商id
-        @NameInMap("ChannelSupplerId")
-        public String channelSupplerId;
+        @NameInMap("ChannelSupplierId")
+        public String channelSupplierId;
 
         // 分销商城id
         @NameInMap("DistributionMallId")
@@ -191,12 +190,12 @@ public class QueryDistributionMallResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryDistributionMallResponseBodyModel setChannelSupplerId(String channelSupplerId) {
-            this.channelSupplerId = channelSupplerId;
+        public QueryDistributionMallResponseBodyModel setChannelSupplierId(String channelSupplierId) {
+            this.channelSupplierId = channelSupplierId;
             return this;
         }
-        public String getChannelSupplerId() {
-            return this.channelSupplerId;
+        public String getChannelSupplierId() {
+            return this.channelSupplierId;
         }
 
         public QueryDistributionMallResponseBodyModel setDistributionMallId(String distributionMallId) {
