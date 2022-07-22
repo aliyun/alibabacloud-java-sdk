@@ -32,9 +32,29 @@ public class JobItem extends TeaModel {
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    // 作业失败时间（UTC）
+    @NameInMap("GmtFailedTime")
+    public String gmtFailedTime;
+
     // 作业结束时间（UTC）
     @NameInMap("GmtFinishTime")
     public String gmtFinishTime;
+
+    // 作业开始运行时间（UTC）
+    @NameInMap("GmtRunningTime")
+    public String gmtRunningTime;
+
+    // 作业停止时间（UTC）
+    @NameInMap("GmtStoppedTime")
+    public String gmtStoppedTime;
+
+    // 作业提交时间（UTC）
+    @NameInMap("GmtSubmittedTime")
+    public String gmtSubmittedTime;
+
+    // 作业成功完成时间（UTC）
+    @NameInMap("GmtSuccessedTime")
+    public String gmtSuccessedTime;
 
     // 作业Id
     @NameInMap("JobId")
@@ -47,6 +67,10 @@ public class JobItem extends TeaModel {
     // 作业类型
     @NameInMap("JobType")
     public String jobType;
+
+    // 任务优先级
+    @NameInMap("Priority")
+    public Integer priority;
 
     // 状态详情码
     @NameInMap("ReasonCode")
@@ -161,12 +185,52 @@ public class JobItem extends TeaModel {
         return this.gmtCreateTime;
     }
 
+    public JobItem setGmtFailedTime(String gmtFailedTime) {
+        this.gmtFailedTime = gmtFailedTime;
+        return this;
+    }
+    public String getGmtFailedTime() {
+        return this.gmtFailedTime;
+    }
+
     public JobItem setGmtFinishTime(String gmtFinishTime) {
         this.gmtFinishTime = gmtFinishTime;
         return this;
     }
     public String getGmtFinishTime() {
         return this.gmtFinishTime;
+    }
+
+    public JobItem setGmtRunningTime(String gmtRunningTime) {
+        this.gmtRunningTime = gmtRunningTime;
+        return this;
+    }
+    public String getGmtRunningTime() {
+        return this.gmtRunningTime;
+    }
+
+    public JobItem setGmtStoppedTime(String gmtStoppedTime) {
+        this.gmtStoppedTime = gmtStoppedTime;
+        return this;
+    }
+    public String getGmtStoppedTime() {
+        return this.gmtStoppedTime;
+    }
+
+    public JobItem setGmtSubmittedTime(String gmtSubmittedTime) {
+        this.gmtSubmittedTime = gmtSubmittedTime;
+        return this;
+    }
+    public String getGmtSubmittedTime() {
+        return this.gmtSubmittedTime;
+    }
+
+    public JobItem setGmtSuccessedTime(String gmtSuccessedTime) {
+        this.gmtSuccessedTime = gmtSuccessedTime;
+        return this;
+    }
+    public String getGmtSuccessedTime() {
+        return this.gmtSuccessedTime;
     }
 
     public JobItem setJobId(String jobId) {
@@ -191,6 +255,14 @@ public class JobItem extends TeaModel {
     }
     public String getJobType() {
         return this.jobType;
+    }
+
+    public JobItem setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
     }
 
     public JobItem setReasonCode(String reasonCode) {

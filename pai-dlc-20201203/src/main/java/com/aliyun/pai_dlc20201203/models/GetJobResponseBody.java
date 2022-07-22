@@ -75,6 +75,10 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("Pods")
     public java.util.List<GetJobResponseBodyPods> pods;
 
+    // 任务的优先级
+    @NameInMap("Priority")
+    public Integer priority;
+
     // 状态详情码
     @NameInMap("ReasonCode")
     public String reasonCode;
@@ -282,6 +286,14 @@ public class GetJobResponseBody extends TeaModel {
     }
     public java.util.List<GetJobResponseBodyPods> getPods() {
         return this.pods;
+    }
+
+    public GetJobResponseBody setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
     }
 
     public GetJobResponseBody setReasonCode(String reasonCode) {
