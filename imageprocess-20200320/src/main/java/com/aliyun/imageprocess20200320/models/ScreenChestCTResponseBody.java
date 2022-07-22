@@ -293,6 +293,9 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("Score")
         public String score;
 
+        @NameInMap("SeriesInstanceUID")
+        public String seriesInstanceUID;
+
         @NameInMap("VolumeScore")
         public String volumeScore;
 
@@ -325,6 +328,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
             return this.score;
         }
 
+        public ScreenChestCTResponseBodyDataCACS setSeriesInstanceUID(String seriesInstanceUID) {
+            this.seriesInstanceUID = seriesInstanceUID;
+            return this;
+        }
+        public String getSeriesInstanceUID() {
+            return this.seriesInstanceUID;
+        }
+
         public ScreenChestCTResponseBodyDataCACS setVolumeScore(String volumeScore) {
             this.volumeScore = volumeScore;
             return this;
@@ -350,6 +361,9 @@ public class ScreenChestCTResponseBody extends TeaModel {
 
         @NameInMap("OtherProbability")
         public String otherProbability;
+
+        @NameInMap("SeriesInstanceUID")
+        public String seriesInstanceUID;
 
         public static ScreenChestCTResponseBodyDataCovid build(java.util.Map<String, ?> map) throws Exception {
             ScreenChestCTResponseBodyDataCovid self = new ScreenChestCTResponseBodyDataCovid();
@@ -394,6 +408,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public String getOtherProbability() {
             return this.otherProbability;
+        }
+
+        public ScreenChestCTResponseBodyDataCovid setSeriesInstanceUID(String seriesInstanceUID) {
+            this.seriesInstanceUID = seriesInstanceUID;
+            return this;
+        }
+        public String getSeriesInstanceUID() {
+            return this.seriesInstanceUID;
         }
 
     }
@@ -465,6 +487,9 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("Lesions")
         public java.util.List<ScreenChestCTResponseBodyDataDetectLymphLesions> lesions;
 
+        @NameInMap("SeriesInstanceUID")
+        public String seriesInstanceUID;
+
         public static ScreenChestCTResponseBodyDataDetectLymph build(java.util.Map<String, ?> map) throws Exception {
             ScreenChestCTResponseBodyDataDetectLymph self = new ScreenChestCTResponseBodyDataDetectLymph();
             return TeaModel.build(map, self);
@@ -476,6 +501,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public java.util.List<ScreenChestCTResponseBodyDataDetectLymphLesions> getLesions() {
             return this.lesions;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectLymph setSeriesInstanceUID(String seriesInstanceUID) {
+            this.seriesInstanceUID = seriesInstanceUID;
+            return this;
+        }
+        public String getSeriesInstanceUID() {
+            return this.seriesInstanceUID;
         }
 
     }
@@ -547,6 +580,9 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("Lesion")
         public ScreenChestCTResponseBodyDataDetectPdacLesion lesion;
 
+        @NameInMap("SeriesInstanceUID")
+        public String seriesInstanceUID;
+
         public static ScreenChestCTResponseBodyDataDetectPdac build(java.util.Map<String, ?> map) throws Exception {
             ScreenChestCTResponseBodyDataDetectPdac self = new ScreenChestCTResponseBodyDataDetectPdac();
             return TeaModel.build(map, self);
@@ -558,6 +594,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public ScreenChestCTResponseBodyDataDetectPdacLesion getLesion() {
             return this.lesion;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectPdac setSeriesInstanceUID(String seriesInstanceUID) {
+            this.seriesInstanceUID = seriesInstanceUID;
+            return this;
+        }
+        public String getSeriesInstanceUID() {
+            return this.seriesInstanceUID;
         }
 
     }
@@ -663,6 +707,9 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("RibSegmentMaskURL")
         public String ribSegmentMaskURL;
 
+        @NameInMap("SeriesInstanceUID")
+        public String seriesInstanceUID;
+
         @NameInMap("Spacing")
         public java.util.List<Float> spacing;
 
@@ -709,6 +756,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public String getRibSegmentMaskURL() {
             return this.ribSegmentMaskURL;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectRibFracture setSeriesInstanceUID(String seriesInstanceUID) {
+            this.seriesInstanceUID = seriesInstanceUID;
+            return this;
+        }
+        public String getSeriesInstanceUID() {
+            return this.seriesInstanceUID;
         }
 
         public ScreenChestCTResponseBodyDataDetectRibFracture setSpacing(java.util.List<Float> spacing) {
@@ -990,6 +1045,9 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("LungNodule")
         public ScreenChestCTResponseBodyDataLungNodule lungNodule;
 
+        @NameInMap("NestedUrlList")
+        public java.util.Map<String, ?> nestedUrlList;
+
         @NameInMap("URLList")
         public java.util.Map<String, ?> URLList;
 
@@ -1060,6 +1118,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public ScreenChestCTResponseBodyDataLungNodule getLungNodule() {
             return this.lungNodule;
+        }
+
+        public ScreenChestCTResponseBodyData setNestedUrlList(java.util.Map<String, ?> nestedUrlList) {
+            this.nestedUrlList = nestedUrlList;
+            return this;
+        }
+        public java.util.Map<String, ?> getNestedUrlList() {
+            return this.nestedUrlList;
         }
 
         public ScreenChestCTResponseBodyData setURLList(java.util.Map<String, ?> URLList) {
