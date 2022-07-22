@@ -5852,6 +5852,89 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.openCmsServiceWithOptions(runtime);
     }
 
+    public PutAlertStrategyResponse putAlertStrategyWithOptions(PutAlertStrategyRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PutAlertStrategyShrinkRequest request = new PutAlertStrategyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.channelMapRule))) {
+            request.channelMapRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.channelMapRule), "ChannelMapRule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.escalationRule))) {
+            request.escalationRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.escalationRule), "EscalationRule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.filterRule))) {
+            request.filterRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.filterRule), "FilterRule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.groupingRule))) {
+            request.groupingRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.groupingRule), "GroupingRule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.pushingRule))) {
+            request.pushingRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.pushingRule), "PushingRule", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channelMapRuleShrink)) {
+            query.put("ChannelMapRule", request.channelMapRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.describe)) {
+            query.put("Describe", request.describe);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.escalationRuleShrink)) {
+            query.put("EscalationRule", request.escalationRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterRuleShrink)) {
+            query.put("FilterRule", request.filterRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupingRuleShrink)) {
+            query.put("GroupingRule", request.groupingRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pushingRuleShrink)) {
+            query.put("PushingRule", request.pushingRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyId)) {
+            query.put("StrategyId", request.strategyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateGroupId)) {
+            query.put("TemplateGroupId", request.templateGroupId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutAlertStrategy"),
+            new TeaPair("version", "2019-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PutAlertStrategyResponse());
+    }
+
+    public PutAlertStrategyResponse putAlertStrategy(PutAlertStrategyRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.putAlertStrategyWithOptions(request, runtime);
+    }
+
     public PutContactResponse putContactWithOptions(PutContactRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
