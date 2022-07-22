@@ -97,9 +97,83 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertionsAssertions extends TeaModel {
+        @NameInMap("operator")
+        public String operator;
+
+        @NameInMap("property")
+        public String property;
+
+        @NameInMap("target")
+        public String target;
+
+        @NameInMap("type")
+        public String type;
+
+        public static DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertionsAssertions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertionsAssertions self = new DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertionsAssertions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertionsAssertions setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertionsAssertions setProperty(String property) {
+            this.property = property;
+            return this;
+        }
+        public String getProperty() {
+            return this.property;
+        }
+
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertionsAssertions setTarget(String target) {
+            this.target = target;
+            return this;
+        }
+        public String getTarget() {
+            return this.target;
+        }
+
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertionsAssertions setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertions extends TeaModel {
+        @NameInMap("assertions")
+        public java.util.List<DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertionsAssertions> assertions;
+
+        public static DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertions self = new DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertions setAssertions(java.util.List<DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertionsAssertions> assertions) {
+            this.assertions = assertions;
+            return this;
+        }
+        public java.util.List<DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertionsAssertions> getAssertions() {
+            return this.assertions;
+        }
+
+    }
+
     public static class DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson extends TeaModel {
         @NameInMap("acceptable_response_code")
         public String acceptableResponseCode;
+
+        @NameInMap("assertions")
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertions assertions;
 
         @NameInMap("attempts")
         public Long attempts;
@@ -196,6 +270,14 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
         public String getAcceptableResponseCode() {
             return this.acceptableResponseCode;
+        }
+
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setAssertions(DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertions assertions) {
+            this.assertions = assertions;
+            return this;
+        }
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertions getAssertions() {
+            return this.assertions;
         }
 
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setAttempts(Long attempts) {

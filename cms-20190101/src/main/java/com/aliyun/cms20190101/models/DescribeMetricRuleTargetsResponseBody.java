@@ -77,6 +77,9 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         @NameInMap("Level")
         public String level;
 
+        @NameInMap("RuleId")
+        public String ruleId;
+
         public static DescribeMetricRuleTargetsResponseBodyTargetsTarget build(java.util.Map<String, ?> map) throws Exception {
             DescribeMetricRuleTargetsResponseBodyTargetsTarget self = new DescribeMetricRuleTargetsResponseBodyTargetsTarget();
             return TeaModel.build(map, self);
@@ -112,6 +115,14 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         }
         public String getLevel() {
             return this.level;
+        }
+
+        public DescribeMetricRuleTargetsResponseBodyTargetsTarget setRuleId(String ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public String getRuleId() {
+            return this.ruleId;
         }
 
     }

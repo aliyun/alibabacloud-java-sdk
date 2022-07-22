@@ -64,6 +64,36 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class BatchCreateInstantSiteMonitorResponseBodyData extends TeaModel {
+        @NameInMap("TaskId")
+        public String taskId;
+
+        @NameInMap("TaskName")
+        public String taskName;
+
+        public static BatchCreateInstantSiteMonitorResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            BatchCreateInstantSiteMonitorResponseBodyData self = new BatchCreateInstantSiteMonitorResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchCreateInstantSiteMonitorResponseBodyData setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        public BatchCreateInstantSiteMonitorResponseBodyData setTaskName(String taskName) {
+            this.taskName = taskName;
+            return this;
+        }
+        public String getTaskName() {
+            return this.taskName;
+        }
+
+    }
+
     public static class CreateInstantSiteMonitorResponseBodyCreateResultList extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
