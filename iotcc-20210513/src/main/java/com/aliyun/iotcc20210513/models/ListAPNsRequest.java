@@ -19,6 +19,9 @@ public class ListAPNsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Type")
+    public String type;
+
     public static ListAPNsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAPNsRequest self = new ListAPNsRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ListAPNsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListAPNsRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }
