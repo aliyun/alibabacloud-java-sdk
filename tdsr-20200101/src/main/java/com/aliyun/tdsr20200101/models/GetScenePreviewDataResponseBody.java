@@ -4,22 +4,18 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetScenePreviewDataResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public GetScenePreviewDataResponseBodyData data;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -69,15 +65,12 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
     }
 
     public static class GetScenePreviewDataResponseBodyDataModelPanoListPosition extends TeaModel {
-        // 当前点位在场景中的旋转四元素
         @NameInMap("Rotation")
         public java.util.List<Double> rotation;
 
-        // 当前点位在场景中的坐标
         @NameInMap("Spot")
         public java.util.List<Double> spot;
 
-        // 当前子场景名标签在场景中的坐标
         @NameInMap("Viewpoint")
         public java.util.List<Double> viewpoint;
 
@@ -113,59 +106,45 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
     }
 
     public static class GetScenePreviewDataResponseBodyDataModelPanoList extends TeaModel {
-        // 当前房间的所有点位
         @NameInMap("CurRoomPicList")
         public java.util.List<String> curRoomPicList;
 
-        // 当前点位是否渲染，false不渲染，场景无法跳转
         @NameInMap("Enabled")
         public Boolean enabled;
 
-        // 楼层号
         @NameInMap("FloorIdx")
         public String floorIdx;
 
-        // 点位ID
         @NameInMap("Id")
         public String id;
 
-        // 单房间多图情况下，是否为主图，默认true
         @NameInMap("MainImage")
         public Boolean mainImage;
 
-        // 当前房间邻近可视的点位id
         @NameInMap("Neighbours")
         public java.util.List<String> neighbours;
 
-        // 位置数据
         @NameInMap("Position")
         public GetScenePreviewDataResponseBodyDataModelPanoListPosition position;
 
-        // 一个名称，无实际意义
         @NameInMap("RawName")
         public String rawName;
 
-        // 全景贴图路径
         @NameInMap("Resource")
         public String resource;
 
-        // 房间号
         @NameInMap("RoomIdx")
         public String roomIdx;
 
-        // 子场景ID
         @NameInMap("SubSceneId")
         public String subSceneId;
 
-        // token
         @NameInMap("Token")
         public String token;
 
-        // 图片虚拟ID
         @NameInMap("VirtualId")
         public String virtualId;
 
-        // 图片名称
         @NameInMap("VirtualName")
         public String virtualName;
 
@@ -289,19 +268,15 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
     }
 
     public static class GetScenePreviewDataResponseBodyDataModel extends TeaModel {
-        // 模型地址
         @NameInMap("ModelPath")
         public String modelPath;
 
-        // 点位数据
         @NameInMap("PanoList")
         public java.util.List<GetScenePreviewDataResponseBodyDataModelPanoList> panoList;
 
-        // 模型的贴图路径
         @NameInMap("TextureModelPath")
         public String textureModelPath;
 
-        // 漫游后预览图片路径
         @NameInMap("TexturePanoPath")
         public String texturePanoPath;
 
@@ -375,15 +350,12 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
     }
 
     public static class GetScenePreviewDataResponseBodyDataTagsConfig extends TeaModel {
-        // 背景色
         @NameInMap("BackgroundColor")
         public String backgroundColor;
 
-        // 按钮配置
         @NameInMap("ButtonConfig")
         public GetScenePreviewDataResponseBodyDataTagsConfigButtonConfig buttonConfig;
 
-        // 内容
         @NameInMap("Content")
         public String content;
 
@@ -396,23 +368,18 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         @NameInMap("FormSelectImgType")
         public String formSelectImgType;
 
-        // 图片链接
         @NameInMap("Images")
         public java.util.List<String> images;
 
-        // 是否在鸟瞰模式下显示
         @NameInMap("IsTagVisibleBy3d")
         public Boolean isTagVisibleBy3d;
 
-        // 超链接
         @NameInMap("Link")
         public String link;
 
-        // 点位ID
         @NameInMap("PanoId")
         public String panoId;
 
-        // 坐标
         @NameInMap("Position")
         public java.util.List<Double> position;
 
@@ -422,15 +389,12 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         @NameInMap("RelatedPanoIds")
         public java.util.List<String> relatedPanoIds;
 
-        // 场景ID
         @NameInMap("SceneId")
         public Long sceneId;
 
-        // 标题
         @NameInMap("Title")
         public String title;
 
-        // 视频链接
         @NameInMap("Video")
         public String video;
 
@@ -570,22 +534,18 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
     }
 
     public static class GetScenePreviewDataResponseBodyDataTags extends TeaModel {
-        // 配置
         @NameInMap("Config")
         public GetScenePreviewDataResponseBodyDataTagsConfig config;
 
-        // 标签ID
         @NameInMap("Id")
         public String id;
 
-        // 坐标
         @NameInMap("Position")
         public java.util.List<Double> position;
 
         @NameInMap("PositionPanoCube")
         public java.util.List<Double> positionPanoCube;
 
-        // 热点类型
         @NameInMap("Type")
         public String type;
 
@@ -637,11 +597,9 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
     }
 
     public static class GetScenePreviewDataResponseBodyData extends TeaModel {
-        // 模型数据
         @NameInMap("Model")
         public GetScenePreviewDataResponseBodyDataModel model;
 
-        // 热点数据
         @NameInMap("Tags")
         public java.util.List<GetScenePreviewDataResponseBodyDataTags> tags;
 

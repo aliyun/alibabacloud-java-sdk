@@ -4,39 +4,30 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class ListSceneResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
-    // 数据总数
     @NameInMap("Count")
     public Long count;
 
-    // 当前页
     @NameInMap("CurrentPage")
     public Long currentPage;
 
-    // 是否有下一页
     @NameInMap("HasNext")
     public Boolean hasNext;
 
-    // 主场景数据
     @NameInMap("List")
     public java.util.List<ListSceneResponseBodyList> list;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 请求ID，与入参requestId对应
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
-    // 总页数
     @NameInMap("TotalPage")
     public Long totalPage;
 
@@ -118,43 +109,39 @@ public class ListSceneResponseBody extends TeaModel {
     }
 
     public static class ListSceneResponseBodyList extends TeaModel {
-        // 封面地址
         @NameInMap("CoverUrl")
         public String coverUrl;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        // 最后修改时间
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        // 主场景Id
         @NameInMap("Id")
         public String id;
 
-        // 场景名称
         @NameInMap("Name")
         public String name;
 
-        // 预览Token
         @NameInMap("PreviewToken")
         public String previewToken;
 
-        // 是否已发布 true：已发布：false：未发布
         @NameInMap("Published")
         public Boolean published;
 
-        // 资源数
         @NameInMap("SourceNum")
         public Long sourceNum;
 
-        // 子场景数
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StatusName")
+        public String statusName;
+
         @NameInMap("SubSceneNum")
         public Long subSceneNum;
 
-        // 场景类型 3D模型：MODEL_3D  全景图片：PIC  全景视频：VIDEO
         @NameInMap("Type")
         public String type;
 
@@ -225,6 +212,22 @@ public class ListSceneResponseBody extends TeaModel {
         }
         public Long getSourceNum() {
             return this.sourceNum;
+        }
+
+        public ListSceneResponseBodyList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListSceneResponseBodyList setStatusName(String statusName) {
+            this.statusName = statusName;
+            return this;
+        }
+        public String getStatusName() {
+            return this.statusName;
         }
 
         public ListSceneResponseBodyList setSubSceneNum(Long subSceneNum) {

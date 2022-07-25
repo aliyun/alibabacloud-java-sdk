@@ -4,15 +4,12 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class UpdateSubSceneShrinkRequest extends TeaModel {
-    // 子场景ID
     @NameInMap("Id")
     public String id;
 
-    // 子场景名称
     @NameInMap("Name")
     public String name;
 
-    // 视角坐标，目前支持3元坐标，4元坐标，例如：[0.94005,0.13397,-0.3136,0.782992]
     @NameInMap("ViewPoint")
     public String viewPointShrink;
 

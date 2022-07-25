@@ -4,19 +4,15 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class PredImageRequest extends TeaModel {
-    // 是否垂直矫正
     @NameInMap("CorrectVertical")
     public Boolean correctVertical;
 
-    // 门数量(DetectDoor为false时，可为0)
     @NameInMap("CountDetectDoor")
     public Long countDetectDoor;
 
-    // 是否门预测
     @NameInMap("DetectDoor")
     public Boolean detectDoor;
 
-    // 子场景ID
     @NameInMap("SubSceneId")
     public String subSceneId;
 

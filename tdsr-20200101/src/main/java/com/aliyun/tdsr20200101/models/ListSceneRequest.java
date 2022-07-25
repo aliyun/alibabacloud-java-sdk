@@ -4,19 +4,15 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class ListSceneRequest extends TeaModel {
-    // 主场景名称
     @NameInMap("Name")
     public String name;
 
-    // 当前页
     @NameInMap("PageNum")
     public Long pageNum;
 
-    // 页长
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // 所有项目Id
     @NameInMap("ProjectId")
     public String projectId;
 

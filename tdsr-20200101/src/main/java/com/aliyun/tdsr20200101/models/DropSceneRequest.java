@@ -4,7 +4,6 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class DropSceneRequest extends TeaModel {
-    // 主场景id
     @NameInMap("Id")
     public String id;
 

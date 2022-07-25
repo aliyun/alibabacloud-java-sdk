@@ -4,39 +4,30 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class ListProjectResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
-    // count
     @NameInMap("Count")
     public Long count;
 
-    // 当前页
     @NameInMap("CurrentPage")
     public Long currentPage;
 
-    // 是否有下一页
     @NameInMap("HasNext")
     public Boolean hasNext;
 
-    // 项目数据
     @NameInMap("List")
     public java.util.List<ListProjectResponseBodyList> list;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 请求ID，与入参requestId对应
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
-    // 总页数
     @NameInMap("TotalPage")
     public Long totalPage;
 
@@ -118,31 +109,24 @@ public class ListProjectResponseBody extends TeaModel {
     }
 
     public static class ListProjectResponseBodyList extends TeaModel {
-        // 业务ID
         @NameInMap("BusinessId")
         public Long businessId;
 
-        // 业务名称
         @NameInMap("BusinessName")
         public String businessName;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 项目ID
         @NameInMap("Id")
         public String id;
 
-        // 最后修改时间
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
-        // 项目名称
         @NameInMap("Name")
         public String name;
 
-        // Token
         @NameInMap("Token")
         public String token;
 

@@ -4,23 +4,18 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetSubSceneTaskStatusResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
-    // 任务信息
     @NameInMap("List")
     public java.util.List<GetSubSceneTaskStatusResponseBodyList> list;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 请求ID，与入参requestId对应
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,31 +65,24 @@ public class GetSubSceneTaskStatusResponseBody extends TeaModel {
     }
 
     public static class GetSubSceneTaskStatusResponseBodyList extends TeaModel {
-        // 任务失败错误码
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        // 任务失败错误信息
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        // 任务ID
         @NameInMap("Id")
         public String id;
 
-        // 场景ID
         @NameInMap("SceneId")
         public String sceneId;
 
-        // 未开始  init 处理中   processing   失败     failure  完成     succeed  取消     canceled
         @NameInMap("Status")
         public String status;
 
-        // 子场景ID
         @NameInMap("SubSceneId")
         public String subSceneId;
 
-        // 墙线预测: wall_line   切图: cut_image 重建: build  直角优化：right_angle_optimization 其他：other
         @NameInMap("Type")
         public String type;
 

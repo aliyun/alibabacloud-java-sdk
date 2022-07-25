@@ -4,11 +4,9 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class UpdateSceneRequest extends TeaModel {
-    // 场景Id
     @NameInMap("Id")
     public String id;
 
-    // 场景名称
     @NameInMap("Name")
     public String name;
 

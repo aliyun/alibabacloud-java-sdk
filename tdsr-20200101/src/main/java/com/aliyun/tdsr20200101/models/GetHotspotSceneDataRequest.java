@@ -4,19 +4,15 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetHotspotSceneDataRequest extends TeaModel {
-    // 自定义oss域名（可为cdn域名）
     @NameInMap("Domain")
     public String domain;
 
-    // 是否开启自用资源访问
     @NameInMap("Enabled")
     public Boolean enabled;
 
-    // 预览token
     @NameInMap("PreviewToken")
     public String previewToken;
 
-    // 0 未发布， 1 已发布
     @NameInMap("Type")
     public Long type;
 

@@ -4,11 +4,9 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class RectifyImageRequest extends TeaModel {
-    // 相机高度 单位 cm
     @NameInMap("CameraHeight")
     public Long cameraHeight;
 
-    // 图片地址
     @NameInMap("Url")
     public String url;
 

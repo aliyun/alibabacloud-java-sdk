@@ -4,23 +4,18 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class AddRoomPlanResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
-    // 文件上传凭据
     @NameInMap("Data")
     public AddRoomPlanResponseBodyData data;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 请求ID，与入参requestId对应
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,31 +65,24 @@ public class AddRoomPlanResponseBody extends TeaModel {
     }
 
     public static class AddRoomPlanResponseBodyData extends TeaModel {
-        // accessId
         @NameInMap("AccessId")
         public String accessId;
 
-        // 上传回调
         @NameInMap("Callback")
         public String callback;
 
-        // 授权路径
         @NameInMap("Dir")
         public String dir;
 
-        // 授权失效时间(s)
         @NameInMap("Expire")
         public String expire;
 
-        // 上传地址
         @NameInMap("Host")
         public String host;
 
-        // 授权
         @NameInMap("Policy")
         public String policy;
 
-        // 签名
         @NameInMap("Signature")
         public String signature;
 

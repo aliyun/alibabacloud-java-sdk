@@ -4,26 +4,21 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetSourcePackStatusResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public GetSourcePackStatusResponseBodyData data;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
-    // 压缩包的地址
     @NameInMap("Url")
     public String url;
 
@@ -81,11 +76,9 @@ public class GetSourcePackStatusResponseBody extends TeaModel {
     }
 
     public static class GetSourcePackStatusResponseBodyData extends TeaModel {
-        // 任务进度
         @NameInMap("Progress")
         public Long progress;
 
-        // 任务状态
         @NameInMap("Status")
         public String status;
 

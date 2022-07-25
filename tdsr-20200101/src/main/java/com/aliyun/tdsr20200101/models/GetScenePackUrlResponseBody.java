@@ -4,22 +4,18 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetScenePackUrlResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public GetScenePackUrlResponseBodyData data;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -69,15 +65,12 @@ public class GetScenePackUrlResponseBody extends TeaModel {
     }
 
     public static class GetScenePackUrlResponseBodyData extends TeaModel {
-        // 失效日期
         @NameInMap("Expire")
         public String expire;
 
-        // 打包文件地址
         @NameInMap("Url")
         public String url;
 
-        // 是否有效
         @NameInMap("Valid")
         public Boolean valid;
 

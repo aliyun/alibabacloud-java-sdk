@@ -4,7 +4,6 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetCopySceneTaskStatusRequest extends TeaModel {
-    // 任务ID
     @NameInMap("TaskId")
     public String taskId;
 

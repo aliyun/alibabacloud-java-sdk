@@ -4,35 +4,27 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetTaskStatusResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
-    // 任务执行失败错误码
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // 任务执行失败错误消息
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 请求ID，与入参requestId对应
     @NameInMap("RequestId")
     public String requestId;
 
-    // 未开始 :init 处理中 : processing    失败 :failure   完成 :succeed  取消 :canceled
     @NameInMap("Status")
     public String status;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
-    // 墙线预测: wall_line 切图: cut_image   重建: build  直角优化：right_angle_optimization  其他：other
     @NameInMap("Type")
     public String type;
 

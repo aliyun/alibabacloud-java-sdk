@@ -4,22 +4,18 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetScenePreviewResourceResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public GetScenePreviewResourceResponseBodyData data;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -69,6 +65,9 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
     }
 
     public static class GetScenePreviewResourceResponseBodyDataResourceDirectory extends TeaModel {
+        @NameInMap("HotspotTagConfig")
+        public String hotspotTagConfig;
+
         @NameInMap("ModelConfig")
         public String modelConfig;
 
@@ -81,6 +80,14 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
         public static GetScenePreviewResourceResponseBodyDataResourceDirectory build(java.util.Map<String, ?> map) throws Exception {
             GetScenePreviewResourceResponseBodyDataResourceDirectory self = new GetScenePreviewResourceResponseBodyDataResourceDirectory();
             return TeaModel.build(map, self);
+        }
+
+        public GetScenePreviewResourceResponseBodyDataResourceDirectory setHotspotTagConfig(String hotspotTagConfig) {
+            this.hotspotTagConfig = hotspotTagConfig;
+            return this;
+        }
+        public String getHotspotTagConfig() {
+            return this.hotspotTagConfig;
         }
 
         public GetScenePreviewResourceResponseBodyDataResourceDirectory setModelConfig(String modelConfig) {

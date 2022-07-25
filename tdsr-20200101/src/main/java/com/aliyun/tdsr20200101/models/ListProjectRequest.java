@@ -4,15 +4,12 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class ListProjectRequest extends TeaModel {
-    // 项目名称（使用name%搜索）
     @NameInMap("Name")
     public String name;
 
-    // 页码
     @NameInMap("PageNum")
     public Long pageNum;
 
-    // 页长
     @NameInMap("PageSize")
     public Long pageSize;
 

@@ -4,65 +4,68 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class DetailSceneResponseBody extends TeaModel {
-    // 返回码
+    @NameInMap("Captures")
+    public java.util.List<DetailSceneResponseBodyCaptures> captures;
+
     @NameInMap("Code")
     public Long code;
 
-    // 封面地址
     @NameInMap("CoverUrl")
     public String coverUrl;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public Long gmtCreate;
 
-    // 最后修改时间
     @NameInMap("GmtModified")
     public Long gmtModified;
 
-    // 主场景Id
     @NameInMap("Id")
     public String id;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 场景名称
     @NameInMap("Name")
     public String name;
 
-    // 预览Token
     @NameInMap("PreviewToken")
     public String previewToken;
 
-    // 是否已发布 true：已发布：false：未发布
     @NameInMap("Published")
     public Boolean published;
 
-    // 请求ID，与入参requestId对应
     @NameInMap("RequestId")
     public String requestId;
 
-    // 资源数
     @NameInMap("SourceNum")
     public Long sourceNum;
 
-    // 子场景数
+    @NameInMap("Status")
+    public String status;
+
+    @NameInMap("StatusName")
+    public String statusName;
+
     @NameInMap("SubSceneNum")
     public Long subSceneNum;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
-    // 场景类型
     @NameInMap("Type")
     public String type;
 
     public static DetailSceneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetailSceneResponseBody self = new DetailSceneResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DetailSceneResponseBody setCaptures(java.util.List<DetailSceneResponseBodyCaptures> captures) {
+        this.captures = captures;
+        return this;
+    }
+    public java.util.List<DetailSceneResponseBodyCaptures> getCaptures() {
+        return this.captures;
     }
 
     public DetailSceneResponseBody setCode(Long code) {
@@ -153,6 +156,22 @@ public class DetailSceneResponseBody extends TeaModel {
         return this.sourceNum;
     }
 
+    public DetailSceneResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DetailSceneResponseBody setStatusName(String statusName) {
+        this.statusName = statusName;
+        return this;
+    }
+    public String getStatusName() {
+        return this.statusName;
+    }
+
     public DetailSceneResponseBody setSubSceneNum(Long subSceneNum) {
         this.subSceneNum = subSceneNum;
         return this;
@@ -175,6 +194,36 @@ public class DetailSceneResponseBody extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class DetailSceneResponseBodyCaptures extends TeaModel {
+        @NameInMap("Title")
+        public String title;
+
+        @NameInMap("Url")
+        public String url;
+
+        public static DetailSceneResponseBodyCaptures build(java.util.Map<String, ?> map) throws Exception {
+            DetailSceneResponseBodyCaptures self = new DetailSceneResponseBodyCaptures();
+            return TeaModel.build(map, self);
+        }
+
+        public DetailSceneResponseBodyCaptures setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public DetailSceneResponseBodyCaptures setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
     }
 
 }

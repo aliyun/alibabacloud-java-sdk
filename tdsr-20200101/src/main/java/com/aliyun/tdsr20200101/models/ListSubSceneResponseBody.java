@@ -4,39 +4,30 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class ListSubSceneResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
-    // 数据总条数
     @NameInMap("Count")
     public Long count;
 
-    // 当前页
     @NameInMap("CurrentPage")
     public Long currentPage;
 
-    // 是否有下一页
     @NameInMap("HasNext")
     public Boolean hasNext;
 
-    // 子场景列表集
     @NameInMap("List")
     public java.util.List<ListSubSceneResponseBodyList> list;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 请求ID，与入参requestId对应
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
-    // 总页数
     @NameInMap("TotalPage")
     public Long totalPage;
 
@@ -118,63 +109,48 @@ public class ListSubSceneResponseBody extends TeaModel {
     }
 
     public static class ListSubSceneResponseBodyList extends TeaModel {
-        // 2k基准图路径
         @NameInMap("BaseImageUrl")
         public String baseImageUrl;
 
-        // 图片路径/视频封面路径
         @NameInMap("CoverUrl")
         public String coverUrl;
 
-        // 切图的路径
         @NameInMap("CubemapPath")
         public String cubemapPath;
 
-        // 是否删除
         @NameInMap("Deleted")
         public Boolean deleted;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        // 最后修改时间
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        // 子场景ID
         @NameInMap("Id")
         public String id;
 
-        // 标注数据
         @NameInMap("LayoutData")
         public String layoutData;
 
-        // 子场景名称
         @NameInMap("Name")
         public String name;
 
-        // 原图地址
         @NameInMap("OriginUrl")
         public String originUrl;
 
-        // 图片ID/视频ID
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // 资源名称
         @NameInMap("ResourceName")
         public String resourceName;
 
-        // 子场景状态 1.未重建，      * 2.中间模型重建中，      * 3.中间模型重建完成，      * 4.待重建，      * 5.服务商重建中，      * 6.服务商重建完成，      * 7.已发布      * 8.发布中
         @NameInMap("Status")
         public Long status;
 
-        // 上传资源类型
         @NameInMap("Type")
         public String type;
 
-        // 图片路径/视频路径
         @NameInMap("Url")
         public String url;
 

@@ -4,7 +4,6 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class DetailProjectRequest extends TeaModel {
-    // 项目Id
     @NameInMap("Id")
     public String id;
 

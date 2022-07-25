@@ -4,27 +4,21 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetSingleConnDataResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
-    // 关联信息
     @NameInMap("List")
     public java.util.List<GetSingleConnDataResponseBodyList> list;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 请求ID，与入参requestId对应
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
-    // 版本
     @NameInMap("Version")
     public String version;
 
@@ -82,15 +76,12 @@ public class GetSingleConnDataResponseBody extends TeaModel {
     }
 
     public static class GetSingleConnDataResponseBodyList extends TeaModel {
-        // ID
         @NameInMap("Id")
         public String id;
 
-        // 关联ID
         @NameInMap("MapId")
         public String mapId;
 
-        // outer:外关联 inner：内关联 stair：楼梯关联
         @NameInMap("Type")
         public String type;
 

@@ -4,7 +4,6 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class RecoveryOriginImageRequest extends TeaModel {
-    // 子场景ID
     @NameInMap("SubSceneId")
     public String subSceneId;
 

@@ -4,35 +4,27 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetSceneBuildTaskStatusResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
-    // 任务失败错误码
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // 任务失败错误消息
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 请求ID，与入参requestId对应
     @NameInMap("RequestId")
     public String requestId;
 
-    // 场景ID
     @NameInMap("SceneId")
     public String sceneId;
 
-    // 未开始  init 处理中 失败     failed   processing  完成     succeed 取消     canceled
     @NameInMap("Status")
     public String status;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
