@@ -1986,6 +1986,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getPostPolicyWithOptions(request, runtime);
     }
 
+    public GetServicerSettingsResponse getServicerSettingsWithOptions(GetServicerSettingsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetServicerSettings"),
+            new TeaPair("version", "2020-07-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServicerSettingsResponse());
+    }
+
+    public GetServicerSettingsResponse getServicerSettings(GetServicerSettingsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getServicerSettingsWithOptions(request, runtime);
+    }
+
     public GetTagListResponse getTagListWithOptions(GetTagListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
