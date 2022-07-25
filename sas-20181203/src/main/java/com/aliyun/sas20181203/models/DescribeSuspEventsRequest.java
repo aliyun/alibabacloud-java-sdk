@@ -46,11 +46,9 @@ public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("OperateErrorCodeList")
     public java.util.List<String> operateErrorCodeList;
 
-    // 处理时间结束时间
     @NameInMap("OperateTimeEnd")
     public String operateTimeEnd;
 
-    // 处理时间开始时间
     @NameInMap("OperateTimeStart")
     public String operateTimeStart;
 
@@ -78,11 +76,9 @@ public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("TargetType")
     public String targetType;
 
-    // 最新发生结束时间
     @NameInMap("TimeEnd")
     public String timeEnd;
 
-    // 最新发生开始时间
     @NameInMap("TimeStart")
     public String timeStart;
 

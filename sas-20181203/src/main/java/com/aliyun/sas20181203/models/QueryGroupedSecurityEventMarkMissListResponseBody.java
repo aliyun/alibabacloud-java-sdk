@@ -76,47 +76,36 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
     }
 
     public static class QueryGroupedSecurityEventMarkMissListResponseBodyList extends TeaModel {
-        // 用户统一编号
         @NameInMap("AliUid")
         public Long aliUid;
 
-        // 处置方式
         @NameInMap("DisposalWay")
         public String disposalWay;
 
-        // 告警事件名称（子类型）
         @NameInMap("EventName")
         public String eventName;
 
-        // 告警事件名称（子类型）
         @NameInMap("EventNameOriginal")
         public String eventNameOriginal;
 
-        // 告警事件名称（父类型）
         @NameInMap("EventType")
         public String eventType;
 
-        // 告警事件名称（父类型）
         @NameInMap("EventTypeOriginal")
         public String eventTypeOriginal;
 
-        // 加白字段
         @NameInMap("Field")
         public String field;
 
-        // 加白值
         @NameInMap("FieldValue")
         public String fieldValue;
 
-        // 加白字段别名
         @NameInMap("FiledAliasName")
         public String filedAliasName;
 
-        // 操作符
         @NameInMap("Operate")
         public String operate;
 
-        // 资产ids，逗号分割
         @NameInMap("Uuids")
         public String uuids;
 

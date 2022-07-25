@@ -47,7 +47,6 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         @NameInMap("SupportedMisType")
         public java.util.List<String> supportedMisType;
 
-        // 资产uuid
         @NameInMap("Uuid")
         public String uuid;
 

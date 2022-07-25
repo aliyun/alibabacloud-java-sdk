@@ -4,7 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeEmgVulItemRequest extends TeaModel {
-    // 检测方式
     @NameInMap("CheckType")
     public Integer checkType;
 

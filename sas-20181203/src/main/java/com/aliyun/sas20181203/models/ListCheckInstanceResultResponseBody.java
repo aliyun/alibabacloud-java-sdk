@@ -8,7 +8,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     public java.util.List<ListCheckInstanceResultResponseBodyBasicData> basicData;
 
     @NameInMap("Checks")
-    public java.util.Map<String, ?> checks;
+    public java.util.List<java.util.Map<String, ?>> checks;
 
     @NameInMap("Columns")
     public java.util.List<ListCheckInstanceResultResponseBodyColumns> columns;
@@ -18,9 +18,6 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
 
     public static ListCheckInstanceResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCheckInstanceResultResponseBody self = new ListCheckInstanceResultResponseBody();
@@ -35,11 +32,11 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         return this.basicData;
     }
 
-    public ListCheckInstanceResultResponseBody setChecks(java.util.Map<String, ?> checks) {
+    public ListCheckInstanceResultResponseBody setChecks(java.util.List<java.util.Map<String, ?>> checks) {
         this.checks = checks;
         return this;
     }
-    public java.util.Map<String, ?> getChecks() {
+    public java.util.List<java.util.Map<String, ?>> getChecks() {
         return this.checks;
     }
 
@@ -65,14 +62,6 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ListCheckInstanceResultResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public static class ListCheckInstanceResultResponseBodyBasicData extends TeaModel {

@@ -200,7 +200,6 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
         @NameInMap("SuspiciousEventCount")
         public Integer suspiciousEventCount;
 
-        // 攻击阶段展示名
         @NameInMap("TacticItems")
         public java.util.List<DescribeAlarmEventListResponseBodySuspEventsTacticItems> tacticItems;
 
