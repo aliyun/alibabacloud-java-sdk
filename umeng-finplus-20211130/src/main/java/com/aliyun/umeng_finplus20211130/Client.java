@@ -106,6 +106,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateComputeTaskByDataSetIdResponse());
     }
 
+    public CreateComputeTaskByMultiDataSetIdResponse createComputeTaskByMultiDataSetId(CreateComputeTaskByMultiDataSetIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createComputeTaskByMultiDataSetIdWithOptions(request, headers, runtime);
+    }
+
+    public CreateComputeTaskByMultiDataSetIdResponse createComputeTaskByMultiDataSetIdWithOptions(CreateComputeTaskByMultiDataSetIdRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("appId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSetIds)) {
+            body.put("dataSetIds", request.dataSetIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remarks)) {
+            body.put("remarks", request.remarks);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateComputeTaskByMultiDataSetId"),
+            new TeaPair("version", "2021-11-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/batch_compute/createComputeTaskByMultiDataSetId"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateComputeTaskByMultiDataSetIdResponse());
+    }
+
     public GetAvailableDataSetListResponse getAvailableDataSetList() throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();

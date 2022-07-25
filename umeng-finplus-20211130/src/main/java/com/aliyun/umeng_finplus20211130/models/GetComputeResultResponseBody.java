@@ -74,9 +74,24 @@ public class GetComputeResultResponseBody extends TeaModel {
         @NameInMap("bcId")
         public Long bcId;
 
+        @NameInMap("billedNum")
+        public Long billedNum;
+
+        @NameInMap("code10000Num")
+        public Long code10000Num;
+
+        @NameInMap("code108Num")
+        public Long code108Num;
+
+        @NameInMap("code109Num")
+        public Long code109Num;
+
         // 文件地址
         @NameInMap("exportFileName")
         public String exportFileName;
+
+        @NameInMap("fileLineNumber")
+        public Long fileLineNumber;
 
         // 计算任务名称
         @NameInMap("name")
@@ -103,12 +118,52 @@ public class GetComputeResultResponseBody extends TeaModel {
             return this.bcId;
         }
 
+        public GetComputeResultResponseBodyData setBilledNum(Long billedNum) {
+            this.billedNum = billedNum;
+            return this;
+        }
+        public Long getBilledNum() {
+            return this.billedNum;
+        }
+
+        public GetComputeResultResponseBodyData setCode10000Num(Long code10000Num) {
+            this.code10000Num = code10000Num;
+            return this;
+        }
+        public Long getCode10000Num() {
+            return this.code10000Num;
+        }
+
+        public GetComputeResultResponseBodyData setCode108Num(Long code108Num) {
+            this.code108Num = code108Num;
+            return this;
+        }
+        public Long getCode108Num() {
+            return this.code108Num;
+        }
+
+        public GetComputeResultResponseBodyData setCode109Num(Long code109Num) {
+            this.code109Num = code109Num;
+            return this;
+        }
+        public Long getCode109Num() {
+            return this.code109Num;
+        }
+
         public GetComputeResultResponseBodyData setExportFileName(String exportFileName) {
             this.exportFileName = exportFileName;
             return this;
         }
         public String getExportFileName() {
             return this.exportFileName;
+        }
+
+        public GetComputeResultResponseBodyData setFileLineNumber(Long fileLineNumber) {
+            this.fileLineNumber = fileLineNumber;
+            return this;
+        }
+        public Long getFileLineNumber() {
+            return this.fileLineNumber;
         }
 
         public GetComputeResultResponseBodyData setName(String name) {
