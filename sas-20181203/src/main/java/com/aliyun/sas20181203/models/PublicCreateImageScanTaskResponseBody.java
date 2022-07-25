@@ -7,7 +7,6 @@ public class PublicCreateImageScanTaskResponseBody extends TeaModel {
     @NameInMap("Data")
     public PublicCreateImageScanTaskResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

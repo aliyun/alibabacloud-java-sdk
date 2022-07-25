@@ -10,7 +10,6 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
     @NameInMap("PageInfo")
     public DescribeImageFixTaskResponseBodyPageInfo pageInfo;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

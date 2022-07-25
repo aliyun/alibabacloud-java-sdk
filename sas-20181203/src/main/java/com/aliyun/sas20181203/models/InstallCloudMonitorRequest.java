@@ -4,23 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class InstallCloudMonitorRequest extends TeaModel {
-    // 非阿里云主机安装云监控插件时所需要的AccessKey
     @NameInMap("AgentAccessKey")
     public String agentAccessKey;
 
-    // 非阿里云主机安装云监控插件时所需要的AccessSecret
     @NameInMap("AgentSecretKey")
     public String agentSecretKey;
 
-    // 云监控版本
     @NameInMap("ArgusVersion")
     public String argusVersion;
 
-    // 实例 instanceId
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;
 
-    // uuid 列表
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
 

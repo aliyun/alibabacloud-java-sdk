@@ -7,11 +7,9 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // 加白方式
     @NameInMap("DisposalWay")
     public String disposalWay;
 
-    // 告警事件名称（子类型）
     @NameInMap("EventName")
     public String eventName;
 
@@ -24,7 +22,6 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 资产名
     @NameInMap("Remark")
     public String remark;
 

@@ -7,7 +7,6 @@ public class CreateVulAutoRepairConfigRequest extends TeaModel {
     @NameInMap("Reason")
     public String reason;
 
-    // 漏洞类型
     @NameInMap("Type")
     public String type;
 
@@ -44,11 +43,9 @@ public class CreateVulAutoRepairConfigRequest extends TeaModel {
     }
 
     public static class CreateVulAutoRepairConfigRequestVulAutoRepairConfigList extends TeaModel {
-        // 漏洞别名
         @NameInMap("AliasName")
         public String aliasName;
 
-        // 漏洞名称
         @NameInMap("Name")
         public String name;
 

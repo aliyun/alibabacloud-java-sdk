@@ -4,7 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListVulAutoRepairConfigRequest extends TeaModel {
-    // 漏洞别名
     @NameInMap("AliasName")
     public String aliasName;
 
@@ -14,7 +13,6 @@ public class ListVulAutoRepairConfigRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 漏洞类型
     @NameInMap("Type")
     public String type;
 

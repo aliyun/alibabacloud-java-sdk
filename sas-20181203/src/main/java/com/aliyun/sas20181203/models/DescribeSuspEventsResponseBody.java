@@ -337,7 +337,6 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("Stages")
         public String stages;
 
-        // 攻击阶段展示名
         @NameInMap("TacticItems")
         public java.util.List<DescribeSuspEventsResponseBodySuspEventsTacticItems> tacticItems;
 
