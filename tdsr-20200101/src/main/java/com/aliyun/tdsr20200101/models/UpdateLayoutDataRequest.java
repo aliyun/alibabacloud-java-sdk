@@ -4,11 +4,9 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class UpdateLayoutDataRequest extends TeaModel {
-    // 标注数据
     @NameInMap("LayoutData")
     public String layoutData;
 
-    // 子场景ID
     @NameInMap("SubSceneId")
     public String subSceneId;
 

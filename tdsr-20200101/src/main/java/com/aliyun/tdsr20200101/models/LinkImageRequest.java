@@ -4,19 +4,15 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class LinkImageRequest extends TeaModel {
-    // 相机高度 单位 cm
     @NameInMap("CameraHeight")
     public Integer cameraHeight;
 
-    // 图片或者视频名称xxx.jpg
     @NameInMap("FileName")
     public String fileName;
 
-    // 平台标识，默认PC
     @NameInMap("Platform")
     public String platform;
 
-    // 子场景ID
     @NameInMap("SubSceneId")
     public String subSceneId;
 

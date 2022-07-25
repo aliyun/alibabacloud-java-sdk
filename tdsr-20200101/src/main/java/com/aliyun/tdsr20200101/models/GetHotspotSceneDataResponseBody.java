@@ -4,22 +4,18 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetHotspotSceneDataResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public GetHotspotSceneDataResponseBodyData data;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -69,19 +65,15 @@ public class GetHotspotSceneDataResponseBody extends TeaModel {
     }
 
     public static class GetHotspotSceneDataResponseBodyData extends TeaModel {
-        // 模型token（sgm token）
         @NameInMap("ModelToken")
         public String modelToken;
 
-        // html转译后的预览数据，包含图片、子场景ID等信息
         @NameInMap("PreviewData")
         public String previewData;
 
-        // 预览token
         @NameInMap("PreviewToken")
         public String previewToken;
 
-        // 3D模型：MODEL_3D 全景图片：PIC 全景视频：VIDEO
         @NameInMap("SceneType")
         public String sceneType;
 

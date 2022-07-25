@@ -4,17 +4,26 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class CopySceneRequest extends TeaModel {
-    // 场景Id
+    @NameInMap("ProjectId")
+    public String projectId;
+
     @NameInMap("SceneId")
     public String sceneId;
 
-    // 新场景名称
     @NameInMap("SceneName")
     public String sceneName;
 
     public static CopySceneRequest build(java.util.Map<String, ?> map) throws Exception {
         CopySceneRequest self = new CopySceneRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CopySceneRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
     }
 
     public CopySceneRequest setSceneId(String sceneId) {

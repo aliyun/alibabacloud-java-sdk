@@ -4,19 +4,15 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetScenePreviewDataRequest extends TeaModel {
-    // 自定义oss域名（可为cdn域名）
     @NameInMap("Domain")
     public String domain;
 
-    // 是否开启自用资源访问（默认false）
     @NameInMap("Enabled")
     public Boolean enabled;
 
-    // 预览token
     @NameInMap("PreviewToken")
     public String previewToken;
 
-    // 是否返回热点数据（默认false）
     @NameInMap("ShowTag")
     public Boolean showTag;
 

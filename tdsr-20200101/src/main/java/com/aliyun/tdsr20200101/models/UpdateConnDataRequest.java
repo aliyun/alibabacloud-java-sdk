@@ -4,11 +4,9 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class UpdateConnDataRequest extends TeaModel {
-    // 关联数据
     @NameInMap("ConnData")
     public String connData;
 
-    // 场景ID
     @NameInMap("SceneId")
     public String sceneId;
 

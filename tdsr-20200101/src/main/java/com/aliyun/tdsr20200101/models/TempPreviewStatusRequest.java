@@ -4,7 +4,6 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class TempPreviewStatusRequest extends TeaModel {
-    // 任务ID
     @NameInMap("SceneId")
     public String sceneId;
 

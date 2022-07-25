@@ -4,11 +4,9 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class AddMosaicsRequest extends TeaModel {
-    // 马赛克位置数据
     @NameInMap("MarkPosition")
     public String markPosition;
 
-    // 子场景ID
     @NameInMap("SubSceneId")
     public String subSceneId;
 

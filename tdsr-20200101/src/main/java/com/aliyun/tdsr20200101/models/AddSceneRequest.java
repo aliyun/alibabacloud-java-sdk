@@ -7,15 +7,12 @@ public class AddSceneRequest extends TeaModel {
     @NameInMap("CustomerUid")
     public String customerUid;
 
-    // 场景名称
     @NameInMap("Name")
     public String name;
 
-    // 项目ID
     @NameInMap("ProjectId")
     public String projectId;
 
-    // 场景类型 3D模型：MODEL_3D  全景图片：PIC  全景视频：VIDEO 混合：MIX
     @NameInMap("Type")
     public String type;
 

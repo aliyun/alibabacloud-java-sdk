@@ -4,27 +4,21 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class LabelBuildRequest extends TeaModel {
-    // 重建模式：MANUAL：手动（云端），默认，SEMI_AUTOMATIC：半自动（移动端）
     @NameInMap("Mode")
     public String mode;
 
-    // 模型效果 PATCH：切片模型（默认） DEPTH：深度模型 VIRTUAL：虚拟模型 MOBILE：移动重建模型
     @NameInMap("ModelStyle")
     public String modelStyle;
 
-    // 墙宽优化，OFF:关闭（默认） NORMAL：标准 ENHANCED：加强
     @NameInMap("OptimizeWallWidth")
     public String optimizeWallWidth;
 
-    // 户型图，DEFAULT（默认），STANDARD（标准）
     @NameInMap("PlanStyle")
     public String planStyle;
 
-    // 场景ID
     @NameInMap("SceneId")
     public String sceneId;
 
-    // 墙高，默认0不设置，范围200-1000. 单位cm
     @NameInMap("WallHeight")
     public Long wallHeight;
 

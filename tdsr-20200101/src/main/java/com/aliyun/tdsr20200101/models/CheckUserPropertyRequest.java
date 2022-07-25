@@ -4,7 +4,6 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class CheckUserPropertyRequest extends TeaModel {
-    // 用户uid
     @NameInMap("Uid")
     public String uid;
 

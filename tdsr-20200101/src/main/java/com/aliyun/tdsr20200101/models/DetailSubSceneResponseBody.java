@@ -4,71 +4,57 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class DetailSubSceneResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
-    // 图片路径/视频封面路径
     @NameInMap("CoverUrl")
     public String coverUrl;
 
-    // 切图路径
     @NameInMap("CubemapPath")
     public String cubemapPath;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public Long gmtCreate;
 
-    // 最后修改时间
     @NameInMap("GmtModified")
     public Long gmtModified;
 
-    // 子场景id
     @NameInMap("Id")
     public String id;
 
-    // 矫正后图的路径
     @NameInMap("ImageUrl")
     public String imageUrl;
 
-    // 墙线标注数据
     @NameInMap("LayoutData")
     public String layoutData;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 子场景名称
     @NameInMap("Name")
     public String name;
 
-    // 原图路径
     @NameInMap("OriginUrl")
     public String originUrl;
 
-    // 请求ID，与入参requestId对应
+    @NameInMap("Position")
+    public String position;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    // 图片ID/视频ID
     @NameInMap("ResourceId")
     public String resourceId;
 
-    // 子场景状态
     @NameInMap("Status")
     public Long status;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
-    // 资源类型
     @NameInMap("Type")
     public String type;
 
-    // 图片路径/视频路径
     @NameInMap("Url")
     public String url;
 
@@ -163,6 +149,14 @@ public class DetailSubSceneResponseBody extends TeaModel {
     }
     public String getOriginUrl() {
         return this.originUrl;
+    }
+
+    public DetailSubSceneResponseBody setPosition(String position) {
+        this.position = position;
+        return this;
+    }
+    public String getPosition() {
+        return this.position;
     }
 
     public DetailSubSceneResponseBody setRequestId(String requestId) {

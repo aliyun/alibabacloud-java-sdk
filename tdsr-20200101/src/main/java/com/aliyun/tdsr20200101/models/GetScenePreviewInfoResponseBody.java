@@ -4,22 +4,18 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetScenePreviewInfoResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public GetScenePreviewInfoResponseBodyData data;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -69,19 +65,15 @@ public class GetScenePreviewInfoResponseBody extends TeaModel {
     }
 
     public static class GetScenePreviewInfoResponseBodyData extends TeaModel {
-        // 模型地址
         @NameInMap("ModelPath")
         public String modelPath;
 
-        // html转译后的预览数据
         @NameInMap("PanoList")
         public String panoList;
 
-        // 模型的贴图路径
         @NameInMap("TextureModelPath")
         public String textureModelPath;
 
-        // 漫游后预览图片路径
         @NameInMap("TexturePanoPath")
         public String texturePanoPath;
 

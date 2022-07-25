@@ -4,11 +4,9 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetPackSceneTaskStatusRequest extends TeaModel {
-    // 任务ID
     @NameInMap("TaskId")
     public String taskId;
 
-    // 操作类型：download（下载），sync（同步）
     @NameInMap("Type")
     public String type;
 

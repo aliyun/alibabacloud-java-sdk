@@ -4,15 +4,12 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class AddSubSceneRequest extends TeaModel {
-    // 子场景名称
     @NameInMap("Name")
     public String name;
 
-    // 场景ID
     @NameInMap("SceneId")
     public String sceneId;
 
-    // 类型 图片：IMAGE 视频：VIDEO
     @NameInMap("UploadType")
     public String uploadType;
 

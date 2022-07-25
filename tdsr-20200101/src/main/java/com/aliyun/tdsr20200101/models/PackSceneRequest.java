@@ -4,11 +4,9 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class PackSceneRequest extends TeaModel {
-    // 场景ID
     @NameInMap("SceneId")
     public String sceneId;
 
-    // 操作类型：download（下载），sync（同步）
     @NameInMap("Type")
     public String type;
 

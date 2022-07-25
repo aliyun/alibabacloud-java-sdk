@@ -4,19 +4,15 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class RectVerticalRequest extends TeaModel {
-    // 需要预测的门的数量
     @NameInMap("CountDetectDoor")
     public Integer countDetectDoor;
 
-    // 是否开启门预测
     @NameInMap("DetectDoor")
     public Boolean detectDoor;
 
-    // 子场景ID
     @NameInMap("SubSceneId")
     public String subSceneId;
 
-    // 矫正数据
     @NameInMap("VerticalRect")
     public String verticalRect;
 

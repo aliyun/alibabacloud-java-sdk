@@ -4,11 +4,9 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class AddProjectRequest extends TeaModel {
-    // 业务id
     @NameInMap("BusinessId")
     public Long businessId;
 
-    // 项目名称
     @NameInMap("Name")
     public String name;
 

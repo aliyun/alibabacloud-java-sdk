@@ -4,22 +4,18 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class CopySceneResponseBody extends TeaModel {
-    // 返回码
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public CopySceneResponseBodyData data;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 请求ID，与入参requestId对应
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -69,7 +65,6 @@ public class CopySceneResponseBody extends TeaModel {
     }
 
     public static class CopySceneResponseBodyData extends TeaModel {
-        // 任务ID
         @NameInMap("TaskId")
         public String taskId;
 

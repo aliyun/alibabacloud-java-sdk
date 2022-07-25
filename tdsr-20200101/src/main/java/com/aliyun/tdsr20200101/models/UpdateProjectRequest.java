@@ -4,15 +4,12 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectRequest extends TeaModel {
-    // 业务Id
     @NameInMap("BusinessId")
     public String businessId;
 
-    // 项目id
     @NameInMap("Id")
     public String id;
 
-    // 项目名称
     @NameInMap("Name")
     public String name;
 

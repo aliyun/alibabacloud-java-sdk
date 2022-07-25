@@ -4,11 +4,9 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class AddRelativePositionRequest extends TeaModel {
-    // 相对位置信息
     @NameInMap("RelativePosition")
     public String relativePosition;
 
-    // 场景ID
     @NameInMap("SceneId")
     public String sceneId;
 

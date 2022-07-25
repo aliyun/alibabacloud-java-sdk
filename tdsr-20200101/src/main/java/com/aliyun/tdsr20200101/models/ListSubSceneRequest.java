@@ -4,22 +4,18 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class ListSubSceneRequest extends TeaModel {
-    // 页码
     @NameInMap("PageNum")
     public Long pageNum;
 
-    // 页长
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // 场景ID
     @NameInMap("SceneId")
     public String sceneId;
 
     @NameInMap("ShowLayoutData")
     public Boolean showLayoutData;
 
-    // 排序字段，默认：NAME（名称），SEQUENCE（自定义排序）
     @NameInMap("SortField")
     public String sortField;
 
