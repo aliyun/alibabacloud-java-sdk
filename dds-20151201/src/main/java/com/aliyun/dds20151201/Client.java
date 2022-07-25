@@ -380,6 +380,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EngineVersion", request.engineVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hiddenZoneId)) {
+            query.put("HiddenZoneId", request.hiddenZoneId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
             query.put("NetworkType", request.networkType);
         }
@@ -422,6 +426,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.restoreTime)) {
             query.put("RestoreTime", request.restoreTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secondaryZoneId)) {
+            query.put("SecondaryZoneId", request.secondaryZoneId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityIPList)) {
@@ -3841,6 +3849,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyBackupPolicyResponse modifyBackupPolicyWithOptions(ModifyBackupPolicyRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backupInterval)) {
+            query.put("BackupInterval", request.backupInterval);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.backupRetentionPeriod)) {
             query.put("BackupRetentionPeriod", request.backupRetentionPeriod);
         }
@@ -3883,6 +3895,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
             query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotBackupType)) {
+            query.put("SnapshotBackupType", request.snapshotBackupType);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
