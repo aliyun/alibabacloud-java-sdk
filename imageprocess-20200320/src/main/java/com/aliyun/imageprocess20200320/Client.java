@@ -1170,6 +1170,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.screenChestCTWithOptions(request, runtime);
     }
 
+    public SegmentOARResponse segmentOARWithOptions(SegmentOARRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bodyPart)) {
+            body.put("BodyPart", request.bodyPart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contrast)) {
+            body.put("Contrast", request.contrast);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
+            body.put("DataFormat", request.dataFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maskList)) {
+            body.put("MaskList", request.maskList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            body.put("OrgId", request.orgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
+            body.put("OrgName", request.orgName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.URLList)) {
+            body.put("URLList", request.URLList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SegmentOAR"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SegmentOARResponse());
+    }
+
+    public SegmentOARResponse segmentOAR(SegmentOARRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentOARWithOptions(request, runtime);
+    }
+
     public TranslateMedResponse translateMedWithOptions(TranslateMedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
