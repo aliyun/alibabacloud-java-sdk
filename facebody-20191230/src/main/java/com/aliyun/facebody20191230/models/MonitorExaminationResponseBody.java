@@ -75,7 +75,7 @@ public class MonitorExaminationResponseBody extends TeaModel {
 
     public static class MonitorExaminationResponseBodyDataFaceInfo extends TeaModel {
         @NameInMap("Completeness")
-        public Long completeness;
+        public Float completeness;
 
         @NameInMap("FaceNumber")
         public Long faceNumber;
@@ -88,11 +88,11 @@ public class MonitorExaminationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public MonitorExaminationResponseBodyDataFaceInfo setCompleteness(Long completeness) {
+        public MonitorExaminationResponseBodyDataFaceInfo setCompleteness(Float completeness) {
             this.completeness = completeness;
             return this;
         }
-        public Long getCompleteness() {
+        public Float getCompleteness() {
             return this.completeness;
         }
 
