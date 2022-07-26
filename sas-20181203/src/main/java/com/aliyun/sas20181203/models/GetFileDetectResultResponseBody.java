@@ -31,28 +31,9 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         return this.resultList;
     }
 
-    public static class GetFileDetectResultResponseBodyResultListExt extends TeaModel {
-        @NameInMap("VirusName")
-        public String virusName;
-
-        public static GetFileDetectResultResponseBodyResultListExt build(java.util.Map<String, ?> map) throws Exception {
-            GetFileDetectResultResponseBodyResultListExt self = new GetFileDetectResultResponseBodyResultListExt();
-            return TeaModel.build(map, self);
-        }
-
-        public GetFileDetectResultResponseBodyResultListExt setVirusName(String virusName) {
-            this.virusName = virusName;
-            return this;
-        }
-        public String getVirusName() {
-            return this.virusName;
-        }
-
-    }
-
     public static class GetFileDetectResultResponseBodyResultList extends TeaModel {
         @NameInMap("Ext")
-        public GetFileDetectResultResponseBodyResultListExt ext;
+        public String ext;
 
         @NameInMap("HashKey")
         public String hashKey;
@@ -71,11 +52,11 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetFileDetectResultResponseBodyResultList setExt(GetFileDetectResultResponseBodyResultListExt ext) {
+        public GetFileDetectResultResponseBodyResultList setExt(String ext) {
             this.ext = ext;
             return this;
         }
-        public GetFileDetectResultResponseBodyResultListExt getExt() {
+        public String getExt() {
             return this.ext;
         }
 
