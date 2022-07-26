@@ -16,6 +16,9 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("IsEipInner")
     public Boolean isEipInner;
 
+    @NameInMap("IsForceSelectedZones")
+    public Boolean isForceSelectedZones;
+
     @NameInMap("IsSetUserAndPassword")
     public Boolean isSetUserAndPassword;
 
@@ -24,6 +27,9 @@ public class StartInstanceRequest extends TeaModel {
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("Notifier")
+    public String notifier;
 
     @NameInMap("Password")
     public String password;
@@ -34,8 +40,14 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("SecurityGroup")
     public String securityGroup;
 
+    @NameInMap("SelectedZones")
+    public String selectedZones;
+
     @NameInMap("ServiceVersion")
     public String serviceVersion;
+
+    @NameInMap("UserPhoneNum")
+    public String userPhoneNum;
 
     @NameInMap("Username")
     public String username;
@@ -86,6 +98,14 @@ public class StartInstanceRequest extends TeaModel {
         return this.isEipInner;
     }
 
+    public StartInstanceRequest setIsForceSelectedZones(Boolean isForceSelectedZones) {
+        this.isForceSelectedZones = isForceSelectedZones;
+        return this;
+    }
+    public Boolean getIsForceSelectedZones() {
+        return this.isForceSelectedZones;
+    }
+
     public StartInstanceRequest setIsSetUserAndPassword(Boolean isSetUserAndPassword) {
         this.isSetUserAndPassword = isSetUserAndPassword;
         return this;
@@ -108,6 +128,14 @@ public class StartInstanceRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public StartInstanceRequest setNotifier(String notifier) {
+        this.notifier = notifier;
+        return this;
+    }
+    public String getNotifier() {
+        return this.notifier;
     }
 
     public StartInstanceRequest setPassword(String password) {
@@ -134,12 +162,28 @@ public class StartInstanceRequest extends TeaModel {
         return this.securityGroup;
     }
 
+    public StartInstanceRequest setSelectedZones(String selectedZones) {
+        this.selectedZones = selectedZones;
+        return this;
+    }
+    public String getSelectedZones() {
+        return this.selectedZones;
+    }
+
     public StartInstanceRequest setServiceVersion(String serviceVersion) {
         this.serviceVersion = serviceVersion;
         return this;
     }
     public String getServiceVersion() {
         return this.serviceVersion;
+    }
+
+    public StartInstanceRequest setUserPhoneNum(String userPhoneNum) {
+        this.userPhoneNum = userPhoneNum;
+        return this;
+    }
+    public String getUserPhoneNum() {
+        return this.userPhoneNum;
     }
 
     public StartInstanceRequest setUsername(String username) {

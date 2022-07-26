@@ -25,6 +25,9 @@ public class CreatePrePayOrderRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("SpecType")
     public String specType;
 
@@ -90,6 +93,14 @@ public class CreatePrePayOrderRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreatePrePayOrderRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreatePrePayOrderRequest setSpecType(String specType) {

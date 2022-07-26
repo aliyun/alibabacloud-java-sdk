@@ -13,6 +13,9 @@ public class GetInstanceListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Tag")
     public java.util.List<GetInstanceListRequestTag> tag;
 
@@ -43,6 +46,14 @@ public class GetInstanceListRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetInstanceListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public GetInstanceListRequest setTag(java.util.List<GetInstanceListRequestTag> tag) {
