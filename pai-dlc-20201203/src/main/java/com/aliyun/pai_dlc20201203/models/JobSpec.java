@@ -4,31 +4,24 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class JobSpec extends TeaModel {
-    // Ecs实例规格
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
-    // 额外的Pod配置
     @NameInMap("ExtraPodSpec")
     public ExtraPodSpec extraPodSpec;
 
-    // 镜像
     @NameInMap("Image")
     public String image;
 
-    // 实例数量
     @NameInMap("PodCount")
     public Long podCount;
 
-    // 资源配置
     @NameInMap("ResourceConfig")
     public ResourceConfig resourceConfig;
 
-    // 类型
     @NameInMap("Type")
     public String type;
 
-    // 是否使用竞价实例
     @NameInMap("UseSpotInstance")
     public Boolean useSpotInstance;
 

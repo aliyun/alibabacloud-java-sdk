@@ -4,39 +4,30 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class Workspace extends TeaModel {
-    // 创建者
     @NameInMap("Creator")
     public String creator;
 
-    // 创建时间
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 最近修改时间
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 
-    // 成员列表
     @NameInMap("Members")
     public java.util.List<Member> members;
 
-    // 资源配额列表
     @NameInMap("Quotas")
     public java.util.List<Quota> quotas;
 
-    // 资源总量
     @NameInMap("TotalResources")
     public Resources totalResources;
 
-    // 管理员列表
     @NameInMap("WorkspaceAdmins")
     public java.util.List<Member> workspaceAdmins;
 
-    // 工作空间id
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    // 工作空间名称
     @NameInMap("WorkspaceName")
     public String workspaceName;
 

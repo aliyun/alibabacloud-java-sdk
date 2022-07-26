@@ -4,11 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class EnvVar extends TeaModel {
-    // 环境变量名称
     @NameInMap("Name")
     public String name;
 
-    // 环境变量值
     @NameInMap("Value")
     public String value;
 

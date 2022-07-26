@@ -4,15 +4,12 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetJobEventsResponseBody extends TeaModel {
-    // 事件
     @NameInMap("Events")
     public java.util.List<String> events;
 
-    // 作业ID
     @NameInMap("JobId")
     public String jobId;
 
-    // 请求ID
     @NameInMap("RequestId")
     public Integer requestId;
 

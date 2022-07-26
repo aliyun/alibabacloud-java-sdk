@@ -4,51 +4,39 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class DataSourceItem extends TeaModel {
-    // 数据源Id
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
-    // 数据源类型
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
-    // 数据源描述
     @NameInMap("Description")
     public String description;
 
-    // 数据源显示名称
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 阿里云OSS文件系统服务端点
     @NameInMap("Endpoint")
     public String endpoint;
 
-    // 阿里云NAS文件系统Id
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
-    // 创建时间（UTC）
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 修改时间（UTC）
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 
-    // 本地挂载目录
     @NameInMap("MountPath")
     public String mountPath;
 
-    // 阿里云OSS文件系统配置选项
     @NameInMap("Options")
     public String options;
 
-    // 阿里云OSS文件系统路径
     @NameInMap("Path")
     public String path;
 
-    // 创建人Id
     @NameInMap("UserId")
     public String userId;
 

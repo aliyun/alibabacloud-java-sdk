@@ -4,31 +4,24 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class DebuggerResult extends TeaModel {
-    // 配置项细节，json结构
     @NameInMap("DebuggerConfigContent")
     public String debuggerConfigContent;
 
-    // 规则报告细节信息
     @NameInMap("DebuggerJobIssues")
     public String debuggerJobIssues;
 
-    // debugger job运行状态描述
     @NameInMap("DebuggerJobStatus")
     public String debuggerJobStatus;
 
-    // 报告文件下载地址
     @NameInMap("DebuggerReportURL")
     public String debuggerReportURL;
 
-    // 作业显示名
     @NameInMap("JobDisplayName")
     public String jobDisplayName;
 
-    // 作业ID
     @NameInMap("JobId")
     public String jobId;
 
-    // 用户ID
     @NameInMap("JobUserId")
     public String jobUserId;
 

@@ -4,19 +4,15 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class JobDebuggerConfig extends TeaModel {
-    // debugger配置信息
     @NameInMap("DebuggerConfigContent")
     public String debuggerConfigContent;
 
-    // debugger配置项ID
     @NameInMap("DebuggerConfigId")
     public String debuggerConfigId;
 
-    // debugger配置创建的时间
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 作业ID
     @NameInMap("JobId")
     public String jobId;
 

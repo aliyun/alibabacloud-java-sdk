@@ -4,59 +4,45 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class DebuggerJob extends TeaModel {
-    // debugger分析作业ID
     @NameInMap("DebuggerJobId")
     public String debuggerJobId;
 
-    // 作业显示名
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 作业运行的时长（单位秒）
     @NameInMap("Duration")
     public String duration;
 
-    // 创建时间（UTC）
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 失败时间（UTC）
     @NameInMap("GmtFailedTime")
     public String gmtFailedTime;
 
-    // 任务完成时间（UTC）
     @NameInMap("GmtFinishTime")
     public String gmtFinishTime;
 
-    // 运行开始时间（UTC）
     @NameInMap("GmtRunningTime")
     public String gmtRunningTime;
 
-    // 结束时间（UTC）
     @NameInMap("GmtStoppedTime")
     public String gmtStoppedTime;
 
-    // 提交时间（UTC）
     @NameInMap("GmtSubmittedTime")
     public String gmtSubmittedTime;
 
-    // 成功结束时间（UTC）
     @NameInMap("GmtSucceedTime")
     public String gmtSucceedTime;
 
-    // 作业运行状态
     @NameInMap("Status")
     public String status;
 
-    // 用户ID
     @NameInMap("UserId")
     public String userId;
 
-    // 作业所属的运行工作空间
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    // 作业所属的运行工作空间名称
     @NameInMap("WorkspaceName")
     public String workspaceName;
 

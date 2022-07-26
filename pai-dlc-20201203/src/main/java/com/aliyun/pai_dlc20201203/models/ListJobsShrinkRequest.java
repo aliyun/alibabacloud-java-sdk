@@ -4,70 +4,54 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListJobsShrinkRequest extends TeaModel {
-    // 作业关联用户ID
     @NameInMap("BusinessUserId")
     public String businessUserId;
 
-    // 调用方
     @NameInMap("Caller")
     public String caller;
 
-    // 作业显示名称，支持模糊查询
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 截止时间
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("FromAllWorkspaces")
     public Boolean fromAllWorkspaces;
 
-    // 作业类型
     @NameInMap("JobType")
     public String jobType;
 
-    // 排序顺序
     @NameInMap("Order")
     public String order;
 
-    // 当前页
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页返回的作业数
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 工作流ID
     @NameInMap("PipelineId")
     public String pipelineId;
 
-    // 资源组ID
     @NameInMap("ResourceId")
     public String resourceId;
 
-    // 是否只返回当前登录者所提交的作业
     @NameInMap("ShowOwn")
     public Boolean showOwn;
 
-    // 按返回字段排序
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 起始时间
     @NameInMap("StartTime")
     public String startTime;
 
-    // 作业状态
     @NameInMap("Status")
     public String status;
 
-    // 自定义标签
     @NameInMap("Tags")
     public String tagsShrink;
 
-    // 工作空间ID
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

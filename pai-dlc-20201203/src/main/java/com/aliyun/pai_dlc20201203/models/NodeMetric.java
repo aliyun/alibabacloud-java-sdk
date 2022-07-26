@@ -4,11 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class NodeMetric extends TeaModel {
-    // 监控指标样本序列
     @NameInMap("Metrics")
     public java.util.List<Metric> metrics;
 
-    // 节点名称
     @NameInMap("NodeName")
     public String nodeName;
 

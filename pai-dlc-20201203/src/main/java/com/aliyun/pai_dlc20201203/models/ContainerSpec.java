@@ -4,31 +4,24 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ContainerSpec extends TeaModel {
-    // 命令参数
     @NameInMap("Args")
     public java.util.List<String> args;
 
-    // 用户命令
     @NameInMap("Command")
     public java.util.List<String> command;
 
-    // 环境变量
     @NameInMap("Env")
     public java.util.List<EnvVar> env;
 
-    // 容器镜像地址
     @NameInMap("Image")
     public String image;
 
-    // 容器名称
     @NameInMap("Name")
     public String name;
 
-    // 容器资源
     @NameInMap("Resources")
     public ResourceRequirements resources;
 
-    // 容器内工作目录
     @NameInMap("WorkingDir")
     public String workingDir;
 

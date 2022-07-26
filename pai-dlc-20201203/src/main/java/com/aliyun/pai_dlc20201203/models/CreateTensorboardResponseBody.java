@@ -4,19 +4,15 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class CreateTensorboardResponseBody extends TeaModel {
-    // DataSourceId
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
-    // 任务Id
     @NameInMap("JobId")
     public String jobId;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // Tensorboard id
     @NameInMap("TensorboardId")
     public String tensorboardId;
 

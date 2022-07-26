@@ -4,31 +4,24 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class DebuggerJobIssue extends TeaModel {
-    // 规则报告的具体json描述
     @NameInMap("DebuggerJobIssue")
     public String debuggerJobIssue;
 
-    // 创建时间（UTC）
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // event的全局唯一ID
     @NameInMap("JobDebuggerIssueId")
     public String jobDebuggerIssueId;
 
-    // 作业ID
     @NameInMap("JobId")
     public String jobId;
 
-    // 规则触发原因的编码
     @NameInMap("ReasonCode")
     public String reasonCode;
 
-    // 规则触发的原因
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
-    // 规则名称
     @NameInMap("RuleName")
     public String ruleName;
 

@@ -4,23 +4,18 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ResourceConfig extends TeaModel {
-    // CPU核心数
     @NameInMap("CPU")
     public String CPU;
 
-    // GPU核心数
     @NameInMap("GPU")
     public String GPU;
 
-    // 显卡类型
     @NameInMap("GPUType")
     public String GPUType;
 
-    // 内存容量
     @NameInMap("Memory")
     public String memory;
 
-    // 共享内存容量
     @NameInMap("SharedMemory")
     public String sharedMemory;
 

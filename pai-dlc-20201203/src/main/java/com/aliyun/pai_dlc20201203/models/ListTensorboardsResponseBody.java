@@ -4,15 +4,12 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListTensorboardsResponseBody extends TeaModel {
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // Tensorboard 列表
     @NameInMap("Tensorboards")
     public java.util.List<Tensorboard> tensorboards;
 
-    // 符合条件的数据源总数量
     @NameInMap("TotalCount")
     public Long totalCount;
 

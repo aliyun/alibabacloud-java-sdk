@@ -4,11 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class DeleteJobResponseBody extends TeaModel {
-    // 作业Id
     @NameInMap("JobId")
     public String jobId;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 

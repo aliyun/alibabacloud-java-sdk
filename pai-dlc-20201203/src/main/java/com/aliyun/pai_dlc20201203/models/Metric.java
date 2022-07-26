@@ -4,11 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class Metric extends TeaModel {
-    // 时间戳（毫秒）
     @NameInMap("Time")
     public Long time;
 
-    // 样本值
     @NameInMap("Value")
     public Float value;
 

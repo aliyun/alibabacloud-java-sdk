@@ -4,15 +4,12 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class Resources extends TeaModel {
-    // CPU核心数
     @NameInMap("CPU")
     public String CPU;
 
-    // GPU卡数
     @NameInMap("GPU")
     public String GPU;
 
-    // 内存大小
     @NameInMap("Memory")
     public String memory;
 

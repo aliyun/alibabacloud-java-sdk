@@ -4,23 +4,18 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetJobMetricsRequest extends TeaModel {
-    // 截止时间
     @NameInMap("EndTime")
     public String endTime;
 
-    // 指标类型
     @NameInMap("MetricType")
     public String metricType;
 
-    // 起始时间
     @NameInMap("StartTime")
     public String startTime;
 
-    // 时间间隔
     @NameInMap("TimeStep")
     public String timeStep;
 
-    // Token
     @NameInMap("Token")
     public String token;
 

@@ -4,23 +4,18 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListEcsSpecsRequest extends TeaModel {
-    // 按加速器类型过滤
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
-    // 排序顺序
     @NameInMap("Order")
     public String order;
 
-    // 查询第几页数据
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 设置查询的分页大写
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 按返回字段排序
     @NameInMap("SortBy")
     public String sortBy;
 

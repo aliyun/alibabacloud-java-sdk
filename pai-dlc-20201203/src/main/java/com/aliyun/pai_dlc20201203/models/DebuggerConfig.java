@@ -4,27 +4,21 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class DebuggerConfig extends TeaModel {
-    // 配置项细节，json结构
     @NameInMap("Content")
     public String content;
 
-    // 系统生成的debug config唯一ID
     @NameInMap("DebuggerConfigId")
     public String debuggerConfigId;
 
-    // 配置项描述
     @NameInMap("Description")
     public String description;
 
-    // 模板配置项名称
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 创建时间（UTC）
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 修改时间（UTC）
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 

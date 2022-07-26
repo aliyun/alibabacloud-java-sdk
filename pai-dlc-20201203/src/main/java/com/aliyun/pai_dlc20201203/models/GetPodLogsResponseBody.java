@@ -4,23 +4,18 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetPodLogsResponseBody extends TeaModel {
-    // 作业ID
     @NameInMap("JobId")
     public String jobId;
 
-    // 日志列表
     @NameInMap("Logs")
     public java.util.List<String> logs;
 
-    // 实例ID
     @NameInMap("PodId")
     public String podId;
 
-    // 实例UID
     @NameInMap("PodUid")
     public String podUid;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

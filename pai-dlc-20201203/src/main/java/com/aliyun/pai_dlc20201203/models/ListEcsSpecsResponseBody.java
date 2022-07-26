@@ -4,15 +4,12 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListEcsSpecsResponseBody extends TeaModel {
-    // ECS规格列表
     @NameInMap("EcsSpecs")
     public java.util.List<EcsSpec> ecsSpecs;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 符合过滤条件的总数量
     @NameInMap("TotalCount")
     public Long totalCount;
 

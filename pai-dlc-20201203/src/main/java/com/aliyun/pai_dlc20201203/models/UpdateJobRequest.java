@@ -4,7 +4,6 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class UpdateJobRequest extends TeaModel {
-    // 设置优先级
     @NameInMap("Priority")
     public Integer priority;
 

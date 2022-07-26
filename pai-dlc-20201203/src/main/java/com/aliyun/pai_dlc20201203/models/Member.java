@@ -4,11 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class Member extends TeaModel {
-    // 成员id
     @NameInMap("MemberId")
     public String memberId;
 
-    // 成员角色
     @NameInMap("MemberType")
     public String memberType;
 

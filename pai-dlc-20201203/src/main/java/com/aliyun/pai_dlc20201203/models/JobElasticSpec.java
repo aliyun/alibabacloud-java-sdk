@@ -4,19 +4,15 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class JobElasticSpec extends TeaModel {
-    // aimaster角色使用的资源规格
     @NameInMap("AIMasterType")
     public String AIMasterType;
 
-    // 打开弹性训练
     @NameInMap("EnableElasticTraining")
     public Boolean enableElasticTraining;
 
-    // 最大并行度
     @NameInMap("MaxParallelism")
     public Integer maxParallelism;
 
-    // 最小并行度
     @NameInMap("MinParallelism")
     public Integer minParallelism;
 
