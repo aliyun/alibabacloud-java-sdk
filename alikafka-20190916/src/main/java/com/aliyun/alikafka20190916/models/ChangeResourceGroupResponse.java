@@ -3,7 +3,7 @@ package com.aliyun.alikafka20190916.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateInstanceConfigResponse extends TeaModel {
+public class ChangeResourceGroupResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class UpdateInstanceConfigResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdateInstanceConfigResponseBody body;
+    public ChangeResourceGroupResponseBody body;
 
-    public static UpdateInstanceConfigResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateInstanceConfigResponse self = new UpdateInstanceConfigResponse();
+    public static ChangeResourceGroupResponse build(java.util.Map<String, ?> map) throws Exception {
+        ChangeResourceGroupResponse self = new ChangeResourceGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateInstanceConfigResponse setHeaders(java.util.Map<String, String> headers) {
+    public ChangeResourceGroupResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class UpdateInstanceConfigResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateInstanceConfigResponse setStatusCode(Integer statusCode) {
+    public ChangeResourceGroupResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class UpdateInstanceConfigResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateInstanceConfigResponse setBody(UpdateInstanceConfigResponseBody body) {
+    public ChangeResourceGroupResponse setBody(ChangeResourceGroupResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateInstanceConfigResponseBody getBody() {
+    public ChangeResourceGroupResponseBody getBody() {
         return this.body;
     }
 
