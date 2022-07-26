@@ -4,27 +4,21 @@ package com.aliyun.iotcc20210513.models;
 import com.aliyun.tea.*;
 
 public class GetStsInfoAndOssPathResponseBody extends TeaModel {
-    // Sts info of accessKeyId
     @NameInMap("AccessKeyId")
     public String accessKeyId;
 
-    // Sts info of accessKeySecret
     @NameInMap("AccessKeySecret")
     public String accessKeySecret;
 
-    // Sts info expiration time
     @NameInMap("Expiration")
     public String expiration;
 
-    // OssPath
     @NameInMap("OssPath")
     public String ossPath;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // Sts info of securityToken
     @NameInMap("SecurityToken")
     public String securityToken;
 

@@ -4,7 +4,6 @@ package com.aliyun.iotcc20210513.models;
 import com.aliyun.tea.*;
 
 public class GrantVirtualBorderRouterResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
