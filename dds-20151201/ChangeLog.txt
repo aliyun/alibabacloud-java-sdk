@@ -1,3 +1,6 @@
+2022-07-26 Version: 3.6.11
+- Update by SDK platform.
+
 2022-07-25 Version: 3.6.10
 - Update by SDK platform.
 
