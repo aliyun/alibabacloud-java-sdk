@@ -4,11 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
-    // 需要续费的实例ID。
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 包年包月续费时长。
     @NameInMap("Period")
     public Long period;
 

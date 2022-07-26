@@ -4,27 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateEnsRouteEntryRequest extends TeaModel {
-    // 自定义路由条目的描述信息。
     @NameInMap("Description")
     public String description;
 
-    // 自定义路由条目的目标网段。
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
-    // 自定义路由条目的下一跳实例的ID。
     @NameInMap("NextHopId")
     public String nextHopId;
 
-    // 自定义路由条目的下一跳的类型
     @NameInMap("NextHopType")
     public String nextHopType;
 
-    // 要创建的自定义路由条目的名称。
     @NameInMap("RouteEntryName")
     public String routeEntryName;
 
-    // 要创建自定义路由条目的路由表ID。
     @NameInMap("RouteTableId")
     public String routeTableId;
 

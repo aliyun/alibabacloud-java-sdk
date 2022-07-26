@@ -4,11 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceVncUrlResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 管理终端Url。
     @NameInMap("VncUrl")
     public String vncUrl;
 

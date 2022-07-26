@@ -4,7 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteEnsRouteEntryRequest extends TeaModel {
-    // 要删除的路由条目ID。
     @NameInMap("RouteEntryId")
     public String routeEntryId;
 

@@ -25,7 +25,6 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     @NameInMap("NetworkName")
     public String networkName;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

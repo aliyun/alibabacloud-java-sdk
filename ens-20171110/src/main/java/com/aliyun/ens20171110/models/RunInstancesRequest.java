@@ -4,116 +4,87 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class RunInstancesRequest extends TeaModel {
-    // 数量
     @NameInMap("Amount")
     public Long amount;
 
-    // 是否自动续费，默认为false
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
-    // 运营商
     @NameInMap("Carrier")
     public String carrier;
 
-    // 数据盘规格
     @NameInMap("DataDisk")
     public java.util.List<RunInstancesRequestDataDisk> dataDisk;
 
-    // 节点id
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
-    // 主机名称
     @NameInMap("HostName")
     public String hostName;
 
-    // 镜像id
     @NameInMap("ImageId")
     public String imageId;
 
-    // 实例付费方式，PrePaid:预付费，包年包月 PostPaid:按量付费
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
-    // 实例名称。长度为2~128个字符，必须以大小字母或中文开头，不能以http://和https://开头。可以包含中文、英文、数字、半角冒号（:）、下划线（_）、点号（.）或者连字符（-）。默认值为实例的InstanceId
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // 实例规格
     @NameInMap("InstanceType")
     public String instanceType;
 
-    // 带宽计费方式
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
-    // 公网最大带宽，如果参数InternetMaxBandwidthOut的值大于0，则自动为实例分配公网IP。
     @NameInMap("InternetMaxBandwidthOut")
     public Long internetMaxBandwidthOut;
 
-    // 密钥对名称
     @NameInMap("KeyPairName")
     public String keyPairName;
 
-    // 地区code
     @NameInMap("NetDistrictCode")
     public String netDistrictCode;
 
-    // 网络id
     @NameInMap("NetWorkId")
     public String netWorkId;
 
-    // 实例密码
     @NameInMap("Password")
     public String password;
 
-    // 购买资源的时长，单位为：月
     @NameInMap("Period")
     public Long period;
 
-    // 查询云服务器ENS不同计费周期的价格。取值范围：
-    // Month（默认）：按月计费的价格单位。
-    // Day：按天计费的价格单位。
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    // 私网ip
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     @NameInMap("PublicIpIdentification")
     public Boolean publicIpIdentification;
 
-    // 调度层级
     @NameInMap("ScheduleAreaLevel")
     public String scheduleAreaLevel;
 
-    // 调度价格策略
     @NameInMap("SchedulingPriceStrategy")
     public String schedulingPriceStrategy;
 
-    // 调度策略
     @NameInMap("SchedulingStrategy")
     public String schedulingStrategy;
 
-    // 安全组id
     @NameInMap("SecurityId")
     public String securityId;
 
-    // 系统盘规格
     @NameInMap("SystemDisk")
     public RunInstancesRequestSystemDisk systemDisk;
 
-    // 是否为HostName和InstanceName添加有序后缀，有序后缀从001开始递增，最大不能超过999
     @NameInMap("UniqueSuffix")
     public Boolean uniqueSuffix;
 
-    // 用户自定义数据，最大支持16KB 您可传入UserData信息。UserData以Base64的方式编码
     @NameInMap("UserData")
     public String userData;
 
-    // 交换机id
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

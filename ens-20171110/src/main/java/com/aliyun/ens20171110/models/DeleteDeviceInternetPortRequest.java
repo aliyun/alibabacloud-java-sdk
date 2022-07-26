@@ -4,15 +4,12 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteDeviceInternetPortRequest extends TeaModel {
-    // InstanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // NatType
     @NameInMap("NatType")
     public String natType;
 
-    // RuleId
     @NameInMap("RuleId")
     public String ruleId;
 

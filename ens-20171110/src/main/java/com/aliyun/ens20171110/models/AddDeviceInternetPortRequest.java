@@ -7,7 +7,6 @@ public class AddDeviceInternetPortRequest extends TeaModel {
     @NameInMap("ISP")
     public String ISP;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 

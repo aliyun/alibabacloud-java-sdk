@@ -7,7 +7,6 @@ public class CreateImageResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    // 镜像ID
     @NameInMap("ImageId")
     public String imageId;
 

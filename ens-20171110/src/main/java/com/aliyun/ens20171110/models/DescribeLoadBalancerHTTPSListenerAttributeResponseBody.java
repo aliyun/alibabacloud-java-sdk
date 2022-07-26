@@ -49,7 +49,6 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

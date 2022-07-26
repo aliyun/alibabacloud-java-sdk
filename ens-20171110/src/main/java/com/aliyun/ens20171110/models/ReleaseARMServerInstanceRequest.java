@@ -4,7 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ReleaseARMServerInstanceRequest extends TeaModel {
-    // AIC实例ID.
     @NameInMap("InstanceId")
     public String instanceId;
 

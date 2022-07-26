@@ -10,11 +10,9 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 路由条目信息。
     @NameInMap("RouteEntrys")
     public java.util.List<DescribeEnsRouteEntryListResponseBodyRouteEntrys> routeEntrys;
 
@@ -67,11 +65,9 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsRouteEntryListResponseBodyRouteEntrysNextHops extends TeaModel {
-        // 下一跳实例ID。
         @NameInMap("NextHopId")
         public String nextHopId;
 
-        // 下一跳类型
         @NameInMap("NextHopType")
         public String nextHopType;
 
@@ -99,35 +95,27 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsRouteEntryListResponseBodyRouteEntrys extends TeaModel {
-        // 路由条目的描述信息。
         @NameInMap("Description")
         public String description;
 
-        // 路由条目的目标网段。
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
-        // 下一跳
         @NameInMap("NextHops")
         public java.util.List<DescribeEnsRouteEntryListResponseBodyRouteEntrysNextHops> nextHops;
 
-        // 路由条目的ID。
         @NameInMap("RouteEntryId")
         public String routeEntryId;
 
-        // 路由条目的名称。
         @NameInMap("RouteEntryName")
         public String routeEntryName;
 
-        // 路由表ID。
         @NameInMap("RouteTableId")
         public String routeTableId;
 
-        // 路由条目的状态
         @NameInMap("Status")
         public String status;
 
-        // 路由条目的类型
         @NameInMap("Type")
         public String type;
 

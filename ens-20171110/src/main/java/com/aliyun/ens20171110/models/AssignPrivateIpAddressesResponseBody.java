@@ -7,7 +7,6 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
     @NameInMap("AssignedPrivateIpAddressesSet")
     public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

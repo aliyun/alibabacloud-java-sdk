@@ -4,11 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ExportMeasurementDataRequest extends TeaModel {
-    // 结束时间，UTC格式
     @NameInMap("EndDate")
     public String endDate;
 
-    // 开始时间，UTC格式
     @NameInMap("StartDate")
     public String startDate;
 

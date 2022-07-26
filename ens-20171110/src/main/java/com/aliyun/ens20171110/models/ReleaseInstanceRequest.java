@@ -4,7 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstanceRequest extends TeaModel {
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 

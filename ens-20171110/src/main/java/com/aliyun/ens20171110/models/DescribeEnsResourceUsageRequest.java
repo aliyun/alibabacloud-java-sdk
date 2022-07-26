@@ -4,11 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsResourceUsageRequest extends TeaModel {
-    // vm实例使用结束时间查询结束范围，，格式： yyyy-MM-dd或yyyy-MM-dd HH:mm:ss
     @NameInMap("ExpiredEndTime")
     public String expiredEndTime;
 
-    // vm实例使用结束时间查询开始范围，格式： yyyy-MM-dd或yyyy-MM-dd HH:mm:ss
     @NameInMap("ExpiredStartTime")
     public String expiredStartTime;
 

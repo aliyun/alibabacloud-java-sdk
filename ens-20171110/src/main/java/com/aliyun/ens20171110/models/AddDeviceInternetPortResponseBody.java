@@ -4,11 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class AddDeviceInternetPortResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // RuleIds
     @NameInMap("RuleIds")
     public java.util.List<String> ruleIds;
 
