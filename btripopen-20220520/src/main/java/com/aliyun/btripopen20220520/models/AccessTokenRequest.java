@@ -4,11 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class AccessTokenRequest extends TeaModel {
-    // 应用的appKey
     @NameInMap("app_key")
     public String appKey;
 
-    // 应用的appSecret
     @NameInMap("app_secret")
     public String appSecret;
 

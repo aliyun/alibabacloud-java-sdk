@@ -3,52 +3,28 @@ package com.aliyun.btripopen20220520.models;
 
 import com.aliyun.tea.*;
 
-public class AccessTokenResponseBody extends TeaModel {
+public class CorpTokenResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("code")
     public String code;
 
     @NameInMap("data")
-    public AccessTokenResponseBodyData data;
+    public CorpTokenResponseBodyData data;
 
     @NameInMap("message")
     public String message;
 
-    @NameInMap("requestId")
-    public String requestId;
-
     @NameInMap("traceId")
     public String traceId;
 
-    public static AccessTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AccessTokenResponseBody self = new AccessTokenResponseBody();
+    public static CorpTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CorpTokenResponseBody self = new CorpTokenResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AccessTokenResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public AccessTokenResponseBody setData(AccessTokenResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public AccessTokenResponseBodyData getData() {
-        return this.data;
-    }
-
-    public AccessTokenResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public AccessTokenResponseBody setRequestId(String requestId) {
+    public CorpTokenResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +32,31 @@ public class AccessTokenResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AccessTokenResponseBody setTraceId(String traceId) {
+    public CorpTokenResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CorpTokenResponseBody setData(CorpTokenResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CorpTokenResponseBodyData getData() {
+        return this.data;
+    }
+
+    public CorpTokenResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public CorpTokenResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
     }
@@ -64,19 +64,19 @@ public class AccessTokenResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public static class AccessTokenResponseBodyData extends TeaModel {
+    public static class CorpTokenResponseBodyData extends TeaModel {
         @NameInMap("expire")
         public Long expire;
 
         @NameInMap("token")
         public String token;
 
-        public static AccessTokenResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            AccessTokenResponseBodyData self = new AccessTokenResponseBodyData();
+        public static CorpTokenResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            CorpTokenResponseBodyData self = new CorpTokenResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public AccessTokenResponseBodyData setExpire(Long expire) {
+        public CorpTokenResponseBodyData setExpire(Long expire) {
             this.expire = expire;
             return this;
         }
@@ -84,7 +84,7 @@ public class AccessTokenResponseBody extends TeaModel {
             return this.expire;
         }
 
-        public AccessTokenResponseBodyData setToken(String token) {
+        public CorpTokenResponseBodyData setToken(String token) {
             this.token = token;
             return this;
         }
