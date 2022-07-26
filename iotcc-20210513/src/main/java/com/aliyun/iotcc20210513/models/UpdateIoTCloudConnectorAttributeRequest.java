@@ -19,6 +19,9 @@ public class UpdateIoTCloudConnectorAttributeRequest extends TeaModel {
     @NameInMap("IoTCloudConnectorName")
     public String ioTCloudConnectorName;
 
+    @NameInMap("Mode")
+    public String mode;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -68,6 +71,14 @@ public class UpdateIoTCloudConnectorAttributeRequest extends TeaModel {
     }
     public String getIoTCloudConnectorName() {
         return this.ioTCloudConnectorName;
+    }
+
+    public UpdateIoTCloudConnectorAttributeRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
     }
 
     public UpdateIoTCloudConnectorAttributeRequest setRegionId(String regionId) {

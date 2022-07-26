@@ -4,11 +4,9 @@ package com.aliyun.iotcc20210513.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionPoolIpOperationResultResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // OssPath
     @NameInMap("ResultFilePaths")
     public java.util.List<String> resultFilePaths;
 

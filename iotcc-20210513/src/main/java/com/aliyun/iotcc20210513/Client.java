@@ -3172,6 +3172,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IoTCloudConnectorName", request.ioTCloudConnectorName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
