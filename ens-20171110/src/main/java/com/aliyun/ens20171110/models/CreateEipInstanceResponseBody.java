@@ -4,11 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateEipInstanceResponseBody extends TeaModel {
-    // EIP的ID。
     @NameInMap("AllocationId")
     public String allocationId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

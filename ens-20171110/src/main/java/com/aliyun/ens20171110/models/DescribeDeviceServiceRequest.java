@@ -19,7 +19,6 @@ public class DescribeDeviceServiceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    // Service ID
     @NameInMap("ServiceId")
     public String serviceId;
 

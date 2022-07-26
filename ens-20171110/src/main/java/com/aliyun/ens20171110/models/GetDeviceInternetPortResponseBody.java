@@ -4,14 +4,12 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceInternetPortResponseBody extends TeaModel {
-    // InstanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("NetworkInfo")
     public java.util.List<GetDeviceInternetPortResponseBodyNetworkInfo> networkInfo;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

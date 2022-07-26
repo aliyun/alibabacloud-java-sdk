@@ -4,11 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyPrepayInstanceSpecRequest extends TeaModel {
-    // 变配实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 更新的配置
     @NameInMap("InstanceType")
     public String instanceType;
 

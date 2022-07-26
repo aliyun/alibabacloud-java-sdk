@@ -7,7 +7,6 @@ public class RemoveBackendServersResponseBody extends TeaModel {
     @NameInMap("BackendServers")
     public RemoveBackendServersResponseBodyBackendServers backendServers;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

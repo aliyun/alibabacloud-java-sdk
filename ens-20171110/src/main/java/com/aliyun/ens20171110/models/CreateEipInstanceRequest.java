@@ -4,27 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateEipInstanceRequest extends TeaModel {
-    // EIP的带宽峰值
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
-    // ENS节点ID
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
-    // EIP的计费方式，取值：  PrePaid：包年包月。 PostPaid（默认值）：按量计费。 当InstanceChargeType取值为PostPaid时，InternetChargeType不能为PayByBandwidth
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
-    // EIP的计量方式，取值：  PayByBandwidth（默认值）：按带宽计费。 取值：95BandwidthByMonth：月95。
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
-    // 运营商信息
     @NameInMap("Isp")
     public String isp;
 
-    // EIP实例名称。
     @NameInMap("Name")
     public String name;
 

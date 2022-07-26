@@ -7,7 +7,6 @@ public class SetBackendServersResponseBody extends TeaModel {
     @NameInMap("BackendServers")
     public SetBackendServersResponseBodyBackendServers backendServers;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

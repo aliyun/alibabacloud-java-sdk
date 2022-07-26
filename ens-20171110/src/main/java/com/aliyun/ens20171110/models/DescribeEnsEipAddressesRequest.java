@@ -4,7 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsEipAddressesRequest extends TeaModel {
-    // 要查询的EIP实例的ID。  最多支持输入50个EIP实例ID，实例ID之间用逗号（,）分隔。
     @NameInMap("AllocationId")
     public String allocationId;
 
@@ -14,19 +13,15 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     @NameInMap("AssociatedInstanceType")
     public String associatedInstanceType;
 
-    // 要查询的EIP的IP地址。  最多支持输入50个EIP的IP地址，IP地址之间用逗号（,）分隔。
     @NameInMap("EipAddress")
     public String eipAddress;
 
-    // ENS节点ID
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
-    // 列表的页码，默认值为1。
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页查询时每页的行数，最大值为100，默认值为10。
     @NameInMap("PageSize")
     public Integer pageSize;
 

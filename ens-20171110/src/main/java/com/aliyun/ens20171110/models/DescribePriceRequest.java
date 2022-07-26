@@ -10,33 +10,24 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("SystemDisk")
     public DescribePriceRequestSystemDisk systemDisk;
 
-    // 如果DataDisk.1.Size为空且此字段不为空时的则以此字段为准
     @NameInMap("DataDisks")
     public java.util.List<DescribePriceRequestDataDisks> dataDisks;
 
-    // 节点ID。
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
-    // 实列规格。
     @NameInMap("InstanceType")
     public String instanceType;
 
-    // 带宽计费方式
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
-    // 购买资源的时长，如果不指定PeriodUnit，则默认按月购买。目前只支持按Days和Month。如果PeriodUnit=Day时，Period仅可以3。如果PeriodUnit=Monthc时，则Period可以为1-9,12。
     @NameInMap("Period")
     public Integer period;
 
-    // 查询云服务器ENS不同计费周期的价格。取值范围：
-    // Month（默认）：按月计费的价格单位。
-    // Day：按天计费的价格单位。
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    // 数量。
     @NameInMap("Quantity")
     public Integer quantity;
 
@@ -118,7 +109,6 @@ public class DescribePriceRequest extends TeaModel {
     }
 
     public static class DescribePriceRequestDataDisk extends TeaModel {
-        // 数据盘大小，单位GB。如果此字段不为空，则以此段为准。
         @NameInMap("Size")
         public Integer size;
 
@@ -138,7 +128,6 @@ public class DescribePriceRequest extends TeaModel {
     }
 
     public static class DescribePriceRequestSystemDisk extends TeaModel {
-        // 系统盘大小，单位：GB
         @NameInMap("Size")
         public Integer size;
 
@@ -158,7 +147,6 @@ public class DescribePriceRequest extends TeaModel {
     }
 
     public static class DescribePriceRequestDataDisks extends TeaModel {
-        // 磁盘类型
         @NameInMap("Category")
         public String category;
 

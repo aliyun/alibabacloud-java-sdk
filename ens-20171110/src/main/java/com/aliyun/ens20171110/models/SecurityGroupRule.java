@@ -4,39 +4,30 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class SecurityGroupRule extends TeaModel {
-    // 描述
     @NameInMap("Description")
     public String description;
 
-    // 目标网段
     @NameInMap("DestCidrIp")
     public String destCidrIp;
 
-    // 方向
     @NameInMap("Direction")
     public String direction;
 
-    // 协议
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
-    // 授权策略
     @NameInMap("Policy")
     public String policy;
 
-    // 目的端口
     @NameInMap("PortRange")
     public String portRange;
 
-    // 源网段
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;
 
-    // 源端口
     @NameInMap("SourcePortRange")
     public String sourcePortRange;
 
-    // 优先级
     @NameInMap("priority")
     public Integer priority;
 

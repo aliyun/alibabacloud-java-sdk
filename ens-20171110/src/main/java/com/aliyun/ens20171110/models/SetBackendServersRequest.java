@@ -35,11 +35,9 @@ public class SetBackendServersRequest extends TeaModel {
         @NameInMap("ServerId")
         public String serverId;
 
-        // 后端服务器类型。  ens：ENS实例（默认）
         @NameInMap("Type")
         public String type;
 
-        // 后端服务器的权重。  取值：0~100  默认值为100，如果值为0，则不会将请求转发给该后端服务器。
         @NameInMap("Weight")
         public Integer weight;
 

@@ -7,7 +7,6 @@ public class CreateNatGatewayResponseBody extends TeaModel {
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

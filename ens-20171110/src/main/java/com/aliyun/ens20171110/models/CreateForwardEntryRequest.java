@@ -13,6 +13,9 @@ public class CreateForwardEntryRequest extends TeaModel {
     @NameInMap("ForwardEntryName")
     public String forwardEntryName;
 
+    @NameInMap("HealthCheckPort")
+    public Integer healthCheckPort;
+
     @NameInMap("InternalIp")
     public String internalIp;
 
@@ -52,6 +55,14 @@ public class CreateForwardEntryRequest extends TeaModel {
     }
     public String getForwardEntryName() {
         return this.forwardEntryName;
+    }
+
+    public CreateForwardEntryRequest setHealthCheckPort(Integer healthCheckPort) {
+        this.healthCheckPort = healthCheckPort;
+        return this;
+    }
+    public Integer getHealthCheckPort() {
+        return this.healthCheckPort;
     }
 
     public CreateForwardEntryRequest setInternalIp(String internalIp) {

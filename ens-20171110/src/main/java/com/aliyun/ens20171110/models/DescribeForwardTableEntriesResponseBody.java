@@ -13,7 +13,6 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -78,6 +77,9 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         @NameInMap("ForwardEntryName")
         public String forwardEntryName;
 
+        @NameInMap("HealthCheckPort")
+        public String healthCheckPort;
+
         @NameInMap("InternalIp")
         public String internalIp;
 
@@ -128,6 +130,14 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
         public String getForwardEntryName() {
             return this.forwardEntryName;
+        }
+
+        public DescribeForwardTableEntriesResponseBodyForwardTableEntries setHealthCheckPort(String healthCheckPort) {
+            this.healthCheckPort = healthCheckPort;
+            return this;
+        }
+        public String getHealthCheckPort() {
+            return this.healthCheckPort;
         }
 
         public DescribeForwardTableEntriesResponseBodyForwardTableEntries setInternalIp(String internalIp) {

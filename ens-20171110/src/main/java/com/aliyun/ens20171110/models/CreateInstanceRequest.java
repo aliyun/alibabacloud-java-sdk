@@ -46,7 +46,6 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
-    // 是否使用镜像预设的密码。使用该参数时，Password参数必须为空，同时您需要确保使用的镜像已经设置了密码。
     @NameInMap("PasswordInherit")
     public Boolean passwordInherit;
 

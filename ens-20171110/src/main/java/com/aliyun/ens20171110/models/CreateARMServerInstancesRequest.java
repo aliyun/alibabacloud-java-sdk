@@ -4,54 +4,39 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateARMServerInstancesRequest extends TeaModel {
-    // 数量，最大支持10
     @NameInMap("Amount")
     public Integer amount;
 
-    // 是否自动续费，默认为false。
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
-    // ENS节点ID。
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     @NameInMap("Frequency")
     public Integer frequency;
 
-    // 镜像ID。
     @NameInMap("ImageId")
     public String imageId;
 
-    // AIC容器实例规格。
     @NameInMap("InstanceType")
     public String instanceType;
 
-    // keypair名称
     @NameInMap("KeyPairName")
     public String keyPairName;
 
-    // 付费类型。PrePaid（目前只支持此种）：包年包月
     @NameInMap("PayType")
     public String payType;
 
-    // 购买周期。
     @NameInMap("Period")
     public Integer period;
 
-    // Month（默认）：按月计费的价格单位。
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    // 分辨率。目前取值
-    // 1920*1080
-    // 1280*720
-    // 1080*1920
-    // 720*1280
     @NameInMap("Resolution")
     public String resolution;
 
-    // 服务器规格。
     @NameInMap("ServerType")
     public String serverType;
 

@@ -4,39 +4,30 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsRouteEntryListRequest extends TeaModel {
-    // 路由条目的目标网段
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
-    // 下一跳实例ID。
     @NameInMap("NextHopId")
     public String nextHopId;
 
-    // 下一跳类型
     @NameInMap("NextHopType")
     public String nextHopType;
 
-    // 列表的页码，默认值为1。
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页查询时每页的行数，最大值为100，默认值为10。
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 要查询的路由条目的ID。
     @NameInMap("RouteEntryId")
     public String routeEntryId;
 
-    // 路由条目的名称。
     @NameInMap("RouteEntryName")
     public String routeEntryName;
 
-    // 路由条目的类型
     @NameInMap("RouteEntryType")
     public String routeEntryType;
 
-    // 要查询的路由表的ID。
     @NameInMap("RouteTableId")
     public String routeTableId;
 

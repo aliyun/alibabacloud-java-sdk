@@ -4,27 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateLoadBalancerRequest extends TeaModel {
-    // ENS节点ID。
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
-    // 负载均衡实例的名称。
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
-    // 负载均衡实例的名称。
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
 
-    // 要创建的ELB实例的网络ID
     @NameInMap("NetworkId")
     public String networkId;
 
-    // 付费类型。PostPaid（目前只支持此种）：按量付费
     @NameInMap("PayType")
     public String payType;
 
-    // 专有网络实例的所属的交换机ID。
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

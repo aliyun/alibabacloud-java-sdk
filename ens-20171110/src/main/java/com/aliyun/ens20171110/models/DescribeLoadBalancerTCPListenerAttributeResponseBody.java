@@ -52,7 +52,6 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     @NameInMap("PersistenceTimeout")
     public Integer persistenceTimeout;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

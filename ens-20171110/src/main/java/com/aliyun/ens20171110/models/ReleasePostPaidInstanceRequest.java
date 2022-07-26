@@ -7,9 +7,6 @@ public class ReleasePostPaidInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Version")
-    public String version;
-
     public static ReleasePostPaidInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleasePostPaidInstanceRequest self = new ReleasePostPaidInstanceRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class ReleasePostPaidInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ReleasePostPaidInstanceRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

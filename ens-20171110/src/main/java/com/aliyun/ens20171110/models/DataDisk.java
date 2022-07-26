@@ -4,7 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DataDisk extends TeaModel {
-    // 数据盘
     @NameInMap("Size")
     public Long size;
 
