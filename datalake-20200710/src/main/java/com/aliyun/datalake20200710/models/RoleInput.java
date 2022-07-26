@@ -4,15 +4,12 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class RoleInput extends TeaModel {
-    // 角色描述
     @NameInMap("Description")
     public String description;
 
-    // DisplayName
     @NameInMap("DisplayName")
     public String displayName;
 
-    // name
     @NameInMap("Name")
     public String name;
 

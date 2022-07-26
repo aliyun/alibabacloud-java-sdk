@@ -7,7 +7,6 @@ public class TableVersion extends TeaModel {
     @NameInMap("Table")
     public Table table;
 
-    // table version
     @NameInMap("VersionId")
     public Integer versionId;
 

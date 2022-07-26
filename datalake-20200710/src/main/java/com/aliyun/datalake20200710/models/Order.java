@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class Order extends TeaModel {
-    // Col
     @NameInMap("Col")
     public String col;
 
-    // Order
     @NameInMap("Order")
     public Integer order;
 

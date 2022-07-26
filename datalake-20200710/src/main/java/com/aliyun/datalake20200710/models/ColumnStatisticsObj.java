@@ -4,15 +4,12 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ColumnStatisticsObj extends TeaModel {
-    // ColumnName of the table
     @NameInMap("ColumnName")
     public String columnName;
 
-    // ColumnStatisticsData
     @NameInMap("ColumnStatisticsData")
     public ColumnStatisticsObjColumnStatisticsData columnStatisticsData;
 
-    // ColumnType
     @NameInMap("ColumnType")
     public String columnType;
 
@@ -46,11 +43,9 @@ public class ColumnStatisticsObj extends TeaModel {
     }
 
     public static class ColumnStatisticsObjColumnStatisticsData extends TeaModel {
-        // StatisticsData
         @NameInMap("StatisticsData")
         public String statisticsData;
 
-        // StatisticsType
         @NameInMap("StatisticsType")
         public String statisticsType;
 

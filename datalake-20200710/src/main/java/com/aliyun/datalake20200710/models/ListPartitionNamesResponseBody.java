@@ -4,27 +4,21 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ListPartitionNamesResponseBody extends TeaModel {
-    // Code
     @NameInMap("Code")
     public String code;
 
-    // Message
     @NameInMap("Message")
     public String message;
 
-    // NextPageToken
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
-    // PartitionNames
     @NameInMap("PartitionNames")
     public java.util.List<String> partitionNames;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // Success
     @NameInMap("Success")
     public Boolean success;
 

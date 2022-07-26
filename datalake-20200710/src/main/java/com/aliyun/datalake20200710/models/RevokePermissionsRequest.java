@@ -4,27 +4,21 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class RevokePermissionsRequest extends TeaModel {
-    // 取消授权的accesses列表
     @NameInMap("Accesses")
     public java.util.List<String> accesses;
 
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // 取消授权的grantable accesses列表
     @NameInMap("DelegateAccesses")
     public java.util.List<String> delegateAccesses;
 
-    // 取消授权meta资源
     @NameInMap("MetaResource")
     public MetaResource metaResource;
 
-    // 取消授权的用户/角色principal
     @NameInMap("Principal")
     public Principal principal;
 
-    // 取消授权的类型，目前仅支持hive
     @NameInMap("Type")
     public String type;
 

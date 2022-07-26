@@ -4,19 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetTableVersionRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 
-    // Table Version
     @NameInMap("VersionId")
     public Integer versionId;
 

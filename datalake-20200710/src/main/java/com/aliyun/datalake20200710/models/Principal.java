@@ -4,7 +4,6 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class Principal extends TeaModel {
-    // 身份标识
     @NameInMap("PrincipalArn")
     public String principalArn;
 

@@ -4,15 +4,12 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ColumnResource extends TeaModel {
-    // ColumnName
     @NameInMap("ColumnNames")
     public java.util.List<String> columnNames;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 

@@ -4,35 +4,27 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ListPermissionsRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // 是否获取用户所属角色的权限
     @NameInMap("IsListUserRolePermissions")
     public Boolean isListUserRolePermissions;
 
-    // 基于资源对权限信息进行过滤
     @NameInMap("MetaResource")
     public MetaResource metaResource;
 
-    // 基于Resource Type进行过滤
     @NameInMap("MetaResourceType")
     public String metaResourceType;
 
-    // 分页Token
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
-    // 分页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 基于Principal对权限信息进行过滤
     @NameInMap("Principal")
     public Principal principal;
 
-    // 获取权限信息的类型，目前仅支持hive
     @NameInMap("Type")
     public String type;
 

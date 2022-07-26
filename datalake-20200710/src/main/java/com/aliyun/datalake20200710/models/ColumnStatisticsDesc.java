@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ColumnStatisticsDesc extends TeaModel {
-    // optional
     @NameInMap("LastAnalyzedTime")
     public Long lastAnalyzedTime;
 
-    // required
     @NameInMap("PartitionName")
     public String partitionName;
 

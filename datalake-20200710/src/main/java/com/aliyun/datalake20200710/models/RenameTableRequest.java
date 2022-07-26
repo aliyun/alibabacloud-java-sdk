@@ -4,22 +4,18 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class RenameTableRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // IsAsync
     @NameInMap("IsAsync")
     public Boolean isAsync;
 
     @NameInMap("TableInput")
     public TableInput tableInput;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 

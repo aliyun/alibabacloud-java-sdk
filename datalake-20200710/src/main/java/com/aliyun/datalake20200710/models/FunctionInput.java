@@ -4,31 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class FunctionInput extends TeaModel {
-    // ClassName
     @NameInMap("ClassName")
     public String className;
 
-    // createTime
     @NameInMap("CreateTime")
     public Integer createTime;
 
-    // FunctionName
     @NameInMap("FunctionName")
     public String functionName;
 
-    // FunctionType
     @NameInMap("FunctionType")
     public String functionType;
 
-    // OwnerName
     @NameInMap("OwnerName")
     public String ownerName;
 
-    // OwnerType
     @NameInMap("OwnerType")
     public String ownerType;
 
-    // ResourceUri
     @NameInMap("ResourceUri")
     public java.util.List<ResourceUri> resourceUri;
 

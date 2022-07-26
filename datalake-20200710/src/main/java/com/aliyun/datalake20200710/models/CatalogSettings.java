@@ -4,7 +4,6 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class CatalogSettings extends TeaModel {
-    // 配置
     @NameInMap("Config")
     public java.util.Map<String, String> config;
 

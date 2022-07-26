@@ -4,35 +4,27 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class TableInput extends TeaModel {
-    // Cascade
     @NameInMap("Cascade")
     public Boolean cascade;
 
-    // CreateTime
     @NameInMap("CreateTime")
     public Integer createTime;
 
-    // CreatedBy
     @NameInMap("CreatedBy")
     public String createdBy;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // LastAccessTime
     @NameInMap("LastAccessTime")
     public Integer lastAccessTime;
 
-    // LastAnalyzedTime
     @NameInMap("LastAnalyzedTime")
     public Integer lastAnalyzedTime;
 
-    // Owner
     @NameInMap("Owner")
     public String owner;
 
-    // OwnerType
     @NameInMap("OwnerType")
     public String ownerType;
 
@@ -45,34 +37,27 @@ public class TableInput extends TeaModel {
     @NameInMap("Privileges")
     public PrincipalPrivilegeSet privileges;
 
-    // Retention
     @NameInMap("Retention")
     public Integer retention;
 
-    // RewriteEnabled
     @NameInMap("RewriteEnabled")
     public Boolean rewriteEnabled;
 
     @NameInMap("Sd")
     public StorageDescriptor sd;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 
-    // TableType
     @NameInMap("TableType")
     public String tableType;
 
-    // Temporary
     @NameInMap("Temporary")
     public Boolean temporary;
 
-    // ViewExpandedText
     @NameInMap("ViewExpandedText")
     public String viewExpandedText;
 
-    // ViewOriginalText
     @NameInMap("ViewOriginalText")
     public String viewOriginalText;
 

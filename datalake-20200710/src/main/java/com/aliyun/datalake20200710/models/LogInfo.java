@@ -4,31 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class LogInfo extends TeaModel {
-    // 业务运行时间
     @NameInMap("BizTime")
     public String bizTime;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 日志内容
     @NameInMap("LogContent")
     public String logContent;
 
-    // 日志id
     @NameInMap("LogId")
     public String logId;
 
-    // 日志概要
     @NameInMap("LogSummary")
     public String logSummary;
 
-    // 日志级别
     @NameInMap("LogType")
     public String logType;
 

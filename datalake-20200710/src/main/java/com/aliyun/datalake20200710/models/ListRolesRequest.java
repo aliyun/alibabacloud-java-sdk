@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ListRolesRequest extends TeaModel {
-    // Next PageToken
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
-    // PageSize
     @NameInMap("PageSize")
     public Integer pageSize;
 

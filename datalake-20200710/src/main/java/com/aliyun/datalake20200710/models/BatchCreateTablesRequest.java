@@ -4,19 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class BatchCreateTablesRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // IfNotExists
     @NameInMap("IfNotExists")
     public Boolean ifNotExists;
 
-    // TableInputs
     @NameInMap("TableInputs")
     public java.util.List<TableInput> tableInputs;
 

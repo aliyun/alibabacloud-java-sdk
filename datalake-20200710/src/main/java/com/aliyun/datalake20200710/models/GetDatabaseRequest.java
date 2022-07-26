@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetDatabaseRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // The name of the database to query.
     @NameInMap("Name")
     public String name;
 

@@ -4,15 +4,12 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class UserRole extends TeaModel {
-    // 授权时间
     @NameInMap("GrantTime")
     public Long grantTime;
 
-    // 授权的角色
     @NameInMap("Role")
     public Role role;
 
-    // 授权的用户
     @NameInMap("User")
     public Principal user;
 

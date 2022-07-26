@@ -4,15 +4,12 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class StorageRankDTO extends TeaModel {
-    // 库存储排名
     @NameInMap("dbStorageRank")
     public java.util.List<DbStorageRank> dbStorageRank;
 
-    // 小文件数量排名
     @NameInMap("smallFileCntRank")
     public java.util.List<SmallFileCntRank> smallFileCntRank;
 
-    // 表存储排名
     @NameInMap("tableStorageRank")
     public java.util.List<TableStorageRank> tableStorageRank;
 

@@ -7,14 +7,12 @@ public class ListUserRolesRequest extends TeaModel {
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
-    // PageSize
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("PrincipalArn")
     public String principalArn;
 
-    // role name pattern filter
     @NameInMap("RoleNamePattern")
     public String roleNamePattern;
 

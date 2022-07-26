@@ -4,39 +4,30 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class LifecycleResource extends TeaModel {
-    // BizId
     @NameInMap("BizId")
     public String bizId;
 
-    // Database
     @NameInMap("Database")
     public LifecycleResourceDatabase database;
 
-    // 数据库名称
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // DatabaseProfile
     @NameInMap("DatabaseProfile")
     public DatabaseProfile databaseProfile;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 生命周期规则id
     @NameInMap("LifecycleRuleBizId")
     public String lifecycleRuleBizId;
 
-    // Owner
     @NameInMap("Owner")
     public Long owner;
 
-    // Table
     @NameInMap("Table")
     public LifecycleResourceTable table;
 
-    // 表名称
     @NameInMap("TableName")
     public String tableName;
 
@@ -129,23 +120,18 @@ public class LifecycleResource extends TeaModel {
     }
 
     public static class LifecycleResourceDatabase extends TeaModel {
-        // CreateTime
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // Description
         @NameInMap("Description")
         public String description;
 
-        // LocationUri
         @NameInMap("LocationUri")
         public String locationUri;
 
-        // Name
         @NameInMap("Name")
         public String name;
 
-        // UpdateTime
         @NameInMap("UpdateTime")
         public Long updateTime;
 
@@ -197,15 +183,12 @@ public class LifecycleResource extends TeaModel {
     }
 
     public static class LifecycleResourceTableSdSerDeInfo extends TeaModel {
-        // Name
         @NameInMap("Name")
         public String name;
 
-        // Parameters
         @NameInMap("Parameters")
         public java.util.Map<String, String> parameters;
 
-        // SerializationLib
         @NameInMap("SerializationLib")
         public String serializationLib;
 
@@ -241,27 +224,21 @@ public class LifecycleResource extends TeaModel {
     }
 
     public static class LifecycleResourceTableSd extends TeaModel {
-        // BucketCols
         @NameInMap("BucketCols")
         public java.util.List<String> bucketCols;
 
-        // InputFormat
         @NameInMap("InputFormat")
         public String inputFormat;
 
-        // Location
         @NameInMap("Location")
         public String location;
 
-        // OutputFormat
         @NameInMap("OutputFormat")
         public String outputFormat;
 
-        // Parameters
         @NameInMap("Parameters")
         public java.util.Map<String, String> parameters;
 
-        // SerDeInfo
         @NameInMap("SerDeInfo")
         public LifecycleResourceTableSdSerDeInfo serDeInfo;
 
@@ -321,27 +298,21 @@ public class LifecycleResource extends TeaModel {
     }
 
     public static class LifecycleResourceTable extends TeaModel {
-        // CreateTime
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // DatabaseName
         @NameInMap("DatabaseName")
         public String databaseName;
 
-        // Parameters
         @NameInMap("Parameters")
         public java.util.Map<String, String> parameters;
 
-        // Sd
         @NameInMap("Sd")
         public LifecycleResourceTableSd sd;
 
-        // TableName
         @NameInMap("TableName")
         public String tableName;
 
-        // TableType
         @NameInMap("TableType")
         public String tableType;
 

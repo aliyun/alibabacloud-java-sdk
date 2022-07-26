@@ -7,31 +7,24 @@ public class StorageDescriptor extends TeaModel {
     @NameInMap("BucketCols")
     public java.util.List<String> bucketCols;
 
-    // Cols
     @NameInMap("Cols")
     public java.util.List<FieldSchema> cols;
 
-    // Compressed
     @NameInMap("Compressed")
     public Boolean compressed;
 
-    // InputFormat
     @NameInMap("InputFormat")
     public String inputFormat;
 
-    // Location
     @NameInMap("Location")
     public String location;
 
-    // NumBuckets
     @NameInMap("NumBuckets")
     public Integer numBuckets;
 
-    // OutputFormat
     @NameInMap("OutputFormat")
     public String outputFormat;
 
-    // Parameters
     @NameInMap("Parameters")
     public java.util.Map<String, String> parameters;
 
@@ -41,11 +34,9 @@ public class StorageDescriptor extends TeaModel {
     @NameInMap("SkewedInfo")
     public SkewedInfo skewedInfo;
 
-    // SortCols
     @NameInMap("SortCols")
     public java.util.List<Order> sortCols;
 
-    // StoredAsSubDirectories
     @NameInMap("StoredAsSubDirectories")
     public Boolean storedAsSubDirectories;
 

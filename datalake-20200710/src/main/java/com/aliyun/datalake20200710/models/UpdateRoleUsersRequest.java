@@ -4,7 +4,6 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class UpdateRoleUsersRequest extends TeaModel {
-    // Role名称
     @NameInMap("RoleName")
     public String roleName;
 

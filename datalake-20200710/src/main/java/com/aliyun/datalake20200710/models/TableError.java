@@ -7,7 +7,6 @@ public class TableError extends TeaModel {
     @NameInMap("ErrorDetail")
     public ErrorDetail errorDetail;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 

@@ -4,19 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class LockObj extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // PartitionName
     @NameInMap("PartitionName")
     public String partitionName;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 

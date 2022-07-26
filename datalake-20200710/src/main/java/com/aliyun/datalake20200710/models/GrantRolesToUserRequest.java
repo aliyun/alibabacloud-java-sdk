@@ -4,7 +4,6 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GrantRolesToUserRequest extends TeaModel {
-    // 待授权的角色名列表
     @NameInMap("RoleNames")
     public java.util.List<String> roleNames;
 

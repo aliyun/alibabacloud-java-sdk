@@ -4,31 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class Role extends TeaModel {
-    // CreateTime
     @NameInMap("CreateTime")
     public Long createTime;
 
-    // 角色描述
     @NameInMap("Description")
     public String description;
 
-    // DisplayName
     @NameInMap("DisplayName")
     public String displayName;
 
-    // IsPredefined
     @NameInMap("IsPredefined")
     public Integer isPredefined;
 
-    // name
     @NameInMap("Name")
     public String name;
 
-    // PrincipalArn
     @NameInMap("PrincipalArn")
     public String principalArn;
 
-    // UpdateTime
     @NameInMap("UpdateTime")
     public Long updateTime;
 

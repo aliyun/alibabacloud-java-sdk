@@ -4,30 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ListPermissionsResponseBody extends TeaModel {
-    // Response Code
     @NameInMap("Code")
     public String code;
 
-    // Message Code
     @NameInMap("Message")
     public String message;
 
-    // NextPageToken
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
     @NameInMap("PrincipalResourcePermissionsList")
     public java.util.List<PrincipalResourcePermissions> principalResourcePermissionsList;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // Success
     @NameInMap("Success")
     public Boolean success;
 
-    // TotalCount
     @NameInMap("TotalCount")
     public Long totalCount;
 

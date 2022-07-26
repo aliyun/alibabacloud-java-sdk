@@ -4,23 +4,18 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class SingleIndicatorDTO extends TeaModel {
-    // 日新增
     @NameInMap("DayIncrement")
     public Long dayIncrement;
 
-    // 日环比
     @NameInMap("DayOnDay")
     public Double dayOnDay;
 
-    // 月新增
     @NameInMap("MonthIncrement")
     public Long monthIncrement;
 
-    // 月环比
     @NameInMap("MonthOnMonth")
     public Double monthOnMonth;
 
-    // 总量
     @NameInMap("Total")
     public Long total;
 

@@ -4,35 +4,27 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class UpdateTablePartitionColumnStatisticsRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // ColumnStatisticsList
     @NameInMap("ColumnStatisticsList")
     public java.util.List<ColumnStatistics> columnStatisticsList;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // Engine
     @NameInMap("Engine")
     public String engine;
 
-    // IsStatsCompliant
     @NameInMap("IsStatsCompliant")
     public Boolean isStatsCompliant;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 
-    // ValidWriteIdList, optional
     @NameInMap("ValidWriteIdList")
     public String validWriteIdList;
 
-    // WriteId, optional
     @NameInMap("WriteId")
     public String writeId;
 

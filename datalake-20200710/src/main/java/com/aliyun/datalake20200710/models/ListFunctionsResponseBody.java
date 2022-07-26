@@ -4,27 +4,21 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionsResponseBody extends TeaModel {
-    // Code
     @NameInMap("Code")
     public String code;
 
-    // Functions
     @NameInMap("Functions")
     public java.util.List<Function> functions;
 
-    // Message
     @NameInMap("Message")
     public String message;
 
-    // NextPageToken
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // Success
     @NameInMap("Success")
     public Boolean success;
 

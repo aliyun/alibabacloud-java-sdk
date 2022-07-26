@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class HighLight extends TeaModel {
-    // 高亮的key
     @NameInMap("Key")
     public String key;
 
-    // 高亮的value
     @NameInMap("Value")
     public String value;
 

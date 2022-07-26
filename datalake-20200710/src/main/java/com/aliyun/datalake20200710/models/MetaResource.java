@@ -4,27 +4,21 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class MetaResource extends TeaModel {
-    // catalog resource
     @NameInMap("CatalogResource")
     public CatalogResource catalogResource;
 
-    // column resource
     @NameInMap("ColumnResource")
     public ColumnResource columnResource;
 
-    // database resource
     @NameInMap("DatabaseResource")
     public DatabaseResource databaseResource;
 
-    // function resource
     @NameInMap("FunctionResource")
     public FunctionResource functionResource;
 
-    // CATALOG,DATABASE, TABLE, FUNCTION, COLUMN任选其一
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // table resource
     @NameInMap("TableResource")
     public TableResource tableResource;
 

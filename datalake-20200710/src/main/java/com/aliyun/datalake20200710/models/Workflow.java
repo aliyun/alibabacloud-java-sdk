@@ -4,19 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class Workflow extends TeaModel {
-    // 最近运行的结束时间
     @NameInMap("LatestEndTime")
     public String latestEndTime;
 
-    // 实例id
     @NameInMap("LatestInstanceId")
     public String latestInstanceId;
 
-    // 最后运行实例的状态
     @NameInMap("LatestInstanceStatus")
     public String latestInstanceStatus;
 
-    // 最后运行的开始时间
     @NameInMap("LatestStartTime")
     public String latestStartTime;
 

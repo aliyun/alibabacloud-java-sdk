@@ -4,23 +4,18 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetTableColumnStatisticsResponseBody extends TeaModel {
-    // Code
     @NameInMap("Code")
     public String code;
 
-    // ColumnStatisticsObjList
     @NameInMap("ColumnStatisticsObjList")
     public java.util.List<ColumnStatisticsObj> columnStatisticsObjList;
 
-    // Message
     @NameInMap("Message")
     public String message;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // Success
     @NameInMap("Success")
     public Boolean success;
 

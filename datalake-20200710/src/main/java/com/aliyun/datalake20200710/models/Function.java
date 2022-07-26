@@ -4,47 +4,36 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class Function extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // ClassName
     @NameInMap("ClassName")
     public String className;
 
-    // CreateTime
     @NameInMap("CreateTime")
     public Integer createTime;
 
-    // CreatedBy
     @NameInMap("CreatedBy")
     public String createdBy;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // FunctionName
     @NameInMap("FunctionName")
     public String functionName;
 
-    // FunctionType
     @NameInMap("FunctionType")
     public String functionType;
 
-    // OwnerName
     @NameInMap("OwnerName")
     public String ownerName;
 
-    // OwnerType
     @NameInMap("OwnerType")
     public String ownerType;
 
-    // ResourceUri
     @NameInMap("ResourceUri")
     public java.util.List<ResourceUri> resourceUri;
 
-    // UpdateTime
     @NameInMap("UpdateTime")
     public Integer updateTime;
 

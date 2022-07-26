@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class IndicatorStatistic extends TeaModel {
-    // 指标数据
     @NameInMap("Data")
     public Long data;
 
-    // 指标日期
     @NameInMap("Date")
     public String date;
 

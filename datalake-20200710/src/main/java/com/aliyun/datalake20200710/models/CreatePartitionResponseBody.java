@@ -4,22 +4,18 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class CreatePartitionResponseBody extends TeaModel {
-    // Code
     @NameInMap("Code")
     public String code;
 
-    // Message
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Partition")
     public Partition partition;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // Success
     @NameInMap("Success")
     public Boolean success;
 

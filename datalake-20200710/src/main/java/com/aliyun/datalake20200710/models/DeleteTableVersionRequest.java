@@ -4,19 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class DeleteTableVersionRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 
-    // table version id
     @NameInMap("VersionId")
     public Integer versionId;
 

@@ -4,23 +4,18 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GrantRevokeEntry extends TeaModel {
-    // 授权的accesses列表
     @NameInMap("Accesses")
     public java.util.List<String> accesses;
 
-    // 授权的grantable accesses列表
     @NameInMap("DelegateAccesses")
     public java.util.List<String> delegateAccesses;
 
-    // identifier for this entry
     @NameInMap("Id")
     public String id;
 
-    // 授权的资源
     @NameInMap("MetaResource")
     public MetaResource metaResource;
 
-    // 授权的用户principal
     @NameInMap("Principal")
     public Principal principal;
 
