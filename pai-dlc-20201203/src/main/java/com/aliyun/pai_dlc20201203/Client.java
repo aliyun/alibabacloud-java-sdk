@@ -15,7 +15,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(Config config) throws Exception {
         super(config);
         this._signatureAlgorithm = "v2";
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("ap-northeast-1", "pai-dlc.aliyuncs.com"),
+            new TeaPair("ap-northeast-2-pop", "pai-dlc.aliyuncs.com"),
+            new TeaPair("ap-south-1", "pai-dlc.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "pai-dlc.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "pai-dlc.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-fujian", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "pai-dlc.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "pai-dlc.aliyuncs.com"),
+            new TeaPair("eu-west-1", "pai-dlc.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "pai-dlc.aliyuncs.com"),
+            new TeaPair("me-east-1", "pai-dlc.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "pai-dlc.aliyuncs.com"),
+            new TeaPair("us-east-1", "pai-dlc.aliyuncs.com"),
+            new TeaPair("us-west-1", "pai-dlc.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("pai-dlc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
