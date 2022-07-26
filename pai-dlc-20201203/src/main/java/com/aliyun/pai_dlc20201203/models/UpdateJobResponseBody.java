@@ -4,11 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class UpdateJobResponseBody extends TeaModel {
-    // 作业ID
     @NameInMap("JobId")
     public String jobId;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

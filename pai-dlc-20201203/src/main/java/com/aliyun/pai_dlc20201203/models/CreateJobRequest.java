@@ -4,72 +4,57 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class CreateJobRequest extends TeaModel {
-    // 代码源配置
     @NameInMap("CodeSource")
     public CreateJobRequestCodeSource codeSource;
 
-    // 数据源配置列表
     @NameInMap("DataSources")
     public java.util.List<CreateJobRequestDataSources> dataSources;
 
-    // debugger参数
     @NameInMap("DebuggerConfigContent")
     public String debuggerConfigContent;
 
-    // 作业显示名称
     @NameInMap("DisplayName")
     public String displayName;
 
     @NameInMap("ElasticSpec")
     public JobElasticSpec elasticSpec;
 
-    // 环境变量配置
     @NameInMap("Envs")
     public java.util.Map<String, String> envs;
 
-    // 作业最大运行时间
     @NameInMap("JobMaxRunningTimeMinutes")
     public Long jobMaxRunningTimeMinutes;
 
-    // 作业规格配置
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
 
-    // 作业类型
     @NameInMap("JobType")
     public String jobType;
 
     @NameInMap("Options")
     public String options;
 
-    // 作业优先级
     @NameInMap("Priority")
     public Integer priority;
 
-    // 资源组编号
     @NameInMap("ResourceId")
     public String resourceId;
 
     @NameInMap("Settings")
     public JobSettings settings;
 
-    // 三方库(requirements.txt)文件路径
     @NameInMap("ThirdpartyLibDir")
     public String thirdpartyLibDir;
 
-    // 三方库配置列表
     @NameInMap("ThirdpartyLibs")
     public java.util.List<String> thirdpartyLibs;
 
-    // 作业命令
     @NameInMap("UserCommand")
     public String userCommand;
 
-    // 用户VPC
     @NameInMap("UserVpc")
     public CreateJobRequestUserVpc userVpc;
 
-    // 工作空间编号
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -223,19 +208,15 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestCodeSource extends TeaModel {
-        // 代码分支
         @NameInMap("Branch")
         public String branch;
 
-        // 代码源Id
         @NameInMap("CodeSourceId")
         public String codeSourceId;
 
-        // 代码Commit
         @NameInMap("Commit")
         public String commit;
 
-        // 本地挂载路径
         @NameInMap("MountPath")
         public String mountPath;
 
@@ -279,11 +260,9 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestDataSources extends TeaModel {
-        // 数据源Id
         @NameInMap("DataSourceId")
         public String dataSourceId;
 
-        // 本地挂载路径
         @NameInMap("MountPath")
         public String mountPath;
 
@@ -311,19 +290,15 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestUserVpc extends TeaModel {
-        // 扩展网段
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
-        // 用户安全组的id
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
-        // 用户交换机的id
         @NameInMap("SwitchId")
         public String switchId;
 
-        // 用户VPC的id
         @NameInMap("VpcId")
         public String vpcId;
 

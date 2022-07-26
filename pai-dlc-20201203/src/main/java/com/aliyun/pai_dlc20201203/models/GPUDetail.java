@@ -4,15 +4,12 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GPUDetail extends TeaModel {
-    // GPU卡数
     @NameInMap("GPU")
     public String GPU;
 
-    // GPU卡型
     @NameInMap("GPUType")
     public String GPUType;
 
-    // GPU卡型全名
     @NameInMap("GPUTypeFullName")
     public String GPUTypeFullName;
 

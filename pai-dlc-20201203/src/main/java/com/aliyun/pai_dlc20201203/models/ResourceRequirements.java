@@ -4,11 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ResourceRequirements extends TeaModel {
-    // 资源限制
     @NameInMap("Limits")
     public java.util.Map<String, String> limits;
 
-    // 资源需求
     @NameInMap("Requests")
     public java.util.Map<String, String> requests;
 

@@ -4,27 +4,21 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class QuotaDetail extends TeaModel {
-    // CPU核数
     @NameInMap("CPU")
     public String CPU;
 
-    // GPU卡数
     @NameInMap("GPU")
     public String GPU;
 
-    // GPU详情
     @NameInMap("GPUDetails")
     public java.util.List<GPUDetail> GPUDetails;
 
-    // GPU卡型
     @NameInMap("GPUType")
     public String GPUType;
 
-    // GPU卡型全名
     @NameInMap("GPUTypeFullName")
     public String GPUTypeFullName;
 
-    // 内存容量
     @NameInMap("Memory")
     public String memory;
 

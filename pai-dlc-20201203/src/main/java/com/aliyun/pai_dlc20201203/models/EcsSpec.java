@@ -4,31 +4,24 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class EcsSpec extends TeaModel {
-    // 加速器类型
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
-    // cpu数量
     @NameInMap("Cpu")
     public Integer cpu;
 
-    // gpu数量
     @NameInMap("Gpu")
     public Integer gpu;
 
-    // gpu类型
     @NameInMap("GpuType")
     public String gpuType;
 
-    // 规格类型
     @NameInMap("InstanceType")
     public String instanceType;
 
-    // 是否有库存
     @NameInMap("IsAvailable")
     public Boolean isAvailable;
 
-    // Memory数量
     @NameInMap("Memory")
     public Integer memory;
 

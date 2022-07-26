@@ -4,51 +4,39 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class Quota extends TeaModel {
-    // 集群id
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // 集群名称
     @NameInMap("ClusterName")
     public String clusterName;
 
-    // 是否允许使用潮汐资源
     @NameInMap("EnableTideResource")
     public Boolean enableTideResource;
 
-    // 是否是独占Quota组
     @NameInMap("IsExclusiveQuota")
     public Boolean isExclusiveQuota;
 
-    // 资源配额id
     @NameInMap("QuotaId")
     public String quotaId;
 
-    // 资源配额名称
     @NameInMap("QuotaName")
     public String quotaName;
 
-    // 资源配额类型
     @NameInMap("QuotaType")
     public String quotaType;
 
-    // 资源组允许使用的潮汐资源级别
     @NameInMap("ResourceLevel")
     public String resourceLevel;
 
-    // 资源总量
     @NameInMap("TotalQuota")
     public QuotaDetail totalQuota;
 
-    // 潮汐资源总量
     @NameInMap("TotalTideQuota")
     public QuotaDetail totalTideQuota;
 
-    // 资源用量
     @NameInMap("UsedQuota")
     public QuotaDetail usedQuota;
 
-    // 潮汐资源用量
     @NameInMap("UsedTideQuota")
     public QuotaDetail usedTideQuota;
 

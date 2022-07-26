@@ -4,19 +4,15 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class AliyunAccounts extends TeaModel {
-    // Aliyun账号的UID
     @NameInMap("AliyunUid")
     public String aliyunUid;
 
-    // 弹内用户的工号
     @NameInMap("EmployeeId")
     public String employeeId;
 
-    // 这条记录的创建时间
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 这条记录的上次修改时间
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 

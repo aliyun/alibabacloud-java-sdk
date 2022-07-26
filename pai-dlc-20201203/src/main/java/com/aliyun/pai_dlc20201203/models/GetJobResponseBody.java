@@ -4,46 +4,36 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetJobResponseBody extends TeaModel {
-    // 集群ID
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // 代码源配置
     @NameInMap("CodeSource")
     public GetJobResponseBodyCodeSource codeSource;
 
-    // 数据源配置列表
     @NameInMap("DataSources")
     public java.util.List<GetJobResponseBodyDataSources> dataSources;
 
-    // 作业显示名称
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 作业运行时长（s）
     @NameInMap("Duration")
     public Long duration;
 
-    // 弹性任务参数
     @NameInMap("ElasticSpec")
     public JobElasticSpec elasticSpec;
 
-    // 是否开启debugger任务
     @NameInMap("EnabledDebugger")
     public Boolean enabledDebugger;
 
-    // 环境变量配置
     @NameInMap("Envs")
     public java.util.Map<String, String> envs;
 
-    // 作业创建时间（UTC）
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
     @NameInMap("GmtFailedTime")
     public String gmtFailedTime;
 
-    // 作业结束时间（UTC）
     @NameInMap("GmtFinishTime")
     public String gmtFinishTime;
 
@@ -59,75 +49,57 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("GmtSuccessedTime")
     public String gmtSuccessedTime;
 
-    // 作业Id
     @NameInMap("JobId")
     public String jobId;
 
-    // 作业规格配置
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
 
-    // 作业类型
     @NameInMap("JobType")
     public String jobType;
 
-    // 作业所以运行Pod列表
     @NameInMap("Pods")
     public java.util.List<GetJobResponseBodyPods> pods;
 
-    // 任务的优先级
     @NameInMap("Priority")
     public Integer priority;
 
-    // 状态详情码
     @NameInMap("ReasonCode")
     public String reasonCode;
 
-    // 状态详情
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 作业运行所在的资源组ID
     @NameInMap("ResourceId")
     public String resourceId;
 
-    // 作业运行时使用的资源级别
     @NameInMap("ResourceLevel")
     public String resourceLevel;
 
-    // 作业额外参数配置
     @NameInMap("Settings")
     public JobSettings settings;
 
-    // 作业状态
     @NameInMap("Status")
     public String status;
 
-    // 三方库(requirements.txt)文件路径
     @NameInMap("ThirdpartyLibDir")
     public String thirdpartyLibDir;
 
-    // 三方库配置列表
     @NameInMap("ThirdpartyLibs")
     public java.util.List<String> thirdpartyLibs;
 
-    // 用户命令
     @NameInMap("UserCommand")
     public String userCommand;
 
-    // 作业提交人Id
     @NameInMap("UserId")
     public String userId;
 
-    // 作业所属工作空间ID
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    // 作业所属工作空间名称
     @NameInMap("WorkspaceName")
     public String workspaceName;
 
@@ -401,19 +373,15 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyCodeSource extends TeaModel {
-        // 代码分支
         @NameInMap("Branch")
         public String branch;
 
-        // 代码源Id
         @NameInMap("CodeSourceId")
         public String codeSourceId;
 
-        // 代码Commit
         @NameInMap("Commit")
         public String commit;
 
-        // 本地挂载路径
         @NameInMap("MountPath")
         public String mountPath;
 
@@ -457,11 +425,9 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyDataSources extends TeaModel {
-        // 数据源Id
         @NameInMap("DataSourceId")
         public String dataSourceId;
 
-        // 本地挂载路径
         @NameInMap("MountPath")
         public String mountPath;
 
@@ -489,35 +455,27 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyPodsHistoryPods extends TeaModel {
-        // Pod创建时间（UTC）
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
-        // Pod结束时间（UTC）
         @NameInMap("GmtFinishTime")
         public String gmtFinishTime;
 
-        // Pod启动时间（UTC）
         @NameInMap("GmtStartTime")
         public String gmtStartTime;
 
-        // Pod Ip
         @NameInMap("Ip")
         public String ip;
 
-        // Pod Id
         @NameInMap("PodId")
         public String podId;
 
-        // Pod UId
         @NameInMap("PodUid")
         public String podUid;
 
-        // Pod状态
         @NameInMap("Status")
         public String status;
 
-        // Pod类型
         @NameInMap("Type")
         public String type;
 
@@ -593,39 +551,30 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyPods extends TeaModel {
-        // Pod创建时间（UTC）
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
-        // Pod结束时间（UTC）
         @NameInMap("GmtFinishTime")
         public String gmtFinishTime;
 
-        // Pod启动时间（UTC）
         @NameInMap("GmtStartTime")
         public String gmtStartTime;
 
-        // 历史Pods
         @NameInMap("HistoryPods")
         public java.util.List<GetJobResponseBodyPodsHistoryPods> historyPods;
 
-        // Pod Ip
         @NameInMap("Ip")
         public String ip;
 
-        // Pod Id
         @NameInMap("PodId")
         public String podId;
 
-        // Pod UId
         @NameInMap("PodUid")
         public String podUid;
 
-        // Pod状态
         @NameInMap("Status")
         public String status;
 
-        // Pod类型
         @NameInMap("Type")
         public String type;
 

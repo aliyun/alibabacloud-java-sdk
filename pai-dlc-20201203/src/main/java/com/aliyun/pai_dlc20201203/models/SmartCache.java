@@ -4,67 +4,51 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class SmartCache extends TeaModel {
-    // cache worker的数量单位是个
     @NameInMap("CacheWorkerNum")
     public Long cacheWorkerNum;
 
-    // 每个cache worker的cache大小单位是GB
     @NameInMap("CacheWorkerSize")
     public Long cacheWorkerSize;
 
-    // SmartCache 描述
     @NameInMap("Description")
     public String description;
 
-    // SmartCache 名称
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 已运行时长
     @NameInMap("Duration")
     public String duration;
 
-    // OSS Endpoint
     @NameInMap("Endpoint")
     public String endpoint;
 
-    // 阿里云的NAS文件系统ID
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
-    // 创建时间（UTC）
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 修改时间（UTC）
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 
-    // 数据源本地挂载目录
     @NameInMap("MountPath")
     public String mountPath;
 
-    // 可选的超参数
     @NameInMap("Options")
     public String options;
 
-    // OSS数据源路径
     @NameInMap("Path")
     public String path;
 
-    // SmartCacheId
     @NameInMap("SmartCacheId")
     public String smartCacheId;
 
-    // 运行状态
     @NameInMap("Status")
     public String status;
 
-    // 挂载的数据类型
     @NameInMap("Type")
     public String type;
 
-    // 创建者Id
     @NameInMap("UserId")
     public String userId;
 

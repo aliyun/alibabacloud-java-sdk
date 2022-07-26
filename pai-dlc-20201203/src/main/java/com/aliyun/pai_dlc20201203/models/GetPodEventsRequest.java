@@ -4,19 +4,15 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetPodEventsRequest extends TeaModel {
-    // 截止时间
     @NameInMap("EndTime")
     public String endTime;
 
-    // 返回的事件最大数量
     @NameInMap("MaxEventsNum")
     public Integer maxEventsNum;
 
-    // 运行实例UID
     @NameInMap("PodUid")
     public String podUid;
 
-    // 起始时间
     @NameInMap("StartTime")
     public String startTime;
 

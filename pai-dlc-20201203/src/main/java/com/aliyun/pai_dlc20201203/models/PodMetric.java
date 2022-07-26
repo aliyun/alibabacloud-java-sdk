@@ -4,11 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class PodMetric extends TeaModel {
-    // 监控指标样本序列
     @NameInMap("Metrics")
     public java.util.List<Metric> metrics;
 
-    // Pod编号
     @NameInMap("PodId")
     public String podId;
 

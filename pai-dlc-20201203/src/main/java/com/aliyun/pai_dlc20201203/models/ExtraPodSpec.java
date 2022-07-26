@@ -4,23 +4,18 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ExtraPodSpec extends TeaModel {
-    // 初始化容器
     @NameInMap("InitContainers")
     public java.util.List<ContainerSpec> initContainers;
 
-    // Pod注解
     @NameInMap("PodAnnotations")
     public java.util.Map<String, String> podAnnotations;
 
-    // Pod标签
     @NameInMap("PodLabels")
     public java.util.Map<String, String> podLabels;
 
-    // 容器间共享的本地目录
     @NameInMap("SharedVolumeMountPaths")
     public java.util.List<String> sharedVolumeMountPaths;
 
-    // 伴随容器
     @NameInMap("SideCarContainers")
     public java.util.List<ContainerSpec> sideCarContainers;
 

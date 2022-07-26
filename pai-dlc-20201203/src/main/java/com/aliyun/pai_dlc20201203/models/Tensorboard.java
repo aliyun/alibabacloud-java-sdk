@@ -4,59 +4,45 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class Tensorboard extends TeaModel {
-    // 数据源Id
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
-    // 展示名称
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 运行时长
     @NameInMap("Duration")
     public String duration;
 
-    // 创建时间（UTC）
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 修改时间（UTC）
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 
-    // 任务Id
     @NameInMap("JobId")
     public String jobId;
 
-    // 状态详情码
     @NameInMap("ReasonCode")
     public String reasonCode;
 
-    // 状态详情
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 状态
     @NameInMap("Status")
     public String status;
 
-    // 文件路径
     @NameInMap("SummaryPath")
     public String summaryPath;
 
-    // Tensorboard Id
     @NameInMap("TensorboardId")
     public String tensorboardId;
 
-    // Tensorboard URL
     @NameInMap("TensorboardUrl")
     public String tensorboardUrl;
 
-    // 创建者
     @NameInMap("UserId")
     public String userId;
 

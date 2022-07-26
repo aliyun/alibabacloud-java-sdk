@@ -4,7 +4,6 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class CreateTensorboardRequest extends TeaModel {
-    // DataSource Id
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
@@ -14,15 +13,12 @@ public class CreateTensorboardRequest extends TeaModel {
     @NameInMap("DataSources")
     public java.util.List<DataSourceItem> dataSources;
 
-    // Tensorboard名称
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 任务Id
     @NameInMap("JobId")
     public String jobId;
 
-    // 最长运行时长
     @NameInMap("MaxRunningTimeMinutes")
     public Long maxRunningTimeMinutes;
 
@@ -35,7 +31,6 @@ public class CreateTensorboardRequest extends TeaModel {
     @NameInMap("SourceType")
     public String sourceType;
 
-    // Summary 目录
     @NameInMap("SummaryPath")
     public String summaryPath;
 

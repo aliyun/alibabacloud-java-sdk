@@ -4,31 +4,24 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ImageItem extends TeaModel {
-    // 加速器类型
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
-    // 镜像作者
     @NameInMap("AuthorId")
     public String authorId;
 
-    // 镜像包含的框架类型
     @NameInMap("Framework")
     public String framework;
 
-    // 镜像类型
     @NameInMap("ImageProviderType")
     public String imageProviderType;
 
-    // 镜像Tag
     @NameInMap("ImageTag")
     public String imageTag;
 
-    // 镜像地址
     @NameInMap("ImageUrl")
     public String imageUrl;
 
-    // 镜像vpc地址
     @NameInMap("ImageUrlVpc")
     public String imageUrlVpc;
 

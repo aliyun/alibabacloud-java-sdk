@@ -4,31 +4,24 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListTensorboardsRequest extends TeaModel {
-    // 展示名称
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 截止时间
     @NameInMap("EndTime")
     public String endTime;
 
-    // JobId
     @NameInMap("JobId")
     public String jobId;
 
-    // 排序顺序
     @NameInMap("Order")
     public String order;
 
-    // 当前页
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页返回的作业数
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 按返回字段排序
     @NameInMap("SortBy")
     public String sortBy;
 
@@ -38,23 +31,18 @@ public class ListTensorboardsRequest extends TeaModel {
     @NameInMap("SourceType")
     public String sourceType;
 
-    // 起始时间
     @NameInMap("StartTime")
     public String startTime;
 
-    // 根据状态过滤
     @NameInMap("Status")
     public String status;
 
-    // TensorboardId
     @NameInMap("TensorboardId")
     public String tensorboardId;
 
-    // 是否显示详情
     @NameInMap("Verbose")
     public Boolean verbose;
 
-    // 工作空间ID
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

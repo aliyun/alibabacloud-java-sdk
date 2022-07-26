@@ -4,15 +4,12 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetJobMetricsResponseBody extends TeaModel {
-    // 作业ID
     @NameInMap("JobId")
     public String jobId;
 
-    // 任务监控指标序列集合
     @NameInMap("PodMetrics")
     public java.util.List<PodMetric> podMetrics;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

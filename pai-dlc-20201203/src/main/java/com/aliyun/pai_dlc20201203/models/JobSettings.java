@@ -4,35 +4,27 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class JobSettings extends TeaModel {
-    // 作业关联用户ID
     @NameInMap("BusinessUserId")
     public String businessUserId;
 
-    // 调用方
     @NameInMap("Caller")
     public String caller;
 
-    // 允许打开作业容错监控
     @NameInMap("EnableErrorMonitoringInAIMaster")
     public Boolean enableErrorMonitoringInAIMaster;
 
-    // 允许作业使用RDMA
     @NameInMap("EnableRDMA")
     public Boolean enableRDMA;
 
-    // 允许作业使用潮汐资源
     @NameInMap("EnableTideResource")
     public Boolean enableTideResource;
 
-    // 用户指定容错监控的配置参数，比如指定是否启动基于log hang的检测
     @NameInMap("ErrorMonitoringArgs")
     public String errorMonitoringArgs;
 
-    // 工作流ID
     @NameInMap("PipelineId")
     public String pipelineId;
 
-    // 自定义标签
     @NameInMap("Tags")
     public java.util.Map<String, String> tags;
 
