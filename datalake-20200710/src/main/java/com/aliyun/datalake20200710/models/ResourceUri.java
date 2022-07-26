@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ResourceUri extends TeaModel {
-    // ResourceType
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // Uri
     @NameInMap("Uri")
     public String uri;
 

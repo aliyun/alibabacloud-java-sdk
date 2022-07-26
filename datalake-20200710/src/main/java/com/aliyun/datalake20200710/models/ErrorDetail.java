@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ErrorDetail extends TeaModel {
-    // Code
     @NameInMap("Code")
     public String code;
 
-    // Message
     @NameInMap("Message")
     public String message;
 

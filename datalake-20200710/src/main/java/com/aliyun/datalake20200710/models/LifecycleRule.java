@@ -4,67 +4,51 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class LifecycleRule extends TeaModel {
-    // archiveDays
     @NameInMap("ArchiveDays")
     public Integer archiveDays;
 
-    // bindCount
     @NameInMap("BindCount")
     public Integer bindCount;
 
-    // bizId
     @NameInMap("BizId")
     public String bizId;
 
-    // coldArchiveDays
     @NameInMap("ColdArchiveDays")
     public Integer coldArchiveDays;
 
-    // Config
     @NameInMap("Config")
     public String config;
 
-    // description
     @NameInMap("Description")
     public String description;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 修改时间
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    // iaDays
     @NameInMap("IaDays")
     public Integer iaDays;
 
-    // name
     @NameInMap("Name")
     public String name;
 
-    // resourceType
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // ruleType
     @NameInMap("RuleType")
     public String ruleType;
 
-    // scheduleStatus
     @NameInMap("ScheduleStatus")
     public String scheduleStatus;
 
-    // 工作流
     @NameInMap("Workflow")
     public Workflow workflow;
 
-    // 工作流id
     @NameInMap("WorkflowId")
     public String workflowId;
 
-    // 工作流实例
     @NameInMap("WorkflowInstance")
     public WorkflowInstance workflowInstance;
 

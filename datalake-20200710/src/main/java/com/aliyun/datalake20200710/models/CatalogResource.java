@@ -4,7 +4,6 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class CatalogResource extends TeaModel {
-    // Catalog id
     @NameInMap("CatalogId")
     public String catalogId;
 

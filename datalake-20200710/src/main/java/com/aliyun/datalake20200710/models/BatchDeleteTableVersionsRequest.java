@@ -4,19 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteTableVersionsRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 
-    // Table versionIds
     @NameInMap("VersionIds")
     public java.util.List<Integer> versionIds;
 

@@ -4,19 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class BatchUpdateTablesRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // 是否异步
     @NameInMap("IsAsync")
     public Boolean isAsync;
 
-    // TableInputs
     @NameInMap("TableInputs")
     public java.util.List<TableInput> tableInputs;
 

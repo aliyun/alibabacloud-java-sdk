@@ -4,19 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class SmallFileCntRank extends TeaModel {
-    // 库名
     @NameInMap("DbName")
     public String dbName;
 
-    // 存储位置
     @NameInMap("Location")
     public String location;
 
-    // 数量
     @NameInMap("Quantity")
     public Long quantity;
 
-    // 表名
     @NameInMap("TableName")
     public String tableName;
 

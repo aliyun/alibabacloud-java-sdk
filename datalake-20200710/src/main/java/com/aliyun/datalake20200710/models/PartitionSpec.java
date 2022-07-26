@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class PartitionSpec extends TeaModel {
-    // SharedSDPartitions
     @NameInMap("SharedSDPartitions")
     public java.util.List<Partition> sharedSDPartitions;
 
-    // SharedStorageDescriptor
     @NameInMap("SharedStorageDescriptor")
     public PartitionSpecSharedStorageDescriptor sharedStorageDescriptor;
 
@@ -34,11 +32,9 @@ public class PartitionSpec extends TeaModel {
     }
 
     public static class PartitionSpecSharedStorageDescriptor extends TeaModel {
-        // Cols
         @NameInMap("Cols")
         public java.util.List<FieldSchema> cols;
 
-        // Location
         @NameInMap("Location")
         public String location;
 

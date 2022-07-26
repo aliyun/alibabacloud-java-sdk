@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class DatabaseResource extends TeaModel {
-    // Database name
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // A wildcard member representing every resource under a database
     @NameInMap("DatabaseWildcard")
     public String databaseWildcard;
 

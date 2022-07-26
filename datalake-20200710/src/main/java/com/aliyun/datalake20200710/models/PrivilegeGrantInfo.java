@@ -4,23 +4,18 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class PrivilegeGrantInfo extends TeaModel {
-    // createTime
     @NameInMap("CreateTime")
     public Integer createTime;
 
-    // grantOption
     @NameInMap("GrantOption")
     public Boolean grantOption;
 
-    // grantor
     @NameInMap("Grantor")
     public String grantor;
 
-    // grantorType
     @NameInMap("GrantorType")
     public String grantorType;
 
-    // privilege
     @NameInMap("Privilege")
     public String privilege;
 

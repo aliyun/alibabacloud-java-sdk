@@ -4,19 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class StorageLayer extends TeaModel {
-    // 归档
     @NameInMap("Archive")
     public Long archive;
 
-    // 冷归档
     @NameInMap("ColdArchive")
     public Long coldArchive;
 
-    // 低频
     @NameInMap("Infrequent")
     public Long infrequent;
 
-    // 标准
     @NameInMap("Standard")
     public Long standard;
 

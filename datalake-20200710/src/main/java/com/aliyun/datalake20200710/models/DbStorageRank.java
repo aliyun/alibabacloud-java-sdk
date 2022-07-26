@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class DbStorageRank extends TeaModel {
-    // 库名
     @NameInMap("DbName")
     public String dbName;
 
-    // 存储量
     @NameInMap("Quantity")
     public Long quantity;
 

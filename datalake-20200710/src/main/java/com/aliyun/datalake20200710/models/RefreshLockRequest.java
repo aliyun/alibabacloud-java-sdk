@@ -4,7 +4,6 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class RefreshLockRequest extends TeaModel {
-    // LockId
     @NameInMap("LockId")
     public Long lockId;
 

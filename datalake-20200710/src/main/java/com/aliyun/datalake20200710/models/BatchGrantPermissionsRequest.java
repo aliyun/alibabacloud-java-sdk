@@ -4,15 +4,12 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class BatchGrantPermissionsRequest extends TeaModel {
-    // catalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // 待授权列表
     @NameInMap("GrantRevokeEntries")
     public java.util.List<GrantRevokeEntry> grantRevokeEntries;
 
-    // 授权的类型，目前仅支持hive
     @NameInMap("Type")
     public String type;
 

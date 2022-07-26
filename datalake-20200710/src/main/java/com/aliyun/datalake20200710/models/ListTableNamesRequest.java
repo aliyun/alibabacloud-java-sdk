@@ -4,27 +4,21 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ListTableNamesRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // NextPageToken
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
-    // PageSize
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // TableNamePattern
     @NameInMap("TableNamePattern")
     public String tableNamePattern;
 
-    // TableType filter
     @NameInMap("TableType")
     public String tableType;
 

@@ -4,22 +4,18 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class BatchDeletePartitionsRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // IfExists
     @NameInMap("IfExists")
     public Boolean ifExists;
 
     @NameInMap("PartitionValueList")
     public java.util.List<BatchDeletePartitionsRequestPartitionValueList> partitionValueList;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 

@@ -4,39 +4,30 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class StorageFormat extends TeaModel {
-    // Avro
     @NameInMap("Avro")
     public Long avro;
 
-    // Csv
     @NameInMap("Csv")
     public Long csv;
 
-    // Delta
     @NameInMap("Delta")
     public Long delta;
 
-    // Hudi
     @NameInMap("Hudi")
     public Long hudi;
 
-    // Iceberg
     @NameInMap("Iceberg")
     public Long iceberg;
 
-    // Json
     @NameInMap("Json")
     public Long json;
 
-    // Orc
     @NameInMap("Orc")
     public Long orc;
 
-    // Parquet
     @NameInMap("Parquet")
     public Long parquet;
 
-    // Uncategorized
     @NameInMap("Uncategorized")
     public Long uncategorized;
 

@@ -4,21 +4,18 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetPartitionColumnStatisticsShrinkRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
     @NameInMap("ColumnNames")
     public String columnNamesShrink;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
     @NameInMap("PartitionNames")
     public String partitionNamesShrink;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 

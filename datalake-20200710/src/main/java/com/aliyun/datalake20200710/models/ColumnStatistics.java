@@ -7,15 +7,12 @@ public class ColumnStatistics extends TeaModel {
     @NameInMap("ColumnStatisticsDesc")
     public ColumnStatisticsDesc columnStatisticsDesc;
 
-    // ColumnStatisticsObjList
     @NameInMap("ColumnStatisticsObjList")
     public java.util.List<ColumnStatisticsObj> columnStatisticsObjList;
 
-    // Engine for hive3+
     @NameInMap("Engine")
     public String engine;
 
-    // IsStatsCompliant for hive3+
     @NameInMap("IsStatsCompliant")
     public Boolean isStatsCompliant;
 

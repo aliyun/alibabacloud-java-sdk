@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class RevokeRoleFromUsersRequest extends TeaModel {
-    // 待revoke的角色
     @NameInMap("RoleName")
     public String roleName;
 
-    // 待revoke的用户列表
     @NameInMap("Users")
     public java.util.List<Principal> users;
 

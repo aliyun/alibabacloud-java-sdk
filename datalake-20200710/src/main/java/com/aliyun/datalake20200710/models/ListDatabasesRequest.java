@@ -4,19 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ListDatabasesRequest extends TeaModel {
-    // catalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // namePattern
     @NameInMap("NamePattern")
     public String namePattern;
 
-    // namePattern
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
-    // pageSize
     @NameInMap("PageSize")
     public Integer pageSize;
 

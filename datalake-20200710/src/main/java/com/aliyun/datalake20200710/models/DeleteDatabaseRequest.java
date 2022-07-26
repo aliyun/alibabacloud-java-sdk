@@ -4,15 +4,12 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class DeleteDatabaseRequest extends TeaModel {
-    // Cascade
     @NameInMap("Cascade")
     public Boolean cascade;
 
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // Name
     @NameInMap("Name")
     public String name;
 

@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class TaskStatus extends TeaModel {
-    // message of the task
     @NameInMap("Message")
     public String message;
 
-    // status of the task
     @NameInMap("Status")
     public String status;
 

@@ -4,23 +4,18 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class Partition extends TeaModel {
-    // CreateTime
     @NameInMap("CreateTime")
     public Integer createTime;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // LastAccessTime
     @NameInMap("LastAccessTime")
     public Integer lastAccessTime;
 
-    // LastAnalyzedTime
     @NameInMap("LastAnalyzedTime")
     public Integer lastAnalyzedTime;
 
-    // Parameters
     @NameInMap("Parameters")
     public java.util.Map<String, String> parameters;
 
@@ -30,11 +25,9 @@ public class Partition extends TeaModel {
     @NameInMap("Sd")
     public StorageDescriptor sd;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 
-    // Values
     @NameInMap("Values")
     public java.util.List<String> values;
 

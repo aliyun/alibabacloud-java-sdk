@@ -4,18 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetTableColumnStatisticsRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
     @NameInMap("ColumnNames")
     public java.util.List<String> columnNames;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 

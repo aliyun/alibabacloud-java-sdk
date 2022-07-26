@@ -4,31 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class PartitionProfile extends TeaModel {
-    // oss存储类型
     @NameInMap("ArchiveStatus")
     public String archiveStatus;
 
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 库名称
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // dml时间
     @NameInMap("DmlTime")
     public String dmlTime;
 
-    // 存储位置
     @NameInMap("Location")
     public String location;
 
-    // 分区名称
     @NameInMap("PartitionName")
     public String partitionName;
 
-    // 表名称
     @NameInMap("TableName")
     public String tableName;
 

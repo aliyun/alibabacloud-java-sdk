@@ -4,31 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class WorkflowInstance extends TeaModel {
-    // 执行进度
     @NameInMap("BatchProgress")
     public Integer batchProgress;
 
-    // 工作流id
     @NameInMap("DlfWorkflowId")
     public String dlfWorkflowId;
 
-    // 结束时间
     @NameInMap("EndTime")
     public Long endTime;
 
-    // 业务流程实例id
     @NameInMap("ExternalInstanceId")
     public String externalInstanceId;
 
-    // 运行日志
     @NameInMap("RuntimeLogs")
     public java.util.List<LogInfo> runtimeLogs;
 
-    // 开始时间
     @NameInMap("StartTime")
     public Long startTime;
 
-    // 运行状态
     @NameInMap("Status")
     public String status;
 

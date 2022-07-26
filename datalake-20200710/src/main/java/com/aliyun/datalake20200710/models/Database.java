@@ -4,31 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class Database extends TeaModel {
-    // createTime
     @NameInMap("CreateTime")
     public Integer createTime;
 
-    // CreatedBy
     @NameInMap("CreatedBy")
     public String createdBy;
 
-    // description
     @NameInMap("Description")
     public String description;
 
-    // locationUri
     @NameInMap("LocationUri")
     public String locationUri;
 
-    // name
     @NameInMap("Name")
     public String name;
 
-    // ownerName
     @NameInMap("OwnerName")
     public String ownerName;
 
-    // ownerType
     @NameInMap("OwnerType")
     public String ownerType;
 
@@ -38,7 +31,6 @@ public class Database extends TeaModel {
     @NameInMap("Privileges")
     public PrincipalPrivilegeSet privileges;
 
-    // updateTime
     @NameInMap("UpdateTime")
     public Integer updateTime;
 

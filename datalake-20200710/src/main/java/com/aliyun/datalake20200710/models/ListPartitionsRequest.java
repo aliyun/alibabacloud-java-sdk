@@ -4,30 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ListPartitionsRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // IsShareSd
     @NameInMap("IsShareSd")
     public Boolean isShareSd;
 
-    // NextPageToken
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
-    // PageSize
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("PartialPartValues")
     public java.util.List<String> partialPartValues;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 

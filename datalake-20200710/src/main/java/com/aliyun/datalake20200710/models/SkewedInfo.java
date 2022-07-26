@@ -4,15 +4,12 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class SkewedInfo extends TeaModel {
-    // SkewedColNames
     @NameInMap("SkewedColNames")
     public java.util.List<String> skewedColNames;
 
-    // SkewedColValueLocationMaps
     @NameInMap("SkewedColValueLocationMaps")
     public java.util.Map<String, String> skewedColValueLocationMaps;
 
-    // SkewedColValueLocationMaps
     @NameInMap("SkewedColValues")
     public java.util.List<java.util.List<String>> skewedColValues;
 

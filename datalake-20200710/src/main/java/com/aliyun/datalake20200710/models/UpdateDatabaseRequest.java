@@ -4,14 +4,12 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class UpdateDatabaseRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
     @NameInMap("DatabaseInput")
     public DatabaseInput databaseInput;
 
-    // Name
     @NameInMap("Name")
     public String name;
 

@@ -4,23 +4,18 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetPartitionColumnStatisticsResponseBody extends TeaModel {
-    // Code
     @NameInMap("Code")
     public String code;
 
-    // Message
     @NameInMap("Message")
     public String message;
 
-    // PartitionStatisticsMap
     @NameInMap("PartitionStatisticsMap")
     public java.util.Map<String, java.util.List<ColumnStatisticsObj>> partitionStatisticsMap;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // Success
     @NameInMap("Success")
     public Boolean success;
 

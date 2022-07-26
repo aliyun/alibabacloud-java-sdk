@@ -4,22 +4,18 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class BatchGetPartitionsRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // IsShareSd
     @NameInMap("IsShareSd")
     public Boolean isShareSd;
 
     @NameInMap("PartitionValueList")
     public java.util.List<BatchGetPartitionsRequestPartitionValueList> partitionValueList;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 

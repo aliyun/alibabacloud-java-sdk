@@ -4,18 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class FieldSchema extends TeaModel {
-    // Comment
     @NameInMap("Comment")
     public String comment;
 
-    // Name
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Parameters")
     public java.util.Map<String, String> parameters;
 
-    // Type
     @NameInMap("Type")
     public String type;
 

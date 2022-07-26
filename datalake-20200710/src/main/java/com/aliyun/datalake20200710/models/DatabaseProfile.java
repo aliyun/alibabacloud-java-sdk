@@ -4,23 +4,18 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class DatabaseProfile extends TeaModel {
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 文件数量
     @NameInMap("FileCnt")
     public Long fileCnt;
 
-    // 文件大小
     @NameInMap("FileSize")
     public Long fileSize;
 
-    // 存储位置
     @NameInMap("Location")
     public String location;
 
-    // 库名称
     @NameInMap("Name")
     public String name;
 

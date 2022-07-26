@@ -4,19 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class FileCnt extends TeaModel {
-    // 大文件
     @NameInMap("Large")
     public Long large;
 
-    // 中文件
     @NameInMap("Middle")
     public Long middle;
 
-    // 小文件
     @NameInMap("Small")
     public Long small;
 
-    // 极小文件
     @NameInMap("Tiny")
     public Long tiny;
 

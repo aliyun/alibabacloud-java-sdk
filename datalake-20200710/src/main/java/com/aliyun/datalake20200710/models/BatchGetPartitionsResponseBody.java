@@ -4,31 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class BatchGetPartitionsResponseBody extends TeaModel {
-    // Code
     @NameInMap("Code")
     public String code;
 
-    // Message
     @NameInMap("Message")
     public String message;
 
-    // PartitionErrors
     @NameInMap("PartitionErrors")
     public java.util.List<PartitionError> partitionErrors;
 
-    // PartitionSpecs
     @NameInMap("PartitionSpecs")
     public java.util.List<PartitionSpec> partitionSpecs;
 
-    // Partitions
     @NameInMap("Partitions")
     public java.util.List<Partition> partitions;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // Success
     @NameInMap("Success")
     public Boolean success;
 

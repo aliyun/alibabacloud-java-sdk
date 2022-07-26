@@ -4,7 +4,6 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class CreateLockRequest extends TeaModel {
-    // LockObjList
     @NameInMap("LockObjList")
     public java.util.List<LockObj> lockObjList;
 

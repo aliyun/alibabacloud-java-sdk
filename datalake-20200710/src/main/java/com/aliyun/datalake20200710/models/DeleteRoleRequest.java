@@ -4,7 +4,6 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class DeleteRoleRequest extends TeaModel {
-    // roleName
     @NameInMap("RoleName")
     public String roleName;
 

@@ -4,31 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ListPartitionsByFilterRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // Filter
     @NameInMap("Filter")
     public String filter;
 
-    // IsShareSd
     @NameInMap("IsShareSd")
     public Boolean isShareSd;
 
-    // NextPageToken
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
-    // PageSize
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 

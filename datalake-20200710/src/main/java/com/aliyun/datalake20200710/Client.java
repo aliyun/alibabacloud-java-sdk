@@ -703,6 +703,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CheckPermissionsResponse());
     }
 
+    public CreateCatalogResponse createCatalog(CreateCatalogRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createCatalogWithOptions(request, headers, runtime);
+    }
+
+    public CreateCatalogResponse createCatalogWithOptions(CreateCatalogRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.catalogInput))) {
+            body.put("CatalogInput", request.catalogInput);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCatalog"),
+            new TeaPair("version", "2020-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/metastore/catalogs"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCatalogResponse());
+    }
+
     public CreateDatabaseResponse createDatabase(CreateDatabaseRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -922,6 +953,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTableResponse());
+    }
+
+    public DeleteCatalogResponse deleteCatalog(DeleteCatalogRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteCatalogWithOptions(request, headers, runtime);
+    }
+
+    public DeleteCatalogResponse deleteCatalogWithOptions(DeleteCatalogRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogId)) {
+            query.put("CatalogId", request.catalogId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isAsync)) {
+            query.put("IsAsync", request.isAsync);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCatalog"),
+            new TeaPair("version", "2020-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/metastore/catalogs"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCatalogResponse());
     }
 
     public DeleteDatabaseResponse deleteDatabase(DeleteDatabaseRequest request) throws Exception {
@@ -1325,6 +1391,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAsyncTaskStatusResponse());
+    }
+
+    public GetCatalogResponse getCatalog(GetCatalogRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getCatalogWithOptions(request, headers, runtime);
+    }
+
+    public GetCatalogResponse getCatalogWithOptions(GetCatalogRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogId)) {
+            query.put("CatalogId", request.catalogId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCatalog"),
+            new TeaPair("version", "2020-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/metastore/catalogs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCatalogResponse());
     }
 
     public GetCatalogSettingsResponse getCatalogSettings(GetCatalogSettingsRequest request) throws Exception {
@@ -2918,6 +3015,108 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RunMigrationWorkflowResponse());
     }
 
+    public SearchResponse search(SearchRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.searchWithOptions(request, headers, runtime);
+    }
+
+    public SearchResponse searchWithOptions(SearchRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogId)) {
+            body.put("CatalogId", request.catalogId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchText)) {
+            body.put("SearchText", request.searchText);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchType)) {
+            body.put("SearchType", request.searchType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortCriteria)) {
+            body.put("SortCriteria", request.sortCriteria);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Search"),
+            new TeaPair("version", "2020-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/metastore/catalogs/search"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchResponse());
+    }
+
+    public SearchAcrossCatalogResponse searchAcrossCatalog(SearchAcrossCatalogRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.searchAcrossCatalogWithOptions(request, headers, runtime);
+    }
+
+    public SearchAcrossCatalogResponse searchAcrossCatalogWithOptions(SearchAcrossCatalogRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogIds)) {
+            body.put("CatalogIds", request.catalogIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchText)) {
+            body.put("SearchText", request.searchText);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchTypes)) {
+            body.put("SearchTypes", request.searchTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortCriteria)) {
+            body.put("SortCriteria", request.sortCriteria);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchAcrossCatalog"),
+            new TeaPair("version", "2020-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/metastore/catalogs/search/search-across-catalog"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchAcrossCatalogResponse());
+    }
+
     public StopMigrationWorkflowResponse stopMigrationWorkflow(StopMigrationWorkflowRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3015,33 +3214,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UnLockResponse());
     }
 
-    public UpdateBlueprintInstanceResponse updateBlueprintInstance(UpdateBlueprintInstanceRequest request) throws Exception {
+    public UpdateCatalogResponse updateCatalog(UpdateCatalogRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateBlueprintInstanceWithOptions(request, headers, runtime);
+        return this.updateCatalogWithOptions(request, headers, runtime);
     }
 
-    public UpdateBlueprintInstanceResponse updateBlueprintInstanceWithOptions(UpdateBlueprintInstanceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public UpdateCatalogResponse updateCatalogWithOptions(UpdateCatalogRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.executeCapacity)) {
-            body.put("ExecuteCapacity", request.executeCapacity);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.executeConcurrency)) {
-            body.put("ExecuteConcurrency", request.executeConcurrency);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.executeParameters)) {
-            body.put("ExecuteParameters", request.executeParameters);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.executeType)) {
-            body.put("ExecuteType", request.executeType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
-            body.put("Id", request.id);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.catalogInput))) {
+            body.put("CatalogInput", request.catalogInput);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -3049,17 +3232,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateBlueprintInstance"),
+            new TeaPair("action", "UpdateCatalog"),
             new TeaPair("version", "2020-07-10"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/webapi/blueprintinstance/update"),
-            new TeaPair("method", "POST"),
+            new TeaPair("pathname", "/api/metastore/catalogs"),
+            new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateBlueprintInstanceResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCatalogResponse());
     }
 
     public UpdateCatalogSettingsResponse updateCatalogSettings(UpdateCatalogSettingsRequest request) throws Exception {

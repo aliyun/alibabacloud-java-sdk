@@ -4,43 +4,33 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class TableProfile extends TeaModel {
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 库名称
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // 文件数量
     @NameInMap("FileCnt")
     public Long fileCnt;
 
-    // 文件大小
     @NameInMap("FileSize")
     public Long fileSize;
 
-    // 是否分区表
     @NameInMap("IsPartitioned")
     public Boolean isPartitioned;
 
-    // 最后跟新时间
     @NameInMap("LastModifyTime")
     public String lastModifyTime;
 
-    // 存储位置
     @NameInMap("Location")
     public String location;
 
-    // 分区数量
     @NameInMap("PartitionCnt")
     public Long partitionCnt;
 
-    // 记录数
     @NameInMap("RecordCnt")
     public Long recordCnt;
 
-    // 表名称
     @NameInMap("TableName")
     public String tableName;
 

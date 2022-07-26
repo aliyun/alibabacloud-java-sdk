@@ -4,18 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetPartitionRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
     @NameInMap("PartitionValues")
     public java.util.List<String> partitionValues;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 

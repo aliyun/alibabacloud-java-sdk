@@ -4,26 +4,21 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class CreatePartitionRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // IfNotExists
     @NameInMap("IfNotExists")
     public Boolean ifNotExists;
 
-    // NeedResult
     @NameInMap("NeedResult")
     public Boolean needResult;
 
     @NameInMap("PartitionInput")
     public PartitionInput partitionInput;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 

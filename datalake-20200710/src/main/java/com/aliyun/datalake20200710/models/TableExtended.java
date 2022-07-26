@@ -4,35 +4,27 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class TableExtended extends TeaModel {
-    // Cascade
     @NameInMap("Cascade")
     public Boolean cascade;
 
-    // CreateTime
     @NameInMap("CreateTime")
     public Integer createTime;
 
-    // CreatedBy
     @NameInMap("CreatedBy")
     public String createdBy;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    // LastAccessTime
     @NameInMap("LastAccessTime")
     public Integer lastAccessTime;
 
-    // LastAnalyzedTime
     @NameInMap("LastAnalyzedTime")
     public Integer lastAnalyzedTime;
 
-    // Owner
     @NameInMap("Owner")
     public String owner;
 
-    // OwnerType
     @NameInMap("OwnerType")
     public String ownerType;
 
@@ -42,47 +34,36 @@ public class TableExtended extends TeaModel {
     @NameInMap("PartitionKeys")
     public java.util.List<FieldSchema> partitionKeys;
 
-    // privileges
     @NameInMap("Privileges")
     public TableExtendedPrivileges privileges;
 
-    // Retention
     @NameInMap("Retention")
     public Integer retention;
 
-    // RewriteEnabled
     @NameInMap("RewriteEnabled")
     public Boolean rewriteEnabled;
 
-    // sd
     @NameInMap("Sd")
     public TableExtendedSd sd;
 
-    // TableFormat
     @NameInMap("TableFormat")
     public String tableFormat;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 
-    // TableType
     @NameInMap("TableType")
     public String tableType;
 
-    // Temporary
     @NameInMap("Temporary")
     public Boolean temporary;
 
-    // UpdateTime
     @NameInMap("UpdateTime")
     public Integer updateTime;
 
-    // ViewExpandedText
     @NameInMap("ViewExpandedText")
     public String viewExpandedText;
 
-    // ViewOriginalText
     @NameInMap("ViewOriginalText")
     public String viewOriginalText;
 
@@ -260,15 +241,12 @@ public class TableExtended extends TeaModel {
     }
 
     public static class TableExtendedPrivileges extends TeaModel {
-        // rolePrivileges
         @NameInMap("RolePrivileges")
         public java.util.Map<String, java.util.List<TableExtendedPrivilegesRolePrivilegesValue>> rolePrivileges;
 
-        // userPrivileges
         @NameInMap("UserPrivileges")
         public java.util.Map<String, java.util.List<TableExtendedPrivilegesUserPrivilegesValue>> userPrivileges;
 
-        // groupPrivileges
         @NameInMap("groupPrivileges")
         public java.util.Map<String, java.util.List<TableExtendedPrivilegesGroupPrivilegesValue>> groupPrivileges;
 
@@ -304,15 +282,12 @@ public class TableExtended extends TeaModel {
     }
 
     public static class TableExtendedSdSerDeInfo extends TeaModel {
-        // Name
         @NameInMap("Name")
         public String name;
 
-        // Parameters
         @NameInMap("Parameters")
         public java.util.Map<String, String> parameters;
 
-        // SerializationLib
         @NameInMap("SerializationLib")
         public String serializationLib;
 
@@ -348,15 +323,12 @@ public class TableExtended extends TeaModel {
     }
 
     public static class TableExtendedSdSkewedInfo extends TeaModel {
-        // SkewedColNames
         @NameInMap("SkewedColNames")
         public java.util.List<String> skewedColNames;
 
-        // SkewedColValueLocationMaps
         @NameInMap("SkewedColValueLocationMaps")
         public java.util.Map<String, String> skewedColValueLocationMaps;
 
-        // SkewedColValues
         @NameInMap("SkewedColValues")
         public java.util.List<java.util.List<String>> skewedColValues;
 
@@ -392,51 +364,39 @@ public class TableExtended extends TeaModel {
     }
 
     public static class TableExtendedSd extends TeaModel {
-        // bucketCols
         @NameInMap("BucketCols")
         public java.util.List<String> bucketCols;
 
-        // Cols
         @NameInMap("Cols")
         public java.util.List<FieldSchema> cols;
 
-        // Compressed
         @NameInMap("Compressed")
         public Boolean compressed;
 
-        // InputFormat
         @NameInMap("InputFormat")
         public String inputFormat;
 
-        // Location
         @NameInMap("Location")
         public String location;
 
-        // NumBuckets
         @NameInMap("NumBuckets")
         public Integer numBuckets;
 
-        // OutputFormat
         @NameInMap("OutputFormat")
         public String outputFormat;
 
-        // Parameters
         @NameInMap("Parameters")
         public java.util.Map<String, String> parameters;
 
-        // SerDeInfo
         @NameInMap("SerDeInfo")
         public TableExtendedSdSerDeInfo serDeInfo;
 
-        // SkewedInfo
         @NameInMap("SkewedInfo")
         public TableExtendedSdSkewedInfo skewedInfo;
 
-        // SortCols
         @NameInMap("SortCols")
         public java.util.List<Order> sortCols;
 
-        // StoredAsSubDirectories
         @NameInMap("StoredAsSubDirectories")
         public Boolean storedAsSubDirectories;
 

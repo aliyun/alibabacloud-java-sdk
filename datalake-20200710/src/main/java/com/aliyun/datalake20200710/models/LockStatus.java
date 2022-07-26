@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class LockStatus extends TeaModel {
-    // LockId
     @NameInMap("LockId")
     public Long lockId;
 
-    // ACQUIRED/NOT_ACQUIRED
     @NameInMap("LockState")
     public String lockState;
 

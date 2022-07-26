@@ -4,19 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class UpdateDatabaseResponseBody extends TeaModel {
-    // Response Code
     @NameInMap("Code")
     public String code;
 
-    // Response Message
     @NameInMap("Message")
     public String message;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // Request is success or not
     @NameInMap("Success")
     public Boolean success;
 

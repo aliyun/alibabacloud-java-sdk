@@ -3,7 +3,7 @@ package com.aliyun.datalake20200710.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateBlueprintInstanceResponse extends TeaModel {
+public class GetCatalogResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class UpdateBlueprintInstanceResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdateBlueprintInstanceResponseBody body;
+    public GetCatalogResponseBody body;
 
-    public static UpdateBlueprintInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateBlueprintInstanceResponse self = new UpdateBlueprintInstanceResponse();
+    public static GetCatalogResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetCatalogResponse self = new GetCatalogResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateBlueprintInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetCatalogResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class UpdateBlueprintInstanceResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateBlueprintInstanceResponse setStatusCode(Integer statusCode) {
+    public GetCatalogResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class UpdateBlueprintInstanceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateBlueprintInstanceResponse setBody(UpdateBlueprintInstanceResponseBody body) {
+    public GetCatalogResponse setBody(GetCatalogResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateBlueprintInstanceResponseBody getBody() {
+    public GetCatalogResponseBody getBody() {
         return this.body;
     }
 

@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class PrivilegeResource extends TeaModel {
-    // Access type
     @NameInMap("Access")
     public String access;
 
-    // resource
     @NameInMap("MetaResource")
     public MetaResource metaResource;
 

@@ -4,19 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class PrincipalResourcePermissions extends TeaModel {
-    // 权限
     @NameInMap("Accesses")
     public java.util.List<String> accesses;
 
-    // grantable权限
     @NameInMap("DelegateAccesses")
     public java.util.List<String> delegateAccesses;
 
-    // 权限信息所属的Hive元数据资源
     @NameInMap("MetaResource")
     public MetaResource metaResource;
 
-    // 权限信息所属的Principal
     @NameInMap("Principal")
     public Principal principal;
 

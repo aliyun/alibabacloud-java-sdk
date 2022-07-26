@@ -4,21 +4,18 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class DeletePartitionColumnStatisticsRequest extends TeaModel {
-    // CatalogId
     @NameInMap("CatalogId")
     public String catalogId;
 
     @NameInMap("ColumnNames")
     public java.util.List<String> columnNames;
 
-    // DatabaseName
     @NameInMap("DatabaseName")
     public String databaseName;
 
     @NameInMap("PartitionNames")
     public java.util.List<String> partitionNames;
 
-    // TableName
     @NameInMap("TableName")
     public String tableName;
 

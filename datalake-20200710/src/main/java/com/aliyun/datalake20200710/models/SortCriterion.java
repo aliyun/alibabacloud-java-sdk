@@ -4,11 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class SortCriterion extends TeaModel {
-    // 排序字段
     @NameInMap("FieldName")
     public String fieldName;
 
-    // 排序方式
     @NameInMap("Sort")
     public String sort;
 
