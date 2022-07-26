@@ -4,23 +4,18 @@ package com.aliyun.xgippop20220520.models;
 import com.aliyun.tea.*;
 
 public class ValidateStatusRequest extends TeaModel {
-    // 阿里UID
     @NameInMap("AliUid")
     public Long aliUid;
 
-    // 应用名称
     @NameInMap("AppId")
     public String appId;
 
-    // 凭证类型
     @NameInMap("CredentialType")
     public String credentialType;
 
-    // mobile=150xxxx4661
     @NameInMap("CredentialValue")
     public String credentialValue;
 
-    // 取值包括cm（中国移动）/ct（中国电信）/cu（中国联通）
     @NameInMap("Operator")
     public String operator;
 

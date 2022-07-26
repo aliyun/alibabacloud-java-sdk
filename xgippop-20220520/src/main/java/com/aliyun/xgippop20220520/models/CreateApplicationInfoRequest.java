@@ -4,22 +4,18 @@ package com.aliyun.xgippop20220520.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationInfoRequest extends TeaModel {
-    // 阿里UID
     @NameInMap("AliUid")
     public Long aliUid;
 
-    // 应用名称
     @NameInMap("AppName")
     public String appName;
 
-    // dynamic（动态业务）/static（静态业务
     @NameInMap("AppTypeList")
     public java.util.List<String> appTypeList;
 
     @NameInMap("AppingList")
     public java.util.List<CreateApplicationInfoRequestAppingList> appingList;
 
-    // 商品code
     @NameInMap("ItemCode")
     public String itemCode;
 
@@ -72,19 +68,15 @@ public class CreateApplicationInfoRequest extends TeaModel {
         @NameInMap("ExtId")
         public Long extId;
 
-        // cdn ip
         @NameInMap("FlowIp")
         public java.util.List<String> flowIp;
 
-        // cdn 域名信息
         @NameInMap("FlowUrl")
         public java.util.List<String> flowUrl;
 
-        // 业务方ip集合
         @NameInMap("OriginalIpList")
         public java.util.List<String> originalIpList;
 
-        // 业务方域名集合
         @NameInMap("OriginalUrlList")
         public java.util.List<String> originalUrlList;
 

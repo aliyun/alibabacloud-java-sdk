@@ -3,12 +3,12 @@ package com.aliyun.xgippop20220520.models;
 
 import com.aliyun.tea.*;
 
-public class OrderFreeFlowProductResponseBody extends TeaModel {
+public class MockOrderFreeFlowProductResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
-    public OrderFreeFlowProductResponseBodyData data;
+    public MockOrderFreeFlowProductResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
@@ -22,12 +22,12 @@ public class OrderFreeFlowProductResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static OrderFreeFlowProductResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        OrderFreeFlowProductResponseBody self = new OrderFreeFlowProductResponseBody();
+    public static MockOrderFreeFlowProductResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        MockOrderFreeFlowProductResponseBody self = new MockOrderFreeFlowProductResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public OrderFreeFlowProductResponseBody setCode(String code) {
+    public MockOrderFreeFlowProductResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -35,15 +35,15 @@ public class OrderFreeFlowProductResponseBody extends TeaModel {
         return this.code;
     }
 
-    public OrderFreeFlowProductResponseBody setData(OrderFreeFlowProductResponseBodyData data) {
+    public MockOrderFreeFlowProductResponseBody setData(MockOrderFreeFlowProductResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public OrderFreeFlowProductResponseBodyData getData() {
+    public MockOrderFreeFlowProductResponseBodyData getData() {
         return this.data;
     }
 
-    public OrderFreeFlowProductResponseBody setMessage(String message) {
+    public MockOrderFreeFlowProductResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -51,7 +51,7 @@ public class OrderFreeFlowProductResponseBody extends TeaModel {
         return this.message;
     }
 
-    public OrderFreeFlowProductResponseBody setRequestId(String requestId) {
+    public MockOrderFreeFlowProductResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -59,7 +59,7 @@ public class OrderFreeFlowProductResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public OrderFreeFlowProductResponseBody setRt(Long rt) {
+    public MockOrderFreeFlowProductResponseBody setRt(Long rt) {
         this.rt = rt;
         return this;
     }
@@ -67,7 +67,7 @@ public class OrderFreeFlowProductResponseBody extends TeaModel {
         return this.rt;
     }
 
-    public OrderFreeFlowProductResponseBody setSuccess(Boolean success) {
+    public MockOrderFreeFlowProductResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -118,58 +118,6 @@ public class OrderFreeFlowProductResponseBody extends TeaModel {
         }
 
         public MockOrderFreeFlowProductResponseBodyData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-    }
-
-    public static class OrderFreeFlowProductResponseBodyData extends TeaModel {
-        @NameInMap("BizCode")
-        public String bizCode;
-
-        @NameInMap("CustomerFlowOrderId")
-        public String customerFlowOrderId;
-
-        @NameInMap("CustomerFlowRequestId")
-        public String customerFlowRequestId;
-
-        @NameInMap("Status")
-        public String status;
-
-        public static OrderFreeFlowProductResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            OrderFreeFlowProductResponseBodyData self = new OrderFreeFlowProductResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public OrderFreeFlowProductResponseBodyData setBizCode(String bizCode) {
-            this.bizCode = bizCode;
-            return this;
-        }
-        public String getBizCode() {
-            return this.bizCode;
-        }
-
-        public OrderFreeFlowProductResponseBodyData setCustomerFlowOrderId(String customerFlowOrderId) {
-            this.customerFlowOrderId = customerFlowOrderId;
-            return this;
-        }
-        public String getCustomerFlowOrderId() {
-            return this.customerFlowOrderId;
-        }
-
-        public OrderFreeFlowProductResponseBodyData setCustomerFlowRequestId(String customerFlowRequestId) {
-            this.customerFlowRequestId = customerFlowRequestId;
-            return this;
-        }
-        public String getCustomerFlowRequestId() {
-            return this.customerFlowRequestId;
-        }
-
-        public OrderFreeFlowProductResponseBodyData setStatus(String status) {
             this.status = status;
             return this;
         }

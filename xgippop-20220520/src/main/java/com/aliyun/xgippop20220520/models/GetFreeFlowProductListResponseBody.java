@@ -4,26 +4,21 @@ package com.aliyun.xgippop20220520.models;
 import com.aliyun.tea.*;
 
 public class GetFreeFlowProductListResponseBody extends TeaModel {
-    // 结果码
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<GetFreeFlowProductListResponseBodyData> data;
 
-    // 结果描述
     @NameInMap("Message")
     public String message;
 
-    // 请求链路ID，如POP请求进来的requestId，返回时原样返回
     @NameInMap("RequestId")
     public String requestId;
 
-    // 服务端处理耗时，ms
     @NameInMap("Rt")
     public Long rt;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -81,35 +76,27 @@ public class GetFreeFlowProductListResponseBody extends TeaModel {
     }
 
     public static class GetFreeFlowProductListResponseBodyData extends TeaModel {
-        // 产品当前状态，true为已配置，false为未配置
         @NameInMap("Configured")
         public Boolean configured;
 
-        // 产品包含的流量大小
         @NameInMap("FlowProductAmount")
         public String flowProductAmount;
 
-        // 免流产品ID
         @NameInMap("FlowProductId")
         public String flowProductId;
 
-        // 流量包名称
         @NameInMap("FlowProductName")
         public String flowProductName;
 
-        // 产品周期
         @NameInMap("FlowProductPeriod")
         public String flowProductPeriod;
 
-        // 取值包括free（定向流量）/normal（通用流量）
         @NameInMap("FlowType")
         public String flowType;
 
-        // 取值包括cm（中国移动）/ct（中国电信）/cu（中国联通）
         @NameInMap("Operator")
         public String operator;
 
-        // 注意这里返回的全量套餐里，只能包含SpecType与该InstanceId的SpecType相同的规格
         @NameInMap("SpecType")
         public String specType;
 

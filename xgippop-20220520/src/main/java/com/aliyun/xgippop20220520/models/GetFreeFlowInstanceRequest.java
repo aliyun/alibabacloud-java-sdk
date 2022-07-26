@@ -7,11 +7,9 @@ public class GetFreeFlowInstanceRequest extends TeaModel {
     @NameInMap("Aliuid")
     public Long aliuid;
 
-    // 应用ID
     @NameInMap("AppId")
     public String appId;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -4,23 +4,18 @@ package com.aliyun.xgippop20220520.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationInfoResponseBody extends TeaModel {
-    // 应用id
     @NameInMap("AppId")
     public String appId;
 
-    // 结果码
     @NameInMap("Code")
     public String code;
 
-    // 结果描述
     @NameInMap("Message")
     public String message;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,11 +4,9 @@ package com.aliyun.xgippop20220520.models;
 import com.aliyun.tea.*;
 
 public class GetFreeFlowProductListRequest extends TeaModel {
-    // 用户编号
     @NameInMap("AliUid")
     public Long aliUid;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 

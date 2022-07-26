@@ -4,27 +4,21 @@ package com.aliyun.xgippop20220520.models;
 import com.aliyun.tea.*;
 
 public class GetFreeFlowInstanceResponseBody extends TeaModel {
-    // 结果码
     @NameInMap("Code")
     public String code;
 
-    // 结果
     @NameInMap("Data")
     public java.util.List<GetFreeFlowInstanceResponseBodyData> data;
 
-    // 结果描述
     @NameInMap("Message")
     public String message;
 
-    // 请求链路ID，如POP请求进来的requestId，返回时原样返回
     @NameInMap("RequestId")
     public String requestId;
 
-    // 服务端处理耗时，ms
     @NameInMap("Rt")
     public Long rt;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -82,35 +76,27 @@ public class GetFreeFlowInstanceResponseBody extends TeaModel {
     }
 
     public static class GetFreeFlowInstanceResponseBodyData extends TeaModel {
-        // APP编号
         @NameInMap("AppCode")
         public String appCode;
 
-        // APP名称
         @NameInMap("AppName")
         public String appName;
 
-        // 产品失效时间
         @NameInMap("EndTime")
         public String endTime;
 
-        // 实例名称
         @NameInMap("InstanceMemo")
         public String instanceMemo;
 
-        // 实例状态
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
-        // 产品开通时间
         @NameInMap("OpenTime")
         public String openTime;
 
-        // 规格类型
         @NameInMap("SpecType")
         public String specType;
 
-        // 产品生效时间
         @NameInMap("StartTime")
         public String startTime;
 
