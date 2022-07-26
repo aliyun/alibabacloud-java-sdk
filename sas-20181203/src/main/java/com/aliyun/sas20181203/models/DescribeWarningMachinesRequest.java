@@ -4,6 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWarningMachinesRequest extends TeaModel {
+    @NameInMap("ClusterId")
+    public String clusterId;
+
+    @NameInMap("ContainerFieldName")
+    public String containerFieldName;
+
+    @NameInMap("ContainerFieldValue")
+    public String containerFieldValue;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -25,12 +34,39 @@ public class DescribeWarningMachinesRequest extends TeaModel {
     @NameInMap("StrategyId")
     public Long strategyId;
 
+    @NameInMap("TargetType")
+    public String targetType;
+
     @NameInMap("Uuids")
     public String uuids;
 
     public static DescribeWarningMachinesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeWarningMachinesRequest self = new DescribeWarningMachinesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeWarningMachinesRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    public DescribeWarningMachinesRequest setContainerFieldName(String containerFieldName) {
+        this.containerFieldName = containerFieldName;
+        return this;
+    }
+    public String getContainerFieldName() {
+        return this.containerFieldName;
+    }
+
+    public DescribeWarningMachinesRequest setContainerFieldValue(String containerFieldValue) {
+        this.containerFieldValue = containerFieldValue;
+        return this;
+    }
+    public String getContainerFieldValue() {
+        return this.containerFieldValue;
     }
 
     public DescribeWarningMachinesRequest setCurrentPage(Integer currentPage) {
@@ -87,6 +123,14 @@ public class DescribeWarningMachinesRequest extends TeaModel {
     }
     public Long getStrategyId() {
         return this.strategyId;
+    }
+
+    public DescribeWarningMachinesRequest setTargetType(String targetType) {
+        this.targetType = targetType;
+        return this;
+    }
+    public String getTargetType() {
+        return this.targetType;
     }
 
     public DescribeWarningMachinesRequest setUuids(String uuids) {

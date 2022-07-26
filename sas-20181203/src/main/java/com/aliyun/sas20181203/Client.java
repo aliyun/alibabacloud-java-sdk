@@ -5826,6 +5826,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeWarningMachinesResponse describeWarningMachinesWithOptions(DescribeWarningMachinesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.containerFieldName)) {
+            query.put("ContainerFieldName", request.containerFieldName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.containerFieldValue)) {
+            query.put("ContainerFieldValue", request.containerFieldValue);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
         }
@@ -5852,6 +5864,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.strategyId)) {
             query.put("StrategyId", request.strategyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
+            query.put("TargetType", request.targetType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.uuids)) {
