@@ -4,26 +4,21 @@ package com.aliyun.xgippop20220520.models;
 import com.aliyun.tea.*;
 
 public class ChangeApplicationInfoRequest extends TeaModel {
-    // 阿里UID
     @NameInMap("AliUid")
     public Long aliUid;
 
     @NameInMap("AppId")
     public String appId;
 
-    // 应用名称
     @NameInMap("AppName")
     public String appName;
 
-    // dynamic|static
     @NameInMap("AppTypeList")
     public String appTypeList;
 
-    // [
     @NameInMap("AppingList")
     public String appingList;
 
-    // 商品code
     @NameInMap("ItemCode")
     public String itemCode;
 

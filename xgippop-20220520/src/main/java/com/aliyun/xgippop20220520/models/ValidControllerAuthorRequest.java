@@ -7,7 +7,6 @@ public class ValidControllerAuthorRequest extends TeaModel {
     @NameInMap("AliUid")
     public Long aliUid;
 
-    // 商品code
     @NameInMap("ItemCode")
     public String itemCode;
 

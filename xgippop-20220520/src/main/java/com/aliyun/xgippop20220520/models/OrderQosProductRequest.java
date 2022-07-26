@@ -7,58 +7,45 @@ public class OrderQosProductRequest extends TeaModel {
     @NameInMap("AliUid")
     public Long aliUid;
 
-    // 渠道ID
     @NameInMap("ChannelId")
     public String channelId;
 
-    // C端v6 IP（移动场景下可以携带）
     @NameInMap("IPv6")
     public String IPv6;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // IP类型
     @NameInMap("IpType")
     public String ipType;
 
-    // C端手机号
     @NameInMap("MobileNumber")
     public String mobileNumber;
 
-    // 取值包括cm（中国移动）/ct（中国电信）/cu（中国联通）
     @NameInMap("Operator")
     public String operator;
 
-    // C端用户私网IP（联通场景下必须携带)
     @NameInMap("PrivateIpv4")
     public String privateIpv4;
 
-    // 产品ID
     @NameInMap("ProductId")
     public String productId;
 
     @NameInMap("Provice")
     public String provice;
 
-    // C端用户公网IP（联通场景下必须携带）
     @NameInMap("PublicIpv4")
     public String publicIpv4;
 
-    // 客户侧生成的QoS请求ID，需要保证请求幂等性，确保不同请求间该参数值唯一
     @NameInMap("QosRequestId")
     public String qosRequestId;
 
-    // 移动场景目前ip
     @NameInMap("TargetIpList")
     public java.util.List<String> targetIpList;
 
-    // token获取
     @NameInMap("Token")
     public String token;
 
-    // 请求次数
     @NameInMap("UnitNum")
     public Integer unitNum;
 

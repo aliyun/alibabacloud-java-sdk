@@ -7,19 +7,15 @@ public class GetFreeFlowUsageRequest extends TeaModel {
     @NameInMap("AliUid")
     public Long aliUid;
 
-    // 当前页
     @NameInMap("CurPageNum")
     public Integer curPageNum;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 查询月份
     @NameInMap("Month")
     public String month;
 
-    // 每页的记录数量
     @NameInMap("NumPerPage")
     public Integer numPerPage;
 

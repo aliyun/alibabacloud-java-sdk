@@ -4,27 +4,21 @@ package com.aliyun.xgippop20220520.models;
 import com.aliyun.tea.*;
 
 public class GetFreeFlowUsageStatisticResponseBody extends TeaModel {
-    // 结果码
     @NameInMap("Code")
     public String code;
 
-    // 结果
     @NameInMap("Data")
     public java.util.List<GetFreeFlowUsageStatisticResponseBodyData> data;
 
-    // 结果描述
     @NameInMap("Message")
     public String message;
 
-    // 请求链路ID，如POP请求进来的requestId，返回时原样返回
     @NameInMap("RequestId")
     public String requestId;
 
-    // 服务端处理耗时，ms
     @NameInMap("Rt")
     public Long rt;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,22 +79,18 @@ public class GetFreeFlowUsageStatisticResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 该实例对应的包类型
         @NameInMap("SpecType")
         public String specType;
 
         @NameInMap("TotalMoney")
         public String totalMoney;
 
-        // 该实例的订单总数
         @NameInMap("TotalOrderNumber")
         public Long totalOrderNumber;
 
-        // 该实例的订单总计量单元数
         @NameInMap("TotalUnitNumber")
         public Long totalUnitNumber;
 
-        // 产品规格
         @NameInMap("YunOutProduct")
         public String yunOutProduct;
 

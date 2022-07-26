@@ -4,26 +4,21 @@ package com.aliyun.xgippop20220520.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationResponseBody extends TeaModel {
-    // 结果码
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<java.util.Map<String, ?>> data;
 
-    // 结果描述
     @NameInMap("Message")
     public String message;
 
-    // 请求链路ID，如POP请求进来的requestId，返回时原样返回
     @NameInMap("RequestId")
     public String requestId;
 
-    // 服务端处理耗时，ms
     @NameInMap("Rt")
     public Long rt;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 

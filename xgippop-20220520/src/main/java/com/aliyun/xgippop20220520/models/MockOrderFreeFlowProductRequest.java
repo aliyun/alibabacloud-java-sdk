@@ -3,7 +3,7 @@ package com.aliyun.xgippop20220520.models;
 
 import com.aliyun.tea.*;
 
-public class OrderFreeFlowProductRequest extends TeaModel {
+public class MockOrderFreeFlowProductRequest extends TeaModel {
     @NameInMap("AliUid")
     public Long aliUid;
 
@@ -34,12 +34,12 @@ public class OrderFreeFlowProductRequest extends TeaModel {
     @NameInMap("PurchaseOrderId")
     public String purchaseOrderId;
 
-    public static OrderFreeFlowProductRequest build(java.util.Map<String, ?> map) throws Exception {
-        OrderFreeFlowProductRequest self = new OrderFreeFlowProductRequest();
+    public static MockOrderFreeFlowProductRequest build(java.util.Map<String, ?> map) throws Exception {
+        MockOrderFreeFlowProductRequest self = new MockOrderFreeFlowProductRequest();
         return TeaModel.build(map, self);
     }
 
-    public OrderFreeFlowProductRequest setAliUid(Long aliUid) {
+    public MockOrderFreeFlowProductRequest setAliUid(Long aliUid) {
         this.aliUid = aliUid;
         return this;
     }
@@ -47,7 +47,7 @@ public class OrderFreeFlowProductRequest extends TeaModel {
         return this.aliUid;
     }
 
-    public OrderFreeFlowProductRequest setChannelId(String channelId) {
+    public MockOrderFreeFlowProductRequest setChannelId(String channelId) {
         this.channelId = channelId;
         return this;
     }
@@ -55,7 +55,7 @@ public class OrderFreeFlowProductRequest extends TeaModel {
         return this.channelId;
     }
 
-    public OrderFreeFlowProductRequest setCustomerFlowRequestId(String customerFlowRequestId) {
+    public MockOrderFreeFlowProductRequest setCustomerFlowRequestId(String customerFlowRequestId) {
         this.customerFlowRequestId = customerFlowRequestId;
         return this;
     }
@@ -63,7 +63,7 @@ public class OrderFreeFlowProductRequest extends TeaModel {
         return this.customerFlowRequestId;
     }
 
-    public OrderFreeFlowProductRequest setFlowProductId(String flowProductId) {
+    public MockOrderFreeFlowProductRequest setFlowProductId(String flowProductId) {
         this.flowProductId = flowProductId;
         return this;
     }
@@ -71,7 +71,7 @@ public class OrderFreeFlowProductRequest extends TeaModel {
         return this.flowProductId;
     }
 
-    public OrderFreeFlowProductRequest setInstanceId(String instanceId) {
+    public MockOrderFreeFlowProductRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -79,7 +79,7 @@ public class OrderFreeFlowProductRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public OrderFreeFlowProductRequest setLasting(String lasting) {
+    public MockOrderFreeFlowProductRequest setLasting(String lasting) {
         this.lasting = lasting;
         return this;
     }
@@ -87,7 +87,7 @@ public class OrderFreeFlowProductRequest extends TeaModel {
         return this.lasting;
     }
 
-    public OrderFreeFlowProductRequest setMobileNumber(String mobileNumber) {
+    public MockOrderFreeFlowProductRequest setMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
         return this;
     }
@@ -95,7 +95,7 @@ public class OrderFreeFlowProductRequest extends TeaModel {
         return this.mobileNumber;
     }
 
-    public OrderFreeFlowProductRequest setNotifyUrl(String notifyUrl) {
+    public MockOrderFreeFlowProductRequest setNotifyUrl(String notifyUrl) {
         this.notifyUrl = notifyUrl;
         return this;
     }
@@ -103,7 +103,7 @@ public class OrderFreeFlowProductRequest extends TeaModel {
         return this.notifyUrl;
     }
 
-    public OrderFreeFlowProductRequest setOperator(String operator) {
+    public MockOrderFreeFlowProductRequest setOperator(String operator) {
         this.operator = operator;
         return this;
     }
@@ -111,7 +111,7 @@ public class OrderFreeFlowProductRequest extends TeaModel {
         return this.operator;
     }
 
-    public OrderFreeFlowProductRequest setPurchaseOrderId(String purchaseOrderId) {
+    public MockOrderFreeFlowProductRequest setPurchaseOrderId(String purchaseOrderId) {
         this.purchaseOrderId = purchaseOrderId;
         return this;
     }

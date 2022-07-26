@@ -4,27 +4,21 @@ package com.aliyun.xgippop20220520.models;
 import com.aliyun.tea.*;
 
 public class SdkValidateStatusResponseBody extends TeaModel {
-    // 结果码
     @NameInMap("Code")
     public String code;
 
-    // 结果
     @NameInMap("Data")
     public SdkValidateStatusResponseBodyData data;
 
-    // 结果描述
     @NameInMap("Message")
     public String message;
 
-    // 请求链路ID，如POP请求进来的requestId，返回时原样返回
     @NameInMap("RequestId")
     public String requestId;
 
-    // 服务端处理耗时，ms
     @NameInMap("Rt")
     public Long rt;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,19 +79,15 @@ public class SdkValidateStatusResponseBody extends TeaModel {
         @NameInMap("ExtId")
         public Long extId;
 
-        // cdn ip
         @NameInMap("FlowIp")
         public java.util.List<String> flowIp;
 
-        // cdn 域名信息
         @NameInMap("FlowUrl")
         public java.util.List<String> flowUrl;
 
-        // 业务方ip集合
         @NameInMap("OriginalIpList")
         public java.util.List<String> originalIpList;
 
-        // 业务方域名集合
         @NameInMap("OriginalUrlList")
         public java.util.List<String> originalUrlList;
 
@@ -152,11 +142,9 @@ public class SdkValidateStatusResponseBody extends TeaModel {
         @NameInMap("AppExtPopList")
         public java.util.List<SdkValidateStatusResponseBodyDataAppExtPopList> appExtPopList;
 
-        // 是否处于免流状态，取值范围为true/false
         @NameInMap("FreeFlow")
         public Boolean freeFlow;
 
-        // 伪码
         @NameInMap("PseudoCode")
         public String pseudoCode;
 

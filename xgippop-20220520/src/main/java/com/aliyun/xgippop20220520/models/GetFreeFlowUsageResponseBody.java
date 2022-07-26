@@ -4,27 +4,21 @@ package com.aliyun.xgippop20220520.models;
 import com.aliyun.tea.*;
 
 public class GetFreeFlowUsageResponseBody extends TeaModel {
-    // 结果码
     @NameInMap("Code")
     public String code;
 
-    // 结果
     @NameInMap("Data")
     public GetFreeFlowUsageResponseBodyData data;
 
-    // 结果描述
     @NameInMap("Message")
     public String message;
 
-    // 请求链路ID，如POP请求进来的requestId，返回时原样返回
     @NameInMap("RequestId")
     public String requestId;
 
-    // 服务端处理耗时，ms
     @NameInMap("Rt")
     public Long rt;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -82,50 +76,39 @@ public class GetFreeFlowUsageResponseBody extends TeaModel {
     }
 
     public static class GetFreeFlowUsageResponseBodyDataCustomerList extends TeaModel {
-        // 购买渠道
         @NameInMap("ChannelId")
         public String channelId;
 
-        // C端产品失效时间
         @NameInMap("CustomerEndTime")
         public String customerEndTime;
 
         @NameInMap("CustomerFlowOrderId")
         public String customerFlowOrderId;
 
-        // C端免流状态，取值包括create/working/expiration
         @NameInMap("CustomerFlowStatus")
         public String customerFlowStatus;
 
-        // C端产品开通时间
         @NameInMap("CustomerOpenTime")
         public String customerOpenTime;
 
-        // C端产品生效时间
         @NameInMap("CustomerStartTime")
         public String customerStartTime;
 
-        // 免流产品ID
         @NameInMap("FlowProductId")
         public String flowProductId;
 
-        // 免流产品名
         @NameInMap("FlowProductName")
         public String flowProductName;
 
-        // 是否包月，true或false
         @NameInMap("IsLasting")
         public Boolean isLasting;
 
-        // C端手机号
         @NameInMap("MobileNumber")
         public String mobileNumber;
 
-        // 该流量包的计量单元数
         @NameInMap("UnitNum")
         public Integer unitNum;
 
-        // 流量包价格
         @NameInMap("UnitPrice")
         public Integer unitPrice;
 
@@ -233,35 +216,27 @@ public class GetFreeFlowUsageResponseBody extends TeaModel {
     }
 
     public static class GetFreeFlowUsageResponseBodyData extends TeaModel {
-        // 当前页数
         @NameInMap("CurPageNum")
         public Integer curPageNum;
 
-        // C端用户列表
         @NameInMap("CustomerList")
         public java.util.List<GetFreeFlowUsageResponseBodyDataCustomerList> customerList;
 
-        // 是否有下一页
         @NameInMap("HasNext")
         public Boolean hasNext;
 
-        // 是否有上一页
         @NameInMap("HasPrev")
         public Boolean hasPrev;
 
-        // 实例ID
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 每页的记录条数
         @NameInMap("NumPerPage")
         public Integer numPerPage;
 
-        // 总记录条数
         @NameInMap("TotalNum")
         public Integer totalNum;
 
-        // 总页数
         @NameInMap("TotalPageNum")
         public Integer totalPageNum;
 
