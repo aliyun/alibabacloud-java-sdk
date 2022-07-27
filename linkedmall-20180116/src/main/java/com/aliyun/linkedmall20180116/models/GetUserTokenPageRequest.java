@@ -4,23 +4,18 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GetUserTokenPageRequest extends TeaModel {
-    // 业务ID
     @NameInMap("BizId")
     public String bizId;
 
-    // 过期时间
     @NameInMap("ExpireSeconds")
     public Long expireSeconds;
 
-    // 扩展信息
     @NameInMap("ExtJson")
     public String extJson;
 
-    // 业务方用户ID
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
-    // 用户昵称
     @NameInMap("UserNick")
     public String userNick;
 

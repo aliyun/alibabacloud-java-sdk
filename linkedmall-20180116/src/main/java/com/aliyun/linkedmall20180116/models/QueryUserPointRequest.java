@@ -7,14 +7,12 @@ public class QueryUserPointRequest extends TeaModel {
     @NameInMap("AccountType")
     public String accountType;
 
-    // 业务ID
     @NameInMap("BizId")
     public String bizId;
 
     @NameInMap("ExtInfo")
     public java.util.Map<String, ?> extInfo;
 
-    // 业务方用户ID
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 

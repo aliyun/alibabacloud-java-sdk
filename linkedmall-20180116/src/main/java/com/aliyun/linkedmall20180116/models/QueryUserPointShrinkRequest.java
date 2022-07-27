@@ -7,14 +7,12 @@ public class QueryUserPointShrinkRequest extends TeaModel {
     @NameInMap("AccountType")
     public String accountType;
 
-    // 业务ID
     @NameInMap("BizId")
     public String bizId;
 
     @NameInMap("ExtInfo")
     public String extInfoShrink;
 
-    // 业务方用户ID
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 

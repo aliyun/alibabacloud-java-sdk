@@ -13,7 +13,6 @@ public class GrantUserPointResponseBody extends TeaModel {
     @NameInMap("Model")
     public GrantUserPointResponseBodyModel model;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -55,55 +54,42 @@ public class GrantUserPointResponseBody extends TeaModel {
     }
 
     public static class GrantUserPointResponseBodyModel extends TeaModel {
-        // 账号ID
         @NameInMap("AccountId")
         public String accountId;
 
-        // 操作
         @NameInMap("Action")
         public String action;
 
-        // 本次操作数额
         @NameInMap("Amount")
         public Long amount;
 
-        // 业务ID
         @NameInMap("BizId")
         public String bizId;
 
-        // 用户ID
         @NameInMap("BizUid")
         public String bizUid;
 
-        // 描述
         @NameInMap("Description")
         public String description;
 
-        // 扩展信息
         @NameInMap("ExtInfo")
         public java.util.Map<String, ?> extInfo;
 
-        // 幂等ID
         @NameInMap("IdempotentId")
         public String idempotentId;
 
-        // 标题
         @NameInMap("Name")
         public String name;
 
-        // 流水记录ID
         @NameInMap("RecordId")
         public String recordId;
 
-        // 账户积分余额
         @NameInMap("Rest")
         public Long rest;
 
-        // 规则ID
         @NameInMap("RuleId")
         public String ruleId;
 
-        // 状态
         @NameInMap("Status")
         public String status;
 

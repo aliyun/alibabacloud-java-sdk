@@ -4,18 +4,15 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GetUserTokenPageResponseBody extends TeaModel {
-    // 响应码
     @NameInMap("Code")
     public String code;
 
-    // 提示信息
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public GetUserTokenPageResponseBodyModel model;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,7 +54,6 @@ public class GetUserTokenPageResponseBody extends TeaModel {
     }
 
     public static class GetUserTokenPageResponseBodyModel extends TeaModel {
-        // 页面地址
         @NameInMap("Url")
         public String url;
 

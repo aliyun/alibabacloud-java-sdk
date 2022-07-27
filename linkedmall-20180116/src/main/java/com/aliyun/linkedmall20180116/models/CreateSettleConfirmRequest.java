@@ -4,7 +4,6 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreateSettleConfirmRequest extends TeaModel {
-    // 业务ID
     @NameInMap("BizId")
     public String bizId;
 

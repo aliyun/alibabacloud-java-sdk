@@ -7,38 +7,30 @@ public class CreateOrderTransactionDetailFileRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
-    // 业务名称
     @NameInMap("BizName")
     public String bizName;
 
-    // 渠道名称
     @NameInMap("ChannelName")
     public String channelName;
 
-    // 创建结束时间
     @NameInMap("CreateEndTime")
     public String createEndTime;
 
-    // 创建开始时间
     @NameInMap("CreateStartTime")
     public String createStartTime;
 
-    // 商品id
     @NameInMap("ItemId")
     public String itemId;
 
     @NameInMap("LmShopId")
     public String lmShopId;
 
-    // 订单状态
     @NameInMap("OrderStatus")
     public String orderStatus;
 
-    // 支付状态
     @NameInMap("PayStatus")
     public String payStatus;
 
-    // PO单号
     @NameInMap("PoCode")
     public String poCode;
 
@@ -48,11 +40,9 @@ public class CreateOrderTransactionDetailFileRequest extends TeaModel {
     @NameInMap("SellerName")
     public String sellerName;
 
-    // 结算节点
     @NameInMap("SettlementNode")
     public String settlementNode;
 
-    // 店铺名称
     @NameInMap("ShopName")
     public String shopName;
 

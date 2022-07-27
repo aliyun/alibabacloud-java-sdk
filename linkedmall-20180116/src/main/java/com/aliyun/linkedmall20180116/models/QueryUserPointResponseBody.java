@@ -13,7 +13,6 @@ public class QueryUserPointResponseBody extends TeaModel {
     @NameInMap("Model")
     public QueryUserPointResponseBodyModel model;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -55,43 +54,33 @@ public class QueryUserPointResponseBody extends TeaModel {
     }
 
     public static class QueryUserPointResponseBodyModel extends TeaModel {
-        // 账户ID
         @NameInMap("AccountId")
         public String accountId;
 
-        // 业务ID
         @NameInMap("BizId")
         public String bizId;
 
-        // 业务方用户ID
         @NameInMap("BizUid")
         public String bizUid;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 当前积分余额
         @NameInMap("CurrentAmount")
         public Long currentAmount;
 
-        // 当前冻结积分
         @NameInMap("FrozenAmount")
         public Long frozenAmount;
 
-        // 历史累计积分
         @NameInMap("HistoryAmount")
         public Long historyAmount;
 
-        // 账号等级
         @NameInMap("Level")
         public String level;
 
-        // 修改时间
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
-        // 账号状态
         @NameInMap("Status")
         public String status;
 
