@@ -4,18 +4,26 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class DeleteStateConfigurationsRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("StateConfigurationIds")
     public String stateConfigurationIds;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static DeleteStateConfigurationsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteStateConfigurationsRequest self = new DeleteStateConfigurationsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteStateConfigurationsRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DeleteStateConfigurationsRequest setRegionId(String regionId) {
@@ -32,14 +40,6 @@ public class DeleteStateConfigurationsRequest extends TeaModel {
     }
     public String getStateConfigurationIds() {
         return this.stateConfigurationIds;
-    }
-
-    public DeleteStateConfigurationsRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

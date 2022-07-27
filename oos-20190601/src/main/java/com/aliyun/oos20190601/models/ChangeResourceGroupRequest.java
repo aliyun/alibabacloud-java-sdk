@@ -4,14 +4,14 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
+    @NameInMap("NewResourceGroupId")
+    public String newResourceGroupId;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceId")
     public String resourceId;
-
-    @NameInMap("NewResourceGroupId")
-    public String newResourceGroupId;
 
     @NameInMap("ResourceType")
     public String resourceType;
@@ -19,6 +19,14 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public static ChangeResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeResourceGroupRequest self = new ChangeResourceGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChangeResourceGroupRequest setNewResourceGroupId(String newResourceGroupId) {
+        this.newResourceGroupId = newResourceGroupId;
+        return this;
+    }
+    public String getNewResourceGroupId() {
+        return this.newResourceGroupId;
     }
 
     public ChangeResourceGroupRequest setRegionId(String regionId) {
@@ -35,14 +43,6 @@ public class ChangeResourceGroupRequest extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
-    }
-
-    public ChangeResourceGroupRequest setNewResourceGroupId(String newResourceGroupId) {
-        this.newResourceGroupId = newResourceGroupId;
-        return this;
-    }
-    public String getNewResourceGroupId() {
-        return this.newResourceGroupId;
     }
 
     public ChangeResourceGroupRequest setResourceType(String resourceType) {

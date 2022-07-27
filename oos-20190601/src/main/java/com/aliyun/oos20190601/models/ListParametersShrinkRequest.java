@@ -4,26 +4,14 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListParametersShrinkRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
     @NameInMap("NextToken")
     public String nextToken;
-
-    @NameInMap("SortField")
-    public String sortField;
-
-    @NameInMap("SortOrder")
-    public String sortOrder;
-
-    @NameInMap("Type")
-    public String type;
 
     @NameInMap("Path")
     public String path;
@@ -31,31 +19,27 @@ public class ListParametersShrinkRequest extends TeaModel {
     @NameInMap("Recursive")
     public Boolean recursive;
 
-    @NameInMap("Tags")
-    public String tagsShrink;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("SortField")
+    public String sortField;
+
+    @NameInMap("SortOrder")
+    public String sortOrder;
+
+    @NameInMap("Tags")
+    public String tagsShrink;
+
+    @NameInMap("Type")
+    public String type;
+
     public static ListParametersShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListParametersShrinkRequest self = new ListParametersShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListParametersShrinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListParametersShrinkRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public ListParametersShrinkRequest setMaxResults(Integer maxResults) {
@@ -66,36 +50,20 @@ public class ListParametersShrinkRequest extends TeaModel {
         return this.maxResults;
     }
 
+    public ListParametersShrinkRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
     public ListParametersShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListParametersShrinkRequest setSortField(String sortField) {
-        this.sortField = sortField;
-        return this;
-    }
-    public String getSortField() {
-        return this.sortField;
-    }
-
-    public ListParametersShrinkRequest setSortOrder(String sortOrder) {
-        this.sortOrder = sortOrder;
-        return this;
-    }
-    public String getSortOrder() {
-        return this.sortOrder;
-    }
-
-    public ListParametersShrinkRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
     public ListParametersShrinkRequest setPath(String path) {
@@ -114,12 +82,12 @@ public class ListParametersShrinkRequest extends TeaModel {
         return this.recursive;
     }
 
-    public ListParametersShrinkRequest setTagsShrink(String tagsShrink) {
-        this.tagsShrink = tagsShrink;
+    public ListParametersShrinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getTagsShrink() {
-        return this.tagsShrink;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListParametersShrinkRequest setResourceGroupId(String resourceGroupId) {
@@ -128,6 +96,38 @@ public class ListParametersShrinkRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ListParametersShrinkRequest setSortField(String sortField) {
+        this.sortField = sortField;
+        return this;
+    }
+    public String getSortField() {
+        return this.sortField;
+    }
+
+    public ListParametersShrinkRequest setSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    public String getSortOrder() {
+        return this.sortOrder;
+    }
+
+    public ListParametersShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
+        return this;
+    }
+    public String getTagsShrink() {
+        return this.tagsShrink;
+    }
+
+    public ListParametersShrinkRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

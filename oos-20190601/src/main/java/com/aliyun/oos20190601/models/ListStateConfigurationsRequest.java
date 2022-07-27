@@ -4,14 +4,17 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListStateConfigurationsRequest extends TeaModel {
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("TemplateName")
-    public String templateName;
-
-    @NameInMap("TemplateVersion")
-    public String templateVersion;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("StateConfigurationIds")
     public String stateConfigurationIds;
@@ -19,58 +22,15 @@ public class ListStateConfigurationsRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
+    @NameInMap("TemplateName")
+    public String templateName;
 
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("TemplateVersion")
+    public String templateVersion;
 
     public static ListStateConfigurationsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListStateConfigurationsRequest self = new ListStateConfigurationsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListStateConfigurationsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListStateConfigurationsRequest setTemplateName(String templateName) {
-        this.templateName = templateName;
-        return this;
-    }
-    public String getTemplateName() {
-        return this.templateName;
-    }
-
-    public ListStateConfigurationsRequest setTemplateVersion(String templateVersion) {
-        this.templateVersion = templateVersion;
-        return this;
-    }
-    public String getTemplateVersion() {
-        return this.templateVersion;
-    }
-
-    public ListStateConfigurationsRequest setStateConfigurationIds(String stateConfigurationIds) {
-        this.stateConfigurationIds = stateConfigurationIds;
-        return this;
-    }
-    public String getStateConfigurationIds() {
-        return this.stateConfigurationIds;
-    }
-
-    public ListStateConfigurationsRequest setTags(java.util.Map<String, ?> tags) {
-        this.tags = tags;
-        return this;
-    }
-    public java.util.Map<String, ?> getTags() {
-        return this.tags;
     }
 
     public ListStateConfigurationsRequest setMaxResults(Integer maxResults) {
@@ -89,12 +49,52 @@ public class ListStateConfigurationsRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public ListStateConfigurationsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ListStateConfigurationsRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ListStateConfigurationsRequest setStateConfigurationIds(String stateConfigurationIds) {
+        this.stateConfigurationIds = stateConfigurationIds;
+        return this;
+    }
+    public String getStateConfigurationIds() {
+        return this.stateConfigurationIds;
+    }
+
+    public ListStateConfigurationsRequest setTags(java.util.Map<String, ?> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.Map<String, ?> getTags() {
+        return this.tags;
+    }
+
+    public ListStateConfigurationsRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    public ListStateConfigurationsRequest setTemplateVersion(String templateVersion) {
+        this.templateVersion = templateVersion;
+        return this;
+    }
+    public String getTemplateVersion() {
+        return this.templateVersion;
     }
 
 }

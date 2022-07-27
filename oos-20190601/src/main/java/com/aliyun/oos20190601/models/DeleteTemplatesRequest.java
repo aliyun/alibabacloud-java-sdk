@@ -4,18 +4,26 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class DeleteTemplatesRequest extends TeaModel {
+    @NameInMap("AutoDeleteExecutions")
+    public Boolean autoDeleteExecutions;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("TemplateNames")
     public String templateNames;
 
-    @NameInMap("AutoDeleteExecutions")
-    public Boolean autoDeleteExecutions;
-
     public static DeleteTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteTemplatesRequest self = new DeleteTemplatesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteTemplatesRequest setAutoDeleteExecutions(Boolean autoDeleteExecutions) {
+        this.autoDeleteExecutions = autoDeleteExecutions;
+        return this;
+    }
+    public Boolean getAutoDeleteExecutions() {
+        return this.autoDeleteExecutions;
     }
 
     public DeleteTemplatesRequest setRegionId(String regionId) {
@@ -32,14 +40,6 @@ public class DeleteTemplatesRequest extends TeaModel {
     }
     public String getTemplateNames() {
         return this.templateNames;
-    }
-
-    public DeleteTemplatesRequest setAutoDeleteExecutions(Boolean autoDeleteExecutions) {
-        this.autoDeleteExecutions = autoDeleteExecutions;
-        return this;
-    }
-    public Boolean getAutoDeleteExecutions() {
-        return this.autoDeleteExecutions;
     }
 
 }

@@ -4,37 +4,21 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListInstancePatchesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("Patches")
     public java.util.List<ListInstancePatchesResponseBodyPatches> patches;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ListInstancePatchesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstancePatchesResponseBody self = new ListInstancePatchesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListInstancePatchesResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ListInstancePatchesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListInstancePatchesResponseBody setMaxResults(Integer maxResults) {
@@ -45,6 +29,14 @@ public class ListInstancePatchesResponseBody extends TeaModel {
         return this.maxResults;
     }
 
+    public ListInstancePatchesResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public ListInstancePatchesResponseBody setPatches(java.util.List<ListInstancePatchesResponseBodyPatches> patches) {
         this.patches = patches;
         return this;
@@ -53,12 +45,17 @@ public class ListInstancePatchesResponseBody extends TeaModel {
         return this.patches;
     }
 
-    public static class ListInstancePatchesResponseBodyPatches extends TeaModel {
-        @NameInMap("Severity")
-        public String severity;
+    public ListInstancePatchesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("Status")
-        public String status;
+    public static class ListInstancePatchesResponseBodyPatches extends TeaModel {
+        @NameInMap("Classification")
+        public String classification;
 
         @NameInMap("InstalledTime")
         public String installedTime;
@@ -66,31 +63,26 @@ public class ListInstancePatchesResponseBody extends TeaModel {
         @NameInMap("KBId")
         public String KBId;
 
+        @NameInMap("Severity")
+        public String severity;
+
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("Title")
         public String title;
-
-        @NameInMap("Classification")
-        public String classification;
 
         public static ListInstancePatchesResponseBodyPatches build(java.util.Map<String, ?> map) throws Exception {
             ListInstancePatchesResponseBodyPatches self = new ListInstancePatchesResponseBodyPatches();
             return TeaModel.build(map, self);
         }
 
-        public ListInstancePatchesResponseBodyPatches setSeverity(String severity) {
-            this.severity = severity;
+        public ListInstancePatchesResponseBodyPatches setClassification(String classification) {
+            this.classification = classification;
             return this;
         }
-        public String getSeverity() {
-            return this.severity;
-        }
-
-        public ListInstancePatchesResponseBodyPatches setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
+        public String getClassification() {
+            return this.classification;
         }
 
         public ListInstancePatchesResponseBodyPatches setInstalledTime(String installedTime) {
@@ -109,20 +101,28 @@ public class ListInstancePatchesResponseBody extends TeaModel {
             return this.KBId;
         }
 
+        public ListInstancePatchesResponseBodyPatches setSeverity(String severity) {
+            this.severity = severity;
+            return this;
+        }
+        public String getSeverity() {
+            return this.severity;
+        }
+
+        public ListInstancePatchesResponseBodyPatches setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public ListInstancePatchesResponseBodyPatches setTitle(String title) {
             this.title = title;
             return this;
         }
         public String getTitle() {
             return this.title;
-        }
-
-        public ListInstancePatchesResponseBodyPatches setClassification(String classification) {
-            this.classification = classification;
-            return this;
-        }
-        public String getClassification() {
-            return this.classification;
         }
 
     }

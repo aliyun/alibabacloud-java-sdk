@@ -4,11 +4,11 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetSecretParametersRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Names")
     public String names;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("WithDecryption")
     public Boolean withDecryption;
@@ -18,20 +18,20 @@ public class GetSecretParametersRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetSecretParametersRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public GetSecretParametersRequest setNames(String names) {
         this.names = names;
         return this;
     }
     public String getNames() {
         return this.names;
+    }
+
+    public GetSecretParametersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetSecretParametersRequest setWithDecryption(Boolean withDecryption) {

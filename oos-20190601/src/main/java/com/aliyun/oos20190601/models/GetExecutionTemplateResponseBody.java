@@ -43,17 +43,29 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
     }
 
     public static class GetExecutionTemplateResponseBodyTemplate extends TeaModel {
+        @NameInMap("CreatedBy")
+        public String createdBy;
+
+        @NameInMap("CreatedDate")
+        public String createdDate;
+
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("Hash")
         public String hash;
 
-        @NameInMap("UpdatedDate")
-        public String updatedDate;
-
-        @NameInMap("UpdatedBy")
-        public String updatedBy;
+        @NameInMap("ShareType")
+        public String shareType;
 
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
+
+        @NameInMap("TemplateFormat")
+        public String templateFormat;
+
+        @NameInMap("TemplateId")
+        public String templateId;
 
         @NameInMap("TemplateName")
         public String templateName;
@@ -61,91 +73,15 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
-        @NameInMap("TemplateFormat")
-        public String templateFormat;
+        @NameInMap("UpdatedBy")
+        public String updatedBy;
 
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("CreatedBy")
-        public String createdBy;
-
-        @NameInMap("CreatedDate")
-        public String createdDate;
-
-        @NameInMap("TemplateId")
-        public String templateId;
-
-        @NameInMap("ShareType")
-        public String shareType;
+        @NameInMap("UpdatedDate")
+        public String updatedDate;
 
         public static GetExecutionTemplateResponseBodyTemplate build(java.util.Map<String, ?> map) throws Exception {
             GetExecutionTemplateResponseBodyTemplate self = new GetExecutionTemplateResponseBodyTemplate();
             return TeaModel.build(map, self);
-        }
-
-        public GetExecutionTemplateResponseBodyTemplate setHash(String hash) {
-            this.hash = hash;
-            return this;
-        }
-        public String getHash() {
-            return this.hash;
-        }
-
-        public GetExecutionTemplateResponseBodyTemplate setUpdatedDate(String updatedDate) {
-            this.updatedDate = updatedDate;
-            return this;
-        }
-        public String getUpdatedDate() {
-            return this.updatedDate;
-        }
-
-        public GetExecutionTemplateResponseBodyTemplate setUpdatedBy(String updatedBy) {
-            this.updatedBy = updatedBy;
-            return this;
-        }
-        public String getUpdatedBy() {
-            return this.updatedBy;
-        }
-
-        public GetExecutionTemplateResponseBodyTemplate setTags(java.util.Map<String, ?> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.Map<String, ?> getTags() {
-            return this.tags;
-        }
-
-        public GetExecutionTemplateResponseBodyTemplate setTemplateName(String templateName) {
-            this.templateName = templateName;
-            return this;
-        }
-        public String getTemplateName() {
-            return this.templateName;
-        }
-
-        public GetExecutionTemplateResponseBodyTemplate setTemplateVersion(String templateVersion) {
-            this.templateVersion = templateVersion;
-            return this;
-        }
-        public String getTemplateVersion() {
-            return this.templateVersion;
-        }
-
-        public GetExecutionTemplateResponseBodyTemplate setTemplateFormat(String templateFormat) {
-            this.templateFormat = templateFormat;
-            return this;
-        }
-        public String getTemplateFormat() {
-            return this.templateFormat;
-        }
-
-        public GetExecutionTemplateResponseBodyTemplate setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public GetExecutionTemplateResponseBodyTemplate setCreatedBy(String createdBy) {
@@ -164,12 +100,20 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             return this.createdDate;
         }
 
-        public GetExecutionTemplateResponseBodyTemplate setTemplateId(String templateId) {
-            this.templateId = templateId;
+        public GetExecutionTemplateResponseBodyTemplate setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getTemplateId() {
-            return this.templateId;
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetExecutionTemplateResponseBodyTemplate setHash(String hash) {
+            this.hash = hash;
+            return this;
+        }
+        public String getHash() {
+            return this.hash;
         }
 
         public GetExecutionTemplateResponseBodyTemplate setShareType(String shareType) {
@@ -178,6 +122,62 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
         }
         public String getShareType() {
             return this.shareType;
+        }
+
+        public GetExecutionTemplateResponseBodyTemplate setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
+        }
+
+        public GetExecutionTemplateResponseBodyTemplate setTemplateFormat(String templateFormat) {
+            this.templateFormat = templateFormat;
+            return this;
+        }
+        public String getTemplateFormat() {
+            return this.templateFormat;
+        }
+
+        public GetExecutionTemplateResponseBodyTemplate setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        public GetExecutionTemplateResponseBodyTemplate setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public GetExecutionTemplateResponseBodyTemplate setTemplateVersion(String templateVersion) {
+            this.templateVersion = templateVersion;
+            return this;
+        }
+        public String getTemplateVersion() {
+            return this.templateVersion;
+        }
+
+        public GetExecutionTemplateResponseBodyTemplate setUpdatedBy(String updatedBy) {
+            this.updatedBy = updatedBy;
+            return this;
+        }
+        public String getUpdatedBy() {
+            return this.updatedBy;
+        }
+
+        public GetExecutionTemplateResponseBodyTemplate setUpdatedDate(String updatedDate) {
+            this.updatedDate = updatedDate;
+            return this;
+        }
+        public String getUpdatedDate() {
+            return this.updatedDate;
         }
 
     }

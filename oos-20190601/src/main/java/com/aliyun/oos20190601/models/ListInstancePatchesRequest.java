@@ -4,9 +4,6 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListInstancePatchesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,17 +16,12 @@ public class ListInstancePatchesRequest extends TeaModel {
     @NameInMap("PatchStatuses")
     public String patchStatuses;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ListInstancePatchesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancePatchesRequest self = new ListInstancePatchesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListInstancePatchesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListInstancePatchesRequest setInstanceId(String instanceId) {
@@ -62,6 +54,14 @@ public class ListInstancePatchesRequest extends TeaModel {
     }
     public String getPatchStatuses() {
         return this.patchStatuses;
+    }
+
+    public ListInstancePatchesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

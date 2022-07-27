@@ -35,11 +35,11 @@ public class SetServiceSettingsResponseBody extends TeaModel {
         @NameInMap("DeliveryOssBucketName")
         public String deliveryOssBucketName;
 
-        @NameInMap("DeliveryOssKeyPrefix")
-        public String deliveryOssKeyPrefix;
-
         @NameInMap("DeliveryOssEnabled")
         public Boolean deliveryOssEnabled;
+
+        @NameInMap("DeliveryOssKeyPrefix")
+        public String deliveryOssKeyPrefix;
 
         @NameInMap("DeliverySlsEnabled")
         public Boolean deliverySlsEnabled;
@@ -63,20 +63,20 @@ public class SetServiceSettingsResponseBody extends TeaModel {
             return this.deliveryOssBucketName;
         }
 
-        public SetServiceSettingsResponseBodyServiceSettings setDeliveryOssKeyPrefix(String deliveryOssKeyPrefix) {
-            this.deliveryOssKeyPrefix = deliveryOssKeyPrefix;
-            return this;
-        }
-        public String getDeliveryOssKeyPrefix() {
-            return this.deliveryOssKeyPrefix;
-        }
-
         public SetServiceSettingsResponseBodyServiceSettings setDeliveryOssEnabled(Boolean deliveryOssEnabled) {
             this.deliveryOssEnabled = deliveryOssEnabled;
             return this;
         }
         public Boolean getDeliveryOssEnabled() {
             return this.deliveryOssEnabled;
+        }
+
+        public SetServiceSettingsResponseBodyServiceSettings setDeliveryOssKeyPrefix(String deliveryOssKeyPrefix) {
+            this.deliveryOssKeyPrefix = deliveryOssKeyPrefix;
+            return this;
+        }
+        public String getDeliveryOssKeyPrefix() {
+            return this.deliveryOssKeyPrefix;
         }
 
         public SetServiceSettingsResponseBodyServiceSettings setDeliverySlsEnabled(Boolean deliverySlsEnabled) {

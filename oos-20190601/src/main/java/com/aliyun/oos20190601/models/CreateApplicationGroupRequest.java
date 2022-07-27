@@ -4,41 +4,36 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationGroupRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ApplicationName")
     public String applicationName;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("CmsGroupId")
+    public String cmsGroupId;
 
     @NameInMap("DeployRegionId")
     public String deployRegionId;
 
-    @NameInMap("Environment")
-    public String environment;
+    @NameInMap("Description")
+    public String description;
 
-    @NameInMap("CreateType")
-    public String createType;
+    @NameInMap("ImportTagKey")
+    public String importTagKey;
 
-    @NameInMap("ImportClusterId")
-    public String importClusterId;
+    @NameInMap("ImportTagValue")
+    public String importTagValue;
 
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static CreateApplicationGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationGroupRequest self = new CreateApplicationGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateApplicationGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateApplicationGroupRequest setApplicationName(String applicationName) {
@@ -49,12 +44,20 @@ public class CreateApplicationGroupRequest extends TeaModel {
         return this.applicationName;
     }
 
-    public CreateApplicationGroupRequest setDescription(String description) {
-        this.description = description;
+    public CreateApplicationGroupRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateApplicationGroupRequest setCmsGroupId(String cmsGroupId) {
+        this.cmsGroupId = cmsGroupId;
+        return this;
+    }
+    public String getCmsGroupId() {
+        return this.cmsGroupId;
     }
 
     public CreateApplicationGroupRequest setDeployRegionId(String deployRegionId) {
@@ -65,28 +68,28 @@ public class CreateApplicationGroupRequest extends TeaModel {
         return this.deployRegionId;
     }
 
-    public CreateApplicationGroupRequest setEnvironment(String environment) {
-        this.environment = environment;
+    public CreateApplicationGroupRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getEnvironment() {
-        return this.environment;
+    public String getDescription() {
+        return this.description;
     }
 
-    public CreateApplicationGroupRequest setCreateType(String createType) {
-        this.createType = createType;
+    public CreateApplicationGroupRequest setImportTagKey(String importTagKey) {
+        this.importTagKey = importTagKey;
         return this;
     }
-    public String getCreateType() {
-        return this.createType;
+    public String getImportTagKey() {
+        return this.importTagKey;
     }
 
-    public CreateApplicationGroupRequest setImportClusterId(String importClusterId) {
-        this.importClusterId = importClusterId;
+    public CreateApplicationGroupRequest setImportTagValue(String importTagValue) {
+        this.importTagValue = importTagValue;
         return this;
     }
-    public String getImportClusterId() {
-        return this.importClusterId;
+    public String getImportTagValue() {
+        return this.importTagValue;
     }
 
     public CreateApplicationGroupRequest setName(String name) {
@@ -95,6 +98,14 @@ public class CreateApplicationGroupRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateApplicationGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

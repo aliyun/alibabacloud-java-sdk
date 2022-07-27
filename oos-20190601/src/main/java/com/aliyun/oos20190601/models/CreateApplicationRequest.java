@@ -4,55 +4,35 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("CloudMonitorContactGroupList")
-    public String cloudMonitorContactGroupList;
-
-    @NameInMap("CloudMonitorEnableSubscribeEvent")
-    public Boolean cloudMonitorEnableSubscribeEvent;
-
-    @NameInMap("CloudMonitorEnableInstallAgent")
-    public Boolean cloudMonitorEnableInstallAgent;
-
-    @NameInMap("CloudMonitorTemplateIdList")
-    public String cloudMonitorTemplateIdList;
-
-    @NameInMap("CloudMonitorRuleEnabled")
-    public Boolean cloudMonitorRuleEnabled;
+    @NameInMap("Tags")
+    public java.util.Map<String, ?> tags;
 
     public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationRequest self = new CreateApplicationRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateApplicationRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateApplicationRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateApplicationRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateApplicationRequest setDescription(String description) {
@@ -63,12 +43,20 @@ public class CreateApplicationRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateApplicationRequest setType(String type) {
-        this.type = type;
+    public CreateApplicationRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateApplicationRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateApplicationRequest setResourceGroupId(String resourceGroupId) {
@@ -79,44 +67,12 @@ public class CreateApplicationRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateApplicationRequest setCloudMonitorContactGroupList(String cloudMonitorContactGroupList) {
-        this.cloudMonitorContactGroupList = cloudMonitorContactGroupList;
+    public CreateApplicationRequest setTags(java.util.Map<String, ?> tags) {
+        this.tags = tags;
         return this;
     }
-    public String getCloudMonitorContactGroupList() {
-        return this.cloudMonitorContactGroupList;
-    }
-
-    public CreateApplicationRequest setCloudMonitorEnableSubscribeEvent(Boolean cloudMonitorEnableSubscribeEvent) {
-        this.cloudMonitorEnableSubscribeEvent = cloudMonitorEnableSubscribeEvent;
-        return this;
-    }
-    public Boolean getCloudMonitorEnableSubscribeEvent() {
-        return this.cloudMonitorEnableSubscribeEvent;
-    }
-
-    public CreateApplicationRequest setCloudMonitorEnableInstallAgent(Boolean cloudMonitorEnableInstallAgent) {
-        this.cloudMonitorEnableInstallAgent = cloudMonitorEnableInstallAgent;
-        return this;
-    }
-    public Boolean getCloudMonitorEnableInstallAgent() {
-        return this.cloudMonitorEnableInstallAgent;
-    }
-
-    public CreateApplicationRequest setCloudMonitorTemplateIdList(String cloudMonitorTemplateIdList) {
-        this.cloudMonitorTemplateIdList = cloudMonitorTemplateIdList;
-        return this;
-    }
-    public String getCloudMonitorTemplateIdList() {
-        return this.cloudMonitorTemplateIdList;
-    }
-
-    public CreateApplicationRequest setCloudMonitorRuleEnabled(Boolean cloudMonitorRuleEnabled) {
-        this.cloudMonitorRuleEnabled = cloudMonitorRuleEnabled;
-        return this;
-    }
-    public Boolean getCloudMonitorRuleEnabled() {
-        return this.cloudMonitorRuleEnabled;
+    public java.util.Map<String, ?> getTags() {
+        return this.tags;
     }
 
 }

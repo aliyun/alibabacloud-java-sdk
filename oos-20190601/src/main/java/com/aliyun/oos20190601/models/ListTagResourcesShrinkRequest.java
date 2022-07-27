@@ -4,6 +4,9 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesShrinkRequest extends TeaModel {
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -16,12 +19,17 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
     @NameInMap("Tags")
     public String tagsShrink;
 
-    @NameInMap("NextToken")
-    public String nextToken;
-
     public static ListTagResourcesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesShrinkRequest self = new ListTagResourcesShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTagResourcesShrinkRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListTagResourcesShrinkRequest setRegionId(String regionId) {
@@ -54,14 +62,6 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
     }
     public String getTagsShrink() {
         return this.tagsShrink;
-    }
-
-    public ListTagResourcesShrinkRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
     }
 
 }

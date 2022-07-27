@@ -4,21 +4,37 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationGroupsResponseBody extends TeaModel {
+    @NameInMap("ApplicationGroups")
+    public java.util.List<ListApplicationGroupsResponseBodyApplicationGroups> applicationGroups;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    @NameInMap("ApplicationGroups")
-    public java.util.List<ListApplicationGroupsResponseBodyApplicationGroups> applicationGroups;
-
     public static ListApplicationGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListApplicationGroupsResponseBody self = new ListApplicationGroupsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListApplicationGroupsResponseBody setApplicationGroups(java.util.List<ListApplicationGroupsResponseBodyApplicationGroups> applicationGroups) {
+        this.applicationGroups = applicationGroups;
+        return this;
+    }
+    public java.util.List<ListApplicationGroupsResponseBodyApplicationGroups> getApplicationGroups() {
+        return this.applicationGroups;
+    }
+
+    public ListApplicationGroupsResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListApplicationGroupsResponseBody setNextToken(String nextToken) {
@@ -37,56 +53,78 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListApplicationGroupsResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public ListApplicationGroupsResponseBody setApplicationGroups(java.util.List<ListApplicationGroupsResponseBodyApplicationGroups> applicationGroups) {
-        this.applicationGroups = applicationGroups;
-        return this;
-    }
-    public java.util.List<ListApplicationGroupsResponseBodyApplicationGroups> getApplicationGroups() {
-        return this.applicationGroups;
-    }
-
     public static class ListApplicationGroupsResponseBodyApplicationGroups extends TeaModel {
+        @NameInMap("ApplicationName")
+        public String applicationName;
+
+        @NameInMap("CmsGroupId")
+        public String cmsGroupId;
+
+        @NameInMap("CreateDate")
+        public String createDate;
+
+        @NameInMap("DeployParameters")
+        public String deployParameters;
+
         @NameInMap("DeployRegionId")
         public String deployRegionId;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("UpdatedDate")
-        public String updatedDate;
+        @NameInMap("ImportTagKey")
+        public String importTagKey;
 
-        @NameInMap("CreatedDate")
-        public String createdDate;
-
-        @NameInMap("ApplicationName")
-        public String applicationName;
+        @NameInMap("ImportTagValue")
+        public String importTagValue;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Environment")
-        public String environment;
+        @NameInMap("Status")
+        public String status;
 
-        @NameInMap("CreateType")
-        public String createType;
+        @NameInMap("StatusReason")
+        public String statusReason;
 
-        @NameInMap("ScalingGroupId")
-        public String scalingGroupId;
-
-        @NameInMap("ImportClusterId")
-        public String importClusterId;
+        @NameInMap("UpdateDate")
+        public String updateDate;
 
         public static ListApplicationGroupsResponseBodyApplicationGroups build(java.util.Map<String, ?> map) throws Exception {
             ListApplicationGroupsResponseBodyApplicationGroups self = new ListApplicationGroupsResponseBodyApplicationGroups();
             return TeaModel.build(map, self);
+        }
+
+        public ListApplicationGroupsResponseBodyApplicationGroups setApplicationName(String applicationName) {
+            this.applicationName = applicationName;
+            return this;
+        }
+        public String getApplicationName() {
+            return this.applicationName;
+        }
+
+        public ListApplicationGroupsResponseBodyApplicationGroups setCmsGroupId(String cmsGroupId) {
+            this.cmsGroupId = cmsGroupId;
+            return this;
+        }
+        public String getCmsGroupId() {
+            return this.cmsGroupId;
+        }
+
+        public ListApplicationGroupsResponseBodyApplicationGroups setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
+        }
+
+        public ListApplicationGroupsResponseBodyApplicationGroups setDeployParameters(String deployParameters) {
+            this.deployParameters = deployParameters;
+            return this;
+        }
+        public String getDeployParameters() {
+            return this.deployParameters;
         }
 
         public ListApplicationGroupsResponseBodyApplicationGroups setDeployRegionId(String deployRegionId) {
@@ -105,28 +143,20 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListApplicationGroupsResponseBodyApplicationGroups setUpdatedDate(String updatedDate) {
-            this.updatedDate = updatedDate;
+        public ListApplicationGroupsResponseBodyApplicationGroups setImportTagKey(String importTagKey) {
+            this.importTagKey = importTagKey;
             return this;
         }
-        public String getUpdatedDate() {
-            return this.updatedDate;
+        public String getImportTagKey() {
+            return this.importTagKey;
         }
 
-        public ListApplicationGroupsResponseBodyApplicationGroups setCreatedDate(String createdDate) {
-            this.createdDate = createdDate;
+        public ListApplicationGroupsResponseBodyApplicationGroups setImportTagValue(String importTagValue) {
+            this.importTagValue = importTagValue;
             return this;
         }
-        public String getCreatedDate() {
-            return this.createdDate;
-        }
-
-        public ListApplicationGroupsResponseBodyApplicationGroups setApplicationName(String applicationName) {
-            this.applicationName = applicationName;
-            return this;
-        }
-        public String getApplicationName() {
-            return this.applicationName;
+        public String getImportTagValue() {
+            return this.importTagValue;
         }
 
         public ListApplicationGroupsResponseBodyApplicationGroups setName(String name) {
@@ -137,36 +167,28 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListApplicationGroupsResponseBodyApplicationGroups setEnvironment(String environment) {
-            this.environment = environment;
+        public ListApplicationGroupsResponseBodyApplicationGroups setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getEnvironment() {
-            return this.environment;
+        public String getStatus() {
+            return this.status;
         }
 
-        public ListApplicationGroupsResponseBodyApplicationGroups setCreateType(String createType) {
-            this.createType = createType;
+        public ListApplicationGroupsResponseBodyApplicationGroups setStatusReason(String statusReason) {
+            this.statusReason = statusReason;
             return this;
         }
-        public String getCreateType() {
-            return this.createType;
+        public String getStatusReason() {
+            return this.statusReason;
         }
 
-        public ListApplicationGroupsResponseBodyApplicationGroups setScalingGroupId(String scalingGroupId) {
-            this.scalingGroupId = scalingGroupId;
+        public ListApplicationGroupsResponseBodyApplicationGroups setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
             return this;
         }
-        public String getScalingGroupId() {
-            return this.scalingGroupId;
-        }
-
-        public ListApplicationGroupsResponseBodyApplicationGroups setImportClusterId(String importClusterId) {
-            this.importClusterId = importClusterId;
-            return this;
-        }
-        public String getImportClusterId() {
-            return this.importClusterId;
+        public String getUpdateDate() {
+            return this.updateDate;
         }
 
     }
