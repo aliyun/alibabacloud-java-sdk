@@ -1304,8 +1304,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "EntityDelete"),
             new TeaPair("version", "2022-05-20"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/costcenter/v1/delete-entity"),
-            new TeaPair("method", "DELETE"),
+            new TeaPair("pathname", "/costcenter/v1/entity/action/delete"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "formData"),
@@ -2411,5 +2411,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new TrainOrderQueryResponse());
+    }
+
+    public UserQueryResponse userQuery(UserQueryRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.userQueryWithOptions(request, headers, runtime);
+    }
+
+    public UserQueryResponse userQueryWithOptions(UserQueryRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.modifiedTimeGreaterOrEqualThan)) {
+            query.put("modified_time_greater_or_equal_than", request.modifiedTimeGreaterOrEqualThan);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdPartCorpId)) {
+            query.put("third_part_corp_id", request.thirdPartCorpId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdPartJobNo)) {
+            query.put("third_part_job_no", request.thirdPartJobNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topAppKeyOwnerId)) {
+            query.put("top_app_key_owner_id", request.topAppKeyOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topAuthorizedHavanaId)) {
+            query.put("top_authorized_havana_id", request.topAuthorizedHavanaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topAuthorizedUserNick)) {
+            query.put("top_authorized_user_nick", request.topAuthorizedUserNick);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UserQuery"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/user/v1/user"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UserQueryResponse());
     }
 }
