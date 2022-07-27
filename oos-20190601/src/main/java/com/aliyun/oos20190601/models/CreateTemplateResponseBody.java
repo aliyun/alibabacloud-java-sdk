@@ -4,26 +4,18 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateResponseBody extends TeaModel {
-    @NameInMap("TemplateType")
-    public String templateType;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Template")
     public CreateTemplateResponseBodyTemplate template;
 
+    @NameInMap("TemplateType")
+    public String templateType;
+
     public static CreateTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateTemplateResponseBody self = new CreateTemplateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateTemplateResponseBody setTemplateType(String templateType) {
-        this.templateType = templateType;
-        return this;
-    }
-    public String getTemplateType() {
-        return this.templateType;
     }
 
     public CreateTemplateResponseBody setRequestId(String requestId) {
@@ -42,18 +34,44 @@ public class CreateTemplateResponseBody extends TeaModel {
         return this.template;
     }
 
+    public CreateTemplateResponseBody setTemplateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public String getTemplateType() {
+        return this.templateType;
+    }
+
     public static class CreateTemplateResponseBodyTemplate extends TeaModel {
+        @NameInMap("CreatedBy")
+        public String createdBy;
+
+        @NameInMap("CreatedDate")
+        public String createdDate;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("HasTrigger")
+        public Boolean hasTrigger;
+
         @NameInMap("Hash")
         public String hash;
 
-        @NameInMap("UpdatedDate")
-        public String updatedDate;
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
-        @NameInMap("UpdatedBy")
-        public String updatedBy;
+        @NameInMap("ShareType")
+        public String shareType;
 
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
+
+        @NameInMap("TemplateFormat")
+        public String templateFormat;
+
+        @NameInMap("TemplateId")
+        public String templateId;
 
         @NameInMap("TemplateName")
         public String templateName;
@@ -61,105 +79,15 @@ public class CreateTemplateResponseBody extends TeaModel {
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
-        @NameInMap("TemplateFormat")
-        public String templateFormat;
+        @NameInMap("UpdatedBy")
+        public String updatedBy;
 
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        @NameInMap("CreatedBy")
-        public String createdBy;
-
-        @NameInMap("CreatedDate")
-        public String createdDate;
-
-        @NameInMap("TemplateId")
-        public String templateId;
-
-        @NameInMap("HasTrigger")
-        public Boolean hasTrigger;
-
-        @NameInMap("ShareType")
-        public String shareType;
+        @NameInMap("UpdatedDate")
+        public String updatedDate;
 
         public static CreateTemplateResponseBodyTemplate build(java.util.Map<String, ?> map) throws Exception {
             CreateTemplateResponseBodyTemplate self = new CreateTemplateResponseBodyTemplate();
             return TeaModel.build(map, self);
-        }
-
-        public CreateTemplateResponseBodyTemplate setHash(String hash) {
-            this.hash = hash;
-            return this;
-        }
-        public String getHash() {
-            return this.hash;
-        }
-
-        public CreateTemplateResponseBodyTemplate setUpdatedDate(String updatedDate) {
-            this.updatedDate = updatedDate;
-            return this;
-        }
-        public String getUpdatedDate() {
-            return this.updatedDate;
-        }
-
-        public CreateTemplateResponseBodyTemplate setUpdatedBy(String updatedBy) {
-            this.updatedBy = updatedBy;
-            return this;
-        }
-        public String getUpdatedBy() {
-            return this.updatedBy;
-        }
-
-        public CreateTemplateResponseBodyTemplate setTags(java.util.Map<String, ?> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.Map<String, ?> getTags() {
-            return this.tags;
-        }
-
-        public CreateTemplateResponseBodyTemplate setTemplateName(String templateName) {
-            this.templateName = templateName;
-            return this;
-        }
-        public String getTemplateName() {
-            return this.templateName;
-        }
-
-        public CreateTemplateResponseBodyTemplate setTemplateVersion(String templateVersion) {
-            this.templateVersion = templateVersion;
-            return this;
-        }
-        public String getTemplateVersion() {
-            return this.templateVersion;
-        }
-
-        public CreateTemplateResponseBodyTemplate setTemplateFormat(String templateFormat) {
-            this.templateFormat = templateFormat;
-            return this;
-        }
-        public String getTemplateFormat() {
-            return this.templateFormat;
-        }
-
-        public CreateTemplateResponseBodyTemplate setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public CreateTemplateResponseBodyTemplate setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
         }
 
         public CreateTemplateResponseBodyTemplate setCreatedBy(String createdBy) {
@@ -178,12 +106,12 @@ public class CreateTemplateResponseBody extends TeaModel {
             return this.createdDate;
         }
 
-        public CreateTemplateResponseBodyTemplate setTemplateId(String templateId) {
-            this.templateId = templateId;
+        public CreateTemplateResponseBodyTemplate setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getTemplateId() {
-            return this.templateId;
+        public String getDescription() {
+            return this.description;
         }
 
         public CreateTemplateResponseBodyTemplate setHasTrigger(Boolean hasTrigger) {
@@ -194,12 +122,84 @@ public class CreateTemplateResponseBody extends TeaModel {
             return this.hasTrigger;
         }
 
+        public CreateTemplateResponseBodyTemplate setHash(String hash) {
+            this.hash = hash;
+            return this;
+        }
+        public String getHash() {
+            return this.hash;
+        }
+
+        public CreateTemplateResponseBodyTemplate setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public CreateTemplateResponseBodyTemplate setShareType(String shareType) {
             this.shareType = shareType;
             return this;
         }
         public String getShareType() {
             return this.shareType;
+        }
+
+        public CreateTemplateResponseBodyTemplate setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
+        }
+
+        public CreateTemplateResponseBodyTemplate setTemplateFormat(String templateFormat) {
+            this.templateFormat = templateFormat;
+            return this;
+        }
+        public String getTemplateFormat() {
+            return this.templateFormat;
+        }
+
+        public CreateTemplateResponseBodyTemplate setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        public CreateTemplateResponseBodyTemplate setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public CreateTemplateResponseBodyTemplate setTemplateVersion(String templateVersion) {
+            this.templateVersion = templateVersion;
+            return this;
+        }
+        public String getTemplateVersion() {
+            return this.templateVersion;
+        }
+
+        public CreateTemplateResponseBodyTemplate setUpdatedBy(String updatedBy) {
+            this.updatedBy = updatedBy;
+            return this;
+        }
+        public String getUpdatedBy() {
+            return this.updatedBy;
+        }
+
+        public CreateTemplateResponseBodyTemplate setUpdatedDate(String updatedDate) {
+            this.updatedDate = updatedDate;
+            return this;
+        }
+        public String getUpdatedDate() {
+            return this.updatedDate;
         }
 
     }

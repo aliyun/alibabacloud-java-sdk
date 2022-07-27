@@ -7,14 +7,14 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
     @NameInMap("Outputs")
     public String outputs;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Parameters")
     public String parameters;
 
     @NameInMap("RamRole")
     public String ramRole;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Tasks")
     public java.util.List<ValidateTemplateContentResponseBodyTasks> tasks;
@@ -30,14 +30,6 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
     }
     public String getOutputs() {
         return this.outputs;
-    }
-
-    public ValidateTemplateContentResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ValidateTemplateContentResponseBody setParameters(String parameters) {
@@ -56,6 +48,14 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
         return this.ramRole;
     }
 
+    public ValidateTemplateContentResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ValidateTemplateContentResponseBody setTasks(java.util.List<ValidateTemplateContentResponseBodyTasks> tasks) {
         this.tasks = tasks;
         return this;
@@ -65,40 +65,24 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
     }
 
     public static class ValidateTemplateContentResponseBodyTasks extends TeaModel {
-        @NameInMap("Outputs")
-        public String outputs;
-
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Outputs")
+        public String outputs;
+
         @NameInMap("Properties")
         public String properties;
+
+        @NameInMap("Type")
+        public String type;
 
         public static ValidateTemplateContentResponseBodyTasks build(java.util.Map<String, ?> map) throws Exception {
             ValidateTemplateContentResponseBodyTasks self = new ValidateTemplateContentResponseBodyTasks();
             return TeaModel.build(map, self);
-        }
-
-        public ValidateTemplateContentResponseBodyTasks setOutputs(String outputs) {
-            this.outputs = outputs;
-            return this;
-        }
-        public String getOutputs() {
-            return this.outputs;
-        }
-
-        public ValidateTemplateContentResponseBodyTasks setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public ValidateTemplateContentResponseBodyTasks setDescription(String description) {
@@ -117,12 +101,28 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ValidateTemplateContentResponseBodyTasks setOutputs(String outputs) {
+            this.outputs = outputs;
+            return this;
+        }
+        public String getOutputs() {
+            return this.outputs;
+        }
+
         public ValidateTemplateContentResponseBodyTasks setProperties(String properties) {
             this.properties = properties;
             return this;
         }
         public String getProperties() {
             return this.properties;
+        }
+
+        public ValidateTemplateContentResponseBodyTasks setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

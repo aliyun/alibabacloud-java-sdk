@@ -4,8 +4,8 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class UpdateExecutionRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("ExecutionId")
     public String executionId;
@@ -13,20 +13,20 @@ public class UpdateExecutionRequest extends TeaModel {
     @NameInMap("Parameters")
     public String parameters;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static UpdateExecutionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateExecutionRequest self = new UpdateExecutionRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateExecutionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public UpdateExecutionRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateExecutionRequest setExecutionId(String executionId) {
@@ -45,12 +45,12 @@ public class UpdateExecutionRequest extends TeaModel {
         return this.parameters;
     }
 
-    public UpdateExecutionRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public UpdateExecutionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

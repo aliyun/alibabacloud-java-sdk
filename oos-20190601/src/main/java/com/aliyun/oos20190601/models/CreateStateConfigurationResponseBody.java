@@ -32,20 +32,38 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
     }
 
     public static class CreateStateConfigurationResponseBodyStateConfiguration extends TeaModel {
+        @NameInMap("ConfigureMode")
+        public String configureMode;
+
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("Targets")
-        public String targets;
+        @NameInMap("Description")
+        public String description;
 
-        @NameInMap("Tags")
-        public java.util.Map<String, ?> tags;
+        @NameInMap("Parameters")
+        public java.util.Map<String, ?> parameters;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("ScheduleExpression")
+        public String scheduleExpression;
+
+        @NameInMap("ScheduleType")
+        public String scheduleType;
 
         @NameInMap("StateConfigurationId")
         public String stateConfigurationId;
 
-        @NameInMap("ScheduleExpression")
-        public String scheduleExpression;
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
+        @NameInMap("Targets")
+        public String targets;
+
+        @NameInMap("TemplateId")
+        public String templateId;
 
         @NameInMap("TemplateName")
         public String templateName;
@@ -53,27 +71,17 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
-        @NameInMap("ConfigureMode")
-        public String configureMode;
-
-        @NameInMap("ScheduleType")
-        public String scheduleType;
-
-        @NameInMap("Parameters")
-        public java.util.Map<String, ?> parameters;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        @NameInMap("TemplateId")
-        public String templateId;
-
         public static CreateStateConfigurationResponseBodyStateConfiguration build(java.util.Map<String, ?> map) throws Exception {
             CreateStateConfigurationResponseBodyStateConfiguration self = new CreateStateConfigurationResponseBodyStateConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public CreateStateConfigurationResponseBodyStateConfiguration setConfigureMode(String configureMode) {
+            this.configureMode = configureMode;
+            return this;
+        }
+        public String getConfigureMode() {
+            return this.configureMode;
         }
 
         public CreateStateConfigurationResponseBodyStateConfiguration setCreateTime(String createTime) {
@@ -84,20 +92,44 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public CreateStateConfigurationResponseBodyStateConfiguration setTargets(String targets) {
-            this.targets = targets;
+        public CreateStateConfigurationResponseBodyStateConfiguration setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getTargets() {
-            return this.targets;
+        public String getDescription() {
+            return this.description;
         }
 
-        public CreateStateConfigurationResponseBodyStateConfiguration setTags(java.util.Map<String, ?> tags) {
-            this.tags = tags;
+        public CreateStateConfigurationResponseBodyStateConfiguration setParameters(java.util.Map<String, ?> parameters) {
+            this.parameters = parameters;
             return this;
         }
-        public java.util.Map<String, ?> getTags() {
-            return this.tags;
+        public java.util.Map<String, ?> getParameters() {
+            return this.parameters;
+        }
+
+        public CreateStateConfigurationResponseBodyStateConfiguration setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public CreateStateConfigurationResponseBodyStateConfiguration setScheduleExpression(String scheduleExpression) {
+            this.scheduleExpression = scheduleExpression;
+            return this;
+        }
+        public String getScheduleExpression() {
+            return this.scheduleExpression;
+        }
+
+        public CreateStateConfigurationResponseBodyStateConfiguration setScheduleType(String scheduleType) {
+            this.scheduleType = scheduleType;
+            return this;
+        }
+        public String getScheduleType() {
+            return this.scheduleType;
         }
 
         public CreateStateConfigurationResponseBodyStateConfiguration setStateConfigurationId(String stateConfigurationId) {
@@ -108,12 +140,28 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             return this.stateConfigurationId;
         }
 
-        public CreateStateConfigurationResponseBodyStateConfiguration setScheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = scheduleExpression;
+        public CreateStateConfigurationResponseBodyStateConfiguration setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
             return this;
         }
-        public String getScheduleExpression() {
-            return this.scheduleExpression;
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
+        }
+
+        public CreateStateConfigurationResponseBodyStateConfiguration setTargets(String targets) {
+            this.targets = targets;
+            return this;
+        }
+        public String getTargets() {
+            return this.targets;
+        }
+
+        public CreateStateConfigurationResponseBodyStateConfiguration setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
         }
 
         public CreateStateConfigurationResponseBodyStateConfiguration setTemplateName(String templateName) {
@@ -130,54 +178,6 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
         }
         public String getTemplateVersion() {
             return this.templateVersion;
-        }
-
-        public CreateStateConfigurationResponseBodyStateConfiguration setConfigureMode(String configureMode) {
-            this.configureMode = configureMode;
-            return this;
-        }
-        public String getConfigureMode() {
-            return this.configureMode;
-        }
-
-        public CreateStateConfigurationResponseBodyStateConfiguration setScheduleType(String scheduleType) {
-            this.scheduleType = scheduleType;
-            return this;
-        }
-        public String getScheduleType() {
-            return this.scheduleType;
-        }
-
-        public CreateStateConfigurationResponseBodyStateConfiguration setParameters(java.util.Map<String, ?> parameters) {
-            this.parameters = parameters;
-            return this;
-        }
-        public java.util.Map<String, ?> getParameters() {
-            return this.parameters;
-        }
-
-        public CreateStateConfigurationResponseBodyStateConfiguration setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public CreateStateConfigurationResponseBodyStateConfiguration setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        public CreateStateConfigurationResponseBodyStateConfiguration setTemplateId(String templateId) {
-            this.templateId = templateId;
-            return this;
-        }
-        public String getTemplateId() {
-            return this.templateId;
         }
 
     }

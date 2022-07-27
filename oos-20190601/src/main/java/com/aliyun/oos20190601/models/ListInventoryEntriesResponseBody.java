@@ -4,6 +4,18 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListInventoryEntriesResponseBody extends TeaModel {
+    @NameInMap("CaptureTime")
+    public String captureTime;
+
+    @NameInMap("Entries")
+    public java.util.List<java.util.Map<String, ?>> entries;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -13,24 +25,44 @@ public class ListInventoryEntriesResponseBody extends TeaModel {
     @NameInMap("SchemaVersion")
     public String schemaVersion;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    @NameInMap("CaptureTime")
-    public String captureTime;
-
     @NameInMap("TypeName")
     public String typeName;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("Entries")
-    public java.util.List<java.util.Map<String, ?>> entries;
 
     public static ListInventoryEntriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInventoryEntriesResponseBody self = new ListInventoryEntriesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListInventoryEntriesResponseBody setCaptureTime(String captureTime) {
+        this.captureTime = captureTime;
+        return this;
+    }
+    public String getCaptureTime() {
+        return this.captureTime;
+    }
+
+    public ListInventoryEntriesResponseBody setEntries(java.util.List<java.util.Map<String, ?>> entries) {
+        this.entries = entries;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, ?>> getEntries() {
+        return this.entries;
+    }
+
+    public ListInventoryEntriesResponseBody setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ListInventoryEntriesResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListInventoryEntriesResponseBody setNextToken(String nextToken) {
@@ -57,44 +89,12 @@ public class ListInventoryEntriesResponseBody extends TeaModel {
         return this.schemaVersion;
     }
 
-    public ListInventoryEntriesResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public ListInventoryEntriesResponseBody setCaptureTime(String captureTime) {
-        this.captureTime = captureTime;
-        return this;
-    }
-    public String getCaptureTime() {
-        return this.captureTime;
-    }
-
     public ListInventoryEntriesResponseBody setTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     public String getTypeName() {
         return this.typeName;
-    }
-
-    public ListInventoryEntriesResponseBody setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ListInventoryEntriesResponseBody setEntries(java.util.List<java.util.Map<String, ?>> entries) {
-        this.entries = entries;
-        return this;
-    }
-    public java.util.List<java.util.Map<String, ?>> getEntries() {
-        return this.entries;
     }
 
 }

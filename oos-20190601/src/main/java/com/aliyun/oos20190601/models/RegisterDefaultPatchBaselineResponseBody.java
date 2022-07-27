@@ -4,23 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PatchBaseline")
     public RegisterDefaultPatchBaselineResponseBodyPatchBaseline patchBaseline;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RegisterDefaultPatchBaselineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RegisterDefaultPatchBaselineResponseBody self = new RegisterDefaultPatchBaselineResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RegisterDefaultPatchBaselineResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RegisterDefaultPatchBaselineResponseBody setPatchBaseline(RegisterDefaultPatchBaselineResponseBodyPatchBaseline patchBaseline) {
@@ -31,18 +23,17 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
         return this.patchBaseline;
     }
 
+    public RegisterDefaultPatchBaselineResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class RegisterDefaultPatchBaselineResponseBodyPatchBaseline extends TeaModel {
-        @NameInMap("OperationSystem")
-        public String operationSystem;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("UpdatedDate")
-        public String updatedDate;
-
-        @NameInMap("UpdatedBy")
-        public String updatedBy;
+        @NameInMap("ApprovalRules")
+        public String approvalRules;
 
         @NameInMap("CreatedBy")
         public String createdBy;
@@ -50,53 +41,38 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
         @NameInMap("CreatedDate")
         public String createdDate;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("ApprovalRules")
-        public String approvalRules;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("OperationSystem")
+        public String operationSystem;
+
         @NameInMap("ShareType")
         public String shareType;
+
+        @NameInMap("UpdatedBy")
+        public String updatedBy;
+
+        @NameInMap("UpdatedDate")
+        public String updatedDate;
 
         public static RegisterDefaultPatchBaselineResponseBodyPatchBaseline build(java.util.Map<String, ?> map) throws Exception {
             RegisterDefaultPatchBaselineResponseBodyPatchBaseline self = new RegisterDefaultPatchBaselineResponseBodyPatchBaseline();
             return TeaModel.build(map, self);
         }
 
-        public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setOperationSystem(String operationSystem) {
-            this.operationSystem = operationSystem;
+        public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setApprovalRules(String approvalRules) {
+            this.approvalRules = approvalRules;
             return this;
         }
-        public String getOperationSystem() {
-            return this.operationSystem;
-        }
-
-        public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setUpdatedDate(String updatedDate) {
-            this.updatedDate = updatedDate;
-            return this;
-        }
-        public String getUpdatedDate() {
-            return this.updatedDate;
-        }
-
-        public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setUpdatedBy(String updatedBy) {
-            this.updatedBy = updatedBy;
-            return this;
-        }
-        public String getUpdatedBy() {
-            return this.updatedBy;
+        public String getApprovalRules() {
+            return this.approvalRules;
         }
 
         public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setCreatedBy(String createdBy) {
@@ -115,20 +91,12 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             return this.createdDate;
         }
 
-        public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setName(String name) {
-            this.name = name;
+        public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setApprovalRules(String approvalRules) {
-            this.approvalRules = approvalRules;
-            return this;
-        }
-        public String getApprovalRules() {
-            return this.approvalRules;
+        public String getDescription() {
+            return this.description;
         }
 
         public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setId(String id) {
@@ -139,12 +107,44 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             return this.id;
         }
 
+        public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setOperationSystem(String operationSystem) {
+            this.operationSystem = operationSystem;
+            return this;
+        }
+        public String getOperationSystem() {
+            return this.operationSystem;
+        }
+
         public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setShareType(String shareType) {
             this.shareType = shareType;
             return this;
         }
         public String getShareType() {
             return this.shareType;
+        }
+
+        public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setUpdatedBy(String updatedBy) {
+            this.updatedBy = updatedBy;
+            return this;
+        }
+        public String getUpdatedBy() {
+            return this.updatedBy;
+        }
+
+        public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setUpdatedDate(String updatedDate) {
+            this.updatedDate = updatedDate;
+            return this;
+        }
+        public String getUpdatedDate() {
+            return this.updatedDate;
         }
 
     }

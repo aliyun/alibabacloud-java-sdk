@@ -4,23 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class UpdateParameterResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Parameter")
     public UpdateParameterResponseBodyParameter parameter;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdateParameterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateParameterResponseBody self = new UpdateParameterResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateParameterResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateParameterResponseBody setParameter(UpdateParameterResponseBodyParameter parameter) {
@@ -31,27 +23,17 @@ public class UpdateParameterResponseBody extends TeaModel {
         return this.parameter;
     }
 
+    public UpdateParameterResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class UpdateParameterResponseBodyParameter extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("UpdatedDate")
-        public String updatedDate;
-
-        @NameInMap("UpdatedBy")
-        public String updatedBy;
-
-        @NameInMap("Tags")
-        public String tags;
-
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("Constraints")
         public String constraints;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
 
         @NameInMap("CreatedBy")
         public String createdBy;
@@ -59,61 +41,39 @@ public class UpdateParameterResponseBody extends TeaModel {
         @NameInMap("CreatedDate")
         public String createdDate;
 
-        @NameInMap("ParameterVersion")
-        public Integer parameterVersion;
-
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ParameterVersion")
+        public Integer parameterVersion;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("ShareType")
         public String shareType;
+
+        @NameInMap("Tags")
+        public String tags;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("UpdatedBy")
+        public String updatedBy;
+
+        @NameInMap("UpdatedDate")
+        public String updatedDate;
 
         public static UpdateParameterResponseBodyParameter build(java.util.Map<String, ?> map) throws Exception {
             UpdateParameterResponseBodyParameter self = new UpdateParameterResponseBodyParameter();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateParameterResponseBodyParameter setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public UpdateParameterResponseBodyParameter setUpdatedDate(String updatedDate) {
-            this.updatedDate = updatedDate;
-            return this;
-        }
-        public String getUpdatedDate() {
-            return this.updatedDate;
-        }
-
-        public UpdateParameterResponseBodyParameter setUpdatedBy(String updatedBy) {
-            this.updatedBy = updatedBy;
-            return this;
-        }
-        public String getUpdatedBy() {
-            return this.updatedBy;
-        }
-
-        public UpdateParameterResponseBodyParameter setTags(String tags) {
-            this.tags = tags;
-            return this;
-        }
-        public String getTags() {
-            return this.tags;
-        }
-
-        public UpdateParameterResponseBodyParameter setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public UpdateParameterResponseBodyParameter setConstraints(String constraints) {
@@ -122,14 +82,6 @@ public class UpdateParameterResponseBody extends TeaModel {
         }
         public String getConstraints() {
             return this.constraints;
-        }
-
-        public UpdateParameterResponseBodyParameter setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
         }
 
         public UpdateParameterResponseBodyParameter setCreatedBy(String createdBy) {
@@ -148,20 +100,12 @@ public class UpdateParameterResponseBody extends TeaModel {
             return this.createdDate;
         }
 
-        public UpdateParameterResponseBodyParameter setParameterVersion(Integer parameterVersion) {
-            this.parameterVersion = parameterVersion;
+        public UpdateParameterResponseBodyParameter setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public Integer getParameterVersion() {
-            return this.parameterVersion;
-        }
-
-        public UpdateParameterResponseBodyParameter setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
+        public String getDescription() {
+            return this.description;
         }
 
         public UpdateParameterResponseBodyParameter setId(String id) {
@@ -172,12 +116,68 @@ public class UpdateParameterResponseBody extends TeaModel {
             return this.id;
         }
 
+        public UpdateParameterResponseBodyParameter setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdateParameterResponseBodyParameter setParameterVersion(Integer parameterVersion) {
+            this.parameterVersion = parameterVersion;
+            return this;
+        }
+        public Integer getParameterVersion() {
+            return this.parameterVersion;
+        }
+
+        public UpdateParameterResponseBodyParameter setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public UpdateParameterResponseBodyParameter setShareType(String shareType) {
             this.shareType = shareType;
             return this;
         }
         public String getShareType() {
             return this.shareType;
+        }
+
+        public UpdateParameterResponseBodyParameter setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
+        }
+
+        public UpdateParameterResponseBodyParameter setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public UpdateParameterResponseBodyParameter setUpdatedBy(String updatedBy) {
+            this.updatedBy = updatedBy;
+            return this;
+        }
+        public String getUpdatedBy() {
+            return this.updatedBy;
+        }
+
+        public UpdateParameterResponseBodyParameter setUpdatedDate(String updatedDate) {
+            this.updatedDate = updatedDate;
+            return this;
+        }
+        public String getUpdatedDate() {
+            return this.updatedDate;
         }
 
     }

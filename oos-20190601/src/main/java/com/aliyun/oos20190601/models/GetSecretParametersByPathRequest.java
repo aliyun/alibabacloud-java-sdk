@@ -4,8 +4,11 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetSecretParametersByPathRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("Path")
     public String path;
@@ -13,11 +16,8 @@ public class GetSecretParametersByPathRequest extends TeaModel {
     @NameInMap("Recursive")
     public Boolean recursive;
 
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("MaxResults")
-    public Integer maxResults;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("WithDecryption")
     public Boolean withDecryption;
@@ -27,12 +27,20 @@ public class GetSecretParametersByPathRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetSecretParametersByPathRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public GetSecretParametersByPathRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public GetSecretParametersByPathRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public GetSecretParametersByPathRequest setPath(String path) {
@@ -51,20 +59,12 @@ public class GetSecretParametersByPathRequest extends TeaModel {
         return this.recursive;
     }
 
-    public GetSecretParametersByPathRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public GetSecretParametersByPathRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public GetSecretParametersByPathRequest setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetSecretParametersByPathRequest setWithDecryption(Boolean withDecryption) {

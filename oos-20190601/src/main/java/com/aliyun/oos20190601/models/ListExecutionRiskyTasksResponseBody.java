@@ -32,11 +32,11 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
     }
 
     public static class ListExecutionRiskyTasksResponseBodyRiskyTasks extends TeaModel {
-        @NameInMap("Service")
-        public String service;
-
         @NameInMap("API")
         public String API;
+
+        @NameInMap("Service")
+        public String service;
 
         @NameInMap("Task")
         public java.util.List<String> task;
@@ -49,20 +49,20 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListExecutionRiskyTasksResponseBodyRiskyTasks setService(String service) {
-            this.service = service;
-            return this;
-        }
-        public String getService() {
-            return this.service;
-        }
-
         public ListExecutionRiskyTasksResponseBodyRiskyTasks setAPI(String API) {
             this.API = API;
             return this;
         }
         public String getAPI() {
             return this.API;
+        }
+
+        public ListExecutionRiskyTasksResponseBodyRiskyTasks setService(String service) {
+            this.service = service;
+            return this;
+        }
+        public String getService() {
+            return this.service;
         }
 
         public ListExecutionRiskyTasksResponseBodyRiskyTasks setTask(java.util.List<String> task) {

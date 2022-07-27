@@ -4,14 +4,14 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListTaskExecutionsResponseBody extends TeaModel {
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("MaxResults")
-    public Integer maxResults;
 
     @NameInMap("TaskExecutions")
     public java.util.List<ListTaskExecutionsResponseBodyTaskExecutions> taskExecutions;
@@ -19,6 +19,14 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
     public static ListTaskExecutionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTaskExecutionsResponseBody self = new ListTaskExecutionsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListTaskExecutionsResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListTaskExecutionsResponseBody setNextToken(String nextToken) {
@@ -37,14 +45,6 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTaskExecutionsResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
     public ListTaskExecutionsResponseBody setTaskExecutions(java.util.List<ListTaskExecutionsResponseBodyTaskExecutions> taskExecutions) {
         this.taskExecutions = taskExecutions;
         return this;
@@ -57,32 +57,44 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
         @NameInMap("ChildExecutionId")
         public String childExecutionId;
 
-        @NameInMap("Outputs")
-        public String outputs;
-
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("CreateDate")
+        public String createDate;
 
         @NameInMap("EndDate")
         public String endDate;
 
-        @NameInMap("ParentTaskExecutionId")
-        public String parentTaskExecutionId;
+        @NameInMap("ExecutionId")
+        public String executionId;
 
-        @NameInMap("TaskName")
-        public String taskName;
+        @NameInMap("ExtraData")
+        public java.util.Map<String, ?> extraData;
 
-        @NameInMap("StartDate")
-        public String startDate;
+        @NameInMap("Loop")
+        public java.util.Map<String, ?> loop;
+
+        @NameInMap("LoopBatchNumber")
+        public Integer loopBatchNumber;
 
         @NameInMap("LoopItem")
         public String loopItem;
 
-        @NameInMap("CreateDate")
-        public String createDate;
+        @NameInMap("Outputs")
+        public String outputs;
 
-        @NameInMap("ExecutionId")
-        public String executionId;
+        @NameInMap("ParentTaskExecutionId")
+        public String parentTaskExecutionId;
+
+        @NameInMap("Properties")
+        public String properties;
+
+        @NameInMap("StartDate")
+        public String startDate;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StatusMessage")
+        public String statusMessage;
 
         @NameInMap("TaskAction")
         public String taskAction;
@@ -90,26 +102,14 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
         @NameInMap("TaskExecutionId")
         public String taskExecutionId;
 
-        @NameInMap("UpdateDate")
-        public String updateDate;
-
-        @NameInMap("Loop")
-        public java.util.Map<String, ?> loop;
+        @NameInMap("TaskName")
+        public String taskName;
 
         @NameInMap("TemplateId")
         public String templateId;
 
-        @NameInMap("LoopBatchNumber")
-        public Integer loopBatchNumber;
-
-        @NameInMap("StatusMessage")
-        public String statusMessage;
-
-        @NameInMap("ExtraData")
-        public java.util.Map<String, ?> extraData;
-
-        @NameInMap("Properties")
-        public String properties;
+        @NameInMap("UpdateDate")
+        public String updateDate;
 
         public static ListTaskExecutionsResponseBodyTaskExecutions build(java.util.Map<String, ?> map) throws Exception {
             ListTaskExecutionsResponseBodyTaskExecutions self = new ListTaskExecutionsResponseBodyTaskExecutions();
@@ -124,20 +124,12 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             return this.childExecutionId;
         }
 
-        public ListTaskExecutionsResponseBodyTaskExecutions setOutputs(String outputs) {
-            this.outputs = outputs;
+        public ListTaskExecutionsResponseBodyTaskExecutions setCreateDate(String createDate) {
+            this.createDate = createDate;
             return this;
         }
-        public String getOutputs() {
-            return this.outputs;
-        }
-
-        public ListTaskExecutionsResponseBodyTaskExecutions setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         public ListTaskExecutionsResponseBodyTaskExecutions setEndDate(String endDate) {
@@ -148,28 +140,36 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             return this.endDate;
         }
 
-        public ListTaskExecutionsResponseBodyTaskExecutions setParentTaskExecutionId(String parentTaskExecutionId) {
-            this.parentTaskExecutionId = parentTaskExecutionId;
+        public ListTaskExecutionsResponseBodyTaskExecutions setExecutionId(String executionId) {
+            this.executionId = executionId;
             return this;
         }
-        public String getParentTaskExecutionId() {
-            return this.parentTaskExecutionId;
+        public String getExecutionId() {
+            return this.executionId;
         }
 
-        public ListTaskExecutionsResponseBodyTaskExecutions setTaskName(String taskName) {
-            this.taskName = taskName;
+        public ListTaskExecutionsResponseBodyTaskExecutions setExtraData(java.util.Map<String, ?> extraData) {
+            this.extraData = extraData;
             return this;
         }
-        public String getTaskName() {
-            return this.taskName;
+        public java.util.Map<String, ?> getExtraData() {
+            return this.extraData;
         }
 
-        public ListTaskExecutionsResponseBodyTaskExecutions setStartDate(String startDate) {
-            this.startDate = startDate;
+        public ListTaskExecutionsResponseBodyTaskExecutions setLoop(java.util.Map<String, ?> loop) {
+            this.loop = loop;
             return this;
         }
-        public String getStartDate() {
-            return this.startDate;
+        public java.util.Map<String, ?> getLoop() {
+            return this.loop;
+        }
+
+        public ListTaskExecutionsResponseBodyTaskExecutions setLoopBatchNumber(Integer loopBatchNumber) {
+            this.loopBatchNumber = loopBatchNumber;
+            return this;
+        }
+        public Integer getLoopBatchNumber() {
+            return this.loopBatchNumber;
         }
 
         public ListTaskExecutionsResponseBodyTaskExecutions setLoopItem(String loopItem) {
@@ -180,20 +180,52 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             return this.loopItem;
         }
 
-        public ListTaskExecutionsResponseBodyTaskExecutions setCreateDate(String createDate) {
-            this.createDate = createDate;
+        public ListTaskExecutionsResponseBodyTaskExecutions setOutputs(String outputs) {
+            this.outputs = outputs;
             return this;
         }
-        public String getCreateDate() {
-            return this.createDate;
+        public String getOutputs() {
+            return this.outputs;
         }
 
-        public ListTaskExecutionsResponseBodyTaskExecutions setExecutionId(String executionId) {
-            this.executionId = executionId;
+        public ListTaskExecutionsResponseBodyTaskExecutions setParentTaskExecutionId(String parentTaskExecutionId) {
+            this.parentTaskExecutionId = parentTaskExecutionId;
             return this;
         }
-        public String getExecutionId() {
-            return this.executionId;
+        public String getParentTaskExecutionId() {
+            return this.parentTaskExecutionId;
+        }
+
+        public ListTaskExecutionsResponseBodyTaskExecutions setProperties(String properties) {
+            this.properties = properties;
+            return this;
+        }
+        public String getProperties() {
+            return this.properties;
+        }
+
+        public ListTaskExecutionsResponseBodyTaskExecutions setStartDate(String startDate) {
+            this.startDate = startDate;
+            return this;
+        }
+        public String getStartDate() {
+            return this.startDate;
+        }
+
+        public ListTaskExecutionsResponseBodyTaskExecutions setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListTaskExecutionsResponseBodyTaskExecutions setStatusMessage(String statusMessage) {
+            this.statusMessage = statusMessage;
+            return this;
+        }
+        public String getStatusMessage() {
+            return this.statusMessage;
         }
 
         public ListTaskExecutionsResponseBodyTaskExecutions setTaskAction(String taskAction) {
@@ -212,20 +244,12 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             return this.taskExecutionId;
         }
 
-        public ListTaskExecutionsResponseBodyTaskExecutions setUpdateDate(String updateDate) {
-            this.updateDate = updateDate;
+        public ListTaskExecutionsResponseBodyTaskExecutions setTaskName(String taskName) {
+            this.taskName = taskName;
             return this;
         }
-        public String getUpdateDate() {
-            return this.updateDate;
-        }
-
-        public ListTaskExecutionsResponseBodyTaskExecutions setLoop(java.util.Map<String, ?> loop) {
-            this.loop = loop;
-            return this;
-        }
-        public java.util.Map<String, ?> getLoop() {
-            return this.loop;
+        public String getTaskName() {
+            return this.taskName;
         }
 
         public ListTaskExecutionsResponseBodyTaskExecutions setTemplateId(String templateId) {
@@ -236,36 +260,12 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             return this.templateId;
         }
 
-        public ListTaskExecutionsResponseBodyTaskExecutions setLoopBatchNumber(Integer loopBatchNumber) {
-            this.loopBatchNumber = loopBatchNumber;
+        public ListTaskExecutionsResponseBodyTaskExecutions setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
             return this;
         }
-        public Integer getLoopBatchNumber() {
-            return this.loopBatchNumber;
-        }
-
-        public ListTaskExecutionsResponseBodyTaskExecutions setStatusMessage(String statusMessage) {
-            this.statusMessage = statusMessage;
-            return this;
-        }
-        public String getStatusMessage() {
-            return this.statusMessage;
-        }
-
-        public ListTaskExecutionsResponseBodyTaskExecutions setExtraData(java.util.Map<String, ?> extraData) {
-            this.extraData = extraData;
-            return this;
-        }
-        public java.util.Map<String, ?> getExtraData() {
-            return this.extraData;
-        }
-
-        public ListTaskExecutionsResponseBodyTaskExecutions setProperties(String properties) {
-            this.properties = properties;
-            return this;
-        }
-        public String getProperties() {
-            return this.properties;
+        public String getUpdateDate() {
+            return this.updateDate;
         }
 
     }

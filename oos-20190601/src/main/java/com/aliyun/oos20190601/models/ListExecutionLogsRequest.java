@@ -4,14 +4,8 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListExecutionLogsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ExecutionId")
     public String executionId;
-
-    @NameInMap("TaskExecutionId")
-    public String taskExecutionId;
 
     @NameInMap("LogType")
     public String logType;
@@ -22,17 +16,15 @@ public class ListExecutionLogsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("TaskExecutionId")
+    public String taskExecutionId;
+
     public static ListExecutionLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListExecutionLogsRequest self = new ListExecutionLogsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListExecutionLogsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListExecutionLogsRequest setExecutionId(String executionId) {
@@ -41,14 +33,6 @@ public class ListExecutionLogsRequest extends TeaModel {
     }
     public String getExecutionId() {
         return this.executionId;
-    }
-
-    public ListExecutionLogsRequest setTaskExecutionId(String taskExecutionId) {
-        this.taskExecutionId = taskExecutionId;
-        return this;
-    }
-    public String getTaskExecutionId() {
-        return this.taskExecutionId;
     }
 
     public ListExecutionLogsRequest setLogType(String logType) {
@@ -73,6 +57,22 @@ public class ListExecutionLogsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListExecutionLogsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListExecutionLogsRequest setTaskExecutionId(String taskExecutionId) {
+        this.taskExecutionId = taskExecutionId;
+        return this;
+    }
+    public String getTaskExecutionId() {
+        return this.taskExecutionId;
     }
 
 }

@@ -4,11 +4,26 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateParameterShrinkRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Constraints")
+    public String constraints;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tags")
+    public String tagsShrink;
 
     @NameInMap("Type")
     public String type;
@@ -16,64 +31,9 @@ public class CreateParameterShrinkRequest extends TeaModel {
     @NameInMap("Value")
     public String value;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("Constraints")
-    public String constraints;
-
-    @NameInMap("Tags")
-    public String tagsShrink;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     public static CreateParameterShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateParameterShrinkRequest self = new CreateParameterShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateParameterShrinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateParameterShrinkRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateParameterShrinkRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public CreateParameterShrinkRequest setValue(String value) {
-        this.value = value;
-        return this;
-    }
-    public String getValue() {
-        return this.value;
-    }
-
-    public CreateParameterShrinkRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public CreateParameterShrinkRequest setClientToken(String clientToken) {
@@ -92,12 +52,28 @@ public class CreateParameterShrinkRequest extends TeaModel {
         return this.constraints;
     }
 
-    public CreateParameterShrinkRequest setTagsShrink(String tagsShrink) {
-        this.tagsShrink = tagsShrink;
+    public CreateParameterShrinkRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getTagsShrink() {
-        return this.tagsShrink;
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateParameterShrinkRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateParameterShrinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateParameterShrinkRequest setResourceGroupId(String resourceGroupId) {
@@ -106,6 +82,30 @@ public class CreateParameterShrinkRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateParameterShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
+        return this;
+    }
+    public String getTagsShrink() {
+        return this.tagsShrink;
+    }
+
+    public CreateParameterShrinkRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
+    public CreateParameterShrinkRequest setValue(String value) {
+        this.value = value;
+        return this;
+    }
+    public String getValue() {
+        return this.value;
     }
 
 }

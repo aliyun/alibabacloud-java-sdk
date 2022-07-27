@@ -4,11 +4,11 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListInventoryEntriesRequest extends TeaModel {
+    @NameInMap("Filter")
+    public java.util.List<ListInventoryEntriesRequestFilter> filter;
+
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("TypeName")
-    public String typeName;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -16,12 +16,23 @@ public class ListInventoryEntriesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("Filter")
-    public java.util.List<ListInventoryEntriesRequestFilter> filter;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("TypeName")
+    public String typeName;
 
     public static ListInventoryEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInventoryEntriesRequest self = new ListInventoryEntriesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInventoryEntriesRequest setFilter(java.util.List<ListInventoryEntriesRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<ListInventoryEntriesRequestFilter> getFilter() {
+        return this.filter;
     }
 
     public ListInventoryEntriesRequest setInstanceId(String instanceId) {
@@ -30,14 +41,6 @@ public class ListInventoryEntriesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListInventoryEntriesRequest setTypeName(String typeName) {
-        this.typeName = typeName;
-        return this;
-    }
-    public String getTypeName() {
-        return this.typeName;
     }
 
     public ListInventoryEntriesRequest setMaxResults(Integer maxResults) {
@@ -56,35 +59,43 @@ public class ListInventoryEntriesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListInventoryEntriesRequest setFilter(java.util.List<ListInventoryEntriesRequestFilter> filter) {
-        this.filter = filter;
+    public ListInventoryEntriesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.List<ListInventoryEntriesRequestFilter> getFilter() {
-        return this.filter;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListInventoryEntriesRequest setTypeName(String typeName) {
+        this.typeName = typeName;
+        return this;
+    }
+    public String getTypeName() {
+        return this.typeName;
     }
 
     public static class ListInventoryEntriesRequestFilter extends TeaModel {
-        @NameInMap("Value")
-        public java.util.List<String> value;
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Operator")
         public String operator;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Value")
+        public java.util.List<String> value;
 
         public static ListInventoryEntriesRequestFilter build(java.util.Map<String, ?> map) throws Exception {
             ListInventoryEntriesRequestFilter self = new ListInventoryEntriesRequestFilter();
             return TeaModel.build(map, self);
         }
 
-        public ListInventoryEntriesRequestFilter setValue(java.util.List<String> value) {
-            this.value = value;
+        public ListInventoryEntriesRequestFilter setName(String name) {
+            this.name = name;
             return this;
         }
-        public java.util.List<String> getValue() {
-            return this.value;
+        public String getName() {
+            return this.name;
         }
 
         public ListInventoryEntriesRequestFilter setOperator(String operator) {
@@ -95,12 +106,12 @@ public class ListInventoryEntriesRequest extends TeaModel {
             return this.operator;
         }
 
-        public ListInventoryEntriesRequestFilter setName(String name) {
-            this.name = name;
+        public ListInventoryEntriesRequestFilter setValue(java.util.List<String> value) {
+            this.value = value;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public java.util.List<String> getValue() {
+            return this.value;
         }
 
     }

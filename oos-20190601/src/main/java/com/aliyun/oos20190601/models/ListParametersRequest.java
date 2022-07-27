@@ -4,26 +4,14 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListParametersRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
     @NameInMap("NextToken")
     public String nextToken;
-
-    @NameInMap("SortField")
-    public String sortField;
-
-    @NameInMap("SortOrder")
-    public String sortOrder;
-
-    @NameInMap("Type")
-    public String type;
 
     @NameInMap("Path")
     public String path;
@@ -31,31 +19,27 @@ public class ListParametersRequest extends TeaModel {
     @NameInMap("Recursive")
     public Boolean recursive;
 
-    @NameInMap("Tags")
-    public java.util.Map<String, ?> tags;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("SortField")
+    public String sortField;
+
+    @NameInMap("SortOrder")
+    public String sortOrder;
+
+    @NameInMap("Tags")
+    public java.util.Map<String, ?> tags;
+
+    @NameInMap("Type")
+    public String type;
+
     public static ListParametersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListParametersRequest self = new ListParametersRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListParametersRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListParametersRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public ListParametersRequest setMaxResults(Integer maxResults) {
@@ -66,36 +50,20 @@ public class ListParametersRequest extends TeaModel {
         return this.maxResults;
     }
 
+    public ListParametersRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
     public ListParametersRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListParametersRequest setSortField(String sortField) {
-        this.sortField = sortField;
-        return this;
-    }
-    public String getSortField() {
-        return this.sortField;
-    }
-
-    public ListParametersRequest setSortOrder(String sortOrder) {
-        this.sortOrder = sortOrder;
-        return this;
-    }
-    public String getSortOrder() {
-        return this.sortOrder;
-    }
-
-    public ListParametersRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
     public ListParametersRequest setPath(String path) {
@@ -114,12 +82,12 @@ public class ListParametersRequest extends TeaModel {
         return this.recursive;
     }
 
-    public ListParametersRequest setTags(java.util.Map<String, ?> tags) {
-        this.tags = tags;
+    public ListParametersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.Map<String, ?> getTags() {
-        return this.tags;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListParametersRequest setResourceGroupId(String resourceGroupId) {
@@ -128,6 +96,38 @@ public class ListParametersRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ListParametersRequest setSortField(String sortField) {
+        this.sortField = sortField;
+        return this;
+    }
+    public String getSortField() {
+        return this.sortField;
+    }
+
+    public ListParametersRequest setSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    public String getSortOrder() {
+        return this.sortOrder;
+    }
+
+    public ListParametersRequest setTags(java.util.Map<String, ?> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.Map<String, ?> getTags() {
+        return this.tags;
+    }
+
+    public ListParametersRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

@@ -4,11 +4,8 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListExecutionLogsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ExecutionLogs")
+    public java.util.List<ListExecutionLogsResponseBodyExecutionLogs> executionLogs;
 
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
@@ -16,28 +13,23 @@ public class ListExecutionLogsResponseBody extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    @NameInMap("ExecutionLogs")
-    public java.util.List<ListExecutionLogsResponseBodyExecutionLogs> executionLogs;
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListExecutionLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListExecutionLogsResponseBody self = new ListExecutionLogsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListExecutionLogsResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public ListExecutionLogsResponseBody setExecutionLogs(java.util.List<ListExecutionLogsResponseBodyExecutionLogs> executionLogs) {
+        this.executionLogs = executionLogs;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ListExecutionLogsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<ListExecutionLogsResponseBodyExecutionLogs> getExecutionLogs() {
+        return this.executionLogs;
     }
 
     public ListExecutionLogsResponseBody setIsTruncated(Boolean isTruncated) {
@@ -56,23 +48,31 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         return this.maxResults;
     }
 
-    public ListExecutionLogsResponseBody setExecutionLogs(java.util.List<ListExecutionLogsResponseBodyExecutionLogs> executionLogs) {
-        this.executionLogs = executionLogs;
+    public ListExecutionLogsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public java.util.List<ListExecutionLogsResponseBodyExecutionLogs> getExecutionLogs() {
-        return this.executionLogs;
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListExecutionLogsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListExecutionLogsResponseBodyExecutionLogs extends TeaModel {
-        @NameInMap("TaskExecutionId")
-        public String taskExecutionId;
+        @NameInMap("LogType")
+        public String logType;
 
         @NameInMap("Message")
         public String message;
 
-        @NameInMap("LogType")
-        public String logType;
+        @NameInMap("TaskExecutionId")
+        public String taskExecutionId;
 
         @NameInMap("Timestamp")
         public String timestamp;
@@ -82,12 +82,12 @@ public class ListExecutionLogsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListExecutionLogsResponseBodyExecutionLogs setTaskExecutionId(String taskExecutionId) {
-            this.taskExecutionId = taskExecutionId;
+        public ListExecutionLogsResponseBodyExecutionLogs setLogType(String logType) {
+            this.logType = logType;
             return this;
         }
-        public String getTaskExecutionId() {
-            return this.taskExecutionId;
+        public String getLogType() {
+            return this.logType;
         }
 
         public ListExecutionLogsResponseBodyExecutionLogs setMessage(String message) {
@@ -98,12 +98,12 @@ public class ListExecutionLogsResponseBody extends TeaModel {
             return this.message;
         }
 
-        public ListExecutionLogsResponseBodyExecutionLogs setLogType(String logType) {
-            this.logType = logType;
+        public ListExecutionLogsResponseBodyExecutionLogs setTaskExecutionId(String taskExecutionId) {
+            this.taskExecutionId = taskExecutionId;
             return this;
         }
-        public String getLogType() {
-            return this.logType;
+        public String getTaskExecutionId() {
+            return this.taskExecutionId;
         }
 
         public ListExecutionLogsResponseBodyExecutionLogs setTimestamp(String timestamp) {

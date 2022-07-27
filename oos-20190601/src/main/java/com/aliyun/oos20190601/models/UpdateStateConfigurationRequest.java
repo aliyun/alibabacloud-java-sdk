@@ -4,8 +4,11 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class UpdateStateConfigurationRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("ConfigureMode")
+    public String configureMode;
 
     @NameInMap("Description")
     public String description;
@@ -13,20 +16,17 @@ public class UpdateStateConfigurationRequest extends TeaModel {
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
-    @NameInMap("ConfigureMode")
-    public String configureMode;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("ScheduleType")
-    public String scheduleType;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ScheduleExpression")
     public String scheduleExpression;
 
-    @NameInMap("Targets")
-    public String targets;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("ScheduleType")
+    public String scheduleType;
 
     @NameInMap("StateConfigurationId")
     public String stateConfigurationId;
@@ -34,20 +34,28 @@ public class UpdateStateConfigurationRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("Targets")
+    public String targets;
 
     public static UpdateStateConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStateConfigurationRequest self = new UpdateStateConfigurationRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateStateConfigurationRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public UpdateStateConfigurationRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public UpdateStateConfigurationRequest setConfigureMode(String configureMode) {
+        this.configureMode = configureMode;
+        return this;
+    }
+    public String getConfigureMode() {
+        return this.configureMode;
     }
 
     public UpdateStateConfigurationRequest setDescription(String description) {
@@ -66,20 +74,20 @@ public class UpdateStateConfigurationRequest extends TeaModel {
         return this.parameters;
     }
 
-    public UpdateStateConfigurationRequest setConfigureMode(String configureMode) {
-        this.configureMode = configureMode;
+    public UpdateStateConfigurationRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getConfigureMode() {
-        return this.configureMode;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public UpdateStateConfigurationRequest setScheduleType(String scheduleType) {
-        this.scheduleType = scheduleType;
+    public UpdateStateConfigurationRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public String getScheduleType() {
-        return this.scheduleType;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public UpdateStateConfigurationRequest setScheduleExpression(String scheduleExpression) {
@@ -90,20 +98,12 @@ public class UpdateStateConfigurationRequest extends TeaModel {
         return this.scheduleExpression;
     }
 
-    public UpdateStateConfigurationRequest setTargets(String targets) {
-        this.targets = targets;
+    public UpdateStateConfigurationRequest setScheduleType(String scheduleType) {
+        this.scheduleType = scheduleType;
         return this;
     }
-    public String getTargets() {
-        return this.targets;
-    }
-
-    public UpdateStateConfigurationRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getScheduleType() {
+        return this.scheduleType;
     }
 
     public UpdateStateConfigurationRequest setStateConfigurationId(String stateConfigurationId) {
@@ -122,12 +122,12 @@ public class UpdateStateConfigurationRequest extends TeaModel {
         return this.tags;
     }
 
-    public UpdateStateConfigurationRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public UpdateStateConfigurationRequest setTargets(String targets) {
+        this.targets = targets;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getTargets() {
+        return this.targets;
     }
 
 }

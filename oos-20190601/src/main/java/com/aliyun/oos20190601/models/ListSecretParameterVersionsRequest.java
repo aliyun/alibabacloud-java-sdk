@@ -4,17 +4,17 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListSecretParameterVersionsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
     @NameInMap("NextToken")
     public String nextToken;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ShareType")
     public String shareType;
@@ -27,12 +27,12 @@ public class ListSecretParameterVersionsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListSecretParameterVersionsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ListSecretParameterVersionsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListSecretParameterVersionsRequest setName(String name) {
@@ -43,20 +43,20 @@ public class ListSecretParameterVersionsRequest extends TeaModel {
         return this.name;
     }
 
-    public ListSecretParameterVersionsRequest setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
     public ListSecretParameterVersionsRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListSecretParameterVersionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListSecretParameterVersionsRequest setShareType(String shareType) {

@@ -32,23 +32,38 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
     }
 
     public static class ListStateConfigurationsResponseBodyStateConfigurations extends TeaModel {
-        @NameInMap("UpdateTime")
-        public String updateTime;
+        @NameInMap("ConfigureMode")
+        public String configureMode;
 
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("Targets")
-        public String targets;
+        @NameInMap("Description")
+        public String description;
 
-        @NameInMap("Tags")
-        public java.util.Map<String, ?> tags;
+        @NameInMap("Parameters")
+        public String parameters;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("ScheduleExpression")
+        public String scheduleExpression;
+
+        @NameInMap("ScheduleType")
+        public String scheduleType;
 
         @NameInMap("StateConfigurationId")
         public String stateConfigurationId;
 
-        @NameInMap("ScheduleExpression")
-        public String scheduleExpression;
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
+        @NameInMap("Targets")
+        public String targets;
+
+        @NameInMap("TemplateId")
+        public String templateId;
 
         @NameInMap("TemplateName")
         public String templateName;
@@ -56,35 +71,20 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
-        @NameInMap("ConfigureMode")
-        public String configureMode;
-
-        @NameInMap("ScheduleType")
-        public String scheduleType;
-
-        @NameInMap("Parameters")
-        public String parameters;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        @NameInMap("TemplateId")
-        public String templateId;
+        @NameInMap("UpdateTime")
+        public String updateTime;
 
         public static ListStateConfigurationsResponseBodyStateConfigurations build(java.util.Map<String, ?> map) throws Exception {
             ListStateConfigurationsResponseBodyStateConfigurations self = new ListStateConfigurationsResponseBodyStateConfigurations();
             return TeaModel.build(map, self);
         }
 
-        public ListStateConfigurationsResponseBodyStateConfigurations setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
+        public ListStateConfigurationsResponseBodyStateConfigurations setConfigureMode(String configureMode) {
+            this.configureMode = configureMode;
             return this;
         }
-        public String getUpdateTime() {
-            return this.updateTime;
+        public String getConfigureMode() {
+            return this.configureMode;
         }
 
         public ListStateConfigurationsResponseBodyStateConfigurations setCreateTime(String createTime) {
@@ -95,20 +95,44 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListStateConfigurationsResponseBodyStateConfigurations setTargets(String targets) {
-            this.targets = targets;
+        public ListStateConfigurationsResponseBodyStateConfigurations setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getTargets() {
-            return this.targets;
+        public String getDescription() {
+            return this.description;
         }
 
-        public ListStateConfigurationsResponseBodyStateConfigurations setTags(java.util.Map<String, ?> tags) {
-            this.tags = tags;
+        public ListStateConfigurationsResponseBodyStateConfigurations setParameters(String parameters) {
+            this.parameters = parameters;
             return this;
         }
-        public java.util.Map<String, ?> getTags() {
-            return this.tags;
+        public String getParameters() {
+            return this.parameters;
+        }
+
+        public ListStateConfigurationsResponseBodyStateConfigurations setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public ListStateConfigurationsResponseBodyStateConfigurations setScheduleExpression(String scheduleExpression) {
+            this.scheduleExpression = scheduleExpression;
+            return this;
+        }
+        public String getScheduleExpression() {
+            return this.scheduleExpression;
+        }
+
+        public ListStateConfigurationsResponseBodyStateConfigurations setScheduleType(String scheduleType) {
+            this.scheduleType = scheduleType;
+            return this;
+        }
+        public String getScheduleType() {
+            return this.scheduleType;
         }
 
         public ListStateConfigurationsResponseBodyStateConfigurations setStateConfigurationId(String stateConfigurationId) {
@@ -119,12 +143,28 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             return this.stateConfigurationId;
         }
 
-        public ListStateConfigurationsResponseBodyStateConfigurations setScheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = scheduleExpression;
+        public ListStateConfigurationsResponseBodyStateConfigurations setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
             return this;
         }
-        public String getScheduleExpression() {
-            return this.scheduleExpression;
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
+        }
+
+        public ListStateConfigurationsResponseBodyStateConfigurations setTargets(String targets) {
+            this.targets = targets;
+            return this;
+        }
+        public String getTargets() {
+            return this.targets;
+        }
+
+        public ListStateConfigurationsResponseBodyStateConfigurations setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
         }
 
         public ListStateConfigurationsResponseBodyStateConfigurations setTemplateName(String templateName) {
@@ -143,52 +183,12 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             return this.templateVersion;
         }
 
-        public ListStateConfigurationsResponseBodyStateConfigurations setConfigureMode(String configureMode) {
-            this.configureMode = configureMode;
+        public ListStateConfigurationsResponseBodyStateConfigurations setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public String getConfigureMode() {
-            return this.configureMode;
-        }
-
-        public ListStateConfigurationsResponseBodyStateConfigurations setScheduleType(String scheduleType) {
-            this.scheduleType = scheduleType;
-            return this;
-        }
-        public String getScheduleType() {
-            return this.scheduleType;
-        }
-
-        public ListStateConfigurationsResponseBodyStateConfigurations setParameters(String parameters) {
-            this.parameters = parameters;
-            return this;
-        }
-        public String getParameters() {
-            return this.parameters;
-        }
-
-        public ListStateConfigurationsResponseBodyStateConfigurations setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListStateConfigurationsResponseBodyStateConfigurations setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        public ListStateConfigurationsResponseBodyStateConfigurations setTemplateId(String templateId) {
-            this.templateId = templateId;
-            return this;
-        }
-        public String getTemplateId() {
-            return this.templateId;
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

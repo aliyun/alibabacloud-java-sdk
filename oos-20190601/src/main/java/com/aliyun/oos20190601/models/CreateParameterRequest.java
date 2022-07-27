@@ -4,11 +4,26 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateParameterRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Constraints")
+    public String constraints;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tags")
+    public java.util.Map<String, ?> tags;
 
     @NameInMap("Type")
     public String type;
@@ -16,64 +31,9 @@ public class CreateParameterRequest extends TeaModel {
     @NameInMap("Value")
     public String value;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("Constraints")
-    public String constraints;
-
-    @NameInMap("Tags")
-    public java.util.Map<String, ?> tags;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     public static CreateParameterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateParameterRequest self = new CreateParameterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateParameterRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateParameterRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateParameterRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public CreateParameterRequest setValue(String value) {
-        this.value = value;
-        return this;
-    }
-    public String getValue() {
-        return this.value;
-    }
-
-    public CreateParameterRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public CreateParameterRequest setClientToken(String clientToken) {
@@ -92,12 +52,28 @@ public class CreateParameterRequest extends TeaModel {
         return this.constraints;
     }
 
-    public CreateParameterRequest setTags(java.util.Map<String, ?> tags) {
-        this.tags = tags;
+    public CreateParameterRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public java.util.Map<String, ?> getTags() {
-        return this.tags;
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateParameterRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateParameterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateParameterRequest setResourceGroupId(String resourceGroupId) {
@@ -106,6 +82,30 @@ public class CreateParameterRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateParameterRequest setTags(java.util.Map<String, ?> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.Map<String, ?> getTags() {
+        return this.tags;
+    }
+
+    public CreateParameterRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
+    public CreateParameterRequest setValue(String value) {
+        this.value = value;
+        return this;
+    }
+    public String getValue() {
+        return this.value;
     }
 
 }

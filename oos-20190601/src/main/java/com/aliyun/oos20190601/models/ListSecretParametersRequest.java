@@ -4,23 +4,14 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListSecretParametersRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
     @NameInMap("NextToken")
     public String nextToken;
-
-    @NameInMap("SortField")
-    public String sortField;
-
-    @NameInMap("SortOrder")
-    public String sortOrder;
 
     @NameInMap("Path")
     public String path;
@@ -28,31 +19,24 @@ public class ListSecretParametersRequest extends TeaModel {
     @NameInMap("Recursive")
     public Boolean recursive;
 
-    @NameInMap("Tags")
-    public java.util.Map<String, ?> tags;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("SortField")
+    public String sortField;
+
+    @NameInMap("SortOrder")
+    public String sortOrder;
+
+    @NameInMap("Tags")
+    public java.util.Map<String, ?> tags;
+
     public static ListSecretParametersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSecretParametersRequest self = new ListSecretParametersRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListSecretParametersRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListSecretParametersRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public ListSecretParametersRequest setMaxResults(Integer maxResults) {
@@ -63,28 +47,20 @@ public class ListSecretParametersRequest extends TeaModel {
         return this.maxResults;
     }
 
+    public ListSecretParametersRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
     public ListSecretParametersRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListSecretParametersRequest setSortField(String sortField) {
-        this.sortField = sortField;
-        return this;
-    }
-    public String getSortField() {
-        return this.sortField;
-    }
-
-    public ListSecretParametersRequest setSortOrder(String sortOrder) {
-        this.sortOrder = sortOrder;
-        return this;
-    }
-    public String getSortOrder() {
-        return this.sortOrder;
     }
 
     public ListSecretParametersRequest setPath(String path) {
@@ -103,12 +79,12 @@ public class ListSecretParametersRequest extends TeaModel {
         return this.recursive;
     }
 
-    public ListSecretParametersRequest setTags(java.util.Map<String, ?> tags) {
-        this.tags = tags;
+    public ListSecretParametersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.Map<String, ?> getTags() {
-        return this.tags;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListSecretParametersRequest setResourceGroupId(String resourceGroupId) {
@@ -117,6 +93,30 @@ public class ListSecretParametersRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ListSecretParametersRequest setSortField(String sortField) {
+        this.sortField = sortField;
+        return this;
+    }
+    public String getSortField() {
+        return this.sortField;
+    }
+
+    public ListSecretParametersRequest setSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    public String getSortOrder() {
+        return this.sortOrder;
+    }
+
+    public ListSecretParametersRequest setTags(java.util.Map<String, ?> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.Map<String, ?> getTags() {
+        return this.tags;
     }
 
 }

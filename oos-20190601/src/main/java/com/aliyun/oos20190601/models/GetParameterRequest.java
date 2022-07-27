@@ -4,14 +4,14 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetParameterRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Name")
     public String name;
 
     @NameInMap("ParameterVersion")
     public Integer parameterVersion;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -19,14 +19,6 @@ public class GetParameterRequest extends TeaModel {
     public static GetParameterRequest build(java.util.Map<String, ?> map) throws Exception {
         GetParameterRequest self = new GetParameterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetParameterRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetParameterRequest setName(String name) {
@@ -43,6 +35,14 @@ public class GetParameterRequest extends TeaModel {
     }
     public Integer getParameterVersion() {
         return this.parameterVersion;
+    }
+
+    public GetParameterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetParameterRequest setResourceGroupId(String resourceGroupId) {

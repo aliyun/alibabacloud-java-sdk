@@ -4,23 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class UpdateApplicationGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ApplicationGroup")
     public UpdateApplicationGroupResponseBodyApplicationGroup applicationGroup;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdateApplicationGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateApplicationGroupResponseBody self = new UpdateApplicationGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateApplicationGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateApplicationGroupResponseBody setApplicationGroup(UpdateApplicationGroupResponseBodyApplicationGroup applicationGroup) {
@@ -31,40 +23,58 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
         return this.applicationGroup;
     }
 
+    public UpdateApplicationGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class UpdateApplicationGroupResponseBodyApplicationGroup extends TeaModel {
+        @NameInMap("ApplicationName")
+        public String applicationName;
+
+        @NameInMap("CreatedDate")
+        public String createdDate;
+
         @NameInMap("DeployRegionId")
         public String deployRegionId;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("UpdatedDate")
-        public String updatedDate;
+        @NameInMap("ImportTagKey")
+        public String importTagKey;
 
-        @NameInMap("CreatedDate")
-        public String createdDate;
-
-        @NameInMap("ApplicationName")
-        public String applicationName;
+        @NameInMap("ImportTagValue")
+        public String importTagValue;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Environment")
-        public String environment;
-
-        @NameInMap("CreateType")
-        public String createType;
-
-        @NameInMap("ScalingGroupId")
-        public String scalingGroupId;
-
-        @NameInMap("ImportClusterId")
-        public String importClusterId;
+        @NameInMap("UpdatedDate")
+        public String updatedDate;
 
         public static UpdateApplicationGroupResponseBodyApplicationGroup build(java.util.Map<String, ?> map) throws Exception {
             UpdateApplicationGroupResponseBodyApplicationGroup self = new UpdateApplicationGroupResponseBodyApplicationGroup();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateApplicationGroupResponseBodyApplicationGroup setApplicationName(String applicationName) {
+            this.applicationName = applicationName;
+            return this;
+        }
+        public String getApplicationName() {
+            return this.applicationName;
+        }
+
+        public UpdateApplicationGroupResponseBodyApplicationGroup setCreatedDate(String createdDate) {
+            this.createdDate = createdDate;
+            return this;
+        }
+        public String getCreatedDate() {
+            return this.createdDate;
         }
 
         public UpdateApplicationGroupResponseBodyApplicationGroup setDeployRegionId(String deployRegionId) {
@@ -83,28 +93,20 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
             return this.description;
         }
 
-        public UpdateApplicationGroupResponseBodyApplicationGroup setUpdatedDate(String updatedDate) {
-            this.updatedDate = updatedDate;
+        public UpdateApplicationGroupResponseBodyApplicationGroup setImportTagKey(String importTagKey) {
+            this.importTagKey = importTagKey;
             return this;
         }
-        public String getUpdatedDate() {
-            return this.updatedDate;
+        public String getImportTagKey() {
+            return this.importTagKey;
         }
 
-        public UpdateApplicationGroupResponseBodyApplicationGroup setCreatedDate(String createdDate) {
-            this.createdDate = createdDate;
+        public UpdateApplicationGroupResponseBodyApplicationGroup setImportTagValue(String importTagValue) {
+            this.importTagValue = importTagValue;
             return this;
         }
-        public String getCreatedDate() {
-            return this.createdDate;
-        }
-
-        public UpdateApplicationGroupResponseBodyApplicationGroup setApplicationName(String applicationName) {
-            this.applicationName = applicationName;
-            return this;
-        }
-        public String getApplicationName() {
-            return this.applicationName;
+        public String getImportTagValue() {
+            return this.importTagValue;
         }
 
         public UpdateApplicationGroupResponseBodyApplicationGroup setName(String name) {
@@ -115,36 +117,12 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
             return this.name;
         }
 
-        public UpdateApplicationGroupResponseBodyApplicationGroup setEnvironment(String environment) {
-            this.environment = environment;
+        public UpdateApplicationGroupResponseBodyApplicationGroup setUpdatedDate(String updatedDate) {
+            this.updatedDate = updatedDate;
             return this;
         }
-        public String getEnvironment() {
-            return this.environment;
-        }
-
-        public UpdateApplicationGroupResponseBodyApplicationGroup setCreateType(String createType) {
-            this.createType = createType;
-            return this;
-        }
-        public String getCreateType() {
-            return this.createType;
-        }
-
-        public UpdateApplicationGroupResponseBodyApplicationGroup setScalingGroupId(String scalingGroupId) {
-            this.scalingGroupId = scalingGroupId;
-            return this;
-        }
-        public String getScalingGroupId() {
-            return this.scalingGroupId;
-        }
-
-        public UpdateApplicationGroupResponseBodyApplicationGroup setImportClusterId(String importClusterId) {
-            this.importClusterId = importClusterId;
-            return this;
-        }
-        public String getImportClusterId() {
-            return this.importClusterId;
+        public String getUpdatedDate() {
+            return this.updatedDate;
         }
 
     }

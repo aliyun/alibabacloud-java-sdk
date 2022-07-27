@@ -4,17 +4,11 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateSecretParameterRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("Value")
-    public String value;
+    @NameInMap("Constraints")
+    public String constraints;
 
     @NameInMap("Description")
     public String description;
@@ -22,69 +16,27 @@ public class CreateSecretParameterRequest extends TeaModel {
     @NameInMap("KeyId")
     public String keyId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("Name")
+    public String name;
 
-    @NameInMap("Constraints")
-    public String constraints;
-
-    @NameInMap("Tags")
-    public String tags;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tags")
+    public String tags;
+
+    @NameInMap("Type")
+    public String type;
+
+    @NameInMap("Value")
+    public String value;
+
     public static CreateSecretParameterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSecretParameterRequest self = new CreateSecretParameterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateSecretParameterRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateSecretParameterRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateSecretParameterRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public CreateSecretParameterRequest setValue(String value) {
-        this.value = value;
-        return this;
-    }
-    public String getValue() {
-        return this.value;
-    }
-
-    public CreateSecretParameterRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public CreateSecretParameterRequest setKeyId(String keyId) {
-        this.keyId = keyId;
-        return this;
-    }
-    public String getKeyId() {
-        return this.keyId;
     }
 
     public CreateSecretParameterRequest setClientToken(String clientToken) {
@@ -103,12 +55,36 @@ public class CreateSecretParameterRequest extends TeaModel {
         return this.constraints;
     }
 
-    public CreateSecretParameterRequest setTags(String tags) {
-        this.tags = tags;
+    public CreateSecretParameterRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getTags() {
-        return this.tags;
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateSecretParameterRequest setKeyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
+    public String getKeyId() {
+        return this.keyId;
+    }
+
+    public CreateSecretParameterRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateSecretParameterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateSecretParameterRequest setResourceGroupId(String resourceGroupId) {
@@ -117,6 +93,30 @@ public class CreateSecretParameterRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateSecretParameterRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
+    }
+
+    public CreateSecretParameterRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
+    public CreateSecretParameterRequest setValue(String value) {
+        this.value = value;
+        return this;
+    }
+    public String getValue() {
+        return this.value;
     }
 
 }

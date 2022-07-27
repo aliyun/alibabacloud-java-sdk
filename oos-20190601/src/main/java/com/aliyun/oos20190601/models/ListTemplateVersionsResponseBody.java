@@ -4,14 +4,14 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListTemplateVersionsResponseBody extends TeaModel {
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("MaxResults")
-    public Integer maxResults;
 
     @NameInMap("TemplateVersions")
     public java.util.List<ListTemplateVersionsResponseBodyTemplateVersions> templateVersions;
@@ -19,6 +19,14 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
     public static ListTemplateVersionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTemplateVersionsResponseBody self = new ListTemplateVersionsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListTemplateVersionsResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListTemplateVersionsResponseBody setNextToken(String nextToken) {
@@ -37,14 +45,6 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTemplateVersionsResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
     public ListTemplateVersionsResponseBody setTemplateVersions(java.util.List<ListTemplateVersionsResponseBodyTemplateVersions> templateVersions) {
         this.templateVersions = templateVersions;
         return this;
@@ -57,20 +57,20 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("UpdatedDate")
-        public String updatedDate;
-
-        @NameInMap("UpdatedBy")
-        public String updatedBy;
-
-        @NameInMap("VersionName")
-        public String versionName;
+        @NameInMap("TemplateFormat")
+        public String templateFormat;
 
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
-        @NameInMap("TemplateFormat")
-        public String templateFormat;
+        @NameInMap("UpdatedBy")
+        public String updatedBy;
+
+        @NameInMap("UpdatedDate")
+        public String updatedDate;
+
+        @NameInMap("VersionName")
+        public String versionName;
 
         public static ListTemplateVersionsResponseBodyTemplateVersions build(java.util.Map<String, ?> map) throws Exception {
             ListTemplateVersionsResponseBodyTemplateVersions self = new ListTemplateVersionsResponseBodyTemplateVersions();
@@ -85,28 +85,12 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListTemplateVersionsResponseBodyTemplateVersions setUpdatedDate(String updatedDate) {
-            this.updatedDate = updatedDate;
+        public ListTemplateVersionsResponseBodyTemplateVersions setTemplateFormat(String templateFormat) {
+            this.templateFormat = templateFormat;
             return this;
         }
-        public String getUpdatedDate() {
-            return this.updatedDate;
-        }
-
-        public ListTemplateVersionsResponseBodyTemplateVersions setUpdatedBy(String updatedBy) {
-            this.updatedBy = updatedBy;
-            return this;
-        }
-        public String getUpdatedBy() {
-            return this.updatedBy;
-        }
-
-        public ListTemplateVersionsResponseBodyTemplateVersions setVersionName(String versionName) {
-            this.versionName = versionName;
-            return this;
-        }
-        public String getVersionName() {
-            return this.versionName;
+        public String getTemplateFormat() {
+            return this.templateFormat;
         }
 
         public ListTemplateVersionsResponseBodyTemplateVersions setTemplateVersion(String templateVersion) {
@@ -117,12 +101,28 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             return this.templateVersion;
         }
 
-        public ListTemplateVersionsResponseBodyTemplateVersions setTemplateFormat(String templateFormat) {
-            this.templateFormat = templateFormat;
+        public ListTemplateVersionsResponseBodyTemplateVersions setUpdatedBy(String updatedBy) {
+            this.updatedBy = updatedBy;
             return this;
         }
-        public String getTemplateFormat() {
-            return this.templateFormat;
+        public String getUpdatedBy() {
+            return this.updatedBy;
+        }
+
+        public ListTemplateVersionsResponseBodyTemplateVersions setUpdatedDate(String updatedDate) {
+            this.updatedDate = updatedDate;
+            return this;
+        }
+        public String getUpdatedDate() {
+            return this.updatedDate;
+        }
+
+        public ListTemplateVersionsResponseBodyTemplateVersions setVersionName(String versionName) {
+            this.versionName = versionName;
+            return this;
+        }
+        public String getVersionName() {
+            return this.versionName;
         }
 
     }
