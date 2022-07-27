@@ -13,7 +13,6 @@ public class ListProxiesResponseBody extends TeaModel {
     @NameInMap("ProxyList")
     public java.util.List<ListProxiesResponseBodyProxyList> proxyList;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -78,14 +77,17 @@ public class ListProxiesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public Long instanceId;
 
-        @NameInMap("MysqlPort")
-        public Integer mysqlPort;
-
         @NameInMap("PrivateEnable")
         public Boolean privateEnable;
 
         @NameInMap("PrivateHost")
         public String privateHost;
+
+        @NameInMap("ProtocolPort")
+        public Integer protocolPort;
+
+        @NameInMap("ProtocolType")
+        public String protocolType;
 
         @NameInMap("ProxyId")
         public Long proxyId;
@@ -133,14 +135,6 @@ public class ListProxiesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListProxiesResponseBodyProxyList setMysqlPort(Integer mysqlPort) {
-            this.mysqlPort = mysqlPort;
-            return this;
-        }
-        public Integer getMysqlPort() {
-            return this.mysqlPort;
-        }
-
         public ListProxiesResponseBodyProxyList setPrivateEnable(Boolean privateEnable) {
             this.privateEnable = privateEnable;
             return this;
@@ -155,6 +149,22 @@ public class ListProxiesResponseBody extends TeaModel {
         }
         public String getPrivateHost() {
             return this.privateHost;
+        }
+
+        public ListProxiesResponseBodyProxyList setProtocolPort(Integer protocolPort) {
+            this.protocolPort = protocolPort;
+            return this;
+        }
+        public Integer getProtocolPort() {
+            return this.protocolPort;
+        }
+
+        public ListProxiesResponseBodyProxyList setProtocolType(String protocolType) {
+            this.protocolType = protocolType;
+            return this;
+        }
+        public String getProtocolType() {
+            return this.protocolType;
         }
 
         public ListProxiesResponseBodyProxyList setProxyId(Long proxyId) {

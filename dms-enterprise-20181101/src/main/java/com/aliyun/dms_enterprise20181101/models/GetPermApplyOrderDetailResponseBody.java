@@ -13,7 +13,6 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
     @NameInMap("PermApplyOrderDetail")
     public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetail permApplyOrderDetail;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

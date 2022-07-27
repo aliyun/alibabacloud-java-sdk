@@ -13,7 +13,6 @@ public class ChangeColumnSecLevelRequest extends TeaModel {
     @NameInMap("IsLogic")
     public Boolean isLogic;
 
-    // 新的敏感等级
     @NameInMap("NewLevel")
     public String newLevel;
 

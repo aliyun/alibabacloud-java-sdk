@@ -13,7 +13,6 @@ public class ListProxyAccessesResponseBody extends TeaModel {
     @NameInMap("ProxyAccessList")
     public java.util.List<ListProxyAccessesResponseBodyProxyAccessList> proxyAccessList;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

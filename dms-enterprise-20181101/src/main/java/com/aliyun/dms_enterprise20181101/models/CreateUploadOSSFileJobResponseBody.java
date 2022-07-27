@@ -13,7 +13,6 @@ public class CreateUploadOSSFileJobResponseBody extends TeaModel {
     @NameInMap("JobKey")
     public String jobKey;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -13,7 +13,6 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
     @NameInMap("PreCheckDBList")
     public java.util.List<ListDataCorrectPreCheckDBResponseBodyPreCheckDBList> preCheckDBList;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -13,7 +13,6 @@ public class GetDataCorrectSQLFileResponseBody extends TeaModel {
     @NameInMap("FileUrl")
     public String fileUrl;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

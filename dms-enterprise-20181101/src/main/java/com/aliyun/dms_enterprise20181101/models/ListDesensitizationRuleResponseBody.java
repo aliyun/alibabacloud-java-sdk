@@ -7,21 +7,18 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
     @NameInMap("DesensitizationRuleList")
     public java.util.List<ListDesensitizationRuleResponseBodyDesensitizationRuleList> desensitizationRuleList;
 
-    // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
     @NameInMap("TotalCount")
     public Integer totalCount;
 
