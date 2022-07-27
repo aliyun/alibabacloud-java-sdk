@@ -4,14 +4,14 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class EntityDeleteResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("module")
     public EntityDeleteResponseBodyModule module;
 
     @NameInMap("more_page")
     public Boolean morePage;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("result_code")
     public Integer resultCode;
@@ -30,14 +30,6 @@ public class EntityDeleteResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public EntityDeleteResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public EntityDeleteResponseBody setModule(EntityDeleteResponseBodyModule module) {
         this.module = module;
         return this;
@@ -52,6 +44,14 @@ public class EntityDeleteResponseBody extends TeaModel {
     }
     public Boolean getMorePage() {
         return this.morePage;
+    }
+
+    public EntityDeleteResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public EntityDeleteResponseBody setResultCode(Integer resultCode) {

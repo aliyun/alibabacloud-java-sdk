@@ -19,8 +19,8 @@ public class IsvUserSaveResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    @NameInMap("traceid")
-    public String traceid;
+    @NameInMap("traceId")
+    public String traceId;
 
     public static IsvUserSaveResponseBody build(java.util.Map<String, ?> map) throws Exception {
         IsvUserSaveResponseBody self = new IsvUserSaveResponseBody();
@@ -67,12 +67,12 @@ public class IsvUserSaveResponseBody extends TeaModel {
         return this.success;
     }
 
-    public IsvUserSaveResponseBody setTraceid(String traceid) {
-        this.traceid = traceid;
+    public IsvUserSaveResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
         return this;
     }
-    public String getTraceid() {
-        return this.traceid;
+    public String getTraceId() {
+        return this.traceId;
     }
 
 }
