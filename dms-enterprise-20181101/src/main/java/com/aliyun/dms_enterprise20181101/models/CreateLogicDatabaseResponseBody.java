@@ -13,7 +13,6 @@ public class CreateLogicDatabaseResponseBody extends TeaModel {
     @NameInMap("LogicDbId")
     public Long logicDbId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

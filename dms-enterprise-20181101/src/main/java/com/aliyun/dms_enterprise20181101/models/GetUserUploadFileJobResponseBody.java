@@ -10,7 +10,6 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

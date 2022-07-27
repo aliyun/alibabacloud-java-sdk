@@ -13,7 +13,6 @@ public class GetDBTaskSQLJobLogResponseBody extends TeaModel {
     @NameInMap("Log")
     public String log;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

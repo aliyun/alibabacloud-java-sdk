@@ -13,7 +13,6 @@ public class CreateProxyAccessResponseBody extends TeaModel {
     @NameInMap("ProxyAccessId")
     public Long proxyAccessId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

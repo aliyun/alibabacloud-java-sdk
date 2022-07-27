@@ -13,7 +13,6 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
     @NameInMap("OwnerApplyOrderDetail")
     public GetOwnerApplyOrderDetailResponseBodyOwnerApplyOrderDetail ownerApplyOrderDetail;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
