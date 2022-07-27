@@ -7,35 +7,27 @@ public class GrantUserPointRequest extends TeaModel {
     @NameInMap("AccountType")
     public String accountType;
 
-    // 数额
     @NameInMap("Amount")
     public Long amount;
 
-    // 业务ID
     @NameInMap("BizId")
     public String bizId;
 
-    // 扩展信息
     @NameInMap("ExtInfo")
     public java.util.Map<String, ?> extInfo;
 
-    // 幂等ID
     @NameInMap("IdempotentId")
     public String idempotentId;
 
-    // 发放说明
     @NameInMap("Message")
     public String message;
 
-    // 规则ID
     @NameInMap("RuleId")
     public String ruleId;
 
-    // 业务方用户ID
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
-    // 发放主题
     @NameInMap("Title")
     public String title;
 

@@ -13,7 +13,6 @@ public class GetActivityGameInfoResponseBody extends TeaModel {
     @NameInMap("Model")
     public GetActivityGameInfoResponseBodyModel model;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -55,23 +54,18 @@ public class GetActivityGameInfoResponseBody extends TeaModel {
     }
 
     public static class GetActivityGameInfoResponseBodyModel extends TeaModel {
-        // 扩展信息
         @NameInMap("ExtInfo")
         public String extInfo;
 
-        // 玩法信息
         @NameInMap("GameDTO")
         public String gameDTO;
 
-        // 玩法展示信息
         @NameInMap("GameShowInfo")
         public String gameShowInfo;
 
-        // 玩法币信息
         @NameInMap("UserGameCoinInfos")
         public String userGameCoinInfos;
 
-        // 用户进度
         @NameInMap("UserProcessDTO")
         public String userProcessDTO;
 

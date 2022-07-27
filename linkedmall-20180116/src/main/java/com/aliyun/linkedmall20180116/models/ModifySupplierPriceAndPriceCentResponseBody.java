@@ -13,7 +13,6 @@ public class ModifySupplierPriceAndPriceCentResponseBody extends TeaModel {
     @NameInMap("Model")
     public Boolean model;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -19,11 +19,9 @@ public class ListUserGameProcessResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
     @NameInMap("TotalCount")
     public Long totalCount;
 

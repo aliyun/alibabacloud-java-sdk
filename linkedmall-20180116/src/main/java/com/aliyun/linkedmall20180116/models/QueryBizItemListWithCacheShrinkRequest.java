@@ -4,27 +4,21 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryBizItemListWithCacheShrinkRequest extends TeaModel {
-    // bizId
     @NameInMap("BizId")
     public String bizId;
 
-    // itemIds
     @NameInMap("ItemIds")
     public String itemIdsShrink;
 
-    // lmItemIds
     @NameInMap("LmItemIds")
     public String lmItemIdsShrink;
 
-    // pageNumber
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // pageSize
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // subBizCode
     @NameInMap("SubBizCode")
     public String subBizCode;
 

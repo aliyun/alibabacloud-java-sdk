@@ -7,31 +7,24 @@ public class StartUserGameRequest extends TeaModel {
     @NameInMap("AccountType")
     public String accountType;
 
-    // 活动ID
     @NameInMap("ActivityId")
     public String activityId;
 
-    // 业务ID
     @NameInMap("BizId")
     public String bizId;
 
-    // 扩展信息
     @NameInMap("ExtInfo")
     public java.util.Map<String, ?> extInfo;
 
-    // 玩法ID
     @NameInMap("GameId")
     public String gameId;
 
-    // 路线ID
     @NameInMap("RouteId")
     public String routeId;
 
-    // 业务方用户ID
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
-    // 用户APP
     @NameInMap("UserApp")
     public String userApp;
 

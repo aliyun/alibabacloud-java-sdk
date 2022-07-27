@@ -13,7 +13,6 @@ public class StartUserGameResponseBody extends TeaModel {
     @NameInMap("Model")
     public StartUserGameResponseBodyModel model;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -61,22 +60,18 @@ public class StartUserGameResponseBody extends TeaModel {
         @NameInMap("BizId")
         public String bizId;
 
-        // 进度内容
         @NameInMap("CurrentShowContent")
         public String currentShowContent;
 
-        // 当前步骤ID
         @NameInMap("CurrentStepId")
         public String currentStepId;
 
-        // 当前步骤状态
         @NameInMap("CurrentStepStatus")
         public String currentStepStatus;
 
         @NameInMap("Desc")
         public String desc;
 
-        // 扩展信息
         @NameInMap("ExtInfo")
         public String extInfo;
 
@@ -86,15 +81,12 @@ public class StartUserGameResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        // 进度ID
         @NameInMap("ProcessId")
         public String processId;
 
-        // 路线ID
         @NameInMap("RouteId")
         public String routeId;
 
-        // 状态
         @NameInMap("Status")
         public String status;
 

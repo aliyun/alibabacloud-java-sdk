@@ -98,15 +98,12 @@ public class RegisterSettleAccountResponseBody extends TeaModel {
     }
 
     public static class RegisterSettleAccountResponseBodyModel extends TeaModel {
-        // 结算账号ID
         @NameInMap("AccountId")
         public String accountId;
 
-        // 入参账号no
         @NameInMap("AccountNo")
         public String accountNo;
 
-        // 主键ID
         @NameInMap("Id")
         public String id;
 

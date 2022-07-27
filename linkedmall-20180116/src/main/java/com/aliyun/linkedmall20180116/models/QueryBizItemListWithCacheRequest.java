@@ -4,27 +4,21 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryBizItemListWithCacheRequest extends TeaModel {
-    // bizId
     @NameInMap("BizId")
     public String bizId;
 
-    // itemIds
     @NameInMap("ItemIds")
     public java.util.List<Long> itemIds;
 
-    // lmItemIds
     @NameInMap("LmItemIds")
     public java.util.List<String> lmItemIds;
 
-    // pageNumber
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // pageSize
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // subBizCode
     @NameInMap("SubBizCode")
     public String subBizCode;
 

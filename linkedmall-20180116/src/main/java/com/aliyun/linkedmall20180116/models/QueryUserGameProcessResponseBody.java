@@ -13,7 +13,6 @@ public class QueryUserGameProcessResponseBody extends TeaModel {
     @NameInMap("Model")
     public QueryUserGameProcessResponseBodyModel model;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

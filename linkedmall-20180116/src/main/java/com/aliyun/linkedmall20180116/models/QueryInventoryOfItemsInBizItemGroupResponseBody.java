@@ -54,7 +54,6 @@ public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
     }
 
     public static class QueryInventoryOfItemsInBizItemGroupResponseBodyItemListSkuList extends TeaModel {
-        // 剩余可售库存
         @NameInMap("Quantity")
         public Integer quantity;
 
@@ -91,18 +90,15 @@ public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
         @NameInMap("LmItemId")
         public String lmItemId;
 
-        // 剩余可售库存
         @NameInMap("Quantity")
         public Integer quantity;
 
         @NameInMap("SkuList")
         public java.util.List<QueryInventoryOfItemsInBizItemGroupResponseBodyItemListSkuList> skuList;
 
-        // 总量库存
         @NameInMap("TotalQuantity")
         public Long totalQuantity;
 
-        // 已售库存
         @NameInMap("TotalSoldQuantity")
         public Long totalSoldQuantity;
 

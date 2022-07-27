@@ -7,11 +7,9 @@ public class ListUserPointRecordsRequest extends TeaModel {
     @NameInMap("AccountType")
     public String accountType;
 
-    // 业务ID
     @NameInMap("BizId")
     public String bizId;
 
-    // 发放说明
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -21,26 +19,21 @@ public class ListUserPointRecordsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 操作
     @NameInMap("PointAction")
     public String pointAction;
 
     @NameInMap("PointActions")
     public String pointActions;
 
-    // 规则ID
     @NameInMap("RecordId")
     public String recordId;
 
-    // 数额
     @NameInMap("RuleId")
     public String ruleId;
 
-    // 发放主题
     @NameInMap("StartTime")
     public Long startTime;
 
-    // 业务方用户ID
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 

@@ -4,35 +4,27 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryBizItemListWithCacheResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // model
     @NameInMap("ItemList")
     public java.util.List<QueryBizItemListWithCacheResponseBodyItemList> itemList;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // pageNumber
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // pageSize
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
-    // totalCount
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -106,45 +98,36 @@ public class QueryBizItemListWithCacheResponseBody extends TeaModel {
     }
 
     public static class QueryBizItemListWithCacheResponseBodyItemList extends TeaModel {
-        // 商品是否可售卖
         @NameInMap("CanSell")
         public Boolean canSell;
 
         @NameInMap("ItemId")
         public Long itemId;
 
-        // 商品名称
         @NameInMap("ItemTitle")
         public String itemTitle;
 
         @NameInMap("LmItemId")
         public String lmItemId;
 
-        // 商品主图
         @NameInMap("MainPicUrl")
         public String mainPicUrl;
 
-        // 用户支付价格:分
         @NameInMap("PointPrice")
         public Long pointPrice;
 
-        // 积分，单位：个
         @NameInMap("Points")
         public Long points;
 
-        // 积分抵扣的金额，单位：分
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
-        // 渠道售价，单位：分
         @NameInMap("PriceCent")
         public Long priceCent;
 
-        // 商品原价（元）
         @NameInMap("ReservePrice")
         public Long reservePrice;
 
-        // 商品状态。1-商品可售；2-商品下架；3-价格异常；4-商品删除
         @NameInMap("Status")
         public Long status;
 
