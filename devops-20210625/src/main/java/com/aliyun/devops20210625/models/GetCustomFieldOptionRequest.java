@@ -4,15 +4,12 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetCustomFieldOptionRequest extends TeaModel {
-    // 项目id
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
 
-    // 类型
     @NameInMap("spaceType")
     public String spaceType;
 
-    // 工作项类型id
     @NameInMap("workitemTypeIdentifier")
     public String workitemTypeIdentifier;
 

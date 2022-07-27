@@ -4,19 +4,15 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetProjectMemberRequest extends TeaModel {
-    // accessToken（选填），使用AK方式调用时无需填accessToken
     @NameInMap("AccessToken")
     public String accessToken;
 
-    // 企业ID
     @NameInMap("OrganizationId")
     public String organizationId;
 
-    // 代码仓库Id
     @NameInMap("repositoryId")
     public Long repositoryId;
 
-    // 用户阿里云PK
     @NameInMap("userAliyunPk")
     public String userAliyunPk;
 

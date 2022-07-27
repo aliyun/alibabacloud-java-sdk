@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetWorkItemActivityResponseBody extends TeaModel {
-    // 动态信息
     @NameInMap("activities")
     public java.util.List<GetWorkItemActivityResponseBodyActivities> activities;
 
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true或者false
     @NameInMap("success")
     public Boolean success;
 
@@ -70,19 +65,15 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemActivityResponseBodyActivitiesProperty extends TeaModel {
-        // 属性的展示名
         @NameInMap("displayName")
         public String displayName;
 
-        // 资源id
         @NameInMap("propertyIdentifier")
         public String propertyIdentifier;
 
-        // 属性key
         @NameInMap("propertyName")
         public String propertyName;
 
-        // 类型
         @NameInMap("propertyType")
         public String propertyType;
 
@@ -126,35 +117,27 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemActivityResponseBodyActivities extends TeaModel {
-        // 动作类型
         @NameInMap("actionType")
         public String actionType;
 
-        // 事件id
         @NameInMap("eventId")
         public Long eventId;
 
-        // 事件时间
         @NameInMap("eventTime")
         public Long eventTime;
 
-        // 事件类型
         @NameInMap("eventType")
         public String eventType;
 
-        // 操作者
         @NameInMap("operator")
         public String operator;
 
-        // 父事件id
         @NameInMap("parentEventId")
         public Long parentEventId;
 
-        // 修改属性
         @NameInMap("property")
         public GetWorkItemActivityResponseBodyActivitiesProperty property;
 
-        // 操作对象
         @NameInMap("resourceIdentifier")
         public String resourceIdentifier;
 

@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetOrganizationMemberResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 成员
     @NameInMap("member")
     public GetOrganizationMemberResponseBodyMember member;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true 接口调用成功，false 接口调用失败
     @NameInMap("success")
     public Boolean success;
 
@@ -70,11 +65,9 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
     }
 
     public static class GetOrganizationMemberResponseBodyMemberIdentities extends TeaModel {
-        // 第三方系统的用户 id
         @NameInMap("externUid")
         public String externUid;
 
-        // 第三方系统
         @NameInMap("provider")
         public String provider;
 
@@ -102,55 +95,42 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
     }
 
     public static class GetOrganizationMemberResponseBodyMember extends TeaModel {
-        // 阿里云用户PK
         @NameInMap("accountId")
         public String accountId;
 
-        // 生日
         @NameInMap("birthday")
         public Long birthday;
 
-        // 部门名称列表
         @NameInMap("deptLists")
         public java.util.List<String> deptLists;
 
-        // 邮箱
         @NameInMap("email")
         public String email;
 
-        // 入职时间
         @NameInMap("hiredDate")
         public Long hiredDate;
 
-        // 第三方信息
         @NameInMap("identities")
         public GetOrganizationMemberResponseBodyMemberIdentities identities;
 
-        // 加入云效企业时间
         @NameInMap("joinTime")
         public Long joinTime;
 
-        // 最近一次访问时间
         @NameInMap("lastVisitTime")
         public Long lastVisitTime;
 
-        // 手机号
         @NameInMap("mobile")
         public String mobile;
 
-        // 企业成员名
         @NameInMap("organizationMemberName")
         public String organizationMemberName;
 
-        // 企业角色Id
         @NameInMap("organizationRoleId")
         public String organizationRoleId;
 
-        // 企业角色名字
         @NameInMap("organizationRoleName")
         public String organizationRoleName;
 
-        // 用户状态
         @NameInMap("state")
         public String state;
 

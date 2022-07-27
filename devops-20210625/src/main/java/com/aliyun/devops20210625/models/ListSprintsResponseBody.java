@@ -4,35 +4,27 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListSprintsResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // 每页数量
     @NameInMap("maxResults")
     public Long maxResults;
 
-    // 分页Token，没有下一页则为空
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // 迭代信息
     @NameInMap("sprints")
     public java.util.List<ListSprintsResponseBodySprints> sprints;
 
-    // true或者false
     @NameInMap("success")
     public Boolean success;
 
-    // 总数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -106,51 +98,39 @@ public class ListSprintsResponseBody extends TeaModel {
     }
 
     public static class ListSprintsResponseBodySprints extends TeaModel {
-        // 创建人id
         @NameInMap("creator")
         public String creator;
 
-        // 描述信息
         @NameInMap("description")
         public String description;
 
-        // 结束时间
         @NameInMap("endDate")
         public Long endDate;
 
-        // 创建时间
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
-        // 修改时间
         @NameInMap("gmtModified")
         public Long gmtModified;
 
-        // 迭代唯一标识符
         @NameInMap("identifier")
         public String identifier;
 
-        // 修改人
         @NameInMap("modifier")
         public String modifier;
 
-        // 迭代名称
         @NameInMap("name")
         public String name;
 
-        // 可见范围
         @NameInMap("scope")
         public String scope;
 
-        // 项目id
         @NameInMap("spaceIdentifier")
         public String spaceIdentifier;
 
-        // 开始时间
         @NameInMap("startDate")
         public Long startDate;
 
-        // 状态，未开始:Todo, 进行中:Doing, 已完成:Done
         @NameInMap("status")
         public String status;
 

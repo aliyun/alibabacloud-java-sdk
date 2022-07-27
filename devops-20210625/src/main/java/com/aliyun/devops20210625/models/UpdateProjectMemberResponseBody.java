@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectMemberResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // 成员信息
     @NameInMap("member")
     public UpdateProjectMemberResponseBodyMember member;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true或者false
     @NameInMap("success")
     public Boolean success;
 
@@ -70,35 +65,27 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
     }
 
     public static class UpdateProjectMemberResponseBodyMember extends TeaModel {
-        // 创建时间
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
-        // 修改时间
         @NameInMap("gmtModified")
         public Long gmtModified;
 
-        // id
         @NameInMap("id")
         public String id;
 
-        // 角色id
         @NameInMap("roleIdentifier")
         public String roleIdentifier;
 
-        // 资源id，也就是项目id
         @NameInMap("targetIdentifier")
         public String targetIdentifier;
 
-        // 资源类型
         @NameInMap("targetType")
         public String targetType;
 
-        // 用户id
         @NameInMap("userIdentifier")
         public String userIdentifier;
 
-        // 用户类型
         @NameInMap("userType")
         public String userType;
 

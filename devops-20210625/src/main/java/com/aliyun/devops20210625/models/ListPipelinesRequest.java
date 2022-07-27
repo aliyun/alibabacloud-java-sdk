@@ -4,43 +4,33 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListPipelinesRequest extends TeaModel {
-    // 创建结束时间
     @NameInMap("createEndTime")
     public Long createEndTime;
 
-    // 创建开始时间
     @NameInMap("createStartTime")
     public Long createStartTime;
 
-    // 创建人阿里云账号Id
     @NameInMap("creatorAccountIds")
     public String creatorAccountIds;
 
-    // 执行人阿里云账号id
     @NameInMap("executeAccountIds")
     public String executeAccountIds;
 
-    // 执行结束时间
     @NameInMap("executeEndTime")
     public Long executeEndTime;
 
-    // 执行开始时间
     @NameInMap("executeStartTime")
     public Long executeStartTime;
 
-    // 返回的总数
     @NameInMap("maxResults")
     public Long maxResults;
 
-    // 分页Token
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 流水线名称
     @NameInMap("pipelineName")
     public String pipelineName;
 
-    // 状态列表，多个逗号分割
     @NameInMap("statusList")
     public String statusList;
 

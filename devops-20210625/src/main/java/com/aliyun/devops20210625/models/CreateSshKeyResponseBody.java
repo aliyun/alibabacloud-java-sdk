@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateSshKeyResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // 企业公钥
     @NameInMap("sshKey")
     public CreateSshKeyResponseBodySshKey sshKey;
 
-    // true 接口调用成功，false 接口调用失败
     @NameInMap("success")
     public Boolean success;
 
@@ -70,11 +65,9 @@ public class CreateSshKeyResponseBody extends TeaModel {
     }
 
     public static class CreateSshKeyResponseBodySshKey extends TeaModel {
-        // 企业公钥id
         @NameInMap("id")
         public Long id;
 
-        // 企业公钥
         @NameInMap("publicKey")
         public String publicKey;
 

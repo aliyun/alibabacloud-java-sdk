@@ -4,31 +4,24 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListVariableGroupsResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 下一次查询的token，为空表示最后一页
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true 接口调用成功，false 接口调用失败
     @NameInMap("success")
     public Boolean success;
 
-    // 变量组总数
     @NameInMap("totalCount")
     public Long totalCount;
 
-    // 变量组
     @NameInMap("variableGroups")
     public java.util.List<ListVariableGroupsResponseBodyVariableGroups> variableGroups;
 
@@ -94,11 +87,9 @@ public class ListVariableGroupsResponseBody extends TeaModel {
     }
 
     public static class ListVariableGroupsResponseBodyVariableGroupsRelatedPipelines extends TeaModel {
-        // 关联的流水线Id
         @NameInMap("id")
         public Long id;
 
-        // 关联的流水线名称
         @NameInMap("name")
         public String name;
 
@@ -126,15 +117,12 @@ public class ListVariableGroupsResponseBody extends TeaModel {
     }
 
     public static class ListVariableGroupsResponseBodyVariableGroupsVariables extends TeaModel {
-        // 是否加密
         @NameInMap("isEncrypted")
         public Boolean isEncrypted;
 
-        // 变量名
         @NameInMap("name")
         public String name;
 
-        // 变量值
         @NameInMap("value")
         public String value;
 
@@ -170,39 +158,30 @@ public class ListVariableGroupsResponseBody extends TeaModel {
     }
 
     public static class ListVariableGroupsResponseBodyVariableGroups extends TeaModel {
-        // 创建时间
         @NameInMap("createTime")
         public Long createTime;
 
-        // 创建人阿里云账号id
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
-        // 变量组描述
         @NameInMap("description")
         public String description;
 
-        // 变量组id
         @NameInMap("id")
         public Long id;
 
-        // 更新人阿里云账号id
         @NameInMap("modifierAccountId")
         public String modifierAccountId;
 
-        // 变量组名称
         @NameInMap("name")
         public String name;
 
-        // 关联的流水线
         @NameInMap("relatedPipelines")
         public java.util.List<ListVariableGroupsResponseBodyVariableGroupsRelatedPipelines> relatedPipelines;
 
-        // 更新时间
         @NameInMap("updateTime")
         public Long updateTime;
 
-        // 变量
         @NameInMap("variables")
         public java.util.List<ListVariableGroupsResponseBodyVariableGroupsVariables> variables;
 

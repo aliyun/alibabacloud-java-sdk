@@ -7,67 +7,51 @@ public class CreateRepositoryRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
-    // 代码库头像地址
     @NameInMap("avatarUrl")
     public String avatarUrl;
 
-    // 代码库描述
     @NameInMap("description")
     public String description;
 
-    // gitignore模板类型
     @NameInMap("gitignoreType")
     public String gitignoreType;
 
-    // 导入时使用的账号
     @NameInMap("importAccount")
     public String importAccount;
 
-    // 使用使用demo库内容进行初始化
     @NameInMap("importDemoProject")
     public Boolean importDemoProject;
 
-    // 导入代码库类型 (GIT: Git库, SVN: SVN库)
     @NameInMap("importRepoType")
     public String importRepoType;
 
-    // 导入时账号的token
     @NameInMap("importToken")
     public String importToken;
 
-    // import_token字段的传输格式，使用明文或rsa加密
     @NameInMap("importTokenEncrypted")
     public String importTokenEncrypted;
 
-    // 导入地址（http协议地址）
     @NameInMap("importUrl")
     public String importUrl;
 
-    // 初始化标准智能化服务
     @NameInMap("initStandardService")
     public Boolean initStandardService;
 
-    // 是否启用加密
     @NameInMap("isCryptoEnabled")
     public Boolean isCryptoEnabled;
 
-    // 本地导入代码库的远程地址
     @NameInMap("localImportUrl")
     public String localImportUrl;
 
-    // 代码库名称
     @NameInMap("name")
     public String name;
 
-    // 代码库父路径id
     @NameInMap("namespaceId")
     public Long namespaceId;
 
-    // 代码库路径
     @NameInMap("path")
     public String path;
 
-    // 自动创建readme类型 (EMPTY: 仅创建README.md, USER_GUIDE: 包含新手引导)
     @NameInMap("readmeType")
     public String readmeType;
 

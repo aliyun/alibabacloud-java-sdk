@@ -7,7 +7,6 @@ public class CreateOAuthTokenResponseBody extends TeaModel {
     @NameInMap("errorCode")
     public String errorCode;
 
-    // Id of the request
     @NameInMap("errorMessage")
     public String errorMessage;
 

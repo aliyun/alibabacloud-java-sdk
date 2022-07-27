@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListProjectTemplatesResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true或者false
     @NameInMap("success")
     public Boolean success;
 
-    // 项目模板信息
     @NameInMap("templates")
     public java.util.List<ListProjectTemplatesResponseBodyTemplates> templates;
 
@@ -73,43 +68,33 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
         @NameInMap("copyFrom")
         public String copyFrom;
 
-        // 创建人id
         @NameInMap("creator")
         public String creator;
 
-        // 描述信息
         @NameInMap("description")
         public String description;
 
-        // 创建时间
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
-        // 修改时间
         @NameInMap("gmtModified")
         public Long gmtModified;
 
-        // 模板封面
         @NameInMap("icon")
         public String icon;
 
-        // 模板唯一标识符
         @NameInMap("identifier")
         public String identifier;
 
-        // 修改人
         @NameInMap("modifier")
         public String modifier;
 
-        // 模板名称
         @NameInMap("name")
         public String name;
 
-        // 模板英文名称
         @NameInMap("nameEn")
         public String nameEn;
 
-        // 所属资源类型
         @NameInMap("resourceCategory")
         public String resourceCategory;
 
@@ -122,7 +107,6 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
         @NameInMap("spaceType")
         public String spaceType;
 
-        // 模板类型 0-system/4-custom/16-instance
         @NameInMap("type")
         public Long type;
 

@@ -4,7 +4,6 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListProjectsRequest extends TeaModel {
-    // 项目类型
     @NameInMap("category")
     public String category;
 
@@ -14,15 +13,12 @@ public class ListProjectsRequest extends TeaModel {
     @NameInMap("extraConditions")
     public String extraConditions;
 
-    // 每页最大返回数量，0-200，默认值20
     @NameInMap("maxResults")
     public Long maxResults;
 
-    // 分页中的起始序列
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 公开类型
     @NameInMap("scope")
     public String scope;
 

@@ -4,15 +4,12 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListWorkItemAllFieldsRequest extends TeaModel {
-    // 项目id
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
 
-    // 资源类型
     @NameInMap("spaceType")
     public String spaceType;
 
-    // 工作项类型id，工作项类型的列表和id可以从ListProjectWorkitemType中获取
     @NameInMap("workitemTypeIdentifier")
     public String workitemTypeIdentifier;
 

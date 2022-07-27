@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // 项目信息
     @NameInMap("project")
     public CreateProjectResponseBodyProject project;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true或者false
     @NameInMap("success")
     public Boolean success;
 
@@ -70,67 +65,51 @@ public class CreateProjectResponseBody extends TeaModel {
     }
 
     public static class CreateProjectResponseBodyProject extends TeaModel {
-        // 空间大类id
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
-        // 创建人id
         @NameInMap("creator")
         public String creator;
 
-        // 自定义编号
         @NameInMap("customCode")
         public String customCode;
 
-        // 描述信息
         @NameInMap("description")
         public String description;
 
-        // 创建时间
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
-        // 修改时间
         @NameInMap("gmtModified")
         public Long gmtModified;
 
-        // 图标
         @NameInMap("icon")
         public String icon;
 
-        // 项目唯一标识符
         @NameInMap("identifier")
         public String identifier;
 
-        // 项目状态
         @NameInMap("logicalStatus")
         public String logicalStatus;
 
-        // 修改人
         @NameInMap("modifier")
         public String modifier;
 
-        // 项目名称
         @NameInMap("name")
         public String name;
 
-        // 企业id
         @NameInMap("organizationIdentifier")
         public String organizationIdentifier;
 
-        // 可见范围
         @NameInMap("scope")
         public String scope;
 
-        // 状态id
         @NameInMap("statusIdentifier")
         public String statusIdentifier;
 
-        // 状态阶段
         @NameInMap("statusStageIdentifier")
         public String statusStageIdentifier;
 
-        // 空间小类id
         @NameInMap("typeIdentifier")
         public String typeIdentifier;
 

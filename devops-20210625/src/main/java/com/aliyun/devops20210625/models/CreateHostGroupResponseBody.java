@@ -13,7 +13,6 @@ public class CreateHostGroupResponseBody extends TeaModel {
     @NameInMap("hostGroupId")
     public Long hostGroupId;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 

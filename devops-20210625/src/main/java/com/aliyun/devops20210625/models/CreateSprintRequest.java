@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateSprintRequest extends TeaModel {
-    // 结束时间
     @NameInMap("endDate")
     public String endDate;
 
-    // 迭代名
     @NameInMap("name")
     public String name;
 
-    // 项目id
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
 
-    // 负责人列表
     @NameInMap("staffIds")
     public java.util.List<String> staffIds;
 
-    // 开始时间
     @NameInMap("startDate")
     public String startDate;
 

@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetPipelineResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 流水线
     @NameInMap("pipeline")
     public GetPipelineResponseBodyPipeline pipeline;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true 接口调用成功，false 接口调用失败
     @NameInMap("success")
     public Boolean success;
 
@@ -70,67 +65,51 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodyPipelinePipelineConfigSourcesData extends TeaModel {
-        // 分支
         @NameInMap("branch")
         public String branch;
 
-        // 克隆深度
         @NameInMap("cloneDepth")
         public Long cloneDepth;
 
-        // Credential Id
         @NameInMap("credentialId")
         public Long credentialId;
 
-        // Credential Label
         @NameInMap("credentialLabel")
         public String credentialLabel;
 
-        // Credential Type
         @NameInMap("credentialType")
         public String credentialType;
 
-        // 触发事件
         @NameInMap("events")
         public java.util.List<String> events;
 
-        // 是否分支模式
         @NameInMap("isBranchMode")
         public Boolean isBranchMode;
 
-        // 是否设置clone深度
         @NameInMap("isCloneDepth")
         public Boolean isCloneDepth;
 
-        // 是否子模块
         @NameInMap("isSubmodule")
         public Boolean isSubmodule;
 
-        // 是否提交触发
         @NameInMap("isTrigger")
         public Boolean isTrigger;
 
-        // 代码源显示标签
         @NameInMap("label")
         public String label;
 
-        // github命名空间
         @NameInMap("namespace")
         public String namespace;
 
-        // 代码库地址
         @NameInMap("repo")
         public String repo;
 
-        // 服务连接Id
         @NameInMap("serviceConnectionId")
         public Long serviceConnectionId;
 
-        // 触发过滤条件
         @NameInMap("triggerFilter")
         public String triggerFilter;
 
-        // webhhook地址
         @NameInMap("webhook")
         public String webhook;
 
@@ -270,15 +249,12 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodyPipelinePipelineConfigSources extends TeaModel {
-        // 代码数据
         @NameInMap("data")
         public GetPipelineResponseBodyPipelinePipelineConfigSourcesData data;
 
-        // 代码源唯一标识
         @NameInMap("sign")
         public String sign;
 
-        // 代码源类型aliyunGit 阿里云代码库 customGitlab  自建git giteeGit 码云 codeup Codeup git 通用git gitlab gitlab bitbucket bitbucket githubOAuth github
         @NameInMap("type")
         public String type;
 
@@ -314,15 +290,12 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodyPipelinePipelineConfig extends TeaModel {
-        // 流水线配置信息
         @NameInMap("flow")
         public String flow;
 
-        // 流水线环境变量等
         @NameInMap("settings")
         public String settings;
 
-        // 代码源
         @NameInMap("sources")
         public java.util.List<GetPipelineResponseBodyPipelinePipelineConfigSources> sources;
 
@@ -358,11 +331,9 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodyPipelineTagList extends TeaModel {
-        // 标签id
         @NameInMap("id")
         public Long id;
 
-        // 标签名称
         @NameInMap("name")
         public String name;
 
@@ -390,43 +361,33 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static class GetPipelineResponseBodyPipeline extends TeaModel {
-        // 创建时间
         @NameInMap("createTime")
         public Long createTime;
 
-        // 创建者阿里云账号id
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
-        // 环境id 0 日常环境  1预发环境 2正式环境
         @NameInMap("envId")
         public Integer envId;
 
-        // 环境名称
         @NameInMap("envName")
         public String envName;
 
-        // 流水线分组id
         @NameInMap("groupId")
         public Long groupId;
 
-        // 更新人阿里云账号id
         @NameInMap("modifierAccountId")
         public String modifierAccountId;
 
-        // 流水线名称
         @NameInMap("name")
         public String name;
 
-        // 流水线配置
         @NameInMap("pipelineConfig")
         public GetPipelineResponseBodyPipelinePipelineConfig pipelineConfig;
 
-        // 标签
         @NameInMap("tagList")
         public java.util.List<GetPipelineResponseBodyPipelineTagList> tagList;
 
-        // 更新时间
         @NameInMap("updateTime")
         public Long updateTime;
 

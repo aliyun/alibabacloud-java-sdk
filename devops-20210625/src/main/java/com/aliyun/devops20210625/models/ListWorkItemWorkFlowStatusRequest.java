@@ -4,19 +4,15 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListWorkItemWorkFlowStatusRequest extends TeaModel {
-    // 项目id
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
 
-    // 空间类型
     @NameInMap("spaceType")
     public String spaceType;
 
-    // 工作项大类型
     @NameInMap("workitemCategoryIdentifier")
     public String workitemCategoryIdentifier;
 
-    // 工作项小类型id
     @NameInMap("workitemTypeIdentifier")
     public String workitemTypeIdentifier;
 

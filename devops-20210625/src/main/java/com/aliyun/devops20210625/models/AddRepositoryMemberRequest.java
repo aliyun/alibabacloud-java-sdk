@@ -4,19 +4,15 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class AddRepositoryMemberRequest extends TeaModel {
-    // Codeup访问令牌，使用AK/SK方式访问可以不用填AccessToken
     @NameInMap("AccessToken")
     public String accessToken;
 
-    // 成员权限
     @NameInMap("accessLevel")
     public Integer accessLevel;
 
-    // 需要添加为代码库成员的用户阿里云ID。支持多个，以","分割
     @NameInMap("aliyunPks")
     public String aliyunPks;
 
-    // 企业ID
     @NameInMap("organizationId")
     public String organizationId;
 

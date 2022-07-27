@@ -4,31 +4,24 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListHostGroupsResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 主机组
     @NameInMap("hostGroups")
     public java.util.List<ListHostGroupsResponseBodyHostGroups> hostGroups;
 
-    // 分页token,空表示最后一页
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true 接口调用成功，false 接口调用失败
     @NameInMap("success")
     public Boolean success;
 
-    // 总数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -94,59 +87,45 @@ public class ListHostGroupsResponseBody extends TeaModel {
     }
 
     public static class ListHostGroupsResponseBodyHostGroups extends TeaModel {
-        // 阿里云区域
         @NameInMap("aliyunRegion")
         public String aliyunRegion;
 
-        // 主机时间
         @NameInMap("createTime")
         public Long createTime;
 
-        // 创建人阿里云账号id
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
-        // 描述
         @NameInMap("description")
         public String description;
 
-        // ecs标签Key
         @NameInMap("ecsLabelKey")
         public String ecsLabelKey;
 
-        // Ecs标签值
         @NameInMap("ecsLabelValue")
         public String ecsLabelValue;
 
-        // 主机类型
         @NameInMap("ecsType")
         public String ecsType;
 
-        // 主机个数
         @NameInMap("hostNum")
         public Long hostNum;
 
-        // 323232
         @NameInMap("id")
         public Long id;
 
-        // 修改人阿里云账号id
         @NameInMap("modifierAccountId")
         public String modifierAccountId;
 
-        // 部署组名称
         @NameInMap("name")
         public String name;
 
-        // 服务连接Id
         @NameInMap("serviceConnectionId")
         public Long serviceConnectionId;
 
-        // 类型
         @NameInMap("type")
         public String type;
 
-        // 更新时间
         @NameInMap("updateTime")
         public Long updateTime;
 

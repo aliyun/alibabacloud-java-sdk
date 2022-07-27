@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListFlowTagGroupsResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 标签分类
     @NameInMap("flowTagGroups")
     public java.util.List<ListFlowTagGroupsResponseBodyFlowTagGroups> flowTagGroups;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true 接口调用成功，false 接口调用失败
     @NameInMap("success")
     public Boolean success;
 
@@ -70,19 +65,15 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
     }
 
     public static class ListFlowTagGroupsResponseBodyFlowTagGroups extends TeaModel {
-        // 创建人
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
-        // 标签分类id
         @NameInMap("id")
         public Long id;
 
-        // 修改人
         @NameInMap("modiferAccountId")
         public String modiferAccountId;
 
-        // 标签分类名称
         @NameInMap("name")
         public String name;
 

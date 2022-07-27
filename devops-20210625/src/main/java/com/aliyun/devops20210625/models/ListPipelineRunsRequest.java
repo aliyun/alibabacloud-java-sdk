@@ -4,27 +4,21 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListPipelineRunsRequest extends TeaModel {
-    // 结束时间
     @NameInMap("endTime")
     public Long endTime;
 
-    // 最大返回数量
     @NameInMap("maxResults")
     public Long maxResults;
 
-    // 分页Token
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 开始时间
     @NameInMap("startTime")
     public Long startTime;
 
-    // 状态 状态 FAIL 运行失败 SUCCESS 运行成功 RUNNING 运行中
     @NameInMap("status")
     public String status;
 
-    // 触发模式 1人工触发 2定时触发 3代码提交触发
     @NameInMap("triggerMode")
     public Integer triggerMode;
 

@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListWorkItemAllFieldsResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // 字段信息
     @NameInMap("fields")
     public java.util.List<ListWorkItemAllFieldsResponseBodyFields> fields;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true或者false
     @NameInMap("success")
     public Boolean success;
 
@@ -70,31 +65,24 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
     }
 
     public static class ListWorkItemAllFieldsResponseBodyFieldsOptions extends TeaModel {
-        // 根据语言环境获取当前展示的值
         @NameInMap("displayValue")
         public String displayValue;
 
-        // 字段唯一标识
         @NameInMap("fieldIdentifier")
         public String fieldIdentifier;
 
-        // 待选值的唯一标识
         @NameInMap("identifier")
         public String identifier;
 
-        // 展示级别，数字范围1~9，数字越大，颜色越浅。
         @NameInMap("level")
         public Long level;
 
-        // 待选值顺序
         @NameInMap("position")
         public Long position;
 
-        // 待选值中文名称
         @NameInMap("value")
         public String value;
 
-        // 待选值英文名称
         @NameInMap("valueEn")
         public String valueEn;
 
@@ -162,71 +150,54 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
     }
 
     public static class ListWorkItemAllFieldsResponseBodyFields extends TeaModel {
-        // 字段类型
         @NameInMap("className")
         public String className;
 
-        // 创建人id
         @NameInMap("creator")
         public String creator;
 
-        // 默认值
         @NameInMap("defaultValue")
         public String defaultValue;
 
-        // 描述信息
         @NameInMap("description")
         public String description;
 
-        // 字段格式
         @NameInMap("format")
         public String format;
 
-        // 创建时间
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
-        // 修改时间
         @NameInMap("gmtModified")
         public Long gmtModified;
 
-        // 字段唯一标识符
         @NameInMap("identifier")
         public String identifier;
 
-        // 是否必填
         @NameInMap("isRequired")
         public Boolean isRequired;
 
-        // 创建时是否展示
         @NameInMap("isShowWhenCreate")
         public Boolean isShowWhenCreate;
 
-        // 是否是系统必须字段，比如：负责人、状态等。
         @NameInMap("isSystemRequired")
         public Boolean isSystemRequired;
 
-        // 联动的服务，比如：迭代 迭代服务开启/关闭，这个字段字段加进/剔除出对应的模板； 字段模板里，这类字段不能手动添加或删除
         @NameInMap("linkWithService")
         public String linkWithService;
 
-        // 修改人
         @NameInMap("modifier")
         public String modifier;
 
-        // 字段名称
         @NameInMap("name")
         public String name;
 
-        // 待选值
         @NameInMap("options")
         public java.util.List<ListWorkItemAllFieldsResponseBodyFieldsOptions> options;
 
-        // 区分不同的适用对象
         @NameInMap("resourceType")
         public String resourceType;
 
-        // 区分不同的类型，如系统字段、用户自定义字段
         @NameInMap("type")
         public String type;
 

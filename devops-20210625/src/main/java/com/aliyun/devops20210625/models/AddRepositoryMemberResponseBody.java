@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class AddRepositoryMemberResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 返回结果
     @NameInMap("Result")
     public java.util.List<AddRepositoryMemberResponseBodyResult> result;
 
-    // 请求状态
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,27 +65,21 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
     }
 
     public static class AddRepositoryMemberResponseBodyResult extends TeaModel {
-        // 权限类型
         @NameInMap("AccessLevel")
         public Integer accessLevel;
 
-        // 头像地址
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
-        // 邮箱
         @NameInMap("Email")
         public String email;
 
-        // 云效用户ID
         @NameInMap("ExternUserId")
         public String externUserId;
 
-        // Codeup用户Id
         @NameInMap("Id")
         public Long id;
 
-        // 状态
         @NameInMap("State")
         public String state;
 

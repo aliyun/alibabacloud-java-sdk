@@ -10,34 +10,27 @@ public class AddWebhookRequest extends TeaModel {
     @NameInMap("OrganizationId")
     public String organizationId;
 
-    // webhook描述
     @NameInMap("description")
     public String description;
 
-    // 使用ssl认证
     @NameInMap("enableSslVerification")
     public Boolean enableSslVerification;
 
-    // 合并请求事件
     @NameInMap("mergeRequestsEvents")
     public Boolean mergeRequestsEvents;
 
-    // 评论事件
     @NameInMap("noteEvents")
     public Boolean noteEvents;
 
-    // 分支推送事件
     @NameInMap("pushEvents")
     public Boolean pushEvents;
 
     @NameInMap("secretToken")
     public String secretToken;
 
-    // 标签推送事件
     @NameInMap("tagPushEvents")
     public Boolean tagPushEvents;
 
-    // hook url
     @NameInMap("url")
     public String url;
 

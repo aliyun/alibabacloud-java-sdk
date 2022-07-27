@@ -4,35 +4,27 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoriesRequest extends TeaModel {
-    // accessToken
     @NameInMap("accessToken")
     public String accessToken;
 
-    // 是否列出归档项目
     @NameInMap("archived")
     public Boolean archived;
 
-    // 排序字段
     @NameInMap("orderBy")
     public String orderBy;
 
-    // 企业ID
     @NameInMap("organizationId")
     public String organizationId;
 
-    // 页码
     @NameInMap("page")
     public Long page;
 
-    // 每页大小
     @NameInMap("perPage")
     public Long perPage;
 
-    // 搜索关键字
     @NameInMap("search")
     public String search;
 
-    // 排序方式 (desc: 降序, asc: 升序)
     @NameInMap("sort")
     public String sort;
 

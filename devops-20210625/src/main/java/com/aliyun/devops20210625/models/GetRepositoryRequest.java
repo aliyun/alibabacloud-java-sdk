@@ -4,15 +4,12 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetRepositoryRequest extends TeaModel {
-    // 个人访问令牌
     @NameInMap("accessToken")
     public String accessToken;
 
-    // 代码库ID或路径
     @NameInMap("identity")
     public String identity;
 
-    // 企业ID
     @NameInMap("organizationId")
     public String organizationId;
 

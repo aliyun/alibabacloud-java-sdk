@@ -4,19 +4,15 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ReleaseWorkspaceResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 
-    // 请求是否成功
     @NameInMap("success")
     public Boolean success;
 

@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetFileLastCommitResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 响应结果
     @NameInMap("Result")
     public GetFileLastCommitResponseBodyResult result;
 
-    // 请求结果
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,11 +65,9 @@ public class GetFileLastCommitResponseBody extends TeaModel {
     }
 
     public static class GetFileLastCommitResponseBodyResultSignature extends TeaModel {
-        // GPG密钥ID
         @NameInMap("GpgKeyId")
         public String gpgKeyId;
 
-        // 验证状态
         @NameInMap("VerificationStatus")
         public String verificationStatus;
 
@@ -102,55 +95,42 @@ public class GetFileLastCommitResponseBody extends TeaModel {
     }
 
     public static class GetFileLastCommitResponseBodyResult extends TeaModel {
-        // 作者提交时间
         @NameInMap("AuthorDate")
         public String authorDate;
 
-        // 提交者邮箱
         @NameInMap("AuthorEmail")
         public String authorEmail;
 
-        // 作者姓名
         @NameInMap("AuthorName")
         public String authorName;
 
-        // 提交者提交时间
         @NameInMap("CommittedDate")
         public String committedDate;
 
-        // 提交者邮箱
         @NameInMap("CommitterEmail")
         public String committerEmail;
 
-        // 提交者姓名
         @NameInMap("CommitterName")
         public String committerName;
 
-        // 创建时间
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        // Commit ID
         @NameInMap("Id")
         public String id;
 
-        // 提交内容
         @NameInMap("Message")
         public String message;
 
-        // 父提交ID
         @NameInMap("ParentIds")
         public java.util.List<String> parentIds;
 
-        // Commit短ID
         @NameInMap("ShortId")
         public String shortId;
 
-        // 签名
         @NameInMap("Signature")
         public GetFileLastCommitResponseBodyResultSignature signature;
 
-        // 标题，提交的第一行内容
         @NameInMap("Title")
         public String title;
 
