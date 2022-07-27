@@ -4,31 +4,24 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListPipelineRunsResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 下一个分页token，为空时，表示没有下一页
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 流水线运行实例
     @NameInMap("pipelineRuns")
     public java.util.List<ListPipelineRunsResponseBodyPipelineRuns> pipelineRuns;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true 接口调用成功，false 接口调用失败
     @NameInMap("success")
     public Boolean success;
 
-    // 总数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -94,31 +87,24 @@ public class ListPipelineRunsResponseBody extends TeaModel {
     }
 
     public static class ListPipelineRunsResponseBodyPipelineRuns extends TeaModel {
-        // 运行人阿里云账号id
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
-        // 结束时间
         @NameInMap("endTime")
         public Long endTime;
 
-        // 流水线id
         @NameInMap("pipelineId")
         public Long pipelineId;
 
-        // 流水线实例id
         @NameInMap("pipelineRunId")
         public Long pipelineRunId;
 
-        // 开始时间
         @NameInMap("startTime")
         public Long startTime;
 
-        // 运行状态
         @NameInMap("status")
         public String status;
 
-        // 触发模式
         @NameInMap("triggerMode")
         public Long triggerMode;
 

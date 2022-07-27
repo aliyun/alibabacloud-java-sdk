@@ -4,35 +4,27 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListProjectsResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // 每页数量
     @NameInMap("maxResults")
     public Long maxResults;
 
-    // 分页Token，没有下一页则为空
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 项目信息
     @NameInMap("projects")
     public java.util.List<ListProjectsResponseBodyProjects> projects;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true或者false
     @NameInMap("success")
     public Boolean success;
 
-    // 总数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -106,55 +98,42 @@ public class ListProjectsResponseBody extends TeaModel {
     }
 
     public static class ListProjectsResponseBodyProjects extends TeaModel {
-        // 类型
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
-        // 创建人
         @NameInMap("creator")
         public String creator;
 
-        // 自定义编号
         @NameInMap("customCode")
         public String customCode;
 
-        // 删除时间
         @NameInMap("deleteTime")
         public Long deleteTime;
 
-        // 描述信息
         @NameInMap("description")
         public String description;
 
-        // 创建时间
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
-        // 项目封面
         @NameInMap("icon")
         public String icon;
 
-        // 项目唯一标识符
         @NameInMap("identifier")
         public String identifier;
 
-        // 逻辑状态
         @NameInMap("logicalStatus")
         public String logicalStatus;
 
-        // 项目名称
         @NameInMap("name")
         public String name;
 
-        // 公开还是私有
         @NameInMap("scope")
         public String scope;
 
-        // 状态阶段
         @NameInMap("statusStageIdentifier")
         public String statusStageIdentifier;
 
-        // 类型id
         @NameInMap("typeIdentifier")
         public String typeIdentifier;
 

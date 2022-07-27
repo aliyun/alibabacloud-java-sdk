@@ -4,7 +4,6 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetWorkItemWorkFlowInfoRequest extends TeaModel {
-    // 项目id
     @NameInMap("configurationId")
     public String configurationId;
 

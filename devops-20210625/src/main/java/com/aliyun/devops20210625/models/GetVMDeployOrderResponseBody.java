@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetVMDeployOrderResponseBody extends TeaModel {
-    // 部署单
     @NameInMap("deployOrder")
     public GetVMDeployOrderResponseBodyDeployOrder deployOrder;
 
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true 接口调用成功，false 接口调用失败
     @NameInMap("success")
     public Boolean success;
 
@@ -70,15 +65,12 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
     }
 
     public static class GetVMDeployOrderResponseBodyDeployOrderActions extends TeaModel {
-        // 是否可用
         @NameInMap("disable")
         public Boolean disable;
 
-        // 参数
         @NameInMap("params")
-        public java.util.Map<String, ?> params;
+        public Object params;
 
-        // Action
         @NameInMap("type")
         public String type;
 
@@ -95,11 +87,11 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             return this.disable;
         }
 
-        public GetVMDeployOrderResponseBodyDeployOrderActions setParams(java.util.Map<String, ?> params) {
+        public GetVMDeployOrderResponseBodyDeployOrderActions setParams(Object params) {
             this.params = params;
             return this;
         }
-        public java.util.Map<String, ?> getParams() {
+        public Object getParams() {
             return this.params;
         }
 
@@ -114,15 +106,12 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
     }
 
     public static class GetVMDeployOrderResponseBodyDeployOrderDeployMachineInfoDeployMachinesActions extends TeaModel {
-        // 是否可用
         @NameInMap("disable")
         public Boolean disable;
 
-        // 参数
         @NameInMap("params")
-        public java.util.Map<String, ?> params;
+        public Object params;
 
-        // Action
         @NameInMap("type")
         public String type;
 
@@ -139,11 +128,11 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             return this.disable;
         }
 
-        public GetVMDeployOrderResponseBodyDeployOrderDeployMachineInfoDeployMachinesActions setParams(java.util.Map<String, ?> params) {
+        public GetVMDeployOrderResponseBodyDeployOrderDeployMachineInfoDeployMachinesActions setParams(Object params) {
             this.params = params;
             return this;
         }
-        public java.util.Map<String, ?> getParams() {
+        public Object getParams() {
             return this.params;
         }
 
@@ -158,35 +147,27 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
     }
 
     public static class GetVMDeployOrderResponseBodyDeployOrderDeployMachineInfoDeployMachines extends TeaModel {
-        // 后续action
         @NameInMap("actions")
         public java.util.List<GetVMDeployOrderResponseBodyDeployOrderDeployMachineInfoDeployMachinesActions> actions;
 
-        // 部署批次
         @NameInMap("batchNum")
         public Integer batchNum;
 
-        // 机器状态
         @NameInMap("clientStatus")
         public String clientStatus;
 
-        // 开始时间
         @NameInMap("createTime")
         public Long createTime;
 
-        // 机器IP
         @NameInMap("ip")
         public String ip;
 
-        // 机器sn
         @NameInMap("machineSn")
         public String machineSn;
 
-        // 部署状态
         @NameInMap("status")
         public String status;
 
-        // 修改时间
         @NameInMap("updateTime")
         public Long updateTime;
 
@@ -262,15 +243,12 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
     }
 
     public static class GetVMDeployOrderResponseBodyDeployOrderDeployMachineInfo extends TeaModel {
-        // 发布批次
         @NameInMap("batchNum")
         public Integer batchNum;
 
-        // 部署机器列表
         @NameInMap("deployMachines")
         public java.util.List<GetVMDeployOrderResponseBodyDeployOrderDeployMachineInfoDeployMachines> deployMachines;
 
-        // 主机组ID
         @NameInMap("hostGroupId")
         public Long hostGroupId;
 
@@ -306,43 +284,33 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
     }
 
     public static class GetVMDeployOrderResponseBodyDeployOrder extends TeaModel {
-        // 后续action
         @NameInMap("actions")
         public java.util.List<GetVMDeployOrderResponseBodyDeployOrderActions> actions;
 
-        // 创建时时间
         @NameInMap("createTime")
         public Long createTime;
 
-        // 创建人
         @NameInMap("creator")
         public String creator;
 
-        // 当前发布批次
         @NameInMap("currentBatch")
         public Integer currentBatch;
 
-        // 部署机器信息
         @NameInMap("deployMachineInfo")
         public GetVMDeployOrderResponseBodyDeployOrderDeployMachineInfo deployMachineInfo;
 
-        // 部署单ID
         @NameInMap("deployOrderId")
         public String deployOrderId;
 
-        // 错误码
         @NameInMap("exceptionCode")
         public String exceptionCode;
 
-        // 发布状态
         @NameInMap("status")
         public String status;
 
-        // 总发布批次
         @NameInMap("totalBatch")
         public Integer totalBatch;
 
-        // 修改时间
         @NameInMap("updateTime")
         public Long updateTime;
 

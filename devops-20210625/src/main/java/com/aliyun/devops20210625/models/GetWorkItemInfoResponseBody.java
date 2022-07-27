@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetWorkItemInfoResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true或者false
     @NameInMap("success")
     public Boolean success;
 
-    // 工作项信息
     @NameInMap("workitem")
     public GetWorkItemInfoResponseBodyWorkitem workitem;
 
@@ -70,23 +65,18 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList extends TeaModel {
-        // 根据语言环境获取当前展示的值
         @NameInMap("displayValue")
         public String displayValue;
 
-        // 字段值为对象类型时，值所对应的对象的唯一标识 例如：option表中的id
         @NameInMap("identifier")
         public String identifier;
 
-        // 展示级别，数字范围1~9，数字越大，颜色越浅。
         @NameInMap("level")
         public Long level;
 
-        // 字段值
         @NameInMap("value")
         public String value;
 
-        // 字段英文值，目前只有列表类有英文值
         @NameInMap("valueEn")
         public String valueEn;
 
@@ -138,39 +128,30 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemInfoResponseBodyWorkitemCustomFields extends TeaModel {
-        // 字段的className，便于数据查询
         @NameInMap("fieldClassName")
         public String fieldClassName;
 
-        // 字段格式，便于查询数据
         @NameInMap("fieldFormat")
         public String fieldFormat;
 
-        // 字段的唯一标识
         @NameInMap("fieldIdentifier")
         public String fieldIdentifier;
 
-        // 展示级别，数字范围1~9，数字越大，颜色越浅。
         @NameInMap("level")
         public Long level;
 
-        // 值对象列表
         @NameInMap("objectValue")
         public String objectValue;
 
-        // 自定义字段值的position
         @NameInMap("position")
         public Long position;
 
-        // 字段值，写入时使用
         @NameInMap("value")
         public String value;
 
-        // 值对象列表，查询时使用
         @NameInMap("valueList")
         public java.util.List<GetWorkItemInfoResponseBodyWorkitemCustomFieldsValueList> valueList;
 
-        // 工作项的唯一标识
         @NameInMap("workitemIdentifier")
         public String workitemIdentifier;
 
@@ -254,107 +235,81 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemInfoResponseBodyWorkitem extends TeaModel {
-        // 负责人
         @NameInMap("assignedTo")
         public String assignedTo;
 
-        // 工作项的类型id
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
-        // 创建人
         @NameInMap("creator")
         public String creator;
 
-        // 自定义字段列表
         @NameInMap("customFields")
         public java.util.List<GetWorkItemInfoResponseBodyWorkitemCustomFields> customFields;
 
-        // 工作项内容
         @NameInMap("document")
         public String document;
 
-        // 创建时间
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
-        // 修改时间
         @NameInMap("gmtModified")
         public Long gmtModified;
 
-        // 工作项唯一标识
         @NameInMap("identifier")
         public String identifier;
 
-        // 逻辑状态
         @NameInMap("logicalStatus")
         public String logicalStatus;
 
-        // 修改人
         @NameInMap("modifier")
         public String modifier;
 
-        // 父工作项id
         @NameInMap("parentIdentifier")
         public String parentIdentifier;
 
-        // 参与人account id列表
         @NameInMap("participant")
         public java.util.List<String> participant;
 
-        // 编号
         @NameInMap("serialNumber")
         public String serialNumber;
 
-        // 所属项目id
         @NameInMap("spaceIdentifier")
         public String spaceIdentifier;
 
-        // 所属项目名称
         @NameInMap("spaceName")
         public String spaceName;
 
-        // 项目类型
         @NameInMap("spaceType")
         public String spaceType;
 
-        // 关联的迭代id
         @NameInMap("sprint")
         public java.util.List<String> sprint;
 
-        // 状态名称
         @NameInMap("status")
         public String status;
 
-        // 状态id
         @NameInMap("statusIdentifier")
         public String statusIdentifier;
 
-        // 状态阶段id
         @NameInMap("statusStageIdentifier")
         public String statusStageIdentifier;
 
-        // 工作项标题
         @NameInMap("subject")
         public String subject;
 
-        // 标签id列表
         @NameInMap("tag")
         public java.util.List<String> tag;
 
-        // 抄送人的account id列表
         @NameInMap("tracker")
         public java.util.List<String> tracker;
 
-        // 状态更新时间
         @NameInMap("updateStatusAt")
         public Long updateStatusAt;
 
-        // 验证者的account id列表
         @NameInMap("verifier")
         public java.util.List<String> verifier;
 
-        // 工作项类型id
         @NameInMap("workitemTypeIdentifier")
         public String workitemTypeIdentifier;
 

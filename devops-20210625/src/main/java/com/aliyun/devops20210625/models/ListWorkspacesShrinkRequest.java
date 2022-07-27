@@ -4,19 +4,15 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspacesShrinkRequest extends TeaModel {
-    // 本次读取的最大数据记录数量，默认10，最大100
     @NameInMap("maxResults")
     public Integer maxResults;
 
-    // 用来标记当前开始读取的位置，置空表示从头开始
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 枚举值：CREATING-创建中, SUCCESS-运行中, FROZEN-冻结中, RECOVERING-恢复中
     @NameInMap("statusList")
     public String statusListShrink;
 
-    // 空间模板列表
     @NameInMap("workspaceTemplateList")
     public String workspaceTemplateListShrink;
 

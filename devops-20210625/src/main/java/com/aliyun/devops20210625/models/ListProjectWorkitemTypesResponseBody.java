@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListProjectWorkitemTypesResponseBody extends TeaModel {
-    // 错误返回码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误返回信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // openapi平台的request id
     @NameInMap("requestId")
     public String requestId;
 
-    // 接口是否正常返回
     @NameInMap("success")
     public Boolean success;
 
-    // 工作项类型
     @NameInMap("workitemTypes")
     public java.util.List<ListProjectWorkitemTypesResponseBodyWorkitemTypes> workitemTypes;
 
@@ -70,51 +65,39 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
     }
 
     public static class ListProjectWorkitemTypesResponseBodyWorkitemTypes extends TeaModel {
-        // 添加到项目中的添加人
         @NameInMap("addUser")
         public String addUser;
 
-        // 工作项类型
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
-        // 工作项类型创建人
         @NameInMap("creator")
         public String creator;
 
-        // 在项目中是否为默认类型
         @NameInMap("defaultType")
         public Boolean defaultType;
 
-        // 描述
         @NameInMap("description")
         public String description;
 
-        // 是否启用
         @NameInMap("enable")
         public Boolean enable;
 
-        // 添加到项目中的时间
         @NameInMap("gmtAdd")
         public Long gmtAdd;
 
-        // 创建时间
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
-        // 工作项类型id
         @NameInMap("identifier")
         public String identifier;
 
-        // 工作项类型的名称
         @NameInMap("name")
         public String name;
 
-        // 工作项类型的英文名称
         @NameInMap("nameEn")
         public String nameEn;
 
-        // 是否系统默认
         @NameInMap("systemDefault")
         public Boolean systemDefault;
 

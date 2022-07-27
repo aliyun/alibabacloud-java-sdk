@@ -4,19 +4,15 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetFileLastCommitRequest extends TeaModel {
-    // 个人访问令牌
     @NameInMap("accessToken")
     public String accessToken;
 
-    // 文件路径
     @NameInMap("filepath")
     public String filepath;
 
-    // 云效企业ID
     @NameInMap("organizationId")
     public String organizationId;
 
-    // 分支名称、标签名称或Commit ID
     @NameInMap("sha")
     public String sha;
 

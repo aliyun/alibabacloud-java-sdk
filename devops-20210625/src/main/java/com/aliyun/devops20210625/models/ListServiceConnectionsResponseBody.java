@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListServiceConnectionsResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // 服务连接
     @NameInMap("serviceConnections")
     public java.util.List<ListServiceConnectionsResponseBodyServiceConnections> serviceConnections;
 
-    // true 接口调用成功，false 接口调用失败
     @NameInMap("success")
     public Boolean success;
 
@@ -70,23 +65,18 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListServiceConnectionsResponseBodyServiceConnections extends TeaModel {
-        // 创建时间
         @NameInMap("createTime")
         public Long createTime;
 
-        // 服务连接Id
         @NameInMap("id")
         public Long id;
 
-        // 服务连接名称
         @NameInMap("name")
         public String name;
 
-        // 拥有者阿里云账号id
         @NameInMap("ownerAccountId")
         public Long ownerAccountId;
 
-        // 服务连接类型
         @NameInMap("type")
         public String type;
 

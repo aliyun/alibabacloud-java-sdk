@@ -4,7 +4,6 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListProjectTemplatesRequest extends TeaModel {
-    // 模板类型
     @NameInMap("category")
     public String category;
 

@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class LogVMDeployMachineResponseBody extends TeaModel {
-    // 部署单
     @NameInMap("deployMachineLog")
     public LogVMDeployMachineResponseBodyDeployMachineLog deployMachineLog;
 
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true 接口调用成功，false 接口调用失败
     @NameInMap("success")
     public Boolean success;
 
@@ -70,23 +65,18 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
     }
 
     public static class LogVMDeployMachineResponseBodyDeployMachineLog extends TeaModel {
-        // 部署地域
         @NameInMap("aliyunRegion")
         public String aliyunRegion;
 
-        // 部署开始时间
         @NameInMap("deployBeginTime")
         public Long deployBeginTime;
 
-        // 部署结束时间
         @NameInMap("deployEndTime")
         public Long deployEndTime;
 
-        // 部署日志
         @NameInMap("deployLog")
         public String deployLog;
 
-        // 部署日志路径
         @NameInMap("deployLogPath")
         public String deployLogPath;
 

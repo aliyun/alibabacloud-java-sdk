@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetCustomFieldOptionResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // 字段值信息
     @NameInMap("fileds")
     public java.util.List<GetCustomFieldOptionResponseBodyFileds> fileds;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true或者false
     @NameInMap("success")
     public Boolean success;
 
@@ -70,31 +65,24 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
     }
 
     public static class GetCustomFieldOptionResponseBodyFileds extends TeaModel {
-        // 展示的值
         @NameInMap("displayValue")
         public String displayValue;
 
-        // 字段唯一标识
         @NameInMap("fieldIdentifier")
         public String fieldIdentifier;
 
-        // 迭代唯一标识符
         @NameInMap("identifier")
         public String identifier;
 
-        // 展示级别，数字范围1~9，数字越大，颜色越浅
         @NameInMap("level")
         public Long level;
 
-        // 待选值顺序
         @NameInMap("position")
         public Long position;
 
-        // 字段中文名称
         @NameInMap("value")
         public String value;
 
-        // 字段英文名称
         @NameInMap("valueEn")
         public String valueEn;
 

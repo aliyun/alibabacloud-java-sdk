@@ -4,26 +4,21 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoriesResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public Integer errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 请求requestId
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListRepositoriesResponseBodyResult> result;
 
-    // 调用是否成功
     @NameInMap("success")
     public Boolean success;
 
-    // 总数量
     @NameInMap("total")
     public Long total;
 
@@ -81,75 +76,57 @@ public class ListRepositoriesResponseBody extends TeaModel {
     }
 
     public static class ListRepositoriesResponseBodyResult extends TeaModel {
-        // 代码库Id
         @NameInMap("Id")
         public Long id;
 
-        // 当前用户在该代码库上的权限类型
         @NameInMap("accessLevel")
         public Integer accessLevel;
 
-        // 代码库是否归档
         @NameInMap("archive")
         public Boolean archive;
 
-        // 头像地址
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
-        // 创建时间
         @NameInMap("createdAt")
         public String createdAt;
 
-        // 代码库描述
         @NameInMap("description")
         public String description;
 
-        // 代码库导入状态
         @NameInMap("importStatus")
         public String importStatus;
 
-        // 最后活跃时间
         @NameInMap("lastActivityAt")
         public String lastActivityAt;
 
-        // 代码库名称
         @NameInMap("name")
         public String name;
 
-        // 代码库完整名称（含完整组名称）
         @NameInMap("nameWithNamespace")
         public String nameWithNamespace;
 
-        // 上级路径的id
         @NameInMap("namespaceId")
         public Long namespaceId;
 
-        // 代码库路径
         @NameInMap("path")
         public String path;
 
-        // 代码库完整路径（含完整组路径）
         @NameInMap("pathWithNamespace")
         public String pathWithNamespace;
 
-        // 是否被收藏
         @NameInMap("star")
         public Boolean star;
 
-        // 被收藏的数量
         @NameInMap("starCount")
         public Long starCount;
 
-        // 更新时间
         @NameInMap("updatedAt")
         public String updatedAt;
 
-        // 可见性;0标识私有的/10标识企业内公开
         @NameInMap("visibilityLevel")
         public String visibilityLevel;
 
-        // 页面访问时的URL
         @NameInMap("webUrl")
         public String webUrl;
 

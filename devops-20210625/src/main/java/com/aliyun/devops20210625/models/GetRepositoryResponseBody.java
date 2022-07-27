@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetRepositoryResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 代码库信息
     @NameInMap("repository")
     public GetRepositoryResponseBodyRepository repository;
 
-    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 
-    // 请求是否成功
     @NameInMap("success")
     public Boolean success;
 
@@ -70,39 +65,30 @@ public class GetRepositoryResponseBody extends TeaModel {
     }
 
     public static class GetRepositoryResponseBodyRepositoryNamespace extends TeaModel {
-        // 头像地址
         @NameInMap("avatar")
         public String avatar;
 
-        // 创建时间
         @NameInMap("createdAt")
         public String createdAt;
 
-        // 描述
         @NameInMap("description")
         public String description;
 
-        // id
         @NameInMap("id")
         public Long id;
 
-        // 名称
         @NameInMap("name")
         public String name;
 
-        // 归属者ID
         @NameInMap("ownerId")
         public Long ownerId;
 
-        // 路径
         @NameInMap("path")
         public String path;
 
-        // 更新时间
         @NameInMap("updatedAt")
         public String updatedAt;
 
-        // 可见性。0：私有，10：内部公开
         @NameInMap("visibilityLevel")
         public Integer visibilityLevel;
 
@@ -186,75 +172,57 @@ public class GetRepositoryResponseBody extends TeaModel {
     }
 
     public static class GetRepositoryResponseBodyRepository extends TeaModel {
-        // 归档标识
         @NameInMap("archive")
         public Boolean archive;
 
-        // 代码库头像地址
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
-        // 创建时间
         @NameInMap("createdAt")
         public String createdAt;
 
-        // 创建者ID
         @NameInMap("creatorId")
         public Long creatorId;
 
-        // 默认分支
         @NameInMap("defaultBranch")
         public String defaultBranch;
 
-        // DEMO库标识
         @NameInMap("demoProjectStatus")
         public Boolean demoProjectStatus;
 
-        // 描述
         @NameInMap("description")
         public String description;
 
-        // HTTP克隆地址
         @NameInMap("httpUrlToRepository")
         public String httpUrlToRepository;
 
-        // 代码库ID
         @NameInMap("id")
         public Long id;
 
-        // 最后活跃时间
         @NameInMap("lastActivityAt")
         public String lastActivityAt;
 
-        // 名称
         @NameInMap("name")
         public String name;
 
-        // 名称（含父名称）
         @NameInMap("nameWithNamespace")
         public String nameWithNamespace;
 
-        // 父空间
         @NameInMap("namespace")
         public GetRepositoryResponseBodyRepositoryNamespace namespace;
 
-        // 路径
         @NameInMap("path")
         public String path;
 
-        // 路径（含父路径）
         @NameInMap("pathWithNamespace")
         public String pathWithNamespace;
 
-        // SSH克隆地址
         @NameInMap("sshUrlToRepository")
         public String sshUrlToRepository;
 
-        // 可见性。0：私有，10：内部公开
         @NameInMap("visibilityLevel")
         public Integer visibilityLevel;
 
-        // 页面访问地址
         @NameInMap("webUrl")
         public String webUrl;
 

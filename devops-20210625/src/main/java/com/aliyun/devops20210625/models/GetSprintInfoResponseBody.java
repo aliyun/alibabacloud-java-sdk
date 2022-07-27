@@ -13,7 +13,6 @@ public class GetSprintInfoResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    // 迭代信息
     @NameInMap("sprint")
     public GetSprintInfoResponseBodySprint sprint;
 
@@ -66,51 +65,39 @@ public class GetSprintInfoResponseBody extends TeaModel {
     }
 
     public static class GetSprintInfoResponseBodySprint extends TeaModel {
-        // 创建人id
         @NameInMap("creator")
         public String creator;
 
-        // 描述信息
         @NameInMap("description")
         public String description;
 
-        // 结束时间
         @NameInMap("endDate")
         public Long endDate;
 
-        // 创建时间
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
-        // 修改时间
         @NameInMap("gmtModified")
         public Long gmtModified;
 
-        // 迭代唯一标识符
         @NameInMap("identifier")
         public String identifier;
 
-        // 修改人
         @NameInMap("modifier")
         public String modifier;
 
-        // 迭代名称
         @NameInMap("name")
         public String name;
 
-        // 可见范围
         @NameInMap("scope")
         public String scope;
 
-        // 项目id
         @NameInMap("spaceIdentifier")
         public String spaceIdentifier;
 
-        // 开始时间
         @NameInMap("startDate")
         public Long startDate;
 
-        // 状态
         @NameInMap("status")
         public String status;
 

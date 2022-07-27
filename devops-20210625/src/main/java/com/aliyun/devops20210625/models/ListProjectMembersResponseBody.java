@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListProjectMembersResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // member信息
     @NameInMap("members")
     public java.util.List<ListProjectMembersResponseBodyMembers> members;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true或者false
     @NameInMap("success")
     public Boolean success;
 
@@ -70,7 +65,6 @@ public class ListProjectMembersResponseBody extends TeaModel {
     }
 
     public static class ListProjectMembersResponseBodyMembersDivision extends TeaModel {
-        // 部门唯一标识
         @NameInMap("identifier")
         public String identifier;
 
@@ -90,7 +84,6 @@ public class ListProjectMembersResponseBody extends TeaModel {
     }
 
     public static class ListProjectMembersResponseBodyMembersOrganizationUserInfo extends TeaModel {
-        // 企业唯一标识符
         @NameInMap("organizationIdentifier")
         public String organizationIdentifier;
 
@@ -110,79 +103,60 @@ public class ListProjectMembersResponseBody extends TeaModel {
     }
 
     public static class ListProjectMembersResponseBodyMembers extends TeaModel {
-        // 登陆账号
         @NameInMap("account")
         public String account;
 
-        // 用户头像
         @NameInMap("avatar")
         public String avatar;
 
-        // 钉钉id
         @NameInMap("dingTalkId")
         public String dingTalkId;
 
-        // 展示名
         @NameInMap("displayName")
         public String displayName;
 
-        // 展示昵称
         @NameInMap("displayNickName")
         public String displayNickName;
 
-        // 展示真名
         @NameInMap("displayRealName")
         public String displayRealName;
 
-        // 部门信息
         @NameInMap("division")
         public ListProjectMembersResponseBodyMembersDivision division;
 
-        // 邮箱
         @NameInMap("email")
         public String email;
 
-        // 性别
         @NameInMap("gender")
         public String gender;
 
-        // 用户唯一 标识符
         @NameInMap("identifier")
         public String identifier;
 
-        // 手机号
         @NameInMap("mobile")
         public String mobile;
 
-        // 英文名
         @NameInMap("nameEn")
         public String nameEn;
 
-        // 昵称
         @NameInMap("nickName")
         public String nickName;
 
-        // 昵称拼音
         @NameInMap("nickNamePinyin")
         public String nickNamePinyin;
 
-        // 企业信息
         @NameInMap("organizationUserInfo")
         public ListProjectMembersResponseBodyMembersOrganizationUserInfo organizationUserInfo;
 
-        // 真名
         @NameInMap("realName")
         public String realName;
 
-        // 真名拼音
         @NameInMap("realNamePinyin")
         public String realNamePinyin;
 
-        // 用户类型
         @NameInMap("stamp")
         public String stamp;
 
-        // 角色id
         @NameInMap("tbRoleId")
         public String tbRoleId;
 

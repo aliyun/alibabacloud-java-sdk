@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
-    // 错误返回码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误返回信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // openapi平台的request id
     @NameInMap("requestId")
     public String requestId;
 
-    // 工作流状态
     @NameInMap("statuses")
     public java.util.List<ListWorkItemWorkFlowStatusResponseBodyStatuses> statuses;
 
-    // 接口是否正常返回
     @NameInMap("success")
     public Boolean success;
 
@@ -70,47 +65,36 @@ public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
     }
 
     public static class ListWorkItemWorkFlowStatusResponseBodyStatuses extends TeaModel {
-        // 状态的创建人
         @NameInMap("creator")
         public String creator;
 
-        // 描述
         @NameInMap("description")
         public String description;
 
-        // 创建时间
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
-        // 更新时间
         @NameInMap("gmtModified")
         public Long gmtModified;
 
-        // 工作流状态id
         @NameInMap("identifier")
         public String identifier;
 
-        // 修改人
         @NameInMap("modifier")
         public String modifier;
 
-        // 工作流状态名称
         @NameInMap("name")
         public String name;
 
-        // 状态作用的资源类型
         @NameInMap("resourceType")
         public String resourceType;
 
-        // 状态来源
         @NameInMap("source")
         public String source;
 
-        // 阶段信息-阶段的唯一标识
         @NameInMap("workflowStageIdentifier")
         public String workflowStageIdentifier;
 
-        // 阶段信息-名称
         @NameInMap("workflowStageName")
         public String workflowStageName;
 

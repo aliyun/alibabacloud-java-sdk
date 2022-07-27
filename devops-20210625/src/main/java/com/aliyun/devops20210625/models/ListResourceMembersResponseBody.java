@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListResourceMembersResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // 成员
     @NameInMap("resourceMembers")
     public java.util.List<ListResourceMembersResponseBodyResourceMembers> resourceMembers;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("success")
     public Boolean success;
 
@@ -70,15 +65,12 @@ public class ListResourceMembersResponseBody extends TeaModel {
     }
 
     public static class ListResourceMembersResponseBodyResourceMembers extends TeaModel {
-        // 账号id
         @NameInMap("accountId")
         public String accountId;
 
-        // 角色
         @NameInMap("roleName")
         public String roleName;
 
-        // 用户名称
         @NameInMap("username")
         public String username;
 

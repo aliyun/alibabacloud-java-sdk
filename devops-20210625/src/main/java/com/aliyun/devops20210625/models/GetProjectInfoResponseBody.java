@@ -10,7 +10,6 @@ public class GetProjectInfoResponseBody extends TeaModel {
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 项目信息
     @NameInMap("project")
     public GetProjectInfoResponseBodyProject project;
 

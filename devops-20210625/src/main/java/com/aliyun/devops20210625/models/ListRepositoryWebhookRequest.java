@@ -4,19 +4,15 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryWebhookRequest extends TeaModel {
-    // accessToken
     @NameInMap("accessToken")
     public String accessToken;
 
-    // 企业Id
     @NameInMap("organizationId")
     public String organizationId;
 
-    // 页码
     @NameInMap("page")
     public Long page;
 
-    // 每页数据量
     @NameInMap("pageSize")
     public Long pageSize;
 

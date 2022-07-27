@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class TriggerRepositoryMirrorSyncResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 
-    // 响应结果
     @NameInMap("result")
     public TriggerRepositoryMirrorSyncResponseBodyResult result;
 
-    // 请求结果
     @NameInMap("success")
     public Boolean success;
 
@@ -70,7 +65,6 @@ public class TriggerRepositoryMirrorSyncResponseBody extends TeaModel {
     }
 
     public static class TriggerRepositoryMirrorSyncResponseBodyResult extends TeaModel {
-        // 仓库同步触发结果
         @NameInMap("result")
         public Boolean result;
 

@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkspaceResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 
-    // 请求是否成功
     @NameInMap("success")
     public Boolean success;
 
-    // 工作空间信息
     @NameInMap("workspace")
     public CreateWorkspaceResponseBodyWorkspace workspace;
 
@@ -70,27 +65,21 @@ public class CreateWorkspaceResponseBody extends TeaModel {
     }
 
     public static class CreateWorkspaceResponseBodyWorkspace extends TeaModel {
-        // 创建时间戳
         @NameInMap("createTime")
         public String createTime;
 
-        // 创建者，阿里云PK
         @NameInMap("creator")
         public String creator;
 
-        // 工作空间唯一标识，字符串形式，可在云效DevStudio访问空间链接中获取
         @NameInMap("id")
         public String id;
 
-        // 工作空间名称
         @NameInMap("name")
         public String name;
 
-        // 空间状态，枚举：CREATING-创建中, SUCCESS-运行中, FROZEN-冻结中, RECOVERING-恢复中
         @NameInMap("status")
         public String status;
 
-        // 工作空间模板
         @NameInMap("template")
         public String template;
 

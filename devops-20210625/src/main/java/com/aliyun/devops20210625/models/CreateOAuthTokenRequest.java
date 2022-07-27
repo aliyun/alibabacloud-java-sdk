@@ -4,27 +4,21 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateOAuthTokenRequest extends TeaModel {
-    // clientId
     @NameInMap("clientId")
     public String clientId;
 
-    // client_secret
     @NameInMap("clientSecret")
     public String clientSecret;
 
-    // 当前grantType=code时必传
     @NameInMap("code")
     public String code;
 
-    // 授权类型：code，token
     @NameInMap("grantType")
     public String grantType;
 
-    // code = token时必传
     @NameInMap("login")
     public String login;
 
-    // 授权范围.例如：read:repo,write:repo
     @NameInMap("scope")
     public String scope;
 

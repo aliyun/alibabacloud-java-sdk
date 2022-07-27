@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectMemberRequest extends TeaModel {
-    // 角色id
     @NameInMap("roleIdentifier")
     public String roleIdentifier;
 
-    // 资源id，也就是项目id
     @NameInMap("targetIdentifier")
     public String targetIdentifier;
 
-    // 资源类型
     @NameInMap("targetType")
     public String targetType;
 
-    // 用户id
     @NameInMap("userIdentifier")
     public String userIdentifier;
 
-    // 用户类型
     @NameInMap("userType")
     public String userType;
 

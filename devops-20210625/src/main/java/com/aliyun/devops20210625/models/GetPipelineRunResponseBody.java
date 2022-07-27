@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetPipelineRunResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 流水线运行实例
     @NameInMap("pipelineRun")
     public GetPipelineRunResponseBodyPipelineRun pipelineRun;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true 接口调用成功，false 接口调用失败
     @NameInMap("success")
     public Boolean success;
 
@@ -70,15 +65,12 @@ public class GetPipelineRunResponseBody extends TeaModel {
     }
 
     public static class GetPipelineRunResponseBodyPipelineRunSourcesData extends TeaModel {
-        // 分支
         @NameInMap("branch")
         public String branch;
 
-        // 提交信息 json数据
         @NameInMap("commint")
         public String commint;
 
-        // 代码库地址
         @NameInMap("repo")
         public String repo;
 
@@ -114,15 +106,12 @@ public class GetPipelineRunResponseBody extends TeaModel {
     }
 
     public static class GetPipelineRunResponseBodyPipelineRunSources extends TeaModel {
-        // 代码源信息
         @NameInMap("data")
         public GetPipelineRunResponseBodyPipelineRunSourcesData data;
 
-        // 代码源唯一标识
         @NameInMap("sign")
         public String sign;
 
-        // 代码库类型
         @NameInMap("type")
         public String type;
 
@@ -158,15 +147,12 @@ public class GetPipelineRunResponseBody extends TeaModel {
     }
 
     public static class GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions extends TeaModel {
-        // 是否可用
         @NameInMap("disable")
         public Boolean disable;
 
-        // API参数
         @NameInMap("params")
-        public java.util.Map<String, ?> params;
+        public Object params;
 
-        // API名称
         @NameInMap("type")
         public String type;
 
@@ -183,11 +169,11 @@ public class GetPipelineRunResponseBody extends TeaModel {
             return this.disable;
         }
 
-        public GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions setParams(java.util.Map<String, ?> params) {
+        public GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions setParams(Object params) {
             this.params = params;
             return this;
         }
-        public java.util.Map<String, ?> getParams() {
+        public Object getParams() {
             return this.params;
         }
 
@@ -202,31 +188,24 @@ public class GetPipelineRunResponseBody extends TeaModel {
     }
 
     public static class GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs extends TeaModel {
-        // 后续操作
         @NameInMap("actions")
         public java.util.List<GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions> actions;
 
-        // 结束时间
         @NameInMap("endTime")
         public Long endTime;
 
-        // 任务Id
         @NameInMap("id")
         public Long id;
 
-        // 任务名称
         @NameInMap("name")
         public String name;
 
-        // 触发参数
         @NameInMap("params")
         public String params;
 
-        // 开始时间
         @NameInMap("startTime")
         public Long startTime;
 
-        // 状态
         @NameInMap("status")
         public String status;
 
@@ -294,23 +273,18 @@ public class GetPipelineRunResponseBody extends TeaModel {
     }
 
     public static class GetPipelineRunResponseBodyPipelineRunStagesStageInfo extends TeaModel {
-        // 结束时间
         @NameInMap("endTime")
         public Long endTime;
 
-        // 任务
         @NameInMap("jobs")
         public java.util.List<GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs> jobs;
 
-        // 阶段名称
         @NameInMap("name")
         public String name;
 
-        // 开始时间
         @NameInMap("startTime")
         public Long startTime;
 
-        // 状态
         @NameInMap("status")
         public String status;
 
@@ -362,11 +336,9 @@ public class GetPipelineRunResponseBody extends TeaModel {
     }
 
     public static class GetPipelineRunResponseBodyPipelineRunStages extends TeaModel {
-        // 阶段名称
         @NameInMap("name")
         public String name;
 
-        // 阶段详情
         @NameInMap("stageInfo")
         public GetPipelineRunResponseBodyPipelineRunStagesStageInfo stageInfo;
 
@@ -394,47 +366,36 @@ public class GetPipelineRunResponseBody extends TeaModel {
     }
 
     public static class GetPipelineRunResponseBodyPipelineRun extends TeaModel {
-        // 创建时间
         @NameInMap("createTime")
         public Long createTime;
 
-        // 创建者阿里云账号id
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
 
-        // 更新人阿里云账号id
         @NameInMap("modifierAccountId")
         public String modifierAccountId;
 
-        // 流水线Id
         @NameInMap("pipelineId")
         public Long pipelineId;
 
-        // 流水线运行实例id
         @NameInMap("pipelineRunId")
         public Long pipelineRunId;
 
-        // 代码源
         @NameInMap("sources")
         public java.util.List<GetPipelineRunResponseBodyPipelineRunSources> sources;
 
-        // 阶段拓扑信息
         @NameInMap("stageGroup")
         public java.util.List<java.util.List<String>> stageGroup;
 
-        // 阶段信息
         @NameInMap("stages")
         public java.util.List<GetPipelineRunResponseBodyPipelineRunStages> stages;
 
-        // 状态 FAIL 运行失败 SUCCESS 运行成功 RUNNING 运行中
         @NameInMap("status")
         public String status;
 
-        // 触发模式 1人工触发 2定时触发 3代码提交触发
         @NameInMap("triggerMode")
         public Integer triggerMode;
 
-        // 更新时间
         @NameInMap("updateTime")
         public Long updateTime;
 

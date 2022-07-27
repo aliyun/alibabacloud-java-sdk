@@ -4,22 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateRepositoryResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public CreateRepositoryResponseBodyResult result;
 
-    // 调用是否成功
     @NameInMap("success")
     public Boolean success;
 
@@ -69,43 +65,33 @@ public class CreateRepositoryResponseBody extends TeaModel {
     }
 
     public static class CreateRepositoryResponseBodyResultNamespace extends TeaModel {
-        // 头像地址
         @NameInMap("avatar")
         public String avatar;
 
-        // 创建时间
         @NameInMap("createdAt")
         public String createdAt;
 
-        // 描述
         @NameInMap("description")
         public String description;
 
-        // id
         @NameInMap("id")
         public Long id;
 
-        // 名称
         @NameInMap("name")
         public String name;
 
-        // 归属者id
         @NameInMap("ownerId")
         public Long ownerId;
 
-        // 路径
         @NameInMap("path")
         public String path;
 
-        // 公开性
         @NameInMap("public")
         public Boolean _public;
 
-        // 更新时间
         @NameInMap("updatedAt")
         public String updatedAt;
 
-        // 可见性。0：私有，10：内部公开
         @NameInMap("visibilityLevel")
         public String visibilityLevel;
 
@@ -197,79 +183,60 @@ public class CreateRepositoryResponseBody extends TeaModel {
     }
 
     public static class CreateRepositoryResponseBodyResult extends TeaModel {
-        // 从SVN导入
         @NameInMap("Import_from_svn")
         public Boolean importFromSvn;
 
-        // 归档标识
         @NameInMap("archived")
         public Boolean archived;
 
-        // 代码库头像地址
         @NameInMap("avatar_url")
         public String avatarUrl;
 
-        // 创建时间
         @NameInMap("createdAt")
         public String createdAt;
 
-        // 创建者id
         @NameInMap("creatorId")
         public Long creatorId;
 
-        // 默认分支
         @NameInMap("defaultBranch")
         public String defaultBranch;
 
-        // demo库标识
         @NameInMap("demoProject")
         public Boolean demoProject;
 
-        // 描述
         @NameInMap("description")
         public String description;
 
-        // http地址
         @NameInMap("httpUrlToRepo")
         public String httpUrlToRepo;
 
-        // id
         @NameInMap("id")
         public Long id;
 
-        // 最后活跃时间
         @NameInMap("lastActivityAt")
         public String lastActivityAt;
 
-        // 名称
         @NameInMap("name")
         public String name;
 
-        // 名称（含父路径）
         @NameInMap("nameWithNamespace")
         public String nameWithNamespace;
 
-        // 父路径信息
         @NameInMap("namespace")
         public CreateRepositoryResponseBodyResultNamespace namespace;
 
-        // 路径
         @NameInMap("path")
         public String path;
 
-        // 路径（含父路径）
         @NameInMap("pathWithNamespace")
         public String pathWithNamespace;
 
-        // ssh地址
         @NameInMap("sshUrlToRepo")
         public String sshUrlToRepo;
 
-        // 可见性。0：私有，10：内部公开
         @NameInMap("visibilityLevel")
         public String visibilityLevel;
 
-        // web url
         @NameInMap("webUrl")
         public String webUrl;
 

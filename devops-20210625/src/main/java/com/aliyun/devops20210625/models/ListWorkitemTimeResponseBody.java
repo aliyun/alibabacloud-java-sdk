@@ -4,27 +4,21 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListWorkitemTimeResponseBody extends TeaModel {
-    // 接口返回code
     @NameInMap("code")
     public Long code;
 
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true或者false
     @NameInMap("success")
     public Boolean success;
 
-    // 工时信息
     @NameInMap("workitemTime")
     public java.util.List<ListWorkitemTimeResponseBodyWorkitemTime> workitemTime;
 
@@ -82,43 +76,33 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
     }
 
     public static class ListWorkitemTimeResponseBodyWorkitemTime extends TeaModel {
-        // 实际工时，小时为单位
         @NameInMap("actualTime")
         public Long actualTime;
 
-        // 工时描述信息
         @NameInMap("description")
         public String description;
 
-        // 工时记录的创建时间
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
-        // 结束时间
         @NameInMap("gmtEnd")
         public Long gmtEnd;
 
-        // 工时记录的修改时间
         @NameInMap("gmtModified")
         public Long gmtModified;
 
-        // 开始时间
         @NameInMap("gmtStart")
         public Long gmtStart;
 
-        // 工时唯一标识
         @NameInMap("identifier")
         public String identifier;
 
-        // 登记人的account Id
         @NameInMap("recordUser")
         public String recordUser;
 
-        // 工时类型
         @NameInMap("type")
         public String type;
 
-        // 工作项id，唯一标识
         @NameInMap("workitemIdentifier")
         public String workitemIdentifier;
 

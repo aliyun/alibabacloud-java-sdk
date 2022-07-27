@@ -4,39 +4,30 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListHostGroupsRequest extends TeaModel {
-    // 主机组结束时间
     @NameInMap("createEndTime")
     public Long createEndTime;
 
-    // 主机组创建时间
     @NameInMap("createStartTime")
     public Long createStartTime;
 
-    // 创建阿里云账号id，多个逗号分割
     @NameInMap("creatorAccountIds")
     public String creatorAccountIds;
 
-    // 主机组id，多个逗号分割
     @NameInMap("ids")
     public String ids;
 
-    // 结果返回个数
     @NameInMap("maxResults")
     public Long maxResults;
 
-    // 主机组名称
     @NameInMap("name")
     public String name;
 
-    // 分页token
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 排序顺序
     @NameInMap("pageOrder")
     public String pageOrder;
 
-    // 排序条件ID
     @NameInMap("pageSort")
     public String pageSort;
 

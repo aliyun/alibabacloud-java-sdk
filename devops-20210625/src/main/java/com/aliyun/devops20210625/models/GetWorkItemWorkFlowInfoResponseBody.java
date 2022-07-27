@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true或者false
     @NameInMap("success")
     public Boolean success;
 
-    // 工作项信息
     @NameInMap("workflow")
     public GetWorkItemWorkFlowInfoResponseBodyWorkflow workflow;
 
@@ -70,47 +65,36 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemWorkFlowInfoResponseBodyWorkflowStatuses extends TeaModel {
-        // 创建人
         @NameInMap("creator")
         public String creator;
 
-        // 描述信息
         @NameInMap("description")
         public String description;
 
-        // 创建时间
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
-        // 修改时间
         @NameInMap("gmtModified")
         public Long gmtModified;
 
-        // 状态唯一标识
         @NameInMap("identifier")
         public String identifier;
 
-        // 修改人
         @NameInMap("modifier")
         public String modifier;
 
-        // 状态名
         @NameInMap("name")
         public String name;
 
-        // 资源来源
         @NameInMap("resourceType")
         public String resourceType;
 
-        // 状态来源
         @NameInMap("source")
         public String source;
 
-        // 阶段信息-阶段的唯一标识
         @NameInMap("workflowStageIdentifier")
         public String workflowStageIdentifier;
 
-        // 阶段信息-名称
         @NameInMap("workflowStageName")
         public String workflowStageName;
 
@@ -210,23 +194,18 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemWorkFlowInfoResponseBodyWorkflowWorkflowActions extends TeaModel {
-        // 流转步骤的id
         @NameInMap("id")
         public Long id;
 
-        // action的名称
         @NameInMap("name")
         public String name;
 
-        // action对应的下个状态的信息id
         @NameInMap("nextWorkflowStatusIdentifier")
         public String nextWorkflowStatusIdentifier;
 
-        // action对应的工作流
         @NameInMap("workflowIdentifier")
         public String workflowIdentifier;
 
-        // action对应的当前状态id
         @NameInMap("workflowStatusIdentifier")
         public String workflowStatusIdentifier;
 
@@ -278,63 +257,48 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
     }
 
     public static class GetWorkItemWorkFlowInfoResponseBodyWorkflow extends TeaModel {
-        // 创建人
         @NameInMap("creator")
         public String creator;
 
-        // 工作流的默认状态
         @NameInMap("defaultStatusIdentifier")
         public String defaultStatusIdentifier;
 
-        // 工作流的描述
         @NameInMap("description")
         public String description;
 
-        // 创建时间
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
-        // 修改时间
         @NameInMap("gmtModified")
         public Long gmtModified;
 
-        // 工作流唯一标识
         @NameInMap("identifier")
         public String identifier;
 
-        // 修改人
         @NameInMap("modifier")
         public String modifier;
 
-        // 工作流名称
         @NameInMap("name")
         public String name;
 
-        // 工作流所属的团队空间或项目的identifier
         @NameInMap("ownerSpaceIdentifier")
         public String ownerSpaceIdentifier;
 
-        // 工作流所属的团队项目类型
         @NameInMap("ownerSpaceType")
         public String ownerSpaceType;
 
-        // 资源类型
         @NameInMap("resourceType")
         public String resourceType;
 
-        // 工作流来源
         @NameInMap("source")
         public String source;
 
-        // 工作流的状态顺序
         @NameInMap("statusOrder")
         public String statusOrder;
 
-        // 状态列表
         @NameInMap("statuses")
         public java.util.List<GetWorkItemWorkFlowInfoResponseBodyWorkflowStatuses> statuses;
 
-        // 工作流的流转步骤
         @NameInMap("workflowActions")
         public java.util.List<GetWorkItemWorkFlowInfoResponseBodyWorkflowWorkflowActions> workflowActions;
 

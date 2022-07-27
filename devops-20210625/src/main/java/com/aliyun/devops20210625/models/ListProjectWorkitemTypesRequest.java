@@ -4,11 +4,9 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListProjectWorkitemTypesRequest extends TeaModel {
-    // 工作项类型
     @NameInMap("category")
     public String category;
 
-    // 空间类型
     @NameInMap("spaceType")
     public String spaceType;
 

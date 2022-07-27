@@ -4,23 +4,18 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkitemResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // 请求id，每次请求都是唯一值，便于后续排查问题
     @NameInMap("requestId")
     public String requestId;
 
-    // true或者false
     @NameInMap("success")
     public Boolean success;
 
-    // 工作项信息
     @NameInMap("workitem")
     public CreateWorkitemResponseBodyWorkitem workitem;
 
@@ -70,87 +65,66 @@ public class CreateWorkitemResponseBody extends TeaModel {
     }
 
     public static class CreateWorkitemResponseBodyWorkitem extends TeaModel {
-        // 负责人
         @NameInMap("assignedTo")
         public String assignedTo;
 
-        // 工作项的类型id
         @NameInMap("categoryIdentifier")
         public String categoryIdentifier;
 
-        // 创建人
         @NameInMap("creator")
         public String creator;
 
-        // 工作项内容
         @NameInMap("document")
         public String document;
 
-        // 创建时间
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
-        // 修改时间
         @NameInMap("gmtModified")
         public Long gmtModified;
 
-        // 工作项唯一标识
         @NameInMap("identifier")
         public String identifier;
 
-        // 逻辑状态
         @NameInMap("logicalStatus")
         public String logicalStatus;
 
-        // 修改人
         @NameInMap("modifier")
         public String modifier;
 
-        // 父工作项id
         @NameInMap("parentIdentifier")
         public String parentIdentifier;
 
-        // 编号
         @NameInMap("serialNumber")
         public String serialNumber;
 
-        // 所属项目id
         @NameInMap("spaceIdentifier")
         public String spaceIdentifier;
 
-        // 所属项目名称
         @NameInMap("spaceName")
         public String spaceName;
 
-        // 项目类型
         @NameInMap("spaceType")
         public String spaceType;
 
-        // 迭代的id
         @NameInMap("sprintIdentifier")
         public String sprintIdentifier;
 
-        // 状态名称
         @NameInMap("status")
         public String status;
 
-        // 状态唯一标识id
         @NameInMap("statusIdentifier")
         public String statusIdentifier;
 
-        // 状态阶段id
         @NameInMap("statusStageIdentifier")
         public String statusStageIdentifier;
 
-        // 工作项标题
         @NameInMap("subject")
         public String subject;
 
-        // 状态更新时间
         @NameInMap("updateStatusAt")
         public Long updateStatusAt;
 
-        // 工作项类型id
         @NameInMap("workitemTypeIdentifier")
         public String workitemTypeIdentifier;
 
