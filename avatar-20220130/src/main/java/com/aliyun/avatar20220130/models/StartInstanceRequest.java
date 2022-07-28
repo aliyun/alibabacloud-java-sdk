@@ -7,6 +7,9 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("App")
     public StartInstanceRequestApp app;
 
+    @NameInMap("Channel")
+    public StartInstanceRequestChannel channel;
+
     @NameInMap("TenantId")
     public Long tenantId;
 
@@ -24,6 +27,14 @@ public class StartInstanceRequest extends TeaModel {
     }
     public StartInstanceRequestApp getApp() {
         return this.app;
+    }
+
+    public StartInstanceRequest setChannel(StartInstanceRequestChannel channel) {
+        this.channel = channel;
+        return this;
+    }
+    public StartInstanceRequestChannel getChannel() {
+        return this.channel;
     }
 
     public StartInstanceRequest setTenantId(Long tenantId) {
@@ -57,6 +68,36 @@ public class StartInstanceRequest extends TeaModel {
         }
         public String getAppId() {
             return this.appId;
+        }
+
+    }
+
+    public static class StartInstanceRequestChannel extends TeaModel {
+        @NameInMap("ReqConfig")
+        public java.util.Map<String, ?> reqConfig;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static StartInstanceRequestChannel build(java.util.Map<String, ?> map) throws Exception {
+            StartInstanceRequestChannel self = new StartInstanceRequestChannel();
+            return TeaModel.build(map, self);
+        }
+
+        public StartInstanceRequestChannel setReqConfig(java.util.Map<String, ?> reqConfig) {
+            this.reqConfig = reqConfig;
+            return this;
+        }
+        public java.util.Map<String, ?> getReqConfig() {
+            return this.reqConfig;
+        }
+
+        public StartInstanceRequestChannel setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
