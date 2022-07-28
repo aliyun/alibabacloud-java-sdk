@@ -65,6 +65,9 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
     }
 
     public static class ListAgentBySkillGroupIdResponseBodyData extends TeaModel {
+        @NameInMap("Account")
+        public String account;
+
         @NameInMap("AccountName")
         public String accountName;
 
@@ -83,6 +86,14 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
         public static ListAgentBySkillGroupIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAgentBySkillGroupIdResponseBodyData self = new ListAgentBySkillGroupIdResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListAgentBySkillGroupIdResponseBodyData setAccount(String account) {
+            this.account = account;
+            return this;
+        }
+        public String getAccount() {
+            return this.account;
         }
 
         public ListAgentBySkillGroupIdResponseBodyData setAccountName(String accountName) {

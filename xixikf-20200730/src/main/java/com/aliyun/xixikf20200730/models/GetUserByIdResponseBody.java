@@ -7,14 +7,12 @@ public class GetUserByIdResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // job
     @NameInMap("Data")
     public GetUserByIdResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,28 +65,24 @@ public class GetUserByIdResponseBody extends TeaModel {
     }
 
     public static class GetUserByIdResponseBodyData extends TeaModel {
-        // Job ID
         @NameInMap("email")
         public String email;
 
         @NameInMap("extraInfo")
         public String extraInfo;
 
-        // 操作类型:Create/Cancel
         @NameInMap("foreignId")
         public String foreignId;
 
         @NameInMap("id")
         public Long id;
 
-        // 当操作成功后，存放的响应信息，该信息与操作类型相关：Type为Create时返回的Response为JobId;Type为Cancel时返回所取消的Job的详细信息。
         @NameInMap("nick")
         public String nick;
 
         @NameInMap("sourceId")
         public Long sourceId;
 
-        // 当前操作异常或者失败时的错误信息
         @NameInMap("telephone")
         public String telephone;
 

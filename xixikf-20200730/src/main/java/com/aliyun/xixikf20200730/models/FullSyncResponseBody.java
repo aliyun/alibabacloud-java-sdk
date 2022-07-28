@@ -4,27 +4,21 @@ package com.aliyun.xixikf20200730.models;
 import com.aliyun.tea.*;
 
 public class FullSyncResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // 保存数量
     @NameInMap("Data")
     public Long data;
 
-    // httpStatusCode
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 

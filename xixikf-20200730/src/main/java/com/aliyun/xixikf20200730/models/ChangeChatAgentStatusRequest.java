@@ -4,19 +4,15 @@ package com.aliyun.xixikf20200730.models;
 import com.aliyun.tea.*;
 
 public class ChangeChatAgentStatusRequest extends TeaModel {
-    // 账户名称
     @NameInMap("AccountName")
     public String accountName;
 
-    // clientToken
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 示例id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 修改到的状态类型
     @NameInMap("Method")
     public String method;
 

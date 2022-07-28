@@ -4,11 +4,9 @@ package com.aliyun.xixikf20200730.models;
 import com.aliyun.tea.*;
 
 public class StartChatWorkRequest extends TeaModel {
-    // accountName
     @NameInMap("AccountName")
     public String accountName;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
