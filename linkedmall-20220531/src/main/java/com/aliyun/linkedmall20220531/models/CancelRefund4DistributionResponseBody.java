@@ -4,65 +4,42 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class CancelRefund4DistributionResponseBody extends TeaModel {
-    // 渠道公共数据
-    @NameInMap("BizViewData")
-    public java.util.Map<String, ?> bizViewData;
-
-    // 返回的执行结果码， 正确为字符串 0000
     @NameInMap("Code")
     public String code;
 
-    // 每次请求操作对应的操作日志号，由系统自动生成，返回给租户，可用于排查问题，双方日志中统一透出此标识
     @NameInMap("LogsId")
     public String logsId;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 请求结果数据
     @NameInMap("Model")
     public CancelRefund4DistributionResponseBodyModel model;
 
-    // 当前页
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // pageSize
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // POP请求流水号，建议租户日志中也输出此流水号，双方排查问题方便
     @NameInMap("RequestId")
     public String requestId;
 
-    // 错误子代码。一般用于显示业务类的错误代码，一般建议关注此类错误
     @NameInMap("SubCode")
     public String subCode;
 
-    // 业务处理相关的错误信息，一般建议关注此类错误
     @NameInMap("SubMessage")
     public String subMessage;
 
-    // 本次执行的结果成功与否
     @NameInMap("Success")
     public Boolean success;
 
-    // 总数量
     @NameInMap("TotalCount")
     public Long totalCount;
 
     public static CancelRefund4DistributionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CancelRefund4DistributionResponseBody self = new CancelRefund4DistributionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CancelRefund4DistributionResponseBody setBizViewData(java.util.Map<String, ?> bizViewData) {
-        this.bizViewData = bizViewData;
-        return this;
-    }
-    public java.util.Map<String, ?> getBizViewData() {
-        return this.bizViewData;
     }
 
     public CancelRefund4DistributionResponseBody setCode(String code) {
@@ -154,21 +131,29 @@ public class CancelRefund4DistributionResponseBody extends TeaModel {
     }
 
     public static class CancelRefund4DistributionResponseBodyModel extends TeaModel {
-        // 逆向的状态
+        @NameInMap("DisputeId")
+        public Long disputeId;
+
         @NameInMap("DisputeStatus")
         public Integer disputeStatus;
 
-        // 退款类型
         @NameInMap("DisputeType")
         public Integer disputeType;
 
-        // 当前发起逆向的子分销订单号
         @NameInMap("SubDistributionOrderId")
         public String subDistributionOrderId;
 
         public static CancelRefund4DistributionResponseBodyModel build(java.util.Map<String, ?> map) throws Exception {
             CancelRefund4DistributionResponseBodyModel self = new CancelRefund4DistributionResponseBodyModel();
             return TeaModel.build(map, self);
+        }
+
+        public CancelRefund4DistributionResponseBodyModel setDisputeId(Long disputeId) {
+            this.disputeId = disputeId;
+            return this;
+        }
+        public Long getDisputeId() {
+            return this.disputeId;
         }
 
         public CancelRefund4DistributionResponseBodyModel setDisputeStatus(Integer disputeStatus) {

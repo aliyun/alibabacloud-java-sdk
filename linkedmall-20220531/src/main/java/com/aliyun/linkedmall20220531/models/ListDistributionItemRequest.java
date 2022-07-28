@@ -4,31 +4,24 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class ListDistributionItemRequest extends TeaModel {
-    // 分销商商城id
     @NameInMap("DistributionMallId")
     public String distributionMallId;
 
-    // 分销商id
     @NameInMap("DistributorId")
     public String distributorId;
 
-    // 商品状态
     @NameInMap("ItemStatus")
     public Integer itemStatus;
 
-    // 商品id
     @NameInMap("LmItemId")
     public String lmItemId;
 
-    // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页数量
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 租户Id
     @NameInMap("TenantId")
     public String tenantId;
 

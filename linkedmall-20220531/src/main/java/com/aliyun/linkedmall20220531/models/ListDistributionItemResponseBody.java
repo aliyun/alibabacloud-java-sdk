@@ -4,47 +4,36 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class ListDistributionItemResponseBody extends TeaModel {
-    // 返回的执行结果码， 正确为字符串 0000
     @NameInMap("Code")
     public String code;
 
-    // 每次请求操作对应的操作日志号，由系统自动生成，返回给租户，可用于排查问题，双方日志中统一透出此标识
     @NameInMap("LogsId")
     public String logsId;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 请求结果数据
     @NameInMap("Model")
     public java.util.List<ListDistributionItemResponseBodyModel> model;
 
-    // 当前页
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // pageSize
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // POP请求流水号，建议租户日志中也输出此流水号，双方排查问题方便
     @NameInMap("RequestId")
     public String requestId;
 
-    // 错误子代码。一般用于显示业务类的错误代码，一般建议关注此类错误
     @NameInMap("SubCode")
     public String subCode;
 
-    // 业务处理相关的错误信息，一般建议关注此类错误
     @NameInMap("SubMessage")
     public String subMessage;
 
-    // 本次执行的结果成功与否
     @NameInMap("Success")
     public Boolean success;
 
-    // 总数量
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -438,154 +427,120 @@ public class ListDistributionItemResponseBody extends TeaModel {
     }
 
     public static class ListDistributionItemResponseBodyModelSkuList extends TeaModel {
-        // 记录admin操作商品状态
         @NameInMap("AdminStatus")
         public Integer adminStatus;
 
-        // 阿里云供货价(分)
         @NameInMap("AliyunPriceCent")
         public Long aliyunPriceCent;
 
-        // 权益id
         @NameInMap("BenefitId")
         public String benefitId;
 
         @NameInMap("CanSell")
         public Boolean canSell;
 
-        // 记录顾客操作商品状态
         @NameInMap("CustomerStatus")
         public Integer customerStatus;
 
-        // 客户自定义属性
         @NameInMap("CustomizedAttributeMap")
         public java.util.Map<String, String> customizedAttributeMap;
 
-        // 折扣比 =   供货价/淘宝当前售价
         @NameInMap("DiscountRate")
         public Double discountRate;
 
-        // 差价 = 淘宝当前售价 - 供货价
         @NameInMap("DisparityPrice")
         public Long disparityPrice;
 
-        // 存放买断权益对接模式下：promotionId（权益ID），securityCode（安全码）
         @NameInMap("ExtInfo")
         public String extInfo;
 
-        // 最后修改/生效时间
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // 记录ic操作商品状态
         @NameInMap("IcStatus")
         public Integer icStatus;
 
         @NameInMap("ItemId")
         public Long itemId;
 
-        // sku的扩展属性list
         @NameInMap("LmAttributeModels")
         public java.util.List<ListDistributionItemResponseBodyModelSkuListLmAttributeModels> lmAttributeModels;
 
         @NameInMap("LmItemId")
         public String lmItemId;
 
-        // 主业务库当前售价（分）
         @NameInMap("MainPriceCent")
         public Long mainPriceCent;
 
-        // 商品或SKU最大允许售卖数量,支付宝全积分商品的采买数量
         @NameInMap("MaxAllowedCount")
         public Integer maxAllowedCount;
 
-        // 原始售价（分）
         @NameInMap("OriginalPriceCent")
         public Long originalPriceCent;
 
-        // 积分价格（分），给用户显示时使用，以及在用户自己支付时需要真实支付的金额。
         @NameInMap("PointPrice")
         public Long pointPrice;
 
-        // 积分，单位：个
         @NameInMap("Points")
         public Long points;
 
-        // 积分抵扣的金额，单位：分
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
-        // 积分活动信息说明，长度建议不要超过256
         @NameInMap("PointsInfo")
         public String pointsInfo;
 
-        // 积分活动Key，长度建议不要超过64
         @NameInMap("PointsKey")
         public String pointsKey;
 
-        // 溢价率 = （供货价 - 淘宝当前售价）/ 淘宝当前售价 = 折扣比 - 1
         @NameInMap("PremiumRate")
         public Double premiumRate;
 
-        // 当前售价（分）
         @NameInMap("PriceCent")
         public Long priceCent;
 
-        // 商品剩余库存：MIN
         @NameInMap("Quantity")
         public Long quantity;
 
-        // IC SKU 一口价
         @NameInMap("ReservePrice")
         public Long reservePrice;
 
-        // sku描述信息
         @NameInMap("SkuDesc")
         public String skuDesc;
 
-        // 没有sku的商品，skuId填-1
         @NameInMap("SkuId")
         public Long skuId;
 
-        // sku图片
         @NameInMap("SkuPicUrl")
         public String skuPicUrl;
 
-        // 设置基础库/系统扩展属性
         @NameInMap("SkuProperties")
         public java.util.Map<String, String> skuProperties;
 
         @NameInMap("SkuPropertiesJson")
         public String skuPropertiesJson;
 
-        // sku标题
         @NameInMap("SkuTitle")
         public String skuTitle;
 
-        // 状态
         @NameInMap("Status")
         public Integer status;
 
-        // 阶梯价
         @NameInMap("StepPrices")
         public java.util.List<ListDistributionItemResponseBodyModelSkuListStepPrices> stepPrices;
 
-        // 记录供应商操作商品状态
         @NameInMap("SupplierStatus")
         public Integer supplierStatus;
 
-        // 供应商供货价(分)
         @NameInMap("SupplyPriceCent")
         public Long supplyPriceCent;
 
-        // 淘宝当前售价
         @NameInMap("TaoBaoCurrentPrice")
         public Long taoBaoCurrentPrice;
 
         @NameInMap("Tips")
         public String tips;
 
-        // 客户侧用户标签
         @NameInMap("UserLabel")
         public java.util.List<String> userLabel;
 
@@ -909,138 +864,105 @@ public class ListDistributionItemResponseBody extends TeaModel {
     }
 
     public static class ListDistributionItemResponseBodyModel extends TeaModel {
-        // 淘宝 IC 商品状态：0-正常，-1-用户删除，-2-用户下架，-3-小二下架，－4-小二删除，-5-从未上架，-9-CC，
         @NameInMap("AuctionStatus")
         public Integer auctionStatus;
 
-        // 业务ID
         @NameInMap("BizId")
         public String bizId;
 
-        // 当前业务累计销量
         @NameInMap("BizTotalSaleNum")
         public Long bizTotalSaleNum;
 
-        // 商品在linkedmall平台上的分类：实物商品（entity），猫超卡券（aliComBenifit），电影票（movieTicket）
         @NameInMap("Category")
         public String category;
 
-        // 类目链，父类目在前，子类目在后，叶子类目最后
         @NameInMap("CategoryChain")
         public java.util.List<ListDistributionItemResponseBodyModelCategoryChain> categoryChain;
 
-        // 类目ID
         @NameInMap("CategoryId")
         public Long categoryId;
 
-        // 累计销量
         @NameInMap("CumulativeSaleNum")
         public Long cumulativeSaleNum;
 
-        // 商品详情介绍-图片介绍信息
         @NameInMap("DescOption")
         public String descOption;
 
-        // 折扣比范围
         @NameInMap("DiscountRateScope")
         public String discountRateScope;
 
-        // 差价范围
         @NameInMap("DisparityPriceScope")
         public String disparityPriceScope;
 
-        // 分销商城ID
         @NameInMap("DistributionMallId")
         public String distributionMallId;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // 最后修改/生效时间
         @NameInMap("GmtModified")
         public String gmtModified;
 
         @NameInMap("IcQuantity")
         public Long icQuantity;
 
-        // 是否可销售，目前追要判断了商品的状态是否正常，同时库存要求大于0;
         @NameInMap("IsCanSell")
         public Boolean isCanSell;
 
-        // ic库存或者bbq限购库存是否为0
         @NameInMap("IsInventoryZero")
         public Boolean isInventoryZero;
 
-        // 商品描述信息
         @NameInMap("ItemDesc")
         public String itemDesc;
 
-        // 商品Id
         @NameInMap("ItemId")
         public Long itemId;
 
-        // String类型商品Id，用于解决前端number类型超出长度限制
         @NameInMap("ItemIdStr")
         public String itemIdStr;
 
-        // 商品图片URL，最多5张，一般是Detail上轮播，从itemDO.commonItemImageList属性转换而来。对应EPP的silders
         @NameInMap("ItemImages")
         public java.util.List<String> itemImages;
 
-        // 商品名称
         @NameInMap("ItemName")
         public String itemName;
 
-        // 商品名称
         @NameInMap("ItemTitle")
         public String itemTitle;
 
-        // 环比
         @NameInMap("LinkRatio")
         public String linkRatio;
 
-        // item的扩展属性list
         @NameInMap("LmAttributeModels")
         public java.util.List<ListDistributionItemResponseBodyModelLmAttributeModels> lmAttributeModels;
 
-        // LM商品ID
         @NameInMap("LmItemId")
         public String lmItemId;
 
-        // LM店铺ID
         @NameInMap("LmShopId")
         public Long lmShopId;
 
-        // linkedmall主业务库商品状态
         @NameInMap("MainBizStatus")
         public Integer mainBizStatus;
 
-        // 主业务库累计销量
         @NameInMap("MainBizTotalSaleNum")
         public Long mainBizTotalSaleNum;
 
-        // 主图
         @NameInMap("MainPicUrl")
         public String mainPicUrl;
 
-        // 主业务库商品当前售价范围
         @NameInMap("MainPriceCentScope")
         public String mainPriceCentScope;
 
-        // 商品或SKU最大允许售卖数量,支付宝全积分商品的采买数量
         @NameInMap("MaxAllowedCount")
         public Integer maxAllowedCount;
 
-        // 月销量
         @NameInMap("MonthSaleNum")
         public Long monthSaleNum;
 
-        // 图片url
         @NameInMap("PicUrl")
         public String picUrl;
 
-        // 溢价率范围
         @NameInMap("PremiumRateScope")
         public String premiumRateScope;
 
@@ -1050,58 +972,45 @@ public class ListDistributionItemResponseBody extends TeaModel {
         @NameInMap("PropertiesJson")
         public String propertiesJson;
 
-        // 商品剩余库存：MIN
         @NameInMap("Quantity")
         public Integer quantity;
 
-        // IC划线价
         @NameInMap("ReservedPrice")
         public Long reservedPrice;
 
         @NameInMap("ReservedPriceScope")
         public String reservedPriceScope;
 
-        // 卖家ID
         @NameInMap("SellerId")
         public Long sellerId;
 
-        // 场次库存
         @NameInMap("SessionQuantity")
         public Long sessionQuantity;
 
-        // 店铺ID
         @NameInMap("ShopId")
         public Long shopId;
 
-        // sku列表
         @NameInMap("SkuList")
         public java.util.List<ListDistributionItemResponseBodyModelSkuList> skuList;
 
-        // linkedmall商品状态
         @NameInMap("Status")
         public Integer status;
 
-        // 供应商当前供货价格范围
         @NameInMap("SupplyPriceCentScope")
         public String supplyPriceCentScope;
 
-        // 当前售价范围
         @NameInMap("TaoBaoCurrentPriceScope")
         public String taoBaoCurrentPriceScope;
 
-        // 商品的所属的店铺名称
         @NameInMap("TbShopName")
         public String tbShopName;
 
-        // 对商品不可售的原因描述
         @NameInMap("Tips")
         public String tips;
 
-        // 累计售出数量
         @NameInMap("TotalSoldQuantity")
         public Integer totalSoldQuantity;
 
-        // 类型 @see com.linkedmall.itemcenter.client.enums.ItemGroupType
         @NameInMap("Type")
         public Integer type;
 

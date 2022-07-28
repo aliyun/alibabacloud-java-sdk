@@ -121,8 +121,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ItemInfoLists", request.itemInfoListsShrink);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -188,12 +188,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("LeavePictureLists", request.leavePictureListsShrink);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.subDistributionOrderId)) {
             body.put("SubDistributionOrderId", request.subDistributionOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -229,8 +229,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DistributorId", request.distributorId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -266,12 +266,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DistributorId", request.distributorId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.subDistributionOrderId)) {
             body.put("SubDistributionOrderId", request.subDistributionOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -311,8 +311,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("MainDistributionOrderId", request.mainDistributionOrderId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -352,12 +352,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("GoodsStatus", request.goodsStatus);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.subDistributionOrderId)) {
             body.put("SubDistributionOrderId", request.subDistributionOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -397,12 +397,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DistributorId", request.distributorId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.subDistributionOrderId)) {
             body.put("SubDistributionOrderId", request.subDistributionOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -586,12 +586,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("LeavePictureLists", request.leavePictureListsShrink);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.subDistributionOrderId)) {
             body.put("SubDistributionOrderId", request.subDistributionOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -701,8 +701,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DistributorId", request.distributorId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -779,8 +779,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("MainDistributionOrderId", request.mainDistributionOrderId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -816,8 +816,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("MainDistributionOrderId", request.mainDistributionOrderId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -861,8 +861,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PageSize", request.pageSize);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -894,12 +894,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DistributorId", request.distributorId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.subDistributionOrderId)) {
             body.put("SubDistributionOrderId", request.subDistributionOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -957,8 +957,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ItemInfoLists", request.itemInfoListsShrink);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1002,12 +1002,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("LogisticsNo", request.logisticsNo);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
-            body.put("RequestId", request.requestId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.subDistributionOrderId)) {
             body.put("SubDistributionOrderId", request.subDistributionOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

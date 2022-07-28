@@ -4,65 +4,42 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderList4DistributionResponseBody extends TeaModel {
-    // 渠道公共数据
-    @NameInMap("BizViewData")
-    public java.util.Map<String, ?> bizViewData;
-
-    // 返回的执行结果码， 正确为字符串 0000
     @NameInMap("Code")
     public String code;
 
-    // 每次请求操作对应的操作日志号，由系统自动生成，返回给租户，可用于排查问题，双方日志中统一透出此标识
     @NameInMap("LogsId")
     public String logsId;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 请求结果数据
     @NameInMap("Model")
     public java.util.List<QueryOrderList4DistributionResponseBodyModel> model;
 
-    // 当前页
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // pageSize
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // POP请求流水号，建议租户日志中也输出此流水号，双方排查问题方便
     @NameInMap("RequestId")
     public String requestId;
 
-    // 错误子代码。一般用于显示业务类的错误代码，一般建议关注此类错误
     @NameInMap("SubCode")
     public String subCode;
 
-    // 业务处理相关的错误信息，一般建议关注此类错误
     @NameInMap("SubMessage")
     public String subMessage;
 
-    // 本次执行的结果成功与否
     @NameInMap("Success")
     public Boolean success;
 
-    // 总数量
     @NameInMap("TotalCount")
     public Long totalCount;
 
     public static QueryOrderList4DistributionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryOrderList4DistributionResponseBody self = new QueryOrderList4DistributionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryOrderList4DistributionResponseBody setBizViewData(java.util.Map<String, ?> bizViewData) {
-        this.bizViewData = bizViewData;
-        return this;
-    }
-    public java.util.Map<String, ?> getBizViewData() {
-        return this.bizViewData;
     }
 
     public QueryOrderList4DistributionResponseBody setCode(String code) {
@@ -153,16 +130,16 @@ public class QueryOrderList4DistributionResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class QueryOrderList4DistributionResponseBodyModelSubOrderListItemPriceList extends TeaModel {
+    public static class QueryOrderList4DistributionResponseBodyModelSubOrderListItemPrice extends TeaModel {
         @NameInMap("FundAmountMoney")
         public String fundAmountMoney;
 
-        public static QueryOrderList4DistributionResponseBodyModelSubOrderListItemPriceList build(java.util.Map<String, ?> map) throws Exception {
-            QueryOrderList4DistributionResponseBodyModelSubOrderListItemPriceList self = new QueryOrderList4DistributionResponseBodyModelSubOrderListItemPriceList();
+        public static QueryOrderList4DistributionResponseBodyModelSubOrderListItemPrice build(java.util.Map<String, ?> map) throws Exception {
+            QueryOrderList4DistributionResponseBodyModelSubOrderListItemPrice self = new QueryOrderList4DistributionResponseBodyModelSubOrderListItemPrice();
             return TeaModel.build(map, self);
         }
 
-        public QueryOrderList4DistributionResponseBodyModelSubOrderListItemPriceList setFundAmountMoney(String fundAmountMoney) {
+        public QueryOrderList4DistributionResponseBodyModelSubOrderListItemPrice setFundAmountMoney(String fundAmountMoney) {
             this.fundAmountMoney = fundAmountMoney;
             return this;
         }
@@ -173,17 +150,20 @@ public class QueryOrderList4DistributionResponseBody extends TeaModel {
     }
 
     public static class QueryOrderList4DistributionResponseBodyModelSubOrderList extends TeaModel {
+        @NameInMap("ItemId")
+        public String itemId;
+
         @NameInMap("ItemPic")
         public String itemPic;
 
-        @NameInMap("ItemPriceList")
-        public java.util.List<QueryOrderList4DistributionResponseBodyModelSubOrderListItemPriceList> itemPriceList;
+        @NameInMap("ItemPrice")
+        public java.util.List<QueryOrderList4DistributionResponseBodyModelSubOrderListItemPrice> itemPrice;
 
         @NameInMap("ItemTitle")
         public String itemTitle;
 
-        @NameInMap("LmItemId")
-        public String lmItemId;
+        @NameInMap("LogisticsStatus")
+        public String logisticsStatus;
 
         @NameInMap("MainDistributionOrderId")
         public String mainDistributionOrderId;
@@ -208,6 +188,14 @@ public class QueryOrderList4DistributionResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public QueryOrderList4DistributionResponseBodyModelSubOrderList setItemId(String itemId) {
+            this.itemId = itemId;
+            return this;
+        }
+        public String getItemId() {
+            return this.itemId;
+        }
+
         public QueryOrderList4DistributionResponseBodyModelSubOrderList setItemPic(String itemPic) {
             this.itemPic = itemPic;
             return this;
@@ -216,12 +204,12 @@ public class QueryOrderList4DistributionResponseBody extends TeaModel {
             return this.itemPic;
         }
 
-        public QueryOrderList4DistributionResponseBodyModelSubOrderList setItemPriceList(java.util.List<QueryOrderList4DistributionResponseBodyModelSubOrderListItemPriceList> itemPriceList) {
-            this.itemPriceList = itemPriceList;
+        public QueryOrderList4DistributionResponseBodyModelSubOrderList setItemPrice(java.util.List<QueryOrderList4DistributionResponseBodyModelSubOrderListItemPrice> itemPrice) {
+            this.itemPrice = itemPrice;
             return this;
         }
-        public java.util.List<QueryOrderList4DistributionResponseBodyModelSubOrderListItemPriceList> getItemPriceList() {
-            return this.itemPriceList;
+        public java.util.List<QueryOrderList4DistributionResponseBodyModelSubOrderListItemPrice> getItemPrice() {
+            return this.itemPrice;
         }
 
         public QueryOrderList4DistributionResponseBodyModelSubOrderList setItemTitle(String itemTitle) {
@@ -232,12 +220,12 @@ public class QueryOrderList4DistributionResponseBody extends TeaModel {
             return this.itemTitle;
         }
 
-        public QueryOrderList4DistributionResponseBodyModelSubOrderList setLmItemId(String lmItemId) {
-            this.lmItemId = lmItemId;
+        public QueryOrderList4DistributionResponseBodyModelSubOrderList setLogisticsStatus(String logisticsStatus) {
+            this.logisticsStatus = logisticsStatus;
             return this;
         }
-        public String getLmItemId() {
-            return this.lmItemId;
+        public String getLogisticsStatus() {
+            return this.logisticsStatus;
         }
 
         public QueryOrderList4DistributionResponseBodyModelSubOrderList setMainDistributionOrderId(String mainDistributionOrderId) {
@@ -303,9 +291,6 @@ public class QueryOrderList4DistributionResponseBody extends TeaModel {
         @NameInMap("LogisticsStatus")
         public String logisticsStatus;
 
-        @NameInMap("MainDistributionOrderId")
-        public String mainDistributionOrderId;
-
         @NameInMap("OrderAmount")
         public String orderAmount;
 
@@ -350,14 +335,6 @@ public class QueryOrderList4DistributionResponseBody extends TeaModel {
         }
         public String getLogisticsStatus() {
             return this.logisticsStatus;
-        }
-
-        public QueryOrderList4DistributionResponseBodyModel setMainDistributionOrderId(String mainDistributionOrderId) {
-            this.mainDistributionOrderId = mainDistributionOrderId;
-            return this;
-        }
-        public String getMainDistributionOrderId() {
-            return this.mainDistributionOrderId;
         }
 
         public QueryOrderList4DistributionResponseBodyModel setOrderAmount(String orderAmount) {

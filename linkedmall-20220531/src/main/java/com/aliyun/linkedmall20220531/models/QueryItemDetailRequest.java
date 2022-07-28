@@ -4,19 +4,15 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class QueryItemDetailRequest extends TeaModel {
-    // 分销商商城id
     @NameInMap("DistributionMallId")
     public String distributionMallId;
 
-    // 分销商id
     @NameInMap("DistributorId")
     public String distributorId;
 
-    // lm商品ID
     @NameInMap("LmItemId")
     public String lmItemId;
 
-    // 租户Id
     @NameInMap("TenantId")
     public String tenantId;
 
