@@ -4,27 +4,21 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class CreateUserAccessTokenRequest extends TeaModel {
-    // 用户的阿里云账号ID。下单购买时的主账号ID
     @NameInMap("AliyunUid")
     public String aliyunUid;
 
-    // 自定义token的失效时间。单位秒
     @NameInMap("ExpireTime")
     public Long expireTime;
 
-    // 额外信息，必须是JSON String格式
     @NameInMap("ExtraInfo")
     public String extraInfo;
 
-    // 系统颁发的sourceId
     @NameInMap("SourceId")
     public Long sourceId;
 
-    // 系统颁发的sourceKey。鉴权使用
     @NameInMap("SourceKey")
     public String sourceKey;
 
-    // User dto
     @NameInMap("UserDto")
     public CreateUserAccessTokenRequestUserDto userDto;
 
@@ -82,11 +76,9 @@ public class CreateUserAccessTokenRequest extends TeaModel {
     }
 
     public static class CreateUserAccessTokenRequestUserDto extends TeaModel {
-        // 客户业务系统ID
         @NameInMap("ForeignId")
         public String foreignId;
 
-        // 客户业务系统昵称
         @NameInMap("Nick")
         public String nick;
 

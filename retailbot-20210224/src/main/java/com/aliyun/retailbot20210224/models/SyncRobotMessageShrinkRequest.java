@@ -4,43 +4,33 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class SyncRobotMessageShrinkRequest extends TeaModel {
-    // 答案正文
     @NameInMap("Answer")
     public String answer;
 
-    // 回复给买家的答案ID
     @NameInMap("AnswerId")
     public String answerId;
 
-    // 答案类型
     @NameInMap("AnswerType")
     public String answerType;
 
-    // 单句的唯一ID
     @NameInMap("ChatId")
     public String chatId;
 
-    // 不采纳店小蜜的原因
     @NameInMap("Reason")
     public String reason;
 
-    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 采纳的场景key
     @NameInMap("SceneKey")
     public String sceneKey;
 
-    // 买卖家之间的会话ID
     @NameInMap("SessionId")
     public String sessionId;
 
-    // 回复到千牛的答案
     @NameInMap("Solutions")
     public String solutionsShrink;
 
-    // 是否使用店小蜜的结果
     @NameInMap("UseDxm")
     public String useDxm;
 

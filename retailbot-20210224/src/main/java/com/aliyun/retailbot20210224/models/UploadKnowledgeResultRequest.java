@@ -21,51 +21,39 @@ public class UploadKnowledgeResultRequest extends TeaModel {
     }
 
     public static class UploadKnowledgeResultRequestDigDatas extends TeaModel {
-        // 商家操作类型       accept 手动采纳       ignore 手动忽略       modify 手动修改       error  错误       other  其他(商家无操作)
         @NameInMap("AcceptType")
         public String acceptType;
 
-        // 知识类型
         @NameInMap("ContentType")
         public String contentType;
 
-        // 答案id
         @NameInMap("KmpAnswerId")
         public String kmpAnswerId;
 
-        // 聚类id
         @NameInMap("KmpClusterId")
         public String kmpClusterId;
 
-        // 采纳后的知识id
         @NameInMap("KnowledgeId")
         public String knowledgeId;
 
-        // 问题id
         @NameInMap("QuestionId")
         public String questionId;
 
-        // 问题
         @NameInMap("QuestionName")
         public String questionName;
 
-        // 机器人code
         @NameInMap("RobotCode")
         public String robotCode;
 
-        // 场景key
         @NameInMap("SceneKey")
         public String sceneKey;
 
-        // 场景名称
         @NameInMap("SceneName")
         public String sceneName;
 
-        // solutionId
         @NameInMap("SolutionId")
         public String solutionId;
 
-        // 任务id
         @NameInMap("TaskId")
         public Long taskId;
 

@@ -4,22 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListPackageKnowledgesResponseBody extends TeaModel {
-    // 返回code
     @NameInMap("Code")
     public String code;
 
-    // 知识集合
     @NameInMap("Knowledges")
     public java.util.List<ListPackageKnowledgesResponseBodyKnowledges> knowledges;
 
-    // 返回信息
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功标示
     @NameInMap("Success")
     public Boolean success;
 
@@ -69,35 +65,27 @@ public class ListPackageKnowledgesResponseBody extends TeaModel {
     }
 
     public static class ListPackageKnowledgesResponseBodyKnowledgesSimilarQuestions extends TeaModel {
-        // 创建时间格式：yyyy-MM-dd HH:mm:ss
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 创建用户id
         @NameInMap("CreateUserId")
         public String createUserId;
 
-        // 修改时间格式：yyyy-MM-dd HH:mm:ss
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // 修改用户id
         @NameInMap("ModifyUserId")
         public String modifyUserId;
 
-        // "positive":正向，"negative":负向
         @NameInMap("SimilarQuestionEffectType")
         public String similarQuestionEffectType;
 
-        // 问法id
         @NameInMap("SimilarQuestionId")
         public Long similarQuestionId;
 
-        // 示例问法标题
         @NameInMap("SimilarQuestionTitle")
         public String similarQuestionTitle;
 
-        // "similar":场景正负例句，"sample":场景示例问法，"keyword":场景关键词
         @NameInMap("SimilarQuestionType")
         public String similarQuestionType;
 
@@ -173,19 +161,15 @@ public class ListPackageKnowledgesResponseBody extends TeaModel {
     }
 
     public static class ListPackageKnowledgesResponseBodyKnowledgesSolutionsConditions extends TeaModel {
-        // 约束类型
         @NameInMap("ConditionType")
         public String conditionType;
 
-        // 约束值
         @NameInMap("ConditionValue")
         public String conditionValue;
 
-        // 知识id
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
-        // 答案id
         @NameInMap("SolutionId")
         public Long solutionId;
 
@@ -229,31 +213,24 @@ public class ListPackageKnowledgesResponseBody extends TeaModel {
     }
 
     public static class ListPackageKnowledgesResponseBodyKnowledgesSolutions extends TeaModel {
-        // 约束
         @NameInMap("Conditions")
         public java.util.List<ListPackageKnowledgesResponseBodyKnowledgesSolutionsConditions> conditions;
 
-        // 答案扩展文本
         @NameInMap("ExtraContent")
         public String extraContent;
 
-        // 知识id
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
-        // 答案文本
         @NameInMap("SolutionContent")
         public String solutionContent;
 
-        // 答案id
         @NameInMap("SolutionId")
         public Long solutionId;
 
-        // 答案来源
         @NameInMap("SolutionSource")
         public String solutionSource;
 
-        // 答案类型
         @NameInMap("SolutionType")
         public String solutionType;
 
@@ -321,47 +298,36 @@ public class ListPackageKnowledgesResponseBody extends TeaModel {
     }
 
     public static class ListPackageKnowledgesResponseBodyKnowledges extends TeaModel {
-        // 创建时间格式：yyyy-MM-dd HH:mm:ss
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 创建用户id
         @NameInMap("CreateUserId")
         public String createUserId;
 
-        // 知识描述
         @NameInMap("KnowledgeDescription")
         public String knowledgeDescription;
 
-        // 知识id
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
-        // "online":在用，"disabled":禁用
         @NameInMap("KnowledgeStatus")
         public String knowledgeStatus;
 
-        // 知识标题
         @NameInMap("KnowledgeTitle")
         public String knowledgeTitle;
 
-        // 修改时间格式：yyyy-MM-dd HH:mm:ss
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // 修改用户id
         @NameInMap("ModifyUserId")
         public String modifyUserId;
 
-        // 场景key
         @NameInMap("SceneKey")
         public String sceneKey;
 
-        // 场景问法
         @NameInMap("SimilarQuestions")
         public java.util.List<ListPackageKnowledgesResponseBodyKnowledgesSimilarQuestions> similarQuestions;
 
-        // 答案
         @NameInMap("Solutions")
         public java.util.List<ListPackageKnowledgesResponseBodyKnowledgesSolutions> solutions;
 

@@ -19,7 +19,6 @@ public class PayOrderCallbackResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    // 是否同步
     @NameInMap("synchro")
     public Boolean synchro;
 

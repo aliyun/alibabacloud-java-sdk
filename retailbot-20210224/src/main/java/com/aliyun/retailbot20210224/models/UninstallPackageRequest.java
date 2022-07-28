@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UninstallPackageRequest extends TeaModel {
-    // 操作人信息
     @NameInMap("Operator")
     public UninstallPackageRequestOperator operator;
 
-    // 取消订阅的行业包
     @NameInMap("Packages")
     public java.util.List<UninstallPackageRequestPackages> packages;
 
-    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 
@@ -46,11 +43,9 @@ public class UninstallPackageRequest extends TeaModel {
     }
 
     public static class UninstallPackageRequestOperator extends TeaModel {
-        // 操作人id
         @NameInMap("OperatorId")
         public String operatorId;
 
-        // 操作人显示名称
         @NameInMap("OperatorName")
         public String operatorName;
 
@@ -78,11 +73,9 @@ public class UninstallPackageRequest extends TeaModel {
     }
 
     public static class UninstallPackageRequestPackages extends TeaModel {
-        // 行业包code
         @NameInMap("PackageCode")
         public String packageCode;
 
-        // 行业包版本
         @NameInMap("PackageVersion")
         public String packageVersion;
 

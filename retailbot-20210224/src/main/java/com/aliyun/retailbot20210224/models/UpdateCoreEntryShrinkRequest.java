@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UpdateCoreEntryShrinkRequest extends TeaModel {
-    // 机器人id
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 核心同义词信息
     @NameInMap("SimilarEntry")
     public String similarEntryShrink;
 
-    // 槽位id
     @NameInMap("SlotId")
     public Integer slotId;
 

@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class AppGrayListBatchRemoveRequest extends TeaModel {
-    // 实例应用appCode
     @NameInMap("AppCode")
     public String appCode;
 
-    // 店铺id列表
     @NameInMap("Content")
     public java.util.List<String> content;
 
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 

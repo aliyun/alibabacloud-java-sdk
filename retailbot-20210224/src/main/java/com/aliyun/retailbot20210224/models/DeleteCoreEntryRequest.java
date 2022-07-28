@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class DeleteCoreEntryRequest extends TeaModel {
-    // 机器人id
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 核心同义词信息
     @NameInMap("SimilarEntry")
     public DeleteCoreEntryRequestSimilarEntry similarEntry;
 
-    // 槽位id
     @NameInMap("SlotId")
     public Integer slotId;
 
@@ -46,7 +43,6 @@ public class DeleteCoreEntryRequest extends TeaModel {
     }
 
     public static class DeleteCoreEntryRequestSimilarEntry extends TeaModel {
-        // 核心词id
         @NameInMap("CoreEntryId")
         public Integer coreEntryId;
 

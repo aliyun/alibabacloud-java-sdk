@@ -4,7 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class AdminTestSeviceResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

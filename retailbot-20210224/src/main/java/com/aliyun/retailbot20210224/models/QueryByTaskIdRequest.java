@@ -4,11 +4,9 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class QueryByTaskIdRequest extends TeaModel {
-    // 机器人Code
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 任务id
     @NameInMap("TaskId")
     public Long taskId;
 

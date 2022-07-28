@@ -4,7 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class GenerateTokenRequest extends TeaModel {
-    // 自定义token的失效时间。单位秒
     @NameInMap("ExpireTime")
     public Integer expireTime;
 
@@ -44,15 +43,12 @@ public class GenerateTokenRequest extends TeaModel {
     }
 
     public static class GenerateTokenRequestUserDto extends TeaModel {
-        // 额外信息，必须是JSON String格式
         @NameInMap("ExtraInfo")
         public String extraInfo;
 
-        // 第三方业务系统用户ID
         @NameInMap("ForeignId")
         public String foreignId;
 
-        // 用户昵称
         @NameInMap("Nick")
         public String nick;
 

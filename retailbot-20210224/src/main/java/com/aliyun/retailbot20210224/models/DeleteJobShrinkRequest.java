@@ -4,19 +4,15 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class DeleteJobShrinkRequest extends TeaModel {
-    // 应用Code
     @NameInMap("AppCode")
     public String appCode;
 
-    // 实例Id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 任务ID
     @NameInMap("JobId")
     public Long jobId;
 
-    // 店铺Code
     @NameInMap("ShopId")
     public String shopId;
 

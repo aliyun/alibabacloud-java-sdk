@@ -4,23 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class AddSolutionRequest extends TeaModel {
-    // 知识id
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 
-    // 操作人id
     @NameInMap("OperatorId")
     public String operatorId;
 
-    // 操作人名称
     @NameInMap("OperatorName")
     public String operatorName;
 
-    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 答案
     @NameInMap("Solution")
     public AddSolutionRequestSolution solution;
 
@@ -70,15 +65,12 @@ public class AddSolutionRequest extends TeaModel {
     }
 
     public static class AddSolutionRequestSolutionConditions extends TeaModel {
-        // 生效模式：EffectiveMode  分支：BranchId
         @NameInMap("ConditionType")
         public String conditionType;
 
-        // 生效模式："disable":全部不生效，"auto":全自动，"assistant":智能辅助，"enable":全部生效  分支：分支id
         @NameInMap("ConditionValue")
         public String conditionValue;
 
-        // 知识id
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
@@ -114,19 +106,15 @@ public class AddSolutionRequest extends TeaModel {
     }
 
     public static class AddSolutionRequestSolutionSolutionVariables extends TeaModel {
-        // 知识id
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
-        // 答案id
         @NameInMap("SolutionId")
         public Long solutionId;
 
-        // 变量名称
         @NameInMap("VariableName")
         public String variableName;
 
-        // 变量类型
         @NameInMap("VariableType")
         public String variableType;
 
@@ -170,31 +158,24 @@ public class AddSolutionRequest extends TeaModel {
     }
 
     public static class AddSolutionRequestSolution extends TeaModel {
-        // 答案约束
         @NameInMap("Conditions")
         public java.util.List<AddSolutionRequestSolutionConditions> conditions;
 
-        // 答案扩展信息
         @NameInMap("ExtraContent")
         public String extraContent;
 
-        // 知识id
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
-        // 答案正文
         @NameInMap("SolutionContent")
         public String solutionContent;
 
-        // 答案来源,乐言不需要填
         @NameInMap("SolutionSource")
         public String solutionSource;
 
-        // 答案类型, "text":文本知识
         @NameInMap("SolutionType")
         public String solutionType;
 
-        // 答案变量
         @NameInMap("SolutionVariables")
         public java.util.List<AddSolutionRequestSolutionSolutionVariables> solutionVariables;
 

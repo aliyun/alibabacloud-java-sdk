@@ -4,7 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListSyncRobotMessagesShrinkRequest extends TeaModel {
-    // 人机数据集合
     @NameInMap("RobotMessageDTOList")
     public String robotMessageDTOListShrink;
 

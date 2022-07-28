@@ -4,18 +4,15 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class AppGrayListBatchSaveRequest extends TeaModel {
-    // 实例应用appCode
     @NameInMap("AppCode")
     public String appCode;
 
     @NameInMap("Content")
     public java.util.List<AppGrayListBatchSaveRequestContent> content;
 
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 业务空间id
     @NameInMap("TenantId")
     public Long tenantId;
 
@@ -57,23 +54,18 @@ public class AppGrayListBatchSaveRequest extends TeaModel {
     }
 
     public static class AppGrayListBatchSaveRequestContent extends TeaModel {
-        // 商家id,最大长度50
         @NameInMap("SellerId")
         public String sellerId;
 
-        // 商家名称，最大长度50
         @NameInMap("SellerName")
         public String sellerName;
 
-        // 店铺id，最大长度50
         @NameInMap("ShopId")
         public String shopId;
 
-        // 店铺名称，最大长度50
         @NameInMap("ShopName")
         public String shopName;
 
-        // 应用版本
         @NameInMap("Version")
         public String version;
 

@@ -4,22 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskListResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
     @NameInMap("PageData")
     public QueryTaskListResponseBodyPageData pageData;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -69,27 +65,21 @@ public class QueryTaskListResponseBody extends TeaModel {
     }
 
     public static class QueryTaskListResponseBodyPageDataData extends TeaModel {
-        // 创建时间
         @NameInMap("OperateDate")
         public String operateDate;
 
-        // 约束条件
         @NameInMap("ParamConfig")
         public String paramConfig;
 
-        // 机器人code
         @NameInMap("RobotCode")
         public String robotCode;
 
-        // 状态
         @NameInMap("Status")
         public Long status;
 
-        // 任务id
         @NameInMap("TaskId")
         public Long taskId;
 
-        // 挖掘场景
         @NameInMap("Type")
         public String type;
 
@@ -149,15 +139,12 @@ public class QueryTaskListResponseBody extends TeaModel {
     }
 
     public static class QueryTaskListResponseBodyPageData extends TeaModel {
-        // 任务配置列表
         @NameInMap("Data")
         public java.util.List<QueryTaskListResponseBodyPageDataData> data;
 
-        // 返回的最大记录数
         @NameInMap("MaxResults")
         public Long maxResults;
 
-        // 下一页的token
         @NameInMap("NextToken")
         public String nextToken;
 

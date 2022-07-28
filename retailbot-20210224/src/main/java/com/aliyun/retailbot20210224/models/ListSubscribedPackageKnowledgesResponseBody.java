@@ -4,23 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
-    // 返回code
     @NameInMap("Code")
     public String code;
 
-    // 知识集合
     @NameInMap("Knowledges")
     public java.util.List<ListSubscribedPackageKnowledgesResponseBodyKnowledges> knowledges;
 
-    // 返回信息
     @NameInMap("Message")
     public String message;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功标示
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,35 +65,27 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
     }
 
     public static class ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions extends TeaModel {
-        // 创建时间格式：yyyy-MM-dd HH:mm:ss
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 创建用户id
         @NameInMap("CreateUserId")
         public String createUserId;
 
-        // 修改时间格式：yyyy-MM-dd HH:mm:ss
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // 修改用户id
         @NameInMap("ModifyUserId")
         public String modifyUserId;
 
-        // "positive":正向，"negative":负向
         @NameInMap("SimilarQuestionEffectType")
         public String similarQuestionEffectType;
 
-        // 问法id
         @NameInMap("SimilarQuestionId")
         public Long similarQuestionId;
 
-        // 示例问法标题
         @NameInMap("SimilarQuestionTitle")
         public String similarQuestionTitle;
 
-        // "similar":相似问法，"sample":例句，"keyword":关键字
         @NameInMap("SimilarQuestionType")
         public String similarQuestionType;
 
@@ -174,19 +161,15 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
     }
 
     public static class ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutionsConditions extends TeaModel {
-        // 生效模式：EffectiveMode
         @NameInMap("ConditionType")
         public String conditionType;
 
-        // 生效模式："disable":全部不生效，"auto":全自动，"assistant":智能辅助，"enable":全部生效
         @NameInMap("ConditionValue")
         public String conditionValue;
 
-        // 知识id
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
-        // 答案id
         @NameInMap("SolutionId")
         public Long solutionId;
 
@@ -230,31 +213,24 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
     }
 
     public static class ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions extends TeaModel {
-        // 答案约束
         @NameInMap("Conditions")
         public java.util.List<ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutionsConditions> conditions;
 
-        // 答案扩展信息
         @NameInMap("ExtraContent")
         public String extraContent;
 
-        // 场景id
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
-        // 答案正文
         @NameInMap("SolutionContent")
         public String solutionContent;
 
-        // 答案id
         @NameInMap("SolutionId")
         public Long solutionId;
 
-        // 答案来源
         @NameInMap("SolutionSource")
         public String solutionSource;
 
-        // 答案类型,"text":文本答案
         @NameInMap("SolutionType")
         public String solutionType;
 
@@ -322,46 +298,36 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
     }
 
     public static class ListSubscribedPackageKnowledgesResponseBodyKnowledges extends TeaModel {
-        // 创建时间格式：yyyy-MM-dd HH:mm:ss
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 创建用户id
         @NameInMap("CreateUserId")
         public String createUserId;
 
-        // 知识描述
         @NameInMap("KnowledgeDescription")
         public String knowledgeDescription;
 
-        // 知识id
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
-        // "online":在用，"disabled":禁用
         @NameInMap("KnowledgeStatus")
         public String knowledgeStatus;
 
-        // 知识标题
         @NameInMap("KnowledgeTitle")
         public String knowledgeTitle;
 
-        // 修改时间格式：yyyy-MM-dd HH:mm:ss
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // 修改用户id
         @NameInMap("ModifyUserId")
         public String modifyUserId;
 
         @NameInMap("SceneKey")
         public String sceneKey;
 
-        // 示例问法、正负例句、正负关键字
         @NameInMap("SimilarQuestions")
         public java.util.List<ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions> similarQuestions;
 
-        // 答案
         @NameInMap("Solutions")
         public java.util.List<ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions> solutions;
 

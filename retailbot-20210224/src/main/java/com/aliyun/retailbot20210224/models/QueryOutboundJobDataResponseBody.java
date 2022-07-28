@@ -54,7 +54,6 @@ public class QueryOutboundJobDataResponseBody extends TeaModel {
     }
 
     public static class QueryOutboundJobDataResponseBodyData extends TeaModel {
-        // appCode
         @NameInMap("AppCode")
         public String appCode;
 
@@ -91,7 +90,6 @@ public class QueryOutboundJobDataResponseBody extends TeaModel {
         @NameInMap("JobId")
         public Long jobId;
 
-        // saas Id
         @NameInMap("SaasId")
         public String saasId;
 
@@ -104,7 +102,6 @@ public class QueryOutboundJobDataResponseBody extends TeaModel {
         @NameInMap("SuccessCount")
         public Integer successCount;
 
-        // tenant Id
         @NameInMap("TenantId")
         public Long tenantId;
 

@@ -4,7 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListSlotsResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
@@ -14,15 +13,12 @@ public class ListSlotsResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -80,42 +76,33 @@ public class ListSlotsResponseBody extends TeaModel {
     }
 
     public static class ListSlotsResponseBodyDataResultData extends TeaModel {
-        // 槽位中文名
         @NameInMap("Alias")
         public String alias;
 
-        // 槽位类别id
         @NameInMap("CategoryId")
         public Integer categoryId;
 
-        // 槽位类别名称
         @NameInMap("CategoryName")
         public String categoryName;
 
-        // 槽位中文描述
         @NameInMap("Description")
         public String description;
 
-        // 槽位id
         @NameInMap("Id")
         public Integer id;
 
         @NameInMap("OwnStatus")
         public Integer ownStatus;
 
-        // 槽位来源， 0表示官方槽位，1表示自定义槽位
         @NameInMap("Source")
         public Integer source;
 
-        // 槽位来源名称
         @NameInMap("SourceName")
         public String sourceName;
 
-        // 槽位类型，0枚举型号，1表示区间型，2表示函数型
         @NameInMap("Type")
         public Integer type;
 
-        // 槽位类型名称
         @NameInMap("TypeName")
         public String typeName;
 

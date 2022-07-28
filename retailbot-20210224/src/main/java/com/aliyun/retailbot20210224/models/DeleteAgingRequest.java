@@ -4,11 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class DeleteAgingRequest extends TeaModel {
-    // 要删除的时效id列表
     @NameInMap("AgingIds")
     public java.util.List<Long> agingIds;
 
-    // 机器人code
+    @NameInMap("InstanceType")
+    public String instanceType;
+
     @NameInMap("RobotCode")
     public String robotCode;
 
@@ -23,6 +24,14 @@ public class DeleteAgingRequest extends TeaModel {
     }
     public java.util.List<Long> getAgingIds() {
         return this.agingIds;
+    }
+
+    public DeleteAgingRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public DeleteAgingRequest setRobotCode(String robotCode) {

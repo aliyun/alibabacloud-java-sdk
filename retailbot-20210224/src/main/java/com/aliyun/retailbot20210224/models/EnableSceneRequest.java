@@ -4,19 +4,15 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class EnableSceneRequest extends TeaModel {
-    // 知识id集合
     @NameInMap("KnowledgeIds")
     public java.util.List<Long> knowledgeIds;
 
-    // 操作用户id
     @NameInMap("OperatorId")
     public String operatorId;
 
-    // 操作用户名称
     @NameInMap("OperatorName")
     public String operatorName;
 
-    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 

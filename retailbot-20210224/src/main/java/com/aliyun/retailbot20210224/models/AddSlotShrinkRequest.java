@@ -4,27 +4,21 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class AddSlotShrinkRequest extends TeaModel {
-    // 槽位名称
     @NameInMap("Alias")
     public String alias;
 
-    // 槽位所属分类id
     @NameInMap("CategoryId")
     public Integer categoryId;
 
-    // 槽位中文描述
     @NameInMap("Description")
     public String description;
 
-    // 槽位开启状态
     @NameInMap("OwnStatus")
     public Integer ownStatus;
 
-    // 机器人id
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 核心同义词信息
     @NameInMap("SimilarEntryList")
     public String similarEntryListShrink;
 

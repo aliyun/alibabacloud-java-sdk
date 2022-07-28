@@ -4,23 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class CreateUserAccessTokenResponseBody extends TeaModel {
-    // msg code
     @NameInMap("Code")
     public String code;
 
-    // token
     @NameInMap("Data")
     public String data;
 
-    // msg info
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,23 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class AddSolutionShrinkRequest extends TeaModel {
-    // 知识id
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 
-    // 操作人id
     @NameInMap("OperatorId")
     public String operatorId;
 
-    // 操作人名称
     @NameInMap("OperatorName")
     public String operatorName;
 
-    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 答案
     @NameInMap("Solution")
     public String solutionShrink;
 

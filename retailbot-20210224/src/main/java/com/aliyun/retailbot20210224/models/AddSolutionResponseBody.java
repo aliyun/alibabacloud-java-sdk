@@ -4,23 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class AddSolutionResponseBody extends TeaModel {
-    // 返回code
     @NameInMap("Code")
     public String code;
 
-    // 返回信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 答案id
     @NameInMap("SolutionId")
     public Long solutionId;
 
-    // 是否成功标示
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,23 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListCategoriesResponseBody extends TeaModel {
-    // 知识类目集合
     @NameInMap("Categories")
     public java.util.List<ListCategoriesResponseBodyCategories> categories;
 
-    // 返回code
     @NameInMap("Code")
     public String code;
 
-    // 返回信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功标示
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,15 +65,12 @@ public class ListCategoriesResponseBody extends TeaModel {
     }
 
     public static class ListCategoriesResponseBodyCategoriesChildren extends TeaModel {
-        // 类目id
         @NameInMap("CategoryId")
         public Long categoryId;
 
-        // 类目名称
         @NameInMap("CategoryName")
         public String categoryName;
 
-        // 父类目id
         @NameInMap("ParentCategoryId")
         public Long parentCategoryId;
 
@@ -114,19 +106,15 @@ public class ListCategoriesResponseBody extends TeaModel {
     }
 
     public static class ListCategoriesResponseBodyCategories extends TeaModel {
-        // 类目id
         @NameInMap("CategoryId")
         public Long categoryId;
 
-        // 类目名称
         @NameInMap("CategoryName")
         public String categoryName;
 
-        // 子级类目集合
         @NameInMap("Children")
         public java.util.List<ListCategoriesResponseBodyCategoriesChildren> children;
 
-        // 父类目id
         @NameInMap("ParentCategoryId")
         public Long parentCategoryId;
 

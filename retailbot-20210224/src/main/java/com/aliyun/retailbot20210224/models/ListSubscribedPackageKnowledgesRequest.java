@@ -4,23 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListSubscribedPackageKnowledgesRequest extends TeaModel {
-    // 类目id
     @NameInMap("CategoryId")
     public Long categoryId;
 
-    // 操作用户id
     @NameInMap("OperatorId")
     public String operatorId;
 
-    // 操作用户名称
     @NameInMap("OperatorName")
     public String operatorName;
 
-    // 查询指定包的场景
     @NameInMap("PackageCodes")
     public java.util.List<String> packageCodes;
 
-    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 

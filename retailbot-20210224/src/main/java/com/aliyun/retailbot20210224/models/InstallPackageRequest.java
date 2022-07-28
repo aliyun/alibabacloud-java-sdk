@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class InstallPackageRequest extends TeaModel {
-    // 操作人信息
     @NameInMap("Operator")
     public InstallPackageRequestOperator operator;
 
-    // 订阅的行业包
     @NameInMap("Packages")
     public java.util.List<InstallPackageRequestPackages> packages;
 
-    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 
@@ -46,11 +43,9 @@ public class InstallPackageRequest extends TeaModel {
     }
 
     public static class InstallPackageRequestOperator extends TeaModel {
-        // 操作人id
         @NameInMap("OperatorId")
         public String operatorId;
 
-        // 操作人显示名称
         @NameInMap("OperatorName")
         public String operatorName;
 
@@ -78,11 +73,9 @@ public class InstallPackageRequest extends TeaModel {
     }
 
     public static class InstallPackageRequestPackages extends TeaModel {
-        // 行业包code
         @NameInMap("PackageCode")
         public String packageCode;
 
-        // 行业包版本
         @NameInMap("PackageVersion")
         public String packageVersion;
 

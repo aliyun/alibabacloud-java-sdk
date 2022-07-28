@@ -4,7 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class GetSlotResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
@@ -14,15 +13,12 @@ public class GetSlotResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -80,15 +76,12 @@ public class GetSlotResponseBody extends TeaModel {
     }
 
     public static class GetSlotResponseBodyDataBlackEntryList extends TeaModel {
-        // 词条id
         @NameInMap("Id")
         public Integer id;
 
-        // 槽位id
         @NameInMap("SlotId")
         public Integer slotId;
 
-        // 词条值
         @NameInMap("Value")
         public String value;
 
@@ -124,15 +117,12 @@ public class GetSlotResponseBody extends TeaModel {
     }
 
     public static class GetSlotResponseBodyDataSimilarEntryListCoreEntry extends TeaModel {
-        // 词条id
         @NameInMap("Id")
         public Integer id;
 
-        // 槽位id
         @NameInMap("SlotId")
         public Integer slotId;
 
-        // 词条值
         @NameInMap("Value")
         public String value;
 
@@ -168,15 +158,12 @@ public class GetSlotResponseBody extends TeaModel {
     }
 
     public static class GetSlotResponseBodyDataSimilarEntryListSimilarEntries extends TeaModel {
-        // 词条id
         @NameInMap("Id")
         public Integer id;
 
-        // 槽位id
         @NameInMap("SlotId")
         public Integer slotId;
 
-        // 词条值
         @NameInMap("Value")
         public String value;
 
@@ -212,11 +199,9 @@ public class GetSlotResponseBody extends TeaModel {
     }
 
     public static class GetSlotResponseBodyDataSimilarEntryList extends TeaModel {
-        // 核心词实体
         @NameInMap("CoreEntry")
         public GetSlotResponseBodyDataSimilarEntryListCoreEntry coreEntry;
 
-        // 同义词
         @NameInMap("SimilarEntries")
         public java.util.List<GetSlotResponseBodyDataSimilarEntryListSimilarEntries> similarEntries;
 
@@ -244,51 +229,39 @@ public class GetSlotResponseBody extends TeaModel {
     }
 
     public static class GetSlotResponseBodyData extends TeaModel {
-        // 槽位中文名
         @NameInMap("Alias")
         public String alias;
 
-        // 黑名单词信息
         @NameInMap("BlackEntryList")
         public java.util.List<GetSlotResponseBodyDataBlackEntryList> blackEntryList;
 
-        // 槽位类别id
         @NameInMap("CategoryId")
         public Integer categoryId;
 
-        // 槽位类别名称
         @NameInMap("CategoryName")
         public String categoryName;
 
-        // 槽位中文描述
         @NameInMap("Description")
         public String description;
 
-        // 槽位id
         @NameInMap("Id")
         public Integer id;
 
-        // 槽位开启状态
         @NameInMap("OwnStatus")
         public Integer ownStatus;
 
-        // 核心同义词信息
         @NameInMap("SimilarEntryList")
         public java.util.List<GetSlotResponseBodyDataSimilarEntryList> similarEntryList;
 
-        // 槽位来源， 0表示官方槽位，1表示自定义槽位
         @NameInMap("Source")
         public Integer source;
 
-        // 槽位来源名称
         @NameInMap("SourceName")
         public String sourceName;
 
-        // 槽位类型，0枚举型号，1表示区间型，2表示函数型
         @NameInMap("Type")
         public Integer type;
 
-        // 槽位类型名称
         @NameInMap("TypeName")
         public String typeName;
 

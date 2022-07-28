@@ -4,26 +4,21 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class AddSlotResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 返会结果
     @NameInMap("Data")
     public Integer data;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 

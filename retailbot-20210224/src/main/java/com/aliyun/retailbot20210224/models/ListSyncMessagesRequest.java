@@ -4,7 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListSyncMessagesRequest extends TeaModel {
-    // 人人数据DTO
     @NameInMap("MessageDTOList")
     public java.util.List<ListSyncMessagesRequestMessageDTOList> messageDTOList;
 
@@ -22,63 +21,48 @@ public class ListSyncMessagesRequest extends TeaModel {
     }
 
     public static class ListSyncMessagesRequestMessageDTOList extends TeaModel {
-        // 对话chatId
         @NameInMap("ChatId")
         public String chatId;
 
-        // 消息内容
         @NameInMap("Content")
         public String content;
 
-        // 消息类型
         @NameInMap("ContentType")
         public String contentType;
 
-        // 消息发送方向
         @NameInMap("Direction")
         public String direction;
 
-        // 消息ID
         @NameInMap("MessageId")
         public String messageId;
 
-        // 机器人code
         @NameInMap("RobotCode")
         public String robotCode;
 
-        // 卖家ID
         @NameInMap("SellerId")
         public String sellerId;
 
-        // 卖家nick
         @NameInMap("SellerNick")
         public String sellerNick;
 
-        // 消息发送时间戳
         @NameInMap("SendTime")
         public Long sendTime;
 
-        // 对话sessionId
         @NameInMap("SessionId")
         public String sessionId;
 
-        // 消息来源
         @NameInMap("Source")
         public String source;
 
-        // 卖家小二ID
         @NameInMap("StaffId")
         public String staffId;
 
-        // 卖家小二nick
         @NameInMap("StaffNick")
         public String staffNick;
 
-        // 买家ID
         @NameInMap("UserId")
         public String userId;
 
-        // 买家nick
         @NameInMap("UserNick")
         public String userNick;
 

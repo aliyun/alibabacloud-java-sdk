@@ -4,7 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class QueryOutboundJobDataRequest extends TeaModel {
-    // 结束时间 yyyyMMddHHmmss
     @NameInMap("EndTime")
     public String endTime;
 
@@ -14,7 +13,6 @@ public class QueryOutboundJobDataRequest extends TeaModel {
     @NameInMap("SaasId")
     public String saasId;
 
-    // 开始时间 yyyyMMddHHmmss
     @NameInMap("StartTime")
     public String startTime;
 
