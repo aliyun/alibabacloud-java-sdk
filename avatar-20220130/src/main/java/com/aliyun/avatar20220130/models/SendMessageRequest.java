@@ -13,6 +13,9 @@ public class SendMessageRequest extends TeaModel {
     @NameInMap("TextRequest")
     public SendMessageRequestTextRequest textRequest;
 
+    @NameInMap("VAMLRequest")
+    public SendMessageRequestVAMLRequest VAMLRequest;
+
     public static SendMessageRequest build(java.util.Map<String, ?> map) throws Exception {
         SendMessageRequest self = new SendMessageRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class SendMessageRequest extends TeaModel {
     }
     public SendMessageRequestTextRequest getTextRequest() {
         return this.textRequest;
+    }
+
+    public SendMessageRequest setVAMLRequest(SendMessageRequestVAMLRequest VAMLRequest) {
+        this.VAMLRequest = VAMLRequest;
+        return this;
+    }
+    public SendMessageRequestVAMLRequest getVAMLRequest() {
+        return this.VAMLRequest;
     }
 
     public static class SendMessageRequestTextRequest extends TeaModel {
@@ -90,6 +101,36 @@ public class SendMessageRequest extends TeaModel {
         }
         public Boolean getInterrupt() {
             return this.interrupt;
+        }
+
+    }
+
+    public static class SendMessageRequestVAMLRequest extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("Vaml")
+        public String vaml;
+
+        public static SendMessageRequestVAMLRequest build(java.util.Map<String, ?> map) throws Exception {
+            SendMessageRequestVAMLRequest self = new SendMessageRequestVAMLRequest();
+            return TeaModel.build(map, self);
+        }
+
+        public SendMessageRequestVAMLRequest setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public SendMessageRequestVAMLRequest setVaml(String vaml) {
+            this.vaml = vaml;
+            return this;
+        }
+        public String getVaml() {
+            return this.vaml;
         }
 
     }

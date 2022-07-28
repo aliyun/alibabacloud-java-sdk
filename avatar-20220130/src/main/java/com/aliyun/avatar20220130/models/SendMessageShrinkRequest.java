@@ -13,6 +13,9 @@ public class SendMessageShrinkRequest extends TeaModel {
     @NameInMap("TextRequest")
     public String textRequestShrink;
 
+    @NameInMap("VAMLRequest")
+    public String VAMLRequestShrink;
+
     public static SendMessageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SendMessageShrinkRequest self = new SendMessageShrinkRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class SendMessageShrinkRequest extends TeaModel {
     }
     public String getTextRequestShrink() {
         return this.textRequestShrink;
+    }
+
+    public SendMessageShrinkRequest setVAMLRequestShrink(String VAMLRequestShrink) {
+        this.VAMLRequestShrink = VAMLRequestShrink;
+        return this;
+    }
+    public String getVAMLRequestShrink() {
+        return this.VAMLRequestShrink;
     }
 
 }

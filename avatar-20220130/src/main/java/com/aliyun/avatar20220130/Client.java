@@ -79,6 +79,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.textRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.textRequest), "TextRequest", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.VAMLRequest))) {
+            request.VAMLRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.VAMLRequest), "VAMLRequest", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
             query.put("SessionId", request.sessionId);
@@ -90,6 +94,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.textRequestShrink)) {
             query.put("TextRequest", request.textRequestShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.VAMLRequestShrink)) {
+            query.put("VAMLRequest", request.VAMLRequestShrink);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -122,6 +130,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.app), "App", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.channel))) {
+            request.channelShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.channel), "Channel", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.user))) {
             request.userShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.user), "User", "json");
         }
@@ -129,6 +141,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appShrink)) {
             query.put("App", request.appShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelShrink)) {
+            query.put("Channel", request.channelShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
