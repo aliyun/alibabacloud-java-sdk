@@ -4,23 +4,18 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceLogResponseBody extends TeaModel {
-    // sls日志库
     @NameInMap("LogStore")
     public String logStore;
 
-    // sls日志信息
     @NameInMap("Message")
     public String message;
 
-    // 资源组对应的sls日志管理项目
     @NameInMap("ProjectName")
     public String projectName;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 资源组状态
     @NameInMap("Status")
     public String status;
 

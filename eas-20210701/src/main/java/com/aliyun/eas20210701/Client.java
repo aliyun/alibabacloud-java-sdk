@@ -345,32 +345,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceMirrorResponse());
     }
 
-    public CreateStressResponse createStress(CreateStressRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createStressWithOptions(request, headers, runtime);
-    }
-
-    public CreateStressResponse createStressWithOptions(CreateStressRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", request.body)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateStress"),
-            new TeaPair("version", "2021-07-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/stress"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateStressResponse());
-    }
-
     public DeleteBenchmarkTaskResponse deleteBenchmarkTask(String ClusterId, String TaskName) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -647,32 +621,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceMirrorResponse());
-    }
-
-    public DeleteStressResponse deleteStress(String ClusterId, String StressName) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteStressWithOptions(ClusterId, StressName, headers, runtime);
-    }
-
-    public DeleteStressResponse deleteStressWithOptions(String ClusterId, String StressName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        StressName = com.aliyun.openapiutil.Client.getEncodeParam(StressName);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteStress"),
-            new TeaPair("version", "2021-07-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/stress/" + ClusterId + "/" + StressName + ""),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteStressResponse());
     }
 
     public DescribeBenchmarkTaskResponse describeBenchmarkTask(String ClusterId, String TaskName) throws Exception {
@@ -962,32 +910,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeServiceMirrorResponse());
     }
 
-    public DescribeStressResponse describeStress(String ClusterId, String StressName) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeStressWithOptions(ClusterId, StressName, headers, runtime);
-    }
-
-    public DescribeStressResponse describeStressWithOptions(String ClusterId, String StressName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        StressName = com.aliyun.openapiutil.Client.getEncodeParam(StressName);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeStress"),
-            new TeaPair("version", "2021-07-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/stress/" + ClusterId + "/" + StressName + ""),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeStressResponse());
-    }
-
     public ListBenchmarkTaskResponse listBenchmarkTask() throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1247,30 +1169,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListServicesResponse());
     }
 
-    public ListStressesResponse listStresses() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listStressesWithOptions(headers, runtime);
-    }
-
-    public ListStressesResponse listStressesWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListStresses"),
-            new TeaPair("version", "2021-07-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/stress"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListStressesResponse());
-    }
-
     public ReleaseServiceResponse releaseService(String ClusterId, String ServiceName, ReleaseServiceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1302,32 +1200,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseServiceResponse());
-    }
-
-    public ReportStressResponse reportStress(String ClusterId, String StressName) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.reportStressWithOptions(ClusterId, StressName, headers, runtime);
-    }
-
-    public ReportStressResponse reportStressWithOptions(String ClusterId, String StressName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        StressName = com.aliyun.openapiutil.Client.getEncodeParam(StressName);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ReportStress"),
-            new TeaPair("version", "2021-07-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/stress/" + ClusterId + "/" + StressName + "/report"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ReportStressResponse());
     }
 
     public StartBenchmarkTaskResponse startBenchmarkTask(String ClusterId, String TaskName) throws Exception {
@@ -1382,32 +1254,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartServiceResponse());
     }
 
-    public StartStressResponse startStress(String ClusterId, String StressName) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.startStressWithOptions(ClusterId, StressName, headers, runtime);
-    }
-
-    public StartStressResponse startStressWithOptions(String ClusterId, String StressName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        StressName = com.aliyun.openapiutil.Client.getEncodeParam(StressName);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "StartStress"),
-            new TeaPair("version", "2021-07-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/stress/" + ClusterId + "/" + StressName + "/start"),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartStressResponse());
-    }
-
     public StopBenchmarkTaskResponse stopBenchmarkTask(String ClusterId, String TaskName) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1458,32 +1304,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopServiceResponse());
-    }
-
-    public StopStressResponse stopStress(String ClusterId, String StressName) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.stopStressWithOptions(ClusterId, StressName, headers, runtime);
-    }
-
-    public StopStressResponse stopStressWithOptions(String ClusterId, String StressName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        StressName = com.aliyun.openapiutil.Client.getEncodeParam(StressName);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "StopStress"),
-            new TeaPair("version", "2021-07-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/stress/" + ClusterId + "/" + StressName + "/stop"),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StopStressResponse());
     }
 
     public UpdateBenchmarkTaskResponse updateBenchmarkTask(String ClusterId, String TaskName, UpdateBenchmarkTaskRequest request) throws Exception {
@@ -1766,33 +1586,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceVersionResponse());
-    }
-
-    public UpdateStressResponse updateStress(String ClusterId, String StressName, UpdateStressRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateStressWithOptions(ClusterId, StressName, request, headers, runtime);
-    }
-
-    public UpdateStressResponse updateStressWithOptions(String ClusterId, String StressName, UpdateStressRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        StressName = com.aliyun.openapiutil.Client.getEncodeParam(StressName);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", request.body)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateStress"),
-            new TeaPair("version", "2021-07-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/stress/" + ClusterId + "/" + StressName + ""),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateStressResponse());
     }
 }

@@ -4,23 +4,18 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListResourceInstanceWorkerResponseBody extends TeaModel {
-    // 当前页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // pod列表
     @NameInMap("Pods")
     public java.util.List<ResourceInstanceWorker> pods;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // pod总数
     @NameInMap("TotalCount")
     public Integer totalCount;
 

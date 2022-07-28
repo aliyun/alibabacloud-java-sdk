@@ -4,7 +4,6 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ReleaseServiceRequest extends TeaModel {
-    // 灰度权重，范围 [0, 100]
     @NameInMap("Weight")
     public Integer weight;
 

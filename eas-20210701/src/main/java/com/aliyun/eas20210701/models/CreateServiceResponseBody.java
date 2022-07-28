@@ -13,7 +13,6 @@ public class CreateServiceResponseBody extends TeaModel {
     @NameInMap("Region")
     public String region;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

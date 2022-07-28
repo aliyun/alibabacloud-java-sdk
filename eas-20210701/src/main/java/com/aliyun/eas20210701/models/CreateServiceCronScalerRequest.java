@@ -4,11 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceCronScalerRequest extends TeaModel {
-    // 需要排除的时间点的cron表达式
     @NameInMap("ExcludeDates")
     public java.util.List<String> excludeDates;
 
-    // 定时伸缩任务描述
     @NameInMap("ScaleJobs")
     public java.util.List<CreateServiceCronScalerRequestScaleJobs> scaleJobs;
 
@@ -37,11 +35,9 @@ public class CreateServiceCronScalerRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        // 要执行伸缩任务的cron表达式
         @NameInMap("Schedule")
         public String schedule;
 
-        // 执行伸缩任务的目标replica
         @NameInMap("TargetSize")
         public Integer targetSize;
 

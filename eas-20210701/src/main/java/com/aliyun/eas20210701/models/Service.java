@@ -4,115 +4,87 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class Service extends TeaModel {
-    // 服务的请求Token
     @NameInMap("AccessToken")
     public String accessToken;
 
-    // 服务创建账号的UID
     @NameInMap("CallerUid")
     public String callerUid;
 
-    // 每个实例申请的cpu
     @NameInMap("Cpu")
     public Integer cpu;
 
-    // 服务的创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 当前运行的模型版本
     @NameInMap("CurrentVersion")
     public Integer currentVersion;
 
-    // 每个实例申请的gpu
     @NameInMap("Gpu")
     public Integer gpu;
 
-    // 服务的数据镜像
     @NameInMap("Image")
     public String image;
 
-    // 服务的公网endpoint
     @NameInMap("InternetEndpoint")
     public String internetEndpoint;
 
-    // 服务内网endpoint
     @NameInMap("IntranetEndpoint")
     public String intranetEndpoint;
 
-    // 服务最新版本号
     @NameInMap("LatestVersion")
     public Integer latestVersion;
 
-    // 每个worker需要的内存大小，单位为M
     @NameInMap("Memory")
     public Integer memory;
 
-    // 服务的摘要信息
     @NameInMap("Message")
     public String message;
 
-    // 服务所在的命名空间
     @NameInMap("Namespace")
     public String namespace;
 
-    // 服务创建账号的主账号UID
     @NameInMap("ParentUid")
     public String parentUid;
 
-    // 被挂起的服务的实例个数
     @NameInMap("PendingInstance")
     public Integer pendingInstance;
 
-    // 服务的状态信息
     @NameInMap("Reason")
     public String reason;
 
-    // 服务所在的区域
     @NameInMap("Region")
     public String region;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 服务所在的资源组
     @NameInMap("Resource")
     public String resource;
 
-    // 正在运行的服务的实例个数
     @NameInMap("RunningInstance")
     public Integer runningInstance;
 
-    // 服务的配置信息
     @NameInMap("ServiceConfig")
     public String serviceConfig;
 
-    // 服务ID
     @NameInMap("ServiceId")
     public String serviceId;
 
-    // 服务的名字
     @NameInMap("ServiceName")
     public String serviceName;
 
-    // 服务的部署来源
     @NameInMap("Source")
     public String source;
 
-    // 服务的状态
     @NameInMap("Status")
     public String status;
 
-    // 服务的所有实例总个数
     @NameInMap("TotalInstance")
     public Integer totalInstance;
 
-    // 服务的更新时间
-    @NameInMap("Updatetime")
-    public String updatetime;
+    @NameInMap("UpdateTime")
+    public String updateTime;
 
-    // 服务灰度发布的权重值
     @NameInMap("Weight")
     public Integer weight;
 
@@ -329,12 +301,12 @@ public class Service extends TeaModel {
         return this.totalInstance;
     }
 
-    public Service setUpdatetime(String updatetime) {
-        this.updatetime = updatetime;
+    public Service setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
         return this;
     }
-    public String getUpdatetime() {
-        return this.updatetime;
+    public String getUpdateTime() {
+        return this.updateTime;
     }
 
     public Service setWeight(Integer weight) {

@@ -4,23 +4,18 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceInstancesRequest extends TeaModel {
-    // 是否自动续费
     @NameInMap("AutoRenewal")
     public Boolean autoRenewal;
 
-    // 付费类型，预付费PrePaid，后付费PostPaid
     @NameInMap("ChargeType")
     public String chargeType;
 
-    // 新创建的实例个数，(0, 100]
     @NameInMap("EcsInstanceCount")
     public Integer ecsInstanceCount;
 
-    // 实例机型，对应ecs机型
     @NameInMap("EcsInstanceType")
     public String ecsInstanceType;
 
-    // 用户自这义数据，小于 16KB
     @NameInMap("UserData")
     public String userData;
 

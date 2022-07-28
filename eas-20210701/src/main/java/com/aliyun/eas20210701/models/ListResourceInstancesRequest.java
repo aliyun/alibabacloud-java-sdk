@@ -4,17 +4,12 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListResourceInstancesRequest extends TeaModel {
-    // 付费类型
-    // PrePaid预付费
-    // PostPaid后付费
     @NameInMap("ChargeType")
     public String chargeType;
 
-    // 请求的页码（默认为1）
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页的大小（默认为100）
     @NameInMap("PageSize")
     public Integer pageSize;
 
