@@ -4,23 +4,18 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateConfigTemplateRequest extends TeaModel {
-    // 模板内容
     @NameInMap("Content")
     public String content;
 
-    // 模板描述
     @NameInMap("Description")
     public String description;
 
-    // 模板数据格式
     @NameInMap("Format")
     public String format;
 
-    // 配置模板ID
     @NameInMap("Id")
     public Long id;
 
-    // 配置模板名称
     @NameInMap("Name")
     public String name;
 

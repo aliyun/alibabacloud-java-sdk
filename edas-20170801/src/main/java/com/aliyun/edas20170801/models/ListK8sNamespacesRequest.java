@@ -4,7 +4,6 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListK8sNamespacesRequest extends TeaModel {
-    // A short description of struct
     @NameInMap("ClusterId")
     public String clusterId;
 

@@ -13,7 +13,6 @@ public class InsertOrUpdateRegionRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
-    // MSE注册中心实例ID
     @NameInMap("MseInstanceId")
     public String mseInstanceId;
 
@@ -23,9 +22,6 @@ public class InsertOrUpdateRegionRequest extends TeaModel {
     @NameInMap("RegionTag")
     public String regionTag;
 
-    // 注册中心类型：
-    // - default，EDAS共享注册中心
-    // - exclusive_mse，MSE Nacos注册中心
     @NameInMap("RegistryType")
     public String registryType;
 

@@ -4,19 +4,15 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListConfigTemplatesRequest extends TeaModel {
-    // 页码
     @NameInMap("CurrentPage")
     public Long currentPage;
 
-    // 配置模板ID
     @NameInMap("Id")
     public Long id;
 
-    // 配置模板名称
     @NameInMap("Name")
     public String name;
 
-    // 页大小
     @NameInMap("PageSize")
     public Long pageSize;
 

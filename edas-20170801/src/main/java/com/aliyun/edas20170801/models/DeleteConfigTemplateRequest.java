@@ -4,7 +4,6 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteConfigTemplateRequest extends TeaModel {
-    // 配置模板ID
     @NameInMap("Id")
     public Long id;
 

@@ -58,11 +58,9 @@ public class DeployK8sApplicationRequest extends TeaModel {
     @NameInMap("EnableAhas")
     public Boolean enableAhas;
 
-    // 是否开启推空保护
     @NameInMap("EnableEmptyPushReject")
     public Boolean enableEmptyPushReject;
 
-    // 是否启用无损上线规则
     @NameInMap("EnableLosslessRule")
     public Boolean enableLosslessRule;
 
@@ -93,23 +91,18 @@ public class DeployK8sApplicationRequest extends TeaModel {
     @NameInMap("LocalVolume")
     public String localVolume;
 
-    // 是否启用无损滚动发布模式配置通过就绪检查前完成服务注册
     @NameInMap("LosslessRuleAligned")
     public Boolean losslessRuleAligned;
 
-    // 无损上线延迟注册时长
     @NameInMap("LosslessRuleDelayTime")
     public Integer losslessRuleDelayTime;
 
-    // 无损上线服务预热曲线
     @NameInMap("LosslessRuleFuncType")
     public Integer losslessRuleFuncType;
 
-    // 是否启用无损滚动发布模式配置通过就绪检查前完成服务预热
     @NameInMap("LosslessRuleRelated")
     public Boolean losslessRuleRelated;
 
-    // 无损上线服务预热时长
     @NameInMap("LosslessRuleWarmupTime")
     public Integer losslessRuleWarmupTime;
 
