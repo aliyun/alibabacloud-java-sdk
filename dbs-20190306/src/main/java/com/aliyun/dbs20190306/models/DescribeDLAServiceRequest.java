@@ -3,7 +3,7 @@ package com.aliyun.dbs20190306.models;
 
 import com.aliyun.tea.*;
 
-public class DisableBackupLogRequest extends TeaModel {
+public class DescribeDLAServiceRequest extends TeaModel {
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
@@ -13,12 +13,12 @@ public class DisableBackupLogRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
-    public static DisableBackupLogRequest build(java.util.Map<String, ?> map) throws Exception {
-        DisableBackupLogRequest self = new DisableBackupLogRequest();
+    public static DescribeDLAServiceRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDLAServiceRequest self = new DescribeDLAServiceRequest();
         return TeaModel.build(map, self);
     }
 
-    public DisableBackupLogRequest setBackupPlanId(String backupPlanId) {
+    public DescribeDLAServiceRequest setBackupPlanId(String backupPlanId) {
         this.backupPlanId = backupPlanId;
         return this;
     }
@@ -26,7 +26,7 @@ public class DisableBackupLogRequest extends TeaModel {
         return this.backupPlanId;
     }
 
-    public DisableBackupLogRequest setClientToken(String clientToken) {
+    public DescribeDLAServiceRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -34,7 +34,7 @@ public class DisableBackupLogRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public DisableBackupLogRequest setOwnerId(String ownerId) {
+    public DescribeDLAServiceRequest setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
     }

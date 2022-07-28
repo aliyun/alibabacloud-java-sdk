@@ -3,15 +3,15 @@ package com.aliyun.dbs20190306.models;
 
 import com.aliyun.tea.*;
 
-public class ConfigureBackupPlanRequest extends TeaModel {
-    @NameInMap("AutoStartBackup")
-    public Boolean autoStartBackup;
-
+public class CreateAndStartBackupPlanRequest extends TeaModel {
     @NameInMap("BackupGatewayId")
     public Long backupGatewayId;
 
     @NameInMap("BackupLogIntervalSeconds")
     public Integer backupLogIntervalSeconds;
+
+    @NameInMap("BackupMethod")
+    public String backupMethod;
 
     @NameInMap("BackupObjects")
     public String backupObjects;
@@ -52,6 +52,12 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     @NameInMap("CrossRoleName")
     public String crossRoleName;
 
+    @NameInMap("DatabaseRegion")
+    public String databaseRegion;
+
+    @NameInMap("DatabaseType")
+    public String databaseType;
+
     @NameInMap("DuplicationArchivePeriod")
     public Integer duplicationArchivePeriod;
 
@@ -61,11 +67,29 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     @NameInMap("EnableBackupLog")
     public Boolean enableBackupLog;
 
+    @NameInMap("FromApp")
+    public String fromApp;
+
+    @NameInMap("InstanceClass")
+    public String instanceClass;
+
+    @NameInMap("InstanceType")
+    public String instanceType;
+
     @NameInMap("OSSBucketName")
     public String OSSBucketName;
 
     @NameInMap("OwnerId")
     public String ownerId;
+
+    @NameInMap("PayType")
+    public String payType;
+
+    @NameInMap("Period")
+    public String period;
+
+    @NameInMap("Region")
+    public String region;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -97,20 +121,21 @@ public class ConfigureBackupPlanRequest extends TeaModel {
     @NameInMap("SourceEndpointUserName")
     public String sourceEndpointUserName;
 
-    public static ConfigureBackupPlanRequest build(java.util.Map<String, ?> map) throws Exception {
-        ConfigureBackupPlanRequest self = new ConfigureBackupPlanRequest();
+    @NameInMap("StorageRegion")
+    public String storageRegion;
+
+    @NameInMap("StorageType")
+    public String storageType;
+
+    @NameInMap("UsedTime")
+    public Integer usedTime;
+
+    public static CreateAndStartBackupPlanRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateAndStartBackupPlanRequest self = new CreateAndStartBackupPlanRequest();
         return TeaModel.build(map, self);
     }
 
-    public ConfigureBackupPlanRequest setAutoStartBackup(Boolean autoStartBackup) {
-        this.autoStartBackup = autoStartBackup;
-        return this;
-    }
-    public Boolean getAutoStartBackup() {
-        return this.autoStartBackup;
-    }
-
-    public ConfigureBackupPlanRequest setBackupGatewayId(Long backupGatewayId) {
+    public CreateAndStartBackupPlanRequest setBackupGatewayId(Long backupGatewayId) {
         this.backupGatewayId = backupGatewayId;
         return this;
     }
@@ -118,7 +143,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.backupGatewayId;
     }
 
-    public ConfigureBackupPlanRequest setBackupLogIntervalSeconds(Integer backupLogIntervalSeconds) {
+    public CreateAndStartBackupPlanRequest setBackupLogIntervalSeconds(Integer backupLogIntervalSeconds) {
         this.backupLogIntervalSeconds = backupLogIntervalSeconds;
         return this;
     }
@@ -126,7 +151,15 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.backupLogIntervalSeconds;
     }
 
-    public ConfigureBackupPlanRequest setBackupObjects(String backupObjects) {
+    public CreateAndStartBackupPlanRequest setBackupMethod(String backupMethod) {
+        this.backupMethod = backupMethod;
+        return this;
+    }
+    public String getBackupMethod() {
+        return this.backupMethod;
+    }
+
+    public CreateAndStartBackupPlanRequest setBackupObjects(String backupObjects) {
         this.backupObjects = backupObjects;
         return this;
     }
@@ -134,7 +167,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.backupObjects;
     }
 
-    public ConfigureBackupPlanRequest setBackupPeriod(String backupPeriod) {
+    public CreateAndStartBackupPlanRequest setBackupPeriod(String backupPeriod) {
         this.backupPeriod = backupPeriod;
         return this;
     }
@@ -142,7 +175,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.backupPeriod;
     }
 
-    public ConfigureBackupPlanRequest setBackupPlanId(String backupPlanId) {
+    public CreateAndStartBackupPlanRequest setBackupPlanId(String backupPlanId) {
         this.backupPlanId = backupPlanId;
         return this;
     }
@@ -150,7 +183,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.backupPlanId;
     }
 
-    public ConfigureBackupPlanRequest setBackupPlanName(String backupPlanName) {
+    public CreateAndStartBackupPlanRequest setBackupPlanName(String backupPlanName) {
         this.backupPlanName = backupPlanName;
         return this;
     }
@@ -158,7 +191,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.backupPlanName;
     }
 
-    public ConfigureBackupPlanRequest setBackupRateLimit(Long backupRateLimit) {
+    public CreateAndStartBackupPlanRequest setBackupRateLimit(Long backupRateLimit) {
         this.backupRateLimit = backupRateLimit;
         return this;
     }
@@ -166,7 +199,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.backupRateLimit;
     }
 
-    public ConfigureBackupPlanRequest setBackupRetentionPeriod(Integer backupRetentionPeriod) {
+    public CreateAndStartBackupPlanRequest setBackupRetentionPeriod(Integer backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
     }
@@ -174,7 +207,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.backupRetentionPeriod;
     }
 
-    public ConfigureBackupPlanRequest setBackupSpeedLimit(Long backupSpeedLimit) {
+    public CreateAndStartBackupPlanRequest setBackupSpeedLimit(Long backupSpeedLimit) {
         this.backupSpeedLimit = backupSpeedLimit;
         return this;
     }
@@ -182,7 +215,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.backupSpeedLimit;
     }
 
-    public ConfigureBackupPlanRequest setBackupStartTime(String backupStartTime) {
+    public CreateAndStartBackupPlanRequest setBackupStartTime(String backupStartTime) {
         this.backupStartTime = backupStartTime;
         return this;
     }
@@ -190,7 +223,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.backupStartTime;
     }
 
-    public ConfigureBackupPlanRequest setBackupStorageType(String backupStorageType) {
+    public CreateAndStartBackupPlanRequest setBackupStorageType(String backupStorageType) {
         this.backupStorageType = backupStorageType;
         return this;
     }
@@ -198,7 +231,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.backupStorageType;
     }
 
-    public ConfigureBackupPlanRequest setBackupStrategyType(String backupStrategyType) {
+    public CreateAndStartBackupPlanRequest setBackupStrategyType(String backupStrategyType) {
         this.backupStrategyType = backupStrategyType;
         return this;
     }
@@ -206,7 +239,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.backupStrategyType;
     }
 
-    public ConfigureBackupPlanRequest setClientToken(String clientToken) {
+    public CreateAndStartBackupPlanRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -214,7 +247,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public ConfigureBackupPlanRequest setCrossAliyunId(String crossAliyunId) {
+    public CreateAndStartBackupPlanRequest setCrossAliyunId(String crossAliyunId) {
         this.crossAliyunId = crossAliyunId;
         return this;
     }
@@ -222,7 +255,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.crossAliyunId;
     }
 
-    public ConfigureBackupPlanRequest setCrossRoleName(String crossRoleName) {
+    public CreateAndStartBackupPlanRequest setCrossRoleName(String crossRoleName) {
         this.crossRoleName = crossRoleName;
         return this;
     }
@@ -230,7 +263,23 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.crossRoleName;
     }
 
-    public ConfigureBackupPlanRequest setDuplicationArchivePeriod(Integer duplicationArchivePeriod) {
+    public CreateAndStartBackupPlanRequest setDatabaseRegion(String databaseRegion) {
+        this.databaseRegion = databaseRegion;
+        return this;
+    }
+    public String getDatabaseRegion() {
+        return this.databaseRegion;
+    }
+
+    public CreateAndStartBackupPlanRequest setDatabaseType(String databaseType) {
+        this.databaseType = databaseType;
+        return this;
+    }
+    public String getDatabaseType() {
+        return this.databaseType;
+    }
+
+    public CreateAndStartBackupPlanRequest setDuplicationArchivePeriod(Integer duplicationArchivePeriod) {
         this.duplicationArchivePeriod = duplicationArchivePeriod;
         return this;
     }
@@ -238,7 +287,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.duplicationArchivePeriod;
     }
 
-    public ConfigureBackupPlanRequest setDuplicationInfrequentAccessPeriod(Integer duplicationInfrequentAccessPeriod) {
+    public CreateAndStartBackupPlanRequest setDuplicationInfrequentAccessPeriod(Integer duplicationInfrequentAccessPeriod) {
         this.duplicationInfrequentAccessPeriod = duplicationInfrequentAccessPeriod;
         return this;
     }
@@ -246,7 +295,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.duplicationInfrequentAccessPeriod;
     }
 
-    public ConfigureBackupPlanRequest setEnableBackupLog(Boolean enableBackupLog) {
+    public CreateAndStartBackupPlanRequest setEnableBackupLog(Boolean enableBackupLog) {
         this.enableBackupLog = enableBackupLog;
         return this;
     }
@@ -254,7 +303,31 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.enableBackupLog;
     }
 
-    public ConfigureBackupPlanRequest setOSSBucketName(String OSSBucketName) {
+    public CreateAndStartBackupPlanRequest setFromApp(String fromApp) {
+        this.fromApp = fromApp;
+        return this;
+    }
+    public String getFromApp() {
+        return this.fromApp;
+    }
+
+    public CreateAndStartBackupPlanRequest setInstanceClass(String instanceClass) {
+        this.instanceClass = instanceClass;
+        return this;
+    }
+    public String getInstanceClass() {
+        return this.instanceClass;
+    }
+
+    public CreateAndStartBackupPlanRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public CreateAndStartBackupPlanRequest setOSSBucketName(String OSSBucketName) {
         this.OSSBucketName = OSSBucketName;
         return this;
     }
@@ -262,7 +335,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.OSSBucketName;
     }
 
-    public ConfigureBackupPlanRequest setOwnerId(String ownerId) {
+    public CreateAndStartBackupPlanRequest setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -270,7 +343,31 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ConfigureBackupPlanRequest setResourceGroupId(String resourceGroupId) {
+    public CreateAndStartBackupPlanRequest setPayType(String payType) {
+        this.payType = payType;
+        return this;
+    }
+    public String getPayType() {
+        return this.payType;
+    }
+
+    public CreateAndStartBackupPlanRequest setPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    public String getPeriod() {
+        return this.period;
+    }
+
+    public CreateAndStartBackupPlanRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
+    }
+
+    public CreateAndStartBackupPlanRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -278,7 +375,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public ConfigureBackupPlanRequest setSourceEndpointDatabaseName(String sourceEndpointDatabaseName) {
+    public CreateAndStartBackupPlanRequest setSourceEndpointDatabaseName(String sourceEndpointDatabaseName) {
         this.sourceEndpointDatabaseName = sourceEndpointDatabaseName;
         return this;
     }
@@ -286,7 +383,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.sourceEndpointDatabaseName;
     }
 
-    public ConfigureBackupPlanRequest setSourceEndpointIP(String sourceEndpointIP) {
+    public CreateAndStartBackupPlanRequest setSourceEndpointIP(String sourceEndpointIP) {
         this.sourceEndpointIP = sourceEndpointIP;
         return this;
     }
@@ -294,7 +391,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.sourceEndpointIP;
     }
 
-    public ConfigureBackupPlanRequest setSourceEndpointInstanceID(String sourceEndpointInstanceID) {
+    public CreateAndStartBackupPlanRequest setSourceEndpointInstanceID(String sourceEndpointInstanceID) {
         this.sourceEndpointInstanceID = sourceEndpointInstanceID;
         return this;
     }
@@ -302,7 +399,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.sourceEndpointInstanceID;
     }
 
-    public ConfigureBackupPlanRequest setSourceEndpointInstanceType(String sourceEndpointInstanceType) {
+    public CreateAndStartBackupPlanRequest setSourceEndpointInstanceType(String sourceEndpointInstanceType) {
         this.sourceEndpointInstanceType = sourceEndpointInstanceType;
         return this;
     }
@@ -310,7 +407,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.sourceEndpointInstanceType;
     }
 
-    public ConfigureBackupPlanRequest setSourceEndpointOracleSID(String sourceEndpointOracleSID) {
+    public CreateAndStartBackupPlanRequest setSourceEndpointOracleSID(String sourceEndpointOracleSID) {
         this.sourceEndpointOracleSID = sourceEndpointOracleSID;
         return this;
     }
@@ -318,7 +415,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.sourceEndpointOracleSID;
     }
 
-    public ConfigureBackupPlanRequest setSourceEndpointPassword(String sourceEndpointPassword) {
+    public CreateAndStartBackupPlanRequest setSourceEndpointPassword(String sourceEndpointPassword) {
         this.sourceEndpointPassword = sourceEndpointPassword;
         return this;
     }
@@ -326,7 +423,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.sourceEndpointPassword;
     }
 
-    public ConfigureBackupPlanRequest setSourceEndpointPort(Integer sourceEndpointPort) {
+    public CreateAndStartBackupPlanRequest setSourceEndpointPort(Integer sourceEndpointPort) {
         this.sourceEndpointPort = sourceEndpointPort;
         return this;
     }
@@ -334,7 +431,7 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.sourceEndpointPort;
     }
 
-    public ConfigureBackupPlanRequest setSourceEndpointRegion(String sourceEndpointRegion) {
+    public CreateAndStartBackupPlanRequest setSourceEndpointRegion(String sourceEndpointRegion) {
         this.sourceEndpointRegion = sourceEndpointRegion;
         return this;
     }
@@ -342,12 +439,36 @@ public class ConfigureBackupPlanRequest extends TeaModel {
         return this.sourceEndpointRegion;
     }
 
-    public ConfigureBackupPlanRequest setSourceEndpointUserName(String sourceEndpointUserName) {
+    public CreateAndStartBackupPlanRequest setSourceEndpointUserName(String sourceEndpointUserName) {
         this.sourceEndpointUserName = sourceEndpointUserName;
         return this;
     }
     public String getSourceEndpointUserName() {
         return this.sourceEndpointUserName;
+    }
+
+    public CreateAndStartBackupPlanRequest setStorageRegion(String storageRegion) {
+        this.storageRegion = storageRegion;
+        return this;
+    }
+    public String getStorageRegion() {
+        return this.storageRegion;
+    }
+
+    public CreateAndStartBackupPlanRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    public CreateAndStartBackupPlanRequest setUsedTime(Integer usedTime) {
+        this.usedTime = usedTime;
+        return this;
+    }
+    public Integer getUsedTime() {
+        return this.usedTime;
     }
 
 }

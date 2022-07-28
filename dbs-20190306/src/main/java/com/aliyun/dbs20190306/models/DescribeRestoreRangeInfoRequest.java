@@ -10,14 +10,14 @@ public class DescribeRestoreRangeInfoRequest extends TeaModel {
     @NameInMap("BeginTimestampForRestore")
     public Long beginTimestampForRestore;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("EndTimestampForRestore")
     public Long endTimestampForRestore;
 
     @NameInMap("OwnerId")
     public String ownerId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     @NameInMap("RecentlyRestore")
     public Boolean recentlyRestore;
@@ -43,6 +43,14 @@ public class DescribeRestoreRangeInfoRequest extends TeaModel {
         return this.beginTimestampForRestore;
     }
 
+    public DescribeRestoreRangeInfoRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public DescribeRestoreRangeInfoRequest setEndTimestampForRestore(Long endTimestampForRestore) {
         this.endTimestampForRestore = endTimestampForRestore;
         return this;
@@ -57,14 +65,6 @@ public class DescribeRestoreRangeInfoRequest extends TeaModel {
     }
     public String getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeRestoreRangeInfoRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public DescribeRestoreRangeInfoRequest setRecentlyRestore(Boolean recentlyRestore) {

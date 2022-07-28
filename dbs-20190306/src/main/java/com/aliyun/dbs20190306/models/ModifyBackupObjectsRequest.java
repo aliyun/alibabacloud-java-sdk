@@ -4,29 +4,21 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupObjectsRequest extends TeaModel {
-    @NameInMap("BackupPlanId")
-    public String backupPlanId;
-
     @NameInMap("BackupObjects")
     public String backupObjects;
 
-    @NameInMap("OwnerId")
-    public String ownerId;
+    @NameInMap("BackupPlanId")
+    public String backupPlanId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("OwnerId")
+    public String ownerId;
+
     public static ModifyBackupObjectsRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBackupObjectsRequest self = new ModifyBackupObjectsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyBackupObjectsRequest setBackupPlanId(String backupPlanId) {
-        this.backupPlanId = backupPlanId;
-        return this;
-    }
-    public String getBackupPlanId() {
-        return this.backupPlanId;
     }
 
     public ModifyBackupObjectsRequest setBackupObjects(String backupObjects) {
@@ -37,12 +29,12 @@ public class ModifyBackupObjectsRequest extends TeaModel {
         return this.backupObjects;
     }
 
-    public ModifyBackupObjectsRequest setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
+    public ModifyBackupObjectsRequest setBackupPlanId(String backupPlanId) {
+        this.backupPlanId = backupPlanId;
         return this;
     }
-    public String getOwnerId() {
-        return this.ownerId;
+    public String getBackupPlanId() {
+        return this.backupPlanId;
     }
 
     public ModifyBackupObjectsRequest setClientToken(String clientToken) {
@@ -51,6 +43,14 @@ public class ModifyBackupObjectsRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyBackupObjectsRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
     }
 
 }

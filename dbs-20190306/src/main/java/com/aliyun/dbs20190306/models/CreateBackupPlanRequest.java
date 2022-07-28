@@ -4,75 +4,54 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class CreateBackupPlanRequest extends TeaModel {
-    @NameInMap("Region")
-    public String region;
-
-    @NameInMap("InstanceClass")
-    public String instanceClass;
-
-    @NameInMap("DatabaseType")
-    public String databaseType;
-
     @NameInMap("BackupMethod")
     public String backupMethod;
-
-    @NameInMap("Period")
-    public String period;
-
-    @NameInMap("UsedTime")
-    public Integer usedTime;
-
-    @NameInMap("PayType")
-    public String payType;
-
-    @NameInMap("DatabaseRegion")
-    public String databaseRegion;
-
-    @NameInMap("StorageRegion")
-    public String storageRegion;
-
-    @NameInMap("InstanceType")
-    public String instanceType;
-
-    @NameInMap("StorageType")
-    public String storageType;
-
-    @NameInMap("FromApp")
-    public String fromApp;
-
-    @NameInMap("OwnerId")
-    public String ownerId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DatabaseRegion")
+    public String databaseRegion;
+
+    @NameInMap("DatabaseType")
+    public String databaseType;
+
+    @NameInMap("FromApp")
+    public String fromApp;
+
+    @NameInMap("InstanceClass")
+    public String instanceClass;
+
+    @NameInMap("InstanceType")
+    public String instanceType;
+
+    @NameInMap("OwnerId")
+    public String ownerId;
+
+    @NameInMap("PayType")
+    public String payType;
+
+    @NameInMap("Period")
+    public String period;
+
+    @NameInMap("Region")
+    public String region;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("StorageRegion")
+    public String storageRegion;
+
+    @NameInMap("StorageType")
+    public String storageType;
+
+    @NameInMap("UsedTime")
+    public Integer usedTime;
+
     public static CreateBackupPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateBackupPlanRequest self = new CreateBackupPlanRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateBackupPlanRequest setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
-    }
-
-    public CreateBackupPlanRequest setInstanceClass(String instanceClass) {
-        this.instanceClass = instanceClass;
-        return this;
-    }
-    public String getInstanceClass() {
-        return this.instanceClass;
-    }
-
-    public CreateBackupPlanRequest setDatabaseType(String databaseType) {
-        this.databaseType = databaseType;
-        return this;
-    }
-    public String getDatabaseType() {
-        return this.databaseType;
     }
 
     public CreateBackupPlanRequest setBackupMethod(String backupMethod) {
@@ -83,28 +62,12 @@ public class CreateBackupPlanRequest extends TeaModel {
         return this.backupMethod;
     }
 
-    public CreateBackupPlanRequest setPeriod(String period) {
-        this.period = period;
+    public CreateBackupPlanRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getPeriod() {
-        return this.period;
-    }
-
-    public CreateBackupPlanRequest setUsedTime(Integer usedTime) {
-        this.usedTime = usedTime;
-        return this;
-    }
-    public Integer getUsedTime() {
-        return this.usedTime;
-    }
-
-    public CreateBackupPlanRequest setPayType(String payType) {
-        this.payType = payType;
-        return this;
-    }
-    public String getPayType() {
-        return this.payType;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateBackupPlanRequest setDatabaseRegion(String databaseRegion) {
@@ -115,28 +78,12 @@ public class CreateBackupPlanRequest extends TeaModel {
         return this.databaseRegion;
     }
 
-    public CreateBackupPlanRequest setStorageRegion(String storageRegion) {
-        this.storageRegion = storageRegion;
+    public CreateBackupPlanRequest setDatabaseType(String databaseType) {
+        this.databaseType = databaseType;
         return this;
     }
-    public String getStorageRegion() {
-        return this.storageRegion;
-    }
-
-    public CreateBackupPlanRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
-    }
-
-    public CreateBackupPlanRequest setStorageType(String storageType) {
-        this.storageType = storageType;
-        return this;
-    }
-    public String getStorageType() {
-        return this.storageType;
+    public String getDatabaseType() {
+        return this.databaseType;
     }
 
     public CreateBackupPlanRequest setFromApp(String fromApp) {
@@ -147,6 +94,22 @@ public class CreateBackupPlanRequest extends TeaModel {
         return this.fromApp;
     }
 
+    public CreateBackupPlanRequest setInstanceClass(String instanceClass) {
+        this.instanceClass = instanceClass;
+        return this;
+    }
+    public String getInstanceClass() {
+        return this.instanceClass;
+    }
+
+    public CreateBackupPlanRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
     public CreateBackupPlanRequest setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -155,12 +118,60 @@ public class CreateBackupPlanRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateBackupPlanRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateBackupPlanRequest setPayType(String payType) {
+        this.payType = payType;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getPayType() {
+        return this.payType;
+    }
+
+    public CreateBackupPlanRequest setPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    public String getPeriod() {
+        return this.period;
+    }
+
+    public CreateBackupPlanRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
+    }
+
+    public CreateBackupPlanRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateBackupPlanRequest setStorageRegion(String storageRegion) {
+        this.storageRegion = storageRegion;
+        return this;
+    }
+    public String getStorageRegion() {
+        return this.storageRegion;
+    }
+
+    public CreateBackupPlanRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    public CreateBackupPlanRequest setUsedTime(Integer usedTime) {
+        this.usedTime = usedTime;
+        return this;
+    }
+    public Integer getUsedTime() {
+        return this.usedTime;
     }
 
 }

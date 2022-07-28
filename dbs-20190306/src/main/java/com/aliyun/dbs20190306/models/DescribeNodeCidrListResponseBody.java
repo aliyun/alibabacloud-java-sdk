@@ -4,62 +4,38 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribeNodeCidrListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("InternetIPs")
-    public DescribeNodeCidrListResponseBodyInternetIPs internetIPs;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("IntranetIPs")
-    public DescribeNodeCidrListResponseBodyIntranetIPs intranetIPs;
+    @NameInMap("ErrCode")
+    public String errCode;
 
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("InternetIPs")
+    public DescribeNodeCidrListResponseBodyInternetIPs internetIPs;
+
+    @NameInMap("IntranetIPs")
+    public DescribeNodeCidrListResponseBodyIntranetIPs intranetIPs;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ErrCode")
-    public String errCode;
 
     public static DescribeNodeCidrListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNodeCidrListResponseBody self = new DescribeNodeCidrListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeNodeCidrListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeNodeCidrListResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeNodeCidrListResponseBody setInternetIPs(DescribeNodeCidrListResponseBodyInternetIPs internetIPs) {
-        this.internetIPs = internetIPs;
-        return this;
-    }
-    public DescribeNodeCidrListResponseBodyInternetIPs getInternetIPs() {
-        return this.internetIPs;
-    }
-
-    public DescribeNodeCidrListResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public DescribeNodeCidrListResponseBody setIntranetIPs(DescribeNodeCidrListResponseBodyIntranetIPs intranetIPs) {
-        this.intranetIPs = intranetIPs;
-        return this;
-    }
-    public DescribeNodeCidrListResponseBodyIntranetIPs getIntranetIPs() {
-        return this.intranetIPs;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public DescribeNodeCidrListResponseBody setErrMessage(String errMessage) {
@@ -70,20 +46,44 @@ public class DescribeNodeCidrListResponseBody extends TeaModel {
         return this.errMessage;
     }
 
+    public DescribeNodeCidrListResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public DescribeNodeCidrListResponseBody setInternetIPs(DescribeNodeCidrListResponseBodyInternetIPs internetIPs) {
+        this.internetIPs = internetIPs;
+        return this;
+    }
+    public DescribeNodeCidrListResponseBodyInternetIPs getInternetIPs() {
+        return this.internetIPs;
+    }
+
+    public DescribeNodeCidrListResponseBody setIntranetIPs(DescribeNodeCidrListResponseBodyIntranetIPs intranetIPs) {
+        this.intranetIPs = intranetIPs;
+        return this;
+    }
+    public DescribeNodeCidrListResponseBodyIntranetIPs getIntranetIPs() {
+        return this.intranetIPs;
+    }
+
+    public DescribeNodeCidrListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeNodeCidrListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DescribeNodeCidrListResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
-        return this;
-    }
-    public String getErrCode() {
-        return this.errCode;
     }
 
     public static class DescribeNodeCidrListResponseBodyInternetIPs extends TeaModel {

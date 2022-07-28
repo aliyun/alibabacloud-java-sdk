@@ -4,8 +4,11 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ErrCode")
+    public String errCode;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -13,26 +16,31 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
     @NameInMap("Items")
     public DescribeRestoreRangeInfoResponseBodyItems items;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ErrCode")
-    public String errCode;
 
     public static DescribeRestoreRangeInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRestoreRangeInfoResponseBody self = new DescribeRestoreRangeInfoResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRestoreRangeInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeRestoreRangeInfoResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getErrCode() {
+        return this.errCode;
+    }
+
+    public DescribeRestoreRangeInfoResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
     public DescribeRestoreRangeInfoResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,12 +59,12 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         return this.items;
     }
 
-    public DescribeRestoreRangeInfoResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public DescribeRestoreRangeInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeRestoreRangeInfoResponseBody setSuccess(Boolean success) {
@@ -67,27 +75,27 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeRestoreRangeInfoResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
-        return this;
-    }
-    public String getErrCode() {
-        return this.errCode;
-    }
-
     public static class DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRangeFullBackupListFullBackupDetail extends TeaModel {
+        @NameInMap("BackupSetId")
+        public String backupSetId;
+
         @NameInMap("EndTime")
         public Long endTime;
 
         @NameInMap("StartTime")
         public Long startTime;
 
-        @NameInMap("BackupSetId")
-        public String backupSetId;
-
         public static DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRangeFullBackupListFullBackupDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRangeFullBackupListFullBackupDetail self = new DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRangeFullBackupListFullBackupDetail();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRangeFullBackupListFullBackupDetail setBackupSetId(String backupSetId) {
+            this.backupSetId = backupSetId;
+            return this;
+        }
+        public String getBackupSetId() {
+            return this.backupSetId;
         }
 
         public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRangeFullBackupListFullBackupDetail setEndTime(Long endTime) {
@@ -104,14 +112,6 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         }
         public Long getStartTime() {
             return this.startTime;
-        }
-
-        public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRangeFullBackupListFullBackupDetail setBackupSetId(String backupSetId) {
-            this.backupSetId = backupSetId;
-            return this;
-        }
-        public String getBackupSetId() {
-            return this.backupSetId;
         }
 
     }
@@ -136,11 +136,11 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange extends TeaModel {
+        @NameInMap("BeginTimestampForRestore")
+        public Long beginTimestampForRestore;
+
         @NameInMap("EndTimestampForRestore")
         public Long endTimestampForRestore;
-
-        @NameInMap("SourceEndpointInstanceType")
-        public String sourceEndpointInstanceType;
 
         @NameInMap("FullBackupList")
         public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRangeFullBackupList fullBackupList;
@@ -148,15 +148,23 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         @NameInMap("RangeType")
         public String rangeType;
 
-        @NameInMap("BeginTimestampForRestore")
-        public Long beginTimestampForRestore;
-
         @NameInMap("SourceEndpointInstanceID")
         public String sourceEndpointInstanceID;
+
+        @NameInMap("SourceEndpointInstanceType")
+        public String sourceEndpointInstanceType;
 
         public static DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange build(java.util.Map<String, ?> map) throws Exception {
             DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange self = new DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange setBeginTimestampForRestore(Long beginTimestampForRestore) {
+            this.beginTimestampForRestore = beginTimestampForRestore;
+            return this;
+        }
+        public Long getBeginTimestampForRestore() {
+            return this.beginTimestampForRestore;
         }
 
         public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange setEndTimestampForRestore(Long endTimestampForRestore) {
@@ -165,14 +173,6 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
         }
         public Long getEndTimestampForRestore() {
             return this.endTimestampForRestore;
-        }
-
-        public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange setSourceEndpointInstanceType(String sourceEndpointInstanceType) {
-            this.sourceEndpointInstanceType = sourceEndpointInstanceType;
-            return this;
-        }
-        public String getSourceEndpointInstanceType() {
-            return this.sourceEndpointInstanceType;
         }
 
         public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange setFullBackupList(DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRangeFullBackupList fullBackupList) {
@@ -191,20 +191,20 @@ public class DescribeRestoreRangeInfoResponseBody extends TeaModel {
             return this.rangeType;
         }
 
-        public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange setBeginTimestampForRestore(Long beginTimestampForRestore) {
-            this.beginTimestampForRestore = beginTimestampForRestore;
-            return this;
-        }
-        public Long getBeginTimestampForRestore() {
-            return this.beginTimestampForRestore;
-        }
-
         public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange setSourceEndpointInstanceID(String sourceEndpointInstanceID) {
             this.sourceEndpointInstanceID = sourceEndpointInstanceID;
             return this;
         }
         public String getSourceEndpointInstanceID() {
             return this.sourceEndpointInstanceID;
+        }
+
+        public DescribeRestoreRangeInfoResponseBodyItemsDBSRecoverRange setSourceEndpointInstanceType(String sourceEndpointInstanceType) {
+            this.sourceEndpointInstanceType = sourceEndpointInstanceType;
+            return this;
+        }
+        public String getSourceEndpointInstanceType() {
+            return this.sourceEndpointInstanceType;
         }
 
     }

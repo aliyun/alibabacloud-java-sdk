@@ -7,11 +7,11 @@ public class EnableBackupLogRequest extends TeaModel {
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
-    @NameInMap("OwnerId")
-    public String ownerId;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("OwnerId")
+    public String ownerId;
 
     public static EnableBackupLogRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableBackupLogRequest self = new EnableBackupLogRequest();
@@ -26,20 +26,20 @@ public class EnableBackupLogRequest extends TeaModel {
         return this.backupPlanId;
     }
 
-    public EnableBackupLogRequest setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public String getOwnerId() {
-        return this.ownerId;
-    }
-
     public EnableBackupLogRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public EnableBackupLogRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
     }
 
 }

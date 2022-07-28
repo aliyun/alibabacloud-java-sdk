@@ -4,8 +4,11 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ErrCode")
+    public String errCode;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -13,26 +16,31 @@ public class DescribeRegionsResponseBody extends TeaModel {
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ErrCode")
-    public String errCode;
 
     public static DescribeRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponseBody self = new DescribeRegionsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeRegionsResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getErrCode() {
+        return this.errCode;
+    }
+
+    public DescribeRegionsResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
     public DescribeRegionsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,12 +59,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.regions;
     }
 
-    public DescribeRegionsResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public DescribeRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeRegionsResponseBody setSuccess(Boolean success) {
@@ -65,14 +73,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DescribeRegionsResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
-        return this;
-    }
-    public String getErrCode() {
-        return this.errCode;
     }
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {

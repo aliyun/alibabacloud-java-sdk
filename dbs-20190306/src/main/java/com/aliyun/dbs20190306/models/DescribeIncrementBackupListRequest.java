@@ -7,20 +7,26 @@ public class DescribeIncrementBackupListRequest extends TeaModel {
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
-    @NameInMap("PageNum")
-    public Integer pageNum;
+    @NameInMap("EndTimestamp")
+    public Long endTimestamp;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("ShowStorageType")
     public Boolean showStorageType;
+
+    @NameInMap("StartTimestamp")
+    public Long startTimestamp;
 
     public static DescribeIncrementBackupListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeIncrementBackupListRequest self = new DescribeIncrementBackupListRequest();
@@ -35,20 +41,20 @@ public class DescribeIncrementBackupListRequest extends TeaModel {
         return this.backupPlanId;
     }
 
-    public DescribeIncrementBackupListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeIncrementBackupListRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
-    public DescribeIncrementBackupListRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
+    public DescribeIncrementBackupListRequest setEndTimestamp(Long endTimestamp) {
+        this.endTimestamp = endTimestamp;
         return this;
     }
-    public Integer getPageNum() {
-        return this.pageNum;
+    public Long getEndTimestamp() {
+        return this.endTimestamp;
     }
 
     public DescribeIncrementBackupListRequest setOwnerId(String ownerId) {
@@ -59,12 +65,20 @@ public class DescribeIncrementBackupListRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeIncrementBackupListRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DescribeIncrementBackupListRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public DescribeIncrementBackupListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeIncrementBackupListRequest setShowStorageType(Boolean showStorageType) {
@@ -73,6 +87,14 @@ public class DescribeIncrementBackupListRequest extends TeaModel {
     }
     public Boolean getShowStorageType() {
         return this.showStorageType;
+    }
+
+    public DescribeIncrementBackupListRequest setStartTimestamp(Long startTimestamp) {
+        this.startTimestamp = startTimestamp;
+        return this;
+    }
+    public Long getStartTimestamp() {
+        return this.startTimestamp;
     }
 
 }

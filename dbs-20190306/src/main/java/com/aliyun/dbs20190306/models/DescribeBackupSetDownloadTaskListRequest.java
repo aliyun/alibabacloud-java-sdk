@@ -10,17 +10,17 @@ public class DescribeBackupSetDownloadTaskListRequest extends TeaModel {
     @NameInMap("BackupSetDownloadTaskId")
     public String backupSetDownloadTaskId;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNum")
-    public Integer pageNum;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static DescribeBackupSetDownloadTaskListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupSetDownloadTaskListRequest self = new DescribeBackupSetDownloadTaskListRequest();
@@ -43,20 +43,12 @@ public class DescribeBackupSetDownloadTaskListRequest extends TeaModel {
         return this.backupSetDownloadTaskId;
     }
 
-    public DescribeBackupSetDownloadTaskListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeBackupSetDownloadTaskListRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeBackupSetDownloadTaskListRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Integer getPageNum() {
-        return this.pageNum;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DescribeBackupSetDownloadTaskListRequest setOwnerId(String ownerId) {
@@ -67,12 +59,20 @@ public class DescribeBackupSetDownloadTaskListRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeBackupSetDownloadTaskListRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DescribeBackupSetDownloadTaskListRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public DescribeBackupSetDownloadTaskListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

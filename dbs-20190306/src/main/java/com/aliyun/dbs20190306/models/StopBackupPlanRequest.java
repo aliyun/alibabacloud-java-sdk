@@ -7,14 +7,14 @@ public class StopBackupPlanRequest extends TeaModel {
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
-    @NameInMap("StopMethod")
-    public String stopMethod;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("StopMethod")
+    public String stopMethod;
 
     public static StopBackupPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         StopBackupPlanRequest self = new StopBackupPlanRequest();
@@ -29,12 +29,12 @@ public class StopBackupPlanRequest extends TeaModel {
         return this.backupPlanId;
     }
 
-    public StopBackupPlanRequest setStopMethod(String stopMethod) {
-        this.stopMethod = stopMethod;
+    public StopBackupPlanRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getStopMethod() {
-        return this.stopMethod;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public StopBackupPlanRequest setOwnerId(String ownerId) {
@@ -45,12 +45,12 @@ public class StopBackupPlanRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public StopBackupPlanRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public StopBackupPlanRequest setStopMethod(String stopMethod) {
+        this.stopMethod = stopMethod;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getStopMethod() {
+        return this.stopMethod;
     }
 
 }

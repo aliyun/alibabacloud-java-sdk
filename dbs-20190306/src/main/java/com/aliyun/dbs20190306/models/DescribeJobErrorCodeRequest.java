@@ -4,8 +4,8 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribeJobErrorCodeRequest extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("Language")
     public String language;
@@ -13,20 +13,20 @@ public class DescribeJobErrorCodeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("TaskId")
+    public String taskId;
 
     public static DescribeJobErrorCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeJobErrorCodeRequest self = new DescribeJobErrorCodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeJobErrorCodeRequest setTaskId(String taskId) {
-        this.taskId = taskId;
+    public DescribeJobErrorCodeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DescribeJobErrorCodeRequest setLanguage(String language) {
@@ -45,12 +45,12 @@ public class DescribeJobErrorCodeRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeJobErrorCodeRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DescribeJobErrorCodeRequest setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

@@ -7,17 +7,17 @@ public class RenewBackupPlanRequest extends TeaModel {
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("OwnerId")
+    public String ownerId;
+
     @NameInMap("Period")
     public String period;
 
     @NameInMap("UsedTime")
     public Integer usedTime;
-
-    @NameInMap("OwnerId")
-    public String ownerId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     public static RenewBackupPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewBackupPlanRequest self = new RenewBackupPlanRequest();
@@ -30,6 +30,22 @@ public class RenewBackupPlanRequest extends TeaModel {
     }
     public String getBackupPlanId() {
         return this.backupPlanId;
+    }
+
+    public RenewBackupPlanRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public RenewBackupPlanRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
     }
 
     public RenewBackupPlanRequest setPeriod(String period) {
@@ -46,22 +62,6 @@ public class RenewBackupPlanRequest extends TeaModel {
     }
     public Integer getUsedTime() {
         return this.usedTime;
-    }
-
-    public RenewBackupPlanRequest setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public String getOwnerId() {
-        return this.ownerId;
-    }
-
-    public RenewBackupPlanRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

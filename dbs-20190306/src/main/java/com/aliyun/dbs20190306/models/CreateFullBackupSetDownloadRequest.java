@@ -4,29 +4,21 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class CreateFullBackupSetDownloadRequest extends TeaModel {
-    @NameInMap("BackupSetId")
-    public String backupSetId;
-
     @NameInMap("BackupSetDataFormat")
     public String backupSetDataFormat;
 
-    @NameInMap("OwnerId")
-    public String ownerId;
+    @NameInMap("BackupSetId")
+    public String backupSetId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("OwnerId")
+    public String ownerId;
+
     public static CreateFullBackupSetDownloadRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFullBackupSetDownloadRequest self = new CreateFullBackupSetDownloadRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateFullBackupSetDownloadRequest setBackupSetId(String backupSetId) {
-        this.backupSetId = backupSetId;
-        return this;
-    }
-    public String getBackupSetId() {
-        return this.backupSetId;
     }
 
     public CreateFullBackupSetDownloadRequest setBackupSetDataFormat(String backupSetDataFormat) {
@@ -37,12 +29,12 @@ public class CreateFullBackupSetDownloadRequest extends TeaModel {
         return this.backupSetDataFormat;
     }
 
-    public CreateFullBackupSetDownloadRequest setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
+    public CreateFullBackupSetDownloadRequest setBackupSetId(String backupSetId) {
+        this.backupSetId = backupSetId;
         return this;
     }
-    public String getOwnerId() {
-        return this.ownerId;
+    public String getBackupSetId() {
+        return this.backupSetId;
     }
 
     public CreateFullBackupSetDownloadRequest setClientToken(String clientToken) {
@@ -51,6 +43,14 @@ public class CreateFullBackupSetDownloadRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateFullBackupSetDownloadRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
     }
 
 }
