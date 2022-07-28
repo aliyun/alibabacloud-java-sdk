@@ -4,33 +4,26 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class RenderDistributionOrderShrinkRequest extends TeaModel {
-    // 分销真实买家ID
     @NameInMap("BuyerId")
     public String buyerId;
 
-    // 收货地址
     @NameInMap("DeliveryAddress")
     public String deliveryAddress;
 
-    // 渠道供应商ID
     @NameInMap("DistributionSupplierId")
     public String distributionSupplierId;
 
-    // 分销商ID
     @NameInMap("DistributorId")
     public String distributorId;
 
-    // 扩展信息
     @NameInMap("ExtInfo")
     public String extInfo;
 
-    // 商品信息
     @NameInMap("ItemInfoLists")
     public String itemInfoListsShrink;
 
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("TenantId")
+    public String tenantId;
 
     public static RenderDistributionOrderShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RenderDistributionOrderShrinkRequest self = new RenderDistributionOrderShrinkRequest();
@@ -85,12 +78,12 @@ public class RenderDistributionOrderShrinkRequest extends TeaModel {
         return this.itemInfoListsShrink;
     }
 
-    public RenderDistributionOrderShrinkRequest setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RenderDistributionOrderShrinkRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

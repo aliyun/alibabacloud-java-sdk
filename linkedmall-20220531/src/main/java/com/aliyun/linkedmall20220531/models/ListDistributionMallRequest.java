@@ -4,39 +4,30 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class ListDistributionMallRequest extends TeaModel {
-    // 渠道供应商id
     @NameInMap("ChannelSupplierId")
     public String channelSupplierId;
 
-    // 分销商城id
     @NameInMap("DistributionMallId")
     public String distributionMallId;
 
-    // 商城名称
     @NameInMap("DistributionMallName")
     public String distributionMallName;
 
-    // 分销商ID
     @NameInMap("DistributorId")
     public String distributorId;
 
-    // 结束时间
     @NameInMap("EndDate")
     public String endDate;
 
-    // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页数量
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 开始时间
     @NameInMap("StartDate")
     public String startDate;
 
-    // 租户Id
     @NameInMap("TenantId")
     public String tenantId;
 

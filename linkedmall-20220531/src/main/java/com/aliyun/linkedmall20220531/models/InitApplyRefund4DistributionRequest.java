@@ -4,25 +4,20 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class InitApplyRefund4DistributionRequest extends TeaModel {
-    // 退款类型
     @NameInMap("BizClaimType")
     public Integer bizClaimType;
 
-    // 分销商ID
     @NameInMap("DistributorId")
     public String distributorId;
 
-    // 货物状态
     @NameInMap("GoodsStatus")
     public Integer goodsStatus;
 
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // 子分销订单ID
     @NameInMap("SubDistributionOrderId")
     public String subDistributionOrderId;
+
+    @NameInMap("TenantId")
+    public String tenantId;
 
     public static InitApplyRefund4DistributionRequest build(java.util.Map<String, ?> map) throws Exception {
         InitApplyRefund4DistributionRequest self = new InitApplyRefund4DistributionRequest();
@@ -53,20 +48,20 @@ public class InitApplyRefund4DistributionRequest extends TeaModel {
         return this.goodsStatus;
     }
 
-    public InitApplyRefund4DistributionRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public InitApplyRefund4DistributionRequest setSubDistributionOrderId(String subDistributionOrderId) {
         this.subDistributionOrderId = subDistributionOrderId;
         return this;
     }
     public String getSubDistributionOrderId() {
         return this.subDistributionOrderId;
+    }
+
+    public InitApplyRefund4DistributionRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

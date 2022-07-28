@@ -1,3 +1,6 @@
+2022-07-28 Version: 1.0.5
+- Modify trade interface.
+
 2022-07-21 Version: 1.0.4
 - Modify QueryItemDetail.
 - Modify ListDistributionItem.

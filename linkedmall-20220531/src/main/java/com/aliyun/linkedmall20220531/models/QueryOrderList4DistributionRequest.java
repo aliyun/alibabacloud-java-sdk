@@ -4,25 +4,20 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderList4DistributionRequest extends TeaModel {
-    // 分销商ID
     @NameInMap("DistributorId")
     public String distributorId;
 
-    // 订单过滤条件
     @NameInMap("FilterOption")
     public String filterOption;
 
-    // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页行数
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 请求标识
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("TenantId")
+    public String tenantId;
 
     public static QueryOrderList4DistributionRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryOrderList4DistributionRequest self = new QueryOrderList4DistributionRequest();
@@ -61,12 +56,12 @@ public class QueryOrderList4DistributionRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryOrderList4DistributionRequest setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryOrderList4DistributionRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

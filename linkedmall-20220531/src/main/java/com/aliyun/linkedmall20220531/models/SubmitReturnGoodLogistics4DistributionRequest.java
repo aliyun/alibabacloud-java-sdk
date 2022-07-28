@@ -4,29 +4,23 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class SubmitReturnGoodLogistics4DistributionRequest extends TeaModel {
-    // 公司代码
     @NameInMap("CpCode")
     public String cpCode;
 
-    // 纠纷ID
     @NameInMap("DisputeId")
     public Long disputeId;
 
-    // 分销商ID
     @NameInMap("DistributorId")
     public String distributorId;
 
-    // 物流单号
     @NameInMap("LogisticsNo")
     public String logisticsNo;
 
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // 子分销订单ID
     @NameInMap("SubDistributionOrderId")
     public String subDistributionOrderId;
+
+    @NameInMap("TenantId")
+    public String tenantId;
 
     public static SubmitReturnGoodLogistics4DistributionRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitReturnGoodLogistics4DistributionRequest self = new SubmitReturnGoodLogistics4DistributionRequest();
@@ -65,20 +59,20 @@ public class SubmitReturnGoodLogistics4DistributionRequest extends TeaModel {
         return this.logisticsNo;
     }
 
-    public SubmitReturnGoodLogistics4DistributionRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public SubmitReturnGoodLogistics4DistributionRequest setSubDistributionOrderId(String subDistributionOrderId) {
         this.subDistributionOrderId = subDistributionOrderId;
         return this;
     }
     public String getSubDistributionOrderId() {
         return this.subDistributionOrderId;
+    }
+
+    public SubmitReturnGoodLogistics4DistributionRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

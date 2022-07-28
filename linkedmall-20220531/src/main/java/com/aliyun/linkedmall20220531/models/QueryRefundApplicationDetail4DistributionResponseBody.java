@@ -4,65 +4,42 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class QueryRefundApplicationDetail4DistributionResponseBody extends TeaModel {
-    // 渠道公共数据
-    @NameInMap("BizViewData")
-    public java.util.Map<String, ?> bizViewData;
-
-    // 返回的执行结果码， 正确为字符串 0000
     @NameInMap("Code")
     public String code;
 
-    // 每次请求操作对应的操作日志号，由系统自动生成，返回给租户，可用于排查问题，双方日志中统一透出此标识
     @NameInMap("LogsId")
     public String logsId;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 请求结果数据
     @NameInMap("Model")
     public QueryRefundApplicationDetail4DistributionResponseBodyModel model;
 
-    // 当前页
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // pageSize
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // POP请求流水号，建议租户日志中也输出此流水号，双方排查问题方便
     @NameInMap("RequestId")
     public String requestId;
 
-    // 错误子代码。一般用于显示业务类的错误代码，一般建议关注此类错误
     @NameInMap("SubCode")
     public String subCode;
 
-    // 业务处理相关的错误信息，一般建议关注此类错误
     @NameInMap("SubMessage")
     public String subMessage;
 
-    // 本次执行的结果成功与否
     @NameInMap("Success")
     public Boolean success;
 
-    // 总数量
     @NameInMap("TotalCount")
     public Long totalCount;
 
     public static QueryRefundApplicationDetail4DistributionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryRefundApplicationDetail4DistributionResponseBody self = new QueryRefundApplicationDetail4DistributionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryRefundApplicationDetail4DistributionResponseBody setBizViewData(java.util.Map<String, ?> bizViewData) {
-        this.bizViewData = bizViewData;
-        return this;
-    }
-    public java.util.Map<String, ?> getBizViewData() {
-        return this.bizViewData;
     }
 
     public QueryRefundApplicationDetail4DistributionResponseBody setCode(String code) {
@@ -153,27 +130,27 @@ public class QueryRefundApplicationDetail4DistributionResponseBody extends TeaMo
         return this.totalCount;
     }
 
-    public static class QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReasonText extends TeaModel {
+    public static class QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReason extends TeaModel {
         @NameInMap("ReasonTextId")
-        public String reasonTextId;
+        public Long reasonTextId;
 
         @NameInMap("ReasonTips")
         public String reasonTips;
 
-        public static QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReasonText build(java.util.Map<String, ?> map) throws Exception {
-            QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReasonText self = new QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReasonText();
+        public static QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReason build(java.util.Map<String, ?> map) throws Exception {
+            QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReason self = new QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReason();
             return TeaModel.build(map, self);
         }
 
-        public QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReasonText setReasonTextId(String reasonTextId) {
+        public QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReason setReasonTextId(Long reasonTextId) {
             this.reasonTextId = reasonTextId;
             return this;
         }
-        public String getReasonTextId() {
+        public Long getReasonTextId() {
             return this.reasonTextId;
         }
 
-        public QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReasonText setReasonTips(String reasonTips) {
+        public QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReason setReasonTips(String reasonTips) {
             this.reasonTips = reasonTips;
             return this;
         }
@@ -183,19 +160,19 @@ public class QueryRefundApplicationDetail4DistributionResponseBody extends TeaMo
 
     }
 
-    public static class QueryRefundApplicationDetail4DistributionResponseBodyModelMaxRefundFeeData extends TeaModel {
+    public static class QueryRefundApplicationDetail4DistributionResponseBodyModelRefundFeeData extends TeaModel {
         @NameInMap("MaxRefundFee")
         public Long maxRefundFee;
 
         @NameInMap("MinRefundFee")
         public Long minRefundFee;
 
-        public static QueryRefundApplicationDetail4DistributionResponseBodyModelMaxRefundFeeData build(java.util.Map<String, ?> map) throws Exception {
-            QueryRefundApplicationDetail4DistributionResponseBodyModelMaxRefundFeeData self = new QueryRefundApplicationDetail4DistributionResponseBodyModelMaxRefundFeeData();
+        public static QueryRefundApplicationDetail4DistributionResponseBodyModelRefundFeeData build(java.util.Map<String, ?> map) throws Exception {
+            QueryRefundApplicationDetail4DistributionResponseBodyModelRefundFeeData self = new QueryRefundApplicationDetail4DistributionResponseBodyModelRefundFeeData();
             return TeaModel.build(map, self);
         }
 
-        public QueryRefundApplicationDetail4DistributionResponseBodyModelMaxRefundFeeData setMaxRefundFee(Long maxRefundFee) {
+        public QueryRefundApplicationDetail4DistributionResponseBodyModelRefundFeeData setMaxRefundFee(Long maxRefundFee) {
             this.maxRefundFee = maxRefundFee;
             return this;
         }
@@ -203,7 +180,7 @@ public class QueryRefundApplicationDetail4DistributionResponseBody extends TeaMo
             return this.maxRefundFee;
         }
 
-        public QueryRefundApplicationDetail4DistributionResponseBodyModelMaxRefundFeeData setMinRefundFee(Long minRefundFee) {
+        public QueryRefundApplicationDetail4DistributionResponseBodyModelRefundFeeData setMinRefundFee(Long minRefundFee) {
             this.minRefundFee = minRefundFee;
             return this;
         }
@@ -217,8 +194,8 @@ public class QueryRefundApplicationDetail4DistributionResponseBody extends TeaMo
         @NameInMap("ApplyDisputeDesc")
         public String applyDisputeDesc;
 
-        @NameInMap("ApplyReasonText")
-        public QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReasonText applyReasonText;
+        @NameInMap("ApplyReason")
+        public QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReason applyReason;
 
         @NameInMap("BizClaimType")
         public Integer bizClaimType;
@@ -244,9 +221,6 @@ public class QueryRefundApplicationDetail4DistributionResponseBody extends TeaMo
         @NameInMap("DistributionOrderId")
         public String distributionOrderId;
 
-        @NameInMap("MaxRefundFeeData")
-        public QueryRefundApplicationDetail4DistributionResponseBodyModelMaxRefundFeeData maxRefundFeeData;
-
         @NameInMap("OrderLogisticsStatus")
         public Integer orderLogisticsStatus;
 
@@ -255,6 +229,9 @@ public class QueryRefundApplicationDetail4DistributionResponseBody extends TeaMo
 
         @NameInMap("RefundFee")
         public Long refundFee;
+
+        @NameInMap("RefundFeeData")
+        public QueryRefundApplicationDetail4DistributionResponseBodyModelRefundFeeData refundFeeData;
 
         @NameInMap("RefunderAddress")
         public String refunderAddress;
@@ -299,12 +276,12 @@ public class QueryRefundApplicationDetail4DistributionResponseBody extends TeaMo
             return this.applyDisputeDesc;
         }
 
-        public QueryRefundApplicationDetail4DistributionResponseBodyModel setApplyReasonText(QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReasonText applyReasonText) {
-            this.applyReasonText = applyReasonText;
+        public QueryRefundApplicationDetail4DistributionResponseBodyModel setApplyReason(QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReason applyReason) {
+            this.applyReason = applyReason;
             return this;
         }
-        public QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReasonText getApplyReasonText() {
-            return this.applyReasonText;
+        public QueryRefundApplicationDetail4DistributionResponseBodyModelApplyReason getApplyReason() {
+            return this.applyReason;
         }
 
         public QueryRefundApplicationDetail4DistributionResponseBodyModel setBizClaimType(Integer bizClaimType) {
@@ -371,14 +348,6 @@ public class QueryRefundApplicationDetail4DistributionResponseBody extends TeaMo
             return this.distributionOrderId;
         }
 
-        public QueryRefundApplicationDetail4DistributionResponseBodyModel setMaxRefundFeeData(QueryRefundApplicationDetail4DistributionResponseBodyModelMaxRefundFeeData maxRefundFeeData) {
-            this.maxRefundFeeData = maxRefundFeeData;
-            return this;
-        }
-        public QueryRefundApplicationDetail4DistributionResponseBodyModelMaxRefundFeeData getMaxRefundFeeData() {
-            return this.maxRefundFeeData;
-        }
-
         public QueryRefundApplicationDetail4DistributionResponseBodyModel setOrderLogisticsStatus(Integer orderLogisticsStatus) {
             this.orderLogisticsStatus = orderLogisticsStatus;
             return this;
@@ -401,6 +370,14 @@ public class QueryRefundApplicationDetail4DistributionResponseBody extends TeaMo
         }
         public Long getRefundFee() {
             return this.refundFee;
+        }
+
+        public QueryRefundApplicationDetail4DistributionResponseBodyModel setRefundFeeData(QueryRefundApplicationDetail4DistributionResponseBodyModelRefundFeeData refundFeeData) {
+            this.refundFeeData = refundFeeData;
+            return this;
+        }
+        public QueryRefundApplicationDetail4DistributionResponseBodyModelRefundFeeData getRefundFeeData() {
+            return this.refundFeeData;
         }
 
         public QueryRefundApplicationDetail4DistributionResponseBodyModel setRefunderAddress(String refunderAddress) {

@@ -4,17 +4,14 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class CancelDistributionTradeRequest extends TeaModel {
-    // 分销交易号
     @NameInMap("DistributionTradeId")
     public String distributionTradeId;
 
-    // 分销商ID
     @NameInMap("DistributorId")
     public String distributorId;
 
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("TenantId")
+    public String tenantId;
 
     public static CancelDistributionTradeRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelDistributionTradeRequest self = new CancelDistributionTradeRequest();
@@ -37,12 +34,12 @@ public class CancelDistributionTradeRequest extends TeaModel {
         return this.distributorId;
     }
 
-    public CancelDistributionTradeRequest setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CancelDistributionTradeRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

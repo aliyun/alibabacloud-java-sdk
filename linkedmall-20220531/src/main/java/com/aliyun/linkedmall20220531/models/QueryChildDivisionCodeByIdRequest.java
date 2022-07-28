@@ -4,14 +4,12 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class QueryChildDivisionCodeByIdRequest extends TeaModel {
-    // 分销商ID
     @NameInMap("DistributorId")
     public String distributorId;
 
     @NameInMap("DivisionCode")
     public String divisionCode;
 
-    // 租户Id
     @NameInMap("TenantId")
     public String tenantId;
 

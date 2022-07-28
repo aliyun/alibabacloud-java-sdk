@@ -4,49 +4,38 @@ package com.aliyun.linkedmall20220531.models;
 import com.aliyun.tea.*;
 
 public class ModifyRefund4DistributionRequest extends TeaModel {
-    // 退款原因ID
     @NameInMap("ApplyReasonTextId")
     public Long applyReasonTextId;
 
-    // 退货数量
     @NameInMap("ApplyRefundCount")
     public Integer applyRefundCount;
 
-    // 申请退款金额
     @NameInMap("ApplyRefundFee")
     public Long applyRefundFee;
 
-    // 退款类型
     @NameInMap("BizClaimType")
     public Integer bizClaimType;
 
-    // 纠纷id
     @NameInMap("DisputeId")
     public Long disputeId;
 
-    // 分销商ID
     @NameInMap("DistributorId")
     public String distributorId;
 
-    // 货物状态
     @NameInMap("GoodsStatus")
     public Integer goodsStatus;
 
-    // 留言
     @NameInMap("LeaveMessage")
     public String leaveMessage;
 
-    // 凭证
     @NameInMap("LeavePictureLists")
     public java.util.List<ModifyRefund4DistributionRequestLeavePictureLists> leavePictureLists;
 
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // 子分销订单ID
     @NameInMap("SubDistributionOrderId")
     public String subDistributionOrderId;
+
+    @NameInMap("TenantId")
+    public String tenantId;
 
     public static ModifyRefund4DistributionRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyRefund4DistributionRequest self = new ModifyRefund4DistributionRequest();
@@ -125,20 +114,20 @@ public class ModifyRefund4DistributionRequest extends TeaModel {
         return this.leavePictureLists;
     }
 
-    public ModifyRefund4DistributionRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ModifyRefund4DistributionRequest setSubDistributionOrderId(String subDistributionOrderId) {
         this.subDistributionOrderId = subDistributionOrderId;
         return this;
     }
     public String getSubDistributionOrderId() {
         return this.subDistributionOrderId;
+    }
+
+    public ModifyRefund4DistributionRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public static class ModifyRefund4DistributionRequestLeavePictureLists extends TeaModel {
