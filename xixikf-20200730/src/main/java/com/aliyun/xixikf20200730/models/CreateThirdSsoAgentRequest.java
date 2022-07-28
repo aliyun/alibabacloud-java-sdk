@@ -4,35 +4,27 @@ package com.aliyun.xixikf20200730.models;
 import com.aliyun.tea.*;
 
 public class CreateThirdSsoAgentRequest extends TeaModel {
-    // param3
     @NameInMap("AccountId")
     public String accountId;
 
-    // param4
     @NameInMap("AccountName")
     public String accountName;
 
-    // param2
     @NameInMap("ClientId")
     public String clientId;
 
-    // clientToken
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // param5
     @NameInMap("DisplayName")
     public String displayName;
 
-    // param1
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // param7
     @NameInMap("RoleIds")
     public java.util.List<Long> roleIds;
 
-    // param6
     @NameInMap("SkillGroupIds")
     public java.util.List<Long> skillGroupIds;
 

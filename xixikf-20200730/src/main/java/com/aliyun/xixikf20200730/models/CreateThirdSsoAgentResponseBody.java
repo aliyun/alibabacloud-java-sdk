@@ -4,27 +4,21 @@ package com.aliyun.xixikf20200730.models;
 import com.aliyun.tea.*;
 
 public class CreateThirdSsoAgentResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // 新创建的坐席id
     @NameInMap("Data")
     public Long data;
 
-    // httpStatusCode
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 

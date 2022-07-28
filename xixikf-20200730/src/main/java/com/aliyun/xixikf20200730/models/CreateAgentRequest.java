@@ -7,7 +7,6 @@ public class CreateAgentRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
-    // js sdk中自动生成的鉴权token
     @NameInMap("ClientToken")
     public String clientToken;
 

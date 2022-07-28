@@ -4,26 +4,21 @@ package com.aliyun.xixikf20200730.models;
 import com.aliyun.tea.*;
 
 public class SendXspaceStationMsgToServicerResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 请求结果数据
     @NameInMap("Data")
     public String data;
 
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 请求唯一ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 处理结果
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,27 +4,21 @@ package com.aliyun.xixikf20200730.models;
 import com.aliyun.tea.*;
 
 public class StartChatWorkResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // data
     @NameInMap("Data")
     public String data;
 
-    // httpStatusCode
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
