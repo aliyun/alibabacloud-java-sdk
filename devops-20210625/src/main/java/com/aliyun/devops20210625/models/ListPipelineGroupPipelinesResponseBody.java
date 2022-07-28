@@ -3,7 +3,7 @@ package com.aliyun.devops20210625.models;
 
 import com.aliyun.tea.*;
 
-public class ListPipelinesResponseBody extends TeaModel {
+public class ListPipelineGroupPipelinesResponseBody extends TeaModel {
     @NameInMap("errorCode")
     public String errorCode;
 
@@ -14,7 +14,7 @@ public class ListPipelinesResponseBody extends TeaModel {
     public String nextToken;
 
     @NameInMap("pipelines")
-    public java.util.List<ListPipelinesResponseBodyPipelines> pipelines;
+    public java.util.List<ListPipelineGroupPipelinesResponseBodyPipelines> pipelines;
 
     @NameInMap("requestId")
     public String requestId;
@@ -23,14 +23,14 @@ public class ListPipelinesResponseBody extends TeaModel {
     public Boolean success;
 
     @NameInMap("totalCount")
-    public Long totalCount;
+    public Integer totalCount;
 
-    public static ListPipelinesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListPipelinesResponseBody self = new ListPipelinesResponseBody();
+    public static ListPipelineGroupPipelinesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListPipelineGroupPipelinesResponseBody self = new ListPipelineGroupPipelinesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListPipelinesResponseBody setErrorCode(String errorCode) {
+    public ListPipelineGroupPipelinesResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -38,7 +38,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ListPipelinesResponseBody setErrorMessage(String errorMessage) {
+    public ListPipelineGroupPipelinesResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -46,7 +46,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public ListPipelinesResponseBody setNextToken(String nextToken) {
+    public ListPipelineGroupPipelinesResponseBody setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -54,15 +54,15 @@ public class ListPipelinesResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public ListPipelinesResponseBody setPipelines(java.util.List<ListPipelinesResponseBodyPipelines> pipelines) {
+    public ListPipelineGroupPipelinesResponseBody setPipelines(java.util.List<ListPipelineGroupPipelinesResponseBodyPipelines> pipelines) {
         this.pipelines = pipelines;
         return this;
     }
-    public java.util.List<ListPipelinesResponseBodyPipelines> getPipelines() {
+    public java.util.List<ListPipelineGroupPipelinesResponseBodyPipelines> getPipelines() {
         return this.pipelines;
     }
 
-    public ListPipelinesResponseBody setRequestId(String requestId) {
+    public ListPipelineGroupPipelinesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -70,7 +70,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListPipelinesResponseBody setSuccess(Boolean success) {
+    public ListPipelineGroupPipelinesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -78,23 +78,17 @@ public class ListPipelinesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListPipelinesResponseBody setTotalCount(Long totalCount) {
+    public ListPipelineGroupPipelinesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.totalCount;
     }
 
-    public static class ListPipelinesResponseBodyPipelines extends TeaModel {
+    public static class ListPipelineGroupPipelinesResponseBodyPipelines extends TeaModel {
         @NameInMap("createTime")
         public Long createTime;
-
-        @NameInMap("creatorAccountId")
-        public String creatorAccountId;
-
-        @NameInMap("groupId")
-        public Long groupId;
 
         @NameInMap("pipelineId")
         public Long pipelineId;
@@ -102,12 +96,12 @@ public class ListPipelinesResponseBody extends TeaModel {
         @NameInMap("pipelineName")
         public String pipelineName;
 
-        public static ListPipelinesResponseBodyPipelines build(java.util.Map<String, ?> map) throws Exception {
-            ListPipelinesResponseBodyPipelines self = new ListPipelinesResponseBodyPipelines();
+        public static ListPipelineGroupPipelinesResponseBodyPipelines build(java.util.Map<String, ?> map) throws Exception {
+            ListPipelineGroupPipelinesResponseBodyPipelines self = new ListPipelineGroupPipelinesResponseBodyPipelines();
             return TeaModel.build(map, self);
         }
 
-        public ListPipelinesResponseBodyPipelines setCreateTime(Long createTime) {
+        public ListPipelineGroupPipelinesResponseBodyPipelines setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -115,23 +109,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListPipelinesResponseBodyPipelines setCreatorAccountId(String creatorAccountId) {
-            this.creatorAccountId = creatorAccountId;
-            return this;
-        }
-        public String getCreatorAccountId() {
-            return this.creatorAccountId;
-        }
-
-        public ListPipelinesResponseBodyPipelines setGroupId(Long groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public Long getGroupId() {
-            return this.groupId;
-        }
-
-        public ListPipelinesResponseBodyPipelines setPipelineId(Long pipelineId) {
+        public ListPipelineGroupPipelinesResponseBodyPipelines setPipelineId(Long pipelineId) {
             this.pipelineId = pipelineId;
             return this;
         }
@@ -139,7 +117,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             return this.pipelineId;
         }
 
-        public ListPipelinesResponseBodyPipelines setPipelineName(String pipelineName) {
+        public ListPipelineGroupPipelinesResponseBodyPipelines setPipelineName(String pipelineName) {
             this.pipelineName = pipelineName;
             return this;
         }

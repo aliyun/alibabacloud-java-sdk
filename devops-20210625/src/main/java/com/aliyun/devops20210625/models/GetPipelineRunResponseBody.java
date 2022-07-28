@@ -151,7 +151,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         public Boolean disable;
 
         @NameInMap("params")
-        public Object params;
+        public java.util.Map<String, ?> params;
 
         @NameInMap("type")
         public String type;
@@ -169,11 +169,11 @@ public class GetPipelineRunResponseBody extends TeaModel {
             return this.disable;
         }
 
-        public GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions setParams(Object params) {
+        public GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions setParams(java.util.Map<String, ?> params) {
             this.params = params;
             return this;
         }
-        public Object getParams() {
+        public java.util.Map<String, ?> getParams() {
             return this.params;
         }
 
