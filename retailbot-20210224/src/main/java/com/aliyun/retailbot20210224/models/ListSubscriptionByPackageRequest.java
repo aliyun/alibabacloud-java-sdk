@@ -4,11 +4,9 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionByPackageRequest extends TeaModel {
-    // 行业包信息
     @NameInMap("PackageDTO")
     public ListSubscriptionByPackageRequestPackageDTO packageDTO;
 
-    // 分页参数
     @NameInMap("PageData")
     public ListSubscriptionByPackageRequestPageData pageData;
 
@@ -34,11 +32,9 @@ public class ListSubscriptionByPackageRequest extends TeaModel {
     }
 
     public static class ListSubscriptionByPackageRequestPackageDTO extends TeaModel {
-        // 行业包code
         @NameInMap("PackageCode")
         public String packageCode;
 
-        // 行业包版本
         @NameInMap("PackageVersion")
         public String packageVersion;
 
@@ -66,11 +62,9 @@ public class ListSubscriptionByPackageRequest extends TeaModel {
     }
 
     public static class ListSubscriptionByPackageRequestPageData extends TeaModel {
-        // 返回的最大记录数
         @NameInMap("MaxResults")
         public Integer maxResults;
 
-        // 下一页的token
         @NameInMap("NextToken")
         public String nextToken;
 

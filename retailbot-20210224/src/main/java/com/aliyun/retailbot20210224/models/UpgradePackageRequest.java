@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UpgradePackageRequest extends TeaModel {
-    // 操作人信息
     @NameInMap("Operator")
     public UpgradePackageRequestOperator operator;
 
-    // 需要升级的行业包
     @NameInMap("PackageDTO")
     public UpgradePackageRequestPackageDTO packageDTO;
 
-    // 机器人code
     @NameInMap("RobotCodes")
     public java.util.List<String> robotCodes;
 
@@ -46,11 +43,9 @@ public class UpgradePackageRequest extends TeaModel {
     }
 
     public static class UpgradePackageRequestOperator extends TeaModel {
-        // 操作人id
         @NameInMap("OperatorId")
         public String operatorId;
 
-        // 操作人显示名称
         @NameInMap("OperatorName")
         public String operatorName;
 
@@ -78,11 +73,9 @@ public class UpgradePackageRequest extends TeaModel {
     }
 
     public static class UpgradePackageRequestPackageDTO extends TeaModel {
-        // 行业包code
         @NameInMap("PackageCode")
         public String packageCode;
 
-        // 行业包版本
         @NameInMap("PackageVersion")
         public String packageVersion;
 

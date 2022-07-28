@@ -4,22 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionByRobotResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 订阅的行业包
     @NameInMap("Data")
     public java.util.List<ListSubscriptionByRobotResponseBodyData> data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -69,15 +65,12 @@ public class ListSubscriptionByRobotResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionByRobotResponseBodyData extends TeaModel {
-        // 行业包code
         @NameInMap("PackageCode")
         public String packageCode;
 
-        // 行业包版本
         @NameInMap("PackageVersion")
         public String packageVersion;
 
-        // 机器人code
         @NameInMap("RobotCode")
         public String robotCode;
 

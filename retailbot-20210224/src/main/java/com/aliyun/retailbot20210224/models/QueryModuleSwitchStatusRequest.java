@@ -4,11 +4,9 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class QueryModuleSwitchStatusRequest extends TeaModel {
-    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 开关类型
     @NameInMap("SwitchType")
     public String switchType;
 

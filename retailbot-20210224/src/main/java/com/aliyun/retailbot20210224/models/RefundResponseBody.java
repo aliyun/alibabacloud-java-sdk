@@ -13,7 +13,6 @@ public class RefundResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 

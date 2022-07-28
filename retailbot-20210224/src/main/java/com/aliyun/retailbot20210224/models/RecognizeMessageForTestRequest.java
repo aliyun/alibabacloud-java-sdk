@@ -4,87 +4,66 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class RecognizeMessageForTestRequest extends TeaModel {
-    // 单句的唯一ID
     @NameInMap("ChatId")
     public String chatId;
 
-    // 客户端信息
     @NameInMap("ClientInfo")
     public RecognizeMessageForTestRequestClientInfo clientInfo;
 
-    // 用户输入的query
     @NameInMap("Content")
     public String content;
 
-    // 用户输入的query类型
     @NameInMap("ContentType")
     public String contentType;
 
-    // 上文期望的槽位
     @NameInMap("ExpectedSlots")
     public java.util.List<RecognizeMessageForTestRequestExpectedSlots> expectedSlots;
 
-    // query扩展信息, 通常在点击事件中使用
     @NameInMap("ExtraContent")
     public java.util.Map<String, ?> extraContent;
 
-    // 焦点商品id
     @NameInMap("FocusItemId")
     public String focusItemId;
 
-    // 焦点订单id
     @NameInMap("FocusOrderId")
     public String focusOrderId;
 
-    // 是否忽略场景开关
     @NameInMap("IgnoreSceneSwitch")
     public Boolean ignoreSceneSwitch;
 
-    // 商品列表
     @NameInMap("Items")
     public java.util.List<RecognizeMessageForTestRequestItems> items;
 
-    // 订单列表
     @NameInMap("Orders")
     public java.util.List<RecognizeMessageForTestRequestOrders> orders;
 
-    // 机器人ID
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 当前的对话轮次
     @NameInMap("Round")
     public Integer round;
 
-    // 卖家ID
     @NameInMap("SellerId")
     public String sellerId;
 
-    // 卖家nick
     @NameInMap("SellerNick")
     public String sellerNick;
 
-    // 机器人模式
     @NameInMap("ServiceMode")
     public String serviceMode;
 
-    // 买卖家之间的会话ID
     @NameInMap("SessionId")
     public String sessionId;
 
-    // 卖家接待人ID
     @NameInMap("StaffId")
     public String staffId;
 
-    // 卖家接待人nick
     @NameInMap("StaffNick")
     public String staffNick;
 
-    // 买家ID
     @NameInMap("UserId")
     public String userId;
 
-    // 买家nick
     @NameInMap("UserNick")
     public String userNick;
 
@@ -262,15 +241,12 @@ public class RecognizeMessageForTestRequest extends TeaModel {
     }
 
     public static class RecognizeMessageForTestRequestClientInfo extends TeaModel {
-        // 客户端APP
         @NameInMap("ClientApp")
         public String clientApp;
 
-        // 客户端系统
         @NameInMap("ClientOs")
         public String clientOs;
 
-        // 客户端版本
         @NameInMap("ClientVersion")
         public String clientVersion;
 
@@ -306,7 +282,6 @@ public class RecognizeMessageForTestRequest extends TeaModel {
     }
 
     public static class RecognizeMessageForTestRequestExpectedSlots extends TeaModel {
-        // 槽位key
         @NameInMap("SlotKey")
         public String slotKey;
 
@@ -326,35 +301,27 @@ public class RecognizeMessageForTestRequest extends TeaModel {
     }
 
     public static class RecognizeMessageForTestRequestItems extends TeaModel {
-        // 商品叶子类目id
         @NameInMap("CategoryId")
         public String categoryId;
 
-        // 商品id
         @NameInMap("ItemId")
         public String itemId;
 
-        // 商品主图url
         @NameInMap("PicUrl")
         public String picUrl;
 
-        // 商品价格
         @NameInMap("Price")
         public Float price;
 
-        // 商品属性
         @NameInMap("Property")
         public java.util.Map<String, String> property;
 
-        // 卖家id
         @NameInMap("SellerId")
         public String sellerId;
 
-        // 商品店铺类目
         @NameInMap("ShopCategoryIds")
         public java.util.List<String> shopCategoryIds;
 
-        // 商品标题
         @NameInMap("Title")
         public String title;
 
@@ -430,67 +397,51 @@ public class RecognizeMessageForTestRequest extends TeaModel {
     }
 
     public static class RecognizeMessageForTestRequestOrders extends TeaModel {
-        // 买家id
         @NameInMap("BuyerId")
         public String buyerId;
 
-        // 评价状态
         @NameInMap("BuyerRateStatus")
         public String buyerRateStatus;
 
-        // 订单中的商品数量
         @NameInMap("Count")
         public Integer count;
 
-        // 订单创建时间
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 订单中的商品id
         @NameInMap("ItemId")
         public String itemId;
 
-        // 商品主图url
         @NameInMap("ItemPic")
         public String itemPic;
 
-        // 商品标题
         @NameInMap("ItemTitle")
         public String itemTitle;
 
-        // 物流状态
         @NameInMap("LogisticsStatus")
         public String logisticsStatus;
 
-        // 子订单id
         @NameInMap("OrderId")
         public String orderId;
 
-        // 主订单id
         @NameInMap("ParentOrderId")
         public String parentOrderId;
 
-        // 支付状态
         @NameInMap("PayStatus")
         public String payStatus;
 
-        // 订单支付时间
         @NameInMap("PayTime")
         public Long payTime;
 
-        // 订单价格
         @NameInMap("Price")
         public Float price;
 
-        // 退款状态
         @NameInMap("RefundStatus")
         public String refundStatus;
 
-        // 卖家id
         @NameInMap("SellerId")
         public String sellerId;
 
-        // sku属性
         @NameInMap("SkuProperty")
         public String skuProperty;
 

@@ -4,7 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class QueryOutboundJobsResponseBody extends TeaModel {
-    // BaseResult<List<OutboundJobDTO>>
     @NameInMap("Content")
     public QueryOutboundJobsResponseBodyContent content;
 
@@ -44,11 +43,9 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
     }
 
     public static class QueryOutboundJobsResponseBodyContentData extends TeaModel {
-        // appCode
         @NameInMap("AppCode")
         public String appCode;
 
-        // 应用ID
         @NameInMap("AppId")
         public String appId;
 
@@ -58,41 +55,33 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
         @NameInMap("CrowdConfig")
         public String crowdConfig;
 
-        // 人群类型：上传人群/算法人群
         @NameInMap("CrowdType")
         public Integer crowdType;
 
         @NameInMap("EndTime")
         public String endTime;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // 修改时间
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // 主键
         @NameInMap("Id")
         public Long id;
 
-        // 任务名称：唯一，避免重复提交
         @NameInMap("JobName")
         public String jobName;
 
         @NameInMap("RunConfig")
         public String runConfig;
 
-        // 执行策略：1.一次性任务， 2.周期任务
         @NameInMap("RunType")
         public Integer runType;
 
-        // saas Id
         @NameInMap("SaasId")
         public String saasId;
 
-        // shop Id
         @NameInMap("ShopId")
         public Long shopId;
 
@@ -102,11 +91,9 @@ public class QueryOutboundJobsResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
-        // tenant Id
         @NameInMap("TenantId")
         public Long tenantId;
 
-        // 版本
         @NameInMap("Version")
         public String version;
 

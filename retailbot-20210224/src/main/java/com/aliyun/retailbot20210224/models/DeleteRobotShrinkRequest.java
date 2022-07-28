@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class DeleteRobotShrinkRequest extends TeaModel {
-    // 备注信息
     @NameInMap("Memo")
     public String memo;
 
-    // 操作人信息
     @NameInMap("Operator")
     public String operatorShrink;
 
-    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 

@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class SaveModuleSwitchRequest extends TeaModel {
-    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 开关状态
     @NameInMap("Status")
     public Integer status;
 
-    // 开关类型
     @NameInMap("SwitchType")
     public String switchType;
 

@@ -4,94 +4,72 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class RecognizeMessageShrinkRequest extends TeaModel {
-    // 单句的唯一ID
     @NameInMap("ChatId")
     public String chatId;
 
-    // 客户端信息
     @NameInMap("ClientInfo")
     public String clientInfoShrink;
 
-    // 用户输入的query
     @NameInMap("Content")
     public String content;
 
-    // 用户输入的query类型
     @NameInMap("ContentType")
     public String contentType;
 
-    // 上文期望的槽位
     @NameInMap("ExpectedSlots")
     public String expectedSlotsShrink;
 
-    // query扩展信息, 通常在点击事件中使用
     @NameInMap("ExtraContent")
     public String extraContentShrink;
 
-    // 焦点商品id
     @NameInMap("FocusItemId")
     public String focusItemId;
 
-    // 焦点订单id
     @NameInMap("FocusOrderId")
     public String focusOrderId;
 
-    // 商品列表
     @NameInMap("Items")
     public String itemsShrink;
 
-    // 订单列表
     @NameInMap("Orders")
     public String ordersShrink;
 
-    // 调用知识包指令
     @NameInMap("Packages")
     public String packagesShrink;
 
     @NameInMap("PlatformCode")
     public String platformCode;
 
-    // 机器人ID
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 当前的对话轮次
     @NameInMap("Round")
     public Integer round;
 
-    // 卖家ID
     @NameInMap("SellerId")
     public String sellerId;
 
-    // 卖家nick
     @NameInMap("SellerNick")
     public String sellerNick;
 
-    // 机器人模式
     @NameInMap("ServiceMode")
     public String serviceMode;
 
-    // 买卖家之间的会话ID
     @NameInMap("SessionId")
     public String sessionId;
 
-    // 卖家接待人ID
     @NameInMap("StaffId")
     public String staffId;
 
-    // 卖家接待人nick
     @NameInMap("StaffNick")
     public String staffNick;
 
-    // 是否压测流量
     @NameInMap("StressTesting")
     public Boolean stressTesting;
 
-    // 买家ID
     @NameInMap("UserId")
     public String userId;
 
-    // 买家nick
     @NameInMap("UserNick")
     public String userNick;
 

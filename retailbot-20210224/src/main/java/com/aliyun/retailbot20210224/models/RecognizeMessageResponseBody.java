@@ -4,23 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class RecognizeMessageResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 问答返回结果
     @NameInMap("Data")
     public RecognizeMessageResponseBodyData data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,11 +65,9 @@ public class RecognizeMessageResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageResponseBodyDataKnowledgesSolutionsConditions extends TeaModel {
-        // 条件类型
         @NameInMap("ConditionType")
         public String conditionType;
 
-        // 条件表达式
         @NameInMap("ConditionValue")
         public String conditionValue;
 
@@ -102,11 +95,9 @@ public class RecognizeMessageResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageResponseBodyDataKnowledgesSolutionsSolutionVariables extends TeaModel {
-        // 变量名称
         @NameInMap("VariableName")
         public String variableName;
 
-        // 变量类型
         @NameInMap("VariableType")
         public String variableType;
 
@@ -134,35 +125,27 @@ public class RecognizeMessageResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageResponseBodyDataKnowledgesSolutions extends TeaModel {
-        // 答案限定条件
         @NameInMap("Conditions")
         public java.util.List<RecognizeMessageResponseBodyDataKnowledgesSolutionsConditions> conditions;
 
-        // 扩展答案信息
         @NameInMap("ExtraContent")
         public String extraContent;
 
-        // 知识id
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
-        // 答案内容
         @NameInMap("SolutionContent")
         public String solutionContent;
 
-        // 答案id
         @NameInMap("SolutionId")
         public Long solutionId;
 
-        // 答案来源
         @NameInMap("SolutionSource")
         public String solutionSource;
 
-        // 答案类型
         @NameInMap("SolutionType")
         public String solutionType;
 
-        // 答案变量
         @NameInMap("SolutionVariables")
         public java.util.List<RecognizeMessageResponseBodyDataKnowledgesSolutionsSolutionVariables> solutionVariables;
 
@@ -238,19 +221,15 @@ public class RecognizeMessageResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageResponseBodyDataKnowledges extends TeaModel {
-        // 知识id
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
-        // 知识标题
         @NameInMap("KnowledgeTitle")
         public String knowledgeTitle;
 
-        // 场景key
         @NameInMap("SceneKey")
         public String sceneKey;
 
-        // 知识答案
         @NameInMap("Solutions")
         public java.util.List<RecognizeMessageResponseBodyDataKnowledgesSolutions> solutions;
 
@@ -294,11 +273,9 @@ public class RecognizeMessageResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageResponseBodyDataOutputMessages extends TeaModel {
-        // 回复内容
         @NameInMap("OutputContent")
         public java.util.Map<String, ?> outputContent;
 
-        // 回复类型
         @NameInMap("OutputContentType")
         public String outputContentType;
 
@@ -326,11 +303,9 @@ public class RecognizeMessageResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageResponseBodyDataSceneSceneDTOs extends TeaModel {
-        // 场景key
         @NameInMap("SceneKey")
         public String sceneKey;
 
-        // 场景来源
         @NameInMap("SceneSource")
         public String sceneSource;
 
@@ -358,23 +333,18 @@ public class RecognizeMessageResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageResponseBodyDataScene extends TeaModel {
-        // 情绪识别
         @NameInMap("EmotionTag")
         public String emotionTag;
 
-        // 定位场景使用的商品id
         @NameInMap("ItemId")
         public String itemId;
 
-        // 定位场景使用的订单id
         @NameInMap("OrderId")
         public String orderId;
 
-        // 场景识别
         @NameInMap("SceneDTOs")
         public java.util.List<RecognizeMessageResponseBodyDataSceneSceneDTOs> sceneDTOs;
 
-        // 语义完整性识别
         @NameInMap("SemanticComplete")
         public String semanticComplete;
 
@@ -426,11 +396,9 @@ public class RecognizeMessageResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageResponseBodyDataUnitSlotsUnitSpansNumericSlotValueUnit extends TeaModel {
-        // 单位唯一标识
         @NameInMap("UnitKey")
         public String unitKey;
 
-        // 单位中文名
         @NameInMap("UnitName")
         public String unitName;
 
@@ -458,11 +426,9 @@ public class RecognizeMessageResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageResponseBodyDataUnitSlotsUnitSpansNumericSlotValue extends TeaModel {
-        // 数值部分
         @NameInMap("Num")
         public Double num;
 
-        // 单位部分
         @NameInMap("Unit")
         public RecognizeMessageResponseBodyDataUnitSlotsUnitSpansNumericSlotValueUnit unit;
 
@@ -490,35 +456,27 @@ public class RecognizeMessageResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageResponseBodyDataUnitSlotsUnitSpans extends TeaModel {
-        // 槽位名称
         @NameInMap("Alias")
         public String alias;
 
-        // 槽位结束下标
         @NameInMap("End")
         public Integer end;
 
-        // 槽位值
         @NameInMap("NumericSlotValue")
         public RecognizeMessageResponseBodyDataUnitSlotsUnitSpansNumericSlotValue numericSlotValue;
 
-        // 槽位分值
         @NameInMap("Score")
         public Double score;
 
-        // 槽位key
         @NameInMap("SlotKey")
         public String slotKey;
 
-        // 槽位值
         @NameInMap("SlotValue")
         public String slotValue;
 
-        // 槽位来源
         @NameInMap("Source")
         public String source;
 
-        // 槽位起始下标
         @NameInMap("Start")
         public Integer start;
 
@@ -613,23 +571,18 @@ public class RecognizeMessageResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageResponseBodyData extends TeaModel {
-        // 定位到的知识
         @NameInMap("Knowledges")
         public java.util.List<RecognizeMessageResponseBodyDataKnowledges> knowledges;
 
-        // 建议的回复内容
         @NameInMap("OutputMessages")
         public java.util.List<RecognizeMessageResponseBodyDataOutputMessages> outputMessages;
 
-        // 定位到的场景
         @NameInMap("Scene")
         public RecognizeMessageResponseBodyDataScene scene;
 
-        // 识别到的槽位信息
         @NameInMap("UnitSlots")
         public RecognizeMessageResponseBodyDataUnitSlots unitSlots;
 
-        // 扩展的输出
         @NameInMap("extOutput")
         public java.util.Map<String, ?> extOutput;
 

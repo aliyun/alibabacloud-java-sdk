@@ -4,19 +4,15 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class GetJobRequest extends TeaModel {
-    // 应用Code
     @NameInMap("AppCode")
     public String appCode;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 任务ID
     @NameInMap("JobId")
     public Long jobId;
 
-    // 店铺Id
     @NameInMap("ShopId")
     public String shopId;
 
@@ -69,7 +65,6 @@ public class GetJobRequest extends TeaModel {
     }
 
     public static class GetJobRequestUserProfile extends TeaModel {
-        // 租户ID
         @NameInMap("TenantId")
         public Long tenantId;
 

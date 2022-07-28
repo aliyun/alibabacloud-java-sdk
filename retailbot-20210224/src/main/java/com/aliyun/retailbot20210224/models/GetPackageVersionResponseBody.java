@@ -4,31 +4,24 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class GetPackageVersionResponseBody extends TeaModel {
-    // 返回code
     @NameInMap("Code")
     public String code;
 
-    // 返回信息
     @NameInMap("Message")
     public String message;
 
-    // 包code
     @NameInMap("PackageCode")
     public String packageCode;
 
-    // 包的详细信息
     @NameInMap("PackageDetails")
     public java.util.List<GetPackageVersionResponseBodyPackageDetails> packageDetails;
 
-    // 包名称
     @NameInMap("PackageName")
     public String packageName;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功标示
     @NameInMap("Success")
     public Boolean success;
 
@@ -94,31 +87,24 @@ public class GetPackageVersionResponseBody extends TeaModel {
     }
 
     public static class GetPackageVersionResponseBodyPackageDetails extends TeaModel {
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 创建人id
         @NameInMap("CreateUserId")
         public String createUserId;
 
-        // 修改时间
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // 修改人id
         @NameInMap("ModifyUserId")
         public String modifyUserId;
 
-        // 包详细描述
         @NameInMap("PackageDetailDescription")
         public String packageDetailDescription;
 
-        // 包版本
         @NameInMap("PackageVersion")
         public String packageVersion;
 
-        // 发布时间
         @NameInMap("PublishTime")
         public String publishTime;
 

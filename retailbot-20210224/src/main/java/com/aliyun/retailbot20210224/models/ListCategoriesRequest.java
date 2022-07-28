@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListCategoriesRequest extends TeaModel {
-    // 操作用户id
     @NameInMap("OperatorId")
     public String operatorId;
 
-    // 操作用户名称
     @NameInMap("OperatorName")
     public String operatorName;
 
-    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 

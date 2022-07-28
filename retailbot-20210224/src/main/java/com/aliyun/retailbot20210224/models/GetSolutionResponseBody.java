@@ -4,23 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class GetSolutionResponseBody extends TeaModel {
-    // 返回code
     @NameInMap("Code")
     public String code;
 
-    // 返回信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 答案
     @NameInMap("Solution")
     public GetSolutionResponseBodySolution solution;
 
-    // 是否成功标示
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,19 +65,15 @@ public class GetSolutionResponseBody extends TeaModel {
     }
 
     public static class GetSolutionResponseBodySolutionConditions extends TeaModel {
-        // 生效模式：EffectiveMode
         @NameInMap("ConditionType")
         public String conditionType;
 
-        // 生效模式："disable":全部不生效，"auto":全自动，"assistant":智能辅助，"enable":全部生效
         @NameInMap("ConditionValue")
         public String conditionValue;
 
-        // 知识id
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
-        // 答案id
         @NameInMap("SolutionId")
         public Long solutionId;
 
@@ -126,19 +117,15 @@ public class GetSolutionResponseBody extends TeaModel {
     }
 
     public static class GetSolutionResponseBodySolutionSolutionVariables extends TeaModel {
-        // 知识id
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
-        // 答案id
         @NameInMap("SolutionId")
         public Long solutionId;
 
-        // 变量名称
         @NameInMap("VariableName")
         public String variableName;
 
-        // 变量类型
         @NameInMap("VariableType")
         public String variableType;
 
@@ -182,35 +169,27 @@ public class GetSolutionResponseBody extends TeaModel {
     }
 
     public static class GetSolutionResponseBodySolution extends TeaModel {
-        // 答案约束
         @NameInMap("Conditions")
         public java.util.List<GetSolutionResponseBodySolutionConditions> conditions;
 
-        // 答案扩展信息
         @NameInMap("ExtraContent")
         public String extraContent;
 
-        // 知识id
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 
-        // 答案正文
         @NameInMap("SolutionContent")
         public String solutionContent;
 
-        // 答案id
         @NameInMap("SolutionId")
         public Long solutionId;
 
-        // 答案来源
         @NameInMap("SolutionSource")
         public String solutionSource;
 
-        // 答案类型,"text":文本答案
         @NameInMap("SolutionType")
         public String solutionType;
 
-        // 答案变量
         @NameInMap("SolutionVariables")
         public java.util.List<GetSolutionResponseBodySolutionSolutionVariables> solutionVariables;
 

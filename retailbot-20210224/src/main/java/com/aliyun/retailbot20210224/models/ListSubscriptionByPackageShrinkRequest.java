@@ -4,11 +4,9 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionByPackageShrinkRequest extends TeaModel {
-    // 行业包信息
     @NameInMap("PackageDTO")
     public String packageDTOShrink;
 
-    // 分页参数
     @NameInMap("PageData")
     public String pageDataShrink;
 

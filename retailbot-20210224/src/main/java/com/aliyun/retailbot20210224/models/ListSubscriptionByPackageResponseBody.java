@@ -4,22 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionByPackageResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("PageData")
     public ListSubscriptionByPackageResponseBodyPageData pageData;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -69,15 +65,12 @@ public class ListSubscriptionByPackageResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionByPackageResponseBodyPageDataData extends TeaModel {
-        // 行业包code
         @NameInMap("PackageCode")
         public String packageCode;
 
-        // 行业包版本
         @NameInMap("PackageVersion")
         public String packageVersion;
 
-        // 机器人code
         @NameInMap("RobotCode")
         public String robotCode;
 
@@ -113,19 +106,15 @@ public class ListSubscriptionByPackageResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionByPackageResponseBodyPageData extends TeaModel {
-        // 订阅的行业包
         @NameInMap("Data")
         public java.util.List<ListSubscriptionByPackageResponseBodyPageDataData> data;
 
-        // 返回的最大记录数
         @NameInMap("MaxResults")
         public Integer maxResults;
 
-        // 下一页的token
         @NameInMap("NextToken")
         public String nextToken;
 
-        // 总数据量
         @NameInMap("TotalCount")
         public Integer totalCount;
 

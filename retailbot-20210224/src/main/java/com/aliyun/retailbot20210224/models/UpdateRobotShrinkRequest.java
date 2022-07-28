@@ -4,11 +4,9 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UpdateRobotShrinkRequest extends TeaModel {
-    // 操作人信息
     @NameInMap("Operator")
     public String operatorShrink;
 
-    // 机器人信息
     @NameInMap("RobotDTO")
     public String robotDTOShrink;
 

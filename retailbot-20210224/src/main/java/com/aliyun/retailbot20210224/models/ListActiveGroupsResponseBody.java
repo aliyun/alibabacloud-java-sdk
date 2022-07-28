@@ -4,7 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListActiveGroupsResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("Code")
     public String code;
 

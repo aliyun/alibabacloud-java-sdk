@@ -4,11 +4,9 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class GetSlotRequest extends TeaModel {
-    // 机器人id
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 槽位id
     @NameInMap("SlotId")
     public Integer slotId;
 

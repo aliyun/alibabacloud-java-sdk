@@ -4,22 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class DeleteTaskResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public Long data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // true
     @NameInMap("Success")
     public Boolean success;
 

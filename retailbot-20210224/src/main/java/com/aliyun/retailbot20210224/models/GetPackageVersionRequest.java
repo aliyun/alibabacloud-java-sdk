@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class GetPackageVersionRequest extends TeaModel {
-    // 操作人id
     @NameInMap("OperatorId")
     public String operatorId;
 
-    // 操作人名称
     @NameInMap("OperatorName")
     public String operatorName;
 
-    // 包code
     @NameInMap("PackageCode")
     public String packageCode;
 

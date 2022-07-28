@@ -84,11 +84,9 @@ public class QueryTaskListRequest extends TeaModel {
     }
 
     public static class QueryTaskListRequestPageData extends TeaModel {
-        // 返回的最大记录数
         @NameInMap("MaxResults")
         public Long maxResults;
 
-        // 下一页的token
         @NameInMap("NextToken")
         public String nextToken;
 

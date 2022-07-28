@@ -4,31 +4,24 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListSlotsRequest extends TeaModel {
-    // 槽位所属分类id
     @NameInMap("CategoryId")
     public Integer categoryId;
 
-    // 槽位名称关键字
     @NameInMap("Keyword")
     public String keyword;
 
-    // 当前页码
     @NameInMap("PageNo")
     public Integer pageNo;
 
-    // 每页显示数量
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 机器人id（如果为空，则是操作ISV维度的数据）
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 槽位来源，0表示官方槽位，1表示自定义槽位
     @NameInMap("Source")
     public Integer source;
 
-    // 槽位类型， 0表示枚举型，1表示区间型，2表示函数型
     @NameInMap("Type")
     public Integer type;
 

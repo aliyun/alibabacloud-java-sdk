@@ -4,23 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class CreateAgingResponseBody extends TeaModel {
-    // 返回code
     @NameInMap("Code")
     public String code;
 
-    // 创建的时效ID
     @NameInMap("Data")
     public Long data;
 
-    // 返回信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功标示
     @NameInMap("Success")
     public Boolean success;
 

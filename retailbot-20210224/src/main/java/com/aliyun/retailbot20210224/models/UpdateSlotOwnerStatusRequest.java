@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UpdateSlotOwnerStatusRequest extends TeaModel {
-    // 槽位开启状态 0关闭 1开启
     @NameInMap("OwnStatus")
     public Integer ownStatus;
 
-    // 机器人id
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 槽位id
     @NameInMap("SlotId")
     public Integer slotId;
 

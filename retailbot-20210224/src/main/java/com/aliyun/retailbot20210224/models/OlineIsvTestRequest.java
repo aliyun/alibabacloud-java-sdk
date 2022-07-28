@@ -4,7 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class OlineIsvTestRequest extends TeaModel {
-    // A short description of struct
     @NameInMap("AliyunAccountDTO")
     public OlineIsvTestRequestAliyunAccountDTO aliyunAccountDTO;
 

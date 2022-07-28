@@ -4,11 +4,9 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UpdateRobotRequest extends TeaModel {
-    // 操作人信息
     @NameInMap("Operator")
     public UpdateRobotRequestOperator operator;
 
-    // 机器人信息
     @NameInMap("RobotDTO")
     public UpdateRobotRequestRobotDTO robotDTO;
 
@@ -34,11 +32,9 @@ public class UpdateRobotRequest extends TeaModel {
     }
 
     public static class UpdateRobotRequestOperator extends TeaModel {
-        // 操作人id
         @NameInMap("OperatorId")
         public String operatorId;
 
-        // 操作人显示名
         @NameInMap("OperatorName")
         public String operatorName;
 
@@ -66,31 +62,24 @@ public class UpdateRobotRequest extends TeaModel {
     }
 
     public static class UpdateRobotRequestRobotDTO extends TeaModel {
-        // 签约到期时间
         @NameInMap("ExpireDate")
         public Long expireDate;
 
-        // sass实例id
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 机器人code
         @NameInMap("RobotCode")
         public String robotCode;
 
-        // 卖家id
         @NameInMap("SellerId")
         public String sellerId;
 
-        // 商家nick
         @NameInMap("SellerNick")
         public String sellerNick;
 
-        // 店铺id
         @NameInMap("ShopId")
         public String shopId;
 
-        // 签约时间
         @NameInMap("SignDate")
         public Long signDate;
 

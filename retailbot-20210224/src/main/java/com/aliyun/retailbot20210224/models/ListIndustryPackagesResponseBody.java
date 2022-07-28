@@ -4,22 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListIndustryPackagesResponseBody extends TeaModel {
-    // 返回code
     @NameInMap("Code")
     public String code;
 
-    // 返回信息
     @NameInMap("Message")
     public String message;
 
     @NameInMap("PackagePage")
     public ListIndustryPackagesResponseBodyPackagePage packagePage;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功标示
     @NameInMap("Success")
     public Boolean success;
 
@@ -69,35 +65,27 @@ public class ListIndustryPackagesResponseBody extends TeaModel {
     }
 
     public static class ListIndustryPackagesResponseBodyPackagePagePackages extends TeaModel {
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 创建人id
         @NameInMap("CreateUserId")
         public String createUserId;
 
-        // 修改时间
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // 修改人id
         @NameInMap("ModifyUserId")
         public String modifyUserId;
 
-        // 包code
         @NameInMap("PackageCode")
         public String packageCode;
 
-        // 包描述
         @NameInMap("PackageDescription")
         public String packageDescription;
 
-        // 包名
         @NameInMap("PackageName")
         public String packageName;
 
-        // 包类型
         @NameInMap("PackageType")
         public String packageType;
 
@@ -173,19 +161,15 @@ public class ListIndustryPackagesResponseBody extends TeaModel {
     }
 
     public static class ListIndustryPackagesResponseBodyPackagePage extends TeaModel {
-        // 每页条数
         @NameInMap("MaxResults")
         public Integer maxResults;
 
-        // 页码
         @NameInMap("NextToken")
         public Integer nextToken;
 
-        // 包集合
         @NameInMap("Packages")
         public java.util.List<ListIndustryPackagesResponseBodyPackagePagePackages> packages;
 
-        // 总条数
         @NameInMap("TotalCount")
         public Integer totalCount;
 

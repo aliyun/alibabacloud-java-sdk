@@ -145,7 +145,6 @@ public class QueryOutboundJobDetailRecordResponseBody extends TeaModel {
         @NameInMap("SubBizOrder")
         public Long subBizOrder;
 
-        // tenant Id
         @NameInMap("TenantId")
         public Long tenantId;
 

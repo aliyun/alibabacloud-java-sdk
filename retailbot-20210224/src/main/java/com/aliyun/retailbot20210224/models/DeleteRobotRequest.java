@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class DeleteRobotRequest extends TeaModel {
-    // 备注信息
     @NameInMap("Memo")
     public String memo;
 
-    // 操作人信息
     @NameInMap("Operator")
     public DeleteRobotRequestOperator operator;
 
-    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 
@@ -46,11 +43,9 @@ public class DeleteRobotRequest extends TeaModel {
     }
 
     public static class DeleteRobotRequestOperator extends TeaModel {
-        // 操作人id
         @NameInMap("OperatorId")
         public String operatorId;
 
-        // 操作人显示名
         @NameInMap("OperatorName")
         public String operatorName;
 

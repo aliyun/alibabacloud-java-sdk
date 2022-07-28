@@ -4,23 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListIndustryPackagesRequest extends TeaModel {
-    // 领域
     @NameInMap("Domain")
     public String domain;
 
-    // 每页条数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 当前页
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // 操作用户id
     @NameInMap("OperatorId")
     public String operatorId;
 
-    // 操作用户名称
     @NameInMap("OperatorName")
     public String operatorName;
 

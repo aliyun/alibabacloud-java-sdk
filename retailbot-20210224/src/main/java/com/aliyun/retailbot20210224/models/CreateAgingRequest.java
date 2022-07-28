@@ -4,30 +4,24 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class CreateAgingRequest extends TeaModel {
-    // 结束时间
     @NameInMap("EndTime")
     public Long endTime;
 
-    // 名称
+    @NameInMap("InstanceType")
+    public String instanceType;
+
     @NameInMap("Name")
     public String name;
 
-    // 机器人Code
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 开始时间
     @NameInMap("StartTime")
     public Long startTime;
 
-    // 循环日期,星期为单位,用逗号分割
-    // 1,2,3,4,5,6,7
     @NameInMap("TimeDay")
     public String timeDay;
 
-    // 时效类型,
-    // 1:固定时效
-    // 2:循环时效
     @NameInMap("Type")
     public String type;
 
@@ -42,6 +36,14 @@ public class CreateAgingRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public CreateAgingRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public CreateAgingRequest setName(String name) {

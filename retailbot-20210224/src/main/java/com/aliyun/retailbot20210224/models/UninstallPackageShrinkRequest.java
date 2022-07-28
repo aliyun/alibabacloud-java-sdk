@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UninstallPackageShrinkRequest extends TeaModel {
-    // 操作人信息
     @NameInMap("Operator")
     public String operatorShrink;
 
-    // 取消订阅的行业包
     @NameInMap("Packages")
     public String packagesShrink;
 
-    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 

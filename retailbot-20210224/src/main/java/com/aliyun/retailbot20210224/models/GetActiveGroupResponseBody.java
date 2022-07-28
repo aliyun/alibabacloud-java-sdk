@@ -4,14 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class GetActiveGroupResponseBody extends TeaModel {
-    // 资源名称
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetActiveGroupResponseBodyData data;
 
-    // 资源一级ID
     @NameInMap("Message")
     public String message;
 

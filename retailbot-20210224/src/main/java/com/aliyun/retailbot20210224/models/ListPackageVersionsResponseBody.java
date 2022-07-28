@@ -4,23 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListPackageVersionsResponseBody extends TeaModel {
-    // 返回code
     @NameInMap("Code")
     public String code;
 
-    // 返回信息
     @NameInMap("Message")
     public String message;
 
-    // 包集合
     @NameInMap("Packages")
     public java.util.List<ListPackageVersionsResponseBodyPackages> packages;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功标示
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,31 +65,24 @@ public class ListPackageVersionsResponseBody extends TeaModel {
     }
 
     public static class ListPackageVersionsResponseBodyPackagesPackageDetails extends TeaModel {
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 创建人id
         @NameInMap("CreateUserId")
         public String createUserId;
 
-        // 修改时间
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // 修改人id
         @NameInMap("ModifyUserId")
         public String modifyUserId;
 
-        // 包详细描述
         @NameInMap("PackageDetailDescription")
         public String packageDetailDescription;
 
-        // 包版本
         @NameInMap("PackageVersion")
         public String packageVersion;
 
-        // 发布时间
         @NameInMap("PublishTime")
         public String publishTime;
 
@@ -162,15 +150,12 @@ public class ListPackageVersionsResponseBody extends TeaModel {
     }
 
     public static class ListPackageVersionsResponseBodyPackages extends TeaModel {
-        // 包code
         @NameInMap("PackageCode")
         public String packageCode;
 
-        // 包详细信息
         @NameInMap("PackageDetails")
         public java.util.List<ListPackageVersionsResponseBodyPackagesPackageDetails> packageDetails;
 
-        // 包名
         @NameInMap("PackageName")
         public String packageName;
 

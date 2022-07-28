@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class AddCoreEntryRequest extends TeaModel {
-    // 机器人id
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 核心同义词信息
     @NameInMap("SimilarEntry")
     public AddCoreEntryRequestSimilarEntry similarEntry;
 
-    // 槽位id
     @NameInMap("SlotId")
     public Integer slotId;
 
@@ -46,11 +43,9 @@ public class AddCoreEntryRequest extends TeaModel {
     }
 
     public static class AddCoreEntryRequestSimilarEntry extends TeaModel {
-        // 核心词值
         @NameInMap("CoreValue")
         public String coreValue;
 
-        // 同义词信息
         @NameInMap("SimilarValues")
         public java.util.List<String> similarValues;
 

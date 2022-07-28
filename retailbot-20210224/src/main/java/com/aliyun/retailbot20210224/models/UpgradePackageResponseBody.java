@@ -4,23 +4,18 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UpgradePackageResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 成功和失败的机器人code
     @NameInMap("Data")
     public UpgradePackageResponseBodyData data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,11 +65,9 @@ public class UpgradePackageResponseBody extends TeaModel {
     }
 
     public static class UpgradePackageResponseBodyData extends TeaModel {
-        // 失败的机器人code
         @NameInMap("FailedRobotCodes")
         public java.util.List<String> failedRobotCodes;
 
-        // 成功的机器人code
         @NameInMap("SuccessRobotCodes")
         public java.util.List<String> successRobotCodes;
 

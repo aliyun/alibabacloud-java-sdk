@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class DeleteBlackEntryRequest extends TeaModel {
-    // 黑名单词id
     @NameInMap("BlackEntryId")
     public Integer blackEntryId;
 
-    // 机器人id
     @NameInMap("RobotCode")
     public String robotCode;
 
-    // 槽位id
     @NameInMap("SlotId")
     public Integer slotId;
 

@@ -4,15 +4,12 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UpgradePackageShrinkRequest extends TeaModel {
-    // 操作人信息
     @NameInMap("Operator")
     public String operatorShrink;
 
-    // 需要升级的行业包
     @NameInMap("PackageDTO")
     public String packageDTOShrink;
 
-    // 机器人code
     @NameInMap("RobotCodes")
     public String robotCodesShrink;
 
