@@ -7,7 +7,6 @@ public class GetK8sAppPrecheckResultRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
-    // A short description of struct
     @NameInMap("ClusterId")
     public String clusterId;
 

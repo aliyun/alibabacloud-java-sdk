@@ -7,14 +7,12 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("Annotations")
     public String annotations;
 
-    // 使用应用模版时的应用配置，JSON格式字符串
     @NameInMap("AppConfig")
     public String appConfig;
 
     @NameInMap("AppName")
     public String appName;
 
-    // 创建应用使用的应用模版名称，若创建应用时指定应用模版，则将优先使用应用模版和AppConfig参数确定应用配置，忽略其他配置
     @NameInMap("AppTemplateName")
     public String appTemplateName;
 
@@ -63,11 +61,9 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("EnableAsm")
     public Boolean enableAsm;
 
-    // 是否开启推空保护
     @NameInMap("EnableEmptyPushReject")
     public Boolean enableEmptyPushReject;
 
-    // 是否启用无损上线规则
     @NameInMap("EnableLosslessRule")
     public Boolean enableLosslessRule;
 
@@ -134,23 +130,18 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("LogicalRegionId")
     public String logicalRegionId;
 
-    // 是否启用无损滚动发布模式配置通过就绪检查前完成服务注册
     @NameInMap("LosslessRuleAligned")
     public Boolean losslessRuleAligned;
 
-    // 无损上线延迟注册时长
     @NameInMap("LosslessRuleDelayTime")
     public Integer losslessRuleDelayTime;
 
-    // 无损上线服务预热曲线
     @NameInMap("LosslessRuleFuncType")
     public Integer losslessRuleFuncType;
 
-    // 是否启用无损滚动发布模式配置通过就绪检查前完成服务预热
     @NameInMap("LosslessRuleRelated")
     public Boolean losslessRuleRelated;
 
-    // 无损上线服务预热时长
     @NameInMap("LosslessRuleWarmupTime")
     public Integer losslessRuleWarmupTime;
 
@@ -205,7 +196,6 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("RuntimeClassName")
     public String runtimeClassName;
 
-    // 应用K8s服务信息
     @NameInMap("ServiceConfigs")
     public String serviceConfigs;
 

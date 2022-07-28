@@ -4,19 +4,15 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListConfigTemplatesResponseBody extends TeaModel {
-    // 响应码
     @NameInMap("Code")
     public Integer code;
 
-    // 查询结果
     @NameInMap("Data")
     public ListConfigTemplatesResponseBodyData data;
 
-    // 响应码文本描述
     @NameInMap("Message")
     public String message;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,31 +54,24 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListConfigTemplatesResponseBodyDataResult extends TeaModel {
-        // 模板内容
         @NameInMap("Content")
         public String content;
 
-        // 模板描述
         @NameInMap("Description")
         public String description;
 
-        // 模板数据格式
         @NameInMap("Format")
         public String format;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        // 更新时间
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        // 配置模板ID
         @NameInMap("Id")
         public String id;
 
-        // 配置模板名称
         @NameInMap("Name")
         public String name;
 
@@ -150,19 +139,15 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListConfigTemplatesResponseBodyData extends TeaModel {
-        // 当前分页
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // 页大小
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 配置模板列表
         @NameInMap("Result")
         public java.util.List<ListConfigTemplatesResponseBodyDataResult> result;
 
-        // 配置模板总数
         @NameInMap("TotalSize")
         public Long totalSize;
 

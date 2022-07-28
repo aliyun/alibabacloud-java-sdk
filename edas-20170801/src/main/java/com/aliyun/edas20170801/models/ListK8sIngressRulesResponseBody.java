@@ -93,6 +93,9 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         @NameInMap("Backend")
         public ListK8sIngressRulesResponseBodyDataIngressConfsRulesPathsBackend backend;
 
+        @NameInMap("CollectRate")
+        public Integer collectRate;
+
         @NameInMap("Path")
         public String path;
 
@@ -126,6 +129,14 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         }
         public ListK8sIngressRulesResponseBodyDataIngressConfsRulesPathsBackend getBackend() {
             return this.backend;
+        }
+
+        public ListK8sIngressRulesResponseBodyDataIngressConfsRulesPaths setCollectRate(Integer collectRate) {
+            this.collectRate = collectRate;
+            return this;
+        }
+        public Integer getCollectRate() {
+            return this.collectRate;
         }
 
         public ListK8sIngressRulesResponseBodyDataIngressConfsRulesPaths setPath(String path) {
@@ -220,6 +231,12 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
+        @NameInMap("NewDashboard")
+        public Boolean newDashboard;
+
+        @NameInMap("NewDashboardUrls")
+        public java.util.Map<String, String> newDashboardUrls;
+
         @NameInMap("Rules")
         public java.util.List<ListK8sIngressRulesResponseBodyDataIngressConfsRules> rules;
 
@@ -285,6 +302,22 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public ListK8sIngressRulesResponseBodyDataIngressConfs setNewDashboard(Boolean newDashboard) {
+            this.newDashboard = newDashboard;
+            return this;
+        }
+        public Boolean getNewDashboard() {
+            return this.newDashboard;
+        }
+
+        public ListK8sIngressRulesResponseBodyDataIngressConfs setNewDashboardUrls(java.util.Map<String, String> newDashboardUrls) {
+            this.newDashboardUrls = newDashboardUrls;
+            return this;
+        }
+        public java.util.Map<String, String> getNewDashboardUrls() {
+            return this.newDashboardUrls;
         }
 
         public ListK8sIngressRulesResponseBodyDataIngressConfs setRules(java.util.List<ListK8sIngressRulesResponseBodyDataIngressConfsRules> rules) {

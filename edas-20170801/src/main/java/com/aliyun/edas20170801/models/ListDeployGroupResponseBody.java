@@ -87,6 +87,12 @@ public class ListDeployGroupResponseBody extends TeaModel {
         @NameInMap("Env")
         public String env;
 
+        @NameInMap("EphemeralStorageLimit")
+        public String ephemeralStorageLimit;
+
+        @NameInMap("EphemeralStorageRequest")
+        public String ephemeralStorageRequest;
+
         @NameInMap("GroupId")
         public String groupId;
 
@@ -241,6 +247,22 @@ public class ListDeployGroupResponseBody extends TeaModel {
         }
         public String getEnv() {
             return this.env;
+        }
+
+        public ListDeployGroupResponseBodyDeployGroupListDeployGroup setEphemeralStorageLimit(String ephemeralStorageLimit) {
+            this.ephemeralStorageLimit = ephemeralStorageLimit;
+            return this;
+        }
+        public String getEphemeralStorageLimit() {
+            return this.ephemeralStorageLimit;
+        }
+
+        public ListDeployGroupResponseBodyDeployGroupListDeployGroup setEphemeralStorageRequest(String ephemeralStorageRequest) {
+            this.ephemeralStorageRequest = ephemeralStorageRequest;
+            return this;
+        }
+        public String getEphemeralStorageRequest() {
+            return this.ephemeralStorageRequest;
         }
 
         public ListDeployGroupResponseBodyDeployGroupListDeployGroup setGroupId(String groupId) {

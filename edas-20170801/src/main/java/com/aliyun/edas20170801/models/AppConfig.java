@@ -4,123 +4,93 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class AppConfig extends TeaModel {
-    // 启动命令
     @NameInMap("Command")
     public String command;
 
-    // 启动参数
     @NameInMap("CommandArgs")
     public java.util.List<String> commandArgs;
 
-    // 配置项挂载配置
     @NameInMap("ConfigMountDescs")
     public java.util.List<AppConfigConfigMountDescs> configMountDescs;
 
-    // 是否尽量多节点部署
     @NameInMap("DeployAcrossNodes")
     public Boolean deployAcrossNodes;
 
-    // 是否尽量多可用区部署
     @NameInMap("DeployAcrossZones")
     public Boolean deployAcrossZones;
 
-    // EmptyDir挂载配置
     @NameInMap("EmptyDirs")
     public java.util.List<AppConfigEmptyDirs> emptyDirs;
 
-    // 是否开启限流降级
     @NameInMap("EnableAhas")
     public Boolean enableAhas;
 
-    // 环境变量引用
     @NameInMap("EnvFroms")
     public java.util.List<AppConfigEnvFroms> envFroms;
 
-    // 环境变量
     @NameInMap("Envs")
     public java.util.List<AppConfigEnvs> envs;
 
-    // 镜像配置
     @NameInMap("ImageConfig")
     public AppConfigImageConfig imageConfig;
 
-    // 是否多语言应用
     @NameInMap("IsMultilingualApp")
     public Boolean isMultilingualApp;
 
-    // Java启动参数配置
     @NameInMap("JavaStartUpConfig")
     public String javaStartUpConfig;
 
-    // CPU限制
     @NameInMap("LimitCpu")
     public String limitCpu;
 
-    // 内存限制
     @NameInMap("LimitMem")
     public String limitMem;
 
-    // liveness探针配置
     @NameInMap("Liveness")
     public String liveness;
 
-    // 本地磁盘挂载配置
     @NameInMap("LocalVolumes")
     public java.util.List<AppConfigLocalVolumes> localVolumes;
 
-    // NAS实例ID
     @NameInMap("NasId")
     public String nasId;
 
-    // NAS挂载配置
     @NameInMap("NasMountDescs")
     public java.util.List<AppConfigNasMountDescs> nasMountDescs;
 
-    // NAS存储类型
     @NameInMap("NasStorageType")
     public String nasStorageType;
 
-    // 部署包配置
     @NameInMap("PackageConfig")
     public AppConfigPackageConfig packageConfig;
 
-    // postStart挂钩配置
     @NameInMap("PostStart")
     public String postStart;
 
-    // preStop挂钩配置
     @NameInMap("PreStop")
     public String preStop;
 
-    // 持久化存储挂载配置
     @NameInMap("PvcMountDescs")
     public java.util.List<AppConfigPvcMountDescs> pvcMountDescs;
 
-    // readiness探针配置
     @NameInMap("Readiness")
     public String readiness;
 
-    // 应用实例数
     @NameInMap("Replicas")
     public Long replicas;
 
-    // CPU需求
     @NameInMap("RequestCpu")
     public String requestCpu;
 
-    // 内存需求
     @NameInMap("RequestMem")
     public String requestMem;
 
-    // 运行时类型
     @NameInMap("RuntimeClassName")
     public String runtimeClassName;
 
-    // 日志采集配置
     @NameInMap("SlsConfigs")
     public java.util.List<AppConfigSlsConfigs> slsConfigs;
 
-    // Tomcat配置
     @NameInMap("WebContainerConfig")
     public AppConfigWebContainerConfig webContainerConfig;
 
@@ -370,11 +340,9 @@ public class AppConfig extends TeaModel {
     }
 
     public static class AppConfigConfigMountDescsMountItems extends TeaModel {
-        // 配置项
         @NameInMap("Key")
         public String key;
 
-        // 路径
         @NameInMap("Path")
         public String path;
 
@@ -402,19 +370,15 @@ public class AppConfig extends TeaModel {
     }
 
     public static class AppConfigConfigMountDescs extends TeaModel {
-        // 挂载条目
         @NameInMap("MountItems")
         public java.util.List<AppConfigConfigMountDescsMountItems> mountItems;
 
-        // 挂载路径
         @NameInMap("MountPath")
         public String mountPath;
 
-        // 名称
         @NameInMap("Name")
         public String name;
 
-        // 类型
         @NameInMap("Type")
         public String type;
 
@@ -458,19 +422,15 @@ public class AppConfig extends TeaModel {
     }
 
     public static class AppConfigEmptyDirs extends TeaModel {
-        // 挂载路径
         @NameInMap("MountPath")
         public String mountPath;
 
-        // 容器名称
         @NameInMap("Name")
         public String name;
 
-        // 是否只读
         @NameInMap("ReadOnly")
         public Boolean readOnly;
 
-        // 子路径表达式
         @NameInMap("SubPathExpr")
         public String subPathExpr;
 
@@ -514,11 +474,9 @@ public class AppConfig extends TeaModel {
     }
 
     public static class AppConfigEnvFroms extends TeaModel {
-        // 配置项引用
         @NameInMap("ConfigMapRef")
         public String configMapRef;
 
-        // 保密字典引用
         @NameInMap("SecretRef")
         public String secretRef;
 
@@ -546,15 +504,12 @@ public class AppConfig extends TeaModel {
     }
 
     public static class AppConfigEnvs extends TeaModel {
-        // 变量名
         @NameInMap("Name")
         public String name;
 
-        // 变量值
         @NameInMap("Value")
         public String value;
 
-        // 变量引用
         @NameInMap("ValueFrom")
         public String valueFrom;
 
@@ -590,19 +545,15 @@ public class AppConfig extends TeaModel {
     }
 
     public static class AppConfigImageConfig extends TeaModel {
-        // 镜像仓库实例ID
         @NameInMap("ContainerRegistryId")
         public String containerRegistryId;
 
-        // 镜像服务实例ID
         @NameInMap("CrInstanceId")
         public String crInstanceId;
 
-        // 镜像仓库Region
         @NameInMap("CrRegionId")
         public String crRegionId;
 
-        // 镜像地址
         @NameInMap("ImageUrl")
         public String imageUrl;
 
@@ -646,23 +597,18 @@ public class AppConfig extends TeaModel {
     }
 
     public static class AppConfigLocalVolumes extends TeaModel {
-        // 容器挂载路径
         @NameInMap("MountPath")
         public String mountPath;
 
-        // 名称
         @NameInMap("Name")
         public String name;
 
-        // 节点路径
         @NameInMap("NodePath")
         public String nodePath;
 
-        // 权限类型
         @NameInMap("OpsAuth")
         public Long opsAuth;
 
-        // 类型
         @NameInMap("Type")
         public String type;
 
@@ -714,11 +660,9 @@ public class AppConfig extends TeaModel {
     }
 
     public static class AppConfigNasMountDescs extends TeaModel {
-        // NAS挂载路径
         @NameInMap("MountPath")
         public String mountPath;
 
-        // NAS文件路径
         @NameInMap("NasPath")
         public String nasPath;
 
@@ -746,39 +690,30 @@ public class AppConfig extends TeaModel {
     }
 
     public static class AppConfigPackageConfig extends TeaModel {
-        // Pandora版本
         @NameInMap("EdasContainerVersion")
         public String edasContainerVersion;
 
-        // JDK版本
         @NameInMap("Jdk")
         public String jdk;
 
-        // 部署包类型
         @NameInMap("PackageType")
         public String packageType;
 
-        // 部署包地址
         @NameInMap("PackageUrl")
         public String packageUrl;
 
-        // 部署包版本
         @NameInMap("PackageVersion")
         public String packageVersion;
 
-        // 时区
         @NameInMap("Timezone")
         public String timezone;
 
-        // URI字符编码
         @NameInMap("UriEncoding")
         public String uriEncoding;
 
-        // useBodyEncodingForURI是否启用
         @NameInMap("UseBodyEncoding")
         public Boolean useBodyEncoding;
 
-        // Tomcat版本
         @NameInMap("WebContainer")
         public String webContainer;
 
@@ -862,15 +797,12 @@ public class AppConfig extends TeaModel {
     }
 
     public static class AppConfigPvcMountDescsMountPaths extends TeaModel {
-        // 挂载路径
         @NameInMap("MountPath")
         public String mountPath;
 
-        // 是否只读
         @NameInMap("ReadOnly")
         public Boolean readOnly;
 
-        // 子路径表达式
         @NameInMap("SubPathExpr")
         public String subPathExpr;
 
@@ -906,11 +838,9 @@ public class AppConfig extends TeaModel {
     }
 
     public static class AppConfigPvcMountDescs extends TeaModel {
-        // 持久化存储挂载路径列表
         @NameInMap("MountPaths")
         public java.util.List<AppConfigPvcMountDescsMountPaths> mountPaths;
 
-        // 持久化存储名称
         @NameInMap("PvcName")
         public String pvcName;
 
@@ -938,19 +868,15 @@ public class AppConfig extends TeaModel {
     }
 
     public static class AppConfigSlsConfigs extends TeaModel {
-        // 日志目录
         @NameInMap("LogDir")
         public String logDir;
 
-        // 日志存储
         @NameInMap("Logstore")
         public String logstore;
 
-        // 日志项目
         @NameInMap("Project")
         public String project;
 
-        // 类型
         @NameInMap("Type")
         public String type;
 
@@ -994,43 +920,33 @@ public class AppConfig extends TeaModel {
     }
 
     public static class AppConfigWebContainerConfig extends TeaModel {
-        // connector类型
         @NameInMap("ConnectorType")
         public String connectorType;
 
-        // Context选择类型
         @NameInMap("ContextInputType")
         public String contextInputType;
 
-        // Context路径
         @NameInMap("ContextPath")
         public String contextPath;
 
-        // 应用端口
         @NameInMap("HttpPort")
         public Long httpPort;
 
-        // 最大线程数
         @NameInMap("MaxThreads")
         public Long maxThreads;
 
-        // 自定义配置
         @NameInMap("ServerXml")
         public String serverXml;
 
-        // URI字符编码
         @NameInMap("UriEncoding")
         public String uriEncoding;
 
-        // 是否使用高级配置
         @NameInMap("UseAdvancedServerXml")
         public Boolean useAdvancedServerXml;
 
-        // useBodyEncodingForURI是否启用
         @NameInMap("UseBodyEncoding")
         public Boolean useBodyEncoding;
 
-        // 是否使用默认配置
         @NameInMap("UseDefaultConfig")
         public Boolean useDefaultConfig;
 

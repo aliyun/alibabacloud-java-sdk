@@ -7,7 +7,6 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
     @NameInMap("Annotations")
     public String annotations;
 
-    // A short description of struct
     @NameInMap("AppId")
     public String appId;
 

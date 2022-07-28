@@ -182,6 +182,9 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         @NameInMap("RequestMem")
         public Integer requestMem;
 
+        @NameInMap("SlbInfo")
+        public String slbInfo;
+
         @NameInMap("TomcatVersion")
         public String tomcatVersion;
 
@@ -348,6 +351,14 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         }
         public Integer getRequestMem() {
             return this.requestMem;
+        }
+
+        public GetK8sApplicationResponseBodyApplcationApp setSlbInfo(String slbInfo) {
+            this.slbInfo = slbInfo;
+            return this;
+        }
+        public String getSlbInfo() {
+            return this.slbInfo;
         }
 
         public GetK8sApplicationResponseBodyApplcationApp setTomcatVersion(String tomcatVersion) {
