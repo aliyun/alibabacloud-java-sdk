@@ -4,35 +4,35 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupGatewayListRequest extends TeaModel {
-    @NameInMap("Region")
-    public String region;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("Identifier")
     public String identifier;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("OwnerId")
+    public String ownerId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
 
-    @NameInMap("OwnerId")
-    public String ownerId;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("Region")
+    public String region;
 
     public static DescribeBackupGatewayListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupGatewayListRequest self = new DescribeBackupGatewayListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupGatewayListRequest setRegion(String region) {
-        this.region = region;
+    public DescribeBackupGatewayListRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegion() {
-        return this.region;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DescribeBackupGatewayListRequest setIdentifier(String identifier) {
@@ -43,12 +43,12 @@ public class DescribeBackupGatewayListRequest extends TeaModel {
         return this.identifier;
     }
 
-    public DescribeBackupGatewayListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeBackupGatewayListRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeBackupGatewayListRequest setPageNum(Integer pageNum) {
@@ -59,20 +59,20 @@ public class DescribeBackupGatewayListRequest extends TeaModel {
         return this.pageNum;
     }
 
-    public DescribeBackupGatewayListRequest setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
+    public DescribeBackupGatewayListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getOwnerId() {
-        return this.ownerId;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
-    public DescribeBackupGatewayListRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DescribeBackupGatewayListRequest setRegion(String region) {
+        this.region = region;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRegion() {
+        return this.region;
     }
 
 }

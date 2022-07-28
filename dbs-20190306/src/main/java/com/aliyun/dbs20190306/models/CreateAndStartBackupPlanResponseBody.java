@@ -3,9 +3,12 @@ package com.aliyun.dbs20190306.models;
 
 import com.aliyun.tea.*;
 
-public class UpgradeBackupPlanResponseBody extends TeaModel {
+public class CreateAndStartBackupPlanResponseBody extends TeaModel {
     @NameInMap("BackupPlanId")
     public String backupPlanId;
+
+    @NameInMap("CreateBackupSet")
+    public Boolean createBackupSet;
 
     @NameInMap("ErrCode")
     public String errCode;
@@ -25,12 +28,12 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static UpgradeBackupPlanResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpgradeBackupPlanResponseBody self = new UpgradeBackupPlanResponseBody();
+    public static CreateAndStartBackupPlanResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateAndStartBackupPlanResponseBody self = new CreateAndStartBackupPlanResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpgradeBackupPlanResponseBody setBackupPlanId(String backupPlanId) {
+    public CreateAndStartBackupPlanResponseBody setBackupPlanId(String backupPlanId) {
         this.backupPlanId = backupPlanId;
         return this;
     }
@@ -38,7 +41,15 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
         return this.backupPlanId;
     }
 
-    public UpgradeBackupPlanResponseBody setErrCode(String errCode) {
+    public CreateAndStartBackupPlanResponseBody setCreateBackupSet(Boolean createBackupSet) {
+        this.createBackupSet = createBackupSet;
+        return this;
+    }
+    public Boolean getCreateBackupSet() {
+        return this.createBackupSet;
+    }
+
+    public CreateAndStartBackupPlanResponseBody setErrCode(String errCode) {
         this.errCode = errCode;
         return this;
     }
@@ -46,7 +57,7 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
         return this.errCode;
     }
 
-    public UpgradeBackupPlanResponseBody setErrMessage(String errMessage) {
+    public CreateAndStartBackupPlanResponseBody setErrMessage(String errMessage) {
         this.errMessage = errMessage;
         return this;
     }
@@ -54,7 +65,7 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
         return this.errMessage;
     }
 
-    public UpgradeBackupPlanResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public CreateAndStartBackupPlanResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -62,7 +73,7 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public UpgradeBackupPlanResponseBody setOrderId(String orderId) {
+    public CreateAndStartBackupPlanResponseBody setOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
@@ -70,7 +81,7 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
         return this.orderId;
     }
 
-    public UpgradeBackupPlanResponseBody setRequestId(String requestId) {
+    public CreateAndStartBackupPlanResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -78,7 +89,7 @@ public class UpgradeBackupPlanResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpgradeBackupPlanResponseBody setSuccess(Boolean success) {
+    public CreateAndStartBackupPlanResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

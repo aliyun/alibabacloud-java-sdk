@@ -3,7 +3,7 @@ package com.aliyun.dbs20190306.models;
 
 import com.aliyun.tea.*;
 
-public class EnableBackupLogResponse extends TeaModel {
+public class InitializeDbsServiceLinkedRoleResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class EnableBackupLogResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public EnableBackupLogResponseBody body;
+    public InitializeDbsServiceLinkedRoleResponseBody body;
 
-    public static EnableBackupLogResponse build(java.util.Map<String, ?> map) throws Exception {
-        EnableBackupLogResponse self = new EnableBackupLogResponse();
+    public static InitializeDbsServiceLinkedRoleResponse build(java.util.Map<String, ?> map) throws Exception {
+        InitializeDbsServiceLinkedRoleResponse self = new InitializeDbsServiceLinkedRoleResponse();
         return TeaModel.build(map, self);
     }
 
-    public EnableBackupLogResponse setHeaders(java.util.Map<String, String> headers) {
+    public InitializeDbsServiceLinkedRoleResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class EnableBackupLogResponse extends TeaModel {
         return this.headers;
     }
 
-    public EnableBackupLogResponse setStatusCode(Integer statusCode) {
+    public InitializeDbsServiceLinkedRoleResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class EnableBackupLogResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public EnableBackupLogResponse setBody(EnableBackupLogResponseBody body) {
+    public InitializeDbsServiceLinkedRoleResponse setBody(InitializeDbsServiceLinkedRoleResponseBody body) {
         this.body = body;
         return this;
     }
-    public EnableBackupLogResponseBody getBody() {
+    public InitializeDbsServiceLinkedRoleResponseBody getBody() {
         return this.body;
     }
 

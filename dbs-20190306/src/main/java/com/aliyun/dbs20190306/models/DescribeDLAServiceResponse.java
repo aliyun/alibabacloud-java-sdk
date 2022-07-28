@@ -3,7 +3,7 @@ package com.aliyun.dbs20190306.models;
 
 import com.aliyun.tea.*;
 
-public class EnableBackupLogResponse extends TeaModel {
+public class DescribeDLAServiceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class EnableBackupLogResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public EnableBackupLogResponseBody body;
+    public DescribeDLAServiceResponseBody body;
 
-    public static EnableBackupLogResponse build(java.util.Map<String, ?> map) throws Exception {
-        EnableBackupLogResponse self = new EnableBackupLogResponse();
+    public static DescribeDLAServiceResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDLAServiceResponse self = new DescribeDLAServiceResponse();
         return TeaModel.build(map, self);
     }
 
-    public EnableBackupLogResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeDLAServiceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class EnableBackupLogResponse extends TeaModel {
         return this.headers;
     }
 
-    public EnableBackupLogResponse setStatusCode(Integer statusCode) {
+    public DescribeDLAServiceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class EnableBackupLogResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public EnableBackupLogResponse setBody(EnableBackupLogResponseBody body) {
+    public DescribeDLAServiceResponse setBody(DescribeDLAServiceResponseBody body) {
         this.body = body;
         return this;
     }
-    public EnableBackupLogResponseBody getBody() {
+    public DescribeDLAServiceResponseBody getBody() {
         return this.body;
     }
 

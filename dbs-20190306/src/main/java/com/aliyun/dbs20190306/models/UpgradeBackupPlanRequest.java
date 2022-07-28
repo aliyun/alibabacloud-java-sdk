@@ -7,14 +7,14 @@ public class UpgradeBackupPlanRequest extends TeaModel {
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("InstanceClass")
     public String instanceClass;
 
     @NameInMap("OwnerId")
     public String ownerId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     public static UpgradeBackupPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeBackupPlanRequest self = new UpgradeBackupPlanRequest();
@@ -27,6 +27,14 @@ public class UpgradeBackupPlanRequest extends TeaModel {
     }
     public String getBackupPlanId() {
         return this.backupPlanId;
+    }
+
+    public UpgradeBackupPlanRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpgradeBackupPlanRequest setInstanceClass(String instanceClass) {
@@ -43,14 +51,6 @@ public class UpgradeBackupPlanRequest extends TeaModel {
     }
     public String getOwnerId() {
         return this.ownerId;
-    }
-
-    public UpgradeBackupPlanRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

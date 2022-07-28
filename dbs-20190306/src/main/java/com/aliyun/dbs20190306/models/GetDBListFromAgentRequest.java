@@ -7,17 +7,17 @@ public class GetDBListFromAgentRequest extends TeaModel {
     @NameInMap("BackupGatewayId")
     public Long backupGatewayId;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("OwnerId")
+    public String ownerId;
+
     @NameInMap("SourceEndpointRegion")
     public String sourceEndpointRegion;
 
     @NameInMap("TaskId")
     public Long taskId;
-
-    @NameInMap("OwnerId")
-    public String ownerId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     public static GetDBListFromAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDBListFromAgentRequest self = new GetDBListFromAgentRequest();
@@ -30,6 +30,22 @@ public class GetDBListFromAgentRequest extends TeaModel {
     }
     public Long getBackupGatewayId() {
         return this.backupGatewayId;
+    }
+
+    public GetDBListFromAgentRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public GetDBListFromAgentRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
     }
 
     public GetDBListFromAgentRequest setSourceEndpointRegion(String sourceEndpointRegion) {
@@ -46,22 +62,6 @@ public class GetDBListFromAgentRequest extends TeaModel {
     }
     public Long getTaskId() {
         return this.taskId;
-    }
-
-    public GetDBListFromAgentRequest setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public String getOwnerId() {
-        return this.ownerId;
-    }
-
-    public GetDBListFromAgentRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

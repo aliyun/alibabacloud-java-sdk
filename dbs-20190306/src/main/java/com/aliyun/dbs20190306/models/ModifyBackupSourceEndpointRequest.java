@@ -4,41 +4,17 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupSourceEndpointRequest extends TeaModel {
-    @NameInMap("BackupPlanId")
-    public String backupPlanId;
-
-    @NameInMap("SourceEndpointInstanceType")
-    public String sourceEndpointInstanceType;
-
-    @NameInMap("SourceEndpointRegion")
-    public String sourceEndpointRegion;
-
-    @NameInMap("SourceEndpointInstanceID")
-    public String sourceEndpointInstanceID;
-
-    @NameInMap("SourceEndpointIP")
-    public String sourceEndpointIP;
-
-    @NameInMap("SourceEndpointPort")
-    public Integer sourceEndpointPort;
-
-    @NameInMap("SourceEndpointDatabaseName")
-    public String sourceEndpointDatabaseName;
-
-    @NameInMap("SourceEndpointUserName")
-    public String sourceEndpointUserName;
-
-    @NameInMap("SourceEndpointPassword")
-    public String sourceEndpointPassword;
-
     @NameInMap("BackupGatewayId")
     public Long backupGatewayId;
 
     @NameInMap("BackupObjects")
     public String backupObjects;
 
-    @NameInMap("SourceEndpointOracleSID")
-    public String sourceEndpointOracleSID;
+    @NameInMap("BackupPlanId")
+    public String backupPlanId;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("CrossAliyunId")
     public String crossAliyunId;
@@ -49,84 +25,36 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("SourceEndpointDatabaseName")
+    public String sourceEndpointDatabaseName;
+
+    @NameInMap("SourceEndpointIP")
+    public String sourceEndpointIP;
+
+    @NameInMap("SourceEndpointInstanceID")
+    public String sourceEndpointInstanceID;
+
+    @NameInMap("SourceEndpointInstanceType")
+    public String sourceEndpointInstanceType;
+
+    @NameInMap("SourceEndpointOracleSID")
+    public String sourceEndpointOracleSID;
+
+    @NameInMap("SourceEndpointPassword")
+    public String sourceEndpointPassword;
+
+    @NameInMap("SourceEndpointPort")
+    public Integer sourceEndpointPort;
+
+    @NameInMap("SourceEndpointRegion")
+    public String sourceEndpointRegion;
+
+    @NameInMap("SourceEndpointUserName")
+    public String sourceEndpointUserName;
 
     public static ModifyBackupSourceEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBackupSourceEndpointRequest self = new ModifyBackupSourceEndpointRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyBackupSourceEndpointRequest setBackupPlanId(String backupPlanId) {
-        this.backupPlanId = backupPlanId;
-        return this;
-    }
-    public String getBackupPlanId() {
-        return this.backupPlanId;
-    }
-
-    public ModifyBackupSourceEndpointRequest setSourceEndpointInstanceType(String sourceEndpointInstanceType) {
-        this.sourceEndpointInstanceType = sourceEndpointInstanceType;
-        return this;
-    }
-    public String getSourceEndpointInstanceType() {
-        return this.sourceEndpointInstanceType;
-    }
-
-    public ModifyBackupSourceEndpointRequest setSourceEndpointRegion(String sourceEndpointRegion) {
-        this.sourceEndpointRegion = sourceEndpointRegion;
-        return this;
-    }
-    public String getSourceEndpointRegion() {
-        return this.sourceEndpointRegion;
-    }
-
-    public ModifyBackupSourceEndpointRequest setSourceEndpointInstanceID(String sourceEndpointInstanceID) {
-        this.sourceEndpointInstanceID = sourceEndpointInstanceID;
-        return this;
-    }
-    public String getSourceEndpointInstanceID() {
-        return this.sourceEndpointInstanceID;
-    }
-
-    public ModifyBackupSourceEndpointRequest setSourceEndpointIP(String sourceEndpointIP) {
-        this.sourceEndpointIP = sourceEndpointIP;
-        return this;
-    }
-    public String getSourceEndpointIP() {
-        return this.sourceEndpointIP;
-    }
-
-    public ModifyBackupSourceEndpointRequest setSourceEndpointPort(Integer sourceEndpointPort) {
-        this.sourceEndpointPort = sourceEndpointPort;
-        return this;
-    }
-    public Integer getSourceEndpointPort() {
-        return this.sourceEndpointPort;
-    }
-
-    public ModifyBackupSourceEndpointRequest setSourceEndpointDatabaseName(String sourceEndpointDatabaseName) {
-        this.sourceEndpointDatabaseName = sourceEndpointDatabaseName;
-        return this;
-    }
-    public String getSourceEndpointDatabaseName() {
-        return this.sourceEndpointDatabaseName;
-    }
-
-    public ModifyBackupSourceEndpointRequest setSourceEndpointUserName(String sourceEndpointUserName) {
-        this.sourceEndpointUserName = sourceEndpointUserName;
-        return this;
-    }
-    public String getSourceEndpointUserName() {
-        return this.sourceEndpointUserName;
-    }
-
-    public ModifyBackupSourceEndpointRequest setSourceEndpointPassword(String sourceEndpointPassword) {
-        this.sourceEndpointPassword = sourceEndpointPassword;
-        return this;
-    }
-    public String getSourceEndpointPassword() {
-        return this.sourceEndpointPassword;
     }
 
     public ModifyBackupSourceEndpointRequest setBackupGatewayId(Long backupGatewayId) {
@@ -145,12 +73,20 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
         return this.backupObjects;
     }
 
-    public ModifyBackupSourceEndpointRequest setSourceEndpointOracleSID(String sourceEndpointOracleSID) {
-        this.sourceEndpointOracleSID = sourceEndpointOracleSID;
+    public ModifyBackupSourceEndpointRequest setBackupPlanId(String backupPlanId) {
+        this.backupPlanId = backupPlanId;
         return this;
     }
-    public String getSourceEndpointOracleSID() {
-        return this.sourceEndpointOracleSID;
+    public String getBackupPlanId() {
+        return this.backupPlanId;
+    }
+
+    public ModifyBackupSourceEndpointRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ModifyBackupSourceEndpointRequest setCrossAliyunId(String crossAliyunId) {
@@ -177,12 +113,76 @@ public class ModifyBackupSourceEndpointRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ModifyBackupSourceEndpointRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public ModifyBackupSourceEndpointRequest setSourceEndpointDatabaseName(String sourceEndpointDatabaseName) {
+        this.sourceEndpointDatabaseName = sourceEndpointDatabaseName;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getSourceEndpointDatabaseName() {
+        return this.sourceEndpointDatabaseName;
+    }
+
+    public ModifyBackupSourceEndpointRequest setSourceEndpointIP(String sourceEndpointIP) {
+        this.sourceEndpointIP = sourceEndpointIP;
+        return this;
+    }
+    public String getSourceEndpointIP() {
+        return this.sourceEndpointIP;
+    }
+
+    public ModifyBackupSourceEndpointRequest setSourceEndpointInstanceID(String sourceEndpointInstanceID) {
+        this.sourceEndpointInstanceID = sourceEndpointInstanceID;
+        return this;
+    }
+    public String getSourceEndpointInstanceID() {
+        return this.sourceEndpointInstanceID;
+    }
+
+    public ModifyBackupSourceEndpointRequest setSourceEndpointInstanceType(String sourceEndpointInstanceType) {
+        this.sourceEndpointInstanceType = sourceEndpointInstanceType;
+        return this;
+    }
+    public String getSourceEndpointInstanceType() {
+        return this.sourceEndpointInstanceType;
+    }
+
+    public ModifyBackupSourceEndpointRequest setSourceEndpointOracleSID(String sourceEndpointOracleSID) {
+        this.sourceEndpointOracleSID = sourceEndpointOracleSID;
+        return this;
+    }
+    public String getSourceEndpointOracleSID() {
+        return this.sourceEndpointOracleSID;
+    }
+
+    public ModifyBackupSourceEndpointRequest setSourceEndpointPassword(String sourceEndpointPassword) {
+        this.sourceEndpointPassword = sourceEndpointPassword;
+        return this;
+    }
+    public String getSourceEndpointPassword() {
+        return this.sourceEndpointPassword;
+    }
+
+    public ModifyBackupSourceEndpointRequest setSourceEndpointPort(Integer sourceEndpointPort) {
+        this.sourceEndpointPort = sourceEndpointPort;
+        return this;
+    }
+    public Integer getSourceEndpointPort() {
+        return this.sourceEndpointPort;
+    }
+
+    public ModifyBackupSourceEndpointRequest setSourceEndpointRegion(String sourceEndpointRegion) {
+        this.sourceEndpointRegion = sourceEndpointRegion;
+        return this;
+    }
+    public String getSourceEndpointRegion() {
+        return this.sourceEndpointRegion;
+    }
+
+    public ModifyBackupSourceEndpointRequest setSourceEndpointUserName(String sourceEndpointUserName) {
+        this.sourceEndpointUserName = sourceEndpointUserName;
+        return this;
+    }
+    public String getSourceEndpointUserName() {
+        return this.sourceEndpointUserName;
     }
 
 }

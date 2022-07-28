@@ -4,26 +4,26 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class StartRestoreTaskRequest extends TeaModel {
-    @NameInMap("RestoreTaskId")
-    public String restoreTaskId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("RestoreTaskId")
+    public String restoreTaskId;
 
     public static StartRestoreTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         StartRestoreTaskRequest self = new StartRestoreTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public StartRestoreTaskRequest setRestoreTaskId(String restoreTaskId) {
-        this.restoreTaskId = restoreTaskId;
+    public StartRestoreTaskRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRestoreTaskId() {
-        return this.restoreTaskId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public StartRestoreTaskRequest setOwnerId(String ownerId) {
@@ -34,12 +34,12 @@ public class StartRestoreTaskRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public StartRestoreTaskRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public StartRestoreTaskRequest setRestoreTaskId(String restoreTaskId) {
+        this.restoreTaskId = restoreTaskId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRestoreTaskId() {
+        return this.restoreTaskId;
     }
 
 }

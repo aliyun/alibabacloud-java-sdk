@@ -7,20 +7,26 @@ public class DescribeRestoreTaskListRequest extends TeaModel {
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
-    @NameInMap("RestoreTaskId")
-    public String restoreTaskId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNum")
-    public Integer pageNum;
+    @NameInMap("EndTimestamp")
+    public Long endTimestamp;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RestoreTaskId")
+    public String restoreTaskId;
+
+    @NameInMap("StartTimestamp")
+    public Long startTimestamp;
 
     public static DescribeRestoreTaskListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRestoreTaskListRequest self = new DescribeRestoreTaskListRequest();
@@ -35,28 +41,20 @@ public class DescribeRestoreTaskListRequest extends TeaModel {
         return this.backupPlanId;
     }
 
-    public DescribeRestoreTaskListRequest setRestoreTaskId(String restoreTaskId) {
-        this.restoreTaskId = restoreTaskId;
+    public DescribeRestoreTaskListRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRestoreTaskId() {
-        return this.restoreTaskId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
-    public DescribeRestoreTaskListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeRestoreTaskListRequest setEndTimestamp(Long endTimestamp) {
+        this.endTimestamp = endTimestamp;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeRestoreTaskListRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Integer getPageNum() {
-        return this.pageNum;
+    public Long getEndTimestamp() {
+        return this.endTimestamp;
     }
 
     public DescribeRestoreTaskListRequest setOwnerId(String ownerId) {
@@ -67,12 +65,36 @@ public class DescribeRestoreTaskListRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeRestoreTaskListRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DescribeRestoreTaskListRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public DescribeRestoreTaskListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeRestoreTaskListRequest setRestoreTaskId(String restoreTaskId) {
+        this.restoreTaskId = restoreTaskId;
+        return this;
+    }
+    public String getRestoreTaskId() {
+        return this.restoreTaskId;
+    }
+
+    public DescribeRestoreTaskListRequest setStartTimestamp(Long startTimestamp) {
+        this.startTimestamp = startTimestamp;
+        return this;
+    }
+    public Long getStartTimestamp() {
+        return this.startTimestamp;
     }
 
 }

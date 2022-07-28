@@ -4,17 +4,29 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribeFullBackupListResponseBody extends TeaModel {
+    @NameInMap("ErrCode")
+    public String errCode;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("Items")
+    public DescribeFullBackupListResponseBodyItems items;
+
     @NameInMap("PageNum")
     public Integer pageNum;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("TotalElements")
     public Integer totalElements;
@@ -22,21 +34,41 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
     @NameInMap("TotalPages")
     public Integer totalPages;
 
-    @NameInMap("Items")
-    public DescribeFullBackupListResponseBodyItems items;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
-
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("ErrCode")
-    public String errCode;
-
     public static DescribeFullBackupListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFullBackupListResponseBody self = new DescribeFullBackupListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeFullBackupListResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
+        return this;
+    }
+    public String getErrCode() {
+        return this.errCode;
+    }
+
+    public DescribeFullBackupListResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
+    }
+
+    public DescribeFullBackupListResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public DescribeFullBackupListResponseBody setItems(DescribeFullBackupListResponseBodyItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeFullBackupListResponseBodyItems getItems() {
+        return this.items;
     }
 
     public DescribeFullBackupListResponseBody setPageNum(Integer pageNum) {
@@ -47,14 +79,6 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         return this.pageNum;
     }
 
-    public DescribeFullBackupListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeFullBackupListResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -63,12 +87,20 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeFullBackupListResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public DescribeFullBackupListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeFullBackupListResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DescribeFullBackupListResponseBody setTotalElements(Integer totalElements) {
@@ -87,68 +119,12 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         return this.totalPages;
     }
 
-    public DescribeFullBackupListResponseBody setItems(DescribeFullBackupListResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeFullBackupListResponseBodyItems getItems() {
-        return this.items;
-    }
-
-    public DescribeFullBackupListResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
-    }
-
-    public DescribeFullBackupListResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DescribeFullBackupListResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
-        return this;
-    }
-    public String getErrCode() {
-        return this.errCode;
-    }
-
     public static class DescribeFullBackupListResponseBodyItemsFullBackupFile extends TeaModel {
-        @NameInMap("FinishTime")
-        public Long finishTime;
-
-        @NameInMap("BackupStatus")
-        public String backupStatus;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
-
-        @NameInMap("SourceEndpointIpPort")
-        public String sourceEndpointIpPort;
-
         @NameInMap("BackupObjects")
         public String backupObjects;
 
-        @NameInMap("ErrMessage")
-        public String errMessage;
-
-        @NameInMap("EndTime")
-        public Long endTime;
-
         @NameInMap("BackupSetExpiredTime")
         public Long backupSetExpiredTime;
-
-        @NameInMap("StartTime")
-        public Long startTime;
-
-        @NameInMap("StorageMethod")
-        public String storageMethod;
 
         @NameInMap("BackupSetId")
         public String backupSetId;
@@ -156,17 +132,65 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         @NameInMap("BackupSize")
         public Long backupSize;
 
+        @NameInMap("BackupStatus")
+        public String backupStatus;
+
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        @NameInMap("EndTime")
+        public Long endTime;
+
+        @NameInMap("ErrMessage")
+        public String errMessage;
+
+        @NameInMap("FinishTime")
+        public Long finishTime;
+
+        @NameInMap("SourceEndpointIpPort")
+        public String sourceEndpointIpPort;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        @NameInMap("StorageMethod")
+        public String storageMethod;
+
         public static DescribeFullBackupListResponseBodyItemsFullBackupFile build(java.util.Map<String, ?> map) throws Exception {
             DescribeFullBackupListResponseBodyItemsFullBackupFile self = new DescribeFullBackupListResponseBodyItemsFullBackupFile();
             return TeaModel.build(map, self);
         }
 
-        public DescribeFullBackupListResponseBodyItemsFullBackupFile setFinishTime(Long finishTime) {
-            this.finishTime = finishTime;
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setBackupObjects(String backupObjects) {
+            this.backupObjects = backupObjects;
             return this;
         }
-        public Long getFinishTime() {
-            return this.finishTime;
+        public String getBackupObjects() {
+            return this.backupObjects;
+        }
+
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setBackupSetExpiredTime(Long backupSetExpiredTime) {
+            this.backupSetExpiredTime = backupSetExpiredTime;
+            return this;
+        }
+        public Long getBackupSetExpiredTime() {
+            return this.backupSetExpiredTime;
+        }
+
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setBackupSetId(String backupSetId) {
+            this.backupSetId = backupSetId;
+            return this;
+        }
+        public String getBackupSetId() {
+            return this.backupSetId;
+        }
+
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setBackupSize(Long backupSize) {
+            this.backupSize = backupSize;
+            return this;
+        }
+        public Long getBackupSize() {
+            return this.backupSize;
         }
 
         public DescribeFullBackupListResponseBodyItemsFullBackupFile setBackupStatus(String backupStatus) {
@@ -185,20 +209,12 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeFullBackupListResponseBodyItemsFullBackupFile setSourceEndpointIpPort(String sourceEndpointIpPort) {
-            this.sourceEndpointIpPort = sourceEndpointIpPort;
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setEndTime(Long endTime) {
+            this.endTime = endTime;
             return this;
         }
-        public String getSourceEndpointIpPort() {
-            return this.sourceEndpointIpPort;
-        }
-
-        public DescribeFullBackupListResponseBodyItemsFullBackupFile setBackupObjects(String backupObjects) {
-            this.backupObjects = backupObjects;
-            return this;
-        }
-        public String getBackupObjects() {
-            return this.backupObjects;
+        public Long getEndTime() {
+            return this.endTime;
         }
 
         public DescribeFullBackupListResponseBodyItemsFullBackupFile setErrMessage(String errMessage) {
@@ -209,20 +225,20 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
             return this.errMessage;
         }
 
-        public DescribeFullBackupListResponseBodyItemsFullBackupFile setEndTime(Long endTime) {
-            this.endTime = endTime;
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setFinishTime(Long finishTime) {
+            this.finishTime = finishTime;
             return this;
         }
-        public Long getEndTime() {
-            return this.endTime;
+        public Long getFinishTime() {
+            return this.finishTime;
         }
 
-        public DescribeFullBackupListResponseBodyItemsFullBackupFile setBackupSetExpiredTime(Long backupSetExpiredTime) {
-            this.backupSetExpiredTime = backupSetExpiredTime;
+        public DescribeFullBackupListResponseBodyItemsFullBackupFile setSourceEndpointIpPort(String sourceEndpointIpPort) {
+            this.sourceEndpointIpPort = sourceEndpointIpPort;
             return this;
         }
-        public Long getBackupSetExpiredTime() {
-            return this.backupSetExpiredTime;
+        public String getSourceEndpointIpPort() {
+            return this.sourceEndpointIpPort;
         }
 
         public DescribeFullBackupListResponseBodyItemsFullBackupFile setStartTime(Long startTime) {
@@ -239,22 +255,6 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
         }
         public String getStorageMethod() {
             return this.storageMethod;
-        }
-
-        public DescribeFullBackupListResponseBodyItemsFullBackupFile setBackupSetId(String backupSetId) {
-            this.backupSetId = backupSetId;
-            return this;
-        }
-        public String getBackupSetId() {
-            return this.backupSetId;
-        }
-
-        public DescribeFullBackupListResponseBodyItemsFullBackupFile setBackupSize(Long backupSize) {
-            this.backupSize = backupSize;
-            return this;
-        }
-        public Long getBackupSize() {
-            return this.backupSize;
         }
 
     }

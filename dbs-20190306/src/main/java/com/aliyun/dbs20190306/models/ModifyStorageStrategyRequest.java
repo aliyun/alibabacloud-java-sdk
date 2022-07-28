@@ -10,17 +10,17 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     @NameInMap("BackupRetentionPeriod")
     public Integer backupRetentionPeriod;
 
-    @NameInMap("DuplicationInfrequentAccessPeriod")
-    public Integer duplicationInfrequentAccessPeriod;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("DuplicationArchivePeriod")
     public Integer duplicationArchivePeriod;
 
+    @NameInMap("DuplicationInfrequentAccessPeriod")
+    public Integer duplicationInfrequentAccessPeriod;
+
     @NameInMap("OwnerId")
     public String ownerId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     public static ModifyStorageStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyStorageStrategyRequest self = new ModifyStorageStrategyRequest();
@@ -43,12 +43,12 @@ public class ModifyStorageStrategyRequest extends TeaModel {
         return this.backupRetentionPeriod;
     }
 
-    public ModifyStorageStrategyRequest setDuplicationInfrequentAccessPeriod(Integer duplicationInfrequentAccessPeriod) {
-        this.duplicationInfrequentAccessPeriod = duplicationInfrequentAccessPeriod;
+    public ModifyStorageStrategyRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public Integer getDuplicationInfrequentAccessPeriod() {
-        return this.duplicationInfrequentAccessPeriod;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ModifyStorageStrategyRequest setDuplicationArchivePeriod(Integer duplicationArchivePeriod) {
@@ -59,20 +59,20 @@ public class ModifyStorageStrategyRequest extends TeaModel {
         return this.duplicationArchivePeriod;
     }
 
+    public ModifyStorageStrategyRequest setDuplicationInfrequentAccessPeriod(Integer duplicationInfrequentAccessPeriod) {
+        this.duplicationInfrequentAccessPeriod = duplicationInfrequentAccessPeriod;
+        return this;
+    }
+    public Integer getDuplicationInfrequentAccessPeriod() {
+        return this.duplicationInfrequentAccessPeriod;
+    }
+
     public ModifyStorageStrategyRequest setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public String getOwnerId() {
         return this.ownerId;
-    }
-
-    public ModifyStorageStrategyRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

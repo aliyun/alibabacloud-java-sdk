@@ -7,26 +7,29 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
-    @NameInMap("Region")
-    public String region;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNum")
-    public Integer pageNum;
-
     @NameInMap("BackupPlanName")
     public String backupPlanName;
 
     @NameInMap("BackupPlanStatus")
     public String backupPlanStatus;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("Region")
+    public String region;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static DescribeBackupPlanListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPlanListRequest self = new DescribeBackupPlanListRequest();
@@ -39,30 +42,6 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     }
     public String getBackupPlanId() {
         return this.backupPlanId;
-    }
-
-    public DescribeBackupPlanListRequest setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
-    }
-
-    public DescribeBackupPlanListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeBackupPlanListRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Integer getPageNum() {
-        return this.pageNum;
     }
 
     public DescribeBackupPlanListRequest setBackupPlanName(String backupPlanName) {
@@ -81,6 +60,14 @@ public class DescribeBackupPlanListRequest extends TeaModel {
         return this.backupPlanStatus;
     }
 
+    public DescribeBackupPlanListRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public DescribeBackupPlanListRequest setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -89,12 +76,36 @@ public class DescribeBackupPlanListRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeBackupPlanListRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DescribeBackupPlanListRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public DescribeBackupPlanListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeBackupPlanListRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
+    }
+
+    public DescribeBackupPlanListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

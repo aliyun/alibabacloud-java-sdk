@@ -4,23 +4,15 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public String ownerId;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("OwnerId")
+    public String ownerId;
 
     public static DescribeRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsRequest self = new DescribeRegionsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRegionsRequest setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public String getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeRegionsRequest setClientToken(String clientToken) {
@@ -29,6 +21,14 @@ public class DescribeRegionsRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public DescribeRegionsRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
     }
 
 }

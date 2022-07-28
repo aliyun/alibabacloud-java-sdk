@@ -7,11 +7,11 @@ public class DescribeBackupPlanBillingRequest extends TeaModel {
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
-    @NameInMap("OwnerId")
-    public String ownerId;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("OwnerId")
+    public String ownerId;
 
     @NameInMap("ShowStorageType")
     public Boolean showStorageType;
@@ -29,20 +29,20 @@ public class DescribeBackupPlanBillingRequest extends TeaModel {
         return this.backupPlanId;
     }
 
-    public DescribeBackupPlanBillingRequest setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public String getOwnerId() {
-        return this.ownerId;
-    }
-
     public DescribeBackupPlanBillingRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public DescribeBackupPlanBillingRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeBackupPlanBillingRequest setShowStorageType(Boolean showStorageType) {

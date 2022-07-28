@@ -7,14 +7,14 @@ public class DescribePreCheckProgressListRequest extends TeaModel {
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
-    @NameInMap("RestoreTaskId")
-    public String restoreTaskId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("RestoreTaskId")
+    public String restoreTaskId;
 
     public static DescribePreCheckProgressListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePreCheckProgressListRequest self = new DescribePreCheckProgressListRequest();
@@ -29,12 +29,12 @@ public class DescribePreCheckProgressListRequest extends TeaModel {
         return this.backupPlanId;
     }
 
-    public DescribePreCheckProgressListRequest setRestoreTaskId(String restoreTaskId) {
-        this.restoreTaskId = restoreTaskId;
+    public DescribePreCheckProgressListRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRestoreTaskId() {
-        return this.restoreTaskId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DescribePreCheckProgressListRequest setOwnerId(String ownerId) {
@@ -45,12 +45,12 @@ public class DescribePreCheckProgressListRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribePreCheckProgressListRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DescribePreCheckProgressListRequest setRestoreTaskId(String restoreTaskId) {
+        this.restoreTaskId = restoreTaskId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRestoreTaskId() {
+        return this.restoreTaskId;
     }
 
 }
