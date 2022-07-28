@@ -4,51 +4,39 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ResourceInstanceWorker extends TeaModel {
-    // CpuLimit
     @NameInMap("CpuLimit")
     public Integer cpuLimit;
 
-    // CpuRequest
     @NameInMap("CpuRequest")
     public Integer cpuRequest;
 
-    // GpuLimit
     @NameInMap("GpuLimit")
     public Integer gpuLimit;
 
-    // GpuRequest
     @NameInMap("GpuRequest")
     public Integer gpuRequest;
 
-    // MemoryLimit
     @NameInMap("MemoryLimit")
     public Integer memoryLimit;
 
-    // MemoryRquest
     @NameInMap("MemoryRquest")
     public Integer memoryRquest;
 
-    // pod名
     @NameInMap("Name")
     public String name;
 
-    // 是否ready
     @NameInMap("Ready")
     public Boolean ready;
 
-    // RestartCount
     @NameInMap("RestartCount")
     public Integer restartCount;
 
-    // 服务名
     @NameInMap("ServiceName")
     public String serviceName;
 
-    // StartTime
     @NameInMap("StartTime")
     public String startTime;
 
-    // pod状态
     @NameInMap("Status")
     public String status;
 

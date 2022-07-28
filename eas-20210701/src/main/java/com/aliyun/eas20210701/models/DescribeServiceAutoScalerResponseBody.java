@@ -7,23 +7,18 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     @NameInMap("CurrentValues")
     public java.util.Map<String, ?> currentValues;
 
-    // 服务最大实例数
     @NameInMap("MaxReplica")
     public Integer maxReplica;
 
-    // 服务最小实例数
     @NameInMap("MinReplica")
     public Integer minReplica;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 服务名字
     @NameInMap("ServiceName")
     public String serviceName;
 
-    // 扩缩控制器控制策略
     @NameInMap("Strategies")
     public java.util.Map<String, ?> strategies;
 

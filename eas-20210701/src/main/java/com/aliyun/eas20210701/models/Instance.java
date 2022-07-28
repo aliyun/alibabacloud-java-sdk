@@ -4,55 +4,42 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class Instance extends TeaModel {
-    // 实例所在的宿主机IP
     @NameInMap("HostIP")
     public String hostIP;
 
-    // 实例所在的宿主机名字
     @NameInMap("HostName")
     public String hostName;
 
-    // 实例的内网IP
     @NameInMap("InnerIP")
     public String innerIP;
 
-    // 实例的名字
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // 实例的网络端口
     @NameInMap("InstancePort")
     public Integer instancePort;
 
-    // 实例上一次退出的状态
     @NameInMap("LastState")
     public java.util.List<java.util.Map<String, ?>> lastState;
 
-    // 实例的命名空间
     @NameInMap("Namespace")
     public String namespace;
 
-    // 实例已经启动完成的进程数
     @NameInMap("ReadyProcesses")
     public Integer readyProcesses;
 
-    // 实例当前状态的标识
     @NameInMap("Reason")
     public String reason;
 
-    // 实例重启次数
     @NameInMap("RestartCount")
     public Integer restartCount;
 
-    // 实例的启动时间
     @NameInMap("StartAt")
     public String startAt;
 
-    // 实例状态
     @NameInMap("Status")
     public String status;
 
-    // 实例总的进程数
     @NameInMap("TotalProcesses")
     public Integer totalProcesses;
 

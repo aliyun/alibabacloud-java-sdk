@@ -4,11 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListResourceServicesRequest extends TeaModel {
-    // 请求的页码（默认为1）
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页的大小（默认为100）
     @NameInMap("PageSize")
     public Integer pageSize;
 

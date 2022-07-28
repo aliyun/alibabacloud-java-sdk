@@ -4,11 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceMirrorRequest extends TeaModel {
-    // 比例 [0, 100]
     @NameInMap("Ratio")
     public Integer ratio;
 
-    // 服务实例列表
     @NameInMap("Target")
     public java.util.List<String> target;
 

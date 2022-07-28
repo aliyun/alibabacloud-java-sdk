@@ -4,23 +4,18 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceResponseBody extends TeaModel {
-    // 资源组所在集群ID
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // 资源组的Owner UID
     @NameInMap("OwnerUid")
     public String ownerUid;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 资源组ID
     @NameInMap("ResourceId")
     public String resourceId;
 
-    // 资源组名称
     @NameInMap("ResourceName")
     public String resourceName;
 

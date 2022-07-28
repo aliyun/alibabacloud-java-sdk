@@ -4,27 +4,21 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceLogRequest extends TeaModel {
-    // 查询的结束时间
     @NameInMap("EndTime")
     public String endTime;
 
-    // 要查询的机器ip
     @NameInMap("Ip")
     public String ip;
 
-    // 查询的关键字
     @NameInMap("Keyword")
     public String keyword;
 
-    // 请求的页码（默认为1）
     @NameInMap("PageNum")
     public Long pageNum;
 
-    // 每页的大小（默认为500）
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // 查询的开始时间
     @NameInMap("StartTime")
     public String startTime;
 

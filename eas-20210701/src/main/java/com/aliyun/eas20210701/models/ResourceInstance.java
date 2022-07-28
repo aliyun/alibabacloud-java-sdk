@@ -4,63 +4,48 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ResourceInstance extends TeaModel {
-    // 实例是否自动续费
     @NameInMap("AutoRenewal")
     public Boolean autoRenewal;
 
-    // 实例的计费类型
     @NameInMap("ChargeType")
     public String chargeType;
 
-    // 实例的创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 实例过期时间
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
-    // 实例的Cpu个数
     @NameInMap("InstanceCpuCount")
     public Integer instanceCpuCount;
 
-    // 实例的Gpu个数
     @NameInMap("InstanceGpuCount")
     public Integer instanceGpuCount;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 实例IP
     @NameInMap("InstanceIp")
     public String instanceIp;
 
-    // 实例的内存大小
     @NameInMap("InstanceMemory")
     public String instanceMemory;
 
-    // 实例名称
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // 实例状态
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
-    // 实例的机型
     @NameInMap("InstanceType")
     public String instanceType;
 
-    // 实例被使用的CPU数量
     @NameInMap("InstanceUsedCpu")
     public Float instanceUsedCpu;
 
-    // 实例被使用的GPU数量
     @NameInMap("InstanceUsedGpu")
     public Integer instanceUsedGpu;
 
-    // 实例被使用的内存大小
     @NameInMap("InstanceUsedMemory")
     public String instanceUsedMemory;
 

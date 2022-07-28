@@ -4,11 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceResponseBody extends TeaModel {
-    // 请求返回消息。
     @NameInMap("Message")
     public String message;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 

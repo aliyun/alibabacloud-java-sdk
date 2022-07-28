@@ -4,11 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceLogRequest extends TeaModel {
-    // sls日志库
     @NameInMap("LogStore")
     public String logStore;
 
-    // 资源组对应的sls日志管理项目
     @NameInMap("ProjectName")
     public String projectName;
 

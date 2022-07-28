@@ -4,7 +4,6 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class UpdateResourceRequest extends TeaModel {
-    // 新的资源组名称
     @NameInMap("ResourceName")
     public String resourceName;
 

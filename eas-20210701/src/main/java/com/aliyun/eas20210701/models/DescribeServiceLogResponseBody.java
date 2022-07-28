@@ -4,23 +4,18 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceLogResponseBody extends TeaModel {
-    // 返回的日志信息
     @NameInMap("Logs")
     public java.util.List<String> logs;
 
-    // 当前页码
     @NameInMap("PageNum")
     public Long pageNum;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总计数量
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    // 总计页码
     @NameInMap("TotalPageNum")
     public Long totalPageNum;
 

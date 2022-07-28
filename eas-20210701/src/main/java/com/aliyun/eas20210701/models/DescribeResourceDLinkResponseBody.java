@@ -4,27 +4,21 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceDLinkResponseBody extends TeaModel {
-    // 已打通直连的副VSwitch ID
     @NameInMap("AuxVSwitchList")
     public java.util.List<String> auxVSwitchList;
 
-    // 要打通的客户端的网段信息，会将该网段加入到服务端的回包路由中，与VSwitchIdList可二选一
     @NameInMap("DestinationCIDRs")
     public String destinationCIDRs;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 已打通直连的安全组
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
-    // 已打通直连的主VSwitch ID
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    // 已打通直接的Vpc ID
     @NameInMap("VpcId")
     public String vpcId;
 
