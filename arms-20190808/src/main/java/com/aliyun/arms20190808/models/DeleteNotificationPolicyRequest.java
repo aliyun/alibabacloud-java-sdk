@@ -4,7 +4,6 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteNotificationPolicyRequest extends TeaModel {
-    // 通知策略ID
     @NameInMap("Id")
     public Long id;
 

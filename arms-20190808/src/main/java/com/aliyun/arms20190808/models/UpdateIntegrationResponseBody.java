@@ -7,7 +7,6 @@ public class UpdateIntegrationResponseBody extends TeaModel {
     @NameInMap("Integration")
     public UpdateIntegrationResponseBodyIntegration integration;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

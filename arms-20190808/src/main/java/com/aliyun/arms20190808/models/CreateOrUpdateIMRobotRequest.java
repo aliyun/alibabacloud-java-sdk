@@ -4,39 +4,44 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateIMRobotRequest extends TeaModel {
-    // 是否发送每日统计信息
+    @NameInMap("CardTemplate")
+    public String cardTemplate;
+
     @NameInMap("DailyNoc")
     public Boolean dailyNoc;
 
-    // 每日统计发送时间
     @NameInMap("DailyNocTime")
     public String dailyNocTime;
 
     @NameInMap("EnableOutgoing")
     public Boolean enableOutgoing;
 
-    // 告警机器人地址
     @NameInMap("RobotAddress")
     public String robotAddress;
 
-    // 告警机器人ID
     @NameInMap("RobotId")
     public Long robotId;
 
-    // 告警机器人名称
     @NameInMap("RobotName")
     public String robotName;
 
     @NameInMap("Token")
     public String token;
 
-    // 告警机器人类型:dingding/wechat
     @NameInMap("Type")
     public String type;
 
     public static CreateOrUpdateIMRobotRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrUpdateIMRobotRequest self = new CreateOrUpdateIMRobotRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateOrUpdateIMRobotRequest setCardTemplate(String cardTemplate) {
+        this.cardTemplate = cardTemplate;
+        return this;
+    }
+    public String getCardTemplate() {
+        return this.cardTemplate;
     }
 
     public CreateOrUpdateIMRobotRequest setDailyNoc(Boolean dailyNoc) {

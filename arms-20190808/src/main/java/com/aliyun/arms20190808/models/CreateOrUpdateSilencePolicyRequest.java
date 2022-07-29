@@ -4,17 +4,17 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateSilencePolicyRequest extends TeaModel {
-    // 静默策略ID
     @NameInMap("Id")
     public Long id;
 
-    // 分派规则
     @NameInMap("MatchingRules")
     public String matchingRules;
 
-    // 静默策略名称
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static CreateOrUpdateSilencePolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrUpdateSilencePolicyRequest self = new CreateOrUpdateSilencePolicyRequest();
@@ -43,6 +43,14 @@ public class CreateOrUpdateSilencePolicyRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateOrUpdateSilencePolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

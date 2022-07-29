@@ -10,11 +10,9 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     @NameInMap("AlertGroup")
     public Long alertGroup;
 
-    // 告警规则ID
     @NameInMap("AlertId")
     public Long alertId;
 
-    // 告警规则名称
     @NameInMap("AlertName")
     public String alertName;
 
@@ -24,7 +22,6 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     @NameInMap("AlertStatus")
     public String alertStatus;
 
-    // 告警规则类型
     @NameInMap("AlertType")
     public String alertType;
 
@@ -67,7 +64,6 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     @NameInMap("PromQL")
     public String promQL;
 
-    // 地域
     @NameInMap("RegionId")
     public String regionId;
 

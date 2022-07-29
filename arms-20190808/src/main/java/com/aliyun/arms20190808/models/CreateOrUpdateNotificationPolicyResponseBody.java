@@ -4,11 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
-    // 通知策略对象
     @NameInMap("NotificationPolicy")
     public CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy notificationPolicy;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +32,12 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyGroupRule extends TeaModel {
-        // 分组间隔时间，选填，默认是30s
         @NameInMap("GroupInterval")
         public Long groupInterval;
 
-        // 分组等待时间，选填，默认是5秒
         @NameInMap("GroupWait")
         public Long groupWait;
 
-        // 分组字段,为空则不分组，默认按照alertname分组
         @NameInMap("GroupingFields")
         public java.util.List<String> groupingFields;
 
@@ -78,15 +73,12 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyMatchingRulesMatchingConditions extends TeaModel {
-        // 条件字段
         @NameInMap("Key")
         public String key;
 
-        // 对应关系
         @NameInMap("Operator")
         public String operator;
 
-        // 条件字段值
         @NameInMap("Value")
         public String value;
 
@@ -141,15 +133,12 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRuleNotifyObjects extends TeaModel {
-        // 通知对象ID
         @NameInMap("NotifyObjectId")
         public Long notifyObjectId;
 
-        // 通知对象名称
         @NameInMap("NotifyObjectName")
         public String notifyObjectName;
 
-        // 通知对象类型，CONTACT, CONTACT_GROUP, ARMS_CONTACT, DING_ROBOT
         @NameInMap("NotifyObjectType")
         public String notifyObjectType;
 
@@ -185,19 +174,15 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRule extends TeaModel {
-        // 通知渠道
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
 
-        // 通知时间段结束时间
         @NameInMap("NotifyEndTime")
         public String notifyEndTime;
 
-        // 通知对象
         @NameInMap("NotifyObjects")
         public java.util.List<CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRuleNotifyObjects> notifyObjects;
 
-        // 通知时间段开始时间
         @NameInMap("NotifyStartTime")
         public String notifyStartTime;
 
@@ -241,39 +226,30 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyTemplate extends TeaModel {
-        // 邮件内容
         @NameInMap("EmailContent")
         public String emailContent;
 
-        // 恢复告警邮件内容
         @NameInMap("EmailRecoverContent")
         public String emailRecoverContent;
 
-        // 恢复告警邮件标题
         @NameInMap("EmailRecoverTitle")
         public String emailRecoverTitle;
 
-        // 邮件标题
         @NameInMap("EmailTitle")
         public String emailTitle;
 
-        // 机器人告警内容
         @NameInMap("RobotContent")
         public String robotContent;
 
-        // 短信内容
         @NameInMap("SmsContent")
         public String smsContent;
 
-        // 恢复告警短信内容
         @NameInMap("SmsRecoverContent")
         public String smsRecoverContent;
 
-        // 智能语音告警内容
         @NameInMap("TtsContent")
         public String ttsContent;
 
-        // 智能语音恢复告警内容
         @NameInMap("TtsRecoverContent")
         public String ttsRecoverContent;
 
@@ -357,47 +333,36 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy extends TeaModel {
-        // 升级规则ID
         @NameInMap("EscalationPolicyId")
         public Long escalationPolicyId;
 
-        // 分组规则
         @NameInMap("GroupRule")
         public CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyGroupRule groupRule;
 
-        // 通知策略ID
         @NameInMap("Id")
         public Long id;
 
-        // 集成ID
         @NameInMap("IntegrationId")
         public Long integrationId;
 
-        // 事件匹配规则列表
         @NameInMap("MatchingRules")
         public java.util.List<CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyMatchingRules> matchingRules;
 
-        // 通知策略名称
         @NameInMap("Name")
         public String name;
 
-        // 通知规则
         @NameInMap("NotifyRule")
         public CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRule notifyRule;
 
-        // 通知模板
         @NameInMap("NotifyTemplate")
         public CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyTemplate notifyTemplate;
 
-        // 是否重复通知
         @NameInMap("Repeat")
         public Boolean repeat;
 
-        // 重复通知时间间隔
         @NameInMap("RepeatInterval")
         public Long repeatInterval;
 
-        // 是否发送恢复通知
         @NameInMap("SendRecoverMessage")
         public Boolean sendRecoverMessage;
 

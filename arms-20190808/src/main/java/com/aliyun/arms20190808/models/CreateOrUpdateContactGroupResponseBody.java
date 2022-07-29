@@ -7,7 +7,6 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
     @NameInMap("AlertContactGroup")
     public CreateOrUpdateContactGroupResponseBodyAlertContactGroup alertContactGroup;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,15 +32,12 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateContactGroupResponseBodyAlertContactGroup extends TeaModel {
-        // 告警联系人组ID
         @NameInMap("ContactGroupId")
         public Float contactGroupId;
 
-        // 告警联系人组名称
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 
-        // 告警联系人ids
         @NameInMap("ContactIds")
         public String contactIds;
 

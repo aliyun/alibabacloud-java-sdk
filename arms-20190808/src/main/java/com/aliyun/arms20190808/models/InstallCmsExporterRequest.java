@@ -7,11 +7,9 @@ public class InstallCmsExporterRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // 云监控接入方式支持的参数，多个产品名用#分隔
     @NameInMap("CmsArgs")
     public String cmsArgs;
 
-    // 一方接入方式支持的参数，多个产品名用#分隔
     @NameInMap("DirectArgs")
     public String directArgs;
 

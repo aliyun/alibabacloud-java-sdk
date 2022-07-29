@@ -7,7 +7,6 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
     @NameInMap("EventBridgeIntegration")
     public CreateOrUpdateEventBridgeIntegrationResponseBodyEventBridgeIntegration eventBridgeIntegration;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

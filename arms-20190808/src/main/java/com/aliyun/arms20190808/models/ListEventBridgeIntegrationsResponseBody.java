@@ -7,7 +7,6 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
     @NameInMap("PageBean")
     public ListEventBridgeIntegrationsResponseBodyPageBean pageBean;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

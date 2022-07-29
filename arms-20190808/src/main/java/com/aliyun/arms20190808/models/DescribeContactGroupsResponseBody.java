@@ -4,11 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContactGroupsResponseBody extends TeaModel {
-    // 分页对象
     @NameInMap("PageBean")
     public DescribeContactGroupsResponseBodyPageBean pageBean;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,19 +32,15 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeContactGroupsResponseBodyPageBeanAlertContactGroupsContacts extends TeaModel {
-        // 联系人ID
         @NameInMap("ContactId")
         public Float contactId;
 
-        // 联系人名称
         @NameInMap("ContactName")
         public String contactName;
 
-        // 联系人邮箱
         @NameInMap("Email")
         public String email;
 
-        // 联系人手机号码
         @NameInMap("Phone")
         public String phone;
 
@@ -90,15 +84,12 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeContactGroupsResponseBodyPageBeanAlertContactGroups extends TeaModel {
-        // 告警联系人组ID
         @NameInMap("ContactGroupId")
         public Float contactGroupId;
 
-        // 告警联系人组名称
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 
-        // 联系人对象
         @NameInMap("Contacts")
         public java.util.List<DescribeContactGroupsResponseBodyPageBeanAlertContactGroupsContacts> contacts;
 
@@ -134,19 +125,15 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeContactGroupsResponseBodyPageBean extends TeaModel {
-        // 告警联系人组列表
         @NameInMap("AlertContactGroups")
         public java.util.List<DescribeContactGroupsResponseBodyPageBeanAlertContactGroups> alertContactGroups;
 
-        // 页数
         @NameInMap("Page")
         public Long page;
 
-        // 每一页数目
         @NameInMap("Size")
         public Long size;
 
-        // 总数
         @NameInMap("Total")
         public Long total;
 

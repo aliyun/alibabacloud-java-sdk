@@ -4,11 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebhookContactsResponseBody extends TeaModel {
-    // 分页对象
     @NameInMap("PageBean")
     public DescribeWebhookContactsResponseBodyPageBean pageBean;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,27 +32,21 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebhookContactsResponseBodyPageBeanWebhookContactsWebhook extends TeaModel {
-        // HTTP请求头
         @NameInMap("BizHeaders")
         public java.util.Map<String, ?> bizHeaders;
 
-        // HTTP请求参数
         @NameInMap("BizParams")
         public java.util.Map<String, ?> bizParams;
 
-        // 告警通知模板
         @NameInMap("Body")
         public String body;
 
-        // http请求方式
         @NameInMap("Method")
         public String method;
 
-        // 告警恢复模板
         @NameInMap("RecoverBody")
         public String recoverBody;
 
-        // Url
         @NameInMap("Url")
         public String url;
 
@@ -114,15 +106,12 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebhookContactsResponseBodyPageBeanWebhookContacts extends TeaModel {
-        // webhook对象
         @NameInMap("Webhook")
         public DescribeWebhookContactsResponseBodyPageBeanWebhookContactsWebhook webhook;
 
-        // 告警webhookID
         @NameInMap("WebhookId")
         public Float webhookId;
 
-        // 告警webhook名称
         @NameInMap("WebhookName")
         public String webhookName;
 
@@ -158,19 +147,15 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebhookContactsResponseBodyPageBean extends TeaModel {
-        // 页数
         @NameInMap("Page")
         public Long page;
 
-        // 每一页数目
         @NameInMap("Size")
         public Long size;
 
-        // 总数
         @NameInMap("Total")
         public Long total;
 
-        // 告警webhook联系人列表
         @NameInMap("WebhookContacts")
         public java.util.List<DescribeWebhookContactsResponseBodyPageBeanWebhookContacts> webhookContacts;
 

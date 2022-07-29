@@ -4,47 +4,39 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
-    // 升级规则ID
     @NameInMap("EscalationPolicyId")
     public Long escalationPolicyId;
 
-    // 分组规则
     @NameInMap("GroupRule")
     public String groupRule;
 
-    // 通知策略ID
     @NameInMap("Id")
     public Long id;
 
-    // 集成ID
     @NameInMap("IntegrationId")
     public Long integrationId;
 
-    // 事件匹配规则列表
     @NameInMap("MatchingRules")
     public String matchingRules;
 
-    // 通知策略名称
     @NameInMap("Name")
     public String name;
 
-    // 通知规则,通知对象，必填
     @NameInMap("NotifyRule")
     public String notifyRule;
 
-    // 通知模板
     @NameInMap("NotifyTemplate")
     public String notifyTemplate;
 
-    // 是否重复通知,不填默认为true，需要必填重复通知时间间隔；false，需要必填升级规则ID
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Repeat")
     public Boolean repeat;
 
-    // 重复通知时间间隔,单位：s
     @NameInMap("RepeatInterval")
     public Long repeatInterval;
 
-    // 是否发送恢,不填默认为：true复通知
     @NameInMap("SendRecoverMessage")
     public Boolean sendRecoverMessage;
 
@@ -115,6 +107,14 @@ public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
     }
     public String getNotifyTemplate() {
         return this.notifyTemplate;
+    }
+
+    public CreateOrUpdateNotificationPolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateOrUpdateNotificationPolicyRequest setRepeat(Boolean repeat) {

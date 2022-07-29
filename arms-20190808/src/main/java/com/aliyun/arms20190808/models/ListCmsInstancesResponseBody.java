@@ -7,7 +7,6 @@ public class ListCmsInstancesResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListCmsInstancesResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,11 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListOnCallSchedulesResponseBody extends TeaModel {
-    // 分页对象
     @NameInMap("PageBean")
     public ListOnCallSchedulesResponseBodyPageBean pageBean;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +32,12 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
     }
 
     public static class ListOnCallSchedulesResponseBodyPageBeanOnCallSchedules extends TeaModel {
-        // 排班策略描述
         @NameInMap("Description")
         public String description;
 
-        // 排班策略ID
         @NameInMap("Id")
         public Long id;
 
-        // 排班策略名称
         @NameInMap("Name")
         public String name;
 
@@ -81,15 +76,12 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
         @NameInMap("OnCallSchedules")
         public java.util.List<ListOnCallSchedulesResponseBodyPageBeanOnCallSchedules> onCallSchedules;
 
-        // 页数
         @NameInMap("Page")
         public Long page;
 
-        // 每页展示数目
         @NameInMap("Size")
         public Long size;
 
-        // 总数
         @NameInMap("Total")
         public Long total;
 

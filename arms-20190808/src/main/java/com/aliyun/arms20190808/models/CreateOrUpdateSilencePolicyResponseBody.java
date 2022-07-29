@@ -4,11 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 静默策略对象
     @NameInMap("SilencePolicy")
     public CreateOrUpdateSilencePolicyResponseBodySilencePolicy silencePolicy;
 
@@ -34,15 +32,12 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRulesMatchingConditions extends TeaModel {
-        // 条件字段
         @NameInMap("Key")
         public String key;
 
-        // 对应关系
         @NameInMap("Operator")
         public String operator;
 
-        // 条件字段值
         @NameInMap("Value")
         public String value;
 
@@ -78,7 +73,6 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRules extends TeaModel {
-        // 分派条件
         @NameInMap("MatchingConditions")
         public java.util.List<CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRulesMatchingConditions> matchingConditions;
 
@@ -98,15 +92,12 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateSilencePolicyResponseBodySilencePolicy extends TeaModel {
-        // 静默策略ID
         @NameInMap("Id")
         public Long id;
 
-        // 分派规则
         @NameInMap("MatchingRules")
         public java.util.List<CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRules> matchingRules;
 
-        // 静默策略名称
         @NameInMap("Name")
         public String name;
 

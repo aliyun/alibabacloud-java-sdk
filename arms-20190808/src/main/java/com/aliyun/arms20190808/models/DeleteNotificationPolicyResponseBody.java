@@ -7,7 +7,6 @@ public class DeleteNotificationPolicyResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

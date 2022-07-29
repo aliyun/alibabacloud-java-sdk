@@ -4,15 +4,12 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateContactGroupRequest extends TeaModel {
-    // 告警联系人组ID
     @NameInMap("ContactGroupId")
     public Long contactGroupId;
 
-    // 告警联系人组名称
     @NameInMap("ContactGroupName")
     public String contactGroupName;
 
-    // 告警联系人ids
     @NameInMap("ContactIds")
     public String contactIds;
 

@@ -43,23 +43,18 @@ public class UpdateAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRuleAlertRuleContentAlertRuleItems extends TeaModel {
-        // 应用监控/前端监控-聚合方式
         @NameInMap("Aggregate")
         public String aggregate;
 
-        // 应用监控/前端监控-具体告警条件的指标
         @NameInMap("MetricKey")
         public String metricKey;
 
-        // 应用监控/前端监控-最近N分钟
         @NameInMap("N")
         public Float n;
 
-        // 应用监控/前端监控-判断条件
         @NameInMap("Operator")
         public String operator;
 
-        // 应用监控/前端监控-阈值
         @NameInMap("Value")
         public String value;
 
@@ -111,11 +106,9 @@ public class UpdateAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRuleAlertRuleContent extends TeaModel {
-        // 应用监控/前端监控-告警条件
         @NameInMap("AlertRuleItems")
         public java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleAlertRuleContentAlertRuleItems> alertRuleItems;
 
-        // 应用监控/前端监控-多个告警条件触发逻辑
         @NameInMap("Condition")
         public String condition;
 
@@ -143,11 +136,9 @@ public class UpdateAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRuleAnnotations extends TeaModel {
-        // 键
         @NameInMap("Name")
         public String name;
 
-        // 值
         @NameInMap("Value")
         public String value;
 
@@ -331,11 +322,9 @@ public class UpdateAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRuleLabels extends TeaModel {
-        // 键
         @NameInMap("Name")
         public String name;
 
-        // 值
         @NameInMap("Value")
         public String value;
 
@@ -363,99 +352,75 @@ public class UpdateAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRule extends TeaModel {
-        // Prometheus告警-告警检查类型
         @NameInMap("AlertCheckType")
         public String alertCheckType;
 
-        // Prometheus告警-告警分组ID
         @NameInMap("AlertGroup")
         public Long alertGroup;
 
-        // 告警规则ID
         @NameInMap("AlertId")
         public Float alertId;
 
-        // 告警规则名称
         @NameInMap("AlertName")
         public String alertName;
 
-        // 应用监控/前端监控-告警规则内容
         @NameInMap("AlertRuleContent")
         public CreateOrUpdateAlertRuleResponseBodyAlertRuleAlertRuleContent alertRuleContent;
 
-        // 告警规则状态
         @NameInMap("AlertStatus")
         public String alertStatus;
 
-        // 告警规则类型
         @NameInMap("AlertType")
         public String alertType;
 
-        // Prometheus告警-Annotation
         @NameInMap("Annotations")
         public java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleAnnotations> annotations;
 
-        // 应用监控/前端监控-是否开启新创建应用追加到此告警规则
         @NameInMap("AutoAddNewApplication")
         public Boolean autoAddNewApplication;
 
-        // Prometheus告警-集群ID
         @NameInMap("ClusterId")
         public String clusterId;
 
-        // 创建时间
         @NameInMap("CreatedTime")
         public Long createdTime;
 
-        // Prometheus告警-持续时间
         @NameInMap("Duration")
         public String duration;
 
-        // 扩展字段
         @NameInMap("Extend")
         public String extend;
 
-        // 应用监控/前端监控-告警条件-过滤项
         @NameInMap("Filters")
         public CreateOrUpdateAlertRuleResponseBodyAlertRuleFilters filters;
 
-        // Prometheus告警-Label
         @NameInMap("Labels")
         public java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleLabels> labels;
 
-        // Prometheus告警-等级
         @NameInMap("Level")
         public String level;
 
-        // Prometheus告警-告警内容
         @NameInMap("Message")
         public String message;
 
-        // 应用监控/前端监控-告警指标类型
         @NameInMap("MetricsType")
         public String metricsType;
 
-        // 通知策略ID
         @NameInMap("NotifyStrategy")
         public String notifyStrategy;
 
-        // 应用监控/前端监控-告警关联应用ID
         @NameInMap("Pids")
         public java.util.List<String> pids;
 
-        // Prometheus告警-PromQL语句
         @NameInMap("PromQL")
         public String promQL;
 
-        // 地域
         @NameInMap("RegionId")
         public String regionId;
 
-        // 更新时间
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
-        // 用户UID
         @NameInMap("UserId")
         public String userId;
 

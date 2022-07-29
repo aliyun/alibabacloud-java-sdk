@@ -4,11 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeIMRobotsResponseBody extends TeaModel {
-    // 分页对象
     @NameInMap("PageBean")
     public DescribeIMRobotsResponseBodyPageBean pageBean;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,27 +32,21 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
     }
 
     public static class DescribeIMRobotsResponseBodyPageBeanAlertIMRobots extends TeaModel {
-        // 是否发送每日统计信息
         @NameInMap("DailyNoc")
         public Boolean dailyNoc;
 
-        // 每日统计发送时间
         @NameInMap("DailyNocTime")
         public String dailyNocTime;
 
-        // 告警机器人地址
         @NameInMap("RobotAddr")
         public String robotAddr;
 
-        // 告警机器人ID
         @NameInMap("RobotId")
         public Float robotId;
 
-        // 告警机器人名称
         @NameInMap("RobotName")
         public String robotName;
 
-        // 告警机器人类型
         @NameInMap("Type")
         public String type;
 
@@ -117,15 +109,12 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         @NameInMap("AlertIMRobots")
         public java.util.List<DescribeIMRobotsResponseBodyPageBeanAlertIMRobots> alertIMRobots;
 
-        // 页数
         @NameInMap("Page")
         public Long page;
 
-        // 每一页数目
         @NameInMap("Size")
         public Long size;
 
-        // 总数
         @NameInMap("Total")
         public Long total;
 

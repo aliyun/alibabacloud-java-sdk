@@ -4,11 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContactsResponseBody extends TeaModel {
-    // 分页对象
     @NameInMap("PageBean")
     public DescribeContactsResponseBodyPageBean pageBean;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,27 +32,21 @@ public class DescribeContactsResponseBody extends TeaModel {
     }
 
     public static class DescribeContactsResponseBodyPageBeanAlertContacts extends TeaModel {
-        // 告警联系人ID
         @NameInMap("ContactId")
         public Float contactId;
 
-        // 告警联系人名称
         @NameInMap("ContactName")
         public String contactName;
 
-        // 告警联系人邮箱
         @NameInMap("Email")
         public String email;
 
-        // 手机号码是否验证标识
         @NameInMap("IsVerify")
         public Boolean isVerify;
 
-        // 告警联系人手机号码
         @NameInMap("Phone")
         public String phone;
 
-        // 电话通知失败补发类型：0. 不补发   1. 重复拨打一次电话   2. 发送短信通知   3. 使用全局默认值（当前为不补发）
         @NameInMap("ReissueSendNotice")
         public Long reissueSendNotice;
 
@@ -114,19 +106,15 @@ public class DescribeContactsResponseBody extends TeaModel {
     }
 
     public static class DescribeContactsResponseBodyPageBean extends TeaModel {
-        // 告警联系人列表
         @NameInMap("AlertContacts")
         public java.util.List<DescribeContactsResponseBodyPageBeanAlertContacts> alertContacts;
 
-        // 页数
         @NameInMap("Page")
         public Long page;
 
-        // 每一页大小
         @NameInMap("Size")
         public Long size;
 
-        // 总数
         @NameInMap("Total")
         public Long total;
 
