@@ -5548,10 +5548,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PvcMountDescs", request.pvcMountDescs);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.replicas)) {
             query.put("Replicas", request.replicas);
         }
