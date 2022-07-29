@@ -71,6 +71,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("OfflineInstanceCount")
         public Integer offlineInstanceCount;
 
+        @NameInMap("OutMachineInstanceCount")
+        public Integer outMachineInstanceCount;
+
         @NameInMap("PauseInstanceCount")
         public Integer pauseInstanceCount;
 
@@ -199,6 +202,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getOfflineInstanceCount() {
             return this.offlineInstanceCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setOutMachineInstanceCount(Integer outMachineInstanceCount) {
+            this.outMachineInstanceCount = outMachineInstanceCount;
+            return this;
+        }
+        public Integer getOutMachineInstanceCount() {
+            return this.outMachineInstanceCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setPauseInstanceCount(Integer pauseInstanceCount) {
