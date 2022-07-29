@@ -4,47 +4,36 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListAlertsRequest extends TeaModel {
-    // 告警名称
     @NameInMap("AlertName")
     public String alertName;
 
-    // 通知策略ID
     @NameInMap("DispatchRuleId")
     public Long dispatchRuleId;
 
-    // 查询告警发送历史记录的开始时间，时间格式：YYYY-MM-DD HH:mm:ss
     @NameInMap("EndTime")
     public String endTime;
 
-    // 集成类型
     @NameInMap("IntegrationType")
     public String integrationType;
 
-    // 页数
     @NameInMap("Page")
     public Long page;
 
-    // 告警等级(P1~P6)
     @NameInMap("Severity")
     public String severity;
 
-    // 默认不查活动记录，showActivities=true才查，只查最近3天的内容
     @NameInMap("ShowActivities")
     public Boolean showActivities;
 
-    // 默认不查事件，showEvents=true才查
     @NameInMap("ShowEvents")
     public Boolean showEvents;
 
-    // 每页展示数目
     @NameInMap("Size")
     public Long size;
 
-    // 查询告警发送历史记录的开始时间，时间格式：YYYY-MM-DD HH:mm:ss
     @NameInMap("StartTime")
     public String startTime;
 
-    // 告警状态(0 - 待处理， 1 - 处理中， 2 - 已处理)
     @NameInMap("State")
     public Long state;
 

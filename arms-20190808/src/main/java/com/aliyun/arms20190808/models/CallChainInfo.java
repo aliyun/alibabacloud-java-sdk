@@ -4,79 +4,60 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CallChainInfo extends TeaModel {
-    // additionalInfo
     @NameInMap("AdditionalInfo")
     public String additionalInfo;
 
-    // appName
     @NameInMap("AppName")
     public String appName;
 
-    // appType
     @NameInMap("AppType")
     public String appType;
 
-    // children
     @NameInMap("Children")
     public java.util.List<CallChainInfo> children;
 
-    // haveSpan
     @NameInMap("HaveSpan")
     public Boolean haveSpan;
 
-    // logMap
     @NameInMap("LogMap")
     public java.util.Map<String, java.util.Map<String, ?>> logMap;
 
-    // logTime
     @NameInMap("LogTime")
     public Long logTime;
 
-    // parentSpanId
     @NameInMap("ParentSpanId")
     public String parentSpanId;
 
-    // pid
     @NameInMap("Pid")
     public String pid;
 
-    // regionId
     @NameInMap("RegionId")
     public String regionId;
 
-    // resultCode
     @NameInMap("ResultCode")
     public String resultCode;
 
-    // rpc
     @NameInMap("Rpc")
     public String rpc;
 
-    // rpcId
     @NameInMap("RpcId")
     public String rpcId;
 
-    // rpcType
     @NameInMap("RpcType")
     public Long rpcType;
 
-    // serverIp
     @NameInMap("ServerIp")
     public String serverIp;
 
-    // span
     @NameInMap("Span")
     public Long span;
 
-    // spanId
     @NameInMap("SpanId")
     public String spanId;
 
-    // tagMap
     @NameInMap("TagMap")
     public java.util.Map<String, String> tagMap;
 
-    // traceId
     @NameInMap("TraceId")
     public String traceId;
 

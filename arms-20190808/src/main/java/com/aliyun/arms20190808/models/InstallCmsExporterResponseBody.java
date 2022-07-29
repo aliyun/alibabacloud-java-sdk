@@ -7,7 +7,6 @@ public class InstallCmsExporterResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

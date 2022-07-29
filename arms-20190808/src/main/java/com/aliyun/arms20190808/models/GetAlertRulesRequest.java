@@ -4,31 +4,24 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetAlertRulesRequest extends TeaModel {
-    // 告警规则ID
     @NameInMap("AlertIds")
     public String alertIds;
 
-    // 告警规则名称
     @NameInMap("AlertNames")
     public String alertNames;
 
-    // 告警规则运行状态
     @NameInMap("AlertStatus")
     public String alertStatus;
 
-    // 告警规则类型
     @NameInMap("AlertType")
     public String alertType;
 
-    // 页数
     @NameInMap("Page")
     public Long page;
 
-    // 地域
     @NameInMap("RegionId")
     public String regionId;
 
-    // 每一页大小
     @NameInMap("Size")
     public Long size;
 

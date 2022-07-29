@@ -7,11 +7,9 @@ public class ListEscalationPoliciesRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    // 页数
     @NameInMap("Page")
     public Long page;
 
-    // 每页展示数目
     @NameInMap("Size")
     public Long size;
 

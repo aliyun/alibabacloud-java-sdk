@@ -4,19 +4,18 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListSilencePoliciesRequest extends TeaModel {
-    // 是否查询详情信息
     @NameInMap("IsDetail")
     public Boolean isDetail;
 
-    // 静默策略名称
     @NameInMap("Name")
     public String name;
 
-    // 页数
     @NameInMap("Page")
     public Long page;
 
-    // 每页战术数目
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Size")
     public Long size;
 
@@ -47,6 +46,14 @@ public class ListSilencePoliciesRequest extends TeaModel {
     }
     public Long getPage() {
         return this.page;
+    }
+
+    public ListSilencePoliciesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListSilencePoliciesRequest setSize(Long size) {

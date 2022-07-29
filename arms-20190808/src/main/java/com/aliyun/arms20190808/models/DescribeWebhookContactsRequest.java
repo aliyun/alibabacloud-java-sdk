@@ -10,7 +10,6 @@ public class DescribeWebhookContactsRequest extends TeaModel {
     @NameInMap("Size")
     public Long size;
 
-    // 告警webhook名称
     @NameInMap("WebhookName")
     public String webhookName;
 

@@ -4,15 +4,12 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListOnCallSchedulesRequest extends TeaModel {
-    // 排班策略名称
     @NameInMap("Name")
     public String name;
 
-    // 页数
     @NameInMap("Page")
     public Long page;
 
-    // 展示数目
     @NameInMap("Size")
     public Long size;
 

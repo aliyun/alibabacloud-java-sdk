@@ -4,18 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContactsRequest extends TeaModel {
-    // 告警联系人名称
     @NameInMap("ContactName")
     public String contactName;
 
-    // 告警联系人邮箱
     @NameInMap("Email")
     public String email;
 
     @NameInMap("Page")
     public Long page;
 
-    // 告警联系人手机号码
     @NameInMap("Phone")
     public String phone;
 

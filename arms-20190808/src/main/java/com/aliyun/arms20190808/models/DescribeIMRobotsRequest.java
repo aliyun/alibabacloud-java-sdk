@@ -7,7 +7,6 @@ public class DescribeIMRobotsRequest extends TeaModel {
     @NameInMap("Page")
     public Long page;
 
-    // 告警机器人名称
     @NameInMap("RobotName")
     public String robotName;
 

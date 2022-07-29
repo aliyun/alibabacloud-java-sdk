@@ -4,11 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListSilencePoliciesResponseBody extends TeaModel {
-    // 分页对象
     @NameInMap("PageBean")
     public ListSilencePoliciesResponseBodyPageBean pageBean;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +32,12 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRulesMatchingConditions extends TeaModel {
-        // 条件字段
         @NameInMap("Key")
         public String key;
 
-        // 对应关系
         @NameInMap("Operator")
         public String operator;
 
-        // 条件字段值
         @NameInMap("Value")
         public String value;
 
@@ -78,7 +73,6 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRules extends TeaModel {
-        // 匹配条件
         @NameInMap("MatchingConditions")
         public java.util.List<ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRulesMatchingConditions> matchingConditions;
 
@@ -98,15 +92,12 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSilencePoliciesResponseBodyPageBeanSilencePolicies extends TeaModel {
-        // 静默策略ID
         @NameInMap("Id")
         public Long id;
 
-        // 事件匹配规则列表
         @NameInMap("MatchingRules")
         public java.util.List<ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRules> matchingRules;
 
-        // 静默策略名称
         @NameInMap("Name")
         public String name;
 
@@ -142,19 +133,15 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSilencePoliciesResponseBodyPageBean extends TeaModel {
-        // 页数
         @NameInMap("Page")
         public Long page;
 
-        // 静默策略列表
         @NameInMap("SilencePolicies")
         public java.util.List<ListSilencePoliciesResponseBodyPageBeanSilencePolicies> silencePolicies;
 
-        // 每页数目
         @NameInMap("Size")
         public Long size;
 
-        // 总数
         @NameInMap("Total")
         public Long total;
 

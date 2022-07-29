@@ -4,7 +4,6 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,27 +32,21 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateWebhookContactResponseBodyWebhookContactWebhook extends TeaModel {
-        // http请求头
         @NameInMap("BizHeaders")
         public String bizHeaders;
 
-        // http请求参数
         @NameInMap("BizParams")
         public String bizParams;
 
-        // 告警通知模板
         @NameInMap("Body")
         public String body;
 
-        // Http请求方法
         @NameInMap("Method")
         public String method;
 
-        // 告警恢复模板
         @NameInMap("RecoverBody")
         public String recoverBody;
 
-        // url
         @NameInMap("Url")
         public String url;
 
@@ -116,11 +109,9 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
         @NameInMap("Webhook")
         public CreateOrUpdateWebhookContactResponseBodyWebhookContactWebhook webhook;
 
-        // 告警webhook ID
         @NameInMap("WebhookId")
         public Float webhookId;
 
-        // 告警webhook名称
         @NameInMap("WebhookName")
         public String webhookName;
 

@@ -4,11 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListIntegrationResponseBody extends TeaModel {
-    // 分页信息
     @NameInMap("PageInfo")
     public ListIntegrationResponseBodyPageInfo pageInfo;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +32,12 @@ public class ListIntegrationResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail extends TeaModel {
-        // 是否设置恢复告警事件
         @NameInMap("AutoRecover")
         public Boolean autoRecover;
 
-        // 集成描述
         @NameInMap("Description")
         public String description;
 
-        // 去重得字段
         @NameInMap("DuplicateKey")
         public String duplicateKey;
 
@@ -52,7 +47,6 @@ public class ListIntegrationResponseBody extends TeaModel {
         @NameInMap("FieldRedefineRules")
         public java.util.List<java.util.Map<String, ?>> fieldRedefineRules;
 
-        // 恢复时间
         @NameInMap("RecoverTime")
         public Long recoverTime;
 
@@ -123,39 +117,30 @@ public class ListIntegrationResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationResponseBodyPageInfoIintegrations extends TeaModel {
-        // 接口配置url
         @NameInMap("ApiEndpoint")
         public String apiEndpoint;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 集成详情对象信息
         @NameInMap("IntegrationDetail")
         public ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail integrationDetail;
 
-        // 集成ID
         @NameInMap("IntegrationId")
         public Long integrationId;
 
-        // 集成名称
         @NameInMap("IntegrationName")
         public String integrationName;
 
-        // 集成产品类型，CLOUD_MONITOR，LOG_SERVICE
         @NameInMap("IntegrationProductType")
         public String integrationProductType;
 
-        // 就绪
         @NameInMap("Liveness")
         public String liveness;
 
-        // 接口配置token
         @NameInMap("ShortToken")
         public String shortToken;
 
-        // 是否启用，true/false
         @NameInMap("State")
         public Boolean state;
 
@@ -242,15 +227,12 @@ public class ListIntegrationResponseBody extends TeaModel {
         @NameInMap("Iintegrations")
         public java.util.List<ListIntegrationResponseBodyPageInfoIintegrations> iintegrations;
 
-        // 页数
         @NameInMap("Page")
         public Long page;
 
-        // 条数
         @NameInMap("Size")
         public Long size;
 
-        // 总数
         @NameInMap("Total")
         public Long total;
 

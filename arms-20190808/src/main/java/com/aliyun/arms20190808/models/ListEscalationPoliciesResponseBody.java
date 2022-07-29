@@ -4,11 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListEscalationPoliciesResponseBody extends TeaModel {
-    // 分页对象
     @NameInMap("PageBean")
     public ListEscalationPoliciesResponseBodyPageBean pageBean;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,15 +65,12 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
         @NameInMap("EscalationPolicies")
         public java.util.List<ListEscalationPoliciesResponseBodyPageBeanEscalationPolicies> escalationPolicies;
 
-        // 页数
         @NameInMap("Page")
         public Long page;
 
-        // 每页展示数目
         @NameInMap("Size")
         public Long size;
 
-        // 总数
         @NameInMap("Total")
         public Long total;
 

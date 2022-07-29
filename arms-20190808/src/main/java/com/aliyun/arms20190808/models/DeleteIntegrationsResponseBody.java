@@ -4,11 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteIntegrationsResponseBody extends TeaModel {
-    // 删除成功或者失败
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

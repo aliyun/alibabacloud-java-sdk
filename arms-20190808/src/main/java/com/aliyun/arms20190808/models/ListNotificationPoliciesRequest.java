@@ -4,19 +4,18 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListNotificationPoliciesRequest extends TeaModel {
-    // 是否查询详情信息
     @NameInMap("IsDetail")
     public Boolean isDetail;
 
-    // 通知策略名称
     @NameInMap("Name")
     public String name;
 
-    // 页数
     @NameInMap("Page")
     public Long page;
 
-    // 每页展示数目
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Size")
     public Long size;
 
@@ -47,6 +46,14 @@ public class ListNotificationPoliciesRequest extends TeaModel {
     }
     public Long getPage() {
         return this.page;
+    }
+
+    public ListNotificationPoliciesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListNotificationPoliciesRequest setSize(Long size) {

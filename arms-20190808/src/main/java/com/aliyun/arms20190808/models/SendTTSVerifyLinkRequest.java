@@ -4,11 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SendTTSVerifyLinkRequest extends TeaModel {
-    // 告警联系人ID
     @NameInMap("ContactId")
     public Long contactId;
 
-    // 告警联系人手机号码
     @NameInMap("Phone")
     public String phone;
 

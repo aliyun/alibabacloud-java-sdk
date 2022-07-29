@@ -4,7 +4,6 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteIMRobotRequest extends TeaModel {
-    // 告警机器人ID
     @NameInMap("RobotId")
     public Long robotId;
 

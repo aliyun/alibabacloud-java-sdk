@@ -4,11 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContactGroupsRequest extends TeaModel {
-    // 告警联系人组名称
     @NameInMap("ContactGroupName")
     public String contactGroupName;
 
-    // 是否返回联系人分组中包含的所有联系人。默认不返回所有联系人。
     @NameInMap("IsDetail")
     public Boolean isDetail;
 

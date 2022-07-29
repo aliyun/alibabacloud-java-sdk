@@ -4,11 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListAlertsResponseBody extends TeaModel {
-    // 返回结构体
     @NameInMap("PageBean")
     public ListAlertsResponseBodyPageBean pageBean;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,23 +32,18 @@ public class ListAlertsResponseBody extends TeaModel {
     }
 
     public static class ListAlertsResponseBodyPageBeanListAlertsActivities extends TeaModel {
-        // 通知内容
         @NameInMap("Content")
         public String content;
 
-        // 描述
         @NameInMap("Description")
         public String description;
 
-        // 处理人名称
         @NameInMap("HandlerName")
         public String handlerName;
 
-        // 时间
         @NameInMap("Time")
         public String time;
 
-        // 活动类型
         @NameInMap("Type")
         public Long type;
 
@@ -102,51 +95,39 @@ public class ListAlertsResponseBody extends TeaModel {
     }
 
     public static class ListAlertsResponseBodyPageBeanListAlertsAlertEvents extends TeaModel {
-        // 事件名称
         @NameInMap("AlertName")
         public String alertName;
 
-        // 注释列表
         @NameInMap("Annotations")
         public String annotations;
 
-        // 事件描述
         @NameInMap("Description")
         public String description;
 
-        // 结束时间
         @NameInMap("EndTime")
         public String endTime;
 
-        // 事件地址
         @NameInMap("GeneratorURL")
         public String generatorURL;
 
-        // 集成名称
         @NameInMap("IntegrationName")
         public String integrationName;
 
-        // 集成类型
         @NameInMap("IntegrationType")
         public String integrationType;
 
-        // 标签列表
         @NameInMap("Labels")
         public String labels;
 
-        // 事件接受时间
         @NameInMap("ReceiveTime")
         public String receiveTime;
 
-        // 事件等级
         @NameInMap("Severity")
         public String severity;
 
-        // 开始时间
         @NameInMap("StartTime")
         public String startTime;
 
-        // 告警状态Active("Active"),      * Inhibited("Inhibited"),      * Silenced("Silenced"),      * Resolved("Resolved")
         @NameInMap("State")
         public String state;
 
@@ -254,39 +235,30 @@ public class ListAlertsResponseBody extends TeaModel {
     }
 
     public static class ListAlertsResponseBodyPageBeanListAlerts extends TeaModel {
-        // 活动列表
         @NameInMap("Activities")
         public java.util.List<ListAlertsResponseBodyPageBeanListAlertsActivities> activities;
 
-        // 事件列表
         @NameInMap("AlertEvents")
         public java.util.List<ListAlertsResponseBodyPageBeanListAlertsAlertEvents> alertEvents;
 
-        // 告警ID
         @NameInMap("AlertId")
         public Long alertId;
 
-        // 告警名称
         @NameInMap("AlertName")
         public String alertName;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 通知策略ID
         @NameInMap("DispatchRuleId")
         public Float dispatchRuleId;
 
-        // 通知策略名称
         @NameInMap("DispatchRuleName")
         public String dispatchRuleName;
 
-        // 告警等级(P1~P6)
         @NameInMap("Severity")
         public String severity;
 
-        // 告警状态(0 - 待处理， 1 - 处理中， 2 - 已处理)
         @NameInMap("State")
         public Long state;
 
@@ -370,19 +342,15 @@ public class ListAlertsResponseBody extends TeaModel {
     }
 
     public static class ListAlertsResponseBodyPageBean extends TeaModel {
-        // 告警发送历史信息组
         @NameInMap("ListAlerts")
         public java.util.List<ListAlertsResponseBodyPageBeanListAlerts> listAlerts;
 
-        // 页数
         @NameInMap("Page")
         public Long page;
 
-        // 每页展示数目
         @NameInMap("Size")
         public Long size;
 
-        // 总数
         @NameInMap("Total")
         public Long total;
 

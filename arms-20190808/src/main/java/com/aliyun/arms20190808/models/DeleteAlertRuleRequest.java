@@ -4,7 +4,6 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteAlertRuleRequest extends TeaModel {
-    // 告警规则ID
     @NameInMap("AlertId")
     public Long alertId;
 
