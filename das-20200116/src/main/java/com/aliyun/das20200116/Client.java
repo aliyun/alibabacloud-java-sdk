@@ -1633,39 +1633,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getFullRequestStatResultByInstanceIdWithOptions(request, runtime);
     }
 
-    public GetGeneralAbnormalEventsCountResponse getGeneralAbnormalEventsCountWithOptions(GetGeneralAbnormalEventsCountRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
-            query.put("EndTime", request.endTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
-            query.put("StartTime", request.startTime);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetGeneralAbnormalEventsCount"),
-            new TeaPair("version", "2020-01-16"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGeneralAbnormalEventsCountResponse());
-    }
-
-    public GetGeneralAbnormalEventsCountResponse getGeneralAbnormalEventsCount(GetGeneralAbnormalEventsCountRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getGeneralAbnormalEventsCountWithOptions(request, runtime);
-    }
-
     public GetHDMAliyunResourceSyncResultResponse getHDMAliyunResourceSyncResultWithOptions(GetHDMAliyunResourceSyncResultRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
