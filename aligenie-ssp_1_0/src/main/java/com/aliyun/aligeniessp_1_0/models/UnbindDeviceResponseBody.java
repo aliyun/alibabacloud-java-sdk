@@ -4,19 +4,15 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class UnbindDeviceResponseBody extends TeaModel {
-    // 返回的错误码
     @NameInMap("Code")
     public Integer code;
 
-    // 返回的错误信息
     @NameInMap("Message")
     public String message;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否解绑成功
     @NameInMap("Result")
     public Boolean result;
 

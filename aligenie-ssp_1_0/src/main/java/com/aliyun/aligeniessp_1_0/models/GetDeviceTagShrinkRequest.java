@@ -4,7 +4,6 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceTagShrinkRequest extends TeaModel {
-    // 设备标识信息
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 

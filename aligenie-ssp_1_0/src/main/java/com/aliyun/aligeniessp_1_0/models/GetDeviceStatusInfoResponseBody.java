@@ -4,19 +4,15 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceStatusInfoResponseBody extends TeaModel {
-    // 返回的错误码
     @NameInMap("Code")
     public Integer code;
 
-    // 返回的错误信息
     @NameInMap("Message")
     public String message;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 返回result
     @NameInMap("Result")
     public GetDeviceStatusInfoResponseBodyResult result;
 
@@ -58,7 +54,6 @@ public class GetDeviceStatusInfoResponseBody extends TeaModel {
     }
 
     public static class GetDeviceStatusInfoResponseBodyResult extends TeaModel {
-        // 是否在线，0为不在线，1为在线
         @NameInMap("Online")
         public Integer online;
 

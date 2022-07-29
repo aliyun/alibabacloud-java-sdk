@@ -4,19 +4,15 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceBasicInfoResponseBody extends TeaModel {
-    // 返回的错误码
     @NameInMap("Code")
     public Integer code;
 
-    // 返回的错误信息
     @NameInMap("Message")
     public String message;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 返回result，key为deviceOpenId或deviceUnionId，value为对应的设备信息
     @NameInMap("Result")
     public java.util.Map<String, ResultValue> result;
 

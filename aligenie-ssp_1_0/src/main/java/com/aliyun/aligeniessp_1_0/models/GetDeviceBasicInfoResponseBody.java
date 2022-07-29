@@ -4,19 +4,15 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceBasicInfoResponseBody extends TeaModel {
-    // 返回的错误码
     @NameInMap("Code")
     public Integer code;
 
-    // 返回的错误信息
     @NameInMap("Message")
     public String message;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 返回result
     @NameInMap("Result")
     public GetDeviceBasicInfoResponseBodyResult result;
 
@@ -58,19 +54,15 @@ public class GetDeviceBasicInfoResponseBody extends TeaModel {
     }
 
     public static class GetDeviceBasicInfoResponseBodyResult extends TeaModel {
-        // 固件版本
         @NameInMap("FirmwareVersion")
         public String firmwareVersion;
 
-        // 设备MAC地址
         @NameInMap("Mac")
         public String mac;
 
-        // 设备名称
         @NameInMap("Name")
         public String name;
 
-        // 设备SN
         @NameInMap("Sn")
         public String sn;
 

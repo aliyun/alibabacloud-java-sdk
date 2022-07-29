@@ -4,19 +4,15 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetUserByDeviceIdResponseBody extends TeaModel {
-    // 返回的错误码
     @NameInMap("Code")
     public Integer code;
 
-    // 返回的错误信息
     @NameInMap("Message")
     public String message;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 用户open信息
     @NameInMap("Result")
     public GetUserByDeviceIdResponseBodyResult result;
 
@@ -58,11 +54,9 @@ public class GetUserByDeviceIdResponseBody extends TeaModel {
     }
 
     public static class GetUserByDeviceIdResponseBodyResultUserUnionIds extends TeaModel {
-        // 组织id
         @NameInMap("OrganizationId")
         public String organizationId;
 
-        // 组织id对应的归一id
         @NameInMap("UserUnionId")
         public String userUnionId;
 
@@ -90,11 +84,9 @@ public class GetUserByDeviceIdResponseBody extends TeaModel {
     }
 
     public static class GetUserByDeviceIdResponseBodyResult extends TeaModel {
-        // 用户信息对应的openId
         @NameInMap("UserOpenId")
         public String userOpenId;
 
-        // 组织id及归一id列表
         @NameInMap("UserUnionIds")
         public java.util.List<GetUserByDeviceIdResponseBodyResultUserUnionIds> userUnionIds;
 
