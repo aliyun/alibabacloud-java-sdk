@@ -4,7 +4,6 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceBasicInfoRequest extends TeaModel {
-    // 设备标识信息
     @NameInMap("DeviceInfos")
     public ListDeviceBasicInfoRequestDeviceInfos deviceInfos;
 
@@ -22,23 +21,18 @@ public class ListDeviceBasicInfoRequest extends TeaModel {
     }
 
     public static class ListDeviceBasicInfoRequestDeviceInfos extends TeaModel {
-        // 编码类型对应的值，此处填写天猫精灵AI平台中，该产品ProductKey所在项目的Project ID。
         @NameInMap("EncodeKey")
         public String encodeKey;
 
-        // 编码类型，此处填写“PROJECT_ID”
         @NameInMap("EncodeType")
         public String encodeType;
 
-        // 设备Id的类型  - OPEN_ID：默认的设备ID标识 - UNION_ID: 组织维度的设备ID标识，在开放平台申请过组织后才会有
         @NameInMap("IdType")
         public String idType;
 
-        // 设备标识列表（deviceOpenId或deviceUnionId）
         @NameInMap("Ids")
         public java.util.List<String> ids;
 
-        // 组织ID，如果IdType为UNION_ID时必填
         @NameInMap("OrganizationId")
         public String organizationId;
 

@@ -4,23 +4,18 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceIdByIdentityRequest extends TeaModel {
-    // 编码类型对应的值，此处填写天猫精灵AI平台中，该产品ProductKey所在项目的Project ID。
     @NameInMap("EncodeKey")
     public String encodeKey;
 
-    // 编码类型，此处填写“PROJECT_ID”
     @NameInMap("EncodeType")
     public String encodeType;
 
-    // 认证标识，填写MAC地址或者SN的值。
     @NameInMap("IdentityId")
     public String identityId;
 
-    // 填写设备认证类型，“MAC”或者“SN”
     @NameInMap("IdentityType")
     public String identityType;
 
-    // 产品唯一标志符productKey，在天猫精灵AI平台中创建产品时，平台颁发的全局唯一标识。
     @NameInMap("ProductKey")
     public String productKey;
 
