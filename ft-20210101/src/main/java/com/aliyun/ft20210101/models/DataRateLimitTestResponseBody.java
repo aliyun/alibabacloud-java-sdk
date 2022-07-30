@@ -4,7 +4,6 @@ package com.aliyun.ft20210101.models;
 import com.aliyun.tea.*;
 
 public class DataRateLimitTestResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
