@@ -4,8 +4,8 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class FtDynamicAddressHttpVpcShrinkRequest extends TeaModel {
-    @NameInMap("StringValue")
-    public String stringValueShrink;
+    @NameInMap("BooleanParam")
+    public Boolean booleanParam;
 
     @NameInMap("DefaultValue")
     public String defaultValueShrink;
@@ -13,23 +13,23 @@ public class FtDynamicAddressHttpVpcShrinkRequest extends TeaModel {
     @NameInMap("OtherParam")
     public String otherParamShrink;
 
-    @NameInMap("BooleanParam")
-    public Boolean booleanParam;
-
     @NameInMap("P1")
     public String p1;
+
+    @NameInMap("StringValue")
+    public String stringValueShrink;
 
     public static FtDynamicAddressHttpVpcShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         FtDynamicAddressHttpVpcShrinkRequest self = new FtDynamicAddressHttpVpcShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public FtDynamicAddressHttpVpcShrinkRequest setStringValueShrink(String stringValueShrink) {
-        this.stringValueShrink = stringValueShrink;
+    public FtDynamicAddressHttpVpcShrinkRequest setBooleanParam(Boolean booleanParam) {
+        this.booleanParam = booleanParam;
         return this;
     }
-    public String getStringValueShrink() {
-        return this.stringValueShrink;
+    public Boolean getBooleanParam() {
+        return this.booleanParam;
     }
 
     public FtDynamicAddressHttpVpcShrinkRequest setDefaultValueShrink(String defaultValueShrink) {
@@ -48,20 +48,20 @@ public class FtDynamicAddressHttpVpcShrinkRequest extends TeaModel {
         return this.otherParamShrink;
     }
 
-    public FtDynamicAddressHttpVpcShrinkRequest setBooleanParam(Boolean booleanParam) {
-        this.booleanParam = booleanParam;
-        return this;
-    }
-    public Boolean getBooleanParam() {
-        return this.booleanParam;
-    }
-
     public FtDynamicAddressHttpVpcShrinkRequest setP1(String p1) {
         this.p1 = p1;
         return this;
     }
     public String getP1() {
         return this.p1;
+    }
+
+    public FtDynamicAddressHttpVpcShrinkRequest setStringValueShrink(String stringValueShrink) {
+        this.stringValueShrink = stringValueShrink;
+        return this;
+    }
+    public String getStringValueShrink() {
+        return this.stringValueShrink;
     }
 
 }

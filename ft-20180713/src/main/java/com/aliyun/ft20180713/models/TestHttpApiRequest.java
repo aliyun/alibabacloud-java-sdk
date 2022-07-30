@@ -4,8 +4,8 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class TestHttpApiRequest extends TeaModel {
-    @NameInMap("StringValue")
-    public java.util.Map<String, ?> stringValue;
+    @NameInMap("BooleanParam")
+    public Boolean booleanParam;
 
     @NameInMap("DefaultValue")
     public java.util.Map<String, ?> defaultValue;
@@ -13,20 +13,20 @@ public class TestHttpApiRequest extends TeaModel {
     @NameInMap("OtherParam")
     public java.util.Map<String, ?> otherParam;
 
-    @NameInMap("BooleanParam")
-    public Boolean booleanParam;
+    @NameInMap("StringValue")
+    public java.util.Map<String, ?> stringValue;
 
     public static TestHttpApiRequest build(java.util.Map<String, ?> map) throws Exception {
         TestHttpApiRequest self = new TestHttpApiRequest();
         return TeaModel.build(map, self);
     }
 
-    public TestHttpApiRequest setStringValue(java.util.Map<String, ?> stringValue) {
-        this.stringValue = stringValue;
+    public TestHttpApiRequest setBooleanParam(Boolean booleanParam) {
+        this.booleanParam = booleanParam;
         return this;
     }
-    public java.util.Map<String, ?> getStringValue() {
-        return this.stringValue;
+    public Boolean getBooleanParam() {
+        return this.booleanParam;
     }
 
     public TestHttpApiRequest setDefaultValue(java.util.Map<String, ?> defaultValue) {
@@ -45,12 +45,12 @@ public class TestHttpApiRequest extends TeaModel {
         return this.otherParam;
     }
 
-    public TestHttpApiRequest setBooleanParam(Boolean booleanParam) {
-        this.booleanParam = booleanParam;
+    public TestHttpApiRequest setStringValue(java.util.Map<String, ?> stringValue) {
+        this.stringValue = stringValue;
         return this;
     }
-    public Boolean getBooleanParam() {
-        return this.booleanParam;
+    public java.util.Map<String, ?> getStringValue() {
+        return this.stringValue;
     }
 
 }
