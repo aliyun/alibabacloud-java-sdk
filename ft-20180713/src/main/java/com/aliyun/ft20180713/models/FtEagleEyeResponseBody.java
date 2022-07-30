@@ -4,11 +4,11 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class FtEagleEyeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("eagleEyeTraceId")
     public String eagleEyeTraceId;
@@ -18,20 +18,20 @@ public class FtEagleEyeResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public FtEagleEyeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public FtEagleEyeResponseBody setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public FtEagleEyeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public FtEagleEyeResponseBody setEagleEyeTraceId(String eagleEyeTraceId) {

@@ -4,8 +4,8 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class TestHttpApiShrinkRequest extends TeaModel {
-    @NameInMap("StringValue")
-    public String stringValueShrink;
+    @NameInMap("BooleanParam")
+    public Boolean booleanParam;
 
     @NameInMap("DefaultValue")
     public String defaultValueShrink;
@@ -13,20 +13,20 @@ public class TestHttpApiShrinkRequest extends TeaModel {
     @NameInMap("OtherParam")
     public String otherParamShrink;
 
-    @NameInMap("BooleanParam")
-    public Boolean booleanParam;
+    @NameInMap("StringValue")
+    public String stringValueShrink;
 
     public static TestHttpApiShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         TestHttpApiShrinkRequest self = new TestHttpApiShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public TestHttpApiShrinkRequest setStringValueShrink(String stringValueShrink) {
-        this.stringValueShrink = stringValueShrink;
+    public TestHttpApiShrinkRequest setBooleanParam(Boolean booleanParam) {
+        this.booleanParam = booleanParam;
         return this;
     }
-    public String getStringValueShrink() {
-        return this.stringValueShrink;
+    public Boolean getBooleanParam() {
+        return this.booleanParam;
     }
 
     public TestHttpApiShrinkRequest setDefaultValueShrink(String defaultValueShrink) {
@@ -45,12 +45,12 @@ public class TestHttpApiShrinkRequest extends TeaModel {
         return this.otherParamShrink;
     }
 
-    public TestHttpApiShrinkRequest setBooleanParam(Boolean booleanParam) {
-        this.booleanParam = booleanParam;
+    public TestHttpApiShrinkRequest setStringValueShrink(String stringValueShrink) {
+        this.stringValueShrink = stringValueShrink;
         return this;
     }
-    public Boolean getBooleanParam() {
-        return this.booleanParam;
+    public String getStringValueShrink() {
+        return this.stringValueShrink;
     }
 
 }

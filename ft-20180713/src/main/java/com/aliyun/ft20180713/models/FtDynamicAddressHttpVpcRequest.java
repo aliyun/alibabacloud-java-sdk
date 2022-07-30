@@ -4,8 +4,8 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class FtDynamicAddressHttpVpcRequest extends TeaModel {
-    @NameInMap("StringValue")
-    public java.util.Map<String, ?> stringValue;
+    @NameInMap("BooleanParam")
+    public Boolean booleanParam;
 
     @NameInMap("DefaultValue")
     public java.util.Map<String, ?> defaultValue;
@@ -13,23 +13,23 @@ public class FtDynamicAddressHttpVpcRequest extends TeaModel {
     @NameInMap("OtherParam")
     public java.util.Map<String, ?> otherParam;
 
-    @NameInMap("BooleanParam")
-    public Boolean booleanParam;
-
     @NameInMap("P1")
     public String p1;
+
+    @NameInMap("StringValue")
+    public java.util.Map<String, ?> stringValue;
 
     public static FtDynamicAddressHttpVpcRequest build(java.util.Map<String, ?> map) throws Exception {
         FtDynamicAddressHttpVpcRequest self = new FtDynamicAddressHttpVpcRequest();
         return TeaModel.build(map, self);
     }
 
-    public FtDynamicAddressHttpVpcRequest setStringValue(java.util.Map<String, ?> stringValue) {
-        this.stringValue = stringValue;
+    public FtDynamicAddressHttpVpcRequest setBooleanParam(Boolean booleanParam) {
+        this.booleanParam = booleanParam;
         return this;
     }
-    public java.util.Map<String, ?> getStringValue() {
-        return this.stringValue;
+    public Boolean getBooleanParam() {
+        return this.booleanParam;
     }
 
     public FtDynamicAddressHttpVpcRequest setDefaultValue(java.util.Map<String, ?> defaultValue) {
@@ -48,20 +48,20 @@ public class FtDynamicAddressHttpVpcRequest extends TeaModel {
         return this.otherParam;
     }
 
-    public FtDynamicAddressHttpVpcRequest setBooleanParam(Boolean booleanParam) {
-        this.booleanParam = booleanParam;
-        return this;
-    }
-    public Boolean getBooleanParam() {
-        return this.booleanParam;
-    }
-
     public FtDynamicAddressHttpVpcRequest setP1(String p1) {
         this.p1 = p1;
         return this;
     }
     public String getP1() {
         return this.p1;
+    }
+
+    public FtDynamicAddressHttpVpcRequest setStringValue(java.util.Map<String, ?> stringValue) {
+        this.stringValue = stringValue;
+        return this;
+    }
+    public java.util.Map<String, ?> getStringValue() {
+        return this.stringValue;
     }
 
 }

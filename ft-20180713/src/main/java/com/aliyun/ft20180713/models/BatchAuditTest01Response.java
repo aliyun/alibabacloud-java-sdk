@@ -8,6 +8,10 @@ public class BatchAuditTest01Response extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public BatchAuditTest01ResponseBody body;
@@ -23,6 +27,14 @@ public class BatchAuditTest01Response extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public BatchAuditTest01Response setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public BatchAuditTest01Response setBody(BatchAuditTest01ResponseBody body) {

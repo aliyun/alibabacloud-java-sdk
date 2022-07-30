@@ -4,14 +4,14 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class BatchAuditTest01Request extends TeaModel {
-    @NameInMap("Name")
-    public String name;
-
     @NameInMap("BatchAuditTest01")
     public String batchAuditTest01;
 
     @NameInMap("Demo01")
     public String demo01;
+
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("Test010101")
     public Boolean test010101;
@@ -19,14 +19,6 @@ public class BatchAuditTest01Request extends TeaModel {
     public static BatchAuditTest01Request build(java.util.Map<String, ?> map) throws Exception {
         BatchAuditTest01Request self = new BatchAuditTest01Request();
         return TeaModel.build(map, self);
-    }
-
-    public BatchAuditTest01Request setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public BatchAuditTest01Request setBatchAuditTest01(String batchAuditTest01) {
@@ -43,6 +35,14 @@ public class BatchAuditTest01Request extends TeaModel {
     }
     public String getDemo01() {
         return this.demo01;
+    }
+
+    public BatchAuditTest01Request setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public BatchAuditTest01Request setTest010101(Boolean test010101) {

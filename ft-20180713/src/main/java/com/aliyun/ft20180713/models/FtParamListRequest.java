@@ -4,23 +4,15 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class FtParamListRequest extends TeaModel {
-    @NameInMap("Name")
-    public String name;
-
     @NameInMap("Disk")
     public java.util.List<FtParamListRequestDisk> disk;
+
+    @NameInMap("Name")
+    public String name;
 
     public static FtParamListRequest build(java.util.Map<String, ?> map) throws Exception {
         FtParamListRequest self = new FtParamListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public FtParamListRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public FtParamListRequest setDisk(java.util.List<FtParamListRequestDisk> disk) {
@@ -31,24 +23,24 @@ public class FtParamListRequest extends TeaModel {
         return this.disk;
     }
 
-    public static class FtParamListRequestDisk extends TeaModel {
-        @NameInMap("Type")
-        public java.util.List<String> type;
+    public FtParamListRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
 
+    public static class FtParamListRequestDisk extends TeaModel {
         @NameInMap("Size")
         public java.util.List<String> size;
+
+        @NameInMap("Type")
+        public java.util.List<String> type;
 
         public static FtParamListRequestDisk build(java.util.Map<String, ?> map) throws Exception {
             FtParamListRequestDisk self = new FtParamListRequestDisk();
             return TeaModel.build(map, self);
-        }
-
-        public FtParamListRequestDisk setType(java.util.List<String> type) {
-            this.type = type;
-            return this;
-        }
-        public java.util.List<String> getType() {
-            return this.type;
         }
 
         public FtParamListRequestDisk setSize(java.util.List<String> size) {
@@ -57,6 +49,14 @@ public class FtParamListRequest extends TeaModel {
         }
         public java.util.List<String> getSize() {
             return this.size;
+        }
+
+        public FtParamListRequestDisk setType(java.util.List<String> type) {
+            this.type = type;
+            return this;
+        }
+        public java.util.List<String> getType() {
+            return this.type;
         }
 
     }

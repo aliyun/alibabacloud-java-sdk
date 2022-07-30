@@ -4,18 +4,26 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class FtDynamicAddressDubboResponseBody extends TeaModel {
+    @NameInMap("IntValue")
+    public Integer intValue;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("StringValue")
     public String stringValue;
 
-    @NameInMap("IntValue")
-    public Integer intValue;
-
     public static FtDynamicAddressDubboResponseBody build(java.util.Map<String, ?> map) throws Exception {
         FtDynamicAddressDubboResponseBody self = new FtDynamicAddressDubboResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public FtDynamicAddressDubboResponseBody setIntValue(Integer intValue) {
+        this.intValue = intValue;
+        return this;
+    }
+    public Integer getIntValue() {
+        return this.intValue;
     }
 
     public FtDynamicAddressDubboResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class FtDynamicAddressDubboResponseBody extends TeaModel {
     }
     public String getStringValue() {
         return this.stringValue;
-    }
-
-    public FtDynamicAddressDubboResponseBody setIntValue(Integer intValue) {
-        this.intValue = intValue;
-        return this;
-    }
-    public Integer getIntValue() {
-        return this.intValue;
     }
 
 }
