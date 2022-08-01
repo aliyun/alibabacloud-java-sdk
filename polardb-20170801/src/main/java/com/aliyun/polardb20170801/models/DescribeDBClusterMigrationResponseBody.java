@@ -19,6 +19,9 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     @NameInMap("DelayedSeconds")
     public Integer delayedSeconds;
 
+    @NameInMap("DtsInstanceId")
+    public String dtsInstanceId;
+
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
@@ -83,6 +86,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     }
     public Integer getDelayedSeconds() {
         return this.delayedSeconds;
+    }
+
+    public DescribeDBClusterMigrationResponseBody setDtsInstanceId(String dtsInstanceId) {
+        this.dtsInstanceId = dtsInstanceId;
+        return this;
+    }
+    public String getDtsInstanceId() {
+        return this.dtsInstanceId;
     }
 
     public DescribeDBClusterMigrationResponseBody setExpiredTime(String expiredTime) {

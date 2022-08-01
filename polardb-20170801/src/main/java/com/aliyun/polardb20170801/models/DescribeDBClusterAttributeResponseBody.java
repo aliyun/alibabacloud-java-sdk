@@ -4,6 +4,12 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterAttributeResponseBody extends TeaModel {
+    @NameInMap("BlktagTotal")
+    public Long blktagTotal;
+
+    @NameInMap("BlktagUsed")
+    public Long blktagUsed;
+
     @NameInMap("Category")
     public String category;
 
@@ -49,6 +55,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("Expired")
     public String expired;
 
+    @NameInMap("InodeTotal")
+    public Long inodeTotal;
+
+    @NameInMap("InodeUsed")
+    public Long inodeUsed;
+
     @NameInMap("IsLatestVersion")
     public Boolean isLatestVersion;
 
@@ -91,6 +103,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("StorageMax")
     public Long storageMax;
 
+    @NameInMap("StoragePayType")
+    public String storagePayType;
+
+    @NameInMap("StorageSpace")
+    public Long storageSpace;
+
     @NameInMap("StorageType")
     public String storageType;
 
@@ -115,6 +133,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public static DescribeDBClusterAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterAttributeResponseBody self = new DescribeDBClusterAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBClusterAttributeResponseBody setBlktagTotal(Long blktagTotal) {
+        this.blktagTotal = blktagTotal;
+        return this;
+    }
+    public Long getBlktagTotal() {
+        return this.blktagTotal;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setBlktagUsed(Long blktagUsed) {
+        this.blktagUsed = blktagUsed;
+        return this;
+    }
+    public Long getBlktagUsed() {
+        return this.blktagUsed;
     }
 
     public DescribeDBClusterAttributeResponseBody setCategory(String category) {
@@ -237,6 +271,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         return this.expired;
     }
 
+    public DescribeDBClusterAttributeResponseBody setInodeTotal(Long inodeTotal) {
+        this.inodeTotal = inodeTotal;
+        return this;
+    }
+    public Long getInodeTotal() {
+        return this.inodeTotal;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setInodeUsed(Long inodeUsed) {
+        this.inodeUsed = inodeUsed;
+        return this;
+    }
+    public Long getInodeUsed() {
+        return this.inodeUsed;
+    }
+
     public DescribeDBClusterAttributeResponseBody setIsLatestVersion(Boolean isLatestVersion) {
         this.isLatestVersion = isLatestVersion;
         return this;
@@ -347,6 +397,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
     public Long getStorageMax() {
         return this.storageMax;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setStoragePayType(String storagePayType) {
+        this.storagePayType = storagePayType;
+        return this;
+    }
+    public String getStoragePayType() {
+        return this.storagePayType;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setStorageSpace(Long storageSpace) {
+        this.storageSpace = storageSpace;
+        return this;
+    }
+    public Long getStorageSpace() {
+        return this.storageSpace;
     }
 
     public DescribeDBClusterAttributeResponseBody setStorageType(String storageType) {

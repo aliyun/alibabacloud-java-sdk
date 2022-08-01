@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetaListResponseBody extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
     @NameInMap("Items")
     public java.util.List<DescribeMetaListResponseBodyItems> items;
 
@@ -25,6 +28,14 @@ public class DescribeMetaListResponseBody extends TeaModel {
     public static DescribeMetaListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetaListResponseBody self = new DescribeMetaListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMetaListResponseBody setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     public DescribeMetaListResponseBody setItems(java.util.List<DescribeMetaListResponseBodyItems> items) {

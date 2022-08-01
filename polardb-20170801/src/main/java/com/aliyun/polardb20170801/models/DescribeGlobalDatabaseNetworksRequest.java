@@ -7,6 +7,12 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("GDNDescription")
+    public String GDNDescription;
+
+    @NameInMap("GDNId")
+    public String GDNId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -39,6 +45,22 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribeGlobalDatabaseNetworksRequest setGDNDescription(String GDNDescription) {
+        this.GDNDescription = GDNDescription;
+        return this;
+    }
+    public String getGDNDescription() {
+        return this.GDNDescription;
+    }
+
+    public DescribeGlobalDatabaseNetworksRequest setGDNId(String GDNId) {
+        this.GDNId = GDNId;
+        return this;
+    }
+    public String getGDNId() {
+        return this.GDNId;
     }
 
     public DescribeGlobalDatabaseNetworksRequest setOwnerAccount(String ownerAccount) {

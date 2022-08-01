@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupLogsRequest extends TeaModel {
+    @NameInMap("BackupRegion")
+    public String backupRegion;
+
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -34,6 +37,14 @@ public class DescribeBackupLogsRequest extends TeaModel {
     public static DescribeBackupLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupLogsRequest self = new DescribeBackupLogsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBackupLogsRequest setBackupRegion(String backupRegion) {
+        this.backupRegion = backupRegion;
+        return this;
+    }
+    public String getBackupRegion() {
+        return this.backupRegion;
     }
 
     public DescribeBackupLogsRequest setDBClusterId(String DBClusterId) {

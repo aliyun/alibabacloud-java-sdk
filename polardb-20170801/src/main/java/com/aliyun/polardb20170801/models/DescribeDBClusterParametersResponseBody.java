@@ -74,6 +74,9 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         @NameInMap("DefaultParameterValue")
         public String defaultParameterValue;
 
+        @NameInMap("Factor")
+        public String factor;
+
         @NameInMap("ForceRestart")
         public Boolean forceRestart;
 
@@ -125,6 +128,14 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
         public String getDefaultParameterValue() {
             return this.defaultParameterValue;
+        }
+
+        public DescribeDBClusterParametersResponseBodyRunningParametersParameter setFactor(String factor) {
+            this.factor = factor;
+            return this;
+        }
+        public String getFactor() {
+            return this.factor;
         }
 
         public DescribeDBClusterParametersResponseBodyRunningParametersParameter setForceRestart(Boolean forceRestart) {

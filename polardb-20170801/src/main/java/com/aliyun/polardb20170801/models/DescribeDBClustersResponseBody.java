@@ -253,6 +253,12 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("StoragePayType")
+        public String storagePayType;
+
+        @NameInMap("StorageSpace")
+        public Long storageSpace;
+
         @NameInMap("StorageUsed")
         public Long storageUsed;
 
@@ -420,6 +426,22 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDBClustersResponseBodyItemsDBCluster setStoragePayType(String storagePayType) {
+            this.storagePayType = storagePayType;
+            return this;
+        }
+        public String getStoragePayType() {
+            return this.storagePayType;
+        }
+
+        public DescribeDBClustersResponseBodyItemsDBCluster setStorageSpace(Long storageSpace) {
+            this.storageSpace = storageSpace;
+            return this;
+        }
+        public Long getStorageSpace() {
+            return this.storageSpace;
         }
 
         public DescribeDBClustersResponseBodyItemsDBCluster setStorageUsed(Long storageUsed) {

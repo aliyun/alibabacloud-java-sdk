@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterMigrationRequest extends TeaModel {
+    @NameInMap("ConnectionStrings")
+    public String connectionStrings;
+
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -34,6 +37,14 @@ public class ModifyDBClusterMigrationRequest extends TeaModel {
     public static ModifyDBClusterMigrationRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterMigrationRequest self = new ModifyDBClusterMigrationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBClusterMigrationRequest setConnectionStrings(String connectionStrings) {
+        this.connectionStrings = connectionStrings;
+        return this;
+    }
+    public String getConnectionStrings() {
+        return this.connectionStrings;
     }
 
     public ModifyDBClusterMigrationRequest setDBClusterId(String DBClusterId) {

@@ -7,7 +7,6 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     @NameInMap("ParameterGroup")
     public java.util.List<DescribeParameterGroupResponseBodyParameterGroup> parameterGroup;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

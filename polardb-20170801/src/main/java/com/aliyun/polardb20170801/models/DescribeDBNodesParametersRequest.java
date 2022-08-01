@@ -7,7 +7,6 @@ public class DescribeDBNodesParametersRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    // 查询指定节点的参数列表
     @NameInMap("DBNodeIds")
     public String DBNodeIds;
 

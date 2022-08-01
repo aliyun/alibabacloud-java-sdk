@@ -28,6 +28,12 @@ public class UpgradeDBClusterVersionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("UpgradeLabel")
+    public String upgradeLabel;
+
+    @NameInMap("UpgradePolicy")
+    public String upgradePolicy;
+
     @NameInMap("UpgradeType")
     public String upgradeType;
 
@@ -98,6 +104,22 @@ public class UpgradeDBClusterVersionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public UpgradeDBClusterVersionRequest setUpgradeLabel(String upgradeLabel) {
+        this.upgradeLabel = upgradeLabel;
+        return this;
+    }
+    public String getUpgradeLabel() {
+        return this.upgradeLabel;
+    }
+
+    public UpgradeDBClusterVersionRequest setUpgradePolicy(String upgradePolicy) {
+        this.upgradePolicy = upgradePolicy;
+        return this;
+    }
+    public String getUpgradePolicy() {
+        return this.upgradePolicy;
     }
 
     public UpgradeDBClusterVersionRequest setUpgradeType(String upgradeType) {

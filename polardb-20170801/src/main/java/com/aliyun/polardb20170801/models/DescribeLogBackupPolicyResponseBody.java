@@ -7,6 +7,12 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
     @NameInMap("EnableBackupLog")
     public Integer enableBackupLog;
 
+    @NameInMap("LogBackupAnotherRegionRegion")
+    public String logBackupAnotherRegionRegion;
+
+    @NameInMap("LogBackupAnotherRegionRetentionPeriod")
+    public String logBackupAnotherRegionRetentionPeriod;
+
     @NameInMap("LogBackupRetentionPeriod")
     public Integer logBackupRetentionPeriod;
 
@@ -24,6 +30,22 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
     }
     public Integer getEnableBackupLog() {
         return this.enableBackupLog;
+    }
+
+    public DescribeLogBackupPolicyResponseBody setLogBackupAnotherRegionRegion(String logBackupAnotherRegionRegion) {
+        this.logBackupAnotherRegionRegion = logBackupAnotherRegionRegion;
+        return this;
+    }
+    public String getLogBackupAnotherRegionRegion() {
+        return this.logBackupAnotherRegionRegion;
+    }
+
+    public DescribeLogBackupPolicyResponseBody setLogBackupAnotherRegionRetentionPeriod(String logBackupAnotherRegionRetentionPeriod) {
+        this.logBackupAnotherRegionRetentionPeriod = logBackupAnotherRegionRetentionPeriod;
+        return this;
+    }
+    public String getLogBackupAnotherRegionRetentionPeriod() {
+        return this.logBackupAnotherRegionRetentionPeriod;
     }
 
     public DescribeLogBackupPolicyResponseBody setLogBackupRetentionPeriod(Integer logBackupRetentionPeriod) {

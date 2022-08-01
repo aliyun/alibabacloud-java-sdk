@@ -7,6 +7,12 @@ public class ModifyLogBackupPolicyRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("LogBackupAnotherRegionRegion")
+    public String logBackupAnotherRegionRegion;
+
+    @NameInMap("LogBackupAnotherRegionRetentionPeriod")
+    public String logBackupAnotherRegionRetentionPeriod;
+
     @NameInMap("LogBackupRetentionPeriod")
     public String logBackupRetentionPeriod;
 
@@ -33,6 +39,22 @@ public class ModifyLogBackupPolicyRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public ModifyLogBackupPolicyRequest setLogBackupAnotherRegionRegion(String logBackupAnotherRegionRegion) {
+        this.logBackupAnotherRegionRegion = logBackupAnotherRegionRegion;
+        return this;
+    }
+    public String getLogBackupAnotherRegionRegion() {
+        return this.logBackupAnotherRegionRegion;
+    }
+
+    public ModifyLogBackupPolicyRequest setLogBackupAnotherRegionRetentionPeriod(String logBackupAnotherRegionRetentionPeriod) {
+        this.logBackupAnotherRegionRetentionPeriod = logBackupAnotherRegionRetentionPeriod;
+        return this;
+    }
+    public String getLogBackupAnotherRegionRetentionPeriod() {
+        return this.logBackupAnotherRegionRetentionPeriod;
     }
 
     public ModifyLogBackupPolicyRequest setLogBackupRetentionPeriod(String logBackupRetentionPeriod) {

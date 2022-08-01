@@ -7,10 +7,11 @@ public class ModifyDBClusterAndNodesParametersRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    // 1、修改多个指定节点的参数，以‘，’分割。，修改此集群的集群参数和指定节点的参数
-    // 2、当为空时，说明没有指定，则只修改集群参数。
     @NameInMap("DBNodeIds")
     public String DBNodeIds;
+
+    @NameInMap("FromTimeService")
+    public Boolean fromTimeService;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -18,13 +19,17 @@ public class ModifyDBClusterAndNodesParametersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // 参数模板ID。
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
-    // 参数及其值的JSON串，参数的值都是字符串类型，例如{"wait_timeout":"86","innodb_old_blocks_time":"10"}
     @NameInMap("Parameters")
     public String parameters;
+
+    @NameInMap("PlannedEndTime")
+    public String plannedEndTime;
+
+    @NameInMap("PlannedStartTime")
+    public String plannedStartTime;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -51,6 +56,14 @@ public class ModifyDBClusterAndNodesParametersRequest extends TeaModel {
     }
     public String getDBNodeIds() {
         return this.DBNodeIds;
+    }
+
+    public ModifyDBClusterAndNodesParametersRequest setFromTimeService(Boolean fromTimeService) {
+        this.fromTimeService = fromTimeService;
+        return this;
+    }
+    public Boolean getFromTimeService() {
+        return this.fromTimeService;
     }
 
     public ModifyDBClusterAndNodesParametersRequest setOwnerAccount(String ownerAccount) {
@@ -83,6 +96,22 @@ public class ModifyDBClusterAndNodesParametersRequest extends TeaModel {
     }
     public String getParameters() {
         return this.parameters;
+    }
+
+    public ModifyDBClusterAndNodesParametersRequest setPlannedEndTime(String plannedEndTime) {
+        this.plannedEndTime = plannedEndTime;
+        return this;
+    }
+    public String getPlannedEndTime() {
+        return this.plannedEndTime;
+    }
+
+    public ModifyDBClusterAndNodesParametersRequest setPlannedStartTime(String plannedStartTime) {
+        this.plannedStartTime = plannedStartTime;
+        return this;
+    }
+    public String getPlannedStartTime() {
+        return this.plannedStartTime;
     }
 
     public ModifyDBClusterAndNodesParametersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
