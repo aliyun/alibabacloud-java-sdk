@@ -943,6 +943,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.disableAllSqlConcurrencyControlRulesWithOptions(request, runtime);
     }
 
+    public DisableAutoResourceOptimizeRulesResponse disableAutoResourceOptimizeRulesWithOptions(DisableAutoResourceOptimizeRulesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consoleContext)) {
+            query.put("ConsoleContext", request.consoleContext);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableAutoResourceOptimizeRules"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableAutoResourceOptimizeRulesResponse());
+    }
+
+    public DisableAutoResourceOptimizeRulesResponse disableAutoResourceOptimizeRules(DisableAutoResourceOptimizeRulesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.disableAutoResourceOptimizeRulesWithOptions(request, runtime);
+    }
+
+    public DisableAutoThrottleRulesResponse disableAutoThrottleRulesWithOptions(DisableAutoThrottleRulesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consoleContext)) {
+            query.put("ConsoleContext", request.consoleContext);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableAutoThrottleRules"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableAutoThrottleRulesResponse());
+    }
+
+    public DisableAutoThrottleRulesResponse disableAutoThrottleRules(DisableAutoThrottleRulesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.disableAutoThrottleRulesWithOptions(request, runtime);
+    }
+
     public DisableDasProResponse disableDasProWithOptions(DisableDasProRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1236,6 +1302,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAsyncErrorRequestStatResultResponse getAsyncErrorRequestStatResult(GetAsyncErrorRequestStatResultRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getAsyncErrorRequestStatResultWithOptions(request, runtime);
+    }
+
+    public GetAutoResourceOptimizeRulesResponse getAutoResourceOptimizeRulesWithOptions(GetAutoResourceOptimizeRulesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consoleContext)) {
+            query.put("ConsoleContext", request.consoleContext);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAutoResourceOptimizeRules"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAutoResourceOptimizeRulesResponse());
+    }
+
+    public GetAutoResourceOptimizeRulesResponse getAutoResourceOptimizeRules(GetAutoResourceOptimizeRulesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getAutoResourceOptimizeRulesWithOptions(request, runtime);
+    }
+
+    public GetAutoThrottleRulesResponse getAutoThrottleRulesWithOptions(GetAutoThrottleRulesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consoleContext)) {
+            query.put("ConsoleContext", request.consoleContext);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAutoThrottleRules"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAutoThrottleRulesResponse());
+    }
+
+    public GetAutoThrottleRulesResponse getAutoThrottleRules(GetAutoThrottleRulesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getAutoThrottleRulesWithOptions(request, runtime);
     }
 
     public GetAutonomousNotifyEventContentResponse getAutonomousNotifyEventContentWithOptions(GetAutonomousNotifyEventContentRequest request, RuntimeOptions runtime) throws Exception {
@@ -2377,6 +2509,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.syncHDMAliyunResourceWithOptions(request, runtime);
     }
 
+    public UpdateAutoResourceOptimizeRulesAsyncResponse updateAutoResourceOptimizeRulesAsyncWithOptions(UpdateAutoResourceOptimizeRulesAsyncRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consoleContext)) {
+            query.put("ConsoleContext", request.consoleContext);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resultId)) {
+            query.put("ResultId", request.resultId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableFragmentationRatio)) {
+            query.put("TableFragmentationRatio", request.tableFragmentationRatio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableSpaceSize)) {
+            query.put("TableSpaceSize", request.tableSpaceSize);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAutoResourceOptimizeRulesAsync"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAutoResourceOptimizeRulesAsyncResponse());
+    }
+
+    public UpdateAutoResourceOptimizeRulesAsyncResponse updateAutoResourceOptimizeRulesAsync(UpdateAutoResourceOptimizeRulesAsyncRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateAutoResourceOptimizeRulesAsyncWithOptions(request, runtime);
+    }
+
     public UpdateAutoSqlOptimizeStatusResponse updateAutoSqlOptimizeStatusWithOptions(UpdateAutoSqlOptimizeStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2408,5 +2585,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAutoSqlOptimizeStatusResponse updateAutoSqlOptimizeStatus(UpdateAutoSqlOptimizeStatusRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateAutoSqlOptimizeStatusWithOptions(request, runtime);
+    }
+
+    public UpdateAutoThrottleRulesAsyncResponse updateAutoThrottleRulesAsyncWithOptions(UpdateAutoThrottleRulesAsyncRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.abnormalDuration)) {
+            query.put("AbnormalDuration", request.abnormalDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.activeSessions)) {
+            query.put("ActiveSessions", request.activeSessions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.allowThrottleEndTime)) {
+            query.put("AllowThrottleEndTime", request.allowThrottleEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.allowThrottleStartTime)) {
+            query.put("AllowThrottleStartTime", request.allowThrottleStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoKillSession)) {
+            query.put("AutoKillSession", request.autoKillSession);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consoleContext)) {
+            query.put("ConsoleContext", request.consoleContext);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuSessionRelation)) {
+            query.put("CpuSessionRelation", request.cpuSessionRelation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuUsage)) {
+            query.put("CpuUsage", request.cpuUsage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxThrottleTime)) {
+            query.put("MaxThrottleTime", request.maxThrottleTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resultId)) {
+            query.put("ResultId", request.resultId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAutoThrottleRulesAsync"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAutoThrottleRulesAsyncResponse());
+    }
+
+    public UpdateAutoThrottleRulesAsyncResponse updateAutoThrottleRulesAsync(UpdateAutoThrottleRulesAsyncRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateAutoThrottleRulesAsyncWithOptions(request, runtime);
     }
 }
