@@ -13,7 +13,6 @@ public class DescribeStoragePlanResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -66,63 +65,48 @@ public class DescribeStoragePlanResponseBody extends TeaModel {
     }
 
     public static class DescribeStoragePlanResponseBodyItems extends TeaModel {
-        // AliUid
         @NameInMap("AliUid")
         public String aliUid;
 
-        // 商品代码
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        // 结束时间
         @NameInMap("EndTimes")
         public String endTimes;
 
-        // 容量单位
         @NameInMap("InitCapaCityViewUnit")
         public String initCapaCityViewUnit;
 
-        // 总量
         @NameInMap("InitCapacityViewValue")
         public String initCapacityViewValue;
 
-        // 资源实例ID
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 周期容量单位
         @NameInMap("PeriodCapaCityViewUnit")
         public String periodCapaCityViewUnit;
 
-        // 周期容量
         @NameInMap("PeriodCapacityViewValue")
         public String periodCapacityViewValue;
 
-        // 周期时长
         @NameInMap("PeriodTime")
         public String periodTime;
 
-        // 产品Code
         @NameInMap("ProdCode")
         public String prodCode;
 
-        // 购买时间
         @NameInMap("PurchaseTimes")
         public String purchaseTimes;
 
-        // 开始时间
         @NameInMap("StartTimes")
         public String startTimes;
 
-        // 状态
         @NameInMap("Status")
         public String status;
 
-        // 存储包类型
         @NameInMap("StorageType")
         public String storageType;
 
-        // 资源包类型
         @NameInMap("TemplateName")
         public String templateName;
 

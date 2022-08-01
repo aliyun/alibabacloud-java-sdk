@@ -7,9 +7,11 @@ public class ModifyDBNodesParametersRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    // 节点名称，多个节点名按照“，”分割
     @NameInMap("DBNodeIds")
     public String DBNodeIds;
+
+    @NameInMap("FromTimeService")
+    public Boolean fromTimeService;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -17,13 +19,17 @@ public class ModifyDBNodesParametersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // 参数模板ID。
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
-    // 参数及其值的JSON串，参数的值都是字符串类型，例如{"wait_timeout":"86","innodb_old_blocks_time":"10"}
     @NameInMap("Parameters")
     public String parameters;
+
+    @NameInMap("PlannedEndTime")
+    public String plannedEndTime;
+
+    @NameInMap("PlannedStartTime")
+    public String plannedStartTime;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -50,6 +56,14 @@ public class ModifyDBNodesParametersRequest extends TeaModel {
     }
     public String getDBNodeIds() {
         return this.DBNodeIds;
+    }
+
+    public ModifyDBNodesParametersRequest setFromTimeService(Boolean fromTimeService) {
+        this.fromTimeService = fromTimeService;
+        return this;
+    }
+    public Boolean getFromTimeService() {
+        return this.fromTimeService;
     }
 
     public ModifyDBNodesParametersRequest setOwnerAccount(String ownerAccount) {
@@ -82,6 +96,22 @@ public class ModifyDBNodesParametersRequest extends TeaModel {
     }
     public String getParameters() {
         return this.parameters;
+    }
+
+    public ModifyDBNodesParametersRequest setPlannedEndTime(String plannedEndTime) {
+        this.plannedEndTime = plannedEndTime;
+        return this;
+    }
+    public String getPlannedEndTime() {
+        return this.plannedEndTime;
+    }
+
+    public ModifyDBNodesParametersRequest setPlannedStartTime(String plannedStartTime) {
+        this.plannedStartTime = plannedStartTime;
+        return this;
+    }
+    public String getPlannedStartTime() {
+        return this.plannedStartTime;
     }
 
     public ModifyDBNodesParametersRequest setResourceOwnerAccount(String resourceOwnerAccount) {

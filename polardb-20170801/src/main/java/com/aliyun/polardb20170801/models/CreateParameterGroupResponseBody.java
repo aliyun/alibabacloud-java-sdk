@@ -7,7 +7,6 @@ public class CreateParameterGroupResponseBody extends TeaModel {
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

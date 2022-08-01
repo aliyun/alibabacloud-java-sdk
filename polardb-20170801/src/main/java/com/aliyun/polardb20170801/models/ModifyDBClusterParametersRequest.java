@@ -7,19 +7,26 @@ public class ModifyDBClusterParametersRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("FromTimeService")
+    public Boolean fromTimeService;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // Parameters与ParamGroupId二选一必传
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
-    // Parameters与ParamGroupId二选一必传
     @NameInMap("Parameters")
     public String parameters;
+
+    @NameInMap("PlannedEndTime")
+    public String plannedEndTime;
+
+    @NameInMap("PlannedStartTime")
+    public String plannedStartTime;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -38,6 +45,14 @@ public class ModifyDBClusterParametersRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public ModifyDBClusterParametersRequest setFromTimeService(Boolean fromTimeService) {
+        this.fromTimeService = fromTimeService;
+        return this;
+    }
+    public Boolean getFromTimeService() {
+        return this.fromTimeService;
     }
 
     public ModifyDBClusterParametersRequest setOwnerAccount(String ownerAccount) {
@@ -70,6 +85,22 @@ public class ModifyDBClusterParametersRequest extends TeaModel {
     }
     public String getParameters() {
         return this.parameters;
+    }
+
+    public ModifyDBClusterParametersRequest setPlannedEndTime(String plannedEndTime) {
+        this.plannedEndTime = plannedEndTime;
+        return this;
+    }
+    public String getPlannedEndTime() {
+        return this.plannedEndTime;
+    }
+
+    public ModifyDBClusterParametersRequest setPlannedStartTime(String plannedStartTime) {
+        this.plannedStartTime = plannedStartTime;
+        return this;
+    }
+    public String getPlannedStartTime() {
+        return this.plannedStartTime;
     }
 
     public ModifyDBClusterParametersRequest setResourceOwnerAccount(String resourceOwnerAccount) {

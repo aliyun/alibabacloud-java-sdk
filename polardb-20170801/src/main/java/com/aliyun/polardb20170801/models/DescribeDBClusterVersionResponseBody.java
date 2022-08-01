@@ -25,6 +25,9 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     @NameInMap("IsLatestVersion")
     public String isLatestVersion;
 
+    @NameInMap("IsProxyLatestVersion")
+    public String isProxyLatestVersion;
+
     @NameInMap("ProxyLatestVersion")
     public String proxyLatestVersion;
 
@@ -96,6 +99,14 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     }
     public String getIsLatestVersion() {
         return this.isLatestVersion;
+    }
+
+    public DescribeDBClusterVersionResponseBody setIsProxyLatestVersion(String isProxyLatestVersion) {
+        this.isProxyLatestVersion = isProxyLatestVersion;
+        return this;
+    }
+    public String getIsProxyLatestVersion() {
+        return this.isProxyLatestVersion;
     }
 
     public DescribeDBClusterVersionResponseBody setProxyLatestVersion(String proxyLatestVersion) {

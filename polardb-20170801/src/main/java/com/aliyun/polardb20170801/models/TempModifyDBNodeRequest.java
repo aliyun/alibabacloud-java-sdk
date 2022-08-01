@@ -4,22 +4,18 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class TempModifyDBNodeRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 实例Id
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     @NameInMap("DBNode")
     public java.util.List<TempModifyDBNodeRequestDBNode> DBNode;
 
-    // 变更类型
     @NameInMap("ModifyType")
     public String modifyType;
 
-    // 操作类型（Add:增加节点; Modify:变配）
     @NameInMap("OperationType")
     public String operationType;
 
@@ -35,7 +31,6 @@ public class TempModifyDBNodeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // 变更还原时间(说明：还原时间不能早于当前时间推后1小时，不能晚于集群到期时间的前1天)
     @NameInMap("RestoreTime")
     public String restoreTime;
 

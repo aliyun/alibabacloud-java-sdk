@@ -10,6 +10,9 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
     @NameInMap("BackupMode")
     public String backupMode;
 
+    @NameInMap("BackupRegion")
+    public String backupRegion;
+
     @NameInMap("BackupStatus")
     public String backupStatus;
 
@@ -59,6 +62,14 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
     }
     public String getBackupMode() {
         return this.backupMode;
+    }
+
+    public DescribeDetachedBackupsRequest setBackupRegion(String backupRegion) {
+        this.backupRegion = backupRegion;
+        return this;
+    }
+    public String getBackupRegion() {
+        return this.backupRegion;
     }
 
     public DescribeDetachedBackupsRequest setBackupStatus(String backupStatus) {

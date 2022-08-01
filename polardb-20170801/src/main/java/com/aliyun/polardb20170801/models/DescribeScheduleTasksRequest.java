@@ -25,6 +25,12 @@ public class DescribeScheduleTasksRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PlannedEndTime")
+    public String plannedEndTime;
+
+    @NameInMap("PlannedStartTime")
+    public String plannedStartTime;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -99,6 +105,22 @@ public class DescribeScheduleTasksRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeScheduleTasksRequest setPlannedEndTime(String plannedEndTime) {
+        this.plannedEndTime = plannedEndTime;
+        return this;
+    }
+    public String getPlannedEndTime() {
+        return this.plannedEndTime;
+    }
+
+    public DescribeScheduleTasksRequest setPlannedStartTime(String plannedStartTime) {
+        this.plannedStartTime = plannedStartTime;
+        return this;
+    }
+    public String getPlannedStartTime() {
+        return this.plannedStartTime;
     }
 
     public DescribeScheduleTasksRequest setRegionId(String regionId) {

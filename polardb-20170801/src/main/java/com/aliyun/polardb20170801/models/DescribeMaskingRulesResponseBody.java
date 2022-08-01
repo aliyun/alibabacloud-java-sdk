@@ -4,13 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeMaskingRulesResponseBody extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
     @NameInMap("Data")
     public DescribeMaskingRulesResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -20,6 +22,14 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
     public static DescribeMaskingRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMaskingRulesResponseBody self = new DescribeMaskingRulesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMaskingRulesResponseBody setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     public DescribeMaskingRulesResponseBody setData(DescribeMaskingRulesResponseBodyData data) {
