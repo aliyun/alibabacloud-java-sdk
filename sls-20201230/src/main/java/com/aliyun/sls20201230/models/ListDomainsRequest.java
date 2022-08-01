@@ -4,7 +4,6 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListDomainsRequest extends TeaModel {
-    // 用于搜索匹配的自定义域名
     @NameInMap("domainName")
     public String domainName;
 

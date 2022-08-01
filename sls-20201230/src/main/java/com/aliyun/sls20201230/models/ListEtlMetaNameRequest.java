@@ -4,11 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListEtlMetaNameRequest extends TeaModel {
-    // 默认值为 0。
     @NameInMap("offset")
     public Integer offset;
 
-    // 默认值 200。
     @NameInMap("size")
     public Integer size;
 

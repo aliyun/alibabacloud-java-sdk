@@ -4,15 +4,12 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
-    // 资源的 id 列表，可以一次为多个同类型资源打上相同的标签。
     @NameInMap("resourceId")
     public java.util.List<String> resourceId;
 
-    // 资源的类型。目前取值范围：project。
     @NameInMap("resourceType")
     public String resourceType;
 
-    // 标签列表。
     @NameInMap("tags")
     public java.util.List<TagResourcesRequestTags> tags;
 
@@ -46,11 +43,9 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTags extends TeaModel {
-        // 精确过滤的标签的键。
         @NameInMap("key")
         public String key;
 
-        // 精确过滤的标签的值。
         @NameInMap("value")
         public String value;
 
@@ -78,11 +73,9 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTags extends TeaModel {
-        // 标签的 key。
         @NameInMap("key")
         public String key;
 
-        // 标签的 value。
         @NameInMap("value")
         public String value;
 

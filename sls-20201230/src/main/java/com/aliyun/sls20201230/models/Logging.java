@@ -4,11 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class Logging extends TeaModel {
-    // logging 配置项
     @NameInMap("loggingDetails")
     public java.util.List<LoggingLoggingDetails> loggingDetails;
 
-    // project 名称。
     @NameInMap("loggingProject")
     public String loggingProject;
 
@@ -34,11 +32,9 @@ public class Logging extends TeaModel {
     }
 
     public static class LoggingLoggingDetails extends TeaModel {
-        // logstore 名称。
         @NameInMap("logstore")
         public String logstore;
 
-        // logging 类型。
         @NameInMap("type")
         public String type;
 

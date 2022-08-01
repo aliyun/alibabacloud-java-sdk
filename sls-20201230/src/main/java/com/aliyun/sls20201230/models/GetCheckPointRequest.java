@@ -4,9 +4,6 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetCheckPointRequest extends TeaModel {
-    // Shard ID。
-    // 如果指定的Shard不存在，则返回空列表。
-    // 如果不指定Shard，则返回所有Shard的checkpoint。
     @NameInMap("shard")
     public Integer shard;
 

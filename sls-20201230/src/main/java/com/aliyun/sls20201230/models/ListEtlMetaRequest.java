@@ -13,11 +13,9 @@ public class ListEtlMetaRequest extends TeaModel {
     @NameInMap("etlMetaTag")
     public String etlMetaTag;
 
-    // 默认值 0。
     @NameInMap("offset")
     public Integer offset;
 
-    // 默认值 200.
     @NameInMap("size")
     public Integer size;
 

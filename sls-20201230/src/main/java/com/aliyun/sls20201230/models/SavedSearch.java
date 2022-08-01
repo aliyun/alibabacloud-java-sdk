@@ -4,23 +4,18 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class SavedSearch extends TeaModel {
-    // displayName
     @NameInMap("displayName")
     public String displayName;
 
-    // logstore
     @NameInMap("logstore")
     public String logstore;
 
-    // savedsearchName
     @NameInMap("savedsearchName")
     public String savedsearchName;
 
-    // searchQuery
     @NameInMap("searchQuery")
     public String searchQuery;
 
-    // topic
     @NameInMap("topic")
     public String topic;
 

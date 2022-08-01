@@ -4,27 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class KeysValue extends TeaModel {
-    // 大小写敏感
     @NameInMap("caseSensitive")
     public Boolean caseSensitive;
 
-    // 包含中文
     @NameInMap("chn")
     public Boolean chn;
 
-    // 字段的索引类型
     @NameInMap("type")
     public String type;
 
-    // 别名
     @NameInMap("alias")
     public String alias;
 
-    // 分词符列表。仅当type参数取值为text时，必须设置。
     @NameInMap("token")
     public java.util.List<String> token;
 
-    // 开启统计
     @NameInMap("doc_value")
     public Boolean docValue;
 

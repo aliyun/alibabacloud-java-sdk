@@ -4,7 +4,6 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectRequest extends TeaModel {
-    // Project description
     @NameInMap("description")
     public String description;
 

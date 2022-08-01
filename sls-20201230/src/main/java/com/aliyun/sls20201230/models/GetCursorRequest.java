@@ -4,11 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetCursorRequest extends TeaModel {
-    // 时间点（Unix时间戳）或者字符串begin、end。
     @NameInMap("from")
     public String from;
 
-    // 这里固定为 cursor。
     @NameInMap("type")
     public String type;
 

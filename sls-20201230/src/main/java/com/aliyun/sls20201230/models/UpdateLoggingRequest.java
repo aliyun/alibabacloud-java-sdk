@@ -4,11 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateLoggingRequest extends TeaModel {
-    // 服务日志配置列表。
     @NameInMap("loggingDetails")
     public java.util.List<UpdateLoggingRequestLoggingDetails> loggingDetails;
 
-    // 服务日志要保存到的 project 名称。
     @NameInMap("loggingProject")
     public String loggingProject;
 
@@ -34,11 +32,9 @@ public class UpdateLoggingRequest extends TeaModel {
     }
 
     public static class UpdateLoggingRequestLoggingDetails extends TeaModel {
-        // 该种类服务日志要保存到的 logstore 名称。
         @NameInMap("logstore")
         public String logstore;
 
-        // 服务日志的种类。可选 "consumergroup_log"、 "logtail_alarm"、"operation_log"、"logtail_profile"、"metering"、"logtail_status"、"scheduled_sql_alert"、 "etl_alert" 等。
         @NameInMap("type")
         public String type;
 

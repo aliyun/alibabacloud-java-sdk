@@ -4,31 +4,24 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class EtlJob extends TeaModel {
-    // 是否启用
     @NameInMap("enable")
     public Boolean enable;
 
-    // 任务名称
     @NameInMap("etlJobName")
     public String etlJobName;
 
-    // 运行函数配置
     @NameInMap("functionConfig")
     public EtlJobFunctionConfig functionConfig;
 
-    // 参数列表
     @NameInMap("functionParameter")
     public java.util.Map<String, ?> functionParameter;
 
-    // 日志配置
     @NameInMap("logConfig")
     public EtlJobLogConfig logConfig;
 
-    // 配置数据来源
     @NameInMap("sourceConfig")
     public EtlJobSourceConfig sourceConfig;
 
-    // 触发器配置
     @NameInMap("triggerConfig")
     public EtlJobTriggerConfig triggerConfig;
 
@@ -94,31 +87,24 @@ public class EtlJob extends TeaModel {
     }
 
     public static class EtlJobFunctionConfig extends TeaModel {
-        // 账户 id
         @NameInMap("accountId")
         public String accountId;
 
-        // endpoint
         @NameInMap("endpoint")
         public String endpoint;
 
-        // 函数名
         @NameInMap("functionName")
         public String functionName;
 
-        // 函数 provider，可选值为 FunctionCompute 、CloudProdLogDispatch。当值为 FunctionCompute 时，endpoint、accountid 、regionName 、serviceName 、functionName 必选。
         @NameInMap("functionProvider")
         public String functionProvider;
 
-        // 地域
         @NameInMap("regionName")
         public String regionName;
 
-        // 角色授权
         @NameInMap("roleArn")
         public String roleArn;
 
-        // 服务名
         @NameInMap("serviceName")
         public String serviceName;
 
@@ -186,15 +172,12 @@ public class EtlJob extends TeaModel {
     }
 
     public static class EtlJobLogConfig extends TeaModel {
-        // endpoint
         @NameInMap("endpoint")
         public String endpoint;
 
-        // logstore 名称
         @NameInMap("logstoreName")
         public String logstoreName;
 
-        // project 名称
         @NameInMap("projectName")
         public String projectName;
 
@@ -230,7 +213,6 @@ public class EtlJob extends TeaModel {
     }
 
     public static class EtlJobSourceConfig extends TeaModel {
-        // logstore 名称
         @NameInMap("logstoreName")
         public String logstoreName;
 
@@ -250,23 +232,18 @@ public class EtlJob extends TeaModel {
     }
 
     public static class EtlJobTriggerConfig extends TeaModel {
-        // 最大重试次数，必须在[0,100] 之间
         @NameInMap("maxRetryTime")
         public Integer maxRetryTime;
 
-        // 角色授权配置
         @NameInMap("roleArn")
         public String roleArn;
 
-        // 开始位置，可选 latest、at-unixtime， 默认 latest。
         @NameInMap("startingPosition")
         public String startingPosition;
 
-        // 开始时间
         @NameInMap("startingUnixtime")
         public Long startingUnixtime;
 
-        // 触发间隔，单位为秒，必须在 [3,600] 之间
         @NameInMap("triggerInterval")
         public Integer triggerInterval;
 

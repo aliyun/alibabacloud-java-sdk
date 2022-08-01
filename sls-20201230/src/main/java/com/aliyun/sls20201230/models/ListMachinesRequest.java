@@ -4,11 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListMachinesRequest extends TeaModel {
-    // 查询开始行。默认值为0。
     @NameInMap("offset")
     public Integer offset;
 
-    // 分页查询时，设置的每页行数。默认值为2000。
     @NameInMap("size")
     public Integer size;
 

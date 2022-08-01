@@ -4,23 +4,18 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateCheckPointRequest extends TeaModel {
-    // checkpoint值。
     @NameInMap("checkpoint")
     public String checkpoint;
 
-    // shard 的 id。
     @NameInMap("shard")
     public Integer shard;
 
-    // 消费者。
     @NameInMap("consumer")
     public String consumer;
 
-    // 当不指定消费者时，必须指定forceSuccess为true才能更新checkpoint。
     @NameInMap("forceSuccess")
     public Boolean forceSuccess;
 
-    // 固定为 checkpoint。
     @NameInMap("type")
     public String type;
 

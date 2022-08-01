@@ -4,31 +4,24 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class Project extends TeaModel {
-    // 创建时间
     @NameInMap("createTime")
     public String createTime;
 
-    // 描述
     @NameInMap("description")
     public String description;
 
-    // 最后更新时间
     @NameInMap("lastModifyTime")
     public String lastModifyTime;
 
-    // owner
     @NameInMap("owner")
     public String owner;
 
-    // Project名称
     @NameInMap("projectName")
     public String projectName;
 
-    // 所在区域
     @NameInMap("region")
     public String region;
 
-    // 状态
     @NameInMap("status")
     public String status;
 

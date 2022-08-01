@@ -4,23 +4,18 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class EtlMeta extends TeaModel {
-    // 是否启用
     @NameInMap("enable")
     public Boolean enable;
 
-    // key
     @NameInMap("etlMetaKey")
     public String etlMetaKey;
 
-    // 名字
     @NameInMap("etlMetaName")
     public String etlMetaName;
 
-    // tag
     @NameInMap("etlMetaTag")
     public String etlMetaTag;
 
-    // value
     @NameInMap("etlMetaValue")
     public String etlMetaValue;
 

@@ -4,11 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class EncryptConf extends TeaModel {
-    // enable
     @NameInMap("enable")
     public Boolean enable;
 
-    // 加密算法，只支持default和m4。当 enable 为 true 时，此项必选。
     @NameInMap("encrypt_type")
     public String encryptType;
 

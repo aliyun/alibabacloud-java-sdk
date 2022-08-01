@@ -4,15 +4,12 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class SplitShardRequest extends TeaModel {
-    // 这里固定为 split。
     @NameInMap("action")
     public String action;
 
-    // 分裂的位置。
     @NameInMap("key")
     public String key;
 
-    // 要分裂成的 shard 数量，默认为 2。
     @NameInMap("shardCount")
     public Integer shardCount;
 

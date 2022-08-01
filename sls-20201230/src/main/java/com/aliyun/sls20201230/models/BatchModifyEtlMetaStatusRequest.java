@@ -4,22 +4,18 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class BatchModifyEtlMetaStatusRequest extends TeaModel {
-    // 当 range 的值为 "list" 时有效，匹配list中的 metaKey
     @NameInMap("etlMetaKeyList")
     public java.util.List<String> etlMetaKeyList;
 
     @NameInMap("etlMetaName")
     public String etlMetaName;
 
-    // 匹配的 tag，当 tag 为 "__all_etl_meta_tag_match__" 时表示全部匹配。
     @NameInMap("etlMetaTag")
     public String etlMetaTag;
 
-    // 操作作用的范围，可选 all 代表匹配全部，list 按名单列表匹配 key 两种模式。
     @NameInMap("range")
     public String range;
 
-    // 操作类型，支持启用、禁用、删除三种，即 batch_enable、batch_disable、batch_delete。
     @NameInMap("type")
     public String type;
 

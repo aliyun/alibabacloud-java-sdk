@@ -4,15 +4,12 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ExternalStore extends TeaModel {
-    // 外部存储的名称。
     @NameInMap("externalStoreName")
     public String externalStoreName;
 
-    // 参数
     @NameInMap("parameter")
     public java.util.Map<String, ?> parameter;
 
-    // 类型。可选 rds-vpc 或者 oss
     @NameInMap("storeType")
     public String storeType;
 

@@ -10,7 +10,6 @@ public class GetEtlMetaRequest extends TeaModel {
     @NameInMap("etlMetaKey")
     public String etlMetaKey;
 
-    // 此处固定为 "__all_etl_meta_tag_match__"。
     @NameInMap("etlMetaTag")
     public String etlMetaTag;
 
