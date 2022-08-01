@@ -4,15 +4,12 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListMachineGroupRequest extends TeaModel {
-    // 可将 groupName 作为 pattern 匹配名称，只会返回匹配的机器组。例如 test 可以匹配机器组 test-group。
     @NameInMap("groupName")
     public String groupName;
 
-    // 分页请求的起始位置。默认为0。
     @NameInMap("offset")
     public Integer offset;
 
-    // 分页查询时，设置的每页行数。默认值为2000。
     @NameInMap("size")
     public Integer size;
 

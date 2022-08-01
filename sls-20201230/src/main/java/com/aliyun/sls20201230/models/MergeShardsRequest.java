@@ -4,7 +4,6 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class MergeShardsRequest extends TeaModel {
-    // 固定为 merge。
     @NameInMap("action")
     public String action;
 

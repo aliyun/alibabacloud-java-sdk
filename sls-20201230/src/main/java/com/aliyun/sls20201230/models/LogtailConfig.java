@@ -4,35 +4,27 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class LogtailConfig extends TeaModel {
-    // logtail 配置的名称。
     @NameInMap("configName")
     public String configName;
 
-    // 创建时间，unix 时间戳。
     @NameInMap("createTime")
     public Long createTime;
 
-    // logtail 输入的详细配置。
     @NameInMap("inputDetail")
     public java.util.Map<String, ?> inputDetail;
 
-    // logtail 读取日志的输入类型。
     @NameInMap("inputType")
     public String inputType;
 
-    // 最后一次修改时间，unix 时间戳。
     @NameInMap("lastModifyTime")
     public Long lastModifyTime;
 
-    // 日志样例，可以用于自动生成正则捕获字段。
     @NameInMap("logSample")
     public String logSample;
 
-    // logtail 输出的详细配置。
     @NameInMap("outputDetail")
     public LogtailConfigOutputDetail outputDetail;
 
-    // logtail 输出的目标类型。这里固定选择 LogService。
     @NameInMap("outputType")
     public String outputType;
 
@@ -106,15 +98,12 @@ public class LogtailConfig extends TeaModel {
     }
 
     public static class LogtailConfigOutputDetail extends TeaModel {
-        // 日志项目的 endpoint。
         @NameInMap("endpoint")
         public String endpoint;
 
-        // 输出的目标 logstore 名称。
         @NameInMap("logstoreName")
         public String logstoreName;
 
-        // 地域。
         @NameInMap("region")
         public String region;
 

@@ -4,11 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetAppliedConfigsResponseBody extends TeaModel {
-    // Logtail配置名称列表。
     @NameInMap("configs")
     public java.util.List<String> configs;
 
-    // Logtail配置数量。
     @NameInMap("count")
     public Integer count;
 

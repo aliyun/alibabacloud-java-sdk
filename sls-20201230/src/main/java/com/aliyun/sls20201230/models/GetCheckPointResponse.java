@@ -46,19 +46,15 @@ public class GetCheckPointResponse extends TeaModel {
     }
 
     public static class GetCheckPointResponseBody extends TeaModel {
-        // shard id。
         @NameInMap("shard")
         public Integer shard;
 
-        // checkpoint 值。
         @NameInMap("checkpoint")
         public String checkpoint;
 
-        // checkpoint最后的更新时间。Unix时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
         @NameInMap("updateTime")
         public Long updateTime;
 
-        // 消费者。
         @NameInMap("consumer")
         public String consumer;
 

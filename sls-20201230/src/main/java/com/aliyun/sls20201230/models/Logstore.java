@@ -4,51 +4,39 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class Logstore extends TeaModel {
-    // 接收日志后，自动添加客户端外网IP和日志到达时间
     @NameInMap("appendMeta")
     public Boolean appendMeta;
 
-    // 是否开启 shard 自动分裂。当写入数据量超过已有分区（Shard）写入服务能力且持续5分钟以上时，开启自动分裂功能可自动根据数据量增加分区数量
     @NameInMap("autoSplit")
     public Boolean autoSplit;
 
-    // 创建时间。
     @NameInMap("createTime")
     public Integer createTime;
 
-    // WebTracking功能支持快速采集各种浏览器以及iOS/Android/APP访问信息，默认关闭
     @NameInMap("enable_tracking")
     public Boolean enableTracking;
 
-    // Encrypt configuration
     @NameInMap("encrypt_conf")
     public EncryptConf encryptConf;
 
-    // 必须在 (30, ttl) 之间
     @NameInMap("hot_ttl")
     public Integer hotTtl;
 
-    // 最后修改时间。
     @NameInMap("lastModifyTime")
     public Integer lastModifyTime;
 
-    // logstore 的名称。
     @NameInMap("logstoreName")
     public String logstoreName;
 
-    // 最大 shard 数量。
     @NameInMap("maxSplitShard")
     public Integer maxSplitShard;
 
-    // shard 数量。
     @NameInMap("shardCount")
     public Integer shardCount;
 
-    // telemetryType
     @NameInMap("telemetryType")
     public String telemetryType;
 
-    // 数据保存的天数。
     @NameInMap("ttl")
     public Integer ttl;
 

@@ -4,11 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
-    // 下一个查询开始Token。
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 返回的标签列表。
     @NameInMap("tagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
@@ -34,19 +32,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        // 资源 id。
         @NameInMap("resourceId")
         public String resourceId;
 
-        // 资源类型。
         @NameInMap("resourceType")
         public String resourceType;
 
-        // 标签的键。
         @NameInMap("tagKey")
         public String tagKey;
 
-        // 标签的值。
         @NameInMap("tagValue")
         public String tagValue;
 

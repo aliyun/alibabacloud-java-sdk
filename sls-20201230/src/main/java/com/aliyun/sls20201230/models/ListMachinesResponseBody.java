@@ -4,15 +4,12 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListMachinesResponseBody extends TeaModel {
-    // 当前页返回的机器数目。
     @NameInMap("count")
     public Integer count;
 
-    // 返回的机器信息列表。
     @NameInMap("machines")
     public java.util.List<Machine> machines;
 
-    // 机器总数。
     @NameInMap("total")
     public Integer total;
 

@@ -7,27 +7,21 @@ public class CreateIndexRequest extends TeaModel {
     @NameInMap("keys")
     public java.util.Map<String, KeysValue> keys;
 
-    // 配置全文索引
     @NameInMap("line")
     public CreateIndexRequestLine line;
 
-    // 开启日志聚类，开启后白名单与黑名单至多生效其中一个。
     @NameInMap("log_reduce")
     public Boolean logReduce;
 
-    // 日志聚类的聚类字段黑名单
     @NameInMap("log_reduce_black_list")
     public java.util.List<String> logReduceBlackList;
 
-    // 日志聚类的聚类字段白名单
     @NameInMap("log_reduce_white_list")
     public java.util.List<String> logReduceWhiteList;
 
-    // 统计字段的最大长度
     @NameInMap("max_text_len")
     public Integer maxTextLen;
 
-    // 保存时间，单位为天
     @NameInMap("ttl")
     public Integer ttl;
 
@@ -93,23 +87,18 @@ public class CreateIndexRequest extends TeaModel {
     }
 
     public static class CreateIndexRequestLine extends TeaModel {
-        // 大小写敏感
         @NameInMap("caseSensitive")
         public Boolean caseSensitive;
 
-        // 包含中文
         @NameInMap("chn")
         public Boolean chn;
 
-        // 排除的字段列表，不能与include_keys同时指定。
         @NameInMap("exclude_keys")
         public java.util.List<String> excludeKeys;
 
-        // 包含的字段列表，不能与exclude_keys同时指定。
         @NameInMap("include_keys")
         public java.util.List<String> includeKeys;
 
-        // 分词符列表。可以设置一个分词参数，指定这个字段按照哪一种方式分词。
         @NameInMap("token")
         public java.util.List<String> token;
 

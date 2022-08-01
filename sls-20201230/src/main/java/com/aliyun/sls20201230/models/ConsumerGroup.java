@@ -4,15 +4,12 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ConsumerGroup extends TeaModel {
-    // 消费者名称。
     @NameInMap("name")
     public String name;
 
-    // 是否有序消费
     @NameInMap("order")
     public Boolean order;
 
-    // 消费超时时长，单位为妙
     @NameInMap("timeout")
     public Integer timeout;
 

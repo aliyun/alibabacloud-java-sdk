@@ -4,23 +4,18 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateMachineGroupRequest extends TeaModel {
-    // 机器组属性。
     @NameInMap("groupAttribute")
     public CreateMachineGroupRequestGroupAttribute groupAttribute;
 
-    // 机器组名称。
     @NameInMap("groupName")
     public String groupName;
 
-    // 机器组类型，可选值，默认为空。
     @NameInMap("groupType")
     public String groupType;
 
-    // 机器组标识种类，支持 ip 、userdefined 两种。
     @NameInMap("machineIdentifyType")
     public String machineIdentifyType;
 
-    // 机器列表。
     @NameInMap("machineList")
     public java.util.List<String> machineList;
 
@@ -70,11 +65,9 @@ public class CreateMachineGroupRequest extends TeaModel {
     }
 
     public static class CreateMachineGroupRequestGroupAttribute extends TeaModel {
-        // 机器组所依赖的外部管理系统标识。
         @NameInMap("externalName")
         public String externalName;
 
-        // 机器组的日志主题。
         @NameInMap("groupTopic")
         public String groupTopic;
 

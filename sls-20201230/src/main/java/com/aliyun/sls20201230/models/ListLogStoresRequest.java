@@ -10,7 +10,6 @@ public class ListLogStoresRequest extends TeaModel {
     @NameInMap("offset")
     public Integer offset;
 
-    // 默认值为 500。
     @NameInMap("size")
     public Integer size;
 

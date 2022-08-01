@@ -4,7 +4,6 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetCursorResponseBody extends TeaModel {
-    // 游标位置。
     @NameInMap("cursor")
     public String cursor;
 

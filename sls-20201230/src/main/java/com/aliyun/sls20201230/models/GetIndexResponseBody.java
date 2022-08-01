@@ -4,43 +4,33 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetIndexResponseBody extends TeaModel {
-    // 索引模式
     @NameInMap("index_mode")
     public String indexMode;
 
-    // 字段索引配置。key为字段名称，value为索引配置。
     @NameInMap("keys")
     public java.util.Map<String, KeysValue> keys;
 
-    // 上次修改时间
     @NameInMap("lastModifyTime")
     public Long lastModifyTime;
 
-    // 配置全文索引。
     @NameInMap("line")
     public GetIndexResponseBodyLine line;
 
-    // 是否开启日志聚类.
     @NameInMap("log_reduce")
     public Boolean logReduce;
 
-    // 日志聚类的聚类字段过滤黑名单，仅当日志聚类开启时有效。
     @NameInMap("log_reduce_black_list")
     public java.util.List<String> logReduceBlackList;
 
-    // 日志聚类的聚类字段过滤白名单，仅当日志聚类开启时有效。
     @NameInMap("log_reduce_white_list")
     public java.util.List<String> logReduceWhiteList;
 
-    // 日志服务默认字段值的最大长度为2048字节，即2 KB。如果您需要修改字段值的最大长度，可设置统计字段（text）最大长度，取值范围为64~16384字节。
     @NameInMap("max_text_len")
     public Integer maxTextLen;
 
-    // 存储类型，目前固定取值为pg。
     @NameInMap("storage")
     public String storage;
 
-    // 索引文件生命周期，支持7天、30天、90天。
     @NameInMap("ttl")
     public Integer ttl;
 
@@ -130,23 +120,18 @@ public class GetIndexResponseBody extends TeaModel {
     }
 
     public static class GetIndexResponseBodyLine extends TeaModel {
-        // 大小写敏感
         @NameInMap("caseSensitive")
         public Boolean caseSensitive;
 
-        // 是否包含中文。
         @NameInMap("chn")
         public Boolean chn;
 
-        // 排除的字段列表。
         @NameInMap("exclude_keys")
         public java.util.List<String> excludeKeys;
 
-        // 包含的字段列表。
         @NameInMap("include_keys")
         public java.util.List<String> includeKeys;
 
-        // 分词符列表。
         @NameInMap("token")
         public java.util.List<String> token;
 

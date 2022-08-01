@@ -10,7 +10,6 @@ public class ListProjectRequest extends TeaModel {
     @NameInMap("projectName")
     public String projectName;
 
-    // 默认值为 500。
     @NameInMap("size")
     public Integer size;
 
