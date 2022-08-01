@@ -4,34 +4,27 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisByAppRequest extends TeaModel {
-    // API名称
     @NameInMap("ApiName")
     public String apiName;
 
-    // API的ID
     @NameInMap("ApiUid")
     public String apiUid;
 
-    // APP的ID
     @NameInMap("AppId")
     public Long appId;
 
     @NameInMap("Description")
     public String description;
 
-    // API的请求HTTP Method
     @NameInMap("Method")
     public String method;
 
-    // 当前页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页条目
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // API请求路径
     @NameInMap("Path")
     public String path;
 

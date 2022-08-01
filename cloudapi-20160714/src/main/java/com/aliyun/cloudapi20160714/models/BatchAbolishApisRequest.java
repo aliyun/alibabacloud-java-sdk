@@ -41,6 +41,9 @@ public class BatchAbolishApisRequest extends TeaModel {
         @NameInMap("StageId")
         public String stageId;
 
+        @NameInMap("StageName")
+        public String stageName;
+
         public static BatchAbolishApisRequestApi build(java.util.Map<String, ?> map) throws Exception {
             BatchAbolishApisRequestApi self = new BatchAbolishApisRequestApi();
             return TeaModel.build(map, self);
@@ -68,6 +71,14 @@ public class BatchAbolishApisRequest extends TeaModel {
         }
         public String getStageId() {
             return this.stageId;
+        }
+
+        public BatchAbolishApisRequestApi setStageName(String stageName) {
+            this.stageName = stageName;
+            return this;
+        }
+        public String getStageName() {
+            return this.stageName;
         }
 
     }
