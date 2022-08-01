@@ -4,34 +4,27 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcAccessesRequest extends TeaModel {
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // VPC授权名称
     @NameInMap("Name")
     public String name;
 
-    // 当前页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页展示条目
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 端口号
     @NameInMap("Port")
     public String port;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // Vpc授权ID
     @NameInMap("VpcAccessId")
     public String vpcAccessId;
 
-    // Vpc ID
     @NameInMap("VpcId")
     public String vpcId;
 

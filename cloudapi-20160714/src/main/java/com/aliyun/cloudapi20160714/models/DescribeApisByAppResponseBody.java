@@ -7,19 +7,15 @@ public class DescribeApisByAppResponseBody extends TeaModel {
     @NameInMap("AppApiRelationInfos")
     public DescribeApisByAppResponseBodyAppApiRelationInfos appApiRelationInfos;
 
-    // 当前页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页条目
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总条目数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -69,54 +65,42 @@ public class DescribeApisByAppResponseBody extends TeaModel {
     }
 
     public static class DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo extends TeaModel {
-        // API的ID
         @NameInMap("ApiId")
         public String apiId;
 
-        // API名称
         @NameInMap("ApiName")
         public String apiName;
 
-        // 授权有效时间
         @NameInMap("AuthVaildTime")
         public String authVaildTime;
 
-        // 授权来源
         @NameInMap("AuthorizationSource")
         public String authorizationSource;
 
-        // 授权时间
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        // 描述
         @NameInMap("Description")
         public String description;
 
-        // 分组ID
         @NameInMap("GroupId")
         public String groupId;
 
-        // 分组名称
         @NameInMap("GroupName")
         public String groupName;
 
-        // API的请求HTTP Method
         @NameInMap("Method")
         public String method;
 
         @NameInMap("Operator")
         public String operator;
 
-        // API的请求路径
         @NameInMap("Path")
         public String path;
 
-        // 地区ID
         @NameInMap("RegionId")
         public String regionId;
 
-        // 环境名称
         @NameInMap("StageName")
         public String stageName;
 
