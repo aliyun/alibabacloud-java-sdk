@@ -3,7 +3,7 @@ package com.aliyun.searchengine20211025.models;
 
 import com.aliyun.tea.*;
 
-public class GetDatabaseSchemaResponse extends TeaModel {
+public class ModifyIndexPartitionResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetDatabaseSchemaResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetDatabaseSchemaResponseBody body;
+    public ModifyIndexPartitionResponseBody body;
 
-    public static GetDatabaseSchemaResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetDatabaseSchemaResponse self = new GetDatabaseSchemaResponse();
+    public static ModifyIndexPartitionResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyIndexPartitionResponse self = new ModifyIndexPartitionResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDatabaseSchemaResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyIndexPartitionResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetDatabaseSchemaResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetDatabaseSchemaResponse setStatusCode(Integer statusCode) {
+    public ModifyIndexPartitionResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetDatabaseSchemaResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetDatabaseSchemaResponse setBody(GetDatabaseSchemaResponseBody body) {
+    public ModifyIndexPartitionResponse setBody(ModifyIndexPartitionResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetDatabaseSchemaResponseBody getBody() {
+    public ModifyIndexPartitionResponseBody getBody() {
         return this.body;
     }
 

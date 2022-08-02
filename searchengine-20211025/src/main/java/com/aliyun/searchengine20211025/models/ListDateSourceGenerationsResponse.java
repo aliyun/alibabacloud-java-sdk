@@ -3,7 +3,7 @@ package com.aliyun.searchengine20211025.models;
 
 import com.aliyun.tea.*;
 
-public class CreateSqlInstanceResponse extends TeaModel {
+public class ListDateSourceGenerationsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CreateSqlInstanceResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateSqlInstanceResponseBody body;
+    public ListDateSourceGenerationsResponseBody body;
 
-    public static CreateSqlInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateSqlInstanceResponse self = new CreateSqlInstanceResponse();
+    public static ListDateSourceGenerationsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListDateSourceGenerationsResponse self = new ListDateSourceGenerationsResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateSqlInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListDateSourceGenerationsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CreateSqlInstanceResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateSqlInstanceResponse setStatusCode(Integer statusCode) {
+    public ListDateSourceGenerationsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CreateSqlInstanceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateSqlInstanceResponse setBody(CreateSqlInstanceResponseBody body) {
+    public ListDateSourceGenerationsResponse setBody(ListDateSourceGenerationsResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateSqlInstanceResponseBody getBody() {
+    public ListDateSourceGenerationsResponseBody getBody() {
         return this.body;
     }
 

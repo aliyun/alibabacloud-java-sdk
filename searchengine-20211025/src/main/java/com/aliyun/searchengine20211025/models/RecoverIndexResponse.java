@@ -3,7 +3,7 @@ package com.aliyun.searchengine20211025.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteFolderResponse extends TeaModel {
+public class RecoverIndexResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DeleteFolderResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DeleteFolderResponseBody body;
+    public RecoverIndexResponseBody body;
 
-    public static DeleteFolderResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteFolderResponse self = new DeleteFolderResponse();
+    public static RecoverIndexResponse build(java.util.Map<String, ?> map) throws Exception {
+        RecoverIndexResponse self = new RecoverIndexResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteFolderResponse setHeaders(java.util.Map<String, String> headers) {
+    public RecoverIndexResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DeleteFolderResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteFolderResponse setStatusCode(Integer statusCode) {
+    public RecoverIndexResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DeleteFolderResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteFolderResponse setBody(DeleteFolderResponseBody body) {
+    public RecoverIndexResponse setBody(RecoverIndexResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteFolderResponseBody getBody() {
+    public RecoverIndexResponseBody getBody() {
         return this.body;
     }
 
