@@ -116,6 +116,9 @@ public class ListDataSourcesResponseBody extends TeaModel {
         @NameInMap("partitions")
         public java.util.List<String> partitions;
 
+        @NameInMap("status")
+        public String status;
+
         @NameInMap("type")
         public String type;
 
@@ -178,6 +181,14 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
         public java.util.List<String> getPartitions() {
             return this.partitions;
+        }
+
+        public ListDataSourcesResponseBodyResult setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public ListDataSourcesResponseBodyResult setType(String type) {

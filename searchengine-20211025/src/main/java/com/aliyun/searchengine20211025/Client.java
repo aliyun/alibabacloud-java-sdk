@@ -42,8 +42,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
-            body.put("body", request.body);
+        if (!com.aliyun.teautil.Common.isUnset(request.buildMode)) {
+            body.put("buildMode", request.buildMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceName)) {
+            body.put("dataSourceName", request.dataSourceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceType)) {
+            body.put("dataSourceType", request.dataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataTimeSec)) {
+            body.put("dataTimeSec", request.dataTimeSec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            body.put("domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.generation)) {
+            body.put("generation", request.generation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partition)) {
+            body.put("partition", request.partition);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -62,80 +86,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new BuildIndexResponse());
-    }
-
-    public ChangeResourceGroupResponse changeResourceGroup(String instanceId, ChangeResourceGroupRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.changeResourceGroupWithOptions(instanceId, request, headers, runtime);
-    }
-
-    public ChangeResourceGroupResponse changeResourceGroupWithOptions(String instanceId, ChangeResourceGroupRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.newResourceGroupId)) {
-            body.put("newResourceGroupId", request.newResourceGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
-            body.put("resourceType", request.resourceType);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ChangeResourceGroup"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/actions/change-resource-group"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
-    }
-
-    public CloneSqlInstanceResponse cloneSqlInstance(String instanceId, String database, String sqlInstanceId, CloneSqlInstanceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.cloneSqlInstanceWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
-    }
-
-    public CloneSqlInstanceResponse cloneSqlInstanceWithOptions(String instanceId, String database, String sqlInstanceId, CloneSqlInstanceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        database = com.aliyun.openapiutil.Client.getEncodeParam(database);
-        sqlInstanceId = com.aliyun.openapiutil.Client.getEncodeParam(sqlInstanceId);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            body.put("name", request.name);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.targetFolderId)) {
-            body.put("targetFolderId", request.targetFolderId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CloneSqlInstance"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/sql-studio/databases/" + database + "/sql-instances/" + sqlInstanceId + "/actions/clone"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CloneSqlInstanceResponse());
     }
 
     public CreateClusterResponse createCluster(String instanceId, CreateClusterRequest request) throws Exception {
@@ -208,47 +158,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataSourceResponse());
     }
 
-    public CreateFolderResponse createFolder(String instanceId, String database, CreateFolderRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createFolderWithOptions(instanceId, database, request, headers, runtime);
-    }
-
-    public CreateFolderResponse createFolderWithOptions(String instanceId, String database, CreateFolderRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        database = com.aliyun.openapiutil.Client.getEncodeParam(database);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            body.put("name", request.name);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.parent)) {
-            body.put("parent", request.parent);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            body.put("type", request.type);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateFolder"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/sql-studio/databases/" + database + "/folders"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFolderResponse());
-    }
-
     public CreateIndexResponse createIndex(String instanceId, CreateIndexRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -307,43 +216,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceResponse());
     }
 
-    public CreateSqlInstanceResponse createSqlInstance(String instanceId, String database, CreateSqlInstanceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createSqlInstanceWithOptions(instanceId, database, request, headers, runtime);
-    }
-
-    public CreateSqlInstanceResponse createSqlInstanceWithOptions(String instanceId, String database, CreateSqlInstanceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        database = com.aliyun.openapiutil.Client.getEncodeParam(database);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            body.put("name", request.name);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.parent)) {
-            body.put("parent", request.parent);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateSqlInstance"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/sql-studio/databases/" + database + "/sql-instances"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSqlInstanceResponse());
-    }
-
     public DeleteAdvanceConfigResponse deleteAdvanceConfig(String instanceId, String configName) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -394,33 +266,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataSourceResponse());
-    }
-
-    public DeleteFolderResponse deleteFolder(String instanceId, String database, String folderId) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteFolderWithOptions(instanceId, database, folderId, headers, runtime);
-    }
-
-    public DeleteFolderResponse deleteFolderWithOptions(String instanceId, String database, String folderId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        database = com.aliyun.openapiutil.Client.getEncodeParam(database);
-        folderId = com.aliyun.openapiutil.Client.getEncodeParam(folderId);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteFolder"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/sql-studio/databases/" + database + "/folders/" + folderId + ""),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFolderResponse());
     }
 
     public DeleteIndexResponse deleteIndex(String instanceId, String indexName, DeleteIndexRequest request) throws Exception {
@@ -506,91 +351,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceResponse());
-    }
-
-    public DeleteSqlInstanceResponse deleteSqlInstance(String instanceId, String database, String sqlInstanceId) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteSqlInstanceWithOptions(instanceId, database, sqlInstanceId, headers, runtime);
-    }
-
-    public DeleteSqlInstanceResponse deleteSqlInstanceWithOptions(String instanceId, String database, String sqlInstanceId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        database = com.aliyun.openapiutil.Client.getEncodeParam(database);
-        sqlInstanceId = com.aliyun.openapiutil.Client.getEncodeParam(sqlInstanceId);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteSqlInstance"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/sql-studio/databases/" + database + "/sql-instances/" + sqlInstanceId + ""),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSqlInstanceResponse());
-    }
-
-    public ExecuteSqlInstanceResponse executeSqlInstance(String instanceId, String database, String sqlInstanceId, ExecuteSqlInstanceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.executeSqlInstanceWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
-    }
-
-    public ExecuteSqlInstanceResponse executeSqlInstanceWithOptions(String instanceId, String database, String sqlInstanceId, ExecuteSqlInstanceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        database = com.aliyun.openapiutil.Client.getEncodeParam(database);
-        sqlInstanceId = com.aliyun.openapiutil.Client.getEncodeParam(sqlInstanceId);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.combineParam)) {
-            body.put("combineParam", request.combineParam);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
-            body.put("content", request.content);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
-            body.put("domain", request.domain);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dynamicParam)) {
-            body.put("dynamicParam", request.dynamicParam);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.kvpair)) {
-            body.put("kvpair", request.kvpair);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
-            body.put("params", request.params);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.staticParam)) {
-            body.put("staticParam", request.staticParam);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ExecuteSqlInstance"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/sql-studio/databases/" + database + "/sql-instances/" + sqlInstanceId + "/actions/execution"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteSqlInstanceResponse());
     }
 
     public ForceSwitchResponse forceSwitch(String instanceId, String fsmId) throws Exception {
@@ -704,31 +464,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetClusterResponse());
     }
 
-    public GetClusterInfoResponse getClusterInfo(String instanceId) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getClusterInfoWithOptions(instanceId, headers, runtime);
-    }
-
-    public GetClusterInfoResponse getClusterInfoWithOptions(String instanceId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetClusterInfo"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/cluster-info"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetClusterInfoResponse());
-    }
-
     public GetClusterRunTimeInfoResponse getClusterRunTimeInfo(String instanceId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -778,33 +513,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataSourceResponse());
-    }
-
-    public GetDatabaseSchemaResponse getDatabaseSchema(String instanceId, String database, String tableName) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getDatabaseSchemaWithOptions(instanceId, database, tableName, headers, runtime);
-    }
-
-    public GetDatabaseSchemaResponse getDatabaseSchemaWithOptions(String instanceId, String database, String tableName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        database = com.aliyun.openapiutil.Client.getEncodeParam(database);
-        tableName = com.aliyun.openapiutil.Client.getEncodeParam(tableName);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetDatabaseSchema"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/sql-studio/databases/" + database + "/tables/" + tableName + "/schema"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDatabaseSchemaResponse());
     }
 
     public GetDeployGraphResponse getDeployGraph(String instanceId) throws Exception {
@@ -950,31 +658,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceResponse());
     }
 
-    public GetInstanceQuotaResponse getInstanceQuota(String instanceId) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getInstanceQuotaWithOptions(instanceId, headers, runtime);
-    }
-
-    public GetInstanceQuotaResponse getInstanceQuotaWithOptions(String instanceId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetInstanceQuota"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/usedQuota"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceQuotaResponse());
-    }
-
     public GetNodeConfigResponse getNodeConfig(String instanceId, GetNodeConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1021,40 +704,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetNodeConfigResponse());
-    }
-
-    public GetSqlInstanceResponse getSqlInstance(String instanceId, String database, String sqlInstanceId, GetSqlInstanceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getSqlInstanceWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
-    }
-
-    public GetSqlInstanceResponse getSqlInstanceWithOptions(String instanceId, String database, String sqlInstanceId, GetSqlInstanceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        database = com.aliyun.openapiutil.Client.getEncodeParam(database);
-        sqlInstanceId = com.aliyun.openapiutil.Client.getEncodeParam(sqlInstanceId);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
-            query.put("version", request.version);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetSqlInstance"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/sql-studio/databases/" + database + "/sql-instances/" + sqlInstanceId + ""),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSqlInstanceResponse());
     }
 
     public ListAdvanceConfigDirResponse listAdvanceConfigDir(String instanceId, String configName, ListAdvanceConfigDirRequest request) throws Exception {
@@ -1273,56 +922,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataSourcesResponse());
     }
 
-    public ListDatabaseDataVersionsResponse listDatabaseDataVersions(String instanceId, String database, String tableName) throws Exception {
+    public ListDateSourceGenerationsResponse listDateSourceGenerations(String instanceId, String dataSourceName, ListDateSourceGenerationsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listDatabaseDataVersionsWithOptions(instanceId, database, tableName, headers, runtime);
+        return this.listDateSourceGenerationsWithOptions(instanceId, dataSourceName, request, headers, runtime);
     }
 
-    public ListDatabaseDataVersionsResponse listDatabaseDataVersionsWithOptions(String instanceId, String database, String tableName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListDateSourceGenerationsResponse listDateSourceGenerationsWithOptions(String instanceId, String dataSourceName, ListDateSourceGenerationsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        database = com.aliyun.openapiutil.Client.getEncodeParam(database);
-        tableName = com.aliyun.openapiutil.Client.getEncodeParam(tableName);
+        dataSourceName = com.aliyun.openapiutil.Client.getEncodeParam(dataSourceName);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("domainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validStatus)) {
+            query.put("validStatus", request.validStatus);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListDatabaseDataVersions"),
+            new TeaPair("action", "ListDateSourceGenerations"),
             new TeaPair("version", "2021-10-25"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/sql-studio/databases/" + database + "/tables/" + tableName + "/data-version"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/data-sources/" + dataSourceName + "/generations"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDatabaseDataVersionsResponse());
-    }
-
-    public ListDatabasesResponse listDatabases(String instanceId) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listDatabasesWithOptions(instanceId, headers, runtime);
-    }
-
-    public ListDatabasesResponse listDatabasesWithOptions(String instanceId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListDatabases"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/sql-studio/databases"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDatabasesResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDateSourceGenerationsResponse());
     }
 
     public ListIndexesResponse listIndexes(String instanceId) throws Exception {
@@ -1580,8 +1214,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
-            body.put("body", request.body);
+        if (!com.aliyun.teautil.Common.isUnset(request.advancedConfigVersionId)) {
+            body.put("advancedConfigVersionId", request.advancedConfigVersionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buildMode)) {
+            body.put("buildMode", request.buildMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSource)) {
+            body.put("dataSource", request.dataSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceType)) {
+            body.put("dataSourceType", request.dataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataTimeSec)) {
+            body.put("dataTimeSec", request.dataTimeSec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            body.put("domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.generation)) {
+            body.put("generation", request.generation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.indexes)) {
+            body.put("indexes", request.indexes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partition)) {
+            body.put("partition", request.partition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerBuild)) {
+            body.put("triggerBuild", request.triggerBuild);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1715,6 +1385,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyFileResponse());
+    }
+
+    public ModifyIndexPartitionResponse modifyIndexPartition(String instanceId, ModifyIndexPartitionRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modifyIndexPartitionWithOptions(instanceId, request, headers, runtime);
+    }
+
+    public ModifyIndexPartitionResponse modifyIndexPartitionWithOptions(String instanceId, ModifyIndexPartitionRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceName)) {
+            body.put("dataSourceName", request.dataSourceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            body.put("domainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.generation)) {
+            body.put("generation", request.generation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.indexInfos)) {
+            body.put("indexInfos", request.indexInfos);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyIndexPartition"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/index-partition"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyIndexPartitionResponse());
     }
 
     public ModifyIndexVersionResponse modifyIndexVersion(String instanceId, String clusterName, ModifyIndexVersionRequest request) throws Exception {
@@ -1936,6 +1650,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PublishIndexVersionResponse());
     }
 
+    public RecoverIndexResponse recoverIndex(String instanceId, RecoverIndexRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.recoverIndexWithOptions(instanceId, request, headers, runtime);
+    }
+
+    public RecoverIndexResponse recoverIndexWithOptions(String instanceId, RecoverIndexRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.buildDeployId)) {
+            body.put("buildDeployId", request.buildDeployId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceName)) {
+            body.put("dataSourceName", request.dataSourceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.generation)) {
+            body.put("generation", request.generation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.indexName)) {
+            body.put("indexName", request.indexName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecoverIndex"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/recover-index"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecoverIndexResponse());
+    }
+
     public RemoveClusterResponse removeCluster(String instanceId, String clusterName) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1960,40 +1718,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveClusterResponse());
-    }
-
-    public RenameFolderResponse renameFolder(String instanceId, String database, String folderId, RenameFolderRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.renameFolderWithOptions(instanceId, database, folderId, request, headers, runtime);
-    }
-
-    public RenameFolderResponse renameFolderWithOptions(String instanceId, String database, String folderId, RenameFolderRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        database = com.aliyun.openapiutil.Client.getEncodeParam(database);
-        folderId = com.aliyun.openapiutil.Client.getEncodeParam(folderId);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            body.put("name", request.name);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "RenameFolder"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/sql-studio/databases/" + database + "/folders/" + folderId + "/name"),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RenameFolderResponse());
     }
 
     public StopTaskResponse stopTask(String instanceId, String fsmId) throws Exception {
@@ -2047,123 +1771,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceResponse());
-    }
-
-    public UpdateSqlInstanceContentResponse updateSqlInstanceContent(String instanceId, String database, String sqlInstanceId, UpdateSqlInstanceContentRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateSqlInstanceContentWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
-    }
-
-    public UpdateSqlInstanceContentResponse updateSqlInstanceContentWithOptions(String instanceId, String database, String sqlInstanceId, UpdateSqlInstanceContentRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        database = com.aliyun.openapiutil.Client.getEncodeParam(database);
-        sqlInstanceId = com.aliyun.openapiutil.Client.getEncodeParam(sqlInstanceId);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
-            body.put("content", request.content);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateSqlInstanceContent"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/sql-studio/databases/" + database + "/sql-instances/" + sqlInstanceId + "/content"),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSqlInstanceContentResponse());
-    }
-
-    public UpdateSqlInstanceNameResponse updateSqlInstanceName(String instanceId, String database, String sqlInstanceId, UpdateSqlInstanceNameRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateSqlInstanceNameWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
-    }
-
-    public UpdateSqlInstanceNameResponse updateSqlInstanceNameWithOptions(String instanceId, String database, String sqlInstanceId, UpdateSqlInstanceNameRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        database = com.aliyun.openapiutil.Client.getEncodeParam(database);
-        sqlInstanceId = com.aliyun.openapiutil.Client.getEncodeParam(sqlInstanceId);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            body.put("name", request.name);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateSqlInstanceName"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/sql-studio/databases/" + database + "/sql-instances/" + sqlInstanceId + "/name"),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSqlInstanceNameResponse());
-    }
-
-    public UpdateSqlInstanceParamsResponse updateSqlInstanceParams(String instanceId, String database, String sqlInstanceId, UpdateSqlInstanceParamsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateSqlInstanceParamsWithOptions(instanceId, database, sqlInstanceId, request, headers, runtime);
-    }
-
-    public UpdateSqlInstanceParamsResponse updateSqlInstanceParamsWithOptions(String instanceId, String database, String sqlInstanceId, UpdateSqlInstanceParamsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        database = com.aliyun.openapiutil.Client.getEncodeParam(database);
-        sqlInstanceId = com.aliyun.openapiutil.Client.getEncodeParam(sqlInstanceId);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.combineParam)) {
-            body.put("combineParam", request.combineParam);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dynamicParam)) {
-            body.put("dynamicParam", request.dynamicParam);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.kvpair)) {
-            body.put("kvpair", request.kvpair);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
-            body.put("params", request.params);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.staticParam)) {
-            body.put("staticParam", request.staticParam);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateSqlInstanceParams"),
-            new TeaPair("version", "2021-10-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + instanceId + "/sql-studio/databases/" + database + "/sql-instances/" + sqlInstanceId + "/params"),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSqlInstanceParamsResponse());
     }
 }
