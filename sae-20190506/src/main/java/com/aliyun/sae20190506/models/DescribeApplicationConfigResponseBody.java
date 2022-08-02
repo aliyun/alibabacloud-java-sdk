@@ -169,19 +169,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationConfigResponseBodyDataOssMountDescs extends TeaModel {
-        // Bucket名称
         @NameInMap("bucketName")
         public String bucketName;
 
-        // Bucket中Oss Key名称
         @NameInMap("bucketPath")
         public String bucketPath;
 
-        // 挂载到容器的路径
         @NameInMap("mountPath")
         public String mountPath;
 
-        // 是否只读
         @NameInMap("readOnly")
         public Boolean readOnly;
 
@@ -258,7 +254,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("AcrAssumeRoleArn")
         public String acrAssumeRoleArn;
 
-        // ACR 企业版实例 ID
         @NameInMap("AcrInstanceId")
         public String acrInstanceId;
 
@@ -271,7 +266,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
-        // 是否绑定EIP
         @NameInMap("AssociateEip")
         public Boolean associateEip;
 
@@ -299,7 +293,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("EnableAhas")
         public String enableAhas;
 
-        // 开启流量灰度
         @NameInMap("EnableGreyTagRoute")
         public Boolean enableGreyTagRoute;
 
@@ -339,7 +332,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("MountHost")
         public String mountHost;
 
-        // 对应MSE产品侧应用ID
         @NameInMap("MseApplicationId")
         public String mseApplicationId;
 
@@ -352,15 +344,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("NasId")
         public String nasId;
 
-        // OSS读写的AK
         @NameInMap("OssAkId")
         public String ossAkId;
 
-        // OSS读写的secret
         @NameInMap("OssAkSecret")
         public String ossAkSecret;
 
-        // OSS挂载描述信息
         @NameInMap("OssMountDescs")
         public java.util.List<DescribeApplicationConfigResponseBodyDataOssMountDescs> ossMountDescs;
 

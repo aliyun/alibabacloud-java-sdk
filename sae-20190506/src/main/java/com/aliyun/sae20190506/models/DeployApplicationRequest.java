@@ -7,14 +7,12 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("AcrAssumeRoleArn")
     public String acrAssumeRoleArn;
 
-    // ACR 企业版实例 ID
     @NameInMap("AcrInstanceId")
     public String acrInstanceId;
 
     @NameInMap("AppId")
     public String appId;
 
-    // 是否绑定EIP
     @NameInMap("AssociateEip")
     public Boolean associateEip;
 
@@ -45,7 +43,6 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("EnableAhas")
     public String enableAhas;
 
-    // 是否开启发布流量灰度规则
     @NameInMap("EnableGreyTagRoute")
     public Boolean enableGreyTagRoute;
 
@@ -67,15 +64,6 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("KafkaConfigs")
     public String kafkaConfigs;
 
-    @NameInMap("KafkaEndpoint")
-    public String kafkaEndpoint;
-
-    @NameInMap("KafkaInstanceId")
-    public String kafkaInstanceId;
-
-    @NameInMap("KafkaLogfileConfig")
-    public String kafkaLogfileConfig;
-
     @NameInMap("Liveness")
     public String liveness;
 
@@ -91,24 +79,15 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("MountHost")
     public String mountHost;
 
-    @NameInMap("MseFeatureConfig")
-    public String mseFeatureConfig;
-
     @NameInMap("NasId")
     public String nasId;
 
-    @NameInMap("OpenCollectToKafka")
-    public Boolean openCollectToKafka;
-
-    // OSS使用的AKID
     @NameInMap("OssAkId")
     public String ossAkId;
 
-    // OSS AKID对应的secret
     @NameInMap("OssAkSecret")
     public String ossAkSecret;
 
-    // OSS挂载描述信息
     @NameInMap("OssMountDescs")
     public String ossMountDescs;
 
@@ -322,30 +301,6 @@ public class DeployApplicationRequest extends TeaModel {
         return this.kafkaConfigs;
     }
 
-    public DeployApplicationRequest setKafkaEndpoint(String kafkaEndpoint) {
-        this.kafkaEndpoint = kafkaEndpoint;
-        return this;
-    }
-    public String getKafkaEndpoint() {
-        return this.kafkaEndpoint;
-    }
-
-    public DeployApplicationRequest setKafkaInstanceId(String kafkaInstanceId) {
-        this.kafkaInstanceId = kafkaInstanceId;
-        return this;
-    }
-    public String getKafkaInstanceId() {
-        return this.kafkaInstanceId;
-    }
-
-    public DeployApplicationRequest setKafkaLogfileConfig(String kafkaLogfileConfig) {
-        this.kafkaLogfileConfig = kafkaLogfileConfig;
-        return this;
-    }
-    public String getKafkaLogfileConfig() {
-        return this.kafkaLogfileConfig;
-    }
-
     public DeployApplicationRequest setLiveness(String liveness) {
         this.liveness = liveness;
         return this;
@@ -386,28 +341,12 @@ public class DeployApplicationRequest extends TeaModel {
         return this.mountHost;
     }
 
-    public DeployApplicationRequest setMseFeatureConfig(String mseFeatureConfig) {
-        this.mseFeatureConfig = mseFeatureConfig;
-        return this;
-    }
-    public String getMseFeatureConfig() {
-        return this.mseFeatureConfig;
-    }
-
     public DeployApplicationRequest setNasId(String nasId) {
         this.nasId = nasId;
         return this;
     }
     public String getNasId() {
         return this.nasId;
-    }
-
-    public DeployApplicationRequest setOpenCollectToKafka(Boolean openCollectToKafka) {
-        this.openCollectToKafka = openCollectToKafka;
-        return this;
-    }
-    public Boolean getOpenCollectToKafka() {
-        return this.openCollectToKafka;
     }
 
     public DeployApplicationRequest setOssAkId(String ossAkId) {
