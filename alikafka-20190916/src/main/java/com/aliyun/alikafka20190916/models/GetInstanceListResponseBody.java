@@ -208,6 +208,15 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("UpgradeServiceDetailInfo")
         public GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo upgradeServiceDetailInfo;
 
+        @NameInMap("UsedGroupCount")
+        public Integer usedGroupCount;
+
+        @NameInMap("UsedPartitionCount")
+        public Integer usedPartitionCount;
+
+        @NameInMap("UsedTopicCount")
+        public Integer usedTopicCount;
+
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -420,6 +429,30 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo getUpgradeServiceDetailInfo() {
             return this.upgradeServiceDetailInfo;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setUsedGroupCount(Integer usedGroupCount) {
+            this.usedGroupCount = usedGroupCount;
+            return this;
+        }
+        public Integer getUsedGroupCount() {
+            return this.usedGroupCount;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setUsedPartitionCount(Integer usedPartitionCount) {
+            this.usedPartitionCount = usedPartitionCount;
+            return this;
+        }
+        public Integer getUsedPartitionCount() {
+            return this.usedPartitionCount;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setUsedTopicCount(Integer usedTopicCount) {
+            this.usedTopicCount = usedTopicCount;
+            return this;
+        }
+        public Integer getUsedTopicCount() {
+            return this.usedTopicCount;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setVSwitchId(String vSwitchId) {
