@@ -4,15 +4,12 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetGameTrialSurplusDurationResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 状态
     @NameInMap("Status")
     public Float status;
 
-    // 剩余试玩时长
     @NameInMap("SurplusDuration")
     public Double surplusDuration;
 

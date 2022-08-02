@@ -4,23 +4,18 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class ListGameVersionsResponseBody extends TeaModel {
-    // 总记录数
     @NameInMap("Count")
     public Long count;
 
-    // 数据列表
     @NameInMap("DataList")
     public java.util.List<ListGameVersionsResponseBodyDataList> dataList;
 
-    // 本次请求所返回的最大记录条数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -70,15 +65,12 @@ public class ListGameVersionsResponseBody extends TeaModel {
     }
 
     public static class ListGameVersionsResponseBodyDataList extends TeaModel {
-        // 版本ID
         @NameInMap("VersionId")
         public String versionId;
 
-        // 版本名称
         @NameInMap("VersionName")
         public String versionName;
 
-        // 版本号
         @NameInMap("VersionNumber")
         public String versionNumber;
 

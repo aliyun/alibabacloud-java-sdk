@@ -100,7 +100,6 @@ public class ListContainerStatusResponseBody extends TeaModel {
         @NameInMap("Tags")
         public String tags;
 
-        // 系统时间戳
         @NameInMap("Timestamp")
         public Long timestamp;
 

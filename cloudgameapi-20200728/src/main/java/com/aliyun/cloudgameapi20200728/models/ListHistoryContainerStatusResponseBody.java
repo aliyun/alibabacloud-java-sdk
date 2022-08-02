@@ -4,11 +4,9 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class ListHistoryContainerStatusResponseBody extends TeaModel {
-    // 容器状态信息集合
     @NameInMap("DataList")
     public java.util.List<ListHistoryContainerStatusResponseBodyDataList> dataList;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +32,12 @@ public class ListHistoryContainerStatusResponseBody extends TeaModel {
     }
 
     public static class ListHistoryContainerStatusResponseBodyDataListPlayerDetailList extends TeaModel {
-        // 账号ID
         @NameInMap("AccountId")
         public String accountId;
 
-        // 是否主机
         @NameInMap("IsInitiator")
         public Boolean isInitiator;
 
-        // 玩家进入游戏时间
         @NameInMap("StartTime")
         public Long startTime;
 
@@ -78,43 +73,33 @@ public class ListHistoryContainerStatusResponseBody extends TeaModel {
     }
 
     public static class ListHistoryContainerStatusResponseBodyDataList extends TeaModel {
-        // 主机账号ID
         @NameInMap("AccountId")
         public String accountId;
 
-        // 容器退出时间（Linux时间戳，单位毫秒）
         @NameInMap("ContainerQuitTime")
         public Long containerQuitTime;
 
-        // 容器启动时间（Linux时间戳，单位毫秒）
         @NameInMap("ContainerStartTime")
         public Long containerStartTime;
 
-        // 容器状态
         @NameInMap("ContainerState")
         public String containerState;
 
-        // 游戏ID
         @NameInMap("GameId")
         public String gameId;
 
-        // 游戏会话ID
         @NameInMap("GameSessionId")
         public String gameSessionId;
 
-        // 玩家信息集合
         @NameInMap("PlayerDetailList")
         public java.util.List<ListHistoryContainerStatusResponseBodyDataListPlayerDetailList> playerDetailList;
 
-        // 项目ID
         @NameInMap("ProjectId")
         public String projectId;
 
-        // 自定义标识
         @NameInMap("Tags")
         public String tags;
 
-        // 系统时间戳
         @NameInMap("Timestamp")
         public Long timestamp;
 

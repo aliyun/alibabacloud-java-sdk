@@ -4,23 +4,18 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class ListHistoryContainerStatusRequest extends TeaModel {
-    // 结束时间（Linux时间戳，单位毫秒）
     @NameInMap("EndTime")
     public Long endTime;
 
-    // 上一个游戏会话ID
     @NameInMap("LastGameSessionId")
     public String lastGameSessionId;
 
-    // 每页数量
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // 项目ID
     @NameInMap("ProjectId")
     public String projectId;
 
-    // 开始时间（Linux时间戳，单位毫秒）
     @NameInMap("StartTime")
     public Long startTime;
 

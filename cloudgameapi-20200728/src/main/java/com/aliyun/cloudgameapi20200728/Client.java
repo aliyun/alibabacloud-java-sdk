@@ -508,6 +508,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteGameWithOptions(request, runtime);
     }
 
+    public DeleteGameArchiveResponse deleteGameArchiveWithOptions(DeleteGameArchiveRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.archiveId)) {
+            query.put("ArchiveId", request.archiveId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteGameArchive"),
+            new TeaPair("version", "2020-07-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGameArchiveResponse());
+    }
+
+    public DeleteGameArchiveResponse deleteGameArchive(DeleteGameArchiveRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteGameArchiveWithOptions(request, runtime);
+    }
+
     public DeleteGameVersionResponse deleteGameVersionWithOptions(DeleteGameVersionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1335,6 +1372,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listHistoryContainerStatusWithOptions(request, runtime);
     }
 
+    public ListLatestGameArchiveResponse listLatestGameArchiveWithOptions(ListLatestGameArchiveRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagStatus)) {
+            query.put("TagStatus", request.tagStatus);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLatestGameArchive"),
+            new TeaPair("version", "2020-07-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLatestGameArchiveResponse());
+    }
+
+    public ListLatestGameArchiveResponse listLatestGameArchive(ListLatestGameArchiveRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listLatestGameArchiveWithOptions(request, runtime);
+    }
+
     public ListProjectsResponse listProjectsWithOptions(ListProjectsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1658,6 +1740,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveGameFromProjectResponse removeGameFromProject(RemoveGameFromProjectRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.removeGameFromProjectWithOptions(request, runtime);
+    }
+
+    public RestoreGameArchiveResponse restoreGameArchiveWithOptions(RestoreGameArchiveRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.archiveId)) {
+            query.put("ArchiveId", request.archiveId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RestoreGameArchive"),
+            new TeaPair("version", "2020-07-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RestoreGameArchiveResponse());
+    }
+
+    public RestoreGameArchiveResponse restoreGameArchive(RestoreGameArchiveRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.restoreGameArchiveWithOptions(request, runtime);
     }
 
     public SetGameAliveResponse setGameAliveWithOptions(SetGameAliveRequest request, RuntimeOptions runtime) throws Exception {
@@ -2102,6 +2221,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitInternalPurchaseReadyFlagResponse submitInternalPurchaseReadyFlag(SubmitInternalPurchaseReadyFlagRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.submitInternalPurchaseReadyFlagWithOptions(request, runtime);
+    }
+
+    public UpdateGameArchiveTagStatusResponse updateGameArchiveTagStatusWithOptions(UpdateGameArchiveTagStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            query.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.archiveId)) {
+            query.put("ArchiveId", request.archiveId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameId)) {
+            query.put("GameId", request.gameId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagStatus)) {
+            query.put("TagStatus", request.tagStatus);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateGameArchiveTagStatus"),
+            new TeaPair("version", "2020-07-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateGameArchiveTagStatusResponse());
+    }
+
+    public UpdateGameArchiveTagStatusResponse updateGameArchiveTagStatus(UpdateGameArchiveTagStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateGameArchiveTagStatusWithOptions(request, runtime);
     }
 
     public UploadGameVersionByDownloadResponse uploadGameVersionByDownloadWithOptions(UploadGameVersionByDownloadRequest request, RuntimeOptions runtime) throws Exception {

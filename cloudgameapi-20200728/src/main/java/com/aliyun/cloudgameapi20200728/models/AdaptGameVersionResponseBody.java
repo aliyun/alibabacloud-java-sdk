@@ -4,11 +4,9 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class AdaptGameVersionResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // Id of the task
     @NameInMap("TaskId")
     public String taskId;
 

@@ -4,11 +4,9 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class CreateGameDeployWorkflowResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 任务id
     @NameInMap("TaskId")
     public String taskId;
 

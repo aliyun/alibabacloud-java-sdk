@@ -4,11 +4,9 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class AddGameToProjectRequest extends TeaModel {
-    // 游戏iD
     @NameInMap("GameId")
     public String gameId;
 
-    // 项目ID
     @NameInMap("ProjectId")
     public String projectId;
 

@@ -4,23 +4,18 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class SubmitDeploymentRequest extends TeaModel {
-    // 实例ID列表
     @NameInMap("CloudGameInstanceIds")
     public String cloudGameInstanceIds;
 
-    // 游戏iD
     @NameInMap("GameId")
     public String gameId;
 
-    // 操作类型
     @NameInMap("OperationType")
     public String operationType;
 
-    // 项目ID
     @NameInMap("ProjectId")
     public String projectId;
 
-    // 游戏版本ID
     @NameInMap("VersionId")
     public String versionId;
 

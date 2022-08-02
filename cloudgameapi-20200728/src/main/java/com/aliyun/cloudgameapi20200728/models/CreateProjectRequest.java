@@ -4,11 +4,9 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectRequest extends TeaModel {
-    // 幂等参数，1-64位建议使用uuid
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 

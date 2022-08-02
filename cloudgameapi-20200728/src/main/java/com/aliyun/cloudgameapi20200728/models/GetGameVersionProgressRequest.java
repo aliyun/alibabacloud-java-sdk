@@ -4,7 +4,6 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetGameVersionProgressRequest extends TeaModel {
-    // 任务id
     @NameInMap("TaskId")
     public String taskId;
 
