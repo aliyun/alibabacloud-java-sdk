@@ -10,6 +10,9 @@ public class DeleteCatalogRequest extends TeaModel {
     @NameInMap("IsAsync")
     public Boolean isAsync;
 
+    @NameInMap("SystemDebug")
+    public String systemDebug;
+
     public static DeleteCatalogRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCatalogRequest self = new DeleteCatalogRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DeleteCatalogRequest extends TeaModel {
     }
     public Boolean getIsAsync() {
         return this.isAsync;
+    }
+
+    public DeleteCatalogRequest setSystemDebug(String systemDebug) {
+        this.systemDebug = systemDebug;
+        return this;
+    }
+    public String getSystemDebug() {
+        return this.systemDebug;
     }
 
 }

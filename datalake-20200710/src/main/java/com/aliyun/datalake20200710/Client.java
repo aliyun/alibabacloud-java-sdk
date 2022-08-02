@@ -972,6 +972,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IsAsync", request.isAsync);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.systemDebug)) {
+            query.put("SystemDebug", request.systemDebug);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -1455,6 +1459,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetCatalogSettingsResponse());
     }
 
+    /**
+     * GetCatalogSummary
+     */
+    public GetCatalogSummaryResponse getCatalogSummary(GetCatalogSummaryRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getCatalogSummaryWithOptions(request, headers, runtime);
+    }
+
+    public GetCatalogSummaryResponse getCatalogSummaryWithOptions(GetCatalogSummaryRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogId)) {
+            query.put("CatalogId", request.catalogId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCatalogSummary"),
+            new TeaPair("version", "2020-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/metastore/catalogs/summary"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCatalogSummaryResponse());
+    }
+
     public GetDatabaseResponse getDatabase(GetDatabaseRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1488,6 +1526,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDatabaseResponse());
+    }
+
+    /**
+     * GetDatabaseSummary
+     */
+    public GetDatabaseSummaryResponse getDatabaseSummary(GetDatabaseSummaryRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDatabaseSummaryWithOptions(request, headers, runtime);
+    }
+
+    public GetDatabaseSummaryResponse getDatabaseSummaryWithOptions(GetDatabaseSummaryRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogId)) {
+            query.put("CatalogId", request.catalogId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDatabaseSummary"),
+            new TeaPair("version", "2020-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/metastore/catalogs/databases/summary"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDatabaseSummaryResponse());
     }
 
     public GetFunctionResponse getFunction(GetFunctionRequest request) throws Exception {
@@ -1878,6 +1954,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTableColumnStatisticsResponse());
+    }
+
+    public GetTableProfileResponse getTableProfile(GetTableProfileRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getTableProfileWithOptions(request, headers, runtime);
+    }
+
+    public GetTableProfileResponse getTableProfileWithOptions(GetTableProfileRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogId)) {
+            query.put("CatalogId", request.catalogId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseName)) {
+            query.put("DatabaseName", request.databaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTableProfile"),
+            new TeaPair("version", "2020-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/webapi/metastorehouse/catalog/database/tableprofile"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTableProfileResponse());
     }
 
     public GetTableVersionResponse getTableVersion(GetTableVersionRequest request) throws Exception {
