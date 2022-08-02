@@ -7,6 +7,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("BackupRetentionPeriod")
     public Integer backupRetentionPeriod;
 
+    @NameInMap("BackupSize")
+    public String backupSize;
+
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
@@ -30,6 +33,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
     public Integer getBackupRetentionPeriod() {
         return this.backupRetentionPeriod;
+    }
+
+    public DescribeBackupPolicyResponseBody setBackupSize(String backupSize) {
+        this.backupSize = backupSize;
+        return this;
+    }
+    public String getBackupSize() {
+        return this.backupSize;
     }
 
     public DescribeBackupPolicyResponseBody setPreferredBackupPeriod(String preferredBackupPeriod) {

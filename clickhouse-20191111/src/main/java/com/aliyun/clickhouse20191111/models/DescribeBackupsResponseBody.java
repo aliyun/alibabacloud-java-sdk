@@ -92,6 +92,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        @NameInMap("ExpireDate")
+        public String expireDate;
+
         public static DescribeBackupsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupsResponseBodyItems self = new DescribeBackupsResponseBodyItems();
             return TeaModel.build(map, self);
@@ -167,6 +170,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getDBClusterId() {
             return this.DBClusterId;
+        }
+
+        public DescribeBackupsResponseBodyItems setExpireDate(String expireDate) {
+            this.expireDate = expireDate;
+            return this;
+        }
+        public String getExpireDate() {
+            return this.expireDate;
         }
 
     }

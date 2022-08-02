@@ -165,6 +165,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("Engine")
         public String engine;
 
+        @NameInMap("EngineLatestMinorVersion")
+        public String engineLatestMinorVersion;
+
+        @NameInMap("EngineMinorVersion")
+        public String engineMinorVersion;
+
         @NameInMap("EngineVersion")
         public String engineVersion;
 
@@ -179,6 +185,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         @NameInMap("LockReason")
         public String lockReason;
+
+        @NameInMap("MaintainAutoType")
+        public Boolean maintainAutoType;
 
         @NameInMap("MaintainTime")
         public String maintainTime;
@@ -386,6 +395,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             return this.engine;
         }
 
+        public DescribeDBClusterAttributeResponseBodyDBCluster setEngineLatestMinorVersion(String engineLatestMinorVersion) {
+            this.engineLatestMinorVersion = engineLatestMinorVersion;
+            return this;
+        }
+        public String getEngineLatestMinorVersion() {
+            return this.engineLatestMinorVersion;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setEngineMinorVersion(String engineMinorVersion) {
+            this.engineMinorVersion = engineMinorVersion;
+            return this;
+        }
+        public String getEngineMinorVersion() {
+            return this.engineMinorVersion;
+        }
+
         public DescribeDBClusterAttributeResponseBodyDBCluster setEngineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
             return this;
@@ -424,6 +449,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getLockReason() {
             return this.lockReason;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setMaintainAutoType(Boolean maintainAutoType) {
+            this.maintainAutoType = maintainAutoType;
+            return this;
+        }
+        public Boolean getMaintainAutoType() {
+            return this.maintainAutoType;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBCluster setMaintainTime(String maintainTime) {
