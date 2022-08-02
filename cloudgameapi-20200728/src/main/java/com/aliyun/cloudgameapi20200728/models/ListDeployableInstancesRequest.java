@@ -4,19 +4,15 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class ListDeployableInstancesRequest extends TeaModel {
-    // 页码
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // 每页大小
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // 项目ID
     @NameInMap("ProjectId")
     public String projectId;
 
-    // 游戏版本ID
     @NameInMap("VersionId")
     public String versionId;
 

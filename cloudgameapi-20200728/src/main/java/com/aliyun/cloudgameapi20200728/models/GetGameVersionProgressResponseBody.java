@@ -13,7 +13,6 @@ public class GetGameVersionProgressResponseBody extends TeaModel {
     @NameInMap("Extra")
     public java.util.Map<String, ?> extra;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

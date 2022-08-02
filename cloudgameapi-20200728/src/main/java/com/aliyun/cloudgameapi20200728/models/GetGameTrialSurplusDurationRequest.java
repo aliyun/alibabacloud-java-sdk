@@ -4,15 +4,12 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetGameTrialSurplusDurationRequest extends TeaModel {
-    // 账号ID
     @NameInMap("AccountId")
     public String accountId;
 
-    // 游戏ID
     @NameInMap("GameId")
     public String gameId;
 
-    // 项目ID
     @NameInMap("ProjectId")
     public String projectId;
 

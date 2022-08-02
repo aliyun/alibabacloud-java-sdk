@@ -4,7 +4,6 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class DeleteProjectRequest extends TeaModel {
-    // 项目ID
     @NameInMap("ProjectId")
     public String projectId;
 

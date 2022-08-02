@@ -4,15 +4,12 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class CreateGameRequest extends TeaModel {
-    // 幂等参数，1-64位建议使用uuid
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 游戏名称
     @NameInMap("GameName")
     public String gameName;
 
-    // 平台类型
     @NameInMap("PlatformType")
     public Long platformType;
 

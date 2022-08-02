@@ -4,19 +4,15 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetGameVersionResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 版本ID
     @NameInMap("VersionId")
     public String versionId;
 
-    // 版本名称
     @NameInMap("VersionName")
     public String versionName;
 
-    // 版本号
     @NameInMap("VersionNumber")
     public String versionNumber;
 
