@@ -16,7 +16,6 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -97,14 +96,12 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         @NameInMap("index")
         public Integer index;
 
-        // abandon
         @NameInMap("name")
         public String name;
 
         @NameInMap("operator")
         public String operator;
 
-        // abandon
         @NameInMap("type")
         public String type;
 
@@ -255,7 +252,6 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         @NameInMap("expr")
         public String expr;
 
-        // abandon
         @NameInMap("index")
         public Integer index;
 

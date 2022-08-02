@@ -319,18 +319,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("KafkaConfigs", request.kafkaConfigs);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.kafkaEndpoint)) {
-            query.put("KafkaEndpoint", request.kafkaEndpoint);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.kafkaInstanceId)) {
-            query.put("KafkaInstanceId", request.kafkaInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.kafkaLogfileConfig)) {
-            query.put("KafkaLogfileConfig", request.kafkaLogfileConfig);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.liveness)) {
             query.put("Liveness", request.liveness);
         }
@@ -353,10 +341,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nasId)) {
             query.put("NasId", request.nasId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.openCollectToKafka)) {
-            query.put("OpenCollectToKafka", request.openCollectToKafka);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.packageType)) {
@@ -433,10 +417,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.webContainer)) {
             query.put("WebContainer", request.webContainer);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mseFeatureConfig)) {
-            query.put("mseFeatureConfig", request.mseFeatureConfig);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1009,18 +989,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("KafkaConfigs", request.kafkaConfigs);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.kafkaEndpoint)) {
-            query.put("KafkaEndpoint", request.kafkaEndpoint);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.kafkaInstanceId)) {
-            query.put("KafkaInstanceId", request.kafkaInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.kafkaLogfileConfig)) {
-            query.put("KafkaLogfileConfig", request.kafkaLogfileConfig);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.liveness)) {
             query.put("Liveness", request.liveness);
         }
@@ -1041,16 +1009,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MountHost", request.mountHost);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.mseFeatureConfig)) {
-            query.put("MseFeatureConfig", request.mseFeatureConfig);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.nasId)) {
             query.put("NasId", request.nasId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.openCollectToKafka)) {
-            query.put("OpenCollectToKafka", request.openCollectToKafka);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.packageUrl)) {

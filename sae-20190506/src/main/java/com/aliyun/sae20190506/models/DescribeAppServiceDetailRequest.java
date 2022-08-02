@@ -4,7 +4,6 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppServiceDetailRequest extends TeaModel {
-    // mse 的 appId
     @NameInMap("AppId")
     public String appId;
 

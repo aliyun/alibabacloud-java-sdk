@@ -4,23 +4,18 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class CreateGreyTagRouteRequest extends TeaModel {
-    // 应用ID
     @NameInMap("AppId")
     public String appId;
 
-    // 规则名称
     @NameInMap("Description")
     public String description;
 
-    // Dubbo规则
     @NameInMap("DubboRules")
     public String dubboRules;
 
-    // 规则名称
     @NameInMap("Name")
     public String name;
 
-    // SpringCloud规则
     @NameInMap("ScRules")
     public String scRules;
 

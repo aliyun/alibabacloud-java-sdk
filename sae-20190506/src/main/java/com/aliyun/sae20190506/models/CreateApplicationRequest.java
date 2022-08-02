@@ -7,7 +7,6 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("AcrAssumeRoleArn")
     public String acrAssumeRoleArn;
 
-    // ACR 企业版实例 ID
     @NameInMap("AcrInstanceId")
     public String acrInstanceId;
 
@@ -17,7 +16,6 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
-    // 是否绑定EIP
     @NameInMap("AssociateEip")
     public Boolean associateEip;
 
@@ -63,15 +61,6 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("KafkaConfigs")
     public String kafkaConfigs;
 
-    @NameInMap("KafkaEndpoint")
-    public String kafkaEndpoint;
-
-    @NameInMap("KafkaInstanceId")
-    public String kafkaInstanceId;
-
-    @NameInMap("KafkaLogfileConfig")
-    public String kafkaLogfileConfig;
-
     @NameInMap("Liveness")
     public String liveness;
 
@@ -90,18 +79,12 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("NasId")
     public String nasId;
 
-    @NameInMap("OpenCollectToKafka")
-    public Boolean openCollectToKafka;
-
-    // OSS使用的AKID
     @NameInMap("OssAkId")
     public String ossAkId;
 
-    // OSS AKID对应的secret
     @NameInMap("OssAkSecret")
     public String ossAkSecret;
 
-    // OSS挂载描述信息
     @NameInMap("OssMountDescs")
     public String ossMountDescs;
 
@@ -164,9 +147,6 @@ public class CreateApplicationRequest extends TeaModel {
 
     @NameInMap("WebContainer")
     public String webContainer;
-
-    @NameInMap("mseFeatureConfig")
-    public String mseFeatureConfig;
 
     public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationRequest self = new CreateApplicationRequest();
@@ -325,30 +305,6 @@ public class CreateApplicationRequest extends TeaModel {
         return this.kafkaConfigs;
     }
 
-    public CreateApplicationRequest setKafkaEndpoint(String kafkaEndpoint) {
-        this.kafkaEndpoint = kafkaEndpoint;
-        return this;
-    }
-    public String getKafkaEndpoint() {
-        return this.kafkaEndpoint;
-    }
-
-    public CreateApplicationRequest setKafkaInstanceId(String kafkaInstanceId) {
-        this.kafkaInstanceId = kafkaInstanceId;
-        return this;
-    }
-    public String getKafkaInstanceId() {
-        return this.kafkaInstanceId;
-    }
-
-    public CreateApplicationRequest setKafkaLogfileConfig(String kafkaLogfileConfig) {
-        this.kafkaLogfileConfig = kafkaLogfileConfig;
-        return this;
-    }
-    public String getKafkaLogfileConfig() {
-        return this.kafkaLogfileConfig;
-    }
-
     public CreateApplicationRequest setLiveness(String liveness) {
         this.liveness = liveness;
         return this;
@@ -395,14 +351,6 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getNasId() {
         return this.nasId;
-    }
-
-    public CreateApplicationRequest setOpenCollectToKafka(Boolean openCollectToKafka) {
-        this.openCollectToKafka = openCollectToKafka;
-        return this;
-    }
-    public Boolean getOpenCollectToKafka() {
-        return this.openCollectToKafka;
     }
 
     public CreateApplicationRequest setOssAkId(String ossAkId) {
@@ -587,14 +535,6 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getWebContainer() {
         return this.webContainer;
-    }
-
-    public CreateApplicationRequest setMseFeatureConfig(String mseFeatureConfig) {
-        this.mseFeatureConfig = mseFeatureConfig;
-        return this;
-    }
-    public String getMseFeatureConfig() {
-        return this.mseFeatureConfig;
     }
 
 }
