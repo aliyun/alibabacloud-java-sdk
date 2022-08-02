@@ -3,12 +3,12 @@ package com.aliyun.clickhouse20191111.models;
 
 import com.aliyun.tea.*;
 
-public class OperateLorneTaskStatusRequest extends TeaModel {
+public class ModifyMinorVersionGreadeTypeRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    @NameInMap("LorneStatus")
-    public String lorneStatus;
+    @NameInMap("MaintainAutoType")
+    public Boolean maintainAutoType;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -22,15 +22,12 @@ public class OperateLorneTaskStatusRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("TaskId")
-    public String taskId;
-
-    public static OperateLorneTaskStatusRequest build(java.util.Map<String, ?> map) throws Exception {
-        OperateLorneTaskStatusRequest self = new OperateLorneTaskStatusRequest();
+    public static ModifyMinorVersionGreadeTypeRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyMinorVersionGreadeTypeRequest self = new ModifyMinorVersionGreadeTypeRequest();
         return TeaModel.build(map, self);
     }
 
-    public OperateLorneTaskStatusRequest setDBClusterId(String DBClusterId) {
+    public ModifyMinorVersionGreadeTypeRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -38,15 +35,15 @@ public class OperateLorneTaskStatusRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public OperateLorneTaskStatusRequest setLorneStatus(String lorneStatus) {
-        this.lorneStatus = lorneStatus;
+    public ModifyMinorVersionGreadeTypeRequest setMaintainAutoType(Boolean maintainAutoType) {
+        this.maintainAutoType = maintainAutoType;
         return this;
     }
-    public String getLorneStatus() {
-        return this.lorneStatus;
+    public Boolean getMaintainAutoType() {
+        return this.maintainAutoType;
     }
 
-    public OperateLorneTaskStatusRequest setOwnerAccount(String ownerAccount) {
+    public ModifyMinorVersionGreadeTypeRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -54,7 +51,7 @@ public class OperateLorneTaskStatusRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public OperateLorneTaskStatusRequest setOwnerId(Long ownerId) {
+    public ModifyMinorVersionGreadeTypeRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -62,7 +59,7 @@ public class OperateLorneTaskStatusRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public OperateLorneTaskStatusRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ModifyMinorVersionGreadeTypeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -70,20 +67,12 @@ public class OperateLorneTaskStatusRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public OperateLorneTaskStatusRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ModifyMinorVersionGreadeTypeRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public OperateLorneTaskStatusRequest setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
     }
 
 }

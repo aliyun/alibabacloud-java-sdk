@@ -3,7 +3,7 @@ package com.aliyun.clickhouse20191111.models;
 
 import com.aliyun.tea.*;
 
-public class CheckServiceLinkedRoleResponse extends TeaModel {
+public class ModifyMinorVersionGreadeTypeResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CheckServiceLinkedRoleResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CheckServiceLinkedRoleResponseBody body;
+    public ModifyMinorVersionGreadeTypeResponseBody body;
 
-    public static CheckServiceLinkedRoleResponse build(java.util.Map<String, ?> map) throws Exception {
-        CheckServiceLinkedRoleResponse self = new CheckServiceLinkedRoleResponse();
+    public static ModifyMinorVersionGreadeTypeResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyMinorVersionGreadeTypeResponse self = new ModifyMinorVersionGreadeTypeResponse();
         return TeaModel.build(map, self);
     }
 
-    public CheckServiceLinkedRoleResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyMinorVersionGreadeTypeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CheckServiceLinkedRoleResponse extends TeaModel {
         return this.headers;
     }
 
-    public CheckServiceLinkedRoleResponse setStatusCode(Integer statusCode) {
+    public ModifyMinorVersionGreadeTypeResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CheckServiceLinkedRoleResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CheckServiceLinkedRoleResponse setBody(CheckServiceLinkedRoleResponseBody body) {
+    public ModifyMinorVersionGreadeTypeResponse setBody(ModifyMinorVersionGreadeTypeResponseBody body) {
         this.body = body;
         return this;
     }
-    public CheckServiceLinkedRoleResponseBody getBody() {
+    public ModifyMinorVersionGreadeTypeResponseBody getBody() {
         return this.body;
     }
 
