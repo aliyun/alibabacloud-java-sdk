@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class TransferAccelerationConfiguration extends TeaModel {
-    // 是否开启传输加速
     @NameInMap("Enabled")
     public Boolean enabled;
 

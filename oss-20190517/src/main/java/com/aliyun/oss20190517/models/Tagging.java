@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class Tagging extends TeaModel {
-    // the container of tags
     @NameInMap("TagSet")
     public TagSet tagSet;
 

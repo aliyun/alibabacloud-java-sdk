@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class ReplicationPrefixSet extends TeaModel {
-    // Prefixs used to specify the object to replicate
     @NameInMap("Prefix")
     public java.util.List<String> prefixs;
 

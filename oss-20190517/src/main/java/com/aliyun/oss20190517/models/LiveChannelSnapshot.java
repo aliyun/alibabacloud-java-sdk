@@ -4,19 +4,15 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class LiveChannelSnapshot extends TeaModel {
-    // description
     @NameInMap("DestBucket")
     public String destBucket;
 
-    // description
     @NameInMap("Interval")
     public Long interval;
 
-    // description
     @NameInMap("NotifyTopic")
     public String notifyTopic;
 
-    // description
     @NameInMap("RoleName")
     public String roleName;
 

@@ -4,31 +4,24 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class SelectMetaStatus extends TeaModel {
-    // description
     @NameInMap("ColsCount")
     public Long colsCount;
 
-    // description
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // description
     @NameInMap("Offset")
     public Long offset;
 
-    // description
     @NameInMap("RowsCount")
     public Long rowsCount;
 
-    // description
     @NameInMap("SplitsCount")
     public Long splitsCount;
 
-    // description
     @NameInMap("Status")
     public Long status;
 
-    // description
     @NameInMap("TotalScannedBytes")
     public Long totalScannedBytes;
 

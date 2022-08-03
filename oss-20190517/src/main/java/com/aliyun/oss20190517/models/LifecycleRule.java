@@ -4,39 +4,30 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class LifecycleRule extends TeaModel {
-    // 未完成分片上传的过期属性
     @NameInMap("AbortMultipartUpload")
     public LifecycleAbortMultipartUpload lifecycleAbortMultipartUpload;
 
-    // 过期属性
     @NameInMap("Expiration")
     public LifecycleExpiration lifecycleExpiration;
 
-    // 规则标识
     @NameInMap("ID")
     public String ID;
 
-    // 非当前版本生命周期规则的过期属性
     @NameInMap("NoncurrentVersionExpiration")
     public NoncurrentVersionExpiration noncurrentVersionExpiration;
 
-    // 非当前版本生命周期规则的转储属性
     @NameInMap("NoncurrentVersionTransition")
     public java.util.List<NoncurrentVersionTransition> noncurrentVersionTransition;
 
-    // 指定规则所适用的前缀
     @NameInMap("Prefix")
     public String prefix;
 
-    // 规则的状态
     @NameInMap("Status")
     public String status;
 
-    // 标签列表
     @NameInMap("Tag")
     public java.util.List<Tag> tag;
 
-    // 存储类型转换
     @NameInMap("Transition")
     public java.util.List<LifecycleTransition> lifecycleTransition;
 
@@ -118,11 +109,9 @@ public class LifecycleRule extends TeaModel {
     }
 
     public static class LifecycleAbortMultipartUpload extends TeaModel {
-        // 日期
         @NameInMap("CreatedBeforeDate")
         public String createdBeforeDate;
 
-        // 天数
         @NameInMap("Days")
         public Integer days;
 
@@ -150,15 +139,12 @@ public class LifecycleRule extends TeaModel {
     }
 
     public static class LifecycleExpiration extends TeaModel {
-        // 日期
         @NameInMap("CreatedBeforeDate")
         public String createdBeforeDate;
 
-        // 天数
         @NameInMap("Days")
         public Integer days;
 
-        // 自动移除过期删除标记
         @NameInMap("ExpiredObjectDeleteMarker")
         public Boolean expiredObjectDeleteMarker;
 
@@ -194,7 +180,6 @@ public class LifecycleRule extends TeaModel {
     }
 
     public static class NoncurrentVersionExpiration extends TeaModel {
-        // 天数
         @NameInMap("NoncurrentDays")
         public Integer noncurrentDays;
 
@@ -214,11 +199,9 @@ public class LifecycleRule extends TeaModel {
     }
 
     public static class NoncurrentVersionTransition extends TeaModel {
-        // 天数
         @NameInMap("NoncurrentDays")
         public Integer noncurrentDays;
 
-        // 存储类型
         @NameInMap("StorageClass")
         public String storageClass;
 
@@ -246,11 +229,9 @@ public class LifecycleRule extends TeaModel {
     }
 
     public static class Tag extends TeaModel {
-        // 标签 key
         @NameInMap("Key")
         public String key;
 
-        // 标签 value
         @NameInMap("Value")
         public String value;
 
@@ -278,11 +259,9 @@ public class LifecycleRule extends TeaModel {
     }
 
     public static class LifecycleTransition extends TeaModel {
-        // 日期
         @NameInMap("CreatedBeforeDate")
         public String createdBeforeDate;
 
-        // 天数
         @NameInMap("Days")
         public Integer days;
 

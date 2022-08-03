@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class JSONOutput extends TeaModel {
-    // description
     @NameInMap("RecordDelimiter")
     public String recordDelimiter;
 

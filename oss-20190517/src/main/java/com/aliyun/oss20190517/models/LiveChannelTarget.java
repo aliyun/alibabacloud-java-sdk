@@ -4,19 +4,15 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class LiveChannelTarget extends TeaModel {
-    // description
     @NameInMap("FragCount")
     public Long fragCount;
 
-    // description
     @NameInMap("FragDuration")
     public Long fragDuration;
 
-    // description
     @NameInMap("PlaylistName")
     public String playlistName;
 
-    // description
     @NameInMap("Type")
     public String type;
 

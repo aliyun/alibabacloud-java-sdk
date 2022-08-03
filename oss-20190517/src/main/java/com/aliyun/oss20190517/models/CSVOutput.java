@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class CSVOutput extends TeaModel {
-    // description
     @NameInMap("FieldDelimiter")
     public String fieldDelimiter;
 
-    // description
     @NameInMap("RecordDelimiter")
     public String recordDelimiter;
 

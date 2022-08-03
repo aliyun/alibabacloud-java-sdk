@@ -4,15 +4,12 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class IndexDocument extends TeaModel {
-    // description
     @NameInMap("Suffix")
     public String suffix;
 
-    // description
     @NameInMap("SupportSubDir")
     public Boolean supportSubDir;
 
-    // description
     @NameInMap("Type")
     public String type;
 

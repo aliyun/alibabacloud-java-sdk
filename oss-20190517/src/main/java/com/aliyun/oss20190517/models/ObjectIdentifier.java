@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class ObjectIdentifier extends TeaModel {
-    // key
     @NameInMap("Key")
     public String key;
 
-    // version id
     @NameInMap("VersionId")
     public String versionId;
 

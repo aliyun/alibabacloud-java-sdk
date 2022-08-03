@@ -4,59 +4,45 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class RoutingRuleRedirect extends TeaModel {
-    // description
     @NameInMap("EnableReplacePrefix")
     public Boolean enableReplacePrefix;
 
-    // description
     @NameInMap("HostName")
     public String hostName;
 
-    // description
     @NameInMap("HttpRedirectCode")
     public Long httpRedirectCode;
 
-    // description
     @NameInMap("MirrorCheckMd5")
     public Boolean mirrorCheckMd5;
 
-    // description
     @NameInMap("MirrorFollowRedirect")
     public Boolean mirrorFollowRedirect;
 
-    // description
     @NameInMap("MirrorHeaders")
     public MirrorHeaders mirrorHeaders;
 
-    // description
     @NameInMap("MirrorPassQueryString")
     public Boolean mirrorPassQueryString;
 
-    // description
     @NameInMap("MirrorURL")
     public String mirrorURL;
 
-    // description
     @NameInMap("PassQueryString")
     public Boolean passQueryString;
 
-    // description
     @NameInMap("Protocol")
     public String protocol;
 
-    // description
     @NameInMap("RedirectType")
     public String redirectType;
 
-    // description
     @NameInMap("ReplaceKeyPrefixWith")
     public String replaceKeyPrefixWith;
 
-    // description
     @NameInMap("ReplaceKeyWith")
     public String replaceKeyWith;
 
-    // description
     @NameInMap("TransparentMirrorResponseCodes")
     public String transparentMirrorResponseCodes;
 
@@ -178,11 +164,9 @@ public class RoutingRuleRedirect extends TeaModel {
     }
 
     public static class Set extends TeaModel {
-        // description
         @NameInMap("Key")
         public String key;
 
-        // description
         @NameInMap("Value")
         public String value;
 
@@ -210,19 +194,15 @@ public class RoutingRuleRedirect extends TeaModel {
     }
 
     public static class MirrorHeaders extends TeaModel {
-        // description
         @NameInMap("Pass")
         public java.util.List<String> pass;
 
-        // description
         @NameInMap("PassAll")
         public Boolean passAll;
 
-        // description
         @NameInMap("Remove")
         public java.util.List<String> remove;
 
-        // description
         @NameInMap("Set")
         public java.util.List<Set> set;
 

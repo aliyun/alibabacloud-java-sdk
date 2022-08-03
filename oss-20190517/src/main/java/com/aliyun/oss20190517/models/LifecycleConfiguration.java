@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class LifecycleConfiguration extends TeaModel {
-    // description
     @NameInMap("Rule")
     public java.util.List<LifecycleRule> rule;
 

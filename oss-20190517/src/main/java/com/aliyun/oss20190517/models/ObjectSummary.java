@@ -4,29 +4,24 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class ObjectSummary extends TeaModel {
-    // The entity tag is a hash of the object.
     @NameInMap("ETag")
     public String ETag;
 
-    // The name of the object.
     @NameInMap("Key")
     public String key;
 
-    // The last modification time of the object.
     @NameInMap("LastModified")
     public String lastModified;
 
     @NameInMap("Owner")
     public Owner owner;
 
-    // The size in bytes of the object
     @NameInMap("Size")
     public Long size;
 
     @NameInMap("StorageClass")
     public String storageClass;
 
-    // The type of the object.
     @NameInMap("Type")
     public String type;
 

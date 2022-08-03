@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class ReplicationSourceSelectionCriteria extends TeaModel {
-    // A short description of SseKmsEncryptedObjects
     @NameInMap("SseKmsEncryptedObjects")
     public SseKmsEncryptedObjects sseKmsEncryptedObjects;
 
@@ -22,7 +21,6 @@ public class ReplicationSourceSelectionCriteria extends TeaModel {
     }
 
     public static class SseKmsEncryptedObjects extends TeaModel {
-        // A short description of Status
         @NameInMap("Status")
         public String status;
 

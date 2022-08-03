@@ -4,23 +4,18 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class LiveChannelVideo extends TeaModel {
-    // description
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
-    // description
     @NameInMap("Codec")
     public String codec;
 
-    // description
     @NameInMap("FrameRate")
     public Long frameRate;
 
-    // description
     @NameInMap("Height")
     public Long height;
 
-    // description
     @NameInMap("Width")
     public Long width;
 

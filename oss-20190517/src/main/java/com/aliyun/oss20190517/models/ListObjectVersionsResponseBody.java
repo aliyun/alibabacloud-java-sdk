@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class ListObjectVersionsResponseBody extends TeaModel {
-    // Objects whose names contain the same string that ranges from the prefix to the next occurrence of the delimiter are grouped as a single result element
     @NameInMap("CommonPrefixes")
     public java.util.List<CommonPrefix> commonPrefixes;
 
-    // The container that stores delete markers
     @NameInMap("DeleteMarker")
     public java.util.List<DeleteMarkerEntry> deleteMarkers;
 
@@ -18,19 +16,15 @@ public class ListObjectVersionsResponseBody extends TeaModel {
     @NameInMap("EncodingType")
     public String encodingType;
 
-    // Indicates whether the returned results are truncated
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
-    // Indicates the object from which the operation starts
     @NameInMap("KeyMarker")
     public String keyMarker;
 
-    // The maximum number of returned objects in the response
     @NameInMap("MaxKeys")
     public Long maxKeys;
 
-    // The bucket name
     @NameInMap("Name")
     public String name;
 
@@ -40,15 +34,12 @@ public class ListObjectVersionsResponseBody extends TeaModel {
     @NameInMap("NextVersionIdMarker")
     public String nextVersionIdMarker;
 
-    // The prefix that the names of returned objects must contain
     @NameInMap("Prefix")
     public String prefix;
 
-    // The container that stores the versions of objects except for delete markers
     @NameInMap("Version")
     public java.util.List<ObjectVersion> versions;
 
-    // This parameter is returned with KeyMarker together to indicate the version from which the operation starts
     @NameInMap("VersionIdMarker")
     public String versionIdMarker;
 

@@ -4,15 +4,12 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class RoutingRule extends TeaModel {
-    // description
     @NameInMap("Condition")
     public RoutingRuleCondition condition;
 
-    // description
     @NameInMap("Redirect")
     public RoutingRuleRedirect redirect;
 
-    // description
     @NameInMap("RuleNumber")
     public Long ruleNumber;
 

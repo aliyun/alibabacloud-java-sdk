@@ -4,22 +4,18 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class ReplicationRule extends TeaModel {
-    // A short description of action
     @NameInMap("Action")
     public String action;
 
     @NameInMap("Destination")
     public ReplicationDestination destination;
 
-    // A short description of EncryptionConfiguration
     @NameInMap("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
 
-    // A short description of HistoricalObjectReplication
     @NameInMap("HistoricalObjectReplication")
     public String historicalObjectReplication;
 
-    // rule id
     @NameInMap("ID")
     public String ID;
 
@@ -29,11 +25,9 @@ public class ReplicationRule extends TeaModel {
     @NameInMap("SourceSelectionCriteria")
     public ReplicationSourceSelectionCriteria sourceSelectionCriteria;
 
-    // A short description of action
     @NameInMap("Status")
     public String status;
 
-    // A short description of SyncRole
     @NameInMap("SyncRole")
     public String syncRole;
 
@@ -115,7 +109,6 @@ public class ReplicationRule extends TeaModel {
     }
 
     public static class EncryptionConfiguration extends TeaModel {
-        // kms id
         @NameInMap("ReplicaKmsKeyID")
         public String replicaKmsKeyID;
 

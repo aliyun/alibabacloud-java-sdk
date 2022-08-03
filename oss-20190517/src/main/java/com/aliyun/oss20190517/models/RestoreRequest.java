@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class RestoreRequest extends TeaModel {
-    // description
     @NameInMap("Days")
     public Long days;
 
-    // description
     @NameInMap("JobParameters")
     public JobParameters jobParameters;
 
@@ -34,7 +32,6 @@ public class RestoreRequest extends TeaModel {
     }
 
     public static class JobParameters extends TeaModel {
-        // description
         @NameInMap("Tier")
         public String tier;
 

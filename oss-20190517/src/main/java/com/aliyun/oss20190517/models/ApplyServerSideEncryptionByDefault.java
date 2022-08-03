@@ -4,15 +4,12 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class ApplyServerSideEncryptionByDefault extends TeaModel {
-    // description
     @NameInMap("KMSDataEncryption")
     public String KMSDataEncryption;
 
-    // description
     @NameInMap("KMSMasterKeyID")
     public String KMSMasterKeyID;
 
-    // description
     @NameInMap("SSEAlgorithm")
     public String SSEAlgorithm;
 

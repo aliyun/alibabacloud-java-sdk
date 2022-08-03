@@ -4,30 +4,24 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class CSVInput extends TeaModel {
-    // description
     @NameInMap("AllowQuotedRecordDelimiter")
     public Boolean allowQuotedRecordDelimiter;
 
-    // description
     @NameInMap("CommentCharacter")
     public String commentCharacter;
 
-    // description
     @NameInMap("FieldDelimiter")
     public String fieldDelimiter;
 
     @NameInMap("FileHeaderInfo")
     public String fileHeaderInfo;
 
-    // description
     @NameInMap("QuoteCharacter")
     public String quoteCharacter;
 
-    // description
     @NameInMap("Range")
     public String range;
 
-    // description
     @NameInMap("RecordDelimiter")
     public String recordDelimiter;
 

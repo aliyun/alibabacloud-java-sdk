@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class CommonPrefix extends TeaModel {
-    // The prefix that the names of returned objects contain
     @NameInMap("Prefix")
     public String prefix;
 

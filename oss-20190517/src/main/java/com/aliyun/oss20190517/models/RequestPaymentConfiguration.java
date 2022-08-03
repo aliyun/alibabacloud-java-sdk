@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class RequestPaymentConfiguration extends TeaModel {
-    // description
     @NameInMap("Payer")
     public String payer;
 

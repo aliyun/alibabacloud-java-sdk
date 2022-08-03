@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class SSEKMS extends TeaModel {
-    // The CMK used in the SSE-KMS encryption method
     @NameInMap("KeyId")
     public String keyId;
 

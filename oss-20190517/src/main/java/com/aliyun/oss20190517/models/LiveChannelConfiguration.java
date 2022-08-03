@@ -4,14 +4,12 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class LiveChannelConfiguration extends TeaModel {
-    // description
     @NameInMap("Description")
     public String description;
 
     @NameInMap("Snapshot")
     public LiveChannelSnapshot snapshot;
 
-    // description
     @NameInMap("Status")
     public String status;
 

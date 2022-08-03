@@ -4,19 +4,15 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class RegionInfo extends TeaModel {
-    // accelerate endpoint
     @NameInMap("AccelerateEndpoint")
     public String accelerateEndpoint;
 
-    // internal endpoint
     @NameInMap("InternalEndpoint")
     public String internalEndpoint;
 
-    // internet endpoint
     @NameInMap("InternetEndpoint")
     public String internetEndpoint;
 
-    // region
     @NameInMap("Region")
     public String region;
 

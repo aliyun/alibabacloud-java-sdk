@@ -10,14 +10,12 @@ public class GetBucketInventoryResponseBody extends TeaModel {
     @NameInMap("Filter")
     public InventoryFilter filter;
 
-    // id
     @NameInMap("Id")
     public String id;
 
     @NameInMap("IncludedObjectVersions")
     public String includedObjectVersions;
 
-    // status
     @NameInMap("IsEnabled")
     public Boolean isEnabled;
 

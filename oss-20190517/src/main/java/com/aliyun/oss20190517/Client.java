@@ -59,7 +59,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.uploadId)) {
             query.put("uploadId", request.uploadId);
@@ -94,7 +93,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.position)) {
             query.put("position", request.position);
@@ -206,7 +204,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.encodingType)) {
             query.put("encoding-type", request.encodingType);
@@ -263,7 +260,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CopyObjectResponse copyObjectWithOptions(String bucket, String key, CopyObjectHeaders headers, RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -353,7 +349,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
@@ -661,7 +656,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteLiveChannelResponse deleteLiveChannelWithOptions(String bucket, String channel, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        channel = com.aliyun.openapiutil.Client.getEncodeParam(channel);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
@@ -725,7 +719,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
             query.put("versionId", request.versionId);
@@ -760,7 +753,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
             query.put("versionId", request.versionId);
@@ -1392,7 +1384,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetLiveChannelHistoryResponse getLiveChannelHistoryWithOptions(String bucket, String channel, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        channel = com.aliyun.openapiutil.Client.getEncodeParam(channel);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
@@ -1420,7 +1411,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetLiveChannelInfoResponse getLiveChannelInfoWithOptions(String bucket, String channel, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        channel = com.aliyun.openapiutil.Client.getEncodeParam(channel);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
@@ -1448,7 +1438,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetLiveChannelStatResponse getLiveChannelStatWithOptions(String bucket, String channel, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        channel = com.aliyun.openapiutil.Client.getEncodeParam(channel);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
@@ -1477,7 +1466,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.responseCacheControl)) {
             query.put("response-cache-control", request.responseCacheControl);
@@ -1561,7 +1549,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
             query.put("versionId", request.versionId);
@@ -1596,7 +1583,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
             query.put("versionId", request.versionId);
@@ -1631,7 +1617,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
             query.put("versionId", request.versionId);
@@ -1666,7 +1651,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
             query.put("versionId", request.versionId);
@@ -1701,7 +1685,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        channel = com.aliyun.openapiutil.Client.getEncodeParam(channel);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("endTime", request.endTime);
@@ -1740,7 +1723,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
             query.put("versionId", request.versionId);
@@ -1825,7 +1807,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.encodingType)) {
             query.put("encoding-type", request.encodingType);
@@ -2236,7 +2217,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         ListPartsShrinkRequest request = new ListPartsShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.encodingType)) {
@@ -2288,7 +2268,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public OptionObjectResponse optionObjectWithOptions(String bucket, String key, OptionObjectHeaders headers, RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -2345,7 +2324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "none"),
+            new TeaPair("reqBodyType", "multiFormData"),
             new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new PostObjectResponse());
@@ -2361,8 +2340,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        channel = com.aliyun.openapiutil.Client.getEncodeParam(channel);
-        playlist = com.aliyun.openapiutil.Client.getEncodeParam(playlist);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("endTime", request.endTime);
@@ -2858,7 +2835,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        channel = com.aliyun.openapiutil.Client.getEncodeParam(channel);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
@@ -2888,7 +2864,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        channel = com.aliyun.openapiutil.Client.getEncodeParam(channel);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("status", request.status);
@@ -2923,7 +2898,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -2991,7 +2965,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
             query.put("versionId", request.versionId);
@@ -3035,7 +3008,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
             query.put("versionId", request.versionId);
@@ -3070,7 +3042,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PutSymlinkResponse putSymlinkWithOptions(String bucket, String key, PutSymlinkHeaders headers, RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -3120,7 +3091,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
             query.put("versionId", request.versionId);
@@ -3156,7 +3126,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
@@ -3186,7 +3155,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.partNumber)) {
             query.put("partNumber", request.partNumber);
@@ -3227,7 +3195,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        key = com.aliyun.openapiutil.Client.getEncodeParam(key);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.partNumber)) {
             query.put("partNumber", request.partNumber);

@@ -10,18 +10,15 @@ public class InventoryConfiguration extends TeaModel {
     @NameInMap("Filter")
     public InventoryFilter filter;
 
-    // The specified inventory list name, which must be globally unique in the bucket
     @NameInMap("Id")
     public String id;
 
     @NameInMap("IncludedObjectVersions")
     public String includedObjectVersions;
 
-    // Indicates whether the inventory function is enabled
     @NameInMap("IsEnabled")
     public Boolean isEnabled;
 
-    // The container that stores the configuration fields included in the inventory list
     @NameInMap("OptionalFields")
     public OptionalFields optionalFields;
 
@@ -90,7 +87,6 @@ public class InventoryConfiguration extends TeaModel {
     }
 
     public static class OptionalFields extends TeaModel {
-        // field list
         @NameInMap("Field")
         public java.util.List<String> fields;
 

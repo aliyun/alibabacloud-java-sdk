@@ -4,15 +4,12 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class LiveChannelAudio extends TeaModel {
-    // description
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
-    // description
     @NameInMap("Codec")
     public String codec;
 
-    // description
     @NameInMap("SampleRate")
     public Long sampleRate;
 
