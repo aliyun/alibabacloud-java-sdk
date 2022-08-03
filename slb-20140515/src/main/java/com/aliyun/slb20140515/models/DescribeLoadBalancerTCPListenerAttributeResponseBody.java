@@ -70,6 +70,9 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     @NameInMap("PersistenceTimeout")
     public Integer persistenceTimeout;
 
+    @NameInMap("ProxyProtocolV2Enabled")
+    public Boolean proxyProtocolV2Enabled;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -267,6 +270,14 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     }
     public Integer getPersistenceTimeout() {
         return this.persistenceTimeout;
+    }
+
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setProxyProtocolV2Enabled(Boolean proxyProtocolV2Enabled) {
+        this.proxyProtocolV2Enabled = proxyProtocolV2Enabled;
+        return this;
+    }
+    public Boolean getProxyProtocolV2Enabled() {
+        return this.proxyProtocolV2Enabled;
     }
 
     public DescribeLoadBalancerTCPListenerAttributeResponseBody setRequestId(String requestId) {

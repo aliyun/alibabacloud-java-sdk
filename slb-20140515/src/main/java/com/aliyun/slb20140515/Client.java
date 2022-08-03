@@ -1050,6 +1050,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PersistenceTimeout", request.persistenceTimeout);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyProtocolV2Enabled)) {
+            query.put("ProxyProtocolV2Enabled", request.proxyProtocolV2Enabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -1157,6 +1161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyProtocolV2Enabled)) {
+            query.put("ProxyProtocolV2Enabled", request.proxyProtocolV2Enabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -3489,6 +3497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyLoadBalancerInstanceChargeTypeResponse modifyLoadBalancerInstanceChargeTypeWithOptions(ModifyLoadBalancerInstanceChargeTypeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidth)) {
+            query.put("Bandwidth", request.bandwidth);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceChargeType)) {
             query.put("InstanceChargeType", request.instanceChargeType);
         }
@@ -3499,6 +3511,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerId)) {
             query.put("LoadBalancerId", request.loadBalancerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerSpec)) {
+            query.put("LoadBalancerSpec", request.loadBalancerSpec);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -4994,6 +5010,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PersistenceTimeout", request.persistenceTimeout);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyProtocolV2Enabled)) {
+            query.put("ProxyProtocolV2Enabled", request.proxyProtocolV2Enabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -5109,6 +5129,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyProtocolV2Enabled)) {
+            query.put("ProxyProtocolV2Enabled", request.proxyProtocolV2Enabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

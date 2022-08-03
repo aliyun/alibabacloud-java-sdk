@@ -4,6 +4,9 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class ModifyLoadBalancerInstanceChargeTypeRequest extends TeaModel {
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
+
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
@@ -12,6 +15,9 @@ public class ModifyLoadBalancerInstanceChargeTypeRequest extends TeaModel {
 
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
+
+    @NameInMap("LoadBalancerSpec")
+    public String loadBalancerSpec;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -31,6 +37,14 @@ public class ModifyLoadBalancerInstanceChargeTypeRequest extends TeaModel {
     public static ModifyLoadBalancerInstanceChargeTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyLoadBalancerInstanceChargeTypeRequest self = new ModifyLoadBalancerInstanceChargeTypeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyLoadBalancerInstanceChargeTypeRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
     }
 
     public ModifyLoadBalancerInstanceChargeTypeRequest setInstanceChargeType(String instanceChargeType) {
@@ -55,6 +69,14 @@ public class ModifyLoadBalancerInstanceChargeTypeRequest extends TeaModel {
     }
     public String getLoadBalancerId() {
         return this.loadBalancerId;
+    }
+
+    public ModifyLoadBalancerInstanceChargeTypeRequest setLoadBalancerSpec(String loadBalancerSpec) {
+        this.loadBalancerSpec = loadBalancerSpec;
+        return this;
+    }
+    public String getLoadBalancerSpec() {
+        return this.loadBalancerSpec;
     }
 
     public ModifyLoadBalancerInstanceChargeTypeRequest setOwnerAccount(String ownerAccount) {

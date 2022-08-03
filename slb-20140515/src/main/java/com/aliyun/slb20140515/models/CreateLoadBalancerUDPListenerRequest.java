@@ -46,6 +46,9 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ProxyProtocolV2Enabled")
+    public Boolean proxyProtocolV2Enabled;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -188,6 +191,14 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateLoadBalancerUDPListenerRequest setProxyProtocolV2Enabled(Boolean proxyProtocolV2Enabled) {
+        this.proxyProtocolV2Enabled = proxyProtocolV2Enabled;
+        return this;
+    }
+    public Boolean getProxyProtocolV2Enabled() {
+        return this.proxyProtocolV2Enabled;
     }
 
     public CreateLoadBalancerUDPListenerRequest setRegionId(String regionId) {
