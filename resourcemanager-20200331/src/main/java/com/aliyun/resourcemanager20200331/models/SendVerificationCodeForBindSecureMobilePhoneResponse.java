@@ -8,6 +8,10 @@ public class SendVerificationCodeForBindSecureMobilePhoneResponse extends TeaMod
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public SendVerificationCodeForBindSecureMobilePhoneResponseBody body;
@@ -23,6 +27,14 @@ public class SendVerificationCodeForBindSecureMobilePhoneResponse extends TeaMod
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public SendVerificationCodeForBindSecureMobilePhoneResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public SendVerificationCodeForBindSecureMobilePhoneResponse setBody(SendVerificationCodeForBindSecureMobilePhoneResponseBody body) {

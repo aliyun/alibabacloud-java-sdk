@@ -80,6 +80,55 @@ public class GetResourceGroupResponseBody extends TeaModel {
 
     }
 
+    public static class GetResourceGroupResponseBodyResourceGroupTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetResourceGroupResponseBodyResourceGroupTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            GetResourceGroupResponseBodyResourceGroupTagsTag self = new GetResourceGroupResponseBodyResourceGroupTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResourceGroupResponseBodyResourceGroupTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetResourceGroupResponseBodyResourceGroupTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class GetResourceGroupResponseBodyResourceGroupTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<GetResourceGroupResponseBodyResourceGroupTagsTag> tag;
+
+        public static GetResourceGroupResponseBodyResourceGroupTags build(java.util.Map<String, ?> map) throws Exception {
+            GetResourceGroupResponseBodyResourceGroupTags self = new GetResourceGroupResponseBodyResourceGroupTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResourceGroupResponseBodyResourceGroupTags setTag(java.util.List<GetResourceGroupResponseBodyResourceGroupTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<GetResourceGroupResponseBodyResourceGroupTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class GetResourceGroupResponseBodyResourceGroup extends TeaModel {
         @NameInMap("AccountId")
         public String accountId;
@@ -101,6 +150,9 @@ public class GetResourceGroupResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public GetResourceGroupResponseBodyResourceGroupTags tags;
 
         public static GetResourceGroupResponseBodyResourceGroup build(java.util.Map<String, ?> map) throws Exception {
             GetResourceGroupResponseBodyResourceGroup self = new GetResourceGroupResponseBodyResourceGroup();
@@ -161,6 +213,14 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetResourceGroupResponseBodyResourceGroup setTags(GetResourceGroupResponseBodyResourceGroupTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public GetResourceGroupResponseBodyResourceGroupTags getTags() {
+            return this.tags;
         }
 
     }

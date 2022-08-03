@@ -38,6 +38,9 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("IdentityInformation")
+        public String identityInformation;
+
         @NameInMap("MasterAccountId")
         public String masterAccountId;
 
@@ -72,6 +75,14 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetResourceDirectoryResponseBodyResourceDirectory setIdentityInformation(String identityInformation) {
+            this.identityInformation = identityInformation;
+            return this;
+        }
+        public String getIdentityInformation() {
+            return this.identityInformation;
         }
 
         public GetResourceDirectoryResponseBodyResourceDirectory setMasterAccountId(String masterAccountId) {

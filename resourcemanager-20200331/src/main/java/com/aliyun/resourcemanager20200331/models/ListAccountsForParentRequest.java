@@ -4,6 +4,9 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListAccountsForParentRequest extends TeaModel {
+    @NameInMap("IncludeTags")
+    public Boolean includeTags;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -16,9 +19,20 @@ public class ListAccountsForParentRequest extends TeaModel {
     @NameInMap("QueryKeyword")
     public String queryKeyword;
 
+    @NameInMap("Tag")
+    public java.util.List<ListAccountsForParentRequestTag> tag;
+
     public static ListAccountsForParentRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAccountsForParentRequest self = new ListAccountsForParentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListAccountsForParentRequest setIncludeTags(Boolean includeTags) {
+        this.includeTags = includeTags;
+        return this;
+    }
+    public Boolean getIncludeTags() {
+        return this.includeTags;
     }
 
     public ListAccountsForParentRequest setPageNumber(Integer pageNumber) {
@@ -51,6 +65,44 @@ public class ListAccountsForParentRequest extends TeaModel {
     }
     public String getQueryKeyword() {
         return this.queryKeyword;
+    }
+
+    public ListAccountsForParentRequest setTag(java.util.List<ListAccountsForParentRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListAccountsForParentRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListAccountsForParentRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListAccountsForParentRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListAccountsForParentRequestTag self = new ListAccountsForParentRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAccountsForParentRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAccountsForParentRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
