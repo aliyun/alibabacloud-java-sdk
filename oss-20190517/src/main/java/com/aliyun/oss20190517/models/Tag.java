@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class Tag extends TeaModel {
-    // key
     @NameInMap("Key")
     public String key;
 
-    // value
     @NameInMap("Value")
     public String value;
 

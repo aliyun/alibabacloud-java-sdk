@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class CompleteBucketWormRequest extends TeaModel {
-    // The ID of the retention policy
     @NameInMap("wormId")
     public String wormId;
 

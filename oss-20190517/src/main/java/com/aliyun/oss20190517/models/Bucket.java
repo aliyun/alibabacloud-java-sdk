@@ -4,27 +4,21 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class Bucket extends TeaModel {
-    // The time when the bucket is created.
     @NameInMap("CreationDate")
     public String creationDate;
 
-    // The public endpoint used to access the bucket over the Internet.
     @NameInMap("ExtranetEndpoint")
     public String extranetEndpoint;
 
-    // The internal endpoint used to access the bucket from ECS instances in the same region.
     @NameInMap("IntranetEndpoint")
     public String intranetEndpoint;
 
-    // The data center in which the bucket is located.
     @NameInMap("Location")
     public String location;
 
-    // The name of the bucket.
     @NameInMap("Name")
     public String name;
 
-    // The physical location of the bucket.
     @NameInMap("Region")
     public String region;
 

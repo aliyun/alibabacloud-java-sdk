@@ -4,29 +4,24 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class ReplicationProgressRule extends TeaModel {
-    // A short description of action
     @NameInMap("Action")
     public String action;
 
     @NameInMap("Destination")
     public ReplicationDestination destination;
 
-    // A short description of HistoricalObjectReplication
     @NameInMap("HistoricalObjectReplication")
     public String historicalObjectReplication;
 
-    // rule id
     @NameInMap("ID")
     public String ID;
 
     @NameInMap("PrefixSet")
     public ReplicationPrefixSet prefixSet;
 
-    // A short description of Progress
     @NameInMap("Progress")
     public Progress progress;
 
-    // A short description of action
     @NameInMap("Status")
     public String status;
 
@@ -92,11 +87,9 @@ public class ReplicationProgressRule extends TeaModel {
     }
 
     public static class Progress extends TeaModel {
-        // A short description of HistoricalObject
         @NameInMap("HistoricalObject")
         public String historicalObject;
 
-        // A short description of NewObject
         @NameInMap("NewObject")
         public String newObject;
 

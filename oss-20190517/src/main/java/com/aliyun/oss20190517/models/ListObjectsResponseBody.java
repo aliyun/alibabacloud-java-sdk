@@ -4,41 +4,33 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class ListObjectsResponseBody extends TeaModel {
-    // Objects whose names contain the same string that ranges from the prefix to the next occurrence of the delimiter are grouped as a single result element
     @NameInMap("CommonPrefixes")
     public java.util.List<CommonPrefix> commonPrefixes;
 
-    // The container that stores the returned object metadata
     @NameInMap("Contents")
     public java.util.List<ObjectSummary> contents;
 
-    // The character used to group objects by name
     @NameInMap("Delimiter")
     public String delimiter;
 
     @NameInMap("EncodingType")
     public String encodingType;
 
-    // Indicates whether the returned results are truncated
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
-    // The name of the object from which the list operation begins
     @NameInMap("Marker")
     public String marker;
 
-    // The maximum number of returned objects in the response
     @NameInMap("MaxKeys")
     public Integer maxKeys;
 
-    // The bucket name
     @NameInMap("Name")
     public String name;
 
     @NameInMap("NextMarker")
     public String nextMarker;
 
-    // The prefix that the names of returned objects contain
     @NameInMap("Prefix")
     public String prefix;
 

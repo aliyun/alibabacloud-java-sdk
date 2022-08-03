@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class SelectRequestOptions extends TeaModel {
-    // description
     @NameInMap("MaxSkippedRecordsAllowed")
     public Long maxSkippedRecordsAllowed;
 
-    // description
     @NameInMap("SkipPartialDataRecord")
     public Boolean skipPartialDataRecord;
 

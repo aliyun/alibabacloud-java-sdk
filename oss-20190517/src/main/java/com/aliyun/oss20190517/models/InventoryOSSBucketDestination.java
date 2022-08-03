@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class InventoryOSSBucketDestination extends TeaModel {
-    // The account ID granted by the bucket owner
     @NameInMap("AccountId")
     public String accountId;
 
-    // The bucket that stores the exported inventory list
     @NameInMap("Bucket")
     public String bucket;
 
@@ -18,11 +16,9 @@ public class InventoryOSSBucketDestination extends TeaModel {
     @NameInMap("Format")
     public String format;
 
-    // The path of the exported inventory list
     @NameInMap("Prefix")
     public String prefix;
 
-    // The name of the role to which the bucket owner grants permissions
     @NameInMap("RoleArn")
     public String roleArn;
 

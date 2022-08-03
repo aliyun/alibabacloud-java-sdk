@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class CORSConfiguration extends TeaModel {
-    // description
     @NameInMap("CORSRule")
     public java.util.List<CORSRule> CORSRule;
 
-    // description
     @NameInMap("ResponseVary")
     public Boolean responseVary;
 

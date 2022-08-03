@@ -4,22 +4,18 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class DeleteMarkerEntry extends TeaModel {
-    // Indicates whether the version is the current version
     @NameInMap("IsLatest")
     public Boolean isLatest;
 
-    // The name of the object
     @NameInMap("Key")
     public String key;
 
-    // The last modified time of the object
     @NameInMap("LastModified")
     public String lastModified;
 
     @NameInMap("Owner")
     public Owner owner;
 
-    // The version ID of the object
     @NameInMap("VersionId")
     public String versionId;
 

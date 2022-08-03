@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class JSONInput extends TeaModel {
-    // description
     @NameInMap("ParseJsonNumberAsString")
     public Boolean parseJsonNumberAsString;
 
-    // description
     @NameInMap("Range")
     public String range;
 

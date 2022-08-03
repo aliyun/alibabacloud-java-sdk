@@ -4,15 +4,12 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class Upload extends TeaModel {
-    // description
     @NameInMap("Initiated")
     public String initiated;
 
-    // description
     @NameInMap("Key")
     public String key;
 
-    // description
     @NameInMap("UploadId")
     public String uploadId;
 

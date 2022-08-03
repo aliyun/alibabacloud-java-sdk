@@ -4,15 +4,12 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class LiveRecord extends TeaModel {
-    // description
     @NameInMap("EndTime")
     public String endTime;
 
-    // description
     @NameInMap("RemoteAddr")
     public String remoteAddr;
 
-    // description
     @NameInMap("StartTime")
     public String startTime;
 

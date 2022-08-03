@@ -4,15 +4,12 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class LiveChannel extends TeaModel {
-    // description
     @NameInMap("Description")
     public String description;
 
-    // description
     @NameInMap("LastModified")
     public String lastModified;
 
-    // description
     @NameInMap("Name")
     public String name;
 
@@ -22,7 +19,6 @@ public class LiveChannel extends TeaModel {
     @NameInMap("PublishUrls")
     public LiveChannelPublishUrls publishUrls;
 
-    // description
     @NameInMap("Status")
     public String status;
 

@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class ReplicationRules extends TeaModel {
-    // the container of id
     @NameInMap("ID")
     public java.util.List<String> ids;
 

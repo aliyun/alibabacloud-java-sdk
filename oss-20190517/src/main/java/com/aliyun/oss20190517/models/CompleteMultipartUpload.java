@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class CompleteMultipartUpload extends TeaModel {
-    // description
     @NameInMap("Part")
     public java.util.List<Part> part;
 

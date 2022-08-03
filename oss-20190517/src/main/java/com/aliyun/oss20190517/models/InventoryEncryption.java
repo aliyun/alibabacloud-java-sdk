@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class InventoryEncryption extends TeaModel {
-    // The container that stores the CMK used in the SSE-KMS encryption method
     @NameInMap("SSE-KMS")
     public SSEKMS SSEKMS;
 
-    // The container that stores the information about the SSE-OSS encryption method
     @NameInMap("SSE-OSS")
     public SSEOSS SSEOSS;
 

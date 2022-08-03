@@ -4,19 +4,15 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class DeletedObject extends TeaModel {
-    // description
     @NameInMap("DeleteMarker")
     public Boolean deleteMarker;
 
-    // description
     @NameInMap("DeleteMarkerVersionId")
     public String deleteMarkerVersionId;
 
-    // description
     @NameInMap("Key")
     public String key;
 
-    // description
     @NameInMap("VersionId")
     public String versionId;
 

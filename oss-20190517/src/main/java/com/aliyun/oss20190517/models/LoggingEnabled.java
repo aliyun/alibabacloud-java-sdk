@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class LoggingEnabled extends TeaModel {
-    // 存储访问日志的存储空间
     @NameInMap("TargetBucket")
     public String targetBucket;
 
-    // 保存的日志文件前缀
     @NameInMap("TargetPrefix")
     public String targetPrefix;
 

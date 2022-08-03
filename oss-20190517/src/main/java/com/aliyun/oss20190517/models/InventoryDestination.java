@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class InventoryDestination extends TeaModel {
-    // The information about the bucket that stores the exported inventory list
     @NameInMap("OSSBucketDestination")
     public InventoryOSSBucketDestination OSSBucketDestination;
 

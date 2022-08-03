@@ -7,22 +7,18 @@ public class OutputSerialization extends TeaModel {
     @NameInMap("CSV")
     public CSVOutput csv;
 
-    // description
     @NameInMap("EnablePayloadCrc")
     public Boolean enablePayloadCrc;
 
     @NameInMap("JSON")
     public JSONOutput json;
 
-    // description
     @NameInMap("KeepAllColumns")
     public Boolean keepAllColumns;
 
-    // description
     @NameInMap("OutputHeader")
     public Boolean outputHeader;
 
-    // description
     @NameInMap("OutputRawData")
     public Boolean outputRawData;
 

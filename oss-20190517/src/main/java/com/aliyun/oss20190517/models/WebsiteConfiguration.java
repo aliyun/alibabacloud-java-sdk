@@ -10,7 +10,6 @@ public class WebsiteConfiguration extends TeaModel {
     @NameInMap("IndexDocument")
     public IndexDocument indexDocument;
 
-    // description
     @NameInMap("RoutingRules")
     public RoutingRules routingRules;
 
@@ -44,7 +43,6 @@ public class WebsiteConfiguration extends TeaModel {
     }
 
     public static class RoutingRules extends TeaModel {
-        // description
         @NameInMap("RoutingRule")
         public java.util.List<RoutingRule> routingRule;
 

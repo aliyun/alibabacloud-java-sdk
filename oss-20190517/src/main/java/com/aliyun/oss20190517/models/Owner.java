@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class Owner extends TeaModel {
-    // The display name of the owner
     @NameInMap("DisplayName")
     public String displayName;
 
-    // The ID of the owner
     @NameInMap("ID")
     public String ID;
 

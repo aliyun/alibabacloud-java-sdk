@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class InventoryFilter extends TeaModel {
-    // The prefix specified in the inventory rule
     @NameInMap("Prefix")
     public String prefix;
 

@@ -7,7 +7,6 @@ public class SelectMetaRequest extends TeaModel {
     @NameInMap("InputSerialization")
     public InputSerialization inputSerialization;
 
-    // description
     @NameInMap("OverwriteIfExists")
     public Boolean overwriteIfExists;
 

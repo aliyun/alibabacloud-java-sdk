@@ -4,19 +4,15 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class Part extends TeaModel {
-    // description
     @NameInMap("ETag")
     public String ETag;
 
-    // description
     @NameInMap("LastModified")
     public String lastModified;
 
-    // description
     @NameInMap("PartNumber")
     public Long partNumber;
 
-    // description
     @NameInMap("Size")
     public Long size;
 

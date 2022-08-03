@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class TagSet extends TeaModel {
-    // A short description of struct
     @NameInMap("Tag")
     public java.util.List<Tag> tags;
 

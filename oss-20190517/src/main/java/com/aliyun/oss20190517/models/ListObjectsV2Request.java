@@ -7,22 +7,18 @@ public class ListObjectsV2Request extends TeaModel {
     @NameInMap("continuation-token")
     public String continuationToken;
 
-    // The character used to group objects by name
     @NameInMap("delimiter")
     public String delimiter;
 
-    // The encoding type of the object name in the response
     @NameInMap("encoding-type")
     public String encodingType;
 
     @NameInMap("fetch-owner")
     public Boolean fetchOwner;
 
-    // The maximum number of objects to return
     @NameInMap("max-keys")
     public Long maxKeys;
 
-    // The prefix that the returned object names must contain
     @NameInMap("prefix")
     public String prefix;
 

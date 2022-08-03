@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class ExtendWormConfiguration extends TeaModel {
-    // The number of days for which objects can be retained
     @NameInMap("RetentionPeriodInDays")
     public Integer retentionPeriodInDays;
 

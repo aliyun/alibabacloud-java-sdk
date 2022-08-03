@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class GetObjectAclRequest extends TeaModel {
-    // The version of a object
     @NameInMap("versionId")
     public String versionId;
 

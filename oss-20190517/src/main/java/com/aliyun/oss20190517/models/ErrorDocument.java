@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class ErrorDocument extends TeaModel {
-    // description
     @NameInMap("HttpStatus")
     public String httpStatus;
 
-    // description
     @NameInMap("Key")
     public String key;
 

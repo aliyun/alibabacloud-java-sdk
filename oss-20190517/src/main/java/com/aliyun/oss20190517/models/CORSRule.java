@@ -4,23 +4,18 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class CORSRule extends TeaModel {
-    // description
     @NameInMap("AllowedHeader")
     public String allowedHeader;
 
-    // description
     @NameInMap("AllowedMethod")
     public java.util.List<String> allowedMethod;
 
-    // description
     @NameInMap("AllowedOrigin")
     public java.util.List<String> allowedOrigin;
 
-    // description
     @NameInMap("ExposeHeader")
     public java.util.List<String> exposeHeader;
 
-    // description
     @NameInMap("MaxAgeSeconds")
     public Long maxAgeSeconds;
 

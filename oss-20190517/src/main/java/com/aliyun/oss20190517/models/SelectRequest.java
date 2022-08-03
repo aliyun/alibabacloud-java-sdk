@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class SelectRequest extends TeaModel {
-    // description
     @NameInMap("Expression")
     public String expression;
 

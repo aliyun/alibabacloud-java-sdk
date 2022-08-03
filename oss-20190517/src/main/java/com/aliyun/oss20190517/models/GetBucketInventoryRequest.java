@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class GetBucketInventoryRequest extends TeaModel {
-    // The ID of the inventory rule to query
     @NameInMap("inventoryId")
     public String inventoryId;
 

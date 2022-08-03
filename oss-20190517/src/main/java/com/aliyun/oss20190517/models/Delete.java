@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class Delete extends TeaModel {
-    // description
     @NameInMap("Object")
     public java.util.List<ObjectIdentifier> objects;
 
-    // description
     @NameInMap("Quiet")
     public Boolean quiet;
 

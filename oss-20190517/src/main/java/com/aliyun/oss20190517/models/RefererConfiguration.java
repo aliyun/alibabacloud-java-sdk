@@ -4,15 +4,12 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class RefererConfiguration extends TeaModel {
-    // 是否允许Referer字段为空的请求访问
     @NameInMap("AllowEmptyReferer")
     public Boolean allowEmptyReferer;
 
-    // description
     @NameInMap("AllowTruncateQueryString")
     public Boolean allowTruncateQueryString;
 
-    // 保存Referer访问白名单
     @NameInMap("RefererList")
     public RefererList refererList;
 
@@ -46,7 +43,6 @@ public class RefererConfiguration extends TeaModel {
     }
 
     public static class RefererList extends TeaModel {
-        // 指定一条Referer访问白名单
         @NameInMap("Referer")
         public java.util.List<String> referer;
 

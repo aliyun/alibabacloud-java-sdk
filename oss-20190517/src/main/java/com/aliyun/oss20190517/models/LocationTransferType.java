@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class LocationTransferType extends TeaModel {
-    // The region in which the destination bucket can be located
     @NameInMap("Location")
     public String location;
 
-    // The container that stores the transmission type
     @NameInMap("TransferTypes")
     public TransferTypes transferTypes;
 
@@ -34,7 +32,6 @@ public class LocationTransferType extends TeaModel {
     }
 
     public static class TransferTypes extends TeaModel {
-        // The link used to transfer data in Cross-region replication
         @NameInMap("Type")
         public String type;
 

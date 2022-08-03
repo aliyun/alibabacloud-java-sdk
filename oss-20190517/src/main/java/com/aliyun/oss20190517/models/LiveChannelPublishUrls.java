@@ -4,7 +4,6 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class LiveChannelPublishUrls extends TeaModel {
-    // description
     @NameInMap("Url")
     public String url;
 

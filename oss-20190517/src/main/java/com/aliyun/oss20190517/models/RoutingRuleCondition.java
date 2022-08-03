@@ -4,11 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class RoutingRuleCondition extends TeaModel {
-    // A short description of struct
     @NameInMap("HttpErrorCodeReturnedEquals")
     public Long httpErrorCodeReturnedEquals;
 
-    // A short description of struct
     @NameInMap("KeyPrefixEquals")
     public String keyPrefixEquals;
 
