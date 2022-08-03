@@ -4,23 +4,18 @@ package com.aliyun.umeng_apm20220214.models;
 import com.aliyun.tea.*;
 
 public class GetSymUploadParamResponseBody extends TeaModel {
-    // code
     @NameInMap("code")
     public Long code;
 
-    // data
     @NameInMap("data")
     public GetSymUploadParamResponseBodyData data;
 
-    // 异常描述
     @NameInMap("msg")
     public String msg;
 
-    // 是否成功
     @NameInMap("success")
     public Boolean success;
 
-    // traceId
     @NameInMap("traceId")
     public String traceId;
 
@@ -70,27 +65,21 @@ public class GetSymUploadParamResponseBody extends TeaModel {
     }
 
     public static class GetSymUploadParamResponseBodyData extends TeaModel {
-        // 文件上传表单必要参数
         @NameInMap("accessKeyId")
         public String accessKeyId;
 
-        // 文件上传表单必要参数
         @NameInMap("callback")
         public String callback;
 
-        // 文件上传表单必要参数
         @NameInMap("key")
         public String key;
 
-        // 文件上传表单必要参数
         @NameInMap("policy")
         public String policy;
 
-        // 文件上传表单必要参数
         @NameInMap("signature")
         public String signature;
 
-        // 文件上传地址
         @NameInMap("uploadAddress")
         public String uploadAddress;
 
