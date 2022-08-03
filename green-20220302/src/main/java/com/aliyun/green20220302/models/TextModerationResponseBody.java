@@ -13,7 +13,6 @@ public class TextModerationResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -61,9 +60,6 @@ public class TextModerationResponseBody extends TeaModel {
         @NameInMap("reason")
         public String reason;
 
-        @NameInMap("suggestion")
-        public String suggestion;
-
         public static TextModerationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             TextModerationResponseBodyData self = new TextModerationResponseBodyData();
             return TeaModel.build(map, self);
@@ -83,14 +79,6 @@ public class TextModerationResponseBody extends TeaModel {
         }
         public String getReason() {
             return this.reason;
-        }
-
-        public TextModerationResponseBodyData setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
         }
 
     }
