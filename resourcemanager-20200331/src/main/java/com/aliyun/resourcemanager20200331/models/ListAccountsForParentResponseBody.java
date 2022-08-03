@@ -64,6 +64,55 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListAccountsForParentResponseBodyAccountsAccountTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListAccountsForParentResponseBodyAccountsAccountTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            ListAccountsForParentResponseBodyAccountsAccountTagsTag self = new ListAccountsForParentResponseBodyAccountsAccountTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAccountsForParentResponseBodyAccountsAccountTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAccountsForParentResponseBodyAccountsAccountTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListAccountsForParentResponseBodyAccountsAccountTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<ListAccountsForParentResponseBodyAccountsAccountTagsTag> tag;
+
+        public static ListAccountsForParentResponseBodyAccountsAccountTags build(java.util.Map<String, ?> map) throws Exception {
+            ListAccountsForParentResponseBodyAccountsAccountTags self = new ListAccountsForParentResponseBodyAccountsAccountTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAccountsForParentResponseBodyAccountsAccountTags setTag(java.util.List<ListAccountsForParentResponseBodyAccountsAccountTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<ListAccountsForParentResponseBodyAccountsAccountTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class ListAccountsForParentResponseBodyAccountsAccount extends TeaModel {
         @NameInMap("AccountId")
         public String accountId;
@@ -88,6 +137,9 @@ public class ListAccountsForParentResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public ListAccountsForParentResponseBodyAccountsAccountTags tags;
 
         @NameInMap("Type")
         public String type;
@@ -159,6 +211,14 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListAccountsForParentResponseBodyAccountsAccount setTags(ListAccountsForParentResponseBodyAccountsAccountTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public ListAccountsForParentResponseBodyAccountsAccountTags getTags() {
+            return this.tags;
         }
 
         public ListAccountsForParentResponseBodyAccountsAccount setType(String type) {

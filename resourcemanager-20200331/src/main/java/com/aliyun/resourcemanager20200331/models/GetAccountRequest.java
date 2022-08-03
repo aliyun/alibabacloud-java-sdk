@@ -7,6 +7,9 @@ public class GetAccountRequest extends TeaModel {
     @NameInMap("AccountId")
     public String accountId;
 
+    @NameInMap("IncludeTags")
+    public Boolean includeTags;
+
     public static GetAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAccountRequest self = new GetAccountRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class GetAccountRequest extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
+    }
+
+    public GetAccountRequest setIncludeTags(Boolean includeTags) {
+        this.includeTags = includeTags;
+        return this;
+    }
+    public Boolean getIncludeTags() {
+        return this.includeTags;
     }
 
 }

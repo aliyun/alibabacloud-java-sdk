@@ -64,6 +64,55 @@ public class ListAccountsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListAccountsResponseBodyAccountsAccountTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListAccountsResponseBodyAccountsAccountTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            ListAccountsResponseBodyAccountsAccountTagsTag self = new ListAccountsResponseBodyAccountsAccountTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAccountsResponseBodyAccountsAccountTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAccountsResponseBodyAccountsAccountTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListAccountsResponseBodyAccountsAccountTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<ListAccountsResponseBodyAccountsAccountTagsTag> tag;
+
+        public static ListAccountsResponseBodyAccountsAccountTags build(java.util.Map<String, ?> map) throws Exception {
+            ListAccountsResponseBodyAccountsAccountTags self = new ListAccountsResponseBodyAccountsAccountTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAccountsResponseBodyAccountsAccountTags setTag(java.util.List<ListAccountsResponseBodyAccountsAccountTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<ListAccountsResponseBodyAccountsAccountTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class ListAccountsResponseBodyAccountsAccount extends TeaModel {
         @NameInMap("AccountId")
         public String accountId;
@@ -91,6 +140,9 @@ public class ListAccountsResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public ListAccountsResponseBodyAccountsAccountTags tags;
 
         @NameInMap("Type")
         public String type;
@@ -170,6 +222,14 @@ public class ListAccountsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListAccountsResponseBodyAccountsAccount setTags(ListAccountsResponseBodyAccountsAccountTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public ListAccountsResponseBodyAccountsAccountTags getTags() {
+            return this.tags;
         }
 
         public ListAccountsResponseBodyAccountsAccount setType(String type) {

@@ -31,6 +31,36 @@ public class GetAccountResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetAccountResponseBodyAccountTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetAccountResponseBodyAccountTags build(java.util.Map<String, ?> map) throws Exception {
+            GetAccountResponseBodyAccountTags self = new GetAccountResponseBodyAccountTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAccountResponseBodyAccountTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetAccountResponseBodyAccountTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetAccountResponseBodyAccount extends TeaModel {
         @NameInMap("AccountId")
         public String accountId;
@@ -53,6 +83,9 @@ public class GetAccountResponseBody extends TeaModel {
         @NameInMap("JoinTime")
         public String joinTime;
 
+        @NameInMap("Location")
+        public String location;
+
         @NameInMap("ModifyTime")
         public String modifyTime;
 
@@ -64,6 +97,9 @@ public class GetAccountResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<GetAccountResponseBodyAccountTags> tags;
 
         @NameInMap("Type")
         public String type;
@@ -129,6 +165,14 @@ public class GetAccountResponseBody extends TeaModel {
             return this.joinTime;
         }
 
+        public GetAccountResponseBodyAccount setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
         public GetAccountResponseBodyAccount setModifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
             return this;
@@ -159,6 +203,14 @@ public class GetAccountResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetAccountResponseBodyAccount setTags(java.util.List<GetAccountResponseBodyAccountTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetAccountResponseBodyAccountTags> getTags() {
+            return this.tags;
         }
 
         public GetAccountResponseBodyAccount setType(String type) {

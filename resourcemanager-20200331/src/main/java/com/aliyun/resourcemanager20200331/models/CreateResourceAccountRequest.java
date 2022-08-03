@@ -16,6 +16,9 @@ public class CreateResourceAccountRequest extends TeaModel {
     @NameInMap("PayerAccountId")
     public String payerAccountId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateResourceAccountRequestTag> tag;
+
     public static CreateResourceAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateResourceAccountRequest self = new CreateResourceAccountRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,44 @@ public class CreateResourceAccountRequest extends TeaModel {
     }
     public String getPayerAccountId() {
         return this.payerAccountId;
+    }
+
+    public CreateResourceAccountRequest setTag(java.util.List<CreateResourceAccountRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateResourceAccountRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateResourceAccountRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateResourceAccountRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateResourceAccountRequestTag self = new CreateResourceAccountRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateResourceAccountRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateResourceAccountRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
