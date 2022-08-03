@@ -154,6 +154,9 @@ public class GetKnowledgeResponseBody extends TeaModel {
         @NameInMap("SimilarQuestionId")
         public Long similarQuestionId;
 
+        @NameInMap("SimilarQuestionLevel")
+        public String similarQuestionLevel;
+
         @NameInMap("SimilarQuestionTitle")
         public String similarQuestionTitle;
 
@@ -211,6 +214,14 @@ public class GetKnowledgeResponseBody extends TeaModel {
         }
         public Long getSimilarQuestionId() {
             return this.similarQuestionId;
+        }
+
+        public GetKnowledgeResponseBodyKnowledgeSimilarQuestions setSimilarQuestionLevel(String similarQuestionLevel) {
+            this.similarQuestionLevel = similarQuestionLevel;
+            return this;
+        }
+        public String getSimilarQuestionLevel() {
+            return this.similarQuestionLevel;
         }
 
         public GetKnowledgeResponseBodyKnowledgeSimilarQuestions setSimilarQuestionTitle(String similarQuestionTitle) {

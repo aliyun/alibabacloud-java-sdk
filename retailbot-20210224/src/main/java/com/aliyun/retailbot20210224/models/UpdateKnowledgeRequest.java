@@ -4,6 +4,9 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UpdateKnowledgeRequest extends TeaModel {
+    @NameInMap("InstanceType")
+    public String instanceType;
+
     @NameInMap("Knowledge")
     public UpdateKnowledgeRequestKnowledge knowledge;
 
@@ -19,6 +22,14 @@ public class UpdateKnowledgeRequest extends TeaModel {
     public static UpdateKnowledgeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateKnowledgeRequest self = new UpdateKnowledgeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateKnowledgeRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public UpdateKnowledgeRequest setKnowledge(UpdateKnowledgeRequestKnowledge knowledge) {
