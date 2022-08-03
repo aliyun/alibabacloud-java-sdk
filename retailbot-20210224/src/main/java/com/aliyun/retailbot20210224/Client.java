@@ -1168,6 +1168,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetKnowledgeResponse getKnowledgeWithOptions(GetKnowledgeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            body.put("InstanceType", request.instanceType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.knowledgeId)) {
             body.put("KnowledgeId", request.knowledgeId);
         }
@@ -1455,6 +1459,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListActiveGroupsResponse listActiveGroups(ListActiveGroupsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listActiveGroupsWithOptions(request, runtime);
+    }
+
+    public ListAgingResponse listAgingWithOptions(ListAgingRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.afterStartTime)) {
+            body.put("AfterStartTime", request.afterStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agingId)) {
+            body.put("AgingId", request.agingId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agingName)) {
+            body.put("AgingName", request.agingName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.beforeEndTime)) {
+            body.put("BeforeEndTime", request.beforeEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            body.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            body.put("InstanceType", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.robotCode)) {
+            body.put("RobotCode", request.robotCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAging"),
+            new TeaPair("version", "2021-02-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgingResponse());
+    }
+
+    public ListAgingResponse listAging(ListAgingRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listAgingWithOptions(request, runtime);
     }
 
     public ListCategoriesResponse listCategoriesWithOptions(ListCategoriesRequest request, RuntimeOptions runtime) throws Exception {
@@ -3114,6 +3179,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateKnowledgeResponse updateKnowledgeWithOptions(UpdateKnowledgeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            body.put("InstanceType", request.instanceType);
+        }
+
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.knowledge))) {
             bodyFlat.put("Knowledge", request.knowledge);
