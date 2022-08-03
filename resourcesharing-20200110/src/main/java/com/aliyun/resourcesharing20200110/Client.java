@@ -32,6 +32,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public AcceptResourceShareInvitationResponse acceptResourceShareInvitationWithOptions(AcceptResourceShareInvitationRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceShareInvitationId)) {
+            query.put("ResourceShareInvitationId", request.resourceShareInvitationId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AcceptResourceShareInvitation"),
+            new TeaPair("version", "2020-01-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AcceptResourceShareInvitationResponse());
+    }
+
+    public AcceptResourceShareInvitationResponse acceptResourceShareInvitation(AcceptResourceShareInvitationRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.acceptResourceShareInvitationWithOptions(request, runtime);
+    }
+
     public AssociateResourceShareResponse associateResourceShareWithOptions(AssociateResourceShareRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -72,6 +101,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateResourceShareResponse createResourceShareWithOptions(CreateResourceShareRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowExternalTargets)) {
+            query.put("AllowExternalTargets", request.allowExternalTargets);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceShareName)) {
             query.put("ResourceShareName", request.resourceShareName);
         }
@@ -167,6 +200,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DisassociateResourceShareResponse disassociateResourceShareWithOptions(DisassociateResourceShareRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwner)) {
+            query.put("ResourceOwner", request.resourceOwner);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceShareId)) {
             query.put("ResourceShareId", request.resourceShareId);
         }
@@ -273,6 +310,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListResourceShareAssociationsResponse listResourceShareAssociations(ListResourceShareAssociationsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listResourceShareAssociationsWithOptions(request, runtime);
+    }
+
+    public ListResourceShareInvitationsResponse listResourceShareInvitationsWithOptions(ListResourceShareInvitationsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceShareIds)) {
+            query.put("ResourceShareIds", request.resourceShareIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceShareInvitationIds)) {
+            query.put("ResourceShareInvitationIds", request.resourceShareInvitationIds);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListResourceShareInvitations"),
+            new TeaPair("version", "2020-01-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceShareInvitationsResponse());
+    }
+
+    public ListResourceShareInvitationsResponse listResourceShareInvitations(ListResourceShareInvitationsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listResourceShareInvitationsWithOptions(request, runtime);
     }
 
     public ListResourceSharesResponse listResourceSharesWithOptions(ListResourceSharesRequest request, RuntimeOptions runtime) throws Exception {
@@ -430,9 +508,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listSharedTargetsWithOptions(request, runtime);
     }
 
+    public RejectResourceShareInvitationResponse rejectResourceShareInvitationWithOptions(RejectResourceShareInvitationRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceShareInvitationId)) {
+            query.put("ResourceShareInvitationId", request.resourceShareInvitationId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RejectResourceShareInvitation"),
+            new TeaPair("version", "2020-01-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RejectResourceShareInvitationResponse());
+    }
+
+    public RejectResourceShareInvitationResponse rejectResourceShareInvitation(RejectResourceShareInvitationRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.rejectResourceShareInvitationWithOptions(request, runtime);
+    }
+
     public UpdateResourceShareResponse updateResourceShareWithOptions(UpdateResourceShareRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowExternalTargets)) {
+            query.put("AllowExternalTargets", request.allowExternalTargets);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceShareId)) {
             query.put("ResourceShareId", request.resourceShareId);
         }

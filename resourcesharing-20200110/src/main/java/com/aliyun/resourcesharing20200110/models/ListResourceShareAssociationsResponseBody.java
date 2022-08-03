@@ -61,6 +61,9 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         @NameInMap("EntityType")
         public String entityType;
 
+        @NameInMap("External")
+        public Boolean external;
+
         @NameInMap("ResourceShareId")
         public String resourceShareId;
 
@@ -121,6 +124,14 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         }
         public String getEntityType() {
             return this.entityType;
+        }
+
+        public ListResourceShareAssociationsResponseBodyResourceShareAssociations setExternal(Boolean external) {
+            this.external = external;
+            return this;
+        }
+        public Boolean getExternal() {
+            return this.external;
         }
 
         public ListResourceShareAssociationsResponseBodyResourceShareAssociations setResourceShareId(String resourceShareId) {

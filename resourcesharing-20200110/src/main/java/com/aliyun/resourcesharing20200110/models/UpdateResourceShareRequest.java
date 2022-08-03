@@ -4,6 +4,9 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class UpdateResourceShareRequest extends TeaModel {
+    @NameInMap("AllowExternalTargets")
+    public Boolean allowExternalTargets;
+
     @NameInMap("ResourceShareId")
     public String resourceShareId;
 
@@ -13,6 +16,14 @@ public class UpdateResourceShareRequest extends TeaModel {
     public static UpdateResourceShareRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateResourceShareRequest self = new UpdateResourceShareRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateResourceShareRequest setAllowExternalTargets(Boolean allowExternalTargets) {
+        this.allowExternalTargets = allowExternalTargets;
+        return this;
+    }
+    public Boolean getAllowExternalTargets() {
+        return this.allowExternalTargets;
     }
 
     public UpdateResourceShareRequest setResourceShareId(String resourceShareId) {

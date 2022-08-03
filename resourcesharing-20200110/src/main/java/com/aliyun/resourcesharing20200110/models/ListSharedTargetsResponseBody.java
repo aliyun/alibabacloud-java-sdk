@@ -46,6 +46,9 @@ public class ListSharedTargetsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("External")
+        public Boolean external;
+
         @NameInMap("ResourceShareId")
         public String resourceShareId;
 
@@ -66,6 +69,14 @@ public class ListSharedTargetsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListSharedTargetsResponseBodySharedTargets setExternal(Boolean external) {
+            this.external = external;
+            return this;
+        }
+        public Boolean getExternal() {
+            return this.external;
         }
 
         public ListSharedTargetsResponseBodySharedTargets setResourceShareId(String resourceShareId) {
