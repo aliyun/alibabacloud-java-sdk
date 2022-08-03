@@ -49,6 +49,9 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
 
+    @NameInMap("ProxyProtocolV2Enabled")
+    public Boolean proxyProtocolV2Enabled;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -187,6 +190,14 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     }
     public String getMasterSlaveServerGroupId() {
         return this.masterSlaveServerGroupId;
+    }
+
+    public DescribeLoadBalancerUDPListenerAttributeResponseBody setProxyProtocolV2Enabled(Boolean proxyProtocolV2Enabled) {
+        this.proxyProtocolV2Enabled = proxyProtocolV2Enabled;
+        return this;
+    }
+    public Boolean getProxyProtocolV2Enabled() {
+        return this.proxyProtocolV2Enabled;
     }
 
     public DescribeLoadBalancerUDPListenerAttributeResponseBody setRequestId(String requestId) {

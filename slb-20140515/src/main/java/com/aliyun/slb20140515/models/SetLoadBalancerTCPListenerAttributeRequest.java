@@ -73,6 +73,9 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     @NameInMap("PersistenceTimeout")
     public Integer persistenceTimeout;
 
+    @NameInMap("ProxyProtocolV2Enabled")
+    public Boolean proxyProtocolV2Enabled;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -284,6 +287,14 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     }
     public Integer getPersistenceTimeout() {
         return this.persistenceTimeout;
+    }
+
+    public SetLoadBalancerTCPListenerAttributeRequest setProxyProtocolV2Enabled(Boolean proxyProtocolV2Enabled) {
+        this.proxyProtocolV2Enabled = proxyProtocolV2Enabled;
+        return this;
+    }
+    public Boolean getProxyProtocolV2Enabled() {
+        return this.proxyProtocolV2Enabled;
     }
 
     public SetLoadBalancerTCPListenerAttributeRequest setRegionId(String regionId) {
