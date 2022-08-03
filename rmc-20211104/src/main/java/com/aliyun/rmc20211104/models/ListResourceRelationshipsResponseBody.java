@@ -57,9 +57,6 @@ public class ListResourceRelationshipsResponseBody extends TeaModel {
         @NameInMap("AccountId")
         public String accountId;
 
-        @NameInMap("RelationshipType")
-        public String relationshipType;
-
         @NameInMap("SourceRegionId")
         public String sourceRegionId;
 
@@ -89,14 +86,6 @@ public class ListResourceRelationshipsResponseBody extends TeaModel {
         }
         public String getAccountId() {
             return this.accountId;
-        }
-
-        public ListResourceRelationshipsResponseBodyResourceRelationships setRelationshipType(String relationshipType) {
-            this.relationshipType = relationshipType;
-            return this;
-        }
-        public String getRelationshipType() {
-            return this.relationshipType;
         }
 
         public ListResourceRelationshipsResponseBodyResourceRelationships setSourceRegionId(String sourceRegionId) {
