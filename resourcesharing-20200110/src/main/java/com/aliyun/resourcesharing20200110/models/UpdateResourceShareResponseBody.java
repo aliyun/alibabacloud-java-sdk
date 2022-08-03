@@ -32,6 +32,9 @@ public class UpdateResourceShareResponseBody extends TeaModel {
     }
 
     public static class UpdateResourceShareResponseBodyResourceShare extends TeaModel {
+        @NameInMap("AllowExternalTargets")
+        public Boolean allowExternalTargets;
+
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -53,6 +56,14 @@ public class UpdateResourceShareResponseBody extends TeaModel {
         public static UpdateResourceShareResponseBodyResourceShare build(java.util.Map<String, ?> map) throws Exception {
             UpdateResourceShareResponseBodyResourceShare self = new UpdateResourceShareResponseBodyResourceShare();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateResourceShareResponseBodyResourceShare setAllowExternalTargets(Boolean allowExternalTargets) {
+            this.allowExternalTargets = allowExternalTargets;
+            return this;
+        }
+        public Boolean getAllowExternalTargets() {
+            return this.allowExternalTargets;
         }
 
         public UpdateResourceShareResponseBodyResourceShare setCreateTime(String createTime) {

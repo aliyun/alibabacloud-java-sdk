@@ -4,6 +4,9 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class DisassociateResourceShareRequest extends TeaModel {
+    @NameInMap("ResourceOwner")
+    public String resourceOwner;
+
     @NameInMap("ResourceShareId")
     public String resourceShareId;
 
@@ -16,6 +19,14 @@ public class DisassociateResourceShareRequest extends TeaModel {
     public static DisassociateResourceShareRequest build(java.util.Map<String, ?> map) throws Exception {
         DisassociateResourceShareRequest self = new DisassociateResourceShareRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DisassociateResourceShareRequest setResourceOwner(String resourceOwner) {
+        this.resourceOwner = resourceOwner;
+        return this;
+    }
+    public String getResourceOwner() {
+        return this.resourceOwner;
     }
 
     public DisassociateResourceShareRequest setResourceShareId(String resourceShareId) {

@@ -3,7 +3,7 @@ package com.aliyun.resourcesharing20200110.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeRegionsResponse extends TeaModel {
+public class AcceptResourceShareInvitationResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeRegionsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeRegionsResponseBody body;
+    public AcceptResourceShareInvitationResponseBody body;
 
-    public static DescribeRegionsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeRegionsResponse self = new DescribeRegionsResponse();
+    public static AcceptResourceShareInvitationResponse build(java.util.Map<String, ?> map) throws Exception {
+        AcceptResourceShareInvitationResponse self = new AcceptResourceShareInvitationResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRegionsResponse setHeaders(java.util.Map<String, String> headers) {
+    public AcceptResourceShareInvitationResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeRegionsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeRegionsResponse setStatusCode(Integer statusCode) {
+    public AcceptResourceShareInvitationResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeRegionsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeRegionsResponse setBody(DescribeRegionsResponseBody body) {
+    public AcceptResourceShareInvitationResponse setBody(AcceptResourceShareInvitationResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeRegionsResponseBody getBody() {
+    public AcceptResourceShareInvitationResponseBody getBody() {
         return this.body;
     }
 

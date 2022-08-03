@@ -3,7 +3,7 @@ package com.aliyun.resourcesharing20200110.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeRegionsResponse extends TeaModel {
+public class ListResourceShareInvitationsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeRegionsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeRegionsResponseBody body;
+    public ListResourceShareInvitationsResponseBody body;
 
-    public static DescribeRegionsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeRegionsResponse self = new DescribeRegionsResponse();
+    public static ListResourceShareInvitationsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListResourceShareInvitationsResponse self = new ListResourceShareInvitationsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRegionsResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListResourceShareInvitationsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeRegionsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeRegionsResponse setStatusCode(Integer statusCode) {
+    public ListResourceShareInvitationsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeRegionsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeRegionsResponse setBody(DescribeRegionsResponseBody body) {
+    public ListResourceShareInvitationsResponse setBody(ListResourceShareInvitationsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeRegionsResponseBody getBody() {
+    public ListResourceShareInvitationsResponseBody getBody() {
         return this.body;
     }
 
