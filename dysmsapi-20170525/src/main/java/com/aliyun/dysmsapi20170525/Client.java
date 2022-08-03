@@ -868,8 +868,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
             query.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
+            query.put("TemplateType", request.templateType);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

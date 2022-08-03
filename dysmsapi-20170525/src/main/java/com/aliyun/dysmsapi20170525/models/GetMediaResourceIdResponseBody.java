@@ -54,12 +54,23 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
     }
 
     public static class GetMediaResourceIdResponseBodyData extends TeaModel {
+        @NameInMap("ResUrlDownload")
+        public String resUrlDownload;
+
         @NameInMap("ResourceId")
         public Long resourceId;
 
         public static GetMediaResourceIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMediaResourceIdResponseBodyData self = new GetMediaResourceIdResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetMediaResourceIdResponseBodyData setResUrlDownload(String resUrlDownload) {
+            this.resUrlDownload = resUrlDownload;
+            return this;
+        }
+        public String getResUrlDownload() {
+            return this.resUrlDownload;
         }
 
         public GetMediaResourceIdResponseBodyData setResourceId(Long resourceId) {

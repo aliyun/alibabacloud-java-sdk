@@ -25,8 +25,14 @@ public class QuerySendStatisticsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SignName")
+    public String signName;
+
     @NameInMap("StartDate")
     public String startDate;
+
+    @NameInMap("TemplateType")
+    public Integer templateType;
 
     public static QuerySendStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySendStatisticsRequest self = new QuerySendStatisticsRequest();
@@ -89,12 +95,28 @@ public class QuerySendStatisticsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public QuerySendStatisticsRequest setSignName(String signName) {
+        this.signName = signName;
+        return this;
+    }
+    public String getSignName() {
+        return this.signName;
+    }
+
     public QuerySendStatisticsRequest setStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     public String getStartDate() {
         return this.startDate;
+    }
+
+    public QuerySendStatisticsRequest setTemplateType(Integer templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public Integer getTemplateType() {
+        return this.templateType;
     }
 
 }
