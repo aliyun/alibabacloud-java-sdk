@@ -31,14 +31,8 @@ public class TestProRequest extends TeaModel {
     @NameInMap("testField6")
     public String testField6;
 
-    @NameInMap("testField8")
-    public String testField8;
-
     @NameInMap("testField3")
     public String testField3;
-
-    @NameInMap("testField7")
-    public String testField7;
 
     public static TestProRequest build(java.util.Map<String, ?> map) throws Exception {
         TestProRequest self = new TestProRequest();
@@ -117,28 +111,12 @@ public class TestProRequest extends TeaModel {
         return this.testField6;
     }
 
-    public TestProRequest setTestField8(String testField8) {
-        this.testField8 = testField8;
-        return this;
-    }
-    public String getTestField8() {
-        return this.testField8;
-    }
-
     public TestProRequest setTestField3(String testField3) {
         this.testField3 = testField3;
         return this;
     }
     public String getTestField3() {
         return this.testField3;
-    }
-
-    public TestProRequest setTestField7(String testField7) {
-        this.testField7 = testField7;
-        return this;
-    }
-    public String getTestField7() {
-        return this.testField7;
     }
 
 }
