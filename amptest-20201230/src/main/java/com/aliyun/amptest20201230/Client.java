@@ -438,6 +438,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Four", request.four);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.jack)) {
+            query.put("Jack", request.jack);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.list)) {
             query.put("List", request.list);
         }
