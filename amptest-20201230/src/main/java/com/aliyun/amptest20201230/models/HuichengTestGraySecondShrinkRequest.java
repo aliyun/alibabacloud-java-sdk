@@ -4,7 +4,6 @@ package com.aliyun.amptest20201230.models;
 import com.aliyun.tea.*;
 
 public class HuichengTestGraySecondShrinkRequest extends TeaModel {
-    // home
     @NameInMap("Home")
     public String homeShrink;
 

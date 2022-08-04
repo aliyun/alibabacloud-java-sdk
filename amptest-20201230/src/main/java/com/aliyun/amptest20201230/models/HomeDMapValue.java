@@ -4,11 +4,9 @@ package com.aliyun.amptest20201230.models;
 import com.aliyun.tea.*;
 
 public class HomeDMapValue extends TeaModel {
-    // detail
     @NameInMap("Detail")
     public String detail;
 
-    // location
     @NameInMap("Location")
     public HomeDMapValueLocation location;
 
@@ -34,11 +32,9 @@ public class HomeDMapValue extends TeaModel {
     }
 
     public static class HomeDMapValueLocation extends TeaModel {
-        // late
         @NameInMap("Late")
         public Long late;
 
-        // Lon
         @NameInMap("Lon")
         public Long lon;
 

@@ -28,13 +28,15 @@ public class HuichengetRequest extends TeaModel {
     @NameInMap("Four")
     public String four;
 
+    @NameInMap("Jack")
+    public String jack;
+
     @NameInMap("List")
     public String list;
 
     @NameInMap("NewName")
     public String newName;
 
-    // 发阿迪
     @NameInMap("Nigh")
     public String nigh;
 
@@ -144,6 +146,14 @@ public class HuichengetRequest extends TeaModel {
     }
     public String getFour() {
         return this.four;
+    }
+
+    public HuichengetRequest setJack(String jack) {
+        this.jack = jack;
+        return this;
+    }
+    public String getJack() {
+        return this.jack;
     }
 
     public HuichengetRequest setList(String list) {

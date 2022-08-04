@@ -4,7 +4,6 @@ package com.aliyun.amptest20201230.models;
 import com.aliyun.tea.*;
 
 public class HuichengTestGrayFifthRequest extends TeaModel {
-    // home
     @NameInMap("Home")
     public HuichengTestGrayFifthRequestHome home;
 
@@ -22,11 +21,9 @@ public class HuichengTestGrayFifthRequest extends TeaModel {
     }
 
     public static class HuichengTestGrayFifthRequestHomeAddressLocation extends TeaModel {
-        // late
         @NameInMap("Late")
         public Long late;
 
-        // lon
         @NameInMap("Lon")
         public Long lon;
 
@@ -54,7 +51,6 @@ public class HuichengTestGrayFifthRequest extends TeaModel {
     }
 
     public static class HuichengTestGrayFifthRequestHomeAddressT extends TeaModel {
-        // class
         @NameInMap("Class")
         public String _class;
 
@@ -74,15 +70,12 @@ public class HuichengTestGrayFifthRequest extends TeaModel {
     }
 
     public static class HuichengTestGrayFifthRequestHomeAddress extends TeaModel {
-        // detail
         @NameInMap("Detail")
         public String detail;
 
-        // asdasd
         @NameInMap("Location")
         public HuichengTestGrayFifthRequestHomeAddressLocation location;
 
-        // t
         @NameInMap("T")
         public HuichengTestGrayFifthRequestHomeAddressT t;
 
@@ -118,11 +111,9 @@ public class HuichengTestGrayFifthRequest extends TeaModel {
     }
 
     public static class HuichengTestGrayFifthRequestHomeLocations extends TeaModel {
-        // asdasd
         @NameInMap("Late")
         public Long late;
 
-        // sadasd
         @NameInMap("Lon")
         public Long lon;
 
@@ -150,7 +141,6 @@ public class HuichengTestGrayFifthRequest extends TeaModel {
     }
 
     public static class HuichengTestGrayFifthRequestHomeT extends TeaModel {
-        // class
         @NameInMap("Class")
         public String _class;
 
@@ -170,27 +160,21 @@ public class HuichengTestGrayFifthRequest extends TeaModel {
     }
 
     public static class HuichengTestGrayFifthRequestHome extends TeaModel {
-        // asdasd
         @NameInMap("Address")
         public HuichengTestGrayFifthRequestHomeAddress address;
 
-        // dMap
         @NameInMap("DMap")
         public java.util.Map<String, HomeDMapValue> DMap;
 
-        // asdasd
         @NameInMap("Locations")
         public java.util.List<HuichengTestGrayFifthRequestHomeLocations> locations;
 
-        // NameToAge
         @NameInMap("NameToAge")
         public java.util.Map<String, Integer> nameToAge;
 
-        // asdasd
         @NameInMap("PhoneNumbers")
         public java.util.List<String> phoneNumbers;
 
-        // t
         @NameInMap("T")
         public HuichengTestGrayFifthRequestHomeT t;
 
