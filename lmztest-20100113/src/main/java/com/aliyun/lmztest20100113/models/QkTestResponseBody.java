@@ -4,7 +4,6 @@ package com.aliyun.lmztest20100113.models;
 import com.aliyun.tea.*;
 
 public class QkTestResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

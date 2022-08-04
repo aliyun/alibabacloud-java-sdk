@@ -16,26 +16,14 @@ public class GetProductComponentDetailRequest extends TeaModel {
     @NameInMap("testField")
     public String testField;
 
-    @NameInMap("TestField4")
-    public String testField4;
+    @NameInMap("TestF1")
+    public String testF1;
 
-    @NameInMap("TestField5")
-    public String testField5;
-
-    @NameInMap("TestField51")
-    public String testField51;
-
-    @NameInMap("TestField59")
-    public String testField59;
-
-    @NameInMap("TestField6")
-    public String testField6;
+    @NameInMap("TestRelease")
+    public String testRelease;
 
     @NameInMap("testField2")
     public String testField2;
-
-    @NameInMap("testField3")
-    public String testField3;
 
     public static GetProductComponentDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetProductComponentDetailRequest self = new GetProductComponentDetailRequest();
@@ -74,44 +62,20 @@ public class GetProductComponentDetailRequest extends TeaModel {
         return this.testField;
     }
 
-    public GetProductComponentDetailRequest setTestField4(String testField4) {
-        this.testField4 = testField4;
+    public GetProductComponentDetailRequest setTestF1(String testF1) {
+        this.testF1 = testF1;
         return this;
     }
-    public String getTestField4() {
-        return this.testField4;
+    public String getTestF1() {
+        return this.testF1;
     }
 
-    public GetProductComponentDetailRequest setTestField5(String testField5) {
-        this.testField5 = testField5;
+    public GetProductComponentDetailRequest setTestRelease(String testRelease) {
+        this.testRelease = testRelease;
         return this;
     }
-    public String getTestField5() {
-        return this.testField5;
-    }
-
-    public GetProductComponentDetailRequest setTestField51(String testField51) {
-        this.testField51 = testField51;
-        return this;
-    }
-    public String getTestField51() {
-        return this.testField51;
-    }
-
-    public GetProductComponentDetailRequest setTestField59(String testField59) {
-        this.testField59 = testField59;
-        return this;
-    }
-    public String getTestField59() {
-        return this.testField59;
-    }
-
-    public GetProductComponentDetailRequest setTestField6(String testField6) {
-        this.testField6 = testField6;
-        return this;
-    }
-    public String getTestField6() {
-        return this.testField6;
+    public String getTestRelease() {
+        return this.testRelease;
     }
 
     public GetProductComponentDetailRequest setTestField2(String testField2) {
@@ -120,14 +84,6 @@ public class GetProductComponentDetailRequest extends TeaModel {
     }
     public String getTestField2() {
         return this.testField2;
-    }
-
-    public GetProductComponentDetailRequest setTestField3(String testField3) {
-        this.testField3 = testField3;
-        return this;
-    }
-    public String getTestField3() {
-        return this.testField3;
     }
 
 }
