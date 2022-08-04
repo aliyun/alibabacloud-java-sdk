@@ -3,12 +3,18 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class RefreshDBClusterStorageUsageRequest extends TeaModel {
+public class CloseAITaskRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,15 +22,20 @@ public class RefreshDBClusterStorageUsageRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SyncRealTime")
-    public Boolean syncRealTime;
-
-    public static RefreshDBClusterStorageUsageRequest build(java.util.Map<String, ?> map) throws Exception {
-        RefreshDBClusterStorageUsageRequest self = new RefreshDBClusterStorageUsageRequest();
+    public static CloseAITaskRequest build(java.util.Map<String, ?> map) throws Exception {
+        CloseAITaskRequest self = new CloseAITaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public RefreshDBClusterStorageUsageRequest setOwnerAccount(String ownerAccount) {
+    public CloseAITaskRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public CloseAITaskRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -32,7 +43,7 @@ public class RefreshDBClusterStorageUsageRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public RefreshDBClusterStorageUsageRequest setOwnerId(Long ownerId) {
+    public CloseAITaskRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -40,7 +51,15 @@ public class RefreshDBClusterStorageUsageRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public RefreshDBClusterStorageUsageRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public CloseAITaskRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CloseAITaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -48,20 +67,12 @@ public class RefreshDBClusterStorageUsageRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public RefreshDBClusterStorageUsageRequest setResourceOwnerId(Long resourceOwnerId) {
+    public CloseAITaskRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public RefreshDBClusterStorageUsageRequest setSyncRealTime(Boolean syncRealTime) {
-        this.syncRealTime = syncRealTime;
-        return this;
-    }
-    public Boolean getSyncRealTime() {
-        return this.syncRealTime;
     }
 
 }
