@@ -1,3 +1,6 @@
+2022-08-04 Version: 1.0.10
+- EndPoint.
+
 2021-12-21 Version: 1.0.8
 - Add query application groups.
 
