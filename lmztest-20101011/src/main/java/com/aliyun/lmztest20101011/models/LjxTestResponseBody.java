@@ -4,30 +4,24 @@ package com.aliyun.lmztest20101011.models;
 import com.aliyun.tea.*;
 
 public class LjxTestResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public Integer code;
 
-    // id
     @NameInMap("Id")
     public String id;
 
-    // longList
     @NameInMap("LongList")
     public java.util.List<Long> longList;
 
-    // maps
     @NameInMap("Maps")
     public java.util.List<LjxTestResponseBodyMaps> maps;
 
-    // name
     @NameInMap("Name")
     public String name;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    // stringList
     @NameInMap("StringList")
     public java.util.List<String> stringList;
 
@@ -104,7 +98,6 @@ public class LjxTestResponseBody extends TeaModel {
     }
 
     public static class LjxTestResponseBodyMaps extends TeaModel {
-        // param0
         @NameInMap("Param0")
         public java.util.Map<String, String> param0;
 

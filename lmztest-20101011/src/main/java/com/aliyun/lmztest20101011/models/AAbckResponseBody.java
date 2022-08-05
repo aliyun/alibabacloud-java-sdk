@@ -4,7 +4,6 @@ package com.aliyun.lmztest20101011.models;
 import com.aliyun.tea.*;
 
 public class AAbckResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

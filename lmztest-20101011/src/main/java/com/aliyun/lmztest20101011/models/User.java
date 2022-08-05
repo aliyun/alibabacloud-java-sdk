@@ -4,11 +4,9 @@ package com.aliyun.lmztest20101011.models;
 import com.aliyun.tea.*;
 
 public class User extends TeaModel {
-    // address
     @NameInMap("Address")
     public String address;
 
-    // id
     @NameInMap("Id")
     public String id;
 

@@ -4,7 +4,6 @@ package com.aliyun.lmztest20101011.models;
 import com.aliyun.tea.*;
 
 public class StructThree extends TeaModel {
-    // name
     @NameInMap("name")
     public String name;
 

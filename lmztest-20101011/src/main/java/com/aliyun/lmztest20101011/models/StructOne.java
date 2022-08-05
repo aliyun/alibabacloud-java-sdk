@@ -4,7 +4,6 @@ package com.aliyun.lmztest20101011.models;
 import com.aliyun.tea.*;
 
 public class StructOne extends TeaModel {
-    // id
     @NameInMap("id")
     public String id;
 

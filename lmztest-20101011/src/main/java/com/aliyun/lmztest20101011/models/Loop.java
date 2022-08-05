@@ -4,14 +4,12 @@ package com.aliyun.lmztest20101011.models;
 import com.aliyun.tea.*;
 
 public class Loop extends TeaModel {
-    // id
     @NameInMap("id")
     public String id;
 
     @NameInMap("loop")
     public Loop loop;
 
-    // name
     @NameInMap("name")
     public String name;
 
