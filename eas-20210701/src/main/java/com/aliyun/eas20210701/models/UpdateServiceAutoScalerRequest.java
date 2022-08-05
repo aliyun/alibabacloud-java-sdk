@@ -4,13 +4,13 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceAutoScalerRequest extends TeaModel {
-    @NameInMap("Max")
+    @NameInMap("max")
     public Integer max;
 
-    @NameInMap("Min")
+    @NameInMap("min")
     public Integer min;
 
-    @NameInMap("Strategies")
+    @NameInMap("strategies")
     public UpdateServiceAutoScalerRequestStrategies strategies;
 
     public static UpdateServiceAutoScalerRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -43,10 +43,10 @@ public class UpdateServiceAutoScalerRequest extends TeaModel {
     }
 
     public static class UpdateServiceAutoScalerRequestStrategies extends TeaModel {
-        @NameInMap("Cpu")
+        @NameInMap("cpu")
         public Float cpu;
 
-        @NameInMap("Qps")
+        @NameInMap("qps")
         public Float qps;
 
         public static UpdateServiceAutoScalerRequestStrategies build(java.util.Map<String, ?> map) throws Exception {

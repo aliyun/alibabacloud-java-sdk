@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceAutoScalerResponseBody extends TeaModel {
+    @NameInMap("Behavior")
+    public java.util.Map<String, ?> behavior;
+
     @NameInMap("CurrentValues")
     public java.util.Map<String, ?> currentValues;
 
@@ -25,6 +28,14 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     public static DescribeServiceAutoScalerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeServiceAutoScalerResponseBody self = new DescribeServiceAutoScalerResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeServiceAutoScalerResponseBody setBehavior(java.util.Map<String, ?> behavior) {
+        this.behavior = behavior;
+        return this;
+    }
+    public java.util.Map<String, ?> getBehavior() {
+        return this.behavior;
     }
 
     public DescribeServiceAutoScalerResponseBody setCurrentValues(java.util.Map<String, ?> currentValues) {

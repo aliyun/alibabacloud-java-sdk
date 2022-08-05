@@ -242,15 +242,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ServiceName = com.aliyun.openapiutil.Client.getEncodeParam(ServiceName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.max)) {
-            body.put("Max", request.max);
+            body.put("max", request.max);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.min)) {
-            body.put("Min", request.min);
+            body.put("min", request.min);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.strategies))) {
-            body.put("Strategies", request.strategies);
+            body.put("strategies", request.strategies);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1452,15 +1452,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ServiceName = com.aliyun.openapiutil.Client.getEncodeParam(ServiceName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.max)) {
-            body.put("Max", request.max);
+            body.put("max", request.max);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.min)) {
-            body.put("Min", request.min);
+            body.put("min", request.min);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.strategies))) {
-            body.put("Strategies", request.strategies);
+            body.put("strategies", request.strategies);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
