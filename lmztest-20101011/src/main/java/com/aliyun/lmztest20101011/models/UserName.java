@@ -4,15 +4,12 @@ package com.aliyun.lmztest20101011.models;
 import com.aliyun.tea.*;
 
 public class UserName extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // name
     @NameInMap("Name")
     public String name;
 
-    // size
     @NameInMap("size")
     public Integer size;
 

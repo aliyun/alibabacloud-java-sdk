@@ -4,19 +4,15 @@ package com.aliyun.lmztest20101011.models;
 import com.aliyun.tea.*;
 
 public class Address extends TeaModel {
-    // codes
     @NameInMap("Codes")
     public java.util.List<String> codes;
 
-    // id
     @NameInMap("Id")
     public String id;
 
-    // mao
     @NameInMap("Map")
     public java.util.Map<String, String> map;
 
-    // username
     @NameInMap("UserName")
     public String userName;
 

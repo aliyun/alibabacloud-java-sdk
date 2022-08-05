@@ -7,7 +7,6 @@ public class DemoGrayReleaseTestTwoRequest extends TeaModel {
     @NameInMap("Code")
     public Long code;
 
-    // A short description of struct
     @NameInMap("NumberCode")
     public String numberCode;
 

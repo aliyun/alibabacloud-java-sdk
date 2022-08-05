@@ -4,13 +4,23 @@ package com.aliyun.lmztest20101011.models;
 import com.aliyun.tea.*;
 
 public class DemoGreyReleaseTestResponseBody extends TeaModel {
-    // Id of the request
+    @NameInMap("Id")
+    public String id;
+
     @NameInMap("RequestId")
     public String requestId;
 
     public static DemoGreyReleaseTestResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DemoGreyReleaseTestResponseBody self = new DemoGreyReleaseTestResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DemoGreyReleaseTestResponseBody setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
     public DemoGreyReleaseTestResponseBody setRequestId(String requestId) {

@@ -4,15 +4,12 @@ package com.aliyun.lmztest20101011.models;
 import com.aliyun.tea.*;
 
 public class AddCRParam extends TeaModel {
-    // attributes
     @NameInMap("attributes")
     public String attributes;
 
-    // configId
     @NameInMap("configId")
     public String configId;
 
-    // relations
     @NameInMap("relations")
     public java.util.List<String> relations;
 

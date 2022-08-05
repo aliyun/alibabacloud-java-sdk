@@ -4,11 +4,9 @@ package com.aliyun.lmztest20101011.models;
 import com.aliyun.tea.*;
 
 public class AndBackRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken2")
     public String clientToken2;
 
-    // test
     @NameInMap("TestDemo")
     public String testDemo;
 

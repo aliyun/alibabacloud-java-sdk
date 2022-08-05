@@ -4,27 +4,21 @@ package com.aliyun.lmztest20101011.models;
 import com.aliyun.tea.*;
 
 public class School extends TeaModel {
-    // d
     @NameInMap("aa")
     public java.util.Map<String, String> aa;
 
-    // c
     @NameInMap("cccs")
     public java.util.Map<String, String> cccs;
 
-    // vd
     @NameInMap("csdcfd")
     public java.util.List<java.util.List<String>> csdcfd;
 
-    // d
     @NameInMap("da")
     public String da;
 
-    // f
     @NameInMap("dds")
     public SchoolDds dds;
 
-    // c
     @NameInMap("ddw")
     public java.util.List<String> ddw;
 
@@ -82,7 +76,6 @@ public class School extends TeaModel {
     }
 
     public static class SchoolDds extends TeaModel {
-        // d
         @NameInMap("e")
         public String e;
 

@@ -4,11 +4,9 @@ package com.aliyun.lmztest20101011.models;
 import com.aliyun.tea.*;
 
 public class AAbckRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken3")
     public String clientToken3;
 
-    // test
     @NameInMap("TestDemo")
     public String testDemo;
 

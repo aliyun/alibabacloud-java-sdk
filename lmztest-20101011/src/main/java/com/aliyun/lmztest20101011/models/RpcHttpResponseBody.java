@@ -10,7 +10,6 @@ public class RpcHttpResponseBody extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
