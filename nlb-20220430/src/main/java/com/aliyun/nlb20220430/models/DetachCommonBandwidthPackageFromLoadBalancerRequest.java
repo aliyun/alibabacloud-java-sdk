@@ -19,9 +19,6 @@ public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends TeaMode
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("RequestContent")
-    public String requestContent;
-
     public static DetachCommonBandwidthPackageFromLoadBalancerRequest build(java.util.Map<String, ?> map) throws Exception {
         DetachCommonBandwidthPackageFromLoadBalancerRequest self = new DetachCommonBandwidthPackageFromLoadBalancerRequest();
         return TeaModel.build(map, self);
@@ -65,14 +62,6 @@ public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends TeaMode
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DetachCommonBandwidthPackageFromLoadBalancerRequest setRequestContent(String requestContent) {
-        this.requestContent = requestContent;
-        return this;
-    }
-    public String getRequestContent() {
-        return this.requestContent;
     }
 
 }

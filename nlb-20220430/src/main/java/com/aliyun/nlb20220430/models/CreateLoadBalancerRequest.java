@@ -13,14 +13,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
-    @NameInMap("BizFlag")
-    public String bizFlag;
-
     @NameInMap("ClientToken")
     public String clientToken;
-
-    @NameInMap("CrossZoneEnabled")
-    public Boolean crossZoneEnabled;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -39,12 +33,6 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("SecurityGroupIds")
-    public java.util.List<String> securityGroupIds;
-
-    @NameInMap("TrafficAffinityEnabled")
-    public Boolean trafficAffinityEnabled;
 
     @NameInMap("VpcId")
     public String vpcId;
@@ -81,28 +69,12 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.bandwidthPackageId;
     }
 
-    public CreateLoadBalancerRequest setBizFlag(String bizFlag) {
-        this.bizFlag = bizFlag;
-        return this;
-    }
-    public String getBizFlag() {
-        return this.bizFlag;
-    }
-
     public CreateLoadBalancerRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    public CreateLoadBalancerRequest setCrossZoneEnabled(Boolean crossZoneEnabled) {
-        this.crossZoneEnabled = crossZoneEnabled;
-        return this;
-    }
-    public Boolean getCrossZoneEnabled() {
-        return this.crossZoneEnabled;
     }
 
     public CreateLoadBalancerRequest setDryRun(Boolean dryRun) {
@@ -153,22 +125,6 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateLoadBalancerRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
-        this.securityGroupIds = securityGroupIds;
-        return this;
-    }
-    public java.util.List<String> getSecurityGroupIds() {
-        return this.securityGroupIds;
-    }
-
-    public CreateLoadBalancerRequest setTrafficAffinityEnabled(Boolean trafficAffinityEnabled) {
-        this.trafficAffinityEnabled = trafficAffinityEnabled;
-        return this;
-    }
-    public Boolean getTrafficAffinityEnabled() {
-        return this.trafficAffinityEnabled;
-    }
-
     public CreateLoadBalancerRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -186,7 +142,6 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
 
     public static class CreateLoadBalancerRequestLoadBalancerBillingConfig extends TeaModel {
-        // PrePay, PostPay
         @NameInMap("PayType")
         public String payType;
 
@@ -206,11 +161,9 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
 
     public static class CreateLoadBalancerRequestZoneMappings extends TeaModel {
-        // 公网ipId
         @NameInMap("AllocationId")
         public String allocationId;
 
-        // 私网ip
         @NameInMap("PrivateIPv4Address")
         public String privateIPv4Address;
 

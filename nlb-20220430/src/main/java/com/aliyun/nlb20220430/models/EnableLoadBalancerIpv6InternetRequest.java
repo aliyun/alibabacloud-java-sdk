@@ -16,9 +16,6 @@ public class EnableLoadBalancerIpv6InternetRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("RequestContent")
-    public String requestContent;
-
     public static EnableLoadBalancerIpv6InternetRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableLoadBalancerIpv6InternetRequest self = new EnableLoadBalancerIpv6InternetRequest();
         return TeaModel.build(map, self);
@@ -54,14 +51,6 @@ public class EnableLoadBalancerIpv6InternetRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public EnableLoadBalancerIpv6InternetRequest setRequestContent(String requestContent) {
-        this.requestContent = requestContent;
-        return this;
-    }
-    public String getRequestContent() {
-        return this.requestContent;
     }
 
 }

@@ -28,7 +28,6 @@ public class ListServerGroupsRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<ListServerGroupsRequestTag> tag;
 
-    // 服务器组所在vpc的id
     @NameInMap("VpcId")
     public String vpcId;
 

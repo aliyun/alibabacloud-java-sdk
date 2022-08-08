@@ -10,7 +10,6 @@ public class GetListenerAttributeRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // update or delete必选, add在custom中生成
     @NameInMap("ListenerId")
     public String listenerId;
 

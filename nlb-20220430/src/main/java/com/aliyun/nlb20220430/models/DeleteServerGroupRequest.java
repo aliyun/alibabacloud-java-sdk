@@ -13,7 +13,6 @@ public class DeleteServerGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    // 服务器组ID
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 

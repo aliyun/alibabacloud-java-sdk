@@ -4,26 +4,11 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListLoadBalancersResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("DynamicCode")
-    public String dynamicCode;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("LoadBalancers")
     public java.util.List<ListLoadBalancersResponseBodyLoadBalancers> loadBalancers;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -31,47 +16,12 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     public static ListLoadBalancersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListLoadBalancersResponseBody self = new ListLoadBalancersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListLoadBalancersResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListLoadBalancersResponseBody setDynamicCode(String dynamicCode) {
-        this.dynamicCode = dynamicCode;
-        return this;
-    }
-    public String getDynamicCode() {
-        return this.dynamicCode;
-    }
-
-    public ListLoadBalancersResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
-    public ListLoadBalancersResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public ListLoadBalancersResponseBody setLoadBalancers(java.util.List<ListLoadBalancersResponseBodyLoadBalancers> loadBalancers) {
@@ -90,14 +40,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         return this.maxResults;
     }
 
-    public ListLoadBalancersResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public ListLoadBalancersResponseBody setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -114,14 +56,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListLoadBalancersResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public ListLoadBalancersResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -131,7 +65,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig extends TeaModel {
-        // 实例的计费类型
         @NameInMap("PayType")
         public String payType;
 
@@ -211,7 +144,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersZoneMappingsLoadBalancerAddresses extends TeaModel {
-        // 公网ipId
         @NameInMap("AllocationId")
         public String allocationId;
 
@@ -221,11 +153,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
-        // 私网ip
         @NameInMap("PrivateIPv4Address")
         public String privateIPv4Address;
 
-        // 公网ip地址：仅Get的时候有值
         @NameInMap("PublicIPv4Address")
         public String publicIPv4Address;
 
@@ -324,15 +254,8 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         @NameInMap("AddressType")
         public String addressType;
 
-        // 用户uid
-        @NameInMap("AliUid")
-        public Long aliUid;
-
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
-
-        @NameInMap("CapacityUnitCount")
-        public Long capacityUnitCount;
 
         @NameInMap("CreateTime")
         public String createTime;
@@ -343,7 +266,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         @NameInMap("DNSName")
         public String DNSName;
 
-        // 计费相关属性
+        @NameInMap("Ipv6AddressType")
+        public String ipv6AddressType;
+
         @NameInMap("LoadBalancerBillingConfig")
         public ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig loadBalancerBillingConfig;
 
@@ -362,11 +287,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         @NameInMap("LoadBalancerType")
         public String loadBalancerType;
 
-        // 实例处于锁定状态列表
         @NameInMap("OperationLocks")
         public java.util.List<ListLoadBalancersResponseBodyLoadBalancersOperationLocks> operationLocks;
 
-        // 业务location
         @NameInMap("RegionId")
         public String regionId;
 
@@ -378,9 +301,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
         @NameInMap("Tags")
         public java.util.List<ListLoadBalancersResponseBodyLoadBalancersTags> tags;
-
-        @NameInMap("TrafficAffinityEnabled")
-        public Boolean trafficAffinityEnabled;
 
         @NameInMap("VpcId")
         public String vpcId;
@@ -409,28 +329,12 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             return this.addressType;
         }
 
-        public ListLoadBalancersResponseBodyLoadBalancers setAliUid(Long aliUid) {
-            this.aliUid = aliUid;
-            return this;
-        }
-        public Long getAliUid() {
-            return this.aliUid;
-        }
-
         public ListLoadBalancersResponseBodyLoadBalancers setBandwidthPackageId(String bandwidthPackageId) {
             this.bandwidthPackageId = bandwidthPackageId;
             return this;
         }
         public String getBandwidthPackageId() {
             return this.bandwidthPackageId;
-        }
-
-        public ListLoadBalancersResponseBodyLoadBalancers setCapacityUnitCount(Long capacityUnitCount) {
-            this.capacityUnitCount = capacityUnitCount;
-            return this;
-        }
-        public Long getCapacityUnitCount() {
-            return this.capacityUnitCount;
         }
 
         public ListLoadBalancersResponseBodyLoadBalancers setCreateTime(String createTime) {
@@ -455,6 +359,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
         public String getDNSName() {
             return this.DNSName;
+        }
+
+        public ListLoadBalancersResponseBodyLoadBalancers setIpv6AddressType(String ipv6AddressType) {
+            this.ipv6AddressType = ipv6AddressType;
+            return this;
+        }
+        public String getIpv6AddressType() {
+            return this.ipv6AddressType;
         }
 
         public ListLoadBalancersResponseBodyLoadBalancers setLoadBalancerBillingConfig(ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig loadBalancerBillingConfig) {
@@ -543,14 +455,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
         public java.util.List<ListLoadBalancersResponseBodyLoadBalancersTags> getTags() {
             return this.tags;
-        }
-
-        public ListLoadBalancersResponseBodyLoadBalancers setTrafficAffinityEnabled(Boolean trafficAffinityEnabled) {
-            this.trafficAffinityEnabled = trafficAffinityEnabled;
-            return this;
-        }
-        public Boolean getTrafficAffinityEnabled() {
-            return this.trafficAffinityEnabled;
         }
 
         public ListLoadBalancersResponseBodyLoadBalancers setVpcId(String vpcId) {

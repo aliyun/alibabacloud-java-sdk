@@ -4,39 +4,30 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListLoadBalancersRequest extends TeaModel {
-    // 负载均衡地址 todo 增加校验方法
-    @NameInMap("Address")
-    public String address;
-
-    // 协议类型
     @NameInMap("AddressIpVersion")
     public String addressIpVersion;
 
-    // 地址类型：取值 internet，intranet
     @NameInMap("AddressType")
     public String addressType;
 
-    // dns 地址
     @NameInMap("DNSName")
     public String DNSName;
 
-    // 实例业务状态
+    @NameInMap("Ipv6AddressType")
+    public String ipv6AddressType;
+
     @NameInMap("LoadBalancerBusinessStatus")
     public String loadBalancerBusinessStatus;
 
-    // 实例列表
     @NameInMap("LoadBalancerIds")
     public java.util.List<String> loadBalancerIds;
 
-    // 负载均衡实例名称
     @NameInMap("LoadBalancerNames")
     public java.util.List<String> loadBalancerNames;
 
-    // 实例状态
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
-    // 负载均衡类型
     @NameInMap("LoadBalancerType")
     public String loadBalancerType;
 
@@ -49,32 +40,21 @@ public class ListLoadBalancersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    // 企业资源组标识
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("Tag")
     public java.util.List<ListLoadBalancersRequestTag> tag;
 
-    // 专有网络唯一标识
     @NameInMap("VpcIds")
     public java.util.List<String> vpcIds;
 
-    // 负载均衡拥有的可用区
     @NameInMap("ZoneId")
     public String zoneId;
 
     public static ListLoadBalancersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListLoadBalancersRequest self = new ListLoadBalancersRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListLoadBalancersRequest setAddress(String address) {
-        this.address = address;
-        return this;
-    }
-    public String getAddress() {
-        return this.address;
     }
 
     public ListLoadBalancersRequest setAddressIpVersion(String addressIpVersion) {
@@ -99,6 +79,14 @@ public class ListLoadBalancersRequest extends TeaModel {
     }
     public String getDNSName() {
         return this.DNSName;
+    }
+
+    public ListLoadBalancersRequest setIpv6AddressType(String ipv6AddressType) {
+        this.ipv6AddressType = ipv6AddressType;
+        return this;
+    }
+    public String getIpv6AddressType() {
+        return this.ipv6AddressType;
     }
 
     public ListLoadBalancersRequest setLoadBalancerBusinessStatus(String loadBalancerBusinessStatus) {

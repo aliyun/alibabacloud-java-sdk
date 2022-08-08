@@ -10,15 +10,11 @@ public class StartListenerRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // update or delete必选, add在custom中生成
     @NameInMap("ListenerId")
     public String listenerId;
 
     @NameInMap("RegionId")
     public String regionId;
-
-    @NameInMap("RequestContent")
-    public String requestContent;
 
     public static StartListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         StartListenerRequest self = new StartListenerRequest();
@@ -55,14 +51,6 @@ public class StartListenerRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public StartListenerRequest setRequestContent(String requestContent) {
-        this.requestContent = requestContent;
-        return this;
-    }
-    public String getRequestContent() {
-        return this.requestContent;
     }
 
 }

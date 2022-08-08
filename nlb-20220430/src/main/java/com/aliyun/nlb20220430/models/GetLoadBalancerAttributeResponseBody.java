@@ -13,34 +13,21 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
-    @NameInMap("CapacityUnitCount")
-    public Long capacityUnitCount;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Cps")
     public Integer cps;
 
     @NameInMap("CreateTime")
     public String createTime;
 
-    @NameInMap("CrossZoneEnable")
-    public Boolean crossZoneEnable;
+    @NameInMap("CrossZoneEnabled")
+    public Boolean crossZoneEnabled;
 
     @NameInMap("DNSName")
     public String DNSName;
 
-    @NameInMap("DynamicCode")
-    public String dynamicCode;
+    @NameInMap("Ipv6AddressType")
+    public String ipv6AddressType;
 
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    // 计费相关属性
     @NameInMap("LoadBalancerBillingConfig")
     public GetLoadBalancerAttributeResponseBodyLoadBalancerBillingConfig loadBalancerBillingConfig;
 
@@ -59,10 +46,6 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("LoadBalancerType")
     public String loadBalancerType;
 
-    @NameInMap("Message")
-    public String message;
-
-    // 实例处于锁定状态列表
     @NameInMap("OperationLocks")
     public java.util.List<GetLoadBalancerAttributeResponseBodyOperationLocks> operationLocks;
 
@@ -74,15 +57,6 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("SecurityGroupIds")
-    public java.util.List<String> securityGroupIds;
-
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("TrafficAffinityEnable")
-    public Boolean trafficAffinityEnable;
 
     @NameInMap("VpcId")
     public String vpcId;
@@ -119,22 +93,6 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         return this.bandwidthPackageId;
     }
 
-    public GetLoadBalancerAttributeResponseBody setCapacityUnitCount(Long capacityUnitCount) {
-        this.capacityUnitCount = capacityUnitCount;
-        return this;
-    }
-    public Long getCapacityUnitCount() {
-        return this.capacityUnitCount;
-    }
-
-    public GetLoadBalancerAttributeResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetLoadBalancerAttributeResponseBody setCps(Integer cps) {
         this.cps = cps;
         return this;
@@ -151,12 +109,12 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public GetLoadBalancerAttributeResponseBody setCrossZoneEnable(Boolean crossZoneEnable) {
-        this.crossZoneEnable = crossZoneEnable;
+    public GetLoadBalancerAttributeResponseBody setCrossZoneEnabled(Boolean crossZoneEnabled) {
+        this.crossZoneEnabled = crossZoneEnabled;
         return this;
     }
-    public Boolean getCrossZoneEnable() {
-        return this.crossZoneEnable;
+    public Boolean getCrossZoneEnabled() {
+        return this.crossZoneEnabled;
     }
 
     public GetLoadBalancerAttributeResponseBody setDNSName(String DNSName) {
@@ -167,28 +125,12 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         return this.DNSName;
     }
 
-    public GetLoadBalancerAttributeResponseBody setDynamicCode(String dynamicCode) {
-        this.dynamicCode = dynamicCode;
+    public GetLoadBalancerAttributeResponseBody setIpv6AddressType(String ipv6AddressType) {
+        this.ipv6AddressType = ipv6AddressType;
         return this;
     }
-    public String getDynamicCode() {
-        return this.dynamicCode;
-    }
-
-    public GetLoadBalancerAttributeResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
-    public GetLoadBalancerAttributeResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public String getIpv6AddressType() {
+        return this.ipv6AddressType;
     }
 
     public GetLoadBalancerAttributeResponseBody setLoadBalancerBillingConfig(GetLoadBalancerAttributeResponseBodyLoadBalancerBillingConfig loadBalancerBillingConfig) {
@@ -239,14 +181,6 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         return this.loadBalancerType;
     }
 
-    public GetLoadBalancerAttributeResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public GetLoadBalancerAttributeResponseBody setOperationLocks(java.util.List<GetLoadBalancerAttributeResponseBodyOperationLocks> operationLocks) {
         this.operationLocks = operationLocks;
         return this;
@@ -279,30 +213,6 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public GetLoadBalancerAttributeResponseBody setSecurityGroupIds(java.util.List<String> securityGroupIds) {
-        this.securityGroupIds = securityGroupIds;
-        return this;
-    }
-    public java.util.List<String> getSecurityGroupIds() {
-        return this.securityGroupIds;
-    }
-
-    public GetLoadBalancerAttributeResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetLoadBalancerAttributeResponseBody setTrafficAffinityEnable(Boolean trafficAffinityEnable) {
-        this.trafficAffinityEnable = trafficAffinityEnable;
-        return this;
-    }
-    public Boolean getTrafficAffinityEnable() {
-        return this.trafficAffinityEnable;
-    }
-
     public GetLoadBalancerAttributeResponseBody setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -320,7 +230,6 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyLoadBalancerBillingConfig extends TeaModel {
-        // 实例的计费类型
         @NameInMap("PayType")
         public String payType;
 
@@ -370,7 +279,6 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses extends TeaModel {
-        // 公网ipId
         @NameInMap("AllocationId")
         public String allocationId;
 
@@ -380,11 +288,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
-        // 私网ip
         @NameInMap("PrivateIPv4Address")
         public String privateIPv4Address;
 
-        // 公网ip地址：仅Get的时候有值
         @NameInMap("PublicIPv4Address")
         public String publicIPv4Address;
 

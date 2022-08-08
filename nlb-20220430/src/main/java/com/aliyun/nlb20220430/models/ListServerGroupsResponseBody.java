@@ -4,23 +4,8 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListServerGroupsResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("DynamicCode")
-    public String dynamicCode;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("MaxResults")
     public Integer maxResults;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -31,9 +16,6 @@ public class ListServerGroupsResponseBody extends TeaModel {
     @NameInMap("ServerGroups")
     public java.util.List<ListServerGroupsResponseBodyServerGroups> serverGroups;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -42,52 +24,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListServerGroupsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListServerGroupsResponseBody setDynamicCode(String dynamicCode) {
-        this.dynamicCode = dynamicCode;
-        return this;
-    }
-    public String getDynamicCode() {
-        return this.dynamicCode;
-    }
-
-    public ListServerGroupsResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
-    public ListServerGroupsResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public ListServerGroupsResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     public Integer getMaxResults() {
         return this.maxResults;
-    }
-
-    public ListServerGroupsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public ListServerGroupsResponseBody setNextToken(String nextToken) {
@@ -114,14 +56,6 @@ public class ListServerGroupsResponseBody extends TeaModel {
         return this.serverGroups;
     }
 
-    public ListServerGroupsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public ListServerGroupsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -131,46 +65,36 @@ public class ListServerGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupsResponseBodyServerGroupsHealthCheck extends TeaModel {
-        // 健康检查使用的端口
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
 
-        // 健康检查响应的最大超时时间
         @NameInMap("HealthCheckConnectTimeout")
         public Integer healthCheckConnectTimeout;
 
-        // 健康检查的域名
         @NameInMap("HealthCheckDomain")
         public String healthCheckDomain;
 
-        // 是否开启健康检查
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
-        // 状态码，多个状态码用逗号分隔
         @NameInMap("HealthCheckHttpCode")
         public java.util.List<String> healthCheckHttpCode;
 
-        // 健康检查时间间隔
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
-        // 健康检查协议类型
         @NameInMap("HealthCheckType")
         public String healthCheckType;
 
-        // 健康检查的url
         @NameInMap("HealthCheckUrl")
         public String healthCheckUrl;
 
-        // 健康检查连续成功多少次后，将后端服务器的健康检查状态由fail判定为success
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
         @NameInMap("HttpCheckMethod")
         public String httpCheckMethod;
 
-        // 健康检查连续失败多少次后，将后端服务器的健康检查状态由success判定为fail
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
 
@@ -300,79 +224,57 @@ public class ListServerGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupsResponseBodyServerGroups extends TeaModel {
-        // 服务器组地址类型
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
         @NameInMap("AliUid")
         public Long aliUid;
 
-        // 连接优雅中断开关
         @NameInMap("ConnectionDrainEnabled")
         public Boolean connectionDrainEnabled;
 
-        // 连接优雅中断超时时间
         @NameInMap("ConnectionDrainTimeout")
         public Integer connectionDrainTimeout;
 
-        // 健康检查配置
         @NameInMap("HealthCheck")
         public ListServerGroupsResponseBodyServerGroupsHealthCheck healthCheck;
 
-        // 会话保持开关
-        @NameInMap("PersistenceEnabled")
-        public Boolean persistenceEnabled;
-
-        // 会话保持超时时间
-        @NameInMap("PersistenceTimeout")
-        public Integer persistenceTimeout;
-
-        // 客户端地址保持开关
         @NameInMap("PreserveClientIpEnabled")
         public Boolean preserveClientIpEnabled;
 
-        // 后端协议
         @NameInMap("Protocol")
         public String protocol;
 
-        // 业务region
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("RelatedLoadBalancerIds")
         public java.util.List<String> relatedLoadBalancerIds;
 
-        // 资源组id
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // 调度类型
         @NameInMap("Scheduler")
         public String scheduler;
 
         @NameInMap("ServerCount")
         public Integer serverCount;
 
-        // 服务器组id
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
-        // 服务器组名称
         @NameInMap("ServerGroupName")
         public String serverGroupName;
 
-        // 状态
         @NameInMap("ServerGroupStatus")
         public String serverGroupStatus;
 
-        // 服务器组类型
         @NameInMap("ServerGroupType")
         public String serverGroupType;
 
         @NameInMap("Tags")
         public java.util.List<ListServerGroupsResponseBodyServerGroupsTags> tags;
 
-        // 服务器组的vpcid
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -419,22 +321,6 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public ListServerGroupsResponseBodyServerGroupsHealthCheck getHealthCheck() {
             return this.healthCheck;
-        }
-
-        public ListServerGroupsResponseBodyServerGroups setPersistenceEnabled(Boolean persistenceEnabled) {
-            this.persistenceEnabled = persistenceEnabled;
-            return this;
-        }
-        public Boolean getPersistenceEnabled() {
-            return this.persistenceEnabled;
-        }
-
-        public ListServerGroupsResponseBodyServerGroups setPersistenceTimeout(Integer persistenceTimeout) {
-            this.persistenceTimeout = persistenceTimeout;
-            return this;
-        }
-        public Integer getPersistenceTimeout() {
-            return this.persistenceTimeout;
         }
 
         public ListServerGroupsResponseBodyServerGroups setPreserveClientIpEnabled(Boolean preserveClientIpEnabled) {

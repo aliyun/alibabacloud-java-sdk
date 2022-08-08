@@ -4,23 +4,8 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class AddServersToServerGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("DynamicCode")
-    public String dynamicCode;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("JobId")
     public String jobId;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -28,44 +13,9 @@ public class AddServersToServerGroupResponseBody extends TeaModel {
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     public static AddServersToServerGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddServersToServerGroupResponseBody self = new AddServersToServerGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AddServersToServerGroupResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public AddServersToServerGroupResponseBody setDynamicCode(String dynamicCode) {
-        this.dynamicCode = dynamicCode;
-        return this;
-    }
-    public String getDynamicCode() {
-        return this.dynamicCode;
-    }
-
-    public AddServersToServerGroupResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
-    public AddServersToServerGroupResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public AddServersToServerGroupResponseBody setJobId(String jobId) {
@@ -74,14 +24,6 @@ public class AddServersToServerGroupResponseBody extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
-    }
-
-    public AddServersToServerGroupResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public AddServersToServerGroupResponseBody setRequestId(String requestId) {
@@ -98,14 +40,6 @@ public class AddServersToServerGroupResponseBody extends TeaModel {
     }
     public String getServerGroupId() {
         return this.serverGroupId;
-    }
-
-    public AddServersToServerGroupResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
 }

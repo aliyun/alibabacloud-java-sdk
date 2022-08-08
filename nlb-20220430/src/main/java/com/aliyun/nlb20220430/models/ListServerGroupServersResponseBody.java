@@ -4,23 +4,8 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListServerGroupServersResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("DynamicCode")
-    public String dynamicCode;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("MaxResults")
     public Integer maxResults;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -31,9 +16,6 @@ public class ListServerGroupServersResponseBody extends TeaModel {
     @NameInMap("Servers")
     public java.util.List<ListServerGroupServersResponseBodyServers> servers;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -42,52 +24,12 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListServerGroupServersResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListServerGroupServersResponseBody setDynamicCode(String dynamicCode) {
-        this.dynamicCode = dynamicCode;
-        return this;
-    }
-    public String getDynamicCode() {
-        return this.dynamicCode;
-    }
-
-    public ListServerGroupServersResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
-    public ListServerGroupServersResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public ListServerGroupServersResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     public Integer getMaxResults() {
         return this.maxResults;
-    }
-
-    public ListServerGroupServersResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public ListServerGroupServersResponseBody setNextToken(String nextToken) {
@@ -114,14 +56,6 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         return this.servers;
     }
 
-    public ListServerGroupServersResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public ListServerGroupServersResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -131,38 +65,30 @@ public class ListServerGroupServersResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupServersResponseBodyServers extends TeaModel {
-        // 服务器描述信息
         @NameInMap("Description")
         public String description;
 
-        // 服务器端口
         @NameInMap("Port")
         public Integer port;
 
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
-        // 服务器id
         @NameInMap("ServerId")
         public String serverId;
 
-        // 服务器ip
         @NameInMap("ServerIp")
         public String serverIp;
 
-        // 服务器类型
         @NameInMap("ServerType")
         public String serverType;
 
-        // 服务器的状态
         @NameInMap("Status")
         public String status;
 
-        // 后端权重
         @NameInMap("Weight")
         public Integer weight;
 
-        // 服务器对应的zoneId
         @NameInMap("ZoneId")
         public String zoneId;
 

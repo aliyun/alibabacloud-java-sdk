@@ -16,9 +16,6 @@ public class UpdateSecurityPolicyAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("RequestContent")
-    public String requestContent;
-
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
@@ -63,14 +60,6 @@ public class UpdateSecurityPolicyAttributeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public UpdateSecurityPolicyAttributeRequest setRequestContent(String requestContent) {
-        this.requestContent = requestContent;
-        return this;
-    }
-    public String getRequestContent() {
-        return this.requestContent;
     }
 
     public UpdateSecurityPolicyAttributeRequest setSecurityPolicyId(String securityPolicyId) {
