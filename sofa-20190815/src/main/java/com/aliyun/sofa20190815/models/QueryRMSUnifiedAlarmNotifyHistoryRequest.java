@@ -176,6 +176,9 @@ public class QueryRMSUnifiedAlarmNotifyHistoryRequest extends TeaModel {
         @NameInMap("SubscriberType")
         public String subscriberType;
 
+        @NameInMap("SubscriberUuid")
+        public String subscriberUuid;
+
         public static QueryRMSUnifiedAlarmNotifyHistoryRequestAlarmSubscribers build(java.util.Map<String, ?> map) throws Exception {
             QueryRMSUnifiedAlarmNotifyHistoryRequestAlarmSubscribers self = new QueryRMSUnifiedAlarmNotifyHistoryRequestAlarmSubscribers();
             return TeaModel.build(map, self);
@@ -211,6 +214,14 @@ public class QueryRMSUnifiedAlarmNotifyHistoryRequest extends TeaModel {
         }
         public String getSubscriberType() {
             return this.subscriberType;
+        }
+
+        public QueryRMSUnifiedAlarmNotifyHistoryRequestAlarmSubscribers setSubscriberUuid(String subscriberUuid) {
+            this.subscriberUuid = subscriberUuid;
+            return this;
+        }
+        public String getSubscriberUuid() {
+            return this.subscriberUuid;
         }
 
     }

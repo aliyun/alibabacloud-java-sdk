@@ -16,6 +16,9 @@ public class QueryRMSMetricsRequest extends TeaModel {
     @NameInMap("FieldsRepeatList")
     public java.util.List<String> fieldsRepeatList;
 
+    @NameInMap("PeriodType")
+    public String periodType;
+
     @NameInMap("Plugin")
     public String plugin;
 
@@ -63,6 +66,14 @@ public class QueryRMSMetricsRequest extends TeaModel {
     }
     public java.util.List<String> getFieldsRepeatList() {
         return this.fieldsRepeatList;
+    }
+
+    public QueryRMSMetricsRequest setPeriodType(String periodType) {
+        this.periodType = periodType;
+        return this;
+    }
+    public String getPeriodType() {
+        return this.periodType;
     }
 
     public QueryRMSMetricsRequest setPlugin(String plugin) {
