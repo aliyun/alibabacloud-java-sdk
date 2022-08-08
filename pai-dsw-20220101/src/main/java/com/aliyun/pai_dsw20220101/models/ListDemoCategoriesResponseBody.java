@@ -4,11 +4,9 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListDemoCategoriesResponseBody extends TeaModel {
-    // 样例列表
     @NameInMap("Categories")
     public java.util.List<DemoCategory> categories;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 

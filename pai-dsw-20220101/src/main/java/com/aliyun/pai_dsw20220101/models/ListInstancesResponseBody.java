@@ -4,31 +4,24 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
-    // 状态码
     @NameInMap("Code")
     public String code;
 
-    // http状态码
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // 本分页中请求的实例列表
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
-    // 说明
     @NameInMap("Message")
     public String message;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 成功标志
     @NameInMap("Success")
     public Boolean success;
 
-    // 实例总数
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -94,11 +87,9 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesDatasets extends TeaModel {
-        // 数据集Id
         @NameInMap("DatasetId")
         public String datasetId;
 
-        // 容器内挂载路径
         @NameInMap("MountPath")
         public String mountPath;
 
@@ -126,23 +117,18 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesInstanceShutdownTimer extends TeaModel {
-        // 设定关机时间
         @NameInMap("DueTime")
         public String dueTime;
 
-        // 创建时间
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
-        // 修改时间
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
-        // 实例Id
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 剩余关机时间（ms）
         @NameInMap("RemainingTimeInMs")
         public Long remainingTimeInMs;
 
@@ -194,27 +180,21 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesLatestSnapshot extends TeaModel {
-        // 快照创建时间
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
-        // 快照修改时间
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
-        // 镜像Id
         @NameInMap("ImageId")
         public String imageId;
 
-        // 镜像名称
         @NameInMap("ImageName")
         public String imageName;
 
-        // 镜像Url
         @NameInMap("ImageUrl")
         public String imageUrl;
 
-        // 镜像仓库Url
         @NameInMap("RepositoryUrl")
         public String repositoryUrl;
 
@@ -274,23 +254,18 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesRequestedResource extends TeaModel {
-        // cpu核数
         @NameInMap("CPU")
         public String CPU;
 
-        // gpu数量
         @NameInMap("GPU")
         public String GPU;
 
-        // gpu显卡类型
         @NameInMap("GPUType")
         public String GPUType;
 
-        // memory大小
         @NameInMap("Memory")
         public String memory;
 
-        // shared memory大小
         @NameInMap("SharedMemory")
         public String sharedMemory;
 
@@ -342,15 +317,12 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesUserVpc extends TeaModel {
-        // Security Group Id
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
-        // VSwitch Id
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // Vpc Id
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -386,130 +358,99 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
-        // 实例计算类型
         @NameInMap("AcceleratorType")
         public String acceleratorType;
 
-        // 工作空间内是否他人可见
         @NameInMap("Accessibility")
         public String accessibility;
 
-        // 累计运行时间（ms）
         @NameInMap("AccumulatedRunningTimeInMs")
         public Long accumulatedRunningTimeInMs;
 
-        // 数据集集合
         @NameInMap("Datasets")
         public java.util.List<ListInstancesResponseBodyInstancesDatasets> datasets;
 
-        // 实例对应的Ecs规格
         @NameInMap("EcsSpec")
         public String ecsSpec;
 
-        // 环境变量
         @NameInMap("EnvironmentVariables")
         public java.util.Map<String, String> environmentVariables;
 
-        // 实例创建时间
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
-        // 实例修改时间
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
-        // 镜像Id
         @NameInMap("ImageId")
         public String imageId;
 
-        // 镜像名称
         @NameInMap("ImageName")
         public String imageName;
 
-        // 镜像地址
         @NameInMap("ImageUrl")
         public String imageUrl;
 
-        // 实例Id
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 实例名称
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // 定时关机任务
         @NameInMap("InstanceShutdownTimer")
         public ListInstancesResponseBodyInstancesInstanceShutdownTimer instanceShutdownTimer;
 
-        // 实例Url
         @NameInMap("InstanceUrl")
         public String instanceUrl;
 
-        // Jupyterlab Url
         @NameInMap("JupyterlabUrl")
         public String jupyterlabUrl;
 
-        // 最新保存的用户镜像
         @NameInMap("LatestSnapshot")
         public ListInstancesResponseBodyInstancesLatestSnapshot latestSnapshot;
 
-        // 支付类型
         @NameInMap("PaymentType")
         public String paymentType;
 
-        // 优先级，在分配资源给实例时，优先级越高的实例越优先
         @NameInMap("Priority")
         public Long priority;
 
-        // 实例错误代码
         @NameInMap("ReasonCode")
         public String reasonCode;
 
-        // 实例错误原因
         @NameInMap("ReasonMessage")
         public String reasonMessage;
 
-        // 资源配置，弹内或者轻量化时使用
         @NameInMap("RequestedResource")
         public ListInstancesResponseBodyInstancesRequestedResource requestedResource;
 
-        // 资源Id,预付费时填写
         @NameInMap("ResourceId")
         public String resourceId;
 
         @NameInMap("ResourceName")
         public String resourceName;
 
-        // 实例状态
         @NameInMap("Status")
         public String status;
 
-        // 终端url
         @NameInMap("TerminalUrl")
         public String terminalUrl;
 
-        // 用户Id
         @NameInMap("UserId")
         public String userId;
 
-        // 用户名称
         @NameInMap("UserName")
         public String userName;
 
-        // user vpc配置
         @NameInMap("UserVpc")
         public ListInstancesResponseBodyInstancesUserVpc userVpc;
 
-        // Web IDE url
         @NameInMap("WebIDEUrl")
         public String webIDEUrl;
 
-        // 工作空间Id
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
-        // 工作空间名称
         @NameInMap("WorkspaceName")
         public String workspaceName;
 

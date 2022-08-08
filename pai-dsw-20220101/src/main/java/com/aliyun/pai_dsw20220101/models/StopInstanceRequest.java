@@ -4,7 +4,6 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
-    // 是否保存环境后再关闭实例
     @NameInMap("SaveImage")
     public Boolean saveImage;
 

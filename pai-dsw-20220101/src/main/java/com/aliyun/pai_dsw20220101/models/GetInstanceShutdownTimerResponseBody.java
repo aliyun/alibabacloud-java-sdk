@@ -4,43 +4,33 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceShutdownTimerResponseBody extends TeaModel {
-    // 状态码
     @NameInMap("Code")
     public String code;
 
-    // 设定关机时间
     @NameInMap("DueTime")
     public String dueTime;
 
-    // 创建时间
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 修改时间
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
-    // http状态码
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // 实例Id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 说明
     @NameInMap("Message")
     public String message;
 
-    // 剩余关机时间（ms）
     @NameInMap("RemainingTimeInMs")
     public Long remainingTimeInMs;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 成功标志
     @NameInMap("Success")
     public Boolean success;
 

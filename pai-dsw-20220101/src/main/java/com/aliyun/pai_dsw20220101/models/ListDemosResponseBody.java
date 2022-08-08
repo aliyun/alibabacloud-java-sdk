@@ -4,15 +4,12 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListDemosResponseBody extends TeaModel {
-    // 样例列表
     @NameInMap("Demos")
     public java.util.List<ListDemosResponseBodyDemos> demos;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总数
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,27 +43,21 @@ public class ListDemosResponseBody extends TeaModel {
     }
 
     public static class ListDemosResponseBodyDemos extends TeaModel {
-        // 所在目录
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
-        // 样例描述
         @NameInMap("DemoDescription")
         public String demoDescription;
 
-        // 样例名称
         @NameInMap("DemoName")
         public String demoName;
 
-        // 样例地址
         @NameInMap("DemoUrl")
         public String demoUrl;
 
-        // 序号
         @NameInMap("Order")
         public Long order;
 
-        // 大小
         @NameInMap("Size")
         public Long size;
 

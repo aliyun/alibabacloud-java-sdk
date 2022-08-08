@@ -4,15 +4,12 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceSnapshotRequest extends TeaModel {
-    // 镜像地址
     @NameInMap("ImageUrl")
     public String imageUrl;
 
-    // 实例快照描述
     @NameInMap("SnapshotDescription")
     public String snapshotDescription;
 
-    // 实例快照名称
     @NameInMap("SnapshotName")
     public String snapshotName;
 

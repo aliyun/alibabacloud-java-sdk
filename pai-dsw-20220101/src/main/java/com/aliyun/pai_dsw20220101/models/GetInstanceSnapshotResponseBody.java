@@ -4,63 +4,48 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceSnapshotResponseBody extends TeaModel {
-    // 状态码
     @NameInMap("Code")
     public String code;
 
-    // 实例快照创建时间
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    // 实例快照修改时间
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
-    // http状态码
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // 实例快照的镜像Id
     @NameInMap("ImageId")
     public String imageId;
 
-    // 实例快照的镜像地址
     @NameInMap("ImageUrl")
     public String imageUrl;
 
-    // 实例Id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 说明
     @NameInMap("Message")
     public String message;
 
-    // 实例快照错误代码
     @NameInMap("ReasonCode")
     public String reasonCode;
 
-    // 实例快照错误消息
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 实例快照Id
     @NameInMap("SnapshotId")
     public String snapshotId;
 
-    // 实例快照名称
     @NameInMap("SnapshotName")
     public String snapshotName;
 
-    // 实例快照状态
     @NameInMap("Status")
     public String status;
 
-    // 成功标志
     @NameInMap("Success")
     public Boolean success;
 
