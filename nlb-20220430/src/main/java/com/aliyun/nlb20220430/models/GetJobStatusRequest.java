@@ -7,7 +7,6 @@ public class GetJobStatusRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // add 必选
     @NameInMap("JobId")
     public String jobId;
 

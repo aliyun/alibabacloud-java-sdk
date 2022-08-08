@@ -10,33 +10,21 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 是否开启连接优雅中断
     @NameInMap("ConnectionDrainEnabled")
     public Boolean connectionDrainEnabled;
 
-    // 连接优雅中断超时时间
     @NameInMap("ConnectionDrainTimeout")
     public Integer connectionDrainTimeout;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 健康检查配置
     @NameInMap("HealthCheckConfig")
     public CreateServerGroupRequestHealthCheckConfig healthCheckConfig;
-
-    // 是否开启会话保持
-    @NameInMap("PersistenceEnabled")
-    public Boolean persistenceEnabled;
-
-    // 会话保持超时时间
-    @NameInMap("PersistenceTimeout")
-    public Integer persistenceTimeout;
 
     @NameInMap("PreserveClientIpEnabled")
     public Boolean preserveClientIpEnabled;
 
-    // 后端服务器类型
     @NameInMap("Protocol")
     public String protocol;
 
@@ -46,19 +34,15 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // 调度类型
     @NameInMap("Scheduler")
     public String scheduler;
 
-    // 服务器组名称
     @NameInMap("ServerGroupName")
     public String serverGroupName;
 
-    // 服务器组类型
     @NameInMap("ServerGroupType")
     public String serverGroupType;
 
-    // 服务器组所在vpc的id
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -113,22 +97,6 @@ public class CreateServerGroupRequest extends TeaModel {
     }
     public CreateServerGroupRequestHealthCheckConfig getHealthCheckConfig() {
         return this.healthCheckConfig;
-    }
-
-    public CreateServerGroupRequest setPersistenceEnabled(Boolean persistenceEnabled) {
-        this.persistenceEnabled = persistenceEnabled;
-        return this;
-    }
-    public Boolean getPersistenceEnabled() {
-        return this.persistenceEnabled;
-    }
-
-    public CreateServerGroupRequest setPersistenceTimeout(Integer persistenceTimeout) {
-        this.persistenceTimeout = persistenceTimeout;
-        return this;
-    }
-    public Integer getPersistenceTimeout() {
-        return this.persistenceTimeout;
     }
 
     public CreateServerGroupRequest setPreserveClientIpEnabled(Boolean preserveClientIpEnabled) {
@@ -196,46 +164,36 @@ public class CreateServerGroupRequest extends TeaModel {
     }
 
     public static class CreateServerGroupRequestHealthCheckConfig extends TeaModel {
-        // 健康检查使用的端口
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
 
-        // 健康检查响应的最大超时时间
         @NameInMap("HealthCheckConnectTimeout")
         public Integer healthCheckConnectTimeout;
 
-        // 健康检查的域名
         @NameInMap("HealthCheckDomain")
         public String healthCheckDomain;
 
-        // 是否开启健康检查
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
-        // 状态码，多个状态码用逗号分隔
         @NameInMap("HealthCheckHttpCode")
         public java.util.List<String> healthCheckHttpCode;
 
-        // 健康检查时间间隔
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
-        // 健康检查协议类型
         @NameInMap("HealthCheckType")
         public String healthCheckType;
 
-        // 健康检查的url
         @NameInMap("HealthCheckUrl")
         public String healthCheckUrl;
 
-        // 健康检查连续成功多少次后，将后端服务器的健康检查状态由fail判定为success
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
         @NameInMap("HttpCheckMethod")
         public String httpCheckMethod;
 
-        // 健康检查连续失败多少次后，将后端服务器的健康检查状态由success判定为fail
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
 

@@ -4,80 +4,54 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class GetListenerAttributeResponseBody extends TeaModel {
-    // 用户uid
-    @NameInMap("AliUid")
-    public Long aliUid;
-
     @NameInMap("AlpnEnabled")
     public Boolean alpnEnabled;
 
     @NameInMap("AlpnPolicy")
     public String alpnPolicy;
 
-    // ca 证书列表
     @NameInMap("CaCertificateIds")
     public java.util.List<String> caCertificateIds;
 
     @NameInMap("CaEnabled")
     public Boolean caEnabled;
 
-    // server证书列表
     @NameInMap("CertificateIds")
     public java.util.List<String> certificateIds;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Cps")
     public Integer cps;
 
-    @NameInMap("DynamicCode")
-    public String dynamicCode;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    // anyPort监听结束端口
     @NameInMap("EndPort")
     public String endPort;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    // 空闲超时时间
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
-    // 监听描述
     @NameInMap("ListenerDescription")
     public String listenerDescription;
 
-    // 监听id
     @NameInMap("ListenerId")
     public String listenerId;
 
-    // 监听端口
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
-    // 监听协议 (TCP, UDP, TCPSSL, GENEVE)
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     @NameInMap("ListenerStatus")
     public String listenerStatus;
 
-    // 列表id
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Mss")
+    public Integer mss;
 
     @NameInMap("ProxyProtocolEnabled")
     public String proxyProtocolEnabled;
 
-    // 业务location
     @NameInMap("RegionId")
     public String regionId;
 
@@ -87,32 +61,18 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     @NameInMap("SecSensorEnabled")
     public String secSensorEnabled;
 
-    // Tclssl监听的安全策略
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
-    // servergroupId
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
-    // anyPort监听起始端口
     @NameInMap("StartPort")
     public String startPort;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static GetListenerAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetListenerAttributeResponseBody self = new GetListenerAttributeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetListenerAttributeResponseBody setAliUid(Long aliUid) {
-        this.aliUid = aliUid;
-        return this;
-    }
-    public Long getAliUid() {
-        return this.aliUid;
     }
 
     public GetListenerAttributeResponseBody setAlpnEnabled(Boolean alpnEnabled) {
@@ -155,14 +115,6 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         return this.certificateIds;
     }
 
-    public GetListenerAttributeResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetListenerAttributeResponseBody setCps(Integer cps) {
         this.cps = cps;
         return this;
@@ -171,36 +123,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         return this.cps;
     }
 
-    public GetListenerAttributeResponseBody setDynamicCode(String dynamicCode) {
-        this.dynamicCode = dynamicCode;
-        return this;
-    }
-    public String getDynamicCode() {
-        return this.dynamicCode;
-    }
-
-    public GetListenerAttributeResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
     public GetListenerAttributeResponseBody setEndPort(String endPort) {
         this.endPort = endPort;
         return this;
     }
     public String getEndPort() {
         return this.endPort;
-    }
-
-    public GetListenerAttributeResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public GetListenerAttributeResponseBody setIdleTimeout(Integer idleTimeout) {
@@ -259,12 +187,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         return this.loadBalancerId;
     }
 
-    public GetListenerAttributeResponseBody setMessage(String message) {
-        this.message = message;
+    public GetListenerAttributeResponseBody setMss(Integer mss) {
+        this.mss = mss;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public Integer getMss() {
+        return this.mss;
     }
 
     public GetListenerAttributeResponseBody setProxyProtocolEnabled(String proxyProtocolEnabled) {
@@ -321,14 +249,6 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
     public String getStartPort() {
         return this.startPort;
-    }
-
-    public GetListenerAttributeResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
 }

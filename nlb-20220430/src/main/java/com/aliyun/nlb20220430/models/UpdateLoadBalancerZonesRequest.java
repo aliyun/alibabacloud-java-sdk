@@ -65,11 +65,9 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
     }
 
     public static class UpdateLoadBalancerZonesRequestZoneMappings extends TeaModel {
-        // 公网ipId
         @NameInMap("AllocationId")
         public String allocationId;
 
-        // 私网ip
         @NameInMap("PrivateIPv4Address")
         public String privateIPv4Address;
 

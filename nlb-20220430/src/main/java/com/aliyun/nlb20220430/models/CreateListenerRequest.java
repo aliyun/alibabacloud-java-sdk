@@ -10,14 +10,12 @@ public class CreateListenerRequest extends TeaModel {
     @NameInMap("AlpnPolicy")
     public String alpnPolicy;
 
-    // ca 证书列表
     @NameInMap("CaCertificateIds")
     public java.util.List<String> caCertificateIds;
 
     @NameInMap("CaEnabled")
     public Boolean caEnabled;
 
-    // server证书列表
     @NameInMap("CertificateIds")
     public java.util.List<String> certificateIds;
 
@@ -33,25 +31,23 @@ public class CreateListenerRequest extends TeaModel {
     @NameInMap("EndPort")
     public Integer endPort;
 
-    // 空闲超时时间
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
-    // 监听描述
     @NameInMap("ListenerDescription")
     public String listenerDescription;
 
-    // 监听端口
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
-    // 监听协议
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
-    // add 必选
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
+
+    @NameInMap("Mss")
+    public Integer mss;
 
     @NameInMap("ProxyProtocolEnabled")
     public Boolean proxyProtocolEnabled;
@@ -62,11 +58,9 @@ public class CreateListenerRequest extends TeaModel {
     @NameInMap("SecSensorEnabled")
     public Boolean secSensorEnabled;
 
-    // Tclssl监听的安全策略
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
-    // servergroupId
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
@@ -188,6 +182,14 @@ public class CreateListenerRequest extends TeaModel {
     }
     public String getLoadBalancerId() {
         return this.loadBalancerId;
+    }
+
+    public CreateListenerRequest setMss(Integer mss) {
+        this.mss = mss;
+        return this;
+    }
+    public Integer getMss() {
+        return this.mss;
     }
 
     public CreateListenerRequest setProxyProtocolEnabled(Boolean proxyProtocolEnabled) {

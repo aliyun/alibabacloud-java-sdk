@@ -4,26 +4,11 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListListenersResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("DynamicCode")
-    public String dynamicCode;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("Listeners")
     public java.util.List<ListListenersResponseBodyListeners> listeners;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -31,47 +16,12 @@ public class ListListenersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     public static ListListenersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListListenersResponseBody self = new ListListenersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListListenersResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListListenersResponseBody setDynamicCode(String dynamicCode) {
-        this.dynamicCode = dynamicCode;
-        return this;
-    }
-    public String getDynamicCode() {
-        return this.dynamicCode;
-    }
-
-    public ListListenersResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
-    public ListListenersResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public ListListenersResponseBody setListeners(java.util.List<ListListenersResponseBodyListeners> listeners) {
@@ -90,14 +40,6 @@ public class ListListenersResponseBody extends TeaModel {
         return this.maxResults;
     }
 
-    public ListListenersResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public ListListenersResponseBody setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -114,14 +56,6 @@ public class ListListenersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListListenersResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public ListListenersResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -131,48 +65,39 @@ public class ListListenersResponseBody extends TeaModel {
     }
 
     public static class ListListenersResponseBodyListeners extends TeaModel {
-        // 用户uid
-        @NameInMap("AliUid")
-        public Long aliUid;
-
         @NameInMap("AlpnEnabled")
         public String alpnEnabled;
 
         @NameInMap("AlpnPolicy")
         public String alpnPolicy;
 
-        // ca 证书列表
         @NameInMap("CaCertificateIds")
         public java.util.List<String> caCertificateIds;
 
         @NameInMap("CaEnabled")
         public Boolean caEnabled;
 
-        // server证书列表
         @NameInMap("CertificateIds")
         public java.util.List<String> certificateIds;
 
-        // anyPort监听结束端口
+        @NameInMap("Cps")
+        public Integer cps;
+
         @NameInMap("EndPort")
         public String endPort;
 
-        // 空闲超时时间
         @NameInMap("IdleTimeout")
         public Integer idleTimeout;
 
-        // 监听描述
         @NameInMap("ListenerDescription")
         public String listenerDescription;
 
-        // 自己生成后赋值
         @NameInMap("ListenerId")
         public String listenerId;
 
-        // 监听端口
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
-        // 监听协议 (TCP, UDP, TCPSSL, GENEVE)
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
@@ -182,39 +107,30 @@ public class ListListenersResponseBody extends TeaModel {
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
+        @NameInMap("Mss")
+        public Integer mss;
+
         @NameInMap("ProxyProtocolEnabled")
         public String proxyProtocolEnabled;
 
-        // 业务location
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("SecSensorEnabled")
         public String secSensorEnabled;
 
-        // Tclssl监听的安全策略
         @NameInMap("SecurityPolicyId")
         public String securityPolicyId;
 
-        // servergroupId
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
-        // anyPort监听起始端口
         @NameInMap("StartPort")
         public String startPort;
 
         public static ListListenersResponseBodyListeners build(java.util.Map<String, ?> map) throws Exception {
             ListListenersResponseBodyListeners self = new ListListenersResponseBodyListeners();
             return TeaModel.build(map, self);
-        }
-
-        public ListListenersResponseBodyListeners setAliUid(Long aliUid) {
-            this.aliUid = aliUid;
-            return this;
-        }
-        public Long getAliUid() {
-            return this.aliUid;
         }
 
         public ListListenersResponseBodyListeners setAlpnEnabled(String alpnEnabled) {
@@ -255,6 +171,14 @@ public class ListListenersResponseBody extends TeaModel {
         }
         public java.util.List<String> getCertificateIds() {
             return this.certificateIds;
+        }
+
+        public ListListenersResponseBodyListeners setCps(Integer cps) {
+            this.cps = cps;
+            return this;
+        }
+        public Integer getCps() {
+            return this.cps;
         }
 
         public ListListenersResponseBodyListeners setEndPort(String endPort) {
@@ -319,6 +243,14 @@ public class ListListenersResponseBody extends TeaModel {
         }
         public String getLoadBalancerId() {
             return this.loadBalancerId;
+        }
+
+        public ListListenersResponseBodyListeners setMss(Integer mss) {
+            this.mss = mss;
+            return this;
+        }
+        public Integer getMss() {
+            return this.mss;
         }
 
         public ListListenersResponseBodyListeners setProxyProtocolEnabled(String proxyProtocolEnabled) {

@@ -4,23 +4,8 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityPolicyResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("DynamicCode")
-    public String dynamicCode;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("MaxResults")
     public Integer maxResults;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -31,9 +16,6 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
     @NameInMap("SecurityPolicies")
     public java.util.List<ListSecurityPolicyResponseBodySecurityPolicies> securityPolicies;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -42,52 +24,12 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListSecurityPolicyResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListSecurityPolicyResponseBody setDynamicCode(String dynamicCode) {
-        this.dynamicCode = dynamicCode;
-        return this;
-    }
-    public String getDynamicCode() {
-        return this.dynamicCode;
-    }
-
-    public ListSecurityPolicyResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
-    public ListSecurityPolicyResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public ListSecurityPolicyResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     public Integer getMaxResults() {
         return this.maxResults;
-    }
-
-    public ListSecurityPolicyResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public ListSecurityPolicyResponseBody setNextToken(String nextToken) {
@@ -112,14 +54,6 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
     }
     public java.util.List<ListSecurityPolicyResponseBodySecurityPolicies> getSecurityPolicies() {
         return this.securityPolicies;
-    }
-
-    public ListSecurityPolicyResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public ListSecurityPolicyResponseBody setTotalCount(Integer totalCount) {
@@ -213,11 +147,9 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
     }
 
     public static class ListSecurityPolicyResponseBodySecurityPolicies extends TeaModel {
-        // 加密套件
         @NameInMap("Ciphers")
         public String ciphers;
 
-        // 业务location
         @NameInMap("RegionId")
         public String regionId;
 
@@ -227,11 +159,9 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // tls策略ID
         @NameInMap("SecurityPolicyId")
         public String securityPolicyId;
 
-        // 名称
         @NameInMap("SecurityPolicyName")
         public String securityPolicyName;
 
@@ -241,7 +171,6 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<ListSecurityPolicyResponseBodySecurityPoliciesTags> tags;
 
-        // tls版本
         @NameInMap("TlsVersion")
         public String tlsVersion;
 

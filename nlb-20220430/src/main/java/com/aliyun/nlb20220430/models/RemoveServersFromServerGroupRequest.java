@@ -65,19 +65,15 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
     }
 
     public static class RemoveServersFromServerGroupRequestServers extends TeaModel {
-        // 服务器端口
         @NameInMap("Port")
         public Integer port;
 
-        // 服务器id
         @NameInMap("ServerId")
         public String serverId;
 
-        // 服务器ip
         @NameInMap("ServerIp")
         public String serverIp;
 
-        // 服务器类型
         @NameInMap("ServerType")
         public String serverType;
 

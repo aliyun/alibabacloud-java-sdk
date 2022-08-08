@@ -76,7 +76,6 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
     }
 
     public static class UpdateLoadBalancerAddressTypeConfigRequestZoneMappings extends TeaModel {
-        // 公网ipId
         @NameInMap("AllocationId")
         public String allocationId;
 

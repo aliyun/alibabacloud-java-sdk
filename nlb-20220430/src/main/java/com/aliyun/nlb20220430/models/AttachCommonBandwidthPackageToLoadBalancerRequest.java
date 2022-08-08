@@ -19,9 +19,6 @@ public class AttachCommonBandwidthPackageToLoadBalancerRequest extends TeaModel 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("RequestContent")
-    public String requestContent;
-
     public static AttachCommonBandwidthPackageToLoadBalancerRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachCommonBandwidthPackageToLoadBalancerRequest self = new AttachCommonBandwidthPackageToLoadBalancerRequest();
         return TeaModel.build(map, self);
@@ -65,14 +62,6 @@ public class AttachCommonBandwidthPackageToLoadBalancerRequest extends TeaModel 
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public AttachCommonBandwidthPackageToLoadBalancerRequest setRequestContent(String requestContent) {
-        this.requestContent = requestContent;
-        return this;
-    }
-    public String getRequestContent() {
-        return this.requestContent;
     }
 
 }

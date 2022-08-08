@@ -65,27 +65,21 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
     }
 
     public static class UpdateServerGroupServersAttributeRequestServers extends TeaModel {
-        // 服务器描述信息
         @NameInMap("Description")
         public String description;
 
-        // 服务器端口
         @NameInMap("Port")
         public Integer port;
 
-        // 服务器id
         @NameInMap("ServerId")
         public String serverId;
 
-        // 服务器ip
         @NameInMap("ServerIp")
         public String serverIp;
 
-        // 服务器类型
         @NameInMap("ServerType")
         public String serverType;
 
-        // 后端权重
         @NameInMap("Weight")
         public Integer weight;
 

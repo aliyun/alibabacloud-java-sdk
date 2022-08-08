@@ -4,15 +4,12 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListListenersRequest extends TeaModel {
-    // 监听唯一标识
     @NameInMap("ListenerIds")
     public java.util.List<String> listenerIds;
 
-    // 监听协议
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
-    // 负载均衡实例标识
     @NameInMap("LoadBalancerIds")
     public java.util.List<String> loadBalancerIds;
 
