@@ -4,7 +4,6 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListDemosRequest extends TeaModel {
-    // 目录
     @NameInMap("Category")
     public String category;
 

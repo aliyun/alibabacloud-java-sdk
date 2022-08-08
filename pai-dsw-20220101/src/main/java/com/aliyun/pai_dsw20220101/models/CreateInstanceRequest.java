@@ -4,51 +4,39 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
-    // 工作空间内是否他人可见
     @NameInMap("Accessibility")
     public String accessibility;
 
-    // 数据集集合
     @NameInMap("Datasets")
     public java.util.List<CreateInstanceRequestDatasets> datasets;
 
-    // 实例对应的Ecs规格
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
-    // 环境变量
     @NameInMap("EnvironmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
-    // 镜像Id
     @NameInMap("ImageId")
     public String imageId;
 
-    // 镜像地址
     @NameInMap("ImageUrl")
     public String imageUrl;
 
-    // 实例名称
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // 优先级，在分配资源给实例时，优先级越高的实例越优先
     @NameInMap("Priority")
     public Long priority;
 
-    // 资源配置，弹内或者轻量化时使用
     @NameInMap("RequestedResource")
     public CreateInstanceRequestRequestedResource requestedResource;
 
-    // 资源Id,预付费时填写
     @NameInMap("ResourceId")
     public String resourceId;
 
-    // user vpc配置
     @NameInMap("UserVpc")
     public CreateInstanceRequestUserVpc userVpc;
 
-    // 工作空间Id
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -154,11 +142,9 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestDatasets extends TeaModel {
-        // 数据集Id
         @NameInMap("DatasetId")
         public String datasetId;
 
-        // 容器内挂载路径
         @NameInMap("MountPath")
         public String mountPath;
 
@@ -186,23 +172,18 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestRequestedResource extends TeaModel {
-        // cpu核数
         @NameInMap("CPU")
         public String CPU;
 
-        // gpu数量
         @NameInMap("GPU")
         public String GPU;
 
-        // gpu显卡类型
         @NameInMap("GPUType")
         public String GPUType;
 
-        // memory大小
         @NameInMap("Memory")
         public String memory;
 
-        // shared memory大小
         @NameInMap("SharedMemory")
         public String sharedMemory;
 
@@ -254,15 +235,12 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestUserVpc extends TeaModel {
-        // Security Group Id
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
-        // VSwitch Id
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // Vpc Id
         @NameInMap("VpcId")
         public String vpcId;
 

@@ -4,31 +4,24 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceSnapshotResponseBody extends TeaModel {
-    // 状态码
     @NameInMap("Code")
     public String code;
 
-    // http状态码
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // 说明
     @NameInMap("Message")
     public String message;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 本分页中请求的实例镜像列表
     @NameInMap("Snapshots")
     public java.util.List<ListInstanceSnapshotResponseBodySnapshots> snapshots;
 
-    // 成功标志
     @NameInMap("Success")
     public Boolean success;
 
-    // 实例总数
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -94,43 +87,33 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
     }
 
     public static class ListInstanceSnapshotResponseBodySnapshots extends TeaModel {
-        // 实例快照创建时间
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
-        // 实例快照修改时间
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
-        // 实例快照的镜像Id
         @NameInMap("ImageId")
         public String imageId;
 
-        // 实例快照的镜像地址
         @NameInMap("ImageUrl")
         public String imageUrl;
 
-        // 实例Id
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 实例快照错误代码
         @NameInMap("ReasonCode")
         public String reasonCode;
 
-        // 实例快照错误消息
         @NameInMap("ReasonMessage")
         public String reasonMessage;
 
-        // 实例快照Id
         @NameInMap("SnapshotId")
         public String snapshotId;
 
-        // 实例快照名称
         @NameInMap("SnapshotName")
         public String snapshotName;
 
-        // 实例快照状态
         @NameInMap("Status")
         public String status;
 

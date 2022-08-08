@@ -4,27 +4,21 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceResponseBody extends TeaModel {
-    // 状态码
     @NameInMap("Code")
     public String code;
 
-    // http状态码
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // 实例Id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 说明
     @NameInMap("Message")
     public String message;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 成功标志
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,19 +4,15 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class DemoCategory extends TeaModel {
-    // 目录码
     @NameInMap("CategoryCode")
     public String categoryCode;
 
-    // 目录名
     @NameInMap("CategoryName")
     public String categoryName;
 
-    // 序号
     @NameInMap("Order")
     public Long order;
 
-    // 目录列表
     @NameInMap("SubCategories")
     public java.util.List<DemoCategory> subCategories;
 

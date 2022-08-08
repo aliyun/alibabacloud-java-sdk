@@ -4,31 +4,24 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListEcsSpecsResponseBody extends TeaModel {
-    // 状态码
     @NameInMap("Code")
     public String code;
 
-    // 本分页中请求的实例列表
     @NameInMap("EcsSpecs")
     public java.util.List<ListEcsSpecsResponseBodyEcsSpecs> ecsSpecs;
 
-    // http状态码
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // 说明
     @NameInMap("Message")
     public String message;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 成功标志
     @NameInMap("Success")
     public Boolean success;
 
-    // 实例总数
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -94,43 +87,33 @@ public class ListEcsSpecsResponseBody extends TeaModel {
     }
 
     public static class ListEcsSpecsResponseBodyEcsSpecs extends TeaModel {
-        // 资源类型
         @NameInMap("AcceleratorType")
         public String acceleratorType;
 
-        // CPU核数
         @NameInMap("CPU")
         public Long CPU;
 
-        // 货币单位
         @NameInMap("Currency")
         public String currency;
 
-        // GPU卡数
         @NameInMap("GPU")
         public Long GPU;
 
-        // 显卡类型
         @NameInMap("GPUType")
         public String GPUType;
 
-        // 实例接收带宽
         @NameInMap("InstanceBandwidthRx")
         public Long instanceBandwidthRx;
 
-        // 实例规格
         @NameInMap("InstanceType")
         public String instanceType;
 
-        // 内存大小(GB)
         @NameInMap("Memory")
         public Float memory;
 
-        // 价格
         @NameInMap("Price")
         public Double price;
 
-        // 系统盘大小(GB)
         @NameInMap("SystemDiskCapacity")
         public Long systemDiskCapacity;
 

@@ -10,19 +10,15 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
-    // 实例名称
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // 排列顺序
     @NameInMap("Order")
     public String order;
 
-    // 页码
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // 分页数量大小
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -32,15 +28,12 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
-    // 排序字段
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 实例状态
     @NameInMap("Status")
     public String status;
 
-    // 工作空间Id
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
