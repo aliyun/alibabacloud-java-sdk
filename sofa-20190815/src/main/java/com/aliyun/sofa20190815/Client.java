@@ -207,6 +207,103 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createMqSofamqTopicWithOptions(request, runtime);
     }
 
+    public CreateRMSUnifiedAlarmRuleResponse createRMSUnifiedAlarmRuleWithOptions(CreateRMSUnifiedAlarmRuleRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alarmNodata)) {
+            body.put("AlarmNodata", request.alarmNodata);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            body.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelsRepeatList)) {
+            body.put("ChannelsRepeatList", request.channelsRepeatList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.emergency)) {
+            body.put("Emergency", request.emergency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.emergencyUrl)) {
+            body.put("EmergencyUrl", request.emergencyUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.level)) {
+            body.put("Level", request.level);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyFiring)) {
+            body.put("NotifyFiring", request.notifyFiring);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyNodata)) {
+            body.put("NotifyNodata", request.notifyNodata);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyRecovered)) {
+            body.put("NotifyRecovered", request.notifyRecovered);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyTarget)) {
+            body.put("NotifyTarget", request.notifyTarget);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyTimeFilterJsonStr)) {
+            body.put("NotifyTimeFilterJsonStr", request.notifyTimeFilterJsonStr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pendingHit)) {
+            body.put("PendingHit", request.pendingHit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recoveredHit)) {
+            body.put("RecoveredHit", request.recoveredHit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleConfig)) {
+            body.put("RuleConfig", request.ruleConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.silenceTime)) {
+            body.put("SilenceTime", request.silenceTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.step)) {
+            body.put("Step", request.step);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
+            body.put("WorkspaceName", request.workspaceName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRMSUnifiedAlarmRule"),
+            new TeaPair("version", "2019-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRMSUnifiedAlarmRuleResponse());
+    }
+
+    public CreateRMSUnifiedAlarmRuleResponse createRMSUnifiedAlarmRule(CreateRMSUnifiedAlarmRuleRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createRMSUnifiedAlarmRuleWithOptions(request, runtime);
+    }
+
     public DeleteMqSofamqGroupResponse deleteMqSofamqGroupWithOptions(DeleteMqSofamqGroupRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -403,6 +500,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteMsConfigResourcesResponse deleteMsConfigResources(DeleteMsConfigResourcesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteMsConfigResourcesWithOptions(request, runtime);
+    }
+
+    public DeleteRMSUnifiedAlarmRuleResponse deleteRMSUnifiedAlarmRuleWithOptions(DeleteRMSUnifiedAlarmRuleRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
+            body.put("WorkspaceName", request.workspaceName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRMSUnifiedAlarmRule"),
+            new TeaPair("version", "2019-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRMSUnifiedAlarmRuleResponse());
+    }
+
+    public DeleteRMSUnifiedAlarmRuleResponse deleteRMSUnifiedAlarmRule(DeleteRMSUnifiedAlarmRuleRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteRMSUnifiedAlarmRuleWithOptions(request, runtime);
     }
 
     public DescribeCasComputersResponse describeCasComputersWithOptions(DescribeCasComputersRequest request, RuntimeOptions runtime) throws Exception {
@@ -1805,6 +1935,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("FieldsRepeatList", request.fieldsRepeatList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.periodType)) {
+            body.put("PeriodType", request.periodType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.plugin)) {
             body.put("Plugin", request.plugin);
         }
@@ -1864,6 +1998,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.alarmStatusRepeatList)) {
             body.put("AlarmStatusRepeatList", request.alarmStatusRepeatList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alarmTargetKeyword)) {
+            body.put("AlarmTargetKeyword", request.alarmTargetKeyword);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.alarmTargetType)) {
@@ -2506,5 +2644,122 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateMsConfigResourcesResponse updateMsConfigResources(UpdateMsConfigResourcesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateMsConfigResourcesWithOptions(request, runtime);
+    }
+
+    public UpdateRMSUnifiedAlarmRuleResponse updateRMSUnifiedAlarmRuleWithOptions(UpdateRMSUnifiedAlarmRuleRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alarmNodata)) {
+            body.put("AlarmNodata", request.alarmNodata);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            body.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelsRepeatList)) {
+            body.put("ChannelsRepeatList", request.channelsRepeatList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.emergency)) {
+            body.put("Emergency", request.emergency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.emergencyUrl)) {
+            body.put("EmergencyUrl", request.emergencyUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.level)) {
+            body.put("Level", request.level);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyFiring)) {
+            body.put("NotifyFiring", request.notifyFiring);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyNodata)) {
+            body.put("NotifyNodata", request.notifyNodata);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyRecovered)) {
+            body.put("NotifyRecovered", request.notifyRecovered);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyTarget)) {
+            body.put("NotifyTarget", request.notifyTarget);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyTimeFilterJsonStr)) {
+            body.put("NotifyTimeFilterJsonStr", request.notifyTimeFilterJsonStr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pendingHit)) {
+            body.put("PendingHit", request.pendingHit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recoveredHit)) {
+            body.put("RecoveredHit", request.recoveredHit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleConfig)) {
+            body.put("RuleConfig", request.ruleConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.silenceTime)) {
+            body.put("SilenceTime", request.silenceTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.step)) {
+            body.put("Step", request.step);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.suspendedEndTime)) {
+            body.put("SuspendedEndTime", request.suspendedEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.suspendedReason)) {
+            body.put("SuspendedReason", request.suspendedReason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.suspendedStartTime)) {
+            body.put("SuspendedStartTime", request.suspendedStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
+            body.put("WorkspaceName", request.workspaceName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRMSUnifiedAlarmRule"),
+            new TeaPair("version", "2019-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRMSUnifiedAlarmRuleResponse());
+    }
+
+    public UpdateRMSUnifiedAlarmRuleResponse updateRMSUnifiedAlarmRule(UpdateRMSUnifiedAlarmRuleRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateRMSUnifiedAlarmRuleWithOptions(request, runtime);
     }
 }

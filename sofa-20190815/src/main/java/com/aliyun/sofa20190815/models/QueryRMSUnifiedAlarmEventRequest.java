@@ -19,6 +19,9 @@ public class QueryRMSUnifiedAlarmEventRequest extends TeaModel {
     @NameInMap("AlarmStatusRepeatList")
     public java.util.List<Long> alarmStatusRepeatList;
 
+    @NameInMap("AlarmTargetKeyword")
+    public String alarmTargetKeyword;
+
     @NameInMap("AlarmTargetType")
     public String alarmTargetType;
 
@@ -86,6 +89,14 @@ public class QueryRMSUnifiedAlarmEventRequest extends TeaModel {
     }
     public java.util.List<Long> getAlarmStatusRepeatList() {
         return this.alarmStatusRepeatList;
+    }
+
+    public QueryRMSUnifiedAlarmEventRequest setAlarmTargetKeyword(String alarmTargetKeyword) {
+        this.alarmTargetKeyword = alarmTargetKeyword;
+        return this;
+    }
+    public String getAlarmTargetKeyword() {
+        return this.alarmTargetKeyword;
     }
 
     public QueryRMSUnifiedAlarmEventRequest setAlarmTargetType(String alarmTargetType) {
