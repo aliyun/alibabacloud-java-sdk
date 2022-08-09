@@ -80,6 +80,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("NetworkId")
         public String networkId;
 
+        @NameInMap("Spec")
+        public String spec;
+
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -126,6 +129,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
         public String getNetworkId() {
             return this.networkId;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGateways setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
         }
 
         public DescribeNatGatewaysResponseBodyNatGateways setVSwitchId(String vSwitchId) {

@@ -10,9 +10,6 @@ public class RebootInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Version")
-    public String version;
-
     public static RebootInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RebootInstanceRequest self = new RebootInstanceRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class RebootInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public RebootInstanceRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

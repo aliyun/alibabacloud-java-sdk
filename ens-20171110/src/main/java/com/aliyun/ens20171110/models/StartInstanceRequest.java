@@ -7,9 +7,6 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Version")
-    public String version;
-
     public static StartInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StartInstanceRequest self = new StartInstanceRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class StartInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public StartInstanceRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

@@ -7,6 +7,9 @@ public class CreateNatGatewayRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    @NameInMap("InstanceType")
+    public String instanceType;
+
     @NameInMap("Name")
     public String name;
 
@@ -27,6 +30,14 @@ public class CreateNatGatewayRequest extends TeaModel {
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    public CreateNatGatewayRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public CreateNatGatewayRequest setName(String name) {
