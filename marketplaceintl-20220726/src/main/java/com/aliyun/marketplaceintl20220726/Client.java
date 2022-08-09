@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 import com.aliyun.marketplaceintl20220726.models.*;
 import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
+import com.aliyun.oss.*;
+import com.aliyun.oss.models.*;
+import com.aliyun.tearpc.*;
+import com.aliyun.tearpc.models.*;
+import com.aliyun.openplatform20191219.*;
+import com.aliyun.openplatform20191219.models.*;
+import com.aliyun.ossutil.*;
+import com.aliyun.ossutil.models.*;
+import com.aliyun.fileform.*;
+import com.aliyun.fileform.models.*;
 import com.aliyun.teaopenapi.*;
 import com.aliyun.teaopenapi.models.*;
 import com.aliyun.openapiutil.*;
@@ -12,7 +22,7 @@ import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "";
         this.checkConfig(config);
@@ -32,7 +42,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public AddIntlImageProductVersionResponse addIntlImageProductVersionWithOptions(AddIntlImageProductVersionRequest request, RuntimeOptions runtime) throws Exception {
+    public AddIntlImageProductVersionResponse addIntlImageProductVersionWithOptions(AddIntlImageProductVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
@@ -82,11 +92,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public AddIntlImageProductVersionResponse addIntlImageProductVersion(AddIntlImageProductVersionRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addIntlImageProductVersionWithOptions(request, runtime);
     }
 
-    public CreateOrUpdateIntlImageResponse createOrUpdateIntlImageWithOptions(CreateOrUpdateIntlImageRequest request, RuntimeOptions runtime) throws Exception {
+    public CreateOrUpdateIntlImageResponse createOrUpdateIntlImageWithOptions(CreateOrUpdateIntlImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
@@ -148,11 +158,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public CreateOrUpdateIntlImageResponse createOrUpdateIntlImage(CreateOrUpdateIntlImageRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createOrUpdateIntlImageWithOptions(request, runtime);
     }
 
-    public DescribeAccessibleRegionsResponse describeAccessibleRegionsWithOptions(DescribeAccessibleRegionsRequest request, RuntimeOptions runtime) throws Exception {
+    public DescribeAccessibleRegionsResponse describeAccessibleRegionsWithOptions(DescribeAccessibleRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
@@ -185,11 +195,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeAccessibleRegionsResponse describeAccessibleRegions(DescribeAccessibleRegionsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAccessibleRegionsWithOptions(request, runtime);
     }
 
-    public DescribeCategoriesResponse describeCategoriesWithOptions(DescribeCategoriesRequest request, RuntimeOptions runtime) throws Exception {
+    public DescribeCategoriesResponse describeCategoriesWithOptions(DescribeCategoriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
@@ -222,11 +232,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeCategoriesResponse describeCategories(DescribeCategoriesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCategoriesWithOptions(request, runtime);
     }
 
-    public DescribeCountriesResponse describeCountriesWithOptions(DescribeCountriesRequest request, RuntimeOptions runtime) throws Exception {
+    public DescribeCountriesResponse describeCountriesWithOptions(DescribeCountriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
@@ -259,11 +269,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeCountriesResponse describeCountries(DescribeCountriesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCountriesWithOptions(request, runtime);
     }
 
-    public DescribeCustomImagesResponse describeCustomImagesWithOptions(DescribeCustomImagesRequest request, RuntimeOptions runtime) throws Exception {
+    public DescribeCustomImagesResponse describeCustomImagesWithOptions(DescribeCustomImagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ak)) {
@@ -308,11 +318,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeCustomImagesResponse describeCustomImages(DescribeCustomImagesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCustomImagesWithOptions(request, runtime);
     }
 
-    public DescribeImageCommodityInfoResponse describeImageCommodityInfoWithOptions(DescribeImageCommodityInfoRequest request, RuntimeOptions runtime) throws Exception {
+    public DescribeImageCommodityInfoResponse describeImageCommodityInfoWithOptions(DescribeImageCommodityInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.commodityCode)) {
@@ -349,11 +359,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeImageCommodityInfoResponse describeImageCommodityInfo(DescribeImageCommodityInfoRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeImageCommodityInfoWithOptions(request, runtime);
     }
 
-    public DescribeImageCommodityStatusResponse describeImageCommodityStatusWithOptions(DescribeImageCommodityStatusRequest request, RuntimeOptions runtime) throws Exception {
+    public DescribeImageCommodityStatusResponse describeImageCommodityStatusWithOptions(DescribeImageCommodityStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.commodityCode)) {
@@ -390,11 +400,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeImageCommodityStatusResponse describeImageCommodityStatus(DescribeImageCommodityStatusRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeImageCommodityStatusWithOptions(request, runtime);
     }
 
-    public DescribeImageConstraintsResponse describeImageConstraintsWithOptions(DescribeImageConstraintsRequest request, RuntimeOptions runtime) throws Exception {
+    public DescribeImageConstraintsResponse describeImageConstraintsWithOptions(DescribeImageConstraintsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ak)) {
@@ -443,11 +453,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeImageConstraintsResponse describeImageConstraints(DescribeImageConstraintsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeImageConstraintsWithOptions(request, runtime);
     }
 
-    public DescribeInstanceTypesResponse describeInstanceTypesWithOptions(DescribeInstanceTypesRequest request, RuntimeOptions runtime) throws Exception {
+    public DescribeInstanceTypesResponse describeInstanceTypesWithOptions(DescribeInstanceTypesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
@@ -480,11 +490,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeInstanceTypesResponse describeInstanceTypes(DescribeInstanceTypesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceTypesWithOptions(request, runtime);
     }
 
-    public DescribeListResourcesResponse describeListResourcesWithOptions(DescribeListResourcesRequest request, RuntimeOptions runtime) throws Exception {
+    public DescribeListResourcesResponse describeListResourcesWithOptions(DescribeListResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
@@ -521,11 +531,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeListResourcesResponse describeListResources(DescribeListResourcesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeListResourcesWithOptions(request, runtime);
     }
 
-    public DescribeReleasableRegionListResponse describeReleasableRegionListWithOptions(DescribeReleasableRegionListRequest request, RuntimeOptions runtime) throws Exception {
+    public DescribeReleasableRegionListResponse describeReleasableRegionListWithOptions(DescribeReleasableRegionListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
@@ -558,11 +568,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeReleasableRegionListResponse describeReleasableRegionList(DescribeReleasableRegionListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeReleasableRegionListWithOptions(request, runtime);
     }
 
-    public SubmitImageCommodityReviewResponse submitImageCommodityReviewWithOptions(SubmitImageCommodityReviewRequest request, RuntimeOptions runtime) throws Exception {
+    public SubmitImageCommodityReviewResponse submitImageCommodityReviewWithOptions(SubmitImageCommodityReviewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.commodityCode)) {
@@ -599,7 +609,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public SubmitImageCommodityReviewResponse submitImageCommodityReview(SubmitImageCommodityReviewRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitImageCommodityReviewWithOptions(request, runtime);
+    }
+
+    public UploadFileResponse uploadFileWithOptions(UploadFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
+            body.put("EncryptData", request.encryptData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
+            body.put("FileUrl", request.fileUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            body.put("RequestId", request.requestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
+            body.put("Uid", request.uid);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UploadFile"),
+            new TeaPair("version", "2022-07-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UploadFileResponse());
+    }
+
+    public UploadFileResponse uploadFile(UploadFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.uploadFileWithOptions(request, runtime);
+    }
+
+    public UploadFileResponse uploadFileAdvance(UploadFileAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        String accessKeyId = _credential.getAccessKeyId();
+        String accessKeySecret = _credential.getAccessKeySecret();
+        String securityToken = _credential.getSecurityToken();
+        String credentialType = _credential.getType();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
+        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
+            credentialType = "access_key";
+        }
+
+        com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("securityToken", securityToken),
+            new TeaPair("type", credentialType),
+            new TeaPair("endpoint", openPlatformEndpoint),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
+        AuthorizeFileUploadRequest authRequest = AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
+            new TeaPair("product", "marketplaceIntl"),
+            new TeaPair("regionId", _regionId)
+        ));
+        AuthorizeFileUploadResponse authResponse = new AuthorizeFileUploadResponse();
+        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("type", "access_key"),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.oss.Client ossClient = null;
+        FileField fileObj = new FileField();
+        PostObjectRequest.PostObjectRequestHeader ossHeader = new PostObjectRequest.PostObjectRequestHeader();
+        PostObjectRequest uploadRequest = new PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
+        UploadFileRequest uploadFileReq = new UploadFileRequest();
+        com.aliyun.openapiutil.Client.convert(request, uploadFileReq);
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrlObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.fileUrlObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            uploadFileReq.fileUrl = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
+        UploadFileResponse uploadFileResp = this.uploadFileWithOptions(uploadFileReq, runtime);
+        return uploadFileResp;
     }
 }
