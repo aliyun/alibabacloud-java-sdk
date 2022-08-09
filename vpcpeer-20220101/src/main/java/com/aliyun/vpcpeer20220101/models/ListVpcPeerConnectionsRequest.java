@@ -19,7 +19,6 @@ public class ListVpcPeerConnectionsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    // 根据两端vpcid过滤，不区分发起端和接收端。如果只传入一个，则根据一端过滤
     @NameInMap("VpcId")
     public java.util.List<String> vpcId;
 
