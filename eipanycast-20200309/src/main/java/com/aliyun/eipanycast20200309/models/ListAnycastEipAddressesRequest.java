@@ -10,6 +10,9 @@ public class ListAnycastEipAddressesRequest extends TeaModel {
     @NameInMap("AnycastId")
     public String anycastId;
 
+    @NameInMap("AnycastIds")
+    public java.util.List<String> anycastIds;
+
     @NameInMap("BindInstanceIds")
     public java.util.List<String> bindInstanceIds;
 
@@ -56,6 +59,14 @@ public class ListAnycastEipAddressesRequest extends TeaModel {
     }
     public String getAnycastId() {
         return this.anycastId;
+    }
+
+    public ListAnycastEipAddressesRequest setAnycastIds(java.util.List<String> anycastIds) {
+        this.anycastIds = anycastIds;
+        return this;
+    }
+    public java.util.List<String> getAnycastIds() {
+        return this.anycastIds;
     }
 
     public ListAnycastEipAddressesRequest setBindInstanceIds(java.util.List<String> bindInstanceIds) {
