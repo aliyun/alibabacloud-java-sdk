@@ -309,6 +309,9 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         @NameInMap("SceneSource")
         public String sceneSource;
 
+        @NameInMap("contextModule")
+        public String contextModule;
+
         public static RecognizeMessageForTestResponseBodyDataSceneSceneDTOs build(java.util.Map<String, ?> map) throws Exception {
             RecognizeMessageForTestResponseBodyDataSceneSceneDTOs self = new RecognizeMessageForTestResponseBodyDataSceneSceneDTOs();
             return TeaModel.build(map, self);
@@ -328,6 +331,14 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         }
         public String getSceneSource() {
             return this.sceneSource;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataSceneSceneDTOs setContextModule(String contextModule) {
+            this.contextModule = contextModule;
+            return this;
+        }
+        public String getContextModule() {
+            return this.contextModule;
         }
 
     }
