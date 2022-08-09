@@ -139,6 +139,9 @@ public class ListCardInfoResponseBody extends TeaModel {
         @NameInMap("DataType")
         public String dataType;
 
+        @NameInMap("DirectionalGroupId")
+        public Long directionalGroupId;
+
         @NameInMap("DirectionalGroupName")
         public String directionalGroupName;
 
@@ -290,6 +293,14 @@ public class ListCardInfoResponseBody extends TeaModel {
         }
         public String getDataType() {
             return this.dataType;
+        }
+
+        public ListCardInfoResponseBodyDataList setDirectionalGroupId(Long directionalGroupId) {
+            this.directionalGroupId = directionalGroupId;
+            return this;
+        }
+        public Long getDirectionalGroupId() {
+            return this.directionalGroupId;
         }
 
         public ListCardInfoResponseBodyDataList setDirectionalGroupName(String directionalGroupName) {

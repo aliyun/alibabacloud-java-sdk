@@ -14,6 +14,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(Config config) throws Exception {
         super(config);
+        this._signatureAlgorithm = "v2";
         this._endpointRule = "central";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("linkcard", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -30,6 +31,139 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
+    }
+
+    public AddDirectionalCardResponse addDirectionalCardWithOptions(AddDirectionalCardRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddDirectionalCardShrinkRequest request = new AddDirectionalCardShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.orderList)) {
+            request.orderListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.orderList, "OrderList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tagList)) {
+            request.tagListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tagList, "TagList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUri)) {
+            query.put("FileUri", request.fileUri);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderListShrink)) {
+            query.put("OrderList", request.orderListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagListShrink)) {
+            query.put("TagList", request.tagListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadMethod)) {
+            query.put("UploadMethod", request.uploadMethod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadType)) {
+            query.put("UploadType", request.uploadType);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddDirectionalCard"),
+            new TeaPair("version", "2021-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDirectionalCardResponse());
+    }
+
+    public AddDirectionalCardResponse addDirectionalCard(AddDirectionalCardRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addDirectionalCardWithOptions(request, runtime);
+    }
+
+    public AddDirectionalGroupResponse addDirectionalGroupWithOptions(AddDirectionalGroupRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddDirectionalGroup"),
+            new TeaPair("version", "2021-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDirectionalGroupResponse());
+    }
+
+    public AddDirectionalGroupResponse addDirectionalGroup(AddDirectionalGroupRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addDirectionalGroupWithOptions(request, runtime);
+    }
+
+    public BatchAddDirectionalAddressResponse batchAddDirectionalAddressWithOptions(BatchAddDirectionalAddressRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addressType)) {
+            query.put("AddressType", request.addressType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listAddress)) {
+            query.put("ListAddress", request.listAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchAddDirectionalAddress"),
+            new TeaPair("version", "2021-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchAddDirectionalAddressResponse());
+    }
+
+    public BatchAddDirectionalAddressResponse batchAddDirectionalAddress(BatchAddDirectionalAddressRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.batchAddDirectionalAddressWithOptions(request, runtime);
     }
 
     public CardStatisticsResponse cardStatisticsWithOptions(RuntimeOptions runtime) throws Exception {
@@ -256,6 +390,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IsAutoRecharge", request.isAutoRecharge);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxFlow)) {
+            query.put("MaxFlow", request.maxFlow);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minFlow)) {
+            query.put("MinFlow", request.minFlow);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.msisdn)) {
             query.put("Msisdn", request.msisdn);
         }
@@ -320,6 +462,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCardInfoResponse listCardInfo(ListCardInfoRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listCardInfoWithOptions(request, runtime);
+    }
+
+    public ListDirectionalAddressResponse listDirectionalAddressWithOptions(ListDirectionalAddressRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDirectionalAddress"),
+            new TeaPair("version", "2021-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDirectionalAddressResponse());
+    }
+
+    public ListDirectionalAddressResponse listDirectionalAddress(ListDirectionalAddressRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listDirectionalAddressWithOptions(request, runtime);
+    }
+
+    public ListDirectionalDetailResponse listDirectionalDetailWithOptions(ListDirectionalDetailRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iccid)) {
+            query.put("Iccid", request.iccid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDirectionalDetail"),
+            new TeaPair("version", "2021-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDirectionalDetailResponse());
+    }
+
+    public ListDirectionalDetailResponse listDirectionalDetail(ListDirectionalDetailRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listDirectionalDetailWithOptions(request, runtime);
     }
 
     public ListOrderResponse listOrderWithOptions(ListOrderRequest request, RuntimeOptions runtime) throws Exception {
@@ -615,5 +831,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAutoRechargeSwitchResponse updateAutoRechargeSwitch(UpdateAutoRechargeSwitchRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateAutoRechargeSwitchWithOptions(request, runtime);
+    }
+
+    public VerifyIotCardResponse verifyIotCardWithOptions(VerifyIotCardRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iccid)) {
+            query.put("Iccid", request.iccid);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyIotCard"),
+            new TeaPair("version", "2021-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyIotCardResponse());
+    }
+
+    public VerifyIotCardResponse verifyIotCard(VerifyIotCardRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.verifyIotCardWithOptions(request, runtime);
     }
 }
