@@ -7,7 +7,6 @@ public class AssociateAnycastEipAddressRequest extends TeaModel {
     @NameInMap("AnycastId")
     public String anycastId;
 
-    // 关联模式，默认模式、普通模式Default/Normal
     @NameInMap("AssociationMode")
     public String associationMode;
 
@@ -26,11 +25,9 @@ public class AssociateAnycastEipAddressRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 绑定时关联的pop location，如果是绑定的第一个实例，该参数会忽略，会下发到全部pop点
     @NameInMap("PopLocations")
     public java.util.List<AssociateAnycastEipAddressRequestPopLocations> popLocations;
 
-    // 私网ip地址
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
@@ -112,7 +109,6 @@ public class AssociateAnycastEipAddressRequest extends TeaModel {
     }
 
     public static class AssociateAnycastEipAddressRequestPopLocations extends TeaModel {
-        // pop location
         @NameInMap("PopLocation")
         public String popLocation;
 

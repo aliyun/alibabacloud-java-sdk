@@ -7,7 +7,6 @@ public class UpdateAnycastEipAddressAssociationsRequest extends TeaModel {
     @NameInMap("AnycastId")
     public String anycastId;
 
-    // 关联模式，默认模式、普通模式Default/Normal
     @NameInMap("AssociationMode")
     public String associationMode;
 
@@ -20,11 +19,9 @@ public class UpdateAnycastEipAddressAssociationsRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 新增关联的pop location
     @NameInMap("PopLocationAddList")
     public java.util.List<UpdateAnycastEipAddressAssociationsRequestPopLocationAddList> popLocationAddList;
 
-    // 待删除的关联pop location
     @NameInMap("PopLocationDeleteList")
     public java.util.List<UpdateAnycastEipAddressAssociationsRequestPopLocationDeleteList> popLocationDeleteList;
 
@@ -90,7 +87,6 @@ public class UpdateAnycastEipAddressAssociationsRequest extends TeaModel {
     }
 
     public static class UpdateAnycastEipAddressAssociationsRequestPopLocationAddList extends TeaModel {
-        // pop location
         @NameInMap("PopLocation")
         public String popLocation;
 
@@ -110,7 +106,6 @@ public class UpdateAnycastEipAddressAssociationsRequest extends TeaModel {
     }
 
     public static class UpdateAnycastEipAddressAssociationsRequestPopLocationDeleteList extends TeaModel {
-        // pop location
         @NameInMap("PopLocation")
         public String popLocation;
 

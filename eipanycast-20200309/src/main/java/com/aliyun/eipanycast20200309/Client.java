@@ -252,6 +252,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AnycastId", request.anycastId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.anycastIds)) {
+            query.put("AnycastIds", request.anycastIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.bindInstanceIds)) {
             query.put("BindInstanceIds", request.bindInstanceIds);
         }

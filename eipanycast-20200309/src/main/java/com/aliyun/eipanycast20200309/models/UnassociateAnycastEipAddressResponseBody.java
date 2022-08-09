@@ -4,7 +4,6 @@ package com.aliyun.eipanycast20200309.models;
 import com.aliyun.tea.*;
 
 public class UnassociateAnycastEipAddressResponseBody extends TeaModel {
-    // 私网IP地址
     @NameInMap("RequestId")
     public String requestId;
 

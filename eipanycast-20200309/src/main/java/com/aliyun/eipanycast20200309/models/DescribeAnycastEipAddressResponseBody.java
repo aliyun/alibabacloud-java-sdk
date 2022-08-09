@@ -175,7 +175,6 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeAnycastEipAddressResponseBodyAnycastEipBindInfoListPopLocations extends TeaModel {
-        // PopLocation
         @NameInMap("PopLocation")
         public String popLocation;
 
@@ -195,7 +194,6 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeAnycastEipAddressResponseBodyAnycastEipBindInfoList extends TeaModel {
-        // 绑定模式 Normal、Default
         @NameInMap("AssociationMode")
         public String associationMode;
 
@@ -211,11 +209,9 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         @NameInMap("BindTime")
         public String bindTime;
 
-        // 关联的pop点
         @NameInMap("PopLocations")
         public java.util.List<DescribeAnycastEipAddressResponseBodyAnycastEipBindInfoListPopLocations> popLocations;
 
-        // ip地址
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
