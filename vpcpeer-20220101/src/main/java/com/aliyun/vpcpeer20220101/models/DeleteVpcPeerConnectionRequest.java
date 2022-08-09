@@ -10,7 +10,6 @@ public class DeleteVpcPeerConnectionRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 是否强删
     @NameInMap("Force")
     public Boolean force;
 
