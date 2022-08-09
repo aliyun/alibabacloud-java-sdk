@@ -16,6 +16,9 @@ public class CreateSnatEntryRequest extends TeaModel {
     @NameInMap("SourceCIDR")
     public String sourceCIDR;
 
+    @NameInMap("SourceNetworkId")
+    public String sourceNetworkId;
+
     @NameInMap("SourceVSwitchId")
     public String sourceVSwitchId;
 
@@ -54,6 +57,14 @@ public class CreateSnatEntryRequest extends TeaModel {
     }
     public String getSourceCIDR() {
         return this.sourceCIDR;
+    }
+
+    public CreateSnatEntryRequest setSourceNetworkId(String sourceNetworkId) {
+        this.sourceNetworkId = sourceNetworkId;
+        return this;
+    }
+    public String getSourceNetworkId() {
+        return this.sourceNetworkId;
     }
 
     public CreateSnatEntryRequest setSourceVSwitchId(String sourceVSwitchId) {
