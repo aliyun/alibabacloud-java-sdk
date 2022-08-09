@@ -4,9 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CostCenterSaveRequest extends TeaModel {
-    @NameInMap("alipay_id")
-    public String alipayId;
-
     @NameInMap("alipay_no")
     public String alipayNo;
 
@@ -25,20 +22,9 @@ public class CostCenterSaveRequest extends TeaModel {
     @NameInMap("title")
     public String title;
 
-    @NameInMap("user_id")
-    public String userId;
-
     public static CostCenterSaveRequest build(java.util.Map<String, ?> map) throws Exception {
         CostCenterSaveRequest self = new CostCenterSaveRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CostCenterSaveRequest setAlipayId(String alipayId) {
-        this.alipayId = alipayId;
-        return this;
-    }
-    public String getAlipayId() {
-        return this.alipayId;
     }
 
     public CostCenterSaveRequest setAlipayNo(String alipayNo) {
@@ -87,14 +73,6 @@ public class CostCenterSaveRequest extends TeaModel {
     }
     public String getTitle() {
         return this.title;
-    }
-
-    public CostCenterSaveRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }

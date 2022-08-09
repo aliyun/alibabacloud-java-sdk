@@ -87,47 +87,15 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
     }
 
     public static class InvoiceRuleSaveResponseBodyModule extends TeaModel {
-        @NameInMap("account")
-        public String account;
-
         @NameInMap("add_num")
         public Integer addNum;
-
-        @NameInMap("havana_id")
-        public String havanaId;
 
         @NameInMap("remove_num")
         public Integer removeNum;
 
-        @NameInMap("selected_external_user_num")
-        public Integer selectedExternalUserNum;
-
-        @NameInMap("selected_user_num")
-        public Integer selectedUserNum;
-
-        @NameInMap("suite_key")
-        public String suiteKey;
-
-        @NameInMap("token_grant_type")
-        public Integer tokenGrantType;
-
-        @NameInMap("version")
-        public Integer version;
-
-        @NameInMap("without_authority")
-        public Boolean withoutAuthority;
-
         public static InvoiceRuleSaveResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             InvoiceRuleSaveResponseBodyModule self = new InvoiceRuleSaveResponseBodyModule();
             return TeaModel.build(map, self);
-        }
-
-        public InvoiceRuleSaveResponseBodyModule setAccount(String account) {
-            this.account = account;
-            return this;
-        }
-        public String getAccount() {
-            return this.account;
         }
 
         public InvoiceRuleSaveResponseBodyModule setAddNum(Integer addNum) {
@@ -138,68 +106,12 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
             return this.addNum;
         }
 
-        public InvoiceRuleSaveResponseBodyModule setHavanaId(String havanaId) {
-            this.havanaId = havanaId;
-            return this;
-        }
-        public String getHavanaId() {
-            return this.havanaId;
-        }
-
         public InvoiceRuleSaveResponseBodyModule setRemoveNum(Integer removeNum) {
             this.removeNum = removeNum;
             return this;
         }
         public Integer getRemoveNum() {
             return this.removeNum;
-        }
-
-        public InvoiceRuleSaveResponseBodyModule setSelectedExternalUserNum(Integer selectedExternalUserNum) {
-            this.selectedExternalUserNum = selectedExternalUserNum;
-            return this;
-        }
-        public Integer getSelectedExternalUserNum() {
-            return this.selectedExternalUserNum;
-        }
-
-        public InvoiceRuleSaveResponseBodyModule setSelectedUserNum(Integer selectedUserNum) {
-            this.selectedUserNum = selectedUserNum;
-            return this;
-        }
-        public Integer getSelectedUserNum() {
-            return this.selectedUserNum;
-        }
-
-        public InvoiceRuleSaveResponseBodyModule setSuiteKey(String suiteKey) {
-            this.suiteKey = suiteKey;
-            return this;
-        }
-        public String getSuiteKey() {
-            return this.suiteKey;
-        }
-
-        public InvoiceRuleSaveResponseBodyModule setTokenGrantType(Integer tokenGrantType) {
-            this.tokenGrantType = tokenGrantType;
-            return this;
-        }
-        public Integer getTokenGrantType() {
-            return this.tokenGrantType;
-        }
-
-        public InvoiceRuleSaveResponseBodyModule setVersion(Integer version) {
-            this.version = version;
-            return this;
-        }
-        public Integer getVersion() {
-            return this.version;
-        }
-
-        public InvoiceRuleSaveResponseBodyModule setWithoutAuthority(Boolean withoutAuthority) {
-            this.withoutAuthority = withoutAuthority;
-            return this;
-        }
-        public Boolean getWithoutAuthority() {
-            return this.withoutAuthority;
         }
 
     }

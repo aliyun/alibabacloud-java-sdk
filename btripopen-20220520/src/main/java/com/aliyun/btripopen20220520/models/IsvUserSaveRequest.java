@@ -4,23 +4,12 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IsvUserSaveRequest extends TeaModel {
-    @NameInMap("user_Id")
-    public String userId;
-
     @NameInMap("user_list")
     public java.util.List<IsvUserSaveRequestUserList> userList;
 
     public static IsvUserSaveRequest build(java.util.Map<String, ?> map) throws Exception {
         IsvUserSaveRequest self = new IsvUserSaveRequest();
         return TeaModel.build(map, self);
-    }
-
-    public IsvUserSaveRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public IsvUserSaveRequest setUserList(java.util.List<IsvUserSaveRequestUserList> userList) {

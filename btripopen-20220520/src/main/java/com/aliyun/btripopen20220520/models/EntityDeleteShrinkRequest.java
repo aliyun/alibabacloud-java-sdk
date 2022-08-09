@@ -13,9 +13,6 @@ public class EntityDeleteShrinkRequest extends TeaModel {
     @NameInMap("thirdpart_id")
     public String thirdpartId;
 
-    @NameInMap("user_id")
-    public String userId;
-
     public static EntityDeleteShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         EntityDeleteShrinkRequest self = new EntityDeleteShrinkRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class EntityDeleteShrinkRequest extends TeaModel {
     }
     public String getThirdpartId() {
         return this.thirdpartId;
-    }
-
-    public EntityDeleteShrinkRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }

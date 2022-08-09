@@ -7,9 +7,6 @@ public class DepartmentSaveRequest extends TeaModel {
     @NameInMap("depart_list")
     public java.util.List<DepartmentSaveRequestDepartList> departList;
 
-    @NameInMap("user_id")
-    public String userId;
-
     public static DepartmentSaveRequest build(java.util.Map<String, ?> map) throws Exception {
         DepartmentSaveRequest self = new DepartmentSaveRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class DepartmentSaveRequest extends TeaModel {
     }
     public java.util.List<DepartmentSaveRequestDepartList> getDepartList() {
         return this.departList;
-    }
-
-    public DepartmentSaveRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public static class DepartmentSaveRequestDepartList extends TeaModel {

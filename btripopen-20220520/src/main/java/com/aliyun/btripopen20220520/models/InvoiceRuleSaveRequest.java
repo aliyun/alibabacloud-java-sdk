@@ -7,17 +7,11 @@ public class InvoiceRuleSaveRequest extends TeaModel {
     @NameInMap("all_employe")
     public Boolean allEmploye;
 
-    @NameInMap("corp_id")
-    public String corpId;
-
     @NameInMap("entities")
     public java.util.List<InvoiceRuleSaveRequestEntities> entities;
 
     @NameInMap("third_part_id")
     public String thirdPartId;
-
-    @NameInMap("user_id")
-    public String userId;
 
     public static InvoiceRuleSaveRequest build(java.util.Map<String, ?> map) throws Exception {
         InvoiceRuleSaveRequest self = new InvoiceRuleSaveRequest();
@@ -30,14 +24,6 @@ public class InvoiceRuleSaveRequest extends TeaModel {
     }
     public Boolean getAllEmploye() {
         return this.allEmploye;
-    }
-
-    public InvoiceRuleSaveRequest setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
     }
 
     public InvoiceRuleSaveRequest setEntities(java.util.List<InvoiceRuleSaveRequestEntities> entities) {
@@ -54,14 +40,6 @@ public class InvoiceRuleSaveRequest extends TeaModel {
     }
     public String getThirdPartId() {
         return this.thirdPartId;
-    }
-
-    public InvoiceRuleSaveRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public static class InvoiceRuleSaveRequestEntities extends TeaModel {
