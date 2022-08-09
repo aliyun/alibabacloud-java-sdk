@@ -16,7 +16,6 @@ public class RenewResponseBody extends TeaModel {
     @NameInMap("LocalizedMessage")
     public String localizedMessage;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -49,6 +49,12 @@ public class ListCardInfoRequest extends TeaModel {
     @NameInMap("IsAutoRecharge")
     public Boolean isAutoRecharge;
 
+    @NameInMap("MaxFlow")
+    public String maxFlow;
+
+    @NameInMap("MinFlow")
+    public String minFlow;
+
     @NameInMap("Msisdn")
     public String msisdn;
 
@@ -205,6 +211,22 @@ public class ListCardInfoRequest extends TeaModel {
     }
     public Boolean getIsAutoRecharge() {
         return this.isAutoRecharge;
+    }
+
+    public ListCardInfoRequest setMaxFlow(String maxFlow) {
+        this.maxFlow = maxFlow;
+        return this;
+    }
+    public String getMaxFlow() {
+        return this.maxFlow;
+    }
+
+    public ListCardInfoRequest setMinFlow(String minFlow) {
+        this.minFlow = minFlow;
+        return this;
+    }
+    public String getMinFlow() {
+        return this.minFlow;
     }
 
     public ListCardInfoRequest setMsisdn(String msisdn) {
