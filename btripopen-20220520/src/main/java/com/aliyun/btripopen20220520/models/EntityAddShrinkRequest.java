@@ -10,9 +10,6 @@ public class EntityAddShrinkRequest extends TeaModel {
     @NameInMap("thirdpart_id")
     public String thirdpartId;
 
-    @NameInMap("user_id")
-    public String userId;
-
     public static EntityAddShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         EntityAddShrinkRequest self = new EntityAddShrinkRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class EntityAddShrinkRequest extends TeaModel {
     }
     public String getThirdpartId() {
         return this.thirdpartId;
-    }
-
-    public EntityAddShrinkRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }

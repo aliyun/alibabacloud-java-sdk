@@ -13,9 +13,6 @@ public class InvoiceModifyRequest extends TeaModel {
     @NameInMap("bank_no")
     public String bankNo;
 
-    @NameInMap("corp_id")
-    public String corpId;
-
     @NameInMap("tax_no")
     public String taxNo;
 
@@ -30,9 +27,6 @@ public class InvoiceModifyRequest extends TeaModel {
 
     @NameInMap("type")
     public Integer type;
-
-    @NameInMap("user_id")
-    public String userId;
 
     public static InvoiceModifyRequest build(java.util.Map<String, ?> map) throws Exception {
         InvoiceModifyRequest self = new InvoiceModifyRequest();
@@ -61,14 +55,6 @@ public class InvoiceModifyRequest extends TeaModel {
     }
     public String getBankNo() {
         return this.bankNo;
-    }
-
-    public InvoiceModifyRequest setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
     }
 
     public InvoiceModifyRequest setTaxNo(String taxNo) {
@@ -109,14 +95,6 @@ public class InvoiceModifyRequest extends TeaModel {
     }
     public Integer getType() {
         return this.type;
-    }
-
-    public InvoiceModifyRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }

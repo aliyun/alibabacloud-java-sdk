@@ -19,9 +19,6 @@ public class CostCenterModifyRequest extends TeaModel {
     @NameInMap("title")
     public String title;
 
-    @NameInMap("user_id")
-    public String userId;
-
     public static CostCenterModifyRequest build(java.util.Map<String, ?> map) throws Exception {
         CostCenterModifyRequest self = new CostCenterModifyRequest();
         return TeaModel.build(map, self);
@@ -65,14 +62,6 @@ public class CostCenterModifyRequest extends TeaModel {
     }
     public String getTitle() {
         return this.title;
-    }
-
-    public CostCenterModifyRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }

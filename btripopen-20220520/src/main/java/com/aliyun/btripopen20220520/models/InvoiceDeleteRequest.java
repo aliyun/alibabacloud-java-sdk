@@ -7,9 +7,6 @@ public class InvoiceDeleteRequest extends TeaModel {
     @NameInMap("third_part_id")
     public String thirdPartId;
 
-    @NameInMap("user_id")
-    public String userId;
-
     public static InvoiceDeleteRequest build(java.util.Map<String, ?> map) throws Exception {
         InvoiceDeleteRequest self = new InvoiceDeleteRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class InvoiceDeleteRequest extends TeaModel {
     }
     public String getThirdPartId() {
         return this.thirdPartId;
-    }
-
-    public InvoiceDeleteRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }

@@ -10,9 +10,6 @@ public class EntityAddRequest extends TeaModel {
     @NameInMap("thirdpart_id")
     public String thirdpartId;
 
-    @NameInMap("user_id")
-    public String userId;
-
     public static EntityAddRequest build(java.util.Map<String, ?> map) throws Exception {
         EntityAddRequest self = new EntityAddRequest();
         return TeaModel.build(map, self);
@@ -34,41 +31,16 @@ public class EntityAddRequest extends TeaModel {
         return this.thirdpartId;
     }
 
-    public EntityAddRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
     public static class EntityAddRequestEntityDOList extends TeaModel {
-        @NameInMap("corp_id")
-        public String corpId;
-
         @NameInMap("entity_id")
         public String entityId;
 
         @NameInMap("entity_type")
         public String entityType;
 
-        @NameInMap("name")
-        public String name;
-
-        @NameInMap("user_num")
-        public Integer userNum;
-
         public static EntityAddRequestEntityDOList build(java.util.Map<String, ?> map) throws Exception {
             EntityAddRequestEntityDOList self = new EntityAddRequestEntityDOList();
             return TeaModel.build(map, self);
-        }
-
-        public EntityAddRequestEntityDOList setCorpId(String corpId) {
-            this.corpId = corpId;
-            return this;
-        }
-        public String getCorpId() {
-            return this.corpId;
         }
 
         public EntityAddRequestEntityDOList setEntityId(String entityId) {
@@ -85,22 +57,6 @@ public class EntityAddRequest extends TeaModel {
         }
         public String getEntityType() {
             return this.entityType;
-        }
-
-        public EntityAddRequestEntityDOList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public EntityAddRequestEntityDOList setUserNum(Integer userNum) {
-            this.userNum = userNum;
-            return this;
-        }
-        public Integer getUserNum() {
-            return this.userNum;
         }
 
     }

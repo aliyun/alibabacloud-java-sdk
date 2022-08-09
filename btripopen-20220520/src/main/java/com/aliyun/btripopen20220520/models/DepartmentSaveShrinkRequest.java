@@ -7,9 +7,6 @@ public class DepartmentSaveShrinkRequest extends TeaModel {
     @NameInMap("depart_list")
     public String departListShrink;
 
-    @NameInMap("user_id")
-    public String userId;
-
     public static DepartmentSaveShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DepartmentSaveShrinkRequest self = new DepartmentSaveShrinkRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class DepartmentSaveShrinkRequest extends TeaModel {
     }
     public String getDepartListShrink() {
         return this.departListShrink;
-    }
-
-    public DepartmentSaveShrinkRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }

@@ -13,9 +13,6 @@ public class EntityDeleteRequest extends TeaModel {
     @NameInMap("thirdpart_id")
     public String thirdpartId;
 
-    @NameInMap("user_id")
-    public String userId;
-
     public static EntityDeleteRequest build(java.util.Map<String, ?> map) throws Exception {
         EntityDeleteRequest self = new EntityDeleteRequest();
         return TeaModel.build(map, self);
@@ -45,41 +42,16 @@ public class EntityDeleteRequest extends TeaModel {
         return this.thirdpartId;
     }
 
-    public EntityDeleteRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
     public static class EntityDeleteRequestEntityDOList extends TeaModel {
-        @NameInMap("corp_id")
-        public String corpId;
-
         @NameInMap("entity_id")
         public String entityId;
 
         @NameInMap("entity_type")
         public String entityType;
 
-        @NameInMap("name")
-        public String name;
-
-        @NameInMap("user_num")
-        public Integer userNum;
-
         public static EntityDeleteRequestEntityDOList build(java.util.Map<String, ?> map) throws Exception {
             EntityDeleteRequestEntityDOList self = new EntityDeleteRequestEntityDOList();
             return TeaModel.build(map, self);
-        }
-
-        public EntityDeleteRequestEntityDOList setCorpId(String corpId) {
-            this.corpId = corpId;
-            return this;
-        }
-        public String getCorpId() {
-            return this.corpId;
         }
 
         public EntityDeleteRequestEntityDOList setEntityId(String entityId) {
@@ -96,22 +68,6 @@ public class EntityDeleteRequest extends TeaModel {
         }
         public String getEntityType() {
             return this.entityType;
-        }
-
-        public EntityDeleteRequestEntityDOList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public EntityDeleteRequestEntityDOList setUserNum(Integer userNum) {
-            this.userNum = userNum;
-            return this;
-        }
-        public Integer getUserNum() {
-            return this.userNum;
         }
 
     }
