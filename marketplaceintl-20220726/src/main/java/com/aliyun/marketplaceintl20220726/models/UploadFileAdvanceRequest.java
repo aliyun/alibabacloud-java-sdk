@@ -8,8 +8,8 @@ public class UploadFileAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream fileUrlObject;
 
-    @NameInMap("EncryptData")
-    public String encryptData;
+    @NameInMap("FileName")
+    public String fileName;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -33,12 +33,12 @@ public class UploadFileAdvanceRequest extends TeaModel {
         return this.fileUrlObject;
     }
 
-    public UploadFileAdvanceRequest setEncryptData(String encryptData) {
-        this.encryptData = encryptData;
+    public UploadFileAdvanceRequest setFileName(String fileName) {
+        this.fileName = fileName;
         return this;
     }
-    public String getEncryptData() {
-        return this.encryptData;
+    public String getFileName() {
+        return this.fileName;
     }
 
     public UploadFileAdvanceRequest setRequestId(String requestId) {

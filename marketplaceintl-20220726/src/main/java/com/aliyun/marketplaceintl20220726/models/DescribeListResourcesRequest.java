@@ -4,9 +4,6 @@ package com.aliyun.marketplaceintl20220726.models;
 import com.aliyun.tea.*;
 
 public class DescribeListResourcesRequest extends TeaModel {
-    @NameInMap("EncryptData")
-    public String encryptData;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -19,14 +16,6 @@ public class DescribeListResourcesRequest extends TeaModel {
     public static DescribeListResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeListResourcesRequest self = new DescribeListResourcesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeListResourcesRequest setEncryptData(String encryptData) {
-        this.encryptData = encryptData;
-        return this;
-    }
-    public String getEncryptData() {
-        return this.encryptData;
     }
 
     public DescribeListResourcesRequest setRequestId(String requestId) {

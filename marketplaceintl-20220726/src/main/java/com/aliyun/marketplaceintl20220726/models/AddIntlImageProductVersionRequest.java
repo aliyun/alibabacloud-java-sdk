@@ -10,9 +10,6 @@ public class AddIntlImageProductVersionRequest extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
-    @NameInMap("EncryptData")
-    public String encryptData;
-
     @NameInMap("ImageConstraint")
     public AddIntlImageProductVersionRequestImageConstraint imageConstraint;
 
@@ -41,14 +38,6 @@ public class AddIntlImageProductVersionRequest extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
-    }
-
-    public AddIntlImageProductVersionRequest setEncryptData(String encryptData) {
-        this.encryptData = encryptData;
-        return this;
-    }
-    public String getEncryptData() {
-        return this.encryptData;
     }
 
     public AddIntlImageProductVersionRequest setImageConstraint(AddIntlImageProductVersionRequestImageConstraint imageConstraint) {

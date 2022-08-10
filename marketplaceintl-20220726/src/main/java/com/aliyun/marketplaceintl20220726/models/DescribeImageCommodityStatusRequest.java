@@ -7,9 +7,6 @@ public class DescribeImageCommodityStatusRequest extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
-    @NameInMap("EncryptData")
-    public String encryptData;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -27,14 +24,6 @@ public class DescribeImageCommodityStatusRequest extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
-    }
-
-    public DescribeImageCommodityStatusRequest setEncryptData(String encryptData) {
-        this.encryptData = encryptData;
-        return this;
-    }
-    public String getEncryptData() {
-        return this.encryptData;
     }
 
     public DescribeImageCommodityStatusRequest setRequestId(String requestId) {
