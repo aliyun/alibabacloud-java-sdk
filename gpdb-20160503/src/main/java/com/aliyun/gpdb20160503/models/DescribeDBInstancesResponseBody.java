@@ -168,6 +168,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("SegNodeNum")
         public String segNodeNum;
 
@@ -336,6 +339,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setSegNodeNum(String segNodeNum) {
