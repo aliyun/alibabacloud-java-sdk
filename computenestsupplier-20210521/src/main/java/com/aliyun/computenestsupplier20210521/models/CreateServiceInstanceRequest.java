@@ -31,7 +31,6 @@ public class CreateServiceInstanceRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
-    // 用户ID
     @NameInMap("UserId")
     public String userId;
 
