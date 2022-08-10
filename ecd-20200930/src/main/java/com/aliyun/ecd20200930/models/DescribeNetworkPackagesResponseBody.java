@@ -70,6 +70,9 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
+        @NameInMap("OfficeSiteVpcType")
+        public String officeSiteVpcType;
+
         public static DescribeNetworkPackagesResponseBodyNetworkPackages build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkPackagesResponseBodyNetworkPackages self = new DescribeNetworkPackagesResponseBodyNetworkPackages();
             return TeaModel.build(map, self);
@@ -145,6 +148,14 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         }
         public String getOfficeSiteName() {
             return this.officeSiteName;
+        }
+
+        public DescribeNetworkPackagesResponseBodyNetworkPackages setOfficeSiteVpcType(String officeSiteVpcType) {
+            this.officeSiteVpcType = officeSiteVpcType;
+            return this;
+        }
+        public String getOfficeSiteVpcType() {
+            return this.officeSiteVpcType;
         }
 
     }

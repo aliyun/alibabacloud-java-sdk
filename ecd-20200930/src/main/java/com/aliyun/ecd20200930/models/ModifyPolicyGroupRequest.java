@@ -58,6 +58,9 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("RecordingEndTime")
     public String recordingEndTime;
 
+    @NameInMap("RecordingExpires")
+    public Long recordingExpires;
+
     @NameInMap("RecordingFps")
     public Long recordingFps;
 
@@ -238,6 +241,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
     public String getRecordingEndTime() {
         return this.recordingEndTime;
+    }
+
+    public ModifyPolicyGroupRequest setRecordingExpires(Long recordingExpires) {
+        this.recordingExpires = recordingExpires;
+        return this;
+    }
+    public Long getRecordingExpires() {
+        return this.recordingExpires;
     }
 
     public ModifyPolicyGroupRequest setRecordingFps(Long recordingFps) {

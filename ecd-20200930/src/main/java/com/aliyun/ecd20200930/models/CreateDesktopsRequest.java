@@ -61,6 +61,9 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("UserAssignMode")
     public String userAssignMode;
 
+    @NameInMap("UserCommands")
+    public java.util.List<CreateDesktopsRequestUserCommands> userCommands;
+
     @NameInMap("UserName")
     public String userName;
 
@@ -230,6 +233,14 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.userAssignMode;
     }
 
+    public CreateDesktopsRequest setUserCommands(java.util.List<CreateDesktopsRequestUserCommands> userCommands) {
+        this.userCommands = userCommands;
+        return this;
+    }
+    public java.util.List<CreateDesktopsRequestUserCommands> getUserCommands() {
+        return this.userCommands;
+    }
+
     public CreateDesktopsRequest setUserName(String userName) {
         this.userName = userName;
         return this;
@@ -288,6 +299,47 @@ public class CreateDesktopsRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class CreateDesktopsRequestUserCommands extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("ContentEncoding")
+        public String contentEncoding;
+
+        @NameInMap("ContentType")
+        public String contentType;
+
+        public static CreateDesktopsRequestUserCommands build(java.util.Map<String, ?> map) throws Exception {
+            CreateDesktopsRequestUserCommands self = new CreateDesktopsRequestUserCommands();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDesktopsRequestUserCommands setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public CreateDesktopsRequestUserCommands setContentEncoding(String contentEncoding) {
+            this.contentEncoding = contentEncoding;
+            return this;
+        }
+        public String getContentEncoding() {
+            return this.contentEncoding;
+        }
+
+        public CreateDesktopsRequestUserCommands setContentType(String contentType) {
+            this.contentType = contentType;
+            return this;
+        }
+        public String getContentType() {
+            return this.contentType;
         }
 
     }

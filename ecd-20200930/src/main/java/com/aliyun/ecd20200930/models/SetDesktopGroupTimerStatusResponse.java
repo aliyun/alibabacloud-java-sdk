@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeRecordingsResponse extends TeaModel {
+public class SetDesktopGroupTimerStatusResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeRecordingsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeRecordingsResponseBody body;
+    public SetDesktopGroupTimerStatusResponseBody body;
 
-    public static DescribeRecordingsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeRecordingsResponse self = new DescribeRecordingsResponse();
+    public static SetDesktopGroupTimerStatusResponse build(java.util.Map<String, ?> map) throws Exception {
+        SetDesktopGroupTimerStatusResponse self = new SetDesktopGroupTimerStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRecordingsResponse setHeaders(java.util.Map<String, String> headers) {
+    public SetDesktopGroupTimerStatusResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeRecordingsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeRecordingsResponse setStatusCode(Integer statusCode) {
+    public SetDesktopGroupTimerStatusResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeRecordingsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeRecordingsResponse setBody(DescribeRecordingsResponseBody body) {
+    public SetDesktopGroupTimerStatusResponse setBody(SetDesktopGroupTimerStatusResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeRecordingsResponseBody getBody() {
+    public SetDesktopGroupTimerStatusResponseBody getBody() {
         return this.body;
     }
 
