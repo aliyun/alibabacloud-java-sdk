@@ -1,3 +1,6 @@
+2022-08-10 Version: 2.0.8
+- 开发SetDesktopGroupTimer和SetDesktopGroupTimerStatus接口.
+
 2022-07-12 Version: 2.0.7
 - Upgrade sdk to same version.
 

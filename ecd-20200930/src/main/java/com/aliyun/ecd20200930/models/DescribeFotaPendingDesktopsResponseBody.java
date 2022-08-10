@@ -10,7 +10,6 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
