@@ -32,6 +32,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public CheckResultResponse checkResultWithOptions(CheckResultRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extraImageControlList)) {
+            query.put("ExtraImageControlList", request.extraImageControlList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isReturnImage)) {
+            query.put("IsReturnImage", request.isReturnImage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
+            query.put("MerchantBizId", request.merchantBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.returnFiveCategorySpoofResult)) {
+            query.put("ReturnFiveCategorySpoofResult", request.returnFiveCategorySpoofResult);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transactionId)) {
+            query.put("TransactionId", request.transactionId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckResult"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckResultResponse());
+    }
+
+    public CheckResultResponse checkResult(CheckResultRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.checkResultWithOptions(request, runtime);
+    }
+
     public InitializeResponse initializeWithOptions(InitializeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
