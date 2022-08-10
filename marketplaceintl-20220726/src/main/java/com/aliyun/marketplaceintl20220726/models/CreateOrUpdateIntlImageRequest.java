@@ -19,9 +19,6 @@ public class CreateOrUpdateIntlImageRequest extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
-    @NameInMap("EncryptData")
-    public String encryptData;
-
     @NameInMap("ProtocolInfo")
     public CreateOrUpdateIntlImageRequestProtocolInfo protocolInfo;
 
@@ -74,14 +71,6 @@ public class CreateOrUpdateIntlImageRequest extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
-    }
-
-    public CreateOrUpdateIntlImageRequest setEncryptData(String encryptData) {
-        this.encryptData = encryptData;
-        return this;
-    }
-    public String getEncryptData() {
-        return this.encryptData;
     }
 
     public CreateOrUpdateIntlImageRequest setProtocolInfo(CreateOrUpdateIntlImageRequestProtocolInfo protocolInfo) {

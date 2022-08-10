@@ -7,9 +7,6 @@ public class DescribeCustomImagesRequest extends TeaModel {
     @NameInMap("Ak")
     public String ak;
 
-    @NameInMap("EncryptData")
-    public String encryptData;
-
     @NameInMap("RegionNo")
     public String regionNo;
 
@@ -33,14 +30,6 @@ public class DescribeCustomImagesRequest extends TeaModel {
     }
     public String getAk() {
         return this.ak;
-    }
-
-    public DescribeCustomImagesRequest setEncryptData(String encryptData) {
-        this.encryptData = encryptData;
-        return this;
-    }
-    public String getEncryptData() {
-        return this.encryptData;
     }
 
     public DescribeCustomImagesRequest setRegionNo(String regionNo) {

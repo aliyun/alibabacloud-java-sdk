@@ -79,9 +79,6 @@ public class DescribeCountriesResponseBody extends TeaModel {
         @NameInMap("Countries")
         public java.util.List<String> countries;
 
-        @NameInMap("EncryptData")
-        public String encryptData;
-
         @NameInMap("RequestId")
         public String requestId;
 
@@ -99,14 +96,6 @@ public class DescribeCountriesResponseBody extends TeaModel {
         }
         public java.util.List<String> getCountries() {
             return this.countries;
-        }
-
-        public DescribeCountriesResponseBodyData setEncryptData(String encryptData) {
-            this.encryptData = encryptData;
-            return this;
-        }
-        public String getEncryptData() {
-            return this.encryptData;
         }
 
         public DescribeCountriesResponseBodyData setRequestId(String requestId) {

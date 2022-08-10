@@ -7,9 +7,6 @@ public class DescribeImageConstraintsRequest extends TeaModel {
     @NameInMap("Ak")
     public String ak;
 
-    @NameInMap("EncryptData")
-    public String encryptData;
-
     @NameInMap("ImageId")
     public String imageId;
 
@@ -36,14 +33,6 @@ public class DescribeImageConstraintsRequest extends TeaModel {
     }
     public String getAk() {
         return this.ak;
-    }
-
-    public DescribeImageConstraintsRequest setEncryptData(String encryptData) {
-        this.encryptData = encryptData;
-        return this;
-    }
-    public String getEncryptData() {
-        return this.encryptData;
     }
 
     public DescribeImageConstraintsRequest setImageId(String imageId) {

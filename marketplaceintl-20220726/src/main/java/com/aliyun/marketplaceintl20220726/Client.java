@@ -54,10 +54,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CommodityCode", request.commodityCode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
-            body.put("EncryptData", request.encryptData);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.imageConstraint))) {
             bodyFlat.put("ImageConstraint", request.imageConstraint);
         }
@@ -120,10 +116,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CommodityCode", request.commodityCode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
-            body.put("EncryptData", request.encryptData);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.protocolInfo))) {
             bodyFlat.put("ProtocolInfo", request.protocolInfo);
         }
@@ -165,10 +157,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAccessibleRegionsResponse describeAccessibleRegionsWithOptions(DescribeAccessibleRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
-            body.put("EncryptData", request.encryptData);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
             body.put("RequestId", request.requestId);
         }
@@ -202,10 +190,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCategoriesResponse describeCategoriesWithOptions(DescribeCategoriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
-            body.put("EncryptData", request.encryptData);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
             body.put("RequestId", request.requestId);
         }
@@ -239,10 +223,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCountriesResponse describeCountriesWithOptions(DescribeCountriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
-            body.put("EncryptData", request.encryptData);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
             body.put("RequestId", request.requestId);
         }
@@ -278,10 +258,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ak)) {
             body.put("Ak", request.ak);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
-            body.put("EncryptData", request.encryptData);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionNo)) {
@@ -329,10 +305,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CommodityCode", request.commodityCode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
-            body.put("EncryptData", request.encryptData);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
             body.put("RequestId", request.requestId);
         }
@@ -370,10 +342,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CommodityCode", request.commodityCode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
-            body.put("EncryptData", request.encryptData);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
             body.put("RequestId", request.requestId);
         }
@@ -409,10 +377,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ak)) {
             body.put("Ak", request.ak);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
-            body.put("EncryptData", request.encryptData);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
@@ -460,10 +424,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeInstanceTypesResponse describeInstanceTypesWithOptions(DescribeInstanceTypesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
-            body.put("EncryptData", request.encryptData);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
             body.put("RequestId", request.requestId);
         }
@@ -497,10 +457,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeListResourcesResponse describeListResourcesWithOptions(DescribeListResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
-            body.put("EncryptData", request.encryptData);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
             body.put("RequestId", request.requestId);
         }
@@ -538,10 +494,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeReleasableRegionListResponse describeReleasableRegionListWithOptions(DescribeReleasableRegionListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
-            body.put("EncryptData", request.encryptData);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
             body.put("RequestId", request.requestId);
         }
@@ -579,10 +531,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CommodityCode", request.commodityCode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
-            body.put("EncryptData", request.encryptData);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
             body.put("RequestId", request.requestId);
         }
@@ -616,8 +564,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UploadFileResponse uploadFileWithOptions(UploadFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.encryptData)) {
-            body.put("EncryptData", request.encryptData);
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            body.put("FileName", request.fileName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {

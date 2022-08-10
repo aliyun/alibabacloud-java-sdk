@@ -7,9 +7,6 @@ public class SubmitImageCommodityReviewRequest extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
-    @NameInMap("EncryptData")
-    public String encryptData;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -27,14 +24,6 @@ public class SubmitImageCommodityReviewRequest extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
-    }
-
-    public SubmitImageCommodityReviewRequest setEncryptData(String encryptData) {
-        this.encryptData = encryptData;
-        return this;
-    }
-    public String getEncryptData() {
-        return this.encryptData;
     }
 
     public SubmitImageCommodityReviewRequest setRequestId(String requestId) {

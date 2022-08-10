@@ -4,8 +4,8 @@ package com.aliyun.marketplaceintl20220726.models;
 import com.aliyun.tea.*;
 
 public class UploadFileRequest extends TeaModel {
-    @NameInMap("EncryptData")
-    public String encryptData;
+    @NameInMap("FileName")
+    public String fileName;
 
     @NameInMap("FileUrl")
     public String fileUrl;
@@ -24,12 +24,12 @@ public class UploadFileRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UploadFileRequest setEncryptData(String encryptData) {
-        this.encryptData = encryptData;
+    public UploadFileRequest setFileName(String fileName) {
+        this.fileName = fileName;
         return this;
     }
-    public String getEncryptData() {
-        return this.encryptData;
+    public String getFileName() {
+        return this.fileName;
     }
 
     public UploadFileRequest setFileUrl(String fileUrl) {
