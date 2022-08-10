@@ -204,6 +204,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("RunningTime")
         public String runningTime;
 
@@ -577,6 +580,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setRunningTime(String runningTime) {

@@ -37,6 +37,9 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Tag")
     public java.util.List<DescribeDBInstancesShrinkRequestTag> tag;
 
@@ -131,6 +134,14 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDBInstancesShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeDBInstancesShrinkRequest setTag(java.util.List<DescribeDBInstancesShrinkRequestTag> tag) {
