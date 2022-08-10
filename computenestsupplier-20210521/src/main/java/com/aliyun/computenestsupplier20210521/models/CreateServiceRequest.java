@@ -49,6 +49,9 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateServiceRequestTag> tag;
 
+    @NameInMap("TenantType")
+    public String tenantType;
+
     @NameInMap("TrialDuration")
     public Long trialDuration;
 
@@ -181,6 +184,14 @@ public class CreateServiceRequest extends TeaModel {
     }
     public java.util.List<CreateServiceRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateServiceRequest setTenantType(String tenantType) {
+        this.tenantType = tenantType;
+        return this;
+    }
+    public String getTenantType() {
+        return this.tenantType;
     }
 
     public CreateServiceRequest setTrialDuration(Long trialDuration) {
