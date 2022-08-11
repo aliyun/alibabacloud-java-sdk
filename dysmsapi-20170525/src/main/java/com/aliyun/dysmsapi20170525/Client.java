@@ -1193,10 +1193,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.phoneNumberJson)) {
-            query.put("PhoneNumberJson", request.phoneNumberJson);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -1205,24 +1201,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.signNameJson)) {
-            query.put("SignNameJson", request.signNameJson);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.smsUpExtendCodeJson)) {
-            query.put("SmsUpExtendCodeJson", request.smsUpExtendCodeJson);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
             query.put("TemplateCode", request.templateCode);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneNumberJson)) {
+            body.put("PhoneNumberJson", request.phoneNumberJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signNameJson)) {
+            body.put("SignNameJson", request.signNameJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smsUpExtendCodeJson)) {
+            body.put("SmsUpExtendCodeJson", request.smsUpExtendCodeJson);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateParamJson)) {
-            query.put("TemplateParamJson", request.templateParamJson);
+            body.put("TemplateParamJson", request.templateParamJson);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SendBatchSms"),
