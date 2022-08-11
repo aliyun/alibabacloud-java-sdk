@@ -91,6 +91,36 @@ public class ListConfigRulesResponseBody extends TeaModel {
 
     }
 
+    public static class ListConfigRulesResponseBodyConfigRulesConfigRuleListTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListConfigRulesResponseBodyConfigRulesConfigRuleListTags build(java.util.Map<String, ?> map) throws Exception {
+            ListConfigRulesResponseBodyConfigRulesConfigRuleListTags self = new ListConfigRulesResponseBodyConfigRulesConfigRuleListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleListTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleListTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListConfigRulesResponseBodyConfigRulesConfigRuleList extends TeaModel {
         @NameInMap("AccountId")
         public Long accountId;
@@ -130,6 +160,9 @@ public class ListConfigRulesResponseBody extends TeaModel {
 
         @NameInMap("SourceOwner")
         public String sourceOwner;
+
+        @NameInMap("Tags")
+        public java.util.List<ListConfigRulesResponseBodyConfigRulesConfigRuleListTags> tags;
 
         public static ListConfigRulesResponseBodyConfigRulesConfigRuleList build(java.util.Map<String, ?> map) throws Exception {
             ListConfigRulesResponseBodyConfigRulesConfigRuleList self = new ListConfigRulesResponseBodyConfigRulesConfigRuleList();
@@ -238,6 +271,14 @@ public class ListConfigRulesResponseBody extends TeaModel {
         }
         public String getSourceOwner() {
             return this.sourceOwner;
+        }
+
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setTags(java.util.List<ListConfigRulesResponseBodyConfigRulesConfigRuleListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListConfigRulesResponseBodyConfigRulesConfigRuleListTags> getTags() {
+            return this.tags;
         }
 
     }

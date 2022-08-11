@@ -1,3 +1,6 @@
+2022-08-11 Version: 2.0.9
+- Fix ListManagedRules bugs.
+
 2022-01-11 Version: 2.0.8
 - Fix bugs.
 
