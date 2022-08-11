@@ -9,8 +9,6 @@ import com.aliyun.teaopenapi.*;
 import com.aliyun.teaopenapi.models.*;
 import com.aliyun.openapiutil.*;
 import com.aliyun.endpointutil.*;
-import com.aliyun.credentials.*;
-import com.aliyun.gateway.fc.util.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
@@ -3756,47 +3754,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTriggerResponse());
-    }
-
-    public okhttp3.Response InvokeHTTPTrigger(String url, String method, byte[] body, okhttp3.Headers headers) throws Exception {
-        com.aliyun.credentials.Client cred = _credential;
-        com.aliyun.gateway.fc.util.Client utilClient = new com.aliyun.gateway.fc.util.Client(cred);
-        return utilClient.InvokeHTTPTrigger(url, method, body, headers);
-    }
-
-    public okhttp3.Response InvokeAnonymousHTTPTrigger(String url, String method, byte[] body, okhttp3.Headers headers) throws Exception {
-        com.aliyun.credentials.Client cred = _credential;
-        com.aliyun.gateway.fc.util.Client utilClient = new com.aliyun.gateway.fc.util.Client(cred);
-        return utilClient.InvokeAnonymousHTTPTrigger(url, method, body, headers);
-    }
-
-    public okhttp3.Response SendHTTPRequestWithAuthorization(okhttp3.Request req) throws Exception {
-        com.aliyun.credentials.Client cred = _credential;
-        com.aliyun.gateway.fc.util.Client utilClient = new com.aliyun.gateway.fc.util.Client(cred);
-        return utilClient.SendHTTPRequestWithAuthorization(req);
-    }
-
-    public okhttp3.Response SendHTTPRequest(okhttp3.Request req) throws Exception {
-        com.aliyun.credentials.Client cred = _credential;
-        com.aliyun.gateway.fc.util.Client utilClient = new com.aliyun.gateway.fc.util.Client(cred);
-        return utilClient.SendHTTPRequest(req);
-    }
-
-    public okhttp3.Request SignRequest(okhttp3.Request req) throws Exception {
-        com.aliyun.credentials.Client cred = _credential;
-        com.aliyun.gateway.fc.util.Client utilClient = new com.aliyun.gateway.fc.util.Client(cred);
-        return utilClient.SignRequest(req);
-    }
-
-    public okhttp3.Request SignRequestWithContentMD5(okhttp3.Request req, String contentMD5) throws Exception {
-        com.aliyun.credentials.Client cred = _credential;
-        com.aliyun.gateway.fc.util.Client utilClient = new com.aliyun.gateway.fc.util.Client(cred);
-        return utilClient.SignRequestWithContentMD5(req, contentMD5);
-    }
-
-    public okhttp3.Request BuildHTTPRequest(String url, String method, byte[] body, okhttp3.Headers headers) throws Exception {
-        com.aliyun.credentials.Client cred = _credential;
-        com.aliyun.gateway.fc.util.Client utilClient = new com.aliyun.gateway.fc.util.Client(cred);
-        return utilClient.BuildHTTPRequest(url, method, body, headers);
     }
 }
