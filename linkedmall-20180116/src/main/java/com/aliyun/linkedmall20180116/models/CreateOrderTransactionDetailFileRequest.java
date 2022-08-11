@@ -31,8 +31,20 @@ public class CreateOrderTransactionDetailFileRequest extends TeaModel {
     @NameInMap("PayStatus")
     public String payStatus;
 
+    @NameInMap("PaymentEndTime")
+    public String paymentEndTime;
+
+    @NameInMap("PaymentStartTime")
+    public String paymentStartTime;
+
     @NameInMap("PoCode")
     public String poCode;
+
+    @NameInMap("RefundEndTime")
+    public String refundEndTime;
+
+    @NameInMap("RefundStartTime")
+    public String refundStartTime;
 
     @NameInMap("SellerId")
     public String sellerId;
@@ -45,6 +57,9 @@ public class CreateOrderTransactionDetailFileRequest extends TeaModel {
 
     @NameInMap("ShopName")
     public String shopName;
+
+    @NameInMap("TbMainOrderId")
+    public String tbMainOrderId;
 
     @NameInMap("TenantId")
     public String tenantId;
@@ -129,12 +144,44 @@ public class CreateOrderTransactionDetailFileRequest extends TeaModel {
         return this.payStatus;
     }
 
+    public CreateOrderTransactionDetailFileRequest setPaymentEndTime(String paymentEndTime) {
+        this.paymentEndTime = paymentEndTime;
+        return this;
+    }
+    public String getPaymentEndTime() {
+        return this.paymentEndTime;
+    }
+
+    public CreateOrderTransactionDetailFileRequest setPaymentStartTime(String paymentStartTime) {
+        this.paymentStartTime = paymentStartTime;
+        return this;
+    }
+    public String getPaymentStartTime() {
+        return this.paymentStartTime;
+    }
+
     public CreateOrderTransactionDetailFileRequest setPoCode(String poCode) {
         this.poCode = poCode;
         return this;
     }
     public String getPoCode() {
         return this.poCode;
+    }
+
+    public CreateOrderTransactionDetailFileRequest setRefundEndTime(String refundEndTime) {
+        this.refundEndTime = refundEndTime;
+        return this;
+    }
+    public String getRefundEndTime() {
+        return this.refundEndTime;
+    }
+
+    public CreateOrderTransactionDetailFileRequest setRefundStartTime(String refundStartTime) {
+        this.refundStartTime = refundStartTime;
+        return this;
+    }
+    public String getRefundStartTime() {
+        return this.refundStartTime;
     }
 
     public CreateOrderTransactionDetailFileRequest setSellerId(String sellerId) {
@@ -167,6 +214,14 @@ public class CreateOrderTransactionDetailFileRequest extends TeaModel {
     }
     public String getShopName() {
         return this.shopName;
+    }
+
+    public CreateOrderTransactionDetailFileRequest setTbMainOrderId(String tbMainOrderId) {
+        this.tbMainOrderId = tbMainOrderId;
+        return this;
+    }
+    public String getTbMainOrderId() {
+        return this.tbMainOrderId;
     }
 
     public CreateOrderTransactionDetailFileRequest setTenantId(String tenantId) {

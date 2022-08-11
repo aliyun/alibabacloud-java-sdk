@@ -731,8 +731,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PayStatus", request.payStatus);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentEndTime)) {
+            body.put("PaymentEndTime", request.paymentEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentStartTime)) {
+            body.put("PaymentStartTime", request.paymentStartTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.poCode)) {
             body.put("PoCode", request.poCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.refundEndTime)) {
+            body.put("RefundEndTime", request.refundEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.refundStartTime)) {
+            body.put("RefundStartTime", request.refundStartTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sellerId)) {
@@ -749,6 +765,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.shopName)) {
             body.put("ShopName", request.shopName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tbMainOrderId)) {
+            body.put("TbMainOrderId", request.tbMainOrderId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
