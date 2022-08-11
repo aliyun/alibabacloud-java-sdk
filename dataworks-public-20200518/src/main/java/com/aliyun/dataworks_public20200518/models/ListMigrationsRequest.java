@@ -4,7 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListMigrationsRequest extends TeaModel {
-    // Migration operation type, IMPORT/EXPORT
     @NameInMap("MigrationType")
     public String migrationType;
 
@@ -17,7 +16,6 @@ public class ListMigrationsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // Workspace Id
     @NameInMap("ProjectId")
     public Long projectId;
 

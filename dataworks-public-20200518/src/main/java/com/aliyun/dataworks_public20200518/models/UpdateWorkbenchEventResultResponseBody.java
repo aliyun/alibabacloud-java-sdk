@@ -4,11 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkbenchEventResultResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 成功标识
     @NameInMap("Success")
     public Boolean success;
 

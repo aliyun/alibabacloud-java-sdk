@@ -7,7 +7,6 @@ public class ListExtensionsResponseBody extends TeaModel {
     @NameInMap("PagingInfo")
     public ListExtensionsResponseBodyPagingInfo pagingInfo;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

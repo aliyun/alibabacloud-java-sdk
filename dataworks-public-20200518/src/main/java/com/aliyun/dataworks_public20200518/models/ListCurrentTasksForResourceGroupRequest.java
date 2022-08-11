@@ -16,7 +16,6 @@ public class ListCurrentTasksForResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceGroupIdentifier")
     public String resourceGroupIdentifier;
 
-    // 3-等待资源；4-运行中
     @NameInMap("Status")
     public Integer status;
 

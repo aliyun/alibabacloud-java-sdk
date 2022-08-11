@@ -19,6 +19,9 @@ public class GetMetaTablePartitionRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SortCriterion")
+    public GetMetaTablePartitionRequestSortCriterion sortCriterion;
+
     @NameInMap("TableGuid")
     public String tableGuid;
 
@@ -70,6 +73,14 @@ public class GetMetaTablePartitionRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public GetMetaTablePartitionRequest setSortCriterion(GetMetaTablePartitionRequestSortCriterion sortCriterion) {
+        this.sortCriterion = sortCriterion;
+        return this;
+    }
+    public GetMetaTablePartitionRequestSortCriterion getSortCriterion() {
+        return this.sortCriterion;
+    }
+
     public GetMetaTablePartitionRequest setTableGuid(String tableGuid) {
         this.tableGuid = tableGuid;
         return this;
@@ -84,6 +95,36 @@ public class GetMetaTablePartitionRequest extends TeaModel {
     }
     public String getTableName() {
         return this.tableName;
+    }
+
+    public static class GetMetaTablePartitionRequestSortCriterion extends TeaModel {
+        @NameInMap("Order")
+        public String order;
+
+        @NameInMap("SortField")
+        public String sortField;
+
+        public static GetMetaTablePartitionRequestSortCriterion build(java.util.Map<String, ?> map) throws Exception {
+            GetMetaTablePartitionRequestSortCriterion self = new GetMetaTablePartitionRequestSortCriterion();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMetaTablePartitionRequestSortCriterion setOrder(String order) {
+            this.order = order;
+            return this;
+        }
+        public String getOrder() {
+            return this.order;
+        }
+
+        public GetMetaTablePartitionRequestSortCriterion setSortField(String sortField) {
+            this.sortField = sortField;
+            return this;
+        }
+        public String getSortField() {
+            return this.sortField;
+        }
+
     }
 
 }

@@ -4,7 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListHistoryTasksForResourceGroupRequest extends TeaModel {
-    // 最晚当前时间
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -20,7 +19,6 @@ public class ListHistoryTasksForResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceGroupIdentifier")
     public String resourceGroupIdentifier;
 
-    // 7天内
     @NameInMap("StartTime")
     public Long startTime;
 

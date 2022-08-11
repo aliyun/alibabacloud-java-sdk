@@ -7,7 +7,6 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
     @NameInMap("Paging")
     public ListShiftSchedulesResponseBodyPaging paging;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

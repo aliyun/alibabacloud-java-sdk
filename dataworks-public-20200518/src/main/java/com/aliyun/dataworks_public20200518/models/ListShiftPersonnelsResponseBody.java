@@ -7,7 +7,6 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
     @NameInMap("Paging")
     public ListShiftPersonnelsResponseBodyPaging paging;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
