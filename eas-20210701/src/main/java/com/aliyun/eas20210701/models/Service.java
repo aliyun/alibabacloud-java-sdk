@@ -19,6 +19,9 @@ public class Service extends TeaModel {
     @NameInMap("CurrentVersion")
     public Integer currentVersion;
 
+    @NameInMap("ExtraData")
+    public String extraData;
+
     @NameInMap("Gpu")
     public Integer gpu;
 
@@ -61,11 +64,17 @@ public class Service extends TeaModel {
     @NameInMap("Resource")
     public String resource;
 
+    @NameInMap("ResourceAlias")
+    public String resourceAlias;
+
     @NameInMap("RunningInstance")
     public Integer runningInstance;
 
     @NameInMap("ServiceConfig")
     public String serviceConfig;
+
+    @NameInMap("ServiceGroup")
+    public String serviceGroup;
 
     @NameInMap("ServiceId")
     public String serviceId;
@@ -131,6 +140,14 @@ public class Service extends TeaModel {
     }
     public Integer getCurrentVersion() {
         return this.currentVersion;
+    }
+
+    public Service setExtraData(String extraData) {
+        this.extraData = extraData;
+        return this;
+    }
+    public String getExtraData() {
+        return this.extraData;
     }
 
     public Service setGpu(Integer gpu) {
@@ -245,6 +262,14 @@ public class Service extends TeaModel {
         return this.resource;
     }
 
+    public Service setResourceAlias(String resourceAlias) {
+        this.resourceAlias = resourceAlias;
+        return this;
+    }
+    public String getResourceAlias() {
+        return this.resourceAlias;
+    }
+
     public Service setRunningInstance(Integer runningInstance) {
         this.runningInstance = runningInstance;
         return this;
@@ -259,6 +284,14 @@ public class Service extends TeaModel {
     }
     public String getServiceConfig() {
         return this.serviceConfig;
+    }
+
+    public Service setServiceGroup(String serviceGroup) {
+        this.serviceGroup = serviceGroup;
+        return this;
+    }
+    public String getServiceGroup() {
+        return this.serviceGroup;
     }
 
     public Service setServiceId(String serviceId) {
