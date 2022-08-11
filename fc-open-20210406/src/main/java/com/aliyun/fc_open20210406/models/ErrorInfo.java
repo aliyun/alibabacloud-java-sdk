@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ErrorInfo extends TeaModel {
-    // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 错误堆栈
     @NameInMap("stackTrace")
     public String stackTrace;
 

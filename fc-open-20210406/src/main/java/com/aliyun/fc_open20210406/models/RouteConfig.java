@@ -4,7 +4,6 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class RouteConfig extends TeaModel {
-    // routes
     @NameInMap("routes")
     public java.util.List<PathConfig> routes;
 

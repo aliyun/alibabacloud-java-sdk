@@ -4,7 +4,6 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class OSSTriggerConfig extends TeaModel {
-    // events
     @NameInMap("events")
     public java.util.List<String> events;
 

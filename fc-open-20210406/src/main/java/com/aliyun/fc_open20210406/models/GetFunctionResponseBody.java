@@ -4,58 +4,45 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetFunctionResponseBody extends TeaModel {
-    // 自定义、自定义容器运行时 HTTP Server 的监听端口
     @NameInMap("caPort")
     public Integer caPort;
 
-    // function code包的CRC64值
     @NameInMap("codeChecksum")
     public String codeChecksum;
 
-    // 系统返回的function的code包大小，单位为byte Example : 1024
     @NameInMap("codeSize")
     public Long codeSize;
 
-    // function创建时间
     @NameInMap("createdTime")
     public String createdTime;
 
     @NameInMap("customContainerConfig")
     public CustomContainerConfigInfo customContainerConfig;
 
-    // 函数自定义DNS配置
     @NameInMap("customDNS")
     public CustomDNS customDNS;
 
-    // Custom Runtime函数详细配置
     @NameInMap("customRuntimeConfig")
     public CustomRuntimeConfig customRuntimeConfig;
 
-    // 函数描述
     @NameInMap("description")
     public String description;
 
-    // 为函数设置的环境变量，可以在函数中获取环境变量的值
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
-    // 系统为每个function生成的唯一ID
     @NameInMap("functionId")
     public String functionId;
 
-    // 函数名称
     @NameInMap("functionName")
     public String functionName;
 
-    // function的执行入口
     @NameInMap("handler")
     public String handler;
 
-    // 初始化function运行的超时时间，单位为秒，最小1秒，默认3秒。初始化function超过这个时间后会被终止执行
     @NameInMap("initializationTimeout")
     public Integer initializationTimeout;
 
-    // 初始化 function 执行的入口，具体格式和语言相关
     @NameInMap("initializer")
     public String initializer;
 
@@ -71,22 +58,18 @@ public class GetFunctionResponseBody extends TeaModel {
     @NameInMap("instanceType")
     public String instanceType;
 
-    // function上次修改时间
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
     @NameInMap("layers")
     public java.util.List<String> layers;
 
-    // function设置的内存大小，单位为MB
     @NameInMap("memorySize")
     public Integer memorySize;
 
-    // function运行的语言环境，目前支持nodejs6, nodejs8, python2.7, python3, java8
     @NameInMap("runtime")
     public String runtime;
 
-    // 运行的超时时间，单位为秒
     @NameInMap("timeout")
     public Integer timeout;
 

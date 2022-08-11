@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListOnDemandConfigsResponseBody extends TeaModel {
-    // 预留实例配置
     @NameInMap("configs")
     public java.util.List<OnDemandConfig> configs;
 
-    // 用来返回更多的查询结果。如果这个值没有返回，则说明没有更多结果。
     @NameInMap("nextToken")
     public String nextToken;
 

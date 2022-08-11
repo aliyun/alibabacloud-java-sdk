@@ -4,7 +4,6 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetProvisionConfigRequest extends TeaModel {
-    // 别名名称
     @NameInMap("qualifier")
     public String qualifier;
 

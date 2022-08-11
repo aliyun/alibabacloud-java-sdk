@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class LayerCode extends TeaModel {
-    // 层代码位置
     @NameInMap("location")
     public String location;
 
-    // 层代码类型
     @NameInMap("repositoryType")
     public String repositoryType;
 

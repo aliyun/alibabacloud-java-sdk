@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListLayerVersionsRequest extends TeaModel {
-    // 本次读取的最大数据记录数量
     @NameInMap("limit")
     public Integer limit;
 
-    // 起始版本
     @NameInMap("startVersion")
     public Integer startVersion;
 

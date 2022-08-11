@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class PreStop extends TeaModel {
-    // PreStop handler
     @NameInMap("handler")
     public String handler;
 
-    // PreStop hander timeout
     @NameInMap("timeout")
     public Integer timeout;
 

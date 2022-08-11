@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class RegisterEventSourceResponseBody extends TeaModel {
-    // 创建时间
     @NameInMap("createdTime")
     public String createdTime;
 
-    // 事件源资源标识符
     @NameInMap("sourceArn")
     public String sourceArn;
 

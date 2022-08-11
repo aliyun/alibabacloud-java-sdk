@@ -4,7 +4,6 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class Destination extends TeaModel {
-    // destination
     @NameInMap("destination")
     public String destination;
 

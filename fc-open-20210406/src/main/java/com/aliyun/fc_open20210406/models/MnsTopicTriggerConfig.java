@@ -4,15 +4,12 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class MnsTopicTriggerConfig extends TeaModel {
-    // filterTag
     @NameInMap("filterTag")
     public String filterTag;
 
-    // notifyContentFormat
     @NameInMap("notifyContentFormat")
     public String notifyContentFormat;
 
-    // notifyStrategy
     @NameInMap("notifyStrategy")
     public String notifyStrategy;
 

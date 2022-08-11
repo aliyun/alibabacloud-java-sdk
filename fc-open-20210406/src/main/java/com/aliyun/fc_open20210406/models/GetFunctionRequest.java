@@ -4,7 +4,6 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetFunctionRequest extends TeaModel {
-    // service版本, 可以是versionId或者aliasName
     @NameInMap("qualifier")
     public String qualifier;
 

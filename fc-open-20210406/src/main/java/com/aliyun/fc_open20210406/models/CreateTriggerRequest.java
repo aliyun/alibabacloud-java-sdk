@@ -7,27 +7,21 @@ public class CreateTriggerRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
-    // event source，如OSS，使用该role去invoke function
     @NameInMap("invocationRole")
     public String invocationRole;
 
-    // service版本
     @NameInMap("qualifier")
     public String qualifier;
 
-    // event source的Aliyun Resource Name（ARN
     @NameInMap("sourceArn")
     public String sourceArn;
 
-    // trigger配置，针对不同的trigger类型，trigger配置会有所不同
     @NameInMap("triggerConfig")
     public String triggerConfig;
 
-    // trigger名称
     @NameInMap("triggerName")
     public String triggerName;
 
-    // trigger类型，如 oss, log, tablestore, timer, http, cdn_events, mns_topic
     @NameInMap("triggerType")
     public String triggerType;
 

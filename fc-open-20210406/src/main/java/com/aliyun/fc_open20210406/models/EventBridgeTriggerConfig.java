@@ -4,18 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class EventBridgeTriggerConfig extends TeaModel {
-    // asyncInvocationType
     @NameInMap("asyncInvocationType")
     public Boolean asyncInvocationType;
 
-    // eventRuleFilterPattern
     @NameInMap("eventRuleFilterPattern")
     public String eventRuleFilterPattern;
 
     @NameInMap("eventSourceConfig")
     public EventSourceConfig eventSourceConfig;
 
-    // triggerEnable
     @NameInMap("triggerEnable")
     public Boolean triggerEnable;
 

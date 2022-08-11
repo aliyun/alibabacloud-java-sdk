@@ -4,23 +4,18 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ScheduledActions extends TeaModel {
-    // endTime
     @NameInMap("endTime")
     public String endTime;
 
-    // name
     @NameInMap("name")
     public String name;
 
-    // scheduleExpression
     @NameInMap("scheduleExpression")
     public String scheduleExpression;
 
-    // startTime
     @NameInMap("startTime")
     public String startTime;
 
-    // target
     @NameInMap("target")
     public Long target;
 

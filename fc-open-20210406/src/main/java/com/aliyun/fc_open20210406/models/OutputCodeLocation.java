@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class OutputCodeLocation extends TeaModel {
-    // location
     @NameInMap("location")
     public String location;
 
-    // repositoryType
     @NameInMap("repositoryType")
     public String repositoryType;
 

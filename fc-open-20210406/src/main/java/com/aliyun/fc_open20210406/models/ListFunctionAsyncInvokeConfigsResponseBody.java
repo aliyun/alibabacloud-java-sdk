@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
-    // 异步配置列表
     @NameInMap("configs")
     public java.util.List<ListFunctionAsyncInvokeConfigsResponseBodyConfigs> configs;
 
-    // 下次查询token
     @NameInMap("nextToken")
     public String nextToken;
 
@@ -34,34 +32,27 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
     }
 
     public static class ListFunctionAsyncInvokeConfigsResponseBodyConfigs extends TeaModel {
-        // 创建时间
         @NameInMap("createdTime")
         public String createdTime;
 
         @NameInMap("destinationConfig")
         public DestinationConfig destinationConfig;
 
-        // 函数名称
         @NameInMap("function")
         public String function;
 
-        // 最后更改时间
         @NameInMap("lastModifiedTime")
         public String lastModifiedTime;
 
-        // 消息最大存活时长
         @NameInMap("maxAsyncEventAgeInSeconds")
         public Long maxAsyncEventAgeInSeconds;
 
-        // 异步调用失败后的最大重试次数
         @NameInMap("maxAsyncRetryAttempts")
         public Long maxAsyncRetryAttempts;
 
-        // 限定符
         @NameInMap("qualifier")
         public String qualifier;
 
-        // 服务名称
         @NameInMap("service")
         public String service;
 

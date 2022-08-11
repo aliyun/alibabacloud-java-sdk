@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class CustomRuntimeConfig extends TeaModel {
-    // 启动入口命令接收的参数
     @NameInMap("args")
     public java.util.List<String> args;
 
-    // 启动入口命令
     @NameInMap("command")
     public java.util.List<String> command;
 

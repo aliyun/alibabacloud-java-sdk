@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListServicesResponseBody extends TeaModel {
-    // 下次查询token
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 服务列表
     @NameInMap("services")
     public java.util.List<ListServicesResponseBodyServices> services;
 
@@ -34,19 +32,15 @@ public class ListServicesResponseBody extends TeaModel {
     }
 
     public static class ListServicesResponseBodyServices extends TeaModel {
-        // 创建时间
         @NameInMap("createdTime")
         public String createdTime;
 
-        // 服务描述
         @NameInMap("description")
         public String description;
 
-        // 公网访问设置
         @NameInMap("internetAccess")
         public Boolean internetAccess;
 
-        // 上次更新时间
         @NameInMap("lastModifiedTime")
         public String lastModifiedTime;
 
@@ -56,15 +50,12 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("nasConfig")
         public NASConfig nasConfig;
 
-        // 服务角色
         @NameInMap("role")
         public String role;
 
-        // 服务ID
         @NameInMap("serviceId")
         public String serviceId;
 
-        // 服务信息
         @NameInMap("serviceName")
         public String serviceName;
 

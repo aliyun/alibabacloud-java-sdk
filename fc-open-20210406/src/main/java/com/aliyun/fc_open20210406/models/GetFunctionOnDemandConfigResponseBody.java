@@ -7,7 +7,6 @@ public class GetFunctionOnDemandConfigResponseBody extends TeaModel {
     @NameInMap("maximumInstanceCount")
     public Long maximumInstanceCount;
 
-    // Id of the request
     @NameInMap("resource")
     public String resource;
 

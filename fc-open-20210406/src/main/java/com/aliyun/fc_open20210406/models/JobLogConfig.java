@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class JobLogConfig extends TeaModel {
-    // logstore
     @NameInMap("logstore")
     public String logstore;
 
-    // project
     @NameInMap("project")
     public String project;
 

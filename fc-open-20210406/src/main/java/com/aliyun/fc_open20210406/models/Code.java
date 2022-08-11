@@ -4,15 +4,12 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class Code extends TeaModel {
-    // 函数代码包的OSS bucket name
     @NameInMap("ossBucketName")
     public String ossBucketName;
 
-    // 函数代码包的OSS对象名
     @NameInMap("ossObjectName")
     public String ossObjectName;
 
-    // 直接在request body中上传code zip包的base64编码
     @NameInMap("zipFile")
     public String zipFile;
 

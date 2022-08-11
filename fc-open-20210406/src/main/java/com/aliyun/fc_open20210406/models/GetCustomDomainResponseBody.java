@@ -16,7 +16,6 @@ public class GetCustomDomainResponseBody extends TeaModel {
     @NameInMap("createdTime")
     public String createdTime;
 
-    // Id of the request
     @NameInMap("domainName")
     public String domainName;
 

@@ -4,15 +4,12 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class AsyncConfigMeta extends TeaModel {
-    // 异步配置所属函数名称。
     @NameInMap("functionName")
     public String functionName;
 
-    // 异步配置所属服务版本/别名。
     @NameInMap("qualifier")
     public String qualifier;
 
-    // 异步配置所属服务名称。
     @NameInMap("serviceName")
     public String serviceName;
 

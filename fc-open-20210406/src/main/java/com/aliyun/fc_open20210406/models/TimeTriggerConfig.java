@@ -4,15 +4,12 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class TimeTriggerConfig extends TeaModel {
-    // cronExpression
     @NameInMap("cronExpression")
     public String cronExpression;
 
-    // enable
     @NameInMap("enable")
     public Boolean enable;
 
-    // payload
     @NameInMap("payload")
     public String payload;
 

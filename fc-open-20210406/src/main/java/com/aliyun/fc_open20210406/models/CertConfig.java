@@ -4,15 +4,12 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class CertConfig extends TeaModel {
-    // 证书名称
     @NameInMap("certName")
     public String certName;
 
-    // 证书，如果是证书链则依次填写多个证书
     @NameInMap("certificate")
     public String certificate;
 
-    // 私钥
     @NameInMap("privateKey")
     public String privateKey;
 

@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class LogTriggerConfig extends TeaModel {
-    // enable
     @NameInMap("enable")
     public Boolean enable;
 
-    // functionParameter
     @NameInMap("functionParameter")
     public java.util.Map<String, String> functionParameter;
 

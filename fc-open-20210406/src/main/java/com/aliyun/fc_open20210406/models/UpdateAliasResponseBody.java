@@ -4,27 +4,21 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class UpdateAliasResponseBody extends TeaModel {
-    // 额外版本权重
     @NameInMap("additionalVersionWeight")
     public java.util.Map<String, Float> additionalVersionWeight;
 
-    // 别名名称
     @NameInMap("aliasName")
     public String aliasName;
 
-    // 创建时间
     @NameInMap("createdTime")
     public String createdTime;
 
-    // 别名描述
     @NameInMap("description")
     public String description;
 
-    // 上次更新时间
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
-    // 版本ID
     @NameInMap("versionId")
     public String versionId;
 

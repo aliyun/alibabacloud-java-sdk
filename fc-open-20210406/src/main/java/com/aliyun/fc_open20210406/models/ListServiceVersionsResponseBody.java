@@ -4,15 +4,12 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListServiceVersionsResponseBody extends TeaModel {
-    // 排序方向
     @NameInMap("direction")
     public String direction;
 
-    // 下次查询token
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 版本列表
     @NameInMap("versions")
     public java.util.List<ListServiceVersionsResponseBodyVersions> versions;
 
@@ -46,19 +43,15 @@ public class ListServiceVersionsResponseBody extends TeaModel {
     }
 
     public static class ListServiceVersionsResponseBodyVersions extends TeaModel {
-        // 创建时间
         @NameInMap("createdTime")
         public String createdTime;
 
-        // 版本描述
         @NameInMap("description")
         public String description;
 
-        // 上次更新时间
         @NameInMap("lastModifiedTime")
         public String lastModifiedTime;
 
-        // 版本ID
         @NameInMap("versionId")
         public String versionId;
 

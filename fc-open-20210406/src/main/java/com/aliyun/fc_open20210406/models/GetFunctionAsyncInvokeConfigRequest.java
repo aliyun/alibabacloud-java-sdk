@@ -4,7 +4,6 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetFunctionAsyncInvokeConfigRequest extends TeaModel {
-    // 限定符
     @NameInMap("qualifier")
     public String qualifier;
 

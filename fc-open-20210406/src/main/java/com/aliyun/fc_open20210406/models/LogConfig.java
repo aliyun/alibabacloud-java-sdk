@@ -4,23 +4,18 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class LogConfig extends TeaModel {
-    // 开启实例级别指标
     @NameInMap("enableInstanceMetrics")
     public Boolean enableInstanceMetrics;
 
-    // 开启请求级别指标
     @NameInMap("enableRequestMetrics")
     public Boolean enableRequestMetrics;
 
-    // 日志切分规则
     @NameInMap("logBeginRule")
     public String logBeginRule;
 
-    // 日志库
     @NameInMap("logstore")
     public String logstore;
 
-    // 日志项目
     @NameInMap("project")
     public String project;
 

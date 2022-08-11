@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetResourceTagsResponseBody extends TeaModel {
-    // Resource ARN 全称
     @NameInMap("resourceArn")
     public String resourceArn;
 
-    // tag 列表
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
 
