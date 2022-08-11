@@ -34,6 +34,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("Comments")
     public String comments;
 
+    @NameInMap("ConnectDuration")
+    public Long connectDuration;
+
     @NameInMap("DefaultInitDesktopCount")
     public Integer defaultInitDesktopCount;
 
@@ -45,6 +48,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
 
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
+
+    @NameInMap("IdleDisconnectDuration")
+    public Long idleDisconnectDuration;
 
     @NameInMap("KeepDuration")
     public Long keepDuration;
@@ -72,6 +78,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
 
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
+
+    @NameInMap("RatioThreshold")
+    public Float ratioThreshold;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -176,6 +185,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
         return this.comments;
     }
 
+    public CreateDesktopGroupRequest setConnectDuration(Long connectDuration) {
+        this.connectDuration = connectDuration;
+        return this;
+    }
+    public Long getConnectDuration() {
+        return this.connectDuration;
+    }
+
     public CreateDesktopGroupRequest setDefaultInitDesktopCount(Integer defaultInitDesktopCount) {
         this.defaultInitDesktopCount = defaultInitDesktopCount;
         return this;
@@ -206,6 +223,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
     }
     public java.util.List<String> getEndUserIds() {
         return this.endUserIds;
+    }
+
+    public CreateDesktopGroupRequest setIdleDisconnectDuration(Long idleDisconnectDuration) {
+        this.idleDisconnectDuration = idleDisconnectDuration;
+        return this;
+    }
+    public Long getIdleDisconnectDuration() {
+        return this.idleDisconnectDuration;
     }
 
     public CreateDesktopGroupRequest setKeepDuration(Long keepDuration) {
@@ -278,6 +303,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
     }
     public String getPolicyGroupId() {
         return this.policyGroupId;
+    }
+
+    public CreateDesktopGroupRequest setRatioThreshold(Float ratioThreshold) {
+        this.ratioThreshold = ratioThreshold;
+        return this;
+    }
+    public Float getRatioThreshold() {
+        return this.ratioThreshold;
     }
 
     public CreateDesktopGroupRequest setRegionId(String regionId) {

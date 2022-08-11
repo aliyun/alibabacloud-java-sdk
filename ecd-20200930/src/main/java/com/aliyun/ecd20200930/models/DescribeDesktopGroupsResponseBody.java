@@ -49,6 +49,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("Comments")
         public String comments;
 
+        @NameInMap("ConnectDuration")
+        public Long connectDuration;
+
         @NameInMap("Cpu")
         public Integer cpu;
 
@@ -81,6 +84,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
 
         @NameInMap("GpuSpec")
         public String gpuSpec;
+
+        @NameInMap("IdleDisconnectDuration")
+        public Long idleDisconnectDuration;
 
         @NameInMap("ImageId")
         public String imageId;
@@ -127,6 +133,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
 
+        @NameInMap("RatioThreshold")
+        public Float ratioThreshold;
+
         @NameInMap("ResetType")
         public Long resetType;
 
@@ -138,6 +147,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
 
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
+
+        @NameInMap("Version")
+        public Integer version;
 
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
@@ -164,6 +176,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public String getComments() {
             return this.comments;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setConnectDuration(Long connectDuration) {
+            this.connectDuration = connectDuration;
+            return this;
+        }
+        public Long getConnectDuration() {
+            return this.connectDuration;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setCpu(Integer cpu) {
@@ -252,6 +272,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public String getGpuSpec() {
             return this.gpuSpec;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setIdleDisconnectDuration(Long idleDisconnectDuration) {
+            this.idleDisconnectDuration = idleDisconnectDuration;
+            return this;
+        }
+        public Long getIdleDisconnectDuration() {
+            return this.idleDisconnectDuration;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setImageId(String imageId) {
@@ -374,6 +402,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             return this.policyGroupName;
         }
 
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setRatioThreshold(Float ratioThreshold) {
+            this.ratioThreshold = ratioThreshold;
+            return this;
+        }
+        public Float getRatioThreshold() {
+            return this.ratioThreshold;
+        }
+
         public DescribeDesktopGroupsResponseBodyDesktopGroups setResetType(Long resetType) {
             this.resetType = resetType;
             return this;
@@ -404,6 +440,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public Integer getSystemDiskSize() {
             return this.systemDiskSize;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setVersion(Integer version) {
+            this.version = version;
+            return this;
+        }
+        public Integer getVersion() {
+            return this.version;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
