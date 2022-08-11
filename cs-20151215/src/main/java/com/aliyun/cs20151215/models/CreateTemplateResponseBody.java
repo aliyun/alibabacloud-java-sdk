@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateResponseBody extends TeaModel {
-    // 模板ID。
     @NameInMap("template_id")
     public String templateId;
 

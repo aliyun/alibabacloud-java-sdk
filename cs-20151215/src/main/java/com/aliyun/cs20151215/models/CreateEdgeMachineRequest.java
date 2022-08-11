@@ -4,15 +4,12 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateEdgeMachineRequest extends TeaModel {
-    // hostname
     @NameInMap("hostname")
     public String hostname;
 
-    // model
     @NameInMap("model")
     public String model;
 
-    // sn
     @NameInMap("sn")
     public String sn;
 

@@ -4,11 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyInstancesRequest extends TeaModel {
-    // 策略实例名称
     @NameInMap("instance_name")
     public String instanceName;
 
-    // 策略类型
     @NameInMap("policy_name")
     public String policyName;
 

@@ -4,11 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class AttachInstancesResponseBody extends TeaModel {
-    // 节点信息列表。
     @NameInMap("list")
     public java.util.List<AttachInstancesResponseBodyList> list;
 
-    // 任务ID。
     @NameInMap("task_id")
     public String taskId;
 
@@ -34,15 +32,12 @@ public class AttachInstancesResponseBody extends TeaModel {
     }
 
     public static class AttachInstancesResponseBodyList extends TeaModel {
-        // 状态码。
         @NameInMap("code")
         public String code;
 
-        // 实例ID。
         @NameInMap("instanceId")
         public String instanceId;
 
-        // 添加结果描述。
         @NameInMap("message")
         public String message;
 

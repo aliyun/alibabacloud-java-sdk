@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class OpenAckServiceRequest extends TeaModel {
-    // 要开通的服务类型
     @NameInMap("type")
     public String type;
 

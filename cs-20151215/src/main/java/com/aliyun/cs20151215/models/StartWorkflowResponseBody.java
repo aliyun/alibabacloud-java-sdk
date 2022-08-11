@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class StartWorkflowResponseBody extends TeaModel {
-    // 工作流名称
     @NameInMap("JobName")
     public String jobName;
 

@@ -4,23 +4,18 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
-    // 是否删除全部自定义标签，仅当tag_keys为空时生效，取值：[true,false]。
     @NameInMap("all")
     public Boolean all;
 
-    // 资源所属的地域ID
     @NameInMap("region_id")
     public String regionId;
 
-    // 资源ID。数组长度取值范围为：1~50
     @NameInMap("resource_ids")
     public java.util.List<String> resourceIds;
 
-    // 资源类型定义。取值范围： 只支持CLUSTER这一种资源类型
     @NameInMap("resource_type")
     public String resourceType;
 
-    // 资源的标签键。N的取值范围：1~20
     @NameInMap("tag_keys")
     public java.util.List<String> tagKeys;
 

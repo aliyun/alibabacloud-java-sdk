@@ -4,86 +4,66 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ScaleOutClusterRequest extends TeaModel {
-    // 在节点上安装云监控
     @NameInMap("cloud_monitor_flags")
     public Boolean cloudMonitorFlags;
 
-    // 扩容节点数
     @NameInMap("count")
     public Long count;
 
-    // CPU亲和性策略
     @NameInMap("cpu_policy")
     public String cpuPolicy;
 
-    // 自定义镜像
     @NameInMap("image_id")
     public String imageId;
 
-    // keypair名称，和login_password二选一。
     @NameInMap("key_pair")
     public String keyPair;
 
-    // SSH登录密码，和key_pair二选一。
     @NameInMap("login_password")
     public String loginPassword;
 
-    // RDS白名单
     @NameInMap("rds_instances")
     public java.util.List<String> rdsInstances;
 
     @NameInMap("runtime")
     public Runtime runtime;
 
-    // 节点标签
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
-    // 节点污点信息
     @NameInMap("taints")
     public java.util.List<Taint> taints;
 
-    // 节点自定义数据
     @NameInMap("user_data")
     public String userData;
 
-    // 虚拟交换机
     @NameInMap("vswitch_ids")
     public java.util.List<String> vswitchIds;
 
-    // Worker节点到期是否自动续费
     @NameInMap("worker_auto_renew")
     public Boolean workerAutoRenew;
 
-    // Worker节点自动续费时长
     @NameInMap("worker_auto_renew_period")
     public Long workerAutoRenewPeriod;
 
-    // Worker节点数据盘配置
     @NameInMap("worker_data_disks")
     public java.util.List<ScaleOutClusterRequestWorkerDataDisks> workerDataDisks;
 
-    // Worker节点付费类型
     @NameInMap("worker_instance_charge_type")
     public String workerInstanceChargeType;
 
-    // Worker节点实例规格
     @NameInMap("worker_instance_types")
     public java.util.List<String> workerInstanceTypes;
 
-    // Worker节点包年包月时长
     @NameInMap("worker_period")
     public Long workerPeriod;
 
-    // Worker节点包年包月周期
     @NameInMap("worker_period_unit")
     public String workerPeriodUnit;
 
-    // Worker节点系统盘类型
     @NameInMap("worker_system_disk_category")
     public String workerSystemDiskCategory;
 
-    // Worker节点系统盘大小
     @NameInMap("worker_system_disk_size")
     public Long workerSystemDiskSize;
 
@@ -261,19 +241,15 @@ public class ScaleOutClusterRequest extends TeaModel {
     }
 
     public static class ScaleOutClusterRequestWorkerDataDisks extends TeaModel {
-        // 自动快照策略ID，云盘会按照快照策略自动备份。
         @NameInMap("auto_snapshot_policy_id")
         public String autoSnapshotPolicyId;
 
-        // 数据盘类型,默认值：cloud_efficiency
         @NameInMap("category")
         public String category;
 
-        // 是否对数据盘加密
         @NameInMap("encrypted")
         public String encrypted;
 
-        // 数据盘大小，单位为GiB。  取值范围：[40,32768]
         @NameInMap("size")
         public String size;
 

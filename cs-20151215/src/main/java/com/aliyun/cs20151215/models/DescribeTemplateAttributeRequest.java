@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeTemplateAttributeRequest extends TeaModel {
-    // 模板类型，值为创建部署模板时指定的模板类型。
     @NameInMap("template_type")
     public String templateType;
 

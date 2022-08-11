@@ -4,15 +4,12 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterResponseBody extends TeaModel {
-    // 集群ID。
     @NameInMap("cluster_id")
     public String clusterId;
 
-    // 请求ID。
     @NameInMap("request_id")
     public String requestId;
 
-    // 任务ID。
     @NameInMap("task_id")
     public String taskId;
 

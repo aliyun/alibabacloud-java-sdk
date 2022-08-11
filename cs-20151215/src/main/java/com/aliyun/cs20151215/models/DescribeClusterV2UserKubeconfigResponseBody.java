@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterV2UserKubeconfigResponseBody extends TeaModel {
-    // kubeconfig内容。
     @NameInMap("config")
     public String config;
 

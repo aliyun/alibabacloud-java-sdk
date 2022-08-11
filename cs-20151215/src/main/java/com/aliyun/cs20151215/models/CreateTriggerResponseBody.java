@@ -4,23 +4,18 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateTriggerResponseBody extends TeaModel {
-    // 触发器行为。
     @NameInMap("action")
     public String action;
 
-    // 集群ID。
     @NameInMap("cluster_id")
     public String clusterId;
 
-    // 触发器ID。
     @NameInMap("id")
     public String id;
 
-    // 触发器项目名称。
     @NameInMap("project_id")
     public String projectId;
 
-    // 触发器类型。默认值为 deployment 。
     @NameInMap("type")
     public String type;
 

@@ -4,15 +4,12 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class Addon extends TeaModel {
-    // 插件配置参数。
     @NameInMap("config")
     public String config;
 
-    // 是否禁止默认安装。true | false。
     @NameInMap("disabled")
     public Boolean disabled;
 
-    // 插件名称。
     @NameInMap("name")
     public String name;
 

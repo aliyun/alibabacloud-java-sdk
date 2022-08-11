@@ -4,43 +4,33 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterNodePoolRequest extends TeaModel {
-    // 自动伸缩节点池配置。
     @NameInMap("auto_scaling")
     public CreateClusterNodePoolRequestAutoScaling autoScaling;
 
-    // 节点数量。
     @NameInMap("count")
     public Long count;
 
-    // 边缘节点池网络相关的配置。该值只对edge类型的节点池有意义
     @NameInMap("interconnect_config")
     public CreateClusterNodePoolRequestInterconnectConfig interconnectConfig;
 
-    // 边缘节点池的网络类型。basic：基础型；improved：增强型。该值只对edge类型的节点池有意义。
     @NameInMap("interconnect_mode")
     public String interconnectMode;
 
-    // 集群配置
     @NameInMap("kubernetes_config")
     public CreateClusterNodePoolRequestKubernetesConfig kubernetesConfig;
 
-    // 托管节点池配置。
     @NameInMap("management")
     public CreateClusterNodePoolRequestManagement management;
 
-    // 边缘节点池允许容纳的最大节点数量. 节点池内可以容纳的最大节点数量，该参数大于等于0。0表示无额外限制(仅受限于集群整体可以容纳的节点数，节点池本身无额外限制)。边缘节点池该参数值往往大于0；ess类型节点池和默认的edge类型节点池该参数值为0
     @NameInMap("max_nodes")
     public Long maxNodes;
 
-    // 节点池配置
     @NameInMap("nodepool_info")
     public CreateClusterNodePoolRequestNodepoolInfo nodepoolInfo;
 
-    // 伸缩组配置
     @NameInMap("scaling_group")
     public CreateClusterNodePoolRequestScalingGroup scalingGroup;
 
-    // 加密计算节点池配置。
     @NameInMap("tee_config")
     public CreateClusterNodePoolRequestTeeConfig teeConfig;
 
@@ -130,31 +120,24 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestAutoScaling extends TeaModel {
-        // 带宽峰值。
         @NameInMap("eip_bandwidth")
         public Long eipBandwidth;
 
-        // EIP实例规格。
         @NameInMap("eip_internet_charge_type")
         public String eipInternetChargeType;
 
-        // 是否开启自动伸缩。
         @NameInMap("enable")
         public Boolean enable;
 
-        // 是否绑定EIP。
         @NameInMap("is_bond_eip")
         public Boolean isBondEip;
 
-        // 最大实例数。
         @NameInMap("max_instances")
         public Long maxInstances;
 
-        // 最小实例数。
         @NameInMap("min_instances")
         public Long minInstances;
 
-        // 扩容节点类型。
         @NameInMap("type")
         public String type;
 
@@ -222,23 +205,18 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestInterconnectConfig extends TeaModel {
-        // 边缘增强型节点池的网络带宽，单位M。
         @NameInMap("bandwidth")
         public Long bandwidth;
 
-        // 边缘增强型节点池绑定的云连接网实例ID(CCNID)
         @NameInMap("ccn_id")
         public String ccnId;
 
-        // 边缘增强型节点池绑定的云连接网实例所属的区域
         @NameInMap("ccn_region_id")
         public String ccnRegionId;
 
-        // 边缘增强型节点池绑定的云企业网实例ID(CENID)
         @NameInMap("cen_id")
         public String cenId;
 
-        // 边缘增强型节点池的购买时长，单位月
         @NameInMap("improved_period")
         public String improvedPeriod;
 
@@ -290,35 +268,27 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestKubernetesConfig extends TeaModel {
-        // 是否开启云监控。
         @NameInMap("cms_enabled")
         public Boolean cmsEnabled;
 
-        // CPU管理策略。
         @NameInMap("cpu_policy")
         public String cpuPolicy;
 
-        // 节点标签。
         @NameInMap("labels")
         public java.util.List<Tag> labels;
 
-        // 自定义节点名称
         @NameInMap("node_name_mode")
         public String nodeNameMode;
 
-        // 容器运行时。
         @NameInMap("runtime")
         public String runtime;
 
-        // 容器运行时版本。
         @NameInMap("runtime_version")
         public String runtimeVersion;
 
-        // 污点信息。
         @NameInMap("taints")
         public java.util.List<Taint> taints;
 
-        // 节点自定义数据。
         @NameInMap("user_data")
         public String userData;
 
@@ -394,19 +364,15 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestManagementUpgradeConfig extends TeaModel {
-        // 是否启用自动升级
         @NameInMap("auto_upgrade")
         public Boolean autoUpgrade;
 
-        // 最大不可用节点数量。
         @NameInMap("max_unavailable")
         public Long maxUnavailable;
 
-        // 额外节点数量。
         @NameInMap("surge")
         public Long surge;
 
-        // 额外节点比例。和surge二选一。
         @NameInMap("surge_percentage")
         public Long surgePercentage;
 
@@ -450,15 +416,12 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestManagement extends TeaModel {
-        // 是否启用自动修复。
         @NameInMap("auto_repair")
         public Boolean autoRepair;
 
-        // 是否启用托管节点池。
         @NameInMap("enable")
         public Boolean enable;
 
-        // 自动升级配置。
         @NameInMap("upgrade_config")
         public CreateClusterNodePoolRequestManagementUpgradeConfig upgradeConfig;
 
@@ -494,15 +457,12 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestNodepoolInfo extends TeaModel {
-        // 节点池名称
         @NameInMap("name")
         public String name;
 
-        // 资源组ID。
         @NameInMap("resource_group_id")
         public String resourceGroupId;
 
-        // 节点池类型，对于边缘节点池来说，类型为"edge"
         @NameInMap("type")
         public String type;
 
@@ -538,11 +498,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestScalingGroupSpotPriceLimit extends TeaModel {
-        // 抢占实例规格。
         @NameInMap("instance_type")
         public String instanceType;
 
-        // 抢占实例单价。
         @NameInMap("price_limit")
         public String priceLimit;
 
@@ -570,11 +528,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestScalingGroupTags extends TeaModel {
-        // key
         @NameInMap("key")
         public String key;
 
-        // value
         @NameInMap("value")
         public String value;
 
@@ -602,135 +558,102 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestScalingGroup extends TeaModel {
-        // 节点是否开启自动续费
         @NameInMap("auto_renew")
         public Boolean autoRenew;
 
-        // 节点自动续费周期
         @NameInMap("auto_renew_period")
         public Long autoRenewPeriod;
 
-        // 当MultiAZPolicy取值为COST_OPTIMIZED时，如果因价格、库存等原因无法创建足够的抢占式实例，是否允许自动尝试创建按量实例满足ECS实例数量要求。取值范围：true：允许。false：不允许。默认值：true
         @NameInMap("compensate_with_on_demand")
         public Boolean compensateWithOnDemand;
 
-        // 数据盘配置。
         @NameInMap("data_disks")
         public java.util.List<DataDisk> dataDisks;
 
-        // 部署集ID。
         @NameInMap("deploymentset_id")
         public String deploymentsetId;
 
-        // 姐弟池期望节点数
         @NameInMap("desired_size")
         public Long desiredSize;
 
-        // 自定义镜像。
         @NameInMap("image_id")
         public String imageId;
 
-        // 操作系统镜像类型，和platform二选一
         @NameInMap("image_type")
         public String imageType;
 
-        // 节点付费类型
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
-        // 实例规格。
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
 
-        // 节点公网IP网络计费类型
         @NameInMap("internet_charge_type")
         public String internetChargeType;
 
-        // 节点公网IP出带宽最大值，单位为Mbps（Mega bit per second），取值范围：1~100
         @NameInMap("internet_max_bandwidth_out")
         public Long internetMaxBandwidthOut;
 
-        // 密钥对名称，和login_password二选一。
         @NameInMap("key_pair")
         public String keyPair;
 
-        // SSH登录密码。
         @NameInMap("login_password")
         public String loginPassword;
 
-        // 多可用区伸缩组ECS实例扩缩容策略
         @NameInMap("multi_az_policy")
         public String multiAzPolicy;
 
-        // 伸缩组所需要按量实例个数的最小值，取值范围：0~1000。当按量实例个数少于该值时，将优先创建按量实例。
         @NameInMap("on_demand_base_capacity")
         public Long onDemandBaseCapacity;
 
-        // 伸缩组满足最小按量实例数（OnDemandBaseCapacity）要求后，超出的实例中按量实例应占的比例，取值范围：0～100。
         @NameInMap("on_demand_percentage_above_base_capacity")
         public Long onDemandPercentageAboveBaseCapacity;
 
-        // 节点包年包月时长。
         @NameInMap("period")
         public Long period;
 
-        // 节点包年包月周期。
         @NameInMap("period_unit")
         public String periodUnit;
 
-        // 操作系统发行版，和image_type二选一
         @NameInMap("platform")
         public String platform;
 
-        // RDS实例列表。
         @NameInMap("rds_instances")
         public java.util.List<String> rdsInstances;
 
-        // 自动伸缩。
         @NameInMap("scaling_policy")
         public String scalingPolicy;
 
-        // 安全组ID。
         @NameInMap("security_group_id")
         public String securityGroupId;
 
-        // 多安全组ID
         @NameInMap("security_group_ids")
         public java.util.List<String> securityGroupIds;
 
-        // 指定可用实例规格的个数，伸缩组将按成本最低的多个规格均衡创建抢占式实例。取值范围：1~10。
         @NameInMap("spot_instance_pools")
         public Long spotInstancePools;
 
-        // 是否开启补齐抢占式实例。开启后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。
         @NameInMap("spot_instance_remedy")
         public Boolean spotInstanceRemedy;
 
-        // 抢占实例价格上限配置。
         @NameInMap("spot_price_limit")
         public java.util.List<CreateClusterNodePoolRequestScalingGroupSpotPriceLimit> spotPriceLimit;
 
-        // 抢占式实例类型
         @NameInMap("spot_strategy")
         public String spotStrategy;
 
-        // 节点系统盘类型。
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
 
-        // 节点系统盘磁盘性能，只针对ESSD磁盘生效
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;
 
-        // 节点系统盘大小。
         @NameInMap("system_disk_size")
         public Long systemDiskSize;
 
-        // ECS标签
         @NameInMap("tags")
         public java.util.List<CreateClusterNodePoolRequestScalingGroupTags> tags;
 
-        // 虚拟交换机ID。
         @NameInMap("vswitch_ids")
         public java.util.List<String> vswitchIds;
 
@@ -1006,7 +929,6 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestTeeConfig extends TeaModel {
-        // 是否为加密计算节点池。
         @NameInMap("tee_enable")
         public Boolean teeEnable;
 

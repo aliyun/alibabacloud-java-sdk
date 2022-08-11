@@ -32,15 +32,12 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeEventsResponseBodyEventsData extends TeaModel {
-        // 事件级别
         @NameInMap("level")
         public String level;
 
-        // 事件详情
         @NameInMap("message")
         public String message;
 
-        // 事件状态
         @NameInMap("reason")
         public String reason;
 
@@ -76,31 +73,24 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeEventsResponseBodyEvents extends TeaModel {
-        // 集群ID
         @NameInMap("cluster_id")
         public String clusterId;
 
-        // 事件描述
         @NameInMap("data")
         public DescribeEventsResponseBodyEventsData data;
 
-        // 事件ID
         @NameInMap("event_id")
         public String eventId;
 
-        // 事件源
         @NameInMap("source")
         public String source;
 
-        // 事件
         @NameInMap("subject")
         public String subject;
 
-        // 事件开始事件
         @NameInMap("time")
         public String time;
 
-        // 事件类型
         @NameInMap("type")
         public String type;
 
@@ -168,15 +158,12 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeEventsResponseBodyPageInfo extends TeaModel {
-        // 每页记录数量
         @NameInMap("page_number")
         public Long pageNumber;
 
-        // 页数
         @NameInMap("page_size")
         public Long pageSize;
 
-        // 结果总数
         @NameInMap("total_count")
         public Long totalCount;
 

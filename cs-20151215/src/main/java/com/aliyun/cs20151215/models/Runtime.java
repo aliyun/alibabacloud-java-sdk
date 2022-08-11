@@ -4,11 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class Runtime extends TeaModel {
-    // 容器运行时名称
     @NameInMap("name")
     public String name;
 
-    // 容器运行时版本
     @NameInMap("version")
     public String version;
 

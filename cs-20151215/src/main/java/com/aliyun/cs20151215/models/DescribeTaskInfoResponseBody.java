@@ -4,31 +4,24 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeTaskInfoResponseBody extends TeaModel {
-    // 集群ID。
     @NameInMap("cluster_id")
     public String clusterId;
 
-    // 任务创建时间。
     @NameInMap("created")
     public String created;
 
-    // 任务当前状态。
     @NameInMap("state")
     public String state;
 
-    // 任务ID。
     @NameInMap("task_id")
     public String taskId;
 
-    // 任务执行详情。
     @NameInMap("task_result")
     public java.util.List<DescribeTaskInfoResponseBodyTaskResult> taskResult;
 
-    // 当前任务类型。
     @NameInMap("task_type")
     public String taskType;
 
-    // 任务更新时间。
     @NameInMap("updated")
     public String updated;
 
@@ -94,11 +87,9 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeTaskInfoResponseBodyTaskResult extends TeaModel {
-        // 操作的资源，例如：实例ID。
         @NameInMap("data")
         public String data;
 
-        // 资源的状态。
         @NameInMap("status")
         public String status;
 

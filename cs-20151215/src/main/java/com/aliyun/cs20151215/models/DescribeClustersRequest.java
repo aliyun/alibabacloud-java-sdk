@@ -4,11 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClustersRequest extends TeaModel {
-    // 集群类型。
     @NameInMap("clusterType")
     public String clusterType;
 
-    // 集群名称。
     @NameInMap("name")
     public String name;
 

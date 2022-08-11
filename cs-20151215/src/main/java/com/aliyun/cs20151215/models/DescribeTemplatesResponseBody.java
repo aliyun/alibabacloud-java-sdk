@@ -4,11 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeTemplatesResponseBody extends TeaModel {
-    // 分页信息。
     @NameInMap("page_info")
     public DescribeTemplatesResponseBodyPageInfo pageInfo;
 
-    // 模板列表。
     @NameInMap("templates")
     public java.util.List<DescribeTemplatesResponseBodyTemplates> templates;
 
@@ -34,15 +32,12 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeTemplatesResponseBodyPageInfo extends TeaModel {
-        // 当前页数。
         @NameInMap("page_number")
         public Long pageNumber;
 
-        // 单页最大数据条数。
         @NameInMap("page_size")
         public Long pageSize;
 
-        // 结果总数。
         @NameInMap("total_count")
         public Long totalCount;
 
@@ -78,43 +73,33 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeTemplatesResponseBodyTemplates extends TeaModel {
-        // 模板访问权限，取值为：private、pubilc或shared。。
         @NameInMap("acl")
         public String acl;
 
-        // 模板创建时间。
         @NameInMap("created")
         public String created;
 
-        // 模板描述信息。
         @NameInMap("description")
         public String description;
 
-        // 模板ID。会模板随着更新而变化。
         @NameInMap("id")
         public String id;
 
-        // 模板名称。
         @NameInMap("name")
         public String name;
 
-        // 模板标签，如果不显式指定了，默认为模板名称。
         @NameInMap("tags")
         public String tags;
 
-        // 模板详情。
         @NameInMap("template")
         public String template;
 
-        // 部署模板类型。
         @NameInMap("template_type")
         public String templateType;
 
-        // 模板唯一ID。
         @NameInMap("template_with_hist_id")
         public String templateWithHistId;
 
-        // 模板修改时间。
         @NameInMap("updated")
         public String updated;
 

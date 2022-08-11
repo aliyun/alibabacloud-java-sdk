@@ -4,23 +4,18 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class StandardComponentsValue extends TeaModel {
-    // 组件名称。
     @NameInMap("name")
     public String name;
 
-    // 组件版本。
     @NameInMap("version")
     public String version;
 
-    // 组件描述信息。
     @NameInMap("description")
     public String description;
 
-    // 是否为必需组件。
     @NameInMap("required")
     public String required;
 
-    // 是否禁止默认安装。
     @NameInMap("disabled")
     public Boolean disabled;
 

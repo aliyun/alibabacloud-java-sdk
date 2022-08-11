@@ -4,118 +4,90 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterDetailResponseBody extends TeaModel {
-    // 集群ID。
     @NameInMap("cluster_id")
     public String clusterId;
 
-    // 托管版集群类型，面向托管集群。  ack.pro.small：专业托管集群。 ack.standard ：标准托管集群。
     @NameInMap("cluster_spec")
     public String clusterSpec;
 
-    // 集群类型。
     @NameInMap("cluster_type")
     public String clusterType;
 
-    // 集群创建时间。
     @NameInMap("created")
     public String created;
 
-    // 集群当前版本。
     @NameInMap("current_version")
     public String currentVersion;
 
-    // 集群是否开启删除保护。
     @NameInMap("deletion_protection")
     public Boolean deletionProtection;
 
-    // 集群内Docker版本。
     @NameInMap("docker_version")
     public String dockerVersion;
 
-    // 集群Ingress LB实例ID。
     @NameInMap("external_loadbalancer_id")
     public String externalLoadbalancerId;
 
-    // 集群初始化版本。
     @NameInMap("init_version")
     public String initVersion;
 
     @NameInMap("maintenance_window")
     public MaintenanceWindow maintenanceWindow;
 
-    // 集群访问地址。
     @NameInMap("master_url")
     public String masterUrl;
 
-    // 集群元数据。
     @NameInMap("meta_data")
     public String metaData;
 
-    // 集群名称。
     @NameInMap("name")
     public String name;
 
-    // 集群采用的网络类型，例如：VPC网络。
     @NameInMap("network_mode")
     public String networkMode;
 
-    // 集群可升级版本。
     @NameInMap("next_version")
     public String nextVersion;
 
-    // 集群是否启用用PrivateZone。  true：启用 false：不启用 默认值：false。
     @NameInMap("private_zone")
     public Boolean privateZone;
 
-    // 面向场景时的集群类型。  Default：非边缘场景集群。 Edge：边缘场景集群。
     @NameInMap("profile")
     public String profile;
 
-    // 集群所在地域ID。
     @NameInMap("region_id")
     public String regionId;
 
-    // 集群资源组ID。
     @NameInMap("resource_group_id")
     public String resourceGroupId;
 
-    // 集群安全组ID。
     @NameInMap("security_group_id")
     public String securityGroupId;
 
-    // 集群节点数量。
     @NameInMap("size")
     public Long size;
 
-    // 集群运行状态。
     @NameInMap("state")
     public String state;
 
-    // Pod网络地址段，必须是有效的私有网段，即以下网段及其子网：10.0.0.0/8，172.16-31.0.0/12-16，192.168.0.0/16。不能与 VPC 及VPC 内已有 Kubernetes 集群使用的网段重复，创建成功后不能修改。  有关集群网络规划，请参见：[VPC下 Kubernetes 的网络地址段规划](https://help.aliyun.com/document_detail/～～86500～～)。
     @NameInMap("subnet_cidr")
     public String subnetCidr;
 
-    // 集群标签。
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
-    // 集群更新时间。
     @NameInMap("updated")
     public String updated;
 
-    // 集群使用的VPC ID。
     @NameInMap("vpc_id")
     public String vpcId;
 
-    // 集群节点使用的虚拟交换机列表。
     @NameInMap("vswitch_id")
     public String vswitchId;
 
-    // Worker节点RAM角色名称。
     @NameInMap("worker_ram_role_name")
     public String workerRamRoleName;
 
-    // 集群所在地域内的可用区ID。
     @NameInMap("zone_id")
     public String zoneId;
 

@@ -4,27 +4,21 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeEdgeMachinesRequest extends TeaModel {
-    // host name
     @NameInMap("hostname")
     public String hostname;
 
-    // life state
     @NameInMap("life_state")
     public String lifeState;
 
-    // model
     @NameInMap("model")
     public String model;
 
-    // online state
     @NameInMap("online_state")
     public String onlineState;
 
-    // page number
     @NameInMap("page_number")
     public Long pageNumber;
 
-    // page size
     @NameInMap("page_size")
     public Long pageSize;
 

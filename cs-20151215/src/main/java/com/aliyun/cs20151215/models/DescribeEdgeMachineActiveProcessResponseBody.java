@@ -4,23 +4,18 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
-    // logs of activate
     @NameInMap("logs")
     public String logs;
 
-    // process of activate
     @NameInMap("progress")
     public Long progress;
 
-    // Id of the request
     @NameInMap("request_id")
     public String requestId;
 
-    // state of activate
     @NameInMap("state")
     public String state;
 
-    // step of activate
     @NameInMap("step")
     public String step;
 

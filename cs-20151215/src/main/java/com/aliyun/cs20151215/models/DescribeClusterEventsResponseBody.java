@@ -4,11 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterEventsResponseBody extends TeaModel {
-    // 事件列表。
     @NameInMap("events")
     public java.util.List<DescribeClusterEventsResponseBodyEvents> events;
 
-    // 分页信息。
     @NameInMap("page_info")
     public DescribeClusterEventsResponseBodyPageInfo pageInfo;
 
@@ -34,15 +32,12 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterEventsResponseBodyEventsData extends TeaModel {
-        // 事件级别。
         @NameInMap("level")
         public String level;
 
-        // 事件详情。
         @NameInMap("message")
         public String message;
 
-        // 事件状态。
         @NameInMap("reason")
         public String reason;
 
@@ -78,31 +73,24 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterEventsResponseBodyEvents extends TeaModel {
-        // 集群ID。
         @NameInMap("cluster_id")
         public String clusterId;
 
-        // 事件描述。
         @NameInMap("data")
         public DescribeClusterEventsResponseBodyEventsData data;
 
-        // 事件ID。
         @NameInMap("event_id")
         public String eventId;
 
-        // 事件源。
         @NameInMap("source")
         public String source;
 
-        // 事件子项。
         @NameInMap("subject")
         public String subject;
 
-        // 事件开始时间。
         @NameInMap("time")
         public String time;
 
-        // 事件类型。
         @NameInMap("type")
         public String type;
 
@@ -170,15 +158,12 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterEventsResponseBodyPageInfo extends TeaModel {
-        // 分页页数。
         @NameInMap("page_number")
         public Long pageNumber;
 
-        // 每页大小。
         @NameInMap("page_size")
         public Long pageSize;
 
-        // 结果总数。
         @NameInMap("total_count")
         public Long totalCount;
 

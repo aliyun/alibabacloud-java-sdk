@@ -4,15 +4,12 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class FixNodePoolVulsRequest extends TeaModel {
-    // 待修复的节点名称列表
     @NameInMap("nodes")
     public java.util.List<String> nodes;
 
-    // 轮转修复策略
     @NameInMap("rollout_policy")
     public FixNodePoolVulsRequestRolloutPolicy rolloutPolicy;
 
-    // 待修复的漏洞名称列表
     @NameInMap("vul_list")
     public java.util.List<String> vulList;
 
@@ -46,7 +43,6 @@ public class FixNodePoolVulsRequest extends TeaModel {
     }
 
     public static class FixNodePoolVulsRequestRolloutPolicy extends TeaModel {
-        // 轮转修复时的最大并行度
         @NameInMap("max_parallelism")
         public Long maxParallelism;
 

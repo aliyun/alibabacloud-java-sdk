@@ -4,11 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class RepairClusterNodePoolResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("request_id")
     public String requestId;
 
-    // 任务ID
     @NameInMap("task_id")
     public String taskId;
 

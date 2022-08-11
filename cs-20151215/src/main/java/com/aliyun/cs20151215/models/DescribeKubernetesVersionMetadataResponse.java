@@ -46,31 +46,24 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
     }
 
     public static class DescribeKubernetesVersionMetadataResponseBodyImages extends TeaModel {
-        // 镜像ID。
         @NameInMap("image_id")
         public String imageId;
 
-        // 镜像名称。
         @NameInMap("image_name")
         public String imageName;
 
-        // 操作系统发行版。取值范围： CentOS,AliyunLinux,Windows,WindowsCore。
         @NameInMap("platform")
         public String platform;
 
-        // 镜像版本。
         @NameInMap("os_version")
         public String osVersion;
 
-        // 镜像类型。
         @NameInMap("image_type")
         public String imageType;
 
-        // 操作系统发行版本号。
         @NameInMap("os_type")
         public String osType;
 
-        // 镜像分类
         @NameInMap("image_category")
         public String imageCategory;
 
@@ -138,27 +131,21 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
     }
 
     public static class DescribeKubernetesVersionMetadataResponseBody extends TeaModel {
-        // Kubernetes版本特性。
         @NameInMap("capabilities")
         public java.util.Map<String, ?> capabilities;
 
-        // ECS系统镜像列表。
         @NameInMap("images")
         public java.util.List<DescribeKubernetesVersionMetadataResponseBodyImages> images;
 
-        // Kubernetes版本元数据信息。
         @NameInMap("meta_data")
         public java.util.Map<String, ?> metaData;
 
-        // 容器运行时详情。
         @NameInMap("runtimes")
         public java.util.List<Runtime> runtimes;
 
-        // Kubernetes版本。
         @NameInMap("version")
         public String version;
 
-        // 是否为多可用区。
         @NameInMap("multi_az")
         public String multiAz;
 

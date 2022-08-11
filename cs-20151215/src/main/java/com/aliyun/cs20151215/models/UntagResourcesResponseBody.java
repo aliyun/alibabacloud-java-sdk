@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
-    // 请求id。
     @NameInMap("RequestId")
     public String requestId;
 

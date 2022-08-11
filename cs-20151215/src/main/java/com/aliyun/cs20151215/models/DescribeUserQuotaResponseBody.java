@@ -4,23 +4,18 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserQuotaResponseBody extends TeaModel {
-    // 托管版集群配额。
     @NameInMap("amk_cluster_quota")
     public Long amkClusterQuota;
 
-    // Serverless集群配额。
     @NameInMap("ask_cluster_quota")
     public Long askClusterQuota;
 
-    // 集群节点池配额。
     @NameInMap("cluster_nodepool_quota")
     public Long clusterNodepoolQuota;
 
-    // 专有版集群托管版集群的总配额。
     @NameInMap("cluster_quota")
     public Long clusterQuota;
 
-    // 单集群的节点配额。
     @NameInMap("node_quota")
     public Long nodeQuota;
 

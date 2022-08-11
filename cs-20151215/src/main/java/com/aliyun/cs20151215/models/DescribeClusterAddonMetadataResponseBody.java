@@ -4,15 +4,12 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterAddonMetadataResponseBody extends TeaModel {
-    // 组件参数Schema
     @NameInMap("config_schema")
     public String configSchema;
 
-    // 组件名称
     @NameInMap("name")
     public String name;
 
-    // 组件版本
     @NameInMap("version")
     public String version;
 

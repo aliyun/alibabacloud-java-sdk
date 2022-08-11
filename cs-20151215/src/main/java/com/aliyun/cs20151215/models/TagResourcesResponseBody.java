@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
-    // 请求id。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -22,19 +21,15 @@ public class TagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        // 资源ID。
         @NameInMap("resource_id")
         public String resourceId;
 
-        // 资源类型。
         @NameInMap("resource_type")
         public String resourceType;
 
-        // 标签key。
         @NameInMap("tag_key")
         public String tagKey;
 
-        // 标签值。
         @NameInMap("tag_value")
         public String tagValue;
 
@@ -78,7 +73,6 @@ public class TagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        // 资源标签。
         @NameInMap("tag_resource")
         public java.util.List<ListTagResourcesResponseBodyTagResourcesTagResource> tagResource;
 

@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterConfigurationRequest extends TeaModel {
-    // 自定义配置。
     @NameInMap("customize_config")
     public java.util.List<ModifyClusterConfigurationRequestCustomizeConfig> customizeConfig;
 
@@ -22,11 +21,9 @@ public class ModifyClusterConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyClusterConfigurationRequestCustomizeConfigConfigs extends TeaModel {
-        // key值。
         @NameInMap("key")
         public String key;
 
-        // value值。
         @NameInMap("value")
         public String value;
 
@@ -54,11 +51,9 @@ public class ModifyClusterConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyClusterConfigurationRequestCustomizeConfig extends TeaModel {
-        // 组件配置。
         @NameInMap("configs")
         public java.util.List<ModifyClusterConfigurationRequestCustomizeConfigConfigs> configs;
 
-        // 组件名称。
         @NameInMap("name")
         public String name;
 

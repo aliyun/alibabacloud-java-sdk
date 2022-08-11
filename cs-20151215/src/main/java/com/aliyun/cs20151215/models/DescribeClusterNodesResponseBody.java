@@ -4,11 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterNodesResponseBody extends TeaModel {
-    // 节点信息列表。
     @NameInMap("nodes")
     public java.util.List<DescribeClusterNodesResponseBodyNodes> nodes;
 
-    // 分页信息。
     @NameInMap("page")
     public DescribeClusterNodesResponseBodyPage page;
 
@@ -34,83 +32,63 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNodesResponseBodyNodes extends TeaModel {
-        // 节点创建时间。
         @NameInMap("creation_time")
         public String creationTime;
 
-        // 错误信息说明。
         @NameInMap("error_message")
         public String errorMessage;
 
-        // 节点过期时间。
         @NameInMap("expired_time")
         public String expiredTime;
 
-        // 节点主机名。
         @NameInMap("host_name")
         public String hostName;
 
-        // 节点使用的镜像ID。
         @NameInMap("image_id")
         public String imageId;
 
-        // 节点付费类型。
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
-        // 节点实例ID。
         @NameInMap("instance_id")
         public String instanceId;
 
-        // 节点名称。
         @NameInMap("instance_name")
         public String instanceName;
 
-        // 节点实例角色类型，Master或Worker。
         @NameInMap("instance_role")
         public String instanceRole;
 
-        // 节点实例状态，
         @NameInMap("instance_status")
         public String instanceStatus;
 
-        // 节点实例类型。
         @NameInMap("instance_type")
         public String instanceType;
 
-        // 节点实例所属ECS实例簇名称。
         @NameInMap("instance_type_family")
         public String instanceTypeFamily;
 
-        // 节点IP地址。
         @NameInMap("ip_address")
         public java.util.List<String> ipAddress;
 
-        // 节点是否为aliyun实例。
         @NameInMap("is_aliyun_node")
         public Boolean isAliyunNode;
 
-        // 节点名称，该名称是k8s专用名称。
         @NameInMap("node_name")
         public String nodeName;
 
-        // 节点状态，是否Ready。
         @NameInMap("node_status")
         public String nodeStatus;
 
-        // 节点池ID。
         @NameInMap("nodepool_id")
         public String nodepoolId;
 
-        // 节点通过什么方式创建出来的，例如：ROS。
         @NameInMap("source")
         public String source;
 
-        // 抢占时实例类型
         @NameInMap("spot_strategy")
         public String spotStrategy;
 
-        // ECS运行状态，例如：Running。
         @NameInMap("state")
         public String state;
 
@@ -282,15 +260,12 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNodesResponseBodyPage extends TeaModel {
-        // 总页数。
         @NameInMap("page_number")
         public Integer pageNumber;
 
-        // 单页展示结果数量。
         @NameInMap("page_size")
         public Integer pageSize;
 
-        // 结果总条数。
         @NameInMap("total_count")
         public Integer totalCount;
 

@@ -3,7 +3,7 @@ package com.aliyun.cs20151215.models;
 
 import com.aliyun.tea.*;
 
-public class MigrateClusterResponse extends TeaModel {
+public class DescribeClusterTasksResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class MigrateClusterResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public MigrateClusterResponseBody body;
+    public DescribeClusterTasksResponseBody body;
 
-    public static MigrateClusterResponse build(java.util.Map<String, ?> map) throws Exception {
-        MigrateClusterResponse self = new MigrateClusterResponse();
+    public static DescribeClusterTasksResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeClusterTasksResponse self = new DescribeClusterTasksResponse();
         return TeaModel.build(map, self);
     }
 
-    public MigrateClusterResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeClusterTasksResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class MigrateClusterResponse extends TeaModel {
         return this.headers;
     }
 
-    public MigrateClusterResponse setStatusCode(Integer statusCode) {
+    public DescribeClusterTasksResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class MigrateClusterResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public MigrateClusterResponse setBody(MigrateClusterResponseBody body) {
+    public DescribeClusterTasksResponse setBody(DescribeClusterTasksResponseBody body) {
         this.body = body;
         return this;
     }
-    public MigrateClusterResponseBody getBody() {
+    public DescribeClusterTasksResponseBody getBody() {
         return this.body;
     }
 

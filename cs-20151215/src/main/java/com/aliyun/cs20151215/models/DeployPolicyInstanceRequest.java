@@ -4,15 +4,12 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DeployPolicyInstanceRequest extends TeaModel {
-    // 规则治理动作
     @NameInMap("action")
     public String action;
 
-    // 限制策略实施的命名空间，为空时表示所有命名空间
     @NameInMap("namespaces")
     public java.util.List<String> namespaces;
 
-    // 当前规则实例的配置参数
     @NameInMap("parameters")
     public java.util.Map<String, ?> parameters;
 

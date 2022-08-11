@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CancelWorkflowRequest extends TeaModel {
-    // 执行的操作，目前只支持cancel。
     @NameInMap("action")
     public String action;
 
