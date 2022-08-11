@@ -25,6 +25,9 @@ public class CreateOrUpdateIntlImageRequest extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SaleInfo")
+    public CreateOrUpdateIntlImageRequestSaleInfo saleInfo;
+
     @NameInMap("Uid")
     public String uid;
 
@@ -87,6 +90,14 @@ public class CreateOrUpdateIntlImageRequest extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateOrUpdateIntlImageRequest setSaleInfo(CreateOrUpdateIntlImageRequestSaleInfo saleInfo) {
+        this.saleInfo = saleInfo;
+        return this;
+    }
+    public CreateOrUpdateIntlImageRequestSaleInfo getSaleInfo() {
+        return this.saleInfo;
     }
 
     public CreateOrUpdateIntlImageRequest setUid(String uid) {
@@ -787,6 +798,321 @@ public class CreateOrUpdateIntlImageRequest extends TeaModel {
         }
         public String getProductType() {
             return this.productType;
+        }
+
+    }
+
+    public static class CreateOrUpdateIntlImageRequestSaleInfoPostpaidPricePostpaidPriceList extends TeaModel {
+        @NameInMap("BasePrice")
+        public String basePrice;
+
+        @NameInMap("Currency")
+        public String currency;
+
+        @NameInMap("ExcelUrl")
+        public String excelUrl;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("PriceType")
+        public String priceType;
+
+        public static CreateOrUpdateIntlImageRequestSaleInfoPostpaidPricePostpaidPriceList build(java.util.Map<String, ?> map) throws Exception {
+            CreateOrUpdateIntlImageRequestSaleInfoPostpaidPricePostpaidPriceList self = new CreateOrUpdateIntlImageRequestSaleInfoPostpaidPricePostpaidPriceList();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPostpaidPricePostpaidPriceList setBasePrice(String basePrice) {
+            this.basePrice = basePrice;
+            return this;
+        }
+        public String getBasePrice() {
+            return this.basePrice;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPostpaidPricePostpaidPriceList setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPostpaidPricePostpaidPriceList setExcelUrl(String excelUrl) {
+            this.excelUrl = excelUrl;
+            return this;
+        }
+        public String getExcelUrl() {
+            return this.excelUrl;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPostpaidPricePostpaidPriceList setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPostpaidPricePostpaidPriceList setPriceType(String priceType) {
+            this.priceType = priceType;
+            return this;
+        }
+        public String getPriceType() {
+            return this.priceType;
+        }
+
+    }
+
+    public static class CreateOrUpdateIntlImageRequestSaleInfoPostpaidPrice extends TeaModel {
+        @NameInMap("HourPrice")
+        public String hourPrice;
+
+        @NameInMap("PostpaidPriceList")
+        public java.util.List<CreateOrUpdateIntlImageRequestSaleInfoPostpaidPricePostpaidPriceList> postpaidPriceList;
+
+        @NameInMap("UnifiedPrice")
+        public Boolean unifiedPrice;
+
+        public static CreateOrUpdateIntlImageRequestSaleInfoPostpaidPrice build(java.util.Map<String, ?> map) throws Exception {
+            CreateOrUpdateIntlImageRequestSaleInfoPostpaidPrice self = new CreateOrUpdateIntlImageRequestSaleInfoPostpaidPrice();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPostpaidPrice setHourPrice(String hourPrice) {
+            this.hourPrice = hourPrice;
+            return this;
+        }
+        public String getHourPrice() {
+            return this.hourPrice;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPostpaidPrice setPostpaidPriceList(java.util.List<CreateOrUpdateIntlImageRequestSaleInfoPostpaidPricePostpaidPriceList> postpaidPriceList) {
+            this.postpaidPriceList = postpaidPriceList;
+            return this;
+        }
+        public java.util.List<CreateOrUpdateIntlImageRequestSaleInfoPostpaidPricePostpaidPriceList> getPostpaidPriceList() {
+            return this.postpaidPriceList;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPostpaidPrice setUnifiedPrice(Boolean unifiedPrice) {
+            this.unifiedPrice = unifiedPrice;
+            return this;
+        }
+        public Boolean getUnifiedPrice() {
+            return this.unifiedPrice;
+        }
+
+    }
+
+    public static class CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPricePrepaymentPriceList extends TeaModel {
+        @NameInMap("BasePrice")
+        public String basePrice;
+
+        @NameInMap("Currency")
+        public String currency;
+
+        @NameInMap("ExcelUrl")
+        public String excelUrl;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("PriceType")
+        public String priceType;
+
+        @NameInMap("TradeType")
+        public String tradeType;
+
+        public static CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPricePrepaymentPriceList build(java.util.Map<String, ?> map) throws Exception {
+            CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPricePrepaymentPriceList self = new CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPricePrepaymentPriceList();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPricePrepaymentPriceList setBasePrice(String basePrice) {
+            this.basePrice = basePrice;
+            return this;
+        }
+        public String getBasePrice() {
+            return this.basePrice;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPricePrepaymentPriceList setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPricePrepaymentPriceList setExcelUrl(String excelUrl) {
+            this.excelUrl = excelUrl;
+            return this;
+        }
+        public String getExcelUrl() {
+            return this.excelUrl;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPricePrepaymentPriceList setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPricePrepaymentPriceList setPriceType(String priceType) {
+            this.priceType = priceType;
+            return this;
+        }
+        public String getPriceType() {
+            return this.priceType;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPricePrepaymentPriceList setTradeType(String tradeType) {
+            this.tradeType = tradeType;
+            return this;
+        }
+        public String getTradeType() {
+            return this.tradeType;
+        }
+
+    }
+
+    public static class CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPrice extends TeaModel {
+        @NameInMap("MonthPrice")
+        public String monthPrice;
+
+        @NameInMap("MonthRenewPrice")
+        public String monthRenewPrice;
+
+        @NameInMap("PrepaymentPriceList")
+        public java.util.List<CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPricePrepaymentPriceList> prepaymentPriceList;
+
+        @NameInMap("UnifiedPrice")
+        public Boolean unifiedPrice;
+
+        @NameInMap("YearPrice")
+        public String yearPrice;
+
+        @NameInMap("YearRenewPrice")
+        public String yearRenewPrice;
+
+        public static CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPrice build(java.util.Map<String, ?> map) throws Exception {
+            CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPrice self = new CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPrice();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPrice setMonthPrice(String monthPrice) {
+            this.monthPrice = monthPrice;
+            return this;
+        }
+        public String getMonthPrice() {
+            return this.monthPrice;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPrice setMonthRenewPrice(String monthRenewPrice) {
+            this.monthRenewPrice = monthRenewPrice;
+            return this;
+        }
+        public String getMonthRenewPrice() {
+            return this.monthRenewPrice;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPrice setPrepaymentPriceList(java.util.List<CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPricePrepaymentPriceList> prepaymentPriceList) {
+            this.prepaymentPriceList = prepaymentPriceList;
+            return this;
+        }
+        public java.util.List<CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPricePrepaymentPriceList> getPrepaymentPriceList() {
+            return this.prepaymentPriceList;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPrice setUnifiedPrice(Boolean unifiedPrice) {
+            this.unifiedPrice = unifiedPrice;
+            return this;
+        }
+        public Boolean getUnifiedPrice() {
+            return this.unifiedPrice;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPrice setYearPrice(String yearPrice) {
+            this.yearPrice = yearPrice;
+            return this;
+        }
+        public String getYearPrice() {
+            return this.yearPrice;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPrice setYearRenewPrice(String yearRenewPrice) {
+            this.yearRenewPrice = yearRenewPrice;
+            return this;
+        }
+        public String getYearRenewPrice() {
+            return this.yearRenewPrice;
+        }
+
+    }
+
+    public static class CreateOrUpdateIntlImageRequestSaleInfo extends TeaModel {
+        @NameInMap("BillingMethods")
+        public Integer billingMethods;
+
+        @NameInMap("CommodityFrontShow")
+        public String commodityFrontShow;
+
+        @NameInMap("PostpaidPrice")
+        public CreateOrUpdateIntlImageRequestSaleInfoPostpaidPrice postpaidPrice;
+
+        @NameInMap("PrepaymentPrice")
+        public CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPrice prepaymentPrice;
+
+        @NameInMap("PricingPlan")
+        public String pricingPlan;
+
+        public static CreateOrUpdateIntlImageRequestSaleInfo build(java.util.Map<String, ?> map) throws Exception {
+            CreateOrUpdateIntlImageRequestSaleInfo self = new CreateOrUpdateIntlImageRequestSaleInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfo setBillingMethods(Integer billingMethods) {
+            this.billingMethods = billingMethods;
+            return this;
+        }
+        public Integer getBillingMethods() {
+            return this.billingMethods;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfo setCommodityFrontShow(String commodityFrontShow) {
+            this.commodityFrontShow = commodityFrontShow;
+            return this;
+        }
+        public String getCommodityFrontShow() {
+            return this.commodityFrontShow;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfo setPostpaidPrice(CreateOrUpdateIntlImageRequestSaleInfoPostpaidPrice postpaidPrice) {
+            this.postpaidPrice = postpaidPrice;
+            return this;
+        }
+        public CreateOrUpdateIntlImageRequestSaleInfoPostpaidPrice getPostpaidPrice() {
+            return this.postpaidPrice;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfo setPrepaymentPrice(CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPrice prepaymentPrice) {
+            this.prepaymentPrice = prepaymentPrice;
+            return this;
+        }
+        public CreateOrUpdateIntlImageRequestSaleInfoPrepaymentPrice getPrepaymentPrice() {
+            return this.prepaymentPrice;
+        }
+
+        public CreateOrUpdateIntlImageRequestSaleInfo setPricingPlan(String pricingPlan) {
+            this.pricingPlan = pricingPlan;
+            return this;
+        }
+        public String getPricingPlan() {
+            return this.pricingPlan;
         }
 
     }
