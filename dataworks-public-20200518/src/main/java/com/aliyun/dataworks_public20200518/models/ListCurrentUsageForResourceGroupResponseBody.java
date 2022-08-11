@@ -13,7 +13,6 @@ public class ListCurrentUsageForResourceGroupResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

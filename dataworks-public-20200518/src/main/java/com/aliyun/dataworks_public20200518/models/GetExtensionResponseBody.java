@@ -7,7 +7,6 @@ public class GetExtensionResponseBody extends TeaModel {
     @NameInMap("Extension")
     public GetExtensionResponseBodyExtension extension;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

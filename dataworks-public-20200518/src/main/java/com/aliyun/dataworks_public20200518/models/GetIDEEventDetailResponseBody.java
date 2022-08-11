@@ -7,7 +7,6 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
     @NameInMap("EventDetail")
     public GetIDEEventDetailResponseBodyEventDetail eventDetail;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

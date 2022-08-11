@@ -7,11 +7,9 @@ public class GetDISyncTaskMetricInfoResponseBody extends TeaModel {
     @NameInMap("MetricInfo")
     public GetDISyncTaskMetricInfoResponseBodyMetricInfo metricInfo;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // isSuccess
     @NameInMap("Success")
     public Boolean success;
 

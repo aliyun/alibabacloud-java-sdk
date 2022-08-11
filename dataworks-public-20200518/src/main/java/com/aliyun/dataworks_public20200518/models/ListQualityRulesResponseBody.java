@@ -133,7 +133,6 @@ public class ListQualityRulesResponseBody extends TeaModel {
         @NameInMap("RuleCheckerRelationId")
         public Integer ruleCheckerRelationId;
 
-        // 规则名称
         @NameInMap("RuleName")
         public String ruleName;
 
