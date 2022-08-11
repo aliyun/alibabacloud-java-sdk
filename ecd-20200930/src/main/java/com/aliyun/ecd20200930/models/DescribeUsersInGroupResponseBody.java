@@ -226,6 +226,9 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         @NameInMap("ExternalInfo")
         public DescribeUsersInGroupResponseBodyEndUsersExternalInfo externalInfo;
 
+        @NameInMap("UserDesktopId")
+        public String userDesktopId;
+
         @NameInMap("UserSetPropertiesModels")
         public java.util.List<DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels> userSetPropertiesModels;
 
@@ -304,6 +307,14 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
         public DescribeUsersInGroupResponseBodyEndUsersExternalInfo getExternalInfo() {
             return this.externalInfo;
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsers setUserDesktopId(String userDesktopId) {
+            this.userDesktopId = userDesktopId;
+            return this;
+        }
+        public String getUserDesktopId() {
+            return this.userDesktopId;
         }
 
         public DescribeUsersInGroupResponseBodyEndUsers setUserSetPropertiesModels(java.util.List<DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels> userSetPropertiesModels) {

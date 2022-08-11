@@ -35,6 +35,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("CronExpression")
         public String cronExpression;
 
+        @NameInMap("Forced")
+        public Boolean forced;
+
         @NameInMap("Status")
         public Integer status;
 
@@ -52,6 +55,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
         public String getCronExpression() {
             return this.cronExpression;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktopsTimerInfos setForced(Boolean forced) {
+            this.forced = forced;
+            return this;
+        }
+        public Boolean getForced() {
+            return this.forced;
         }
 
         public GetDesktopGroupDetailResponseBodyDesktopsTimerInfos setStatus(Integer status) {
@@ -84,6 +95,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
         @NameInMap("Comments")
         public String comments;
+
+        @NameInMap("ConnectDuration")
+        public Long connectDuration;
 
         @NameInMap("Cpu")
         public Integer cpu;
@@ -120,6 +134,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
         @NameInMap("GpuSpec")
         public String gpuSpec;
+
+        @NameInMap("IdleDisconnectDuration")
+        public Long idleDisconnectDuration;
 
         @NameInMap("KeepDuration")
         public Long keepDuration;
@@ -163,6 +180,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
 
+        @NameInMap("RatioThreshold")
+        public Float ratioThreshold;
+
         @NameInMap("ResType")
         public Integer resType;
 
@@ -180,6 +200,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
         @NameInMap("TimerInfos")
         public java.util.List<GetDesktopGroupDetailResponseBodyDesktopsTimerInfos> timerInfos;
+
+        @NameInMap("Version")
+        public Long version;
 
         public static GetDesktopGroupDetailResponseBodyDesktops build(java.util.Map<String, ?> map) throws Exception {
             GetDesktopGroupDetailResponseBodyDesktops self = new GetDesktopGroupDetailResponseBodyDesktops();
@@ -216,6 +239,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
         public String getComments() {
             return this.comments;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktops setConnectDuration(Long connectDuration) {
+            this.connectDuration = connectDuration;
+            return this;
+        }
+        public Long getConnectDuration() {
+            return this.connectDuration;
         }
 
         public GetDesktopGroupDetailResponseBodyDesktops setCpu(Integer cpu) {
@@ -312,6 +343,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
         public String getGpuSpec() {
             return this.gpuSpec;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktops setIdleDisconnectDuration(Long idleDisconnectDuration) {
+            this.idleDisconnectDuration = idleDisconnectDuration;
+            return this;
+        }
+        public Long getIdleDisconnectDuration() {
+            return this.idleDisconnectDuration;
         }
 
         public GetDesktopGroupDetailResponseBodyDesktops setKeepDuration(Long keepDuration) {
@@ -426,6 +465,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             return this.policyGroupName;
         }
 
+        public GetDesktopGroupDetailResponseBodyDesktops setRatioThreshold(Float ratioThreshold) {
+            this.ratioThreshold = ratioThreshold;
+            return this;
+        }
+        public Float getRatioThreshold() {
+            return this.ratioThreshold;
+        }
+
         public GetDesktopGroupDetailResponseBodyDesktops setResType(Integer resType) {
             this.resType = resType;
             return this;
@@ -472,6 +519,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
         public java.util.List<GetDesktopGroupDetailResponseBodyDesktopsTimerInfos> getTimerInfos() {
             return this.timerInfos;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktops setVersion(Long version) {
+            this.version = version;
+            return this;
+        }
+        public Long getVersion() {
+            return this.version;
         }
 
     }

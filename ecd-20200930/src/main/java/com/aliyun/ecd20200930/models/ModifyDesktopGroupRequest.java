@@ -19,11 +19,20 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     @NameInMap("Comments")
     public String comments;
 
+    @NameInMap("ConnectDuration")
+    public Long connectDuration;
+
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     @NameInMap("DesktopGroupName")
     public String desktopGroupName;
+
+    @NameInMap("DisableSessionConfig")
+    public Boolean disableSessionConfig;
+
+    @NameInMap("IdleDisconnectDuration")
+    public Long idleDisconnectDuration;
 
     @NameInMap("ImageId")
     public String imageId;
@@ -45,6 +54,9 @@ public class ModifyDesktopGroupRequest extends TeaModel {
 
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
+
+    @NameInMap("RatioThreshold")
+    public Float ratioThreshold;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -100,6 +112,14 @@ public class ModifyDesktopGroupRequest extends TeaModel {
         return this.comments;
     }
 
+    public ModifyDesktopGroupRequest setConnectDuration(Long connectDuration) {
+        this.connectDuration = connectDuration;
+        return this;
+    }
+    public Long getConnectDuration() {
+        return this.connectDuration;
+    }
+
     public ModifyDesktopGroupRequest setDesktopGroupId(String desktopGroupId) {
         this.desktopGroupId = desktopGroupId;
         return this;
@@ -114,6 +134,22 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     }
     public String getDesktopGroupName() {
         return this.desktopGroupName;
+    }
+
+    public ModifyDesktopGroupRequest setDisableSessionConfig(Boolean disableSessionConfig) {
+        this.disableSessionConfig = disableSessionConfig;
+        return this;
+    }
+    public Boolean getDisableSessionConfig() {
+        return this.disableSessionConfig;
+    }
+
+    public ModifyDesktopGroupRequest setIdleDisconnectDuration(Long idleDisconnectDuration) {
+        this.idleDisconnectDuration = idleDisconnectDuration;
+        return this;
+    }
+    public Long getIdleDisconnectDuration() {
+        return this.idleDisconnectDuration;
     }
 
     public ModifyDesktopGroupRequest setImageId(String imageId) {
@@ -170,6 +206,14 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     }
     public String getPolicyGroupId() {
         return this.policyGroupId;
+    }
+
+    public ModifyDesktopGroupRequest setRatioThreshold(Float ratioThreshold) {
+        this.ratioThreshold = ratioThreshold;
+        return this;
+    }
+    public Float getRatioThreshold() {
+        return this.ratioThreshold;
     }
 
     public ModifyDesktopGroupRequest setRegionId(String regionId) {

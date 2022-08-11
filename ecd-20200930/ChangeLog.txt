@@ -1,3 +1,6 @@
+2022-08-11 Version: 2.0.9
+- ModifydesktopGroup接口.
+
 2022-08-10 Version: 2.0.8
 - 开发SetDesktopGroupTimer和SetDesktopGroupTimerStatus接口.
 
