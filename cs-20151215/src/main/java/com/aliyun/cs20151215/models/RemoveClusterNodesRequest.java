@@ -4,15 +4,12 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class RemoveClusterNodesRequest extends TeaModel {
-    // 是否排空节点上的Pod。
     @NameInMap("drain_node")
     public Boolean drainNode;
 
-    // 要移除的Node列表。
     @NameInMap("nodes")
     public java.util.List<String> nodes;
 
-    // 是否同时释放ECS。
     @NameInMap("release_node")
     public Boolean releaseNode;
 

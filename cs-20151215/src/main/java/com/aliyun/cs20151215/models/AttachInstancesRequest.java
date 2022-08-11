@@ -4,54 +4,42 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class AttachInstancesRequest extends TeaModel {
-    // CPU亲和策略。
     @NameInMap("cpu_policy")
     public String cpuPolicy;
 
-    // 是否格式化数据盘。
     @NameInMap("format_disk")
     public Boolean formatDisk;
 
-    // 自定义镜像ID。
     @NameInMap("image_id")
     public String imageId;
 
-    // 实例列表。
     @NameInMap("instances")
     public java.util.List<String> instances;
 
-    // 是否为边缘节点。
     @NameInMap("is_edge_worker")
     public Boolean isEdgeWorker;
 
-    // 是否保留实例名称。
     @NameInMap("keep_instance_name")
     public Boolean keepInstanceName;
 
-    // key_pair名称，与login_password二选一
     @NameInMap("key_pair")
     public String keyPair;
 
-    // 节点池ID，欲将节点添加到哪个节点池中。。
     @NameInMap("nodepool_id")
     public String nodepoolId;
 
-    // password，与key_pair二选一。
     @NameInMap("password")
     public String password;
 
-    // RDS实例列表。
     @NameInMap("rds_instances")
     public java.util.List<String> rdsInstances;
 
     @NameInMap("runtime")
     public Runtime runtime;
 
-    // 节点标签。
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
-    // 节点自定义数据。
     @NameInMap("user_data")
     public String userData;
 

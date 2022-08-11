@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeExternalAgentResponseBody extends TeaModel {
-    // 代理配置。
     @NameInMap("config")
     public String config;
 

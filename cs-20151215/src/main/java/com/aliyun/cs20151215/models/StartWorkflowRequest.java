@@ -4,79 +4,60 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class StartWorkflowRequest extends TeaModel {
-    // bam文件输出名称。
     @NameInMap("mapping_bam_out_filename")
     public String mappingBamOutFilename;
 
-    // bam文件输出路径。
     @NameInMap("mapping_bam_out_path")
     public String mappingBamOutPath;
 
-    // 存放mapping的bucket名称。
     @NameInMap("mapping_bucket_name")
     public String mappingBucketName;
 
-    // mapping的第一个fastq文件名。
     @NameInMap("mapping_fastq_first_filename")
     public String mappingFastqFirstFilename;
 
-    // mapping的fastq文件路径。
     @NameInMap("mapping_fastq_path")
     public String mappingFastqPath;
 
-    // mapping的第二个fastq文件名。
     @NameInMap("mapping_fastq_second_filename")
     public String mappingFastqSecondFilename;
 
-    // 是否进行dup。
     @NameInMap("mapping_is_mark_dup")
     public String mappingIsMarkDup;
 
-    // mapping oss数据的存放region。
     @NameInMap("mapping_oss_region")
     public String mappingOssRegion;
 
-    // mapping的reference文件位置。
     @NameInMap("mapping_reference_path")
     public String mappingReferencePath;
 
-    // SLA类型，可选值：s、g、p。 白银级（s）：超过90 Gbp的部分，按1.5 Gbp/min计算增加的时间。 黄金级（g）：超过90 Gbp的部分，按2 Gbp/min计算增加的时间。 铂金级（p）：超过90 Gbp的部分，按3 Gbp/min计算增加的时间。
     @NameInMap("service")
     public String service;
 
-    // 存放wgs的bucket名称。
     @NameInMap("wgs_bucket_name")
     public String wgsBucketName;
 
-    // wgs的第一个fastq文件名。
     @NameInMap("wgs_fastq_first_filename")
     public String wgsFastqFirstFilename;
 
-    // wgs的fastq文件路径。
     @NameInMap("wgs_fastq_path")
     public String wgsFastqPath;
 
-    // wgs的第二个fastq文件名。
     @NameInMap("wgs_fastq_second_filename")
     public String wgsFastqSecondFilename;
 
-    // wgs oss数据的存放region。
     @NameInMap("wgs_oss_region")
     public String wgsOssRegion;
 
-    // wgs的reference文件路径。
     @NameInMap("wgs_reference_path")
     public String wgsReferencePath;
 
-    // wgs的vcf输出文件名称。
     @NameInMap("wgs_vcf_out_filename")
     public String wgsVcfOutFilename;
 
-    // wgs的vcf输出路径。
     @NameInMap("wgs_vcf_out_path")
     public String wgsVcfOutPath;
 
-    // 工作流类型，可选值：wgs或mapping。
     @NameInMap("workflow_type")
     public String workflowType;
 

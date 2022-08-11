@@ -4,31 +4,27 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterNodePoolRequest extends TeaModel {
-    // 自动伸缩节点池配置。
     @NameInMap("auto_scaling")
     public ModifyClusterNodePoolRequestAutoScaling autoScaling;
 
-    // 集群配置。
     @NameInMap("kubernetes_config")
     public ModifyClusterNodePoolRequestKubernetesConfig kubernetesConfig;
 
-    // 托管版节点池配置。
     @NameInMap("management")
     public ModifyClusterNodePoolRequestManagement management;
 
-    // 节点池配置。
+    @NameInMap("node_config")
+    public ModifyClusterNodePoolRequestNodeConfig nodeConfig;
+
     @NameInMap("nodepool_info")
     public ModifyClusterNodePoolRequestNodepoolInfo nodepoolInfo;
 
-    // 扩容组配置。
     @NameInMap("scaling_group")
     public ModifyClusterNodePoolRequestScalingGroup scalingGroup;
 
-    // 加密计算配置。
     @NameInMap("tee_config")
     public ModifyClusterNodePoolRequestTeeConfig teeConfig;
 
-    // 是否同步更新节点标签及污点。
     @NameInMap("update_nodes")
     public Boolean updateNodes;
 
@@ -59,6 +55,14 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
     }
     public ModifyClusterNodePoolRequestManagement getManagement() {
         return this.management;
+    }
+
+    public ModifyClusterNodePoolRequest setNodeConfig(ModifyClusterNodePoolRequestNodeConfig nodeConfig) {
+        this.nodeConfig = nodeConfig;
+        return this;
+    }
+    public ModifyClusterNodePoolRequestNodeConfig getNodeConfig() {
+        return this.nodeConfig;
     }
 
     public ModifyClusterNodePoolRequest setNodepoolInfo(ModifyClusterNodePoolRequestNodepoolInfo nodepoolInfo) {
@@ -94,31 +98,24 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
     }
 
     public static class ModifyClusterNodePoolRequestAutoScaling extends TeaModel {
-        // 带宽峰值。
         @NameInMap("eip_bandwidth")
         public Long eipBandwidth;
 
-        // EIP计费类型。
         @NameInMap("eip_internet_charge_type")
         public String eipInternetChargeType;
 
-        // 是否开启自动伸缩。
         @NameInMap("enable")
         public Boolean enable;
 
-        // 是否绑定EIP。
         @NameInMap("is_bond_eip")
         public Boolean isBondEip;
 
-        // 最大实例数。
         @NameInMap("max_instances")
         public Long maxInstances;
 
-        // 最小实例数。
         @NameInMap("min_instances")
         public Long minInstances;
 
-        // 自动伸缩节点类型。
         @NameInMap("type")
         public String type;
 
@@ -186,31 +183,24 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
     }
 
     public static class ModifyClusterNodePoolRequestKubernetesConfig extends TeaModel {
-        // 是否开启云监控。
         @NameInMap("cms_enabled")
         public Boolean cmsEnabled;
 
-        // CPU管理策略。
         @NameInMap("cpu_policy")
         public String cpuPolicy;
 
-        // 节点标签。
         @NameInMap("labels")
         public java.util.List<Tag> labels;
 
-        // 容器运行时。
         @NameInMap("runtime")
         public String runtime;
 
-        // 容器运行时版本。
         @NameInMap("runtime_version")
         public String runtimeVersion;
 
-        // 污点配置。
         @NameInMap("taints")
         public java.util.List<Taint> taints;
 
-        // 实例自定义数据。
         @NameInMap("user_data")
         public String userData;
 
@@ -278,19 +268,15 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
     }
 
     public static class ModifyClusterNodePoolRequestManagementUpgradeConfig extends TeaModel {
-        // 是否启用自动升级，自修复。
         @NameInMap("auto_upgrade")
         public Boolean autoUpgrade;
 
-        // 最大不可用节点数量。
         @NameInMap("max_unavailable")
         public Long maxUnavailable;
 
-        // 额外节点数量。
         @NameInMap("surge")
         public Long surge;
 
-        // 额外节点比例， 和surge 二选一。
         @NameInMap("surge_percentage")
         public Long surgePercentage;
 
@@ -334,15 +320,12 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
     }
 
     public static class ModifyClusterNodePoolRequestManagement extends TeaModel {
-        // 是否开启自动修复。
         @NameInMap("auto_repair")
         public Boolean autoRepair;
 
-        // 是否启用托管节点池。
         @NameInMap("enable")
         public Boolean enable;
 
-        // 自动升级配置。
         @NameInMap("upgrade_config")
         public ModifyClusterNodePoolRequestManagementUpgradeConfig upgradeConfig;
 
@@ -377,12 +360,210 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
 
     }
 
+    public static class ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration extends TeaModel {
+        @NameInMap("cpuManagerPolicy")
+        public String cpuManagerPolicy;
+
+        @NameInMap("eventBurst")
+        public Long eventBurst;
+
+        @NameInMap("eventRecordQPS")
+        public Long eventRecordQPS;
+
+        @NameInMap("evictionHard")
+        public java.util.Map<String, ?> evictionHard;
+
+        @NameInMap("evictionSoft")
+        public java.util.Map<String, ?> evictionSoft;
+
+        @NameInMap("evictionSoftGracePeriod")
+        public java.util.Map<String, ?> evictionSoftGracePeriod;
+
+        @NameInMap("kubeAPIBurst")
+        public Long kubeAPIBurst;
+
+        @NameInMap("kubeAPIQPS")
+        public Long kubeAPIQPS;
+
+        @NameInMap("kubeReserved")
+        public java.util.Map<String, ?> kubeReserved;
+
+        @NameInMap("registryBurst")
+        public Long registryBurst;
+
+        @NameInMap("registryPullQPS")
+        public Long registryPullQPS;
+
+        @NameInMap("serializeImagePulls")
+        public Boolean serializeImagePulls;
+
+        @NameInMap("systemReserved")
+        public java.util.Map<String, ?> systemReserved;
+
+        public static ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration self = new ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration setCpuManagerPolicy(String cpuManagerPolicy) {
+            this.cpuManagerPolicy = cpuManagerPolicy;
+            return this;
+        }
+        public String getCpuManagerPolicy() {
+            return this.cpuManagerPolicy;
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration setEventBurst(Long eventBurst) {
+            this.eventBurst = eventBurst;
+            return this;
+        }
+        public Long getEventBurst() {
+            return this.eventBurst;
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration setEventRecordQPS(Long eventRecordQPS) {
+            this.eventRecordQPS = eventRecordQPS;
+            return this;
+        }
+        public Long getEventRecordQPS() {
+            return this.eventRecordQPS;
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration setEvictionHard(java.util.Map<String, ?> evictionHard) {
+            this.evictionHard = evictionHard;
+            return this;
+        }
+        public java.util.Map<String, ?> getEvictionHard() {
+            return this.evictionHard;
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration setEvictionSoft(java.util.Map<String, ?> evictionSoft) {
+            this.evictionSoft = evictionSoft;
+            return this;
+        }
+        public java.util.Map<String, ?> getEvictionSoft() {
+            return this.evictionSoft;
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration setEvictionSoftGracePeriod(java.util.Map<String, ?> evictionSoftGracePeriod) {
+            this.evictionSoftGracePeriod = evictionSoftGracePeriod;
+            return this;
+        }
+        public java.util.Map<String, ?> getEvictionSoftGracePeriod() {
+            return this.evictionSoftGracePeriod;
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration setKubeAPIBurst(Long kubeAPIBurst) {
+            this.kubeAPIBurst = kubeAPIBurst;
+            return this;
+        }
+        public Long getKubeAPIBurst() {
+            return this.kubeAPIBurst;
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration setKubeAPIQPS(Long kubeAPIQPS) {
+            this.kubeAPIQPS = kubeAPIQPS;
+            return this;
+        }
+        public Long getKubeAPIQPS() {
+            return this.kubeAPIQPS;
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration setKubeReserved(java.util.Map<String, ?> kubeReserved) {
+            this.kubeReserved = kubeReserved;
+            return this;
+        }
+        public java.util.Map<String, ?> getKubeReserved() {
+            return this.kubeReserved;
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration setRegistryBurst(Long registryBurst) {
+            this.registryBurst = registryBurst;
+            return this;
+        }
+        public Long getRegistryBurst() {
+            return this.registryBurst;
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration setRegistryPullQPS(Long registryPullQPS) {
+            this.registryPullQPS = registryPullQPS;
+            return this;
+        }
+        public Long getRegistryPullQPS() {
+            return this.registryPullQPS;
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration setSerializeImagePulls(Boolean serializeImagePulls) {
+            this.serializeImagePulls = serializeImagePulls;
+            return this;
+        }
+        public Boolean getSerializeImagePulls() {
+            return this.serializeImagePulls;
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration setSystemReserved(java.util.Map<String, ?> systemReserved) {
+            this.systemReserved = systemReserved;
+            return this;
+        }
+        public java.util.Map<String, ?> getSystemReserved() {
+            return this.systemReserved;
+        }
+
+    }
+
+    public static class ModifyClusterNodePoolRequestNodeConfigRolloutPolicy extends TeaModel {
+        @NameInMap("max_unavailable")
+        public Long maxUnavailable;
+
+        public static ModifyClusterNodePoolRequestNodeConfigRolloutPolicy build(java.util.Map<String, ?> map) throws Exception {
+            ModifyClusterNodePoolRequestNodeConfigRolloutPolicy self = new ModifyClusterNodePoolRequestNodeConfigRolloutPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfigRolloutPolicy setMaxUnavailable(Long maxUnavailable) {
+            this.maxUnavailable = maxUnavailable;
+            return this;
+        }
+        public Long getMaxUnavailable() {
+            return this.maxUnavailable;
+        }
+
+    }
+
+    public static class ModifyClusterNodePoolRequestNodeConfig extends TeaModel {
+        @NameInMap("kubelet_configuration")
+        public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration kubeletConfiguration;
+
+        @NameInMap("rollout_policy")
+        public ModifyClusterNodePoolRequestNodeConfigRolloutPolicy rolloutPolicy;
+
+        public static ModifyClusterNodePoolRequestNodeConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyClusterNodePoolRequestNodeConfig self = new ModifyClusterNodePoolRequestNodeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfig setKubeletConfiguration(ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration kubeletConfiguration) {
+            this.kubeletConfiguration = kubeletConfiguration;
+            return this;
+        }
+        public ModifyClusterNodePoolRequestNodeConfigKubeletConfiguration getKubeletConfiguration() {
+            return this.kubeletConfiguration;
+        }
+
+        public ModifyClusterNodePoolRequestNodeConfig setRolloutPolicy(ModifyClusterNodePoolRequestNodeConfigRolloutPolicy rolloutPolicy) {
+            this.rolloutPolicy = rolloutPolicy;
+            return this;
+        }
+        public ModifyClusterNodePoolRequestNodeConfigRolloutPolicy getRolloutPolicy() {
+            return this.rolloutPolicy;
+        }
+
+    }
+
     public static class ModifyClusterNodePoolRequestNodepoolInfo extends TeaModel {
-        // 节点池名称。
         @NameInMap("name")
         public String name;
 
-        // 资源组ID。
         @NameInMap("resource_group_id")
         public String resourceGroupId;
 
@@ -410,11 +591,9 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
     }
 
     public static class ModifyClusterNodePoolRequestScalingGroupSpotPriceLimit extends TeaModel {
-        // 抢占式实例规格
         @NameInMap("instance_type")
         public String instanceType;
 
-        // 单台实例上限价格，单位：元/小时。
         @NameInMap("price_limit")
         public String priceLimit;
 
@@ -442,119 +621,90 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
     }
 
     public static class ModifyClusterNodePoolRequestScalingGroup extends TeaModel {
-        // 节点池节点是启用自动续费
         @NameInMap("auto_renew")
         public Boolean autoRenew;
 
-        // 节点池节点自动续费周期
         @NameInMap("auto_renew_period")
         public Long autoRenewPeriod;
 
-        // 当MultiAZPolicy取值为COST_OPTIMIZED时，如果因价格、库存等原因无法创建足够的抢占式实例，是否允许自动尝试创建按量实例满足ECS实例数量要求。取值范围：true：允许。false：不允许。默认值：true
         @NameInMap("compensate_with_on_demand")
         public Boolean compensateWithOnDemand;
 
-        // 数据盘配置。
         @NameInMap("data_disks")
         public java.util.List<DataDisk> dataDisks;
 
-        // 节点池期望节点数
         @NameInMap("desired_size")
         public Long desiredSize;
 
-        // 自定义镜像
         @NameInMap("image_id")
         public String imageId;
 
-        // 节点付费类型。
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
-        // 节点实例规格。
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
 
-        // 节点公网IP网络计费类型
         @NameInMap("internet_charge_type")
         public String internetChargeType;
 
-        // 节点公网IP出带宽最大值，单位为Mbps（Mega bit per second），取值范围：1~100
         @NameInMap("internet_max_bandwidth_out")
         public Long internetMaxBandwidthOut;
 
-        // 密钥对名称，和login_password二选一。
         @NameInMap("key_pair")
         public String keyPair;
 
-        // SSH登录密码，和key_pari二选一。
         @NameInMap("login_password")
         public String loginPassword;
 
-        // 多可用区伸缩组ECS实例扩缩容策略
         @NameInMap("multi_az_policy")
         public String multiAzPolicy;
 
-        // 伸缩组所需要按量实例个数的最小值，取值范围：0~1000。当按量实例个数少于该值时，将优先创建按量实例。
         @NameInMap("on_demand_base_capacity")
         public Long onDemandBaseCapacity;
 
-        // 伸缩组满足最小按量实例数（OnDemandBaseCapacity）要求后，超出的实例中按量实例应占的比例，取值范围：0～100。
         @NameInMap("on_demand_percentage_above_base_capacity")
         public Long onDemandPercentageAboveBaseCapacity;
 
-        // 包年包月时长
         @NameInMap("period")
         public Long period;
 
-        // 付费周期
         @NameInMap("period_unit")
         public String periodUnit;
 
-        // 操作系统发行版。
         @NameInMap("platform")
         public String platform;
 
-        // RDS实例列表。
         @NameInMap("rds_instances")
         public java.util.List<String> rdsInstances;
 
-        // 扩容策略。
         @NameInMap("scaling_policy")
         public String scalingPolicy;
 
-        // 指定可用实例规格的个数，伸缩组将按成本最低的多个规格均衡创建抢占式实例。取值范围：1~10。
         @NameInMap("spot_instance_pools")
         public Long spotInstancePools;
 
-        // 是否开启补齐抢占式实例。开启后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。
         @NameInMap("spot_instance_remedy")
         public Boolean spotInstanceRemedy;
 
-        // 抢占实例价格上限配置
         @NameInMap("spot_price_limit")
         public java.util.List<ModifyClusterNodePoolRequestScalingGroupSpotPriceLimit> spotPriceLimit;
 
-        // 抢占式实例类型
         @NameInMap("spot_strategy")
         public String spotStrategy;
 
-        // 节点系统盘类型。
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
 
-        // 节点系统盘磁盘性能，只针对ESSD磁盘生效
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;
 
-        // 节点系统盘大小。
         @NameInMap("system_disk_size")
         public Long systemDiskSize;
 
-        // ECS标签。
         @NameInMap("tags")
         public java.util.List<Tag> tags;
 
-        // 节点使用的虚拟交换机ID。
         @NameInMap("vswitch_ids")
         public java.util.List<String> vswitchIds;
 
@@ -798,7 +948,6 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
     }
 
     public static class ModifyClusterNodePoolRequestTeeConfig extends TeaModel {
-        // 是否为加密计算节点池。
         @NameInMap("tee_enable")
         public Boolean teeEnable;
 

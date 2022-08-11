@@ -4,47 +4,36 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescirbeWorkflowResponseBody extends TeaModel {
-    // 工作流创建时间。
     @NameInMap("create_time")
     public String createTime;
 
-    // 工作流经过时长。
     @NameInMap("duration")
     public String duration;
 
-    // 任务结束时间。
     @NameInMap("finish_time")
     public String finishTime;
 
-    // 输入数据大小。
     @NameInMap("input_data_size")
     public String inputDataSize;
 
-    // 工作流名称。
     @NameInMap("job_name")
     public String jobName;
 
-    // 工作流所在命名空间。
     @NameInMap("job_namespace")
     public String jobNamespace;
 
-    // 输出数据大小。
     @NameInMap("output_data_size")
     public String outputDataSize;
 
-    // 工作流当前状态。
     @NameInMap("status")
     public String status;
 
-    // 碱基对个数。
     @NameInMap("total_bases")
     public String totalBases;
 
-    // Reads个数。
     @NameInMap("total_reads")
     public String totalReads;
 
-    // 用户输入参数。
     @NameInMap("user_input_data")
     public String userInputData;
 

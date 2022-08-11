@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class InstallClusterAddonsRequest extends TeaModel {
-    // Addon列表。
     @NameInMap("body")
     public java.util.List<InstallClusterAddonsRequestBody> body;
 
@@ -22,15 +21,12 @@ public class InstallClusterAddonsRequest extends TeaModel {
     }
 
     public static class InstallClusterAddonsRequestBody extends TeaModel {
-        // 组件配置信息。
         @NameInMap("config")
         public String config;
 
-        // 组件名称。
         @NameInMap("name")
         public String name;
 
-        // 组件版本号。
         @NameInMap("version")
         public String version;
 
@@ -66,7 +62,6 @@ public class InstallClusterAddonsRequest extends TeaModel {
     }
 
     public static class UnInstallClusterAddonsRequestAddons extends TeaModel {
-        // 组件名称。
         @NameInMap("name")
         public String name;
 

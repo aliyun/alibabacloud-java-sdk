@@ -4,31 +4,24 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel {
-    // device name
     @NameInMap("device_name")
     public String deviceName;
 
-    // Id of the request
     @NameInMap("model")
     public String model;
 
-    // product key
     @NameInMap("product_key")
     public String productKey;
 
-    // request id
     @NameInMap("request_id")
     public String requestId;
 
-    // sn
     @NameInMap("sn")
     public String sn;
 
-    // token
     @NameInMap("token")
     public String token;
 
-    // tunnel endpoint
     @NameInMap("tunnel_endpoint")
     public String tunnelEndpoint;
 

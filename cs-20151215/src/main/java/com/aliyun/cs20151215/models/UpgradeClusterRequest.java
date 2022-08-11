@@ -4,15 +4,12 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpgradeClusterRequest extends TeaModel {
-    // 组件名称，集群升级时取值"k8s"。
     @NameInMap("component_name")
     public String componentName;
 
-    // 目标版本。
     @NameInMap("next_version")
     public String nextVersion;
 
-    // 当前版本。
     @NameInMap("version")
     public String version;
 

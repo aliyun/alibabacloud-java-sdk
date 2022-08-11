@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterTagsRequest extends TeaModel {
-    // 集群标签列表。
     @NameInMap("body")
     public java.util.List<Tag> body;
 

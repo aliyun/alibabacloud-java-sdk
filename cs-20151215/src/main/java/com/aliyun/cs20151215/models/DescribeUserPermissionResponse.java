@@ -46,27 +46,21 @@ public class DescribeUserPermissionResponse extends TeaModel {
     }
 
     public static class DescribeUserPermissionResponseBody extends TeaModel {
-        // 集群访问配置
         @NameInMap("resource_id")
         public String resourceId;
 
-        // 授权类型
         @NameInMap("resource_type")
         public String resourceType;
 
-        // 自定义角色名称
         @NameInMap("role_name")
         public String roleName;
 
-        // 预置的角色类型
         @NameInMap("role_type")
         public String roleType;
 
-        // 是否为集群 owner 的授权
         @NameInMap("is_owner")
         public Long isOwner;
 
-        // 是否为ram 角色授权
         @NameInMap("is_ram_role")
         public Long isRamRole;
 

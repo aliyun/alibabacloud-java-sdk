@@ -4,11 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpdateK8sClusterUserConfigExpireRequest extends TeaModel {
-    // kubeconfig过期小时
     @NameInMap("expire_hour")
     public Long expireHour;
 
-    // 指定用户id
     @NameInMap("user")
     public String user;
 

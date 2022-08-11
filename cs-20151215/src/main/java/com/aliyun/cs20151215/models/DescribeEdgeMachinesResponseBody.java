@@ -4,11 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeEdgeMachinesResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("edge_machines")
     public java.util.List<DescribeEdgeMachinesResponseBodyEdgeMachines> edgeMachines;
 
-    // page info
     @NameInMap("page_info")
     public DescribeEdgeMachinesResponseBodyPageInfo pageInfo;
 
@@ -34,43 +32,33 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
     }
 
     public static class DescribeEdgeMachinesResponseBodyEdgeMachines extends TeaModel {
-        // actvite time
         @NameInMap("active_time")
         public String activeTime;
 
-        // created time
         @NameInMap("created")
         public String created;
 
-        // edge machine id
         @NameInMap("edge_machine_id")
         public String edgeMachineId;
 
-        // hostname
         @NameInMap("hostname")
         public String hostname;
 
-        // life state
         @NameInMap("life_state")
         public String lifeState;
 
-        // model
         @NameInMap("model")
         public String model;
 
-        // name of edgemachine
         @NameInMap("name")
         public String name;
 
-        // online state
         @NameInMap("online_state")
         public String onlineState;
 
-        // sn
         @NameInMap("sn")
         public String sn;
 
-        // update time
         @NameInMap("updated")
         public String updated;
 
@@ -162,15 +150,12 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
     }
 
     public static class DescribeEdgeMachinesResponseBodyPageInfo extends TeaModel {
-        // page number
         @NameInMap("page_number")
         public Integer pageNumber;
 
-        // page size
         @NameInMap("page_size")
         public Integer pageSize;
 
-        // total count
         @NameInMap("total_count")
         public Integer totalCount;
 

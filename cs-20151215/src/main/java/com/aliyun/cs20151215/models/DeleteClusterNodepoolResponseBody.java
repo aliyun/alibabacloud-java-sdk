@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DeleteClusterNodepoolResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("request_id")
     public String requestId;
 

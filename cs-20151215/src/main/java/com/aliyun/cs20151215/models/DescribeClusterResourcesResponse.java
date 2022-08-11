@@ -46,31 +46,24 @@ public class DescribeClusterResourcesResponse extends TeaModel {
     }
 
     public static class DescribeClusterResourcesResponseBody extends TeaModel {
-        // 集群ID。
         @NameInMap("cluster_id")
         public String clusterId;
 
-        // 资源创建时间。
         @NameInMap("created")
         public String created;
 
-        // 资源实例ID。
         @NameInMap("instance_id")
         public String instanceId;
 
-        // 资源元信息。
         @NameInMap("resource_info")
         public String resourceInfo;
 
-        // 资源类型。
         @NameInMap("resource_type")
         public String resourceType;
 
-        // 资源状态。
         @NameInMap("state")
         public String state;
 
-        // 是否为自动创建。
         @NameInMap("auto_create")
         public Long autoCreate;
 

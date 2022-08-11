@@ -4,23 +4,18 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
-    // 集群类型。
     @NameInMap("ClusterType")
     public String clusterType;
 
-    // 要查询的版本，如果为空则查所有版本。
     @NameInMap("KubernetesVersion")
     public String kubernetesVersion;
 
-    // 边缘集群标识，用于区分边缘集群，取值：Default或Edge。
     @NameInMap("Profile")
     public String profile;
 
-    // 地域ID。
     @NameInMap("Region")
     public String region;
 
-    // 运行时。
     @NameInMap("runtime")
     public String runtime;
 

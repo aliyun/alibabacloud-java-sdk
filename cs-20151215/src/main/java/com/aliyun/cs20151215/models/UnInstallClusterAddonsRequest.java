@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UnInstallClusterAddonsRequest extends TeaModel {
-    // 卸载组件列表。
     @NameInMap("addons")
     public java.util.List<UnInstallClusterAddonsRequestAddons> addons;
 
@@ -22,7 +21,6 @@ public class UnInstallClusterAddonsRequest extends TeaModel {
     }
 
     public static class UnInstallClusterAddonsRequestAddons extends TeaModel {
-        // 组件名称。
         @NameInMap("name")
         public String name;
 

@@ -4,19 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventsRequest extends TeaModel {
-    // 集群ID
     @NameInMap("cluster_id")
     public String clusterId;
 
-    // 没页记录数量
     @NameInMap("page_number")
     public Long pageNumber;
 
-    // 页数
     @NameInMap("page_size")
     public Long pageSize;
 
-    // 事件类型
     @NameInMap("type")
     public String type;
 

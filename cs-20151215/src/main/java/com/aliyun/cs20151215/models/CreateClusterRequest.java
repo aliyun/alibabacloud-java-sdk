@@ -4,338 +4,264 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
-    // 集群组件配置
     @NameInMap("addons")
     public java.util.List<Addon> addons;
 
-    // 合法的请求token身份，用于apiserver服务端认证请求token是否合法。
     @NameInMap("api_audiences")
     public String apiAudiences;
 
-    // CIS安全加固
+    @NameInMap("charge_type")
+    public String chargeType;
+
     @NameInMap("cis_enabled")
     public Boolean cisEnabled;
 
-    // 为ECS安装云监控
     @NameInMap("cloud_monitor_flags")
     public Boolean cloudMonitorFlags;
 
-    // 集群本地域名
     @NameInMap("cluster_domain")
     public String clusterDomain;
 
-    // 托管版集群类型
     @NameInMap("cluster_spec")
     public String clusterSpec;
 
-    // 集群类型
     @NameInMap("cluster_type")
     public String clusterType;
 
-    // POD网络网段
     @NameInMap("container_cidr")
     public String containerCidr;
 
-    // 需要采集日志的组件
     @NameInMap("controlplane_log_components")
     public java.util.List<String> controlplaneLogComponents;
 
-    // 使用已有log project时，需要指定log project
     @NameInMap("controlplane_log_project")
     public String controlplaneLogProject;
 
-    // 控制平面日志
     @NameInMap("controlplane_log_ttl")
     public String controlplaneLogTtl;
 
-    // CPU策略
     @NameInMap("cpu_policy")
     public String cpuPolicy;
 
-    // 自定义证书SAN
     @NameInMap("custom_san")
     public String customSan;
 
-    // 集群删除保护
     @NameInMap("deletion_protection")
     public Boolean deletionProtection;
 
-    // 失败回滚
     @NameInMap("disable_rollback")
     public Boolean disableRollback;
 
-    // 启用 RRSA 功能
     @NameInMap("enable_rrsa")
     public Boolean enableRrsa;
 
-    // Secret落盘加密
     @NameInMap("encryption_provider_key")
     public String encryptionProviderKey;
 
-    // 使用EIP暴露apiServer
     @NameInMap("endpoint_public_access")
     public Boolean endpointPublicAccess;
 
-    // 使用已有节点创建集群时，是否格式化已有实例的磁盘
     @NameInMap("format_disk")
     public Boolean formatDisk;
 
-    // 自定义镜像
     @NameInMap("image_id")
     public String imageId;
 
-    // 操作系统镜像类型
     @NameInMap("image_type")
     public String imageType;
 
-    // 使用已有节点创建集群时，已有实例列表
     @NameInMap("instances")
     public java.util.List<String> instances;
 
-    // 自动创建企业安全组
     @NameInMap("is_enterprise_security_group")
     public Boolean isEnterpriseSecurityGroup;
 
-    // 使用已有节点创建集群时，是否保留实例名称。
     @NameInMap("keep_instance_name")
     public Boolean keepInstanceName;
 
-    // 密钥对名称，和login_password二选一。
     @NameInMap("key_pair")
     public String keyPair;
 
-    // 集群版本
     @NameInMap("kubernetes_version")
     public String kubernetesVersion;
 
-    // 负载均衡规格
     @NameInMap("load_balancer_spec")
     public String loadBalancerSpec;
 
-    // ASK 集群开启日志服务
     @NameInMap("logging_type")
     public String loggingType;
 
-    // SSH登录密码。密码规则为8~30 个字符，且至少同时包含三项（大小写字母、数字和特殊符号），和key_pair二选一。
     @NameInMap("login_password")
     public String loginPassword;
 
-    // 集群Master节点是否自动续费
     @NameInMap("master_auto_renew")
     public Boolean masterAutoRenew;
 
-    // 集群Master节点自动续费时长
     @NameInMap("master_auto_renew_period")
     public Long masterAutoRenewPeriod;
 
-    // 集群Master节点数量
     @NameInMap("master_count")
     public Long masterCount;
 
-    // 集群Master节点付费类型
     @NameInMap("master_instance_charge_type")
     public String masterInstanceChargeType;
 
-    // 集群Master节点类型
     @NameInMap("master_instance_types")
     public java.util.List<String> masterInstanceTypes;
 
-    // 集群Master节点包年包月时长
     @NameInMap("master_period")
     public Long masterPeriod;
 
-    // 集群Master节点包年包月周期
     @NameInMap("master_period_unit")
     public String masterPeriodUnit;
 
-    // 集群Master节点系统盘类型
     @NameInMap("master_system_disk_category")
     public String masterSystemDiskCategory;
 
-    // Master节点系统盘磁盘性能，只针对ESSD磁盘生效
     @NameInMap("master_system_disk_performance_level")
     public String masterSystemDiskPerformanceLevel;
 
-    // 集群Master节点系统盘大小，至少40
     @NameInMap("master_system_disk_size")
     public Long masterSystemDiskSize;
 
-    // 集群Master节点自动快照备份策略
     @NameInMap("master_system_disk_snapshot_policy_id")
     public String masterSystemDiskSnapshotPolicyId;
 
-    // 集群Master节点使用的虚拟交换机
     @NameInMap("master_vswitch_ids")
     public java.util.List<String> masterVswitchIds;
 
-    // 集群名称。
     @NameInMap("name")
     public String name;
 
-    // 使用自动创建专有网络创建ASK集群时，是否在vpc中创建Nat网关并配置SNAT规则。
     @NameInMap("nat_gateway")
     public Boolean natGateway;
 
-    // 节点IP数量
     @NameInMap("node_cidr_mask")
     public String nodeCidrMask;
 
-    // 自定义节点名称
     @NameInMap("node_name_mode")
     public String nodeNameMode;
 
-    // 节点服务端口范围
     @NameInMap("node_port_range")
     public String nodePortRange;
 
-    // 集群Worker节点数量
     @NameInMap("num_of_nodes")
     public Long numOfNodes;
 
-    // 操作系统平台类型
     @NameInMap("os_type")
     public String osType;
 
-    // 操作系统发行版
+    @NameInMap("period")
+    public Long period;
+
+    @NameInMap("period_unit")
+    public String periodUnit;
+
     @NameInMap("platform")
     public String platform;
 
-    // 创建Terway网络类型的集群时，需要为pod指定单独的虚拟交换机
     @NameInMap("pod_vswitch_ids")
     public java.util.List<String> podVswitchIds;
 
-    // 面向场景时的集群类型。  Default：非边缘场景集群。 Edge：边缘场景集群。
     @NameInMap("profile")
     public String profile;
 
-    // Proxy代理模式，ipvs|iptables
     @NameInMap("proxy_mode")
     public String proxyMode;
 
-    // RDS白名单
     @NameInMap("rds_instances")
     public java.util.List<String> rdsInstances;
 
-    // 地域ID
     @NameInMap("region_id")
     public String regionId;
 
-    // 集群所属资源组ID
     @NameInMap("resource_group_id")
     public String resourceGroupId;
 
     @NameInMap("runtime")
     public Runtime runtime;
 
-    // 安全组ID，和is_enterprise_security_group二选一
     @NameInMap("security_group_id")
     public String securityGroupId;
 
-    // serviceaccount token中的签发身份，即token payload中的iss字段。
     @NameInMap("service_account_issuer")
     public String serviceAccountIssuer;
 
-    // 服务网络网段
     @NameInMap("service_cidr")
     public String serviceCidr;
 
-    // 创建ASK集群时，服务发现类型
     @NameInMap("service_discovery_types")
     public java.util.List<String> serviceDiscoveryTypes;
 
-    // 若您集群内的节点、应用等需要访问公网，勾选该项后我们将为您创建 NAT 网关并自动配置 SNAT 规则
     @NameInMap("snat_entry")
     public Boolean snatEntry;
 
-    // 等保安全加固
     @NameInMap("soc_enabled")
     public Boolean socEnabled;
 
-    // 允许公网ssh登录
     @NameInMap("ssh_flags")
     public Boolean sshFlags;
 
-    // 集群标签
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
-    // 节点污点信息
     @NameInMap("taints")
     public java.util.List<Taint> taints;
 
-    // 集群创建超时时间
     @NameInMap("timeout_mins")
     public Long timeoutMins;
 
-    // 时区
     @NameInMap("timezone")
     public String timezone;
 
-    // 自定义集群CA
     @NameInMap("user_ca")
     public String userCa;
 
-    // 节点自定义数据
     @NameInMap("user_data")
     public String userData;
 
-    // 集群专有网络ID。
     @NameInMap("vpcid")
     public String vpcid;
 
-    // 集群节点所在虚拟交换机。
     @NameInMap("vswitch_ids")
     public java.util.List<String> vswitchIds;
 
-    // 集群Worker节点到期是否自动续费
     @NameInMap("worker_auto_renew")
     public Boolean workerAutoRenew;
 
-    // 集群Worker节点自动续费时长
     @NameInMap("worker_auto_renew_period")
     public Long workerAutoRenewPeriod;
 
-    // 集群Worker节点数据盘配置
     @NameInMap("worker_data_disks")
     public java.util.List<CreateClusterRequestWorkerDataDisks> workerDataDisks;
 
-    // 集群Worker节点付费类型
     @NameInMap("worker_instance_charge_type")
     public String workerInstanceChargeType;
 
-    // 集群Worker节点类型
     @NameInMap("worker_instance_types")
     public java.util.List<String> workerInstanceTypes;
 
-    // 集群Worker节点包年包月时长
     @NameInMap("worker_period")
     public Long workerPeriod;
 
-    // 集群Worker节点包年包月周期
     @NameInMap("worker_period_unit")
     public String workerPeriodUnit;
 
-    // 集群Worker节点系统盘类型
     @NameInMap("worker_system_disk_category")
     public String workerSystemDiskCategory;
 
-    // 集群Worker节点磁盘性能，只对ESSD类型磁盘生效
     @NameInMap("worker_system_disk_performance_level")
     public String workerSystemDiskPerformanceLevel;
 
-    // 集群Worker节点系统盘大小
     @NameInMap("worker_system_disk_size")
     public Long workerSystemDiskSize;
 
-    // 集群Worker节点系统盘快照备份策略
     @NameInMap("worker_system_disk_snapshot_policy_id")
     public String workerSystemDiskSnapshotPolicyId;
 
-    // 集群Worker节点所在虚拟交换机
     @NameInMap("worker_vswitch_ids")
     public java.util.List<String> workerVswitchIds;
 
-    // 使用自动创建专有网络创建ASK集群时，需要指定专有网络的可用区
     @NameInMap("zone_id")
     public String zoneId;
 
@@ -358,6 +284,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getApiAudiences() {
         return this.apiAudiences;
+    }
+
+    public CreateClusterRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public CreateClusterRequest setCisEnabled(Boolean cisEnabled) {
@@ -728,6 +662,22 @@ public class CreateClusterRequest extends TeaModel {
         return this.osType;
     }
 
+    public CreateClusterRequest setPeriod(Long period) {
+        this.period = period;
+        return this;
+    }
+    public Long getPeriod() {
+        return this.period;
+    }
+
+    public CreateClusterRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
     public CreateClusterRequest setPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -1017,19 +967,15 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestWorkerDataDisks extends TeaModel {
-        // 集群Worker节点数据盘类型
         @NameInMap("category")
         public String category;
 
-        // 集群Worker节点数据盘是否加密
         @NameInMap("encrypted")
         public String encrypted;
 
-        // 集群Worker节点数据盘磁盘性能等级，仅对ESSD磁盘生效
         @NameInMap("performance_level")
         public String performanceLevel;
 
-        // 集群Worker节点数据盘大小
         @NameInMap("size")
         public String size;
 

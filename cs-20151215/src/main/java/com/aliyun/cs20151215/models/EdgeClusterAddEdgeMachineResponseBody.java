@@ -4,11 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class EdgeClusterAddEdgeMachineResponseBody extends TeaModel {
-    // edge machine id
     @NameInMap("edge_machine_id")
     public String edgeMachineId;
 
-    // Id of the request
     @NameInMap("request_id")
     public String requestId;
 

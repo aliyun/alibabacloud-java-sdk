@@ -7,7 +7,6 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     @NameInMap("instances_severity_count")
     public java.util.Map<String, ?> instancesSeverityCount;
 
-    // 不同策略类型下的策略实例计数列表
     @NameInMap("policy_instances")
     public java.util.List<DescribePolicyInstancesStatusResponseBodyPolicyInstances> policyInstances;
 

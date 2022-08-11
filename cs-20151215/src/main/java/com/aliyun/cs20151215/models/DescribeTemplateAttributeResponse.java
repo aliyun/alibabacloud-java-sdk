@@ -46,43 +46,33 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
     }
 
     public static class DescribeTemplateAttributeResponseBody extends TeaModel {
-        // 编排模板ID，模板每次修改，这个ID都会改变。
         @NameInMap("id")
         public String id;
 
-        // 编排模板权限。取值：private，public，shared。
         @NameInMap("acl")
         public String acl;
 
-        // 编排模板名称。
         @NameInMap("name")
         public String name;
 
-        // 编排模板内容。
         @NameInMap("template")
         public String template;
 
-        // 编排模板类型
         @NameInMap("template_type")
         public String templateType;
 
-        // 编排模板描述。
         @NameInMap("description")
         public String description;
 
-        // 部署模板的标签。
         @NameInMap("tags")
         public String tags;
 
-        // 编排模板ID，该ID唯一不随更新而改变。
         @NameInMap("template_with_hist_id")
         public String templateWithHistId;
 
-        // 编排模板创建时间。
         @NameInMap("created")
         public String created;
 
-        // 编排模板修改时间。
         @NameInMap("updated")
         public String updated;
 

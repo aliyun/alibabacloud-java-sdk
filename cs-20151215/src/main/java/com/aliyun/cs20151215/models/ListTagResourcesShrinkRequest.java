@@ -4,23 +4,18 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesShrinkRequest extends TeaModel {
-    // 下一次查询Token。
     @NameInMap("next_token")
     public String nextToken;
 
-    // 地域ID
     @NameInMap("region_id")
     public String regionId;
 
-    // 集群ID列表。
     @NameInMap("resource_ids")
     public String resourceIdsShrink;
 
-    // 资源类型，只支持Cluster
     @NameInMap("resource_type")
     public String resourceType;
 
-    // 按标签查找。
     @NameInMap("tags")
     public String tagsShrink;
 

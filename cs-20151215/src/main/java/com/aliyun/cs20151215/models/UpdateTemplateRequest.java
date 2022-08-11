@@ -4,23 +4,18 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
-    // 部署模板描述信息。
     @NameInMap("description")
     public String description;
 
-    // 部署模板名称。
     @NameInMap("name")
     public String name;
 
-    // 部署模板标签
     @NameInMap("tags")
     public String tags;
 
-    // 部署模板yaml。
     @NameInMap("template")
     public String template;
 
-    // 部署模板类型。
     @NameInMap("template_type")
     public String templateType;
 

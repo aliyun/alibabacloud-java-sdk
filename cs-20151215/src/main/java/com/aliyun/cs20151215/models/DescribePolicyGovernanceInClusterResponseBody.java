@@ -4,19 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
-    // 集群当前策略治理审计日志
     @NameInMap("admit_log")
     public DescribePolicyGovernanceInClusterResponseBodyAdmitLog admitLog;
 
-    // 当前集群中开启的不同等级策略计数统计
     @NameInMap("on_state")
     public java.util.List<DescribePolicyGovernanceInClusterResponseBodyOnState> onState;
 
-    // 集群中当前被拦截和告警两种处理类型下不同治理等级的违规计数。
     @NameInMap("totalViolations")
     public DescribePolicyGovernanceInClusterResponseBodyTotalViolations totalViolations;
 
-    // 集群中针对不同策略类型的拦截和告警的审计计数统计列表
     @NameInMap("violations")
     public DescribePolicyGovernanceInClusterResponseBodyViolations violations;
 
@@ -58,27 +54,21 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyAdmitLogLog extends TeaModel {
-        // 目标集群ID
         @NameInMap("cluster_id")
         public String clusterId;
 
-        // 策略类型名称
         @NameInMap("constraint_kind")
         public String constraintKind;
 
-        // 策略治理审计日志信息
         @NameInMap("msg")
         public String msg;
 
-        // 目标资源类型
         @NameInMap("resource_kind")
         public String resourceKind;
 
-        // 目标资源名称
         @NameInMap("resource_name")
         public String resourceName;
 
-        // 目标资源命名空间
         @NameInMap("resource_namespace")
         public String resourceNamespace;
 
@@ -138,15 +128,12 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyAdmitLog extends TeaModel {
-        // 当前查询到的日志总数
         @NameInMap("count")
         public Long count;
 
-        // 策略治理审计日志内容
         @NameInMap("log")
         public DescribePolicyGovernanceInClusterResponseBodyAdmitLogLog log;
 
-        // 查询结果的状态
         @NameInMap("progress")
         public String progress;
 
@@ -182,15 +169,12 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyOnState extends TeaModel {
-        // 当前开启的策略种类计数
         @NameInMap("enabled_count")
         public Integer enabledCount;
 
-        // 策略治理等级
         @NameInMap("severity")
         public String severity;
 
-        // 该等级下策略种类总数
         @NameInMap("total")
         public Integer total;
 
@@ -226,11 +210,9 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyTotalViolationsDeny extends TeaModel {
-        // 策略治理等级
         @NameInMap("severity")
         public String severity;
 
-        // 被拦截的事件计数
         @NameInMap("violations")
         public Long violations;
 
@@ -258,11 +240,9 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyTotalViolationsWarn extends TeaModel {
-        // 策略治理等级
         @NameInMap("severity")
         public String severity;
 
-        // 告警的事件计数
         @NameInMap("violations")
         public Long violations;
 
@@ -290,11 +270,9 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyTotalViolations extends TeaModel {
-        // 被拦截的不同治理等级的违规计数统计
         @NameInMap("deny")
         public DescribePolicyGovernanceInClusterResponseBodyTotalViolationsDeny deny;
 
-        // 告警模式下不同治理等级的违规计数统计
         @NameInMap("warn")
         public DescribePolicyGovernanceInClusterResponseBodyTotalViolationsWarn warn;
 
@@ -322,19 +300,15 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationsDeny extends TeaModel {
-        // 策略描述
         @NameInMap("policyDescription")
         public String policyDescription;
 
-        // 策略名称
         @NameInMap("policyName")
         public String policyName;
 
-        // 策略治理等级
         @NameInMap("severity")
         public String severity;
 
-        // 对应规则的事件计数
         @NameInMap("violations")
         public Long violations;
 
@@ -378,19 +352,15 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationsWarn extends TeaModel {
-        // 策略描述
         @NameInMap("policyDescription")
         public String policyDescription;
 
-        // 策略名称
         @NameInMap("policyName")
         public String policyName;
 
-        // 策略治理等级
         @NameInMap("severity")
         public String severity;
 
-        // 对应规则的事件计数
         @NameInMap("violations")
         public Long violations;
 
@@ -434,11 +404,9 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolations extends TeaModel {
-        // 被拦截的不同策略类型的审计计数
         @NameInMap("deny")
         public DescribePolicyGovernanceInClusterResponseBodyViolationsDeny deny;
 
-        // 告警的不同策略类型审计计数
         @NameInMap("warn")
         public DescribePolicyGovernanceInClusterResponseBodyViolationsWarn warn;
 

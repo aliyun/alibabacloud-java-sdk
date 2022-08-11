@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ScaleClusterNodePoolRequest extends TeaModel {
-    // 扩容节点数量
     @NameInMap("count")
     public Long count;
 

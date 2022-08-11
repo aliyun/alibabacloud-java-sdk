@@ -46,31 +46,24 @@ public class DescribeTriggerResponse extends TeaModel {
     }
 
     public static class DescribeTriggerResponseBody extends TeaModel {
-        // 触发器ID。
         @NameInMap("id")
         public String id;
 
-        // 触发器名称。
         @NameInMap("name")
         public String name;
 
-        // 集群ID
         @NameInMap("cluster_id")
         public String clusterId;
 
-        // 触发器项目名称
         @NameInMap("project_id")
         public String projectId;
 
-        // 触发器类型。
         @NameInMap("type")
         public String type;
 
-        // 触发器行为
         @NameInMap("action")
         public String action;
 
-        // Token
         @NameInMap("token")
         public String token;
 

@@ -4,15 +4,12 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class EdgeClusterAddEdgeMachineRequest extends TeaModel {
-    // expired
     @NameInMap("expired")
     public Long expired;
 
-    // nodepool_id
     @NameInMap("nodepool_id")
     public String nodepoolId;
 
-    // options
     @NameInMap("options")
     public String options;
 

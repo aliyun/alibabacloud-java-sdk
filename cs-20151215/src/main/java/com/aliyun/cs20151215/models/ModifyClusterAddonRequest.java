@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterAddonRequest extends TeaModel {
-    // 自定义参数设置
     @NameInMap("config")
     public String config;
 

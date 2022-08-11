@@ -4,15 +4,12 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterEventsRequest extends TeaModel {
-    // 分页页数。
     @NameInMap("page_number")
     public Long pageNumber;
 
-    // 每页大小。
     @NameInMap("page_size")
     public Long pageSize;
 
-    // 查询的任务ID。
     @NameInMap("task_id")
     public Long taskId;
 

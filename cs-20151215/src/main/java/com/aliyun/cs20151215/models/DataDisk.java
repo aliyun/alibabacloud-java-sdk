@@ -4,23 +4,18 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DataDisk extends TeaModel {
-    // 开启云盘备份时的自动备份策略。
     @NameInMap("auto_snapshot_policy_id")
     public String autoSnapshotPolicyId;
 
-    // 数据盘类型
     @NameInMap("category")
     public String category;
 
-    // 是否对数据盘加密。
     @NameInMap("encrypted")
     public String encrypted;
 
-    // 数据盘磁盘性能，只针对ESSD磁盘生效
     @NameInMap("performance_level")
     public String performanceLevel;
 
-    // 数据盘大小，取值范围：40～32767
     @NameInMap("size")
     public Long size;
 

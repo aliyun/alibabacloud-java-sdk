@@ -4,11 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClustersV1ResponseBody extends TeaModel {
-    // 集群详情列表。
     @NameInMap("clusters")
     public java.util.List<DescribeClustersV1ResponseBodyClusters> clusters;
 
-    // 分页信息。
     @NameInMap("page_info")
     public DescribeClustersV1ResponseBodyPageInfo pageInfo;
 
@@ -34,118 +32,90 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
     }
 
     public static class DescribeClustersV1ResponseBodyClusters extends TeaModel {
-        // 集群ID。
         @NameInMap("cluster_id")
         public String clusterId;
 
-        // 托管版集群类型，面向托管集群。 • ack.pro.small：专业托管集群。 • ack.standard ：标准托管集群。
         @NameInMap("cluster_spec")
         public String clusterSpec;
 
-        // 集群类型。
         @NameInMap("cluster_type")
         public String clusterType;
 
-        // 集群初始化时间。
         @NameInMap("created")
         public String created;
 
-        // 集群当前版本。
         @NameInMap("current_version")
         public String currentVersion;
 
-        // 集群是否开启删除保护。
         @NameInMap("deletion_protection")
         public Boolean deletionProtection;
 
-        // 集群使用的Docker版本。
         @NameInMap("docker_version")
         public String dockerVersion;
 
-        // 集群负载均衡服务的ID。
         @NameInMap("external_loadbalancer_id")
         public String externalLoadbalancerId;
 
-        // 集群初始化版本。
         @NameInMap("init_version")
         public String initVersion;
 
         @NameInMap("maintenance_window")
         public MaintenanceWindow maintenanceWindow;
 
-        // 集群访问地址列表。
         @NameInMap("master_url")
         public String masterUrl;
 
-        // 集群元数据信息。
         @NameInMap("meta_data")
         public String metaData;
 
-        // 集群名称。
         @NameInMap("name")
         public String name;
 
-        // 集群使用的网络类型，例如：VPC网络。
         @NameInMap("network_mode")
         public String networkMode;
 
-        // 集群可升级版本。
         @NameInMap("next_version")
         public String nextVersion;
 
-        // 集群是否开启Private Zone。
         @NameInMap("private_zone")
         public Boolean privateZone;
 
-        // 边缘集群表示，用于区分边缘托管版集群。
         @NameInMap("profile")
         public String profile;
 
-        // 地域ID。
         @NameInMap("region_id")
         public String regionId;
 
-        // 集群资源组ID。
         @NameInMap("resource_group_id")
         public String resourceGroupId;
 
-        // 集群安全组ID。
         @NameInMap("security_group_id")
         public String securityGroupId;
 
-        // 集群节点数。
         @NameInMap("size")
         public Long size;
 
-        // 集群运行状态。
         @NameInMap("state")
         public String state;
 
-        // POD网段地址。
         @NameInMap("subnet_cidr")
         public String subnetCidr;
 
-        // 集群标签。
         @NameInMap("tags")
         public java.util.List<Tag> tags;
 
-        // 集群更新时间。
         @NameInMap("updated")
         public String updated;
 
-        // 集群所在的VPC ID。
         @NameInMap("vpc_id")
         public String vpcId;
 
-        // 集群使用的虚拟交换ID。
         @NameInMap("vswitch_id")
         public String vswitchId;
 
-        // 集群Worker RAM角色。
         @NameInMap("worker_ram_role_name")
         public String workerRamRoleName;
 
-        // 可用区ID。
         @NameInMap("zone_id")
         public String zoneId;
 
@@ -389,15 +359,12 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
     }
 
     public static class DescribeClustersV1ResponseBodyPageInfo extends TeaModel {
-        // 分页数。
         @NameInMap("page_number")
         public Integer pageNumber;
 
-        // 单页大小。
         @NameInMap("page_size")
         public Integer pageSize;
 
-        // 结果总数。
         @NameInMap("total_count")
         public Integer totalCount;
 

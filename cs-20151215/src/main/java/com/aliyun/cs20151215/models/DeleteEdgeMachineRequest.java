@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DeleteEdgeMachineRequest extends TeaModel {
-    // whether force delete
     @NameInMap("force")
     public String force;
 

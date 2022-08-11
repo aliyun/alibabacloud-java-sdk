@@ -4,15 +4,12 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class Taint extends TeaModel {
-    // 污点生效策略。
     @NameInMap("effect")
     public String effect;
 
-    // key值。
     @NameInMap("key")
     public String key;
 
-    // value值。
     @NameInMap("value")
     public String value;
 

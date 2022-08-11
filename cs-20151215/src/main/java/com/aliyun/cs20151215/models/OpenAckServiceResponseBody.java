@@ -4,11 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class OpenAckServiceResponseBody extends TeaModel {
-    // 开通服务的订单号。
     @NameInMap("order_id")
     public String orderId;
 
-    // 请求ID
     @NameInMap("request_id")
     public String requestId;
 

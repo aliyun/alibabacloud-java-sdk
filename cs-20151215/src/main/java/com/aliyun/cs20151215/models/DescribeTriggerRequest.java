@@ -4,19 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeTriggerRequest extends TeaModel {
-    // 应用名称。
     @NameInMap("Name")
     public String name;
 
-    // 应用所属命名空间。
     @NameInMap("Namespace")
     public String namespace;
 
-    // 应用类型。
     @NameInMap("Type")
     public String type;
 
-    // 触发器行为。
     @NameInMap("action")
     public String action;
 

@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("models")
     public java.util.List<DescribeEdgeMachineModelsResponseBodyModels> models;
 
@@ -22,35 +21,27 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
     }
 
     public static class DescribeEdgeMachineModelsResponseBodyModels extends TeaModel {
-        // cpu
         @NameInMap("cpu")
         public Integer cpu;
 
-        // cpu arch
         @NameInMap("cpu_arch")
         public String cpuArch;
 
-        // created
         @NameInMap("created")
         public String created;
 
-        // description
         @NameInMap("description")
         public String description;
 
-        // manage runtime
         @NameInMap("manage_runtime")
         public Integer manageRuntime;
 
-        // memory
         @NameInMap("memory")
         public Integer memory;
 
-        // model
         @NameInMap("model")
         public String model;
 
-        // model id
         @NameInMap("model_id")
         public String modelId;
 

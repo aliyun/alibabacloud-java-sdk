@@ -4,15 +4,12 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
-    // 下一个查询开始Token，为空说明没有下一个
     @NameInMap("next_token")
     public String nextToken;
 
-    // 请求ID。
     @NameInMap("request_id")
     public String requestId;
 
-    // 资源标签列表。
     @NameInMap("tag_resources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -46,19 +43,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        // 资源ID。
         @NameInMap("resource_id")
         public String resourceId;
 
-        // 资源类型。
         @NameInMap("resource_type")
         public String resourceType;
 
-        // 标签key。
         @NameInMap("tag_key")
         public String tagKey;
 
-        // 标签值。
         @NameInMap("tag_value")
         public String tagValue;
 
@@ -102,7 +95,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        // 资源标签。
         @NameInMap("tag_resource")
         public java.util.List<ListTagResourcesResponseBodyTagResourcesTagResource> tagResource;
 

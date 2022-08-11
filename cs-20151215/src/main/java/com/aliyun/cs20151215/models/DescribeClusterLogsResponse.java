@@ -46,23 +46,18 @@ public class DescribeClusterLogsResponse extends TeaModel {
     }
 
     public static class DescribeClusterLogsResponseBody extends TeaModel {
-        // 日志ID。
         @NameInMap("ID")
         public Long ID;
 
-        // 集群ID。
         @NameInMap("cluster_id")
         public String clusterId;
 
-        // 日志内容。
         @NameInMap("cluster_log")
         public String clusterLog;
 
-        // 日志创建时间。
         @NameInMap("created")
         public String created;
 
-        // 日志更新时间。
         @NameInMap("updated")
         public String updated;
 

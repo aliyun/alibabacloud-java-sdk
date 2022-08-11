@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterV2UserKubeconfigRequest extends TeaModel {
-    // 是否为内网访问。
     @NameInMap("PrivateIpAddress")
     public Boolean privateIpAddress;
 

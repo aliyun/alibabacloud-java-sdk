@@ -46,43 +46,33 @@ public class DescribePolicyInstancesResponse extends TeaModel {
     }
 
     public static class DescribePolicyInstancesResponseBody extends TeaModel {
-        // 策略实例实施者UID
         @NameInMap("ali_uid")
         public String aliUid;
 
-        // 目标集群ID
         @NameInMap("cluster_id")
         public String clusterId;
 
-        // 规则实例名称
         @NameInMap("instance_name")
         public String instanceName;
 
-        // 策略治理规则名称
         @NameInMap("policy_name")
         public String policyName;
 
-        // 策略类型名称
         @NameInMap("policy_category")
         public String policyCategory;
 
-        // 规则模板描述
         @NameInMap("policy_description")
         public String policyDescription;
 
-        // 当前规则实例的配置参数
         @NameInMap("policy_parameters")
         public String policyParameters;
 
-        // 规则实例治理等级
         @NameInMap("policy_severity")
         public String policySeverity;
 
-        // 策略实例实施范围： 默认"*"代表集群所有ns 否则返回作用namespaces名称，多个namespaces以逗号分隔
         @NameInMap("policy_scope")
         public String policyScope;
 
-        // 规则治理动作  deny: 拦截违规部署  warn：告警
         @NameInMap("policy_action")
         public String policyAction;
 

@@ -4,7 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class RepairClusterNodePoolRequest extends TeaModel {
-    // 节点列表，如果不指定则表示当前节点池内所有节点
     @NameInMap("nodes")
     public java.util.List<String> nodes;
 

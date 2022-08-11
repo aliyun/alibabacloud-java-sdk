@@ -4,27 +4,21 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterAttachScriptsRequest extends TeaModel {
-    // 节点CPU架构,支持amd64、arm、arm64。边缘托管集群专有字段。
     @NameInMap("arch")
     public String arch;
 
-    // 数据盘挂载
     @NameInMap("format_disk")
     public Boolean formatDisk;
 
-    // 保留实例名称
     @NameInMap("keep_instance_name")
     public Boolean keepInstanceName;
 
-    // 节点池ID。将节点加入指定节点池。
     @NameInMap("nodepool_id")
     public String nodepoolId;
 
-    // 边缘托管版集群节点的接入配置。
     @NameInMap("options")
     public String options;
 
-    // RDS白名单
     @NameInMap("rds_instances")
     public java.util.List<String> rdsInstances;
 

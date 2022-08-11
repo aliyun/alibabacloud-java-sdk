@@ -4,38 +4,30 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterRequest extends TeaModel {
-    // 集群是否绑定EIP，用于公网访问API Server。 true | false
     @NameInMap("api_server_eip")
     public Boolean apiServerEip;
 
-    // 集群API Server 公网连接端点。
     @NameInMap("api_server_eip_id")
     public String apiServerEipId;
 
-    // 集群是否开启删除保护。默认值false。
     @NameInMap("deletion_protection")
     public Boolean deletionProtection;
 
-    // 启用或禁用 RRSA 功能。true: 启用，false: 禁用
     @NameInMap("enable_rrsa")
     public Boolean enableRrsa;
 
-    // 域名是否重新绑定到Ingress的SLB地址。
     @NameInMap("ingress_domain_rebinding")
     public String ingressDomainRebinding;
 
-    // 集群的Ingress SLB的ID。
     @NameInMap("ingress_loadbalancer_id")
     public String ingressLoadbalancerId;
 
-    // 实例删除保护，防止通过控制台或API误删除释放节点。
     @NameInMap("instance_deletion_protection")
     public Boolean instanceDeletionProtection;
 
     @NameInMap("maintenance_window")
     public MaintenanceWindow maintenanceWindow;
 
-    // 集群资源组ID。
     @NameInMap("resource_group_id")
     public String resourceGroupId;
 

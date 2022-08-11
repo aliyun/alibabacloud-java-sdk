@@ -4,23 +4,18 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterNodesRequest extends TeaModel {
-    // 节点实例ID，按照实例ID进行过滤。  节点池ID不为空时会忽略此字段。多节点用逗号分割
     @NameInMap("instanceIds")
     public String instanceIds;
 
-    // 节点池ID。
     @NameInMap("nodepool_id")
     public String nodepoolId;
 
-    // 分页数量
     @NameInMap("pageNumber")
     public String pageNumber;
 
-    // 每页大小。
     @NameInMap("pageSize")
     public String pageSize;
 
-    // 节点状态。默认值：all。
     @NameInMap("state")
     public String state;
 
