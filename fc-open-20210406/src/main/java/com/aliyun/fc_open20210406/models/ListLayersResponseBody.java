@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListLayersResponseBody extends TeaModel {
-    // 层列表
     @NameInMap("layers")
     public java.util.List<Layer> layers;
 
-    // 剩余列表起始层名
     @NameInMap("nextToken")
     public String nextToken;
 

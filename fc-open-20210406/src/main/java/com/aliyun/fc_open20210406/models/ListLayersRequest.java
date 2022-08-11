@@ -4,19 +4,21 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListLayersRequest extends TeaModel {
-    // 最大返回条目数
     @NameInMap("limit")
     public Integer limit;
 
-    // 下一个层名称
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 层名称前缀
+    @NameInMap("official")
+    public Boolean official;
+
     @NameInMap("prefix")
     public String prefix;
 
-    // 起始层名称
+    @NameInMap("public")
+    public Boolean _public;
+
     @NameInMap("startKey")
     public String startKey;
 
@@ -41,12 +43,28 @@ public class ListLayersRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public ListLayersRequest setOfficial(Boolean official) {
+        this.official = official;
+        return this;
+    }
+    public Boolean getOfficial() {
+        return this.official;
+    }
+
     public ListLayersRequest setPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     public String getPrefix() {
         return this.prefix;
+    }
+
+    public ListLayersRequest set_public(Boolean _public) {
+        this._public = _public;
+        return this;
+    }
+    public Boolean get_public() {
+        return this._public;
     }
 
     public ListLayersRequest setStartKey(String startKey) {

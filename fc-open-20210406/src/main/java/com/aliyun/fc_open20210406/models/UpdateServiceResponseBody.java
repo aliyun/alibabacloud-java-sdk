@@ -4,19 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceResponseBody extends TeaModel {
-    // 创建时间
     @NameInMap("createdTime")
     public String createdTime;
 
-    // 服务描述
     @NameInMap("description")
     public String description;
 
-    // 公网访问设置
     @NameInMap("internetAccess")
     public Boolean internetAccess;
 
-    // 上次更新时间
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
@@ -26,23 +22,17 @@ public class UpdateServiceResponseBody extends TeaModel {
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
-    // 服务角色
     @NameInMap("role")
     public String role;
 
-    // 服务ID
     @NameInMap("serviceId")
     public String serviceId;
 
-    // 服务名称
     @NameInMap("serviceName")
     public String serviceName;
 
     @NameInMap("tracingConfig")
     public TracingConfig tracingConfig;
-
-    @NameInMap("vendorConfig")
-    public VendorConfig vendorConfig;
 
     @NameInMap("vpcConfig")
     public VPCConfig vpcConfig;
@@ -130,14 +120,6 @@ public class UpdateServiceResponseBody extends TeaModel {
     }
     public TracingConfig getTracingConfig() {
         return this.tracingConfig;
-    }
-
-    public UpdateServiceResponseBody setVendorConfig(VendorConfig vendorConfig) {
-        this.vendorConfig = vendorConfig;
-        return this;
-    }
-    public VendorConfig getVendorConfig() {
-        return this.vendorConfig;
     }
 
     public UpdateServiceResponseBody setVpcConfig(VPCConfig vpcConfig) {

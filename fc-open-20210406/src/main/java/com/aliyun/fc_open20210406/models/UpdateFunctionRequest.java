@@ -7,7 +7,6 @@ public class UpdateFunctionRequest extends TeaModel {
     @NameInMap("InstanceConcurrency")
     public Integer instanceConcurrency;
 
-    // 自定义、自定义容器运行时 HTTP Server 的监听端口
     @NameInMap("caPort")
     public Integer caPort;
 
@@ -17,31 +16,24 @@ public class UpdateFunctionRequest extends TeaModel {
     @NameInMap("customContainerConfig")
     public CustomContainerConfig customContainerConfig;
 
-    // 函数自定义DNS配置
     @NameInMap("customDNS")
     public CustomDNS customDNS;
 
-    // Custom Runtime函数详细配置
     @NameInMap("customRuntimeConfig")
     public CustomRuntimeConfig customRuntimeConfig;
 
-    // 函数描述
     @NameInMap("description")
     public String description;
 
-    // 为函数设置的环境变量，可以在函数中获取环境变量的值
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
-    // function执行的入口，具体格式和语言相关
     @NameInMap("handler")
     public String handler;
 
-    // 初始化function运行的超时时间，单位为秒，最小1秒，默认3秒。初始化function超过这个时间后会被终止执行
     @NameInMap("initializationTimeout")
     public Integer initializationTimeout;
 
-    // 初始化 function 执行的入口，具体格式和语言相关
     @NameInMap("initializer")
     public String initializer;
 
@@ -57,15 +49,12 @@ public class UpdateFunctionRequest extends TeaModel {
     @NameInMap("layers")
     public java.util.List<String> layers;
 
-    // function的内存规格，单位为MB，为64MB的倍数
     @NameInMap("memorySize")
     public Integer memorySize;
 
-    // runtime
     @NameInMap("runtime")
     public String runtime;
 
-    // function运行的超时时间，单位为秒，最小1秒，默认3秒。function超过这个时间后会被终止执行
     @NameInMap("timeout")
     public Integer timeout;
 

@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionAsyncInvokeConfigsRequest extends TeaModel {
-    // 最多返回个数
     @NameInMap("limit")
     public Integer limit;
 
-    // 下次查询token
     @NameInMap("nextToken")
     public String nextToken;
 

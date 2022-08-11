@@ -7,15 +7,12 @@ public class ListStatefulAsyncInvocationFunctionsHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    // 您的阿里云账号（主账号）ID。
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
-    // 发起API调用的日期，用于对请求签名。格式为yyyy-mm-ddhh:mm:ss。
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
-    // 用于链路追踪的ID。
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

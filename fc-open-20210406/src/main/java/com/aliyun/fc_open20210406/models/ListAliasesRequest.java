@@ -4,19 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListAliasesRequest extends TeaModel {
-    // 最多返回个数
     @NameInMap("limit")
     public Integer limit;
 
-    // 下次查询token
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 前缀
     @NameInMap("prefix")
     public String prefix;
 
-    // 起始key
     @NameInMap("startKey")
     public String startKey;
 

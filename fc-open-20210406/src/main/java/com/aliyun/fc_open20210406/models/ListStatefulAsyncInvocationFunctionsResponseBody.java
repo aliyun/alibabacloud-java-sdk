@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListStatefulAsyncInvocationFunctionsResponseBody extends TeaModel {
-    // 返回的实际数据列表。
     @NameInMap("data")
     public java.util.List<AsyncConfigMeta> data;
 
-    // 用来表示当前调用返回读取到的位置，空代表数据已经读取完毕。
     @NameInMap("nextToken")
     public String nextToken;
 

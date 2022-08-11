@@ -4,7 +4,6 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class AvailableAZ extends TeaModel {
-    // az
     @NameInMap("availableAZs")
     public String availableAZs;
 

@@ -7,18 +7,15 @@ public class PutFunctionAsyncInvokeConfigRequest extends TeaModel {
     @NameInMap("destinationConfig")
     public DestinationConfig destinationConfig;
 
-    // 消息最大存活时长
     @NameInMap("maxAsyncEventAgeInSeconds")
     public Long maxAsyncEventAgeInSeconds;
 
-    // 异步调用失败后的最大重试次数
     @NameInMap("maxAsyncRetryAttempts")
     public Long maxAsyncRetryAttempts;
 
     @NameInMap("statefulInvocation")
     public Boolean statefulInvocation;
 
-    // 别名或版本
     @NameInMap("qualifier")
     public String qualifier;
 

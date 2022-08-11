@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListReservedCapacitiesResponseBody extends TeaModel {
-    // nextToken
     @NameInMap("nextToken")
     public String nextToken;
 
-    // reservedCapacities
     @NameInMap("reservedCapacities")
     public java.util.List<OpenReservedCapacity> reservedCapacities;
 

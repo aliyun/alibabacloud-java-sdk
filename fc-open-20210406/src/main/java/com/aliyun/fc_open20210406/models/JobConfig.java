@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class JobConfig extends TeaModel {
-    // maxRetryTime
     @NameInMap("maxRetryTime")
     public Long maxRetryTime;
 
-    // triggerInterval
     @NameInMap("triggerInterval")
     public Long triggerInterval;
 

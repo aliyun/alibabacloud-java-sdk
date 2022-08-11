@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class DNSOption extends TeaModel {
-    // DNS option 名称
     @NameInMap("name")
     public String name;
 
-    // DNS option 值
     @NameInMap("value")
     public String value;
 

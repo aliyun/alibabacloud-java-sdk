@@ -4,7 +4,6 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListEventSourcesResponseBody extends TeaModel {
-    // 事件源列表
     @NameInMap("eventSources")
     public java.util.List<ListEventSourcesResponseBodyEventSources> eventSources;
 
@@ -22,11 +21,9 @@ public class ListEventSourcesResponseBody extends TeaModel {
     }
 
     public static class ListEventSourcesResponseBodyEventSources extends TeaModel {
-        // 创建时间
         @NameInMap("createdTime")
         public String createdTime;
 
-        // 事件源资源标识符
         @NameInMap("sourceArn")
         public String sourceArn;
 

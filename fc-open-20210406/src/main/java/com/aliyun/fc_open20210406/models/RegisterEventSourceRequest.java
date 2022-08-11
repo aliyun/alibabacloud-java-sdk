@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class RegisterEventSourceRequest extends TeaModel {
-    // 事件源资源标识符
     @NameInMap("sourceArn")
     public String sourceArn;
 
-    // 别名或版本
     @NameInMap("qualifier")
     public String qualifier;
 

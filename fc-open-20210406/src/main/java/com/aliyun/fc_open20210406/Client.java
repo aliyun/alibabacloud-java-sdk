@@ -79,6 +79,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resolvePolicy)) {
+            body.put("resolvePolicy", request.resolvePolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.routePolicy))) {
+            body.put("routePolicy", request.routePolicy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
             body.put("versionId", request.versionId);
         }
@@ -1715,6 +1723,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("qualifier", request.qualifier);
         }
 
+        String body = "";
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            body = com.aliyun.teautil.Common.toString(request.body);
+        }
+
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1747,7 +1760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toString(request.body))
+            new TeaPair("body", body)
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "InvokeFunction"),
@@ -2097,14 +2110,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
-            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
-            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -2193,8 +2198,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("nextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.official)) {
+            query.put("official", request.official);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.prefix)) {
             query.put("prefix", request.prefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request._public)) {
+            query.put("public", request._public);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startKey)) {
@@ -3012,6 +3025,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PutFunctionOnDemandConfigResponse());
     }
 
+    public PutLayerACLResponse putLayerACL(String layerName, PutLayerACLRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        PutLayerACLHeaders headers = new PutLayerACLHeaders();
+        return this.putLayerACLWithOptions(layerName, request, headers, runtime);
+    }
+
+    public PutLayerACLResponse putLayerACLWithOptions(String layerName, PutLayerACLRequest request, PutLayerACLHeaders headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        layerName = com.aliyun.openapiutil.Client.getEncodeParam(layerName);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request._public)) {
+            query.put("public", request._public);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutLayerACL"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/acl"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "string")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PutLayerACLResponse());
+    }
+
     public PutProvisionConfigResponse putProvisionConfig(String serviceName, String functionName, PutProvisionConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         PutProvisionConfigHeaders headers = new PutProvisionConfigHeaders();
@@ -3312,6 +3374,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolvePolicy)) {
+            body.put("resolvePolicy", request.resolvePolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.routePolicy))) {
+            body.put("routePolicy", request.routePolicy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {

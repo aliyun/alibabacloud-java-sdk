@@ -4,19 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class SourceRabbitMQParameters extends TeaModel {
-    // InstanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // QueueName
     @NameInMap("QueueName")
     public String queueName;
 
-    // RegionId
     @NameInMap("RegionId")
     public String regionId;
 
-    // VirtualHostName
     @NameInMap("VirtualHostName")
     public String virtualHostName;
 

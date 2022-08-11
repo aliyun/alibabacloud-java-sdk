@@ -7,7 +7,6 @@ public class UpdateServiceHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    // 用于确保实际更改的资源和期望更改的资源是一致的，该值来自Create，Get和Update API的响应
     @NameInMap("If-Match")
     public String ifMatch;
 

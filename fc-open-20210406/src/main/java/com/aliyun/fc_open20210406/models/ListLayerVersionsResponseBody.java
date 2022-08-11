@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListLayerVersionsResponseBody extends TeaModel {
-    // 层版本列表
     @NameInMap("layers")
     public java.util.List<Layer> layers;
 
-    // 剩余列表起始版本号
     @NameInMap("nextVersion")
     public Integer nextVersion;
 

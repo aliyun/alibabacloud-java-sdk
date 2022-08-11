@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class HTTPTriggerConfig extends TeaModel {
-    // 认证类型
     @NameInMap("authType")
     public String authType;
 
-    // 允许的HTTP方法列表
     @NameInMap("methods")
     public java.util.List<String> methods;
 

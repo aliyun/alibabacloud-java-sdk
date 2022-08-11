@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetAccountSettingsResponseBody extends TeaModel {
-    // 可用区列表
     @NameInMap("availableAZs")
     public java.util.List<String> availableAZs;
 
-    // 默认服务角色
     @NameInMap("defaultRole")
     public String defaultRole;
 

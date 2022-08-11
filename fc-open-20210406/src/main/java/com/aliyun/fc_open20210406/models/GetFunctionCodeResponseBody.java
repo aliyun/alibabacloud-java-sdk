@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetFunctionCodeResponseBody extends TeaModel {
-    // function code包的CRC64值
     @NameInMap("checksum")
     public String checksum;
 
-    // 获取function代码的URL
     @NameInMap("url")
     public String url;
 

@@ -7,7 +7,6 @@ public class EventSourceConfig extends TeaModel {
     @NameInMap("eventSourceParameters")
     public EventSourceParameters eventSourceParameters;
 
-    // eventSourceType
     @NameInMap("eventSourceType")
     public String eventSourceType;
 

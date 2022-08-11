@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListProvisionConfigsResponseBody extends TeaModel {
-    // 下次查询的起始token
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 预留实例列表
     @NameInMap("provisionConfigs")
     public java.util.List<ListProvisionConfigsResponseBodyProvisionConfigs> provisionConfigs;
 
@@ -34,31 +32,24 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
     }
 
     public static class ListProvisionConfigsResponseBodyProvisionConfigs extends TeaModel {
-        // 是否始终分配CPU给函数实例。
         @NameInMap("alwaysAllocateCPU")
         public Boolean alwaysAllocateCPU;
 
-        // 实际资源个数
         @NameInMap("current")
         public Long current;
 
-        // 预留实例创建失败时的错误信息
         @NameInMap("currentError")
         public String currentError;
 
-        // 资源描述
         @NameInMap("resource")
         public String resource;
 
-        // 定时策略配置
         @NameInMap("scheduledActions")
         public java.util.List<ScheduledActions> scheduledActions;
 
-        // 目标资源个数
         @NameInMap("target")
         public Long target;
 
-        // 指标追踪伸缩策略配置
         @NameInMap("targetTrackingPolicies")
         public java.util.List<TargetTrackingPolicies> targetTrackingPolicies;
 

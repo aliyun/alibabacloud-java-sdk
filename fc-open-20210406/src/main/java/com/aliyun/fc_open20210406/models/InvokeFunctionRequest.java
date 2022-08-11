@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class InvokeFunctionRequest extends TeaModel {
-    // 事件（event），binary type。函数计算服务将event传递给用户function来处理
     @NameInMap("body")
     public byte[] body;
 
-    // service版本, 可以是versionId或者aliasName
     @NameInMap("qualifier")
     public String qualifier;
 

@@ -4,27 +4,27 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetAliasResponseBody extends TeaModel {
-    // 额外版本权重
     @NameInMap("additionalVersionWeight")
     public java.util.Map<String, Float> additionalVersionWeight;
 
-    // 别名名称
     @NameInMap("aliasName")
     public String aliasName;
 
-    // 创建时间
     @NameInMap("createdTime")
     public String createdTime;
 
-    // 别名描述
     @NameInMap("description")
     public String description;
 
-    // 上次更新时间
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
-    // 版本ID
+    @NameInMap("resolvePolicy")
+    public String resolvePolicy;
+
+    @NameInMap("routePolicy")
+    public RoutePolicy routePolicy;
+
     @NameInMap("versionId")
     public String versionId;
 
@@ -71,6 +71,22 @@ public class GetAliasResponseBody extends TeaModel {
     }
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
+    }
+
+    public GetAliasResponseBody setResolvePolicy(String resolvePolicy) {
+        this.resolvePolicy = resolvePolicy;
+        return this;
+    }
+    public String getResolvePolicy() {
+        return this.resolvePolicy;
+    }
+
+    public GetAliasResponseBody setRoutePolicy(RoutePolicy routePolicy) {
+        this.routePolicy = routePolicy;
+        return this;
+    }
+    public RoutePolicy getRoutePolicy() {
+        return this.routePolicy;
     }
 
     public GetAliasResponseBody setVersionId(String versionId) {

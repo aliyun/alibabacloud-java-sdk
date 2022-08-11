@@ -4,19 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class StatefulAsyncInvocationEvent extends TeaModel {
-    // 事件详细数据。
     @NameInMap("eventDetail")
     public String eventDetail;
 
-    // 事件ID。
     @NameInMap("eventId")
     public Long eventId;
 
-    // 事件执行状态。
     @NameInMap("status")
     public String status;
 
-    // 事件时间。
     @NameInMap("timestamp")
     public Long timestamp;
 

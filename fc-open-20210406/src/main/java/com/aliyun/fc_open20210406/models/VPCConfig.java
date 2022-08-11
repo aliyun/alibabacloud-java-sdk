@@ -4,19 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class VPCConfig extends TeaModel {
-    // Role
     @NameInMap("role")
     public String role;
 
-    // 安全组ID
     @NameInMap("securityGroupId")
     public String securityGroupId;
 
-    // VSwitch ID列表
     @NameInMap("vSwitchIds")
     public java.util.List<String> vSwitchIds;
 
-    // VPC ID
     @NameInMap("vpcId")
     public String vpcId;
 

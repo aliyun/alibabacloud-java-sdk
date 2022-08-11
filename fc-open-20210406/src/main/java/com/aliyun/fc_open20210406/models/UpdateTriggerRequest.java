@@ -7,15 +7,12 @@ public class UpdateTriggerRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
-    // event source，如OSS，使用该role去invoke function
     @NameInMap("invocationRole")
     public String invocationRole;
 
-    // service版本
     @NameInMap("qualifier")
     public String qualifier;
 
-    // trigger配置，针对不同的trigger类型，trigger配置会有所不同
     @NameInMap("triggerConfig")
     public String triggerConfig;
 

@@ -4,43 +4,39 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class Layer extends TeaModel {
-    // 层访问类型
     @NameInMap("acl")
     public Integer acl;
 
-    // arn
     @NameInMap("arn")
     public String arn;
 
-    // 层代码
+    @NameInMap("arnV2")
+    public String arnV2;
+
     @NameInMap("code")
     public LayerCode code;
 
-    // 层Checksum
     @NameInMap("codeChecksum")
     public String codeChecksum;
 
-    // 层代码大小
     @NameInMap("codeSize")
     public Long codeSize;
 
-    // compatibleRuntime
     @NameInMap("compatibleRuntime")
     public java.util.List<String> compatibleRuntime;
 
-    // 层创建时间
     @NameInMap("createTime")
     public String createTime;
 
-    // 层描述
     @NameInMap("description")
     public String description;
 
-    // 层名称
     @NameInMap("layerName")
     public String layerName;
 
-    // 层版本
+    @NameInMap("license")
+    public String license;
+
     @NameInMap("version")
     public Integer version;
 
@@ -63,6 +59,14 @@ public class Layer extends TeaModel {
     }
     public String getArn() {
         return this.arn;
+    }
+
+    public Layer setArnV2(String arnV2) {
+        this.arnV2 = arnV2;
+        return this;
+    }
+    public String getArnV2() {
+        return this.arnV2;
     }
 
     public Layer setCode(LayerCode code) {
@@ -119,6 +123,14 @@ public class Layer extends TeaModel {
     }
     public String getLayerName() {
         return this.layerName;
+    }
+
+    public Layer setLicense(String license) {
+        this.license = license;
+        return this;
+    }
+    public String getLicense() {
+        return this.license;
     }
 
     public Layer setVersion(Integer version) {

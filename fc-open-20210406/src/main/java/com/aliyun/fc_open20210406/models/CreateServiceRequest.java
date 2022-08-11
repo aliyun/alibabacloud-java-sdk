@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceRequest extends TeaModel {
-    // 服务描述
     @NameInMap("description")
     public String description;
 
-    // 公网访问设置
     @NameInMap("internetAccess")
     public Boolean internetAccess;
 
@@ -18,11 +16,9 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
-    // 服务角色
     @NameInMap("role")
     public String role;
 
-    // 服务名称
     @NameInMap("serviceName")
     public String serviceName;
 

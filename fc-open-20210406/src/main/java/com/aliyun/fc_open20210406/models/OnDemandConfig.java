@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class OnDemandConfig extends TeaModel {
-    // todo
     @NameInMap("maximumInstanceCount")
     public Long maximumInstanceCount;
 
-    // 函数详情
     @NameInMap("resource")
     public String resource;
 

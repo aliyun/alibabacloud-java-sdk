@@ -21,11 +21,9 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
-        // 实例ID。
         @NameInMap("instanceId")
         public String instanceId;
 
-        // 实例所属的服务版本。如果是LATEST别名下的函数实例，则返回版本号为0。
         @NameInMap("versionId")
         public String versionId;
 

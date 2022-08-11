@@ -4,23 +4,18 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class PutProvisionConfigRequest extends TeaModel {
-    // 当实例进入空闲状态时，是否继续分配CPU。
     @NameInMap("alwaysAllocateCPU")
     public Boolean alwaysAllocateCPU;
 
-    // 定时策略配置
     @NameInMap("scheduledActions")
     public java.util.List<ScheduledActions> scheduledActions;
 
-    // 预留的目标资源个数
     @NameInMap("target")
     public Long target;
 
-    // 指标追踪伸缩策略配置
     @NameInMap("targetTrackingPolicies")
     public java.util.List<TargetTrackingPolicies> targetTrackingPolicies;
 
-    // 别名名称
     @NameInMap("qualifier")
     public String qualifier;
 

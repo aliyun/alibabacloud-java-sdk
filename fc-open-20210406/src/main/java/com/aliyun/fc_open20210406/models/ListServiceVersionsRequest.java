@@ -4,19 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListServiceVersionsRequest extends TeaModel {
-    // 排序方向
     @NameInMap("direction")
     public String direction;
 
-    // 最多返回个数
     @NameInMap("limit")
     public Integer limit;
 
-    // 下次查询token
     @NameInMap("nextToken")
     public String nextToken;
 
-    // 起始key
     @NameInMap("startKey")
     public String startKey;
 

@@ -4,53 +4,42 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class UpdateTriggerResponseBody extends TeaModel {
-    // 创建时间
     @NameInMap("createdTime")
     public String createdTime;
 
     @NameInMap("description")
     public String description;
 
-    // 域名名称，使用域名名称拼接上函数计算域名，可以采用HTTP协议调用到触发器对应版本的函数。例如{domainName}.cn-shanghai.fc.aliyuncs.com
     @NameInMap("domainName")
     public String domainName;
 
-    // 调用函数使用的RAM角色的ARN
     @NameInMap("invocationRole")
     public String invocationRole;
 
-    // 上次修改时间
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
-    // service版本
     @NameInMap("qualifier")
     public String qualifier;
 
-    // event source的Aliyun Resource Name（ARN
     @NameInMap("sourceArn")
     public String sourceArn;
 
-    // trigger配置对象
     @NameInMap("triggerConfig")
     public String triggerConfig;
 
     @NameInMap("triggerId")
     public String triggerId;
 
-    // trigger名称
     @NameInMap("triggerName")
     public String triggerName;
 
-    // trigger类型，如 oss, log, tablestore, timer, http, cdn_events, mns_topic
     @NameInMap("triggerType")
     public String triggerType;
 
-    // 公网域名地址。在互联网可以通过HTTP协议或者HTTPS协议访问HTTP Trigger。
     @NameInMap("urlInternet")
     public String urlInternet;
 
-    // 私网域名地址。在VPC可以通过HTTP协议或者HTTPS协议访问HTTP Trigger。
     @NameInMap("urlIntranet")
     public String urlIntranet;
 

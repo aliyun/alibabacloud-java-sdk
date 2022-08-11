@@ -4,15 +4,12 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class NASConfig extends TeaModel {
-    // groupID
     @NameInMap("groupId")
     public Integer groupId;
 
-    // 挂载点
     @NameInMap("mountPoints")
     public java.util.List<NASConfigMountPoints> mountPoints;
 
-    // userID
     @NameInMap("userId")
     public Integer userId;
 
@@ -46,11 +43,9 @@ public class NASConfig extends TeaModel {
     }
 
     public static class NASConfigMountPoints extends TeaModel {
-        // 本地挂载目录
         @NameInMap("mountDir")
         public String mountDir;
 
-        // NAS服务器地址
         @NameInMap("serverAddr")
         public String serverAddr;
 

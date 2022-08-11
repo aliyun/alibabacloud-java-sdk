@@ -4,15 +4,12 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class CustomDNS extends TeaModel {
-    // DNS resolver 配置参数列表
     @NameInMap("dnsOptions")
     public java.util.List<DNSOption> dnsOptions;
 
-    // DNS 服务器的 IP 地址列表
     @NameInMap("nameServers")
     public java.util.List<String> nameServers;
 
-    // DNS 搜索域的列表
     @NameInMap("searches")
     public java.util.List<String> searches;
 

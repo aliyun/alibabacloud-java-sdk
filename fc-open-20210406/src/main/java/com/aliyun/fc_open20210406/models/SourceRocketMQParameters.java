@@ -4,31 +4,24 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class SourceRocketMQParameters extends TeaModel {
-    // GroupID
     @NameInMap("GroupID")
     public String groupID;
 
-    // InstanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // Offset
     @NameInMap("Offset")
     public String offset;
 
-    // RegionId
     @NameInMap("RegionId")
     public String regionId;
 
-    // Tag
     @NameInMap("Tag")
     public String tag;
 
-    // Timestamp
     @NameInMap("Timestamp")
     public Long timestamp;
 
-    // Topic
     @NameInMap("Topic")
     public String topic;
 

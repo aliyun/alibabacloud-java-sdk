@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class OSSTriggerKey extends TeaModel {
-    // prefix
     @NameInMap("prefix")
     public String prefix;
 
-    // suffix
     @NameInMap("suffix")
     public String suffix;
 

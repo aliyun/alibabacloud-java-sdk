@@ -4,7 +4,6 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class AccelerationInfo extends TeaModel {
-    // 镜像加速状态，取值 Preparing 或 Ready
     @NameInMap("status")
     public String status;
 

@@ -4,27 +4,21 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class OpenReservedCapacity extends TeaModel {
-    // createdTime
     @NameInMap("createdTime")
     public String createdTime;
 
-    // cu
     @NameInMap("cu")
     public Long cu;
 
-    // deadline
     @NameInMap("deadline")
     public String deadline;
 
-    // instanceId
     @NameInMap("instanceId")
     public String instanceId;
 
-    // isRefunded
     @NameInMap("isRefunded")
     public String isRefunded;
 
-    // lastModifiedTime
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 

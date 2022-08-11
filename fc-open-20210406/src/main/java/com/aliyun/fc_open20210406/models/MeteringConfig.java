@@ -4,15 +4,12 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class MeteringConfig extends TeaModel {
-    // 日志仓库
     @NameInMap("logConfig")
     public LogConfig logConfig;
 
-    // 支付用户
     @NameInMap("payerId")
     public String payerId;
 
-    // 权限
     @NameInMap("role")
     public String role;
 

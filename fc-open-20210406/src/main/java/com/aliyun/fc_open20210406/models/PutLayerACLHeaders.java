@@ -3,12 +3,9 @@ package com.aliyun.fc_open20210406.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteServiceHeaders extends TeaModel {
+public class PutLayerACLHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
-
-    @NameInMap("If-Match")
-    public String ifMatch;
 
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
@@ -19,12 +16,12 @@ public class DeleteServiceHeaders extends TeaModel {
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 
-    public static DeleteServiceHeaders build(java.util.Map<String, ?> map) throws Exception {
-        DeleteServiceHeaders self = new DeleteServiceHeaders();
+    public static PutLayerACLHeaders build(java.util.Map<String, ?> map) throws Exception {
+        PutLayerACLHeaders self = new PutLayerACLHeaders();
         return TeaModel.build(map, self);
     }
 
-    public DeleteServiceHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
+    public PutLayerACLHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
         this.commonHeaders = commonHeaders;
         return this;
     }
@@ -32,15 +29,7 @@ public class DeleteServiceHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public DeleteServiceHeaders setIfMatch(String ifMatch) {
-        this.ifMatch = ifMatch;
-        return this;
-    }
-    public String getIfMatch() {
-        return this.ifMatch;
-    }
-
-    public DeleteServiceHeaders setXFcAccountId(String xFcAccountId) {
+    public PutLayerACLHeaders setXFcAccountId(String xFcAccountId) {
         this.xFcAccountId = xFcAccountId;
         return this;
     }
@@ -48,7 +37,7 @@ public class DeleteServiceHeaders extends TeaModel {
         return this.xFcAccountId;
     }
 
-    public DeleteServiceHeaders setXFcDate(String xFcDate) {
+    public PutLayerACLHeaders setXFcDate(String xFcDate) {
         this.xFcDate = xFcDate;
         return this;
     }
@@ -56,7 +45,7 @@ public class DeleteServiceHeaders extends TeaModel {
         return this.xFcDate;
     }
 
-    public DeleteServiceHeaders setXFcTraceId(String xFcTraceId) {
+    public PutLayerACLHeaders setXFcTraceId(String xFcTraceId) {
         this.xFcTraceId = xFcTraceId;
         return this;
     }

@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class Resource extends TeaModel {
-    // resourceArn
     @NameInMap("resourceArn")
     public String resourceArn;
 
-    // tags
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
 

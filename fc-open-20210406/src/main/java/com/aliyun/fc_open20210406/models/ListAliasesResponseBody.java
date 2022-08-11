@@ -4,11 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListAliasesResponseBody extends TeaModel {
-    // 别名列表
     @NameInMap("aliases")
     public java.util.List<ListAliasesResponseBodyAliases> aliases;
 
-    // 下次查询token
     @NameInMap("nextToken")
     public String nextToken;
 
@@ -34,27 +32,27 @@ public class ListAliasesResponseBody extends TeaModel {
     }
 
     public static class ListAliasesResponseBodyAliases extends TeaModel {
-        // 额外版本权重
         @NameInMap("additionalVersionWeight")
         public java.util.Map<String, Float> additionalVersionWeight;
 
-        // 别名名称
         @NameInMap("aliasName")
         public String aliasName;
 
-        // 创建时间
         @NameInMap("createdTime")
         public String createdTime;
 
-        // 别名描述
         @NameInMap("description")
         public String description;
 
-        // 上次更新时间
         @NameInMap("lastModifiedTime")
         public String lastModifiedTime;
 
-        // 版本ID
+        @NameInMap("resolvePolicy")
+        public String resolvePolicy;
+
+        @NameInMap("routePolicy")
+        public RoutePolicy routePolicy;
+
         @NameInMap("versionId")
         public String versionId;
 
@@ -101,6 +99,22 @@ public class ListAliasesResponseBody extends TeaModel {
         }
         public String getLastModifiedTime() {
             return this.lastModifiedTime;
+        }
+
+        public ListAliasesResponseBodyAliases setResolvePolicy(String resolvePolicy) {
+            this.resolvePolicy = resolvePolicy;
+            return this;
+        }
+        public String getResolvePolicy() {
+            return this.resolvePolicy;
+        }
+
+        public ListAliasesResponseBodyAliases setRoutePolicy(RoutePolicy routePolicy) {
+            this.routePolicy = routePolicy;
+            return this;
+        }
+        public RoutePolicy getRoutePolicy() {
+            return this.routePolicy;
         }
 
         public ListAliasesResponseBodyAliases setVersionId(String versionId) {
