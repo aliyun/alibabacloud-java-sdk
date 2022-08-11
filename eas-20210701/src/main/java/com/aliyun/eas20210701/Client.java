@@ -1180,6 +1180,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         ServiceName = com.aliyun.openapiutil.Client.getEncodeParam(ServiceName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.trafficState)) {
+            body.put("TrafficState", request.trafficState);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.weight)) {
             body.put("Weight", request.weight);
         }
