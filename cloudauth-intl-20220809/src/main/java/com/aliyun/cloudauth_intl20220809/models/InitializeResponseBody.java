@@ -57,6 +57,9 @@ public class InitializeResponseBody extends TeaModel {
         @NameInMap("TransactionId")
         public String transactionId;
 
+        @NameInMap("clientCfg")
+        public String clientCfg;
+
         public static InitializeResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             InitializeResponseBodyResult self = new InitializeResponseBodyResult();
             return TeaModel.build(map, self);
@@ -68,6 +71,14 @@ public class InitializeResponseBody extends TeaModel {
         }
         public String getTransactionId() {
             return this.transactionId;
+        }
+
+        public InitializeResponseBodyResult setClientCfg(String clientCfg) {
+            this.clientCfg = clientCfg;
+            return this;
+        }
+        public String getClientCfg() {
+            return this.clientCfg;
         }
 
     }
