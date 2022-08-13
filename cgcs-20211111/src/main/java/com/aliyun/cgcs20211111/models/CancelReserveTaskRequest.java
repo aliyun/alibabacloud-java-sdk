@@ -4,11 +4,9 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CancelReserveTaskRequest extends TeaModel {
-    // 客户端幂等性 token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 创建容量预定任务时返回的 taskId
     @NameInMap("TaskId")
     public String taskId;
 

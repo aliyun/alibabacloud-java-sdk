@@ -10,11 +10,9 @@ public class StopAppSessionBatchShrinkRequest extends TeaModel {
     @NameInMap("AppVersion")
     public String appVersion;
 
-    // 自定义用户id
     @NameInMap("BatchId")
     public String batchId;
 
-    // 自定义会话id
     @NameInMap("ProjectId")
     public String projectId;
 

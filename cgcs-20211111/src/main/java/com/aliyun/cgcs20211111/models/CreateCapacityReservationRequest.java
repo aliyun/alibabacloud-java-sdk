@@ -4,31 +4,24 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateCapacityReservationRequest extends TeaModel {
-    // 应用ID
     @NameInMap("AppId")
     public String appId;
 
-    // 应用版本ID，如果不填，采用控制台设置的默认版本
     @NameInMap("AppVersion")
     public String appVersion;
 
-    // 客户端 token，保持幂等性。
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 大区 id
     @NameInMap("DistrictId")
     public String districtId;
 
-    // 预期资源ready可服务时间 时间格式 yyyy-mm-dd HH:MM:SS 比如
     @NameInMap("ExpectResourceReadyTime")
     public String expectResourceReadyTime;
 
-    // 预期创建出的容器能支持的 session 数量。GCS 内部会根据适配自动计算出所需要的资源量，以及多种机型的配比。
     @NameInMap("ExpectSessionCapacity")
     public Integer expectSessionCapacity;
 
-    // 项目ID
     @NameInMap("ProjectId")
     public String projectId;
 

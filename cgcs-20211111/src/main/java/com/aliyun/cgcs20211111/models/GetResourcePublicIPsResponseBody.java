@@ -4,23 +4,18 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class GetResourcePublicIPsResponseBody extends TeaModel {
-    // ip 列表
     @NameInMap("IpList")
     public java.util.List<GetResourcePublicIPsResponseBodyIpList> ipList;
 
-    // 第几页
     @NameInMap("PageNum")
     public Integer pageNum;
 
-    // 每页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // pop的requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // 满足匹配条件的总量
     @NameInMap("Total")
     public Integer total;
 
@@ -70,11 +65,9 @@ public class GetResourcePublicIPsResponseBody extends TeaModel {
     }
 
     public static class GetResourcePublicIPsResponseBodyIpList extends TeaModel {
-        // ip
         @NameInMap("Ip")
         public String ip;
 
-        // 项目 id
         @NameInMap("ProjectId")
         public String projectId;
 

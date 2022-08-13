@@ -1,3 +1,6 @@
+2022-08-13 Version: 2.3.6
+- AMP version.
+
 2022-07-20 Version: 2.3.0
 - Add sync open api.
 - Add batch open api.

@@ -4,11 +4,9 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class GetAppSessionRequest extends TeaModel {
-    // 自定义会话id
     @NameInMap("CustomSessionId")
     public String customSessionId;
 
-    // 平台会话id
     @NameInMap("PlatformSessionId")
     public String platformSessionId;
 

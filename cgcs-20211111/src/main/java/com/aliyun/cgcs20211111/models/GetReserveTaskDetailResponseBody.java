@@ -4,43 +4,33 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class GetReserveTaskDetailResponseBody extends TeaModel {
-    // 容量预定时的 appId
     @NameInMap("AppId")
     public String appId;
 
-    // 容量预定时的 appVersion
     @NameInMap("AppVersion")
     public String appVersion;
 
-    // 当前任务已经生产完成的会话路数
     @NameInMap("CurrCompletedSessionCapacity")
     public Integer currCompletedSessionCapacity;
 
-    // 容量预定时指定的大区id
     @NameInMap("DistrictId")
     public String districtId;
 
-    // 容量预定，期望生效时间
     @NameInMap("ExpectResourceReadyTime")
     public String expectResourceReadyTime;
 
-    // 容量预定期望的会话路数
     @NameInMap("ExpectSessionCapacity")
     public Integer expectSessionCapacity;
 
-    // 容量预定时的 projectId
     @NameInMap("ProjectId")
     public String projectId;
 
-    // pop的requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // 容器创建任务 id
     @NameInMap("TaskId")
     public String taskId;
 
-    // 任务状态
     @NameInMap("TaskStatus")
     public String taskStatus;
 

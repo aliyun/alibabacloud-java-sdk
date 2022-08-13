@@ -4,19 +4,15 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class StopAppSessionBatchResponseBody extends TeaModel {
-    // 应用id
     @NameInMap("AppId")
     public String appId;
 
-    // 自定义会话id
     @NameInMap("BatchId")
     public String batchId;
 
-    // 平台会话id
     @NameInMap("ProjectId")
     public String projectId;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 

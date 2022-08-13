@@ -4,7 +4,6 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CancelReserveTaskResponseBody extends TeaModel {
-    // pop的requestId
     @NameInMap("RequestId")
     public String requestId;
 

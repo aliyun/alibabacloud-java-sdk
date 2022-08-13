@@ -4,23 +4,18 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppSessionSyncRequest extends TeaModel {
-    // 应用ID
     @NameInMap("AppId")
     public String appId;
 
-    // 应用版本
     @NameInMap("AppVersion")
     public String appVersion;
 
-    // 客户端ip
     @NameInMap("ClientIp")
     public String clientIp;
 
-    // 自定义会话id
     @NameInMap("CustomSessionId")
     public String customSessionId;
 
-    // 自定义用户id
     @NameInMap("CustomUserId")
     public String customUserId;
 
@@ -30,11 +25,9 @@ public class CreateAppSessionSyncRequest extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
-    // 启动参数
     @NameInMap("StartParameters")
     public java.util.List<CreateAppSessionSyncRequestStartParameters> startParameters;
 
-    // 系统信息：如端侧机型等信息
     @NameInMap("SystemInfo")
     public java.util.List<CreateAppSessionSyncRequestSystemInfo> systemInfo;
 
@@ -127,11 +120,9 @@ public class CreateAppSessionSyncRequest extends TeaModel {
     }
 
     public static class CreateAppSessionSyncRequestStartParameters extends TeaModel {
-        // key
         @NameInMap("Key")
         public String key;
 
-        // value
         @NameInMap("Value")
         public String value;
 

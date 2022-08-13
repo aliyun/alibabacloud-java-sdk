@@ -3,7 +3,7 @@ package com.aliyun.cgcs20211111.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteProjectResponse extends TeaModel {
+public class CancelUploadTaskResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DeleteProjectResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DeleteProjectResponseBody body;
+    public CancelUploadTaskResponseBody body;
 
-    public static DeleteProjectResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteProjectResponse self = new DeleteProjectResponse();
+    public static CancelUploadTaskResponse build(java.util.Map<String, ?> map) throws Exception {
+        CancelUploadTaskResponse self = new CancelUploadTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteProjectResponse setHeaders(java.util.Map<String, String> headers) {
+    public CancelUploadTaskResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DeleteProjectResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteProjectResponse setStatusCode(Integer statusCode) {
+    public CancelUploadTaskResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DeleteProjectResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteProjectResponse setBody(DeleteProjectResponseBody body) {
+    public CancelUploadTaskResponse setBody(CancelUploadTaskResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteProjectResponseBody getBody() {
+    public CancelUploadTaskResponseBody getBody() {
         return this.body;
     }
 

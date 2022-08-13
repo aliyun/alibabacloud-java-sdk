@@ -3,7 +3,7 @@ package com.aliyun.cgcs20211111.models;
 
 import com.aliyun.tea.*;
 
-public class GetTenantResponse extends TeaModel {
+public class QueryOfflineTaskProgressResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetTenantResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetTenantResponseBody body;
+    public QueryOfflineTaskProgressResponseBody body;
 
-    public static GetTenantResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetTenantResponse self = new GetTenantResponse();
+    public static QueryOfflineTaskProgressResponse build(java.util.Map<String, ?> map) throws Exception {
+        QueryOfflineTaskProgressResponse self = new QueryOfflineTaskProgressResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetTenantResponse setHeaders(java.util.Map<String, String> headers) {
+    public QueryOfflineTaskProgressResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetTenantResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetTenantResponse setStatusCode(Integer statusCode) {
+    public QueryOfflineTaskProgressResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetTenantResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetTenantResponse setBody(GetTenantResponseBody body) {
+    public QueryOfflineTaskProgressResponse setBody(QueryOfflineTaskProgressResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetTenantResponseBody getBody() {
+    public QueryOfflineTaskProgressResponseBody getBody() {
         return this.body;
     }
 

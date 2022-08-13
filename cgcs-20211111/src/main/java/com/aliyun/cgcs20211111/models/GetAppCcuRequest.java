@@ -4,14 +4,12 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class GetAppCcuRequest extends TeaModel {
-    // 自定义会话id
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("AppVersion")
     public String appVersion;
 
-    // 平台会话id
     @NameInMap("ProjectId")
     public String projectId;
 

@@ -4,11 +4,9 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class StopAppSessionShrinkRequest extends TeaModel {
-    // 自定义会话id
     @NameInMap("CustomSessionId")
     public String customSessionId;
 
-    // 自定义用户id
     @NameInMap("PlatformSessionId")
     public String platformSessionId;
 

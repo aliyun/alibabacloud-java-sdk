@@ -4,14 +4,12 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppSessionBatchSyncResponseBody extends TeaModel {
-    // 自定义会话id
     @NameInMap("BatchId")
     public String batchId;
 
     @NameInMap("FailedList")
     public java.util.List<CreateAppSessionBatchSyncResponseBodyFailedList> failedList;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
@@ -231,22 +229,18 @@ public class CreateAppSessionBatchSyncResponseBody extends TeaModel {
     }
 
     public static class CreateAppSessionBatchSyncResponseBodyResultList extends TeaModel {
-        // 应用id
         @NameInMap("AppId")
         public String appId;
 
-        // 应用版本
         @NameInMap("AppVersion")
         public String appVersion;
 
         @NameInMap("BizInfo")
         public CreateAppSessionBatchSyncResponseBodyResultListBizInfo bizInfo;
 
-        // 自定义会话id
         @NameInMap("CustomSessionId")
         public String customSessionId;
 
-        // 平台会话id
         @NameInMap("PlatformSessionId")
         public String platformSessionId;
 
