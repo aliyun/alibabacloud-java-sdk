@@ -4,11 +4,9 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class ReleaseCapacityResponseBody extends TeaModel {
-    // pop的requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // 容器异步释放任务 id
     @NameInMap("TaskId")
     public String taskId;
 

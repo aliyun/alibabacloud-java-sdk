@@ -3,7 +3,7 @@ package com.aliyun.cgcs20211111.models;
 
 import com.aliyun.tea.*;
 
-public class RefreshDistrictMetaResponse extends TeaModel {
+public class SubmitOfflineTaskResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class RefreshDistrictMetaResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public RefreshDistrictMetaResponseBody body;
+    public SubmitOfflineTaskResponseBody body;
 
-    public static RefreshDistrictMetaResponse build(java.util.Map<String, ?> map) throws Exception {
-        RefreshDistrictMetaResponse self = new RefreshDistrictMetaResponse();
+    public static SubmitOfflineTaskResponse build(java.util.Map<String, ?> map) throws Exception {
+        SubmitOfflineTaskResponse self = new SubmitOfflineTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public RefreshDistrictMetaResponse setHeaders(java.util.Map<String, String> headers) {
+    public SubmitOfflineTaskResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class RefreshDistrictMetaResponse extends TeaModel {
         return this.headers;
     }
 
-    public RefreshDistrictMetaResponse setStatusCode(Integer statusCode) {
+    public SubmitOfflineTaskResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class RefreshDistrictMetaResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RefreshDistrictMetaResponse setBody(RefreshDistrictMetaResponseBody body) {
+    public SubmitOfflineTaskResponse setBody(SubmitOfflineTaskResponseBody body) {
         this.body = body;
         return this;
     }
-    public RefreshDistrictMetaResponseBody getBody() {
+    public SubmitOfflineTaskResponseBody getBody() {
         return this.body;
     }
 

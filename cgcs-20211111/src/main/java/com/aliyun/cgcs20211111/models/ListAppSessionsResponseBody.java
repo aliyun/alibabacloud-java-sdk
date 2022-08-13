@@ -13,7 +13,6 @@ public class ListAppSessionsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
@@ -96,26 +95,21 @@ public class ListAppSessionsResponseBody extends TeaModel {
     }
 
     public static class ListAppSessionsResponseBodyAppSessions extends TeaModel {
-        // 应用id
         @NameInMap("AppId")
         public String appId;
 
-        // 应用版本
         @NameInMap("AppVersion")
         public String appVersion;
 
         @NameInMap("BizInfo")
         public ListAppSessionsResponseBodyAppSessionsBizInfo bizInfo;
 
-        // 自定义会话id
         @NameInMap("CustomSessionId")
         public String customSessionId;
 
-        // 平台会话id
         @NameInMap("PlatformSessionId")
         public String platformSessionId;
 
-        // 状态
         @NameInMap("Status")
         public String status;
 

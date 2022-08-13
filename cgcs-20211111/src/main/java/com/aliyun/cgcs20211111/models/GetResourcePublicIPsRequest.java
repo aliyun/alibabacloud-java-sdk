@@ -4,15 +4,12 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class GetResourcePublicIPsRequest extends TeaModel {
-    // 第几页，默认从 1 开始
     @NameInMap("PageNum")
     public Integer pageNum;
 
-    // 一页大小，默认 20，最大 100
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 项目 id
     @NameInMap("ProjectId")
     public String projectId;
 

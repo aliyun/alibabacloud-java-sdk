@@ -3,12 +3,12 @@ package com.aliyun.cgcs20211111.models;
 
 import com.aliyun.tea.*;
 
-public class VersionCheckSameNameServiceResponseBody extends TeaModel {
+public class CancelUploadTaskResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
-    public String data;
+    public Boolean data;
 
     @NameInMap("Message")
     public String message;
@@ -16,12 +16,12 @@ public class VersionCheckSameNameServiceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static VersionCheckSameNameServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        VersionCheckSameNameServiceResponseBody self = new VersionCheckSameNameServiceResponseBody();
+    public static CancelUploadTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CancelUploadTaskResponseBody self = new CancelUploadTaskResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public VersionCheckSameNameServiceResponseBody setCode(String code) {
+    public CancelUploadTaskResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -29,15 +29,15 @@ public class VersionCheckSameNameServiceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public VersionCheckSameNameServiceResponseBody setData(String data) {
+    public CancelUploadTaskResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public Boolean getData() {
         return this.data;
     }
 
-    public VersionCheckSameNameServiceResponseBody setMessage(String message) {
+    public CancelUploadTaskResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -45,7 +45,7 @@ public class VersionCheckSameNameServiceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public VersionCheckSameNameServiceResponseBody setRequestId(String requestId) {
+    public CancelUploadTaskResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -4,15 +4,12 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateCapacityReservationResponseBody extends TeaModel {
-    // 当前最大可分配的 session 库存，注意两次调用之间，该库存值可能有变动
     @NameInMap("CurrMaxAllocatableSessionCapacity")
     public Integer currMaxAllocatableSessionCapacity;
 
-    // pop的requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // 容器创建任务 id
     @NameInMap("TaskId")
     public String taskId;
 

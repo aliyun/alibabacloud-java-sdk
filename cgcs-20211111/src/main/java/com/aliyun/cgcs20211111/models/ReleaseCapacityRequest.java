@@ -4,22 +4,18 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class ReleaseCapacityRequest extends TeaModel {
-    // app id
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("AppVersion")
     public String appVersion;
 
-    // 大区 id
     @NameInMap("DistrictId")
     public String districtId;
 
-    // 期望释放的会话路数
     @NameInMap("ExpectReleaseSessionCapacity")
     public Integer expectReleaseSessionCapacity;
 
-    // 项目 id
     @NameInMap("ProjectId")
     public String projectId;
 

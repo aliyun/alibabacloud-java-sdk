@@ -7,19 +7,15 @@ public class ListAppSessionsRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 自定义会话id
     @NameInMap("CustomSessionIds")
     public java.util.List<String> customSessionIds;
 
-    // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 自定义用户id
     @NameInMap("PlatformSessionIds")
     public java.util.List<String> platformSessionIds;
 

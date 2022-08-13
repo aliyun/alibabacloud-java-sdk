@@ -4,7 +4,6 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class GetReserveTaskDetailRequest extends TeaModel {
-    // 创建容量预定任务时返回的 taskId
     @NameInMap("TaskId")
     public String taskId;
 

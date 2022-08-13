@@ -4,34 +4,30 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppSessionRequest extends TeaModel {
-    // 应用ID
     @NameInMap("AppId")
     public String appId;
 
-    // 应用版本
     @NameInMap("AppVersion")
     public String appVersion;
 
-    // 客户端ip
     @NameInMap("ClientIp")
     public String clientIp;
 
-    // 自定义会话id
     @NameInMap("CustomSessionId")
     public String customSessionId;
 
-    // 自定义用户id
     @NameInMap("CustomUserId")
     public String customUserId;
 
     @NameInMap("EnablePostpaid")
     public Boolean enablePostpaid;
 
-    // 启动参数
+    @NameInMap("ProjectId")
+    public String projectId;
+
     @NameInMap("StartParameters")
     public java.util.List<CreateAppSessionRequestStartParameters> startParameters;
 
-    // 系统信息：如端侧机型等信息
     @NameInMap("SystemInfo")
     public java.util.List<CreateAppSessionRequestSystemInfo> systemInfo;
 
@@ -91,6 +87,14 @@ public class CreateAppSessionRequest extends TeaModel {
         return this.enablePostpaid;
     }
 
+    public CreateAppSessionRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
+    }
+
     public CreateAppSessionRequest setStartParameters(java.util.List<CreateAppSessionRequestStartParameters> startParameters) {
         this.startParameters = startParameters;
         return this;
@@ -116,7 +120,6 @@ public class CreateAppSessionRequest extends TeaModel {
     }
 
     public static class CreateAppSessionRequestStartParameters extends TeaModel {
-        // key
         @NameInMap("Key")
         public String key;
 
