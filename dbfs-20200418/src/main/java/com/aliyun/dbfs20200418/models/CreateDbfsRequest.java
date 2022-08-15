@@ -4,6 +4,9 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class CreateDbfsRequest extends TeaModel {
+    @NameInMap("AdvancedFeatures")
+    public String advancedFeatures;
+
     @NameInMap("Category")
     public String category;
 
@@ -52,6 +55,14 @@ public class CreateDbfsRequest extends TeaModel {
     public static CreateDbfsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDbfsRequest self = new CreateDbfsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDbfsRequest setAdvancedFeatures(String advancedFeatures) {
+        this.advancedFeatures = advancedFeatures;
+        return this;
+    }
+    public String getAdvancedFeatures() {
+        return this.advancedFeatures;
     }
 
     public CreateDbfsRequest setCategory(String category) {

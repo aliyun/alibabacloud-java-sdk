@@ -4,11 +4,9 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTypesResponseBody extends TeaModel {
-    // Array of InstanceType
     @NameInMap("InstanceTypes")
     public java.util.List<DescribeInstanceTypesResponseBodyInstanceTypes> instanceTypes;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
