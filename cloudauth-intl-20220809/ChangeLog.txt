@@ -1,3 +1,6 @@
+2022-08-15 Version: 1.0.4
+- Support ekyc.
+
 2022-08-12 Version: 1.0.3
 - Support checkResult for ekyc.
 
