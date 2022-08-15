@@ -91,6 +91,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ServiceType")
     public String serviceType;
 
@@ -338,6 +341,14 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetLindormInstanceResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public GetLindormInstanceResponseBody setServiceType(String serviceType) {

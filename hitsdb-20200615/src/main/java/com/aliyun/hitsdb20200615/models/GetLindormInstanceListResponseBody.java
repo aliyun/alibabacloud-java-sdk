@@ -104,6 +104,9 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("EnableCompute")
+        public Boolean enableCompute;
+
         @NameInMap("EnableStream")
         public Boolean enableStream;
 
@@ -136,6 +139,9 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("ServiceType")
         public String serviceType;
@@ -176,6 +182,14 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetLindormInstanceListResponseBodyInstanceList setEnableCompute(Boolean enableCompute) {
+            this.enableCompute = enableCompute;
+            return this;
+        }
+        public Boolean getEnableCompute() {
+            return this.enableCompute;
         }
 
         public GetLindormInstanceListResponseBodyInstanceList setEnableStream(Boolean enableStream) {
@@ -264,6 +278,14 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetLindormInstanceListResponseBodyInstanceList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public GetLindormInstanceListResponseBodyInstanceList setServiceType(String serviceType) {

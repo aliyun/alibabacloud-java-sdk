@@ -13,9 +13,6 @@ public class GetLindormInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -52,14 +49,6 @@ public class GetLindormInstanceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public GetLindormInstanceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetLindormInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
