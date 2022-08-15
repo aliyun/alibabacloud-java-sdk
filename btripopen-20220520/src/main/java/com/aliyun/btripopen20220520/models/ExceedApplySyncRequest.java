@@ -10,9 +10,6 @@ public class ExceedApplySyncRequest extends TeaModel {
     @NameInMap("biz_category")
     public Integer bizCategory;
 
-    @NameInMap("corp_id")
-    public String corpId;
-
     @NameInMap("remark")
     public String remark;
 
@@ -44,14 +41,6 @@ public class ExceedApplySyncRequest extends TeaModel {
     }
     public Integer getBizCategory() {
         return this.bizCategory;
-    }
-
-    public ExceedApplySyncRequest setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
     }
 
     public ExceedApplySyncRequest setRemark(String remark) {

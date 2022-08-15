@@ -7,9 +7,6 @@ public class TrainExceedApplyQueryRequest extends TeaModel {
     @NameInMap("apply_id")
     public Long applyId;
 
-    @NameInMap("corp_id")
-    public String corpId;
-
     @NameInMap("user_id")
     public String userId;
 
@@ -24,14 +21,6 @@ public class TrainExceedApplyQueryRequest extends TeaModel {
     }
     public Long getApplyId() {
         return this.applyId;
-    }
-
-    public TrainExceedApplyQueryRequest setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
     }
 
     public TrainExceedApplyQueryRequest setUserId(String userId) {

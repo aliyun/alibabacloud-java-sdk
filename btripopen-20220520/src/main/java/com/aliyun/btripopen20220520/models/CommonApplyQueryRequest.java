@@ -10,9 +10,6 @@ public class CommonApplyQueryRequest extends TeaModel {
     @NameInMap("biz_category")
     public Integer bizCategory;
 
-    @NameInMap("corp_id")
-    public String corpId;
-
     @NameInMap("user_id")
     public String userId;
 
@@ -35,14 +32,6 @@ public class CommonApplyQueryRequest extends TeaModel {
     }
     public Integer getBizCategory() {
         return this.bizCategory;
-    }
-
-    public CommonApplyQueryRequest setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
     }
 
     public CommonApplyQueryRequest setUserId(String userId) {

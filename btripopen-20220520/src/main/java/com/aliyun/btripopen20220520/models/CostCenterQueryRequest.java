@@ -4,9 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CostCenterQueryRequest extends TeaModel {
-    @NameInMap("corp_id")
-    public String corpId;
-
     @NameInMap("need_org_entity")
     public Boolean needOrgEntity;
 
@@ -22,14 +19,6 @@ public class CostCenterQueryRequest extends TeaModel {
     public static CostCenterQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         CostCenterQueryRequest self = new CostCenterQueryRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CostCenterQueryRequest setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
     }
 
     public CostCenterQueryRequest setNeedOrgEntity(Boolean needOrgEntity) {
