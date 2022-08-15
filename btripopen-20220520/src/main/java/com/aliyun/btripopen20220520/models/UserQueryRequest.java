@@ -7,9 +7,6 @@ public class UserQueryRequest extends TeaModel {
     @NameInMap("modified_time_greater_or_equal_than")
     public String modifiedTimeGreaterOrEqualThan;
 
-    @NameInMap("third_part_corp_id")
-    public String thirdPartCorpId;
-
     @NameInMap("third_part_job_no")
     public String thirdPartJobNo;
 
@@ -24,14 +21,6 @@ public class UserQueryRequest extends TeaModel {
     }
     public String getModifiedTimeGreaterOrEqualThan() {
         return this.modifiedTimeGreaterOrEqualThan;
-    }
-
-    public UserQueryRequest setThirdPartCorpId(String thirdPartCorpId) {
-        this.thirdPartCorpId = thirdPartCorpId;
-        return this;
-    }
-    public String getThirdPartCorpId() {
-        return this.thirdPartCorpId;
     }
 
     public UserQueryRequest setThirdPartJobNo(String thirdPartJobNo) {

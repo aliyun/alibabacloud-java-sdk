@@ -7,9 +7,6 @@ public class CostCenterSaveRequest extends TeaModel {
     @NameInMap("alipay_no")
     public String alipayNo;
 
-    @NameInMap("corp_id")
-    public String corpId;
-
     @NameInMap("number")
     public String number;
 
@@ -33,14 +30,6 @@ public class CostCenterSaveRequest extends TeaModel {
     }
     public String getAlipayNo() {
         return this.alipayNo;
-    }
-
-    public CostCenterSaveRequest setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
     }
 
     public CostCenterSaveRequest setNumber(String number) {

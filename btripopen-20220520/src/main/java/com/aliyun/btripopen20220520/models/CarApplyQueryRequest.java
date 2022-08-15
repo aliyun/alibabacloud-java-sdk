@@ -4,9 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CarApplyQueryRequest extends TeaModel {
-    @NameInMap("corp_id")
-    public String corpId;
-
     @NameInMap("created_end_at")
     public String createdEndAt;
 
@@ -28,14 +25,6 @@ public class CarApplyQueryRequest extends TeaModel {
     public static CarApplyQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         CarApplyQueryRequest self = new CarApplyQueryRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CarApplyQueryRequest setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
     }
 
     public CarApplyQueryRequest setCreatedEndAt(String createdEndAt) {

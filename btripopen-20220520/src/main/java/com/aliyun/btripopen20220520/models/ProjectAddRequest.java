@@ -7,9 +7,6 @@ public class ProjectAddRequest extends TeaModel {
     @NameInMap("code")
     public String code;
 
-    @NameInMap("corp_id")
-    public String corpId;
-
     @NameInMap("project_name")
     public String projectName;
 
@@ -33,14 +30,6 @@ public class ProjectAddRequest extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public ProjectAddRequest setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
     }
 
     public ProjectAddRequest setProjectName(String projectName) {

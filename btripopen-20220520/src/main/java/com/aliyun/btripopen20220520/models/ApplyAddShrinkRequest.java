@@ -37,6 +37,12 @@ public class ApplyAddShrinkRequest extends TeaModel {
     @NameInMap("itinerary_list")
     public String itineraryListShrink;
 
+    @NameInMap("itinerary_rule")
+    public Integer itineraryRule;
+
+    @NameInMap("itinerary_set_list")
+    public String itinerarySetListShrink;
+
     @NameInMap("limit_traveler")
     public Integer limitTraveler;
 
@@ -176,6 +182,22 @@ public class ApplyAddShrinkRequest extends TeaModel {
     }
     public String getItineraryListShrink() {
         return this.itineraryListShrink;
+    }
+
+    public ApplyAddShrinkRequest setItineraryRule(Integer itineraryRule) {
+        this.itineraryRule = itineraryRule;
+        return this;
+    }
+    public Integer getItineraryRule() {
+        return this.itineraryRule;
+    }
+
+    public ApplyAddShrinkRequest setItinerarySetListShrink(String itinerarySetListShrink) {
+        this.itinerarySetListShrink = itinerarySetListShrink;
+        return this;
+    }
+    public String getItinerarySetListShrink() {
+        return this.itinerarySetListShrink;
     }
 
     public ApplyAddShrinkRequest setLimitTraveler(Integer limitTraveler) {
