@@ -147,6 +147,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.applyCreateDistributionOrderWithOptions(request, runtime);
     }
 
+    public ApplyDistributionMallResponse applyDistributionMallWithOptions(ApplyDistributionMallRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bindBizId)) {
+            body.put("BindBizId", request.bindBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallName)) {
+            body.put("DistributionMallName", request.distributionMallName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
+            body.put("DistributorId", request.distributorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mallType)) {
+            body.put("MallType", request.mallType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            body.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ApplyDistributionMall"),
+            new TeaPair("version", "2022-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyDistributionMallResponse());
+    }
+
+    public ApplyDistributionMallResponse applyDistributionMall(ApplyDistributionMallRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.applyDistributionMallWithOptions(request, runtime);
+    }
+
     public ApplyRefund4DistributionResponse applyRefund4DistributionWithOptions(ApplyRefund4DistributionRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ApplyRefund4DistributionShrinkRequest request = new ApplyRefund4DistributionShrinkRequest();
@@ -216,6 +273,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ApplyRefund4DistributionResponse applyRefund4Distribution(ApplyRefund4DistributionRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.applyRefund4DistributionWithOptions(request, runtime);
+    }
+
+    public BindChannelBizToDistributionMallResponse bindChannelBizToDistributionMallWithOptions(BindChannelBizToDistributionMallRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            body.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
+            body.put("DistributionMallId", request.distributionMallId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
+            body.put("DistributorId", request.distributorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subBizId)) {
+            body.put("SubBizId", request.subBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BindChannelBizToDistributionMall"),
+            new TeaPair("version", "2022-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BindChannelBizToDistributionMallResponse());
+    }
+
+    public BindChannelBizToDistributionMallResponse bindChannelBizToDistributionMall(BindChannelBizToDistributionMallRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.bindChannelBizToDistributionMallWithOptions(request, runtime);
     }
 
     public CancelDistributionTradeResponse cancelDistributionTradeWithOptions(CancelDistributionTradeRequest request, RuntimeOptions runtime) throws Exception {
@@ -1030,5 +1132,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitReturnGoodLogistics4DistributionResponse submitReturnGoodLogistics4Distribution(SubmitReturnGoodLogistics4DistributionRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.submitReturnGoodLogistics4DistributionWithOptions(request, runtime);
+    }
+
+    public UnbindChannelBizToDistributionMallResponse unbindChannelBizToDistributionMallWithOptions(UnbindChannelBizToDistributionMallRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            body.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributionMallId)) {
+            body.put("DistributionMallId", request.distributionMallId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distributorId)) {
+            body.put("DistributorId", request.distributorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subBizId)) {
+            body.put("SubBizId", request.subBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetBizId)) {
+            body.put("TargetBizId", request.targetBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetSubBizId)) {
+            body.put("TargetSubBizId", request.targetSubBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnbindChannelBizToDistributionMall"),
+            new TeaPair("version", "2022-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindChannelBizToDistributionMallResponse());
+    }
+
+    public UnbindChannelBizToDistributionMallResponse unbindChannelBizToDistributionMall(UnbindChannelBizToDistributionMallRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.unbindChannelBizToDistributionMallWithOptions(request, runtime);
     }
 }

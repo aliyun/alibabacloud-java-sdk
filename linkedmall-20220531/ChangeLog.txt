@@ -1,3 +1,6 @@
+2022-08-15 Version: 1.0.6
+- Modify QueryItemDetail API.
+
 2022-07-28 Version: 1.0.5
 - Modify trade interface.
 
