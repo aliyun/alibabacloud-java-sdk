@@ -82,6 +82,9 @@ public class Service extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    @NameInMap("ServiceUid")
+    public String serviceUid;
+
     @NameInMap("Source")
     public String source;
 
@@ -308,6 +311,14 @@ public class Service extends TeaModel {
     }
     public String getServiceName() {
         return this.serviceName;
+    }
+
+    public Service setServiceUid(String serviceUid) {
+        this.serviceUid = serviceUid;
+        return this;
+    }
+    public String getServiceUid() {
+        return this.serviceUid;
     }
 
     public Service setSource(String source) {
