@@ -4,7 +4,6 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTypesRequest extends TeaModel {
-    // 地域ID
     @NameInMap("RegionId")
     public String regionId;
 

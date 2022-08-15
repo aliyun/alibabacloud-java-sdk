@@ -164,6 +164,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDbfsResponse createDbfsWithOptions(CreateDbfsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.advancedFeatures)) {
+            query.put("AdvancedFeatures", request.advancedFeatures);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.category)) {
             query.put("Category", request.category);
         }
@@ -889,43 +893,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RenameDbfsResponse renameDbfs(RenameDbfsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.renameDbfsWithOptions(request, runtime);
-    }
-
-    public ResetDbfsResponse resetDbfsWithOptions(ResetDbfsRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.fsId)) {
-            query.put("FsId", request.fsId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.snapshotId)) {
-            query.put("SnapshotId", request.snapshotId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ResetDbfs"),
-            new TeaPair("version", "2020-04-18"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetDbfsResponse());
-    }
-
-    public ResetDbfsResponse resetDbfs(ResetDbfsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.resetDbfsWithOptions(request, runtime);
     }
 
     public ResizeDbfsResponse resizeDbfsWithOptions(ResizeDbfsRequest request, RuntimeOptions runtime) throws Exception {
