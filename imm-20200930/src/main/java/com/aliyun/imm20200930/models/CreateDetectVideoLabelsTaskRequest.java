@@ -7,9 +7,6 @@ public class CreateDetectVideoLabelsTaskRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -36,14 +33,6 @@ public class CreateDetectVideoLabelsTaskRequest extends TeaModel {
     }
     public CredentialConfig getCredentialConfig() {
         return this.credentialConfig;
-    }
-
-    public CreateDetectVideoLabelsTaskRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
     }
 
     public CreateDetectVideoLabelsTaskRequest setNotifyTopicName(String notifyTopicName) {
