@@ -831,6 +831,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createImageSplicingTaskWithOptions(request, runtime);
     }
 
+    public CreateImageToPDFTaskResponse createImageToPDFTaskWithOptions(CreateImageToPDFTaskRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateImageToPDFTaskShrinkRequest request = new CreateImageToPDFTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.credentialConfig))) {
+            request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.credentialConfig), "CredentialConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sources)) {
+            request.sourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sources, "Sources", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
+            query.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
+            query.put("NotifyTopicName", request.notifyTopicName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourcesShrink)) {
+            query.put("Sources", request.sourcesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetURI)) {
+            query.put("TargetURI", request.targetURI);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateImageToPDFTask"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateImageToPDFTaskResponse());
+    }
+
+    public CreateImageToPDFTaskResponse createImageToPDFTask(CreateImageToPDFTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createImageToPDFTaskWithOptions(request, runtime);
+    }
+
     public CreateMediaConvertTaskResponse createMediaConvertTaskWithOptions(CreateMediaConvertTaskRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateMediaConvertTaskShrinkRequest request = new CreateMediaConvertTaskShrinkRequest();
