@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceLogRequest extends TeaModel {
+    @NameInMap("InstanceHistoryId")
+    public Long instanceHistoryId;
+
     @NameInMap("InstanceId")
     public Long instanceId;
 
@@ -13,6 +16,14 @@ public class GetInstanceLogRequest extends TeaModel {
     public static GetInstanceLogRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceLogRequest self = new GetInstanceLogRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetInstanceLogRequest setInstanceHistoryId(Long instanceHistoryId) {
+        this.instanceHistoryId = instanceHistoryId;
+        return this;
+    }
+    public Long getInstanceHistoryId() {
+        return this.instanceHistoryId;
     }
 
     public GetInstanceLogRequest setInstanceId(Long instanceId) {

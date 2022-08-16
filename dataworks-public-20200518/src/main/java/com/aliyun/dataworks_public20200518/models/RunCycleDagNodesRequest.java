@@ -37,6 +37,9 @@ public class RunCycleDagNodesRequest extends TeaModel {
     @NameInMap("StartBizDate")
     public String startBizDate;
 
+    @NameInMap("StartFutureInstanceImmediately")
+    public Boolean startFutureInstanceImmediately;
+
     public static RunCycleDagNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         RunCycleDagNodesRequest self = new RunCycleDagNodesRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class RunCycleDagNodesRequest extends TeaModel {
     }
     public String getStartBizDate() {
         return this.startBizDate;
+    }
+
+    public RunCycleDagNodesRequest setStartFutureInstanceImmediately(Boolean startFutureInstanceImmediately) {
+        this.startFutureInstanceImmediately = startFutureInstanceImmediately;
+        return this;
+    }
+    public Boolean getStartFutureInstanceImmediately() {
+        return this.startFutureInstanceImmediately;
     }
 
 }
