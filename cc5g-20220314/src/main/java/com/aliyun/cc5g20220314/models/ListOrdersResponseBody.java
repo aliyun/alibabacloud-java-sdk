@@ -10,11 +10,9 @@ public class ListOrdersResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 数组，返回示例目录。
     @NameInMap("Orders")
     public java.util.List<ListOrdersResponseBodyOrders> orders;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,7 +65,6 @@ public class ListOrdersResponseBody extends TeaModel {
     }
 
     public static class ListOrdersResponseBodyOrders extends TeaModel {
-        // 创建时间
         @NameInMap("Action")
         public String action;
 
@@ -116,7 +113,6 @@ public class ListOrdersResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        // 资源名称
         @NameInMap("Status")
         public String status;
 

@@ -10,14 +10,12 @@ public class ListWirelessCloudConnectorsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TotalCount")
     public String totalCount;
 
-    // 数组，返回示例目录。
     @NameInMap("WirelessCloudConnectors")
     public java.util.List<ListWirelessCloudConnectorsResponseBodyWirelessCloudConnectors> wirelessCloudConnectors;
 
@@ -67,6 +65,9 @@ public class ListWirelessCloudConnectorsResponseBody extends TeaModel {
     }
 
     public static class ListWirelessCloudConnectorsResponseBodyWirelessCloudConnectors extends TeaModel {
+        @NameInMap("BusinessType")
+        public String businessType;
+
         @NameInMap("CardCount")
         public String cardCount;
 
@@ -82,27 +83,32 @@ public class ListWirelessCloudConnectorsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        // 创建时间
         @NameInMap("Name")
         public String name;
 
         @NameInMap("RegionId")
         public String regionId;
 
-        // 资源名称
         @NameInMap("Status")
         public String status;
 
         @NameInMap("UseCase")
         public String useCase;
 
-        // 资源一级ID
         @NameInMap("WirelessCloudConnectorId")
         public String wirelessCloudConnectorId;
 
         public static ListWirelessCloudConnectorsResponseBodyWirelessCloudConnectors build(java.util.Map<String, ?> map) throws Exception {
             ListWirelessCloudConnectorsResponseBodyWirelessCloudConnectors self = new ListWirelessCloudConnectorsResponseBodyWirelessCloudConnectors();
             return TeaModel.build(map, self);
+        }
+
+        public ListWirelessCloudConnectorsResponseBodyWirelessCloudConnectors setBusinessType(String businessType) {
+            this.businessType = businessType;
+            return this;
+        }
+        public String getBusinessType() {
+            return this.businessType;
         }
 
         public ListWirelessCloudConnectorsResponseBodyWirelessCloudConnectors setCardCount(String cardCount) {

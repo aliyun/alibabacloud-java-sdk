@@ -4,7 +4,6 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListDataPackagesResponseBody extends TeaModel {
-    // 数组，返回示例目录。
     @NameInMap("DataPackages")
     public java.util.List<ListDataPackagesResponseBodyDataPackages> dataPackages;
 
@@ -14,7 +13,6 @@ public class ListDataPackagesResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -82,14 +80,12 @@ public class ListDataPackagesResponseBody extends TeaModel {
         @NameInMap("ISP")
         public String ISP;
 
-        // 创建时间
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Size")
         public String size;
 
-        // 资源名称
         @NameInMap("Status")
         public String status;
 

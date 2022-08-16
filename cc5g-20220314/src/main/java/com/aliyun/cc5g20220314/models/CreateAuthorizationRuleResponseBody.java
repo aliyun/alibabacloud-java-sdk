@@ -7,7 +7,6 @@ public class CreateAuthorizationRuleResponseBody extends TeaModel {
     @NameInMap("AuthorizationRuleId")
     public String authorizationRuleId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,7 +4,6 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListBatchOperateCardsTasksResponseBody extends TeaModel {
-    // 数组，返回示例目录。
     @NameInMap("BatchOperateCardsTasks")
     public java.util.List<ListBatchOperateCardsTasksResponseBodyBatchOperateCardsTasks> batchOperateCardsTasks;
 
@@ -14,7 +13,6 @@ public class ListBatchOperateCardsTasksResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -97,7 +95,6 @@ public class ListBatchOperateCardsTasksResponseBody extends TeaModel {
     }
 
     public static class ListBatchOperateCardsTasksResponseBodyBatchOperateCardsTasks extends TeaModel {
-        // 资源一级ID
         @NameInMap("BatchOperateCardsTaskId")
         public String batchOperateCardsTaskId;
 
@@ -117,9 +114,8 @@ public class ListBatchOperateCardsTasksResponseBody extends TeaModel {
         public String name;
 
         @NameInMap("OperateResultOssFilePath")
-        public Boolean operateResultOssFilePath;
+        public String operateResultOssFilePath;
 
-        // 创建时间
         @NameInMap("OperateType")
         public String operateType;
 
@@ -185,11 +181,11 @@ public class ListBatchOperateCardsTasksResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListBatchOperateCardsTasksResponseBodyBatchOperateCardsTasks setOperateResultOssFilePath(Boolean operateResultOssFilePath) {
+        public ListBatchOperateCardsTasksResponseBodyBatchOperateCardsTasks setOperateResultOssFilePath(String operateResultOssFilePath) {
             this.operateResultOssFilePath = operateResultOssFilePath;
             return this;
         }
-        public Boolean getOperateResultOssFilePath() {
+        public String getOperateResultOssFilePath() {
             return this.operateResultOssFilePath;
         }
 
