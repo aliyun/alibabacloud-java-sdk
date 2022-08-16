@@ -7,9 +7,6 @@ public class CreateFigureClusteringTaskRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -33,14 +30,6 @@ public class CreateFigureClusteringTaskRequest extends TeaModel {
     }
     public String getDatasetName() {
         return this.datasetName;
-    }
-
-    public CreateFigureClusteringTaskRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
     }
 
     public CreateFigureClusteringTaskRequest setNotifyTopicName(String notifyTopicName) {

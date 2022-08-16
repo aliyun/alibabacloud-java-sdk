@@ -501,10 +501,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CredentialConfig", request.credentialConfigShrink);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.notifyEndpoint)) {
-            query.put("NotifyEndpoint", request.notifyEndpoint);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
             query.put("NotifyTopicName", request.notifyTopicName);
         }
@@ -558,10 +554,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
             query.put("DatasetName", request.datasetName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.notifyEndpoint)) {
-            query.put("NotifyEndpoint", request.notifyEndpoint);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
