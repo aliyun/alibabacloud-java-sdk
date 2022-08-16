@@ -4,31 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class WebofficeWatermark extends TeaModel {
-    // 字体颜色
     @NameInMap("FillStyle")
     public String fillStyle;
 
-    // 字体样式
     @NameInMap("Font")
     public String font;
 
-    // 水平间距
     @NameInMap("Horizontal")
     public Long horizontal;
 
-    // 旋转角度
     @NameInMap("Rotate")
     public Float rotate;
 
-    // 水印类型，目前仅支持文字水印，0: 无水印；1: 文字水印
     @NameInMap("Type")
     public Long type;
 
-    // 水印文字
     @NameInMap("Value")
     public String value;
 
-    // 垂直间距
     @NameInMap("Vertical")
     public Long vertical;
 

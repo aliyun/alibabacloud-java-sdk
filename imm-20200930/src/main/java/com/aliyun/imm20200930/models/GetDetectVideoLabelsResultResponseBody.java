@@ -4,51 +4,39 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetDetectVideoLabelsResultResponseBody extends TeaModel {
-    // 任务错误码
     @NameInMap("Code")
     public String code;
 
-    // 任务结束时间
     @NameInMap("EndTime")
     public String endTime;
 
-    // 事件Id
     @NameInMap("EventId")
     public String eventId;
 
-    // 标签列表
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
-    // 任务错误消息
     @NameInMap("Message")
     public String message;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
-    // 请求唯一Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 任务开始时间
     @NameInMap("StartTime")
     public String startTime;
 
-    // 任务运行状态
     @NameInMap("Status")
     public String status;
 
-    // 任务唯一ID
     @NameInMap("TaskId")
     public String taskId;
 
-    // 任务类型
     @NameInMap("TaskType")
     public String taskType;
 
-    // 用户自定义信息
     @NameInMap("UserData")
     public String userData;
 

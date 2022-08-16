@@ -4,11 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class AssumeRoleChain extends TeaModel {
-    // 链式授权节点
     @NameInMap("Chain")
     public java.util.List<AssumeRoleChainNode> chain;
 
-    // 当前用户 policy
     @NameInMap("Policy")
     public String policy;
 

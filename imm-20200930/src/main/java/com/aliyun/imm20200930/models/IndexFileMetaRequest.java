@@ -10,9 +10,6 @@ public class IndexFileMetaRequest extends TeaModel {
     @NameInMap("File")
     public FileForReq file;
 
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -38,14 +35,6 @@ public class IndexFileMetaRequest extends TeaModel {
     }
     public FileForReq getFile() {
         return this.file;
-    }
-
-    public IndexFileMetaRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
     }
 
     public IndexFileMetaRequest setNotifyTopicName(String notifyTopicName) {

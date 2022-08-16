@@ -7,7 +7,6 @@ public class UpdateDatasetResponseBody extends TeaModel {
     @NameInMap("Dataset")
     public Dataset dataset;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

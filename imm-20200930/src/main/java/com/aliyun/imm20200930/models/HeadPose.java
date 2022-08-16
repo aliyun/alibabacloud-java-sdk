@@ -4,15 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class HeadPose extends TeaModel {
-    // Pitch
     @NameInMap("Pitch")
     public Float pitch;
 
-    // Roll
     @NameInMap("Roll")
     public Float roll;
 
-    // Yaw
     @NameInMap("Yaw")
     public Float yaw;
 

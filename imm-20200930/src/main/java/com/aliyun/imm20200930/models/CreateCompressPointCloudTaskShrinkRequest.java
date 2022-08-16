@@ -1,0 +1,144 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.imm20200930.models;
+
+import com.aliyun.tea.*;
+
+public class CreateCompressPointCloudTaskShrinkRequest extends TeaModel {
+    @NameInMap("CompressMethod")
+    public String compressMethod;
+
+    @NameInMap("CredentialConfig")
+    public String credentialConfigShrink;
+
+    @NameInMap("KdtreeOption")
+    public String kdtreeOptionShrink;
+
+    @NameInMap("NotifyTopicName")
+    public String notifyTopicName;
+
+    @NameInMap("OctreeOption")
+    public String octreeOptionShrink;
+
+    @NameInMap("PointCloudFields")
+    public String pointCloudFieldsShrink;
+
+    @NameInMap("PointCloudFileFormat")
+    public String pointCloudFileFormat;
+
+    @NameInMap("ProjectName")
+    public String projectName;
+
+    @NameInMap("SourceURI")
+    public String sourceURI;
+
+    @NameInMap("Tags")
+    public String tagsShrink;
+
+    @NameInMap("TargetURI")
+    public String targetURI;
+
+    @NameInMap("UserData")
+    public String userData;
+
+    public static CreateCompressPointCloudTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateCompressPointCloudTaskShrinkRequest self = new CreateCompressPointCloudTaskShrinkRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateCompressPointCloudTaskShrinkRequest setCompressMethod(String compressMethod) {
+        this.compressMethod = compressMethod;
+        return this;
+    }
+    public String getCompressMethod() {
+        return this.compressMethod;
+    }
+
+    public CreateCompressPointCloudTaskShrinkRequest setCredentialConfigShrink(String credentialConfigShrink) {
+        this.credentialConfigShrink = credentialConfigShrink;
+        return this;
+    }
+    public String getCredentialConfigShrink() {
+        return this.credentialConfigShrink;
+    }
+
+    public CreateCompressPointCloudTaskShrinkRequest setKdtreeOptionShrink(String kdtreeOptionShrink) {
+        this.kdtreeOptionShrink = kdtreeOptionShrink;
+        return this;
+    }
+    public String getKdtreeOptionShrink() {
+        return this.kdtreeOptionShrink;
+    }
+
+    public CreateCompressPointCloudTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {
+        this.notifyTopicName = notifyTopicName;
+        return this;
+    }
+    public String getNotifyTopicName() {
+        return this.notifyTopicName;
+    }
+
+    public CreateCompressPointCloudTaskShrinkRequest setOctreeOptionShrink(String octreeOptionShrink) {
+        this.octreeOptionShrink = octreeOptionShrink;
+        return this;
+    }
+    public String getOctreeOptionShrink() {
+        return this.octreeOptionShrink;
+    }
+
+    public CreateCompressPointCloudTaskShrinkRequest setPointCloudFieldsShrink(String pointCloudFieldsShrink) {
+        this.pointCloudFieldsShrink = pointCloudFieldsShrink;
+        return this;
+    }
+    public String getPointCloudFieldsShrink() {
+        return this.pointCloudFieldsShrink;
+    }
+
+    public CreateCompressPointCloudTaskShrinkRequest setPointCloudFileFormat(String pointCloudFileFormat) {
+        this.pointCloudFileFormat = pointCloudFileFormat;
+        return this;
+    }
+    public String getPointCloudFileFormat() {
+        return this.pointCloudFileFormat;
+    }
+
+    public CreateCompressPointCloudTaskShrinkRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
+    }
+
+    public CreateCompressPointCloudTaskShrinkRequest setSourceURI(String sourceURI) {
+        this.sourceURI = sourceURI;
+        return this;
+    }
+    public String getSourceURI() {
+        return this.sourceURI;
+    }
+
+    public CreateCompressPointCloudTaskShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
+        return this;
+    }
+    public String getTagsShrink() {
+        return this.tagsShrink;
+    }
+
+    public CreateCompressPointCloudTaskShrinkRequest setTargetURI(String targetURI) {
+        this.targetURI = targetURI;
+        return this;
+    }
+    public String getTargetURI() {
+        return this.targetURI;
+    }
+
+    public CreateCompressPointCloudTaskShrinkRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
+    }
+
+}

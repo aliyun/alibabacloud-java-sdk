@@ -4,75 +4,57 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class FigureCluster extends TeaModel {
-    // AverageAge
     @NameInMap("AverageAge")
     public Float averageAge;
 
-    // Cover
     @NameInMap("Cover")
     public File cover;
 
-    // CreateTime
     @NameInMap("CreateTime")
     public String createTime;
 
-    // CustomId
     @NameInMap("CustomId")
     public String customId;
 
-    // CustomLabels
     @NameInMap("CustomLabels")
     public java.util.Map<String, ?> customLabels;
 
-    // DatasetName
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // FaceCount
     @NameInMap("FaceCount")
     public Long faceCount;
 
-    // Gender
     @NameInMap("Gender")
     public String gender;
 
-    // ImageCount
     @NameInMap("ImageCount")
     public Long imageCount;
 
-    // MaxAge
     @NameInMap("MaxAge")
     public Float maxAge;
 
-    // MinAge
     @NameInMap("MinAge")
     public Float minAge;
 
-    // Name
     @NameInMap("Name")
     public String name;
 
-    // ObjectId
     @NameInMap("ObjectId")
     public String objectId;
 
-    // ObjectType
     @NameInMap("ObjectType")
     public String objectType;
 
-    // OwnerId
     @NameInMap("OwnerId")
     public String ownerId;
 
-    // ProjectName
     @NameInMap("ProjectName")
     public String projectName;
 
-    // UpdateTime
     @NameInMap("UpdateTime")
     public String updateTime;
 
-    // VideoCount
     @NameInMap("VideoCount")
     public Long videoCount;
 

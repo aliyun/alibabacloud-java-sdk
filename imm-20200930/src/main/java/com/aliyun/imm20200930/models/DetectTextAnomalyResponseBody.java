@@ -4,7 +4,6 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DetectTextAnomalyResponseBody extends TeaModel {
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 

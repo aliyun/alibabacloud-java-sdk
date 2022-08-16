@@ -4,38 +4,30 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SimpleQueryShrinkRequest extends TeaModel {
-    // 聚合字段
     @NameInMap("Aggregations")
     public String aggregationsShrink;
 
-    // Dataset 名称
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // 本次读取的最大数据记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 标记当前开始读取的位置，置空表示从头开始
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 排序字段
     @NameInMap("Order")
     public String order;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
     @NameInMap("Query")
     public String queryShrink;
 
-    // 排序方式，默认 DESC
     @NameInMap("Sort")
     public String sort;
 
-    // 仅返回哪些字段
     @NameInMap("WithFields")
     public String withFieldsShrink;
 

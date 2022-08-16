@@ -7,7 +7,6 @@ public class CreateVideoModerationTaskResponseBody extends TeaModel {
     @NameInMap("EventId")
     public String eventId;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,15 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CredentialConfig extends TeaModel {
-    // 授权链
     @NameInMap("Chain")
     public java.util.List<CredentialConfigChain> chain;
 
-    // 权限策略
     @NameInMap("Policy")
     public String policy;
 
-    // 服务角色
     @NameInMap("ServiceRole")
     public String serviceRole;
 
@@ -46,15 +43,12 @@ public class CredentialConfig extends TeaModel {
     }
 
     public static class CredentialConfigChain extends TeaModel {
-        // 授权对象
         @NameInMap("AssumeRoleFor")
         public String assumeRoleFor;
 
-        // 授权角色
         @NameInMap("Role")
         public String role;
 
-        // 授权方类型
         @NameInMap("RoleType")
         public String roleType;
 

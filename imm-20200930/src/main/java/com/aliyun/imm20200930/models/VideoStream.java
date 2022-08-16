@@ -4,115 +4,87 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class VideoStream extends TeaModel {
-    // AverageFrameRate
     @NameInMap("AverageFrameRate")
     public String averageFrameRate;
 
-    // BitDepth
     @NameInMap("BitDepth")
     public Long bitDepth;
 
-    // Bitrate
     @NameInMap("Bitrate")
     public Long bitrate;
 
-    // CodecLongName
     @NameInMap("CodecLongName")
     public String codecLongName;
 
-    // CodecName
     @NameInMap("CodecName")
     public String codecName;
 
-    // CodecTag
     @NameInMap("CodecTag")
     public String codecTag;
 
-    // CodecTagString
     @NameInMap("CodecTagString")
     public String codecTagString;
 
-    // CodecTimeBase
     @NameInMap("CodecTimeBase")
     public String codecTimeBase;
 
-    // ColorPrimaries
     @NameInMap("ColorPrimaries")
     public String colorPrimaries;
 
-    // ColorRange
     @NameInMap("ColorRange")
     public String colorRange;
 
-    // ColorSpace
     @NameInMap("ColorSpace")
     public String colorSpace;
 
-    // ColorTransfer
     @NameInMap("ColorTransfer")
     public String colorTransfer;
 
-    // DisplayAspectRatio
     @NameInMap("DisplayAspectRatio")
     public String displayAspectRatio;
 
-    // Duration
     @NameInMap("Duration")
     public Double duration;
 
-    // FrameCount
     @NameInMap("FrameCount")
     public Long frameCount;
 
-    // FrameRate
     @NameInMap("FrameRate")
     public String frameRate;
 
-    // HasBFrames
     @NameInMap("HasBFrames")
     public Long hasBFrames;
 
-    // Height
     @NameInMap("Height")
     public Long height;
 
-    // Index
     @NameInMap("Index")
     public Long index;
 
-    // Language
     @NameInMap("Language")
     public String language;
 
-    // Level
     @NameInMap("Level")
     public Long level;
 
-    // PixelFormat
     @NameInMap("PixelFormat")
     public String pixelFormat;
 
-    // Profile
     @NameInMap("Profile")
     public String profile;
 
-    // Rotate
     @NameInMap("Rotate")
     public String rotate;
 
-    // SampleAspectRatio
     @NameInMap("SampleAspectRatio")
     public String sampleAspectRatio;
 
-    // StartTime
     @NameInMap("StartTime")
     public Double startTime;
 
-    // TimeBase
     @NameInMap("TimeBase")
     public String timeBase;
 
-    // Width
     @NameInMap("Width")
     public Long width;
 

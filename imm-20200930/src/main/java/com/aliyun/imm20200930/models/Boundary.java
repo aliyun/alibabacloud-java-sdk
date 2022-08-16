@@ -4,19 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Boundary extends TeaModel {
-    // Height
     @NameInMap("Height")
     public Long height;
 
-    // Left
     @NameInMap("Left")
     public Long left;
 
-    // Top
     @NameInMap("Top")
     public Long top;
 
-    // Width
     @NameInMap("Width")
     public Long width;
 

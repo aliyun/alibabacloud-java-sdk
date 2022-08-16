@@ -4,14 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetsResponseBody extends TeaModel {
-    // Datasets
     @NameInMap("Datasets")
     public java.util.List<Dataset> datasets;
 
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

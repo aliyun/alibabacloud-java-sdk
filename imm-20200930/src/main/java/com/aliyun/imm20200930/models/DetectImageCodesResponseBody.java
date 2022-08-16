@@ -4,11 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DetectImageCodesResponseBody extends TeaModel {
-    // 二维码检测结果
     @NameInMap("Codes")
     public java.util.List<Codes> codes;
 
-    // 请求唯一ID
     @NameInMap("RequestId")
     public String requestId;
 

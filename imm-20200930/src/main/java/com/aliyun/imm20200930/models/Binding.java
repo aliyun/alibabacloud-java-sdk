@@ -4,35 +4,27 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Binding extends TeaModel {
-    // CreateTime
     @NameInMap("CreateTime")
     public String createTime;
 
-    // DatasetName
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // Detail
     @NameInMap("Detail")
     public String detail;
 
-    // Phase
     @NameInMap("Phase")
     public String phase;
 
-    // ProjectName
     @NameInMap("ProjectName")
     public String projectName;
 
-    // State
     @NameInMap("State")
     public String state;
 
-    // URI
     @NameInMap("URI")
     public String URI;
 
-    // UpdateTime
     @NameInMap("UpdateTime")
     public String updateTime;
 

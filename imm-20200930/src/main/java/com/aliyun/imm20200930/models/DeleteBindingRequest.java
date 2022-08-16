@@ -10,7 +10,6 @@ public class DeleteBindingRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // A short description of struct
     @NameInMap("ProjectName")
     public String projectName;
 

@@ -4,15 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CroppingSuggestion extends TeaModel {
-    // AspectRatio
     @NameInMap("AspectRatio")
     public String aspectRatio;
 
-    // Boundary
     @NameInMap("Boundary")
     public Boundary boundary;
 
-    // Confidence
     @NameInMap("Confidence")
     public Float confidence;
 

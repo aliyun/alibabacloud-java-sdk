@@ -7,7 +7,6 @@ public class CreateDatasetResponseBody extends TeaModel {
     @NameInMap("Dataset")
     public Dataset dataset;
 
-    // 请求 ID
     @NameInMap("RequestId")
     public String requestId;
 

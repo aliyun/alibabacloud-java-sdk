@@ -7,7 +7,6 @@ public class CreateStoryResponseBody extends TeaModel {
     @NameInMap("EventId")
     public String eventId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

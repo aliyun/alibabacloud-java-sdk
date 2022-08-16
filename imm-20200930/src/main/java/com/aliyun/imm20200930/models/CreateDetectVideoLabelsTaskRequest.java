@@ -7,26 +7,21 @@ public class CreateDetectVideoLabelsTaskRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
-    // NotifyEndpoint
     @NameInMap("NotifyEndpoint")
     public String notifyEndpoint;
 
-    // NotifyTopicName
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
-    // SourceURI
     @NameInMap("SourceURI")
     public String sourceURI;
 
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
-    // UserData
     @NameInMap("UserData")
     public String userData;
 

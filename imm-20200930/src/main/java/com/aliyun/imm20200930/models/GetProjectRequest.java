@@ -4,11 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetProjectRequest extends TeaModel {
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
-    // 是否获取详细信息
     @NameInMap("WithStatistics")
     public Boolean withStatistics;
 

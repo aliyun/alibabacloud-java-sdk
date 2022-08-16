@@ -4,15 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class AssumeRoleChainNode extends TeaModel {
-    // 账号id
     @NameInMap("OwnerId")
     public String ownerId;
 
-    // 授权角色名
     @NameInMap("Role")
     public String role;
 
-    // 账号类型，普通账号填 user，服务账号填 service
     @NameInMap("Type")
     public String type;
 

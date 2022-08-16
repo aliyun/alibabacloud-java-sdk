@@ -7,7 +7,6 @@ public class AttachOSSBucketRequest extends TeaModel {
     @NameInMap("OSSBucket")
     public String OSSBucket;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 

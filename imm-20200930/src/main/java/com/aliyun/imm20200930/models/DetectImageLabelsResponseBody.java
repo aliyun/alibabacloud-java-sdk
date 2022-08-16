@@ -4,11 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DetectImageLabelsResponseBody extends TeaModel {
-    // 内容标签列表
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
-    // 请求唯一ID
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,106 +4,81 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Figure extends TeaModel {
-    // Age
     @NameInMap("Age")
     public Long age;
 
-    // AgeSD
     @NameInMap("AgeSD")
     public Float ageSD;
 
-    // Attractive
     @NameInMap("Attractive")
     public Float attractive;
 
-    // Beard
     @NameInMap("Beard")
     public String beard;
 
-    // BeardConfidence
     @NameInMap("BeardConfidence")
     public Float beardConfidence;
 
-    // Boundary
     @NameInMap("Boundary")
     public Boundary boundary;
 
-    // Emotion
     @NameInMap("Emotion")
     public String emotion;
 
-    // EmotionConfidence
     @NameInMap("EmotionConfidence")
     public Float emotionConfidence;
 
-    // FaceQuality
     @NameInMap("FaceQuality")
     public Float faceQuality;
 
-    // FigureClusterConfidence
     @NameInMap("FigureClusterConfidence")
     public Float figureClusterConfidence;
 
-    // FigureClusterId
     @NameInMap("FigureClusterId")
     public String figureClusterId;
 
-    // FigureConfidence
     @NameInMap("FigureConfidence")
     public Float figureConfidence;
 
-    // FigureId
     @NameInMap("FigureId")
     public String figureId;
 
-    // FigureType
     @NameInMap("FigureType")
     public String figureType;
 
-    // Gender
     @NameInMap("Gender")
     public String gender;
 
-    // GenderConfidence
     @NameInMap("GenderConfidence")
     public Float genderConfidence;
 
-    // Glasses
     @NameInMap("Glasses")
     public String glasses;
 
-    // GlassesConfidence
     @NameInMap("GlassesConfidence")
     public Float glassesConfidence;
 
-    // Hat
     @NameInMap("Hat")
     public String hat;
 
-    // HatConfidence
     @NameInMap("HatConfidence")
     public Float hatConfidence;
 
     @NameInMap("HeadPose")
     public HeadPose headPose;
 
-    // Mask
     @NameInMap("Mask")
     public String mask;
 
-    // MaskConfidence
     @NameInMap("MaskConfidence")
     public Float maskConfidence;
 
-    // Mouth
     @NameInMap("Mouth")
     public String mouth;
 
-    // MouthConfidence
     @NameInMap("MouthConfidence")
     public Float mouthConfidence;
 
-    // Sharpness
     @NameInMap("Sharpness")
     public Float sharpness;
 

@@ -4,23 +4,18 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SemanticQueryRequest extends TeaModel {
-    // Dataset 名称
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // 本次读取的最大数据记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 标记当前开始读取的位置，置空表示从头开始
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
-    // 需要搜索的内容，使用自然语言描述
     @NameInMap("Query")
     public String query;
 

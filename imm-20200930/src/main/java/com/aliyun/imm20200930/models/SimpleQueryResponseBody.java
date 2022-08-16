@@ -4,19 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SimpleQueryResponseBody extends TeaModel {
-    // 聚合字段的字段名
     @NameInMap("Aggregations")
     public java.util.List<SimpleQueryResponseBodyAggregations> aggregations;
 
-    // 文件列表
     @NameInMap("Files")
     public java.util.List<File> files;
 
-    // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 本次请求的唯一 Id
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,11 +54,9 @@ public class SimpleQueryResponseBody extends TeaModel {
     }
 
     public static class SimpleQueryResponseBodyAggregationsGroups extends TeaModel {
-        // 分组聚合的计数
         @NameInMap("Count")
         public Long count;
 
-        // 分组聚合的值
         @NameInMap("Value")
         public String value;
 
@@ -90,15 +84,12 @@ public class SimpleQueryResponseBody extends TeaModel {
     }
 
     public static class SimpleQueryResponseBodyAggregations extends TeaModel {
-        // 聚合字段名
         @NameInMap("Field")
         public String field;
 
-        // 分组聚合的结果
         @NameInMap("Groups")
         public java.util.List<SimpleQueryResponseBodyAggregationsGroups> groups;
 
-        // 聚合字段的聚合操作符
         @NameInMap("Operation")
         public String operation;
 

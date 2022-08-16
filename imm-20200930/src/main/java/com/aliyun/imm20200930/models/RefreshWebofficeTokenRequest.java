@@ -4,18 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class RefreshWebofficeTokenRequest extends TeaModel {
-    // access token
     @NameInMap("AccessToken")
     public String accessToken;
 
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
-    // refresh token
     @NameInMap("RefreshToken")
     public String refreshToken;
 

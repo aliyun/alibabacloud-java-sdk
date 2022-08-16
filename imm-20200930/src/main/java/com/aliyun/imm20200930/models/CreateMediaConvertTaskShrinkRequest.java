@@ -7,9 +7,6 @@ public class CreateMediaConvertTaskShrinkRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -39,14 +36,6 @@ public class CreateMediaConvertTaskShrinkRequest extends TeaModel {
     }
     public String getCredentialConfigShrink() {
         return this.credentialConfigShrink;
-    }
-
-    public CreateMediaConvertTaskShrinkRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
     }
 
     public CreateMediaConvertTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {

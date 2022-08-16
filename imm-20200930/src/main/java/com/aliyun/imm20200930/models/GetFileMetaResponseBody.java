@@ -4,11 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetFileMetaResponseBody extends TeaModel {
-    // File list.
     @NameInMap("Files")
     public java.util.List<File> files;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -10,9 +10,6 @@ public class BatchIndexFileMetaRequest extends TeaModel {
     @NameInMap("Files")
     public java.util.List<FileForReq> files;
 
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -38,14 +35,6 @@ public class BatchIndexFileMetaRequest extends TeaModel {
     }
     public java.util.List<FileForReq> getFiles() {
         return this.files;
-    }
-
-    public BatchIndexFileMetaRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
     }
 
     public BatchIndexFileMetaRequest setNotifyTopicName(String notifyTopicName) {

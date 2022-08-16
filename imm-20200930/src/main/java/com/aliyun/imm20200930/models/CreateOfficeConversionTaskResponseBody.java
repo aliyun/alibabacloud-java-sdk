@@ -7,11 +7,9 @@ public class CreateOfficeConversionTaskResponseBody extends TeaModel {
     @NameInMap("EventId")
     public String eventId;
 
-    // 请求 id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 任务 id
     @NameInMap("TaskId")
     public String taskId;
 

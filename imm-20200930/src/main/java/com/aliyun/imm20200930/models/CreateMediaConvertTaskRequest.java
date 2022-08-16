@@ -7,9 +7,6 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -39,14 +36,6 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     }
     public CredentialConfig getCredentialConfig() {
         return this.credentialConfig;
-    }
-
-    public CreateMediaConvertTaskRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
     }
 
     public CreateMediaConvertTaskRequest setNotifyTopicName(String notifyTopicName) {

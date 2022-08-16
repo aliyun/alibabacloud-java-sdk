@@ -4,55 +4,42 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Dataset extends TeaModel {
-    // 媒体集当前绑定数
     @NameInMap("BindCount")
     public Long bindCount;
 
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 媒体集最大绑定数
     @NameInMap("DatasetMaxBindCount")
     public Long datasetMaxBindCount;
 
-    // 媒体集最多实体数量
     @NameInMap("DatasetMaxEntityCount")
     public Long datasetMaxEntityCount;
 
-    // 媒体集最多文件数量
     @NameInMap("DatasetMaxFileCount")
     public Long datasetMaxFileCount;
 
-    // 媒体集最多关系数量
     @NameInMap("DatasetMaxRelationCount")
     public Long datasetMaxRelationCount;
 
-    // 媒体集最大文件总大小
     @NameInMap("DatasetMaxTotalFileSize")
     public Long datasetMaxTotalFileSize;
 
-    // 媒体集名称
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // 描述
     @NameInMap("Description")
     public String description;
 
-    // 媒体集当前文件数
     @NameInMap("FileCount")
     public Long fileCount;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
-    // 媒体集当前文件总大小
     @NameInMap("TotalFileSize")
     public Long totalFileSize;
 
-    // 更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 

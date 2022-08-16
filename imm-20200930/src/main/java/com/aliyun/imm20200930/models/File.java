@@ -4,318 +4,240 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class File extends TeaModel {
-    // AccessControlAllowOrigin
     @NameInMap("AccessControlAllowOrigin")
     public String accessControlAllowOrigin;
 
-    // AccessControlRequestMethod
     @NameInMap("AccessControlRequestMethod")
     public String accessControlRequestMethod;
 
-    // Addresses
     @NameInMap("Addresses")
     public java.util.List<Address> addresses;
 
-    // Album
     @NameInMap("Album")
     public String album;
 
-    // AlbumArtist
     @NameInMap("AlbumArtist")
     public String albumArtist;
 
-    // Artist
     @NameInMap("Artist")
     public String artist;
 
-    // AudioCovers
     @NameInMap("AudioCovers")
     public java.util.List<Image> audioCovers;
 
-    // AudioStreams
     @NameInMap("AudioStreams")
     public java.util.List<AudioStream> audioStreams;
 
-    // Bitrate
     @NameInMap("Bitrate")
     public Long bitrate;
 
-    // CacheControl
     @NameInMap("CacheControl")
     public String cacheControl;
 
-    // Composer
     @NameInMap("Composer")
     public String composer;
 
-    // ContentDisposition
     @NameInMap("ContentDisposition")
     public String contentDisposition;
 
-    // ContentEncoding
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
-    // ContentLanguage
     @NameInMap("ContentLanguage")
     public String contentLanguage;
 
-    // ContentMd5
     @NameInMap("ContentMd5")
     public String contentMd5;
 
-    // ContentType
     @NameInMap("ContentType")
     public String contentType;
 
-    // CreateTime
     @NameInMap("CreateTime")
     public String createTime;
 
-    // CroppingSuggestions
     @NameInMap("CroppingSuggestions")
     public java.util.List<CroppingSuggestion> croppingSuggestions;
 
-    // CustomId
     @NameInMap("CustomId")
     public String customId;
 
-    // CustomLabels
     @NameInMap("CustomLabels")
     public java.util.Map<String, ?> customLabels;
 
-    // DatasetName
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // DocumentContent
     @NameInMap("DocumentContent")
     public String documentContent;
 
-    // DocumentLanguage
     @NameInMap("DocumentLanguage")
     public String documentLanguage;
 
-    // Duration
     @NameInMap("Duration")
     public Double duration;
 
-    // ETag
     @NameInMap("ETag")
     public String ETag;
 
-    // EXIF
     @NameInMap("EXIF")
     public String EXIF;
 
-    // FigureCount
     @NameInMap("FigureCount")
     public Long figureCount;
 
-    // Figures
     @NameInMap("Figures")
     public java.util.List<Figure> figures;
 
-    // FileAccessTime
     @NameInMap("FileAccessTime")
     public String fileAccessTime;
 
-    // FileCreateTime
     @NameInMap("FileCreateTime")
     public String fileCreateTime;
 
-    // FileHash
     @NameInMap("FileHash")
     public String fileHash;
 
-    // FileModifiedTime
     @NameInMap("FileModifiedTime")
     public String fileModifiedTime;
 
-    // Filename
     @NameInMap("Filename")
     public String filename;
 
-    // FormatLongName
     @NameInMap("FormatLongName")
     public String formatLongName;
 
-    // FormatName
     @NameInMap("FormatName")
     public String formatName;
 
-    // ImageHeight
     @NameInMap("ImageHeight")
     public Long imageHeight;
 
     @NameInMap("ImageScore")
     public ImageScore imageScore;
 
-    // ImageWidth
     @NameInMap("ImageWidth")
     public Long imageWidth;
 
-    // Labels
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
-    // Language
     @NameInMap("Language")
     public String language;
 
-    // LatLong
     @NameInMap("LatLong")
     public String latLong;
 
-    // MediaType
     @NameInMap("MediaType")
     public String mediaType;
 
-    // OCRContents
     @NameInMap("OCRContents")
     public java.util.List<OCRContents> OCRContents;
 
-    // OSSCRC64
     @NameInMap("OSSCRC64")
     public String OSSCRC64;
 
-    // OSSDeleteMarker
     @NameInMap("OSSDeleteMarker")
     public String OSSDeleteMarker;
 
-    // OSSExpiration
     @NameInMap("OSSExpiration")
     public String OSSExpiration;
 
-    // OSSObjectType
     @NameInMap("OSSObjectType")
     public String OSSObjectType;
 
-    // OSSStorageClass
     @NameInMap("OSSStorageClass")
     public String OSSStorageClass;
 
-    // OSSTagging
     @NameInMap("OSSTagging")
     public java.util.Map<String, ?> OSSTagging;
 
-    // OSSTaggingCount
     @NameInMap("OSSTaggingCount")
     public Long OSSTaggingCount;
 
-    // OSSURI
     @NameInMap("OSSURI")
     public String OSSURI;
 
-    // OSSUserMeta
     @NameInMap("OSSUserMeta")
     public java.util.Map<String, ?> OSSUserMeta;
 
-    // OSSVersionId
     @NameInMap("OSSVersionId")
     public String OSSVersionId;
 
-    // ObjectACL
     @NameInMap("ObjectACL")
     public String objectACL;
 
-    // ObjectId
     @NameInMap("ObjectId")
     public String objectId;
 
-    // ObjectType
     @NameInMap("ObjectType")
     public String objectType;
 
-    // Orientation
     @NameInMap("Orientation")
     public Long orientation;
 
-    // OwnerId
     @NameInMap("OwnerId")
     public String ownerId;
 
-    // PageCount
     @NameInMap("PageCount")
     public Long pageCount;
 
-    // Performer
     @NameInMap("Performer")
     public String performer;
 
-    // ProduceTime
     @NameInMap("ProduceTime")
     public String produceTime;
 
-    // ProgramCount
     @NameInMap("ProgramCount")
     public Long programCount;
 
-    // ProjectName
     @NameInMap("ProjectName")
     public String projectName;
 
-    // ServerSideDataEncryption
     @NameInMap("ServerSideDataEncryption")
     public String serverSideDataEncryption;
 
-    // ServerSideEncryption
     @NameInMap("ServerSideEncryption")
     public String serverSideEncryption;
 
-    // ServerSideEncryptionCustomerAlgorithm
     @NameInMap("ServerSideEncryptionCustomerAlgorithm")
     public String serverSideEncryptionCustomerAlgorithm;
 
-    // ServerSideEncryptionKeyId
     @NameInMap("ServerSideEncryptionKeyId")
     public String serverSideEncryptionKeyId;
 
-    // Size
     @NameInMap("Size")
     public Long size;
 
-    // StartTime
     @NameInMap("StartTime")
     public Double startTime;
 
-    // StreamCount
     @NameInMap("StreamCount")
     public Long streamCount;
 
-    // Subtitles
     @NameInMap("Subtitles")
     public java.util.List<SubtitleStream> subtitles;
 
-    // Timezone
     @NameInMap("Timezone")
     public String timezone;
 
-    // Title
     @NameInMap("Title")
     public String title;
 
-    // TravelClusterId
     @NameInMap("TravelClusterId")
     public String travelClusterId;
 
-    // URI
     @NameInMap("URI")
     public String URI;
 
-    // UpdateTime
     @NameInMap("UpdateTime")
     public String updateTime;
 
-    // VideoHeight
     @NameInMap("VideoHeight")
     public Long videoHeight;
 
-    // VideoStreams
     @NameInMap("VideoStreams")
     public java.util.List<VideoStream> videoStreams;
 
-    // VideoWidth
     @NameInMap("VideoWidth")
     public Long videoWidth;
 

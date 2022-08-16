@@ -4,11 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class PresetReference extends TeaModel {
-    // 名称
     @NameInMap("Name")
     public String name;
 
-    // 类型
     @NameInMap("Type")
     public String type;
 

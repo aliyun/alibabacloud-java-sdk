@@ -7,7 +7,6 @@ public class AddStoryFilesResponseBody extends TeaModel {
     @NameInMap("Files")
     public java.util.List<AddStoryFilesResponseBodyFiles> files;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,11 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Body extends TeaModel {
-    // Boundary
     @NameInMap("Boundary")
     public Boundary boundary;
 
-    // Confidence
     @NameInMap("Confidence")
     public Float confidence;
 
@@ -135,11 +133,9 @@ public class Body extends TeaModel {
     }
 
     public static class SemanticQueryResponseBodyAggregationsGroups extends TeaModel {
-        // 分组聚合的计数
         @NameInMap("Count")
         public Long count;
 
-        // 分组聚合的值
         @NameInMap("Value")
         public String value;
 
@@ -167,19 +163,15 @@ public class Body extends TeaModel {
     }
 
     public static class SemanticQueryResponseBodyAggregations extends TeaModel {
-        // 聚合字段名
         @NameInMap("Field")
         public String field;
 
-        // 分组聚合的结果
         @NameInMap("Groups")
         public java.util.List<SemanticQueryResponseBodyAggregationsGroups> groups;
 
-        // 聚合字段的聚合操作符
         @NameInMap("Operation")
         public String operation;
 
-        // 聚合的统计结果
         @NameInMap("Value")
         public Float value;
 
@@ -223,11 +215,9 @@ public class Body extends TeaModel {
     }
 
     public static class SimpleQueryResponseBodyAggregationsGroups extends TeaModel {
-        // 分组聚合的计数
         @NameInMap("Count")
         public Long count;
 
-        // 分组聚合的值
         @NameInMap("Value")
         public String value;
 
@@ -255,15 +245,12 @@ public class Body extends TeaModel {
     }
 
     public static class SimpleQueryResponseBodyAggregations extends TeaModel {
-        // 聚合字段名
         @NameInMap("Field")
         public String field;
 
-        // 分组聚合的结果
         @NameInMap("Groups")
         public java.util.List<SimpleQueryResponseBodyAggregationsGroups> groups;
 
-        // 聚合字段的聚合操作符
         @NameInMap("Operation")
         public String operation;
 

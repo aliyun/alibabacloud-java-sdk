@@ -7,7 +7,6 @@ public class GetOSSBucketAttachmentResponseBody extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 

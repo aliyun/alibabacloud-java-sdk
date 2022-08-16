@@ -22,16 +22,12 @@ public class CreateImageSplicingTaskShrinkRequest extends TeaModel {
     @NameInMap("Margin")
     public Long margin;
 
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
     @NameInMap("Padding")
     public Long padding;
 
-    // A short description of struct
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -104,14 +100,6 @@ public class CreateImageSplicingTaskShrinkRequest extends TeaModel {
     }
     public Long getMargin() {
         return this.margin;
-    }
-
-    public CreateImageSplicingTaskShrinkRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
     }
 
     public CreateImageSplicingTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {

@@ -4,19 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class OCRContents extends TeaModel {
-    // Boundary
     @NameInMap("Boundary")
     public Boundary boundary;
 
-    // Confidence
     @NameInMap("Confidence")
     public Float confidence;
 
-    // Contents
     @NameInMap("Contents")
     public String contents;
 
-    // Language
     @NameInMap("Language")
     public String language;
 

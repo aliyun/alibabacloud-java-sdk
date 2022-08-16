@@ -4,27 +4,21 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Label extends TeaModel {
-    // CentricScore
     @NameInMap("CentricScore")
     public Float centricScore;
 
-    // LabelConfidence
     @NameInMap("LabelConfidence")
     public Float labelConfidence;
 
-    // LabelLevel
     @NameInMap("LabelLevel")
     public Long labelLevel;
 
-    // LabelName
     @NameInMap("LabelName")
     public String labelName;
 
-    // Language
     @NameInMap("Language")
     public String language;
 
-    // ParentLabelName
     @NameInMap("ParentLabelName")
     public String parentLabelName;
 

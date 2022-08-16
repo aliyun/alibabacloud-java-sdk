@@ -7,7 +7,6 @@ public class CreateProjectResponseBody extends TeaModel {
     @NameInMap("Project")
     public Project project;
 
-    // 本次请求的唯一 ID
     @NameInMap("RequestId")
     public String requestId;
 

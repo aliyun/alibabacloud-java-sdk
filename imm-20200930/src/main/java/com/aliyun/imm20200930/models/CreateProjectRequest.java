@@ -28,7 +28,6 @@ public class CreateProjectRequest extends TeaModel {
     @NameInMap("ProjectMaxDatasetCount")
     public Long projectMaxDatasetCount;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 

@@ -7,7 +7,6 @@ public class DetectImageScoreResponseBody extends TeaModel {
     @NameInMap("ImageScore")
     public DetectImageScoreResponseBodyImageScore imageScore;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,11 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DetectImageBodiesResponseBody extends TeaModel {
-    // 图片裁剪结果
     @NameInMap("Bodies")
     public java.util.List<Body> bodies;
 
-    // 请求唯一ID
     @NameInMap("RequestId")
     public String requestId;
 

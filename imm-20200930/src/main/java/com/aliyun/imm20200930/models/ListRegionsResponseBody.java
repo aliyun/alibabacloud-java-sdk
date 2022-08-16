@@ -7,7 +7,6 @@ public class ListRegionsResponseBody extends TeaModel {
     @NameInMap("Regions")
     public java.util.List<RegionType> regions;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 

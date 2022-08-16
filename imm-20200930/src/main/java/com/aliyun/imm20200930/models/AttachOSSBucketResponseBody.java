@@ -4,7 +4,6 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class AttachOSSBucketResponseBody extends TeaModel {
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 

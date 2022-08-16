@@ -7,12 +7,8 @@ public class CreateFigureClustersMergingTaskShrinkRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // 源cluster
     @NameInMap("From")
     public String from;
-
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
 
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
@@ -23,7 +19,6 @@ public class CreateFigureClustersMergingTaskShrinkRequest extends TeaModel {
     @NameInMap("Tags")
     public String tagsShrink;
 
-    // 目的cluster
     @NameInMap("To")
     public String to;
 
@@ -49,14 +44,6 @@ public class CreateFigureClustersMergingTaskShrinkRequest extends TeaModel {
     }
     public String getFrom() {
         return this.from;
-    }
-
-    public CreateFigureClustersMergingTaskShrinkRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
     }
 
     public CreateFigureClustersMergingTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {
