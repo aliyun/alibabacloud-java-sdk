@@ -22,6 +22,9 @@ public class DescribeCheckWarningsRequest extends TeaModel {
     @NameInMap("RiskId")
     public Long riskId;
 
+    @NameInMap("RiskStatus")
+    public Integer riskStatus;
+
     @NameInMap("SourceIp")
     public String sourceIp;
 
@@ -79,6 +82,14 @@ public class DescribeCheckWarningsRequest extends TeaModel {
     }
     public Long getRiskId() {
         return this.riskId;
+    }
+
+    public DescribeCheckWarningsRequest setRiskStatus(Integer riskStatus) {
+        this.riskStatus = riskStatus;
+        return this;
+    }
+    public Integer getRiskStatus() {
+        return this.riskStatus;
     }
 
     public DescribeCheckWarningsRequest setSourceIp(String sourceIp) {

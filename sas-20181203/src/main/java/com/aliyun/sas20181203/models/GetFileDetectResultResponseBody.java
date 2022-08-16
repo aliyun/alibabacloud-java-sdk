@@ -32,6 +32,12 @@ public class GetFileDetectResultResponseBody extends TeaModel {
     }
 
     public static class GetFileDetectResultResponseBodyResultList extends TeaModel {
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
         @NameInMap("Ext")
         public String ext;
 
@@ -50,6 +56,22 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         public static GetFileDetectResultResponseBodyResultList build(java.util.Map<String, ?> map) throws Exception {
             GetFileDetectResultResponseBodyResultList self = new GetFileDetectResultResponseBodyResultList();
             return TeaModel.build(map, self);
+        }
+
+        public GetFileDetectResultResponseBodyResultList setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public GetFileDetectResultResponseBodyResultList setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public GetFileDetectResultResponseBodyResultList setExt(String ext) {

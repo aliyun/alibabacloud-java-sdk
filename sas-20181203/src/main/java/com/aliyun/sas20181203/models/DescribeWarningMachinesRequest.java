@@ -16,6 +16,9 @@ public class DescribeWarningMachinesRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("HaveRisk")
+    public Integer haveRisk;
+
     @NameInMap("Lang")
     public String lang;
 
@@ -75,6 +78,14 @@ public class DescribeWarningMachinesRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeWarningMachinesRequest setHaveRisk(Integer haveRisk) {
+        this.haveRisk = haveRisk;
+        return this;
+    }
+    public Integer getHaveRisk() {
+        return this.haveRisk;
     }
 
     public DescribeWarningMachinesRequest setLang(String lang) {
