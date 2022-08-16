@@ -413,6 +413,161 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createFileDetectUploadUrlWithOptions(request, runtime);
     }
 
+    public CreateHoneypotResponse createHoneypotWithOptions(CreateHoneypotRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.honeypotImageId)) {
+            query.put("HoneypotImageId", request.honeypotImageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.honeypotImageName)) {
+            query.put("HoneypotImageName", request.honeypotImageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.honeypotName)) {
+            query.put("HoneypotName", request.honeypotName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.meta)) {
+            query.put("Meta", request.meta);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            query.put("NodeId", request.nodeId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateHoneypot"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateHoneypotResponse());
+    }
+
+    public CreateHoneypotResponse createHoneypot(CreateHoneypotRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createHoneypotWithOptions(request, runtime);
+    }
+
+    public CreateHoneypotNodeResponse createHoneypotNodeWithOptions(CreateHoneypotNodeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowHoneypotAccessInternet)) {
+            query.put("AllowHoneypotAccessInternet", request.allowHoneypotAccessInternet);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.availableProbeNum)) {
+            query.put("AvailableProbeNum", request.availableProbeNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeName)) {
+            query.put("NodeName", request.nodeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupProbeIpList)) {
+            query.put("SecurityGroupProbeIpList", request.securityGroupProbeIpList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateHoneypotNode"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateHoneypotNodeResponse());
+    }
+
+    public CreateHoneypotNodeResponse createHoneypotNode(CreateHoneypotNodeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createHoneypotNodeWithOptions(request, runtime);
+    }
+
+    public CreateHoneypotProbeResponse createHoneypotProbeWithOptions(CreateHoneypotProbeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.arp)) {
+            query.put("Arp", request.arp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessGroupId)) {
+            query.put("BusinessGroupId", request.businessGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.controlNodeId)) {
+            query.put("ControlNodeId", request.controlNodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            query.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.honeypotBindList)) {
+            query.put("HoneypotBindList", request.honeypotBindList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ping)) {
+            query.put("Ping", request.ping);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.probeType)) {
+            query.put("ProbeType", request.probeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.probeVersion)) {
+            query.put("ProbeVersion", request.probeVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyIp)) {
+            query.put("ProxyIp", request.proxyIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateHoneypotProbe"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateHoneypotProbeResponse());
+    }
+
+    public CreateHoneypotProbeResponse createHoneypotProbe(CreateHoneypotProbeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createHoneypotProbeWithOptions(request, runtime);
+    }
+
     public CreateOrUpdateAssetGroupResponse createOrUpdateAssetGroupWithOptions(CreateOrUpdateAssetGroupRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1760,6 +1915,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.riskId)) {
             query.put("RiskId", request.riskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskStatus)) {
+            query.put("RiskStatus", request.riskStatus);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
@@ -5974,6 +6133,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CurrentPage", request.currentPage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.haveRisk)) {
+            query.put("HaveRisk", request.haveRisk);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
@@ -6112,6 +6275,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeWebLockConfigListResponse describeWebLockConfigList(DescribeWebLockConfigListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeWebLockConfigListWithOptions(request, runtime);
+    }
+
+    public DescribeWebLockFileEventsResponse describeWebLockFileEventsWithOptions(DescribeWebLockFileEventsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dealed)) {
+            query.put("Dealed", request.dealed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processName)) {
+            query.put("ProcessName", request.processName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tsBegin)) {
+            query.put("TsBegin", request.tsBegin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tsEnd)) {
+            query.put("TsEnd", request.tsEnd);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWebLockFileEvents"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWebLockFileEventsResponse());
+    }
+
+    public DescribeWebLockFileEventsResponse describeWebLockFileEvents(DescribeWebLockFileEventsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeWebLockFileEventsWithOptions(request, runtime);
     }
 
     public ExportRecordResponse exportRecordWithOptions(ExportRecordRequest request, RuntimeOptions runtime) throws Exception {
@@ -6872,6 +7088,121 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCheckResultResponse listCheckResult(ListCheckResultRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listCheckResultWithOptions(request, runtime);
+    }
+
+    public ListHoneypotResponse listHoneypotWithOptions(ListHoneypotRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.honeypotIds)) {
+            query.put("HoneypotIds", request.honeypotIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.honeypotName)) {
+            query.put("HoneypotName", request.honeypotName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            query.put("NodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeName)) {
+            query.put("NodeName", request.nodeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHoneypot"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHoneypotResponse());
+    }
+
+    public ListHoneypotResponse listHoneypot(ListHoneypotRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listHoneypotWithOptions(request, runtime);
+    }
+
+    public ListHoneypotAlarmEventsResponse listHoneypotAlarmEventsWithOptions(ListHoneypotAlarmEventsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHoneypotAlarmEvents"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHoneypotAlarmEventsResponse());
+    }
+
+    public ListHoneypotAlarmEventsResponse listHoneypotAlarmEvents(ListHoneypotAlarmEventsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listHoneypotAlarmEventsWithOptions(request, runtime);
+    }
+
+    public ListHoneypotNodeResponse listHoneypotNodeWithOptions(ListHoneypotNodeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            query.put("NodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeName)) {
+            query.put("NodeName", request.nodeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHoneypotNode"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHoneypotNodeResponse());
+    }
+
+    public ListHoneypotNodeResponse listHoneypotNode(ListHoneypotNodeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listHoneypotNodeWithOptions(request, runtime);
     }
 
     public ListVulAutoRepairConfigResponse listVulAutoRepairConfigWithOptions(ListVulAutoRepairConfigRequest request, RuntimeOptions runtime) throws Exception {
