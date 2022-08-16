@@ -4,27 +4,21 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class WebofficePermission extends TeaModel {
-    // 拷贝
     @NameInMap("Copy")
     public Boolean copy;
 
-    // 导出
     @NameInMap("Export")
     public Boolean export;
 
-    // 查看历史版本
     @NameInMap("History")
     public Boolean history;
 
-    // 打印
     @NameInMap("Print")
     public Boolean print;
 
-    // 只读模式
     @NameInMap("Readonly")
     public Boolean readonly;
 
-    // 重命名
     @NameInMap("Rename")
     public Boolean rename;
 

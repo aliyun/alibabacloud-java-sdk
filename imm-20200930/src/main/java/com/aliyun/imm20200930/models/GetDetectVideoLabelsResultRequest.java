@@ -4,15 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetDetectVideoLabelsResultRequest extends TeaModel {
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
-    // TaskId
     @NameInMap("TaskId")
     public String taskId;
 
-    // TaskType
     @NameInMap("TaskType")
     public String taskType;
 

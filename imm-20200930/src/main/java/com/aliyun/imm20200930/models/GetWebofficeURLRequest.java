@@ -4,66 +4,48 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetWebofficeURLRequest extends TeaModel {
-    // 缓存预览标识
     @NameInMap("CachePreview")
     public Boolean cachePreview;
 
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
-    // 是否支持外部上传
     @NameInMap("ExternalUploaded")
     public Boolean externalUploaded;
 
-    // 文件名，必须带文件名后缀，默认是 SourceUri 的最后一级
     @NameInMap("Filename")
     public String filename;
 
-    // 隐藏工具栏，预览模式下使用
     @NameInMap("Hidecmb")
     public Boolean hidecmb;
 
-    // mns 消息通知地址
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
-    // mns 消息通知 topic
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
-    // 文件密码
     @NameInMap("Password")
     public String password;
 
-    // 权限
     @NameInMap("Permission")
     public WebofficePermission permission;
 
-    // 预览前几页
     @NameInMap("PreviewPages")
     public Long previewPages;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
-    // oss 防盗链 referer
     @NameInMap("Referer")
     public String referer;
 
-    // 预览编辑地址
     @NameInMap("SourceURI")
     public String sourceURI;
 
-    // 用户
     @NameInMap("User")
     public WebofficeUser user;
 
-    // 用户自定义数据，在消息通知中返回
     @NameInMap("UserData")
     public String userData;
 
-    // 水印
     @NameInMap("Watermark")
     public WebofficeWatermark watermark;
 
@@ -110,14 +92,6 @@ public class GetWebofficeURLRequest extends TeaModel {
     }
     public Boolean getHidecmb() {
         return this.hidecmb;
-    }
-
-    public GetWebofficeURLRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
     }
 
     public GetWebofficeURLRequest setNotifyTopicName(String notifyTopicName) {

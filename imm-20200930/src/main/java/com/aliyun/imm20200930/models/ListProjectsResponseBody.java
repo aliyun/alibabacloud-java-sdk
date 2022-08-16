@@ -4,15 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ListProjectsResponseBody extends TeaModel {
-    // 当总结果个数大于MaxResults时，用于翻页的token
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 由ProjectItem组成的数组
     @NameInMap("Projects")
     public java.util.List<Project> projects;
 
-    // 本次请求的唯一 ID
     @NameInMap("RequestId")
     public String requestId;
 

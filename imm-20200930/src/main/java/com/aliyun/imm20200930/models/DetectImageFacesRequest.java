@@ -7,7 +7,6 @@ public class DetectImageFacesRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 

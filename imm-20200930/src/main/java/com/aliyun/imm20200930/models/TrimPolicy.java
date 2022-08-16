@@ -4,19 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class TrimPolicy extends TeaModel {
-    // 禁止删除所有空单元格
     @NameInMap("DisableDeleteEmptyCell")
     public Boolean disableDeleteEmptyCell;
 
-    // 禁止删除所有重复样式
     @NameInMap("DisableDeleteRepeatedStyle")
     public Boolean disableDeleteRepeatedStyle;
 
-    // 禁止删除未使用的单元格图片
     @NameInMap("DisableDeleteUnusedPicture")
     public Boolean disableDeleteUnusedPicture;
 
-    // 禁止删除没有使用的Shape
     @NameInMap("DisableDeleteUnusedShape")
     public Boolean disableDeleteUnusedShape;
 

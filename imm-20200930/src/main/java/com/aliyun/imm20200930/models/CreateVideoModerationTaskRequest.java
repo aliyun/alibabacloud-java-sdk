@@ -13,13 +13,9 @@ public class CreateVideoModerationTaskRequest extends TeaModel {
     @NameInMap("MaxFrames")
     public Long maxFrames;
 
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -65,14 +61,6 @@ public class CreateVideoModerationTaskRequest extends TeaModel {
     }
     public Long getMaxFrames() {
         return this.maxFrames;
-    }
-
-    public CreateVideoModerationTaskRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
     }
 
     public CreateVideoModerationTaskRequest setNotifyTopicName(String notifyTopicName) {

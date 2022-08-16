@@ -4,7 +4,6 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ImageScore extends TeaModel {
-    // OverallQualityScore
     @NameInMap("OverallQualityScore")
     public Float overallQualityScore;
 

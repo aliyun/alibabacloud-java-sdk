@@ -4,15 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateBindingRequest extends TeaModel {
-    // DatasetName
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // ProjectName
     @NameInMap("ProjectName")
     public String projectName;
 
-    // URI
     @NameInMap("URI")
     public String URI;
 

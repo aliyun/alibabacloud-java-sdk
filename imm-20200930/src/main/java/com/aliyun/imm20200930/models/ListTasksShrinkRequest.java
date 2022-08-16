@@ -7,18 +7,15 @@ public class ListTasksShrinkRequest extends TeaModel {
     @NameInMap("EndTimeRange")
     public String endTimeRangeShrink;
 
-    // MaxResults
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // NextToken
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("Order")
     public String order;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 

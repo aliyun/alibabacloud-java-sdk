@@ -7,18 +7,15 @@ public class ListTasksRequest extends TeaModel {
     @NameInMap("EndTimeRange")
     public TimeRange endTimeRange;
 
-    // MaxResults
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // NextToken
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("Order")
     public String order;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 

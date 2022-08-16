@@ -4,51 +4,39 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SubtitleStream extends TeaModel {
-    // Bitrate
     @NameInMap("Bitrate")
     public Long bitrate;
 
-    // CodecLongName
     @NameInMap("CodecLongName")
     public String codecLongName;
 
-    // CodecName
     @NameInMap("CodecName")
     public String codecName;
 
-    // CodecTag
     @NameInMap("CodecTag")
     public String codecTag;
 
-    // CodecTagString
     @NameInMap("CodecTagString")
     public String codecTagString;
 
-    // Content
     @NameInMap("Content")
     public String content;
 
-    // Duration
     @NameInMap("Duration")
     public Double duration;
 
-    // Height
     @NameInMap("Height")
     public Long height;
 
-    // Index
     @NameInMap("Index")
     public Long index;
 
-    // Language
     @NameInMap("Language")
     public String language;
 
-    // StartTime
     @NameInMap("StartTime")
     public Double startTime;
 
-    // Width
     @NameInMap("Width")
     public Long width;
 

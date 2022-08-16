@@ -4,67 +4,51 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Project extends TeaModel {
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 项目当前媒体集数
     @NameInMap("DatasetCount")
     public Long datasetCount;
 
-    // 项目最多绑定数
     @NameInMap("DatasetMaxBindCount")
     public Long datasetMaxBindCount;
 
-    // 项目最多实体数
     @NameInMap("DatasetMaxEntityCount")
     public Long datasetMaxEntityCount;
 
-    // 项目最多文件数
     @NameInMap("DatasetMaxFileCount")
     public Long datasetMaxFileCount;
 
-    // 项目最多关系数
     @NameInMap("DatasetMaxRelationCount")
     public Long datasetMaxRelationCount;
 
-    // 项目最大文件总大小
     @NameInMap("DatasetMaxTotalFileSize")
     public Long datasetMaxTotalFileSize;
 
-    // 描述
     @NameInMap("Description")
     public String description;
 
-    // 项目最大并发数
     @NameInMap("EngineConcurrency")
     public Long engineConcurrency;
 
-    // 项目当前文件数
     @NameInMap("FileCount")
     public Long fileCount;
 
-    // 项目最多媒体集数量
     @NameInMap("ProjectMaxDatasetCount")
     public Long projectMaxDatasetCount;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
-    // 项目QPS
     @NameInMap("ProjectQueriesPerSecond")
     public Long projectQueriesPerSecond;
 
-    // 服务角色
     @NameInMap("ServiceRole")
     public String serviceRole;
 
-    // 项目当前文件总大小
     @NameInMap("TotalFileSize")
     public Long totalFileSize;
 
-    // 更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 

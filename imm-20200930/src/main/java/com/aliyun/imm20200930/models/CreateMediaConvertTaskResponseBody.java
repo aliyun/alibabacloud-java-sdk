@@ -7,7 +7,6 @@ public class CreateMediaConvertTaskResponseBody extends TeaModel {
     @NameInMap("EventId")
     public String eventId;
 
-    // 请求 ID
     @NameInMap("RequestId")
     public String requestId;
 

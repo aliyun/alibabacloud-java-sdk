@@ -13,7 +13,6 @@ public class RemoveStoryFilesRequest extends TeaModel {
     @NameInMap("ObjectId")
     public String objectId;
 
-    // A short description of struct
     @NameInMap("ProjectName")
     public String projectName;
 

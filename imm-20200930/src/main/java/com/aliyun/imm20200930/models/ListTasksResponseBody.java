@@ -4,23 +4,18 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ListTasksResponseBody extends TeaModel {
-    // 最大结果数量
     @NameInMap("MaxResults")
     public String maxResults;
 
-    // 翻页标记
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
-    // 请求唯一Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 任务信息
     @NameInMap("Tasks")
     public java.util.List<TaskInfo> tasks;
 

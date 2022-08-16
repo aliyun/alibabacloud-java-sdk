@@ -7,7 +7,6 @@ public class BatchGetFileMetaResponseBody extends TeaModel {
     @NameInMap("Files")
     public java.util.List<File> files;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

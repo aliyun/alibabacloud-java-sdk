@@ -7,7 +7,6 @@ public class DetectImageFacesResponseBody extends TeaModel {
     @NameInMap("Faces")
     public java.util.List<Figure> faces;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 

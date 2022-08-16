@@ -4,7 +4,6 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetStoryResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

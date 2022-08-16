@@ -4,35 +4,27 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class FileForReq extends TeaModel {
-    // ContentType
     @NameInMap("ContentType")
     public String contentType;
 
-    // CustomId
     @NameInMap("CustomId")
     public String customId;
 
-    // CustomLabels
     @NameInMap("CustomLabels")
     public java.util.Map<String, ?> customLabels;
 
-    // Figures
     @NameInMap("Figures")
     public java.util.List<FileForReqFigures> figures;
 
-    // FileHash
     @NameInMap("FileHash")
     public String fileHash;
 
-    // MediaType
     @NameInMap("MediaType")
     public String mediaType;
 
-    // OSSURI
     @NameInMap("OSSURI")
     public String OSSURI;
 
-    // URI
     @NameInMap("URI")
     public String URI;
 
@@ -106,15 +98,12 @@ public class FileForReq extends TeaModel {
     }
 
     public static class FileForReqFigures extends TeaModel {
-        // FigureClusterId
         @NameInMap("FigureClusterId")
         public String figureClusterId;
 
-        // FigureId
         @NameInMap("FigureId")
         public String figureId;
 
-        // FigureType
         @NameInMap("FigureType")
         public String figureType;
 

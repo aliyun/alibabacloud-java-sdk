@@ -4,15 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class WebofficeUser extends TeaModel {
-    // 头像
     @NameInMap("Avatar")
     public String avatar;
 
-    // Id
     @NameInMap("Id")
     public String id;
 
-    // 名字
     @NameInMap("Name")
     public String name;
 

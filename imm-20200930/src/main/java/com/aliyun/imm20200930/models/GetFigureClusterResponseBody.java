@@ -7,7 +7,6 @@ public class GetFigureClusterResponseBody extends TeaModel {
     @NameInMap("FigureCluster")
     public FigureCluster figureCluster;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

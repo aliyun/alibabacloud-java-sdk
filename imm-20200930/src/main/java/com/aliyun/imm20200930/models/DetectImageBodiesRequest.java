@@ -7,14 +7,12 @@ public class DetectImageBodiesRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
     @NameInMap("Sensitivity")
     public Float sensitivity;
 
-    // SourceURI
     @NameInMap("SourceURI")
     public String sourceURI;
 

@@ -7,7 +7,6 @@ public class UpdateProjectResponseBody extends TeaModel {
     @NameInMap("Project")
     public Project project;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

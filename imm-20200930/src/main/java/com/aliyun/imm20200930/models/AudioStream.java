@@ -4,71 +4,54 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class AudioStream extends TeaModel {
-    // Bitrate
     @NameInMap("Bitrate")
     public Long bitrate;
 
-    // ChannelLayout
     @NameInMap("ChannelLayout")
     public String channelLayout;
 
-    // Channels
     @NameInMap("Channels")
     public Long channels;
 
-    // CodecLongName
     @NameInMap("CodecLongName")
     public String codecLongName;
 
-    // CodecName
     @NameInMap("CodecName")
     public String codecName;
 
-    // CodecTag
     @NameInMap("CodecTag")
     public String codecTag;
 
-    // CodecTagString
     @NameInMap("CodecTagString")
     public String codecTagString;
 
-    // CodecTimeBase
     @NameInMap("CodecTimeBase")
     public String codecTimeBase;
 
-    // Duration
     @NameInMap("Duration")
     public Double duration;
 
-    // FrameCount
     @NameInMap("FrameCount")
     public Long frameCount;
 
-    // Index
     @NameInMap("Index")
     public Long index;
 
-    // Language
     @NameInMap("Language")
     public String language;
 
-    // Lyric
     @NameInMap("Lyric")
     public String lyric;
 
-    // SampleFormat
     @NameInMap("SampleFormat")
     public String sampleFormat;
 
-    // SampleRate
     @NameInMap("SampleRate")
     public Long sampleRate;
 
-    // StartTime
     @NameInMap("StartTime")
     public Double startTime;
 
-    // TimeBase
     @NameInMap("TimeBase")
     public String timeBase;
 

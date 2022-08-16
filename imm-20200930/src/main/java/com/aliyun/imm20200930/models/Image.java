@@ -4,26 +4,21 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Image extends TeaModel {
-    // CroppingSuggestions
     @NameInMap("CroppingSuggestions")
     public java.util.List<CroppingSuggestion> croppingSuggestions;
 
-    // EXIF
     @NameInMap("EXIF")
     public String EXIF;
 
-    // ImageHeight
     @NameInMap("ImageHeight")
     public Long imageHeight;
 
     @NameInMap("ImageScore")
     public ImageScore imageScore;
 
-    // ImageWidth
     @NameInMap("ImageWidth")
     public Long imageWidth;
 
-    // OCRContents
     @NameInMap("OCRContents")
     public java.util.List<OCRContents> OCRContents;
 

@@ -4,23 +4,18 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class FigureClusterForReq extends TeaModel {
-    // Cover
     @NameInMap("Cover")
     public FigureClusterForReqCover cover;
 
-    // CustomId
     @NameInMap("CustomId")
     public String customId;
 
-    // CustomLabels
     @NameInMap("CustomLabels")
     public java.util.Map<String, ?> customLabels;
 
-    // Name
     @NameInMap("Name")
     public String name;
 
-    // ObjectId
     @NameInMap("ObjectId")
     public String objectId;
 
@@ -70,7 +65,6 @@ public class FigureClusterForReq extends TeaModel {
     }
 
     public static class FigureClusterForReqCoverFigures extends TeaModel {
-        // FigureId
         @NameInMap("FigureId")
         public String figureId;
 
@@ -90,7 +84,6 @@ public class FigureClusterForReq extends TeaModel {
     }
 
     public static class FigureClusterForReqCover extends TeaModel {
-        // Figures
         @NameInMap("Figures")
         public java.util.List<FigureClusterForReqCoverFigures> figures;
 

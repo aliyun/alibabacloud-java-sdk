@@ -4,39 +4,30 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class TaskInfo extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 任务结束时间
     @NameInMap("EndTime")
     public String endTime;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 
-    // 任务开始时间
     @NameInMap("StartTime")
     public String startTime;
 
-    // 任务状态
     @NameInMap("Status")
     public String status;
 
-    // 标签
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
-    // 任务唯一ID
     @NameInMap("TaskId")
     public String taskId;
 
-    // 任务类型
     @NameInMap("TaskType")
     public String taskType;
 
-    // 用户自定义信息
     @NameInMap("UserData")
     public String userData;
 

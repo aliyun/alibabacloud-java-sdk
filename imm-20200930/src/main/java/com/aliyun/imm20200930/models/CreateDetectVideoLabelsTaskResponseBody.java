@@ -4,15 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateDetectVideoLabelsTaskResponseBody extends TeaModel {
-    // 事件Id
     @NameInMap("EventId")
     public String eventId;
 
-    // 请求唯一Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 任务唯一ID
     @NameInMap("TaskId")
     public String taskId;
 

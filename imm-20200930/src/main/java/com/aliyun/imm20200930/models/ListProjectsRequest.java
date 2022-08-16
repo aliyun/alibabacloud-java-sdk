@@ -4,15 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ListProjectsRequest extends TeaModel {
-    // 返回结果的最大个数
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 列出包含某前缀的project
     @NameInMap("Prefix")
     public String prefix;
 

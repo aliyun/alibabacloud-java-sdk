@@ -4,38 +4,30 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SimpleQueryRequest extends TeaModel {
-    // 聚合字段
     @NameInMap("Aggregations")
     public java.util.List<SimpleQueryRequestAggregations> aggregations;
 
-    // Dataset 名称
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // 本次读取的最大数据记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 标记当前开始读取的位置，置空表示从头开始
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 排序字段
     @NameInMap("Order")
     public String order;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
     @NameInMap("Query")
     public SimpleQuery query;
 
-    // 排序方式，默认 DESC
     @NameInMap("Sort")
     public String sort;
 
-    // 仅返回哪些字段
     @NameInMap("WithFields")
     public java.util.List<String> withFields;
 
@@ -117,11 +109,9 @@ public class SimpleQueryRequest extends TeaModel {
     }
 
     public static class SimpleQueryRequestAggregations extends TeaModel {
-        // 聚合字段的字段名
         @NameInMap("Field")
         public String field;
 
-        // 聚合字段的聚合操作符
         @NameInMap("Operation")
         public String operation;
 

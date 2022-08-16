@@ -4,27 +4,21 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetWebofficeURLResponseBody extends TeaModel {
-    // access token
     @NameInMap("AccessToken")
     public String accessToken;
 
-    // access token 过期时间
     @NameInMap("AccessTokenExpiredTime")
     public String accessTokenExpiredTime;
 
-    // refresh token
     @NameInMap("RefreshToken")
     public String refreshToken;
 
-    // refresh token 过期时间
     @NameInMap("RefreshTokenExpiredTime")
     public String refreshTokenExpiredTime;
 
-    // 请求 id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 预览编辑地址
     @NameInMap("WebofficeURL")
     public String webofficeURL;
 

@@ -10,9 +10,6 @@ public class IndexFileMetaShrinkRequest extends TeaModel {
     @NameInMap("File")
     public String fileShrink;
 
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -38,14 +35,6 @@ public class IndexFileMetaShrinkRequest extends TeaModel {
     }
     public String getFileShrink() {
         return this.fileShrink;
-    }
-
-    public IndexFileMetaShrinkRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
     }
 
     public IndexFileMetaShrinkRequest setNotifyTopicName(String notifyTopicName) {

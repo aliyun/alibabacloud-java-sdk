@@ -7,11 +7,9 @@ public class FuzzyQueryResponseBody extends TeaModel {
     @NameInMap("Files")
     public java.util.List<File> files;
 
-    // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 本次请求的唯一 Id
     @NameInMap("RequestId")
     public String requestId;
 

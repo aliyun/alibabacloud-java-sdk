@@ -4,18 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetsRequest extends TeaModel {
-    // 返回最大个数
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("Prefix")
     public String prefix;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 

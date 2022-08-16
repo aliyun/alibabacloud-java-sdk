@@ -4,19 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SimpleQuery extends TeaModel {
-    // 需要查询的字段名
     @NameInMap("Field")
     public String field;
 
-    // 运算符
     @NameInMap("Operation")
     public String operation;
 
-    // 由 SimpleQuery 结构体组成的子查询数组
     @NameInMap("SubQueries")
     public java.util.List<SimpleQuery> subQueries;
 
-    // 需要查询的字段值
     @NameInMap("Value")
     public String value;
 

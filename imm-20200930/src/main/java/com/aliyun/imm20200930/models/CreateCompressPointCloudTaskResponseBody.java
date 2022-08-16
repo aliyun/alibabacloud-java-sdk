@@ -3,7 +3,7 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateFigureClustersMergingTaskResponseBody extends TeaModel {
+public class CreateCompressPointCloudTaskResponseBody extends TeaModel {
     @NameInMap("EventId")
     public String eventId;
 
@@ -13,12 +13,12 @@ public class CreateFigureClustersMergingTaskResponseBody extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
-    public static CreateFigureClustersMergingTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateFigureClustersMergingTaskResponseBody self = new CreateFigureClustersMergingTaskResponseBody();
+    public static CreateCompressPointCloudTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateCompressPointCloudTaskResponseBody self = new CreateCompressPointCloudTaskResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateFigureClustersMergingTaskResponseBody setEventId(String eventId) {
+    public CreateCompressPointCloudTaskResponseBody setEventId(String eventId) {
         this.eventId = eventId;
         return this;
     }
@@ -26,7 +26,7 @@ public class CreateFigureClustersMergingTaskResponseBody extends TeaModel {
         return this.eventId;
     }
 
-    public CreateFigureClustersMergingTaskResponseBody setRequestId(String requestId) {
+    public CreateCompressPointCloudTaskResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -34,7 +34,7 @@ public class CreateFigureClustersMergingTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateFigureClustersMergingTaskResponseBody setTaskId(String taskId) {
+    public CreateCompressPointCloudTaskResponseBody setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }

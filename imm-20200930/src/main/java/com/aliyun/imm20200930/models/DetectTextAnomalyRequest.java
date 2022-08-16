@@ -7,7 +7,6 @@ public class DetectTextAnomalyRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 

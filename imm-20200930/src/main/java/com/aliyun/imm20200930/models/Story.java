@@ -7,67 +7,51 @@ public class Story extends TeaModel {
     @NameInMap("Cover")
     public File cover;
 
-    // CreateTime
     @NameInMap("CreateTime")
     public String createTime;
 
-    // CustomId
     @NameInMap("CustomId")
     public String customId;
 
-    // CustomLabels
     @NameInMap("CustomLabels")
     public java.util.Map<String, ?> customLabels;
 
-    // DatasetName
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // FigureClusterIds
     @NameInMap("FigureClusterIds")
     public java.util.List<String> figureClusterIds;
 
-    // Files
     @NameInMap("Files")
     public java.util.List<File> files;
 
-    // ObjectId
     @NameInMap("ObjectId")
     public String objectId;
 
-    // ObjectType
     @NameInMap("ObjectType")
     public String objectType;
 
-    // OwnerId
     @NameInMap("OwnerId")
     public String ownerId;
 
-    // ProjectName
     @NameInMap("ProjectName")
     public String projectName;
 
-    // StoryEndTime
     @NameInMap("StoryEndTime")
     public String storyEndTime;
 
-    // StoryName
     @NameInMap("StoryName")
     public String storyName;
 
-    // StoryStartTime
     @NameInMap("StoryStartTime")
     public String storyStartTime;
 
-    // StorySubType
     @NameInMap("StorySubType")
     public String storySubType;
 
-    // StoryType
     @NameInMap("StoryType")
     public String storyType;
 
-    // UpdateTime
     @NameInMap("UpdateTime")
     public String updateTime;
 

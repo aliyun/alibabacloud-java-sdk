@@ -7,7 +7,6 @@ public class GetBindingResponseBody extends TeaModel {
     @NameInMap("Binding")
     public Binding binding;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,7 +4,6 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteProjectResponseBody extends TeaModel {
-    // 本次请求的唯一 ID
     @NameInMap("RequestId")
     public String requestId;
 

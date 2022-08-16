@@ -4,19 +4,15 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Codes extends TeaModel {
-    // Boundary
     @NameInMap("Boundary")
     public Boundary boundary;
 
-    // Confidence
     @NameInMap("Confidence")
     public Float confidence;
 
-    // Content
     @NameInMap("Content")
     public String content;
 
-    // Type
     @NameInMap("Type")
     public String type;
 

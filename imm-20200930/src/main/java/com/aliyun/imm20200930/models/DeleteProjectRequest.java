@@ -4,7 +4,6 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteProjectRequest extends TeaModel {
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 

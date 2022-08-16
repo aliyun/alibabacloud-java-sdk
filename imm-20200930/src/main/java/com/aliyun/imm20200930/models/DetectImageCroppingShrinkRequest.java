@@ -10,11 +10,9 @@ public class DetectImageCroppingShrinkRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
-    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
-    // SourceURI
     @NameInMap("SourceURI")
     public String sourceURI;
 

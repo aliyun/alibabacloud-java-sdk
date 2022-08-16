@@ -16,14 +16,12 @@ public class QueryFigureClustersRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 升降序
     @NameInMap("Order")
     public String order;
 
     @NameInMap("ProjectName")
     public String projectName;
 
-    // 排序字段
     @NameInMap("Sort")
     public String sort;
 

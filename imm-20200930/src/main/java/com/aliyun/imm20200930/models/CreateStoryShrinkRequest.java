@@ -19,9 +19,6 @@ public class CreateStoryShrinkRequest extends TeaModel {
     @NameInMap("MinFileCount")
     public Long minFileCount;
 
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -95,14 +92,6 @@ public class CreateStoryShrinkRequest extends TeaModel {
     }
     public Long getMinFileCount() {
         return this.minFileCount;
-    }
-
-    public CreateStoryShrinkRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
     }
 
     public CreateStoryShrinkRequest setNotifyTopicName(String notifyTopicName) {

@@ -13,7 +13,6 @@ public class ListBindingsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // A short description of struct
     @NameInMap("ProjectName")
     public String projectName;
 
