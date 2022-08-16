@@ -7,9 +7,6 @@ public class ListCardsRequest extends TeaModel {
     @NameInMap("Apn")
     public String apn;
 
-    @NameInMap("DestinationType")
-    public String destinationType;
-
     @NameInMap("Iccid")
     public String iccid;
 
@@ -37,9 +34,6 @@ public class ListCardsRequest extends TeaModel {
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
 
-    @NameInMap("VpcId")
-    public String vpcId;
-
     @NameInMap("WirelessCloudConnectorId")
     public String wirelessCloudConnectorId;
 
@@ -54,14 +48,6 @@ public class ListCardsRequest extends TeaModel {
     }
     public String getApn() {
         return this.apn;
-    }
-
-    public ListCardsRequest setDestinationType(String destinationType) {
-        this.destinationType = destinationType;
-        return this;
-    }
-    public String getDestinationType() {
-        return this.destinationType;
     }
 
     public ListCardsRequest setIccid(String iccid) {
@@ -134,14 +120,6 @@ public class ListCardsRequest extends TeaModel {
     }
     public java.util.List<String> getStatuses() {
         return this.statuses;
-    }
-
-    public ListCardsRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
     }
 
     public ListCardsRequest setWirelessCloudConnectorId(String wirelessCloudConnectorId) {

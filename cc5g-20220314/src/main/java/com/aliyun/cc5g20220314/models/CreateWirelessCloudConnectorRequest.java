@@ -4,6 +4,9 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class CreateWirelessCloudConnectorRequest extends TeaModel {
+    @NameInMap("BusinessType")
+    public String businessType;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -31,6 +34,14 @@ public class CreateWirelessCloudConnectorRequest extends TeaModel {
     public static CreateWirelessCloudConnectorRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWirelessCloudConnectorRequest self = new CreateWirelessCloudConnectorRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateWirelessCloudConnectorRequest setBusinessType(String businessType) {
+        this.businessType = businessType;
+        return this;
+    }
+    public String getBusinessType() {
+        return this.businessType;
     }
 
     public CreateWirelessCloudConnectorRequest setClientToken(String clientToken) {

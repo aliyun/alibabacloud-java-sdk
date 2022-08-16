@@ -4,6 +4,9 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListWirelessCloudConnectorsRequest extends TeaModel {
+    @NameInMap("BusinessType")
+    public String businessType;
+
     @NameInMap("MaxResults")
     public Long maxResults;
 
@@ -25,6 +28,14 @@ public class ListWirelessCloudConnectorsRequest extends TeaModel {
     public static ListWirelessCloudConnectorsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListWirelessCloudConnectorsRequest self = new ListWirelessCloudConnectorsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListWirelessCloudConnectorsRequest setBusinessType(String businessType) {
+        this.businessType = businessType;
+        return this;
+    }
+    public String getBusinessType() {
+        return this.businessType;
     }
 
     public ListWirelessCloudConnectorsRequest setMaxResults(Long maxResults) {

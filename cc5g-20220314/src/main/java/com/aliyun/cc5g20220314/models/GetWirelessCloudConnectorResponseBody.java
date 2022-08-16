@@ -4,6 +4,9 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class GetWirelessCloudConnectorResponseBody extends TeaModel {
+    @NameInMap("BusinessType")
+    public String businessType;
+
     @NameInMap("CardCount")
     public String cardCount;
 
@@ -19,17 +22,18 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Features")
+    public java.util.List<String> features;
+
     @NameInMap("Name")
     public String name;
 
-    // 数组，返回示例目录。
     @NameInMap("NetLinks")
     public java.util.List<GetWirelessCloudConnectorResponseBodyNetLinks> netLinks;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -45,6 +49,14 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
     public static GetWirelessCloudConnectorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetWirelessCloudConnectorResponseBody self = new GetWirelessCloudConnectorResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetWirelessCloudConnectorResponseBody setBusinessType(String businessType) {
+        this.businessType = businessType;
+        return this;
+    }
+    public String getBusinessType() {
+        return this.businessType;
     }
 
     public GetWirelessCloudConnectorResponseBody setCardCount(String cardCount) {
@@ -85,6 +97,14 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public GetWirelessCloudConnectorResponseBody setFeatures(java.util.List<String> features) {
+        this.features = features;
+        return this;
+    }
+    public java.util.List<String> getFeatures() {
+        return this.features;
     }
 
     public GetWirelessCloudConnectorResponseBody setName(String name) {
@@ -156,11 +176,9 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
         @NameInMap("ISP")
         public String ISP;
 
-        // 创建时间
         @NameInMap("Name")
         public String name;
 
-        // 资源名称
         @NameInMap("NetLinkId")
         public String netLinkId;
 

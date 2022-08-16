@@ -4,11 +4,9 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListZonesResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 数组，返回示例目录。
     @NameInMap("Zones")
     public java.util.List<ListZonesResponseBodyZones> zones;
 
@@ -34,11 +32,9 @@ public class ListZonesResponseBody extends TeaModel {
     }
 
     public static class ListZonesResponseBodyZones extends TeaModel {
-        // 创建时间
         @NameInMap("LocalName")
         public String localName;
 
-        // 资源名称
         @NameInMap("ZoneId")
         public String zoneId;
 

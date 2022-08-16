@@ -4,7 +4,6 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListCardsResponseBody extends TeaModel {
-    // 数组，返回示例目录。
     @NameInMap("Cards")
     public java.util.List<ListCardsResponseBodyCards> cards;
 
@@ -14,7 +13,6 @@ public class ListCardsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,7 +65,6 @@ public class ListCardsResponseBody extends TeaModel {
     }
 
     public static class ListCardsResponseBodyCards extends TeaModel {
-        // 创建时间
         @NameInMap("APN")
         public String APN;
 
@@ -83,7 +80,6 @@ public class ListCardsResponseBody extends TeaModel {
         @NameInMap("ISP")
         public String ISP;
 
-        // 资源一级ID
         @NameInMap("Iccid")
         public String iccid;
 
@@ -99,10 +95,12 @@ public class ListCardsResponseBody extends TeaModel {
         @NameInMap("Lock")
         public Boolean lock;
 
+        @NameInMap("Msisdn")
+        public String msisdn;
+
         @NameInMap("Name")
         public String name;
 
-        // 资源名称
         @NameInMap("NetType")
         public String netType;
 
@@ -117,6 +115,9 @@ public class ListCardsResponseBody extends TeaModel {
 
         @NameInMap("UsageDataMonth")
         public Long usageDataMonth;
+
+        @NameInMap("UsageDataTotal")
+        public String usageDataTotal;
 
         public static ListCardsResponseBodyCards build(java.util.Map<String, ?> map) throws Exception {
             ListCardsResponseBodyCards self = new ListCardsResponseBodyCards();
@@ -203,6 +204,14 @@ public class ListCardsResponseBody extends TeaModel {
             return this.lock;
         }
 
+        public ListCardsResponseBodyCards setMsisdn(String msisdn) {
+            this.msisdn = msisdn;
+            return this;
+        }
+        public String getMsisdn() {
+            return this.msisdn;
+        }
+
         public ListCardsResponseBodyCards setName(String name) {
             this.name = name;
             return this;
@@ -249,6 +258,14 @@ public class ListCardsResponseBody extends TeaModel {
         }
         public Long getUsageDataMonth() {
             return this.usageDataMonth;
+        }
+
+        public ListCardsResponseBodyCards setUsageDataTotal(String usageDataTotal) {
+            this.usageDataTotal = usageDataTotal;
+            return this;
+        }
+        public String getUsageDataTotal() {
+            return this.usageDataTotal;
         }
 
     }

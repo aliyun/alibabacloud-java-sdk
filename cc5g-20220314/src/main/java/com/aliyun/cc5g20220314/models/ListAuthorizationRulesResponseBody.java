@@ -4,7 +4,6 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorizationRulesResponseBody extends TeaModel {
-    // 数组，返回示例目录。
     @NameInMap("AuthorizationRules")
     public java.util.List<ListAuthorizationRulesResponseBodyAuthorizationRules> authorizationRules;
 
@@ -14,7 +13,6 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,7 +65,6 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
     }
 
     public static class ListAuthorizationRulesResponseBodyAuthorizationRules extends TeaModel {
-        // 资源一级ID
         @NameInMap("AuthorizationRuleId")
         public String authorizationRuleId;
 
@@ -84,9 +81,8 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         public String destinationType;
 
         @NameInMap("Dns")
-        public String dns;
+        public Boolean dns;
 
-        // 创建时间
         @NameInMap("Name")
         public String name;
 
@@ -96,7 +92,6 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         @NameInMap("SourceCidr")
         public String sourceCidr;
 
-        // 资源名称
         @NameInMap("Status")
         public String status;
 
@@ -148,11 +143,11 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             return this.destinationType;
         }
 
-        public ListAuthorizationRulesResponseBodyAuthorizationRules setDns(String dns) {
+        public ListAuthorizationRulesResponseBodyAuthorizationRules setDns(Boolean dns) {
             this.dns = dns;
             return this;
         }
-        public String getDns() {
+        public Boolean getDns() {
             return this.dns;
         }
 

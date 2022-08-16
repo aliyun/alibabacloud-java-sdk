@@ -10,7 +10,6 @@ public class CreateBatchOperateCardsTaskResponseBody extends TeaModel {
     @NameInMap("OperateResultOssFilePath")
     public String operateResultOssFilePath;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
