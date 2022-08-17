@@ -4,26 +4,21 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
-    // 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。如果设置了NextToken，则请求参数PageSize和PageNumber将失效，且返回数据中的TotalCount无效。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 参数页码。
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 参数页行数。
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("ReplicaPairs")
     public java.util.List<DescribeDiskReplicaPairsResponseBodyReplicaPairs> replicaPairs;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 分页查询时的结果总条数。
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -81,15 +76,12 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiskReplicaPairsResponseBodyReplicaPairs extends TeaModel {
-        // 异步复制时使用的带宽。单位为Kbps。
         @NameInMap("Bandwidth")
         public Long bandwidth;
 
-        // 付费类型。PREPAY：预付费；POSTPAY：后付费。
         @NameInMap("ChargeType")
         public String chargeType;
 
-        // 创建时间。1970年1月1日0点0分以来的秒数。
         @NameInMap("CreateTime")
         public Long createTime;
 
@@ -102,44 +94,36 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         @NameInMap("DestinationRegion")
         public String destinationRegion;
 
-        // 从盘所属的可用区。
         @NameInMap("DestinationZoneId")
         public String destinationZoneId;
 
         @NameInMap("ExpiredTime")
         public Long expiredTime;
 
-        // 最近一次异步复制操作完成的时间。该参数以时间戳的形式提供返回值。单位为秒。
         @NameInMap("LastRecoverPoint")
         public Long lastRecoverPoint;
 
         @NameInMap("PairName")
         public String pairName;
 
-        // 复制对的初始源地域。
         @NameInMap("PrimaryRegion")
         public String primaryRegion;
 
-        // 复制对的初始源可用区。
         @NameInMap("PrimaryZone")
         public String primaryZone;
 
-        // 复制对的RPO值。单位为秒。
         @NameInMap("RPO")
         public Long RPO;
 
-        // 所属复制组id。
         @NameInMap("ReplicaGroupId")
         public String replicaGroupId;
 
-        // 所属复制组名称。
         @NameInMap("ReplicaGroupName")
         public String replicaGroupName;
 
         @NameInMap("ReplicaPairId")
         public String replicaPairId;
 
-        // 复制对信息的后端站点来源，production或backup。
         @NameInMap("Site")
         public String site;
 
@@ -149,43 +133,18 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         @NameInMap("SourceRegion")
         public String sourceRegion;
 
-        // 主盘所属的可用区。
         @NameInMap("SourceZoneId")
         public String sourceZoneId;
 
-        // 复制对的初始目的地域。
         @NameInMap("StandbyRegion")
         public String standbyRegion;
 
-        // 复制对的初始目的可用区。
         @NameInMap("StandbyZone")
         public String standbyZone;
 
-        // 异步复制关系的状态。可能值：
-        // 
-        // - invalid：失效。该状态表示异步复制关系存在异常。
-        // - creating：创建中。
-        // - created：已创建。
-        // - create_failed：创建失败。
-        // - initial_syncing：初始同步中。异步复制在创建并启动后，主盘数据初次异步复制到从盘的过程中，将处于该状态。
-        // - syncing：同步中。主盘和从盘之间非第一次进行异步复制数据时，将处于该状态。
-        // - manual_syncing：单次同步中。单次同步，同步完成后恢复到stopped状态。如果是第一次单次同步，则同步中也显示为状态manual_syncing。
-        // - normal：正常。当异步复制的当前周期内数据复制完成时，将处于该状态。
-        // - stopping：停止中。
-        // - stopped：已停止。
-        // - stop_failed：停止失败。
-        // - failovering：故障切换中。
-        // - failovered：故障切换完成。
-        // - failover_failed：故障切换失败。
-        // - reprotecting：反向复制操作中。
-        // - reprotect_failed：反向复制失败。
-        // - deleting：删除中。
-        // - delete_failed：删除失败。
-        // - deleted：已删除。
         @NameInMap("Status")
         public String status;
 
-        // 复制对的状态提示信息。比如invalid时，可能值：DeviceRemoved：主盘或者从盘被删除。DeviceKeyChanged：主盘或从盘的DeviceKey映射发生变化。
         @NameInMap("StatusMessage")
         public String statusMessage;
 

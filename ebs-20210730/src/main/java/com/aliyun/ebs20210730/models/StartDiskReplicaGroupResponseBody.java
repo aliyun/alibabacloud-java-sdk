@@ -4,7 +4,6 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class StartDiskReplicaGroupResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

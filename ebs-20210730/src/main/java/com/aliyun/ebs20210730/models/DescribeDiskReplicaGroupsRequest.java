@@ -16,7 +16,6 @@ public class DescribeDiskReplicaGroupsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    // production或backup，表示数据从主或备站点获取，默认为production。
     @NameInMap("Site")
     public String site;
 
