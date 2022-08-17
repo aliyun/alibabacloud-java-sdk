@@ -10,7 +10,6 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
     @NameInMap("ReplicaGroups")
     public java.util.List<DescribeDiskReplicaGroupsResponseBodyReplicaGroups> replicaGroups;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -44,6 +43,9 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiskReplicaGroupsResponseBodyReplicaGroups extends TeaModel {
+        @NameInMap("Bandwidth")
+        public Long bandwidth;
+
         @NameInMap("Description")
         public String description;
 
@@ -62,15 +64,12 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         @NameInMap("PairIds")
         public java.util.List<byte[]> pairIds;
 
-        // 复制组中的复制对个数
         @NameInMap("PairNumber")
         public Long pairNumber;
 
-        // 复制组的初始源地域。
         @NameInMap("PrimaryRegion")
         public String primaryRegion;
 
-        // 复制组的初始源可用区。
         @NameInMap("PrimaryZone")
         public String primaryZone;
 
@@ -80,7 +79,6 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         @NameInMap("ReplicaGroupId")
         public String replicaGroupId;
 
-        // pair信息的后端站点来源，production或backup
         @NameInMap("Site")
         public String site;
 
@@ -90,11 +88,9 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         @NameInMap("SourceZoneId")
         public String sourceZoneId;
 
-        // 复制组的初始目的地域。
         @NameInMap("StandbyRegion")
         public String standbyRegion;
 
-        // 复制组的初始目的可用区。
         @NameInMap("StandbyZone")
         public String standbyZone;
 
@@ -104,6 +100,14 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         public static DescribeDiskReplicaGroupsResponseBodyReplicaGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeDiskReplicaGroupsResponseBodyReplicaGroups self = new DescribeDiskReplicaGroupsResponseBodyReplicaGroups();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDiskReplicaGroupsResponseBodyReplicaGroups setBandwidth(Long bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public Long getBandwidth() {
+            return this.bandwidth;
         }
 
         public DescribeDiskReplicaGroupsResponseBodyReplicaGroups setDescription(String description) {

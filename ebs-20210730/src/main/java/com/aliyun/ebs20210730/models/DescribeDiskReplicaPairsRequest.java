@@ -4,38 +4,27 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiskReplicaPairsRequest extends TeaModel {
-    // 分页查询时每页的最大条目数。取值范围：1~500
-    // 
-    // 默认值：10
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 查询凭证（Token）。取值为上一次调用该接口返回的NextToken参数值，初次调用接口时无需设置该参数。如果设置了NextToken，则请求参数PageSize和PageNumber将失效，且返回数据中的TotalCount无效。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 分页查询时的页码。
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页查询时设置的每页行数。
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 异步复制关系ID列表。您可以指定一个或多个异步复制关系ID进行查询。格式为：pair-cn-dsa****,pair-cn-asd****。
-    // 
-    // 默认值为空，表示查询当前地域下所有的异步复制关系。
     @NameInMap("PairIds")
     public String pairIds;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    // 所属复制组id。
     @NameInMap("ReplicaGroupId")
     public String replicaGroupId;
 
-    // production或backup，表示获取本地为生产站点或灾备站点的复制对数据，默认为production。
     @NameInMap("Site")
     public String site;
 

@@ -4,6 +4,9 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class ModifyDiskReplicaGroupRequest extends TeaModel {
+    @NameInMap("Bandwidth")
+    public Long bandwidth;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -25,6 +28,14 @@ public class ModifyDiskReplicaGroupRequest extends TeaModel {
     public static ModifyDiskReplicaGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDiskReplicaGroupRequest self = new ModifyDiskReplicaGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDiskReplicaGroupRequest setBandwidth(Long bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Long getBandwidth() {
+        return this.bandwidth;
     }
 
     public ModifyDiskReplicaGroupRequest setClientToken(String clientToken) {
