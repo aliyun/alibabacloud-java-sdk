@@ -8,11 +8,17 @@ public class UploadFileAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream fileUrlObject;
 
+    @NameInMap("Ak")
+    public String ak;
+
     @NameInMap("FileName")
     public String fileName;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Secret")
+    public String secret;
 
     @NameInMap("Type")
     public String type;
@@ -33,6 +39,14 @@ public class UploadFileAdvanceRequest extends TeaModel {
         return this.fileUrlObject;
     }
 
+    public UploadFileAdvanceRequest setAk(String ak) {
+        this.ak = ak;
+        return this;
+    }
+    public String getAk() {
+        return this.ak;
+    }
+
     public UploadFileAdvanceRequest setFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -47,6 +61,14 @@ public class UploadFileAdvanceRequest extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UploadFileAdvanceRequest setSecret(String secret) {
+        this.secret = secret;
+        return this;
+    }
+    public String getSecret() {
+        return this.secret;
     }
 
     public UploadFileAdvanceRequest setType(String type) {

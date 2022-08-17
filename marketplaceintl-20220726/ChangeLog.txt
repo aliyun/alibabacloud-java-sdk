@@ -1,3 +1,6 @@
+2022-08-17 Version: 1.0.5
+- InteMarketPlace add ak and secret field.
+
 2022-08-11 Version: 1.0.4
 - Test.
 

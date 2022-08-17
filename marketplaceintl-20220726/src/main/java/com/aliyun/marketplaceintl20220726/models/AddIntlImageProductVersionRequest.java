@@ -7,6 +7,9 @@ public class AddIntlImageProductVersionRequest extends TeaModel {
     @NameInMap("AccessDetail")
     public AddIntlImageProductVersionRequestAccessDetail accessDetail;
 
+    @NameInMap("Ak")
+    public String ak;
+
     @NameInMap("CommodityCode")
     public String commodityCode;
 
@@ -15,6 +18,9 @@ public class AddIntlImageProductVersionRequest extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Secret")
+    public String secret;
 
     @NameInMap("Uid")
     public String uid;
@@ -30,6 +36,14 @@ public class AddIntlImageProductVersionRequest extends TeaModel {
     }
     public AddIntlImageProductVersionRequestAccessDetail getAccessDetail() {
         return this.accessDetail;
+    }
+
+    public AddIntlImageProductVersionRequest setAk(String ak) {
+        this.ak = ak;
+        return this;
+    }
+    public String getAk() {
+        return this.ak;
     }
 
     public AddIntlImageProductVersionRequest setCommodityCode(String commodityCode) {
@@ -54,6 +68,14 @@ public class AddIntlImageProductVersionRequest extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public AddIntlImageProductVersionRequest setSecret(String secret) {
+        this.secret = secret;
+        return this;
+    }
+    public String getSecret() {
+        return this.secret;
     }
 
     public AddIntlImageProductVersionRequest setUid(String uid) {
