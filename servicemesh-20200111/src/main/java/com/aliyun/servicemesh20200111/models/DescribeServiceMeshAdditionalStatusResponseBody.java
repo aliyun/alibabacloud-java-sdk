@@ -94,6 +94,69 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus extends TeaModel {
+        @NameInMap("Locked")
+        public Boolean locked;
+
+        @NameInMap("PayType")
+        public String payType;
+
+        @NameInMap("Reused")
+        public Boolean reused;
+
+        @NameInMap("SLBBackEndServerNumStatus")
+        public String SLBBackEndServerNumStatus;
+
+        @NameInMap("SLBExistStatus")
+        public String SLBExistStatus;
+
+        public static DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus self = new DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus setLocked(Boolean locked) {
+            this.locked = locked;
+            return this;
+        }
+        public Boolean getLocked() {
+            return this.locked;
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus setReused(Boolean reused) {
+            this.reused = reused;
+            return this;
+        }
+        public Boolean getReused() {
+            return this.reused;
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus setSLBBackEndServerNumStatus(String SLBBackEndServerNumStatus) {
+            this.SLBBackEndServerNumStatus = SLBBackEndServerNumStatus;
+            return this;
+        }
+        public String getSLBBackEndServerNumStatus() {
+            return this.SLBBackEndServerNumStatus;
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus setSLBExistStatus(String SLBExistStatus) {
+            this.SLBExistStatus = SLBExistStatus;
+            return this;
+        }
+        public String getSLBExistStatus() {
+            return this.SLBExistStatus;
+        }
+
+    }
+
     public static class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus extends TeaModel {
         @NameInMap("Locked")
         public Boolean locked;
@@ -170,6 +233,9 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
         @NameInMap("AuditProjectStatus")
         public String auditProjectStatus;
 
+        @NameInMap("CanaryPilotLoadBalancerStatus")
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus canaryPilotLoadBalancerStatus;
+
         @NameInMap("ControlPlaneProjectStatus")
         public String controlPlaneProjectStatus;
 
@@ -217,6 +283,14 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
         }
         public String getAuditProjectStatus() {
             return this.auditProjectStatus;
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatus setCanaryPilotLoadBalancerStatus(DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus canaryPilotLoadBalancerStatus) {
+            this.canaryPilotLoadBalancerStatus = canaryPilotLoadBalancerStatus;
+            return this;
+        }
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus getCanaryPilotLoadBalancerStatus() {
+            return this.canaryPilotLoadBalancerStatus;
         }
 
         public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatus setControlPlaneProjectStatus(String controlPlaneProjectStatus) {

@@ -13,6 +13,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("AccessLogFormat")
     public String accessLogFormat;
 
+    @NameInMap("AccessLogGatewayLifecycle")
+    public Integer accessLogGatewayLifecycle;
+
     @NameInMap("AccessLogProject")
     public String accessLogProject;
 
@@ -24,6 +27,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
 
     @NameInMap("AccessLogServicePort")
     public Integer accessLogServicePort;
+
+    @NameInMap("AccessLogSidecarLifecycle")
+    public Integer accessLogSidecarLifecycle;
 
     @NameInMap("AuditProject")
     public String auditProject;
@@ -66,6 +72,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
 
     @NameInMap("EnableAudit")
     public Boolean enableAudit;
+
+    @NameInMap("EnableAutoDiagnosis")
+    public Boolean enableAutoDiagnosis;
 
     @NameInMap("EnableCRHistory")
     public Boolean enableCRHistory;
@@ -282,6 +291,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
         return this.accessLogFormat;
     }
 
+    public UpdateMeshFeatureRequest setAccessLogGatewayLifecycle(Integer accessLogGatewayLifecycle) {
+        this.accessLogGatewayLifecycle = accessLogGatewayLifecycle;
+        return this;
+    }
+    public Integer getAccessLogGatewayLifecycle() {
+        return this.accessLogGatewayLifecycle;
+    }
+
     public UpdateMeshFeatureRequest setAccessLogProject(String accessLogProject) {
         this.accessLogProject = accessLogProject;
         return this;
@@ -312,6 +329,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public Integer getAccessLogServicePort() {
         return this.accessLogServicePort;
+    }
+
+    public UpdateMeshFeatureRequest setAccessLogSidecarLifecycle(Integer accessLogSidecarLifecycle) {
+        this.accessLogSidecarLifecycle = accessLogSidecarLifecycle;
+        return this;
+    }
+    public Integer getAccessLogSidecarLifecycle() {
+        return this.accessLogSidecarLifecycle;
     }
 
     public UpdateMeshFeatureRequest setAuditProject(String auditProject) {
@@ -424,6 +449,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public Boolean getEnableAudit() {
         return this.enableAudit;
+    }
+
+    public UpdateMeshFeatureRequest setEnableAutoDiagnosis(Boolean enableAutoDiagnosis) {
+        this.enableAutoDiagnosis = enableAutoDiagnosis;
+        return this;
+    }
+    public Boolean getEnableAutoDiagnosis() {
+        return this.enableAutoDiagnosis;
     }
 
     public UpdateMeshFeatureRequest setEnableCRHistory(Boolean enableCRHistory) {

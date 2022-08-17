@@ -4,23 +4,18 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesResponseBody extends TeaModel {
-    // MaxResults本次请求所返回的最大记录条数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    // VSwitches
     @NameInMap("VSwitches")
     public java.util.List<DescribeVSwitchesResponseBodyVSwitches> vSwitches;
 

@@ -2592,6 +2592,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AccessLogFormat", request.accessLogFormat);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.accessLogGatewayLifecycle)) {
+            body.put("AccessLogGatewayLifecycle", request.accessLogGatewayLifecycle);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.accessLogProject)) {
             body.put("AccessLogProject", request.accessLogProject);
         }
@@ -2606,6 +2610,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.accessLogServicePort)) {
             body.put("AccessLogServicePort", request.accessLogServicePort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accessLogSidecarLifecycle)) {
+            body.put("AccessLogSidecarLifecycle", request.accessLogSidecarLifecycle);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.auditProject)) {
@@ -2662,6 +2670,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableAudit)) {
             body.put("EnableAudit", request.enableAudit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAutoDiagnosis)) {
+            body.put("EnableAutoDiagnosis", request.enableAutoDiagnosis);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableCRHistory)) {

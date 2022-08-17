@@ -4,7 +4,6 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetCaCertResponseBody extends TeaModel {
-    // base64 encode format
     @NameInMap("CaCert")
     public String caCert;
 
