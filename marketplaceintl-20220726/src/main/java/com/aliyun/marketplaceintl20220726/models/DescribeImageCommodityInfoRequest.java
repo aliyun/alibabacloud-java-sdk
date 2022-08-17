@@ -4,11 +4,17 @@ package com.aliyun.marketplaceintl20220726.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageCommodityInfoRequest extends TeaModel {
+    @NameInMap("Ak")
+    public String ak;
+
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Secret")
+    public String secret;
 
     @NameInMap("Uid")
     public String uid;
@@ -16,6 +22,14 @@ public class DescribeImageCommodityInfoRequest extends TeaModel {
     public static DescribeImageCommodityInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageCommodityInfoRequest self = new DescribeImageCommodityInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeImageCommodityInfoRequest setAk(String ak) {
+        this.ak = ak;
+        return this;
+    }
+    public String getAk() {
+        return this.ak;
     }
 
     public DescribeImageCommodityInfoRequest setCommodityCode(String commodityCode) {
@@ -32,6 +46,14 @@ public class DescribeImageCommodityInfoRequest extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeImageCommodityInfoRequest setSecret(String secret) {
+        this.secret = secret;
+        return this;
+    }
+    public String getSecret() {
+        return this.secret;
     }
 
     public DescribeImageCommodityInfoRequest setUid(String uid) {

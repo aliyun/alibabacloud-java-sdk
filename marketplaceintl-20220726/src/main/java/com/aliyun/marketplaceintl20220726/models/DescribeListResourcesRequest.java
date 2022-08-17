@@ -4,8 +4,14 @@ package com.aliyun.marketplaceintl20220726.models;
 import com.aliyun.tea.*;
 
 public class DescribeListResourcesRequest extends TeaModel {
+    @NameInMap("Ak")
+    public String ak;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Secret")
+    public String secret;
 
     @NameInMap("Type")
     public String type;
@@ -18,12 +24,28 @@ public class DescribeListResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeListResourcesRequest setAk(String ak) {
+        this.ak = ak;
+        return this;
+    }
+    public String getAk() {
+        return this.ak;
+    }
+
     public DescribeListResourcesRequest setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeListResourcesRequest setSecret(String secret) {
+        this.secret = secret;
+        return this;
+    }
+    public String getSecret() {
+        return this.secret;
     }
 
     public DescribeListResourcesRequest setType(String type) {

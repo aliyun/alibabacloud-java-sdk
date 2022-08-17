@@ -76,11 +76,17 @@ public class DescribeCountriesResponseBody extends TeaModel {
     }
 
     public static class DescribeCountriesResponseBodyData extends TeaModel {
+        @NameInMap("Ak")
+        public String ak;
+
         @NameInMap("Countries")
         public java.util.List<String> countries;
 
         @NameInMap("RequestId")
         public String requestId;
+
+        @NameInMap("Secret")
+        public String secret;
 
         @NameInMap("Uid")
         public String uid;
@@ -88,6 +94,14 @@ public class DescribeCountriesResponseBody extends TeaModel {
         public static DescribeCountriesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeCountriesResponseBodyData self = new DescribeCountriesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCountriesResponseBodyData setAk(String ak) {
+            this.ak = ak;
+            return this;
+        }
+        public String getAk() {
+            return this.ak;
         }
 
         public DescribeCountriesResponseBodyData setCountries(java.util.List<String> countries) {
@@ -104,6 +118,14 @@ public class DescribeCountriesResponseBody extends TeaModel {
         }
         public String getRequestId() {
             return this.requestId;
+        }
+
+        public DescribeCountriesResponseBodyData setSecret(String secret) {
+            this.secret = secret;
+            return this;
+        }
+        public String getSecret() {
+            return this.secret;
         }
 
         public DescribeCountriesResponseBodyData setUid(String uid) {

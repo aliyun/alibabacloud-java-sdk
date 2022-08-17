@@ -7,6 +7,9 @@ public class CreateOrUpdateIntlImageRequest extends TeaModel {
     @NameInMap("AccessInfo")
     public CreateOrUpdateIntlImageRequestAccessInfo accessInfo;
 
+    @NameInMap("Ak")
+    public String ak;
+
     @NameInMap("BasicInfo")
     public CreateOrUpdateIntlImageRequestBasicInfo basicInfo;
 
@@ -28,6 +31,9 @@ public class CreateOrUpdateIntlImageRequest extends TeaModel {
     @NameInMap("SaleInfo")
     public CreateOrUpdateIntlImageRequestSaleInfo saleInfo;
 
+    @NameInMap("Secret")
+    public String secret;
+
     @NameInMap("Uid")
     public String uid;
 
@@ -42,6 +48,14 @@ public class CreateOrUpdateIntlImageRequest extends TeaModel {
     }
     public CreateOrUpdateIntlImageRequestAccessInfo getAccessInfo() {
         return this.accessInfo;
+    }
+
+    public CreateOrUpdateIntlImageRequest setAk(String ak) {
+        this.ak = ak;
+        return this;
+    }
+    public String getAk() {
+        return this.ak;
     }
 
     public CreateOrUpdateIntlImageRequest setBasicInfo(CreateOrUpdateIntlImageRequestBasicInfo basicInfo) {
@@ -98,6 +112,14 @@ public class CreateOrUpdateIntlImageRequest extends TeaModel {
     }
     public CreateOrUpdateIntlImageRequestSaleInfo getSaleInfo() {
         return this.saleInfo;
+    }
+
+    public CreateOrUpdateIntlImageRequest setSecret(String secret) {
+        this.secret = secret;
+        return this;
+    }
+    public String getSecret() {
+        return this.secret;
     }
 
     public CreateOrUpdateIntlImageRequest setUid(String uid) {
