@@ -968,4 +968,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.tagDbfsWithOptions(request, runtime);
     }
+
+    public UpdateDbfsResponse updateDbfsWithOptions(UpdateDbfsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.advancedFeatures)) {
+            query.put("AdvancedFeatures", request.advancedFeatures);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fsId)) {
+            query.put("FsId", request.fsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            query.put("InstanceType", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usedScene)) {
+            query.put("UsedScene", request.usedScene);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDbfs"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDbfsResponse());
+    }
+
+    public UpdateDbfsResponse updateDbfs(UpdateDbfsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateDbfsWithOptions(request, runtime);
+    }
 }
