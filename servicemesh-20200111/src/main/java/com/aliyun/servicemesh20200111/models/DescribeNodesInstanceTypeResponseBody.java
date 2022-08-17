@@ -32,15 +32,29 @@ public class DescribeNodesInstanceTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeNodesInstanceTypeResponseBodyInstanceTypes extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
         @NameInMap("MultiBufferEnabled")
         public Boolean multiBufferEnabled;
 
         @NameInMap("NodeType")
         public String nodeType;
 
+        @NameInMap("Value")
+        public String value;
+
         public static DescribeNodesInstanceTypeResponseBodyInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
             DescribeNodesInstanceTypeResponseBodyInstanceTypes self = new DescribeNodesInstanceTypeResponseBodyInstanceTypes();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNodesInstanceTypeResponseBodyInstanceTypes setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
         public DescribeNodesInstanceTypeResponseBodyInstanceTypes setMultiBufferEnabled(Boolean multiBufferEnabled) {
@@ -57,6 +71,14 @@ public class DescribeNodesInstanceTypeResponseBody extends TeaModel {
         }
         public String getNodeType() {
             return this.nodeType;
+        }
+
+        public DescribeNodesInstanceTypeResponseBodyInstanceTypes setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

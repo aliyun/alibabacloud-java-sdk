@@ -7,6 +7,9 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
     @NameInMap("Clusters")
     public java.util.List<DescribeServiceMeshClustersResponseBodyClusters> clusters;
 
+    @NameInMap("NumberOfClusters")
+    public Long numberOfClusters;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
     }
     public java.util.List<DescribeServiceMeshClustersResponseBodyClusters> getClusters() {
         return this.clusters;
+    }
+
+    public DescribeServiceMeshClustersResponseBody setNumberOfClusters(Long numberOfClusters) {
+        this.numberOfClusters = numberOfClusters;
+        return this;
+    }
+    public Long getNumberOfClusters() {
+        return this.numberOfClusters;
     }
 
     public DescribeServiceMeshClustersResponseBody setRequestId(String requestId) {

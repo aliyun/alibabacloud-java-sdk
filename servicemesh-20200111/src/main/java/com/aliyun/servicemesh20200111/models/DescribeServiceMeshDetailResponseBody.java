@@ -384,6 +384,36 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf extends TeaModel {
+        @NameInMap("GatewayLifecycle")
+        public Integer gatewayLifecycle;
+
+        @NameInMap("SidecarLifecycle")
+        public Integer sidecarLifecycle;
+
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf setGatewayLifecycle(Integer gatewayLifecycle) {
+            this.gatewayLifecycle = gatewayLifecycle;
+            return this;
+        }
+        public Integer getGatewayLifecycle() {
+            return this.gatewayLifecycle;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf setSidecarLifecycle(Integer sidecarLifecycle) {
+            this.sidecarLifecycle = sidecarLifecycle;
+            return this;
+        }
+        public Integer getSidecarLifecycle() {
+            return this.sidecarLifecycle;
+        }
+
+    }
+
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration extends TeaModel {
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -955,6 +985,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration extends TeaModel {
+        @NameInMap("AccessLogExtraConf")
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf accessLogExtraConf;
+
         @NameInMap("CRAggregationConfiguration")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration CRAggregationConfiguration;
 
@@ -994,6 +1027,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setAccessLogExtraConf(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf accessLogExtraConf) {
+            this.accessLogExtraConf = accessLogExtraConf;
+            return this;
+        }
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf getAccessLogExtraConf() {
+            return this.accessLogExtraConf;
         }
 
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setCRAggregationConfiguration(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration CRAggregationConfiguration) {
