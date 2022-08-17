@@ -10,9 +10,6 @@ public class InvoiceSearchResponseBody extends TeaModel {
     @NameInMap("module")
     public java.util.List<InvoiceSearchResponseBodyModule> module;
 
-    @NameInMap("more_page")
-    public Boolean morePage;
-
     @NameInMap("result_code")
     public Integer resultCode;
 
@@ -44,14 +41,6 @@ public class InvoiceSearchResponseBody extends TeaModel {
     }
     public java.util.List<InvoiceSearchResponseBodyModule> getModule() {
         return this.module;
-    }
-
-    public InvoiceSearchResponseBody setMorePage(Boolean morePage) {
-        this.morePage = morePage;
-        return this;
-    }
-    public Boolean getMorePage() {
-        return this.morePage;
     }
 
     public InvoiceSearchResponseBody setResultCode(Integer resultCode) {

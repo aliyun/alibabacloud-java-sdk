@@ -7,6 +7,9 @@ public class InvoiceSearchRequest extends TeaModel {
     @NameInMap("title")
     public String title;
 
+    @NameInMap("user_id")
+    public String userId;
+
     public static InvoiceSearchRequest build(java.util.Map<String, ?> map) throws Exception {
         InvoiceSearchRequest self = new InvoiceSearchRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class InvoiceSearchRequest extends TeaModel {
     }
     public String getTitle() {
         return this.title;
+    }
+
+    public InvoiceSearchRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

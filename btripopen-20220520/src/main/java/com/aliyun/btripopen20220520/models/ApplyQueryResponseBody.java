@@ -675,6 +675,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("itinerary_list")
         public java.util.List<ApplyQueryResponseBodyModuleItineraryList> itineraryList;
 
+        @NameInMap("itinerary_rule")
+        public Integer itineraryRule;
+
         @NameInMap("limit_traveler")
         public Integer limitTraveler;
 
@@ -854,6 +857,14 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
         public java.util.List<ApplyQueryResponseBodyModuleItineraryList> getItineraryList() {
             return this.itineraryList;
+        }
+
+        public ApplyQueryResponseBodyModule setItineraryRule(Integer itineraryRule) {
+            this.itineraryRule = itineraryRule;
+            return this;
+        }
+        public Integer getItineraryRule() {
+            return this.itineraryRule;
         }
 
         public ApplyQueryResponseBodyModule setLimitTraveler(Integer limitTraveler) {

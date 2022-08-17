@@ -34,14 +34,11 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("hotel_share")
     public ApplyAddRequestHotelShare hotelShare;
 
+    @NameInMap("international_flight_cabins")
+    public String internationalFlightCabins;
+
     @NameInMap("itinerary_list")
     public java.util.List<ApplyAddRequestItineraryList> itineraryList;
-
-    @NameInMap("itinerary_rule")
-    public Integer itineraryRule;
-
-    @NameInMap("itinerary_set_list")
-    public java.util.List<ApplyAddRequestItinerarySetList> itinerarySetList;
 
     @NameInMap("limit_traveler")
     public Integer limitTraveler;
@@ -176,28 +173,20 @@ public class ApplyAddRequest extends TeaModel {
         return this.hotelShare;
     }
 
+    public ApplyAddRequest setInternationalFlightCabins(String internationalFlightCabins) {
+        this.internationalFlightCabins = internationalFlightCabins;
+        return this;
+    }
+    public String getInternationalFlightCabins() {
+        return this.internationalFlightCabins;
+    }
+
     public ApplyAddRequest setItineraryList(java.util.List<ApplyAddRequestItineraryList> itineraryList) {
         this.itineraryList = itineraryList;
         return this;
     }
     public java.util.List<ApplyAddRequestItineraryList> getItineraryList() {
         return this.itineraryList;
-    }
-
-    public ApplyAddRequest setItineraryRule(Integer itineraryRule) {
-        this.itineraryRule = itineraryRule;
-        return this;
-    }
-    public Integer getItineraryRule() {
-        return this.itineraryRule;
-    }
-
-    public ApplyAddRequest setItinerarySetList(java.util.List<ApplyAddRequestItinerarySetList> itinerarySetList) {
-        this.itinerarySetList = itinerarySetList;
-        return this;
-    }
-    public java.util.List<ApplyAddRequestItinerarySetList> getItinerarySetList() {
-        return this.itinerarySetList;
     }
 
     public ApplyAddRequest setLimitTraveler(Integer limitTraveler) {
@@ -694,146 +683,6 @@ public class ApplyAddRequest extends TeaModel {
         }
         public Integer getTripWay() {
             return this.tripWay;
-        }
-
-    }
-
-    public static class ApplyAddRequestItinerarySetList extends TeaModel {
-        @NameInMap("arr_date")
-        public String arrDate;
-
-        @NameInMap("city_code_set")
-        public String cityCodeSet;
-
-        @NameInMap("city_set")
-        public String citySet;
-
-        @NameInMap("cost_center_id")
-        public Long costCenterId;
-
-        @NameInMap("dep_date")
-        public String depDate;
-
-        @NameInMap("invoice_id")
-        public Long invoiceId;
-
-        @NameInMap("itinerary_id")
-        public String itineraryId;
-
-        @NameInMap("project_code")
-        public String projectCode;
-
-        @NameInMap("project_title")
-        public String projectTitle;
-
-        @NameInMap("third_part_invoice_id")
-        public String thirdPartInvoiceId;
-
-        @NameInMap("thirdpart_cost_center_id")
-        public String thirdpartCostCenterId;
-
-        @NameInMap("transport")
-        public Integer transport;
-
-        public static ApplyAddRequestItinerarySetList build(java.util.Map<String, ?> map) throws Exception {
-            ApplyAddRequestItinerarySetList self = new ApplyAddRequestItinerarySetList();
-            return TeaModel.build(map, self);
-        }
-
-        public ApplyAddRequestItinerarySetList setArrDate(String arrDate) {
-            this.arrDate = arrDate;
-            return this;
-        }
-        public String getArrDate() {
-            return this.arrDate;
-        }
-
-        public ApplyAddRequestItinerarySetList setCityCodeSet(String cityCodeSet) {
-            this.cityCodeSet = cityCodeSet;
-            return this;
-        }
-        public String getCityCodeSet() {
-            return this.cityCodeSet;
-        }
-
-        public ApplyAddRequestItinerarySetList setCitySet(String citySet) {
-            this.citySet = citySet;
-            return this;
-        }
-        public String getCitySet() {
-            return this.citySet;
-        }
-
-        public ApplyAddRequestItinerarySetList setCostCenterId(Long costCenterId) {
-            this.costCenterId = costCenterId;
-            return this;
-        }
-        public Long getCostCenterId() {
-            return this.costCenterId;
-        }
-
-        public ApplyAddRequestItinerarySetList setDepDate(String depDate) {
-            this.depDate = depDate;
-            return this;
-        }
-        public String getDepDate() {
-            return this.depDate;
-        }
-
-        public ApplyAddRequestItinerarySetList setInvoiceId(Long invoiceId) {
-            this.invoiceId = invoiceId;
-            return this;
-        }
-        public Long getInvoiceId() {
-            return this.invoiceId;
-        }
-
-        public ApplyAddRequestItinerarySetList setItineraryId(String itineraryId) {
-            this.itineraryId = itineraryId;
-            return this;
-        }
-        public String getItineraryId() {
-            return this.itineraryId;
-        }
-
-        public ApplyAddRequestItinerarySetList setProjectCode(String projectCode) {
-            this.projectCode = projectCode;
-            return this;
-        }
-        public String getProjectCode() {
-            return this.projectCode;
-        }
-
-        public ApplyAddRequestItinerarySetList setProjectTitle(String projectTitle) {
-            this.projectTitle = projectTitle;
-            return this;
-        }
-        public String getProjectTitle() {
-            return this.projectTitle;
-        }
-
-        public ApplyAddRequestItinerarySetList setThirdPartInvoiceId(String thirdPartInvoiceId) {
-            this.thirdPartInvoiceId = thirdPartInvoiceId;
-            return this;
-        }
-        public String getThirdPartInvoiceId() {
-            return this.thirdPartInvoiceId;
-        }
-
-        public ApplyAddRequestItinerarySetList setThirdpartCostCenterId(String thirdpartCostCenterId) {
-            this.thirdpartCostCenterId = thirdpartCostCenterId;
-            return this;
-        }
-        public String getThirdpartCostCenterId() {
-            return this.thirdpartCostCenterId;
-        }
-
-        public ApplyAddRequestItinerarySetList setTransport(Integer transport) {
-            this.transport = transport;
-            return this;
-        }
-        public Integer getTransport() {
-            return this.transport;
         }
 
     }

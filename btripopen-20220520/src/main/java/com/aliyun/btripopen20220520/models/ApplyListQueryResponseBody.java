@@ -375,6 +375,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("itinerary_list")
         public java.util.List<ApplyListQueryResponseBodyModuleListItineraryList> itineraryList;
 
+        @NameInMap("itinerary_rule")
+        public Integer itineraryRule;
+
         @NameInMap("status")
         public Integer status;
 
@@ -510,6 +513,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
         public java.util.List<ApplyListQueryResponseBodyModuleListItineraryList> getItineraryList() {
             return this.itineraryList;
+        }
+
+        public ApplyListQueryResponseBodyModuleList setItineraryRule(Integer itineraryRule) {
+            this.itineraryRule = itineraryRule;
+            return this;
+        }
+        public Integer getItineraryRule() {
+            return this.itineraryRule;
         }
 
         public ApplyListQueryResponseBodyModuleList setStatus(Integer status) {

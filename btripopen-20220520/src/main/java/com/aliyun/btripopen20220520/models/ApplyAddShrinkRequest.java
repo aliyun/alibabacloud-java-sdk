@@ -34,14 +34,11 @@ public class ApplyAddShrinkRequest extends TeaModel {
     @NameInMap("hotel_share")
     public String hotelShareShrink;
 
+    @NameInMap("international_flight_cabins")
+    public String internationalFlightCabins;
+
     @NameInMap("itinerary_list")
     public String itineraryListShrink;
-
-    @NameInMap("itinerary_rule")
-    public Integer itineraryRule;
-
-    @NameInMap("itinerary_set_list")
-    public String itinerarySetListShrink;
 
     @NameInMap("limit_traveler")
     public Integer limitTraveler;
@@ -176,28 +173,20 @@ public class ApplyAddShrinkRequest extends TeaModel {
         return this.hotelShareShrink;
     }
 
+    public ApplyAddShrinkRequest setInternationalFlightCabins(String internationalFlightCabins) {
+        this.internationalFlightCabins = internationalFlightCabins;
+        return this;
+    }
+    public String getInternationalFlightCabins() {
+        return this.internationalFlightCabins;
+    }
+
     public ApplyAddShrinkRequest setItineraryListShrink(String itineraryListShrink) {
         this.itineraryListShrink = itineraryListShrink;
         return this;
     }
     public String getItineraryListShrink() {
         return this.itineraryListShrink;
-    }
-
-    public ApplyAddShrinkRequest setItineraryRule(Integer itineraryRule) {
-        this.itineraryRule = itineraryRule;
-        return this;
-    }
-    public Integer getItineraryRule() {
-        return this.itineraryRule;
-    }
-
-    public ApplyAddShrinkRequest setItinerarySetListShrink(String itinerarySetListShrink) {
-        this.itinerarySetListShrink = itinerarySetListShrink;
-        return this;
-    }
-    public String getItinerarySetListShrink() {
-        return this.itinerarySetListShrink;
     }
 
     public ApplyAddShrinkRequest setLimitTraveler(Integer limitTraveler) {

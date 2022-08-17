@@ -7,12 +7,6 @@ public class InvoiceDeleteResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("module")
-    public Boolean module;
-
-    @NameInMap("more_page")
-    public Boolean morePage;
-
     @NameInMap("result_code")
     public Integer resultCode;
 
@@ -36,22 +30,6 @@ public class InvoiceDeleteResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public InvoiceDeleteResponseBody setModule(Boolean module) {
-        this.module = module;
-        return this;
-    }
-    public Boolean getModule() {
-        return this.module;
-    }
-
-    public InvoiceDeleteResponseBody setMorePage(Boolean morePage) {
-        this.morePage = morePage;
-        return this;
-    }
-    public Boolean getMorePage() {
-        return this.morePage;
     }
 
     public InvoiceDeleteResponseBody setResultCode(Integer resultCode) {

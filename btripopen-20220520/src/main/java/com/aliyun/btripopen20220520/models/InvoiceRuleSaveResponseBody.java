@@ -10,9 +10,6 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
     @NameInMap("module")
     public InvoiceRuleSaveResponseBodyModule module;
 
-    @NameInMap("more_page")
-    public Boolean morePage;
-
     @NameInMap("result_code")
     public Integer resultCode;
 
@@ -44,14 +41,6 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
     }
     public InvoiceRuleSaveResponseBodyModule getModule() {
         return this.module;
-    }
-
-    public InvoiceRuleSaveResponseBody setMorePage(Boolean morePage) {
-        this.morePage = morePage;
-        return this;
-    }
-    public Boolean getMorePage() {
-        return this.morePage;
     }
 
     public InvoiceRuleSaveResponseBody setResultCode(Integer resultCode) {

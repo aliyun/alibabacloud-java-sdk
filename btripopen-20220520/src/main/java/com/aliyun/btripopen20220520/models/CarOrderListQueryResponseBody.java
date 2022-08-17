@@ -93,6 +93,9 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         @NameInMap("category_type")
         public Integer categoryType;
 
+        @NameInMap("gmt_create")
+        public String gmtCreate;
+
         @NameInMap("passenger_name")
         public String passengerName;
 
@@ -130,6 +133,14 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         }
         public Integer getCategoryType() {
             return this.categoryType;
+        }
+
+        public CarOrderListQueryResponseBodyModulePriceInfoList setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public String getGmtCreate() {
+            return this.gmtCreate;
         }
 
         public CarOrderListQueryResponseBodyModulePriceInfoList setPassengerName(String passengerName) {
@@ -287,9 +298,6 @@ public class CarOrderListQueryResponseBody extends TeaModel {
 
         @NameInMap("memo")
         public String memo;
-
-        @NameInMap("order_id")
-        public String orderId;
 
         @NameInMap("order_status")
         public Integer orderStatus;
@@ -569,14 +577,6 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         }
         public String getMemo() {
             return this.memo;
-        }
-
-        public CarOrderListQueryResponseBodyModule setOrderId(String orderId) {
-            this.orderId = orderId;
-            return this;
-        }
-        public String getOrderId() {
-            return this.orderId;
         }
 
         public CarOrderListQueryResponseBodyModule setOrderStatus(Integer orderStatus) {

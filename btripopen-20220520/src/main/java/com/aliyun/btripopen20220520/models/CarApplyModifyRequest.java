@@ -4,9 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CarApplyModifyRequest extends TeaModel {
-    @NameInMap("corp_id")
-    public String corpId;
-
     @NameInMap("operate_time")
     public String operateTime;
 
@@ -25,14 +22,6 @@ public class CarApplyModifyRequest extends TeaModel {
     public static CarApplyModifyRequest build(java.util.Map<String, ?> map) throws Exception {
         CarApplyModifyRequest self = new CarApplyModifyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CarApplyModifyRequest setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
     }
 
     public CarApplyModifyRequest setOperateTime(String operateTime) {

@@ -503,9 +503,6 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         @NameInMap("project_title")
         public String projectTitle;
 
-        @NameInMap("thirdpart_cost_center_id")
-        public String thirdpartCostCenterId;
-
         @NameInMap("thirdpart_project_id")
         public String thirdpartProjectId;
 
@@ -569,14 +566,6 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         }
         public String getProjectTitle() {
             return this.projectTitle;
-        }
-
-        public TrainOrderQueryResponseBodyModulePassengerInfoList setThirdpartCostCenterId(String thirdpartCostCenterId) {
-            this.thirdpartCostCenterId = thirdpartCostCenterId;
-            return this;
-        }
-        public String getThirdpartCostCenterId() {
-            return this.thirdpartCostCenterId;
         }
 
         public TrainOrderQueryResponseBodyModulePassengerInfoList setThirdpartProjectId(String thirdpartProjectId) {

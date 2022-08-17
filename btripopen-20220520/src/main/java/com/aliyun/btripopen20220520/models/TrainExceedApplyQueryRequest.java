@@ -7,9 +7,6 @@ public class TrainExceedApplyQueryRequest extends TeaModel {
     @NameInMap("apply_id")
     public Long applyId;
 
-    @NameInMap("user_id")
-    public String userId;
-
     public static TrainExceedApplyQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         TrainExceedApplyQueryRequest self = new TrainExceedApplyQueryRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class TrainExceedApplyQueryRequest extends TeaModel {
     }
     public Long getApplyId() {
         return this.applyId;
-    }
-
-    public TrainExceedApplyQueryRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }
