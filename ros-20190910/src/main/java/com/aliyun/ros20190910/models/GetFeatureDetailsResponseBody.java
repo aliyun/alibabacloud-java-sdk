@@ -195,6 +195,25 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     }
 
+    public static class GetFeatureDetailsResponseBodyTerraformSupportedResourceTypesStackOperationRisk extends TeaModel {
+        @NameInMap("DeleteStack")
+        public java.util.List<String> deleteStack;
+
+        public static GetFeatureDetailsResponseBodyTerraformSupportedResourceTypesStackOperationRisk build(java.util.Map<String, ?> map) throws Exception {
+            GetFeatureDetailsResponseBodyTerraformSupportedResourceTypesStackOperationRisk self = new GetFeatureDetailsResponseBodyTerraformSupportedResourceTypesStackOperationRisk();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFeatureDetailsResponseBodyTerraformSupportedResourceTypesStackOperationRisk setDeleteStack(java.util.List<String> deleteStack) {
+            this.deleteStack = deleteStack;
+            return this;
+        }
+        public java.util.List<String> getDeleteStack() {
+            return this.deleteStack;
+        }
+
+    }
+
     public static class GetFeatureDetailsResponseBodyTerraformSupportedResourceTypes extends TeaModel {
         @NameInMap("CustomTag")
         public java.util.List<String> customTag;
@@ -204,6 +223,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
         @NameInMap("ResourceGroup")
         public java.util.List<String> resourceGroup;
+
+        @NameInMap("StackOperationRisk")
+        public GetFeatureDetailsResponseBodyTerraformSupportedResourceTypesStackOperationRisk stackOperationRisk;
 
         @NameInMap("SystemTag")
         public java.util.List<String> systemTag;
@@ -235,6 +257,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
         public java.util.List<String> getResourceGroup() {
             return this.resourceGroup;
+        }
+
+        public GetFeatureDetailsResponseBodyTerraformSupportedResourceTypes setStackOperationRisk(GetFeatureDetailsResponseBodyTerraformSupportedResourceTypesStackOperationRisk stackOperationRisk) {
+            this.stackOperationRisk = stackOperationRisk;
+            return this;
+        }
+        public GetFeatureDetailsResponseBodyTerraformSupportedResourceTypesStackOperationRisk getStackOperationRisk() {
+            return this.stackOperationRisk;
         }
 
         public GetFeatureDetailsResponseBodyTerraformSupportedResourceTypes setSystemTag(java.util.List<String> systemTag) {
