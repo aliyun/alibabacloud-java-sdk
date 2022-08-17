@@ -10,9 +10,6 @@ public class EntityAddResponseBody extends TeaModel {
     @NameInMap("module")
     public EntityAddResponseBodyModule module;
 
-    @NameInMap("more_page")
-    public Boolean morePage;
-
     @NameInMap("result_code")
     public Integer resultCode;
 
@@ -44,14 +41,6 @@ public class EntityAddResponseBody extends TeaModel {
     }
     public EntityAddResponseBodyModule getModule() {
         return this.module;
-    }
-
-    public EntityAddResponseBody setMorePage(Boolean morePage) {
-        this.morePage = morePage;
-        return this;
-    }
-    public Boolean getMorePage() {
-        return this.morePage;
     }
 
     public EntityAddResponseBody setResultCode(Integer resultCode) {

@@ -7,12 +7,6 @@ public class CostCenterDeleteResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("module")
-    public java.util.Map<String, ?> module;
-
-    @NameInMap("more_page")
-    public Boolean morePage;
-
     @NameInMap("result_code")
     public Integer resultCode;
 
@@ -36,22 +30,6 @@ public class CostCenterDeleteResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CostCenterDeleteResponseBody setModule(java.util.Map<String, ?> module) {
-        this.module = module;
-        return this;
-    }
-    public java.util.Map<String, ?> getModule() {
-        return this.module;
-    }
-
-    public CostCenterDeleteResponseBody setMorePage(Boolean morePage) {
-        this.morePage = morePage;
-        return this;
-    }
-    public Boolean getMorePage() {
-        return this.morePage;
     }
 
     public CostCenterDeleteResponseBody setResultCode(Integer resultCode) {

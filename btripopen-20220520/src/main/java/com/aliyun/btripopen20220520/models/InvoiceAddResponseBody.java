@@ -7,12 +7,6 @@ public class InvoiceAddResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("module")
-    public Long module;
-
-    @NameInMap("more_page")
-    public Boolean morePage;
-
     @NameInMap("result_code")
     public Integer resultCode;
 
@@ -36,22 +30,6 @@ public class InvoiceAddResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public InvoiceAddResponseBody setModule(Long module) {
-        this.module = module;
-        return this;
-    }
-    public Long getModule() {
-        return this.module;
-    }
-
-    public InvoiceAddResponseBody setMorePage(Boolean morePage) {
-        this.morePage = morePage;
-        return this;
-    }
-    public Boolean getMorePage() {
-        return this.morePage;
     }
 
     public InvoiceAddResponseBody setResultCode(Integer resultCode) {

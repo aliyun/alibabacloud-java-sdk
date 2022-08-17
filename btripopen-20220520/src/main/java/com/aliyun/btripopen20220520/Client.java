@@ -141,16 +141,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.itineraryListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.itineraryList, "itinerary_list", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.itinerarySetList)) {
-            request.itinerarySetListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.itinerarySetList, "itinerary_set_list", "json");
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.travelerList)) {
             request.travelerListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.travelerList, "traveler_list", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.travelerStandard)) {
             request.travelerStandardShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.travelerStandard, "traveler_standard", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.internationalFlightCabins)) {
+            query.put("international_flight_cabins", request.internationalFlightCabins);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -196,14 +197,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.itineraryListShrink)) {
             body.put("itinerary_list", request.itineraryListShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.itineraryRule)) {
-            body.put("itinerary_rule", request.itineraryRule);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.itinerarySetListShrink)) {
-            body.put("itinerary_set_list", request.itinerarySetListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.limitTraveler)) {
@@ -272,6 +265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         Params params = Params.build(TeaConverter.buildMap(
@@ -655,10 +649,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CarApplyModifyResponse carApplyModifyWithOptions(CarApplyModifyRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.corpId)) {
-            body.put("corp_id", request.corpId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.operateTime)) {
             body.put("operate_time", request.operateTime);
         }
@@ -1608,10 +1598,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("apply_id", request.applyId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            query.put("user_id", request.userId);
-        }
-
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -1908,6 +1894,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("title", request.title);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("user_id", request.userId);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -2173,10 +2163,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applyId)) {
             query.put("apply_id", request.applyId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
-            query.put("user_id", request.userId);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

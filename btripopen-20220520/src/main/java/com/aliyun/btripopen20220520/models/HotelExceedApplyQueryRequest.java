@@ -7,9 +7,6 @@ public class HotelExceedApplyQueryRequest extends TeaModel {
     @NameInMap("apply_id")
     public Long applyId;
 
-    @NameInMap("user_id")
-    public String userId;
-
     public static HotelExceedApplyQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         HotelExceedApplyQueryRequest self = new HotelExceedApplyQueryRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class HotelExceedApplyQueryRequest extends TeaModel {
     }
     public Long getApplyId() {
         return this.applyId;
-    }
-
-    public HotelExceedApplyQueryRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }
