@@ -4,7 +4,6 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class MoveResourceGroupResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
