@@ -1672,6 +1672,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryProjectWithOptions(request, runtime);
     }
 
+    public QuerySessionStatusResponse querySessionStatusWithOptions(QuerySessionStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessKey)) {
+            body.put("AccessKey", request.accessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gameSession)) {
+            body.put("GameSession", request.gameSession);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QuerySessionStatus"),
+            new TeaPair("version", "2020-07-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySessionStatusResponse());
+    }
+
+    public QuerySessionStatusResponse querySessionStatus(QuerySessionStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.querySessionStatusWithOptions(request, runtime);
+    }
+
     public QueryTenantResponse queryTenantWithOptions(QueryTenantRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
