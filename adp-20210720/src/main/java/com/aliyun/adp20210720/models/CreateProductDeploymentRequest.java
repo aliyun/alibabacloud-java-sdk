@@ -4,27 +4,21 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class CreateProductDeploymentRequest extends TeaModel {
-    // 环境uid
     @NameInMap("environmentUID")
     public String environmentUID;
 
-    // 指定产品部署的 namespace，仅 ACK 底座支持
     @NameInMap("namespace")
     public String namespace;
 
-    // 旧产品版本uid
     @NameInMap("oldProductVersionUID")
     public String oldProductVersionUID;
 
-    // 部署包配置文件
     @NameInMap("packageConfig")
     public String packageConfig;
 
-    // 部署包uid
     @NameInMap("packageUID")
     public String packageUID;
 
-    // 产品版本uid
     @NameInMap("productVersionUID")
     public String productVersionUID;
 

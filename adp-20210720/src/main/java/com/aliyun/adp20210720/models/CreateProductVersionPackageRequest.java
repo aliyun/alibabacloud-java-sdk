@@ -4,22 +4,24 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class CreateProductVersionPackageRequest extends TeaModel {
-    // ENUM["TRIDENT","ACK-D"]
     @NameInMap("clusterEngineType")
     public String clusterEngineType;
+
+    @NameInMap("foundationReferenceUID")
+    public String foundationReferenceUID;
+
+    @NameInMap("oldFoundationReferenceUID")
+    public String oldFoundationReferenceUID;
 
     @NameInMap("oldProductVersionUID")
     public String oldProductVersionUID;
 
-    // ENUM:["all","base"."application"]
     @NameInMap("packageContentType")
     public String packageContentType;
 
-    // "ENUM value: ["Hopctl", "Sealer"]"
     @NameInMap("packageToolType")
     public String packageToolType;
 
-    // ENUM:["full","upgrade"]
     @NameInMap("packageType")
     public String packageType;
 
@@ -37,6 +39,22 @@ public class CreateProductVersionPackageRequest extends TeaModel {
     }
     public String getClusterEngineType() {
         return this.clusterEngineType;
+    }
+
+    public CreateProductVersionPackageRequest setFoundationReferenceUID(String foundationReferenceUID) {
+        this.foundationReferenceUID = foundationReferenceUID;
+        return this;
+    }
+    public String getFoundationReferenceUID() {
+        return this.foundationReferenceUID;
+    }
+
+    public CreateProductVersionPackageRequest setOldFoundationReferenceUID(String oldFoundationReferenceUID) {
+        this.oldFoundationReferenceUID = oldFoundationReferenceUID;
+        return this;
+    }
+    public String getOldFoundationReferenceUID() {
+        return this.oldFoundationReferenceUID;
     }
 
     public CreateProductVersionPackageRequest setOldProductVersionUID(String oldProductVersionUID) {

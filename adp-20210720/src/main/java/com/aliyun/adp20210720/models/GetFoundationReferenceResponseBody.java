@@ -49,7 +49,6 @@ public class GetFoundationReferenceResponseBody extends TeaModel {
         @NameInMap("foundationVersionUID")
         public String foundationVersionUID;
 
-        // foundation reference uid
         @NameInMap("uid")
         public String uid;
 

@@ -4,14 +4,12 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class GetEnvironmentLicenseResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("code")
     public String code;
 
     @NameInMap("data")
     public GetEnvironmentLicenseResponseBodyData data;
 
-    // 错误信息
     @NameInMap("msg")
     public String msg;
 
@@ -45,7 +43,6 @@ public class GetEnvironmentLicenseResponseBody extends TeaModel {
     }
 
     public static class GetEnvironmentLicenseResponseBodyDataLicenseQuotaClusterQuota extends TeaModel {
-        // cpu核数限制
         @NameInMap("cpuCoreLimit")
         public Long cpuCoreLimit;
 
@@ -65,15 +62,12 @@ public class GetEnvironmentLicenseResponseBody extends TeaModel {
     }
 
     public static class GetEnvironmentLicenseResponseBodyDataLicenseQuotaComponentQuotas extends TeaModel {
-        // 组件名
         @NameInMap("componentName")
         public String componentName;
 
-        // 组件来源
         @NameInMap("componentSource")
         public String componentSource;
 
-        // 实例数限制
         @NameInMap("instanceLimit")
         public Long instanceLimit;
 
@@ -150,11 +144,9 @@ public class GetEnvironmentLicenseResponseBody extends TeaModel {
     }
 
     public static class GetEnvironmentLicenseResponseBodyDataLicenseQuota extends TeaModel {
-        // 集群配额
         @NameInMap("clusterQuota")
         public GetEnvironmentLicenseResponseBodyDataLicenseQuotaClusterQuota clusterQuota;
 
-        // 组件配额
         @NameInMap("componentQuotas")
         public java.util.List<GetEnvironmentLicenseResponseBodyDataLicenseQuotaComponentQuotas> componentQuotas;
 
@@ -193,22 +185,18 @@ public class GetEnvironmentLicenseResponseBody extends TeaModel {
     }
 
     public static class GetEnvironmentLicenseResponseBodyData extends TeaModel {
-        // 过期时间
         @NameInMap("expireTime")
         public String expireTime;
 
-        // license内容
         @NameInMap("licenseKey")
         public String licenseKey;
 
-        // license配额
         @NameInMap("licenseQuota")
         public GetEnvironmentLicenseResponseBodyDataLicenseQuota licenseQuota;
 
         @NameInMap("productVersionUID")
         public String productVersionUID;
 
-        // 拒绝原因
         @NameInMap("rejectReason")
         public String rejectReason;
 
@@ -218,15 +206,12 @@ public class GetEnvironmentLicenseResponseBody extends TeaModel {
         @NameInMap("secretYAML")
         public String secretYAML;
 
-        // 状态
         @NameInMap("status")
         public String status;
 
-        // 类型
         @NameInMap("type")
         public String type;
 
-        // license uid
         @NameInMap("uid")
         public String uid;
 

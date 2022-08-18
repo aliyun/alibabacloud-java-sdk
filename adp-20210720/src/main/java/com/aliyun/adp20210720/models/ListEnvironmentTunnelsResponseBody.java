@@ -4,14 +4,12 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListEnvironmentTunnelsResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("code")
     public String code;
 
     @NameInMap("data")
     public ListEnvironmentTunnelsResponseBodyData data;
 
-    // 错误信息
     @NameInMap("msg")
     public String msg;
 
@@ -45,27 +43,21 @@ public class ListEnvironmentTunnelsResponseBody extends TeaModel {
     }
 
     public static class ListEnvironmentTunnelsResponseBodyDataListTunnelConfig extends TeaModel {
-        // 跳板机hostname
         @NameInMap("hostname")
         public String hostname;
 
-        // 跳板机密码
         @NameInMap("password")
         public String password;
 
-        // 直连regionId
         @NameInMap("regionId")
         public String regionId;
 
-        // 跳板机ssh端口号
         @NameInMap("sshPort")
         public Integer sshPort;
 
-        // 跳板机用户名
         @NameInMap("username")
         public String username;
 
-        // 直连vpcId
         @NameInMap("vpcId")
         public String vpcId;
 
@@ -128,7 +120,6 @@ public class ListEnvironmentTunnelsResponseBody extends TeaModel {
         @NameInMap("tunnelConfig")
         public ListEnvironmentTunnelsResponseBodyDataListTunnelConfig tunnelConfig;
 
-        // 通道类型
         @NameInMap("tunnelType")
         public String tunnelType;
 

@@ -4,15 +4,12 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class PutEnvironmentTunnelResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("code")
     public String code;
 
-    // 数据
     @NameInMap("data")
     public PutEnvironmentTunnelResponseBodyData data;
 
-    // 错误信息
     @NameInMap("msg")
     public String msg;
 
@@ -46,7 +43,6 @@ public class PutEnvironmentTunnelResponseBody extends TeaModel {
     }
 
     public static class PutEnvironmentTunnelResponseBodyData extends TeaModel {
-        // 通道id，可空
         @NameInMap("uid")
         public String uid;
 

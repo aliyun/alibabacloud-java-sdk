@@ -10,27 +10,21 @@ public class ListProductVersionsRequest extends TeaModel {
     @NameInMap("pageSize")
     public String pageSize;
 
-    // 支持的platform，为空则不过滤
     @NameInMap("platforms")
     public java.util.List<ListProductVersionsRequestPlatforms> platforms;
 
-    // 过滤参数，产品名称
     @NameInMap("productName")
     public String productName;
 
-    // 过滤参数，产品uid
     @NameInMap("productUID")
     public String productUID;
 
-    // 过滤参数，是否已发布
     @NameInMap("released")
     public Boolean released;
 
-    // 过滤参数，支持的环境类型
     @NameInMap("supportedFoundationTypes")
     public java.util.List<String> supportedFoundationTypes;
 
-    // 过滤参数，产品版本号
     @NameInMap("version")
     public String version;
 

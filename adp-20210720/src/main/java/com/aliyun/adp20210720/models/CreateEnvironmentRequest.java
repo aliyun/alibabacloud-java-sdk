@@ -22,7 +22,6 @@ public class CreateEnvironmentRequest extends TeaModel {
     @NameInMap("productVersionUID")
     public String productVersionUID;
 
-    // 环境类型
     @NameInMap("type")
     public String type;
 

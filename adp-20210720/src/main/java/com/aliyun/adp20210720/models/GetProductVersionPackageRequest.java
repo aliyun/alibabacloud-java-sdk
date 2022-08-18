@@ -4,6 +4,12 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class GetProductVersionPackageRequest extends TeaModel {
+    @NameInMap("foundationReferenceUID")
+    public String foundationReferenceUID;
+
+    @NameInMap("oldFoundationReferenceUID")
+    public String oldFoundationReferenceUID;
+
     @NameInMap("oldProductVersionUID")
     public String oldProductVersionUID;
 
@@ -25,6 +31,22 @@ public class GetProductVersionPackageRequest extends TeaModel {
     public static GetProductVersionPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         GetProductVersionPackageRequest self = new GetProductVersionPackageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetProductVersionPackageRequest setFoundationReferenceUID(String foundationReferenceUID) {
+        this.foundationReferenceUID = foundationReferenceUID;
+        return this;
+    }
+    public String getFoundationReferenceUID() {
+        return this.foundationReferenceUID;
+    }
+
+    public GetProductVersionPackageRequest setOldFoundationReferenceUID(String oldFoundationReferenceUID) {
+        this.oldFoundationReferenceUID = oldFoundationReferenceUID;
+        return this;
+    }
+    public String getOldFoundationReferenceUID() {
+        return this.oldFoundationReferenceUID;
     }
 
     public GetProductVersionPackageRequest setOldProductVersionUID(String oldProductVersionUID) {

@@ -13,7 +13,6 @@ public class AddProductVersionConfigResponseBody extends TeaModel {
     @NameInMap("msg")
     public String msg;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 
@@ -55,7 +54,6 @@ public class AddProductVersionConfigResponseBody extends TeaModel {
     }
 
     public static class AddProductVersionConfigResponseBodyData extends TeaModel {
-        // product version config uid
         @NameInMap("uid")
         public String uid;
 

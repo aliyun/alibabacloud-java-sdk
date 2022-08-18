@@ -4,15 +4,12 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListEnvironmentLicensesResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("code")
     public String code;
 
-    // 业务数据
     @NameInMap("data")
     public ListEnvironmentLicensesResponseBodyData data;
 
-    // 错误信息
     @NameInMap("msg")
     public String msg;
 
@@ -46,7 +43,6 @@ public class ListEnvironmentLicensesResponseBody extends TeaModel {
     }
 
     public static class ListEnvironmentLicensesResponseBodyDataListLicenseQuotaClusterQuota extends TeaModel {
-        // cpu核数限制
         @NameInMap("cpuCoreLimit")
         public Integer cpuCoreLimit;
 
@@ -66,15 +62,12 @@ public class ListEnvironmentLicensesResponseBody extends TeaModel {
     }
 
     public static class ListEnvironmentLicensesResponseBodyDataListLicenseQuotaComponentQuotas extends TeaModel {
-        // 组件名
         @NameInMap("componentName")
         public String componentName;
 
-        // 组件来源
         @NameInMap("componentSource")
         public String componentSource;
 
-        // 实例数限制
         @NameInMap("instanceLimit")
         public Integer instanceLimit;
 
@@ -151,11 +144,9 @@ public class ListEnvironmentLicensesResponseBody extends TeaModel {
     }
 
     public static class ListEnvironmentLicensesResponseBodyDataListLicenseQuota extends TeaModel {
-        // 集群配额
         @NameInMap("clusterQuota")
         public ListEnvironmentLicensesResponseBodyDataListLicenseQuotaClusterQuota clusterQuota;
 
-        // 组件配额
         @NameInMap("componentQuotas")
         public java.util.List<ListEnvironmentLicensesResponseBodyDataListLicenseQuotaComponentQuotas> componentQuotas;
 
@@ -194,37 +185,30 @@ public class ListEnvironmentLicensesResponseBody extends TeaModel {
     }
 
     public static class ListEnvironmentLicensesResponseBodyDataList extends TeaModel {
-        // 过期时间
         @NameInMap("expireTime")
         public String expireTime;
 
-        // license内容
         @NameInMap("licenseKey")
         public String licenseKey;
 
-        // license配额
         @NameInMap("licenseQuota")
         public ListEnvironmentLicensesResponseBodyDataListLicenseQuota licenseQuota;
 
         @NameInMap("productVersionUID")
         public String productVersionUID;
 
-        // 拒绝原因
         @NameInMap("rejectReason")
         public String rejectReason;
 
         @NameInMap("scope")
         public String scope;
 
-        // 状态
         @NameInMap("status")
         public String status;
 
-        // 类型
         @NameInMap("type")
         public String type;
 
-        // license uid
         @NameInMap("uid")
         public String uid;
 
@@ -308,19 +292,15 @@ public class ListEnvironmentLicensesResponseBody extends TeaModel {
     }
 
     public static class ListEnvironmentLicensesResponseBodyData extends TeaModel {
-        // license列表
         @NameInMap("list")
         public java.util.List<ListEnvironmentLicensesResponseBodyDataList> list;
 
-        // 页码
         @NameInMap("pageNum")
         public Integer pageNum;
 
-        // 页大小
         @NameInMap("pageSize")
         public Integer pageSize;
 
-        // 总数
         @NameInMap("total")
         public Integer total;
 

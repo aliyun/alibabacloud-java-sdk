@@ -4,71 +4,54 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ComponentVersion extends TeaModel {
-    // appVersion
     @NameInMap("appVersion")
     public String appVersion;
 
-    // componentName
     @NameInMap("componentName")
     public String componentName;
 
-    // componentUID
     @NameInMap("componentUID")
     public String componentUID;
 
-    // description
     @NameInMap("description")
     public String description;
 
-    // documents
     @NameInMap("documents")
     public String documents;
 
-    // imagesMapping
     @NameInMap("imagesMapping")
     public String imagesMapping;
 
-    // namespace
     @NameInMap("namespace")
     public String namespace;
 
-    // orchestrationType
     @NameInMap("orchestrationType")
     public String orchestrationType;
 
-    // orchestrationValues
     @NameInMap("orchestrationValues")
     public String orchestrationValues;
 
-    // packageURL
     @NameInMap("packageURL")
     public String packageURL;
 
-    // parentComponent
     @NameInMap("parentComponent")
     public Boolean parentComponent;
 
-    // platforms
     @NameInMap("platforms")
     public java.util.List<Platform> platforms;
 
-    // readme
     @NameInMap("readme")
     public String readme;
 
-    // resources
     @NameInMap("resources")
     public String resources;
 
-    // source
     @NameInMap("source")
     public String source;
 
-    // uid
     @NameInMap("uid")
     public String uid;
 
-    // version
     @NameInMap("version")
     public String version;
 

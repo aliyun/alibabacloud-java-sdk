@@ -4,115 +4,87 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class InstanceInfo extends TeaModel {
-    // annotations
     @NameInMap("annotations")
     public java.util.Map<String, String> annotations;
 
-    // arch
     @NameInMap("arch")
     public String arch;
 
-    // clusterLabels
     @NameInMap("clusterLabels")
     public java.util.Map<String, String> clusterLabels;
 
-    // clusterTaints
     @NameInMap("clusterTaints")
     public java.util.List<InstanceInfoClusterTaints> clusterTaints;
 
-    // clusterUID
     @NameInMap("clusterUID")
     public String clusterUID;
 
-    // cpu
     @NameInMap("cpu")
     public String cpu;
 
-    // createdAt
     @NameInMap("createdAt")
     public String createdAt;
 
-    // dataDisk
     @NameInMap("dataDisk")
     public java.util.List<Disk> dataDisk;
 
-    // diskConfigAnnotations
     @NameInMap("diskConfigAnnotations")
     public java.util.Map<String, String> diskConfigAnnotations;
 
-    // hostName
     @NameInMap("hostName")
     public String hostName;
 
-    // identifier
     @NameInMap("identifier")
     public String identifier;
 
-    // imageID
     @NameInMap("imageID")
     public String imageID;
 
-    // instanceType
     @NameInMap("instanceType")
     public String instanceType;
 
-    // internetBandwidth
     @NameInMap("internetBandwidth")
     public Integer internetBandwidth;
 
-    // kernel
     @NameInMap("kernel")
     public String kernel;
 
-    // labels
     @NameInMap("labels")
     public java.util.Map<String, String> labels;
 
-    // macAddress
     @NameInMap("macAddress")
     public String macAddress;
 
-    // memory
     @NameInMap("memory")
     public String memory;
 
-    // networkCards
     @NameInMap("networkCards")
     public java.util.List<InstanceInfoNetworkCards> networkCards;
 
-    // os
     @NameInMap("os")
     public String os;
 
-    // osVersion
     @NameInMap("osVersion")
     public String osVersion;
 
-    // privateIP
     @NameInMap("privateIP")
     public String privateIP;
 
-    // publicIP
     @NameInMap("publicIP")
     public String publicIP;
 
-    // rootPassword
     @NameInMap("rootPassword")
     public String rootPassword;
 
-    // systemDisk
     @NameInMap("systemDisk")
     public java.util.List<Disk> systemDisk;
 
-    // systemInfo
     @NameInMap("systemInfo")
     public String systemInfo;
 
-    // taints
     @NameInMap("taints")
     public java.util.List<InstanceInfoTaints> taints;
 
-    // uid
     @NameInMap("uid")
     public String uid;
 
@@ -346,15 +318,12 @@ public class InstanceInfo extends TeaModel {
     }
 
     public static class InstanceInfoClusterTaints extends TeaModel {
-        // effect
         @NameInMap("effect")
         public String effect;
 
-        // key
         @NameInMap("key")
         public String key;
 
-        // value
         @NameInMap("value")
         public String value;
 
@@ -390,11 +359,9 @@ public class InstanceInfo extends TeaModel {
     }
 
     public static class InstanceInfoNetworkCards extends TeaModel {
-        // ip
         @NameInMap("ip")
         public String ip;
 
-        // name
         @NameInMap("name")
         public String name;
 
@@ -422,15 +389,12 @@ public class InstanceInfo extends TeaModel {
     }
 
     public static class InstanceInfoTaints extends TeaModel {
-        // effect
         @NameInMap("effect")
         public String effect;
 
-        // key
         @NameInMap("key")
         public String key;
 
-        // value
         @NameInMap("value")
         public String value;
 

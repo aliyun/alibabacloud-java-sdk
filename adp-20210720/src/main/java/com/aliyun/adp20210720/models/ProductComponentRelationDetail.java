@@ -4,119 +4,90 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ProductComponentRelationDetail extends TeaModel {
-    // appVersion
     @NameInMap("appVersion")
     public String appVersion;
 
-    // category
     @NameInMap("category")
     public String category;
 
-    // class
     @NameInMap("class")
     public String _class;
 
-    // componentName
     @NameInMap("componentName")
     public String componentName;
 
-    // componentOrchestrationValues
     @NameInMap("componentOrchestrationValues")
     public String componentOrchestrationValues;
 
-    // componentUID
     @NameInMap("componentUID")
     public String componentUID;
 
-    // componentVersionUID
     @NameInMap("componentVersionUID")
     public String componentVersionUID;
 
-    // createdAt
     @NameInMap("createdAt")
     public String createdAt;
 
-    // description
     @NameInMap("description")
     public String description;
 
-    // documents
     @NameInMap("documents")
     public String documents;
 
-    // enable
     @NameInMap("enable")
     public Boolean enable;
 
-    // imagesMapping
     @NameInMap("imagesMapping")
     public String imagesMapping;
 
-    // namespace
     @NameInMap("namespace")
     public String namespace;
 
-    // orchestrationType
     @NameInMap("orchestrationType")
     public String orchestrationType;
 
-    // parentComponent
     @NameInMap("parentComponent")
     public Boolean parentComponent;
 
-    // parentComponentVersionRelationUID
     @NameInMap("parentComponentVersionRelationUID")
     public String parentComponentVersionRelationUID;
 
-    // parentComponentVersionUID
     @NameInMap("parentComponentVersionUID")
     public String parentComponentVersionUID;
 
-    // priority
     @NameInMap("priority")
     public Integer priority;
 
-    // productVersionUID
     @NameInMap("productVersionUID")
     public String productVersionUID;
 
-    // provider
     @NameInMap("provider")
     public String provider;
 
-    // public
     @NameInMap("public")
     public Boolean _public;
 
-    // readme
     @NameInMap("readme")
     public String readme;
 
-    // relationUID
     @NameInMap("relationUID")
     public String relationUID;
 
-    // releaseName
     @NameInMap("releaseName")
     public String releaseName;
 
-    // resources
     @NameInMap("resources")
     public String resources;
 
-    // sequence
     @NameInMap("sequence")
     public Integer sequence;
 
-    // singleton
     @NameInMap("singleton")
     public Boolean singleton;
 
-    // source
     @NameInMap("source")
     public String source;
 
-    // version
     @NameInMap("version")
     public String version;
 

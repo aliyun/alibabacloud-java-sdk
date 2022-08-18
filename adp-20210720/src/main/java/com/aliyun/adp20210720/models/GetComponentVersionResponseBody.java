@@ -42,6 +42,36 @@ public class GetComponentVersionResponseBody extends TeaModel {
         return this.msg;
     }
 
+    public static class GetComponentVersionResponseBodyDataResources extends TeaModel {
+        @NameInMap("limits")
+        public java.util.Map<String, ?> limits;
+
+        @NameInMap("requests")
+        public java.util.Map<String, ?> requests;
+
+        public static GetComponentVersionResponseBodyDataResources build(java.util.Map<String, ?> map) throws Exception {
+            GetComponentVersionResponseBodyDataResources self = new GetComponentVersionResponseBodyDataResources();
+            return TeaModel.build(map, self);
+        }
+
+        public GetComponentVersionResponseBodyDataResources setLimits(java.util.Map<String, ?> limits) {
+            this.limits = limits;
+            return this;
+        }
+        public java.util.Map<String, ?> getLimits() {
+            return this.limits;
+        }
+
+        public GetComponentVersionResponseBodyDataResources setRequests(java.util.Map<String, ?> requests) {
+            this.requests = requests;
+            return this;
+        }
+        public java.util.Map<String, ?> getRequests() {
+            return this.requests;
+        }
+
+    }
+
     public static class GetComponentVersionResponseBodyData extends TeaModel {
         @NameInMap("componentName")
         public String componentName;
@@ -53,7 +83,7 @@ public class GetComponentVersionResponseBody extends TeaModel {
         public String description;
 
         @NameInMap("documents")
-        public java.util.List<String> documents;
+        public String documents;
 
         @NameInMap("orchestrationValues")
         public String orchestrationValues;
@@ -74,7 +104,7 @@ public class GetComponentVersionResponseBody extends TeaModel {
         public String readme;
 
         @NameInMap("resources")
-        public String resources;
+        public GetComponentVersionResponseBodyDataResources resources;
 
         @NameInMap("uid")
         public String uid;
@@ -111,11 +141,11 @@ public class GetComponentVersionResponseBody extends TeaModel {
             return this.description;
         }
 
-        public GetComponentVersionResponseBodyData setDocuments(java.util.List<String> documents) {
+        public GetComponentVersionResponseBodyData setDocuments(String documents) {
             this.documents = documents;
             return this;
         }
-        public java.util.List<String> getDocuments() {
+        public String getDocuments() {
             return this.documents;
         }
 
@@ -167,11 +197,11 @@ public class GetComponentVersionResponseBody extends TeaModel {
             return this.readme;
         }
 
-        public GetComponentVersionResponseBodyData setResources(String resources) {
+        public GetComponentVersionResponseBodyData setResources(GetComponentVersionResponseBodyDataResources resources) {
             this.resources = resources;
             return this;
         }
-        public String getResources() {
+        public GetComponentVersionResponseBodyDataResources getResources() {
             return this.resources;
         }
 

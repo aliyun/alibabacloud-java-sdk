@@ -4,7 +4,6 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class GetProductVersionDifferencesRequest extends TeaModel {
-    // 上一个产品版本id
     @NameInMap("preVersionUID")
     public String preVersionUID;
 

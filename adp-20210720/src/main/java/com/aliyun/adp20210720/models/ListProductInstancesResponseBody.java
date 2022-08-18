@@ -21,6 +21,9 @@ public class ListProductInstancesResponseBody extends TeaModel {
     }
 
     public static class ListProductInstancesResponseBodyDataList extends TeaModel {
+        @NameInMap("continuousDeployment")
+        public Boolean continuousDeployment;
+
         @NameInMap("productName")
         public String productName;
 
@@ -39,6 +42,14 @@ public class ListProductInstancesResponseBody extends TeaModel {
         public static ListProductInstancesResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListProductInstancesResponseBodyDataList self = new ListProductInstancesResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public ListProductInstancesResponseBodyDataList setContinuousDeployment(Boolean continuousDeployment) {
+            this.continuousDeployment = continuousDeployment;
+            return this;
+        }
+        public Boolean getContinuousDeployment() {
+            return this.continuousDeployment;
         }
 
         public ListProductInstancesResponseBodyDataList setProductName(String productName) {

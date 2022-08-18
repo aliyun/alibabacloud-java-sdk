@@ -7,7 +7,6 @@ public class BatchAddEnvironmentNodesRequest extends TeaModel {
     @NameInMap("instanceList")
     public java.util.List<InstanceInfo> instanceList;
 
-    // 是否覆盖
     @NameInMap("overwrite")
     public Boolean overwrite;
 

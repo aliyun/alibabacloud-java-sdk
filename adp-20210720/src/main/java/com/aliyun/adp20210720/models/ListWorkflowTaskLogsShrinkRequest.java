@@ -7,18 +7,15 @@ public class ListWorkflowTaskLogsShrinkRequest extends TeaModel {
     @NameInMap("filterValues")
     public String filterValuesShrink;
 
-    // log 的顺序，positive 代表最新的数据在最后，reverse 代表最新的数据在最前
     @NameInMap("orderType")
     public String orderType;
 
     @NameInMap("pageNum")
     public Long pageNum;
 
-    // 每一页的行数，最大值 100
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // ENUM:["CreateCluster","DeleteCluster","Pack","Deploy"]
     @NameInMap("workflowType")
     public String workflowType;
 

@@ -4,15 +4,12 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class CreateProductDeploymentResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("code")
     public String code;
 
-    // 数据
     @NameInMap("data")
     public CreateProductDeploymentResponseBodyData data;
 
-    // 错误信息
     @NameInMap("msg")
     public String msg;
 
@@ -46,7 +43,6 @@ public class CreateProductDeploymentResponseBody extends TeaModel {
     }
 
     public static class CreateProductDeploymentResponseBodyData extends TeaModel {
-        // 部署uid
         @NameInMap("uid")
         public String uid;
 

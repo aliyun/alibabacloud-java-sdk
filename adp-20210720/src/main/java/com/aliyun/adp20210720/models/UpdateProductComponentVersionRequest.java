@@ -10,7 +10,6 @@ public class UpdateProductComponentVersionRequest extends TeaModel {
     @NameInMap("enable")
     public Boolean enable;
 
-    // 如果该参数不为空，则代表更新组件版本
     @NameInMap("newComponentVersionUID")
     public String newComponentVersionUID;
 

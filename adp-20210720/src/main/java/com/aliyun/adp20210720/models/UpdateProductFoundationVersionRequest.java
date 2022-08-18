@@ -4,7 +4,6 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class UpdateProductFoundationVersionRequest extends TeaModel {
-    // 底座版本uid
     @NameInMap("foundationVersionUID")
     public String foundationVersionUID;
 

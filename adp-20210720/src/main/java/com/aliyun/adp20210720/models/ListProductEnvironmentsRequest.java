@@ -4,7 +4,6 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListProductEnvironmentsRequest extends TeaModel {
-    // 兼容版本产品版本id
     @NameInMap("compatibleProductVersionUID")
     public String compatibleProductVersionUID;
 

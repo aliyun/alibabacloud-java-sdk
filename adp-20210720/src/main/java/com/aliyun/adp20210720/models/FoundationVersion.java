@@ -4,63 +4,48 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class FoundationVersion extends TeaModel {
-    // cluster config schema，用作针对 cluster config 进行校验以及前端可根据改数据进行展示
     @NameInMap("clusterConfigSchema")
     public String clusterConfigSchema;
 
-    // 支持的 cluster 引擎列表
     @NameInMap("clusterEngines")
     public java.util.List<FoundationVersionClusterEngines> clusterEngines;
 
-    // 默认 cluster config，需要通过base64 进行编码
     @NameInMap("defaultClusterConfig")
     public String defaultClusterConfig;
 
-    // description
     @NameInMap("description")
     public String description;
 
-    // documents
     @NameInMap("documents")
     public String documents;
 
-    // 驱动层描述
     @NameInMap("driver")
     public FoundationVersionDriver driver;
 
-    // 底座功能列表
     @NameInMap("features")
     public java.util.List<String> features;
 
-    // 标签
     @NameInMap("labels")
     public String labels;
 
-    // name，目前仅能是 “ADP 底座“
     @NameInMap("name")
     public String name;
 
-    // 打包工具
     @NameInMap("packageTools")
     public java.util.List<FoundationVersionPackageTools> packageTools;
 
-    // platforms
     @NameInMap("platforms")
     public java.util.List<Platform> platforms;
 
-    // status，ENUM:["Testing","Published","Deprecated"] Published 后，则全平台所有用户可见，请谨慎操作
     @NameInMap("status")
     public String status;
 
-    // the type of foundation version,ENUM:["trident","ack"]
     @NameInMap("type")
     public String type;
 
-    // uid
     @NameInMap("uid")
     public String uid;
 
-    // version
     @NameInMap("version")
     public String version;
 
@@ -189,16 +174,95 @@ public class FoundationVersion extends TeaModel {
         return this.version;
     }
 
+    public static class FoundationVersionClusterEnginesInfrastructureStatements extends TeaModel {
+        @NameInMap("default")
+        public Boolean _default;
+
+        @NameInMap("distroName")
+        public String distroName;
+
+        @NameInMap("distroVersion")
+        public String distroVersion;
+
+        @NameInMap("platform")
+        public Platform platform;
+
+        public static FoundationVersionClusterEnginesInfrastructureStatements build(java.util.Map<String, ?> map) throws Exception {
+            FoundationVersionClusterEnginesInfrastructureStatements self = new FoundationVersionClusterEnginesInfrastructureStatements();
+            return TeaModel.build(map, self);
+        }
+
+        public FoundationVersionClusterEnginesInfrastructureStatements set_default(Boolean _default) {
+            this._default = _default;
+            return this;
+        }
+        public Boolean get_default() {
+            return this._default;
+        }
+
+        public FoundationVersionClusterEnginesInfrastructureStatements setDistroName(String distroName) {
+            this.distroName = distroName;
+            return this;
+        }
+        public String getDistroName() {
+            return this.distroName;
+        }
+
+        public FoundationVersionClusterEnginesInfrastructureStatements setDistroVersion(String distroVersion) {
+            this.distroVersion = distroVersion;
+            return this;
+        }
+        public String getDistroVersion() {
+            return this.distroVersion;
+        }
+
+        public FoundationVersionClusterEnginesInfrastructureStatements setPlatform(Platform platform) {
+            this.platform = platform;
+            return this;
+        }
+        public Platform getPlatform() {
+            return this.platform;
+        }
+
+    }
+
+    public static class FoundationVersionClusterEnginesNetworkList extends TeaModel {
+        @NameInMap("ipFamilies")
+        public java.util.List<String> ipFamilies;
+
+        @NameInMap("name")
+        public String name;
+
+        public static FoundationVersionClusterEnginesNetworkList build(java.util.Map<String, ?> map) throws Exception {
+            FoundationVersionClusterEnginesNetworkList self = new FoundationVersionClusterEnginesNetworkList();
+            return TeaModel.build(map, self);
+        }
+
+        public FoundationVersionClusterEnginesNetworkList setIpFamilies(java.util.List<String> ipFamilies) {
+            this.ipFamilies = ipFamilies;
+            return this;
+        }
+        public java.util.List<String> getIpFamilies() {
+            return this.ipFamilies;
+        }
+
+        public FoundationVersionClusterEnginesNetworkList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class FoundationVersionClusterEnginesPackageToolsInstallToolPackages extends TeaModel {
-        // 安装工具架构类型
         @NameInMap("architecture")
         public String architecture;
 
-        // 安装工具支持的操作系统
         @NameInMap("os")
         public String os;
 
-        // 地址
         @NameInMap("url")
         public String url;
 
@@ -234,27 +298,21 @@ public class FoundationVersion extends TeaModel {
     }
 
     public static class FoundationVersionClusterEnginesPackageTools extends TeaModel {
-        // 打包工具image 地址
         @NameInMap("image")
         public String image;
 
-        // 安装工具
         @NameInMap("installToolPackages")
         public java.util.List<FoundationVersionClusterEnginesPackageToolsInstallToolPackages> installToolPackages;
 
-        // 打包工具名称
         @NameInMap("name")
         public String name;
 
-        // 包类型
         @NameInMap("packageFormat")
         public String packageFormat;
 
-        // 打包工具类型
         @NameInMap("type")
         public String type;
 
-        // 打包工具版本
         @NameInMap("version")
         public String version;
 
@@ -314,15 +372,12 @@ public class FoundationVersion extends TeaModel {
     }
 
     public static class FoundationVersionClusterEnginesPackages extends TeaModel {
-        // 包支持的架构
         @NameInMap("architecture")
         public String architecture;
 
-        // 包支持的操作系统
         @NameInMap("os")
         public String os;
 
-        // 包地址
         @NameInMap("url")
         public String url;
 
@@ -358,25 +413,43 @@ public class FoundationVersion extends TeaModel {
     }
 
     public static class FoundationVersionClusterEngines extends TeaModel {
-        // cluster engine 支持的打包工具定义
+        @NameInMap("infrastructureStatements")
+        public java.util.List<FoundationVersionClusterEnginesInfrastructureStatements> infrastructureStatements;
+
+        @NameInMap("networkList")
+        public java.util.List<FoundationVersionClusterEnginesNetworkList> networkList;
+
         @NameInMap("packageTools")
         public java.util.List<FoundationVersionClusterEnginesPackageTools> packageTools;
 
-        // cluster engine 的包
         @NameInMap("packages")
         public java.util.List<FoundationVersionClusterEnginesPackages> packages;
 
-        // cluster engine 列表
         @NameInMap("type")
         public String type;
 
-        // cluster engine 版本
         @NameInMap("version")
         public String version;
 
         public static FoundationVersionClusterEngines build(java.util.Map<String, ?> map) throws Exception {
             FoundationVersionClusterEngines self = new FoundationVersionClusterEngines();
             return TeaModel.build(map, self);
+        }
+
+        public FoundationVersionClusterEngines setInfrastructureStatements(java.util.List<FoundationVersionClusterEnginesInfrastructureStatements> infrastructureStatements) {
+            this.infrastructureStatements = infrastructureStatements;
+            return this;
+        }
+        public java.util.List<FoundationVersionClusterEnginesInfrastructureStatements> getInfrastructureStatements() {
+            return this.infrastructureStatements;
+        }
+
+        public FoundationVersionClusterEngines setNetworkList(java.util.List<FoundationVersionClusterEnginesNetworkList> networkList) {
+            this.networkList = networkList;
+            return this;
+        }
+        public java.util.List<FoundationVersionClusterEnginesNetworkList> getNetworkList() {
+            return this.networkList;
         }
 
         public FoundationVersionClusterEngines setPackageTools(java.util.List<FoundationVersionClusterEnginesPackageTools> packageTools) {
@@ -414,11 +487,9 @@ public class FoundationVersion extends TeaModel {
     }
 
     public static class FoundationVersionDriverComponents extends TeaModel {
-        // 组件名称
         @NameInMap("name")
         public String name;
 
-        // 组件版本
         @NameInMap("version")
         public String version;
 
@@ -446,7 +517,6 @@ public class FoundationVersion extends TeaModel {
     }
 
     public static class FoundationVersionDriver extends TeaModel {
-        // 驱动层组件
         @NameInMap("components")
         public java.util.List<FoundationVersionDriverComponents> components;
 
@@ -466,11 +536,9 @@ public class FoundationVersion extends TeaModel {
     }
 
     public static class FoundationVersionPackageTools extends TeaModel {
-        // 工具名
         @NameInMap("name")
         public String name;
 
-        // 工具版本
         @NameInMap("version")
         public String version;
 

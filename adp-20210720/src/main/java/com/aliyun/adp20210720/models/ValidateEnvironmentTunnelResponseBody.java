@@ -4,11 +4,9 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ValidateEnvironmentTunnelResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("code")
     public String code;
 
-    // 错误信息
     @NameInMap("msg")
     public String msg;
 

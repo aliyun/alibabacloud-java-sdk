@@ -4,7 +4,6 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class CreateProductVersionRequest extends TeaModel {
-    // 基于哪个版本克隆
     @NameInMap("baseProductVersionUID")
     public String baseProductVersionUID;
 

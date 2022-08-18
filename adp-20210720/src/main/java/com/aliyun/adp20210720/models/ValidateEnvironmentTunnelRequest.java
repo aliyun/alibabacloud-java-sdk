@@ -4,11 +4,9 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ValidateEnvironmentTunnelRequest extends TeaModel {
-    // 通道配置
     @NameInMap("tunnelConfig")
     public ValidateEnvironmentTunnelRequestTunnelConfig tunnelConfig;
 
-    // 通道类型
     @NameInMap("tunnelType")
     public String tunnelType;
 
@@ -34,27 +32,21 @@ public class ValidateEnvironmentTunnelRequest extends TeaModel {
     }
 
     public static class ValidateEnvironmentTunnelRequestTunnelConfig extends TeaModel {
-        // 跳板机hostname
         @NameInMap("hostname")
         public String hostname;
 
-        // 跳板机密码
         @NameInMap("password")
         public String password;
 
-        // 直连地域id
         @NameInMap("regionId")
         public String regionId;
 
-        // 跳板机ssh端口号
         @NameInMap("sshPort")
         public Integer sshPort;
 
-        // 跳板机用户名
         @NameInMap("username")
         public String username;
 
-        // 直连vpcId
         @NameInMap("vpcId")
         public String vpcId;
 

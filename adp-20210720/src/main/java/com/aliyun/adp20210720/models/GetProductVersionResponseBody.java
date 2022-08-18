@@ -43,6 +43,9 @@ public class GetProductVersionResponseBody extends TeaModel {
     }
 
     public static class GetProductVersionResponseBodyData extends TeaModel {
+        @NameInMap("continuousIntegration")
+        public Boolean continuousIntegration;
+
         @NameInMap("description")
         public String description;
 
@@ -73,6 +76,14 @@ public class GetProductVersionResponseBody extends TeaModel {
         public static GetProductVersionResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetProductVersionResponseBodyData self = new GetProductVersionResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetProductVersionResponseBodyData setContinuousIntegration(Boolean continuousIntegration) {
+            this.continuousIntegration = continuousIntegration;
+            return this;
+        }
+        public Boolean getContinuousIntegration() {
+            return this.continuousIntegration;
         }
 
         public GetProductVersionResponseBodyData setDescription(String description) {

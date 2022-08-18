@@ -4,23 +4,18 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class AddProductVersionConfigRequest extends TeaModel {
-    // 组件uid
     @NameInMap("componentVersionUID")
     public String componentVersionUID;
 
-    // 配置说明
     @NameInMap("description")
     public String description;
 
-    // 配置信息key
     @NameInMap("name")
     public String name;
 
-    // 父组件uid
     @NameInMap("parentComponentVersionUID")
     public String parentComponentVersionUID;
 
-    // 配置信息value
     @NameInMap("value")
     public String value;
 
@@ -81,23 +76,18 @@ public class AddProductVersionConfigRequest extends TeaModel {
     }
 
     public static class BatchAddProductVersionConfigRequestProductVersionConfigList extends TeaModel {
-        // 组件uid
         @NameInMap("componentVersionUID")
         public String componentVersionUID;
 
-        // 配置说明
         @NameInMap("description")
         public String description;
 
-        // 配置信息key
         @NameInMap("name")
         public String name;
 
-        // 父组件uid
         @NameInMap("parentComponentVersionUID")
         public String parentComponentVersionUID;
 
-        // 配置信息value
         @NameInMap("value")
         public String value;
 

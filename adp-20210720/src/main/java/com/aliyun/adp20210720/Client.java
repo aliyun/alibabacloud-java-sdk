@@ -130,6 +130,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         uid = com.aliyun.openapiutil.Client.getEncodeParam(uid);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productVersionInfoList)) {
+            body.put("productVersionInfoList", request.productVersionInfoList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.productVersionUIDList)) {
             body.put("productVersionUIDList", request.productVersionUIDList);
         }
@@ -430,6 +434,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("contact", request.contact);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.licenseQuota))) {
             body.put("licenseQuota", request.licenseQuota);
         }
@@ -654,6 +662,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clusterEngineType)) {
             query.put("clusterEngineType", request.clusterEngineType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.foundationReferenceUID)) {
+            query.put("foundationReferenceUID", request.foundationReferenceUID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oldFoundationReferenceUID)) {
+            query.put("oldFoundationReferenceUID", request.oldFoundationReferenceUID);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.oldProductVersionUID)) {
@@ -1379,6 +1395,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         uid = com.aliyun.openapiutil.Client.getEncodeParam(uid);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.foundationReferenceUID)) {
+            query.put("foundationReferenceUID", request.foundationReferenceUID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oldFoundationReferenceUID)) {
+            query.put("oldFoundationReferenceUID", request.oldFoundationReferenceUID);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.oldProductVersionUID)) {
             query.put("oldProductVersionUID", request.oldProductVersionUID);
         }
@@ -1432,6 +1456,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.productVersionUID)) {
             query.put("productVersionUID", request.productVersionUID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
+            query.put("uid", request.uid);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1860,15 +1888,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListFoundationReferenceComponentsResponse());
     }
 
-    public ListFoundationVersionsResponse listFoundationVersions() throws Exception {
+    public ListFoundationVersionsResponse listFoundationVersions(ListFoundationVersionsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listFoundationVersionsWithOptions(headers, runtime);
+        return this.listFoundationVersionsWithOptions(request, headers, runtime);
     }
 
-    public ListFoundationVersionsResponse listFoundationVersionsWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListFoundationVersionsResponse listFoundationVersionsWithOptions(ListFoundationVersionsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sortDirect)) {
+            query.put("sortDirect", request.sortDirect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortKey)) {
+            query.put("sortKey", request.sortKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListFoundationVersions"),
@@ -2160,6 +2203,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameter)) {
+            query.put("parameter", request.parameter);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -2813,6 +2860,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         uid = com.aliyun.openapiutil.Client.getEncodeParam(uid);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.continuousIntegration)) {
+            body.put("continuousIntegration", request.continuousIntegration);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
         }

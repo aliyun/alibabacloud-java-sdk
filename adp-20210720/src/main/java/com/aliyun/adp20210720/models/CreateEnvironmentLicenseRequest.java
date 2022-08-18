@@ -4,18 +4,18 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class CreateEnvironmentLicenseRequest extends TeaModel {
-    // 企业名称
     @NameInMap("companyName")
     public String companyName;
 
-    // 联系方式
     @NameInMap("contact")
     public String contact;
+
+    @NameInMap("description")
+    public String description;
 
     @NameInMap("licenseQuota")
     public CreateEnvironmentLicenseRequestLicenseQuota licenseQuota;
 
-    // 机器指纹信息
     @NameInMap("machineFingerprint")
     public String machineFingerprint;
 
@@ -25,14 +25,12 @@ public class CreateEnvironmentLicenseRequest extends TeaModel {
     @NameInMap("productVersionUID")
     public String productVersionUID;
 
-    // 使用场景
     @NameInMap("scenario")
     public String scenario;
 
     @NameInMap("scope")
     public String scope;
 
-    // 证书类型
     @NameInMap("type")
     public String type;
 
@@ -55,6 +53,14 @@ public class CreateEnvironmentLicenseRequest extends TeaModel {
     }
     public String getContact() {
         return this.contact;
+    }
+
+    public CreateEnvironmentLicenseRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateEnvironmentLicenseRequest setLicenseQuota(CreateEnvironmentLicenseRequestLicenseQuota licenseQuota) {

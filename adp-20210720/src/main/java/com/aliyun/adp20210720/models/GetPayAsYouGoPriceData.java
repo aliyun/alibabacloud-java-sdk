@@ -4,27 +4,21 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class GetPayAsYouGoPriceData extends TeaModel {
-    // ModuleList
     @NameInMap("ModuleList")
     public java.util.List<GetPayAsYouGoPriceDataModuleList> moduleList;
 
-    // OwnerId
     @NameInMap("OwnerId")
     public String ownerId;
 
-    // ProductCode
     @NameInMap("ProductCode")
     public String productCode;
 
-    // ProductType
     @NameInMap("ProductType")
     public String productType;
 
-    // Region
     @NameInMap("Region")
     public String region;
 
-    // SubscriptionType
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 
@@ -82,15 +76,12 @@ public class GetPayAsYouGoPriceData extends TeaModel {
     }
 
     public static class GetPayAsYouGoPriceDataModuleList extends TeaModel {
-        // Config
         @NameInMap("Config")
         public String config;
 
-        // ModuleCode
         @NameInMap("ModuleCode")
         public String moduleCode;
 
-        // PriceType
         @NameInMap("PriceType")
         public String priceType;
 

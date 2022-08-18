@@ -4,19 +4,15 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ExportPort extends TeaModel {
-    // 目标IP 段
     @NameInMap("cidrIP")
     public String cidrIP;
 
-    // 端口范围，格式：start/end
     @NameInMap("portRange")
     public String portRange;
 
-    // 协议
     @NameInMap("protocol")
     public String protocol;
 
-    // 为true，则代表deny
     @NameInMap("unallowed")
     public Boolean unallowed;
 
