@@ -7,8 +7,8 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
     @NameInMap("DomainGroups")
     public DescribeDomainGroupsResponseBodyDomainGroups domainGroups;
 
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
@@ -16,8 +16,8 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeDomainGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainGroupsResponseBody self = new DescribeDomainGroupsResponseBody();
@@ -32,12 +32,12 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         return this.domainGroups;
     }
 
-    public DescribeDomainGroupsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public DescribeDomainGroupsResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDomainGroupsResponseBody setPageSize(Long pageSize) {
@@ -56,27 +56,35 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDomainGroupsResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDomainGroupsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup extends TeaModel {
+        @NameInMap("DomainCount")
+        public Long domainCount;
+
         @NameInMap("GroupId")
         public String groupId;
 
         @NameInMap("GroupName")
         public String groupName;
 
-        @NameInMap("DomainCount")
-        public Long domainCount;
-
         public static DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup self = new DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup setDomainCount(Long domainCount) {
+            this.domainCount = domainCount;
+            return this;
+        }
+        public Long getDomainCount() {
+            return this.domainCount;
         }
 
         public DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup setGroupId(String groupId) {
@@ -93,14 +101,6 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         }
         public String getGroupName() {
             return this.groupName;
-        }
-
-        public DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup setDomainCount(Long domainCount) {
-            this.domainCount = domainCount;
-            return this;
-        }
-        public Long getDomainCount() {
-            return this.domainCount;
         }
 
     }

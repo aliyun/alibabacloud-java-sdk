@@ -4,45 +4,18 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class OperateBatchDomainRequest extends TeaModel {
+    @NameInMap("DomainRecordInfo")
+    public java.util.List<OperateBatchDomainRequestDomainRecordInfo> domainRecordInfo;
+
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
 
     @NameInMap("Type")
     public String type;
 
-    @NameInMap("DomainRecordInfo")
-    public java.util.List<OperateBatchDomainRequestDomainRecordInfo> domainRecordInfo;
-
     public static OperateBatchDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateBatchDomainRequest self = new OperateBatchDomainRequest();
         return TeaModel.build(map, self);
-    }
-
-    public OperateBatchDomainRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public OperateBatchDomainRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public OperateBatchDomainRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
     public OperateBatchDomainRequest setDomainRecordInfo(java.util.List<OperateBatchDomainRequestDomainRecordInfo> domainRecordInfo) {
@@ -53,16 +26,23 @@ public class OperateBatchDomainRequest extends TeaModel {
         return this.domainRecordInfo;
     }
 
+    public OperateBatchDomainRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public OperateBatchDomainRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
     public static class OperateBatchDomainRequestDomainRecordInfo extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Value")
-        public String value;
-
-        @NameInMap("Ttl")
-        public Integer ttl;
-
         @NameInMap("Domain")
         public String domain;
 
@@ -72,45 +52,30 @@ public class OperateBatchDomainRequest extends TeaModel {
         @NameInMap("NewRr")
         public String newRr;
 
-        @NameInMap("Rr")
-        public String rr;
-
-        @NameInMap("Priority")
-        public Integer priority;
-
         @NameInMap("NewType")
         public String newType;
 
         @NameInMap("NewValue")
         public String newValue;
 
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("Rr")
+        public String rr;
+
+        @NameInMap("Ttl")
+        public Integer ttl;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Value")
+        public String value;
+
         public static OperateBatchDomainRequestDomainRecordInfo build(java.util.Map<String, ?> map) throws Exception {
             OperateBatchDomainRequestDomainRecordInfo self = new OperateBatchDomainRequestDomainRecordInfo();
             return TeaModel.build(map, self);
-        }
-
-        public OperateBatchDomainRequestDomainRecordInfo setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public OperateBatchDomainRequestDomainRecordInfo setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public OperateBatchDomainRequestDomainRecordInfo setTtl(Integer ttl) {
-            this.ttl = ttl;
-            return this;
-        }
-        public Integer getTtl() {
-            return this.ttl;
         }
 
         public OperateBatchDomainRequestDomainRecordInfo setDomain(String domain) {
@@ -137,22 +102,6 @@ public class OperateBatchDomainRequest extends TeaModel {
             return this.newRr;
         }
 
-        public OperateBatchDomainRequestDomainRecordInfo setRr(String rr) {
-            this.rr = rr;
-            return this;
-        }
-        public String getRr() {
-            return this.rr;
-        }
-
-        public OperateBatchDomainRequestDomainRecordInfo setPriority(Integer priority) {
-            this.priority = priority;
-            return this;
-        }
-        public Integer getPriority() {
-            return this.priority;
-        }
-
         public OperateBatchDomainRequestDomainRecordInfo setNewType(String newType) {
             this.newType = newType;
             return this;
@@ -167,6 +116,46 @@ public class OperateBatchDomainRequest extends TeaModel {
         }
         public String getNewValue() {
             return this.newValue;
+        }
+
+        public OperateBatchDomainRequestDomainRecordInfo setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public OperateBatchDomainRequestDomainRecordInfo setRr(String rr) {
+            this.rr = rr;
+            return this;
+        }
+        public String getRr() {
+            return this.rr;
+        }
+
+        public OperateBatchDomainRequestDomainRecordInfo setTtl(Integer ttl) {
+            this.ttl = ttl;
+            return this;
+        }
+        public Integer getTtl() {
+            return this.ttl;
+        }
+
+        public OperateBatchDomainRequestDomainRecordInfo setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public OperateBatchDomainRequestDomainRecordInfo setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

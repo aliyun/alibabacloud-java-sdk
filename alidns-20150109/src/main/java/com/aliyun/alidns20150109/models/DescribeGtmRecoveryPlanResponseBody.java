@@ -4,11 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("CreateTime")
+    public String createTime;
 
-    @NameInMap("LastRollbackTime")
-    public String lastRollbackTime;
+    @NameInMap("CreateTimestamp")
+    public Long createTimestamp;
 
     @NameInMap("FaultAddrPoolNum")
     public Integer faultAddrPoolNum;
@@ -19,17 +19,14 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     @NameInMap("LastExecuteTime")
     public String lastExecuteTime;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("CreateTime")
-    public String createTime;
-
     @NameInMap("LastExecuteTimestamp")
     public Long lastExecuteTimestamp;
 
-    @NameInMap("Remark")
-    public String remark;
+    @NameInMap("LastRollbackTime")
+    public String lastRollbackTime;
+
+    @NameInMap("LastRollbackTimestamp")
+    public Long lastRollbackTimestamp;
 
     @NameInMap("Name")
     public String name;
@@ -37,37 +34,40 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     @NameInMap("RecoveryPlanId")
     public Long recoveryPlanId;
 
+    @NameInMap("Remark")
+    public String remark;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Status")
+    public String status;
+
     @NameInMap("UpdateTime")
     public String updateTime;
 
     @NameInMap("UpdateTimestamp")
     public Long updateTimestamp;
 
-    @NameInMap("LastRollbackTimestamp")
-    public Long lastRollbackTimestamp;
-
-    @NameInMap("CreateTimestamp")
-    public Long createTimestamp;
-
     public static DescribeGtmRecoveryPlanResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGtmRecoveryPlanResponseBody self = new DescribeGtmRecoveryPlanResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeGtmRecoveryPlanResponseBody setStatus(String status) {
-        this.status = status;
+    public DescribeGtmRecoveryPlanResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getCreateTime() {
+        return this.createTime;
     }
 
-    public DescribeGtmRecoveryPlanResponseBody setLastRollbackTime(String lastRollbackTime) {
-        this.lastRollbackTime = lastRollbackTime;
+    public DescribeGtmRecoveryPlanResponseBody setCreateTimestamp(Long createTimestamp) {
+        this.createTimestamp = createTimestamp;
         return this;
     }
-    public String getLastRollbackTime() {
-        return this.lastRollbackTime;
+    public Long getCreateTimestamp() {
+        return this.createTimestamp;
     }
 
     public DescribeGtmRecoveryPlanResponseBody setFaultAddrPoolNum(Integer faultAddrPoolNum) {
@@ -94,22 +94,6 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         return this.lastExecuteTime;
     }
 
-    public DescribeGtmRecoveryPlanResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeGtmRecoveryPlanResponseBody setCreateTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public String getCreateTime() {
-        return this.createTime;
-    }
-
     public DescribeGtmRecoveryPlanResponseBody setLastExecuteTimestamp(Long lastExecuteTimestamp) {
         this.lastExecuteTimestamp = lastExecuteTimestamp;
         return this;
@@ -118,12 +102,20 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         return this.lastExecuteTimestamp;
     }
 
-    public DescribeGtmRecoveryPlanResponseBody setRemark(String remark) {
-        this.remark = remark;
+    public DescribeGtmRecoveryPlanResponseBody setLastRollbackTime(String lastRollbackTime) {
+        this.lastRollbackTime = lastRollbackTime;
         return this;
     }
-    public String getRemark() {
-        return this.remark;
+    public String getLastRollbackTime() {
+        return this.lastRollbackTime;
+    }
+
+    public DescribeGtmRecoveryPlanResponseBody setLastRollbackTimestamp(Long lastRollbackTimestamp) {
+        this.lastRollbackTimestamp = lastRollbackTimestamp;
+        return this;
+    }
+    public Long getLastRollbackTimestamp() {
+        return this.lastRollbackTimestamp;
     }
 
     public DescribeGtmRecoveryPlanResponseBody setName(String name) {
@@ -142,6 +134,30 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         return this.recoveryPlanId;
     }
 
+    public DescribeGtmRecoveryPlanResponseBody setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
+    }
+
+    public DescribeGtmRecoveryPlanResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeGtmRecoveryPlanResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
     public DescribeGtmRecoveryPlanResponseBody setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -158,43 +174,27 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         return this.updateTimestamp;
     }
 
-    public DescribeGtmRecoveryPlanResponseBody setLastRollbackTimestamp(Long lastRollbackTimestamp) {
-        this.lastRollbackTimestamp = lastRollbackTimestamp;
-        return this;
-    }
-    public Long getLastRollbackTimestamp() {
-        return this.lastRollbackTimestamp;
-    }
-
-    public DescribeGtmRecoveryPlanResponseBody setCreateTimestamp(Long createTimestamp) {
-        this.createTimestamp = createTimestamp;
-        return this;
-    }
-    public Long getCreateTimestamp() {
-        return this.createTimestamp;
-    }
-
     public static class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr extends TeaModel {
-        @NameInMap("Value")
-        public String value;
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("Mode")
         public String mode;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr build(java.util.Map<String, ?> map) throws Exception {
             DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr self = new DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr();
             return TeaModel.build(map, self);
         }
 
-        public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr setValue(String value) {
-            this.value = value;
+        public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr setId(Long id) {
+            this.id = id;
             return this;
         }
-        public String getValue() {
-            return this.value;
+        public Long getId() {
+            return this.id;
         }
 
         public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr setMode(String mode) {
@@ -205,12 +205,12 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             return this.mode;
         }
 
-        public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr setId(Long id) {
-            this.id = id;
+        public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr setValue(String value) {
+            this.value = value;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -235,29 +235,21 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool extends TeaModel {
-        @NameInMap("Addrs")
-        public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrs addrs;
-
         @NameInMap("AddrPoolId")
         public String addrPoolId;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
 
         @NameInMap("AddrPoolName")
         public String addrPoolName;
 
+        @NameInMap("Addrs")
+        public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrs addrs;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         public static DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool build(java.util.Map<String, ?> map) throws Exception {
             DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool self = new DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool setAddrs(DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrs addrs) {
-            this.addrs = addrs;
-            return this;
-        }
-        public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrs getAddrs() {
-            return this.addrs;
         }
 
         public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool setAddrPoolId(String addrPoolId) {
@@ -268,20 +260,28 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             return this.addrPoolId;
         }
 
-        public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
         public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool setAddrPoolName(String addrPoolName) {
             this.addrPoolName = addrPoolName;
             return this;
         }
         public String getAddrPoolName() {
             return this.addrPoolName;
+        }
+
+        public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool setAddrs(DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrs addrs) {
+            this.addrs = addrs;
+            return this;
+        }
+        public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrs getAddrs() {
+            return this.addrs;
+        }
+
+        public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
     }

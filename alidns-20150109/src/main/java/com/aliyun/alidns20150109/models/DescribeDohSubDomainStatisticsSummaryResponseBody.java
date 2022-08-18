@@ -4,27 +4,35 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("TotalPages")
-    public Integer totalPages;
+    @NameInMap("Statistics")
+    public java.util.List<DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics> statistics;
 
     @NameInMap("TotalItems")
     public Integer totalItems;
 
-    @NameInMap("Statistics")
-    public java.util.List<DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics> statistics;
+    @NameInMap("TotalPages")
+    public Integer totalPages;
 
     public static DescribeDohSubDomainStatisticsSummaryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDohSubDomainStatisticsSummaryResponseBody self = new DescribeDohSubDomainStatisticsSummaryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDohSubDomainStatisticsSummaryResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDohSubDomainStatisticsSummaryResponseBody setPageSize(Integer pageSize) {
@@ -43,20 +51,12 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
         return this.requestId;
     }
 
-    public DescribeDohSubDomainStatisticsSummaryResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDohSubDomainStatisticsSummaryResponseBody setStatistics(java.util.List<DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics> statistics) {
+        this.statistics = statistics;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeDohSubDomainStatisticsSummaryResponseBody setTotalPages(Integer totalPages) {
-        this.totalPages = totalPages;
-        return this;
-    }
-    public Integer getTotalPages() {
-        return this.totalPages;
+    public java.util.List<DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics> getStatistics() {
+        return this.statistics;
     }
 
     public DescribeDohSubDomainStatisticsSummaryResponseBody setTotalItems(Integer totalItems) {
@@ -67,20 +67,20 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
         return this.totalItems;
     }
 
-    public DescribeDohSubDomainStatisticsSummaryResponseBody setStatistics(java.util.List<DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics> statistics) {
-        this.statistics = statistics;
+    public DescribeDohSubDomainStatisticsSummaryResponseBody setTotalPages(Integer totalPages) {
+        this.totalPages = totalPages;
         return this;
     }
-    public java.util.List<DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics> getStatistics() {
-        return this.statistics;
+    public Integer getTotalPages() {
+        return this.totalPages;
     }
 
     public static class DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics extends TeaModel {
-        @NameInMap("V6HttpCount")
-        public Long v6HttpCount;
+        @NameInMap("HttpCount")
+        public Long httpCount;
 
-        @NameInMap("V4HttpsCount")
-        public Long v4HttpsCount;
+        @NameInMap("HttpsCount")
+        public Long httpsCount;
 
         @NameInMap("IpCount")
         public Long ipCount;
@@ -91,14 +91,14 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
         @NameInMap("TotalCount")
         public Long totalCount;
 
-        @NameInMap("HttpCount")
-        public Long httpCount;
-
-        @NameInMap("HttpsCount")
-        public Long httpsCount;
-
         @NameInMap("V4HttpCount")
         public Long v4HttpCount;
+
+        @NameInMap("V4HttpsCount")
+        public Long v4HttpsCount;
+
+        @NameInMap("V6HttpCount")
+        public Long v6HttpCount;
 
         @NameInMap("V6HttpsCount")
         public Long v6HttpsCount;
@@ -108,20 +108,20 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
             return TeaModel.build(map, self);
         }
 
-        public DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics setV6HttpCount(Long v6HttpCount) {
-            this.v6HttpCount = v6HttpCount;
+        public DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics setHttpCount(Long httpCount) {
+            this.httpCount = httpCount;
             return this;
         }
-        public Long getV6HttpCount() {
-            return this.v6HttpCount;
+        public Long getHttpCount() {
+            return this.httpCount;
         }
 
-        public DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics setV4HttpsCount(Long v4HttpsCount) {
-            this.v4HttpsCount = v4HttpsCount;
+        public DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics setHttpsCount(Long httpsCount) {
+            this.httpsCount = httpsCount;
             return this;
         }
-        public Long getV4HttpsCount() {
-            return this.v4HttpsCount;
+        public Long getHttpsCount() {
+            return this.httpsCount;
         }
 
         public DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics setIpCount(Long ipCount) {
@@ -148,28 +148,28 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
             return this.totalCount;
         }
 
-        public DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics setHttpCount(Long httpCount) {
-            this.httpCount = httpCount;
-            return this;
-        }
-        public Long getHttpCount() {
-            return this.httpCount;
-        }
-
-        public DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics setHttpsCount(Long httpsCount) {
-            this.httpsCount = httpsCount;
-            return this;
-        }
-        public Long getHttpsCount() {
-            return this.httpsCount;
-        }
-
         public DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics setV4HttpCount(Long v4HttpCount) {
             this.v4HttpCount = v4HttpCount;
             return this;
         }
         public Long getV4HttpCount() {
             return this.v4HttpCount;
+        }
+
+        public DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics setV4HttpsCount(Long v4HttpsCount) {
+            this.v4HttpsCount = v4HttpsCount;
+            return this;
+        }
+        public Long getV4HttpsCount() {
+            return this.v4HttpsCount;
+        }
+
+        public DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics setV6HttpCount(Long v6HttpCount) {
+            this.v6HttpCount = v6HttpCount;
+            return this;
+        }
+        public Long getV6HttpCount() {
+            return this.v6HttpCount;
         }
 
         public DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics setV6HttpsCount(Long v6HttpsCount) {

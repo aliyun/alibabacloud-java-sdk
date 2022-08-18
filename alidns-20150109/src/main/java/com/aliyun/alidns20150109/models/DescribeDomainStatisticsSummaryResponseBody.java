@@ -4,27 +4,35 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("TotalPages")
-    public Integer totalPages;
+    @NameInMap("Statistics")
+    public DescribeDomainStatisticsSummaryResponseBodyStatistics statistics;
 
     @NameInMap("TotalItems")
     public Integer totalItems;
 
-    @NameInMap("Statistics")
-    public DescribeDomainStatisticsSummaryResponseBodyStatistics statistics;
+    @NameInMap("TotalPages")
+    public Integer totalPages;
 
     public static DescribeDomainStatisticsSummaryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainStatisticsSummaryResponseBody self = new DescribeDomainStatisticsSummaryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDomainStatisticsSummaryResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDomainStatisticsSummaryResponseBody setPageSize(Integer pageSize) {
@@ -43,20 +51,12 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDomainStatisticsSummaryResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDomainStatisticsSummaryResponseBody setStatistics(DescribeDomainStatisticsSummaryResponseBodyStatistics statistics) {
+        this.statistics = statistics;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeDomainStatisticsSummaryResponseBody setTotalPages(Integer totalPages) {
-        this.totalPages = totalPages;
-        return this;
-    }
-    public Integer getTotalPages() {
-        return this.totalPages;
+    public DescribeDomainStatisticsSummaryResponseBodyStatistics getStatistics() {
+        return this.statistics;
     }
 
     public DescribeDomainStatisticsSummaryResponseBody setTotalItems(Integer totalItems) {
@@ -67,20 +67,20 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
         return this.totalItems;
     }
 
-    public DescribeDomainStatisticsSummaryResponseBody setStatistics(DescribeDomainStatisticsSummaryResponseBodyStatistics statistics) {
-        this.statistics = statistics;
+    public DescribeDomainStatisticsSummaryResponseBody setTotalPages(Integer totalPages) {
+        this.totalPages = totalPages;
         return this;
     }
-    public DescribeDomainStatisticsSummaryResponseBodyStatistics getStatistics() {
-        return this.statistics;
+    public Integer getTotalPages() {
+        return this.totalPages;
     }
 
     public static class DescribeDomainStatisticsSummaryResponseBodyStatisticsStatistic extends TeaModel {
-        @NameInMap("DomainName")
-        public String domainName;
-
         @NameInMap("Count")
         public Long count;
+
+        @NameInMap("DomainName")
+        public String domainName;
 
         @NameInMap("DomainType")
         public String domainType;
@@ -90,20 +90,20 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDomainStatisticsSummaryResponseBodyStatisticsStatistic setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
-        }
-
         public DescribeDomainStatisticsSummaryResponseBodyStatisticsStatistic setCount(Long count) {
             this.count = count;
             return this;
         }
         public Long getCount() {
             return this.count;
+        }
+
+        public DescribeDomainStatisticsSummaryResponseBodyStatisticsStatistic setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
         }
 
         public DescribeDomainStatisticsSummaryResponseBodyStatisticsStatistic setDomainType(String domainType) {

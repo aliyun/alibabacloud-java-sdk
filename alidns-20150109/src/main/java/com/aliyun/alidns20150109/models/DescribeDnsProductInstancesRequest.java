@@ -4,11 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsProductInstancesRequest extends TeaModel {
+    @NameInMap("DomainType")
+    public String domainType;
+
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -16,15 +16,23 @@ public class DescribeDnsProductInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("VersionCode")
     public String versionCode;
-
-    @NameInMap("DomainType")
-    public String domainType;
 
     public static DescribeDnsProductInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDnsProductInstancesRequest self = new DescribeDnsProductInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDnsProductInstancesRequest setDomainType(String domainType) {
+        this.domainType = domainType;
+        return this;
+    }
+    public String getDomainType() {
+        return this.domainType;
     }
 
     public DescribeDnsProductInstancesRequest setLang(String lang) {
@@ -33,14 +41,6 @@ public class DescribeDnsProductInstancesRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeDnsProductInstancesRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeDnsProductInstancesRequest setPageNumber(Long pageNumber) {
@@ -59,20 +59,20 @@ public class DescribeDnsProductInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeDnsProductInstancesRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
+    }
+
     public DescribeDnsProductInstancesRequest setVersionCode(String versionCode) {
         this.versionCode = versionCode;
         return this;
     }
     public String getVersionCode() {
         return this.versionCode;
-    }
-
-    public DescribeDnsProductInstancesRequest setDomainType(String domainType) {
-        this.domainType = domainType;
-        return this;
-    }
-    public String getDomainType() {
-        return this.domainType;
     }
 
 }

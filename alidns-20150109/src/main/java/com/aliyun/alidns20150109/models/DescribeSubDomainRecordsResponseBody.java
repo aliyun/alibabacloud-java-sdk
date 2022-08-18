@@ -4,8 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeSubDomainRecordsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("DomainRecords")
+    public DescribeSubDomainRecordsResponseBodyDomainRecords domainRecords;
+
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
@@ -13,39 +16,12 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DomainRecords")
-    public DescribeSubDomainRecordsResponseBodyDomainRecords domainRecords;
-
-    @NameInMap("PageNumber")
-    public Long pageNumber;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeSubDomainRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSubDomainRecordsResponseBody self = new DescribeSubDomainRecordsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSubDomainRecordsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeSubDomainRecordsResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeSubDomainRecordsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeSubDomainRecordsResponseBody setDomainRecords(DescribeSubDomainRecordsResponseBodyDomainRecords domainRecords) {
@@ -64,27 +40,39 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeSubDomainRecordsResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeSubDomainRecordsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeSubDomainRecordsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeSubDomainRecordsResponseBodyDomainRecordsRecord extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Weight")
-        public Integer weight;
-
-        @NameInMap("Value")
-        public String value;
-
-        @NameInMap("TTL")
-        public Long TTL;
+        @NameInMap("DomainName")
+        public String domainName;
 
         @NameInMap("Line")
         public String line;
 
-        @NameInMap("RecordId")
-        public String recordId;
+        @NameInMap("Locked")
+        public Boolean locked;
 
         @NameInMap("Priority")
         public Long priority;
@@ -92,55 +80,35 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
         @NameInMap("RR")
         public String RR;
 
-        @NameInMap("DomainName")
-        public String domainName;
+        @NameInMap("RecordId")
+        public String recordId;
 
-        @NameInMap("Locked")
-        public Boolean locked;
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TTL")
+        public Long TTL;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Value")
+        public String value;
+
+        @NameInMap("Weight")
+        public Integer weight;
 
         public static DescribeSubDomainRecordsResponseBodyDomainRecordsRecord build(java.util.Map<String, ?> map) throws Exception {
             DescribeSubDomainRecordsResponseBodyDomainRecordsRecord self = new DescribeSubDomainRecordsResponseBodyDomainRecordsRecord();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setStatus(String status) {
-            this.status = status;
+        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setDomainName(String domainName) {
+            this.domainName = domainName;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
-        }
-
-        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setTTL(Long TTL) {
-            this.TTL = TTL;
-            return this;
-        }
-        public Long getTTL() {
-            return this.TTL;
+        public String getDomainName() {
+            return this.domainName;
         }
 
         public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setLine(String line) {
@@ -151,12 +119,12 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
             return this.line;
         }
 
-        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setRecordId(String recordId) {
-            this.recordId = recordId;
+        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setLocked(Boolean locked) {
+            this.locked = locked;
             return this;
         }
-        public String getRecordId() {
-            return this.recordId;
+        public Boolean getLocked() {
+            return this.locked;
         }
 
         public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setPriority(Long priority) {
@@ -175,20 +143,52 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
             return this.RR;
         }
 
-        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setDomainName(String domainName) {
-            this.domainName = domainName;
+        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setRecordId(String recordId) {
+            this.recordId = recordId;
             return this;
         }
-        public String getDomainName() {
-            return this.domainName;
+        public String getRecordId() {
+            return this.recordId;
         }
 
-        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setLocked(Boolean locked) {
-            this.locked = locked;
+        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public Boolean getLocked() {
-            return this.locked;
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setTTL(Long TTL) {
+            this.TTL = TTL;
+            return this;
+        }
+        public Long getTTL() {
+            return this.TTL;
+        }
+
+        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public DescribeSubDomainRecordsResponseBodyDomainRecordsRecord setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }

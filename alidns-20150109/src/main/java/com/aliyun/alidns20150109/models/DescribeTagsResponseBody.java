@@ -4,8 +4,8 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
@@ -13,23 +13,23 @@ public class DescribeTagsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
     @NameInMap("Tags")
     public java.util.List<DescribeTagsResponseBodyTags> tags;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTagsResponseBody self = new DescribeTagsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeTagsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public DescribeTagsResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeTagsResponseBody setPageSize(Long pageSize) {
@@ -48,20 +48,20 @@ public class DescribeTagsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeTagsResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeTagsResponseBody setTags(java.util.List<DescribeTagsResponseBodyTags> tags) {
         this.tags = tags;
         return this;
     }
     public java.util.List<DescribeTagsResponseBodyTags> getTags() {
         return this.tags;
+    }
+
+    public DescribeTagsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeTagsResponseBodyTags extends TeaModel {

@@ -7,11 +7,11 @@ public class UpdateDNSSLBWeightRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("RecordId")
     public String recordId;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     @NameInMap("Weight")
     public Integer weight;
@@ -29,20 +29,20 @@ public class UpdateDNSSLBWeightRequest extends TeaModel {
         return this.lang;
     }
 
-    public UpdateDNSSLBWeightRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
     public UpdateDNSSLBWeightRequest setRecordId(String recordId) {
         this.recordId = recordId;
         return this;
     }
     public String getRecordId() {
         return this.recordId;
+    }
+
+    public UpdateDNSSLBWeightRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public UpdateDNSSLBWeightRequest setWeight(Integer weight) {

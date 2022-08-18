@@ -4,17 +4,14 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainLogsRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("KeyWord")
     public String keyWord;
 
-    @NameInMap("GroupId")
-    public String groupId;
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -25,31 +22,23 @@ public class DescribeDomainLogsRequest extends TeaModel {
     @NameInMap("StartDate")
     public String startDate;
 
-    @NameInMap("endDate")
-    public String endDate;
-
     @NameInMap("Type")
     public String type;
+
+    @NameInMap("endDate")
+    public String endDate;
 
     public static DescribeDomainLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainLogsRequest self = new DescribeDomainLogsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainLogsRequest setLang(String lang) {
-        this.lang = lang;
+    public DescribeDomainLogsRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public DescribeDomainLogsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public DescribeDomainLogsRequest setKeyWord(String keyWord) {
@@ -60,12 +49,12 @@ public class DescribeDomainLogsRequest extends TeaModel {
         return this.keyWord;
     }
 
-    public DescribeDomainLogsRequest setGroupId(String groupId) {
-        this.groupId = groupId;
+    public DescribeDomainLogsRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getGroupId() {
-        return this.groupId;
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeDomainLogsRequest setPageNumber(Long pageNumber) {
@@ -92,20 +81,20 @@ public class DescribeDomainLogsRequest extends TeaModel {
         return this.startDate;
     }
 
-    public DescribeDomainLogsRequest setEndDate(String endDate) {
-        this.endDate = endDate;
-        return this;
-    }
-    public String getEndDate() {
-        return this.endDate;
-    }
-
     public DescribeDomainLogsRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
+    }
+
+    public DescribeDomainLogsRequest setEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    public String getEndDate() {
+        return this.endDate;
     }
 
 }

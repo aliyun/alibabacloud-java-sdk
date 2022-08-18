@@ -4,62 +4,30 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SetDNSSLBStatusRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
-    @NameInMap("SubDomain")
-    public String subDomain;
-
-    @NameInMap("Open")
-    public Boolean open;
-
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("Line")
     public String line;
 
+    @NameInMap("Open")
+    public Boolean open;
+
+    @NameInMap("SubDomain")
+    public String subDomain;
+
+    @NameInMap("Type")
+    public String type;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     public static SetDNSSLBStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDNSSLBStatusRequest self = new SetDNSSLBStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetDNSSLBStatusRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public SetDNSSLBStatusRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public SetDNSSLBStatusRequest setSubDomain(String subDomain) {
-        this.subDomain = subDomain;
-        return this;
-    }
-    public String getSubDomain() {
-        return this.subDomain;
-    }
-
-    public SetDNSSLBStatusRequest setOpen(Boolean open) {
-        this.open = open;
-        return this;
-    }
-    public Boolean getOpen() {
-        return this.open;
     }
 
     public SetDNSSLBStatusRequest setDomainName(String domainName) {
@@ -70,12 +38,12 @@ public class SetDNSSLBStatusRequest extends TeaModel {
         return this.domainName;
     }
 
-    public SetDNSSLBStatusRequest setType(String type) {
-        this.type = type;
+    public SetDNSSLBStatusRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public String getLang() {
+        return this.lang;
     }
 
     public SetDNSSLBStatusRequest setLine(String line) {
@@ -84,6 +52,38 @@ public class SetDNSSLBStatusRequest extends TeaModel {
     }
     public String getLine() {
         return this.line;
+    }
+
+    public SetDNSSLBStatusRequest setOpen(Boolean open) {
+        this.open = open;
+        return this;
+    }
+    public Boolean getOpen() {
+        return this.open;
+    }
+
+    public SetDNSSLBStatusRequest setSubDomain(String subDomain) {
+        this.subDomain = subDomain;
+        return this;
+    }
+    public String getSubDomain() {
+        return this.subDomain;
+    }
+
+    public SetDNSSLBStatusRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
+    public SetDNSSLBStatusRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

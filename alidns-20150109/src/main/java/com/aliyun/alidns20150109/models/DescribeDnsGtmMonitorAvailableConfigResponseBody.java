@@ -4,32 +4,24 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
-    @NameInMap("Ipv4IspCityNodes")
-    public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes ipv4IspCityNodes;
-
     @NameInMap("DomainIpv4IspCityNodes")
     public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodes domainIpv4IspCityNodes;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("DomainIpv6IspCityNodes")
     public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodes domainIpv6IspCityNodes;
 
+    @NameInMap("Ipv4IspCityNodes")
+    public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes ipv4IspCityNodes;
+
     @NameInMap("Ipv6IspCityNodes")
     public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodes ipv6IspCityNodes;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDnsGtmMonitorAvailableConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDnsGtmMonitorAvailableConfigResponseBody self = new DescribeDnsGtmMonitorAvailableConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDnsGtmMonitorAvailableConfigResponseBody setIpv4IspCityNodes(DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes ipv4IspCityNodes) {
-        this.ipv4IspCityNodes = ipv4IspCityNodes;
-        return this;
-    }
-    public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes getIpv4IspCityNodes() {
-        return this.ipv4IspCityNodes;
     }
 
     public DescribeDnsGtmMonitorAvailableConfigResponseBody setDomainIpv4IspCityNodes(DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodes domainIpv4IspCityNodes) {
@@ -40,20 +32,20 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         return this.domainIpv4IspCityNodes;
     }
 
-    public DescribeDnsGtmMonitorAvailableConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDnsGtmMonitorAvailableConfigResponseBody setDomainIpv6IspCityNodes(DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodes domainIpv6IspCityNodes) {
         this.domainIpv6IspCityNodes = domainIpv6IspCityNodes;
         return this;
     }
     public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodes getDomainIpv6IspCityNodes() {
         return this.domainIpv6IspCityNodes;
+    }
+
+    public DescribeDnsGtmMonitorAvailableConfigResponseBody setIpv4IspCityNodes(DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes ipv4IspCityNodes) {
+        this.ipv4IspCityNodes = ipv4IspCityNodes;
+        return this;
+    }
+    public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes getIpv4IspCityNodes() {
+        return this.ipv4IspCityNodes;
     }
 
     public DescribeDnsGtmMonitorAvailableConfigResponseBody setIpv6IspCityNodes(DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodes ipv6IspCityNodes) {
@@ -64,106 +56,29 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         return this.ipv6IspCityNodes;
     }
 
-    public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode extends TeaModel {
-        @NameInMap("CityCode")
-        public String cityCode;
-
-        @NameInMap("GroupName")
-        public String groupName;
-
-        @NameInMap("IspCode")
-        public String ispCode;
-
-        @NameInMap("CityName")
-        public String cityName;
-
-        @NameInMap("IspName")
-        public String ispName;
-
-        @NameInMap("GroupType")
-        public String groupType;
-
-        @NameInMap("DefaultSelected")
-        public Boolean defaultSelected;
-
-        public static DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode self = new DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode setCityCode(String cityCode) {
-            this.cityCode = cityCode;
-            return this;
-        }
-        public String getCityCode() {
-            return this.cityCode;
-        }
-
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
-        }
-
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode setIspCode(String ispCode) {
-            this.ispCode = ispCode;
-            return this;
-        }
-        public String getIspCode() {
-            return this.ispCode;
-        }
-
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode setCityName(String cityName) {
-            this.cityName = cityName;
-            return this;
-        }
-        public String getCityName() {
-            return this.cityName;
-        }
-
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode setIspName(String ispName) {
-            this.ispName = ispName;
-            return this;
-        }
-        public String getIspName() {
-            return this.ispName;
-        }
-
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode setGroupType(String groupType) {
-            this.groupType = groupType;
-            return this;
-        }
-        public String getGroupType() {
-            return this.groupType;
-        }
-
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode setDefaultSelected(Boolean defaultSelected) {
-            this.defaultSelected = defaultSelected;
-            return this;
-        }
-        public Boolean getDefaultSelected() {
-            return this.defaultSelected;
-        }
-
+    public DescribeDnsGtmMonitorAvailableConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes extends TeaModel {
-        @NameInMap("Ipv4IspCityNode")
-        public java.util.List<DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode> ipv4IspCityNode;
+    public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNodeIps extends TeaModel {
+        @NameInMap("Ip")
+        public java.util.List<String> ip;
 
-        public static DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes self = new DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes();
+        public static DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNodeIps build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNodeIps self = new DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNodeIps();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes setIpv4IspCityNode(java.util.List<DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode> ipv4IspCityNode) {
-            this.ipv4IspCityNode = ipv4IspCityNode;
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNodeIps setIp(java.util.List<String> ip) {
+            this.ip = ip;
             return this;
         }
-        public java.util.List<DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode> getIpv4IspCityNode() {
-            return this.ipv4IspCityNode;
+        public java.util.List<String> getIp() {
+            return this.ip;
         }
 
     }
@@ -172,23 +87,26 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         @NameInMap("CityCode")
         public String cityCode;
 
-        @NameInMap("GroupName")
-        public String groupName;
-
-        @NameInMap("IspCode")
-        public String ispCode;
-
         @NameInMap("CityName")
         public String cityName;
 
-        @NameInMap("IspName")
-        public String ispName;
+        @NameInMap("DefaultSelected")
+        public Boolean defaultSelected;
+
+        @NameInMap("GroupName")
+        public String groupName;
 
         @NameInMap("GroupType")
         public String groupType;
 
-        @NameInMap("DefaultSelected")
-        public Boolean defaultSelected;
+        @NameInMap("Ips")
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNodeIps ips;
+
+        @NameInMap("IspCode")
+        public String ispCode;
+
+        @NameInMap("IspName")
+        public String ispName;
 
         public static DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode build(java.util.Map<String, ?> map) throws Exception {
             DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode self = new DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode();
@@ -203,22 +121,6 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             return this.cityCode;
         }
 
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
-        }
-
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode setIspCode(String ispCode) {
-            this.ispCode = ispCode;
-            return this;
-        }
-        public String getIspCode() {
-            return this.ispCode;
-        }
-
         public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode setCityName(String cityName) {
             this.cityName = cityName;
             return this;
@@ -227,12 +129,20 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             return this.cityName;
         }
 
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode setIspName(String ispName) {
-            this.ispName = ispName;
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode setDefaultSelected(Boolean defaultSelected) {
+            this.defaultSelected = defaultSelected;
             return this;
         }
-        public String getIspName() {
-            return this.ispName;
+        public Boolean getDefaultSelected() {
+            return this.defaultSelected;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
         }
 
         public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode setGroupType(String groupType) {
@@ -243,12 +153,28 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             return this.groupType;
         }
 
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode setDefaultSelected(Boolean defaultSelected) {
-            this.defaultSelected = defaultSelected;
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode setIps(DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNodeIps ips) {
+            this.ips = ips;
             return this;
         }
-        public Boolean getDefaultSelected() {
-            return this.defaultSelected;
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNodeIps getIps() {
+            return this.ips;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode setIspCode(String ispCode) {
+            this.ispCode = ispCode;
+            return this;
+        }
+        public String getIspCode() {
+            return this.ispCode;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode setIspName(String ispName) {
+            this.ispName = ispName;
+            return this;
+        }
+        public String getIspName() {
+            return this.ispName;
         }
 
     }
@@ -272,27 +198,49 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNodeIps extends TeaModel {
+        @NameInMap("ip")
+        public java.util.List<String> ip;
+
+        public static DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNodeIps build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNodeIps self = new DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNodeIps();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNodeIps setIp(java.util.List<String> ip) {
+            this.ip = ip;
+            return this;
+        }
+        public java.util.List<String> getIp() {
+            return this.ip;
+        }
+
+    }
+
     public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode extends TeaModel {
         @NameInMap("CityCode")
         public String cityCode;
 
-        @NameInMap("GroupName")
-        public String groupName;
-
-        @NameInMap("IspCode")
-        public String ispCode;
-
         @NameInMap("CityName")
         public String cityName;
 
-        @NameInMap("IspName")
-        public String ispName;
+        @NameInMap("DefaultSelected")
+        public Boolean defaultSelected;
+
+        @NameInMap("GroupName")
+        public String groupName;
 
         @NameInMap("GroupType")
         public String groupType;
 
-        @NameInMap("DefaultSelected")
-        public Boolean defaultSelected;
+        @NameInMap("Ips")
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNodeIps ips;
+
+        @NameInMap("IspCode")
+        public String ispCode;
+
+        @NameInMap("IspName")
+        public String ispName;
 
         public static DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode build(java.util.Map<String, ?> map) throws Exception {
             DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode self = new DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode();
@@ -307,22 +255,6 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             return this.cityCode;
         }
 
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
-        }
-
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode setIspCode(String ispCode) {
-            this.ispCode = ispCode;
-            return this;
-        }
-        public String getIspCode() {
-            return this.ispCode;
-        }
-
         public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode setCityName(String cityName) {
             this.cityName = cityName;
             return this;
@@ -331,12 +263,20 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             return this.cityName;
         }
 
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode setIspName(String ispName) {
-            this.ispName = ispName;
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode setDefaultSelected(Boolean defaultSelected) {
+            this.defaultSelected = defaultSelected;
             return this;
         }
-        public String getIspName() {
-            return this.ispName;
+        public Boolean getDefaultSelected() {
+            return this.defaultSelected;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
         }
 
         public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode setGroupType(String groupType) {
@@ -347,12 +287,28 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             return this.groupType;
         }
 
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode setDefaultSelected(Boolean defaultSelected) {
-            this.defaultSelected = defaultSelected;
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode setIps(DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNodeIps ips) {
+            this.ips = ips;
             return this;
         }
-        public Boolean getDefaultSelected() {
-            return this.defaultSelected;
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNodeIps getIps() {
+            return this.ips;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode setIspCode(String ispCode) {
+            this.ispCode = ispCode;
+            return this;
+        }
+        public String getIspCode() {
+            return this.ispCode;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode setIspName(String ispName) {
+            this.ispName = ispName;
+            return this;
+        }
+        public String getIspName() {
+            return this.ispName;
         }
 
     }
@@ -376,27 +332,183 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode extends TeaModel {
+    public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNodeIps extends TeaModel {
+        @NameInMap("Ip")
+        public java.util.List<String> ip;
+
+        public static DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNodeIps build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNodeIps self = new DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNodeIps();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNodeIps setIp(java.util.List<String> ip) {
+            this.ip = ip;
+            return this;
+        }
+        public java.util.List<String> getIp() {
+            return this.ip;
+        }
+
+    }
+
+    public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode extends TeaModel {
         @NameInMap("CityCode")
         public String cityCode;
-
-        @NameInMap("GroupName")
-        public String groupName;
-
-        @NameInMap("IspCode")
-        public String ispCode;
 
         @NameInMap("CityName")
         public String cityName;
 
-        @NameInMap("IspName")
-        public String ispName;
+        @NameInMap("DefaultSelected")
+        public Boolean defaultSelected;
+
+        @NameInMap("GroupName")
+        public String groupName;
 
         @NameInMap("GroupType")
         public String groupType;
 
+        @NameInMap("Ips")
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNodeIps ips;
+
+        @NameInMap("IspCode")
+        public String ispCode;
+
+        @NameInMap("IspName")
+        public String ispName;
+
+        public static DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode self = new DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode setCityCode(String cityCode) {
+            this.cityCode = cityCode;
+            return this;
+        }
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode setCityName(String cityName) {
+            this.cityName = cityName;
+            return this;
+        }
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode setDefaultSelected(Boolean defaultSelected) {
+            this.defaultSelected = defaultSelected;
+            return this;
+        }
+        public Boolean getDefaultSelected() {
+            return this.defaultSelected;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode setGroupType(String groupType) {
+            this.groupType = groupType;
+            return this;
+        }
+        public String getGroupType() {
+            return this.groupType;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode setIps(DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNodeIps ips) {
+            this.ips = ips;
+            return this;
+        }
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNodeIps getIps() {
+            return this.ips;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode setIspCode(String ispCode) {
+            this.ispCode = ispCode;
+            return this;
+        }
+        public String getIspCode() {
+            return this.ispCode;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode setIspName(String ispName) {
+            this.ispName = ispName;
+            return this;
+        }
+        public String getIspName() {
+            return this.ispName;
+        }
+
+    }
+
+    public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes extends TeaModel {
+        @NameInMap("Ipv4IspCityNode")
+        public java.util.List<DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode> ipv4IspCityNode;
+
+        public static DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes self = new DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes setIpv4IspCityNode(java.util.List<DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode> ipv4IspCityNode) {
+            this.ipv4IspCityNode = ipv4IspCityNode;
+            return this;
+        }
+        public java.util.List<DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode> getIpv4IspCityNode() {
+            return this.ipv4IspCityNode;
+        }
+
+    }
+
+    public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNodeIps extends TeaModel {
+        @NameInMap("Ip")
+        public java.util.List<String> ip;
+
+        public static DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNodeIps build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNodeIps self = new DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNodeIps();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNodeIps setIp(java.util.List<String> ip) {
+            this.ip = ip;
+            return this;
+        }
+        public java.util.List<String> getIp() {
+            return this.ip;
+        }
+
+    }
+
+    public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode extends TeaModel {
+        @NameInMap("CityCode")
+        public String cityCode;
+
+        @NameInMap("CityName")
+        public String cityName;
+
         @NameInMap("DefaultSelected")
         public Boolean defaultSelected;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("GroupType")
+        public String groupType;
+
+        @NameInMap("Ips")
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNodeIps ips;
+
+        @NameInMap("IspCode")
+        public String ispCode;
+
+        @NameInMap("IspName")
+        public String ispName;
 
         public static DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode build(java.util.Map<String, ?> map) throws Exception {
             DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode self = new DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode();
@@ -411,22 +523,6 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             return this.cityCode;
         }
 
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
-        }
-
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode setIspCode(String ispCode) {
-            this.ispCode = ispCode;
-            return this;
-        }
-        public String getIspCode() {
-            return this.ispCode;
-        }
-
         public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode setCityName(String cityName) {
             this.cityName = cityName;
             return this;
@@ -435,12 +531,20 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             return this.cityName;
         }
 
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode setIspName(String ispName) {
-            this.ispName = ispName;
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode setDefaultSelected(Boolean defaultSelected) {
+            this.defaultSelected = defaultSelected;
             return this;
         }
-        public String getIspName() {
-            return this.ispName;
+        public Boolean getDefaultSelected() {
+            return this.defaultSelected;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
         }
 
         public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode setGroupType(String groupType) {
@@ -451,12 +555,28 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             return this.groupType;
         }
 
-        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode setDefaultSelected(Boolean defaultSelected) {
-            this.defaultSelected = defaultSelected;
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode setIps(DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNodeIps ips) {
+            this.ips = ips;
             return this;
         }
-        public Boolean getDefaultSelected() {
-            return this.defaultSelected;
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNodeIps getIps() {
+            return this.ips;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode setIspCode(String ispCode) {
+            this.ispCode = ispCode;
+            return this;
+        }
+        public String getIspCode() {
+            return this.ispCode;
+        }
+
+        public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode setIspName(String ispName) {
+            this.ispName = ispName;
+            return this;
+        }
+        public String getIspName() {
+            return this.ispName;
         }
 
     }

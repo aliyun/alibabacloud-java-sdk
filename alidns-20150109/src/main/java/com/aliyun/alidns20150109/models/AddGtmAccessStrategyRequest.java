@@ -4,17 +4,8 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddGtmAccessStrategyRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("StrategyName")
-    public String strategyName;
+    @NameInMap("AccessLines")
+    public String accessLines;
 
     @NameInMap("DefaultAddrPoolId")
     public String defaultAddrPoolId;
@@ -22,44 +13,26 @@ public class AddGtmAccessStrategyRequest extends TeaModel {
     @NameInMap("FailoverAddrPoolId")
     public String failoverAddrPoolId;
 
-    @NameInMap("AccessLines")
-    public String accessLines;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("StrategyName")
+    public String strategyName;
 
     public static AddGtmAccessStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
         AddGtmAccessStrategyRequest self = new AddGtmAccessStrategyRequest();
         return TeaModel.build(map, self);
     }
 
-    public AddGtmAccessStrategyRequest setLang(String lang) {
-        this.lang = lang;
+    public AddGtmAccessStrategyRequest setAccessLines(String accessLines) {
+        this.accessLines = accessLines;
         return this;
     }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public AddGtmAccessStrategyRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public AddGtmAccessStrategyRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public AddGtmAccessStrategyRequest setStrategyName(String strategyName) {
-        this.strategyName = strategyName;
-        return this;
-    }
-    public String getStrategyName() {
-        return this.strategyName;
+    public String getAccessLines() {
+        return this.accessLines;
     }
 
     public AddGtmAccessStrategyRequest setDefaultAddrPoolId(String defaultAddrPoolId) {
@@ -78,12 +51,28 @@ public class AddGtmAccessStrategyRequest extends TeaModel {
         return this.failoverAddrPoolId;
     }
 
-    public AddGtmAccessStrategyRequest setAccessLines(String accessLines) {
-        this.accessLines = accessLines;
+    public AddGtmAccessStrategyRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getAccessLines() {
-        return this.accessLines;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public AddGtmAccessStrategyRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public AddGtmAccessStrategyRequest setStrategyName(String strategyName) {
+        this.strategyName = strategyName;
+        return this;
+    }
+    public String getStrategyName() {
+        return this.strategyName;
     }
 
 }

@@ -7,9 +7,6 @@ public class DeleteGtmRecoveryPlanRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("RecoveryPlanId")
     public Long recoveryPlanId;
 
@@ -24,14 +21,6 @@ public class DeleteGtmRecoveryPlanRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DeleteGtmRecoveryPlanRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DeleteGtmRecoveryPlanRequest setRecoveryPlanId(Long recoveryPlanId) {

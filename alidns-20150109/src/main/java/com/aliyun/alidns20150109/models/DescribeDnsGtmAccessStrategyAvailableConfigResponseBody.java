@@ -4,44 +4,36 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends TeaModel {
-    @NameInMap("SelectedDomainLines")
-    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines selectedDomainLines;
-
     @NameInMap("DomainAddrPools")
     public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPools domainAddrPools;
 
     @NameInMap("Ipv4AddrPools")
     public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv4AddrPools ipv4AddrPools;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("SelectedIpv4Lines")
-    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines selectedIpv4Lines;
-
     @NameInMap("Ipv6AddrPools")
     public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPools ipv6AddrPools;
-
-    @NameInMap("SuggestSetDefaultLine")
-    public Boolean suggestSetDefaultLine;
-
-    @NameInMap("SelectedIpv6Lines")
-    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines selectedIpv6Lines;
 
     @NameInMap("Lines")
     public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLines lines;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SelectedDomainLines")
+    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines selectedDomainLines;
+
+    @NameInMap("SelectedIpv4Lines")
+    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines selectedIpv4Lines;
+
+    @NameInMap("SelectedIpv6Lines")
+    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines selectedIpv6Lines;
+
+    @NameInMap("SuggestSetDefaultLine")
+    public Boolean suggestSetDefaultLine;
+
     public static DescribeDnsGtmAccessStrategyAvailableConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDnsGtmAccessStrategyAvailableConfigResponseBody self = new DescribeDnsGtmAccessStrategyAvailableConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBody setSelectedDomainLines(DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines selectedDomainLines) {
-        this.selectedDomainLines = selectedDomainLines;
-        return this;
-    }
-    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines getSelectedDomainLines() {
-        return this.selectedDomainLines;
     }
 
     public DescribeDnsGtmAccessStrategyAvailableConfigResponseBody setDomainAddrPools(DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPools domainAddrPools) {
@@ -60,44 +52,12 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         return this.ipv4AddrPools;
     }
 
-    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBody setSelectedIpv4Lines(DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines selectedIpv4Lines) {
-        this.selectedIpv4Lines = selectedIpv4Lines;
-        return this;
-    }
-    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines getSelectedIpv4Lines() {
-        return this.selectedIpv4Lines;
-    }
-
     public DescribeDnsGtmAccessStrategyAvailableConfigResponseBody setIpv6AddrPools(DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPools ipv6AddrPools) {
         this.ipv6AddrPools = ipv6AddrPools;
         return this;
     }
     public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPools getIpv6AddrPools() {
         return this.ipv6AddrPools;
-    }
-
-    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBody setSuggestSetDefaultLine(Boolean suggestSetDefaultLine) {
-        this.suggestSetDefaultLine = suggestSetDefaultLine;
-        return this;
-    }
-    public Boolean getSuggestSetDefaultLine() {
-        return this.suggestSetDefaultLine;
-    }
-
-    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBody setSelectedIpv6Lines(DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines selectedIpv6Lines) {
-        this.selectedIpv6Lines = selectedIpv6Lines;
-        return this;
-    }
-    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines getSelectedIpv6Lines() {
-        return this.selectedIpv6Lines;
     }
 
     public DescribeDnsGtmAccessStrategyAvailableConfigResponseBody setLines(DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLines lines) {
@@ -108,46 +68,59 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         return this.lines;
     }
 
-    public static class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines extends TeaModel {
-        @NameInMap("SelectedDomainLine")
-        public java.util.List<String> selectedDomainLine;
+    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        public static DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines self = new DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines();
-            return TeaModel.build(map, self);
-        }
+    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBody setSelectedDomainLines(DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines selectedDomainLines) {
+        this.selectedDomainLines = selectedDomainLines;
+        return this;
+    }
+    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines getSelectedDomainLines() {
+        return this.selectedDomainLines;
+    }
 
-        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines setSelectedDomainLine(java.util.List<String> selectedDomainLine) {
-            this.selectedDomainLine = selectedDomainLine;
-            return this;
-        }
-        public java.util.List<String> getSelectedDomainLine() {
-            return this.selectedDomainLine;
-        }
+    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBody setSelectedIpv4Lines(DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines selectedIpv4Lines) {
+        this.selectedIpv4Lines = selectedIpv4Lines;
+        return this;
+    }
+    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines getSelectedIpv4Lines() {
+        return this.selectedIpv4Lines;
+    }
 
+    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBody setSelectedIpv6Lines(DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines selectedIpv6Lines) {
+        this.selectedIpv6Lines = selectedIpv6Lines;
+        return this;
+    }
+    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines getSelectedIpv6Lines() {
+        return this.selectedIpv6Lines;
+    }
+
+    public DescribeDnsGtmAccessStrategyAvailableConfigResponseBody setSuggestSetDefaultLine(Boolean suggestSetDefaultLine) {
+        this.suggestSetDefaultLine = suggestSetDefaultLine;
+        return this;
+    }
+    public Boolean getSuggestSetDefaultLine() {
+        return this.suggestSetDefaultLine;
     }
 
     public static class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPoolsDomainAddrPool extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("AddrCount")
         public Integer addrCount;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Name")
+        public String name;
+
         public static DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPoolsDomainAddrPool build(java.util.Map<String, ?> map) throws Exception {
             DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPoolsDomainAddrPool self = new DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPoolsDomainAddrPool();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPoolsDomainAddrPool setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPoolsDomainAddrPool setAddrCount(Integer addrCount) {
@@ -164,6 +137,14 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPoolsDomainAddrPool setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }
@@ -188,26 +169,18 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
     }
 
     public static class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv4AddrPoolsIpv4AddrPool extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("AddrCount")
         public Integer addrCount;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Name")
+        public String name;
+
         public static DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv4AddrPoolsIpv4AddrPool build(java.util.Map<String, ?> map) throws Exception {
             DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv4AddrPoolsIpv4AddrPool self = new DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv4AddrPoolsIpv4AddrPool();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv4AddrPoolsIpv4AddrPool setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv4AddrPoolsIpv4AddrPool setAddrCount(Integer addrCount) {
@@ -224,6 +197,14 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv4AddrPoolsIpv4AddrPool setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }
@@ -247,46 +228,19 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
     }
 
-    public static class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines extends TeaModel {
-        @NameInMap("SelectedIpv4Line")
-        public java.util.List<String> selectedIpv4Line;
-
-        public static DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines self = new DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines setSelectedIpv4Line(java.util.List<String> selectedIpv4Line) {
-            this.selectedIpv4Line = selectedIpv4Line;
-            return this;
-        }
-        public java.util.List<String> getSelectedIpv4Line() {
-            return this.selectedIpv4Line;
-        }
-
-    }
-
     public static class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPoolsIpv6AddrPool extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("AddrCount")
         public Integer addrCount;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Name")
+        public String name;
+
         public static DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPoolsIpv6AddrPool build(java.util.Map<String, ?> map) throws Exception {
             DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPoolsIpv6AddrPool self = new DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPoolsIpv6AddrPool();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPoolsIpv6AddrPool setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPoolsIpv6AddrPool setAddrCount(Integer addrCount) {
@@ -303,6 +257,14 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPoolsIpv6AddrPool setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }
@@ -326,28 +288,12 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
     }
 
-    public static class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines extends TeaModel {
-        @NameInMap("SelectedIpv6Line")
-        public java.util.List<String> selectedIpv6Line;
-
-        public static DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines self = new DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines setSelectedIpv6Line(java.util.List<String> selectedIpv6Line) {
-            this.selectedIpv6Line = selectedIpv6Line;
-            return this;
-        }
-        public java.util.List<String> getSelectedIpv6Line() {
-            return this.selectedIpv6Line;
-        }
-
-    }
-
     public static class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLinesLine extends TeaModel {
         @NameInMap("FatherCode")
         public String fatherCode;
+
+        @NameInMap("GroupCode")
+        public String groupCode;
 
         @NameInMap("GroupName")
         public String groupName;
@@ -357,9 +303,6 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
         @NameInMap("LineName")
         public String lineName;
-
-        @NameInMap("GroupCode")
-        public String groupCode;
 
         public static DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLinesLine build(java.util.Map<String, ?> map) throws Exception {
             DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLinesLine self = new DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLinesLine();
@@ -372,6 +315,14 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         }
         public String getFatherCode() {
             return this.fatherCode;
+        }
+
+        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLinesLine setGroupCode(String groupCode) {
+            this.groupCode = groupCode;
+            return this;
+        }
+        public String getGroupCode() {
+            return this.groupCode;
         }
 
         public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLinesLine setGroupName(String groupName) {
@@ -398,14 +349,6 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             return this.lineName;
         }
 
-        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLinesLine setGroupCode(String groupCode) {
-            this.groupCode = groupCode;
-            return this;
-        }
-        public String getGroupCode() {
-            return this.groupCode;
-        }
-
     }
 
     public static class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLines extends TeaModel {
@@ -423,6 +366,63 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         }
         public java.util.List<DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLinesLine> getLine() {
             return this.line;
+        }
+
+    }
+
+    public static class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines extends TeaModel {
+        @NameInMap("SelectedDomainLine")
+        public java.util.List<String> selectedDomainLine;
+
+        public static DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines self = new DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines setSelectedDomainLine(java.util.List<String> selectedDomainLine) {
+            this.selectedDomainLine = selectedDomainLine;
+            return this;
+        }
+        public java.util.List<String> getSelectedDomainLine() {
+            return this.selectedDomainLine;
+        }
+
+    }
+
+    public static class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines extends TeaModel {
+        @NameInMap("SelectedIpv4Line")
+        public java.util.List<String> selectedIpv4Line;
+
+        public static DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines self = new DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines setSelectedIpv4Line(java.util.List<String> selectedIpv4Line) {
+            this.selectedIpv4Line = selectedIpv4Line;
+            return this;
+        }
+        public java.util.List<String> getSelectedIpv4Line() {
+            return this.selectedIpv4Line;
+        }
+
+    }
+
+    public static class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines extends TeaModel {
+        @NameInMap("SelectedIpv6Line")
+        public java.util.List<String> selectedIpv6Line;
+
+        public static DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines self = new DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines setSelectedIpv6Line(java.util.List<String> selectedIpv6Line) {
+            this.selectedIpv6Line = selectedIpv6Line;
+            return this;
+        }
+        public java.util.List<String> getSelectedIpv6Line() {
+            return this.selectedIpv6Line;
         }
 
     }

@@ -4,11 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddGtmRecoveryPlanRequest extends TeaModel {
+    @NameInMap("FaultAddrPool")
+    public String faultAddrPool;
+
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
 
     @NameInMap("Name")
     public String name;
@@ -16,12 +16,17 @@ public class AddGtmRecoveryPlanRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
-    @NameInMap("FaultAddrPool")
-    public String faultAddrPool;
-
     public static AddGtmRecoveryPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         AddGtmRecoveryPlanRequest self = new AddGtmRecoveryPlanRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddGtmRecoveryPlanRequest setFaultAddrPool(String faultAddrPool) {
+        this.faultAddrPool = faultAddrPool;
+        return this;
+    }
+    public String getFaultAddrPool() {
+        return this.faultAddrPool;
     }
 
     public AddGtmRecoveryPlanRequest setLang(String lang) {
@@ -30,14 +35,6 @@ public class AddGtmRecoveryPlanRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public AddGtmRecoveryPlanRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public AddGtmRecoveryPlanRequest setName(String name) {
@@ -54,14 +51,6 @@ public class AddGtmRecoveryPlanRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
-    }
-
-    public AddGtmRecoveryPlanRequest setFaultAddrPool(String faultAddrPool) {
-        this.faultAddrPool = faultAddrPool;
-        return this;
-    }
-    public String getFaultAddrPool() {
-        return this.faultAddrPool;
     }
 
 }

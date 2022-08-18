@@ -7,17 +7,14 @@ public class PreviewGtmRecoveryPlanRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
-    @NameInMap("RecoveryPlanId")
-    public Long recoveryPlanId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RecoveryPlanId")
+    public Long recoveryPlanId;
 
     public static PreviewGtmRecoveryPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         PreviewGtmRecoveryPlanRequest self = new PreviewGtmRecoveryPlanRequest();
@@ -30,22 +27,6 @@ public class PreviewGtmRecoveryPlanRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public PreviewGtmRecoveryPlanRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public PreviewGtmRecoveryPlanRequest setRecoveryPlanId(Long recoveryPlanId) {
-        this.recoveryPlanId = recoveryPlanId;
-        return this;
-    }
-    public Long getRecoveryPlanId() {
-        return this.recoveryPlanId;
     }
 
     public PreviewGtmRecoveryPlanRequest setPageNumber(Integer pageNumber) {
@@ -62,6 +43,14 @@ public class PreviewGtmRecoveryPlanRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public PreviewGtmRecoveryPlanRequest setRecoveryPlanId(Long recoveryPlanId) {
+        this.recoveryPlanId = recoveryPlanId;
+        return this;
+    }
+    public Long getRecoveryPlanId() {
+        return this.recoveryPlanId;
     }
 
 }

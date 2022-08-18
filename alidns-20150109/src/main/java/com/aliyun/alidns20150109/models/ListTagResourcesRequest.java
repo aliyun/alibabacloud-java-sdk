@@ -7,23 +7,17 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("ResourceId")
+    public java.util.List<String> resourceId;
 
     @NameInMap("ResourceType")
     public String resourceType;
 
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("Size")
-    public Integer size;
-
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
-
-    @NameInMap("ResourceId")
-    public java.util.List<String> resourceId;
 
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
@@ -38,12 +32,20 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.lang;
     }
 
-    public ListTagResourcesRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public ListTagResourcesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
     }
 
     public ListTagResourcesRequest setResourceType(String resourceType) {
@@ -54,36 +56,12 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public ListTagResourcesRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ListTagResourcesRequest setSize(Integer size) {
-        this.size = size;
-        return this;
-    }
-    public Integer getSize() {
-        return this.size;
-    }
-
     public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {
         this.tag = tag;
         return this;
     }
     public java.util.List<ListTagResourcesRequestTag> getTag() {
         return this.tag;
-    }
-
-    public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public java.util.List<String> getResourceId() {
-        return this.resourceId;
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {

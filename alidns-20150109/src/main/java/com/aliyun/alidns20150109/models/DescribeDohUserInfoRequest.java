@@ -4,18 +4,26 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDohUserInfoRequest extends TeaModel {
+    @NameInMap("EndDate")
+    public String endDate;
+
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("StartDate")
     public String startDate;
 
-    @NameInMap("EndDate")
-    public String endDate;
-
     public static DescribeDohUserInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDohUserInfoRequest self = new DescribeDohUserInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDohUserInfoRequest setEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    public String getEndDate() {
+        return this.endDate;
     }
 
     public DescribeDohUserInfoRequest setLang(String lang) {
@@ -32,14 +40,6 @@ public class DescribeDohUserInfoRequest extends TeaModel {
     }
     public String getStartDate() {
         return this.startDate;
-    }
-
-    public DescribeDohUserInfoRequest setEndDate(String endDate) {
-        this.endDate = endDate;
-        return this;
-    }
-    public String getEndDate() {
-        return this.endDate;
     }
 
 }

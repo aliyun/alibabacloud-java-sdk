@@ -7,8 +7,8 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
     @NameInMap("Domains")
     public java.util.List<DescribeDnsCacheDomainsResponseBodyDomains> domains;
 
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
@@ -16,8 +16,8 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeDnsCacheDomainsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDnsCacheDomainsResponseBody self = new DescribeDnsCacheDomainsResponseBody();
@@ -32,12 +32,12 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         return this.domains;
     }
 
-    public DescribeDnsCacheDomainsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public DescribeDnsCacheDomainsResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDnsCacheDomainsResponseBody setPageSize(Long pageSize) {
@@ -56,12 +56,12 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDnsCacheDomainsResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDnsCacheDomainsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeDnsCacheDomainsResponseBodyDomainsSourceDnsServers extends TeaModel {
@@ -95,145 +95,57 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsCacheDomainsResponseBodyDomains extends TeaModel {
-        @NameInMap("SourceProtocol")
-        public String sourceProtocol;
-
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
-        @NameInMap("Remark")
-        public String remark;
-
-        @NameInMap("ExpireTime")
-        public String expireTime;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("SourceEdns")
-        public String sourceEdns;
-
-        @NameInMap("DomainName")
-        public String domainName;
-
-        @NameInMap("DomainId")
-        public String domainId;
-
-        @NameInMap("UpdateTimestamp")
-        public Long updateTimestamp;
-
-        @NameInMap("ExpireTimestamp")
-        public Long expireTimestamp;
-
         @NameInMap("CacheTtlMax")
         public Integer cacheTtlMax;
 
         @NameInMap("CacheTtlMin")
         public Integer cacheTtlMin;
 
-        @NameInMap("VersionCode")
-        public String versionCode;
-
-        @NameInMap("SourceDnsServers")
-        public java.util.List<DescribeDnsCacheDomainsResponseBodyDomainsSourceDnsServers> sourceDnsServers;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        @NameInMap("DomainId")
+        public String domainId;
+
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("ExpireTimestamp")
+        public Long expireTimestamp;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("Remark")
+        public String remark;
+
+        @NameInMap("SourceDnsServers")
+        public java.util.List<DescribeDnsCacheDomainsResponseBodyDomainsSourceDnsServers> sourceDnsServers;
+
+        @NameInMap("SourceEdns")
+        public String sourceEdns;
+
+        @NameInMap("SourceProtocol")
+        public String sourceProtocol;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
+        @NameInMap("UpdateTimestamp")
+        public Long updateTimestamp;
+
+        @NameInMap("VersionCode")
+        public String versionCode;
+
         public static DescribeDnsCacheDomainsResponseBodyDomains build(java.util.Map<String, ?> map) throws Exception {
             DescribeDnsCacheDomainsResponseBodyDomains self = new DescribeDnsCacheDomainsResponseBodyDomains();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDnsCacheDomainsResponseBodyDomains setSourceProtocol(String sourceProtocol) {
-            this.sourceProtocol = sourceProtocol;
-            return this;
-        }
-        public String getSourceProtocol() {
-            return this.sourceProtocol;
-        }
-
-        public DescribeDnsCacheDomainsResponseBodyDomains setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public DescribeDnsCacheDomainsResponseBodyDomains setRemark(String remark) {
-            this.remark = remark;
-            return this;
-        }
-        public String getRemark() {
-            return this.remark;
-        }
-
-        public DescribeDnsCacheDomainsResponseBodyDomains setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public String getExpireTime() {
-            return this.expireTime;
-        }
-
-        public DescribeDnsCacheDomainsResponseBodyDomains setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeDnsCacheDomainsResponseBodyDomains setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeDnsCacheDomainsResponseBodyDomains setSourceEdns(String sourceEdns) {
-            this.sourceEdns = sourceEdns;
-            return this;
-        }
-        public String getSourceEdns() {
-            return this.sourceEdns;
-        }
-
-        public DescribeDnsCacheDomainsResponseBodyDomains setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
-        }
-
-        public DescribeDnsCacheDomainsResponseBodyDomains setDomainId(String domainId) {
-            this.domainId = domainId;
-            return this;
-        }
-        public String getDomainId() {
-            return this.domainId;
-        }
-
-        public DescribeDnsCacheDomainsResponseBodyDomains setUpdateTimestamp(Long updateTimestamp) {
-            this.updateTimestamp = updateTimestamp;
-            return this;
-        }
-        public Long getUpdateTimestamp() {
-            return this.updateTimestamp;
-        }
-
-        public DescribeDnsCacheDomainsResponseBodyDomains setExpireTimestamp(Long expireTimestamp) {
-            this.expireTimestamp = expireTimestamp;
-            return this;
-        }
-        public Long getExpireTimestamp() {
-            return this.expireTimestamp;
         }
 
         public DescribeDnsCacheDomainsResponseBodyDomains setCacheTtlMax(Integer cacheTtlMax) {
@@ -252,12 +164,68 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             return this.cacheTtlMin;
         }
 
-        public DescribeDnsCacheDomainsResponseBodyDomains setVersionCode(String versionCode) {
-            this.versionCode = versionCode;
+        public DescribeDnsCacheDomainsResponseBodyDomains setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getVersionCode() {
-            return this.versionCode;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeDnsCacheDomainsResponseBodyDomains setCreateTimestamp(Long createTimestamp) {
+            this.createTimestamp = createTimestamp;
+            return this;
+        }
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
+        }
+
+        public DescribeDnsCacheDomainsResponseBodyDomains setDomainId(String domainId) {
+            this.domainId = domainId;
+            return this;
+        }
+        public String getDomainId() {
+            return this.domainId;
+        }
+
+        public DescribeDnsCacheDomainsResponseBodyDomains setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public DescribeDnsCacheDomainsResponseBodyDomains setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        public DescribeDnsCacheDomainsResponseBodyDomains setExpireTimestamp(Long expireTimestamp) {
+            this.expireTimestamp = expireTimestamp;
+            return this;
+        }
+        public Long getExpireTimestamp() {
+            return this.expireTimestamp;
+        }
+
+        public DescribeDnsCacheDomainsResponseBodyDomains setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeDnsCacheDomainsResponseBodyDomains setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public DescribeDnsCacheDomainsResponseBodyDomains setSourceDnsServers(java.util.List<DescribeDnsCacheDomainsResponseBodyDomainsSourceDnsServers> sourceDnsServers) {
@@ -268,12 +236,44 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             return this.sourceDnsServers;
         }
 
-        public DescribeDnsCacheDomainsResponseBodyDomains setCreateTimestamp(Long createTimestamp) {
-            this.createTimestamp = createTimestamp;
+        public DescribeDnsCacheDomainsResponseBodyDomains setSourceEdns(String sourceEdns) {
+            this.sourceEdns = sourceEdns;
             return this;
         }
-        public Long getCreateTimestamp() {
-            return this.createTimestamp;
+        public String getSourceEdns() {
+            return this.sourceEdns;
+        }
+
+        public DescribeDnsCacheDomainsResponseBodyDomains setSourceProtocol(String sourceProtocol) {
+            this.sourceProtocol = sourceProtocol;
+            return this;
+        }
+        public String getSourceProtocol() {
+            return this.sourceProtocol;
+        }
+
+        public DescribeDnsCacheDomainsResponseBodyDomains setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public DescribeDnsCacheDomainsResponseBodyDomains setUpdateTimestamp(Long updateTimestamp) {
+            this.updateTimestamp = updateTimestamp;
+            return this;
+        }
+        public Long getUpdateTimestamp() {
+            return this.updateTimestamp;
+        }
+
+        public DescribeDnsCacheDomainsResponseBodyDomains setVersionCode(String versionCode) {
+            this.versionCode = versionCode;
+            return this;
+        }
+        public String getVersionCode() {
+            return this.versionCode;
         }
 
     }

@@ -4,32 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddDomainRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("Lang")
+    public String lang;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
 
     public static AddDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         AddDomainRequest self = new AddDomainRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddDomainRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public AddDomainRequest setDomainName(String domainName) {
@@ -48,20 +37,20 @@ public class AddDomainRequest extends TeaModel {
         return this.groupId;
     }
 
+    public AddDomainRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
     public AddDomainRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public AddDomainRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
 }

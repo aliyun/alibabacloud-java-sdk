@@ -4,11 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceDomainsRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -16,12 +16,17 @@ public class DescribeInstanceDomainsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     public static DescribeInstanceDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceDomainsRequest self = new DescribeInstanceDomainsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceDomainsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeInstanceDomainsRequest setLang(String lang) {
@@ -30,14 +35,6 @@ public class DescribeInstanceDomainsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeInstanceDomainsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeInstanceDomainsRequest setPageNumber(Long pageNumber) {
@@ -54,14 +51,6 @@ public class DescribeInstanceDomainsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribeInstanceDomainsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
 }

@@ -7,9 +7,6 @@ public class DeleteDnsGtmAccessStrategyRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("StrategyId")
     public String strategyId;
 
@@ -24,14 +21,6 @@ public class DeleteDnsGtmAccessStrategyRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DeleteDnsGtmAccessStrategyRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DeleteDnsGtmAccessStrategyRequest setStrategyId(String strategyId) {

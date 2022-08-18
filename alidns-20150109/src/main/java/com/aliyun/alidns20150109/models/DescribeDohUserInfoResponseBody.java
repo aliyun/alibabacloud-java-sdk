@@ -4,21 +4,37 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDohUserInfoResponseBody extends TeaModel {
+    @NameInMap("DomainCount")
+    public Integer domainCount;
+
+    @NameInMap("PdnsId")
+    public Long pdnsId;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SubDomainCount")
     public Integer subDomainCount;
 
-    @NameInMap("PdnsId")
-    public Long pdnsId;
-
-    @NameInMap("DomainCount")
-    public Integer domainCount;
-
     public static DescribeDohUserInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDohUserInfoResponseBody self = new DescribeDohUserInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDohUserInfoResponseBody setDomainCount(Integer domainCount) {
+        this.domainCount = domainCount;
+        return this;
+    }
+    public Integer getDomainCount() {
+        return this.domainCount;
+    }
+
+    public DescribeDohUserInfoResponseBody setPdnsId(Long pdnsId) {
+        this.pdnsId = pdnsId;
+        return this;
+    }
+    public Long getPdnsId() {
+        return this.pdnsId;
     }
 
     public DescribeDohUserInfoResponseBody setRequestId(String requestId) {
@@ -35,22 +51,6 @@ public class DescribeDohUserInfoResponseBody extends TeaModel {
     }
     public Integer getSubDomainCount() {
         return this.subDomainCount;
-    }
-
-    public DescribeDohUserInfoResponseBody setPdnsId(Long pdnsId) {
-        this.pdnsId = pdnsId;
-        return this;
-    }
-    public Long getPdnsId() {
-        return this.pdnsId;
-    }
-
-    public DescribeDohUserInfoResponseBody setDomainCount(Integer domainCount) {
-        this.domainCount = domainCount;
-        return this;
-    }
-    public Integer getDomainCount() {
-        return this.domainCount;
     }
 
 }

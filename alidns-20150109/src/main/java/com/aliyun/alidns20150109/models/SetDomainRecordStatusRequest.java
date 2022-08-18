@@ -7,14 +7,14 @@ public class SetDomainRecordStatusRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("RecordId")
     public String recordId;
 
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static SetDomainRecordStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDomainRecordStatusRequest self = new SetDomainRecordStatusRequest();
@@ -27,14 +27,6 @@ public class SetDomainRecordStatusRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public SetDomainRecordStatusRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public SetDomainRecordStatusRequest setRecordId(String recordId) {
@@ -51,6 +43,14 @@ public class SetDomainRecordStatusRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public SetDomainRecordStatusRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

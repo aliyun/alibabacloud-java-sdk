@@ -4,11 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddDnsCacheDomainRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("CacheTtlMax")
+    public Integer cacheTtlMax;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("CacheTtlMin")
+    public Integer cacheTtlMin;
 
     @NameInMap("DomainName")
     public String domainName;
@@ -16,17 +16,8 @@ public class AddDnsCacheDomainRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("CacheTtlMin")
-    public Integer cacheTtlMin;
-
-    @NameInMap("CacheTtlMax")
-    public Integer cacheTtlMax;
-
-    @NameInMap("SourceProtocol")
-    public String sourceProtocol;
-
-    @NameInMap("SourceEdns")
-    public String sourceEdns;
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("Remark")
     public String remark;
@@ -34,25 +25,31 @@ public class AddDnsCacheDomainRequest extends TeaModel {
     @NameInMap("SourceDnsServer")
     public java.util.List<AddDnsCacheDomainRequestSourceDnsServer> sourceDnsServer;
 
+    @NameInMap("SourceEdns")
+    public String sourceEdns;
+
+    @NameInMap("SourceProtocol")
+    public String sourceProtocol;
+
     public static AddDnsCacheDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         AddDnsCacheDomainRequest self = new AddDnsCacheDomainRequest();
         return TeaModel.build(map, self);
     }
 
-    public AddDnsCacheDomainRequest setLang(String lang) {
-        this.lang = lang;
+    public AddDnsCacheDomainRequest setCacheTtlMax(Integer cacheTtlMax) {
+        this.cacheTtlMax = cacheTtlMax;
         return this;
     }
-    public String getLang() {
-        return this.lang;
+    public Integer getCacheTtlMax() {
+        return this.cacheTtlMax;
     }
 
-    public AddDnsCacheDomainRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public AddDnsCacheDomainRequest setCacheTtlMin(Integer cacheTtlMin) {
+        this.cacheTtlMin = cacheTtlMin;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public Integer getCacheTtlMin() {
+        return this.cacheTtlMin;
     }
 
     public AddDnsCacheDomainRequest setDomainName(String domainName) {
@@ -71,36 +68,12 @@ public class AddDnsCacheDomainRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public AddDnsCacheDomainRequest setCacheTtlMin(Integer cacheTtlMin) {
-        this.cacheTtlMin = cacheTtlMin;
+    public AddDnsCacheDomainRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public Integer getCacheTtlMin() {
-        return this.cacheTtlMin;
-    }
-
-    public AddDnsCacheDomainRequest setCacheTtlMax(Integer cacheTtlMax) {
-        this.cacheTtlMax = cacheTtlMax;
-        return this;
-    }
-    public Integer getCacheTtlMax() {
-        return this.cacheTtlMax;
-    }
-
-    public AddDnsCacheDomainRequest setSourceProtocol(String sourceProtocol) {
-        this.sourceProtocol = sourceProtocol;
-        return this;
-    }
-    public String getSourceProtocol() {
-        return this.sourceProtocol;
-    }
-
-    public AddDnsCacheDomainRequest setSourceEdns(String sourceEdns) {
-        this.sourceEdns = sourceEdns;
-        return this;
-    }
-    public String getSourceEdns() {
-        return this.sourceEdns;
+    public String getLang() {
+        return this.lang;
     }
 
     public AddDnsCacheDomainRequest setRemark(String remark) {
@@ -117,6 +90,22 @@ public class AddDnsCacheDomainRequest extends TeaModel {
     }
     public java.util.List<AddDnsCacheDomainRequestSourceDnsServer> getSourceDnsServer() {
         return this.sourceDnsServer;
+    }
+
+    public AddDnsCacheDomainRequest setSourceEdns(String sourceEdns) {
+        this.sourceEdns = sourceEdns;
+        return this;
+    }
+    public String getSourceEdns() {
+        return this.sourceEdns;
+    }
+
+    public AddDnsCacheDomainRequest setSourceProtocol(String sourceProtocol) {
+        this.sourceProtocol = sourceProtocol;
+        return this;
+    }
+    public String getSourceProtocol() {
+        return this.sourceProtocol;
     }
 
     public static class AddDnsCacheDomainRequestSourceDnsServer extends TeaModel {

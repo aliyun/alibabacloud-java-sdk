@@ -7,8 +7,8 @@ public class DescribeDomainsResponseBody extends TeaModel {
     @NameInMap("Domains")
     public DescribeDomainsResponseBodyDomains domains;
 
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
@@ -16,8 +16,8 @@ public class DescribeDomainsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeDomainsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainsResponseBody self = new DescribeDomainsResponseBody();
@@ -32,12 +32,12 @@ public class DescribeDomainsResponseBody extends TeaModel {
         return this.domains;
     }
 
-    public DescribeDomainsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public DescribeDomainsResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDomainsResponseBody setPageSize(Long pageSize) {
@@ -56,12 +56,31 @@ public class DescribeDomainsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDomainsResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDomainsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class DescribeDomainsResponseBodyDomainsDomainDnsServers extends TeaModel {
+        @NameInMap("DnsServer")
+        public java.util.List<String> dnsServer;
+
+        public static DescribeDomainsResponseBodyDomainsDomainDnsServers build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDomainsResponseBodyDomainsDomainDnsServers self = new DescribeDomainsResponseBodyDomainsDomainDnsServers();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainsResponseBodyDomainsDomainDnsServers setDnsServer(java.util.List<String> dnsServer) {
+            this.dnsServer = dnsServer;
+            return this;
+        }
+        public java.util.List<String> getDnsServer() {
+            return this.dnsServer;
+        }
+
     }
 
     public static class DescribeDomainsResponseBodyDomainsDomainTagsTag extends TeaModel {
@@ -113,49 +132,24 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDomainsResponseBodyDomainsDomainDnsServers extends TeaModel {
-        @NameInMap("DnsServer")
-        public java.util.List<String> dnsServer;
-
-        public static DescribeDomainsResponseBodyDomainsDomainDnsServers build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDomainsResponseBodyDomainsDomainDnsServers self = new DescribeDomainsResponseBodyDomainsDomainDnsServers();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainsResponseBodyDomainsDomainDnsServers setDnsServer(java.util.List<String> dnsServer) {
-            this.dnsServer = dnsServer;
-            return this;
-        }
-        public java.util.List<String> getDnsServer() {
-            return this.dnsServer;
-        }
-
-    }
-
     public static class DescribeDomainsResponseBodyDomainsDomain extends TeaModel {
-        @NameInMap("Remark")
-        public String remark;
+        @NameInMap("AliDomain")
+        public Boolean aliDomain;
 
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("RecordCount")
-        public Long recordCount;
+        @NameInMap("CreateTimestamp")
+        public Long createTimestamp;
 
-        @NameInMap("Tags")
-        public DescribeDomainsResponseBodyDomainsDomainTags tags;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("DomainName")
-        public String domainName;
+        @NameInMap("DnsServers")
+        public DescribeDomainsResponseBodyDomainsDomainDnsServers dnsServers;
 
         @NameInMap("DomainId")
         public String domainId;
 
-        @NameInMap("AliDomain")
-        public Boolean aliDomain;
+        @NameInMap("DomainName")
+        public String domainName;
 
         @NameInMap("GroupId")
         public String groupId;
@@ -163,47 +157,53 @@ public class DescribeDomainsResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
         @NameInMap("InstanceEndTime")
         public String instanceEndTime;
 
         @NameInMap("InstanceExpired")
         public Boolean instanceExpired;
 
-        @NameInMap("VersionName")
-        public String versionName;
-
-        @NameInMap("DnsServers")
-        public DescribeDomainsResponseBodyDomainsDomainDnsServers dnsServers;
-
-        @NameInMap("VersionCode")
-        public String versionCode;
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("PunyCode")
         public String punyCode;
 
+        @NameInMap("RecordCount")
+        public Long recordCount;
+
         @NameInMap("RegistrantEmail")
         public String registrantEmail;
 
-        @NameInMap("CreateTimestamp")
-        public Long createTimestamp;
+        @NameInMap("Remark")
+        public String remark;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("Starmark")
         public Boolean starmark;
+
+        @NameInMap("Tags")
+        public DescribeDomainsResponseBodyDomainsDomainTags tags;
+
+        @NameInMap("VersionCode")
+        public String versionCode;
+
+        @NameInMap("VersionName")
+        public String versionName;
 
         public static DescribeDomainsResponseBodyDomainsDomain build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainsResponseBodyDomainsDomain self = new DescribeDomainsResponseBodyDomainsDomain();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDomainsResponseBodyDomainsDomain setRemark(String remark) {
-            this.remark = remark;
+        public DescribeDomainsResponseBodyDomainsDomain setAliDomain(Boolean aliDomain) {
+            this.aliDomain = aliDomain;
             return this;
         }
-        public String getRemark() {
-            return this.remark;
+        public Boolean getAliDomain() {
+            return this.aliDomain;
         }
 
         public DescribeDomainsResponseBodyDomainsDomain setCreateTime(String createTime) {
@@ -214,36 +214,20 @@ public class DescribeDomainsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeDomainsResponseBodyDomainsDomain setRecordCount(Long recordCount) {
-            this.recordCount = recordCount;
+        public DescribeDomainsResponseBodyDomainsDomain setCreateTimestamp(Long createTimestamp) {
+            this.createTimestamp = createTimestamp;
             return this;
         }
-        public Long getRecordCount() {
-            return this.recordCount;
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
         }
 
-        public DescribeDomainsResponseBodyDomainsDomain setTags(DescribeDomainsResponseBodyDomainsDomainTags tags) {
-            this.tags = tags;
+        public DescribeDomainsResponseBodyDomainsDomain setDnsServers(DescribeDomainsResponseBodyDomainsDomainDnsServers dnsServers) {
+            this.dnsServers = dnsServers;
             return this;
         }
-        public DescribeDomainsResponseBodyDomainsDomainTags getTags() {
-            return this.tags;
-        }
-
-        public DescribeDomainsResponseBodyDomainsDomain setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeDomainsResponseBodyDomainsDomain setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
+        public DescribeDomainsResponseBodyDomainsDomainDnsServers getDnsServers() {
+            return this.dnsServers;
         }
 
         public DescribeDomainsResponseBodyDomainsDomain setDomainId(String domainId) {
@@ -254,12 +238,12 @@ public class DescribeDomainsResponseBody extends TeaModel {
             return this.domainId;
         }
 
-        public DescribeDomainsResponseBodyDomainsDomain setAliDomain(Boolean aliDomain) {
-            this.aliDomain = aliDomain;
+        public DescribeDomainsResponseBodyDomainsDomain setDomainName(String domainName) {
+            this.domainName = domainName;
             return this;
         }
-        public Boolean getAliDomain() {
-            return this.aliDomain;
+        public String getDomainName() {
+            return this.domainName;
         }
 
         public DescribeDomainsResponseBodyDomainsDomain setGroupId(String groupId) {
@@ -278,14 +262,6 @@ public class DescribeDomainsResponseBody extends TeaModel {
             return this.groupName;
         }
 
-        public DescribeDomainsResponseBodyDomainsDomain setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
         public DescribeDomainsResponseBodyDomainsDomain setInstanceEndTime(String instanceEndTime) {
             this.instanceEndTime = instanceEndTime;
             return this;
@@ -302,28 +278,12 @@ public class DescribeDomainsResponseBody extends TeaModel {
             return this.instanceExpired;
         }
 
-        public DescribeDomainsResponseBodyDomainsDomain setVersionName(String versionName) {
-            this.versionName = versionName;
+        public DescribeDomainsResponseBodyDomainsDomain setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public String getVersionName() {
-            return this.versionName;
-        }
-
-        public DescribeDomainsResponseBodyDomainsDomain setDnsServers(DescribeDomainsResponseBodyDomainsDomainDnsServers dnsServers) {
-            this.dnsServers = dnsServers;
-            return this;
-        }
-        public DescribeDomainsResponseBodyDomainsDomainDnsServers getDnsServers() {
-            return this.dnsServers;
-        }
-
-        public DescribeDomainsResponseBodyDomainsDomain setVersionCode(String versionCode) {
-            this.versionCode = versionCode;
-            return this;
-        }
-        public String getVersionCode() {
-            return this.versionCode;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DescribeDomainsResponseBodyDomainsDomain setPunyCode(String punyCode) {
@@ -334,6 +294,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
             return this.punyCode;
         }
 
+        public DescribeDomainsResponseBodyDomainsDomain setRecordCount(Long recordCount) {
+            this.recordCount = recordCount;
+            return this;
+        }
+        public Long getRecordCount() {
+            return this.recordCount;
+        }
+
         public DescribeDomainsResponseBodyDomainsDomain setRegistrantEmail(String registrantEmail) {
             this.registrantEmail = registrantEmail;
             return this;
@@ -342,12 +310,20 @@ public class DescribeDomainsResponseBody extends TeaModel {
             return this.registrantEmail;
         }
 
-        public DescribeDomainsResponseBodyDomainsDomain setCreateTimestamp(Long createTimestamp) {
-            this.createTimestamp = createTimestamp;
+        public DescribeDomainsResponseBodyDomainsDomain setRemark(String remark) {
+            this.remark = remark;
             return this;
         }
-        public Long getCreateTimestamp() {
-            return this.createTimestamp;
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public DescribeDomainsResponseBodyDomainsDomain setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeDomainsResponseBodyDomainsDomain setStarmark(Boolean starmark) {
@@ -356,6 +332,30 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
         public Boolean getStarmark() {
             return this.starmark;
+        }
+
+        public DescribeDomainsResponseBodyDomainsDomain setTags(DescribeDomainsResponseBodyDomainsDomainTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeDomainsResponseBodyDomainsDomainTags getTags() {
+            return this.tags;
+        }
+
+        public DescribeDomainsResponseBodyDomainsDomain setVersionCode(String versionCode) {
+            this.versionCode = versionCode;
+            return this;
+        }
+        public String getVersionCode() {
+            return this.versionCode;
+        }
+
+        public DescribeDomainsResponseBodyDomainsDomain setVersionName(String versionName) {
+            this.versionName = versionName;
+            return this;
+        }
+        public String getVersionName() {
+            return this.versionName;
         }
 
     }

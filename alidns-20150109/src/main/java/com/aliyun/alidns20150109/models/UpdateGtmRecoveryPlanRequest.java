@@ -4,27 +4,32 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateGtmRecoveryPlanRequest extends TeaModel {
+    @NameInMap("FaultAddrPool")
+    public String faultAddrPool;
+
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
-    @NameInMap("RecoveryPlanId")
-    public Long recoveryPlanId;
 
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("RecoveryPlanId")
+    public Long recoveryPlanId;
+
     @NameInMap("Remark")
     public String remark;
-
-    @NameInMap("FaultAddrPool")
-    public String faultAddrPool;
 
     public static UpdateGtmRecoveryPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateGtmRecoveryPlanRequest self = new UpdateGtmRecoveryPlanRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateGtmRecoveryPlanRequest setFaultAddrPool(String faultAddrPool) {
+        this.faultAddrPool = faultAddrPool;
+        return this;
+    }
+    public String getFaultAddrPool() {
+        return this.faultAddrPool;
     }
 
     public UpdateGtmRecoveryPlanRequest setLang(String lang) {
@@ -35,12 +40,12 @@ public class UpdateGtmRecoveryPlanRequest extends TeaModel {
         return this.lang;
     }
 
-    public UpdateGtmRecoveryPlanRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public UpdateGtmRecoveryPlanRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public String getName() {
+        return this.name;
     }
 
     public UpdateGtmRecoveryPlanRequest setRecoveryPlanId(Long recoveryPlanId) {
@@ -51,28 +56,12 @@ public class UpdateGtmRecoveryPlanRequest extends TeaModel {
         return this.recoveryPlanId;
     }
 
-    public UpdateGtmRecoveryPlanRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
     public UpdateGtmRecoveryPlanRequest setRemark(String remark) {
         this.remark = remark;
         return this;
     }
     public String getRemark() {
         return this.remark;
-    }
-
-    public UpdateGtmRecoveryPlanRequest setFaultAddrPool(String faultAddrPool) {
-        this.faultAddrPool = faultAddrPool;
-        return this;
-    }
-    public String getFaultAddrPool() {
-        return this.faultAddrPool;
     }
 
 }

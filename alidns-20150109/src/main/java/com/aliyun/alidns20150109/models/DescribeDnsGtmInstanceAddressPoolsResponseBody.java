@@ -4,27 +4,43 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
+    @NameInMap("AddrPools")
+    public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPools addrPools;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalItems")
+    public Integer totalItems;
 
     @NameInMap("TotalPages")
     public Integer totalPages;
 
-    @NameInMap("TotalItems")
-    public Integer totalItems;
-
-    @NameInMap("AddrPools")
-    public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPools addrPools;
-
     public static DescribeDnsGtmInstanceAddressPoolsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDnsGtmInstanceAddressPoolsResponseBody self = new DescribeDnsGtmInstanceAddressPoolsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDnsGtmInstanceAddressPoolsResponseBody setAddrPools(DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPools addrPools) {
+        this.addrPools = addrPools;
+        return this;
+    }
+    public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPools getAddrPools() {
+        return this.addrPools;
+    }
+
+    public DescribeDnsGtmInstanceAddressPoolsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDnsGtmInstanceAddressPoolsResponseBody setPageSize(Integer pageSize) {
@@ -43,12 +59,12 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDnsGtmInstanceAddressPoolsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDnsGtmInstanceAddressPoolsResponseBody setTotalItems(Integer totalItems) {
+        this.totalItems = totalItems;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalItems() {
+        return this.totalItems;
     }
 
     public DescribeDnsGtmInstanceAddressPoolsResponseBody setTotalPages(Integer totalPages) {
@@ -59,123 +75,43 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
         return this.totalPages;
     }
 
-    public DescribeDnsGtmInstanceAddressPoolsResponseBody setTotalItems(Integer totalItems) {
-        this.totalItems = totalItems;
-        return this;
-    }
-    public Integer getTotalItems() {
-        return this.totalItems;
-    }
-
-    public DescribeDnsGtmInstanceAddressPoolsResponseBody setAddrPools(DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPools addrPools) {
-        this.addrPools = addrPools;
-        return this;
-    }
-    public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPools getAddrPools() {
-        return this.addrPools;
-    }
-
     public static class DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("UpdateTimestamp")
-        public Long updateTimestamp;
-
-        @NameInMap("MonitorStatus")
-        public String monitorStatus;
-
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("AddrCount")
+        public Integer addrCount;
 
         @NameInMap("AddrPoolId")
         public String addrPoolId;
 
-        @NameInMap("LbaStrategy")
-        public String lbaStrategy;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("AddrCount")
-        public Integer addrCount;
-
-        @NameInMap("MonitorConfigId")
-        public String monitorConfigId;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        @NameInMap("LbaStrategy")
+        public String lbaStrategy;
+
+        @NameInMap("MonitorConfigId")
+        public String monitorConfigId;
+
+        @NameInMap("MonitorStatus")
+        public String monitorStatus;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
+        @NameInMap("UpdateTimestamp")
+        public Long updateTimestamp;
+
         public static DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool build(java.util.Map<String, ?> map) throws Exception {
             DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool self = new DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setUpdateTimestamp(Long updateTimestamp) {
-            this.updateTimestamp = updateTimestamp;
-            return this;
-        }
-        public Long getUpdateTimestamp() {
-            return this.updateTimestamp;
-        }
-
-        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setMonitorStatus(String monitorStatus) {
-            this.monitorStatus = monitorStatus;
-            return this;
-        }
-        public String getMonitorStatus() {
-            return this.monitorStatus;
-        }
-
-        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setAddrPoolId(String addrPoolId) {
-            this.addrPoolId = addrPoolId;
-            return this;
-        }
-        public String getAddrPoolId() {
-            return this.addrPoolId;
-        }
-
-        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setLbaStrategy(String lbaStrategy) {
-            this.lbaStrategy = lbaStrategy;
-            return this;
-        }
-        public String getLbaStrategy() {
-            return this.lbaStrategy;
-        }
-
-        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setAddrCount(Integer addrCount) {
@@ -186,12 +122,20 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
             return this.addrCount;
         }
 
-        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setMonitorConfigId(String monitorConfigId) {
-            this.monitorConfigId = monitorConfigId;
+        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setAddrPoolId(String addrPoolId) {
+            this.addrPoolId = addrPoolId;
             return this;
         }
-        public String getMonitorConfigId() {
-            return this.monitorConfigId;
+        public String getAddrPoolId() {
+            return this.addrPoolId;
+        }
+
+        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setCreateTimestamp(Long createTimestamp) {
@@ -200,6 +144,62 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
         }
         public Long getCreateTimestamp() {
             return this.createTimestamp;
+        }
+
+        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setLbaStrategy(String lbaStrategy) {
+            this.lbaStrategy = lbaStrategy;
+            return this;
+        }
+        public String getLbaStrategy() {
+            return this.lbaStrategy;
+        }
+
+        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setMonitorConfigId(String monitorConfigId) {
+            this.monitorConfigId = monitorConfigId;
+            return this;
+        }
+        public String getMonitorConfigId() {
+            return this.monitorConfigId;
+        }
+
+        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setMonitorStatus(String monitorStatus) {
+            this.monitorStatus = monitorStatus;
+            return this;
+        }
+        public String getMonitorStatus() {
+            return this.monitorStatus;
+        }
+
+        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool setUpdateTimestamp(Long updateTimestamp) {
+            this.updateTimestamp = updateTimestamp;
+            return this;
+        }
+        public Long getUpdateTimestamp() {
+            return this.updateTimestamp;
         }
 
     }

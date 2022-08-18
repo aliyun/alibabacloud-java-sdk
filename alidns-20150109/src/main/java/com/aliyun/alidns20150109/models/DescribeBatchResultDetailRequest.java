@@ -4,11 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeBatchResultDetailRequest extends TeaModel {
+    @NameInMap("BatchType")
+    public String batchType;
+
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -16,18 +16,23 @@ public class DescribeBatchResultDetailRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("TaskId")
-    public Long taskId;
-
-    @NameInMap("BatchType")
-    public String batchType;
-
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("TaskId")
+    public Long taskId;
 
     public static DescribeBatchResultDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBatchResultDetailRequest self = new DescribeBatchResultDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBatchResultDetailRequest setBatchType(String batchType) {
+        this.batchType = batchType;
+        return this;
+    }
+    public String getBatchType() {
+        return this.batchType;
     }
 
     public DescribeBatchResultDetailRequest setLang(String lang) {
@@ -36,14 +41,6 @@ public class DescribeBatchResultDetailRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeBatchResultDetailRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeBatchResultDetailRequest setPageNumber(Integer pageNumber) {
@@ -62,28 +59,20 @@ public class DescribeBatchResultDetailRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeBatchResultDetailRequest setTaskId(Long taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public Long getTaskId() {
-        return this.taskId;
-    }
-
-    public DescribeBatchResultDetailRequest setBatchType(String batchType) {
-        this.batchType = batchType;
-        return this;
-    }
-    public String getBatchType() {
-        return this.batchType;
-    }
-
     public DescribeBatchResultDetailRequest setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeBatchResultDetailRequest setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

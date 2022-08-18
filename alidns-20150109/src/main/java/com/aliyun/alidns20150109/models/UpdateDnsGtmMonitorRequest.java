@@ -4,8 +4,14 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateDnsGtmMonitorRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("EvaluationCount")
+    public Integer evaluationCount;
+
+    @NameInMap("Interval")
+    public Integer interval;
+
+    @NameInMap("IspCityNode")
+    public java.util.List<UpdateDnsGtmMonitorRequestIspCityNode> ispCityNode;
 
     @NameInMap("Lang")
     public String lang;
@@ -13,35 +19,42 @@ public class UpdateDnsGtmMonitorRequest extends TeaModel {
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
 
-    @NameInMap("ProtocolType")
-    public String protocolType;
-
-    @NameInMap("Interval")
-    public Integer interval;
-
-    @NameInMap("EvaluationCount")
-    public Integer evaluationCount;
-
-    @NameInMap("Timeout")
-    public Integer timeout;
-
     @NameInMap("MonitorExtendInfo")
     public String monitorExtendInfo;
 
-    @NameInMap("IspCityNode")
-    public java.util.List<UpdateDnsGtmMonitorRequestIspCityNode> ispCityNode;
+    @NameInMap("ProtocolType")
+    public String protocolType;
+
+    @NameInMap("Timeout")
+    public Integer timeout;
 
     public static UpdateDnsGtmMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDnsGtmMonitorRequest self = new UpdateDnsGtmMonitorRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDnsGtmMonitorRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public UpdateDnsGtmMonitorRequest setEvaluationCount(Integer evaluationCount) {
+        this.evaluationCount = evaluationCount;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public Integer getEvaluationCount() {
+        return this.evaluationCount;
+    }
+
+    public UpdateDnsGtmMonitorRequest setInterval(Integer interval) {
+        this.interval = interval;
+        return this;
+    }
+    public Integer getInterval() {
+        return this.interval;
+    }
+
+    public UpdateDnsGtmMonitorRequest setIspCityNode(java.util.List<UpdateDnsGtmMonitorRequestIspCityNode> ispCityNode) {
+        this.ispCityNode = ispCityNode;
+        return this;
+    }
+    public java.util.List<UpdateDnsGtmMonitorRequestIspCityNode> getIspCityNode() {
+        return this.ispCityNode;
     }
 
     public UpdateDnsGtmMonitorRequest setLang(String lang) {
@@ -60,38 +73,6 @@ public class UpdateDnsGtmMonitorRequest extends TeaModel {
         return this.monitorConfigId;
     }
 
-    public UpdateDnsGtmMonitorRequest setProtocolType(String protocolType) {
-        this.protocolType = protocolType;
-        return this;
-    }
-    public String getProtocolType() {
-        return this.protocolType;
-    }
-
-    public UpdateDnsGtmMonitorRequest setInterval(Integer interval) {
-        this.interval = interval;
-        return this;
-    }
-    public Integer getInterval() {
-        return this.interval;
-    }
-
-    public UpdateDnsGtmMonitorRequest setEvaluationCount(Integer evaluationCount) {
-        this.evaluationCount = evaluationCount;
-        return this;
-    }
-    public Integer getEvaluationCount() {
-        return this.evaluationCount;
-    }
-
-    public UpdateDnsGtmMonitorRequest setTimeout(Integer timeout) {
-        this.timeout = timeout;
-        return this;
-    }
-    public Integer getTimeout() {
-        return this.timeout;
-    }
-
     public UpdateDnsGtmMonitorRequest setMonitorExtendInfo(String monitorExtendInfo) {
         this.monitorExtendInfo = monitorExtendInfo;
         return this;
@@ -100,12 +81,20 @@ public class UpdateDnsGtmMonitorRequest extends TeaModel {
         return this.monitorExtendInfo;
     }
 
-    public UpdateDnsGtmMonitorRequest setIspCityNode(java.util.List<UpdateDnsGtmMonitorRequestIspCityNode> ispCityNode) {
-        this.ispCityNode = ispCityNode;
+    public UpdateDnsGtmMonitorRequest setProtocolType(String protocolType) {
+        this.protocolType = protocolType;
         return this;
     }
-    public java.util.List<UpdateDnsGtmMonitorRequestIspCityNode> getIspCityNode() {
-        return this.ispCityNode;
+    public String getProtocolType() {
+        return this.protocolType;
+    }
+
+    public UpdateDnsGtmMonitorRequest setTimeout(Integer timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Integer getTimeout() {
+        return this.timeout;
     }
 
     public static class UpdateDnsGtmMonitorRequestIspCityNode extends TeaModel {

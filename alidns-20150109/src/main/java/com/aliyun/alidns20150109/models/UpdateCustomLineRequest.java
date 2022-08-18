@@ -4,24 +4,29 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateCustomLineRequest extends TeaModel {
+    @NameInMap("IpSegment")
+    public java.util.List<UpdateCustomLineRequestIpSegment> ipSegment;
+
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
-    @NameInMap("LineName")
-    public String lineName;
 
     @NameInMap("LineId")
     public Long lineId;
 
-    @NameInMap("IpSegment")
-    public java.util.List<UpdateCustomLineRequestIpSegment> ipSegment;
+    @NameInMap("LineName")
+    public String lineName;
 
     public static UpdateCustomLineRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCustomLineRequest self = new UpdateCustomLineRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateCustomLineRequest setIpSegment(java.util.List<UpdateCustomLineRequestIpSegment> ipSegment) {
+        this.ipSegment = ipSegment;
+        return this;
+    }
+    public java.util.List<UpdateCustomLineRequestIpSegment> getIpSegment() {
+        return this.ipSegment;
     }
 
     public UpdateCustomLineRequest setLang(String lang) {
@@ -32,22 +37,6 @@ public class UpdateCustomLineRequest extends TeaModel {
         return this.lang;
     }
 
-    public UpdateCustomLineRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public UpdateCustomLineRequest setLineName(String lineName) {
-        this.lineName = lineName;
-        return this;
-    }
-    public String getLineName() {
-        return this.lineName;
-    }
-
     public UpdateCustomLineRequest setLineId(Long lineId) {
         this.lineId = lineId;
         return this;
@@ -56,12 +45,12 @@ public class UpdateCustomLineRequest extends TeaModel {
         return this.lineId;
     }
 
-    public UpdateCustomLineRequest setIpSegment(java.util.List<UpdateCustomLineRequestIpSegment> ipSegment) {
-        this.ipSegment = ipSegment;
+    public UpdateCustomLineRequest setLineName(String lineName) {
+        this.lineName = lineName;
         return this;
     }
-    public java.util.List<UpdateCustomLineRequestIpSegment> getIpSegment() {
-        return this.ipSegment;
+    public String getLineName() {
+        return this.lineName;
     }
 
     public static class UpdateCustomLineRequestIpSegment extends TeaModel {

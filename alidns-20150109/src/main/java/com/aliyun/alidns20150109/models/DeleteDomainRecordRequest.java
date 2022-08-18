@@ -7,11 +7,11 @@ public class DeleteDomainRecordRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("RecordId")
     public String recordId;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static DeleteDomainRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDomainRecordRequest self = new DeleteDomainRecordRequest();
@@ -26,20 +26,20 @@ public class DeleteDomainRecordRequest extends TeaModel {
         return this.lang;
     }
 
-    public DeleteDomainRecordRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
     public DeleteDomainRecordRequest setRecordId(String recordId) {
         this.recordId = recordId;
         return this;
     }
     public String getRecordId() {
         return this.recordId;
+    }
+
+    public DeleteDomainRecordRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

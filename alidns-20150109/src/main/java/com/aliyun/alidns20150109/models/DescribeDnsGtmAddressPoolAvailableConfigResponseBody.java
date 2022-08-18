@@ -4,23 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AttributeInfos")
     public DescribeDnsGtmAddressPoolAvailableConfigResponseBodyAttributeInfos attributeInfos;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDnsGtmAddressPoolAvailableConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDnsGtmAddressPoolAvailableConfigResponseBody self = new DescribeDnsGtmAddressPoolAvailableConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDnsGtmAddressPoolAvailableConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDnsGtmAddressPoolAvailableConfigResponseBody setAttributeInfos(DescribeDnsGtmAddressPoolAvailableConfigResponseBodyAttributeInfos attributeInfos) {
@@ -31,9 +23,20 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
         return this.attributeInfos;
     }
 
+    public DescribeDnsGtmAddressPoolAvailableConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeDnsGtmAddressPoolAvailableConfigResponseBodyAttributeInfosAttributeInfo extends TeaModel {
         @NameInMap("FatherCode")
         public String fatherCode;
+
+        @NameInMap("GroupCode")
+        public String groupCode;
 
         @NameInMap("GroupName")
         public String groupName;
@@ -43,9 +46,6 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
 
         @NameInMap("LineName")
         public String lineName;
-
-        @NameInMap("GroupCode")
-        public String groupCode;
 
         public static DescribeDnsGtmAddressPoolAvailableConfigResponseBodyAttributeInfosAttributeInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeDnsGtmAddressPoolAvailableConfigResponseBodyAttributeInfosAttributeInfo self = new DescribeDnsGtmAddressPoolAvailableConfigResponseBodyAttributeInfosAttributeInfo();
@@ -58,6 +58,14 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
         }
         public String getFatherCode() {
             return this.fatherCode;
+        }
+
+        public DescribeDnsGtmAddressPoolAvailableConfigResponseBodyAttributeInfosAttributeInfo setGroupCode(String groupCode) {
+            this.groupCode = groupCode;
+            return this;
+        }
+        public String getGroupCode() {
+            return this.groupCode;
         }
 
         public DescribeDnsGtmAddressPoolAvailableConfigResponseBodyAttributeInfosAttributeInfo setGroupName(String groupName) {
@@ -82,14 +90,6 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
         }
         public String getLineName() {
             return this.lineName;
-        }
-
-        public DescribeDnsGtmAddressPoolAvailableConfigResponseBodyAttributeInfosAttributeInfo setGroupCode(String groupCode) {
-            this.groupCode = groupCode;
-            return this;
-        }
-        public String getGroupCode() {
-            return this.groupCode;
         }
 
     }

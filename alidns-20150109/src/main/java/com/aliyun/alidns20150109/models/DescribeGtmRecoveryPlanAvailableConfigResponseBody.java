@@ -84,11 +84,11 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         @NameInMap("AddrPools")
         public DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPools addrPools;
 
-        @NameInMap("InstanceName")
-        public String instanceName;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
 
         public static DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstance self = new DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstance();
@@ -103,20 +103,20 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             return this.addrPools;
         }
 
-        public DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstance setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
         public DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstance setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstance setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
     }

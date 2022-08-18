@@ -7,11 +7,11 @@ public class DescribeDomainRecordInfoRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("RecordId")
     public String recordId;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static DescribeDomainRecordInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainRecordInfoRequest self = new DescribeDomainRecordInfoRequest();
@@ -26,20 +26,20 @@ public class DescribeDomainRecordInfoRequest extends TeaModel {
         return this.lang;
     }
 
-    public DescribeDomainRecordInfoRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
     public DescribeDomainRecordInfoRequest setRecordId(String recordId) {
         this.recordId = recordId;
         return this;
     }
     public String getRecordId() {
         return this.recordId;
+    }
+
+    public DescribeDomainRecordInfoRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

@@ -4,14 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SetDomainDnssecStatusRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("DomainName")
-    public String domainName;
 
     @NameInMap("Status")
     public String status;
@@ -21,12 +18,12 @@ public class SetDomainDnssecStatusRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SetDomainDnssecStatusRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public SetDomainDnssecStatusRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public SetDomainDnssecStatusRequest setLang(String lang) {
@@ -35,14 +32,6 @@ public class SetDomainDnssecStatusRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public SetDomainDnssecStatusRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public SetDomainDnssecStatusRequest setStatus(String status) {

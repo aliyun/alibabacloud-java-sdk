@@ -4,11 +4,14 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainStatisticsSummaryRequest extends TeaModel {
+    @NameInMap("EndDate")
+    public String endDate;
+
+    @NameInMap("Keyword")
+    public String keyword;
+
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -16,23 +19,11 @@ public class DescribeDomainStatisticsSummaryRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("StartDate")
-    public String startDate;
-
-    @NameInMap("EndDate")
-    public String endDate;
-
-    @NameInMap("OrderBy")
-    public String orderBy;
-
-    @NameInMap("Direction")
-    public String direction;
-
     @NameInMap("SearchMode")
     public String searchMode;
 
-    @NameInMap("Keyword")
-    public String keyword;
+    @NameInMap("StartDate")
+    public String startDate;
 
     @NameInMap("Threshold")
     public Long threshold;
@@ -42,20 +33,28 @@ public class DescribeDomainStatisticsSummaryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDomainStatisticsSummaryRequest setEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    public String getEndDate() {
+        return this.endDate;
+    }
+
+    public DescribeDomainStatisticsSummaryRequest setKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    public String getKeyword() {
+        return this.keyword;
+    }
+
     public DescribeDomainStatisticsSummaryRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeDomainStatisticsSummaryRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeDomainStatisticsSummaryRequest setPageNumber(Long pageNumber) {
@@ -74,38 +73,6 @@ public class DescribeDomainStatisticsSummaryRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDomainStatisticsSummaryRequest setStartDate(String startDate) {
-        this.startDate = startDate;
-        return this;
-    }
-    public String getStartDate() {
-        return this.startDate;
-    }
-
-    public DescribeDomainStatisticsSummaryRequest setEndDate(String endDate) {
-        this.endDate = endDate;
-        return this;
-    }
-    public String getEndDate() {
-        return this.endDate;
-    }
-
-    public DescribeDomainStatisticsSummaryRequest setOrderBy(String orderBy) {
-        this.orderBy = orderBy;
-        return this;
-    }
-    public String getOrderBy() {
-        return this.orderBy;
-    }
-
-    public DescribeDomainStatisticsSummaryRequest setDirection(String direction) {
-        this.direction = direction;
-        return this;
-    }
-    public String getDirection() {
-        return this.direction;
-    }
-
     public DescribeDomainStatisticsSummaryRequest setSearchMode(String searchMode) {
         this.searchMode = searchMode;
         return this;
@@ -114,12 +81,12 @@ public class DescribeDomainStatisticsSummaryRequest extends TeaModel {
         return this.searchMode;
     }
 
-    public DescribeDomainStatisticsSummaryRequest setKeyword(String keyword) {
-        this.keyword = keyword;
+    public DescribeDomainStatisticsSummaryRequest setStartDate(String startDate) {
+        this.startDate = startDate;
         return this;
     }
-    public String getKeyword() {
-        return this.keyword;
+    public String getStartDate() {
+        return this.startDate;
     }
 
     public DescribeDomainStatisticsSummaryRequest setThreshold(Long threshold) {

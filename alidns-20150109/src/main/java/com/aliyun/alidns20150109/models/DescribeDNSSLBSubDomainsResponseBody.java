@@ -4,8 +4,8 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
@@ -13,23 +13,23 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
     @NameInMap("SlbSubDomains")
     public DescribeDNSSLBSubDomainsResponseBodySlbSubDomains slbSubDomains;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeDNSSLBSubDomainsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDNSSLBSubDomainsResponseBody self = new DescribeDNSSLBSubDomainsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDNSSLBSubDomainsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public DescribeDNSSLBSubDomainsResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDNSSLBSubDomainsResponseBody setPageSize(Long pageSize) {
@@ -48,20 +48,20 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDNSSLBSubDomainsResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeDNSSLBSubDomainsResponseBody setSlbSubDomains(DescribeDNSSLBSubDomainsResponseBodySlbSubDomains slbSubDomains) {
         this.slbSubDomains = slbSubDomains;
         return this;
     }
     public DescribeDNSSLBSubDomainsResponseBodySlbSubDomains getSlbSubDomains() {
         return this.slbSubDomains;
+    }
+
+    public DescribeDNSSLBSubDomainsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm extends TeaModel {
@@ -114,40 +114,32 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("RecordCount")
-        public Long recordCount;
+        @NameInMap("LineAlgorithms")
+        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms lineAlgorithms;
 
         @NameInMap("Open")
         public Boolean open;
 
+        @NameInMap("RecordCount")
+        public Long recordCount;
+
         @NameInMap("SubDomain")
         public String subDomain;
 
-        @NameInMap("LineAlgorithms")
-        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms lineAlgorithms;
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain build(java.util.Map<String, ?> map) throws Exception {
             DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain self = new DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain setType(String type) {
-            this.type = type;
+        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain setLineAlgorithms(DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms lineAlgorithms) {
+            this.lineAlgorithms = lineAlgorithms;
             return this;
         }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain setRecordCount(Long recordCount) {
-            this.recordCount = recordCount;
-            return this;
-        }
-        public Long getRecordCount() {
-            return this.recordCount;
+        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms getLineAlgorithms() {
+            return this.lineAlgorithms;
         }
 
         public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain setOpen(Boolean open) {
@@ -158,6 +150,14 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             return this.open;
         }
 
+        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain setRecordCount(Long recordCount) {
+            this.recordCount = recordCount;
+            return this;
+        }
+        public Long getRecordCount() {
+            return this.recordCount;
+        }
+
         public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain setSubDomain(String subDomain) {
             this.subDomain = subDomain;
             return this;
@@ -166,12 +166,12 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             return this.subDomain;
         }
 
-        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain setLineAlgorithms(DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms lineAlgorithms) {
-            this.lineAlgorithms = lineAlgorithms;
+        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain setType(String type) {
+            this.type = type;
             return this;
         }
-        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms getLineAlgorithms() {
-            return this.lineAlgorithms;
+        public String getType() {
+            return this.type;
         }
 
     }

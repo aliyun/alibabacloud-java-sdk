@@ -4,8 +4,8 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class CopyGtmConfigRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("CopyType")
+    public String copyType;
 
     @NameInMap("Lang")
     public String lang;
@@ -16,20 +16,17 @@ public class CopyGtmConfigRequest extends TeaModel {
     @NameInMap("TargetId")
     public String targetId;
 
-    @NameInMap("CopyType")
-    public String copyType;
-
     public static CopyGtmConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         CopyGtmConfigRequest self = new CopyGtmConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public CopyGtmConfigRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public CopyGtmConfigRequest setCopyType(String copyType) {
+        this.copyType = copyType;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public String getCopyType() {
+        return this.copyType;
     }
 
     public CopyGtmConfigRequest setLang(String lang) {
@@ -54,14 +51,6 @@ public class CopyGtmConfigRequest extends TeaModel {
     }
     public String getTargetId() {
         return this.targetId;
-    }
-
-    public CopyGtmConfigRequest setCopyType(String copyType) {
-        this.copyType = copyType;
-        return this;
-    }
-    public String getCopyType() {
-        return this.copyType;
     }
 
 }

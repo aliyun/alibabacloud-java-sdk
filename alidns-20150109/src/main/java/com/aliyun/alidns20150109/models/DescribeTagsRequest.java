@@ -7,17 +7,14 @@ public class DescribeTagsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
-    @NameInMap("ResourceType")
-    public String resourceType;
-
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     public static DescribeTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTagsRequest self = new DescribeTagsRequest();
@@ -30,22 +27,6 @@ public class DescribeTagsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeTagsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public DescribeTagsRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
     }
 
     public DescribeTagsRequest setPageNumber(Long pageNumber) {
@@ -62,6 +43,14 @@ public class DescribeTagsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeTagsRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }
