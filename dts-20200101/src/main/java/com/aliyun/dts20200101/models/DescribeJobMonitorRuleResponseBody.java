@@ -123,11 +123,26 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         @NameInMap("DelayRuleTime")
         public Long delayRuleTime;
 
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("JobType")
+        public String jobType;
+
+        @NameInMap("NoticeValue")
+        public Integer noticeValue;
+
+        @NameInMap("Period")
+        public Integer period;
+
         @NameInMap("Phone")
         public String phone;
 
         @NameInMap("State")
         public String state;
+
+        @NameInMap("Times")
+        public Integer times;
 
         @NameInMap("Type")
         public String type;
@@ -145,6 +160,38 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
             return this.delayRuleTime;
         }
 
+        public DescribeJobMonitorRuleResponseBodyMonitorRules setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public DescribeJobMonitorRuleResponseBodyMonitorRules setJobType(String jobType) {
+            this.jobType = jobType;
+            return this;
+        }
+        public String getJobType() {
+            return this.jobType;
+        }
+
+        public DescribeJobMonitorRuleResponseBodyMonitorRules setNoticeValue(Integer noticeValue) {
+            this.noticeValue = noticeValue;
+            return this;
+        }
+        public Integer getNoticeValue() {
+            return this.noticeValue;
+        }
+
+        public DescribeJobMonitorRuleResponseBodyMonitorRules setPeriod(Integer period) {
+            this.period = period;
+            return this;
+        }
+        public Integer getPeriod() {
+            return this.period;
+        }
+
         public DescribeJobMonitorRuleResponseBodyMonitorRules setPhone(String phone) {
             this.phone = phone;
             return this;
@@ -159,6 +206,14 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public DescribeJobMonitorRuleResponseBodyMonitorRules setTimes(Integer times) {
+            this.times = times;
+            return this;
+        }
+        public Integer getTimes() {
+            return this.times;
         }
 
         public DescribeJobMonitorRuleResponseBodyMonitorRules setType(String type) {

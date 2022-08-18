@@ -4,45 +4,36 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterOperateLogsResponseBody extends TeaModel {
-    // 后端错误码 数字递增
     @NameInMap("Code")
     public String code;
 
     @NameInMap("DataPoints")
     public java.util.List<DescribeClusterOperateLogsResponseBodyDataPoints> dataPoints;
 
-    // 动态错误信息，会替换错误码里的"%s"
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    // 错误短码 ps：InternalError
     @NameInMap("ErrCode")
     public String errCode;
 
-    // 错误信息（返回给用户）
     @NameInMap("ErrMessage")
     public String errMessage;
 
-    // 异常对应的http code
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // 当前页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 当前每页显示数量
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    // 调用结果
     @NameInMap("Success")
     public Boolean success;
 
-    // 总数
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
 

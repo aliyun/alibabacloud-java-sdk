@@ -4,15 +4,12 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricListRequest extends TeaModel {
-    // callType=AssumedRoleUser
     @NameInMap("AccountId")
     public String accountId;
 
-    // 幂等性验证
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // migration job id
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
@@ -25,11 +22,9 @@ public class DescribeMetricListRequest extends TeaModel {
     @NameInMap("MetricName")
     public String metricName;
 
-    // NODE, CLUSTER
     @NameInMap("MetricType")
     public String metricType;
 
-    // OwnerID
     @NameInMap("OwnerID")
     public String ownerID;
 

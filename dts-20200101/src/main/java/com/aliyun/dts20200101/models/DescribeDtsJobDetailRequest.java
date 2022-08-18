@@ -13,7 +13,6 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    // 是否返回所有的同步子任务
     @NameInMap("SyncSubJobHistory")
     public Boolean syncSubJobHistory;
 

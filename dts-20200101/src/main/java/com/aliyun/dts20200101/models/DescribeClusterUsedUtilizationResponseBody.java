@@ -4,7 +4,6 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
-    // 后端错误码 数字递增
     @NameInMap("Code")
     public String code;
 
@@ -26,19 +25,15 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
     @NameInMap("DuUsed")
     public Integer duUsed;
 
-    // 动态错误信息，会替换错误码里的 "%s"
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    // 错误短码 ps：InternalError
     @NameInMap("ErrCode")
     public String errCode;
 
-    // 错误信息（返回给用户）
     @NameInMap("ErrMessage")
     public String errMessage;
 
-    // 异常对应的http code
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -54,7 +49,6 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 调用结果
     @NameInMap("Success")
     public Boolean success;
 

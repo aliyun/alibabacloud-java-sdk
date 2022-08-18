@@ -7,6 +7,9 @@ public class ConfigureDtsJobRequest extends TeaModel {
     @NameInMap("Checkpoint")
     public String checkpoint;
 
+    @NameInMap("DataCheckConfigure")
+    public String dataCheckConfigure;
+
     @NameInMap("DataInitialization")
     public Boolean dataInitialization;
 
@@ -141,6 +144,14 @@ public class ConfigureDtsJobRequest extends TeaModel {
     }
     public String getCheckpoint() {
         return this.checkpoint;
+    }
+
+    public ConfigureDtsJobRequest setDataCheckConfigure(String dataCheckConfigure) {
+        this.dataCheckConfigure = dataCheckConfigure;
+        return this;
+    }
+    public String getDataCheckConfigure() {
+        return this.dataCheckConfigure;
     }
 
     public ConfigureDtsJobRequest setDataInitialization(Boolean dataInitialization) {
