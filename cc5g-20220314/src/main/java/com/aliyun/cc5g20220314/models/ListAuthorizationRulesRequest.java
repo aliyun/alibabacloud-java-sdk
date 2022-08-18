@@ -10,6 +10,9 @@ public class ListAuthorizationRulesRequest extends TeaModel {
     @NameInMap("Destination")
     public String destination;
 
+    @NameInMap("DestinationPort")
+    public String destinationPort;
+
     @NameInMap("DestinationType")
     public String destinationType;
 
@@ -27,6 +30,9 @@ public class ListAuthorizationRulesRequest extends TeaModel {
 
     @NameInMap("Policy")
     public String policy;
+
+    @NameInMap("Protocol")
+    public String protocol;
 
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
@@ -56,6 +62,14 @@ public class ListAuthorizationRulesRequest extends TeaModel {
     }
     public String getDestination() {
         return this.destination;
+    }
+
+    public ListAuthorizationRulesRequest setDestinationPort(String destinationPort) {
+        this.destinationPort = destinationPort;
+        return this;
+    }
+    public String getDestinationPort() {
+        return this.destinationPort;
     }
 
     public ListAuthorizationRulesRequest setDestinationType(String destinationType) {
@@ -104,6 +118,14 @@ public class ListAuthorizationRulesRequest extends TeaModel {
     }
     public String getPolicy() {
         return this.policy;
+    }
+
+    public ListAuthorizationRulesRequest setProtocol(String protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+    public String getProtocol() {
+        return this.protocol;
     }
 
     public ListAuthorizationRulesRequest setStatuses(java.util.List<String> statuses) {

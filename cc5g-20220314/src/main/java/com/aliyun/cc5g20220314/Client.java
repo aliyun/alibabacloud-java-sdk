@@ -153,6 +153,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Destination", request.destination);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationPort)) {
+            query.put("DestinationPort", request.destinationPort);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.destinationType)) {
             query.put("DestinationType", request.destinationType);
         }
@@ -167,6 +171,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policy)) {
             query.put("Policy", request.policy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceCidr)) {
@@ -1190,6 +1198,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Destination", request.destination);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationPort)) {
+            query.put("DestinationPort", request.destinationPort);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
         }
@@ -1200,6 +1212,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policy)) {
             query.put("Policy", request.policy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceCidr)) {

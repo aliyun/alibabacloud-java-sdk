@@ -16,6 +16,9 @@ public class UpdateAuthorizationRuleRequest extends TeaModel {
     @NameInMap("Destination")
     public String destination;
 
+    @NameInMap("DestinationPort")
+    public String destinationPort;
+
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -24,6 +27,9 @@ public class UpdateAuthorizationRuleRequest extends TeaModel {
 
     @NameInMap("Policy")
     public String policy;
+
+    @NameInMap("Protocol")
+    public String protocol;
 
     @NameInMap("SourceCidr")
     public String sourceCidr;
@@ -68,6 +74,14 @@ public class UpdateAuthorizationRuleRequest extends TeaModel {
         return this.destination;
     }
 
+    public UpdateAuthorizationRuleRequest setDestinationPort(String destinationPort) {
+        this.destinationPort = destinationPort;
+        return this;
+    }
+    public String getDestinationPort() {
+        return this.destinationPort;
+    }
+
     public UpdateAuthorizationRuleRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -90,6 +104,14 @@ public class UpdateAuthorizationRuleRequest extends TeaModel {
     }
     public String getPolicy() {
         return this.policy;
+    }
+
+    public UpdateAuthorizationRuleRequest setProtocol(String protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+    public String getProtocol() {
+        return this.protocol;
     }
 
     public UpdateAuthorizationRuleRequest setSourceCidr(String sourceCidr) {
