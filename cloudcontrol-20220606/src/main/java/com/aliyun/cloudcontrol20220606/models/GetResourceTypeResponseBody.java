@@ -254,6 +254,9 @@ public class GetResourceTypeResponseBody extends TeaModel {
         @NameInMap("getOnlyProperties")
         public java.util.List<String> getOnlyProperties;
 
+        @NameInMap("getResponseProperties")
+        public java.util.List<String> getResponseProperties;
+
         @NameInMap("handlers")
         public GetResourceTypeResponseBodyResourceTypeHandlers handlers;
 
@@ -262,6 +265,9 @@ public class GetResourceTypeResponseBody extends TeaModel {
 
         @NameInMap("listOnlyProperties")
         public java.util.List<String> listOnlyProperties;
+
+        @NameInMap("listResponseProperties")
+        public java.util.List<String> listResponseProperties;
 
         @NameInMap("primaryIdentifier")
         public String primaryIdentifier;
@@ -333,6 +339,14 @@ public class GetResourceTypeResponseBody extends TeaModel {
             return this.getOnlyProperties;
         }
 
+        public GetResourceTypeResponseBodyResourceType setGetResponseProperties(java.util.List<String> getResponseProperties) {
+            this.getResponseProperties = getResponseProperties;
+            return this;
+        }
+        public java.util.List<String> getGetResponseProperties() {
+            return this.getResponseProperties;
+        }
+
         public GetResourceTypeResponseBodyResourceType setHandlers(GetResourceTypeResponseBodyResourceTypeHandlers handlers) {
             this.handlers = handlers;
             return this;
@@ -355,6 +369,14 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
         public java.util.List<String> getListOnlyProperties() {
             return this.listOnlyProperties;
+        }
+
+        public GetResourceTypeResponseBodyResourceType setListResponseProperties(java.util.List<String> listResponseProperties) {
+            this.listResponseProperties = listResponseProperties;
+            return this;
+        }
+        public java.util.List<String> getListResponseProperties() {
+            return this.listResponseProperties;
         }
 
         public GetResourceTypeResponseBodyResourceType setPrimaryIdentifier(String primaryIdentifier) {

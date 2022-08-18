@@ -287,6 +287,9 @@ public class ListResourceTypesResponseBody extends TeaModel {
         @NameInMap("getOnlyProperties")
         public java.util.List<String> getOnlyProperties;
 
+        @NameInMap("getResponseProperties")
+        public java.util.List<String> getResponseProperties;
+
         @NameInMap("handlers")
         public ListResourceTypesResponseBodyResourceTypesHandlers handlers;
 
@@ -295,6 +298,9 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
         @NameInMap("listOnlyProperties")
         public java.util.List<String> listOnlyProperties;
+
+        @NameInMap("listResponseProperties")
+        public java.util.List<String> listResponseProperties;
 
         @NameInMap("primaryIdentifier")
         public String primaryIdentifier;
@@ -366,6 +372,14 @@ public class ListResourceTypesResponseBody extends TeaModel {
             return this.getOnlyProperties;
         }
 
+        public ListResourceTypesResponseBodyResourceTypes setGetResponseProperties(java.util.List<String> getResponseProperties) {
+            this.getResponseProperties = getResponseProperties;
+            return this;
+        }
+        public java.util.List<String> getGetResponseProperties() {
+            return this.getResponseProperties;
+        }
+
         public ListResourceTypesResponseBodyResourceTypes setHandlers(ListResourceTypesResponseBodyResourceTypesHandlers handlers) {
             this.handlers = handlers;
             return this;
@@ -388,6 +402,14 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
         public java.util.List<String> getListOnlyProperties() {
             return this.listOnlyProperties;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setListResponseProperties(java.util.List<String> listResponseProperties) {
+            this.listResponseProperties = listResponseProperties;
+            return this;
+        }
+        public java.util.List<String> getListResponseProperties() {
+            return this.listResponseProperties;
         }
 
         public ListResourceTypesResponseBodyResourceTypes setPrimaryIdentifier(String primaryIdentifier) {
