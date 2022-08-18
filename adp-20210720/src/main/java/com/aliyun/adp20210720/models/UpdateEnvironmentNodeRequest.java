@@ -4,11 +4,9 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class UpdateEnvironmentNodeRequest extends TeaModel {
-    // 保留业务分区
     @NameInMap("applicationDisk")
     public String applicationDisk;
 
-    // etcd数据盘
     @NameInMap("etcdDisk")
     public String etcdDisk;
 
@@ -21,11 +19,9 @@ public class UpdateEnvironmentNodeRequest extends TeaModel {
     @NameInMap("taints")
     public java.util.List<UpdateEnvironmentNodeRequestTaints> taints;
 
-    // k8s管控数据盘
     @NameInMap("tridentSystemDisk")
     public String tridentSystemDisk;
 
-    // k8s管控数据盘大小
     @NameInMap("tridentSystemSizeDisk")
     public Integer tridentSystemSizeDisk;
 

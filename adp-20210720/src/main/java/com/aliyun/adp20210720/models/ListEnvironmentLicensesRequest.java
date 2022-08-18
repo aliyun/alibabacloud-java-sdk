@@ -4,18 +4,15 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListEnvironmentLicensesRequest extends TeaModel {
-    // 页码
     @NameInMap("pageNum")
     public Integer pageNum;
 
-    // 页大小
     @NameInMap("pageSize")
     public Integer pageSize;
 
     @NameInMap("scope")
     public String scope;
 
-    // 类型
     @NameInMap("type")
     public String type;
 

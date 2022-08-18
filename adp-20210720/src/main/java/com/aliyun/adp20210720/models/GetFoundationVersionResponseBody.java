@@ -73,41 +73,33 @@ public class GetFoundationVersionResponseBody extends TeaModel {
     }
 
     public static class GetFoundationVersionResponseBodyData extends TeaModel {
-        // description
         @NameInMap("description")
         public String description;
 
-        // 底座功能列表
         @NameInMap("features")
         public java.util.List<String> features;
 
         @NameInMap("labels")
         public String labels;
 
-        // name，目前仅能是 “ADP 底座“
         @NameInMap("name")
         public String name;
 
-        // platforms
         @NameInMap("platforms")
         public java.util.List<Platform> platforms;
 
         @NameInMap("siteSurveyTool")
         public GetFoundationVersionResponseBodyDataSiteSurveyTool siteSurveyTool;
 
-        // status，ENUM:["Testing","Published","Deprecated"] Published 后，则全平台所有用户可见，请谨慎操作
         @NameInMap("status")
         public String status;
 
-        // the type of foundation version,ENUM:["trident","ack"]
         @NameInMap("type")
         public String type;
 
-        // uid
         @NameInMap("uid")
         public String uid;
 
-        // version
         @NameInMap("version")
         public String version;
 

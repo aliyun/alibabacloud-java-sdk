@@ -8,7 +8,7 @@ public class GetFoundationComponentReferenceResponseBody extends TeaModel {
     public String code;
 
     @NameInMap("data")
-    public java.util.List<FoundationComponentReferenceDetail> data;
+    public GetFoundationComponentReferenceResponseBodyData data;
 
     @NameInMap("msg")
     public String msg;
@@ -26,11 +26,11 @@ public class GetFoundationComponentReferenceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetFoundationComponentReferenceResponseBody setData(java.util.List<FoundationComponentReferenceDetail> data) {
+    public GetFoundationComponentReferenceResponseBody setData(GetFoundationComponentReferenceResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<FoundationComponentReferenceDetail> getData() {
+    public GetFoundationComponentReferenceResponseBodyData getData() {
         return this.data;
     }
 
@@ -40,6 +40,25 @@ public class GetFoundationComponentReferenceResponseBody extends TeaModel {
     }
     public String getMsg() {
         return this.msg;
+    }
+
+    public static class GetFoundationComponentReferenceResponseBodyData extends TeaModel {
+        @NameInMap("list")
+        public java.util.List<FoundationComponentReferenceDetail> list;
+
+        public static GetFoundationComponentReferenceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetFoundationComponentReferenceResponseBodyData self = new GetFoundationComponentReferenceResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFoundationComponentReferenceResponseBodyData setList(java.util.List<FoundationComponentReferenceDetail> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<FoundationComponentReferenceDetail> getList() {
+            return this.list;
+        }
+
     }
 
 }

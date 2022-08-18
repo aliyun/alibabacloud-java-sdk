@@ -7,7 +7,6 @@ public class CreateEnvironmentLicenseResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
-    // 业务数据
     @NameInMap("data")
     public CreateEnvironmentLicenseResponseBodyData data;
 
@@ -44,7 +43,6 @@ public class CreateEnvironmentLicenseResponseBody extends TeaModel {
     }
 
     public static class CreateEnvironmentLicenseResponseBodyData extends TeaModel {
-        // license uid
         @NameInMap("uid")
         public String uid;
 

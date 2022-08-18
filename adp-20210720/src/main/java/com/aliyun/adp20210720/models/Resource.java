@@ -4,43 +4,33 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class Resource extends TeaModel {
-    // cpu
     @NameInMap("cpu")
     public ResourceCpu cpu;
 
-    // 实例hostname
     @NameInMap("hostname")
     public String hostname;
 
-    // 资源分组名
     @NameInMap("identifier")
     public String identifier;
 
-    // 镜像
     @NameInMap("image")
     public ResourceImage image;
 
-    // 实例类型
     @NameInMap("instanceType")
     public String instanceType;
 
-    // memory
     @NameInMap("memory")
     public ResourceMemory memory;
 
-    // 需要开放的端口
     @NameInMap("ports")
     public java.util.List<ExportPort> ports;
 
-    // 公网IP 需求
     @NameInMap("publicIP")
     public ResourcePublicIP publicIP;
 
-    // 数量
     @NameInMap("replica")
     public Integer replica;
 
-    // 存储需求
     @NameInMap("storage")
     public java.util.List<ResourceStorage> storage;
 
@@ -130,7 +120,6 @@ public class Resource extends TeaModel {
     }
 
     public static class ResourceCpu extends TeaModel {
-        // 需要的数量
         @NameInMap("required")
         public Integer required;
 
@@ -150,11 +139,9 @@ public class Resource extends TeaModel {
     }
 
     public static class ResourceImage extends TeaModel {
-        // image id
         @NameInMap("id")
         public String id;
 
-        // 名称正则
         @NameInMap("nameRegex")
         public String nameRegex;
 
@@ -182,7 +169,6 @@ public class Resource extends TeaModel {
     }
 
     public static class ResourceMemory extends TeaModel {
-        // 需要的内存，单位 G
         @NameInMap("required")
         public Integer required;
 
@@ -202,11 +188,9 @@ public class Resource extends TeaModel {
     }
 
     public static class ResourcePublicIP extends TeaModel {
-        // 带宽
         @NameInMap("bandwidth")
         public Integer bandwidth;
 
-        // 需要的数量
         @NameInMap("required")
         public Integer required;
 
@@ -234,7 +218,6 @@ public class Resource extends TeaModel {
     }
 
     public static class ResourceStorage extends TeaModel {
-        // 磁盘大小
         @NameInMap("required")
         public Integer required;
 

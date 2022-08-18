@@ -10,7 +10,6 @@ public class DeleteEnvironmentLicenseResponseBody extends TeaModel {
     @NameInMap("msg")
     public String msg;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 

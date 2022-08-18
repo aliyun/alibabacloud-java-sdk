@@ -13,6 +13,9 @@ public class ListProductVersionConfigsRequest extends TeaModel {
     @NameInMap("pageSize")
     public String pageSize;
 
+    @NameInMap("parameter")
+    public String parameter;
+
     public static ListProductVersionConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProductVersionConfigsRequest self = new ListProductVersionConfigsRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ListProductVersionConfigsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListProductVersionConfigsRequest setParameter(String parameter) {
+        this.parameter = parameter;
+        return this;
+    }
+    public String getParameter() {
+        return this.parameter;
     }
 
 }

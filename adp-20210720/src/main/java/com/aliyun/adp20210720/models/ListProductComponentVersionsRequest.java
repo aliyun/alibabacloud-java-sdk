@@ -4,7 +4,6 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListProductComponentVersionsRequest extends TeaModel {
-    // 组件类型，不填写则为全部
     @NameInMap("category")
     public String category;
 

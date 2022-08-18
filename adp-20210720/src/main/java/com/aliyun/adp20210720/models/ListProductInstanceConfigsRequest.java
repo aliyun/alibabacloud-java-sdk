@@ -13,7 +13,6 @@ public class ListProductInstanceConfigsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    // 组件和全局类型字段
     @NameInMap("paramType")
     public String paramType;
 

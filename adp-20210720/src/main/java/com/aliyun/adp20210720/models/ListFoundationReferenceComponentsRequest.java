@@ -7,14 +7,12 @@ public class ListFoundationReferenceComponentsRequest extends TeaModel {
     @NameInMap("foundationReferenceUID")
     public String foundationReferenceUID;
 
-    // foundation version uid
     @NameInMap("foundationVersionUID")
     public String foundationVersionUID;
 
     @NameInMap("onlyEnabled")
     public Boolean onlyEnabled;
 
-    // 产品版本uid
     @NameInMap("productVersionUID")
     public String productVersionUID;
 

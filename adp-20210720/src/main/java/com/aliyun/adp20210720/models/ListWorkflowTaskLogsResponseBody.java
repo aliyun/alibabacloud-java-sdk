@@ -43,7 +43,6 @@ public class ListWorkflowTaskLogsResponseBody extends TeaModel {
     }
 
     public static class ListWorkflowTaskLogsResponseBodyData extends TeaModel {
-        // 日志数据
         @NameInMap("list")
         public java.util.List<String> list;
 

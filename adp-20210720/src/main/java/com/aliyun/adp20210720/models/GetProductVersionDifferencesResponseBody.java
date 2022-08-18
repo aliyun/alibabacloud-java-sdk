@@ -13,7 +13,6 @@ public class GetProductVersionDifferencesResponseBody extends TeaModel {
     @NameInMap("msg")
     public String msg;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 
@@ -55,30 +54,24 @@ public class GetProductVersionDifferencesResponseBody extends TeaModel {
     }
 
     public static class GetProductVersionDifferencesResponseBodyData extends TeaModel {
-        // 组件名称
         @NameInMap("componentName")
         public String componentName;
 
-        // 变更类型，ENUM 类型
         @NameInMap("difference")
         public String difference;
 
-        // 变更描述信息
         @NameInMap("message")
         public String message;
 
-        // 组件之前的版本号
         @NameInMap("preVersion")
         public String preVersion;
 
-        // 组件实例名称
         @NameInMap("releaseName")
         public String releaseName;
 
         @NameInMap("upgradeFlag")
         public Boolean upgradeFlag;
 
-        // 组件当前的版本号
         @NameInMap("version")
         public String version;
 

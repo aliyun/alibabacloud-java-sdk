@@ -4,7 +4,6 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class AddEnvironmentNodesRequest extends TeaModel {
-    // 保留业务分区
     @NameInMap("applicationDisk")
     public String applicationDisk;
 
@@ -14,7 +13,6 @@ public class AddEnvironmentNodesRequest extends TeaModel {
     @NameInMap("dataDisk")
     public java.util.List<AddEnvironmentNodesRequestDataDisk> dataDisk;
 
-    // etcd数据盘
     @NameInMap("etcdDisk")
     public String etcdDisk;
 
@@ -24,7 +22,6 @@ public class AddEnvironmentNodesRequest extends TeaModel {
     @NameInMap("labels")
     public java.util.Map<String, ?> labels;
 
-    // master privateId
     @NameInMap("masterPrivateIPs")
     public java.util.List<String> masterPrivateIPs;
 
@@ -43,15 +40,12 @@ public class AddEnvironmentNodesRequest extends TeaModel {
     @NameInMap("taints")
     public java.util.List<AddEnvironmentNodesRequestTaints> taints;
 
-    // k8s管控数据盘
     @NameInMap("tridentSystemDisk")
     public String tridentSystemDisk;
 
-    // k8s管控数据盘大小
     @NameInMap("tridentSystemSizeDisk")
     public Integer tridentSystemSizeDisk;
 
-    // work privateIp
     @NameInMap("workerPrivateIPs")
     public java.util.List<String> workerPrivateIPs;
 

@@ -4,11 +4,9 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class Platform extends TeaModel {
-    // architecture
     @NameInMap("architecture")
     public String architecture;
 
-    // os
     @NameInMap("os")
     public String os;
 

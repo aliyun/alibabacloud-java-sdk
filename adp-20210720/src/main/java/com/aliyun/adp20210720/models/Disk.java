@@ -4,27 +4,21 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class Disk extends TeaModel {
-    // capacity
     @NameInMap("capacity")
     public Integer capacity;
 
-    // fsType
     @NameInMap("fsType")
     public String fsType;
 
-    // mountPoint
     @NameInMap("mountPoint")
     public String mountPoint;
 
-    // name
     @NameInMap("name")
     public String name;
 
-    // remain
     @NameInMap("remain")
     public Integer remain;
 
-    // type
     @NameInMap("type")
     public String type;
 

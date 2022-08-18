@@ -43,11 +43,9 @@ public class GetWorkflowStatusResponseBody extends TeaModel {
     }
 
     public static class GetWorkflowStatusResponseBodyDataStepStatusWorkflowTasks extends TeaModel {
-        // task name
         @NameInMap("name")
         public String name;
 
-        // task status
         @NameInMap("status")
         public String status;
 
@@ -75,11 +73,9 @@ public class GetWorkflowStatusResponseBody extends TeaModel {
     }
 
     public static class GetWorkflowStatusResponseBodyDataStepStatus extends TeaModel {
-        // step name
         @NameInMap("name")
         public String name;
 
-        // step status
         @NameInMap("status")
         public String status;
 
