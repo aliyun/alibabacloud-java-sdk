@@ -77,6 +77,9 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         @NameInMap("Destination")
         public String destination;
 
+        @NameInMap("DestinationPort")
+        public String destinationPort;
+
         @NameInMap("DestinationType")
         public String destinationType;
 
@@ -88,6 +91,9 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
 
         @NameInMap("Policy")
         public String policy;
+
+        @NameInMap("Protocol")
+        public String protocol;
 
         @NameInMap("SourceCidr")
         public String sourceCidr;
@@ -135,6 +141,14 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             return this.destination;
         }
 
+        public ListAuthorizationRulesResponseBodyAuthorizationRules setDestinationPort(String destinationPort) {
+            this.destinationPort = destinationPort;
+            return this;
+        }
+        public String getDestinationPort() {
+            return this.destinationPort;
+        }
+
         public ListAuthorizationRulesResponseBodyAuthorizationRules setDestinationType(String destinationType) {
             this.destinationType = destinationType;
             return this;
@@ -165,6 +179,14 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         }
         public String getPolicy() {
             return this.policy;
+        }
+
+        public ListAuthorizationRulesResponseBodyAuthorizationRules setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
         }
 
         public ListAuthorizationRulesResponseBodyAuthorizationRules setSourceCidr(String sourceCidr) {
