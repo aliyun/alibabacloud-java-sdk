@@ -7,6 +7,9 @@ public class DescribeDtsJobsRequest extends TeaModel {
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
+    @NameInMap("DtsInstanceId")
+    public String dtsInstanceId;
+
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
@@ -60,6 +63,14 @@ public class DescribeDtsJobsRequest extends TeaModel {
     }
     public String getDedicatedClusterId() {
         return this.dedicatedClusterId;
+    }
+
+    public DescribeDtsJobsRequest setDtsInstanceId(String dtsInstanceId) {
+        this.dtsInstanceId = dtsInstanceId;
+        return this;
+    }
+    public String getDtsInstanceId() {
+        return this.dtsInstanceId;
     }
 
     public DescribeDtsJobsRequest setDtsJobId(String dtsJobId) {

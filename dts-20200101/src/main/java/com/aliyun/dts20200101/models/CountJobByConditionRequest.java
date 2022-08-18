@@ -4,18 +4,15 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class CountJobByConditionRequest extends TeaModel {
-    // 目标端数据库类型
     @NameInMap("DestDbType")
     public String destDbType;
 
-    // 父任务id
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("JobType")
     public String jobType;
 
-    // 查询的值，与Type对应
     @NameInMap("Params")
     public String params;
 
@@ -25,14 +22,12 @@ public class CountJobByConditionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    // 源端数据库类型
     @NameInMap("SrcDbType")
     public String srcDbType;
 
     @NameInMap("Status")
     public String status;
 
-    // 查询类型
     @NameInMap("Type")
     public String type;
 

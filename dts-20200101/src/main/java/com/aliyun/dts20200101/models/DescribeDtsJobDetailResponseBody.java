@@ -25,6 +25,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("DataSynchronizationStatus")
+    public DescribeDtsJobDetailResponseBodyDataSynchronizationStatus dataSynchronizationStatus;
+
     @NameInMap("DatabaseCount")
     public Integer databaseCount;
 
@@ -195,6 +198,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    public DescribeDtsJobDetailResponseBody setDataSynchronizationStatus(DescribeDtsJobDetailResponseBodyDataSynchronizationStatus dataSynchronizationStatus) {
+        this.dataSynchronizationStatus = dataSynchronizationStatus;
+        return this;
+    }
+    public DescribeDtsJobDetailResponseBodyDataSynchronizationStatus getDataSynchronizationStatus() {
+        return this.dataSynchronizationStatus;
     }
 
     public DescribeDtsJobDetailResponseBody setDatabaseCount(Integer databaseCount) {
@@ -491,6 +502,69 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
     public String getTaskType() {
         return this.taskType;
+    }
+
+    public static class DescribeDtsJobDetailResponseBodyDataSynchronizationStatus extends TeaModel {
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("NeedUpgrade")
+        public Boolean needUpgrade;
+
+        @NameInMap("Percent")
+        public String percent;
+
+        @NameInMap("Progress")
+        public String progress;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeDtsJobDetailResponseBodyDataSynchronizationStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobDetailResponseBodyDataSynchronizationStatus self = new DescribeDtsJobDetailResponseBodyDataSynchronizationStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDtsJobDetailResponseBodyDataSynchronizationStatus setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeDtsJobDetailResponseBodyDataSynchronizationStatus setNeedUpgrade(Boolean needUpgrade) {
+            this.needUpgrade = needUpgrade;
+            return this;
+        }
+        public Boolean getNeedUpgrade() {
+            return this.needUpgrade;
+        }
+
+        public DescribeDtsJobDetailResponseBodyDataSynchronizationStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
+        public DescribeDtsJobDetailResponseBodyDataSynchronizationStatus setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
+        }
+
+        public DescribeDtsJobDetailResponseBodyDataSynchronizationStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class DescribeDtsJobDetailResponseBodyDestinationEndpoint extends TeaModel {
@@ -807,19 +881,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -874,19 +944,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -941,19 +1007,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -1035,7 +1097,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("RoleName")
         public String roleName;
 
-        // DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
@@ -1198,11 +1259,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubDistributedJobPerformance extends TeaModel {
-        // 每秒同步的流量，单位为：MB/s
         @NameInMap("Flow")
         public String flow;
 
-        // 每秒同步的记录数
         @NameInMap("Rps")
         public String rps;
 
@@ -1230,23 +1289,18 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubDistributedJobPrecheckStatusDetail extends TeaModel {
-        // 预检查项
         @NameInMap("CheckItem")
         public String checkItem;
 
-        // 检查项的描述
         @NameInMap("CheckItemDescription")
         public String checkItemDescription;
 
-        // 检查结果 (NotStarted: 未启动, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Warning: 警告, Success: 完成)
         @NameInMap("CheckResult")
         public String checkResult;
 
-        // 错误原因
         @NameInMap("FailedReason")
         public String failedReason;
 
-        // 修复方法
         @NameInMap("RepairMethod")
         public String repairMethod;
 
@@ -1307,7 +1361,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("Percent")
         public String percent;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -1351,35 +1404,27 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubDistributedJobRetryState extends TeaModel {
-        // 错误信息
         @NameInMap("ErrMsg")
         public String errMsg;
 
-        // 任务ID
         @NameInMap("JobId")
         public String jobId;
 
-        // 最大重试时间,单位秒
         @NameInMap("MaxRetryTime")
         public Integer maxRetryTime;
 
-        // 模块名称 reader/store/writer/full/struct
         @NameInMap("Module")
         public String module;
 
-        // 已重试次数
         @NameInMap("RetryCount")
         public Integer retryCount;
 
-        // srcDB/destDB/metaDB/dstore
         @NameInMap("RetryTarget")
         public String retryTarget;
 
-        // 已重试时间,单位秒
         @NameInMap("RetryTime")
         public Integer retryTime;
 
-        // 是否重试中
         @NameInMap("Retrying")
         public Boolean retrying;
 
@@ -1458,19 +1503,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -1525,19 +1566,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -1592,19 +1629,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -1686,7 +1719,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("RoleName")
         public String roleName;
 
-        // DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
@@ -1849,11 +1881,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobPerformance extends TeaModel {
-        // 每秒同步的流量，单位为：MB/s
         @NameInMap("Flow")
         public String flow;
 
-        // 每秒同步的记录数
         @NameInMap("Rps")
         public String rps;
 
@@ -1881,23 +1911,18 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobPrecheckStatusDetail extends TeaModel {
-        // 预检查项
         @NameInMap("CheckItem")
         public String checkItem;
 
-        // 检查项的描述
         @NameInMap("CheckItemDescription")
         public String checkItemDescription;
 
-        // 检查结果 (NotStarted: 未启动, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Warning: 警告, Success: 完成)
         @NameInMap("CheckResult")
         public String checkResult;
 
-        // 错误原因
         @NameInMap("FailedReason")
         public String failedReason;
 
-        // 修复方法
         @NameInMap("RepairMethod")
         public String repairMethod;
 
@@ -1958,7 +1983,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("Percent")
         public String percent;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -2002,35 +2026,27 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobRetryState extends TeaModel {
-        // 错误信息
         @NameInMap("ErrMsg")
         public String errMsg;
 
-        // 任务ID
         @NameInMap("JobId")
         public String jobId;
 
-        // 最大重试时间,单位秒
         @NameInMap("MaxRetryTime")
         public Integer maxRetryTime;
 
-        // 模块名称 reader/store/writer/full/struct
         @NameInMap("Module")
         public String module;
 
-        // 已重试次数
         @NameInMap("RetryCount")
         public Integer retryCount;
 
-        // srcDB/destDB/metaDB/dstore
         @NameInMap("RetryTarget")
         public String retryTarget;
 
-        // 已重试时间,单位秒
         @NameInMap("RetryTime")
         public Integer retryTime;
 
-        // 是否重试中
         @NameInMap("Retrying")
         public Boolean retrying;
 
@@ -2136,7 +2152,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("RoleName")
         public String roleName;
 
-        // DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
@@ -2250,19 +2265,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -2385,55 +2396,42 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobTagList extends TeaModel {
-        // 用户id
         @NameInMap("AliUid")
         public Long aliUid;
 
-        // 标签操作者
         @NameInMap("Creator")
         public Long creator;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // 修改时间
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // 主键
         @NameInMap("Id")
         public Long id;
 
-        // region_id
         @NameInMap("RegionId")
         public String regionId;
 
-        // dts instance id
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // 资源类型
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // 0为public，1为private (Public, Private, All)
         @NameInMap("Scope")
         public String scope;
 
-        // 任务所在region，注意一般是dts的目标端region
         @NameInMap("SrcRegion")
         public String srcRegion;
 
-        // 标签类型：系统标签－System，用户标签－Custom (Custom, System, All)
         @NameInMap("TagCategory")
         public String tagCategory;
 
-        // 标签键tagkey
         @NameInMap("TagKey")
         public String tagKey;
 
-        // 标签值tagvalue
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -2597,7 +2595,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
 
-        // 请使用
         @NameInMap("DtsJobDirection")
         public String dtsJobDirection;
 
@@ -2628,14 +2625,12 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("IsDemoJob")
         public Boolean isDemoJob;
 
-        // 返回结果中新增jobType字段
         @NameInMap("JobType")
         public String jobType;
 
         @NameInMap("MigrationMode")
         public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobMigrationMode migrationMode;
 
-        // 任务来源 pts任务、dms任务 (PTS, DMS, DTS)
         @NameInMap("OriginType")
         public String originType;
 
@@ -3074,7 +3069,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("RoleName")
         public String roleName;
 
-        // DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
@@ -3188,19 +3182,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -3323,55 +3313,42 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubDistributedJobTagList extends TeaModel {
-        // 用户id
         @NameInMap("AliUid")
         public Long aliUid;
 
-        // 标签操作者
         @NameInMap("Creator")
         public Long creator;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // 修改时间
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // 主键
         @NameInMap("Id")
         public Long id;
 
-        // region_id
         @NameInMap("RegionId")
         public String regionId;
 
-        // dts instance id
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // 资源类型
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // 0为public，1为private (Public, Private, All)
         @NameInMap("Scope")
         public String scope;
 
-        // 任务所在region，注意一般是dts的目标端region
         @NameInMap("SrcRegion")
         public String srcRegion;
 
-        // 标签类型：系统标签－System，用户标签－Custom (Custom, System, All)
         @NameInMap("TagCategory")
         public String tagCategory;
 
-        // 标签键tagkey
         @NameInMap("TagKey")
         public String tagKey;
 
-        // 标签值tagvalue
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -3535,7 +3512,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
 
-        // 请使用
         @NameInMap("DtsJobDirection")
         public String dtsJobDirection;
 
@@ -3566,14 +3542,12 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("IsDemoJob")
         public Boolean isDemoJob;
 
-        // 返回结果中新增jobType字段
         @NameInMap("JobType")
         public String jobType;
 
         @NameInMap("MigrationMode")
         public DescribeDtsJobDetailResponseBodySubDistributedJobMigrationMode migrationMode;
 
-        // 任务来源 pts任务、dms任务 (PTS, DMS, DTS)
         @NameInMap("OriginType")
         public String originType;
 
@@ -3996,19 +3970,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -4063,19 +4033,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -4130,19 +4096,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -4224,7 +4186,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("RoleName")
         public String roleName;
 
-        // DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
@@ -4387,11 +4348,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubSyncJobPerformance extends TeaModel {
-        // 每秒同步的流量，单位为：MB/s
         @NameInMap("Flow")
         public String flow;
 
-        // 每秒同步的记录数
         @NameInMap("Rps")
         public String rps;
 
@@ -4419,23 +4378,18 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubSyncJobPrecheckStatusDetail extends TeaModel {
-        // 预检查项
         @NameInMap("CheckItem")
         public String checkItem;
 
-        // 检查项的描述
         @NameInMap("CheckItemDescription")
         public String checkItemDescription;
 
-        // 检查结果 (NotStarted: 未启动, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Warning: 警告, Success: 完成)
         @NameInMap("CheckResult")
         public String checkResult;
 
-        // 错误原因
         @NameInMap("FailedReason")
         public String failedReason;
 
-        // 修复方法
         @NameInMap("RepairMethod")
         public String repairMethod;
 
@@ -4496,7 +4450,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("Percent")
         public String percent;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -4540,35 +4493,27 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubSyncJobRetryState extends TeaModel {
-        // 错误信息
         @NameInMap("ErrMsg")
         public String errMsg;
 
-        // 任务ID
         @NameInMap("JobId")
         public String jobId;
 
-        // 最大重试时间,单位秒
         @NameInMap("MaxRetryTime")
         public Integer maxRetryTime;
 
-        // 模块名称 reader/store/writer/full/struct
         @NameInMap("Module")
         public String module;
 
-        // 已重试次数
         @NameInMap("RetryCount")
         public Integer retryCount;
 
-        // srcDB/destDB/metaDB/dstore
         @NameInMap("RetryTarget")
         public String retryTarget;
 
-        // 已重试时间,单位秒
         @NameInMap("RetryTime")
         public Integer retryTime;
 
-        // 是否重试中
         @NameInMap("Retrying")
         public Boolean retrying;
 
@@ -4647,19 +4592,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -4714,19 +4655,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -4781,19 +4718,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -4875,7 +4808,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("RoleName")
         public String roleName;
 
-        // DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
@@ -5038,11 +4970,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobPerformance extends TeaModel {
-        // 每秒同步的流量，单位为：MB/s
         @NameInMap("Flow")
         public String flow;
 
-        // 每秒同步的记录数
         @NameInMap("Rps")
         public String rps;
 
@@ -5070,23 +5000,18 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobPrecheckStatusDetail extends TeaModel {
-        // 预检查项
         @NameInMap("CheckItem")
         public String checkItem;
 
-        // 检查项的描述
         @NameInMap("CheckItemDescription")
         public String checkItemDescription;
 
-        // 检查结果 (NotStarted: 未启动, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Warning: 警告, Success: 完成)
         @NameInMap("CheckResult")
         public String checkResult;
 
-        // 错误原因
         @NameInMap("FailedReason")
         public String failedReason;
 
-        // 修复方法
         @NameInMap("RepairMethod")
         public String repairMethod;
 
@@ -5147,7 +5072,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("Percent")
         public String percent;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -5191,35 +5115,27 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobRetryState extends TeaModel {
-        // 错误信息
         @NameInMap("ErrMsg")
         public String errMsg;
 
-        // 任务ID
         @NameInMap("JobId")
         public String jobId;
 
-        // 最大重试时间,单位秒
         @NameInMap("MaxRetryTime")
         public Integer maxRetryTime;
 
-        // 模块名称 reader/store/writer/full/struct
         @NameInMap("Module")
         public String module;
 
-        // 已重试次数
         @NameInMap("RetryCount")
         public Integer retryCount;
 
-        // srcDB/destDB/metaDB/dstore
         @NameInMap("RetryTarget")
         public String retryTarget;
 
-        // 已重试时间,单位秒
         @NameInMap("RetryTime")
         public Integer retryTime;
 
-        // 是否重试中
         @NameInMap("Retrying")
         public Boolean retrying;
 
@@ -5325,7 +5241,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("RoleName")
         public String roleName;
 
-        // DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
@@ -5439,19 +5354,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -5574,55 +5485,42 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubSyncJobReverseJobTagList extends TeaModel {
-        // 用户id
         @NameInMap("AliUid")
         public Long aliUid;
 
-        // 标签操作者
         @NameInMap("Creator")
         public Long creator;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // 修改时间
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // 主键
         @NameInMap("Id")
         public Long id;
 
-        // region_id
         @NameInMap("RegionId")
         public String regionId;
 
-        // dts instance id
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // 资源类型
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // 0为public，1为private (Public, Private, All)
         @NameInMap("Scope")
         public String scope;
 
-        // 任务所在region，注意一般是dts的目标端region
         @NameInMap("SrcRegion")
         public String srcRegion;
 
-        // 标签类型：系统标签－System，用户标签－Custom (Custom, System, All)
         @NameInMap("TagCategory")
         public String tagCategory;
 
-        // 标签键tagkey
         @NameInMap("TagKey")
         public String tagKey;
 
-        // 标签值tagvalue
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -5786,7 +5684,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
 
-        // 请使用
         @NameInMap("DtsJobDirection")
         public String dtsJobDirection;
 
@@ -5817,14 +5714,12 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("IsDemoJob")
         public Boolean isDemoJob;
 
-        // 返回结果中新增jobType字段
         @NameInMap("JobType")
         public String jobType;
 
         @NameInMap("MigrationMode")
         public DescribeDtsJobDetailResponseBodySubSyncJobReverseJobMigrationMode migrationMode;
 
-        // 任务来源 pts任务、dms任务 (PTS, DMS, DTS)
         @NameInMap("OriginType")
         public String originType;
 
@@ -6263,7 +6158,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("RoleName")
         public String roleName;
 
-        // DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
@@ -6377,19 +6271,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 是否显示提升升级规格
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
-        // 迁移进度
         @NameInMap("Percent")
         public String percent;
 
-        // 已经完成迁移的表数量
         @NameInMap("Progress")
         public String progress;
 
-        // NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
         @NameInMap("Status")
         public String status;
 
@@ -6512,55 +6402,42 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodySubSyncJobTagList extends TeaModel {
-        // 用户id
         @NameInMap("AliUid")
         public Long aliUid;
 
-        // 标签操作者
         @NameInMap("Creator")
         public Long creator;
 
-        // 创建时间
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // 修改时间
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // 主键
         @NameInMap("Id")
         public Long id;
 
-        // region_id
         @NameInMap("RegionId")
         public String regionId;
 
-        // dts instance id
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // 资源类型
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // 0为public，1为private (Public, Private, All)
         @NameInMap("Scope")
         public String scope;
 
-        // 任务所在region，注意一般是dts的目标端region
         @NameInMap("SrcRegion")
         public String srcRegion;
 
-        // 标签类型：系统标签－System，用户标签－Custom (Custom, System, All)
         @NameInMap("TagCategory")
         public String tagCategory;
 
-        // 标签键tagkey
         @NameInMap("TagKey")
         public String tagKey;
 
-        // 标签值tagvalue
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -6724,7 +6601,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
 
-        // 请使用
         @NameInMap("DtsJobDirection")
         public String dtsJobDirection;
 
@@ -6755,14 +6631,12 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("IsDemoJob")
         public Boolean isDemoJob;
 
-        // 返回结果中新增jobType字段
         @NameInMap("JobType")
         public String jobType;
 
         @NameInMap("MigrationMode")
         public DescribeDtsJobDetailResponseBodySubSyncJobMigrationMode migrationMode;
 
-        // 任务来源 pts任务、dms任务 (PTS, DMS, DTS)
         @NameInMap("OriginType")
         public String originType;
 

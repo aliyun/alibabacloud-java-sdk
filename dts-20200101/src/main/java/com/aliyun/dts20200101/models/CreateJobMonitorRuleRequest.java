@@ -10,6 +10,12 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    @NameInMap("NoticeValue")
+    public Integer noticeValue;
+
+    @NameInMap("Period")
+    public Integer period;
+
     @NameInMap("Phone")
     public String phone;
 
@@ -18,6 +24,9 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
 
     @NameInMap("State")
     public String state;
+
+    @NameInMap("Times")
+    public Integer times;
 
     @NameInMap("Type")
     public String type;
@@ -43,6 +52,22 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
         return this.dtsJobId;
     }
 
+    public CreateJobMonitorRuleRequest setNoticeValue(Integer noticeValue) {
+        this.noticeValue = noticeValue;
+        return this;
+    }
+    public Integer getNoticeValue() {
+        return this.noticeValue;
+    }
+
+    public CreateJobMonitorRuleRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
     public CreateJobMonitorRuleRequest setPhone(String phone) {
         this.phone = phone;
         return this;
@@ -65,6 +90,14 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     }
     public String getState() {
         return this.state;
+    }
+
+    public CreateJobMonitorRuleRequest setTimes(Integer times) {
+        this.times = times;
+        return this;
+    }
+    public Integer getTimes() {
+        return this.times;
     }
 
     public CreateJobMonitorRuleRequest setType(String type) {

@@ -4,18 +4,15 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterUsedUtilizationRequest extends TeaModel {
-    // callType=AssumedRoleUser
     @NameInMap("AccountId")
     public String accountId;
 
-    // 幂等性验证
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
-    // migration job id
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
@@ -25,14 +22,12 @@ public class DescribeClusterUsedUtilizationRequest extends TeaModel {
     @NameInMap("MetricType")
     public String metricType;
 
-    // OwnerID
     @NameInMap("OwnerID")
     public String ownerID;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    // callType=AssumedRoleUser
     @NameInMap("SecurityToken")
     public String securityToken;
 

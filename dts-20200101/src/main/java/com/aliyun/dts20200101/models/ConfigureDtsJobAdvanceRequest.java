@@ -11,6 +11,9 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("Checkpoint")
     public String checkpoint;
 
+    @NameInMap("DataCheckConfigure")
+    public String dataCheckConfigure;
+
     @NameInMap("DataInitialization")
     public Boolean dataInitialization;
 
@@ -150,6 +153,14 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     }
     public String getCheckpoint() {
         return this.checkpoint;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setDataCheckConfigure(String dataCheckConfigure) {
+        this.dataCheckConfigure = dataCheckConfigure;
+        return this;
+    }
+    public String getDataCheckConfigure() {
+        return this.dataCheckConfigure;
     }
 
     public ConfigureDtsJobAdvanceRequest setDataInitialization(Boolean dataInitialization) {

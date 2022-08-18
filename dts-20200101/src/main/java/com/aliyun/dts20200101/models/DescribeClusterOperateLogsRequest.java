@@ -4,25 +4,21 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterOperateLogsRequest extends TeaModel {
-    // callType=AssumedRoleUser
     @NameInMap("AccountId")
     public String accountId;
 
-    // 幂等性验证
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
-    // migration job id
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     @NameInMap("EndTime")
     public Long endTime;
 
-    // OwnerID
     @NameInMap("OwnerID")
     public String ownerID;
 
@@ -32,7 +28,6 @@ public class DescribeClusterOperateLogsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 当不传时默认最近返回七天的数据
     @NameInMap("StartTime")
     public Long startTime;
 

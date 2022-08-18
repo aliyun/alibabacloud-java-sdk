@@ -16,6 +16,9 @@ public class SummaryJobDetailRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("StructType")
+    public String structType;
+
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
@@ -54,6 +57,14 @@ public class SummaryJobDetailRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public SummaryJobDetailRequest setStructType(String structType) {
+        this.structType = structType;
+        return this;
+    }
+    public String getStructType() {
+        return this.structType;
     }
 
     public SummaryJobDetailRequest setSynchronizationDirection(String synchronizationDirection) {

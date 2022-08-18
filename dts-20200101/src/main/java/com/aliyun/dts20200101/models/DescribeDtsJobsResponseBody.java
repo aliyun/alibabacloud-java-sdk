@@ -1828,7 +1828,6 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        // DTS任务类型
         @NameInMap("JobType")
         public String jobType;
 
@@ -3808,7 +3807,6 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        // DtsJob类型
         @NameInMap("JobType")
         public String jobType;
 
