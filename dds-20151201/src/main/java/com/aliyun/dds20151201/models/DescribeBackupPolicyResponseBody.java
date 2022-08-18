@@ -4,6 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
+    @NameInMap("BackupInterval")
+    public Integer backupInterval;
+
     @NameInMap("BackupRetentionPeriod")
     public String backupRetentionPeriod;
 
@@ -22,9 +25,20 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SnapshotBackupType")
+    public String snapshotBackupType;
+
     public static DescribeBackupPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPolicyResponseBody self = new DescribeBackupPolicyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBackupPolicyResponseBody setBackupInterval(Integer backupInterval) {
+        this.backupInterval = backupInterval;
+        return this;
+    }
+    public Integer getBackupInterval() {
+        return this.backupInterval;
     }
 
     public DescribeBackupPolicyResponseBody setBackupRetentionPeriod(String backupRetentionPeriod) {
@@ -73,6 +87,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeBackupPolicyResponseBody setSnapshotBackupType(String snapshotBackupType) {
+        this.snapshotBackupType = snapshotBackupType;
+        return this;
+    }
+    public String getSnapshotBackupType() {
+        return this.snapshotBackupType;
     }
 
 }
