@@ -170,6 +170,9 @@ public class StartInstanceResponseBody extends TeaModel {
         @NameInMap("SessionId")
         public String sessionId;
 
+        @NameInMap("Token")
+        public String token;
+
         public static StartInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             StartInstanceResponseBodyData self = new StartInstanceResponseBodyData();
             return TeaModel.build(map, self);
@@ -197,6 +200,14 @@ public class StartInstanceResponseBody extends TeaModel {
         }
         public String getSessionId() {
             return this.sessionId;
+        }
+
+        public StartInstanceResponseBodyData setToken(String token) {
+            this.token = token;
+            return this;
+        }
+        public String getToken() {
+            return this.token;
         }
 
     }
