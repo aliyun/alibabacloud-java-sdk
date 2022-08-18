@@ -1,0 +1,4 @@
+2022-08-18 Version: 1.0.0
+- Support Application authorization manage.
+- Support User and Organizational Unit resource query operation.
+
