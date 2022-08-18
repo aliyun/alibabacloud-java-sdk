@@ -4,14 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SwitchDnsGtmInstanceStrategyModeRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("StrategyMode")
     public String strategyMode;
@@ -21,28 +18,20 @@ public class SwitchDnsGtmInstanceStrategyModeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SwitchDnsGtmInstanceStrategyModeRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public SwitchDnsGtmInstanceStrategyModeRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
     public SwitchDnsGtmInstanceStrategyModeRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public SwitchDnsGtmInstanceStrategyModeRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public SwitchDnsGtmInstanceStrategyModeRequest setStrategyMode(String strategyMode) {

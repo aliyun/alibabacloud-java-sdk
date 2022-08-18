@@ -4,43 +4,27 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("Previews")
     public PreviewGtmRecoveryPlanResponseBodyPreviews previews;
 
-    @NameInMap("TotalPages")
-    public Integer totalPages;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    @NameInMap("TotalPages")
+    public Integer totalPages;
+
     public static PreviewGtmRecoveryPlanResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PreviewGtmRecoveryPlanResponseBody self = new PreviewGtmRecoveryPlanResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public PreviewGtmRecoveryPlanResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public PreviewGtmRecoveryPlanResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public PreviewGtmRecoveryPlanResponseBody setPageNumber(Integer pageNumber) {
@@ -51,6 +35,14 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public PreviewGtmRecoveryPlanResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public PreviewGtmRecoveryPlanResponseBody setPreviews(PreviewGtmRecoveryPlanResponseBodyPreviews previews) {
         this.previews = previews;
         return this;
@@ -59,12 +51,12 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         return this.previews;
     }
 
-    public PreviewGtmRecoveryPlanResponseBody setTotalPages(Integer totalPages) {
-        this.totalPages = totalPages;
+    public PreviewGtmRecoveryPlanResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getTotalPages() {
-        return this.totalPages;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PreviewGtmRecoveryPlanResponseBody setTotalItems(Integer totalItems) {
@@ -75,24 +67,24 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         return this.totalItems;
     }
 
-    public static class PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfosSwitchInfo extends TeaModel {
-        @NameInMap("StrategyName")
-        public String strategyName;
+    public PreviewGtmRecoveryPlanResponseBody setTotalPages(Integer totalPages) {
+        this.totalPages = totalPages;
+        return this;
+    }
+    public Integer getTotalPages() {
+        return this.totalPages;
+    }
 
+    public static class PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfosSwitchInfo extends TeaModel {
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("StrategyName")
+        public String strategyName;
 
         public static PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfosSwitchInfo build(java.util.Map<String, ?> map) throws Exception {
             PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfosSwitchInfo self = new PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfosSwitchInfo();
             return TeaModel.build(map, self);
-        }
-
-        public PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfosSwitchInfo setStrategyName(String strategyName) {
-            this.strategyName = strategyName;
-            return this;
-        }
-        public String getStrategyName() {
-            return this.strategyName;
         }
 
         public PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfosSwitchInfo setContent(String content) {
@@ -101,6 +93,14 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfosSwitchInfo setStrategyName(String strategyName) {
+            this.strategyName = strategyName;
+            return this;
+        }
+        public String getStrategyName() {
+            return this.strategyName;
         }
 
     }
@@ -128,11 +128,11 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("SwitchInfos")
-        public PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfos switchInfos;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("SwitchInfos")
+        public PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfos switchInfos;
 
         @NameInMap("UserDomainName")
         public String userDomainName;
@@ -150,20 +150,20 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public PreviewGtmRecoveryPlanResponseBodyPreviewsPreview setSwitchInfos(PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfos switchInfos) {
-            this.switchInfos = switchInfos;
-            return this;
-        }
-        public PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfos getSwitchInfos() {
-            return this.switchInfos;
-        }
-
         public PreviewGtmRecoveryPlanResponseBodyPreviewsPreview setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public PreviewGtmRecoveryPlanResponseBodyPreviewsPreview setSwitchInfos(PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfos switchInfos) {
+            this.switchInfos = switchInfos;
+            return this;
+        }
+        public PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfos getSwitchInfos() {
+            return this.switchInfos;
         }
 
         public PreviewGtmRecoveryPlanResponseBodyPreviewsPreview setUserDomainName(String userDomainName) {

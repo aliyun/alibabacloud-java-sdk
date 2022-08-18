@@ -4,26 +4,26 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SetDomainRecordStatusResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("RecordId")
+    public String recordId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("RecordId")
-    public String recordId;
+    @NameInMap("Status")
+    public String status;
 
     public static SetDomainRecordStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SetDomainRecordStatusResponseBody self = new SetDomainRecordStatusResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SetDomainRecordStatusResponseBody setStatus(String status) {
-        this.status = status;
+    public SetDomainRecordStatusResponseBody setRecordId(String recordId) {
+        this.recordId = recordId;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getRecordId() {
+        return this.recordId;
     }
 
     public SetDomainRecordStatusResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class SetDomainRecordStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SetDomainRecordStatusResponseBody setRecordId(String recordId) {
-        this.recordId = recordId;
+    public SetDomainRecordStatusResponseBody setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getRecordId() {
-        return this.recordId;
+    public String getStatus() {
+        return this.status;
     }
 
 }

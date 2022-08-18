@@ -4,11 +4,8 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomLineResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("IpSegmentList")
-    public java.util.List<DescribeCustomLineResponseBodyIpSegmentList> ipSegmentList;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("DomainName")
     public String domainName;
@@ -16,31 +13,26 @@ public class DescribeCustomLineResponseBody extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("IpSegmentList")
+    public java.util.List<DescribeCustomLineResponseBodyIpSegmentList> ipSegmentList;
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeCustomLineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomLineResponseBody self = new DescribeCustomLineResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCustomLineResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeCustomLineResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeCustomLineResponseBody setIpSegmentList(java.util.List<DescribeCustomLineResponseBodyIpSegmentList> ipSegmentList) {
-        this.ipSegmentList = ipSegmentList;
-        return this;
-    }
-    public java.util.List<DescribeCustomLineResponseBodyIpSegmentList> getIpSegmentList() {
-        return this.ipSegmentList;
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeCustomLineResponseBody setDomainName(String domainName) {
@@ -59,12 +51,12 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         return this.id;
     }
 
-    public DescribeCustomLineResponseBody setCode(String code) {
-        this.code = code;
+    public DescribeCustomLineResponseBody setIpSegmentList(java.util.List<DescribeCustomLineResponseBodyIpSegmentList> ipSegmentList) {
+        this.ipSegmentList = ipSegmentList;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.List<DescribeCustomLineResponseBodyIpSegmentList> getIpSegmentList() {
+        return this.ipSegmentList;
     }
 
     public DescribeCustomLineResponseBody setName(String name) {
@@ -73,6 +65,14 @@ public class DescribeCustomLineResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribeCustomLineResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeCustomLineResponseBodyIpSegmentList extends TeaModel {

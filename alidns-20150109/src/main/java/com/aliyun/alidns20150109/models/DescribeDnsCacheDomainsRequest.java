@@ -4,14 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsCacheDomainsRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("Keyword")
     public String keyword;
+
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -24,28 +21,20 @@ public class DescribeDnsCacheDomainsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDnsCacheDomainsRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public DescribeDnsCacheDomainsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
     public DescribeDnsCacheDomainsRequest setKeyword(String keyword) {
         this.keyword = keyword;
         return this;
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public DescribeDnsCacheDomainsRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeDnsCacheDomainsRequest setPageNumber(Long pageNumber) {

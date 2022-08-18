@@ -32,12 +32,6 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeDohSubDomainStatisticsResponseBodyStatistics extends TeaModel {
-        @NameInMap("V6HttpCount")
-        public Long v6HttpCount;
-
-        @NameInMap("V4HttpsCount")
-        public Long v4HttpsCount;
-
         @NameInMap("Timestamp")
         public Long timestamp;
 
@@ -47,28 +41,18 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
         @NameInMap("V4HttpCount")
         public Long v4HttpCount;
 
+        @NameInMap("V4HttpsCount")
+        public Long v4HttpsCount;
+
+        @NameInMap("V6HttpCount")
+        public Long v6HttpCount;
+
         @NameInMap("V6HttpsCount")
         public Long v6HttpsCount;
 
         public static DescribeDohSubDomainStatisticsResponseBodyStatistics build(java.util.Map<String, ?> map) throws Exception {
             DescribeDohSubDomainStatisticsResponseBodyStatistics self = new DescribeDohSubDomainStatisticsResponseBodyStatistics();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDohSubDomainStatisticsResponseBodyStatistics setV6HttpCount(Long v6HttpCount) {
-            this.v6HttpCount = v6HttpCount;
-            return this;
-        }
-        public Long getV6HttpCount() {
-            return this.v6HttpCount;
-        }
-
-        public DescribeDohSubDomainStatisticsResponseBodyStatistics setV4HttpsCount(Long v4HttpsCount) {
-            this.v4HttpsCount = v4HttpsCount;
-            return this;
-        }
-        public Long getV4HttpsCount() {
-            return this.v4HttpsCount;
         }
 
         public DescribeDohSubDomainStatisticsResponseBodyStatistics setTimestamp(Long timestamp) {
@@ -93,6 +77,22 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
         }
         public Long getV4HttpCount() {
             return this.v4HttpCount;
+        }
+
+        public DescribeDohSubDomainStatisticsResponseBodyStatistics setV4HttpsCount(Long v4HttpsCount) {
+            this.v4HttpsCount = v4HttpsCount;
+            return this;
+        }
+        public Long getV4HttpsCount() {
+            return this.v4HttpsCount;
+        }
+
+        public DescribeDohSubDomainStatisticsResponseBodyStatistics setV6HttpCount(Long v6HttpCount) {
+            this.v6HttpCount = v6HttpCount;
+            return this;
+        }
+        public Long getV6HttpCount() {
+            return this.v6HttpCount;
         }
 
         public DescribeDohSubDomainStatisticsResponseBodyStatistics setV6HttpsCount(Long v6HttpsCount) {

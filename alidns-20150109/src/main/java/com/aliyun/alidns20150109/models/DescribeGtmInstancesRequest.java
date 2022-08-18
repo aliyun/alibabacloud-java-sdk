@@ -4,11 +4,14 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmInstancesRequest extends TeaModel {
+    @NameInMap("Keyword")
+    public String keyword;
+
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("NeedDetailAttributes")
+    public Boolean needDetailAttributes;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -16,18 +19,20 @@ public class DescribeGtmInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Keyword")
-    public String keyword;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("NeedDetailAttributes")
-    public Boolean needDetailAttributes;
 
     public static DescribeGtmInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGtmInstancesRequest self = new DescribeGtmInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGtmInstancesRequest setKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    public String getKeyword() {
+        return this.keyword;
     }
 
     public DescribeGtmInstancesRequest setLang(String lang) {
@@ -38,12 +43,12 @@ public class DescribeGtmInstancesRequest extends TeaModel {
         return this.lang;
     }
 
-    public DescribeGtmInstancesRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public DescribeGtmInstancesRequest setNeedDetailAttributes(Boolean needDetailAttributes) {
+        this.needDetailAttributes = needDetailAttributes;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public Boolean getNeedDetailAttributes() {
+        return this.needDetailAttributes;
     }
 
     public DescribeGtmInstancesRequest setPageNumber(Integer pageNumber) {
@@ -62,28 +67,12 @@ public class DescribeGtmInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeGtmInstancesRequest setKeyword(String keyword) {
-        this.keyword = keyword;
-        return this;
-    }
-    public String getKeyword() {
-        return this.keyword;
-    }
-
     public DescribeGtmInstancesRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DescribeGtmInstancesRequest setNeedDetailAttributes(Boolean needDetailAttributes) {
-        this.needDetailAttributes = needDetailAttributes;
-        return this;
-    }
-    public Boolean getNeedDetailAttributes() {
-        return this.needDetailAttributes;
     }
 
 }

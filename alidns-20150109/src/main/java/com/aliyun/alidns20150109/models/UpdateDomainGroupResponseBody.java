@@ -4,18 +4,26 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateDomainGroupResponseBody extends TeaModel {
+    @NameInMap("GroupId")
+    public String groupId;
+
     @NameInMap("GroupName")
     public String groupName;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("GroupId")
-    public String groupId;
-
     public static UpdateDomainGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateDomainGroupResponseBody self = new UpdateDomainGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateDomainGroupResponseBody setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public UpdateDomainGroupResponseBody setGroupName(String groupName) {
@@ -32,14 +40,6 @@ public class UpdateDomainGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UpdateDomainGroupResponseBody setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
     }
 
 }

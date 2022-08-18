@@ -7,14 +7,14 @@ public class UpdateDomainRecordRemarkRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("RecordId")
     public String recordId;
 
     @NameInMap("Remark")
     public String remark;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static UpdateDomainRecordRemarkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDomainRecordRemarkRequest self = new UpdateDomainRecordRemarkRequest();
@@ -27,14 +27,6 @@ public class UpdateDomainRecordRemarkRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public UpdateDomainRecordRemarkRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public UpdateDomainRecordRemarkRequest setRecordId(String recordId) {
@@ -51,6 +43,14 @@ public class UpdateDomainRecordRemarkRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public UpdateDomainRecordRemarkRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

@@ -7,20 +7,14 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("ResourceId")
+    public java.util.List<String> resourceId;
 
     @NameInMap("ResourceType")
     public String resourceType;
 
-    @NameInMap("OverWrite")
-    public Boolean overWrite;
-
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
-
-    @NameInMap("ResourceId")
-    public java.util.List<String> resourceId;
 
     public static TagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         TagResourcesRequest self = new TagResourcesRequest();
@@ -35,12 +29,12 @@ public class TagResourcesRequest extends TeaModel {
         return this.lang;
     }
 
-    public TagResourcesRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public TagResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
     }
 
     public TagResourcesRequest setResourceType(String resourceType) {
@@ -51,28 +45,12 @@ public class TagResourcesRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public TagResourcesRequest setOverWrite(Boolean overWrite) {
-        this.overWrite = overWrite;
-        return this;
-    }
-    public Boolean getOverWrite() {
-        return this.overWrite;
-    }
-
     public TagResourcesRequest setTag(java.util.List<TagResourcesRequestTag> tag) {
         this.tag = tag;
         return this;
     }
     public java.util.List<TagResourcesRequestTag> getTag() {
         return this.tag;
-    }
-
-    public TagResourcesRequest setResourceId(java.util.List<String> resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public java.util.List<String> getResourceId() {
-        return this.resourceId;
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {

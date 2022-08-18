@@ -4,20 +4,17 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstancesRequest extends TeaModel {
+    @NameInMap("Keyword")
+    public String keyword;
+
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("Keyword")
-    public String keyword;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -27,20 +24,20 @@ public class DescribeDnsGtmInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDnsGtmInstancesRequest setKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    public String getKeyword() {
+        return this.keyword;
+    }
+
     public DescribeDnsGtmInstancesRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeDnsGtmInstancesRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeDnsGtmInstancesRequest setPageNumber(Integer pageNumber) {
@@ -57,14 +54,6 @@ public class DescribeDnsGtmInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribeDnsGtmInstancesRequest setKeyword(String keyword) {
-        this.keyword = keyword;
-        return this;
-    }
-    public String getKeyword() {
-        return this.keyword;
     }
 
     public DescribeDnsGtmInstancesRequest setResourceGroupId(String resourceGroupId) {

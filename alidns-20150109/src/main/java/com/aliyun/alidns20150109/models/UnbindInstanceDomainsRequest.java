@@ -4,37 +4,18 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UnbindInstanceDomainsRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("DomainNames")
     public String domainNames;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Lang")
+    public String lang;
+
     public static UnbindInstanceDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindInstanceDomainsRequest self = new UnbindInstanceDomainsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UnbindInstanceDomainsRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public UnbindInstanceDomainsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public UnbindInstanceDomainsRequest setDomainNames(String domainNames) {
@@ -51,6 +32,14 @@ public class UnbindInstanceDomainsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UnbindInstanceDomainsRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
 }

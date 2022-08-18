@@ -4,34 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstanceSystemCnameRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     public static DescribeDnsGtmInstanceSystemCnameRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDnsGtmInstanceSystemCnameRequest self = new DescribeDnsGtmInstanceSystemCnameRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDnsGtmInstanceSystemCnameRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
-    public DescribeDnsGtmInstanceSystemCnameRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public DescribeDnsGtmInstanceSystemCnameRequest setInstanceId(String instanceId) {
@@ -40,6 +21,14 @@ public class DescribeDnsGtmInstanceSystemCnameRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeDnsGtmInstanceSystemCnameRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
 }

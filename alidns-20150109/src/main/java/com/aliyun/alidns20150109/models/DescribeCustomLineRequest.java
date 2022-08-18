@@ -4,26 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomLineRequest extends TeaModel {
-    @NameInMap("LineId")
-    public Long lineId;
-
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("LineId")
+    public Long lineId;
 
     public static DescribeCustomLineRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomLineRequest self = new DescribeCustomLineRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCustomLineRequest setLineId(Long lineId) {
-        this.lineId = lineId;
-        return this;
-    }
-    public Long getLineId() {
-        return this.lineId;
     }
 
     public DescribeCustomLineRequest setLang(String lang) {
@@ -34,12 +23,12 @@ public class DescribeCustomLineRequest extends TeaModel {
         return this.lang;
     }
 
-    public DescribeCustomLineRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public DescribeCustomLineRequest setLineId(Long lineId) {
+        this.lineId = lineId;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public Long getLineId() {
+        return this.lineId;
     }
 
 }

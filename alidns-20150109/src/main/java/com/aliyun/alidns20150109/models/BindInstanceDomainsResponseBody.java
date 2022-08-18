@@ -4,11 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class BindInstanceDomainsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("FailedCount")
     public Integer failedCount;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("SuccessCount")
     public Integer successCount;
@@ -18,20 +18,20 @@ public class BindInstanceDomainsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public BindInstanceDomainsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public BindInstanceDomainsResponseBody setFailedCount(Integer failedCount) {
         this.failedCount = failedCount;
         return this;
     }
     public Integer getFailedCount() {
         return this.failedCount;
+    }
+
+    public BindInstanceDomainsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public BindInstanceDomainsResponseBody setSuccessCount(Integer successCount) {

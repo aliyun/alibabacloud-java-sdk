@@ -4,27 +4,35 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("Strategies")
     public DescribeGtmAccessStrategiesResponseBodyStrategies strategies;
-
-    @NameInMap("TotalPages")
-    public Integer totalPages;
 
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    @NameInMap("TotalPages")
+    public Integer totalPages;
+
     public static DescribeGtmAccessStrategiesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGtmAccessStrategiesResponseBody self = new DescribeGtmAccessStrategiesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGtmAccessStrategiesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeGtmAccessStrategiesResponseBody setPageSize(Integer pageSize) {
@@ -43,28 +51,12 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeGtmAccessStrategiesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeGtmAccessStrategiesResponseBody setStrategies(DescribeGtmAccessStrategiesResponseBodyStrategies strategies) {
         this.strategies = strategies;
         return this;
     }
     public DescribeGtmAccessStrategiesResponseBodyStrategies getStrategies() {
         return this.strategies;
-    }
-
-    public DescribeGtmAccessStrategiesResponseBody setTotalPages(Integer totalPages) {
-        this.totalPages = totalPages;
-        return this;
-    }
-    public Integer getTotalPages() {
-        return this.totalPages;
     }
 
     public DescribeGtmAccessStrategiesResponseBody setTotalItems(Integer totalItems) {
@@ -75,7 +67,18 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         return this.totalItems;
     }
 
+    public DescribeGtmAccessStrategiesResponseBody setTotalPages(Integer totalPages) {
+        this.totalPages = totalPages;
+        return this;
+    }
+    public Integer getTotalPages() {
+        return this.totalPages;
+    }
+
     public static class DescribeGtmAccessStrategiesResponseBodyStrategiesStrategyLinesLine extends TeaModel {
+        @NameInMap("GroupCode")
+        public String groupCode;
+
         @NameInMap("GroupName")
         public String groupName;
 
@@ -85,12 +88,17 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         @NameInMap("LineName")
         public String lineName;
 
-        @NameInMap("GroupCode")
-        public String groupCode;
-
         public static DescribeGtmAccessStrategiesResponseBodyStrategiesStrategyLinesLine build(java.util.Map<String, ?> map) throws Exception {
             DescribeGtmAccessStrategiesResponseBodyStrategiesStrategyLinesLine self = new DescribeGtmAccessStrategiesResponseBodyStrategiesStrategyLinesLine();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategyLinesLine setGroupCode(String groupCode) {
+            this.groupCode = groupCode;
+            return this;
+        }
+        public String getGroupCode() {
+            return this.groupCode;
         }
 
         public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategyLinesLine setGroupName(String groupName) {
@@ -115,14 +123,6 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         }
         public String getLineName() {
             return this.lineName;
-        }
-
-        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategyLinesLine setGroupCode(String groupCode) {
-            this.groupCode = groupCode;
-            return this;
-        }
-        public String getGroupCode() {
-            return this.groupCode;
         }
 
     }
@@ -150,20 +150,38 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         @NameInMap("AccessMode")
         public String accessMode;
 
-        @NameInMap("StrategyName")
-        public String strategyName;
-
-        @NameInMap("DefaultAddrPoolMonitorStatus")
-        public String defaultAddrPoolMonitorStatus;
-
-        @NameInMap("StrategyMode")
-        public String strategyMode;
+        @NameInMap("AccessStatus")
+        public String accessStatus;
 
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("CreateTimestamp")
+        public Long createTimestamp;
+
+        @NameInMap("DefaultAddrPoolId")
+        public String defaultAddrPoolId;
+
+        @NameInMap("DefaultAddrPoolMonitorStatus")
+        public String defaultAddrPoolMonitorStatus;
+
+        @NameInMap("DefaultAddrPoolName")
+        public String defaultAddrPoolName;
+
         @NameInMap("DefaultAddrPoolStatus")
         public String defaultAddrPoolStatus;
+
+        @NameInMap("FailoverAddrPoolId")
+        public String failoverAddrPoolId;
+
+        @NameInMap("FailoverAddrPoolMonitorStatus")
+        public String failoverAddrPoolMonitorStatus;
+
+        @NameInMap("FailoverAddrPoolName")
+        public String failoverAddrPoolName;
+
+        @NameInMap("FailoverAddrPoolStatus")
+        public String failoverAddrPoolStatus;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -171,32 +189,14 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         @NameInMap("Lines")
         public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategyLines lines;
 
-        @NameInMap("FailoverAddrPoolId")
-        public String failoverAddrPoolId;
-
-        @NameInMap("DefaultAddrPoolId")
-        public String defaultAddrPoolId;
-
         @NameInMap("StrategyId")
         public String strategyId;
 
-        @NameInMap("FailoverAddrPoolStatus")
-        public String failoverAddrPoolStatus;
+        @NameInMap("StrategyMode")
+        public String strategyMode;
 
-        @NameInMap("AccessStatus")
-        public String accessStatus;
-
-        @NameInMap("FailoverAddrPoolMonitorStatus")
-        public String failoverAddrPoolMonitorStatus;
-
-        @NameInMap("DefaultAddrPoolName")
-        public String defaultAddrPoolName;
-
-        @NameInMap("FailoverAddrPoolName")
-        public String failoverAddrPoolName;
-
-        @NameInMap("CreateTimestamp")
-        public Long createTimestamp;
+        @NameInMap("StrategyName")
+        public String strategyName;
 
         public static DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy build(java.util.Map<String, ?> map) throws Exception {
             DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy self = new DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy();
@@ -211,28 +211,12 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             return this.accessMode;
         }
 
-        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setStrategyName(String strategyName) {
-            this.strategyName = strategyName;
+        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setAccessStatus(String accessStatus) {
+            this.accessStatus = accessStatus;
             return this;
         }
-        public String getStrategyName() {
-            return this.strategyName;
-        }
-
-        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setDefaultAddrPoolMonitorStatus(String defaultAddrPoolMonitorStatus) {
-            this.defaultAddrPoolMonitorStatus = defaultAddrPoolMonitorStatus;
-            return this;
-        }
-        public String getDefaultAddrPoolMonitorStatus() {
-            return this.defaultAddrPoolMonitorStatus;
-        }
-
-        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setStrategyMode(String strategyMode) {
-            this.strategyMode = strategyMode;
-            return this;
-        }
-        public String getStrategyMode() {
-            return this.strategyMode;
+        public String getAccessStatus() {
+            return this.accessStatus;
         }
 
         public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setCreateTime(String createTime) {
@@ -243,12 +227,76 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setCreateTimestamp(Long createTimestamp) {
+            this.createTimestamp = createTimestamp;
+            return this;
+        }
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
+        }
+
+        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setDefaultAddrPoolId(String defaultAddrPoolId) {
+            this.defaultAddrPoolId = defaultAddrPoolId;
+            return this;
+        }
+        public String getDefaultAddrPoolId() {
+            return this.defaultAddrPoolId;
+        }
+
+        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setDefaultAddrPoolMonitorStatus(String defaultAddrPoolMonitorStatus) {
+            this.defaultAddrPoolMonitorStatus = defaultAddrPoolMonitorStatus;
+            return this;
+        }
+        public String getDefaultAddrPoolMonitorStatus() {
+            return this.defaultAddrPoolMonitorStatus;
+        }
+
+        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setDefaultAddrPoolName(String defaultAddrPoolName) {
+            this.defaultAddrPoolName = defaultAddrPoolName;
+            return this;
+        }
+        public String getDefaultAddrPoolName() {
+            return this.defaultAddrPoolName;
+        }
+
         public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setDefaultAddrPoolStatus(String defaultAddrPoolStatus) {
             this.defaultAddrPoolStatus = defaultAddrPoolStatus;
             return this;
         }
         public String getDefaultAddrPoolStatus() {
             return this.defaultAddrPoolStatus;
+        }
+
+        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setFailoverAddrPoolId(String failoverAddrPoolId) {
+            this.failoverAddrPoolId = failoverAddrPoolId;
+            return this;
+        }
+        public String getFailoverAddrPoolId() {
+            return this.failoverAddrPoolId;
+        }
+
+        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setFailoverAddrPoolMonitorStatus(String failoverAddrPoolMonitorStatus) {
+            this.failoverAddrPoolMonitorStatus = failoverAddrPoolMonitorStatus;
+            return this;
+        }
+        public String getFailoverAddrPoolMonitorStatus() {
+            return this.failoverAddrPoolMonitorStatus;
+        }
+
+        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setFailoverAddrPoolName(String failoverAddrPoolName) {
+            this.failoverAddrPoolName = failoverAddrPoolName;
+            return this;
+        }
+        public String getFailoverAddrPoolName() {
+            return this.failoverAddrPoolName;
+        }
+
+        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setFailoverAddrPoolStatus(String failoverAddrPoolStatus) {
+            this.failoverAddrPoolStatus = failoverAddrPoolStatus;
+            return this;
+        }
+        public String getFailoverAddrPoolStatus() {
+            return this.failoverAddrPoolStatus;
         }
 
         public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setInstanceId(String instanceId) {
@@ -267,22 +315,6 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             return this.lines;
         }
 
-        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setFailoverAddrPoolId(String failoverAddrPoolId) {
-            this.failoverAddrPoolId = failoverAddrPoolId;
-            return this;
-        }
-        public String getFailoverAddrPoolId() {
-            return this.failoverAddrPoolId;
-        }
-
-        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setDefaultAddrPoolId(String defaultAddrPoolId) {
-            this.defaultAddrPoolId = defaultAddrPoolId;
-            return this;
-        }
-        public String getDefaultAddrPoolId() {
-            return this.defaultAddrPoolId;
-        }
-
         public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setStrategyId(String strategyId) {
             this.strategyId = strategyId;
             return this;
@@ -291,52 +323,20 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
             return this.strategyId;
         }
 
-        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setFailoverAddrPoolStatus(String failoverAddrPoolStatus) {
-            this.failoverAddrPoolStatus = failoverAddrPoolStatus;
+        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setStrategyMode(String strategyMode) {
+            this.strategyMode = strategyMode;
             return this;
         }
-        public String getFailoverAddrPoolStatus() {
-            return this.failoverAddrPoolStatus;
+        public String getStrategyMode() {
+            return this.strategyMode;
         }
 
-        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setAccessStatus(String accessStatus) {
-            this.accessStatus = accessStatus;
+        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setStrategyName(String strategyName) {
+            this.strategyName = strategyName;
             return this;
         }
-        public String getAccessStatus() {
-            return this.accessStatus;
-        }
-
-        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setFailoverAddrPoolMonitorStatus(String failoverAddrPoolMonitorStatus) {
-            this.failoverAddrPoolMonitorStatus = failoverAddrPoolMonitorStatus;
-            return this;
-        }
-        public String getFailoverAddrPoolMonitorStatus() {
-            return this.failoverAddrPoolMonitorStatus;
-        }
-
-        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setDefaultAddrPoolName(String defaultAddrPoolName) {
-            this.defaultAddrPoolName = defaultAddrPoolName;
-            return this;
-        }
-        public String getDefaultAddrPoolName() {
-            return this.defaultAddrPoolName;
-        }
-
-        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setFailoverAddrPoolName(String failoverAddrPoolName) {
-            this.failoverAddrPoolName = failoverAddrPoolName;
-            return this;
-        }
-        public String getFailoverAddrPoolName() {
-            return this.failoverAddrPoolName;
-        }
-
-        public DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy setCreateTimestamp(Long createTimestamp) {
-            this.createTimestamp = createTimestamp;
-            return this;
-        }
-        public Long getCreateTimestamp() {
-            return this.createTimestamp;
+        public String getStrategyName() {
+            return this.strategyName;
         }
 
     }

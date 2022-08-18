@@ -4,6 +4,12 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDohDomainStatisticsSummaryRequest extends TeaModel {
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("EndDate")
+    public String endDate;
+
     @NameInMap("Lang")
     public String lang;
 
@@ -16,21 +22,25 @@ public class DescribeDohDomainStatisticsSummaryRequest extends TeaModel {
     @NameInMap("StartDate")
     public String startDate;
 
-    @NameInMap("EndDate")
-    public String endDate;
-
-    @NameInMap("OrderBy")
-    public String orderBy;
-
-    @NameInMap("Direction")
-    public String direction;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
     public static DescribeDohDomainStatisticsSummaryRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDohDomainStatisticsSummaryRequest self = new DescribeDohDomainStatisticsSummaryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDohDomainStatisticsSummaryRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDohDomainStatisticsSummaryRequest setEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    public String getEndDate() {
+        return this.endDate;
     }
 
     public DescribeDohDomainStatisticsSummaryRequest setLang(String lang) {
@@ -63,38 +73,6 @@ public class DescribeDohDomainStatisticsSummaryRequest extends TeaModel {
     }
     public String getStartDate() {
         return this.startDate;
-    }
-
-    public DescribeDohDomainStatisticsSummaryRequest setEndDate(String endDate) {
-        this.endDate = endDate;
-        return this;
-    }
-    public String getEndDate() {
-        return this.endDate;
-    }
-
-    public DescribeDohDomainStatisticsSummaryRequest setOrderBy(String orderBy) {
-        this.orderBy = orderBy;
-        return this;
-    }
-    public String getOrderBy() {
-        return this.orderBy;
-    }
-
-    public DescribeDohDomainStatisticsSummaryRequest setDirection(String direction) {
-        this.direction = direction;
-        return this;
-    }
-    public String getDirection() {
-        return this.direction;
-    }
-
-    public DescribeDohDomainStatisticsSummaryRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
 }

@@ -4,26 +4,26 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SetDNSSLBStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Open")
+    public Boolean open;
 
     @NameInMap("RecordCount")
     public Long recordCount;
 
-    @NameInMap("Open")
-    public Boolean open;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SetDNSSLBStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SetDNSSLBStatusResponseBody self = new SetDNSSLBStatusResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SetDNSSLBStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetDNSSLBStatusResponseBody setOpen(Boolean open) {
+        this.open = open;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Boolean getOpen() {
+        return this.open;
     }
 
     public SetDNSSLBStatusResponseBody setRecordCount(Long recordCount) {
@@ -34,12 +34,12 @@ public class SetDNSSLBStatusResponseBody extends TeaModel {
         return this.recordCount;
     }
 
-    public SetDNSSLBStatusResponseBody setOpen(Boolean open) {
-        this.open = open;
+    public SetDNSSLBStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getOpen() {
-        return this.open;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

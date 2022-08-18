@@ -4,18 +4,26 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddCustomLineResponseBody extends TeaModel {
+    @NameInMap("LineCode")
+    public String lineCode;
+
     @NameInMap("LineId")
     public Long lineId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("LineCode")
-    public String lineCode;
-
     public static AddCustomLineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddCustomLineResponseBody self = new AddCustomLineResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddCustomLineResponseBody setLineCode(String lineCode) {
+        this.lineCode = lineCode;
+        return this;
+    }
+    public String getLineCode() {
+        return this.lineCode;
     }
 
     public AddCustomLineResponseBody setLineId(Long lineId) {
@@ -32,14 +40,6 @@ public class AddCustomLineResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public AddCustomLineResponseBody setLineCode(String lineCode) {
-        this.lineCode = lineCode;
-        return this;
-    }
-    public String getLineCode() {
-        return this.lineCode;
     }
 
 }

@@ -4,11 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class TransferDomainRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("DomainNames")
     public String domainNames;
+
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("Remark")
     public String remark;
@@ -16,20 +16,9 @@ public class TransferDomainRequest extends TeaModel {
     @NameInMap("TargetUserId")
     public Long targetUserId;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     public static TransferDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         TransferDomainRequest self = new TransferDomainRequest();
         return TeaModel.build(map, self);
-    }
-
-    public TransferDomainRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public TransferDomainRequest setDomainNames(String domainNames) {
@@ -38,6 +27,14 @@ public class TransferDomainRequest extends TeaModel {
     }
     public String getDomainNames() {
         return this.domainNames;
+    }
+
+    public TransferDomainRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public TransferDomainRequest setRemark(String remark) {
@@ -54,14 +51,6 @@ public class TransferDomainRequest extends TeaModel {
     }
     public Long getTargetUserId() {
         return this.targetUserId;
-    }
-
-    public TransferDomainRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
 }

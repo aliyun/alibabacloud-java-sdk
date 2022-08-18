@@ -4,48 +4,24 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordLogsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("RecordLogs")
+    public DescribeRecordLogsResponseBodyRecordLogs recordLogs;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
-    @NameInMap("RecordLogs")
-    public DescribeRecordLogsResponseBodyRecordLogs recordLogs;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeRecordLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRecordLogsResponseBody self = new DescribeRecordLogsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRecordLogsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeRecordLogsResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeRecordLogsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeRecordLogsResponseBody setPageNumber(Long pageNumber) {
@@ -56,6 +32,14 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeRecordLogsResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeRecordLogsResponseBody setRecordLogs(DescribeRecordLogsResponseBodyRecordLogs recordLogs) {
         this.recordLogs = recordLogs;
         return this;
@@ -64,9 +48,28 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         return this.recordLogs;
     }
 
+    public DescribeRecordLogsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeRecordLogsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeRecordLogsResponseBodyRecordLogsRecordLog extends TeaModel {
         @NameInMap("Action")
         public String action;
+
+        @NameInMap("ActionTime")
+        public String actionTime;
 
         @NameInMap("ActionTimestamp")
         public Long actionTimestamp;
@@ -76,9 +79,6 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
 
         @NameInMap("Message")
         public String message;
-
-        @NameInMap("ActionTime")
-        public String actionTime;
 
         public static DescribeRecordLogsResponseBodyRecordLogsRecordLog build(java.util.Map<String, ?> map) throws Exception {
             DescribeRecordLogsResponseBodyRecordLogsRecordLog self = new DescribeRecordLogsResponseBodyRecordLogsRecordLog();
@@ -91,6 +91,14 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
         public String getAction() {
             return this.action;
+        }
+
+        public DescribeRecordLogsResponseBodyRecordLogsRecordLog setActionTime(String actionTime) {
+            this.actionTime = actionTime;
+            return this;
+        }
+        public String getActionTime() {
+            return this.actionTime;
         }
 
         public DescribeRecordLogsResponseBodyRecordLogsRecordLog setActionTimestamp(Long actionTimestamp) {
@@ -115,14 +123,6 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
-        }
-
-        public DescribeRecordLogsResponseBodyRecordLogsRecordLog setActionTime(String actionTime) {
-            this.actionTime = actionTime;
-            return this;
-        }
-        public String getActionTime() {
-            return this.actionTime;
         }
 
     }

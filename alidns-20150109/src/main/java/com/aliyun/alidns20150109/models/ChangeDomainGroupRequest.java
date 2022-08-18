@@ -4,37 +4,18 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class ChangeDomainGroupRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("Lang")
+    public String lang;
+
     public static ChangeDomainGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeDomainGroupRequest self = new ChangeDomainGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ChangeDomainGroupRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public ChangeDomainGroupRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public ChangeDomainGroupRequest setDomainName(String domainName) {
@@ -51,6 +32,14 @@ public class ChangeDomainGroupRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public ChangeDomainGroupRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
 }

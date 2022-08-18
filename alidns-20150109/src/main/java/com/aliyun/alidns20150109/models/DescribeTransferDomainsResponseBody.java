@@ -4,8 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeTransferDomainsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("DomainTransfers")
+    public DescribeTransferDomainsResponseBodyDomainTransfers domainTransfers;
+
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
@@ -13,23 +16,28 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
-    @NameInMap("DomainTransfers")
-    public DescribeTransferDomainsResponseBodyDomainTransfers domainTransfers;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeTransferDomainsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTransferDomainsResponseBody self = new DescribeTransferDomainsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeTransferDomainsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public DescribeTransferDomainsResponseBody setDomainTransfers(DescribeTransferDomainsResponseBodyDomainTransfers domainTransfers) {
+        this.domainTransfers = domainTransfers;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public DescribeTransferDomainsResponseBodyDomainTransfers getDomainTransfers() {
+        return this.domainTransfers;
+    }
+
+    public DescribeTransferDomainsResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeTransferDomainsResponseBody setPageSize(Long pageSize) {
@@ -48,52 +56,36 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeTransferDomainsResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeTransferDomainsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeTransferDomainsResponseBody setDomainTransfers(DescribeTransferDomainsResponseBodyDomainTransfers domainTransfers) {
-        this.domainTransfers = domainTransfers;
-        return this;
-    }
-    public DescribeTransferDomainsResponseBodyDomainTransfers getDomainTransfers() {
-        return this.domainTransfers;
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer extends TeaModel {
-        @NameInMap("FromUserId")
-        public Long fromUserId;
-
         @NameInMap("CreateTime")
         public String createTime;
-
-        @NameInMap("TargetUserId")
-        public Long targetUserId;
-
-        @NameInMap("DomainName")
-        public String domainName;
-
-        @NameInMap("Id")
-        public Long id;
 
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("FromUserId")
+        public Long fromUserId;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("TargetUserId")
+        public Long targetUserId;
+
         public static DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer build(java.util.Map<String, ?> map) throws Exception {
             DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer self = new DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer setFromUserId(Long fromUserId) {
-            this.fromUserId = fromUserId;
-            return this;
-        }
-        public Long getFromUserId() {
-            return this.fromUserId;
         }
 
         public DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer setCreateTime(String createTime) {
@@ -104,12 +96,12 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer setTargetUserId(Long targetUserId) {
-            this.targetUserId = targetUserId;
+        public DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer setCreateTimestamp(Long createTimestamp) {
+            this.createTimestamp = createTimestamp;
             return this;
         }
-        public Long getTargetUserId() {
-            return this.targetUserId;
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
         }
 
         public DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer setDomainName(String domainName) {
@@ -120,6 +112,14 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             return this.domainName;
         }
 
+        public DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer setFromUserId(Long fromUserId) {
+            this.fromUserId = fromUserId;
+            return this;
+        }
+        public Long getFromUserId() {
+            return this.fromUserId;
+        }
+
         public DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer setId(Long id) {
             this.id = id;
             return this;
@@ -128,12 +128,12 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             return this.id;
         }
 
-        public DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer setCreateTimestamp(Long createTimestamp) {
-            this.createTimestamp = createTimestamp;
+        public DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer setTargetUserId(Long targetUserId) {
+            this.targetUserId = targetUserId;
             return this;
         }
-        public Long getCreateTimestamp() {
-            return this.createTimestamp;
+        public Long getTargetUserId() {
+            return this.targetUserId;
         }
 
     }

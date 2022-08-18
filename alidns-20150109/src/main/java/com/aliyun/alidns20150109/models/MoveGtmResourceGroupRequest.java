@@ -7,14 +7,11 @@ public class MoveGtmResourceGroupRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("ResourceId")
-    public String resourceId;
-
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("ResourceId")
+    public String resourceId;
 
     public static MoveGtmResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         MoveGtmResourceGroupRequest self = new MoveGtmResourceGroupRequest();
@@ -29,14 +26,6 @@ public class MoveGtmResourceGroupRequest extends TeaModel {
         return this.lang;
     }
 
-    public MoveGtmResourceGroupRequest setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public String getResourceId() {
-        return this.resourceId;
-    }
-
     public MoveGtmResourceGroupRequest setNewResourceGroupId(String newResourceGroupId) {
         this.newResourceGroupId = newResourceGroupId;
         return this;
@@ -45,12 +34,12 @@ public class MoveGtmResourceGroupRequest extends TeaModel {
         return this.newResourceGroupId;
     }
 
-    public MoveGtmResourceGroupRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public MoveGtmResourceGroupRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public String getResourceId() {
+        return this.resourceId;
     }
 
 }

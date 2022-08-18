@@ -32,23 +32,15 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainStatisticsResponseBodyStatisticsStatistic extends TeaModel {
-        @NameInMap("Timestamp")
-        public Long timestamp;
-
         @NameInMap("Count")
         public Long count;
+
+        @NameInMap("Timestamp")
+        public Long timestamp;
 
         public static DescribeDomainStatisticsResponseBodyStatisticsStatistic build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainStatisticsResponseBodyStatisticsStatistic self = new DescribeDomainStatisticsResponseBodyStatisticsStatistic();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainStatisticsResponseBodyStatisticsStatistic setTimestamp(Long timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public Long getTimestamp() {
-            return this.timestamp;
         }
 
         public DescribeDomainStatisticsResponseBodyStatisticsStatistic setCount(Long count) {
@@ -57,6 +49,14 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
         }
         public Long getCount() {
             return this.count;
+        }
+
+        public DescribeDomainStatisticsResponseBodyStatisticsStatistic setTimestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Long getTimestamp() {
+            return this.timestamp;
         }
 
     }

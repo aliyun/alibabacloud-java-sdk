@@ -4,26 +4,18 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddDnsGtmAddressPoolResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AddrPoolId")
     public String addrPoolId;
 
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static AddDnsGtmAddressPoolResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddDnsGtmAddressPoolResponseBody self = new AddDnsGtmAddressPoolResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AddDnsGtmAddressPoolResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AddDnsGtmAddressPoolResponseBody setAddrPoolId(String addrPoolId) {
@@ -40,6 +32,14 @@ public class AddDnsGtmAddressPoolResponseBody extends TeaModel {
     }
     public String getMonitorConfigId() {
         return this.monitorConfigId;
+    }
+
+    public AddDnsGtmAddressPoolResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

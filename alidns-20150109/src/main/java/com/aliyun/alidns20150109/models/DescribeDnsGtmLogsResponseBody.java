@@ -4,27 +4,43 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmLogsResponseBody extends TeaModel {
+    @NameInMap("Logs")
+    public DescribeDnsGtmLogsResponseBodyLogs logs;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalItems")
+    public Integer totalItems;
 
     @NameInMap("TotalPages")
     public Integer totalPages;
 
-    @NameInMap("Logs")
-    public DescribeDnsGtmLogsResponseBodyLogs logs;
-
-    @NameInMap("TotalItems")
-    public Integer totalItems;
-
     public static DescribeDnsGtmLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDnsGtmLogsResponseBody self = new DescribeDnsGtmLogsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDnsGtmLogsResponseBody setLogs(DescribeDnsGtmLogsResponseBodyLogs logs) {
+        this.logs = logs;
+        return this;
+    }
+    public DescribeDnsGtmLogsResponseBodyLogs getLogs() {
+        return this.logs;
+    }
+
+    public DescribeDnsGtmLogsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDnsGtmLogsResponseBody setPageSize(Integer pageSize) {
@@ -43,12 +59,12 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDnsGtmLogsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDnsGtmLogsResponseBody setTotalItems(Integer totalItems) {
+        this.totalItems = totalItems;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalItems() {
+        return this.totalItems;
     }
 
     public DescribeDnsGtmLogsResponseBody setTotalPages(Integer totalPages) {
@@ -59,90 +75,34 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         return this.totalPages;
     }
 
-    public DescribeDnsGtmLogsResponseBody setLogs(DescribeDnsGtmLogsResponseBodyLogs logs) {
-        this.logs = logs;
-        return this;
-    }
-    public DescribeDnsGtmLogsResponseBodyLogs getLogs() {
-        return this.logs;
-    }
-
-    public DescribeDnsGtmLogsResponseBody setTotalItems(Integer totalItems) {
-        this.totalItems = totalItems;
-        return this;
-    }
-    public Integer getTotalItems() {
-        return this.totalItems;
-    }
-
     public static class DescribeDnsGtmLogsResponseBodyLogsLog extends TeaModel {
-        @NameInMap("OperTimestamp")
-        public Long operTimestamp;
+        @NameInMap("Content")
+        public String content;
 
         @NameInMap("EntityId")
         public String entityId;
 
-        @NameInMap("EntityType")
-        public String entityType;
-
-        @NameInMap("OperTime")
-        public String operTime;
-
-        @NameInMap("OperAction")
-        public String operAction;
-
-        @NameInMap("Content")
-        public String content;
-
         @NameInMap("EntityName")
         public String entityName;
+
+        @NameInMap("EntityType")
+        public String entityType;
 
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("OperAction")
+        public String operAction;
+
+        @NameInMap("OperTime")
+        public String operTime;
+
+        @NameInMap("OperTimestamp")
+        public Long operTimestamp;
+
         public static DescribeDnsGtmLogsResponseBodyLogsLog build(java.util.Map<String, ?> map) throws Exception {
             DescribeDnsGtmLogsResponseBodyLogsLog self = new DescribeDnsGtmLogsResponseBodyLogsLog();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDnsGtmLogsResponseBodyLogsLog setOperTimestamp(Long operTimestamp) {
-            this.operTimestamp = operTimestamp;
-            return this;
-        }
-        public Long getOperTimestamp() {
-            return this.operTimestamp;
-        }
-
-        public DescribeDnsGtmLogsResponseBodyLogsLog setEntityId(String entityId) {
-            this.entityId = entityId;
-            return this;
-        }
-        public String getEntityId() {
-            return this.entityId;
-        }
-
-        public DescribeDnsGtmLogsResponseBodyLogsLog setEntityType(String entityType) {
-            this.entityType = entityType;
-            return this;
-        }
-        public String getEntityType() {
-            return this.entityType;
-        }
-
-        public DescribeDnsGtmLogsResponseBodyLogsLog setOperTime(String operTime) {
-            this.operTime = operTime;
-            return this;
-        }
-        public String getOperTime() {
-            return this.operTime;
-        }
-
-        public DescribeDnsGtmLogsResponseBodyLogsLog setOperAction(String operAction) {
-            this.operAction = operAction;
-            return this;
-        }
-        public String getOperAction() {
-            return this.operAction;
         }
 
         public DescribeDnsGtmLogsResponseBodyLogsLog setContent(String content) {
@@ -153,6 +113,14 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             return this.content;
         }
 
+        public DescribeDnsGtmLogsResponseBodyLogsLog setEntityId(String entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+        public String getEntityId() {
+            return this.entityId;
+        }
+
         public DescribeDnsGtmLogsResponseBodyLogsLog setEntityName(String entityName) {
             this.entityName = entityName;
             return this;
@@ -161,12 +129,44 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             return this.entityName;
         }
 
+        public DescribeDnsGtmLogsResponseBodyLogsLog setEntityType(String entityType) {
+            this.entityType = entityType;
+            return this;
+        }
+        public String getEntityType() {
+            return this.entityType;
+        }
+
         public DescribeDnsGtmLogsResponseBodyLogsLog setId(Long id) {
             this.id = id;
             return this;
         }
         public Long getId() {
             return this.id;
+        }
+
+        public DescribeDnsGtmLogsResponseBodyLogsLog setOperAction(String operAction) {
+            this.operAction = operAction;
+            return this;
+        }
+        public String getOperAction() {
+            return this.operAction;
+        }
+
+        public DescribeDnsGtmLogsResponseBodyLogsLog setOperTime(String operTime) {
+            this.operTime = operTime;
+            return this;
+        }
+        public String getOperTime() {
+            return this.operTime;
+        }
+
+        public DescribeDnsGtmLogsResponseBodyLogsLog setOperTimestamp(Long operTimestamp) {
+            this.operTimestamp = operTimestamp;
+            return this;
+        }
+        public Long getOperTimestamp() {
+            return this.operTimestamp;
         }
 
     }

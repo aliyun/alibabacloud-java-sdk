@@ -4,26 +4,18 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AddrPools")
     public DescribeGtmAccessStrategyAvailableConfigResponseBodyAddrPools addrPools;
 
     @NameInMap("Lines")
     public DescribeGtmAccessStrategyAvailableConfigResponseBodyLines lines;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeGtmAccessStrategyAvailableConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGtmAccessStrategyAvailableConfigResponseBody self = new DescribeGtmAccessStrategyAvailableConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGtmAccessStrategyAvailableConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeGtmAccessStrategyAvailableConfigResponseBody setAddrPools(DescribeGtmAccessStrategyAvailableConfigResponseBodyAddrPools addrPools) {
@@ -40,6 +32,14 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
     }
     public DescribeGtmAccessStrategyAvailableConfigResponseBodyLines getLines() {
         return this.lines;
+    }
+
+    public DescribeGtmAccessStrategyAvailableConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeGtmAccessStrategyAvailableConfigResponseBodyAddrPoolsAddrPool extends TeaModel {
@@ -92,35 +92,27 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
     }
 
     public static class DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("FatherCode")
         public String fatherCode;
-
-        @NameInMap("LineCode")
-        public String lineCode;
-
-        @NameInMap("GroupName")
-        public String groupName;
-
-        @NameInMap("LineName")
-        public String lineName;
 
         @NameInMap("GroupCode")
         public String groupCode;
 
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("LineCode")
+        public String lineCode;
+
+        @NameInMap("LineName")
+        public String lineName;
+
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine build(java.util.Map<String, ?> map) throws Exception {
             DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine self = new DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine setFatherCode(String fatherCode) {
@@ -131,12 +123,12 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             return this.fatherCode;
         }
 
-        public DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine setLineCode(String lineCode) {
-            this.lineCode = lineCode;
+        public DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine setGroupCode(String groupCode) {
+            this.groupCode = groupCode;
             return this;
         }
-        public String getLineCode() {
-            return this.lineCode;
+        public String getGroupCode() {
+            return this.groupCode;
         }
 
         public DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine setGroupName(String groupName) {
@@ -147,6 +139,14 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             return this.groupName;
         }
 
+        public DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine setLineCode(String lineCode) {
+            this.lineCode = lineCode;
+            return this;
+        }
+        public String getLineCode() {
+            return this.lineCode;
+        }
+
         public DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine setLineName(String lineName) {
             this.lineName = lineName;
             return this;
@@ -155,12 +155,12 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             return this.lineName;
         }
 
-        public DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine setGroupCode(String groupCode) {
-            this.groupCode = groupCode;
+        public DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getGroupCode() {
-            return this.groupCode;
+        public String getStatus() {
+            return this.status;
         }
 
     }

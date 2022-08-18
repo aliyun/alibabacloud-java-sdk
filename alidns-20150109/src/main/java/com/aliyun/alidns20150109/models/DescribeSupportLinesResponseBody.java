@@ -35,11 +35,11 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         @NameInMap("FatherCode")
         public String fatherCode;
 
-        @NameInMap("LineDisplayName")
-        public String lineDisplayName;
-
         @NameInMap("LineCode")
         public String lineCode;
+
+        @NameInMap("LineDisplayName")
+        public String lineDisplayName;
 
         @NameInMap("LineName")
         public String lineName;
@@ -57,20 +57,20 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             return this.fatherCode;
         }
 
-        public DescribeSupportLinesResponseBodyRecordLinesRecordLine setLineDisplayName(String lineDisplayName) {
-            this.lineDisplayName = lineDisplayName;
-            return this;
-        }
-        public String getLineDisplayName() {
-            return this.lineDisplayName;
-        }
-
         public DescribeSupportLinesResponseBodyRecordLinesRecordLine setLineCode(String lineCode) {
             this.lineCode = lineCode;
             return this;
         }
         public String getLineCode() {
             return this.lineCode;
+        }
+
+        public DescribeSupportLinesResponseBodyRecordLinesRecordLine setLineDisplayName(String lineDisplayName) {
+            this.lineDisplayName = lineDisplayName;
+            return this;
+        }
+        public String getLineDisplayName() {
+            return this.lineDisplayName;
         }
 
         public DescribeSupportLinesResponseBodyRecordLinesRecordLine setLineName(String lineName) {

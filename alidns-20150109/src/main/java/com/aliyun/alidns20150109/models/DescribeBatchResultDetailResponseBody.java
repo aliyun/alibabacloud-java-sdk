@@ -4,11 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeBatchResultDetailResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("BatchResultDetails")
     public DescribeBatchResultDetailResponseBodyBatchResultDetails batchResultDetails;
+
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
@@ -16,20 +16,12 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static DescribeBatchResultDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBatchResultDetailResponseBody self = new DescribeBatchResultDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBatchResultDetailResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeBatchResultDetailResponseBody setBatchResultDetails(DescribeBatchResultDetailResponseBodyBatchResultDetails batchResultDetails) {
@@ -38,6 +30,14 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
     }
     public DescribeBatchResultDetailResponseBodyBatchResultDetails getBatchResultDetails() {
         return this.batchResultDetails;
+    }
+
+    public DescribeBatchResultDetailResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeBatchResultDetailResponseBody setPageSize(Long pageSize) {
@@ -56,53 +56,20 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeBatchResultDetailResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeBatchResultDetailResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail extends TeaModel {
-        @NameInMap("Status")
-        public Boolean status;
-
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("BatchType")
+        public String batchType;
 
         @NameInMap("Domain")
         public String domain;
-
-        @NameInMap("Remark")
-        public String remark;
-
-        @NameInMap("RecordId")
-        public String recordId;
-
-        @NameInMap("Rr")
-        public String rr;
-
-        @NameInMap("Priority")
-        public String priority;
-
-        @NameInMap("RrStatus")
-        public String rrStatus;
-
-        @NameInMap("OperateDateStr")
-        public String operateDateStr;
-
-        @NameInMap("NewValue")
-        public String newValue;
-
-        @NameInMap("Value")
-        public String value;
-
-        @NameInMap("Ttl")
-        public String ttl;
-
-        @NameInMap("BatchType")
-        public String batchType;
 
         @NameInMap("Line")
         public String line;
@@ -110,108 +77,45 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         @NameInMap("NewRr")
         public String newRr;
 
+        @NameInMap("NewValue")
+        public String newValue;
+
+        @NameInMap("OperateDateStr")
+        public String operateDateStr;
+
+        @NameInMap("Priority")
+        public String priority;
+
         @NameInMap("Reason")
         public String reason;
+
+        @NameInMap("RecordId")
+        public String recordId;
+
+        @NameInMap("Remark")
+        public String remark;
+
+        @NameInMap("Rr")
+        public String rr;
+
+        @NameInMap("RrStatus")
+        public String rrStatus;
+
+        @NameInMap("Status")
+        public Boolean status;
+
+        @NameInMap("Ttl")
+        public String ttl;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail self = new DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setStatus(Boolean status) {
-            this.status = status;
-            return this;
-        }
-        public Boolean getStatus() {
-            return this.status;
-        }
-
-        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
-        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setRemark(String remark) {
-            this.remark = remark;
-            return this;
-        }
-        public String getRemark() {
-            return this.remark;
-        }
-
-        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setRecordId(String recordId) {
-            this.recordId = recordId;
-            return this;
-        }
-        public String getRecordId() {
-            return this.recordId;
-        }
-
-        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setRr(String rr) {
-            this.rr = rr;
-            return this;
-        }
-        public String getRr() {
-            return this.rr;
-        }
-
-        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setPriority(String priority) {
-            this.priority = priority;
-            return this;
-        }
-        public String getPriority() {
-            return this.priority;
-        }
-
-        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setRrStatus(String rrStatus) {
-            this.rrStatus = rrStatus;
-            return this;
-        }
-        public String getRrStatus() {
-            return this.rrStatus;
-        }
-
-        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setOperateDateStr(String operateDateStr) {
-            this.operateDateStr = operateDateStr;
-            return this;
-        }
-        public String getOperateDateStr() {
-            return this.operateDateStr;
-        }
-
-        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setNewValue(String newValue) {
-            this.newValue = newValue;
-            return this;
-        }
-        public String getNewValue() {
-            return this.newValue;
-        }
-
-        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setTtl(String ttl) {
-            this.ttl = ttl;
-            return this;
-        }
-        public String getTtl() {
-            return this.ttl;
         }
 
         public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setBatchType(String batchType) {
@@ -220,6 +124,14 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         }
         public String getBatchType() {
             return this.batchType;
+        }
+
+        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
         }
 
         public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setLine(String line) {
@@ -238,12 +150,100 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             return this.newRr;
         }
 
+        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setNewValue(String newValue) {
+            this.newValue = newValue;
+            return this;
+        }
+        public String getNewValue() {
+            return this.newValue;
+        }
+
+        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setOperateDateStr(String operateDateStr) {
+            this.operateDateStr = operateDateStr;
+            return this;
+        }
+        public String getOperateDateStr() {
+            return this.operateDateStr;
+        }
+
+        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setPriority(String priority) {
+            this.priority = priority;
+            return this;
+        }
+        public String getPriority() {
+            return this.priority;
+        }
+
         public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setReason(String reason) {
             this.reason = reason;
             return this;
         }
         public String getReason() {
             return this.reason;
+        }
+
+        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setRecordId(String recordId) {
+            this.recordId = recordId;
+            return this;
+        }
+        public String getRecordId() {
+            return this.recordId;
+        }
+
+        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setRr(String rr) {
+            this.rr = rr;
+            return this;
+        }
+        public String getRr() {
+            return this.rr;
+        }
+
+        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setRrStatus(String rrStatus) {
+            this.rrStatus = rrStatus;
+            return this;
+        }
+        public String getRrStatus() {
+            return this.rrStatus;
+        }
+
+        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setStatus(Boolean status) {
+            this.status = status;
+            return this;
+        }
+        public Boolean getStatus() {
+            return this.status;
+        }
+
+        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setTtl(String ttl) {
+            this.ttl = ttl;
+            return this;
+        }
+        public String getTtl() {
+            return this.ttl;
+        }
+
+        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

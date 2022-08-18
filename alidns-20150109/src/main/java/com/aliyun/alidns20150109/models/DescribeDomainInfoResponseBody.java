@@ -4,8 +4,26 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainInfoResponseBody extends TeaModel {
-    @NameInMap("RecordLineTreeJson")
-    public String recordLineTreeJson;
+    @NameInMap("AliDomain")
+    public Boolean aliDomain;
+
+    @NameInMap("AvailableTtls")
+    public DescribeDomainInfoResponseBodyAvailableTtls availableTtls;
+
+    @NameInMap("CreateTime")
+    public String createTime;
+
+    @NameInMap("DnsServers")
+    public DescribeDomainInfoResponseBodyDnsServers dnsServers;
+
+    @NameInMap("DomainId")
+    public String domainId;
+
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("GroupName")
     public String groupName;
@@ -13,14 +31,32 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     @NameInMap("InBlackHole")
     public Boolean inBlackHole;
 
+    @NameInMap("InClean")
+    public Boolean inClean;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("LineType")
+    public String lineType;
+
+    @NameInMap("MinTtl")
+    public Long minTtl;
+
+    @NameInMap("PunyCode")
+    public String punyCode;
+
+    @NameInMap("RecordLineTreeJson")
+    public String recordLineTreeJson;
+
+    @NameInMap("RecordLines")
+    public DescribeDomainInfoResponseBodyRecordLines recordLines;
+
     @NameInMap("RegionLines")
     public Boolean regionLines;
 
-    @NameInMap("SlaveDns")
-    public Boolean slaveDns;
-
-    @NameInMap("AliDomain")
-    public Boolean aliDomain;
+    @NameInMap("Remark")
+    public String remark;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -28,62 +64,74 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
-    @NameInMap("CreateTime")
-    public String createTime;
-
-    @NameInMap("PunyCode")
-    public String punyCode;
-
-    @NameInMap("DnsServers")
-    public DescribeDomainInfoResponseBodyDnsServers dnsServers;
-
-    @NameInMap("Remark")
-    public String remark;
-
-    @NameInMap("GroupId")
-    public String groupId;
+    @NameInMap("SlaveDns")
+    public Boolean slaveDns;
 
     @NameInMap("VersionCode")
     public String versionCode;
 
-    @NameInMap("RecordLines")
-    public DescribeDomainInfoResponseBodyRecordLines recordLines;
-
-    @NameInMap("DomainId")
-    public String domainId;
-
-    @NameInMap("AvailableTtls")
-    public DescribeDomainInfoResponseBodyAvailableTtls availableTtls;
-
-    @NameInMap("MinTtl")
-    public Long minTtl;
-
-    @NameInMap("InClean")
-    public Boolean inClean;
-
     @NameInMap("VersionName")
     public String versionName;
-
-    @NameInMap("LineType")
-    public String lineType;
 
     public static DescribeDomainInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainInfoResponseBody self = new DescribeDomainInfoResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainInfoResponseBody setRecordLineTreeJson(String recordLineTreeJson) {
-        this.recordLineTreeJson = recordLineTreeJson;
+    public DescribeDomainInfoResponseBody setAliDomain(Boolean aliDomain) {
+        this.aliDomain = aliDomain;
         return this;
     }
-    public String getRecordLineTreeJson() {
-        return this.recordLineTreeJson;
+    public Boolean getAliDomain() {
+        return this.aliDomain;
+    }
+
+    public DescribeDomainInfoResponseBody setAvailableTtls(DescribeDomainInfoResponseBodyAvailableTtls availableTtls) {
+        this.availableTtls = availableTtls;
+        return this;
+    }
+    public DescribeDomainInfoResponseBodyAvailableTtls getAvailableTtls() {
+        return this.availableTtls;
+    }
+
+    public DescribeDomainInfoResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    public DescribeDomainInfoResponseBody setDnsServers(DescribeDomainInfoResponseBodyDnsServers dnsServers) {
+        this.dnsServers = dnsServers;
+        return this;
+    }
+    public DescribeDomainInfoResponseBodyDnsServers getDnsServers() {
+        return this.dnsServers;
+    }
+
+    public DescribeDomainInfoResponseBody setDomainId(String domainId) {
+        this.domainId = domainId;
+        return this;
+    }
+    public String getDomainId() {
+        return this.domainId;
+    }
+
+    public DescribeDomainInfoResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDomainInfoResponseBody setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public DescribeDomainInfoResponseBody setGroupName(String groupName) {
@@ -102,6 +150,62 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         return this.inBlackHole;
     }
 
+    public DescribeDomainInfoResponseBody setInClean(Boolean inClean) {
+        this.inClean = inClean;
+        return this;
+    }
+    public Boolean getInClean() {
+        return this.inClean;
+    }
+
+    public DescribeDomainInfoResponseBody setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeDomainInfoResponseBody setLineType(String lineType) {
+        this.lineType = lineType;
+        return this;
+    }
+    public String getLineType() {
+        return this.lineType;
+    }
+
+    public DescribeDomainInfoResponseBody setMinTtl(Long minTtl) {
+        this.minTtl = minTtl;
+        return this;
+    }
+    public Long getMinTtl() {
+        return this.minTtl;
+    }
+
+    public DescribeDomainInfoResponseBody setPunyCode(String punyCode) {
+        this.punyCode = punyCode;
+        return this;
+    }
+    public String getPunyCode() {
+        return this.punyCode;
+    }
+
+    public DescribeDomainInfoResponseBody setRecordLineTreeJson(String recordLineTreeJson) {
+        this.recordLineTreeJson = recordLineTreeJson;
+        return this;
+    }
+    public String getRecordLineTreeJson() {
+        return this.recordLineTreeJson;
+    }
+
+    public DescribeDomainInfoResponseBody setRecordLines(DescribeDomainInfoResponseBodyRecordLines recordLines) {
+        this.recordLines = recordLines;
+        return this;
+    }
+    public DescribeDomainInfoResponseBodyRecordLines getRecordLines() {
+        return this.recordLines;
+    }
+
     public DescribeDomainInfoResponseBody setRegionLines(Boolean regionLines) {
         this.regionLines = regionLines;
         return this;
@@ -110,20 +214,12 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         return this.regionLines;
     }
 
-    public DescribeDomainInfoResponseBody setSlaveDns(Boolean slaveDns) {
-        this.slaveDns = slaveDns;
+    public DescribeDomainInfoResponseBody setRemark(String remark) {
+        this.remark = remark;
         return this;
     }
-    public Boolean getSlaveDns() {
-        return this.slaveDns;
-    }
-
-    public DescribeDomainInfoResponseBody setAliDomain(Boolean aliDomain) {
-        this.aliDomain = aliDomain;
-        return this;
-    }
-    public Boolean getAliDomain() {
-        return this.aliDomain;
+    public String getRemark() {
+        return this.remark;
     }
 
     public DescribeDomainInfoResponseBody setRequestId(String requestId) {
@@ -142,60 +238,12 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribeDomainInfoResponseBody setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public DescribeDomainInfoResponseBody setSlaveDns(Boolean slaveDns) {
+        this.slaveDns = slaveDns;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DescribeDomainInfoResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public DescribeDomainInfoResponseBody setCreateTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public String getCreateTime() {
-        return this.createTime;
-    }
-
-    public DescribeDomainInfoResponseBody setPunyCode(String punyCode) {
-        this.punyCode = punyCode;
-        return this;
-    }
-    public String getPunyCode() {
-        return this.punyCode;
-    }
-
-    public DescribeDomainInfoResponseBody setDnsServers(DescribeDomainInfoResponseBodyDnsServers dnsServers) {
-        this.dnsServers = dnsServers;
-        return this;
-    }
-    public DescribeDomainInfoResponseBodyDnsServers getDnsServers() {
-        return this.dnsServers;
-    }
-
-    public DescribeDomainInfoResponseBody setRemark(String remark) {
-        this.remark = remark;
-        return this;
-    }
-    public String getRemark() {
-        return this.remark;
-    }
-
-    public DescribeDomainInfoResponseBody setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
+    public Boolean getSlaveDns() {
+        return this.slaveDns;
     }
 
     public DescribeDomainInfoResponseBody setVersionCode(String versionCode) {
@@ -206,46 +254,6 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         return this.versionCode;
     }
 
-    public DescribeDomainInfoResponseBody setRecordLines(DescribeDomainInfoResponseBodyRecordLines recordLines) {
-        this.recordLines = recordLines;
-        return this;
-    }
-    public DescribeDomainInfoResponseBodyRecordLines getRecordLines() {
-        return this.recordLines;
-    }
-
-    public DescribeDomainInfoResponseBody setDomainId(String domainId) {
-        this.domainId = domainId;
-        return this;
-    }
-    public String getDomainId() {
-        return this.domainId;
-    }
-
-    public DescribeDomainInfoResponseBody setAvailableTtls(DescribeDomainInfoResponseBodyAvailableTtls availableTtls) {
-        this.availableTtls = availableTtls;
-        return this;
-    }
-    public DescribeDomainInfoResponseBodyAvailableTtls getAvailableTtls() {
-        return this.availableTtls;
-    }
-
-    public DescribeDomainInfoResponseBody setMinTtl(Long minTtl) {
-        this.minTtl = minTtl;
-        return this;
-    }
-    public Long getMinTtl() {
-        return this.minTtl;
-    }
-
-    public DescribeDomainInfoResponseBody setInClean(Boolean inClean) {
-        this.inClean = inClean;
-        return this;
-    }
-    public Boolean getInClean() {
-        return this.inClean;
-    }
-
     public DescribeDomainInfoResponseBody setVersionName(String versionName) {
         this.versionName = versionName;
         return this;
@@ -254,12 +262,23 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         return this.versionName;
     }
 
-    public DescribeDomainInfoResponseBody setLineType(String lineType) {
-        this.lineType = lineType;
-        return this;
-    }
-    public String getLineType() {
-        return this.lineType;
+    public static class DescribeDomainInfoResponseBodyAvailableTtls extends TeaModel {
+        @NameInMap("AvailableTtl")
+        public java.util.List<String> availableTtl;
+
+        public static DescribeDomainInfoResponseBodyAvailableTtls build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDomainInfoResponseBodyAvailableTtls self = new DescribeDomainInfoResponseBodyAvailableTtls();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainInfoResponseBodyAvailableTtls setAvailableTtl(java.util.List<String> availableTtl) {
+            this.availableTtl = availableTtl;
+            return this;
+        }
+        public java.util.List<String> getAvailableTtl() {
+            return this.availableTtl;
+        }
+
     }
 
     public static class DescribeDomainInfoResponseBodyDnsServers extends TeaModel {
@@ -285,11 +304,11 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         @NameInMap("FatherCode")
         public String fatherCode;
 
-        @NameInMap("LineDisplayName")
-        public String lineDisplayName;
-
         @NameInMap("LineCode")
         public String lineCode;
+
+        @NameInMap("LineDisplayName")
+        public String lineDisplayName;
 
         @NameInMap("LineName")
         public String lineName;
@@ -307,20 +326,20 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
             return this.fatherCode;
         }
 
-        public DescribeDomainInfoResponseBodyRecordLinesRecordLine setLineDisplayName(String lineDisplayName) {
-            this.lineDisplayName = lineDisplayName;
-            return this;
-        }
-        public String getLineDisplayName() {
-            return this.lineDisplayName;
-        }
-
         public DescribeDomainInfoResponseBodyRecordLinesRecordLine setLineCode(String lineCode) {
             this.lineCode = lineCode;
             return this;
         }
         public String getLineCode() {
             return this.lineCode;
+        }
+
+        public DescribeDomainInfoResponseBodyRecordLinesRecordLine setLineDisplayName(String lineDisplayName) {
+            this.lineDisplayName = lineDisplayName;
+            return this;
+        }
+        public String getLineDisplayName() {
+            return this.lineDisplayName;
         }
 
         public DescribeDomainInfoResponseBodyRecordLinesRecordLine setLineName(String lineName) {
@@ -348,25 +367,6 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDomainInfoResponseBodyRecordLinesRecordLine> getRecordLine() {
             return this.recordLine;
-        }
-
-    }
-
-    public static class DescribeDomainInfoResponseBodyAvailableTtls extends TeaModel {
-        @NameInMap("AvailableTtl")
-        public java.util.List<String> availableTtl;
-
-        public static DescribeDomainInfoResponseBodyAvailableTtls build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDomainInfoResponseBodyAvailableTtls self = new DescribeDomainInfoResponseBodyAvailableTtls();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainInfoResponseBodyAvailableTtls setAvailableTtl(java.util.List<String> availableTtl) {
-            this.availableTtl = availableTtl;
-            return this;
-        }
-        public java.util.List<String> getAvailableTtl() {
-            return this.availableTtl;
         }
 
     }

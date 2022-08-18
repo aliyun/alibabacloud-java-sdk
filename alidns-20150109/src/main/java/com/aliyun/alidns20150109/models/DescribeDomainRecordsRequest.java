@@ -4,14 +4,26 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRecordsRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("Direction")
+    public String direction;
 
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("GroupId")
+    public Long groupId;
+
+    @NameInMap("KeyWord")
+    public String keyWord;
+
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("Line")
+    public String line;
+
+    @NameInMap("OrderBy")
+    public String orderBy;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -19,11 +31,17 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("KeyWord")
-    public String keyWord;
-
     @NameInMap("RRKeyWord")
     public String RRKeyWord;
+
+    @NameInMap("SearchMode")
+    public String searchMode;
+
+    @NameInMap("Status")
+    public String status;
+
+    @NameInMap("Type")
+    public String type;
 
     @NameInMap("TypeKeyWord")
     public String typeKeyWord;
@@ -31,30 +49,41 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     @NameInMap("ValueKeyWord")
     public String valueKeyWord;
 
-    @NameInMap("OrderBy")
-    public String orderBy;
-
-    @NameInMap("Direction")
-    public String direction;
-
-    @NameInMap("SearchMode")
-    public String searchMode;
-
-    @NameInMap("GroupId")
-    public Long groupId;
-
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("Line")
-    public String line;
-
-    @NameInMap("Status")
-    public String status;
-
     public static DescribeDomainRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainRecordsRequest self = new DescribeDomainRecordsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDomainRecordsRequest setDirection(String direction) {
+        this.direction = direction;
+        return this;
+    }
+    public String getDirection() {
+        return this.direction;
+    }
+
+    public DescribeDomainRecordsRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDomainRecordsRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public Long getGroupId() {
+        return this.groupId;
+    }
+
+    public DescribeDomainRecordsRequest setKeyWord(String keyWord) {
+        this.keyWord = keyWord;
+        return this;
+    }
+    public String getKeyWord() {
+        return this.keyWord;
     }
 
     public DescribeDomainRecordsRequest setLang(String lang) {
@@ -65,20 +94,20 @@ public class DescribeDomainRecordsRequest extends TeaModel {
         return this.lang;
     }
 
-    public DescribeDomainRecordsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public DescribeDomainRecordsRequest setLine(String line) {
+        this.line = line;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public String getLine() {
+        return this.line;
     }
 
-    public DescribeDomainRecordsRequest setDomainName(String domainName) {
-        this.domainName = domainName;
+    public DescribeDomainRecordsRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getOrderBy() {
+        return this.orderBy;
     }
 
     public DescribeDomainRecordsRequest setPageNumber(Long pageNumber) {
@@ -97,20 +126,36 @@ public class DescribeDomainRecordsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDomainRecordsRequest setKeyWord(String keyWord) {
-        this.keyWord = keyWord;
-        return this;
-    }
-    public String getKeyWord() {
-        return this.keyWord;
-    }
-
     public DescribeDomainRecordsRequest setRRKeyWord(String RRKeyWord) {
         this.RRKeyWord = RRKeyWord;
         return this;
     }
     public String getRRKeyWord() {
         return this.RRKeyWord;
+    }
+
+    public DescribeDomainRecordsRequest setSearchMode(String searchMode) {
+        this.searchMode = searchMode;
+        return this;
+    }
+    public String getSearchMode() {
+        return this.searchMode;
+    }
+
+    public DescribeDomainRecordsRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DescribeDomainRecordsRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public DescribeDomainRecordsRequest setTypeKeyWord(String typeKeyWord) {
@@ -127,62 +172,6 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     }
     public String getValueKeyWord() {
         return this.valueKeyWord;
-    }
-
-    public DescribeDomainRecordsRequest setOrderBy(String orderBy) {
-        this.orderBy = orderBy;
-        return this;
-    }
-    public String getOrderBy() {
-        return this.orderBy;
-    }
-
-    public DescribeDomainRecordsRequest setDirection(String direction) {
-        this.direction = direction;
-        return this;
-    }
-    public String getDirection() {
-        return this.direction;
-    }
-
-    public DescribeDomainRecordsRequest setSearchMode(String searchMode) {
-        this.searchMode = searchMode;
-        return this;
-    }
-    public String getSearchMode() {
-        return this.searchMode;
-    }
-
-    public DescribeDomainRecordsRequest setGroupId(Long groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public Long getGroupId() {
-        return this.groupId;
-    }
-
-    public DescribeDomainRecordsRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public DescribeDomainRecordsRequest setLine(String line) {
-        this.line = line;
-        return this;
-    }
-    public String getLine() {
-        return this.line;
-    }
-
-    public DescribeDomainRecordsRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
     }
 
 }

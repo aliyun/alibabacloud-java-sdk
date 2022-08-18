@@ -4,18 +4,26 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsProductInstanceRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("UserClientIp")
     public String userClientIp;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     public static DescribeDnsProductInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDnsProductInstanceRequest self = new DescribeDnsProductInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDnsProductInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeDnsProductInstanceRequest setLang(String lang) {
@@ -32,14 +40,6 @@ public class DescribeDnsProductInstanceRequest extends TeaModel {
     }
     public String getUserClientIp() {
         return this.userClientIp;
-    }
-
-    public DescribeDnsProductInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
 }

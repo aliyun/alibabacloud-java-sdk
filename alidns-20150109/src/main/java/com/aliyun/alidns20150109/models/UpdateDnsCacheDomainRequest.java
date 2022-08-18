@@ -4,11 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateDnsCacheDomainRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("CacheTtlMax")
+    public Integer cacheTtlMax;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("CacheTtlMin")
+    public Integer cacheTtlMin;
 
     @NameInMap("DomainName")
     public String domainName;
@@ -16,40 +16,37 @@ public class UpdateDnsCacheDomainRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("CacheTtlMin")
-    public Integer cacheTtlMin;
+    @NameInMap("Lang")
+    public String lang;
 
-    @NameInMap("CacheTtlMax")
-    public Integer cacheTtlMax;
-
-    @NameInMap("SourceProtocol")
-    public String sourceProtocol;
+    @NameInMap("SourceDnsServer")
+    public java.util.List<UpdateDnsCacheDomainRequestSourceDnsServer> sourceDnsServer;
 
     @NameInMap("SourceEdns")
     public String sourceEdns;
 
-    @NameInMap("SourceDnsServer")
-    public java.util.List<UpdateDnsCacheDomainRequestSourceDnsServer> sourceDnsServer;
+    @NameInMap("SourceProtocol")
+    public String sourceProtocol;
 
     public static UpdateDnsCacheDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDnsCacheDomainRequest self = new UpdateDnsCacheDomainRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDnsCacheDomainRequest setLang(String lang) {
-        this.lang = lang;
+    public UpdateDnsCacheDomainRequest setCacheTtlMax(Integer cacheTtlMax) {
+        this.cacheTtlMax = cacheTtlMax;
         return this;
     }
-    public String getLang() {
-        return this.lang;
+    public Integer getCacheTtlMax() {
+        return this.cacheTtlMax;
     }
 
-    public UpdateDnsCacheDomainRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public UpdateDnsCacheDomainRequest setCacheTtlMin(Integer cacheTtlMin) {
+        this.cacheTtlMin = cacheTtlMin;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public Integer getCacheTtlMin() {
+        return this.cacheTtlMin;
     }
 
     public UpdateDnsCacheDomainRequest setDomainName(String domainName) {
@@ -68,28 +65,20 @@ public class UpdateDnsCacheDomainRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public UpdateDnsCacheDomainRequest setCacheTtlMin(Integer cacheTtlMin) {
-        this.cacheTtlMin = cacheTtlMin;
+    public UpdateDnsCacheDomainRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public Integer getCacheTtlMin() {
-        return this.cacheTtlMin;
+    public String getLang() {
+        return this.lang;
     }
 
-    public UpdateDnsCacheDomainRequest setCacheTtlMax(Integer cacheTtlMax) {
-        this.cacheTtlMax = cacheTtlMax;
+    public UpdateDnsCacheDomainRequest setSourceDnsServer(java.util.List<UpdateDnsCacheDomainRequestSourceDnsServer> sourceDnsServer) {
+        this.sourceDnsServer = sourceDnsServer;
         return this;
     }
-    public Integer getCacheTtlMax() {
-        return this.cacheTtlMax;
-    }
-
-    public UpdateDnsCacheDomainRequest setSourceProtocol(String sourceProtocol) {
-        this.sourceProtocol = sourceProtocol;
-        return this;
-    }
-    public String getSourceProtocol() {
-        return this.sourceProtocol;
+    public java.util.List<UpdateDnsCacheDomainRequestSourceDnsServer> getSourceDnsServer() {
+        return this.sourceDnsServer;
     }
 
     public UpdateDnsCacheDomainRequest setSourceEdns(String sourceEdns) {
@@ -100,12 +89,12 @@ public class UpdateDnsCacheDomainRequest extends TeaModel {
         return this.sourceEdns;
     }
 
-    public UpdateDnsCacheDomainRequest setSourceDnsServer(java.util.List<UpdateDnsCacheDomainRequestSourceDnsServer> sourceDnsServer) {
-        this.sourceDnsServer = sourceDnsServer;
+    public UpdateDnsCacheDomainRequest setSourceProtocol(String sourceProtocol) {
+        this.sourceProtocol = sourceProtocol;
         return this;
     }
-    public java.util.List<UpdateDnsCacheDomainRequestSourceDnsServer> getSourceDnsServer() {
-        return this.sourceDnsServer;
+    public String getSourceProtocol() {
+        return this.sourceProtocol;
     }
 
     public static class UpdateDnsCacheDomainRequestSourceDnsServer extends TeaModel {

@@ -4,23 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Addr")
     public DescribeDnsGtmAddrAttributeInfoResponseBodyAddr addr;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDnsGtmAddrAttributeInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDnsGtmAddrAttributeInfoResponseBody self = new DescribeDnsGtmAddrAttributeInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDnsGtmAddrAttributeInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDnsGtmAddrAttributeInfoResponseBody setAddr(DescribeDnsGtmAddrAttributeInfoResponseBodyAddr addr) {
@@ -31,9 +23,20 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
         return this.addr;
     }
 
+    public DescribeDnsGtmAddrAttributeInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo extends TeaModel {
         @NameInMap("FatherCode")
         public String fatherCode;
+
+        @NameInMap("GroupCode")
+        public String groupCode;
 
         @NameInMap("GroupName")
         public String groupName;
@@ -43,9 +46,6 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
 
         @NameInMap("LineName")
         public String lineName;
-
-        @NameInMap("GroupCode")
-        public String groupCode;
 
         public static DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo self = new DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo();
@@ -58,6 +58,14 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
         }
         public String getFatherCode() {
             return this.fatherCode;
+        }
+
+        public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo setGroupCode(String groupCode) {
+            this.groupCode = groupCode;
+            return this;
+        }
+        public String getGroupCode() {
+            return this.groupCode;
         }
 
         public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo setGroupName(String groupName) {
@@ -84,34 +92,18 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             return this.lineName;
         }
 
-        public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo setGroupCode(String groupCode) {
-            this.groupCode = groupCode;
-            return this;
-        }
-        public String getGroupCode() {
-            return this.groupCode;
-        }
-
     }
 
     public static class DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr extends TeaModel {
-        @NameInMap("AttributeInfo")
-        public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo attributeInfo;
-
         @NameInMap("Addr")
         public String addr;
+
+        @NameInMap("AttributeInfo")
+        public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo attributeInfo;
 
         public static DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr build(java.util.Map<String, ?> map) throws Exception {
             DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr self = new DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr setAttributeInfo(DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo attributeInfo) {
-            this.attributeInfo = attributeInfo;
-            return this;
-        }
-        public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo getAttributeInfo() {
-            return this.attributeInfo;
         }
 
         public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr setAddr(String addr) {
@@ -120,6 +112,14 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
         }
         public String getAddr() {
             return this.addr;
+        }
+
+        public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr setAttributeInfo(DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo attributeInfo) {
+            this.attributeInfo = attributeInfo;
+            return this;
+        }
+        public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo getAttributeInfo() {
+            return this.attributeInfo;
         }
 
     }

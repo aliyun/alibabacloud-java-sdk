@@ -4,23 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("IspCityNodes")
     public DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodes ispCityNodes;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeGtmMonitorAvailableConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGtmMonitorAvailableConfigResponseBody self = new DescribeGtmMonitorAvailableConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGtmMonitorAvailableConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeGtmMonitorAvailableConfigResponseBody setIspCityNodes(DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodes ispCityNodes) {
@@ -31,30 +23,38 @@ public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
         return this.ispCityNodes;
     }
 
+    public DescribeGtmMonitorAvailableConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode extends TeaModel {
         @NameInMap("CityCode")
         public String cityCode;
 
-        @NameInMap("Mainland")
-        public Boolean mainland;
+        @NameInMap("CityName")
+        public String cityName;
+
+        @NameInMap("DefaultSelected")
+        public Boolean defaultSelected;
 
         @NameInMap("GroupName")
         public String groupName;
 
+        @NameInMap("GroupType")
+        public String groupType;
+
         @NameInMap("IspCode")
         public String ispCode;
-
-        @NameInMap("CityName")
-        public String cityName;
 
         @NameInMap("IspName")
         public String ispName;
 
-        @NameInMap("GroupType")
-        public String groupType;
-
-        @NameInMap("DefaultSelected")
-        public Boolean defaultSelected;
+        @NameInMap("Mainland")
+        public Boolean mainland;
 
         public static DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode build(java.util.Map<String, ?> map) throws Exception {
             DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode self = new DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode();
@@ -69,12 +69,20 @@ public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
             return this.cityCode;
         }
 
-        public DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode setMainland(Boolean mainland) {
-            this.mainland = mainland;
+        public DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode setCityName(String cityName) {
+            this.cityName = cityName;
             return this;
         }
-        public Boolean getMainland() {
-            return this.mainland;
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        public DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode setDefaultSelected(Boolean defaultSelected) {
+            this.defaultSelected = defaultSelected;
+            return this;
+        }
+        public Boolean getDefaultSelected() {
+            return this.defaultSelected;
         }
 
         public DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode setGroupName(String groupName) {
@@ -85,20 +93,20 @@ public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
             return this.groupName;
         }
 
+        public DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode setGroupType(String groupType) {
+            this.groupType = groupType;
+            return this;
+        }
+        public String getGroupType() {
+            return this.groupType;
+        }
+
         public DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode setIspCode(String ispCode) {
             this.ispCode = ispCode;
             return this;
         }
         public String getIspCode() {
             return this.ispCode;
-        }
-
-        public DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode setCityName(String cityName) {
-            this.cityName = cityName;
-            return this;
-        }
-        public String getCityName() {
-            return this.cityName;
         }
 
         public DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode setIspName(String ispName) {
@@ -109,20 +117,12 @@ public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
             return this.ispName;
         }
 
-        public DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode setGroupType(String groupType) {
-            this.groupType = groupType;
+        public DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode setMainland(Boolean mainland) {
+            this.mainland = mainland;
             return this;
         }
-        public String getGroupType() {
-            return this.groupType;
-        }
-
-        public DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode setDefaultSelected(Boolean defaultSelected) {
-            this.defaultSelected = defaultSelected;
-            return this;
-        }
-        public Boolean getDefaultSelected() {
-            return this.defaultSelected;
+        public Boolean getMainland() {
+            return this.mainland;
         }
 
     }

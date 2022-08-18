@@ -4,23 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddDomainRecordResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("RecordId")
     public String recordId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AddDomainRecordResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddDomainRecordResponseBody self = new AddDomainRecordResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AddDomainRecordResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AddDomainRecordResponseBody setRecordId(String recordId) {
@@ -29,6 +21,14 @@ public class AddDomainRecordResponseBody extends TeaModel {
     }
     public String getRecordId() {
         return this.recordId;
+    }
+
+    public AddDomainRecordResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

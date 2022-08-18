@@ -4,11 +4,14 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("AlertGroup")
+    public String alertGroup;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
+    @NameInMap("CnameCustomDomainName")
+    public String cnameCustomDomainName;
+
+    @NameInMap("CnameMode")
+    public String cnameMode;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -16,43 +19,45 @@ public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("LbaStrategy")
+    public String lbaStrategy;
+
     @NameInMap("Ttl")
     public Integer ttl;
 
     @NameInMap("UserDomainName")
     public String userDomainName;
 
-    @NameInMap("LbaStrategy")
-    public String lbaStrategy;
-
-    @NameInMap("AlertGroup")
-    public String alertGroup;
-
-    @NameInMap("CnameMode")
-    public String cnameMode;
-
-    @NameInMap("CnameCustomDomainName")
-    public String cnameCustomDomainName;
-
     public static UpdateGtmInstanceGlobalConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateGtmInstanceGlobalConfigRequest self = new UpdateGtmInstanceGlobalConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateGtmInstanceGlobalConfigRequest setLang(String lang) {
-        this.lang = lang;
+    public UpdateGtmInstanceGlobalConfigRequest setAlertGroup(String alertGroup) {
+        this.alertGroup = alertGroup;
         return this;
     }
-    public String getLang() {
-        return this.lang;
+    public String getAlertGroup() {
+        return this.alertGroup;
     }
 
-    public UpdateGtmInstanceGlobalConfigRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
+    public UpdateGtmInstanceGlobalConfigRequest setCnameCustomDomainName(String cnameCustomDomainName) {
+        this.cnameCustomDomainName = cnameCustomDomainName;
         return this;
     }
-    public String getUserClientIp() {
-        return this.userClientIp;
+    public String getCnameCustomDomainName() {
+        return this.cnameCustomDomainName;
+    }
+
+    public UpdateGtmInstanceGlobalConfigRequest setCnameMode(String cnameMode) {
+        this.cnameMode = cnameMode;
+        return this;
+    }
+    public String getCnameMode() {
+        return this.cnameMode;
     }
 
     public UpdateGtmInstanceGlobalConfigRequest setInstanceId(String instanceId) {
@@ -71,6 +76,22 @@ public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
         return this.instanceName;
     }
 
+    public UpdateGtmInstanceGlobalConfigRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public UpdateGtmInstanceGlobalConfigRequest setLbaStrategy(String lbaStrategy) {
+        this.lbaStrategy = lbaStrategy;
+        return this;
+    }
+    public String getLbaStrategy() {
+        return this.lbaStrategy;
+    }
+
     public UpdateGtmInstanceGlobalConfigRequest setTtl(Integer ttl) {
         this.ttl = ttl;
         return this;
@@ -85,38 +106,6 @@ public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
     }
     public String getUserDomainName() {
         return this.userDomainName;
-    }
-
-    public UpdateGtmInstanceGlobalConfigRequest setLbaStrategy(String lbaStrategy) {
-        this.lbaStrategy = lbaStrategy;
-        return this;
-    }
-    public String getLbaStrategy() {
-        return this.lbaStrategy;
-    }
-
-    public UpdateGtmInstanceGlobalConfigRequest setAlertGroup(String alertGroup) {
-        this.alertGroup = alertGroup;
-        return this;
-    }
-    public String getAlertGroup() {
-        return this.alertGroup;
-    }
-
-    public UpdateGtmInstanceGlobalConfigRequest setCnameMode(String cnameMode) {
-        this.cnameMode = cnameMode;
-        return this;
-    }
-    public String getCnameMode() {
-        return this.cnameMode;
-    }
-
-    public UpdateGtmInstanceGlobalConfigRequest setCnameCustomDomainName(String cnameCustomDomainName) {
-        this.cnameCustomDomainName = cnameCustomDomainName;
-        return this;
-    }
-    public String getCnameCustomDomainName() {
-        return this.cnameCustomDomainName;
     }
 
 }

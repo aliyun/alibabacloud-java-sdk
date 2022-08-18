@@ -4,11 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateDNSSLBWeightResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("RecordId")
     public String recordId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Weight")
     public Integer weight;
@@ -18,20 +18,20 @@ public class UpdateDNSSLBWeightResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateDNSSLBWeightResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public UpdateDNSSLBWeightResponseBody setRecordId(String recordId) {
         this.recordId = recordId;
         return this;
     }
     public String getRecordId() {
         return this.recordId;
+    }
+
+    public UpdateDNSSLBWeightResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public UpdateDNSSLBWeightResponseBody setWeight(Integer weight) {

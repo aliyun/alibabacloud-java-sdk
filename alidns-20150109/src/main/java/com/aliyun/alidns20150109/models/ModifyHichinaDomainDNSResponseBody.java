@@ -4,26 +4,18 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("NewDnsServers")
     public ModifyHichinaDomainDNSResponseBodyNewDnsServers newDnsServers;
 
     @NameInMap("OriginalDnsServers")
     public ModifyHichinaDomainDNSResponseBodyOriginalDnsServers originalDnsServers;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ModifyHichinaDomainDNSResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyHichinaDomainDNSResponseBody self = new ModifyHichinaDomainDNSResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyHichinaDomainDNSResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ModifyHichinaDomainDNSResponseBody setNewDnsServers(ModifyHichinaDomainDNSResponseBodyNewDnsServers newDnsServers) {
@@ -40,6 +32,14 @@ public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
     }
     public ModifyHichinaDomainDNSResponseBodyOriginalDnsServers getOriginalDnsServers() {
         return this.originalDnsServers;
+    }
+
+    public ModifyHichinaDomainDNSResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ModifyHichinaDomainDNSResponseBodyNewDnsServers extends TeaModel {
