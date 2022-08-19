@@ -7,7 +7,6 @@ public class ListUsersResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListUsersResponseBodyData> data;
 
-    // 记录总数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -33,82 +32,60 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyData extends TeaModel {
-        // 账户过期时间, 毫秒时间
         @NameInMap("accountExpireTime")
         public Long accountExpireTime;
 
-        // 创建时间, 毫秒时间
         @NameInMap("createTime")
         public Long createTime;
 
-        // 账号描述
         @NameInMap("description")
         public String description;
 
-        // 显示名
         @NameInMap("displayName")
         public String displayName;
 
-        // 邮箱
         @NameInMap("email")
         public String email;
 
-        // 邮箱是否验证
         @NameInMap("emailVerified")
         public Boolean emailVerified;
 
-        // 实例ID
         @NameInMap("instanceId")
         public String instanceId;
 
-        // 锁定过期时间, 毫秒时间
         @NameInMap("lockExpireTime")
         public Long lockExpireTime;
 
-        // 密码是否已设置
-        @NameInMap("passwordSet")
-        public Boolean passwordSet;
-
-        // 手机号
         @NameInMap("phoneNumber")
         public String phoneNumber;
 
-        // 手机号是否验证
         @NameInMap("phoneNumberVerified")
         public Boolean phoneNumberVerified;
 
-        // 手机地区编号,示例：中国大陆手区号为86，不带 00 或 +
         @NameInMap("phoneRegion")
         public String phoneRegion;
 
         @NameInMap("registerTime")
         public Long registerTime;
 
-        // 账户状态, enabled:启用,disabled:禁用
         @NameInMap("status")
         public String status;
 
-        // 最近一次更新时间, 毫秒时间
         @NameInMap("updateTime")
         public Long updateTime;
 
-        // 外部ID
         @NameInMap("userExternalId")
         public String userExternalId;
 
-        // 账户ID
         @NameInMap("userId")
         public String userId;
 
-        // 来源ID
         @NameInMap("userSourceId")
         public String userSourceId;
 
-        // 来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]
         @NameInMap("userSourceType")
         public String userSourceType;
 
-        // 账户名
         @NameInMap("username")
         public String username;
 
@@ -179,14 +156,6 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public Long getLockExpireTime() {
             return this.lockExpireTime;
-        }
-
-        public ListUsersResponseBodyData setPasswordSet(Boolean passwordSet) {
-            this.passwordSet = passwordSet;
-            return this;
-        }
-        public Boolean getPasswordSet() {
-            return this.passwordSet;
         }
 
         public ListUsersResponseBodyData setPhoneNumber(String phoneNumber) {

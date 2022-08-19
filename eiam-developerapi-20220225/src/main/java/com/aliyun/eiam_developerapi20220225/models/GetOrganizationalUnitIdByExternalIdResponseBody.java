@@ -3,16 +3,16 @@ package com.aliyun.eiam_developerapi20220225.models;
 
 import com.aliyun.tea.*;
 
-public class CreateOrganizationalUnitResponseBody extends TeaModel {
+public class GetOrganizationalUnitIdByExternalIdResponseBody extends TeaModel {
     @NameInMap("organizationalUnitId")
     public String organizationalUnitId;
 
-    public static CreateOrganizationalUnitResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateOrganizationalUnitResponseBody self = new CreateOrganizationalUnitResponseBody();
+    public static GetOrganizationalUnitIdByExternalIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetOrganizationalUnitIdByExternalIdResponseBody self = new GetOrganizationalUnitIdByExternalIdResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateOrganizationalUnitResponseBody setOrganizationalUnitId(String organizationalUnitId) {
+    public GetOrganizationalUnitIdByExternalIdResponseBody setOrganizationalUnitId(String organizationalUnitId) {
         this.organizationalUnitId = organizationalUnitId;
         return this;
     }

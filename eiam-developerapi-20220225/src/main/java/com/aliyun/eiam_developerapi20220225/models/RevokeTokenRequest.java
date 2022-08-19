@@ -10,11 +10,9 @@ public class RevokeTokenRequest extends TeaModel {
     @NameInMap("client_secret")
     public String clientSecret;
 
-    // 撤销的token
     @NameInMap("token")
     public String token;
 
-    // token类型
     @NameInMap("token_type_hint")
     public String tokenTypeHint;
 

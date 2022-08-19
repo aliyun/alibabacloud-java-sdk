@@ -4,31 +4,24 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class PatchUserRequest extends TeaModel {
-    // 账户展示名
     @NameInMap("displayName")
     public String displayName;
 
-    // 邮箱
     @NameInMap("email")
     public String email;
 
-    // 邮箱是否验证，邮箱若设置此字段必须设置，无特殊业务可直接设置为true
     @NameInMap("emailVerified")
     public Boolean emailVerified;
 
-    // 手机号
     @NameInMap("phoneNumber")
     public String phoneNumber;
 
-    // 手机号是否验证，手机号若设置此字段必须设置，无特殊业务可直接设置为true
     @NameInMap("phoneNumberVerified")
     public Boolean phoneNumberVerified;
 
-    // 手机地区编号,示例：中国大陆手区号为86，不带 00 或 +, 手机号若设置，此参数必填
     @NameInMap("phoneRegion")
     public String phoneRegion;
 
-    // 账户名
     @NameInMap("username")
     public String username;
 

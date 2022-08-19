@@ -4,11 +4,9 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class PatchOrganizationalUnitRequest extends TeaModel {
-    // 机构描述
     @NameInMap("description")
     public String description;
 
-    // 机构名称
     @NameInMap("organizationalUnitName")
     public String organizationalUnitName;
 

@@ -4,27 +4,21 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class GenerateTokenResponseBody extends TeaModel {
-    // access_token
     @NameInMap("access_token")
     public String accessToken;
 
-    // 过期时间
     @NameInMap("expires_at")
     public Long expiresAt;
 
-    // 有效时长，单位秒
     @NameInMap("expires_in")
     public Long expiresIn;
 
-    // id_token
     @NameInMap("id_token")
     public String idToken;
 
-    // refresh_token
     @NameInMap("refresh_token")
     public String refreshToken;
 
-    // token类型，包含Basic,Bearer
     @NameInMap("token_type")
     public String tokenType;
 

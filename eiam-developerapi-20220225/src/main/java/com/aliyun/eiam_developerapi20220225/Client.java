@@ -422,6 +422,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetOrganizationalUnitResponse());
     }
 
+    public GetOrganizationalUnitIdByExternalIdResponse getOrganizationalUnitIdByExternalId(String instanceId, String applicationId, GetOrganizationalUnitIdByExternalIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        GetOrganizationalUnitIdByExternalIdHeaders headers = new GetOrganizationalUnitIdByExternalIdHeaders();
+        return this.getOrganizationalUnitIdByExternalIdWithOptions(instanceId, applicationId, request, headers, runtime);
+    }
+
+    public GetOrganizationalUnitIdByExternalIdResponse getOrganizationalUnitIdByExternalIdWithOptions(String instanceId, String applicationId, GetOrganizationalUnitIdByExternalIdRequest request, GetOrganizationalUnitIdByExternalIdHeaders headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
+        applicationId = com.aliyun.openapiutil.Client.getEncodeParam(applicationId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationalUnitExternalId)) {
+            body.put("organizationalUnitExternalId", request.organizationalUnitExternalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationalUnitSourceId)) {
+            body.put("organizationalUnitSourceId", request.organizationalUnitSourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationalUnitSourceType)) {
+            body.put("organizationalUnitSourceType", request.organizationalUnitSourceType);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetOrganizationalUnitIdByExternalId"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + instanceId + "/" + applicationId + "/organizationalUnits/_/actions/getOrganizationalUnitIdByExternalId"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOrganizationalUnitIdByExternalIdResponse());
+    }
+
     public GetUserResponse getUser(String instanceId, String applicationId, String userId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         GetUserHeaders headers = new GetUserHeaders();
@@ -458,6 +508,140 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserResponse());
     }
 
+    public GetUserIdByEmailResponse getUserIdByEmail(String instanceId, String applicationId, GetUserIdByEmailRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        GetUserIdByEmailHeaders headers = new GetUserIdByEmailHeaders();
+        return this.getUserIdByEmailWithOptions(instanceId, applicationId, request, headers, runtime);
+    }
+
+    public GetUserIdByEmailResponse getUserIdByEmailWithOptions(String instanceId, String applicationId, GetUserIdByEmailRequest request, GetUserIdByEmailHeaders headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
+        applicationId = com.aliyun.openapiutil.Client.getEncodeParam(applicationId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            body.put("email", request.email);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserIdByEmail"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + instanceId + "/" + applicationId + "/users/_/actions/getUserIdByEmail"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserIdByEmailResponse());
+    }
+
+    public GetUserIdByPhoneNumberResponse getUserIdByPhoneNumber(String instanceId, String applicationId, GetUserIdByPhoneNumberRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        GetUserIdByPhoneNumberHeaders headers = new GetUserIdByPhoneNumberHeaders();
+        return this.getUserIdByPhoneNumberWithOptions(instanceId, applicationId, request, headers, runtime);
+    }
+
+    public GetUserIdByPhoneNumberResponse getUserIdByPhoneNumberWithOptions(String instanceId, String applicationId, GetUserIdByPhoneNumberRequest request, GetUserIdByPhoneNumberHeaders headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
+        applicationId = com.aliyun.openapiutil.Client.getEncodeParam(applicationId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneNumber)) {
+            body.put("phoneNumber", request.phoneNumber);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserIdByPhoneNumber"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + instanceId + "/" + applicationId + "/users/_/actions/getUserIdByPhoneNumber"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserIdByPhoneNumberResponse());
+    }
+
+    public GetUserIdByUserExternalIdResponse getUserIdByUserExternalId(String instanceId, String applicationId, GetUserIdByUserExternalIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        GetUserIdByUserExternalIdHeaders headers = new GetUserIdByUserExternalIdHeaders();
+        return this.getUserIdByUserExternalIdWithOptions(instanceId, applicationId, request, headers, runtime);
+    }
+
+    public GetUserIdByUserExternalIdResponse getUserIdByUserExternalIdWithOptions(String instanceId, String applicationId, GetUserIdByUserExternalIdRequest request, GetUserIdByUserExternalIdHeaders headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
+        applicationId = com.aliyun.openapiutil.Client.getEncodeParam(applicationId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userExternalId)) {
+            body.put("userExternalId", request.userExternalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userSourceId)) {
+            body.put("userSourceId", request.userSourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userSourceType)) {
+            body.put("userSourceType", request.userSourceType);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserIdByUserExternalId"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + instanceId + "/" + applicationId + "/users/_/actions/getUserIdByExternalId"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserIdByUserExternalIdResponse());
+    }
+
     public GetUserInfoResponse getUserInfo(String instanceId, String applicationId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         GetUserInfoHeaders headers = new GetUserInfoHeaders();
@@ -491,41 +675,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserInfoResponse());
-    }
-
-    public GetUserPasswordPolicyResponse getUserPasswordPolicy(String instanceId, String applicationId) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        GetUserPasswordPolicyHeaders headers = new GetUserPasswordPolicyHeaders();
-        return this.getUserPasswordPolicyWithOptions(instanceId, applicationId, headers, runtime);
-    }
-
-    public GetUserPasswordPolicyResponse getUserPasswordPolicyWithOptions(String instanceId, String applicationId, GetUserPasswordPolicyHeaders headers, RuntimeOptions runtime) throws Exception {
-        instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        applicationId = com.aliyun.openapiutil.Client.getEncodeParam(applicationId);
-        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
-            realHeaders = headers.commonHeaders;
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
-            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", realHeaders)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetUserPasswordPolicy"),
-            new TeaPair("version", "2022-02-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v2/" + instanceId + "/" + applicationId + "/users/_/actions/getUserPasswordPolicy"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserPasswordPolicyResponse());
     }
 
     public ListOrganizationalUnitParentIdsResponse listOrganizationalUnitParentIds(String instanceId, String applicationId, String organizationalUnitId) throws Exception {

@@ -4,19 +4,15 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class CreateOrganizationalUnitRequest extends TeaModel {
-    // 描述
     @NameInMap("description")
     public String description;
 
-    // 机构外部ID
     @NameInMap("organizationalUnitExternalId")
     public String organizationalUnitExternalId;
 
-    // 机构名称
     @NameInMap("organizationalUnitName")
     public String organizationalUnitName;
 
-    // 父机构ID
     @NameInMap("parentId")
     public String parentId;
 
