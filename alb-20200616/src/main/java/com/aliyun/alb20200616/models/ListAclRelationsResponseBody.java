@@ -4,11 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListAclRelationsResponseBody extends TeaModel {
-    // 访问控制列表
     @NameInMap("AclRelations")
     public java.util.List<ListAclRelationsResponseBodyAclRelations> aclRelations;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,23 +32,18 @@ public class ListAclRelationsResponseBody extends TeaModel {
     }
 
     public static class ListAclRelationsResponseBodyAclRelationsRelatedListeners extends TeaModel {
-        // 监听ID
         @NameInMap("ListenerId")
         public String listenerId;
 
-        // 监听端口
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
-        // 监听协议
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
-        // 实例ID
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
-        // 关联状态
         @NameInMap("Status")
         public String status;
 
@@ -102,11 +95,9 @@ public class ListAclRelationsResponseBody extends TeaModel {
     }
 
     public static class ListAclRelationsResponseBodyAclRelations extends TeaModel {
-        // 访问控制策略id
         @NameInMap("AclId")
         public String aclId;
 
-        // 关联的监听
         @NameInMap("RelatedListeners")
         public java.util.List<ListAclRelationsResponseBodyAclRelationsRelatedListeners> relatedListeners;
 

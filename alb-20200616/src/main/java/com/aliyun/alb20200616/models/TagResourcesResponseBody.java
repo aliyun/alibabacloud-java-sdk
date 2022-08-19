@@ -4,7 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -22,19 +21,15 @@ public class TagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        // 资源ID
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // 资源类型
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // 标签Key
         @NameInMap("TagKey")
         public String tagKey;
 
-        // 标签Value
         @NameInMap("TagValue")
         public String tagValue;
 

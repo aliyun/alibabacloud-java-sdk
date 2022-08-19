@@ -4,19 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class AddEntriesToAclRequest extends TeaModel {
-    // 条目信息列表
     @NameInMap("AclEntries")
     public java.util.List<AddEntriesToAclRequestAclEntries> aclEntries;
 
-    // AclId
     @NameInMap("AclId")
     public String aclId;
 
-    // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // dryRun
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -58,11 +54,9 @@ public class AddEntriesToAclRequest extends TeaModel {
     }
 
     public static class AddEntriesToAclRequestAclEntries extends TeaModel {
-        // 描述信息
         @NameInMap("Description")
         public String description;
 
-        // 条目
         @NameInMap("Entry")
         public String entry;
 

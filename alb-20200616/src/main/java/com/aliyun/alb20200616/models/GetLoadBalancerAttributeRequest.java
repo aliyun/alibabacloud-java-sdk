@@ -4,7 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class GetLoadBalancerAttributeRequest extends TeaModel {
-    // 实例标识
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 

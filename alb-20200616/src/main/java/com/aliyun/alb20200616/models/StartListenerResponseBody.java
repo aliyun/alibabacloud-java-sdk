@@ -4,11 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class StartListenerResponseBody extends TeaModel {
-    // 异步任务id
     @NameInMap("JobId")
     public String jobId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

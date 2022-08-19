@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListAclEntriesResponseBody extends TeaModel {
-    // 访问控制列表
     @NameInMap("AclEntries")
     public java.util.List<ListAclEntriesResponseBodyAclEntries> aclEntries;
 
-    // 本次查询返回记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,15 +65,12 @@ public class ListAclEntriesResponseBody extends TeaModel {
     }
 
     public static class ListAclEntriesResponseBodyAclEntries extends TeaModel {
-        // 描述信息
         @NameInMap("Description")
         public String description;
 
-        // IP条目
         @NameInMap("Entry")
         public String entry;
 
-        // 状态
         @NameInMap("Status")
         public String status;
 

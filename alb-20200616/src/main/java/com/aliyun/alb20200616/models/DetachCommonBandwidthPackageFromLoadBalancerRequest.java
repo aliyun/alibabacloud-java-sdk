@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends TeaModel {
-    // 带宽包ID
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 预校验
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 实例ID
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
-    // 地域ID
     @NameInMap("RegionId")
     public String regionId;
 

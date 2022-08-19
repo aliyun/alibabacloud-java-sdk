@@ -4,27 +4,21 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class UpdateSecurityPolicyAttributeRequest extends TeaModel {
-    // 加密套件
     @NameInMap("Ciphers")
     public java.util.List<String> ciphers;
 
-    // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 是否只预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 安全策略id
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
-    // 安全策略名称
     @NameInMap("SecurityPolicyName")
     public String securityPolicyName;
 
-    // TLS版本
     @NameInMap("TLSVersions")
     public java.util.List<String> TLSVersions;
 

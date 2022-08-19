@@ -4,11 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    // Region列表
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +32,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
-        // 名称
         @NameInMap("LocalName")
         public String localName;
 
-        // endpoint
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
-        // RegionId
         @NameInMap("RegionId")
         public String regionId;
 

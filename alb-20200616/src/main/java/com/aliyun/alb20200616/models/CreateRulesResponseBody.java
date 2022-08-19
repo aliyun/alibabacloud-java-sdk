@@ -4,15 +4,12 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class CreateRulesResponseBody extends TeaModel {
-    // 异步任务Id
     @NameInMap("JobId")
     public String jobId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 转发规则标识列表
     @NameInMap("RuleIds")
     public java.util.List<CreateRulesResponseBodyRuleIds> ruleIds;
 
@@ -46,11 +43,9 @@ public class CreateRulesResponseBody extends TeaModel {
     }
 
     public static class CreateRulesResponseBodyRuleIds extends TeaModel {
-        // 转发规则优先级
         @NameInMap("Priority")
         public Integer priority;
 
-        // 转发规则标识
         @NameInMap("RuleId")
         public String ruleId;
 

@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListLoadBalancersResponseBody extends TeaModel {
-    // 实例列表
     @NameInMap("LoadBalancers")
     public java.util.List<ListLoadBalancersResponseBodyLoadBalancers> loadBalancers;
 
-    // 本次请求所返回的最大记录条数。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 用来表示当前调用返回读取到的位置，空代表数据已经读取完毕。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 本次请求条件下的数据总量。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,11 +65,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersAccessLogConfig extends TeaModel {
-        // 访问日志投递的logProject
         @NameInMap("LogProject")
         public String logProject;
 
-        // 删除保护开启时间
         @NameInMap("LogStore")
         public String logStore;
 
@@ -102,11 +95,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig extends TeaModel {
-        // 删除保护状态
         @NameInMap("Enabled")
         public Boolean enabled;
 
-        // 删除保护开启时间
         @NameInMap("EnabledTime")
         public String enabledTime;
 
@@ -134,7 +125,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig extends TeaModel {
-        // 实例的计费类型
         @NameInMap("PayType")
         public String payType;
 
@@ -154,11 +144,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersLoadBalancerOperationLocks extends TeaModel {
-        // 锁定的原因
         @NameInMap("LockReason")
         public String lockReason;
 
-        // 锁定的类型
         @NameInMap("LockType")
         public String lockType;
 
@@ -186,11 +174,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig extends TeaModel {
-        // 设置修改保护状态的原因
         @NameInMap("Reason")
         public String reason;
 
-        // 负载均衡修改保护状态
         @NameInMap("Status")
         public String status;
 
@@ -218,11 +204,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersTags extends TeaModel {
-        // 实例的标签键
         @NameInMap("Key")
         public String key;
 
-        // 实例的标签值
         @NameInMap("Value")
         public String value;
 
@@ -250,83 +234,63 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancers extends TeaModel {
-        // 访问日志属性
         @NameInMap("AccessLogConfig")
         public ListLoadBalancersResponseBodyLoadBalancersAccessLogConfig accessLogConfig;
 
-        // 地址模式
         @NameInMap("AddressAllocatedMode")
         public String addressAllocatedMode;
 
-        // 协议版本
         @NameInMap("AddressIpVersion")
         public String addressIpVersion;
 
-        // 地址类型
         @NameInMap("AddressType")
         public String addressType;
 
-        // 带宽包ID
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
-        // 资源创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // DNS域名
         @NameInMap("DNSName")
         public String DNSName;
 
-        // 负载均衡删除保护相关信息
         @NameInMap("DeletionProtectionConfig")
         public ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig deletionProtectionConfig;
 
-        // IPV6地址类型
         @NameInMap("Ipv6AddressType")
         public String ipv6AddressType;
 
-        // 计费相关属性
         @NameInMap("LoadBalancerBillingConfig")
         public ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig loadBalancerBillingConfig;
 
-        // 实例业务状态
         @NameInMap("LoadBalancerBussinessStatus")
         public String loadBalancerBussinessStatus;
 
-        // 负载均衡的版本
         @NameInMap("LoadBalancerEdition")
         public String loadBalancerEdition;
 
-        // 负载均衡标识
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
-        // 实例名称
         @NameInMap("LoadBalancerName")
         public String loadBalancerName;
 
-        // 锁定的原因
         @NameInMap("LoadBalancerOperationLocks")
         public java.util.List<ListLoadBalancersResponseBodyLoadBalancersLoadBalancerOperationLocks> loadBalancerOperationLocks;
 
-        // 实例状态
         @NameInMap("LoadBalancerStatus")
         public String loadBalancerStatus;
 
-        // 负载均衡修改保护相关信息
         @NameInMap("ModificationProtectionConfig")
         public ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig modificationProtectionConfig;
 
-        // 企业资源组ID
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // 标签列表
         @NameInMap("Tags")
         public java.util.List<ListLoadBalancersResponseBodyLoadBalancersTags> tags;
 
-        // Vpc网络ID
         @NameInMap("VpcId")
         public String vpcId;
 

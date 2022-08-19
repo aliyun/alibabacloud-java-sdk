@@ -4,19 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class GetListenerHealthStatusResponseBody extends TeaModel {
-    // 监听健康检查结果
     @NameInMap("ListenerHealthStatus")
     public java.util.List<GetListenerHealthStatusResponseBodyListenerHealthStatus> listenerHealthStatus;
 
-    // 下一页标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 转发规则健康检查结果
     @NameInMap("RuleHealthStatus")
     public java.util.List<GetListenerHealthStatusResponseBodyRuleHealthStatus> ruleHealthStatus;
 
@@ -58,15 +54,12 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     }
 
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosNonNormalServersReason extends TeaModel {
-        // 后端实际的返回码信息
         @NameInMap("ActualResponse")
         public String actualResponse;
 
-        // 用户预期的后端返回码信息
         @NameInMap("ExpectedResponse")
         public String expectedResponse;
 
-        // 失败reasonCode
         @NameInMap("ReasonCode")
         public String reasonCode;
 
@@ -102,23 +95,18 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     }
 
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosNonNormalServers extends TeaModel {
-        // 后端服务器端口
         @NameInMap("Port")
         public Integer port;
 
-        // status为非正常状态时的详细异常原因
         @NameInMap("Reason")
         public GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosNonNormalServersReason reason;
 
-        // 后端服务器id
         @NameInMap("ServerId")
         public String serverId;
 
-        // 后端服务器Ip
         @NameInMap("ServerIp")
         public String serverIp;
 
-        // 健康检查状态
         @NameInMap("Status")
         public String status;
 
@@ -170,19 +158,15 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     }
 
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfos extends TeaModel {
-        // 服务器组使用类型
         @NameInMap("ActionType")
         public String actionType;
 
-        // 健康检查开启/关闭
         @NameInMap("HealthCheckEnabled")
         public String healthCheckEnabled;
 
-        // 处于非正常状态的后端服务器
         @NameInMap("NonNormalServers")
         public java.util.List<GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosNonNormalServers> nonNormalServers;
 
-        // 服务器组ID
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
@@ -226,19 +210,15 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     }
 
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatus extends TeaModel {
-        // 监听Id
         @NameInMap("ListenerId")
         public String listenerId;
 
-        // 监听的端口号
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
-        // 监听的协议
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
-        // 服务器组健康检查结果
         @NameInMap("ServerGroupInfos")
         public java.util.List<GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfos> serverGroupInfos;
 
@@ -282,15 +262,12 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     }
 
     public static class GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfosNonNormalServersReason extends TeaModel {
-        // 后端实际的返回码信息
         @NameInMap("ActualResponse")
         public String actualResponse;
 
-        // 用户预期的后端返回码信息
         @NameInMap("ExpectedResponse")
         public String expectedResponse;
 
-        // 失败reasonCode
         @NameInMap("ReasonCode")
         public String reasonCode;
 
@@ -326,23 +303,18 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     }
 
     public static class GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfosNonNormalServers extends TeaModel {
-        // 后端服务器端口
         @NameInMap("Port")
         public Integer port;
 
-        // status为非正常状态时的详细异常原因
         @NameInMap("Reason")
         public GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfosNonNormalServersReason reason;
 
-        // 后端服务器Id
         @NameInMap("ServerId")
         public String serverId;
 
-        // 后端服务器ID
         @NameInMap("ServerIp")
         public String serverIp;
 
-        // 健康检查状态
         @NameInMap("Status")
         public String status;
 
@@ -394,19 +366,15 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     }
 
     public static class GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfos extends TeaModel {
-        // 服务器组使用类型
         @NameInMap("ActionType")
         public String actionType;
 
-        // 健康检查开启/关闭
         @NameInMap("HealthCheckEnabled")
         public String healthCheckEnabled;
 
-        // 处于非正常状态的后端服务器
         @NameInMap("NonNormalServers")
         public java.util.List<GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfosNonNormalServers> nonNormalServers;
 
-        // 服务器组ID
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
@@ -450,11 +418,9 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     }
 
     public static class GetListenerHealthStatusResponseBodyRuleHealthStatus extends TeaModel {
-        // 转发规则ID
         @NameInMap("RuleId")
         public String ruleId;
 
-        // 服务器组健康检查结果
         @NameInMap("ServerGroupInfos")
         public java.util.List<GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfos> serverGroupInfos;
 

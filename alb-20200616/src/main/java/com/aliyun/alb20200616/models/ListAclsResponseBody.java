@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListAclsResponseBody extends TeaModel {
-    // 访问控制列表
     @NameInMap("Acls")
     public java.util.List<ListAclsResponseBodyAcls> acls;
 
-    // 本次查询返回记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,27 +65,21 @@ public class ListAclsResponseBody extends TeaModel {
     }
 
     public static class ListAclsResponseBodyAcls extends TeaModel {
-        // 访问控制策略id
         @NameInMap("AclId")
         public String aclId;
 
-        // 访问控制策略名称
         @NameInMap("AclName")
         public String aclName;
 
-        // 状态
         @NameInMap("AclStatus")
         public String aclStatus;
 
-        // IP版本
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
-        // 配置管理
         @NameInMap("ConfigManagedEnabled")
         public Boolean configManagedEnabled;
 
-        // 资源组ID
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

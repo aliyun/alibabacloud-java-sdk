@@ -4,19 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class UpdateAclAttributeRequest extends TeaModel {
-    // AclId
     @NameInMap("AclId")
     public String aclId;
 
-    // 访问控制策略名称
     @NameInMap("AclName")
     public String aclName;
 
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 是否预校验请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 

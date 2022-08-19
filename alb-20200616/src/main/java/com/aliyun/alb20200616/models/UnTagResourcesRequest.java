@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class UnTagResourcesRequest extends TeaModel {
-    // 是否删除全部
     @NameInMap("All")
     public Boolean all;
 
-    // 资源实例Id
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    // 资源类型
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // 标签列表
     @NameInMap("Tag")
     public java.util.List<UnTagResourcesRequestTag> tag;
 
-    // 标签键列表
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 
@@ -70,11 +65,9 @@ public class UnTagResourcesRequest extends TeaModel {
     }
 
     public static class UnTagResourcesRequestTag extends TeaModel {
-        // 标签键
         @NameInMap("Key")
         public String key;
 
-        // 标签值
         @NameInMap("Value")
         public String value;
 

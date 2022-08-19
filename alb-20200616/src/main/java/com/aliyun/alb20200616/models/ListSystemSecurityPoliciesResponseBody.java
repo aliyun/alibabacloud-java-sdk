@@ -4,11 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 安全策略
     @NameInMap("SecurityPolicies")
     public java.util.List<ListSystemSecurityPoliciesResponseBodySecurityPolicies> securityPolicies;
 
@@ -34,15 +32,12 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSystemSecurityPoliciesResponseBodySecurityPolicies extends TeaModel {
-        // 加密套件
         @NameInMap("Ciphers")
         public java.util.List<String> ciphers;
 
-        // 安全策略Id
         @NameInMap("SecurityPolicyId")
         public String securityPolicyId;
 
-        // 协议版本
         @NameInMap("TLSVersions")
         public java.util.List<String> TLSVersions;
 

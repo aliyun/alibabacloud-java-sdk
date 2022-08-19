@@ -4,19 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListHealthCheckTemplatesRequest extends TeaModel {
-    // 健康检查模板ID列表
     @NameInMap("HealthCheckTemplateIds")
     public java.util.List<String> healthCheckTemplateIds;
 
-    // 健康检查模板名称列表
     @NameInMap("HealthCheckTemplateNames")
     public java.util.List<String> healthCheckTemplateNames;
 
-    // 查询数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 

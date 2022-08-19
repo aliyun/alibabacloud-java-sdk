@@ -4,15 +4,12 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListServerGroupServersRequest extends TeaModel {
-    // 查询数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 服务器组id
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
@@ -68,11 +65,9 @@ public class ListServerGroupServersRequest extends TeaModel {
     }
 
     public static class ListServerGroupServersRequestTag extends TeaModel {
-        // 标签键
         @NameInMap("Key")
         public String key;
 
-        // 标签值
         @NameInMap("Value")
         public String value;
 

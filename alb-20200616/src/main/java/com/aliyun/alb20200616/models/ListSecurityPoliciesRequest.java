@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityPoliciesRequest extends TeaModel {
-    // 查询数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 资源组ID
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // 安全策略id
     @NameInMap("SecurityPolicyIds")
     public java.util.List<String> securityPolicyIds;
 
-    // 安全策略名称
     @NameInMap("SecurityPolicyNames")
     public java.util.List<String> securityPolicyNames;
 

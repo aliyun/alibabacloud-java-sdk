@@ -4,35 +4,27 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListAsynJobsRequest extends TeaModel {
-    // 操作接口名
     @NameInMap("ApiName")
     public String apiName;
 
-    // 任务过滤时间范围-开始时间
     @NameInMap("BeginTime")
     public Long beginTime;
 
-    // 任务过滤时间范围-结束时间
     @NameInMap("EndTime")
     public Long endTime;
 
-    // 任务ID列表
     @NameInMap("JobIds")
     public java.util.List<String> jobIds;
 
-    // 本次读取的最大数据记录数量
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 下一个查询开始Token
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 资源实例ID列表
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
-    // 资源类型类型
     @NameInMap("ResourceType")
     public String resourceType;
 

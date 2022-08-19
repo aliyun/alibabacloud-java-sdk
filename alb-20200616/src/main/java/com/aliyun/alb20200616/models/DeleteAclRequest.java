@@ -4,15 +4,12 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class DeleteAclRequest extends TeaModel {
-    // 访问控制策略id
     @NameInMap("AclId")
     public String aclId;
 
-    // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // DryRun
     @NameInMap("DryRun")
     public Boolean dryRun;
 

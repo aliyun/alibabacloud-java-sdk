@@ -4,15 +4,12 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
-    // 资源组id
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
-    // 指定资源Id
     @NameInMap("ResourceId")
     public String resourceId;
 
-    // 资源类型
     @NameInMap("ResourceType")
     public String resourceType;
 

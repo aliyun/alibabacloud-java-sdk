@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysResponseBody extends TeaModel {
-    // 本次查询返回记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 标签Key列表
     @NameInMap("TagKeys")
     public java.util.List<ListTagKeysResponseBodyTagKeys> tagKeys;
 
-    // 总记录数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,11 +65,9 @@ public class ListTagKeysResponseBody extends TeaModel {
     }
 
     public static class ListTagKeysResponseBodyTagKeys extends TeaModel {
-        // 标签类型
         @NameInMap("Category")
         public String category;
 
-        // 标签Key
         @NameInMap("TagKey")
         public String tagKey;
 

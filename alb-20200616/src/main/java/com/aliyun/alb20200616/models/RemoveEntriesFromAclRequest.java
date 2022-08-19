@@ -4,19 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class RemoveEntriesFromAclRequest extends TeaModel {
-    // 访问控制策略Id
     @NameInMap("AclId")
     public String aclId;
 
-    // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 是否只预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 条目列表
     @NameInMap("Entries")
     public java.util.List<String> entries;
 

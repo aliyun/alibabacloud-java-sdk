@@ -4,11 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class UpdateRuleAttributeResponseBody extends TeaModel {
-    // 异步任务Id
     @NameInMap("JobId")
     public String jobId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

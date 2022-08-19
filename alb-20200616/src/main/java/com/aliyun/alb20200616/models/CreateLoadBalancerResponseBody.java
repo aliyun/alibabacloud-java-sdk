@@ -4,11 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class CreateLoadBalancerResponseBody extends TeaModel {
-    // 负载均衡实例标识
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

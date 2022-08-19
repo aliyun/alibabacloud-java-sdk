@@ -4,19 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ApplyHealthCheckTemplateToServerGroupRequest extends TeaModel {
-    // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // dryRun
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 健康检查模板Id
     @NameInMap("HealthCheckTemplateId")
     public String healthCheckTemplateId;
 
-    // 服务器组Id
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 

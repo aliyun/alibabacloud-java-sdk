@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListAsynJobsResponseBody extends TeaModel {
-    // 任务列表
     @NameInMap("Jobs")
     public java.util.List<ListAsynJobsResponseBodyJobs> jobs;
 
-    // 本次查询返回记录数量
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -70,43 +65,33 @@ public class ListAsynJobsResponseBody extends TeaModel {
     }
 
     public static class ListAsynJobsResponseBodyJobs extends TeaModel {
-        // openapi名称
         @NameInMap("ApiName")
         public String apiName;
 
-        // 任务开始时间戳
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 如果Status为失败，则为错误码
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        // 如果Status为失败，则为错误信息
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 任务ID
         @NameInMap("Id")
         public String id;
 
-        // 任务结束时间戳
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
-        // 操作类型
         @NameInMap("OperateType")
         public String operateType;
 
-        // 关联的资源实例ID
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // 关联的资源类型
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // 任务状态
         @NameInMap("Status")
         public String status;
 

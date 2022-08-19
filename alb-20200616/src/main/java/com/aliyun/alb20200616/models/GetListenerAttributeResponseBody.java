@@ -4,79 +4,60 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class GetListenerAttributeResponseBody extends TeaModel {
-    // ACL相关配置信息
     @NameInMap("AclConfig")
     public GetListenerAttributeResponseBodyAclConfig aclConfig;
 
-    // 是否开启双向认证
     @NameInMap("CaEnabled")
     public Boolean caEnabled;
 
-    // 监听默认服务器证书列表，N当前取值范围为1
     @NameInMap("Certificates")
     public java.util.List<GetListenerAttributeResponseBodyCertificates> certificates;
 
-    // 默认动作
     @NameInMap("DefaultActions")
     public java.util.List<GetListenerAttributeResponseBodyDefaultActions> defaultActions;
 
-    // 是否开启Gzip压缩
     @NameInMap("GzipEnabled")
     public Boolean gzipEnabled;
 
-    // 是否开启HTTP/2特性
     @NameInMap("Http2Enabled")
     public Boolean http2Enabled;
 
-    // 连接空闲超时时间
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
-    // 监听描述
     @NameInMap("ListenerDescription")
     public String listenerDescription;
 
-    // 监听标识
     @NameInMap("ListenerId")
     public String listenerId;
 
-    // 监听端口
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
-    // 监听协议
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
-    // 监听状态
     @NameInMap("ListenerStatus")
     public String listenerStatus;
 
-    // 负载均衡标识
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
-    // 监听访问日志相关配置
     @NameInMap("LogConfig")
     public GetListenerAttributeResponseBodyLogConfig logConfig;
 
-    // HTTPS启用QUIC时相关属性
     @NameInMap("QuicConfig")
     public GetListenerAttributeResponseBodyQuicConfig quicConfig;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 请求超时时间
     @NameInMap("RequestTimeout")
     public Integer requestTimeout;
 
-    // 安全策略
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
-    // XForward字段相关的配置
     @NameInMap("XForwardedForConfig")
     public GetListenerAttributeResponseBodyXForwardedForConfig XForwardedForConfig;
 
@@ -238,11 +219,9 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetListenerAttributeResponseBodyAclConfigAclRelations extends TeaModel {
-        // ACL标识
         @NameInMap("AclId")
         public String aclId;
 
-        // ACL与监听关联的状态
         @NameInMap("Status")
         public String status;
 
@@ -270,11 +249,9 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetListenerAttributeResponseBodyAclConfig extends TeaModel {
-        // 监听绑定的访问策略组
         @NameInMap("AclRelations")
         public java.util.List<GetListenerAttributeResponseBodyAclConfigAclRelations> aclRelations;
 
-        // 访问控制类型
         @NameInMap("AclType")
         public String aclType;
 
@@ -302,7 +279,6 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetListenerAttributeResponseBodyCertificates extends TeaModel {
-        // 正式标识
         @NameInMap("CertificateId")
         public String certificateId;
 
@@ -322,7 +298,6 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetListenerAttributeResponseBodyDefaultActionsForwardGroupConfigServerGroupTuples extends TeaModel {
-        // 服务器组ID
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
@@ -342,7 +317,6 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetListenerAttributeResponseBodyDefaultActionsForwardGroupConfig extends TeaModel {
-        // 服务器组列表
         @NameInMap("ServerGroupTuples")
         public java.util.List<GetListenerAttributeResponseBodyDefaultActionsForwardGroupConfigServerGroupTuples> serverGroupTuples;
 
@@ -362,11 +336,9 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetListenerAttributeResponseBodyDefaultActions extends TeaModel {
-        // 转发到服务器组
         @NameInMap("ForwardGroupConfig")
         public GetListenerAttributeResponseBodyDefaultActionsForwardGroupConfig forwardGroupConfig;
 
-        // 类型
         @NameInMap("Type")
         public String type;
 
@@ -394,15 +366,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetListenerAttributeResponseBodyLogConfigAccessLogTracingConfig extends TeaModel {
-        // Xtrace功能状态
         @NameInMap("TracingEnabled")
         public Boolean tracingEnabled;
 
-        // Xtrace功能状态
         @NameInMap("TracingSample")
         public Integer tracingSample;
 
-        // xtrace的类型
         @NameInMap("TracingType")
         public String tracingType;
 
@@ -438,11 +407,9 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetListenerAttributeResponseBodyLogConfig extends TeaModel {
-        // 访问日志是否开启携带自定义Header
         @NameInMap("AccessLogRecordCustomizedHeadersEnabled")
         public Boolean accessLogRecordCustomizedHeadersEnabled;
 
-        // 访问日志Xtrace相关的配置
         @NameInMap("AccessLogTracingConfig")
         public GetListenerAttributeResponseBodyLogConfigAccessLogTracingConfig accessLogTracingConfig;
 
@@ -470,11 +437,9 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetListenerAttributeResponseBodyQuicConfig extends TeaModel {
-        // 需要关联的QUIC监听ID，HTTPS监听时有效，QuicUpgradeEnabled为true时必选
         @NameInMap("QuicListenerId")
         public String quicListenerId;
 
-        // 是否开启quic升级，HTTPS监听时有效
         @NameInMap("QuicUpgradeEnabled")
         public Boolean quicUpgradeEnabled;
 
@@ -502,55 +467,48 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetListenerAttributeResponseBodyXForwardedForConfig extends TeaModel {
-        // 自定义HEADER头名称，只有当XForwardedForClientCertClientVerifyEnabled的值为true的时候，此值才会生效；否则该值不会生效。HTTPS监听有效
         @NameInMap("XForwardedForClientCertClientVerifyAlias")
         public String XForwardedForClientCertClientVerifyAlias;
 
-        // 是否通过X-Forwarded-Clientcert-clientverify  头字段获取对访问负载均衡实例客户端证书的校验结果。HTTPS监听有效。
         @NameInMap("XForwardedForClientCertClientVerifyEnabled")
         public Boolean XForwardedForClientCertClientVerifyEnabled;
 
-        // 自定义HEADER头名称，只有当XForwardedForClientCertFingerprintEnabled的值为true的时候，此值才会生效；否则该值不会生效。HTTPS监听有效
         @NameInMap("XForwardedForClientCertFingerprintAlias")
         public String XForwardedForClientCertFingerprintAlias;
 
-        // 是否通过X-Forwarded-Clientcert-fingerprint 头字段获取访问负载均衡实例客户端证书的指纹取值，HTTPS监听有效。
         @NameInMap("XForwardedForClientCertFingerprintEnabled")
         public Boolean XForwardedForClientCertFingerprintEnabled;
 
-        // 自定义HEADER头名称，只有当XForwardedForClientCertIssuerDNEnabled的值为‘On’的时候，此值才会生效；否则该值不会生效。HTTPS监听有效
         @NameInMap("XForwardedForClientCertIssuerDNAlias")
         public String XForwardedForClientCertIssuerDNAlias;
 
-        // 是否通过 X-Forwarded-Clientcert-issuerdn 头字段获取访问负载均衡实例客户端证书的发行者信息。HTTPS监听有效。
         @NameInMap("XForwardedForClientCertIssuerDNEnabled")
         public Boolean XForwardedForClientCertIssuerDNEnabled;
 
-        // 自定义HEADER头名称，只有当XForwardedForClientCertSubjectDNEnabled的值为true的时候，此值才会生效；否则该值不会生效。HTTPS监听有效
         @NameInMap("XForwardedForClientCertSubjectDNAlias")
         public String XForwardedForClientCertSubjectDNAlias;
 
-        // 是否通过X-Forwarded-Clientcert-subjectdn  头字段获取访问负载均衡实例客户端证书的所有者信息。HTTPS监听有效。
         @NameInMap("XForwardedForClientCertSubjectDNEnabled")
         public Boolean XForwardedForClientCertSubjectDNEnabled;
 
-        // 是否通过X-Forwarded-Client-Port 头字段获取访问负载均衡实例客户端的端口。HTTPS监听有效。
+        @NameInMap("XForwardedForClientSourceIpsEnabled")
+        public Boolean XForwardedForClientSourceIpsEnabled;
+
+        @NameInMap("XForwardedForClientSourceIpsTrusted")
+        public String XForwardedForClientSourceIpsTrusted;
+
         @NameInMap("XForwardedForClientSrcPortEnabled")
         public Boolean XForwardedForClientSrcPortEnabled;
 
-        // 是否开启通过X-Forwarded-For头字段获取来访者真实 IP
         @NameInMap("XForwardedForEnabled")
         public Boolean XForwardedForEnabled;
 
-        // 是否通过X-Forwarded-Proto头字段获取负载均衡实例的监听协议。
         @NameInMap("XForwardedForProtoEnabled")
         public Boolean XForwardedForProtoEnabled;
 
-        // 是否通过SLB-ID头字段获取负载均衡实例ID。
         @NameInMap("XForwardedForSLBIdEnabled")
         public Boolean XForwardedForSLBIdEnabled;
 
-        // 是否通过X-Forwarded-Port 头字段获取负载均衡实例的监听端口。HTTPS监听有效。
         @NameInMap("XForwardedForSLBPortEnabled")
         public Boolean XForwardedForSLBPortEnabled;
 
@@ -621,6 +579,22 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
         public Boolean getXForwardedForClientCertSubjectDNEnabled() {
             return this.XForwardedForClientCertSubjectDNEnabled;
+        }
+
+        public GetListenerAttributeResponseBodyXForwardedForConfig setXForwardedForClientSourceIpsEnabled(Boolean XForwardedForClientSourceIpsEnabled) {
+            this.XForwardedForClientSourceIpsEnabled = XForwardedForClientSourceIpsEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForClientSourceIpsEnabled() {
+            return this.XForwardedForClientSourceIpsEnabled;
+        }
+
+        public GetListenerAttributeResponseBodyXForwardedForConfig setXForwardedForClientSourceIpsTrusted(String XForwardedForClientSourceIpsTrusted) {
+            this.XForwardedForClientSourceIpsTrusted = XForwardedForClientSourceIpsTrusted;
+            return this;
+        }
+        public String getXForwardedForClientSourceIpsTrusted() {
+            return this.XForwardedForClientSourceIpsTrusted;
         }
 
         public GetListenerAttributeResponseBodyXForwardedForConfig setXForwardedForClientSrcPortEnabled(Boolean XForwardedForClientSrcPortEnabled) {

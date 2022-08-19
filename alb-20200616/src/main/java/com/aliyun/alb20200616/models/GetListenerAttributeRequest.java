@@ -4,7 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class GetListenerAttributeRequest extends TeaModel {
-    // 监听标识
     @NameInMap("ListenerId")
     public String listenerId;
 

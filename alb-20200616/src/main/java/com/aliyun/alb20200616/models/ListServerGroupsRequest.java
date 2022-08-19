@@ -4,31 +4,24 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListServerGroupsRequest extends TeaModel {
-    // 查询数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 资源组ID
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // 服务器组Id列表
     @NameInMap("ServerGroupIds")
     public java.util.List<String> serverGroupIds;
 
-    // 服务器组名称
     @NameInMap("ServerGroupNames")
     public java.util.List<String> serverGroupNames;
 
-    // Tag列表
     @NameInMap("Tag")
     public java.util.List<ListServerGroupsRequestTag> tag;
 
-    // VpcId
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -94,11 +87,9 @@ public class ListServerGroupsRequest extends TeaModel {
     }
 
     public static class ListServerGroupsRequestTag extends TeaModel {
-        // 标签键
         @NameInMap("Key")
         public String key;
 
-        // 标签值
         @NameInMap("Value")
         public String value;
 

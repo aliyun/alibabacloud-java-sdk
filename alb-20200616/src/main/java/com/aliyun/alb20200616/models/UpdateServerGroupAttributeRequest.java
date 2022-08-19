@@ -4,35 +4,27 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class UpdateServerGroupAttributeRequest extends TeaModel {
-    // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 是否只预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 健康检查配置
     @NameInMap("HealthCheckConfig")
     public UpdateServerGroupAttributeRequestHealthCheckConfig healthCheckConfig;
 
-    // 调度策略
     @NameInMap("Scheduler")
     public String scheduler;
 
-    // 服务器组Id
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
-    // Acl名称
     @NameInMap("ServerGroupName")
     public String serverGroupName;
 
-    // 服务器名称
     @NameInMap("ServiceName")
     public String serviceName;
 
-    // 会话保持配置
     @NameInMap("StickySessionConfig")
     public UpdateServerGroupAttributeRequestStickySessionConfig stickySessionConfig;
 
@@ -106,51 +98,39 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     }
 
     public static class UpdateServerGroupAttributeRequestHealthCheckConfig extends TeaModel {
-        // 健康检查正常的状态码
         @NameInMap("HealthCheckCodes")
         public java.util.List<String> healthCheckCodes;
 
-        // 健康检查端口
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
 
-        // 是否启用健康检查
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
-        // 健康检查域名
         @NameInMap("HealthCheckHost")
         public String healthCheckHost;
 
-        // 健康检查HTTP协议版本
         @NameInMap("HealthCheckHttpVersion")
         public String healthCheckHttpVersion;
 
-        // 健康检查间隔
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
-        // 健康检查方法
         @NameInMap("HealthCheckMethod")
         public String healthCheckMethod;
 
-        // 健康检查Path
         @NameInMap("HealthCheckPath")
         public String healthCheckPath;
 
-        // 健康检查协议类型
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
 
-        // 健康检查超时时间
         @NameInMap("HealthCheckTimeout")
         public Integer healthCheckTimeout;
 
-        // 健康检查成功判定阈值
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
-        // 健康检查不成功判定阈值
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
 
@@ -258,19 +238,15 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     }
 
     public static class UpdateServerGroupAttributeRequestStickySessionConfig extends TeaModel {
-        // 服务器上配置的Cookie
         @NameInMap("Cookie")
         public String cookie;
 
-        // 服务器上配置的Cookie
         @NameInMap("CookieTimeout")
         public Integer cookieTimeout;
 
-        // 是否启用会话保持
         @NameInMap("StickySessionEnabled")
         public Boolean stickySessionEnabled;
 
-        // 会话保持类型
         @NameInMap("StickySessionType")
         public String stickySessionType;
 

@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListRulesRequest extends TeaModel {
-    // 监听ID列表
     @NameInMap("ListenerIds")
     public java.util.List<String> listenerIds;
 
-    // 实例ID列表
     @NameInMap("LoadBalancerIds")
     public java.util.List<String> loadBalancerIds;
 
-    // 本次读取的最大数据记录数量，此参数为可选参数，取值1-100，用户传入为空时，默认为20。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 用来标记当前开始读取的位置，置空表示从头开始。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 转发规则ID列表，N最大支持20
     @NameInMap("RuleIds")
     public java.util.List<String> ruleIds;
 

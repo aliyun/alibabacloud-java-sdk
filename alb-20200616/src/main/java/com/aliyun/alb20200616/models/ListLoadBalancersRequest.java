@@ -4,51 +4,39 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListLoadBalancersRequest extends TeaModel {
-    // 负载均衡的地址类型
     @NameInMap("AddressType")
     public String addressType;
 
-    // 实例业务状态
     @NameInMap("LoadBalancerBussinessStatus")
     public String loadBalancerBussinessStatus;
 
-    // 实例ID列表，N最大支持20
     @NameInMap("LoadBalancerIds")
     public java.util.List<String> loadBalancerIds;
 
-    // 实例Name列表，N最大支持10
     @NameInMap("LoadBalancerNames")
     public java.util.List<String> loadBalancerNames;
 
-    // 实例状态
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
-    // 本次读取的最大数据记录数量，此参数为可选参数，取值1-100，用户传入为空时，默认为20。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 用来标记当前开始读取的位置，置空表示从头开始。
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 付费类型
     @NameInMap("PayType")
     public String payType;
 
-    // 资源组ID
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // tag列表
     @NameInMap("Tag")
     public java.util.List<ListLoadBalancersRequestTag> tag;
 
-    // vpcId列表
     @NameInMap("VpcIds")
     public java.util.List<String> vpcIds;
 
-    // 可用区ID
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -154,11 +142,9 @@ public class ListLoadBalancersRequest extends TeaModel {
     }
 
     public static class ListLoadBalancersRequestTag extends TeaModel {
-        // 实例的标签键
         @NameInMap("Key")
         public String key;
 
-        // 实例的标签值
         @NameInMap("Value")
         public String value;
 
