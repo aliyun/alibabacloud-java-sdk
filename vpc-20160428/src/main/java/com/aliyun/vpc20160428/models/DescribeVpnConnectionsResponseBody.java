@@ -233,6 +233,9 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         @NameInMap("Interval")
         public Integer interval;
 
+        @NameInMap("Policy")
+        public String policy;
+
         @NameInMap("Retry")
         public Integer retry;
 
@@ -269,6 +272,14 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         }
         public Integer getInterval() {
             return this.interval;
+        }
+
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionVcoHealthCheck setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
         }
 
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionVcoHealthCheck setRetry(Integer retry) {
@@ -383,8 +394,17 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection extends TeaModel {
+        @NameInMap("AttachInstanceId")
+        public String attachInstanceId;
+
+        @NameInMap("AttachType")
+        public String attachType;
+
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("CrossAccountAuthorized")
+        public Boolean crossAccountAuthorized;
 
         @NameInMap("CustomerGatewayId")
         public String customerGatewayId;
@@ -410,14 +430,29 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("NetworkType")
+        public String networkType;
+
         @NameInMap("RemoteCaCertificate")
         public String remoteCaCertificate;
 
         @NameInMap("RemoteSubnet")
         public String remoteSubnet;
 
+        @NameInMap("Spec")
+        public String spec;
+
+        @NameInMap("State")
+        public String state;
+
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("TransitRouterId")
+        public String transitRouterId;
+
+        @NameInMap("TransitRouterName")
+        public String transitRouterName;
 
         @NameInMap("VcoHealthCheck")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionVcoHealthCheck vcoHealthCheck;
@@ -436,12 +471,36 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setAttachInstanceId(String attachInstanceId) {
+            this.attachInstanceId = attachInstanceId;
+            return this;
+        }
+        public String getAttachInstanceId() {
+            return this.attachInstanceId;
+        }
+
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setAttachType(String attachType) {
+            this.attachType = attachType;
+            return this;
+        }
+        public String getAttachType() {
+            return this.attachType;
+        }
+
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setCrossAccountAuthorized(Boolean crossAccountAuthorized) {
+            this.crossAccountAuthorized = crossAccountAuthorized;
+            return this;
+        }
+        public Boolean getCrossAccountAuthorized() {
+            return this.crossAccountAuthorized;
         }
 
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setCustomerGatewayId(String customerGatewayId) {
@@ -508,6 +567,14 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             return this.name;
         }
 
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setRemoteCaCertificate(String remoteCaCertificate) {
             this.remoteCaCertificate = remoteCaCertificate;
             return this;
@@ -524,12 +591,44 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             return this.remoteSubnet;
         }
 
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setTransitRouterId(String transitRouterId) {
+            this.transitRouterId = transitRouterId;
+            return this;
+        }
+        public String getTransitRouterId() {
+            return this.transitRouterId;
+        }
+
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setTransitRouterName(String transitRouterName) {
+            this.transitRouterName = transitRouterName;
+            return this;
+        }
+        public String getTransitRouterName() {
+            return this.transitRouterName;
         }
 
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setVcoHealthCheck(DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionVcoHealthCheck vcoHealthCheck) {

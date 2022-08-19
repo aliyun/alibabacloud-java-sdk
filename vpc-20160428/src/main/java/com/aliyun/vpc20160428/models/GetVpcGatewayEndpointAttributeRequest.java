@@ -4,7 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetVpcGatewayEndpointAttributeRequest extends TeaModel {
-    // VPC网关实例ID
     @NameInMap("EndpointId")
     public String endpointId;
 
@@ -14,7 +13,6 @@ public class GetVpcGatewayEndpointAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // 地域
     @NameInMap("RegionId")
     public String regionId;
 

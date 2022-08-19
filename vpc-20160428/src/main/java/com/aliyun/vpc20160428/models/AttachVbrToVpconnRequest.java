@@ -4,22 +4,18 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AttachVbrToVpconnRequest extends TeaModel {
-    // DryRun
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    // 幂等Token
     @NameInMap("Token")
     public String token;
 
-    // 待迁移的vbr
     @NameInMap("VbrId")
     public String vbrId;
 
-    // 迁移到目标vpconn
     @NameInMap("VpconnId")
     public String vpconnId;
 

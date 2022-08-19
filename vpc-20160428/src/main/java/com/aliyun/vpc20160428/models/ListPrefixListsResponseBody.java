@@ -13,7 +13,6 @@ public class ListPrefixListsResponseBody extends TeaModel {
     @NameInMap("PrefixLists")
     public java.util.List<ListPrefixListsResponseBodyPrefixLists> prefixLists;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -66,33 +65,38 @@ public class ListPrefixListsResponseBody extends TeaModel {
     }
 
     public static class ListPrefixListsResponseBodyPrefixLists extends TeaModel {
-        // 前缀列表包含的网段
         @NameInMap("CidrBlocks")
         public java.util.List<String> cidrBlocks;
 
-        // 创建时间
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // IpVersion
         @NameInMap("IpVersion")
         public String ipVersion;
 
-        // 描述
+        @NameInMap("MaxEntries")
+        public Integer maxEntries;
+
+        @NameInMap("OwnerId")
+        public String ownerId;
+
         @NameInMap("PrefixListDescription")
         public String prefixListDescription;
 
-        // 前缀列表的实例ID
         @NameInMap("PrefixListId")
         public String prefixListId;
 
-        // 名称
         @NameInMap("PrefixListName")
         public String prefixListName;
 
-        // 状态
         @NameInMap("PrefixListStatus")
         public String prefixListStatus;
+
+        @NameInMap("ShareType")
+        public String shareType;
+
+        @NameInMap("Status")
+        public String status;
 
         public static ListPrefixListsResponseBodyPrefixLists build(java.util.Map<String, ?> map) throws Exception {
             ListPrefixListsResponseBodyPrefixLists self = new ListPrefixListsResponseBodyPrefixLists();
@@ -121,6 +125,22 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
         public String getIpVersion() {
             return this.ipVersion;
+        }
+
+        public ListPrefixListsResponseBodyPrefixLists setMaxEntries(Integer maxEntries) {
+            this.maxEntries = maxEntries;
+            return this;
+        }
+        public Integer getMaxEntries() {
+            return this.maxEntries;
+        }
+
+        public ListPrefixListsResponseBodyPrefixLists setOwnerId(String ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+        public String getOwnerId() {
+            return this.ownerId;
         }
 
         public ListPrefixListsResponseBodyPrefixLists setPrefixListDescription(String prefixListDescription) {
@@ -153,6 +173,22 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
         public String getPrefixListStatus() {
             return this.prefixListStatus;
+        }
+
+        public ListPrefixListsResponseBodyPrefixLists setShareType(String shareType) {
+            this.shareType = shareType;
+            return this;
+        }
+        public String getShareType() {
+            return this.shareType;
+        }
+
+        public ListPrefixListsResponseBodyPrefixLists setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

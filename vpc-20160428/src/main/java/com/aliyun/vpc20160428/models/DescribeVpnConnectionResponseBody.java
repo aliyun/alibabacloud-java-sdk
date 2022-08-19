@@ -4,8 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpnConnectionResponseBody extends TeaModel {
+    @NameInMap("AttachInstanceId")
+    public String attachInstanceId;
+
+    @NameInMap("AttachType")
+    public String attachType;
+
     @NameInMap("CreateTime")
     public Long createTime;
+
+    @NameInMap("CrossAccountAuthorized")
+    public Boolean crossAccountAuthorized;
 
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
@@ -22,6 +31,9 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     @NameInMap("IkeConfig")
     public DescribeVpnConnectionResponseBodyIkeConfig ikeConfig;
 
+    @NameInMap("InternetIp")
+    public String internetIp;
+
     @NameInMap("IpsecConfig")
     public DescribeVpnConnectionResponseBodyIpsecConfig ipsecConfig;
 
@@ -30,6 +42,9 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("NetworkType")
+    public String networkType;
 
     @NameInMap("RemoteCaCertificate")
     public String remoteCaCertificate;
@@ -40,8 +55,20 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Spec")
+    public String spec;
+
+    @NameInMap("State")
+    public String state;
+
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("TransitRouterId")
+    public String transitRouterId;
+
+    @NameInMap("TransitRouterName")
+    public String transitRouterName;
 
     @NameInMap("VcoHealthCheck")
     public DescribeVpnConnectionResponseBodyVcoHealthCheck vcoHealthCheck;
@@ -55,9 +82,28 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 
+    @NameInMap("ZoneNo")
+    public String zoneNo;
+
     public static DescribeVpnConnectionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpnConnectionResponseBody self = new DescribeVpnConnectionResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVpnConnectionResponseBody setAttachInstanceId(String attachInstanceId) {
+        this.attachInstanceId = attachInstanceId;
+        return this;
+    }
+    public String getAttachInstanceId() {
+        return this.attachInstanceId;
+    }
+
+    public DescribeVpnConnectionResponseBody setAttachType(String attachType) {
+        this.attachType = attachType;
+        return this;
+    }
+    public String getAttachType() {
+        return this.attachType;
     }
 
     public DescribeVpnConnectionResponseBody setCreateTime(Long createTime) {
@@ -66,6 +112,14 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     }
     public Long getCreateTime() {
         return this.createTime;
+    }
+
+    public DescribeVpnConnectionResponseBody setCrossAccountAuthorized(Boolean crossAccountAuthorized) {
+        this.crossAccountAuthorized = crossAccountAuthorized;
+        return this;
+    }
+    public Boolean getCrossAccountAuthorized() {
+        return this.crossAccountAuthorized;
     }
 
     public DescribeVpnConnectionResponseBody setCustomerGatewayId(String customerGatewayId) {
@@ -108,6 +162,14 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         return this.ikeConfig;
     }
 
+    public DescribeVpnConnectionResponseBody setInternetIp(String internetIp) {
+        this.internetIp = internetIp;
+        return this;
+    }
+    public String getInternetIp() {
+        return this.internetIp;
+    }
+
     public DescribeVpnConnectionResponseBody setIpsecConfig(DescribeVpnConnectionResponseBodyIpsecConfig ipsecConfig) {
         this.ipsecConfig = ipsecConfig;
         return this;
@@ -130,6 +192,14 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribeVpnConnectionResponseBody setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
     }
 
     public DescribeVpnConnectionResponseBody setRemoteCaCertificate(String remoteCaCertificate) {
@@ -156,12 +226,44 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeVpnConnectionResponseBody setSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    public String getSpec() {
+        return this.spec;
+    }
+
+    public DescribeVpnConnectionResponseBody setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
+    }
+
     public DescribeVpnConnectionResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeVpnConnectionResponseBody setTransitRouterId(String transitRouterId) {
+        this.transitRouterId = transitRouterId;
+        return this;
+    }
+    public String getTransitRouterId() {
+        return this.transitRouterId;
+    }
+
+    public DescribeVpnConnectionResponseBody setTransitRouterName(String transitRouterName) {
+        this.transitRouterName = transitRouterName;
+        return this;
+    }
+    public String getTransitRouterName() {
+        return this.transitRouterName;
     }
 
     public DescribeVpnConnectionResponseBody setVcoHealthCheck(DescribeVpnConnectionResponseBodyVcoHealthCheck vcoHealthCheck) {
@@ -194,6 +296,14 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     }
     public String getVpnGatewayId() {
         return this.vpnGatewayId;
+    }
+
+    public DescribeVpnConnectionResponseBody setZoneNo(String zoneNo) {
+        this.zoneNo = zoneNo;
+        return this;
+    }
+    public String getZoneNo() {
+        return this.zoneNo;
     }
 
     public static class DescribeVpnConnectionResponseBodyIkeConfig extends TeaModel {
@@ -365,6 +475,9 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         @NameInMap("Interval")
         public Integer interval;
 
+        @NameInMap("Policy")
+        public String policy;
+
         @NameInMap("Retry")
         public Integer retry;
 
@@ -401,6 +514,14 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
         public Integer getInterval() {
             return this.interval;
+        }
+
+        public DescribeVpnConnectionResponseBodyVcoHealthCheck setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
         }
 
         public DescribeVpnConnectionResponseBodyVcoHealthCheck setRetry(Integer retry) {

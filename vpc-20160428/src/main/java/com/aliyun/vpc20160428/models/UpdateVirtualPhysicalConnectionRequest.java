@@ -4,26 +4,21 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class UpdateVirtualPhysicalConnectionRequest extends TeaModel {
-    // DryRun
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // ExpectSpec
     @NameInMap("ExpectSpec")
     public String expectSpec;
 
-    // Vpconn的实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    // 幂等Token
     @NameInMap("Token")
     public String token;
 
-    // vpconn的VlanID
     @NameInMap("VlanId")
     public Long vlanId;
 

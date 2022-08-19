@@ -55,7 +55,6 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
-    // 可用区
     @NameInMap("ZoneId")
     public String zoneId;
 

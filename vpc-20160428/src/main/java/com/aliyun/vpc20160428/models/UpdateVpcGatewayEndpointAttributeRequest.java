@@ -4,23 +4,18 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class UpdateVpcGatewayEndpointAttributeRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 是否只预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 网关节点描述
     @NameInMap("EndpointDescription")
     public String endpointDescription;
 
-    // VPC网关实例ID
     @NameInMap("EndpointId")
     public String endpointId;
 
-    // 网关节点名称
     @NameInMap("EndpointName")
     public String endpointName;
 
@@ -30,11 +25,9 @@ public class UpdateVpcGatewayEndpointAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // 访问云服务的权限控制策略
     @NameInMap("PolicyDocument")
     public String policyDocument;
 
-    // 地域
     @NameInMap("RegionId")
     public String regionId;
 

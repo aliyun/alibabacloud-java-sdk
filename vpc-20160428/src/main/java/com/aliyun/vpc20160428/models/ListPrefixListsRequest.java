@@ -16,11 +16,12 @@ public class ListPrefixListsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // 前缀列表的实例ID
     @NameInMap("PrefixListIds")
     public java.util.List<String> prefixListIds;
 
-    // 地域
+    @NameInMap("PrefixListName")
+    public String prefixListName;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -73,6 +74,14 @@ public class ListPrefixListsRequest extends TeaModel {
     }
     public java.util.List<String> getPrefixListIds() {
         return this.prefixListIds;
+    }
+
+    public ListPrefixListsRequest setPrefixListName(String prefixListName) {
+        this.prefixListName = prefixListName;
+        return this;
+    }
+    public String getPrefixListName() {
+        return this.prefixListName;
     }
 
     public ListPrefixListsRequest setRegionId(String regionId) {

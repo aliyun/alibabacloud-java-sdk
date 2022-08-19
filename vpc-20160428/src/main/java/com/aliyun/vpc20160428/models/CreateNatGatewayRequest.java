@@ -16,6 +16,9 @@ public class CreateNatGatewayRequest extends TeaModel {
     @NameInMap("Duration")
     public String duration;
 
+    @NameInMap("EipBindMode")
+    public String eipBindMode;
+
     @NameInMap("IcmpReplyEnabled")
     public Boolean icmpReplyEnabled;
 
@@ -99,6 +102,14 @@ public class CreateNatGatewayRequest extends TeaModel {
     }
     public String getDuration() {
         return this.duration;
+    }
+
+    public CreateNatGatewayRequest setEipBindMode(String eipBindMode) {
+        this.eipBindMode = eipBindMode;
+        return this;
+    }
+    public String getEipBindMode() {
+        return this.eipBindMode;
     }
 
     public CreateNatGatewayRequest setIcmpReplyEnabled(Boolean icmpReplyEnabled) {

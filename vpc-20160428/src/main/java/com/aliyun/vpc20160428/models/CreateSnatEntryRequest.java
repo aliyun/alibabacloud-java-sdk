@@ -7,6 +7,9 @@ public class CreateSnatEntryRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("EipAffinity")
+    public Integer eipAffinity;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -48,6 +51,14 @@ public class CreateSnatEntryRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateSnatEntryRequest setEipAffinity(Integer eipAffinity) {
+        this.eipAffinity = eipAffinity;
+        return this;
+    }
+    public Integer getEipAffinity() {
+        return this.eipAffinity;
     }
 
     public CreateSnatEntryRequest setOwnerAccount(String ownerAccount) {

@@ -7,7 +7,6 @@ public class CreateFullNatEntryResponseBody extends TeaModel {
     @NameInMap("FullNatEntryId")
     public String fullNatEntryId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

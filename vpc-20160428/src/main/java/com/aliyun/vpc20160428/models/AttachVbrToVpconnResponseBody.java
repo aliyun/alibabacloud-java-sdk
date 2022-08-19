@@ -4,11 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AttachVbrToVpconnResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // Vpconn的实例ID
     @NameInMap("VirtualPhysicalConnection")
     public String virtualPhysicalConnection;
 

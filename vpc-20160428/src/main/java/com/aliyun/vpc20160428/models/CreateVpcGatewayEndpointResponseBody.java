@@ -13,7 +13,6 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
     @NameInMap("EndpointName")
     public String endpointName;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

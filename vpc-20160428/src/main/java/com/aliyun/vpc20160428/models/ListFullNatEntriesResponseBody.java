@@ -19,7 +19,6 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -88,11 +87,9 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
     }
 
     public static class ListFullNatEntriesResponseBodyFullNatEntries extends TeaModel {
-        // 通过DNAT条目进行公网通信的ECS实例的私网IP地址。
         @NameInMap("AccessIp")
         public String accessIp;
 
-        // DNAT条目中进行端口转发的内部端口，取值范围：1-65535。
         @NameInMap("AccessPort")
         public String accessPort;
 
@@ -105,30 +102,24 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         @NameInMap("FullNatEntryId")
         public String fullNatEntryId;
 
-        // FULLNAT规则的名称。 长度为2~128个字符，必须以大小写字母或中文开头，但不能以http://或https://开头。
         @NameInMap("FullNatEntryName")
         public String fullNatEntryName;
 
         @NameInMap("FullNatEntryStatus")
         public String fullNatEntryStatus;
 
-        // 协议类型，取值： • TCP：转发TCP协议的报文。 • UDP：转发UDP协议的报文。
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
-        // DNAT条目中提供公网访问的公网IP地址。
         @NameInMap("NatIp")
         public String natIp;
 
-        // DNAT条目中进行端口转发的外部端口，取值范围：1~65535。
         @NameInMap("NatIpPort")
         public String natIpPort;
 
-        // 当前VpcNat作为服务资源所加入的eni
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
-        // ENI类型，目前仅支持Endpoint
         @NameInMap("NetworkInterfaceType")
         public String networkInterfaceType;
 

@@ -4,42 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
-    // Vpconn是否被确认
     @NameInMap("IsConfirmed")
     public Boolean isConfirmed;
 
-    // 单次查询最大量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 单次查询最大量
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Vpconn的主Pconn
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    // Vpconn的OwnerUid
     @NameInMap("VirtualPhysicalConnectionAliUids")
     public java.util.List<String> virtualPhysicalConnectionAliUids;
 
-    // Vpconn的商业状态
     @NameInMap("VirtualPhysicalConnectionBusinessStatus")
     public String virtualPhysicalConnectionBusinessStatus;
 
-    // 根据Vpconn的ID列表过滤
     @NameInMap("VirtualPhysicalConnectionIds")
     public java.util.List<String> virtualPhysicalConnectionIds;
 
-    // Vpconn的状态
     @NameInMap("VirtualPhysicalConnectionStatuses")
     public java.util.List<String> virtualPhysicalConnectionStatuses;
 
-    // Vpconn的vlanId
     @NameInMap("VlanIds")
     public java.util.List<String> vlanIds;
 

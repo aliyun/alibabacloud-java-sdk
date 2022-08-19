@@ -22,7 +22,6 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     @NameInMap("PolicyDocument")
     public String policyDocument;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
