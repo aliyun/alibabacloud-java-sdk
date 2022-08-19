@@ -4,90 +4,66 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
-    // 账户过期时间, 毫秒时间
     @NameInMap("accountExpireTime")
     public Long accountExpireTime;
 
-    // 创建时间, 毫秒时间
     @NameInMap("createTime")
     public Long createTime;
 
-    // 账号描述
     @NameInMap("description")
     public String description;
 
-    // 显示名
     @NameInMap("displayName")
     public String displayName;
 
-    // 邮箱
     @NameInMap("email")
     public String email;
 
-    // 邮箱是否验证
     @NameInMap("emailVerified")
     public Boolean emailVerified;
 
-    // 实例ID
     @NameInMap("instanceId")
     public String instanceId;
 
-    // 锁定过期时间, 毫秒时间
     @NameInMap("lockExpireTime")
     public Long lockExpireTime;
 
-    // 账户所属组织列表
     @NameInMap("organizationalUnits")
     public java.util.List<GetUserResponseBodyOrganizationalUnits> organizationalUnits;
 
-    // 密码是否已设置
-    @NameInMap("passwordSet")
-    public Boolean passwordSet;
-
-    // 手机号
     @NameInMap("phoneNumber")
     public String phoneNumber;
 
-    // 手机号是否验证
     @NameInMap("phoneNumberVerified")
     public Boolean phoneNumberVerified;
 
-    // 手机地区编号,示例：中国大陆手区号为86，不带 00 或 +
     @NameInMap("phoneRegion")
     public String phoneRegion;
 
-    // 账户主机构ID
     @NameInMap("primaryOrganizationalUnitId")
     public String primaryOrganizationalUnitId;
 
     @NameInMap("registerTime")
     public Long registerTime;
 
-    // 账户状态, enabled:启用,disabled:禁用
     @NameInMap("status")
     public String status;
 
-    // 最近一次更新时间, 毫秒时间
     @NameInMap("updateTime")
     public Long updateTime;
 
-    // 外部ID
     @NameInMap("userExternalId")
     public String userExternalId;
 
-    // 账户ID
     @NameInMap("userId")
     public String userId;
 
-    // 来源ID
     @NameInMap("userSourceId")
     public String userSourceId;
 
-    // 来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]
     @NameInMap("userSourceType")
     public String userSourceType;
 
-    // 账户名
     @NameInMap("username")
     public String username;
 
@@ -166,14 +142,6 @@ public class GetUserResponseBody extends TeaModel {
     }
     public java.util.List<GetUserResponseBodyOrganizationalUnits> getOrganizationalUnits() {
         return this.organizationalUnits;
-    }
-
-    public GetUserResponseBody setPasswordSet(Boolean passwordSet) {
-        this.passwordSet = passwordSet;
-        return this;
-    }
-    public Boolean getPasswordSet() {
-        return this.passwordSet;
     }
 
     public GetUserResponseBody setPhoneNumber(String phoneNumber) {
@@ -273,15 +241,12 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyOrganizationalUnits extends TeaModel {
-        // 机构ID
         @NameInMap("organizationalUnitId")
         public String organizationalUnitId;
 
-        // 机构名称
         @NameInMap("organizationalUnitName")
         public String organizationalUnitName;
 
-        // 是否主机构
         @NameInMap("primary")
         public Boolean primary;
 

@@ -4,7 +4,6 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
-    // 机构ID列表
     @NameInMap("organizationalUnitIds")
     public java.util.List<String> organizationalUnitIds;
 

@@ -7,7 +7,6 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListOrganizationalUnitsResponseBodyData> data;
 
-    // 记录总数
     @NameInMap("totalCount")
     public Long totalCount;
 
@@ -33,43 +32,33 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
     }
 
     public static class ListOrganizationalUnitsResponseBodyData extends TeaModel {
-        // 创建时间，毫秒
         @NameInMap("createTime")
         public Long createTime;
 
-        // 描述
         @NameInMap("description")
         public String description;
 
-        // 实例ID
         @NameInMap("instanceId")
         public String instanceId;
 
-        // 外部ID
         @NameInMap("organizationalUnitExternalId")
         public String organizationalUnitExternalId;
 
-        // 机构ID
         @NameInMap("organizationalUnitId")
         public String organizationalUnitId;
 
-        // 机构名称
         @NameInMap("organizationalUnitName")
         public String organizationalUnitName;
 
-        // 来源ID
         @NameInMap("organizationalUnitSourceId")
         public String organizationalUnitSourceId;
 
-        // 来源类型
         @NameInMap("organizationalUnitSourceType")
         public String organizationalUnitSourceType;
 
-        // 父机构ID
         @NameInMap("parentId")
         public String parentId;
 
-        // 最近一次更新时间，毫秒
         @NameInMap("updateTime")
         public Long updateTime;
 

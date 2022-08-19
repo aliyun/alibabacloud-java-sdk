@@ -7,7 +7,6 @@ public class GetApplicationProvisioningScopeHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    // 认证信息，格式:Bearer access_token
     @NameInMap("Authorization")
     public String authorization;
 

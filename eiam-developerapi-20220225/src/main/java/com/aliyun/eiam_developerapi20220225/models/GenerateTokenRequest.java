@@ -10,43 +10,33 @@ public class GenerateTokenRequest extends TeaModel {
     @NameInMap("client_secret")
     public String clientSecret;
 
-    // code码
     @NameInMap("code")
     public String code;
 
-    // 验证code
     @NameInMap("code_verifier")
     public String codeVerifier;
 
-    // 设备码
     @NameInMap("device_code")
     public String deviceCode;
 
-    // 排除的tag
     @NameInMap("exclusive_tag")
     public String exclusiveTag;
 
-    // 授权类型
     @NameInMap("grant_type")
     public String grantType;
 
-    // 密码
     @NameInMap("password")
     public String password;
 
-    // 重定向URI
     @NameInMap("redirect_uri")
     public String redirectUri;
 
-    // 更新token
     @NameInMap("refresh_token")
     public String refreshToken;
 
-    // scope范围
     @NameInMap("scope")
     public String scope;
 
-    // 用户名
     @NameInMap("username")
     public String username;
 

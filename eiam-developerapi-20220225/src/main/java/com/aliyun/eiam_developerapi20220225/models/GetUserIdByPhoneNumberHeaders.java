@@ -3,19 +3,19 @@ package com.aliyun.eiam_developerapi20220225.models;
 
 import com.aliyun.tea.*;
 
-public class ListOrganizationalUnitsHeaders extends TeaModel {
+public class GetUserIdByPhoneNumberHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
     @NameInMap("Authorization")
     public String authorization;
 
-    public static ListOrganizationalUnitsHeaders build(java.util.Map<String, ?> map) throws Exception {
-        ListOrganizationalUnitsHeaders self = new ListOrganizationalUnitsHeaders();
+    public static GetUserIdByPhoneNumberHeaders build(java.util.Map<String, ?> map) throws Exception {
+        GetUserIdByPhoneNumberHeaders self = new GetUserIdByPhoneNumberHeaders();
         return TeaModel.build(map, self);
     }
 
-    public ListOrganizationalUnitsHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
+    public GetUserIdByPhoneNumberHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
         this.commonHeaders = commonHeaders;
         return this;
     }
@@ -23,7 +23,7 @@ public class ListOrganizationalUnitsHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public ListOrganizationalUnitsHeaders setAuthorization(String authorization) {
+    public GetUserIdByPhoneNumberHeaders setAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
     }

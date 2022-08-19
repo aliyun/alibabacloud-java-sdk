@@ -4,7 +4,6 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class GenerateDeviceCodeRequest extends TeaModel {
-    // scope范围
     @NameInMap("scope")
     public String scope;
 
