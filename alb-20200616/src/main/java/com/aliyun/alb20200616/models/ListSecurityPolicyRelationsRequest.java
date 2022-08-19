@@ -4,7 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityPolicyRelationsRequest extends TeaModel {
-    // 安全策略id
     @NameInMap("SecurityPolicyIds")
     public java.util.List<String> securityPolicyIds;
 

@@ -4,19 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class CreateAclRequest extends TeaModel {
-    // Acl名称
     @NameInMap("AclName")
     public String aclName;
 
-    // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // dryRun
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 资源组Id
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

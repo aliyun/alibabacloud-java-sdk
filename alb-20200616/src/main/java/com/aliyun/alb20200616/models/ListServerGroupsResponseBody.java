@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListServerGroupsResponseBody extends TeaModel {
-    // 本次查询返回记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 服务器组
     @NameInMap("ServerGroups")
     public java.util.List<ListServerGroupsResponseBodyServerGroups> serverGroups;
 
-    // 总记录数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,51 +65,39 @@ public class ListServerGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupsResponseBodyServerGroupsHealthCheckConfig extends TeaModel {
-        // 状态码
         @NameInMap("HealthCheckCodes")
         public java.util.List<String> healthCheckCodes;
 
-        // 端口
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
 
-        // 是否启用健康检查
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
-        // 域名
         @NameInMap("HealthCheckHost")
         public String healthCheckHost;
 
-        // 版本
         @NameInMap("HealthCheckHttpVersion")
         public String healthCheckHttpVersion;
 
-        // 间隔时间
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
-        // 方法
         @NameInMap("HealthCheckMethod")
         public String healthCheckMethod;
 
-        // uri
         @NameInMap("HealthCheckPath")
         public String healthCheckPath;
 
-        // 协议
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
 
-        // 超时时间
         @NameInMap("HealthCheckTimeout")
         public Integer healthCheckTimeout;
 
-        // 健康阈值
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
-        // 不健康阈值
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
 
@@ -222,19 +205,15 @@ public class ListServerGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupsResponseBodyServerGroupsStickySessionConfig extends TeaModel {
-        // Cookie
         @NameInMap("Cookie")
         public String cookie;
 
-        // Cookie超时时间
         @NameInMap("CookieTimeout")
         public Integer cookieTimeout;
 
-        // 是否开启会话保持
         @NameInMap("StickySessionEnabled")
         public Boolean stickySessionEnabled;
 
-        // 会话保持类型
         @NameInMap("StickySessionType")
         public String stickySessionType;
 
@@ -278,11 +257,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupsResponseBodyServerGroupsTags extends TeaModel {
-        // 标签键
         @NameInMap("Key")
         public String key;
 
-        // 标签值
         @NameInMap("Value")
         public String value;
 
@@ -310,67 +287,51 @@ public class ListServerGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupsResponseBodyServerGroups extends TeaModel {
-        // 是否开启配置管理
         @NameInMap("ConfigManagedEnabled")
         public Boolean configManagedEnabled;
 
-        // 健康检查配置
         @NameInMap("HealthCheckConfig")
         public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig healthCheckConfig;
 
-        // 是否支持Ipv6
         @NameInMap("Ipv6Enabled")
         public Boolean ipv6Enabled;
 
-        // 服务器组协议
         @NameInMap("Protocol")
         public String protocol;
 
-        // 资源组id
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // 调度策略
         @NameInMap("Scheduler")
         public String scheduler;
 
-        // 服务器组内服务器数量
         @NameInMap("ServerCount")
         public Integer serverCount;
 
-        // 服务器组Id
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
-        // 服务器组名称
         @NameInMap("ServerGroupName")
         public String serverGroupName;
 
-        // 服务器组状态
         @NameInMap("ServerGroupStatus")
         public String serverGroupStatus;
 
-        // 服务器组类型
         @NameInMap("ServerGroupType")
         public String serverGroupType;
 
-        // 服务器名称
         @NameInMap("ServiceName")
         public String serviceName;
 
-        // 会话保持配置
         @NameInMap("StickySessionConfig")
         public ListServerGroupsResponseBodyServerGroupsStickySessionConfig stickySessionConfig;
 
-        // 标签列表
         @NameInMap("Tags")
         public java.util.List<ListServerGroupsResponseBodyServerGroupsTags> tags;
 
-        // 是否开启后端长链接
         @NameInMap("UpstreamKeepaliveEnabled")
         public Boolean upstreamKeepaliveEnabled;
 
-        // 服务器组所在VpcId
         @NameInMap("VpcId")
         public String vpcId;
 

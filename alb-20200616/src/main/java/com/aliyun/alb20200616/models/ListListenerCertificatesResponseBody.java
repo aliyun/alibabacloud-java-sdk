@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListListenerCertificatesResponseBody extends TeaModel {
-    // 监听SSL证书列表
     @NameInMap("Certificates")
     public java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates;
 
-    // 本次查询返回记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,19 +65,15 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
     }
 
     public static class ListListenerCertificatesResponseBodyCertificates extends TeaModel {
-        // 证书Id
         @NameInMap("CertificateId")
         public String certificateId;
 
-        // 证书类型
         @NameInMap("CertificateType")
         public String certificateType;
 
-        // 是否为默认证书
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
-        // 证书状态
         @NameInMap("Status")
         public String status;
 

@@ -4,15 +4,12 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
-    // 资源实例Id
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    // 资源类型
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // 标签列表
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -46,11 +43,9 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
-        // 标签键
         @NameInMap("Key")
         public String key;
 
-        // 标签值
         @NameInMap("Value")
         public String value;
 
@@ -78,11 +73,9 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTag extends TeaModel {
-        // 标签键
         @NameInMap("Key")
         public String key;
 
-        // 标签值
         @NameInMap("Value")
         public String value;
 
@@ -110,11 +103,9 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class UnTagResourcesRequestTag extends TeaModel {
-        // 标签键
         @NameInMap("Key")
         public String key;
 
-        // 标签值
         @NameInMap("Value")
         public String value;
 

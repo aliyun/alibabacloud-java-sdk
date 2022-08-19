@@ -4,31 +4,24 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class CreateRuleRequest extends TeaModel {
-    // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 是否只预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 监听标识
     @NameInMap("ListenerId")
     public String listenerId;
 
-    // 转发规则优先级
     @NameInMap("Priority")
     public Integer priority;
 
-    // 转发规则动作
     @NameInMap("RuleActions")
     public java.util.List<CreateRuleRequestRuleActions> ruleActions;
 
-    // 转发规则条件
     @NameInMap("RuleConditions")
     public java.util.List<CreateRuleRequestRuleConditions> ruleConditions;
 
-    // 转发规则名称
     @NameInMap("RuleName")
     public String ruleName;
 
@@ -94,15 +87,12 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleActionsFixedResponseConfig extends TeaModel {
-        // 内容
         @NameInMap("Content")
         public String content;
 
-        // 内容类型
         @NameInMap("ContentType")
         public String contentType;
 
-        // HTTP响应码
         @NameInMap("HttpCode")
         public String httpCode;
 
@@ -138,11 +128,9 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleActionsForwardGroupConfigServerGroupStickySession extends TeaModel {
-        // 是否开启会话保持
         @NameInMap("Enabled")
         public Boolean enabled;
 
-        // 超时时间
         @NameInMap("Timeout")
         public Integer timeout;
 
@@ -170,11 +158,9 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleActionsForwardGroupConfigServerGroupTuples extends TeaModel {
-        // 服务器组标识
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
-        // 权重
         @NameInMap("Weight")
         public Integer weight;
 
@@ -202,11 +188,9 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleActionsForwardGroupConfig extends TeaModel {
-        // 服务器组之间会话保持
         @NameInMap("ServerGroupStickySession")
         public CreateRuleRequestRuleActionsForwardGroupConfigServerGroupStickySession serverGroupStickySession;
 
-        // 转发到的目的服务器组列表
         @NameInMap("ServerGroupTuples")
         public java.util.List<CreateRuleRequestRuleActionsForwardGroupConfigServerGroupTuples> serverGroupTuples;
 
@@ -234,15 +218,12 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleActionsInsertHeaderConfig extends TeaModel {
-        // HTTP标头
         @NameInMap("Key")
         public String key;
 
-        // HTTP标头内容
         @NameInMap("Value")
         public String value;
 
-        // 取值类型
         @NameInMap("ValueType")
         public String valueType;
 
@@ -278,27 +259,21 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleActionsRedirectConfig extends TeaModel {
-        // 要跳转的主机地址
         @NameInMap("Host")
         public String host;
 
-        // 跳转方式
         @NameInMap("HttpCode")
         public String httpCode;
 
-        // 要跳转的路径
         @NameInMap("Path")
         public String path;
 
-        // 要跳转的端口
         @NameInMap("Port")
         public String port;
 
-        // 要跳转的协议
         @NameInMap("Protocol")
         public String protocol;
 
-        // 要跳转的查询字符串
         @NameInMap("Query")
         public String query;
 
@@ -358,15 +333,12 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleActionsRewriteConfig extends TeaModel {
-        // 主机名
         @NameInMap("Host")
         public String host;
 
-        // 路径
         @NameInMap("Path")
         public String path;
 
-        // 查询
         @NameInMap("Query")
         public String query;
 
@@ -402,12 +374,23 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleActionsTrafficLimitConfig extends TeaModel {
+        @NameInMap("PerIpQps")
+        public Integer perIpQps;
+
         @NameInMap("QPS")
         public Integer QPS;
 
         public static CreateRuleRequestRuleActionsTrafficLimitConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateRuleRequestRuleActionsTrafficLimitConfig self = new CreateRuleRequestRuleActionsTrafficLimitConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateRuleRequestRuleActionsTrafficLimitConfig setPerIpQps(Integer perIpQps) {
+            this.perIpQps = perIpQps;
+            return this;
+        }
+        public Integer getPerIpQps() {
+            return this.perIpQps;
         }
 
         public CreateRuleRequestRuleActionsTrafficLimitConfig setQPS(Integer QPS) {
@@ -459,11 +442,9 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleActionsTrafficMirrorConfig extends TeaModel {
-        // 镜像至服务器组
         @NameInMap("MirrorGroupConfig")
         public CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig mirrorGroupConfig;
 
-        // 镜像目标类型
         @NameInMap("TargetType")
         public String targetType;
 
@@ -491,39 +472,30 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleActions extends TeaModel {
-        // 返回固定内容动作配置
         @NameInMap("FixedResponseConfig")
         public CreateRuleRequestRuleActionsFixedResponseConfig fixedResponseConfig;
 
-        // 转发组动作配置
         @NameInMap("ForwardGroupConfig")
         public CreateRuleRequestRuleActionsForwardGroupConfig forwardGroupConfig;
 
-        // 插入头部动作配置
         @NameInMap("InsertHeaderConfig")
         public CreateRuleRequestRuleActionsInsertHeaderConfig insertHeaderConfig;
 
-        // 优先级
         @NameInMap("Order")
         public Integer order;
 
-        // 重定向动作配置
         @NameInMap("RedirectConfig")
         public CreateRuleRequestRuleActionsRedirectConfig redirectConfig;
 
-        // 内部重定向动作配置
         @NameInMap("RewriteConfig")
         public CreateRuleRequestRuleActionsRewriteConfig rewriteConfig;
 
-        // 流量限速
         @NameInMap("TrafficLimitConfig")
         public CreateRuleRequestRuleActionsTrafficLimitConfig trafficLimitConfig;
 
-        // 流量镜像
         @NameInMap("TrafficMirrorConfig")
         public CreateRuleRequestRuleActionsTrafficMirrorConfig trafficMirrorConfig;
 
-        // 转发规则动作类型
         @NameInMap("Type")
         public String type;
 
@@ -607,11 +579,9 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleConditionsCookieConfigValues extends TeaModel {
-        // Cookie条件键
         @NameInMap("Key")
         public String key;
 
-        // Cookie条件值
         @NameInMap("Value")
         public String value;
 
@@ -639,7 +609,6 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleConditionsCookieConfig extends TeaModel {
-        // Cookie键值对列表
         @NameInMap("Values")
         public java.util.List<CreateRuleRequestRuleConditionsCookieConfigValues> values;
 
@@ -659,11 +628,9 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleConditionsHeaderConfig extends TeaModel {
-        // HTTP标头键
         @NameInMap("Key")
         public String key;
 
-        // HTTP标头值列表
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -691,7 +658,6 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleConditionsHostConfig extends TeaModel {
-        // 主机名列表
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -711,7 +677,6 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleConditionsMethodConfig extends TeaModel {
-        // HTTP请求方法列表
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -731,7 +696,6 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleConditionsPathConfig extends TeaModel {
-        // 路径条件列表
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -751,11 +715,9 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleConditionsQueryStringConfigValues extends TeaModel {
-        // 查询字符串条件键
         @NameInMap("Key")
         public String key;
 
-        // 查询字符串条件值
         @NameInMap("Value")
         public String value;
 
@@ -783,7 +745,6 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleConditionsQueryStringConfig extends TeaModel {
-        // 查询字符串条件键值对列表
         @NameInMap("Values")
         public java.util.List<CreateRuleRequestRuleConditionsQueryStringConfigValues> values;
 
@@ -803,7 +764,6 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleConditionsSourceIpConfig extends TeaModel {
-        // 基于源IP业务流量匹配
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -823,35 +783,27 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleConditions extends TeaModel {
-        // Cookie条件配置
         @NameInMap("CookieConfig")
         public CreateRuleRequestRuleConditionsCookieConfig cookieConfig;
 
-        // HTTP标头条件配置
         @NameInMap("HeaderConfig")
         public CreateRuleRequestRuleConditionsHeaderConfig headerConfig;
 
-        // 主机名条件配置
         @NameInMap("HostConfig")
         public CreateRuleRequestRuleConditionsHostConfig hostConfig;
 
-        // HTTP请求方法条件配置
         @NameInMap("MethodConfig")
         public CreateRuleRequestRuleConditionsMethodConfig methodConfig;
 
-        // 路径条件配置
         @NameInMap("PathConfig")
         public CreateRuleRequestRuleConditionsPathConfig pathConfig;
 
-        // 查询字符串条件配置
         @NameInMap("QueryStringConfig")
         public CreateRuleRequestRuleConditionsQueryStringConfig queryStringConfig;
 
-        // 基于源IP业务流量匹配
         @NameInMap("SourceIpConfig")
         public CreateRuleRequestRuleConditionsSourceIpConfig sourceIpConfig;
 
-        // 条件类型
         @NameInMap("Type")
         public String type;
 

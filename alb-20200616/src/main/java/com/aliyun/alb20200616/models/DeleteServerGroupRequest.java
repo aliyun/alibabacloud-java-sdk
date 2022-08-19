@@ -4,15 +4,12 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class DeleteServerGroupRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 是否DryRun
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 服务器组id
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 

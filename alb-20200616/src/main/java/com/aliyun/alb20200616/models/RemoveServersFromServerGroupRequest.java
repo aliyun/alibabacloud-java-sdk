@@ -4,19 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class RemoveServersFromServerGroupRequest extends TeaModel {
-    // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 是否只预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 后端服务器Id
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
-    // 后端服务器
     @NameInMap("Servers")
     public java.util.List<RemoveServersFromServerGroupRequestServers> servers;
 
@@ -58,19 +54,15 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
     }
 
     public static class RemoveServersFromServerGroupRequestServers extends TeaModel {
-        // 后端端口号
         @NameInMap("Port")
         public Integer port;
 
-        // 后端服务器id
         @NameInMap("ServerId")
         public String serverId;
 
-        // 后端服务器ip
         @NameInMap("ServerIp")
         public String serverIp;
 
-        // 后端服务器类型
         @NameInMap("ServerType")
         public String serverType;
 

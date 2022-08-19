@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ReplaceServersInServerGroupRequest extends TeaModel {
-    // 待添加后端服务器
     @NameInMap("AddedServers")
     public java.util.List<ReplaceServersInServerGroupRequestAddedServers> addedServers;
 
-    // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // dryRun
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 待删除后端服务器
     @NameInMap("RemovedServers")
     public java.util.List<ReplaceServersInServerGroupRequestRemovedServers> removedServers;
 
-    // 后端服务器Id
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
@@ -70,27 +65,21 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
     }
 
     public static class ReplaceServersInServerGroupRequestAddedServers extends TeaModel {
-        // 描述信息
         @NameInMap("Description")
         public String description;
 
-        // 后端端口号
         @NameInMap("Port")
         public Integer port;
 
-        // 后端服务器id
         @NameInMap("ServerId")
         public String serverId;
 
-        // 后端服务器ip
         @NameInMap("ServerIp")
         public String serverIp;
 
-        // 后端服务器类型
         @NameInMap("ServerType")
         public String serverType;
 
-        // 后端服务器权重
         @NameInMap("Weight")
         public Integer weight;
 
@@ -150,19 +139,15 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
     }
 
     public static class ReplaceServersInServerGroupRequestRemovedServers extends TeaModel {
-        // 端口
         @NameInMap("Port")
         public Integer port;
 
-        // 后端服务器id
         @NameInMap("ServerId")
         public String serverId;
 
-        // 后端服务器ip
         @NameInMap("ServerIp")
         public String serverIp;
 
-        // 后端服务器类型
         @NameInMap("ServerType")
         public String serverType;
 

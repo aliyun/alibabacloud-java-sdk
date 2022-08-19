@@ -4,11 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 安全策略关联关系
     @NameInMap("SecrityPolicyRelations")
     public java.util.List<ListSecurityPolicyRelationsResponseBodySecrityPolicyRelations> secrityPolicyRelations;
 
@@ -34,19 +32,15 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
     }
 
     public static class ListSecurityPolicyRelationsResponseBodySecrityPolicyRelationsRelatedListeners extends TeaModel {
-        // 监听id
         @NameInMap("ListenerId")
         public String listenerId;
 
-        // 监听端口
         @NameInMap("ListenerPort")
         public Long listenerPort;
 
-        // 监听协议
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
-        // 实例id
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
@@ -90,11 +84,9 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
     }
 
     public static class ListSecurityPolicyRelationsResponseBodySecrityPolicyRelations extends TeaModel {
-        // 关联的监听列表
         @NameInMap("RelatedListeners")
         public java.util.List<ListSecurityPolicyRelationsResponseBodySecrityPolicyRelationsRelatedListeners> relatedListeners;
 
-        // 安全策略id
         @NameInMap("SecurityPolicyId")
         public String securityPolicyId;
 

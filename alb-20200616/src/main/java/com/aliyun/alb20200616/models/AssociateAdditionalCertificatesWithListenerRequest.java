@@ -4,19 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel {
-    // 证书列表
     @NameInMap("Certificates")
     public java.util.List<AssociateAdditionalCertificatesWithListenerRequestCertificates> certificates;
 
-    // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // dryRun
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 监听Id
     @NameInMap("ListenerId")
     public String listenerId;
 
@@ -58,7 +54,6 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
     }
 
     public static class AssociateAdditionalCertificatesWithListenerRequestCertificates extends TeaModel {
-        // 证书Id
         @NameInMap("CertificateId")
         public String certificateId;
 

@@ -4,11 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class CreateSecurityPolicyResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 安全策略id
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 

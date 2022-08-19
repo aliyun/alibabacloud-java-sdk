@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityPoliciesResponseBody extends TeaModel {
-    // 本次查询返回记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 安全策略
     @NameInMap("SecurityPolicies")
     public java.util.List<ListSecurityPoliciesResponseBodySecurityPolicies> securityPolicies;
 
-    // 总记录数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,27 +65,21 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSecurityPoliciesResponseBodySecurityPolicies extends TeaModel {
-        // 加密套件
         @NameInMap("Ciphers")
         public java.util.List<String> ciphers;
 
-        // 资源组id
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // 安全策略id
         @NameInMap("SecurityPolicyId")
         public String securityPolicyId;
 
-        // 安全策略名称
         @NameInMap("SecurityPolicyName")
         public String securityPolicyName;
 
-        // 状态
         @NameInMap("SecurityPolicyStatus")
         public String securityPolicyStatus;
 
-        // TLS策略
         @NameInMap("TLSVersions")
         public java.util.List<String> TLSVersions;
 

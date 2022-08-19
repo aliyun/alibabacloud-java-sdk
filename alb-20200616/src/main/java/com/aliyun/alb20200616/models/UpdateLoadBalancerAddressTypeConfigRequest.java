@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
-    // 目标网络类型
     @NameInMap("AddressType")
     public String addressType;
 
-    // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 是否只预检此次请求
     @NameInMap("DryRun")
     public String dryRun;
 
-    // 实例id
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
-    // 可用区及交换机映射列表
     @NameInMap("ZoneMappings")
     public java.util.List<UpdateLoadBalancerAddressTypeConfigRequestZoneMappings> zoneMappings;
 
@@ -70,15 +65,12 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
     }
 
     public static class UpdateLoadBalancerAddressTypeConfigRequestZoneMappings extends TeaModel {
-        // 弹性公网IP
         @NameInMap("AllocationId")
         public String allocationId;
 
-        // 交换机标识
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // 可用区
         @NameInMap("ZoneId")
         public String zoneId;
 

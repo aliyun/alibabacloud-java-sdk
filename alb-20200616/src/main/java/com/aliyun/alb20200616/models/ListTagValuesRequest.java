@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListTagValuesRequest extends TeaModel {
-    // 查询数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 资源实例Id
     @NameInMap("ResourceId")
     public String resourceId;
 
-    // 资源类型
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // 具体的标签Key
     @NameInMap("TagKey")
     public String tagKey;
 

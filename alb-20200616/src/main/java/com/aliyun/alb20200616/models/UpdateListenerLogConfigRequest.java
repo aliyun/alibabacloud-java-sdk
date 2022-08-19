@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class UpdateListenerLogConfigRequest extends TeaModel {
-    // 是否开启携带自定义Header
     @NameInMap("AccessLogRecordCustomizedHeadersEnabled")
     public Boolean accessLogRecordCustomizedHeadersEnabled;
 
-    // 访问日志xtrace字段相关的配置
     @NameInMap("AccessLogTracingConfig")
     public UpdateListenerLogConfigRequestAccessLogTracingConfig accessLogTracingConfig;
 
-    // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 是否只预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 监听标识
     @NameInMap("ListenerId")
     public String listenerId;
 
@@ -70,15 +65,12 @@ public class UpdateListenerLogConfigRequest extends TeaModel {
     }
 
     public static class UpdateListenerLogConfigRequestAccessLogTracingConfig extends TeaModel {
-        // Xtrace功能状态
         @NameInMap("TracingEnabled")
         public Boolean tracingEnabled;
 
-        // xtrace的采样率
         @NameInMap("TracingSample")
         public Integer tracingSample;
 
-        // xtrace的类型
         @NameInMap("TracingType")
         public String tracingType;
 

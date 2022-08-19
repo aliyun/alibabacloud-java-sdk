@@ -4,11 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class GetListenerHealthStatusRequest extends TeaModel {
-    // 是否包含转发规则健康检查结果
     @NameInMap("IncludeRule")
     public Boolean includeRule;
 
-    // 监听Id
     @NameInMap("ListenerId")
     public String listenerId;
 

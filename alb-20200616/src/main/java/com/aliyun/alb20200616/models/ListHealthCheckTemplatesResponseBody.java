@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListHealthCheckTemplatesResponseBody extends TeaModel {
-    // 健康检查模板
     @NameInMap("HealthCheckTemplates")
     public java.util.List<ListHealthCheckTemplatesResponseBodyHealthCheckTemplates> healthCheckTemplates;
 
-    // 本次查询返回记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,55 +65,42 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListHealthCheckTemplatesResponseBodyHealthCheckTemplates extends TeaModel {
-        // 状态码
         @NameInMap("HealthCheckCodes")
         public java.util.List<String> healthCheckCodes;
 
-        // 端口
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
 
-        // 域名
         @NameInMap("HealthCheckHost")
         public String healthCheckHost;
 
-        // 版本
         @NameInMap("HealthCheckHttpVersion")
         public String healthCheckHttpVersion;
 
-        // 间隔时间
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
-        // 方法
         @NameInMap("HealthCheckMethod")
         public String healthCheckMethod;
 
-        // uri
         @NameInMap("HealthCheckPath")
         public String healthCheckPath;
 
-        // 协议
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
 
-        // 健康检查模板Id
         @NameInMap("HealthCheckTemplateId")
         public String healthCheckTemplateId;
 
-        // 名称
         @NameInMap("HealthCheckTemplateName")
         public String healthCheckTemplateName;
 
-        // 超时时间
         @NameInMap("HealthCheckTimeout")
         public Integer healthCheckTimeout;
 
-        // 健康阈值
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
-        // 不健康阈值
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
 

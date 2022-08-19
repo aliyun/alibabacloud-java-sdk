@@ -4,63 +4,48 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class UpdateListenerAttributeRequest extends TeaModel {
-    // 监听默认CA证书列表，N当前取值范围为1
     @NameInMap("CaCertificates")
     public java.util.List<UpdateListenerAttributeRequestCaCertificates> caCertificates;
 
-    // 是否开启双向认证
     @NameInMap("CaEnabled")
     public Boolean caEnabled;
 
-    // 监听默认服务器证书列表，N当前取值范围为1
     @NameInMap("Certificates")
     public java.util.List<UpdateListenerAttributeRequestCertificates> certificates;
 
-    // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 监听默认动作
     @NameInMap("DefaultActions")
     public java.util.List<UpdateListenerAttributeRequestDefaultActions> defaultActions;
 
-    // 是否只预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 是否开启Gzip压缩
     @NameInMap("GzipEnabled")
     public Boolean gzipEnabled;
 
-    // 是否开启HTTP/2特性
     @NameInMap("Http2Enabled")
     public Boolean http2Enabled;
 
-    // 连接空闲超时时间
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
-    // 监听描述
     @NameInMap("ListenerDescription")
     public String listenerDescription;
 
-    // 监听标识
     @NameInMap("ListenerId")
     public String listenerId;
 
-    // HTTPS启用QUIC时相关属性
     @NameInMap("QuicConfig")
     public UpdateListenerAttributeRequestQuicConfig quicConfig;
 
-    // 请求超时时间
     @NameInMap("RequestTimeout")
     public Integer requestTimeout;
 
-    // 安全策略
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
-    // XForward字段相关的配置
     @NameInMap("XForwardedForConfig")
     public UpdateListenerAttributeRequestXForwardedForConfig XForwardedForConfig;
 
@@ -198,7 +183,6 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     }
 
     public static class UpdateListenerAttributeRequestCertificates extends TeaModel {
-        // 正式标识
         @NameInMap("CertificateId")
         public String certificateId;
 
@@ -218,7 +202,6 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     }
 
     public static class UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples extends TeaModel {
-        // 服务器组ID
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
@@ -238,7 +221,6 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     }
 
     public static class UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig extends TeaModel {
-        // 服务器组列表
         @NameInMap("ServerGroupTuples")
         public java.util.List<UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples> serverGroupTuples;
 
@@ -258,11 +240,9 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     }
 
     public static class UpdateListenerAttributeRequestDefaultActions extends TeaModel {
-        // 转发组
         @NameInMap("ForwardGroupConfig")
         public UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig forwardGroupConfig;
 
-        // 动作类型
         @NameInMap("Type")
         public String type;
 
@@ -290,11 +270,9 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     }
 
     public static class UpdateListenerAttributeRequestQuicConfig extends TeaModel {
-        // 需要关联的QUIC监听ID，HTTPS监听时有效，QuicUpgradeEnabled为true时必选
         @NameInMap("QuicListenerId")
         public String quicListenerId;
 
-        // 是否开启quic升级，HTTPS监听时有效
         @NameInMap("QuicUpgradeEnabled")
         public Boolean quicUpgradeEnabled;
 
@@ -322,55 +300,48 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     }
 
     public static class UpdateListenerAttributeRequestXForwardedForConfig extends TeaModel {
-        // 自定义HEADER头名称，只有当XForwardedForClientCertClientVerifyEnabled的值为true的时候，此值才会生效；否则该值不会生效。HTTPS监听有效
         @NameInMap("XForwardedForClientCertClientVerifyAlias")
         public String XForwardedForClientCertClientVerifyAlias;
 
-        // 是否通过X-Forwarded-Clientcert-clientverify  头字段获取对访问负载均衡实例客户端证书的校验结果。HTTPS监听有效。
         @NameInMap("XForwardedForClientCertClientVerifyEnabled")
         public Boolean XForwardedForClientCertClientVerifyEnabled;
 
-        // 自定义HEADER头名称，只有当XForwardedForClientCertFingerprintEnabled的值为true的时候，此值才会生效；否则该值不会生效。HTTPS监听有效
         @NameInMap("XForwardedForClientCertFingerprintAlias")
         public String XForwardedForClientCertFingerprintAlias;
 
-        // 是否通过X-Forwarded-Clientcert-fingerprint 头字段获取访问负载均衡实例客户端证书的指纹取值，HTTPS监听有效。
         @NameInMap("XForwardedForClientCertFingerprintEnabled")
         public Boolean XForwardedForClientCertFingerprintEnabled;
 
-        // 自定义HEADER头名称，只有当XForwardedForClientCertIssuerDNEnabled的值为‘On’的时候，此值才会生效；否则该值不会生效。HTTPS监听有效
         @NameInMap("XForwardedForClientCertIssuerDNAlias")
         public String XForwardedForClientCertIssuerDNAlias;
 
-        // 是否通过 X-Forwarded-Clientcert-issuerdn 头字段获取访问负载均衡实例客户端证书的发行者信息。HTTPS监听有效。
         @NameInMap("XForwardedForClientCertIssuerDNEnabled")
         public Boolean XForwardedForClientCertIssuerDNEnabled;
 
-        // 自定义HEADER头名称，只有当XForwardedForClientCertSubjectDNEnabled的值为true的时候，此值才会生效；否则该值不会生效。HTTPS监听有效
         @NameInMap("XForwardedForClientCertSubjectDNAlias")
         public String XForwardedForClientCertSubjectDNAlias;
 
-        // 是否通过X-Forwarded-Clientcert-subjectdn  头字段获取访问负载均衡实例客户端证书的所有者信息。HTTPS监听有效。
         @NameInMap("XForwardedForClientCertSubjectDNEnabled")
         public Boolean XForwardedForClientCertSubjectDNEnabled;
 
-        // 是否通过X-Forwarded-Client-Port 头字段获取访问负载均衡实例客户端的端口。HTTPS监听有效。
+        @NameInMap("XForwardedForClientSourceIpsEnabled")
+        public Boolean XForwardedForClientSourceIpsEnabled;
+
+        @NameInMap("XForwardedForClientSourceIpsTrusted")
+        public String XForwardedForClientSourceIpsTrusted;
+
         @NameInMap("XForwardedForClientSrcPortEnabled")
         public Boolean XForwardedForClientSrcPortEnabled;
 
-        // 是否开启通过X-Forwarded-For头字段获取来访者真实 IP
         @NameInMap("XForwardedForEnabled")
         public Boolean XForwardedForEnabled;
 
-        // 是否通过X-Forwarded-Proto头字段获取负载均衡实例的监听协议。
         @NameInMap("XForwardedForProtoEnabled")
         public Boolean XForwardedForProtoEnabled;
 
-        // 是否通过SLB-ID头字段获取负载均衡实例ID。
         @NameInMap("XForwardedForSLBIdEnabled")
         public Boolean XForwardedForSLBIdEnabled;
 
-        // 是否通过X-Forwarded-Port 头字段获取负载均衡实例的监听端口。HTTPS监听有效。
         @NameInMap("XForwardedForSLBPortEnabled")
         public Boolean XForwardedForSLBPortEnabled;
 
@@ -441,6 +412,22 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         }
         public Boolean getXForwardedForClientCertSubjectDNEnabled() {
             return this.XForwardedForClientCertSubjectDNEnabled;
+        }
+
+        public UpdateListenerAttributeRequestXForwardedForConfig setXForwardedForClientSourceIpsEnabled(Boolean XForwardedForClientSourceIpsEnabled) {
+            this.XForwardedForClientSourceIpsEnabled = XForwardedForClientSourceIpsEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForClientSourceIpsEnabled() {
+            return this.XForwardedForClientSourceIpsEnabled;
+        }
+
+        public UpdateListenerAttributeRequestXForwardedForConfig setXForwardedForClientSourceIpsTrusted(String XForwardedForClientSourceIpsTrusted) {
+            this.XForwardedForClientSourceIpsTrusted = XForwardedForClientSourceIpsTrusted;
+            return this;
+        }
+        public String getXForwardedForClientSourceIpsTrusted() {
+            return this.XForwardedForClientSourceIpsTrusted;
         }
 
         public UpdateListenerAttributeRequestXForwardedForConfig setXForwardedForClientSrcPortEnabled(Boolean XForwardedForClientSrcPortEnabled) {

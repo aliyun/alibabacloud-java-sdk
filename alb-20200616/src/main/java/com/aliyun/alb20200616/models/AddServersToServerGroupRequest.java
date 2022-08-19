@@ -4,19 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class AddServersToServerGroupRequest extends TeaModel {
-    // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // dryRun
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 后端服务器Id
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
-    // 后端服务器
     @NameInMap("Servers")
     public java.util.List<AddServersToServerGroupRequestServers> servers;
 
@@ -58,27 +54,21 @@ public class AddServersToServerGroupRequest extends TeaModel {
     }
 
     public static class AddServersToServerGroupRequestServers extends TeaModel {
-        // 描述信息
         @NameInMap("Description")
         public String description;
 
-        // 后端端口号
         @NameInMap("Port")
         public Integer port;
 
-        // 后端服务器id
         @NameInMap("ServerId")
         public String serverId;
 
-        // 后端服务器ip
         @NameInMap("ServerIp")
         public String serverIp;
 
-        // 后端服务器类型
         @NameInMap("ServerType")
         public String serverType;
 
-        // 后端服务器权重
         @NameInMap("Weight")
         public Integer weight;
 

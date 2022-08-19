@@ -4,95 +4,72 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class GetLoadBalancerAttributeResponseBody extends TeaModel {
-    // 访问日志属性
     @NameInMap("AccessLogConfig")
     public GetLoadBalancerAttributeResponseBodyAccessLogConfig accessLogConfig;
 
-    // 地址分配方式
     @NameInMap("AddressAllocatedMode")
     public String addressAllocatedMode;
 
-    // 协议版本
     @NameInMap("AddressIpVersion")
     public String addressIpVersion;
 
-    // 地址类型
     @NameInMap("AddressType")
     public String addressType;
 
-    // 带宽包ID
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
-    // 资源创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // DNS域名
     @NameInMap("DNSName")
     public String DNSName;
 
-    // 负载均衡删除保护相关信息
     @NameInMap("DeletionProtectionConfig")
     public GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig deletionProtectionConfig;
 
-    // IPV6地址类型
     @NameInMap("Ipv6AddressType")
     public String ipv6AddressType;
 
-    // 计费相关属性
     @NameInMap("LoadBalancerBillingConfig")
     public GetLoadBalancerAttributeResponseBodyLoadBalancerBillingConfig loadBalancerBillingConfig;
 
-    // 实例业务状态
     @NameInMap("LoadBalancerBussinessStatus")
     public String loadBalancerBussinessStatus;
 
-    // 负载均衡的版本
     @NameInMap("LoadBalancerEdition")
     public String loadBalancerEdition;
 
-    // 负载均衡标识
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
-    // 实例名称
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
-    // 锁定原因
     @NameInMap("LoadBalancerOperationLocks")
     public java.util.List<GetLoadBalancerAttributeResponseBodyLoadBalancerOperationLocks> loadBalancerOperationLocks;
 
-    // 实例状态
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
-    // 负载均衡修改保护相关信息
     @NameInMap("ModificationProtectionConfig")
     public GetLoadBalancerAttributeResponseBodyModificationProtectionConfig modificationProtectionConfig;
 
-    // 地域
     @NameInMap("RegionId")
     public String regionId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 企业资源组ID
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // 标签列表
     @NameInMap("Tags")
     public java.util.List<GetLoadBalancerAttributeResponseBodyTags> tags;
 
-    // Vpc网络ID
     @NameInMap("VpcId")
     public String vpcId;
 
-    // 负载均衡的可用区资源
     @NameInMap("ZoneMappings")
     public java.util.List<GetLoadBalancerAttributeResponseBodyZoneMappings> zoneMappings;
 
@@ -286,11 +263,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyAccessLogConfig extends TeaModel {
-        // 访问日志投递的logProject
         @NameInMap("LogProject")
         public String logProject;
 
-        // 删除保护开启时间
         @NameInMap("LogStore")
         public String logStore;
 
@@ -318,11 +293,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig extends TeaModel {
-        // 删除保护状态
         @NameInMap("Enabled")
         public Boolean enabled;
 
-        // 删除保护开启时间
         @NameInMap("EnabledTime")
         public String enabledTime;
 
@@ -350,7 +323,6 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyLoadBalancerBillingConfig extends TeaModel {
-        // 实例的计费类型
         @NameInMap("PayType")
         public String payType;
 
@@ -370,11 +342,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyLoadBalancerOperationLocks extends TeaModel {
-        // 锁定原因
         @NameInMap("LockReason")
         public String lockReason;
 
-        // 锁定类型
         @NameInMap("LockType")
         public String lockType;
 
@@ -402,11 +372,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyModificationProtectionConfig extends TeaModel {
-        // 设置修改保护状态的原因
         @NameInMap("Reason")
         public String reason;
 
-        // 负载均衡修改保护状态
         @NameInMap("Status")
         public String status;
 
@@ -434,11 +402,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyTags extends TeaModel {
-        // 实例的标签键
         @NameInMap("Key")
         public String key;
 
-        // 实例的标签值
         @NameInMap("Value")
         public String value;
 
@@ -466,11 +432,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses extends TeaModel {
-        // IP地址
         @NameInMap("Address")
         public String address;
 
-        // Ipv6地址
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
@@ -498,15 +462,12 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyZoneMappings extends TeaModel {
-        // 固定VIP模式下，负载均衡在此可用区中的地址列表
         @NameInMap("LoadBalancerAddresses")
         public java.util.List<GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses> loadBalancerAddresses;
 
-        // 交换机标识
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // 可用区标识
         @NameInMap("ZoneId")
         public String zoneId;
 

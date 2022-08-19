@@ -4,19 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
-    // 本次查询返回记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 标签值列表
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
@@ -58,19 +54,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        // 资源ID
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // 资源类型
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // 标签Key
         @NameInMap("TagKey")
         public String tagKey;
 
-        // 标签Value
         @NameInMap("TagValue")
         public String tagValue;
 

@@ -4,15 +4,12 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class DeleteHealthCheckTemplatesRequest extends TeaModel {
-    // 幂等token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // dryRun
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 健康检查模板Id列表
     @NameInMap("HealthCheckTemplateIds")
     public java.util.List<String> healthCheckTemplateIds;
 

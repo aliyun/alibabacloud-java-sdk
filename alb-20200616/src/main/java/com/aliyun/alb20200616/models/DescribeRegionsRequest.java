@@ -4,7 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
-    // 语言
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 

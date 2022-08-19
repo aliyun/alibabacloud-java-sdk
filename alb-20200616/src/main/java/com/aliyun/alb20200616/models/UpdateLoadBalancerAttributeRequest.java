@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class UpdateLoadBalancerAttributeRequest extends TeaModel {
-    // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 是否只预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 实例id
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
-    // 名称
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
-    // 负载均衡修改保护相关信息
     @NameInMap("ModificationProtectionConfig")
     public UpdateLoadBalancerAttributeRequestModificationProtectionConfig modificationProtectionConfig;
 
@@ -70,11 +65,9 @@ public class UpdateLoadBalancerAttributeRequest extends TeaModel {
     }
 
     public static class UpdateLoadBalancerAttributeRequestModificationProtectionConfig extends TeaModel {
-        // 设置修改保护状态的原因
         @NameInMap("Reason")
         public String reason;
 
-        // 负载均衡修改保护状态
         @NameInMap("Status")
         public String status;
 

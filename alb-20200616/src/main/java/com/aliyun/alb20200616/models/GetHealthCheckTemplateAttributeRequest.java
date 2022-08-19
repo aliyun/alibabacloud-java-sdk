@@ -4,7 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class GetHealthCheckTemplateAttributeRequest extends TeaModel {
-    // 健康检查模板Id
     @NameInMap("HealthCheckTemplateId")
     public String healthCheckTemplateId;
 

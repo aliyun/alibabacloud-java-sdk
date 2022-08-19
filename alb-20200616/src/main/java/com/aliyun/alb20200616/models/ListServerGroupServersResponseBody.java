@@ -4,23 +4,18 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListServerGroupServersResponseBody extends TeaModel {
-    // 本次查询返回记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 后端服务器
     @NameInMap("Servers")
     public java.util.List<ListServerGroupServersResponseBodyServers> servers;
 
-    // 总记录数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,35 +65,27 @@ public class ListServerGroupServersResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupServersResponseBodyServers extends TeaModel {
-        // 描述信息
         @NameInMap("Description")
         public String description;
 
-        // 端口
         @NameInMap("Port")
         public Integer port;
 
-        // 服务器组id
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
-        // 服务器id
         @NameInMap("ServerId")
         public String serverId;
 
-        // 服务器ip
         @NameInMap("ServerIp")
         public String serverIp;
 
-        // 后端服务器类型
         @NameInMap("ServerType")
         public String serverType;
 
-        // 状态
         @NameInMap("Status")
         public String status;
 
-        // 权重
         @NameInMap("Weight")
         public Integer weight;
 
