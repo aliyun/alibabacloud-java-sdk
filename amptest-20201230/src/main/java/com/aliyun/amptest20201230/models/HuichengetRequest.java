@@ -19,6 +19,9 @@ public class HuichengetRequest extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("East")
+    public String east;
+
     @NameInMap("Enight")
     public String enight;
 
@@ -28,14 +31,29 @@ public class HuichengetRequest extends TeaModel {
     @NameInMap("Four")
     public String four;
 
+    @NameInMap("Hello")
+    public String hello;
+
+    @NameInMap("Hold")
+    public String hold;
+
     @NameInMap("Jack")
     public String jack;
 
     @NameInMap("List")
     public String list;
 
+    @NameInMap("Mack")
+    public String mack;
+
+    @NameInMap("New1")
+    public String new1;
+
     @NameInMap("NewName")
     public String newName;
+
+    @NameInMap("News")
+    public String news;
 
     @NameInMap("Nigh")
     public String nigh;
@@ -61,6 +79,9 @@ public class HuichengetRequest extends TeaModel {
     @NameInMap("Red")
     public String red;
 
+    @NameInMap("Rong")
+    public String rong;
+
     @NameInMap("Six")
     public String six;
 
@@ -75,6 +96,9 @@ public class HuichengetRequest extends TeaModel {
 
     @NameInMap("Two")
     public String two;
+
+    @NameInMap("Visity")
+    public String visity;
 
     @NameInMap("White")
     public String white;
@@ -124,6 +148,14 @@ public class HuichengetRequest extends TeaModel {
         return this.code;
     }
 
+    public HuichengetRequest setEast(String east) {
+        this.east = east;
+        return this;
+    }
+    public String getEast() {
+        return this.east;
+    }
+
     public HuichengetRequest setEnight(String enight) {
         this.enight = enight;
         return this;
@@ -148,6 +180,22 @@ public class HuichengetRequest extends TeaModel {
         return this.four;
     }
 
+    public HuichengetRequest setHello(String hello) {
+        this.hello = hello;
+        return this;
+    }
+    public String getHello() {
+        return this.hello;
+    }
+
+    public HuichengetRequest setHold(String hold) {
+        this.hold = hold;
+        return this;
+    }
+    public String getHold() {
+        return this.hold;
+    }
+
     public HuichengetRequest setJack(String jack) {
         this.jack = jack;
         return this;
@@ -164,12 +212,36 @@ public class HuichengetRequest extends TeaModel {
         return this.list;
     }
 
+    public HuichengetRequest setMack(String mack) {
+        this.mack = mack;
+        return this;
+    }
+    public String getMack() {
+        return this.mack;
+    }
+
+    public HuichengetRequest setNew1(String new1) {
+        this.new1 = new1;
+        return this;
+    }
+    public String getNew1() {
+        return this.new1;
+    }
+
     public HuichengetRequest setNewName(String newName) {
         this.newName = newName;
         return this;
     }
     public String getNewName() {
         return this.newName;
+    }
+
+    public HuichengetRequest setNews(String news) {
+        this.news = news;
+        return this;
+    }
+    public String getNews() {
+        return this.news;
     }
 
     public HuichengetRequest setNigh(String nigh) {
@@ -236,6 +308,14 @@ public class HuichengetRequest extends TeaModel {
         return this.red;
     }
 
+    public HuichengetRequest setRong(String rong) {
+        this.rong = rong;
+        return this;
+    }
+    public String getRong() {
+        return this.rong;
+    }
+
     public HuichengetRequest setSix(String six) {
         this.six = six;
         return this;
@@ -274,6 +354,14 @@ public class HuichengetRequest extends TeaModel {
     }
     public String getTwo() {
         return this.two;
+    }
+
+    public HuichengetRequest setVisity(String visity) {
+        this.visity = visity;
+        return this;
+    }
+    public String getVisity() {
+        return this.visity;
     }
 
     public HuichengetRequest setWhite(String white) {
