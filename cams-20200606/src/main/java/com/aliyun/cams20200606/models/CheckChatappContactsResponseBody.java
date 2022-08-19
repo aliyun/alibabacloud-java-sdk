@@ -4,18 +4,15 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CheckChatappContactsResponseBody extends TeaModel {
-    // 返回结果 OK 为正常
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<CheckChatappContactsResponseBodyData> data;
 
-    // 提示信息，当返回异常时有值
     @NameInMap("Message")
     public String message;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,12 +54,9 @@ public class CheckChatappContactsResponseBody extends TeaModel {
     }
 
     public static class CheckChatappContactsResponseBodyData extends TeaModel {
-        // 号码
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
-        // 状态
-        // 有效账号为"valid"，无法账号为"invalid"，查询失败返回"failed"
         @NameInMap("Status")
         public String status;
 

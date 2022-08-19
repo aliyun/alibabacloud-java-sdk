@@ -263,6 +263,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listChatappTemplateWithOptions(request, runtime);
     }
 
+    public SendChatappMassMessageResponse sendChatappMassMessageWithOptions(SendChatappMassMessageRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SendChatappMassMessageShrinkRequest request = new SendChatappMassMessageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.senderList)) {
+            request.senderListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.senderList, "SenderList", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channelType)) {
+            body.put("ChannelType", request.channelType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
+            body.put("CustWabaId", request.custWabaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallBackContent)) {
+            body.put("FallBackContent", request.fallBackContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallBackId)) {
+            body.put("FallBackId", request.fallBackId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
+            body.put("From", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            body.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.senderListShrink)) {
+            body.put("SenderList", request.senderListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            body.put("TemplateCode", request.templateCode);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendChatappMassMessage"),
+            new TeaPair("version", "2020-06-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendChatappMassMessageResponse());
+    }
+
+    public SendChatappMassMessageResponse sendChatappMassMessage(SendChatappMassMessageRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.sendChatappMassMessageWithOptions(request, runtime);
+    }
+
     public SendChatappMessageResponse sendChatappMessageWithOptions(SendChatappMessageRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendChatappMessageShrinkRequest request = new SendChatappMessageShrinkRequest();

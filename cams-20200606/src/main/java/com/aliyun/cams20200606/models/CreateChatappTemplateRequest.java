@@ -4,30 +4,24 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CreateChatappTemplateRequest extends TeaModel {
-    // 模板分类
     @NameInMap("Category")
     public String category;
 
     @NameInMap("Components")
     public java.util.List<CreateChatappTemplateRequestComponents> components;
 
-    // ISV客户WabaId
     @NameInMap("CustWabaId")
     public String custWabaId;
 
-    // 变量，KEY-VALUE结构
     @NameInMap("Example")
     public java.util.Map<String, String> example;
 
-    // 语言
     @NameInMap("Language")
     public String language;
 
-    // 模板名称
     @NameInMap("Name")
     public String name;
 
-    // 模板类型
     @NameInMap("TemplateType")
     public String templateType;
 
@@ -93,24 +87,18 @@ public class CreateChatappTemplateRequest extends TeaModel {
     }
 
     public static class CreateChatappTemplateRequestComponentsButtons extends TeaModel {
-        // 号码
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
-        // 所发送消息的文本
         @NameInMap("Text")
         public String text;
 
-        // 按钮类型
-        // PHONE_NUMBER（电话）,URL（网页按钮）和QUICK_REPLY（快速回复）
         @NameInMap("Type")
         public String type;
 
-        // 点击按钮后将访问的网址
         @NameInMap("Url")
         public String url;
 
-        // 网址类型 static-静态dynamic-动态
         @NameInMap("UrlType")
         public String urlType;
 
@@ -162,33 +150,24 @@ public class CreateChatappTemplateRequest extends TeaModel {
     }
 
     public static class CreateChatappTemplateRequestComponents extends TeaModel {
-        // 按钮
         @NameInMap("Buttons")
         public java.util.List<CreateChatappTemplateRequestComponentsButtons> buttons;
 
-        // 描述，当Type为Header，且Format为IMGAGE/DOCUMENT/VIDEO 可以增加描述
         @NameInMap("Caption")
         public String caption;
 
-        // 文件名称，当Type为Header，且Format为DOCUMENT时可以给文件指定名称
         @NameInMap("FileName")
         public String fileName;
 
-        // 格式
-        // TEXT-文本 IMGAGE-图片 DOCUMENT-文档 VIDEO-视频
         @NameInMap("Format")
         public String format;
 
-        // 所发送消息的文本
         @NameInMap("Text")
         public String text;
 
-        // 组件类型
-        // 值：BODY、HEADER、FOOTER 和 BUTTONS
         @NameInMap("Type")
         public String type;
 
-        // 素材路径
         @NameInMap("Url")
         public String url;
 

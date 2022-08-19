@@ -4,30 +4,24 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CreateChatappTemplateShrinkRequest extends TeaModel {
-    // 模板分类
     @NameInMap("Category")
     public String category;
 
     @NameInMap("Components")
     public String componentsShrink;
 
-    // ISV客户WabaId
     @NameInMap("CustWabaId")
     public String custWabaId;
 
-    // 变量，KEY-VALUE结构
     @NameInMap("Example")
     public String exampleShrink;
 
-    // 语言
     @NameInMap("Language")
     public String language;
 
-    // 模板名称
     @NameInMap("Name")
     public String name;
 
-    // 模板类型
     @NameInMap("TemplateType")
     public String templateType;
 

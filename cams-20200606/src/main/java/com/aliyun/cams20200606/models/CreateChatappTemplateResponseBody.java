@@ -4,18 +4,15 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CreateChatappTemplateResponseBody extends TeaModel {
-    // 返回结果 OK 为正常
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public CreateChatappTemplateResponseBodyData data;
 
-    // 提示信息，当返回异常时有值
     @NameInMap("Message")
     public String message;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,11 +54,9 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
     }
 
     public static class CreateChatappTemplateResponseBodyData extends TeaModel {
-        // 模板Code
         @NameInMap("TemplateCode")
         public String templateCode;
 
-        // 模板名称
         @NameInMap("TemplateName")
         public String templateName;
 

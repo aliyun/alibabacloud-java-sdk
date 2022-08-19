@@ -4,11 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class DeleteChatappTemplateRequest extends TeaModel {
-    // ISV客户wabaId
     @NameInMap("CustWabaId")
     public String custWabaId;
 
-    // 模板编码
     @NameInMap("TemplateCode")
     public String templateCode;
 

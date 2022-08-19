@@ -4,18 +4,15 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetChatappTemplateDetailResponseBody extends TeaModel {
-    // 返回结果 OK 为正常
     @NameInMap("Code")
     public String code;
 
-    // TemplateDetail
     @NameInMap("Data")
     public GetChatappTemplateDetailResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,26 +54,18 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetChatappTemplateDetailResponseBodyDataComponentsButtons extends TeaModel {
-        // 电话号码
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
-        // 所发送消息的文本
         @NameInMap("Text")
         public String text;
 
-        // 按钮类型
         @NameInMap("Type")
         public String type;
 
-        // 当按钮类型是
-        // URL 时有效
         @NameInMap("Url")
         public String url;
 
-        // WEB地址类型
-        // static-静态
-        // dynamic-动态
         @NameInMap("UrlType")
         public String urlType;
 
@@ -128,32 +117,24 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetChatappTemplateDetailResponseBodyDataComponents extends TeaModel {
-        // 仅适用于 BUTTONS 类型。
-        // 与按钮相关的参数。
         @NameInMap("Buttons")
         public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsButtons> buttons;
 
-        // 描述，当Type为Header，且Format为IMGAGE/DOCUMENT/VIDEO 可以增加描述
         @NameInMap("Caption")
         public String caption;
 
-        // 文件名称，当Type为Header，且Format为DOCUMENT时可以给文件指定名称
         @NameInMap("FileName")
         public String fileName;
 
-        // 格式
         @NameInMap("Format")
         public String format;
 
-        // 所发送消息的文本
         @NameInMap("Text")
         public String text;
 
-        // 组件类型
         @NameInMap("Type")
         public String type;
 
-        // 素材路径
         @NameInMap("Url")
         public String url;
 
@@ -221,31 +202,24 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetChatappTemplateDetailResponseBodyData extends TeaModel {
-        // 审核状态
         @NameInMap("AuditStatus")
         public String auditStatus;
 
-        // 模板分类
         @NameInMap("Category")
         public String category;
 
-        // 消息模板组件
         @NameInMap("Components")
         public java.util.List<GetChatappTemplateDetailResponseBodyDataComponents> components;
 
-        // 变量例子
         @NameInMap("Example")
         public java.util.Map<String, String> example;
 
-        // 语言
         @NameInMap("Language")
         public String language;
 
-        // 模板名称
         @NameInMap("Name")
         public String name;
 
-        // 模板编码
         @NameInMap("TemplateCode")
         public String templateCode;
 

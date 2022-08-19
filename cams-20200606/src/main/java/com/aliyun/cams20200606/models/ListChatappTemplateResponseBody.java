@@ -7,7 +7,6 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 模板列表
     @NameInMap("ListTemplate")
     public java.util.List<ListChatappTemplateResponseBodyListTemplate> listTemplate;
 
@@ -55,23 +54,18 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     }
 
     public static class ListChatappTemplateResponseBodyListTemplate extends TeaModel {
-        // 审核状态
         @NameInMap("AuditStatus")
         public String auditStatus;
 
-        // 模板分类
         @NameInMap("Category")
         public String category;
 
-        // 语言
         @NameInMap("Language")
         public String language;
 
-        // 模板编码
         @NameInMap("TemplateCode")
         public String templateCode;
 
-        // 模板名称
         @NameInMap("TemplateName")
         public String templateName;
 
