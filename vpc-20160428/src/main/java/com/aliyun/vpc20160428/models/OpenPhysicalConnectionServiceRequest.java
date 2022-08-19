@@ -10,7 +10,6 @@ public class OpenPhysicalConnectionServiceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // 地域
     @NameInMap("RegionId")
     public String regionId;
 

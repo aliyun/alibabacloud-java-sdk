@@ -40,7 +40,6 @@ public class DescribeCommonBandwidthPackagesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // 是否开启安全防护
     @NameInMap("SecurityProtectionEnabled")
     public Boolean securityProtectionEnabled;
 

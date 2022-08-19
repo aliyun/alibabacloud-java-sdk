@@ -4,22 +4,18 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVpconnFromVbrRequest extends TeaModel {
-    // DryRun
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // vpconn的支付方
     @NameInMap("OrderMode")
     public String orderMode;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    // 幂等Token
     @NameInMap("Token")
     public String token;
 
-    // 跨帐号的VBR
     @NameInMap("VbrId")
     public String vbrId;
 

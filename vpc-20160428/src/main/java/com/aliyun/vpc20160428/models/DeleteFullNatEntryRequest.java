@@ -10,11 +10,9 @@ public class DeleteFullNatEntryRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 要修改的DNAT条目的ID。
     @NameInMap("FullNatEntryId")
     public String fullNatEntryId;
 
-    // FullNAT条目所属的FullNAT列表的ID。
     @NameInMap("FullNatTableId")
     public String fullNatTableId;
 

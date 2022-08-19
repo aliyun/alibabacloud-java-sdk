@@ -4,11 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateFullNatEntryRequest extends TeaModel {
-    // 需要进行转发的后端IP
     @NameInMap("AccessIp")
     public String accessIp;
 
-    // 需要进行端口转发的内部端口，取值范围：1~65535。
     @NameInMap("AccessPort")
     public String accessPort;
 
@@ -21,23 +19,18 @@ public class CreateFullNatEntryRequest extends TeaModel {
     @NameInMap("FullNatEntryDescription")
     public String fullNatEntryDescription;
 
-    // FULLNAT规则的名称。 长度为2~128个字符，必须以大小写字母或中文开头，但不能以http://或https://开头。
     @NameInMap("FullNatEntryName")
     public String fullNatEntryName;
 
-    // FullNAT条目所属的FullNAT列表的ID。
     @NameInMap("FullNatTableId")
     public String fullNatTableId;
 
-    // 协议类型，取值： • TCP：转发TCP协议的报文。 • UDP：转发UDP协议的报文。
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
-    // 提供入方向访问的IP地址，该公网IP需要是当前VpcNat下的NatIP
     @NameInMap("NatIp")
     public String natIp;
 
-    // 需要进行端口转发的外部端口，取值范围：1~65535。
     @NameInMap("NatIpPort")
     public String natIpPort;
 

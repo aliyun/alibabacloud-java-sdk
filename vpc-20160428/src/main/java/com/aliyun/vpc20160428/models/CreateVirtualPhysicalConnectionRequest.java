@@ -4,42 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
-    // Vpconn的description
     @NameInMap("Description")
     public String description;
 
-    // DryRun
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // Vpconn的name
     @NameInMap("Name")
     public String name;
 
-    // vpconn的支付方
     @NameInMap("OrderMode")
     public String orderMode;
 
-    // Vpconn的主Pconn
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    // vpconn规格
     @NameInMap("Spec")
     public String spec;
 
-    // 幂等Token
     @NameInMap("Token")
     public String token;
 
-    // vpconn的VlanID
     @NameInMap("VlanId")
     public Long vlanId;
 
-    // Vpconn拥有者
     @NameInMap("VpconnAliUid")
     public Long vpconnAliUid;
 

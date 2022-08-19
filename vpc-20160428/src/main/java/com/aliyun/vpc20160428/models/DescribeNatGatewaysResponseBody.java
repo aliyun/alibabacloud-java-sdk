@@ -354,11 +354,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("NetworkType")
         public String networkType;
 
-        // 默认不支持私网链接。设置为1则意味着支持私网链接
         @NameInMap("PrivateLinkEnabled")
         public Boolean privateLinkEnabled;
 
-        // Fullnat：使用FullNat模式 Geneve：使用Geneve模式。 预估大部分场景都是非Geneve模式的。
         @NameInMap("PrivateLinkMode")
         public String privateLinkMode;
 

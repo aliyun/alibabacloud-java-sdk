@@ -7,14 +7,12 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
     @NameInMap("Endpoints")
     public java.util.List<ListVpcGatewayEndpointsResponseBodyEndpoints> endpoints;
 
-    // 本次请求最大数量
     @NameInMap("MaxResults")
     public Long maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

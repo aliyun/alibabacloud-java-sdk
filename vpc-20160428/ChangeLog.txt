@@ -1,3 +1,6 @@
+2022-08-19 Version: 2.0.4
+- Add DescribePublicIpAddress Interface.
+
 2022-06-10 Version: 2.0.3
 - Generated java 2016-04-28 for Vpc.
 

@@ -4,11 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class UpdateVirtualPhysicalConnectionResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否修改成功
     @NameInMap("Success")
     public String success;
 

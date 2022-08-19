@@ -4,22 +4,18 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
-    // 本次查询数量
     @NameInMap("Count")
     public Integer count;
 
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    // Vpconn
     @NameInMap("VirtualPhysicalConnections")
     public java.util.List<ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnections> virtualPhysicalConnections;
 

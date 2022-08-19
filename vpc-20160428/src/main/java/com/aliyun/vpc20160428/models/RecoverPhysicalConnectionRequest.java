@@ -4,18 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class RecoverPhysicalConnectionRequest extends TeaModel {
-    // DryRun
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 恢复的Pconn
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    // 幂等Token
     @NameInMap("Token")
     public String token;
 

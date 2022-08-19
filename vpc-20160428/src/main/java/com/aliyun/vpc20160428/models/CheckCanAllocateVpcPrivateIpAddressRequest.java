@@ -4,7 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
-    // IpVersion
     @NameInMap("IpVersion")
     public String ipVersion;
 
@@ -14,11 +13,9 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // PrivateIpAddress
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
-    // RegionId
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,7 +25,6 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // VSwitchId
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

@@ -4,15 +4,12 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DissociateRouteTablesFromVpcGatewayEndpointRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 是否只预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // VPC网关实例ID
     @NameInMap("EndpointId")
     public String endpointId;
 
@@ -22,7 +19,6 @@ public class DissociateRouteTablesFromVpcGatewayEndpointRequest extends TeaModel
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // 地域
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,7 +28,6 @@ public class DissociateRouteTablesFromVpcGatewayEndpointRequest extends TeaModel
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // 路由表列表
     @NameInMap("RouteTableIds")
     public java.util.List<String> routeTableIds;
 
