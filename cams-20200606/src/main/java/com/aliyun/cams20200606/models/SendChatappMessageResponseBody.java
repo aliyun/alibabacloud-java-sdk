@@ -10,7 +10,6 @@ public class SendChatappMessageResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // 消息ID
     @NameInMap("MessageId")
     public String messageId;
 

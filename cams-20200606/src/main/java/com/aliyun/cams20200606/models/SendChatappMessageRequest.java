@@ -4,55 +4,42 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class SendChatappMessageRequest extends TeaModel {
-    // 通道类型 whatsapp/viber/line
     @NameInMap("ChannelType")
     public String channelType;
 
-    // 消息内容
     @NameInMap("Content")
     public String content;
 
-    // ISV客户wabaId
     @NameInMap("CustWabaId")
     public String custWabaId;
 
-    // 回落消息内容
     @NameInMap("FallBackContent")
     public String fallBackContent;
 
-    // 回落策略ID，可在控制台创建策略并查看
     @NameInMap("FallBackId")
     public String fallBackId;
 
-    // 发送方
     @NameInMap("From")
     public String from;
 
-    // 语言
     @NameInMap("Language")
     public String language;
 
-    // 消息类型
     @NameInMap("MessageType")
     public String messageType;
 
     @NameInMap("Payload")
     public java.util.List<String> payload;
 
-    // 模板编码
     @NameInMap("TemplateCode")
     public String templateCode;
 
     @NameInMap("TemplateParams")
     public java.util.Map<String, String> templateParams;
 
-    // 接收号码
     @NameInMap("To")
     public String to;
 
-    // 消息大类
-    // template--模板
-    // message--非模板
     @NameInMap("Type")
     public String type;
 

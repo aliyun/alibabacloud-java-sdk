@@ -4,15 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class DeleteChatappTemplateResponseBody extends TeaModel {
-    // 返回结果 OK 为正常
     @NameInMap("Code")
     public String code;
 
-    // 提示信息，当返回异常时有值
     @NameInMap("Message")
     public String message;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

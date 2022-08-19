@@ -4,19 +4,15 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListChatappTemplateRequest extends TeaModel {
-    // 审核状态
     @NameInMap("AuditStatus")
     public String auditStatus;
 
-    // ISV客户WabaId
     @NameInMap("CustWabaId")
     public String custWabaId;
 
-    // 语言
     @NameInMap("Language")
     public String language;
 
-    // 模板名称
     @NameInMap("Name")
     public String name;
 
@@ -69,11 +65,9 @@ public class ListChatappTemplateRequest extends TeaModel {
     }
 
     public static class ListChatappTemplateRequestPage extends TeaModel {
-        // 查询开始数
         @NameInMap("Index")
         public Integer index;
 
-        // 每次查询返回的条数
         @NameInMap("Size")
         public Integer size;
 

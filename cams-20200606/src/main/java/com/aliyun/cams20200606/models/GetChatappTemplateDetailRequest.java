@@ -4,15 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetChatappTemplateDetailRequest extends TeaModel {
-    // ISV客户WabaId
     @NameInMap("CustWabaId")
     public String custWabaId;
 
-    // 语言
     @NameInMap("Language")
     public String language;
 
-    // 模板分类
     @NameInMap("TemplateCode")
     public String templateCode;
 
