@@ -7,9 +7,6 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("IpRange")
-    public DescribePublicIpAddressResponseBodyIpRange ipRange;
-
     @NameInMap("Message")
     public String message;
 
@@ -20,7 +17,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("PublicIpAddress")
-    public String publicIpAddress;
+    public java.util.List<String> publicIpAddress;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -47,14 +44,6 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribePublicIpAddressResponseBody setIpRange(DescribePublicIpAddressResponseBodyIpRange ipRange) {
-        this.ipRange = ipRange;
-        return this;
-    }
-    public DescribePublicIpAddressResponseBodyIpRange getIpRange() {
-        return this.ipRange;
-    }
-
     public DescribePublicIpAddressResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -79,11 +68,11 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribePublicIpAddressResponseBody setPublicIpAddress(String publicIpAddress) {
+    public DescribePublicIpAddressResponseBody setPublicIpAddress(java.util.List<String> publicIpAddress) {
         this.publicIpAddress = publicIpAddress;
         return this;
     }
-    public String getPublicIpAddress() {
+    public java.util.List<String> getPublicIpAddress() {
         return this.publicIpAddress;
     }
 
@@ -117,25 +106,6 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public static class DescribePublicIpAddressResponseBodyIpRange extends TeaModel {
-        @NameInMap("IpRange")
-        public java.util.List<String> ipRange;
-
-        public static DescribePublicIpAddressResponseBodyIpRange build(java.util.Map<String, ?> map) throws Exception {
-            DescribePublicIpAddressResponseBodyIpRange self = new DescribePublicIpAddressResponseBodyIpRange();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribePublicIpAddressResponseBodyIpRange setIpRange(java.util.List<String> ipRange) {
-            this.ipRange = ipRange;
-            return this;
-        }
-        public java.util.List<String> getIpRange() {
-            return this.ipRange;
-        }
-
     }
 
 }
