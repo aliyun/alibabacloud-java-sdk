@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class CreateRoomResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // API请求的返回结果结构体。
     @NameInMap("Result")
     public CreateRoomResponseBodyResult result;
 
@@ -34,7 +32,6 @@ public class CreateRoomResponseBody extends TeaModel {
     }
 
     public static class CreateRoomResponseBodyResult extends TeaModel {
-        // 房间id
         @NameInMap("RoomId")
         public String roomId;
 

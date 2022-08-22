@@ -4,19 +4,15 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class StopLiveRequest extends TeaModel {
-    // 租户名
     @NameInMap("AppId")
     public String appId;
 
-    // 直播资源的唯一标识ID
     @NameInMap("LiveId")
     public String liveId;
 
-    // 房间ID，最大长度36位
     @NameInMap("RoomId")
     public String roomId;
 
-    // 创建直播用户ID
     @NameInMap("UserId")
     public String userId;
 

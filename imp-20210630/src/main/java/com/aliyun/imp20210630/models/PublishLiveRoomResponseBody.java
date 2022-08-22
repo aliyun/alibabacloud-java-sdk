@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class PublishLiveRoomResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 创建场景化直播返回的结果。
     @NameInMap("Result")
     public PublishLiveRoomResponseBodyResult result;
 
@@ -34,15 +32,12 @@ public class PublishLiveRoomResponseBody extends TeaModel {
     }
 
     public static class PublishLiveRoomResponseBodyResult extends TeaModel {
-        // 直播ID。
         @NameInMap("LiveId")
         public String liveId;
 
-        // 直播拉流地址。
         @NameInMap("LiveUrl")
         public String liveUrl;
 
-        // 直播推流地址。
         @NameInMap("PushUrl")
         public String pushUrl;
 

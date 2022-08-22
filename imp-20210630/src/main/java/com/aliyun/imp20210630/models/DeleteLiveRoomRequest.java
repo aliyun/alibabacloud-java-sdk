@@ -4,15 +4,12 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveRoomRequest extends TeaModel {
-    // 应用唯一标识，由6位小写字母、数字组成。
     @NameInMap("AppId")
     public String appId;
 
-    // 直播ID。
     @NameInMap("LiveId")
     public String liveId;
 
-    // 操作人ID。
     @NameInMap("UserId")
     public String userId;
 

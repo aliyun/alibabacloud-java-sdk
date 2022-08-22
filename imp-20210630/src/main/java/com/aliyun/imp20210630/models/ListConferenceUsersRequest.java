@@ -4,15 +4,12 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class ListConferenceUsersRequest extends TeaModel {
-    // 会议唯一标识符
     @NameInMap("ConferenceId")
     public String conferenceId;
 
-    // 查询页码，从第1页开始。
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页显示个数，最大显示个数为100。
     @NameInMap("PageSize")
     public Integer pageSize;
 

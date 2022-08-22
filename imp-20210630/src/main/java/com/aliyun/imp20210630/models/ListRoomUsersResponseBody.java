@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class ListRoomUsersResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // API请求的返回结果结构体。
     @NameInMap("Result")
     public ListRoomUsersResponseBodyResult result;
 
@@ -34,15 +32,12 @@ public class ListRoomUsersResponseBody extends TeaModel {
     }
 
     public static class ListRoomUsersResponseBodyResultRoomUserList extends TeaModel {
-        // 用户拓展字段。
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
-        // 用户昵称。
         @NameInMap("Nick")
         public String nick;
 
-        // 用户唯一标识。
         @NameInMap("UserId")
         public String userId;
 
@@ -78,19 +73,15 @@ public class ListRoomUsersResponseBody extends TeaModel {
     }
 
     public static class ListRoomUsersResponseBodyResult extends TeaModel {
-        // 是否还有下一页用户列表。
         @NameInMap("HasMore")
         public Boolean hasMore;
 
-        // 该房间的用户总页数。
         @NameInMap("PageTotal")
         public Integer pageTotal;
 
-        // 房间用户列表信息。
         @NameInMap("RoomUserList")
         public java.util.List<ListRoomUsersResponseBodyResultRoomUserList> roomUserList;
 
-        // 该房间的用户总数。
         @NameInMap("TotalCount")
         public Integer totalCount;
 

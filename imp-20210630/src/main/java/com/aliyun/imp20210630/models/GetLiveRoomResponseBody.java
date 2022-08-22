@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class GetLiveRoomResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 创建场景化直播返回的结果。
     @NameInMap("Result")
     public GetLiveRoomResponseBodyResult result;
 
@@ -34,11 +32,9 @@ public class GetLiveRoomResponseBody extends TeaModel {
     }
 
     public static class GetLiveRoomResponseBodyResultArtcInfo extends TeaModel {
-        // RTS转码流地址，推荐web端使用。
         @NameInMap("ArtcH5Url")
         public String artcH5Url;
 
-        // RTS原码流地址，推荐移动端使用。
         @NameInMap("ArtcUrl")
         public String artcUrl;
 
@@ -66,19 +62,15 @@ public class GetLiveRoomResponseBody extends TeaModel {
     }
 
     public static class GetLiveRoomResponseBodyResultPluginInstanceInfoList extends TeaModel {
-        // 插件实例创建时间戳，单位：毫秒。
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 插件拓展字段。
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
-        // 插件实例唯一标识。
         @NameInMap("PluginId")
         public String pluginId;
 
-        // 插件唯一标识，取值：live-直播，wb-白板，chat-聊天，rtc。
         @NameInMap("PluginType")
         public String pluginType;
 
@@ -122,119 +114,90 @@ public class GetLiveRoomResponseBody extends TeaModel {
     }
 
     public static class GetLiveRoomResponseBodyResult extends TeaModel {
-        // 主播ID。
         @NameInMap("AnchorId")
         public String anchorId;
 
-        // 主播昵称
         @NameInMap("AnchorNick")
         public String anchorNick;
 
-        // 应用ID。
         @NameInMap("AppId")
         public String appId;
 
-        // RTS低延迟播流信息。
         @NameInMap("ArtcInfo")
         public GetLiveRoomResponseBodyResultArtcInfo artcInfo;
 
-        // 聊天ID。
         @NameInMap("ChatId")
         public String chatId;
 
-        // 连麦会议唯一标识。
         @NameInMap("ConfId")
         public String confId;
 
-        // 封面。
         @NameInMap("CoverUrl")
         public String coverUrl;
 
-        // 直播创建时间，单位：毫秒。
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 是否开启连麦。
         @NameInMap("EnableLinkMic")
         public Boolean enableLinkMic;
 
-        // 直播结束时间，单位：毫秒。
         @NameInMap("EndTime")
         public Long endTime;
 
-        // 直播拓展字段。
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
-        // 原画HLS播放地址。
         @NameInMap("HlsUrl")
         public String hlsUrl;
 
-        // https协议的原画HLS播放地址。
         @NameInMap("HlsUrlHttps")
         public String hlsUrlHttps;
 
-        // 直播ID。
         @NameInMap("LiveId")
         public String liveId;
 
-        // 直播拉流地址。
         @NameInMap("LiveUrl")
         public String liveUrl;
 
-        // https协议的直播拉流地址。
         @NameInMap("LiveUrlHttps")
         public String liveUrlHttps;
 
-        // 公告。
         @NameInMap("Notice")
         public String notice;
 
-        // 在线用户数。
         @NameInMap("OnlineCount")
         public Long onlineCount;
 
-        // 直播回放地址。
         @NameInMap("PlaybackUrl")
         public String playbackUrl;
 
-        // https协议的直播回放地址
         @NameInMap("PlaybackUrlHttps")
         public String playbackUrlHttps;
 
-        // 活跃插件列表。
         @NameInMap("PluginInstanceInfoList")
         public java.util.List<GetLiveRoomResponseBodyResultPluginInstanceInfoList> pluginInstanceInfoList;
 
-        // 直播推流地址。
         @NameInMap("PushUrl")
         public String pushUrl;
 
-        // 访问用户人次。
         @NameInMap("Pv")
         public Long pv;
 
-        // 房间ID。
         @NameInMap("RoomId")
         public String roomId;
 
-        // rtmp协议的播放地址
         @NameInMap("RtmpUrl")
         public String rtmpUrl;
 
-        // 直播开始时间，单位：毫秒。
         @NameInMap("StartTime")
         public Long startTime;
 
-        // 直播状态，0-在播 1-下播。
         @NameInMap("Status")
         public Integer status;
 
-        // 标题。
         @NameInMap("Title")
         public String title;
 
-        // 访问用户数。
         @NameInMap("Uv")
         public Long uv;
 

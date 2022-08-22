@@ -4,19 +4,15 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class DeleteConferenceRequest extends TeaModel {
-    // 租户名
     @NameInMap("AppId")
     public String appId;
 
-    // 会议资源的唯一标识ID
     @NameInMap("ConferenceId")
     public String conferenceId;
 
-    // 房间ID，最大长度36位
     @NameInMap("RoomId")
     public String roomId;
 
-    // 创建会议用户ID
     @NameInMap("UserId")
     public String userId;
 

@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class CreateLiveRecordSliceFileResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 创建场景化直播返回的结果。
     @NameInMap("Result")
     public CreateLiveRecordSliceFileResponseBodyResult result;
 
@@ -34,7 +32,6 @@ public class CreateLiveRecordSliceFileResponseBody extends TeaModel {
     }
 
     public static class CreateLiveRecordSliceFileResponseBodyResult extends TeaModel {
-        // 片段录制文件的地址。
         @NameInMap("SliceRecordUrl")
         public String sliceRecordUrl;
 

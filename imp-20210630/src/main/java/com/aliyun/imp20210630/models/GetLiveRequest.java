@@ -4,7 +4,6 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class GetLiveRequest extends TeaModel {
-    // 直播资源的唯一标识ID
     @NameInMap("LiveId")
     public String liveId;
 

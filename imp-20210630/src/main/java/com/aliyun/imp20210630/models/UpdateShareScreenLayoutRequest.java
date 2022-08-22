@@ -4,31 +4,24 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class UpdateShareScreenLayoutRequest extends TeaModel {
-    // 应用唯一标识，由6位小写字母、数字组成。
     @NameInMap("AppId")
     public String appId;
 
-    // 课堂唯一标识，由调用CreateClass返回。
     @NameInMap("ClassId")
     public String classId;
 
-    // 是否开启叠加老师画面
     @NameInMap("EnableOverlay")
     public Boolean enableOverlay;
 
-    // 叠加画面高度，归一化为1
     @NameInMap("OverlayHeight")
     public Float overlayHeight;
 
-    // 叠加画面宽度，归一化为1
     @NameInMap("OverlayWidth")
     public Float overlayWidth;
 
-    // 叠加画面X坐标，归一化为1
     @NameInMap("OverlayX")
     public Float overlayX;
 
-    // 叠加画面Y坐标，归一化为1
     @NameInMap("OverlayY")
     public Float overlayY;
 

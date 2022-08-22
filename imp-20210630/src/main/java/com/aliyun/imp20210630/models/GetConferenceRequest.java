@@ -4,7 +4,6 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class GetConferenceRequest extends TeaModel {
-    // 会议资源唯一标识。
     @NameInMap("ConferenceId")
     public String conferenceId;
 

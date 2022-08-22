@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class GetLiveRoomStatisticsResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 创建场景化直播返回的结果。
     @NameInMap("Result")
     public GetLiveRoomStatisticsResponseBodyResult result;
 
@@ -34,43 +32,33 @@ public class GetLiveRoomStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetLiveRoomStatisticsResponseBodyResult extends TeaModel {
-        // 直播结束时间，单位：毫秒。
         @NameInMap("EndTime")
         public Long endTime;
 
-        // 点赞数。
         @NameInMap("LikeCount")
         public Long likeCount;
 
-        // 直播ID。
         @NameInMap("LiveId")
         public String liveId;
 
-        // 互动消息数。
         @NameInMap("MessageCount")
         public Long messageCount;
 
-        // 在线用户数。
         @NameInMap("OnlineCount")
         public Long onlineCount;
 
-        // 访问用户人次。
         @NameInMap("Pv")
         public Long pv;
 
-        // 直播开始时间，单位：毫秒。
         @NameInMap("StartTime")
         public Long startTime;
 
-        // 直播状态，0-已创建 1-直播中 2-已关闭。
         @NameInMap("Status")
         public Integer status;
 
-        // 访问用户数。
         @NameInMap("Uv")
         public Long uv;
 
-        // 总观看时长，单位：毫秒。
         @NameInMap("WatchLiveTime")
         public Long watchLiveTime;
 

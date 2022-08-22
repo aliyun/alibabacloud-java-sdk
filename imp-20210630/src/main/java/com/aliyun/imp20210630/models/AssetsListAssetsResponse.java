@@ -4,19 +4,15 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class AssetsListAssetsResponse extends TeaModel {
-    // Asset列表
     @NameInMap("Assets")
     public java.util.List<CommonAsset> assets;
 
-    // 分页Token
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 响应状态
     @NameInMap("Status")
     public RpcStatus status;
 

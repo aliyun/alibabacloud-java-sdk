@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class CreateLiveRoomResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 创建场景化直播返回的结果。
     @NameInMap("Result")
     public CreateLiveRoomResponseBodyResult result;
 
@@ -34,11 +32,9 @@ public class CreateLiveRoomResponseBody extends TeaModel {
     }
 
     public static class CreateLiveRoomResponseBodyResultArtcInfo extends TeaModel {
-        // RTS转码流地址，推荐web端使用。
         @NameInMap("ArtcH5Url")
         public String artcH5Url;
 
-        // RTS原码流地址，推荐移动端使用。
         @NameInMap("ArtcUrl")
         public String artcUrl;
 
@@ -66,19 +62,15 @@ public class CreateLiveRoomResponseBody extends TeaModel {
     }
 
     public static class CreateLiveRoomResponseBodyResultPluginInstanceInfoList extends TeaModel {
-        // 插件实例创建时间戳，单位：毫秒。
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 插件拓展字段。
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
-        // 插件实例唯一标识。
         @NameInMap("PluginId")
         public String pluginId;
 
-        // 插件唯一标识，取值：live-直播，wb-白板，chat-聊天，rtc。
         @NameInMap("PluginType")
         public String pluginType;
 
@@ -122,67 +114,51 @@ public class CreateLiveRoomResponseBody extends TeaModel {
     }
 
     public static class CreateLiveRoomResponseBodyResult extends TeaModel {
-        // 主播ID。
         @NameInMap("AnchorId")
         public String anchorId;
 
-        // 主播昵称。
         @NameInMap("AnchorNick")
         public String anchorNick;
 
-        // 应用ID。
         @NameInMap("AppId")
         public String appId;
 
-        // RTS低延迟播流信息。
         @NameInMap("ArtcInfo")
         public CreateLiveRoomResponseBodyResultArtcInfo artcInfo;
 
-        // 聊天ID。
         @NameInMap("ChatId")
         public String chatId;
 
-        // 封面。
         @NameInMap("CoverUrl")
         public String coverUrl;
 
-        // 直播拓展字段。
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
-        // 原画HLS播放地址。
         @NameInMap("HlsUrl")
         public String hlsUrl;
 
-        // 直播ID。
         @NameInMap("LiveId")
         public String liveId;
 
-        // 直播拉流地址。
         @NameInMap("LiveUrl")
         public String liveUrl;
 
-        // 公告。
         @NameInMap("Notice")
         public String notice;
 
-        // 直播回放地址。
         @NameInMap("PlaybackUrl")
         public String playbackUrl;
 
-        // 活跃插件列表。
         @NameInMap("PluginInstanceInfoList")
         public java.util.List<CreateLiveRoomResponseBodyResultPluginInstanceInfoList> pluginInstanceInfoList;
 
-        // 直播推流地址。
         @NameInMap("PushUrl")
         public String pushUrl;
 
-        // 房间ID。
         @NameInMap("RoomId")
         public String roomId;
 
-        // 标题。
         @NameInMap("Title")
         public String title;
 

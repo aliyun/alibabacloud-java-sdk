@@ -4,19 +4,15 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class CreateClassRequest extends TeaModel {
-    // 应用唯一标识，由6位小写字母、数字组成。
     @NameInMap("AppId")
     public String appId;
 
-    // 创建人用户昵称。
     @NameInMap("CreateNickname")
     public String createNickname;
 
-    // 创建人用户ID。
     @NameInMap("CreateUserId")
     public String createUserId;
 
-    // 课堂标题
     @NameInMap("Title")
     public String title;
 

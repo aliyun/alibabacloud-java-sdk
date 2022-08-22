@@ -4,7 +4,6 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class CreateLiveResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,7 +32,6 @@ public class CreateLiveResponseBody extends TeaModel {
     }
 
     public static class CreateLiveResponseBodyResult extends TeaModel {
-        // 直播的唯一标识ID。
         @NameInMap("LiveId")
         public String liveId;
 

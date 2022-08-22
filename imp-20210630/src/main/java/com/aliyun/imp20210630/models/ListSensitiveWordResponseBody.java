@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class ListSensitiveWordResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 调用发送直播间弹幕的返回结果。
     @NameInMap("Result")
     public ListSensitiveWordResponseBodyResult result;
 

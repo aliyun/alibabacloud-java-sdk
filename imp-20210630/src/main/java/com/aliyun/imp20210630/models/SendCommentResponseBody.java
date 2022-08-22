@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class SendCommentResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 调用发送直播间弹幕的返回结果。
     @NameInMap("Result")
     public SendCommentResponseBodyResult result;
 
@@ -34,27 +32,21 @@ public class SendCommentResponseBody extends TeaModel {
     }
 
     public static class SendCommentResponseBodyResultCommentVO extends TeaModel {
-        // 弹幕的唯一ID。
         @NameInMap("CommentId")
         public String commentId;
 
-        // 弹幕的内容。
         @NameInMap("Content")
         public String content;
 
-        // 弹幕的创建时间，Unix时间戳，单位：毫秒。
         @NameInMap("CreateAt")
         public Long createAt;
 
-        // 扩展字段。
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
-        // 弹幕的发送者ID标识。
         @NameInMap("SenderId")
         public String senderId;
 
-        // 弹幕发送者的昵称。
         @NameInMap("SenderNick")
         public String senderNick;
 
@@ -114,7 +106,6 @@ public class SendCommentResponseBody extends TeaModel {
     }
 
     public static class SendCommentResponseBodyResult extends TeaModel {
-        // 返回的弹幕数据模型。
         @NameInMap("CommentVO")
         public SendCommentResponseBodyResultCommentVO commentVO;
 

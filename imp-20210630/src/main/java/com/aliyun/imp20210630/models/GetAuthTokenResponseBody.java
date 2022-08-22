@@ -4,7 +4,6 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class GetAuthTokenResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,15 +32,12 @@ public class GetAuthTokenResponseBody extends TeaModel {
     }
 
     public static class GetAuthTokenResponseBodyResult extends TeaModel {
-        // 用于长连接建连的token
         @NameInMap("AccessToken")
         public String accessToken;
 
-        // 登录token过期时间(毫秒)
         @NameInMap("AccessTokenExpiredTime")
         public Long accessTokenExpiredTime;
 
-        // 更新Token，若AccessToken过期，则可以使用RefreshToken再次获取新Token
         @NameInMap("RefreshToken")
         public String refreshToken;
 

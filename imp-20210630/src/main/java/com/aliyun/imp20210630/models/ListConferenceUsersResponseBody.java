@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class ListConferenceUsersResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 返回结果
     @NameInMap("Result")
     public ListConferenceUsersResponseBodyResult result;
 
@@ -34,11 +32,9 @@ public class ListConferenceUsersResponseBody extends TeaModel {
     }
 
     public static class ListConferenceUsersResponseBodyResultConferenceUserList extends TeaModel {
-        // 用户状态。
         @NameInMap("Status")
         public String status;
 
-        // 用户ID。
         @NameInMap("UserId")
         public String userId;
 
@@ -66,19 +62,15 @@ public class ListConferenceUsersResponseBody extends TeaModel {
     }
 
     public static class ListConferenceUsersResponseBodyResult extends TeaModel {
-        // 会议用户列表。
         @NameInMap("ConferenceUserList")
         public java.util.List<ListConferenceUsersResponseBodyResultConferenceUserList> conferenceUserList;
 
-        // 是否还有数据
         @NameInMap("HasMore")
         public Boolean hasMore;
 
-        // 总页数
         @NameInMap("PageTotal")
         public Integer pageTotal;
 
-        // 总条目数
         @NameInMap("TotalCount")
         public Integer totalCount;
 

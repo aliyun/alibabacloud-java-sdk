@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class GetClassDetailResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // API请求的返回结果结构体。
     @NameInMap("Result")
     public GetClassDetailResponseBodyResult result;
 
@@ -34,51 +32,39 @@ public class GetClassDetailResponseBody extends TeaModel {
     }
 
     public static class GetClassDetailResponseBodyResult extends TeaModel {
-        // 课堂唯一标识，由调用CreateClass返回。
         @NameInMap("ClassId")
         public String classId;
 
-        // 连麦会议唯一标识。
         @NameInMap("ConfId")
         public String confId;
 
-        // 创建人昵称。
         @NameInMap("CreateNickname")
         public String createNickname;
 
-        // 创建人ID。
         @NameInMap("CreateUserId")
         public String createUserId;
 
-        // 下课时间戳，毫秒。
         @NameInMap("EndTime")
         public Long endTime;
 
-        // 直播的唯一标识ID。
         @NameInMap("LiveId")
         public String liveId;
 
-        // 房间ID
         @NameInMap("RoomId")
         public String roomId;
 
-        // 开始上课时间戳，毫秒。
         @NameInMap("StartTime")
         public Long startTime;
 
-        // 课堂状态，0:未开始 1:上课中 2:已下课。
         @NameInMap("Status")
         public Integer status;
 
-        // 课堂标题。
         @NameInMap("Title")
         public String title;
 
-        // 白板ID
         @NameInMap("WhiteboardId")
         public String whiteboardId;
 
-        // 白板录制ID
         @NameInMap("WhiteboardRecordId")
         public String whiteboardRecordId;
 

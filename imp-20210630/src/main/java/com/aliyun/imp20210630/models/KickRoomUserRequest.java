@@ -4,22 +4,18 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class KickRoomUserRequest extends TeaModel {
-    // 应用唯一标识，由6位小写字母、数字组成。
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("BlockTime")
     public Long blockTime;
 
-    // 被踢出房间的用户ID。
     @NameInMap("KickUser")
     public String kickUser;
 
-    // 房间唯一标识，由字母、数字、符号.和-组成，最大长度36位，传空则随机生成一个房间id。
     @NameInMap("RoomId")
     public String roomId;
 
-    // 操作人的用户ID，用于表示谁执行了踢人操作。
     @NameInMap("UserId")
     public String userId;
 

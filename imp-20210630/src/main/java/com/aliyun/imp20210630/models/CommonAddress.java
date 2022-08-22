@@ -4,23 +4,18 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class CommonAddress extends TeaModel {
-    // 地址
     @NameInMap("Address")
     public String address;
 
-    // 城市
     @NameInMap("City")
     public String city;
 
-    // 国家
     @NameInMap("Country")
     public String country;
 
-    // 区域
     @NameInMap("State")
     public String state;
 
-    // zip
     @NameInMap("Zip")
     public String zip;
 

@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class DeleteCommentByCreatorIdResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 调用删除直播间弹幕的返回结果。
     @NameInMap("Result")
     public DeleteCommentByCreatorIdResponseBodyResult result;
 
@@ -34,7 +32,6 @@ public class DeleteCommentByCreatorIdResponseBody extends TeaModel {
     }
 
     public static class DeleteCommentByCreatorIdResponseBodyResult extends TeaModel {
-        // 删除的结果
         @NameInMap("DeleteResult")
         public Boolean deleteResult;
 

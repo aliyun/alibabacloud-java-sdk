@@ -4,23 +4,18 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class BanCommentRequest extends TeaModel {
-    // 应用唯一标识，由6位小写字母、数字组成。
     @NameInMap("AppId")
     public String appId;
 
-    // 禁言时长（秒）
     @NameInMap("BanCommentTime")
     public Long banCommentTime;
 
-    // 被禁言的用户在房间内的唯一标识
     @NameInMap("BanCommentUser")
     public String banCommentUser;
 
-    // 房间唯一标识，由调用CreateRoom返回。
     @NameInMap("RoomId")
     public String roomId;
 
-    // 用户在房间内的唯一标识
     @NameInMap("UserId")
     public String userId;
 

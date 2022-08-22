@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class GetLiveRoomUserStatisticsResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 创建场景化直播返回的结果。
     @NameInMap("Result")
     public GetLiveRoomUserStatisticsResponseBodyResult result;
 
@@ -40,11 +38,9 @@ public class GetLiveRoomUserStatisticsResponseBody extends TeaModel {
         @NameInMap("LikeCount")
         public Integer likeCount;
 
-        // 用户ID。
         @NameInMap("UserId")
         public String userId;
 
-        // 观看时长，单位：毫秒。
         @NameInMap("WatchLiveTime")
         public Long watchLiveTime;
 
@@ -88,23 +84,18 @@ public class GetLiveRoomUserStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetLiveRoomUserStatisticsResponseBodyResult extends TeaModel {
-        // 是否还有下一页。
         @NameInMap("HasMore")
         public Boolean hasMore;
 
-        // 直播ID。
         @NameInMap("LiveId")
         public String liveId;
 
-        // 用户总页数。
         @NameInMap("PageTotal")
         public Integer pageTotal;
 
-        // 用户总数
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        // 用户观看数据列表。
         @NameInMap("UserStatisticsList")
         public java.util.List<GetLiveRoomUserStatisticsResponseBodyResultUserStatisticsList> userStatisticsList;
 

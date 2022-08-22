@@ -4,15 +4,12 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class AssetsGetAssetResponse extends TeaModel {
-    // Asset
     @NameInMap("Asset")
     public CommonAsset asset;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 响应状态
     @NameInMap("Status")
     public RpcStatus status;
 

@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class ListRoomsResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // API请求的返回结果结构体。
     @NameInMap("Result")
     public ListRoomsResponseBodyResult result;
 
@@ -34,19 +32,15 @@ public class ListRoomsResponseBody extends TeaModel {
     }
 
     public static class ListRoomsResponseBodyResultRoomInfoListPluginInstanceInfoList extends TeaModel {
-        // 插件实例创建时间戳，单位：毫秒。
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 插件拓展字段。
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
-        // 插件实例唯一标识。
         @NameInMap("PluginId")
         public String pluginId;
 
-        // 插件唯一标识，取值：live-直播，wb-白板，chat-聊天，rtc。
         @NameInMap("PluginType")
         public String pluginType;
 
@@ -90,47 +84,36 @@ public class ListRoomsResponseBody extends TeaModel {
     }
 
     public static class ListRoomsResponseBodyResultRoomInfoList extends TeaModel {
-        // 应用唯一标识，由6位小写字母、数字组成。
         @NameInMap("AppId")
         public String appId;
 
-        // 房间创建时间戳，单位：毫秒。
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 房间拓展字段。
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
-        // 房间公告。
         @NameInMap("Notice")
         public String notice;
 
-        // 用户在线数。
         @NameInMap("OnlineCount")
         public Long onlineCount;
 
-        // 活跃插件列表。
         @NameInMap("PluginInstanceInfoList")
         public java.util.List<ListRoomsResponseBodyResultRoomInfoListPluginInstanceInfoList> pluginInstanceInfoList;
 
-        // 房间唯一标识。
         @NameInMap("RoomId")
         public String roomId;
 
-        // 房主用户id。
         @NameInMap("RoomOwnerId")
         public String roomOwnerId;
 
-        // 创建房间使用的模板id。
         @NameInMap("TemplateId")
         public String templateId;
 
-        // 房间标题。
         @NameInMap("Title")
         public String title;
 
-        // 用户访问数。
         @NameInMap("Uv")
         public Long uv;
 
@@ -230,19 +213,15 @@ public class ListRoomsResponseBody extends TeaModel {
     }
 
     public static class ListRoomsResponseBodyResult extends TeaModel {
-        // 是否还有下一页房间列表。
         @NameInMap("HasMore")
         public Boolean hasMore;
 
-        // 该应用的房间总页数。
         @NameInMap("PageTotal")
         public Integer pageTotal;
 
-        // 房间列表信息。
         @NameInMap("RoomInfoList")
         public java.util.List<ListRoomsResponseBodyResultRoomInfoList> roomInfoList;
 
-        // 该应用的房间总数。
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,15 +4,12 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class ListRoomsRequest extends TeaModel {
-    // 应用唯一标识，由6位小写字母、数字组成。
     @NameInMap("AppId")
     public String appId;
 
-    // 查询页码，从1开始，传空默认查询第1页。
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页显示个数，最大支持50，参数为空默认显示个数为10。
     @NameInMap("PageSize")
     public Integer pageSize;
 

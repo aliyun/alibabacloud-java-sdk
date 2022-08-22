@@ -7,7 +7,6 @@ public class DescribeMeterImpPlayBackTimeByLiveIdResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeMeterImpPlayBackTimeByLiveIdResponseBodyData> data;
 
-    // Id
     @NameInMap("RequestId")
     public String requestId;
 
