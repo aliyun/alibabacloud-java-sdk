@@ -4,15 +4,12 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class GetLiveRecordRequest extends TeaModel {
-    // 应用唯一标识，由6位小写字母、数字组成。
     @NameInMap("AppId")
     public String appId;
 
-    // 直播唯一标识，由调用CreateLiveRoom返回。
     @NameInMap("LiveId")
     public String liveId;
 
-    // 操作人用户ID。
     @NameInMap("UserId")
     public String userId;
 

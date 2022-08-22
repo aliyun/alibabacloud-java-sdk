@@ -4,27 +4,21 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class CommonMediaResource extends TeaModel {
-    // media format
     @NameInMap("Format")
     public String format;
 
-    // media id
     @NameInMap("Id")
     public String id;
 
-    // name
     @NameInMap("Name")
     public String name;
 
-    // media sha1
     @NameInMap("Sha1")
     public String sha1;
 
-    // media size
     @NameInMap("Size")
     public Long size;
 
-    // resource url
     @NameInMap("Url")
     public String url;
 

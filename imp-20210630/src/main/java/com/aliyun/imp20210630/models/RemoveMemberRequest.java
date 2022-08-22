@@ -4,15 +4,12 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class RemoveMemberRequest extends TeaModel {
-    // 会议唯一标识
     @NameInMap("ConferenceId")
     public String conferenceId;
 
-    // 邀请者用户ID
     @NameInMap("FromUserId")
     public String fromUserId;
 
-    // 被邀请用户ID
     @NameInMap("ToUserId")
     public String toUserId;
 

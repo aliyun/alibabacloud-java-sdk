@@ -4,15 +4,12 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class RpcStatus extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public Integer code;
 
-    // 错误详情
     @NameInMap("Detail")
     public String detail;
 
-    // 错误消息
     @NameInMap("Message")
     public String message;
 

@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class GetRoomResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 查询房间信息返回结果。
     @NameInMap("Result")
     public GetRoomResponseBodyResult result;
 
@@ -34,19 +32,15 @@ public class GetRoomResponseBody extends TeaModel {
     }
 
     public static class GetRoomResponseBodyResultRoomInfoPluginInstanceInfoList extends TeaModel {
-        // 插件实例创建时间戳，单位：毫秒。
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 插件拓展字段。
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
-        // 插件实例唯一标识。
         @NameInMap("PluginId")
         public String pluginId;
 
-        // 插件唯一标识，取值：live-直播，wb-白板，chat-聊天，rtc。
         @NameInMap("PluginType")
         public String pluginType;
 
@@ -90,55 +84,42 @@ public class GetRoomResponseBody extends TeaModel {
     }
 
     public static class GetRoomResponseBodyResultRoomInfo extends TeaModel {
-        // 管理员ID列表。
         @NameInMap("AdminIdList")
         public java.util.List<String> adminIdList;
 
-        // 应用唯一标识，由6位小写字母、数字组成。
         @NameInMap("AppId")
         public String appId;
 
-        // 房间创建时间戳，单位：毫秒。
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 房间拓展字段。
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
-        // 房间公告。
         @NameInMap("Notice")
         public String notice;
 
-        // 在线用户数。
         @NameInMap("OnlineCount")
         public Long onlineCount;
 
-        // 活跃插件列表。
         @NameInMap("PluginInstanceInfoList")
         public java.util.List<GetRoomResponseBodyResultRoomInfoPluginInstanceInfoList> pluginInstanceInfoList;
 
-        // 访问用户人次。
         @NameInMap("Pv")
         public Long pv;
 
-        // 房间唯一标识。
         @NameInMap("RoomId")
         public String roomId;
 
-        // 房主用户id。
         @NameInMap("RoomOwnerId")
         public String roomOwnerId;
 
-        // 创建房间使用的模板id。
         @NameInMap("TemplateId")
         public String templateId;
 
-        // 房间标题。
         @NameInMap("Title")
         public String title;
 
-        // 访问用户数。
         @NameInMap("Uv")
         public Long uv;
 
@@ -254,7 +235,6 @@ public class GetRoomResponseBody extends TeaModel {
     }
 
     public static class GetRoomResponseBodyResult extends TeaModel {
-        // 房间信息。
         @NameInMap("RoomInfo")
         public GetRoomResponseBodyResultRoomInfo roomInfo;
 

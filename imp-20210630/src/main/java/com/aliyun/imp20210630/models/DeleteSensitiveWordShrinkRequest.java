@@ -4,7 +4,6 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class DeleteSensitiveWordShrinkRequest extends TeaModel {
-    // 弹幕发送者的用户ID，最大长度不超过32个字节。
     @NameInMap("AppId")
     public String appId;
 

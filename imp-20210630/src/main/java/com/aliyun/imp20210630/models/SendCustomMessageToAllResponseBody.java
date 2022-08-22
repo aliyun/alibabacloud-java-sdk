@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class SendCustomMessageToAllResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // API请求的返回结果结构体。
     @NameInMap("Result")
     public SendCustomMessageToAllResponseBodyResult result;
 
@@ -34,7 +32,6 @@ public class SendCustomMessageToAllResponseBody extends TeaModel {
     }
 
     public static class SendCustomMessageToAllResponseBodyResult extends TeaModel {
-        // 消息的唯一ID标识。由数字、大小写字母组成，长度不超过20。
         @NameInMap("MessageId")
         public String messageId;
 

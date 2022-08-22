@@ -4,15 +4,12 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class GetClassDetailRequest extends TeaModel {
-    // 应用唯一标识，由6位小写字母、数字组成。
     @NameInMap("AppId")
     public String appId;
 
-    // 课堂唯一标识，由调用CreateClass返回。
     @NameInMap("ClassId")
     public String classId;
 
-    // 操作人用户ID。
     @NameInMap("UserId")
     public String userId;
 

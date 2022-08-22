@@ -4,67 +4,51 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class CommonSimpleAsset extends TeaModel {
-    // 行政区域地址
     @NameInMap("Address")
     public CommonAddress address;
 
-    // 应用ID
     @NameInMap("AppId")
     public String appId;
 
-    // 审核状态
     @NameInMap("AuditStatus")
     public String auditStatus;
 
-    // 作者
     @NameInMap("Author")
     public String author;
 
-    // 资产描述
     @NameInMap("Description")
     public String description;
 
-    // 扩展字段
     @NameInMap("Extends")
     public java.util.Map<String, ?> _extends;
 
-    // 资产ID
     @NameInMap("Id")
     public String id;
 
-    // 图像资源
     @NameInMap("Image")
     public CommonMediaResource image;
 
-    // 定义Label， eg:type:advertise 支持广告类型的label
     @NameInMap("Labels")
     public java.util.Map<String, ?> labels;
 
-    // 经纬度地理位置
     @NameInMap("Location")
     public TypeLatLng location;
 
-    // 资产来源
     @NameInMap("Source")
     public String source;
 
-    // 资产状态
     @NameInMap("Status")
     public String status;
 
-    // 概要
     @NameInMap("Synopsis")
     public String synopsis;
 
-    // 标签
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
-    // 标题
     @NameInMap("Title")
     public String title;
 
-    // 视频资源
     @NameInMap("Video")
     public CommonMediaResource video;
 

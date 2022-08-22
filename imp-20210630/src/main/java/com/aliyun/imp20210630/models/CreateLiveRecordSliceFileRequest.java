@@ -4,23 +4,18 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class CreateLiveRecordSliceFileRequest extends TeaModel {
-    // 应用唯一标识，由6位小写字母、数字组成。
     @NameInMap("AppId")
     public String appId;
 
-    // 片段结束时间，时间戳。
     @NameInMap("EndTime")
     public Long endTime;
 
-    // 自定义文件名称。
     @NameInMap("FileName")
     public String fileName;
 
-    // 直播ID。
     @NameInMap("LiveId")
     public String liveId;
 
-    // 片段开始时间，时间戳。
     @NameInMap("StartTime")
     public Long startTime;
 

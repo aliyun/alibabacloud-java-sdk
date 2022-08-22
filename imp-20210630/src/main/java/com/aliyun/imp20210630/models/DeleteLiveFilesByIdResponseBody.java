@@ -3,19 +3,19 @@ package com.aliyun.imp20210630.models;
 
 import com.aliyun.tea.*;
 
-public class BanCommentResponseBody extends TeaModel {
+public class DeleteLiveFilesByIdResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public Boolean result;
 
-    public static BanCommentResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        BanCommentResponseBody self = new BanCommentResponseBody();
+    public static DeleteLiveFilesByIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteLiveFilesByIdResponseBody self = new DeleteLiveFilesByIdResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public BanCommentResponseBody setRequestId(String requestId) {
+    public DeleteLiveFilesByIdResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -23,7 +23,7 @@ public class BanCommentResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BanCommentResponseBody setResult(Boolean result) {
+    public DeleteLiveFilesByIdResponseBody setResult(Boolean result) {
         this.result = result;
         return this;
     }

@@ -3,19 +3,19 @@ package com.aliyun.imp20210630.models;
 
 import com.aliyun.tea.*;
 
-public class GetLiveRoomStatisticsRequest extends TeaModel {
+public class DeleteLiveFilesByIdRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("LiveId")
     public String liveId;
 
-    public static GetLiveRoomStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetLiveRoomStatisticsRequest self = new GetLiveRoomStatisticsRequest();
+    public static DeleteLiveFilesByIdRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteLiveFilesByIdRequest self = new DeleteLiveFilesByIdRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetLiveRoomStatisticsRequest setAppId(String appId) {
+    public DeleteLiveFilesByIdRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -23,7 +23,7 @@ public class GetLiveRoomStatisticsRequest extends TeaModel {
         return this.appId;
     }
 
-    public GetLiveRoomStatisticsRequest setLiveId(String liveId) {
+    public DeleteLiveFilesByIdRequest setLiveId(String liveId) {
         this.liveId = liveId;
         return this;
     }

@@ -4,7 +4,6 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class RemoveMemberResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

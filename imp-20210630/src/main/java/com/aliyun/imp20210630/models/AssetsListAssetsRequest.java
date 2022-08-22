@@ -4,28 +4,21 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class AssetsListAssetsRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
-    // Optional. Used to specify a subset of fields that should be
-    // returned by a get operation or modified by an update operation.
     @NameInMap("FieldMask")
     public String fieldMask;
 
-    // 每页显示个数，最大支持20，参数为空默认显示个数为10。
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 分页Token Optional.
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 参数
     @NameInMap("Params")
     public String params;
 
-    // 订阅Topic
     @NameInMap("Topic")
     public String topic;
 

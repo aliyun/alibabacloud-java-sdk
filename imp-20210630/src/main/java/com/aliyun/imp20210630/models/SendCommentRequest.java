@@ -4,27 +4,21 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class SendCommentRequest extends TeaModel {
-    // 应用唯一标识，可以包含小写字母、数字，长度为6个字符。
     @NameInMap("AppId")
     public String appId;
 
-    // 发送的文本内容。最大的长度不超过256个字节。
     @NameInMap("Content")
     public String content;
 
-    // 扩展字段，服务端仅做透传。
     @NameInMap("Extension")
     public java.util.Map<String, String> extension;
 
-    // 直播间唯一标识，在调用CreateRoom返回。
     @NameInMap("RoomId")
     public String roomId;
 
-    // 弹幕发送者的用户ID，最大长度不超过32个字节。
     @NameInMap("SenderId")
     public String senderId;
 
-    // 弹幕消息发送者的昵称。
     @NameInMap("SenderNick")
     public String senderNick;
 

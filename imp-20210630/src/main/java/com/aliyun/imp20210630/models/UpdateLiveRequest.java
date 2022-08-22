@@ -4,15 +4,12 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveRequest extends TeaModel {
-    // 直播简介，支持中英文，最大长度2048位
     @NameInMap("Introduction")
     public String introduction;
 
-    // 直播资源的唯一标识ID
     @NameInMap("LiveId")
     public String liveId;
 
-    // 直播标题，支持中英文，最大长度256位
     @NameInMap("Title")
     public String title;
 

@@ -4,7 +4,6 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class GetStandardRoomJumpUrlResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,7 +32,6 @@ public class GetStandardRoomJumpUrlResponseBody extends TeaModel {
     }
 
     public static class GetStandardRoomJumpUrlResponseBodyResult extends TeaModel {
-        // 样板间跳转协议地址
         @NameInMap("StandardRoomJumpUrl")
         public String standardRoomJumpUrl;
 

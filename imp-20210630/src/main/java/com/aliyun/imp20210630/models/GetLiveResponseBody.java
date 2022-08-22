@@ -4,7 +4,6 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class GetLiveResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,11 +32,9 @@ public class GetLiveResponseBody extends TeaModel {
     }
 
     public static class GetLiveResponseBodyResultArtcInfo extends TeaModel {
-        // 原画转码地址
         @NameInMap("ArtcH5Url")
         public String artcH5Url;
 
-        // 源码地址
         @NameInMap("ArtcUrl")
         public String artcUrl;
 
@@ -65,19 +62,15 @@ public class GetLiveResponseBody extends TeaModel {
     }
 
     public static class GetLiveResponseBodyResultPlayUrlInfoList extends TeaModel {
-        // 直播拉取分辨率 -1:lld 1:lsd 2:lhd 3:lud
         @NameInMap("CodeLevel")
         public Integer codeLevel;
 
-        // flv拉流地址
         @NameInMap("FlvUrl")
         public String flvUrl;
 
-        // hls拉流地址
         @NameInMap("HlsUrl")
         public String hlsUrl;
 
-        // rtmp拉流地址
         @NameInMap("RtmpUrl")
         public String rtmpUrl;
 
@@ -121,83 +114,63 @@ public class GetLiveResponseBody extends TeaModel {
     }
 
     public static class GetLiveResponseBodyResult extends TeaModel {
-        // 主播ID
         @NameInMap("AnchorId")
         public String anchorId;
 
-        // 租户名
         @NameInMap("AppId")
         public String appId;
 
-        // rts播流信息
         @NameInMap("ArtcInfo")
         public GetLiveResponseBodyResultArtcInfo artcInfo;
 
-        // 直播推送分辨率 -1:lld 1:lsd 2:lhd 3:lud
         @NameInMap("CodeLevel")
         public Integer codeLevel;
 
-        // 封面图片
         @NameInMap("CoverUrl")
         public String coverUrl;
 
-        // 直播创建时间（毫秒ms）
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 直播持续时间（毫秒ms）
         @NameInMap("Duration")
         public Long duration;
 
-        // 直播结束时间（毫秒ms）
         @NameInMap("EndTime")
         public Long endTime;
 
-        // hls播放地址
         @NameInMap("HlsUrl")
         public String hlsUrl;
 
-        // 直播简介
         @NameInMap("Introduction")
         public String introduction;
 
-        // 直播资源的唯一标识ID
         @NameInMap("LiveId")
         public String liveId;
 
-        // 直播拉流地址
         @NameInMap("LiveUrl")
         public String liveUrl;
 
-        // 多分辨率多协议播放信息
         @NameInMap("PlayUrlInfoList")
         public java.util.List<GetLiveResponseBodyResultPlayUrlInfoList> playUrlInfoList;
 
-        // 直播回放地址
         @NameInMap("PlaybackUrl")
         public String playbackUrl;
 
-        // 直播推流地址
         @NameInMap("PushUrl")
         public String pushUrl;
 
-        // 房间id
         @NameInMap("RoomId")
         public String roomId;
 
-        // 直播状态：Created-已创建，未开播，Living-直播中，End-直播结束
         @NameInMap("Status")
         public String status;
 
-        // 直播标题
         @NameInMap("Title")
         public String title;
 
-        // 用户自定义数据存储
         @NameInMap("UserDefineField")
         public String userDefineField;
 
-        // 创建直播用户
         @NameInMap("UserId")
         public String userId;
 

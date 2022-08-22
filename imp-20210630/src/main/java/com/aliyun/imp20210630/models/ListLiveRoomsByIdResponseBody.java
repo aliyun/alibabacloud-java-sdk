@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRoomsByIdResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 创建场景化直播返回的结果。
     @NameInMap("Result")
     public ListLiveRoomsByIdResponseBodyResult result;
 
@@ -34,71 +32,54 @@ public class ListLiveRoomsByIdResponseBody extends TeaModel {
     }
 
     public static class ListLiveRoomsByIdResponseBodyResultLiveList extends TeaModel {
-        // 主播ID。
         @NameInMap("AnchorId")
         public String anchorId;
 
-        // 主播昵称。
         @NameInMap("AnchorNick")
         public String anchorNick;
 
-        // 应用ID。
         @NameInMap("AppId")
         public String appId;
 
-        // 聊天ID。
         @NameInMap("ChatId")
         public String chatId;
 
-        // 封面。
         @NameInMap("CoverUrl")
         public String coverUrl;
 
-        // 直播的创建时间。单位为ms。
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 直播的结束时间。单位为ms。
         @NameInMap("EndTime")
         public Long endTime;
 
-        // 直播拓展字段。
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
-        // 直播ID。
         @NameInMap("LiveId")
         public String liveId;
 
-        // 公告。
         @NameInMap("Notice")
         public String notice;
 
-        // 在线用户数。
         @NameInMap("OnlineCount")
         public Long onlineCount;
 
-        // 访问用户人次。
         @NameInMap("Pv")
         public Long pv;
 
-        // 房间ID。
         @NameInMap("RoomId")
         public String roomId;
 
-        // 直播的开始时间。单位为ms。
         @NameInMap("StartTime")
         public Long startTime;
 
-        // 直播状态，0-在播 1-下播。
         @NameInMap("Status")
         public Integer status;
 
-        // 标题。
         @NameInMap("Title")
         public String title;
 
-        // 访问用户数。
         @NameInMap("Uv")
         public Long uv;
 
@@ -246,7 +227,6 @@ public class ListLiveRoomsByIdResponseBody extends TeaModel {
     }
 
     public static class ListLiveRoomsByIdResponseBodyResult extends TeaModel {
-        // 直播列表信息。
         @NameInMap("LiveList")
         public java.util.List<ListLiveRoomsByIdResponseBodyResultLiveList> liveList;
 

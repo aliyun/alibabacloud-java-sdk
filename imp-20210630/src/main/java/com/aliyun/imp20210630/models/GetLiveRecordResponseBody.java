@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class GetLiveRecordResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // API请求的返回结果结构体。
     @NameInMap("Result")
     public GetLiveRecordResponseBodyResult result;
 

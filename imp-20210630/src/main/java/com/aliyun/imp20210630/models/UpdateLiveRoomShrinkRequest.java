@@ -4,39 +4,30 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveRoomShrinkRequest extends TeaModel {
-    // 主播id，仅支持英文和数字，最大长度36位。
     @NameInMap("AnchorId")
     public String anchorId;
 
-    // 主播昵称。
     @NameInMap("AnchorNick")
     public String anchorNick;
 
-    // 应用唯一标识，由6位小写字母、数字组成。
     @NameInMap("AppId")
     public String appId;
 
-    // 封面，支持图片地址链接格式
     @NameInMap("CoverUrl")
     public String coverUrl;
 
-    // 拓展字段，按需传递，需要额外记录的房间属性。
     @NameInMap("Extension")
     public String extensionShrink;
 
-    // 直播ID。
     @NameInMap("LiveId")
     public String liveId;
 
-    // 公告，支持中英文，最大长度256位。
     @NameInMap("Notice")
     public String notice;
 
-    // 标题，支持中英文，最大长度32位。
     @NameInMap("Title")
     public String title;
 
-    // 操作人ID。
     @NameInMap("UserId")
     public String userId;
 

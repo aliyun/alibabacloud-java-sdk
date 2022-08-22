@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class ListClassesResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 创建课程返回的结果。
     @NameInMap("Result")
     public ListClassesResponseBodyResult result;
 
@@ -34,51 +32,39 @@ public class ListClassesResponseBody extends TeaModel {
     }
 
     public static class ListClassesResponseBodyResultClassList extends TeaModel {
-        // 课堂唯一标识，由调用CreateClass返回。
         @NameInMap("ClassId")
         public String classId;
 
-        // 连麦会议唯一标识。
         @NameInMap("ConfId")
         public String confId;
 
-        // 创建人昵称。
         @NameInMap("CreateNickname")
         public String createNickname;
 
-        // 创建人ID。
         @NameInMap("CreateUserId")
         public String createUserId;
 
-        // 下课时间戳，毫秒。
         @NameInMap("EndTime")
         public Long endTime;
 
-        // 直播的唯一标识ID。
         @NameInMap("LiveId")
         public String liveId;
 
-        // 房间ID
         @NameInMap("RoomId")
         public String roomId;
 
-        // 开始上课时间戳，毫秒。
         @NameInMap("StartTime")
         public Long startTime;
 
-        // 课堂状态，0:未开始 1:上课中 2:已下课。
         @NameInMap("Status")
         public Integer status;
 
-        // 课堂标题。
         @NameInMap("Title")
         public String title;
 
-        // 白板ID
         @NameInMap("WhiteboardId")
         public String whiteboardId;
 
-        // 白板录制ID
         @NameInMap("WhiteboardRecordId")
         public String whiteboardRecordId;
 
@@ -186,19 +172,15 @@ public class ListClassesResponseBody extends TeaModel {
     }
 
     public static class ListClassesResponseBodyResult extends TeaModel {
-        // 课程列表信息。
         @NameInMap("ClassList")
         public java.util.List<ListClassesResponseBodyResultClassList> classList;
 
-        // 是否还有下一页。
         @NameInMap("HasMore")
         public Boolean hasMore;
 
-        // 课程总页数。
         @NameInMap("PageTotal")
         public Integer pageTotal;
 
-        // 课程总数。
         @NameInMap("TotalCount")
         public Integer totalCount;
 

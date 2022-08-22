@@ -4,11 +4,9 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class ListCommentsResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 调用查询弹幕消息列表的返回结果。
     @NameInMap("Result")
     public ListCommentsResponseBodyResult result;
 
@@ -34,35 +32,27 @@ public class ListCommentsResponseBody extends TeaModel {
     }
 
     public static class ListCommentsResponseBodyResultCommentVOList extends TeaModel {
-        // 应用ID。
         @NameInMap("AppId")
         public String appId;
 
-        // 弹幕消息的唯一ID标识。
         @NameInMap("CommentId")
         public String commentId;
 
-        // 弹幕消息的内容。
         @NameInMap("Content")
         public String content;
 
-        // 弹幕消息的创建时间，Unix时间戳，单位：毫秒。
         @NameInMap("CreateAt")
         public Long createAt;
 
-        // 扩展字段。
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
-        // 房间ID。
         @NameInMap("RoomId")
         public String roomId;
 
-        // 弹幕消息的发送者ID标识。
         @NameInMap("SenderId")
         public String senderId;
 
-        // 弹幕消息发送者的昵称。
         @NameInMap("SenderNick")
         public String senderNick;
 
@@ -138,19 +128,15 @@ public class ListCommentsResponseBody extends TeaModel {
     }
 
     public static class ListCommentsResponseBodyResult extends TeaModel {
-        // 弹幕消息列表。
         @NameInMap("CommentVOList")
         public java.util.List<ListCommentsResponseBodyResultCommentVOList> commentVOList;
 
-        // 是否还有下一页数据。true表示还有，false表示没有。
         @NameInMap("HasMore")
         public Boolean hasMore;
 
-        // 分页查询弹幕消息列表的总页数。
         @NameInMap("PageTotal")
         public Integer pageTotal;
 
-        // 弹幕消息的总数。
         @NameInMap("TotalCount")
         public Integer totalCount;
 
