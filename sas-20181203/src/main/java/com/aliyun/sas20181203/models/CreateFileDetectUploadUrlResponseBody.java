@@ -84,6 +84,9 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
     }
 
     public static class CreateFileDetectUploadUrlResponseBodyUploadUrlList extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("Context")
         public CreateFileDetectUploadUrlResponseBodyUploadUrlListContext context;
 
@@ -99,12 +102,23 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
         @NameInMap("InternalUrl")
         public String internalUrl;
 
+        @NameInMap("Message")
+        public String message;
+
         @NameInMap("PublicUrl")
         public String publicUrl;
 
         public static CreateFileDetectUploadUrlResponseBodyUploadUrlList build(java.util.Map<String, ?> map) throws Exception {
             CreateFileDetectUploadUrlResponseBodyUploadUrlList self = new CreateFileDetectUploadUrlResponseBodyUploadUrlList();
             return TeaModel.build(map, self);
+        }
+
+        public CreateFileDetectUploadUrlResponseBodyUploadUrlList setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public CreateFileDetectUploadUrlResponseBodyUploadUrlList setContext(CreateFileDetectUploadUrlResponseBodyUploadUrlListContext context) {
@@ -145,6 +159,14 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
         }
         public String getInternalUrl() {
             return this.internalUrl;
+        }
+
+        public CreateFileDetectUploadUrlResponseBodyUploadUrlList setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
         }
 
         public CreateFileDetectUploadUrlResponseBodyUploadUrlList setPublicUrl(String publicUrl) {

@@ -32,17 +32,17 @@ public class GetFileDetectResultResponseBody extends TeaModel {
     }
 
     public static class GetFileDetectResultResponseBodyResultList extends TeaModel {
-        @NameInMap("ErrorCode")
-        public String errorCode;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
+        @NameInMap("Code")
+        public String code;
 
         @NameInMap("Ext")
         public String ext;
 
         @NameInMap("HashKey")
         public String hashKey;
+
+        @NameInMap("Message")
+        public String message;
 
         @NameInMap("Result")
         public Integer result;
@@ -58,20 +58,12 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetFileDetectResultResponseBodyResultList setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
+        public GetFileDetectResultResponseBodyResultList setCode(String code) {
+            this.code = code;
             return this;
         }
-        public String getErrorCode() {
-            return this.errorCode;
-        }
-
-        public GetFileDetectResultResponseBodyResultList setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
+        public String getCode() {
+            return this.code;
         }
 
         public GetFileDetectResultResponseBodyResultList setExt(String ext) {
@@ -88,6 +80,14 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         }
         public String getHashKey() {
             return this.hashKey;
+        }
+
+        public GetFileDetectResultResponseBodyResultList setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
         }
 
         public GetFileDetectResultResponseBodyResultList setResult(Integer result) {
