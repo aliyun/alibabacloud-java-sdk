@@ -1057,11 +1057,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CostCenterQueryResponse costCenterQuery(CostCenterQueryRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        CostCenterQueryHeaders headers = new CostCenterQueryHeaders();
         return this.costCenterQueryWithOptions(request, headers, runtime);
     }
 
-    public CostCenterQueryResponse costCenterQueryWithOptions(CostCenterQueryRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public CostCenterQueryResponse costCenterQueryWithOptions(CostCenterQueryRequest request, CostCenterQueryHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.needOrgEntity)) {
@@ -1080,8 +1080,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("user_id", request.userId);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripSoCorpToken)) {
+            realHeaders.put("x-acs-btrip-so-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripSoCorpToken));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
