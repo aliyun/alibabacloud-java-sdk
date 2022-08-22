@@ -3,46 +3,46 @@ package com.aliyun.aligeniessp_1_0.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteScheduleTaskRequest extends TeaModel {
+public class GetWeatherRequest extends TeaModel {
     @NameInMap("DeviceInfo")
-    public DeleteScheduleTaskRequestDeviceInfo deviceInfo;
+    public GetWeatherRequestDeviceInfo deviceInfo;
 
     @NameInMap("Payload")
-    public DeleteScheduleTaskRequestPayload payload;
+    public GetWeatherRequestPayload payload;
 
     @NameInMap("UserInfo")
-    public DeleteScheduleTaskRequestUserInfo userInfo;
+    public GetWeatherRequestUserInfo userInfo;
 
-    public static DeleteScheduleTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteScheduleTaskRequest self = new DeleteScheduleTaskRequest();
+    public static GetWeatherRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetWeatherRequest self = new GetWeatherRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteScheduleTaskRequest setDeviceInfo(DeleteScheduleTaskRequestDeviceInfo deviceInfo) {
+    public GetWeatherRequest setDeviceInfo(GetWeatherRequestDeviceInfo deviceInfo) {
         this.deviceInfo = deviceInfo;
         return this;
     }
-    public DeleteScheduleTaskRequestDeviceInfo getDeviceInfo() {
+    public GetWeatherRequestDeviceInfo getDeviceInfo() {
         return this.deviceInfo;
     }
 
-    public DeleteScheduleTaskRequest setPayload(DeleteScheduleTaskRequestPayload payload) {
+    public GetWeatherRequest setPayload(GetWeatherRequestPayload payload) {
         this.payload = payload;
         return this;
     }
-    public DeleteScheduleTaskRequestPayload getPayload() {
+    public GetWeatherRequestPayload getPayload() {
         return this.payload;
     }
 
-    public DeleteScheduleTaskRequest setUserInfo(DeleteScheduleTaskRequestUserInfo userInfo) {
+    public GetWeatherRequest setUserInfo(GetWeatherRequestUserInfo userInfo) {
         this.userInfo = userInfo;
         return this;
     }
-    public DeleteScheduleTaskRequestUserInfo getUserInfo() {
+    public GetWeatherRequestUserInfo getUserInfo() {
         return this.userInfo;
     }
 
-    public static class DeleteScheduleTaskRequestDeviceInfo extends TeaModel {
+    public static class GetWeatherRequestDeviceInfo extends TeaModel {
         @NameInMap("EncodeKey")
         public String encodeKey;
 
@@ -58,12 +58,12 @@ public class DeleteScheduleTaskRequest extends TeaModel {
         @NameInMap("OrganizationId")
         public String organizationId;
 
-        public static DeleteScheduleTaskRequestDeviceInfo build(java.util.Map<String, ?> map) throws Exception {
-            DeleteScheduleTaskRequestDeviceInfo self = new DeleteScheduleTaskRequestDeviceInfo();
+        public static GetWeatherRequestDeviceInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetWeatherRequestDeviceInfo self = new GetWeatherRequestDeviceInfo();
             return TeaModel.build(map, self);
         }
 
-        public DeleteScheduleTaskRequestDeviceInfo setEncodeKey(String encodeKey) {
+        public GetWeatherRequestDeviceInfo setEncodeKey(String encodeKey) {
             this.encodeKey = encodeKey;
             return this;
         }
@@ -71,7 +71,7 @@ public class DeleteScheduleTaskRequest extends TeaModel {
             return this.encodeKey;
         }
 
-        public DeleteScheduleTaskRequestDeviceInfo setEncodeType(String encodeType) {
+        public GetWeatherRequestDeviceInfo setEncodeType(String encodeType) {
             this.encodeType = encodeType;
             return this;
         }
@@ -79,7 +79,7 @@ public class DeleteScheduleTaskRequest extends TeaModel {
             return this.encodeType;
         }
 
-        public DeleteScheduleTaskRequestDeviceInfo setId(String id) {
+        public GetWeatherRequestDeviceInfo setId(String id) {
             this.id = id;
             return this;
         }
@@ -87,7 +87,7 @@ public class DeleteScheduleTaskRequest extends TeaModel {
             return this.id;
         }
 
-        public DeleteScheduleTaskRequestDeviceInfo setIdType(String idType) {
+        public GetWeatherRequestDeviceInfo setIdType(String idType) {
             this.idType = idType;
             return this;
         }
@@ -95,7 +95,7 @@ public class DeleteScheduleTaskRequest extends TeaModel {
             return this.idType;
         }
 
-        public DeleteScheduleTaskRequestDeviceInfo setOrganizationId(String organizationId) {
+        public GetWeatherRequestDeviceInfo setOrganizationId(String organizationId) {
             this.organizationId = organizationId;
             return this;
         }
@@ -105,26 +105,15 @@ public class DeleteScheduleTaskRequest extends TeaModel {
 
     }
 
-    public static class DeleteScheduleTaskRequestPayload extends TeaModel {
-        @NameInMap("Id")
-        public Long id;
-
-        public static DeleteScheduleTaskRequestPayload build(java.util.Map<String, ?> map) throws Exception {
-            DeleteScheduleTaskRequestPayload self = new DeleteScheduleTaskRequestPayload();
+    public static class GetWeatherRequestPayload extends TeaModel {
+        public static GetWeatherRequestPayload build(java.util.Map<String, ?> map) throws Exception {
+            GetWeatherRequestPayload self = new GetWeatherRequestPayload();
             return TeaModel.build(map, self);
-        }
-
-        public DeleteScheduleTaskRequestPayload setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
         }
 
     }
 
-    public static class DeleteScheduleTaskRequestUserInfo extends TeaModel {
+    public static class GetWeatherRequestUserInfo extends TeaModel {
         @NameInMap("EncodeKey")
         public String encodeKey;
 
@@ -140,12 +129,12 @@ public class DeleteScheduleTaskRequest extends TeaModel {
         @NameInMap("OrganizationId")
         public String organizationId;
 
-        public static DeleteScheduleTaskRequestUserInfo build(java.util.Map<String, ?> map) throws Exception {
-            DeleteScheduleTaskRequestUserInfo self = new DeleteScheduleTaskRequestUserInfo();
+        public static GetWeatherRequestUserInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetWeatherRequestUserInfo self = new GetWeatherRequestUserInfo();
             return TeaModel.build(map, self);
         }
 
-        public DeleteScheduleTaskRequestUserInfo setEncodeKey(String encodeKey) {
+        public GetWeatherRequestUserInfo setEncodeKey(String encodeKey) {
             this.encodeKey = encodeKey;
             return this;
         }
@@ -153,7 +142,7 @@ public class DeleteScheduleTaskRequest extends TeaModel {
             return this.encodeKey;
         }
 
-        public DeleteScheduleTaskRequestUserInfo setEncodeType(String encodeType) {
+        public GetWeatherRequestUserInfo setEncodeType(String encodeType) {
             this.encodeType = encodeType;
             return this;
         }
@@ -161,7 +150,7 @@ public class DeleteScheduleTaskRequest extends TeaModel {
             return this.encodeType;
         }
 
-        public DeleteScheduleTaskRequestUserInfo setId(String id) {
+        public GetWeatherRequestUserInfo setId(String id) {
             this.id = id;
             return this;
         }
@@ -169,7 +158,7 @@ public class DeleteScheduleTaskRequest extends TeaModel {
             return this.id;
         }
 
-        public DeleteScheduleTaskRequestUserInfo setIdType(String idType) {
+        public GetWeatherRequestUserInfo setIdType(String idType) {
             this.idType = idType;
             return this;
         }
@@ -177,7 +166,7 @@ public class DeleteScheduleTaskRequest extends TeaModel {
             return this.idType;
         }
 
-        public DeleteScheduleTaskRequestUserInfo setOrganizationId(String organizationId) {
+        public GetWeatherRequestUserInfo setOrganizationId(String organizationId) {
             this.organizationId = organizationId;
             return this;
         }

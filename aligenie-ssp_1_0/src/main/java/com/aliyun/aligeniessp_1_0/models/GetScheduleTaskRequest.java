@@ -109,9 +109,6 @@ public class GetScheduleTaskRequest extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
-        @NameInMap("Invoker")
-        public String invoker;
-
         public static GetScheduleTaskRequestPayload build(java.util.Map<String, ?> map) throws Exception {
             GetScheduleTaskRequestPayload self = new GetScheduleTaskRequestPayload();
             return TeaModel.build(map, self);
@@ -123,14 +120,6 @@ public class GetScheduleTaskRequest extends TeaModel {
         }
         public Long getId() {
             return this.id;
-        }
-
-        public GetScheduleTaskRequestPayload setInvoker(String invoker) {
-            this.invoker = invoker;
-            return this;
-        }
-        public String getInvoker() {
-            return this.invoker;
         }
 
     }
