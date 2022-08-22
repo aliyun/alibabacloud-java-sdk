@@ -4,6 +4,12 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class ListDbfsAttachableEcsInstancesRequest extends TeaModel {
+    @NameInMap("FilterKey")
+    public String filterKey;
+
+    @NameInMap("FilterValue")
+    public String filterValue;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -16,6 +22,22 @@ public class ListDbfsAttachableEcsInstancesRequest extends TeaModel {
     public static ListDbfsAttachableEcsInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDbfsAttachableEcsInstancesRequest self = new ListDbfsAttachableEcsInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDbfsAttachableEcsInstancesRequest setFilterKey(String filterKey) {
+        this.filterKey = filterKey;
+        return this;
+    }
+    public String getFilterKey() {
+        return this.filterKey;
+    }
+
+    public ListDbfsAttachableEcsInstancesRequest setFilterValue(String filterValue) {
+        this.filterValue = filterValue;
+        return this;
+    }
+    public String getFilterValue() {
+        return this.filterValue;
     }
 
     public ListDbfsAttachableEcsInstancesRequest setPageNumber(Integer pageNumber) {

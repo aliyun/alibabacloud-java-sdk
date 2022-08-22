@@ -664,6 +664,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDbfsAttachableEcsInstancesResponse listDbfsAttachableEcsInstancesWithOptions(ListDbfsAttachableEcsInstancesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterKey)) {
+            query.put("FilterKey", request.filterKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterValue)) {
+            query.put("FilterValue", request.filterValue);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
