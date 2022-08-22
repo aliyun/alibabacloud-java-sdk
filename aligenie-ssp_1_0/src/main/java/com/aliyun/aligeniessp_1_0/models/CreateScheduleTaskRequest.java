@@ -339,9 +339,6 @@ public class CreateScheduleTaskRequest extends TeaModel {
         @NameInMap("IdempotentId")
         public String idempotentId;
 
-        @NameInMap("Invoker")
-        public String invoker;
-
         @NameInMap("ScheduleDTO")
         public CreateScheduleTaskRequestPayloadScheduleDTO scheduleDTO;
 
@@ -364,14 +361,6 @@ public class CreateScheduleTaskRequest extends TeaModel {
         }
         public String getIdempotentId() {
             return this.idempotentId;
-        }
-
-        public CreateScheduleTaskRequestPayload setInvoker(String invoker) {
-            this.invoker = invoker;
-            return this;
-        }
-        public String getInvoker() {
-            return this.invoker;
         }
 
         public CreateScheduleTaskRequestPayload setScheduleDTO(CreateScheduleTaskRequestPayloadScheduleDTO scheduleDTO) {

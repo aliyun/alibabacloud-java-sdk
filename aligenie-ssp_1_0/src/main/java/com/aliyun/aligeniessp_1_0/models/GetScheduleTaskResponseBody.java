@@ -91,12 +91,6 @@ public class GetScheduleTaskResponseBody extends TeaModel {
         @NameInMap("ScheduleType")
         public String scheduleType;
 
-        @NameInMap("UserId")
-        public Long userId;
-
-        @NameInMap("Uuid")
-        public String uuid;
-
         public static GetScheduleTaskResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetScheduleTaskResponseBodyResult self = new GetScheduleTaskResponseBodyResult();
             return TeaModel.build(map, self);
@@ -148,22 +142,6 @@ public class GetScheduleTaskResponseBody extends TeaModel {
         }
         public String getScheduleType() {
             return this.scheduleType;
-        }
-
-        public GetScheduleTaskResponseBodyResult setUserId(Long userId) {
-            this.userId = userId;
-            return this;
-        }
-        public Long getUserId() {
-            return this.userId;
-        }
-
-        public GetScheduleTaskResponseBodyResult setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
         }
 
     }
