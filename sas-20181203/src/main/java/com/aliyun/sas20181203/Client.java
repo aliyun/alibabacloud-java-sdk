@@ -383,6 +383,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateFileDetectUploadUrlResponse createFileDetectUploadUrlWithOptions(CreateFileDetectUploadUrlRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hashKeyContextList)) {
+            query.put("HashKeyContextList", request.hashKeyContextList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.hashKeyList)) {
             query.put("HashKeyList", request.hashKeyList);
         }

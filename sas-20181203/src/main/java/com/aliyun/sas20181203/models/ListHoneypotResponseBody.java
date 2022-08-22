@@ -189,9 +189,6 @@ public class ListHoneypotResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        @NameInMap("LastRowKey")
-        public String lastRowKey;
-
         @NameInMap("PageSize")
         public Integer pageSize;
 
@@ -217,14 +214,6 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
         public Integer getCurrentPage() {
             return this.currentPage;
-        }
-
-        public ListHoneypotResponseBodyPageInfo setLastRowKey(String lastRowKey) {
-            this.lastRowKey = lastRowKey;
-            return this;
-        }
-        public String getLastRowKey() {
-            return this.lastRowKey;
         }
 
         public ListHoneypotResponseBodyPageInfo setPageSize(Integer pageSize) {
