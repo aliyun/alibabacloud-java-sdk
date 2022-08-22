@@ -10,6 +10,9 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListDbfsAttachableEcsInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDbfsAttachableEcsInstancesResponseBody self = new ListDbfsAttachableEcsInstancesResponseBody();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListDbfsAttachableEcsInstancesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo extends TeaModel {
