@@ -141,6 +141,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.itineraryListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.itineraryList, "itinerary_list", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.itinerarySetList)) {
+            request.itinerarySetListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.itinerarySetList, "itinerary_set_list", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.travelerList)) {
             request.travelerListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.travelerList, "traveler_list", "json");
         }
@@ -197,6 +201,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.itineraryListShrink)) {
             body.put("itinerary_list", request.itineraryListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.itineraryRule)) {
+            body.put("itinerary_rule", request.itineraryRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.itinerarySetListShrink)) {
+            body.put("itinerary_set_list", request.itinerarySetListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.limitTraveler)) {
@@ -379,6 +391,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.itineraryListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.itineraryList, "itinerary_list", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.itinerarySetList)) {
+            request.itinerarySetListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.itinerarySetList, "itinerary_set_list", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.travelerList)) {
             request.travelerListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.travelerList, "traveler_list", "json");
         }
@@ -430,6 +446,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.itineraryListShrink)) {
             body.put("itinerary_list", request.itineraryListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.itineraryRule)) {
+            body.put("itinerary_rule", request.itineraryRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.itinerarySetListShrink)) {
+            body.put("itinerary_set_list", request.itinerarySetListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.limitTraveler)) {
