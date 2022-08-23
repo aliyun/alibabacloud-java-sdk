@@ -4,43 +4,33 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class SaveApThirdAppRequest extends TeaModel {
-    // addStyle
     @NameInMap("AddStyle")
     public Integer addStyle;
 
-    // apAssetId
     @NameInMap("ApAssetId")
     public Long apAssetId;
 
-    // appSecret
     @NameInMap("AppCode")
     public String appCode;
 
-    // appData
     @NameInMap("AppData")
     public String appData;
 
-    // appKey
     @NameInMap("AppName")
     public String appName;
 
-    // category
     @NameInMap("Category")
     public Integer category;
 
-    // id
     @NameInMap("Id")
     public Long id;
 
-    // mac
     @NameInMap("Mac")
     public String mac;
 
-    // appName
     @NameInMap("ThirdAppName")
     public String thirdAppName;
 
-    // version
     @NameInMap("Version")
     public String version;
 

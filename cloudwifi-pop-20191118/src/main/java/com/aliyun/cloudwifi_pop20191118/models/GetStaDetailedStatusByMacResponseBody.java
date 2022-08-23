@@ -3,7 +3,7 @@ package com.aliyun.cloudwifi_pop20191118.models;
 
 import com.aliyun.tea.*;
 
-public class GetApgroupDetailedConfigResponseBody extends TeaModel {
+public class GetStaDetailedStatusByMacResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
@@ -19,12 +19,12 @@ public class GetApgroupDetailedConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static GetApgroupDetailedConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetApgroupDetailedConfigResponseBody self = new GetApgroupDetailedConfigResponseBody();
+    public static GetStaDetailedStatusByMacResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetStaDetailedStatusByMacResponseBody self = new GetStaDetailedStatusByMacResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetApgroupDetailedConfigResponseBody setData(java.util.Map<String, ?> data) {
+    public GetStaDetailedStatusByMacResponseBody setData(java.util.Map<String, ?> data) {
         this.data = data;
         return this;
     }
@@ -32,7 +32,7 @@ public class GetApgroupDetailedConfigResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GetApgroupDetailedConfigResponseBody setErrorCode(Integer errorCode) {
+    public GetStaDetailedStatusByMacResponseBody setErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -40,7 +40,7 @@ public class GetApgroupDetailedConfigResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public GetApgroupDetailedConfigResponseBody setErrorMessage(String errorMessage) {
+    public GetStaDetailedStatusByMacResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -48,7 +48,7 @@ public class GetApgroupDetailedConfigResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public GetApgroupDetailedConfigResponseBody setIsSuccess(Boolean isSuccess) {
+    public GetStaDetailedStatusByMacResponseBody setIsSuccess(Boolean isSuccess) {
         this.isSuccess = isSuccess;
         return this;
     }
@@ -56,7 +56,7 @@ public class GetApgroupDetailedConfigResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
-    public GetApgroupDetailedConfigResponseBody setRequestId(String requestId) {
+    public GetStaDetailedStatusByMacResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

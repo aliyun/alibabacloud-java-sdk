@@ -3,7 +3,7 @@ package com.aliyun.cloudwifi_pop20191118.models;
 
 import com.aliyun.tea.*;
 
-public class SaveApBasicConfigResponse extends TeaModel {
+public class GetStaDetailedStatusByMacResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class SaveApBasicConfigResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public SaveApBasicConfigResponseBody body;
+    public GetStaDetailedStatusByMacResponseBody body;
 
-    public static SaveApBasicConfigResponse build(java.util.Map<String, ?> map) throws Exception {
-        SaveApBasicConfigResponse self = new SaveApBasicConfigResponse();
+    public static GetStaDetailedStatusByMacResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetStaDetailedStatusByMacResponse self = new GetStaDetailedStatusByMacResponse();
         return TeaModel.build(map, self);
     }
 
-    public SaveApBasicConfigResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetStaDetailedStatusByMacResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class SaveApBasicConfigResponse extends TeaModel {
         return this.headers;
     }
 
-    public SaveApBasicConfigResponse setStatusCode(Integer statusCode) {
+    public GetStaDetailedStatusByMacResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class SaveApBasicConfigResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SaveApBasicConfigResponse setBody(SaveApBasicConfigResponseBody body) {
+    public GetStaDetailedStatusByMacResponse setBody(GetStaDetailedStatusByMacResponseBody body) {
         this.body = body;
         return this;
     }
-    public SaveApBasicConfigResponseBody getBody() {
+    public GetStaDetailedStatusByMacResponseBody getBody() {
         return this.body;
     }
 

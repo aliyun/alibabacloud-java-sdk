@@ -4,19 +4,15 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class GetApgroupDetailedConfigRequest extends TeaModel {
-    // apgroupId
     @NameInMap("ApgroupId")
     public Long apgroupId;
 
-    // apgroupUuid
     @NameInMap("ApgroupUuid")
     public String apgroupUuid;
 
-    // appSecret
     @NameInMap("AppCode")
     public String appCode;
 
-    // appKey
     @NameInMap("AppName")
     public String appName;
 

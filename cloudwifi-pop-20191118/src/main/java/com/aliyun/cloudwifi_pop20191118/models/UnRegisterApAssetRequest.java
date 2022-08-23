@@ -4,35 +4,27 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class UnRegisterApAssetRequest extends TeaModel {
-    // appSecret
     @NameInMap("AppCode")
     public String appCode;
 
-    // appKey
     @NameInMap("AppName")
     public String appName;
 
-    // assetApgroupId
     @NameInMap("AssetApgroupId")
     public Long assetApgroupId;
 
-    // category
     @NameInMap("Category")
     public Integer category;
 
-    // id
     @NameInMap("Id")
     public Long id;
 
-    // mac
     @NameInMap("Mac")
     public String mac;
 
-    // serialNo
     @NameInMap("SerialNo")
     public String serialNo;
 
-    // useFor
     @NameInMap("UseFor")
     public Integer useFor;
 

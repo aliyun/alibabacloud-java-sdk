@@ -4,23 +4,18 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class DelApThirdAppRequest extends TeaModel {
-    // apAssetId
     @NameInMap("ApAssetId")
     public Long apAssetId;
 
-    // appSecret
     @NameInMap("AppCode")
     public String appCode;
 
-    // appKey
     @NameInMap("AppName")
     public String appName;
 
-    // id
     @NameInMap("Id")
     public Long id;
 
-    // mac
     @NameInMap("Mac")
     public String mac;
 

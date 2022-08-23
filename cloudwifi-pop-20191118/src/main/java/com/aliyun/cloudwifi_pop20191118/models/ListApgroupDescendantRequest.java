@@ -4,31 +4,24 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class ListApgroupDescendantRequest extends TeaModel {
-    // apgroupId
     @NameInMap("ApgroupId")
     public Long apgroupId;
 
-    // apgroupUuid
     @NameInMap("ApgroupUuid")
     public String apgroupUuid;
 
-    // appSecret
     @NameInMap("AppCode")
     public String appCode;
 
-    // appKey
     @NameInMap("AppName")
     public String appName;
 
-    // cursor
     @NameInMap("Cursor")
     public Long cursor;
 
-    // level
     @NameInMap("Level")
     public Long level;
 
-    // pageSize
     @NameInMap("PageSize")
     public Integer pageSize;
 

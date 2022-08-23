@@ -4,43 +4,33 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class EditApgroupThirdAppRequest extends TeaModel {
-    // apgroupId
     @NameInMap("ApgroupId")
     public Long apgroupId;
 
-    // appSecret
     @NameInMap("AppCode")
     public String appCode;
 
-    // appData
     @NameInMap("AppData")
     public String appData;
 
-    // appKey
     @NameInMap("AppName")
     public String appName;
 
-    // applyToSubGroup
     @NameInMap("ApplyToSubGroup")
     public Integer applyToSubGroup;
 
-    // category
     @NameInMap("Category")
     public Integer category;
 
-    // configType
     @NameInMap("ConfigType")
     public String configType;
 
-    // id
     @NameInMap("Id")
     public Long id;
 
-    // inheritParentGroup
     @NameInMap("InheritParentGroup")
     public Integer inheritParentGroup;
 
-    // appName
     @NameInMap("ThirdAppName")
     public String thirdAppName;
 

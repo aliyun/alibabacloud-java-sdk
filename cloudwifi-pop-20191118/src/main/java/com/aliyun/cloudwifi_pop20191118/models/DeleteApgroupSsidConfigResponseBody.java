@@ -4,23 +4,18 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class DeleteApgroupSsidConfigResponseBody extends TeaModel {
-    // data
     @NameInMap("Data")
     public DeleteApgroupSsidConfigResponseBodyData data;
 
-    // errorCode
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // errorMsg
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // success
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
@@ -70,11 +65,9 @@ public class DeleteApgroupSsidConfigResponseBody extends TeaModel {
     }
 
     public static class DeleteApgroupSsidConfigResponseBodyData extends TeaModel {
-        // id
         @NameInMap("Id")
         public Long id;
 
-        // taskId
         @NameInMap("TaskId")
         public String taskId;
 
