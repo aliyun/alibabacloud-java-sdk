@@ -478,6 +478,124 @@ public class ApplyQueryResponseBody extends TeaModel {
 
     }
 
+    public static class ApplyQueryResponseBodyModuleItinerarySetList extends TeaModel {
+        @NameInMap("arr_date")
+        public String arrDate;
+
+        @NameInMap("city_code_set")
+        public String cityCodeSet;
+
+        @NameInMap("city_set")
+        public String citySet;
+
+        @NameInMap("cost_center_name")
+        public String costCenterName;
+
+        @NameInMap("dep_date")
+        public String depDate;
+
+        @NameInMap("invoice_name")
+        public String invoiceName;
+
+        @NameInMap("itinerary_id")
+        public String itineraryId;
+
+        @NameInMap("project_code")
+        public String projectCode;
+
+        @NameInMap("project_title")
+        public String projectTitle;
+
+        @NameInMap("traffic_type")
+        public Integer trafficType;
+
+        public static ApplyQueryResponseBodyModuleItinerarySetList build(java.util.Map<String, ?> map) throws Exception {
+            ApplyQueryResponseBodyModuleItinerarySetList self = new ApplyQueryResponseBodyModuleItinerarySetList();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyQueryResponseBodyModuleItinerarySetList setArrDate(String arrDate) {
+            this.arrDate = arrDate;
+            return this;
+        }
+        public String getArrDate() {
+            return this.arrDate;
+        }
+
+        public ApplyQueryResponseBodyModuleItinerarySetList setCityCodeSet(String cityCodeSet) {
+            this.cityCodeSet = cityCodeSet;
+            return this;
+        }
+        public String getCityCodeSet() {
+            return this.cityCodeSet;
+        }
+
+        public ApplyQueryResponseBodyModuleItinerarySetList setCitySet(String citySet) {
+            this.citySet = citySet;
+            return this;
+        }
+        public String getCitySet() {
+            return this.citySet;
+        }
+
+        public ApplyQueryResponseBodyModuleItinerarySetList setCostCenterName(String costCenterName) {
+            this.costCenterName = costCenterName;
+            return this;
+        }
+        public String getCostCenterName() {
+            return this.costCenterName;
+        }
+
+        public ApplyQueryResponseBodyModuleItinerarySetList setDepDate(String depDate) {
+            this.depDate = depDate;
+            return this;
+        }
+        public String getDepDate() {
+            return this.depDate;
+        }
+
+        public ApplyQueryResponseBodyModuleItinerarySetList setInvoiceName(String invoiceName) {
+            this.invoiceName = invoiceName;
+            return this;
+        }
+        public String getInvoiceName() {
+            return this.invoiceName;
+        }
+
+        public ApplyQueryResponseBodyModuleItinerarySetList setItineraryId(String itineraryId) {
+            this.itineraryId = itineraryId;
+            return this;
+        }
+        public String getItineraryId() {
+            return this.itineraryId;
+        }
+
+        public ApplyQueryResponseBodyModuleItinerarySetList setProjectCode(String projectCode) {
+            this.projectCode = projectCode;
+            return this;
+        }
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        public ApplyQueryResponseBodyModuleItinerarySetList setProjectTitle(String projectTitle) {
+            this.projectTitle = projectTitle;
+            return this;
+        }
+        public String getProjectTitle() {
+            return this.projectTitle;
+        }
+
+        public ApplyQueryResponseBodyModuleItinerarySetList setTrafficType(Integer trafficType) {
+            this.trafficType = trafficType;
+            return this;
+        }
+        public Integer getTrafficType() {
+            return this.trafficType;
+        }
+
+    }
+
     public static class ApplyQueryResponseBodyModuleTravelerListHotelCitys extends TeaModel {
         @NameInMap("city_code")
         public String cityCode;
@@ -678,6 +796,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("itinerary_rule")
         public Integer itineraryRule;
 
+        @NameInMap("itinerary_set_list")
+        public java.util.List<ApplyQueryResponseBodyModuleItinerarySetList> itinerarySetList;
+
         @NameInMap("limit_traveler")
         public Integer limitTraveler;
 
@@ -865,6 +986,14 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
         public Integer getItineraryRule() {
             return this.itineraryRule;
+        }
+
+        public ApplyQueryResponseBodyModule setItinerarySetList(java.util.List<ApplyQueryResponseBodyModuleItinerarySetList> itinerarySetList) {
+            this.itinerarySetList = itinerarySetList;
+            return this;
+        }
+        public java.util.List<ApplyQueryResponseBodyModuleItinerarySetList> getItinerarySetList() {
+            return this.itinerarySetList;
         }
 
         public ApplyQueryResponseBodyModule setLimitTraveler(Integer limitTraveler) {
