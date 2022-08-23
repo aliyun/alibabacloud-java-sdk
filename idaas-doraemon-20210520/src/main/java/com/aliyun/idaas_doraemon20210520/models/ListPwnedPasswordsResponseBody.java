@@ -13,7 +13,6 @@ public class ListPwnedPasswordsResponseBody extends TeaModel {
     @NameInMap("PwnedPasswordInfos")
     public java.util.List<ListPwnedPasswordsResponseBodyPwnedPasswordInfos> pwnedPasswordInfos;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

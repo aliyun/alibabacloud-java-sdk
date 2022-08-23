@@ -4,11 +4,9 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class CreateUserAuthenticateOptionsResponseBody extends TeaModel {
-    // 防重放挑战码
     @NameInMap("ChallengeBase64")
     public String challengeBase64;
 
-    // 创建认证的Options，内容是JSON
     @NameInMap("Options")
     public String options;
 

@@ -65,35 +65,27 @@ public class ListCostUnitOrdersResponseBody extends TeaModel {
     }
 
     public static class ListCostUnitOrdersResponseBodyItems extends TeaModel {
-        // 阿里云订单编号
         @NameInMap("AliOrderCode")
         public String aliOrderCode;
 
-        // 阿里云订单实例名称
         @NameInMap("AliOrderInstanceId")
         public String aliOrderInstanceId;
 
-        // 创建时间
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 过期时间
         @NameInMap("ExpiredTime")
         public Long expiredTime;
 
-        // 订单状态。VALID：有效、REFUND：退款、EXPIRED：过期
         @NameInMap("OrderStatus")
         public String orderStatus;
 
-        // 退款时间，毫秒时间戳，退款时才有值
         @NameInMap("RefundTime")
         public Long refundTime;
 
-        // 总计 CU 值，单位厘，实际购买 CU 乘以 1000
         @NameInMap("TotalCostUnit")
         public Long totalCostUnit;
 
-        // 已用 CU 值，单位厘，实际使用 CU 乘以 1000
         @NameInMap("UsedCostUnit")
         public Long usedCostUnit;
 

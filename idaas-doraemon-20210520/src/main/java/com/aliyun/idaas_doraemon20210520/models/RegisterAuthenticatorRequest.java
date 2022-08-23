@@ -4,47 +4,36 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class RegisterAuthenticatorRequest extends TeaModel {
-    // 应用外部Id
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
 
-    // 认证器名字
     @NameInMap("AuthenticatorName")
     public String authenticatorName;
 
-    // 认证器类型
     @NameInMap("AuthenticatorType")
     public String authenticatorType;
 
-    // 客户端SDK生成认证上下文
     @NameInMap("ClientExtendParamsJson")
     public String clientExtendParamsJson;
 
-    // 客户端SDK生成认证上下文签名信息
     @NameInMap("ClientExtendParamsJsonSign")
     public String clientExtendParamsJsonSign;
 
-    // 用户自定义记录审计日志信息
     @NameInMap("LogParams")
     public String logParams;
 
-    // 注册上下文
     @NameInMap("RegistrationContext")
     public String registrationContext;
 
-    // 会话绑定的challenge base64标识
     @NameInMap("RequireChallengeBase64")
     public String requireChallengeBase64;
 
-    // 服务端配置项，决定认证要求属性
     @NameInMap("ServerExtendParamsJson")
     public String serverExtendParamsJson;
 
-    // 用户id
     @NameInMap("UserId")
     public String userId;
 
-    // 用户端来源IP地址，用于审计
     @NameInMap("UserSourceIp")
     public String userSourceIp;
 

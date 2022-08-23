@@ -4,31 +4,24 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class CreateUserAuthenticateOptionsRequest extends TeaModel {
-    // 应用外部Id
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
 
-    // 认证器类型
     @NameInMap("AuthenticatorType")
     public String authenticatorType;
 
-    // 操作hash，用来和认证绑定
     @NameInMap("BindHashBase64")
     public String bindHashBase64;
 
-    // 客户端SDK生成认证上下文
     @NameInMap("ClientExtendParamsJson")
     public String clientExtendParamsJson;
 
-    // 客户端SDK生成认证上下文签名信息
     @NameInMap("ClientExtendParamsJsonSign")
     public String clientExtendParamsJsonSign;
 
-    // 服务端配置项，决定认证要求属性
     @NameInMap("ServerExtendParamsJson")
     public String serverExtendParamsJson;
 
-    // 用户id
     @NameInMap("UserId")
     public String userId;
 

@@ -4,19 +4,15 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ListCostUnitOrdersRequest extends TeaModel {
-    // 开始创建时间
     @NameInMap("BeginDate")
     public String beginDate;
 
-    // 结束创建时间
     @NameInMap("FinalDate")
     public String finalDate;
 
-    // 第几页
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 

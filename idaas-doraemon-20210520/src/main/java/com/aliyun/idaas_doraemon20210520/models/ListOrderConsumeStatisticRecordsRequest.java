@@ -4,23 +4,18 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ListOrderConsumeStatisticRecordsRequest extends TeaModel {
-    // 阿里订单编号
     @NameInMap("AliOrderCode")
     public String aliOrderCode;
 
-    // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页记录数
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 统计时间最大值
     @NameInMap("StatisticTimeMax")
     public String statisticTimeMax;
 
-    // 统计时间最小值
     @NameInMap("StatisticTimeMin")
     public String statisticTimeMin;
 

@@ -4,23 +4,18 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ListAuthenticatorsRequest extends TeaModel {
-    // 应用外部Id
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
 
-    // 认证器类型
     @NameInMap("AuthenticatorType")
     public String authenticatorType;
 
-    // 当前开始读取的位置，不设置时默认为1
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // 本次读取的最大数据记录数量，不指定时使用默认值
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // 用户id
     @NameInMap("UserId")
     public String userId;
 

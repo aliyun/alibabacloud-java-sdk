@@ -16,7 +16,6 @@ public class ListAuthenticationLogsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 返回列表长度
     @NameInMap("TotalCount")
     public Long totalCount;
 
