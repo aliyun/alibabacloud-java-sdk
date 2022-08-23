@@ -4,7 +4,6 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class VerifyUserAuthenticationResponseBody extends TeaModel {
-    // 认证结果
     @NameInMap("AuthenticateResultInfo")
     public VerifyUserAuthenticationResponseBodyAuthenticateResultInfo authenticateResultInfo;
 
@@ -17,7 +16,6 @@ public class VerifyUserAuthenticationResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 认证结果，true or false
     @NameInMap("VerifyResult")
     public Boolean verifyResult;
 
@@ -67,15 +65,12 @@ public class VerifyUserAuthenticationResponseBody extends TeaModel {
     }
 
     public static class VerifyUserAuthenticationResponseBodyAuthenticateResultInfo extends TeaModel {
-        // 这次认证绑定的操作hash
         @NameInMap("BindHashBase64")
         public String bindHashBase64;
 
-        // 认证使用的凭据Id
         @NameInMap("CredentialId")
         public String credentialId;
 
-        // 认证通过的用户Id
         @NameInMap("UserId")
         public String userId;
 

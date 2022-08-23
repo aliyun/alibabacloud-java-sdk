@@ -7,18 +7,15 @@ public class ListAuthenticatorsResponseBody extends TeaModel {
     @NameInMap("Authenticator")
     public java.util.List<ListAuthenticatorsResponseBodyAuthenticator> authenticator;
 
-    // 读取到的位置
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // 每页记录数量
     @NameInMap("PageSize")
     public Long pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    // 查询结果数据总数
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -68,31 +65,24 @@ public class ListAuthenticatorsResponseBody extends TeaModel {
     }
 
     public static class ListAuthenticatorsResponseBodyAuthenticator extends TeaModel {
-        // 应用ID
         @NameInMap("ApplicationExternalId")
         public String applicationExternalId;
 
-        // 身份认证对应的认证器名称
         @NameInMap("AuthenticatorName")
         public String authenticatorName;
 
-        // 认证器uuid
         @NameInMap("AuthenticatorUuid")
         public String authenticatorUuid;
 
-        // 身份认证ID
         @NameInMap("CredentialId")
         public String credentialId;
 
-        // 最后验证时间，如果新注册则为注册时间
         @NameInMap("LastVerifyTime")
         public Long lastVerifyTime;
 
-        // 创建时间
         @NameInMap("RegisterTime")
         public Long registerTime;
 
-        // 认证器类型
         @NameInMap("Type")
         public String type;
 

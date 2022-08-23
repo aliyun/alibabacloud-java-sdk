@@ -32,41 +32,33 @@ public class GetAuthenticatorResponseBody extends TeaModel {
     }
 
     public static class GetAuthenticatorResponseBodyAuthenticator extends TeaModel {
-        // 认证器名字
         @NameInMap("AuthenticatorName")
         public String authenticatorName;
 
         @NameInMap("AuthenticatorUuid")
         public String authenticatorUuid;
 
-        // 创建认证器的Options
         @NameInMap("CredentialId")
         public String credentialId;
 
         @NameInMap("CustomAuthenticator")
         public String customAuthenticator;
 
-        // 用户最后签名IP
         @NameInMap("LastVerifySourceIp")
         public String lastVerifySourceIp;
 
-        // 最后验证时间
         @NameInMap("LastVerifyTime")
         public Long lastVerifyTime;
 
-        // 用户最后签名userAgent
         @NameInMap("LastVerifyUserAgent")
         public String lastVerifyUserAgent;
 
-        // 用户注册IP
         @NameInMap("RegisterSourceIp")
         public String registerSourceIp;
 
-        // 注册时间
         @NameInMap("RegisterTime")
         public Long registerTime;
 
-        // 认证器类型
         @NameInMap("Type")
         public String type;
 

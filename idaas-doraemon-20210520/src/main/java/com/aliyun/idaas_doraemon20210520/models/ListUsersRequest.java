@@ -4,11 +4,9 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
-    // 应用外部Id
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
 
-    // 用户id
     @NameInMap("UserId")
     public String userId;
 

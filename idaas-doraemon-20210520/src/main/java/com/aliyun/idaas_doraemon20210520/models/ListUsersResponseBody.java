@@ -7,7 +7,6 @@ public class ListUsersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 查询结果数据总数
     @NameInMap("TotalCount")
     public Long totalCount;
 

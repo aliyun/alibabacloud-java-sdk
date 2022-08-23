@@ -4,15 +4,12 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class DeregisterAuthenticatorRequest extends TeaModel {
-    // 应用外部Id
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
 
-    // 认证器uuid
     @NameInMap("AuthenticatorUuid")
     public String authenticatorUuid;
 
-    // 用户id
     @NameInMap("UserId")
     public String userId;
 

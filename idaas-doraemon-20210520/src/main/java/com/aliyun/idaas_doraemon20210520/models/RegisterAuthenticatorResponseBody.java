@@ -4,11 +4,9 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class RegisterAuthenticatorResponseBody extends TeaModel {
-    // 认证器UUID
     @NameInMap("AuthenticatorUuid")
     public String authenticatorUuid;
 
-    // 仅IFAA认证器注册返回
     @NameInMap("EtasResponseSting")
     public String etasResponseSting;
 
