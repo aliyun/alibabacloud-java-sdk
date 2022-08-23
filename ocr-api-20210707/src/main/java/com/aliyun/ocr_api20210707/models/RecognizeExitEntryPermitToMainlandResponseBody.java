@@ -4,19 +4,15 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeExitEntryPermitToMainlandResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 返回数据
     @NameInMap("Data")
     public String data;
 
-    // 错误提示
     @NameInMap("Message")
     public String message;
 
-    // 请求唯一 ID
     @NameInMap("RequestId")
     public String requestId;
 

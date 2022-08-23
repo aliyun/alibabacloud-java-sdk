@@ -3,7 +3,7 @@ package com.aliyun.ocr_api20210707.models;
 
 import com.aliyun.tea.*;
 
-public class RecognizeCommonPrintedInvoiceResponseBody extends TeaModel {
+public class RecognizeDocumentStructureResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -16,12 +16,12 @@ public class RecognizeCommonPrintedInvoiceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static RecognizeCommonPrintedInvoiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        RecognizeCommonPrintedInvoiceResponseBody self = new RecognizeCommonPrintedInvoiceResponseBody();
+    public static RecognizeDocumentStructureResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        RecognizeDocumentStructureResponseBody self = new RecognizeDocumentStructureResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public RecognizeCommonPrintedInvoiceResponseBody setCode(String code) {
+    public RecognizeDocumentStructureResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -29,7 +29,7 @@ public class RecognizeCommonPrintedInvoiceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public RecognizeCommonPrintedInvoiceResponseBody setData(String data) {
+    public RecognizeDocumentStructureResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -37,7 +37,7 @@ public class RecognizeCommonPrintedInvoiceResponseBody extends TeaModel {
         return this.data;
     }
 
-    public RecognizeCommonPrintedInvoiceResponseBody setMessage(String message) {
+    public RecognizeDocumentStructureResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -45,7 +45,7 @@ public class RecognizeCommonPrintedInvoiceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public RecognizeCommonPrintedInvoiceResponseBody setRequestId(String requestId) {
+    public RecognizeDocumentStructureResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
