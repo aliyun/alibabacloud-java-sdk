@@ -4,15 +4,12 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeExitEntryPermitToMainlandRequest extends TeaModel {
-    // 图案坐标信息输出，针对结构化，如身份证人脸头像
     @NameInMap("OutputFigure")
     public Boolean outputFigure;
 
-    // 图片链接（长度不超 2048，不支持 base64）
     @NameInMap("Url")
     public String url;
 
-    // 图片二进制字节流，最大10MB
     @NameInMap("body")
     public java.io.InputStream body;
 

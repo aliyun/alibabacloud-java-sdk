@@ -7,11 +7,9 @@ public class RecognizeCovidTestReportRequest extends TeaModel {
     @NameInMap("MultipleResult")
     public Boolean multipleResult;
 
-    // 图片链接（长度不超 2048，不支持 base64）
     @NameInMap("Url")
     public String url;
 
-    // 图片二进制字节流，最大10MB
     @NameInMap("body")
     public java.io.InputStream body;
 

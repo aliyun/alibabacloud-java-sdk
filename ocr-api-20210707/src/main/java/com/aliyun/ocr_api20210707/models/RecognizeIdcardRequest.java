@@ -4,15 +4,12 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeIdcardRequest extends TeaModel {
-    // 是否需要图案检测功能，默认不需要
     @NameInMap("OutputFigure")
     public Boolean outputFigure;
 
-    // 图片链接（长度不超 2048，不支持 base64）
     @NameInMap("Url")
     public String url;
 
-    // 图片二进制字节流，最大10MB
     @NameInMap("body")
     public java.io.InputStream body;
 

@@ -3,7 +3,7 @@ package com.aliyun.ocr_api20210707.models;
 
 import com.aliyun.tea.*;
 
-public class RecognizeAdvancedRequest extends TeaModel {
+public class RecognizeDocumentStructureRequest extends TeaModel {
     @NameInMap("NeedRotate")
     public Boolean needRotate;
 
@@ -16,11 +16,11 @@ public class RecognizeAdvancedRequest extends TeaModel {
     @NameInMap("OutputCharInfo")
     public Boolean outputCharInfo;
 
-    @NameInMap("OutputFigure")
-    public Boolean outputFigure;
-
     @NameInMap("OutputTable")
     public Boolean outputTable;
+
+    @NameInMap("Page")
+    public Boolean page;
 
     @NameInMap("Paragraph")
     public Boolean paragraph;
@@ -31,15 +31,18 @@ public class RecognizeAdvancedRequest extends TeaModel {
     @NameInMap("Url")
     public String url;
 
+    @NameInMap("UseNewStyleOutput")
+    public Boolean useNewStyleOutput;
+
     @NameInMap("body")
     public java.io.InputStream body;
 
-    public static RecognizeAdvancedRequest build(java.util.Map<String, ?> map) throws Exception {
-        RecognizeAdvancedRequest self = new RecognizeAdvancedRequest();
+    public static RecognizeDocumentStructureRequest build(java.util.Map<String, ?> map) throws Exception {
+        RecognizeDocumentStructureRequest self = new RecognizeDocumentStructureRequest();
         return TeaModel.build(map, self);
     }
 
-    public RecognizeAdvancedRequest setNeedRotate(Boolean needRotate) {
+    public RecognizeDocumentStructureRequest setNeedRotate(Boolean needRotate) {
         this.needRotate = needRotate;
         return this;
     }
@@ -47,7 +50,7 @@ public class RecognizeAdvancedRequest extends TeaModel {
         return this.needRotate;
     }
 
-    public RecognizeAdvancedRequest setNeedSortPage(Boolean needSortPage) {
+    public RecognizeDocumentStructureRequest setNeedSortPage(Boolean needSortPage) {
         this.needSortPage = needSortPage;
         return this;
     }
@@ -55,7 +58,7 @@ public class RecognizeAdvancedRequest extends TeaModel {
         return this.needSortPage;
     }
 
-    public RecognizeAdvancedRequest setNoStamp(Boolean noStamp) {
+    public RecognizeDocumentStructureRequest setNoStamp(Boolean noStamp) {
         this.noStamp = noStamp;
         return this;
     }
@@ -63,7 +66,7 @@ public class RecognizeAdvancedRequest extends TeaModel {
         return this.noStamp;
     }
 
-    public RecognizeAdvancedRequest setOutputCharInfo(Boolean outputCharInfo) {
+    public RecognizeDocumentStructureRequest setOutputCharInfo(Boolean outputCharInfo) {
         this.outputCharInfo = outputCharInfo;
         return this;
     }
@@ -71,15 +74,7 @@ public class RecognizeAdvancedRequest extends TeaModel {
         return this.outputCharInfo;
     }
 
-    public RecognizeAdvancedRequest setOutputFigure(Boolean outputFigure) {
-        this.outputFigure = outputFigure;
-        return this;
-    }
-    public Boolean getOutputFigure() {
-        return this.outputFigure;
-    }
-
-    public RecognizeAdvancedRequest setOutputTable(Boolean outputTable) {
+    public RecognizeDocumentStructureRequest setOutputTable(Boolean outputTable) {
         this.outputTable = outputTable;
         return this;
     }
@@ -87,7 +82,15 @@ public class RecognizeAdvancedRequest extends TeaModel {
         return this.outputTable;
     }
 
-    public RecognizeAdvancedRequest setParagraph(Boolean paragraph) {
+    public RecognizeDocumentStructureRequest setPage(Boolean page) {
+        this.page = page;
+        return this;
+    }
+    public Boolean getPage() {
+        return this.page;
+    }
+
+    public RecognizeDocumentStructureRequest setParagraph(Boolean paragraph) {
         this.paragraph = paragraph;
         return this;
     }
@@ -95,7 +98,7 @@ public class RecognizeAdvancedRequest extends TeaModel {
         return this.paragraph;
     }
 
-    public RecognizeAdvancedRequest setRow(Boolean row) {
+    public RecognizeDocumentStructureRequest setRow(Boolean row) {
         this.row = row;
         return this;
     }
@@ -103,7 +106,7 @@ public class RecognizeAdvancedRequest extends TeaModel {
         return this.row;
     }
 
-    public RecognizeAdvancedRequest setUrl(String url) {
+    public RecognizeDocumentStructureRequest setUrl(String url) {
         this.url = url;
         return this;
     }
@@ -111,7 +114,15 @@ public class RecognizeAdvancedRequest extends TeaModel {
         return this.url;
     }
 
-    public RecognizeAdvancedRequest setBody(java.io.InputStream body) {
+    public RecognizeDocumentStructureRequest setUseNewStyleOutput(Boolean useNewStyleOutput) {
+        this.useNewStyleOutput = useNewStyleOutput;
+        return this;
+    }
+    public Boolean getUseNewStyleOutput() {
+        return this.useNewStyleOutput;
+    }
+
+    public RecognizeDocumentStructureRequest setBody(java.io.InputStream body) {
         this.body = body;
         return this;
     }

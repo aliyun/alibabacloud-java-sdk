@@ -4,23 +4,18 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeEduPaperOcrRequest extends TeaModel {
-    // 图片类型
     @NameInMap("ImageType")
     public String imageType;
 
-    // 是否输出原图坐标信息(如果图片被做过旋转，图片校正等处理)
     @NameInMap("OutputOricoord")
     public Boolean outputOricoord;
 
-    // 年级学科
     @NameInMap("Subject")
     public String subject;
 
-    // 图片链接（长度不超 2048，不支持 base64）
     @NameInMap("Url")
     public String url;
 
-    // 图片二进制字节流，最大10MB
     @NameInMap("body")
     public java.io.InputStream body;
 

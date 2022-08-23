@@ -4,23 +4,18 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeEduPaperCutRequest extends TeaModel {
-    // 切题类型
     @NameInMap("CutType")
     public String cutType;
 
-    // 图片类型
     @NameInMap("ImageType")
     public String imageType;
 
-    // 年级学科
     @NameInMap("Subject")
     public String subject;
 
-    // 图片链接（长度不超 2048，不支持 base64）
     @NameInMap("Url")
     public String url;
 
-    // 图片二进制字节流，最大10MB
     @NameInMap("body")
     public java.io.InputStream body;
 

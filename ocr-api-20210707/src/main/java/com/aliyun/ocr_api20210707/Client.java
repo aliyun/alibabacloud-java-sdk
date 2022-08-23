@@ -250,63 +250,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.recognizeBasicWithOptions(request, runtime);
     }
 
-    public RecognizeBatchRecognizeResponse recognizeBatchRecognizeWithOptions(RecognizeBatchRecognizeRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.imageName)) {
-            query.put("ImageName", request.imageName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.imageOp)) {
-            query.put("ImageOp", request.imageOp);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.imageOssKey)) {
-            query.put("ImageOssKey", request.imageOssKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.needRotate)) {
-            query.put("NeedRotate", request.needRotate);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.needSortPage)) {
-            query.put("NeedSortPage", request.needSortPage);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.outputCharInfo)) {
-            query.put("OutputCharInfo", request.outputCharInfo);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.outputTable)) {
-            query.put("OutputTable", request.outputTable);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
-            query.put("Url", request.url);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "RecognizeBatchRecognize"),
-            new TeaPair("version", "2021-07-07"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizeBatchRecognizeResponse());
-    }
-
-    public RecognizeBatchRecognizeResponse recognizeBatchRecognize(RecognizeBatchRecognizeRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.recognizeBatchRecognizeWithOptions(request, runtime);
-    }
-
     public RecognizeBirthCertificationResponse recognizeBirthCertificationWithOptions(RecognizeBirthCertificationRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -656,18 +599,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.recognizeCtwoMedicalDeviceManageLicenseWithOptions(request, runtime);
     }
 
-    public RecognizeDeleteExcelRecordResponse recognizeDeleteExcelRecordWithOptions(RecognizeDeleteExcelRecordRequest request, RuntimeOptions runtime) throws Exception {
+    public RecognizeDocumentStructureResponse recognizeDocumentStructureWithOptions(RecognizeDocumentStructureRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
-            query.put("Id", request.id);
+        if (!com.aliyun.teautil.Common.isUnset(request.needRotate)) {
+            query.put("NeedRotate", request.needRotate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needSortPage)) {
+            query.put("NeedSortPage", request.needSortPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noStamp)) {
+            query.put("NoStamp", request.noStamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputCharInfo)) {
+            query.put("OutputCharInfo", request.outputCharInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputTable)) {
+            query.put("OutputTable", request.outputTable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paragraph)) {
+            query.put("Paragraph", request.paragraph);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.row)) {
+            query.put("Row", request.row);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useNewStyleOutput)) {
+            query.put("UseNewStyleOutput", request.useNewStyleOutput);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", request.body),
+            new TeaPair("stream", request.body)
         ));
         Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "RecognizeDeleteExcelRecord"),
+            new TeaPair("action", "RecognizeDocumentStructure"),
             new TeaPair("version", "2021-07-07"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
@@ -677,12 +658,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizeDeleteExcelRecordResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizeDocumentStructureResponse());
     }
 
-    public RecognizeDeleteExcelRecordResponse recognizeDeleteExcelRecord(RecognizeDeleteExcelRecordRequest request) throws Exception {
+    public RecognizeDocumentStructureResponse recognizeDocumentStructure(RecognizeDocumentStructureRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.recognizeDeleteExcelRecordWithOptions(request, runtime);
+        return this.recognizeDocumentStructureWithOptions(request, runtime);
     }
 
     public RecognizeDrivingLicenseResponse recognizeDrivingLicenseWithOptions(RecognizeDrivingLicenseRequest request, RuntimeOptions runtime) throws Exception {
@@ -1006,84 +987,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RecognizeEstateCertificationResponse recognizeEstateCertification(RecognizeEstateCertificationRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.recognizeEstateCertificationWithOptions(request, runtime);
-    }
-
-    public RecognizeExcelExportResponse recognizeExcelExportWithOptions(RecognizeExcelExportRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
-            query.put("FileName", request.fileName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.imageOp)) {
-            query.put("ImageOp", request.imageOp);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ocrImageCount)) {
-            query.put("OcrImageCount", request.ocrImageCount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ocrResult)) {
-            query.put("OcrResult", request.ocrResult);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ocrType)) {
-            query.put("OcrType", request.ocrType);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "RecognizeExcelExport"),
-            new TeaPair("version", "2021-07-07"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizeExcelExportResponse());
-    }
-
-    public RecognizeExcelExportResponse recognizeExcelExport(RecognizeExcelExportRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.recognizeExcelExportWithOptions(request, runtime);
-    }
-
-    public RecognizeExcelRecordResponse recognizeExcelRecordWithOptions(RecognizeExcelRecordRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.currPage)) {
-            query.put("CurrPage", request.currPage);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "RecognizeExcelRecord"),
-            new TeaPair("version", "2021-07-07"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizeExcelRecordResponse());
-    }
-
-    public RecognizeExcelRecordResponse recognizeExcelRecord(RecognizeExcelRecordRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.recognizeExcelRecordWithOptions(request, runtime);
     }
 
     public RecognizeExitEntryPermitToHKResponse recognizeExitEntryPermitToHKWithOptions(RecognizeExitEntryPermitToHKRequest request, RuntimeOptions runtime) throws Exception {
