@@ -1225,6 +1225,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getRadioRunHistoryTimeSerWithOptions(request, runtime);
     }
 
+    public GetStaDetailedStatusByMacResponse getStaDetailedStatusByMacWithOptions(GetStaDetailedStatusByMacRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appCode)) {
+            query.put("AppCode", request.appCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.staMac)) {
+            query.put("StaMac", request.staMac);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetStaDetailedStatusByMac"),
+            new TeaPair("version", "2019-11-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetStaDetailedStatusByMacResponse());
+    }
+
+    public GetStaDetailedStatusByMacResponse getStaDetailedStatusByMac(GetStaDetailedStatusByMacRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getStaDetailedStatusByMacWithOptions(request, runtime);
+    }
+
     public GetStaStatusListByApResponse getStaStatusListByApWithOptions(GetStaStatusListByApRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1268,6 +1305,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetStaStatusListByApResponse getStaStatusListByAp(GetStaStatusListByApRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getStaStatusListByApWithOptions(request, runtime);
+    }
+
+    public JudgeXingTianBusinessResponse judgeXingTianBusinessWithOptions(JudgeXingTianBusinessRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appCode)) {
+            query.put("AppCode", request.appCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realmId)) {
+            query.put("RealmId", request.realmId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "JudgeXingTianBusiness"),
+            new TeaPair("version", "2019-11-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new JudgeXingTianBusinessResponse());
+    }
+
+    public JudgeXingTianBusinessResponse judgeXingTianBusiness(JudgeXingTianBusinessRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.judgeXingTianBusinessWithOptions(request, runtime);
     }
 
     public KickStaResponse kickStaWithOptions(KickStaRequest request, RuntimeOptions runtime) throws Exception {

@@ -4,15 +4,12 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class GetBatchTaskProgressRequest extends TeaModel {
-    // appSecret
     @NameInMap("AppCode")
     public String appCode;
 
-    // appKey
     @NameInMap("AppName")
     public String appName;
 
-    // param1
     @NameInMap("TaskId")
     public String taskId;
 

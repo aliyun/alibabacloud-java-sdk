@@ -3,9 +3,9 @@ package com.aliyun.cloudwifi_pop20191118.models;
 
 import com.aliyun.tea.*;
 
-public class GetApgroupDetailedConfigResponseBody extends TeaModel {
+public class JudgeXingTianBusinessResponseBody extends TeaModel {
     @NameInMap("Data")
-    public java.util.Map<String, ?> data;
+    public Boolean data;
 
     @NameInMap("ErrorCode")
     public Integer errorCode;
@@ -19,20 +19,20 @@ public class GetApgroupDetailedConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static GetApgroupDetailedConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetApgroupDetailedConfigResponseBody self = new GetApgroupDetailedConfigResponseBody();
+    public static JudgeXingTianBusinessResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        JudgeXingTianBusinessResponseBody self = new JudgeXingTianBusinessResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetApgroupDetailedConfigResponseBody setData(java.util.Map<String, ?> data) {
+    public JudgeXingTianBusinessResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
-    public java.util.Map<String, ?> getData() {
+    public Boolean getData() {
         return this.data;
     }
 
-    public GetApgroupDetailedConfigResponseBody setErrorCode(Integer errorCode) {
+    public JudgeXingTianBusinessResponseBody setErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -40,7 +40,7 @@ public class GetApgroupDetailedConfigResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public GetApgroupDetailedConfigResponseBody setErrorMessage(String errorMessage) {
+    public JudgeXingTianBusinessResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -48,7 +48,7 @@ public class GetApgroupDetailedConfigResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public GetApgroupDetailedConfigResponseBody setIsSuccess(Boolean isSuccess) {
+    public JudgeXingTianBusinessResponseBody setIsSuccess(Boolean isSuccess) {
         this.isSuccess = isSuccess;
         return this;
     }
@@ -56,7 +56,7 @@ public class GetApgroupDetailedConfigResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
-    public GetApgroupDetailedConfigResponseBody setRequestId(String requestId) {
+    public JudgeXingTianBusinessResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

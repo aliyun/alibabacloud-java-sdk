@@ -4,75 +4,57 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class SaveApgroupPortalConfigShrinkRequest extends TeaModel {
-    // apgroupId
     @NameInMap("ApgroupId")
     public Long apgroupId;
 
-    // appAuthUrl
     @NameInMap("AppAuthUrl")
     public String appAuthUrl;
 
-    // appSecret
     @NameInMap("AppCode")
     public String appCode;
 
-    // appKey
     @NameInMap("AppName")
     public String appName;
 
-    // authKey
     @NameInMap("AuthKey")
     public String authKey;
 
-    // authSecret
     @NameInMap("AuthSecret")
     public String authSecret;
 
-    // checkUrl
     @NameInMap("CheckUrl")
     public String checkUrl;
 
-    // clientDownload
     @NameInMap("ClientDownload")
     public Integer clientDownload;
 
-    // clientUpload
     @NameInMap("ClientUpload")
     public Integer clientUpload;
 
-    // countdown
     @NameInMap("Countdown")
     public Integer countdown;
 
-    // network
     @NameInMap("Network")
     public Integer network;
 
-    // portalTypes
     @NameInMap("PortalTypes")
     public String portalTypesShrink;
 
-    // portalUrl
     @NameInMap("PortalUrl")
     public String portalUrl;
 
-    // timeStamp
     @NameInMap("TimeStamp")
     public Long timeStamp;
 
-    // totalDownload
     @NameInMap("TotalDownload")
     public Integer totalDownload;
 
-    // totalUpload
     @NameInMap("TotalUpload")
     public Integer totalUpload;
 
-    // webAuthUrl
     @NameInMap("WebAuthUrl")
     public String webAuthUrl;
 
-    // whitelist
     @NameInMap("Whitelist")
     public String whitelist;
 
