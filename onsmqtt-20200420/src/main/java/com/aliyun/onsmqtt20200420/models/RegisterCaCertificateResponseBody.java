@@ -4,7 +4,6 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class RegisterCaCertificateResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

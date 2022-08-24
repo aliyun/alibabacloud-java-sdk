@@ -7,7 +7,6 @@ public class ListCaCertificateResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListCaCertificateResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

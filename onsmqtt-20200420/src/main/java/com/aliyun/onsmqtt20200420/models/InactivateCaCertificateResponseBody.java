@@ -3,19 +3,19 @@ package com.aliyun.onsmqtt20200420.models;
 
 import com.aliyun.tea.*;
 
-public class ActiveCaCertificateResponseBody extends TeaModel {
+public class InactivateCaCertificateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Sn")
     public String sn;
 
-    public static ActiveCaCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ActiveCaCertificateResponseBody self = new ActiveCaCertificateResponseBody();
+    public static InactivateCaCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        InactivateCaCertificateResponseBody self = new InactivateCaCertificateResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ActiveCaCertificateResponseBody setRequestId(String requestId) {
+    public InactivateCaCertificateResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -23,7 +23,7 @@ public class ActiveCaCertificateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ActiveCaCertificateResponseBody setSn(String sn) {
+    public InactivateCaCertificateResponseBody setSn(String sn) {
         this.sn = sn;
         return this;
     }

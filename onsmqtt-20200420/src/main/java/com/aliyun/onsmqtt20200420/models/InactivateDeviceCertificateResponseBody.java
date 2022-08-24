@@ -3,19 +3,19 @@ package com.aliyun.onsmqtt20200420.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteDeviceCertificateResponseBody extends TeaModel {
+public class InactivateDeviceCertificateResponseBody extends TeaModel {
     @NameInMap("DeviceSn")
     public String deviceSn;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteDeviceCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteDeviceCertificateResponseBody self = new DeleteDeviceCertificateResponseBody();
+    public static InactivateDeviceCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        InactivateDeviceCertificateResponseBody self = new InactivateDeviceCertificateResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDeviceCertificateResponseBody setDeviceSn(String deviceSn) {
+    public InactivateDeviceCertificateResponseBody setDeviceSn(String deviceSn) {
         this.deviceSn = deviceSn;
         return this;
     }
@@ -23,7 +23,7 @@ public class DeleteDeviceCertificateResponseBody extends TeaModel {
         return this.deviceSn;
     }
 
-    public DeleteDeviceCertificateResponseBody setRequestId(String requestId) {
+    public InactivateDeviceCertificateResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
