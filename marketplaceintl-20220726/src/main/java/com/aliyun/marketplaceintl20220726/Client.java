@@ -62,6 +62,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             bodyFlat.put("ImageConstraint", request.imageConstraint);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.releaseRegion)) {
+            body.put("ReleaseRegion", request.releaseRegion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
             body.put("RequestId", request.requestId);
         }

@@ -769,6 +769,321 @@ public class DescribeImageCommodityInfoResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPricePostpaidPriceList extends TeaModel {
+        @NameInMap("BasePrice")
+        public String basePrice;
+
+        @NameInMap("Currency")
+        public String currency;
+
+        @NameInMap("ExcelUrl")
+        public String excelUrl;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("PriceType")
+        public String priceType;
+
+        public static DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPricePostpaidPriceList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPricePostpaidPriceList self = new DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPricePostpaidPriceList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPricePostpaidPriceList setBasePrice(String basePrice) {
+            this.basePrice = basePrice;
+            return this;
+        }
+        public String getBasePrice() {
+            return this.basePrice;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPricePostpaidPriceList setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPricePostpaidPriceList setExcelUrl(String excelUrl) {
+            this.excelUrl = excelUrl;
+            return this;
+        }
+        public String getExcelUrl() {
+            return this.excelUrl;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPricePostpaidPriceList setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPricePostpaidPriceList setPriceType(String priceType) {
+            this.priceType = priceType;
+            return this;
+        }
+        public String getPriceType() {
+            return this.priceType;
+        }
+
+    }
+
+    public static class DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPrice extends TeaModel {
+        @NameInMap("HourPrice")
+        public String hourPrice;
+
+        @NameInMap("PostpaidPriceList")
+        public java.util.List<DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPricePostpaidPriceList> postpaidPriceList;
+
+        @NameInMap("UnifiedPrice")
+        public Boolean unifiedPrice;
+
+        public static DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPrice build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPrice self = new DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPrice();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPrice setHourPrice(String hourPrice) {
+            this.hourPrice = hourPrice;
+            return this;
+        }
+        public String getHourPrice() {
+            return this.hourPrice;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPrice setPostpaidPriceList(java.util.List<DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPricePostpaidPriceList> postpaidPriceList) {
+            this.postpaidPriceList = postpaidPriceList;
+            return this;
+        }
+        public java.util.List<DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPricePostpaidPriceList> getPostpaidPriceList() {
+            return this.postpaidPriceList;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPrice setUnifiedPrice(Boolean unifiedPrice) {
+            this.unifiedPrice = unifiedPrice;
+            return this;
+        }
+        public Boolean getUnifiedPrice() {
+            return this.unifiedPrice;
+        }
+
+    }
+
+    public static class DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPricePrepaymentPriceList extends TeaModel {
+        @NameInMap("BasePrice")
+        public String basePrice;
+
+        @NameInMap("Currency")
+        public String currency;
+
+        @NameInMap("ExcelUrl")
+        public String excelUrl;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("PriceType")
+        public String priceType;
+
+        @NameInMap("TradeType")
+        public String tradeType;
+
+        public static DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPricePrepaymentPriceList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPricePrepaymentPriceList self = new DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPricePrepaymentPriceList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPricePrepaymentPriceList setBasePrice(String basePrice) {
+            this.basePrice = basePrice;
+            return this;
+        }
+        public String getBasePrice() {
+            return this.basePrice;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPricePrepaymentPriceList setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPricePrepaymentPriceList setExcelUrl(String excelUrl) {
+            this.excelUrl = excelUrl;
+            return this;
+        }
+        public String getExcelUrl() {
+            return this.excelUrl;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPricePrepaymentPriceList setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPricePrepaymentPriceList setPriceType(String priceType) {
+            this.priceType = priceType;
+            return this;
+        }
+        public String getPriceType() {
+            return this.priceType;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPricePrepaymentPriceList setTradeType(String tradeType) {
+            this.tradeType = tradeType;
+            return this;
+        }
+        public String getTradeType() {
+            return this.tradeType;
+        }
+
+    }
+
+    public static class DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPrice extends TeaModel {
+        @NameInMap("MonthPrice")
+        public String monthPrice;
+
+        @NameInMap("MonthRenewPrice")
+        public String monthRenewPrice;
+
+        @NameInMap("PrepaymentPriceList")
+        public java.util.List<DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPricePrepaymentPriceList> prepaymentPriceList;
+
+        @NameInMap("UnifiedPrice")
+        public Boolean unifiedPrice;
+
+        @NameInMap("YearPrice")
+        public String yearPrice;
+
+        @NameInMap("YearRenewPrice")
+        public String yearRenewPrice;
+
+        public static DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPrice build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPrice self = new DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPrice();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPrice setMonthPrice(String monthPrice) {
+            this.monthPrice = monthPrice;
+            return this;
+        }
+        public String getMonthPrice() {
+            return this.monthPrice;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPrice setMonthRenewPrice(String monthRenewPrice) {
+            this.monthRenewPrice = monthRenewPrice;
+            return this;
+        }
+        public String getMonthRenewPrice() {
+            return this.monthRenewPrice;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPrice setPrepaymentPriceList(java.util.List<DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPricePrepaymentPriceList> prepaymentPriceList) {
+            this.prepaymentPriceList = prepaymentPriceList;
+            return this;
+        }
+        public java.util.List<DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPricePrepaymentPriceList> getPrepaymentPriceList() {
+            return this.prepaymentPriceList;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPrice setUnifiedPrice(Boolean unifiedPrice) {
+            this.unifiedPrice = unifiedPrice;
+            return this;
+        }
+        public Boolean getUnifiedPrice() {
+            return this.unifiedPrice;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPrice setYearPrice(String yearPrice) {
+            this.yearPrice = yearPrice;
+            return this;
+        }
+        public String getYearPrice() {
+            return this.yearPrice;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPrice setYearRenewPrice(String yearRenewPrice) {
+            this.yearRenewPrice = yearRenewPrice;
+            return this;
+        }
+        public String getYearRenewPrice() {
+            return this.yearRenewPrice;
+        }
+
+    }
+
+    public static class DescribeImageCommodityInfoResponseBodyDataSaleInfo extends TeaModel {
+        @NameInMap("BillingMethods")
+        public Integer billingMethods;
+
+        @NameInMap("CommodityFrontShow")
+        public String commodityFrontShow;
+
+        @NameInMap("PostpaidPrice")
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPrice postpaidPrice;
+
+        @NameInMap("PrepaymentPrice")
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPrice prepaymentPrice;
+
+        @NameInMap("PricingPlan")
+        public String pricingPlan;
+
+        public static DescribeImageCommodityInfoResponseBodyDataSaleInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageCommodityInfoResponseBodyDataSaleInfo self = new DescribeImageCommodityInfoResponseBodyDataSaleInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfo setBillingMethods(Integer billingMethods) {
+            this.billingMethods = billingMethods;
+            return this;
+        }
+        public Integer getBillingMethods() {
+            return this.billingMethods;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfo setCommodityFrontShow(String commodityFrontShow) {
+            this.commodityFrontShow = commodityFrontShow;
+            return this;
+        }
+        public String getCommodityFrontShow() {
+            return this.commodityFrontShow;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfo setPostpaidPrice(DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPrice postpaidPrice) {
+            this.postpaidPrice = postpaidPrice;
+            return this;
+        }
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPostpaidPrice getPostpaidPrice() {
+            return this.postpaidPrice;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfo setPrepaymentPrice(DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPrice prepaymentPrice) {
+            this.prepaymentPrice = prepaymentPrice;
+            return this;
+        }
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfoPrepaymentPrice getPrepaymentPrice() {
+            return this.prepaymentPrice;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfo setPricingPlan(String pricingPlan) {
+            this.pricingPlan = pricingPlan;
+            return this;
+        }
+        public String getPricingPlan() {
+            return this.pricingPlan;
+        }
+
+    }
+
     public static class DescribeImageCommodityInfoResponseBodyData extends TeaModel {
         @NameInMap("AccessInfo")
         public DescribeImageCommodityInfoResponseBodyDataAccessInfo accessInfo;
@@ -784,6 +1099,9 @@ public class DescribeImageCommodityInfoResponseBody extends TeaModel {
 
         @NameInMap("ProtocolInfo")
         public DescribeImageCommodityInfoResponseBodyDataProtocolInfo protocolInfo;
+
+        @NameInMap("SaleInfo")
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfo saleInfo;
 
         @NameInMap("TrackId")
         public String trackId;
@@ -831,6 +1149,14 @@ public class DescribeImageCommodityInfoResponseBody extends TeaModel {
         }
         public DescribeImageCommodityInfoResponseBodyDataProtocolInfo getProtocolInfo() {
             return this.protocolInfo;
+        }
+
+        public DescribeImageCommodityInfoResponseBodyData setSaleInfo(DescribeImageCommodityInfoResponseBodyDataSaleInfo saleInfo) {
+            this.saleInfo = saleInfo;
+            return this;
+        }
+        public DescribeImageCommodityInfoResponseBodyDataSaleInfo getSaleInfo() {
+            return this.saleInfo;
         }
 
         public DescribeImageCommodityInfoResponseBodyData setTrackId(String trackId) {

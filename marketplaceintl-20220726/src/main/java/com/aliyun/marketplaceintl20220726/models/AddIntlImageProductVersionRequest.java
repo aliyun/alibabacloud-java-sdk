@@ -16,6 +16,9 @@ public class AddIntlImageProductVersionRequest extends TeaModel {
     @NameInMap("ImageConstraint")
     public AddIntlImageProductVersionRequestImageConstraint imageConstraint;
 
+    @NameInMap("ReleaseRegion")
+    public String releaseRegion;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -60,6 +63,14 @@ public class AddIntlImageProductVersionRequest extends TeaModel {
     }
     public AddIntlImageProductVersionRequestImageConstraint getImageConstraint() {
         return this.imageConstraint;
+    }
+
+    public AddIntlImageProductVersionRequest setReleaseRegion(String releaseRegion) {
+        this.releaseRegion = releaseRegion;
+        return this;
+    }
+    public String getReleaseRegion() {
+        return this.releaseRegion;
     }
 
     public AddIntlImageProductVersionRequest setRequestId(String requestId) {
