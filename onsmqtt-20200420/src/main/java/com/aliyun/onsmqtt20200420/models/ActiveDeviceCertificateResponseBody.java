@@ -7,7 +7,6 @@ public class ActiveDeviceCertificateResponseBody extends TeaModel {
     @NameInMap("DeviceSn")
     public String deviceSn;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

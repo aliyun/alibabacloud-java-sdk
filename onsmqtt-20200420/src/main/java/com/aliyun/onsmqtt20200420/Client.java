@@ -3,16 +3,10 @@ package com.aliyun.onsmqtt20200420;
 
 import com.aliyun.tea.*;
 import com.aliyun.onsmqtt20200420.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
         this.checkConfig(config);
@@ -32,7 +26,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public ActiveCaCertificateResponse activeCaCertificateWithOptions(ActiveCaCertificateRequest request, RuntimeOptions runtime) throws Exception {
+    public ActiveCaCertificateResponse activeCaCertificateWithOptions(ActiveCaCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.mqttInstanceId)) {
@@ -43,10 +37,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Sn", request.sn);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ActiveCaCertificate"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -61,11 +55,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public ActiveCaCertificateResponse activeCaCertificate(ActiveCaCertificateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.activeCaCertificateWithOptions(request, runtime);
     }
 
-    public ActiveDeviceCertificateResponse activeDeviceCertificateWithOptions(ActiveDeviceCertificateRequest request, RuntimeOptions runtime) throws Exception {
+    public ActiveDeviceCertificateResponse activeDeviceCertificateWithOptions(ActiveDeviceCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.caSn)) {
@@ -80,10 +74,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MqttInstanceId", request.mqttInstanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ActiveDeviceCertificate"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -98,11 +92,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public ActiveDeviceCertificateResponse activeDeviceCertificate(ActiveDeviceCertificateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.activeDeviceCertificateWithOptions(request, runtime);
     }
 
-    public ApplyTokenResponse applyTokenWithOptions(ApplyTokenRequest request, RuntimeOptions runtime) throws Exception {
+    public ApplyTokenResponse applyTokenWithOptions(ApplyTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.actions)) {
@@ -121,10 +115,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Resources", request.resources);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ApplyToken"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -139,11 +133,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public ApplyTokenResponse applyToken(ApplyTokenRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.applyTokenWithOptions(request, runtime);
     }
 
-    public BatchQuerySessionByClientIdsResponse batchQuerySessionByClientIdsWithOptions(BatchQuerySessionByClientIdsRequest request, RuntimeOptions runtime) throws Exception {
+    public BatchQuerySessionByClientIdsResponse batchQuerySessionByClientIdsWithOptions(BatchQuerySessionByClientIdsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientIdList)) {
@@ -154,10 +148,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "BatchQuerySessionByClientIds"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -172,11 +166,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public BatchQuerySessionByClientIdsResponse batchQuerySessionByClientIds(BatchQuerySessionByClientIdsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchQuerySessionByClientIdsWithOptions(request, runtime);
     }
 
-    public CreateGroupIdResponse createGroupIdWithOptions(CreateGroupIdRequest request, RuntimeOptions runtime) throws Exception {
+    public CreateGroupIdResponse createGroupIdWithOptions(CreateGroupIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
@@ -187,10 +181,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateGroupId"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -205,11 +199,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public CreateGroupIdResponse createGroupId(CreateGroupIdRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createGroupIdWithOptions(request, runtime);
     }
 
-    public DeleteCaCertificateResponse deleteCaCertificateWithOptions(DeleteCaCertificateRequest request, RuntimeOptions runtime) throws Exception {
+    public DeleteCaCertificateResponse deleteCaCertificateWithOptions(DeleteCaCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.mqttInstanceId)) {
@@ -220,10 +214,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Sn", request.sn);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteCaCertificate"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -238,11 +232,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteCaCertificateResponse deleteCaCertificate(DeleteCaCertificateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCaCertificateWithOptions(request, runtime);
     }
 
-    public DeleteDeviceCertificateResponse deleteDeviceCertificateWithOptions(DeleteDeviceCertificateRequest request, RuntimeOptions runtime) throws Exception {
+    public DeleteDeviceCertificateResponse deleteDeviceCertificateWithOptions(DeleteDeviceCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.caSn)) {
@@ -257,10 +251,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MqttInstanceId", request.mqttInstanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteDeviceCertificate"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -275,11 +269,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteDeviceCertificateResponse deleteDeviceCertificate(DeleteDeviceCertificateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDeviceCertificateWithOptions(request, runtime);
     }
 
-    public DeleteGroupIdResponse deleteGroupIdWithOptions(DeleteGroupIdRequest request, RuntimeOptions runtime) throws Exception {
+    public DeleteGroupIdResponse deleteGroupIdWithOptions(DeleteGroupIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
@@ -290,10 +284,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteGroupId"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -308,17 +302,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteGroupIdResponse deleteGroupId(DeleteGroupIdRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteGroupIdWithOptions(request, runtime);
     }
 
-    public GetCaCertificateResponse getCaCertificateWithOptions(GetCaCertificateRequest request, RuntimeOptions runtime) throws Exception {
+    public GetCaCertificateResponse getCaCertificateWithOptions(GetCaCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetCaCertificate"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -333,17 +327,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetCaCertificateResponse getCaCertificate(GetCaCertificateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getCaCertificateWithOptions(request, runtime);
     }
 
-    public GetDeviceCertificateResponse getDeviceCertificateWithOptions(GetDeviceCertificateRequest request, RuntimeOptions runtime) throws Exception {
+    public GetDeviceCertificateResponse getDeviceCertificateWithOptions(GetDeviceCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetDeviceCertificate"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -358,11 +352,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetDeviceCertificateResponse getDeviceCertificate(GetDeviceCertificateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDeviceCertificateWithOptions(request, runtime);
     }
 
-    public GetDeviceCredentialResponse getDeviceCredentialWithOptions(GetDeviceCredentialRequest request, RuntimeOptions runtime) throws Exception {
+    public GetDeviceCredentialResponse getDeviceCredentialWithOptions(GetDeviceCredentialRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
@@ -373,10 +367,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetDeviceCredential"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -391,17 +385,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetDeviceCredentialResponse getDeviceCredential(GetDeviceCredentialRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDeviceCredentialWithOptions(request, runtime);
     }
 
-    public GetRegisterCodeResponse getRegisterCodeWithOptions(GetRegisterCodeRequest request, RuntimeOptions runtime) throws Exception {
+    public GetRegisterCodeResponse getRegisterCodeWithOptions(GetRegisterCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetRegisterCode"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -416,17 +410,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetRegisterCodeResponse getRegisterCode(GetRegisterCodeRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRegisterCodeWithOptions(request, runtime);
     }
 
-    public ListCaCertificateResponse listCaCertificateWithOptions(ListCaCertificateRequest request, RuntimeOptions runtime) throws Exception {
+    public InactivateCaCertificateResponse inactivateCaCertificateWithOptions(InactivateCaCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mqttInstanceId)) {
+            query.put("MqttInstanceId", request.mqttInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sn)) {
+            query.put("Sn", request.sn);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InactivateCaCertificate"),
+            new TeaPair("version", "2020-04-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InactivateCaCertificateResponse());
+    }
+
+    public InactivateCaCertificateResponse inactivateCaCertificate(InactivateCaCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.inactivateCaCertificateWithOptions(request, runtime);
+    }
+
+    public InactivateDeviceCertificateResponse inactivateDeviceCertificateWithOptions(InactivateDeviceCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.caSn)) {
+            query.put("CaSn", request.caSn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceSn)) {
+            query.put("DeviceSn", request.deviceSn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mqttInstanceId)) {
+            query.put("MqttInstanceId", request.mqttInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InactivateDeviceCertificate"),
+            new TeaPair("version", "2020-04-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InactivateDeviceCertificateResponse());
+    }
+
+    public InactivateDeviceCertificateResponse inactivateDeviceCertificate(InactivateDeviceCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.inactivateDeviceCertificateWithOptions(request, runtime);
+    }
+
+    public ListCaCertificateResponse listCaCertificateWithOptions(ListCaCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListCaCertificate"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -441,17 +505,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public ListCaCertificateResponse listCaCertificate(ListCaCertificateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCaCertificateWithOptions(request, runtime);
     }
 
-    public ListDeviceCertificateResponse listDeviceCertificateWithOptions(ListDeviceCertificateRequest request, RuntimeOptions runtime) throws Exception {
+    public ListDeviceCertificateResponse listDeviceCertificateWithOptions(ListDeviceCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListDeviceCertificate"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -466,17 +530,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public ListDeviceCertificateResponse listDeviceCertificate(ListDeviceCertificateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDeviceCertificateWithOptions(request, runtime);
     }
 
-    public ListDeviceCertificateByCaSnResponse listDeviceCertificateByCaSnWithOptions(ListDeviceCertificateByCaSnRequest request, RuntimeOptions runtime) throws Exception {
+    public ListDeviceCertificateByCaSnResponse listDeviceCertificateByCaSnWithOptions(ListDeviceCertificateByCaSnRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListDeviceCertificateByCaSn"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -491,21 +555,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public ListDeviceCertificateByCaSnResponse listDeviceCertificateByCaSn(ListDeviceCertificateByCaSnRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDeviceCertificateByCaSnWithOptions(request, runtime);
     }
 
-    public ListGroupIdResponse listGroupIdWithOptions(ListGroupIdRequest request, RuntimeOptions runtime) throws Exception {
+    public ListGroupIdResponse listGroupIdWithOptions(ListGroupIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListGroupId"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -520,11 +584,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public ListGroupIdResponse listGroupId(ListGroupIdRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listGroupIdWithOptions(request, runtime);
     }
 
-    public QueryMqttTraceDeviceResponse queryMqttTraceDeviceWithOptions(QueryMqttTraceDeviceRequest request, RuntimeOptions runtime) throws Exception {
+    public QueryMqttTraceDeviceResponse queryMqttTraceDeviceWithOptions(QueryMqttTraceDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
@@ -559,10 +623,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Reverse", request.reverse);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryMqttTraceDevice"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -577,11 +641,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public QueryMqttTraceDeviceResponse queryMqttTraceDevice(QueryMqttTraceDeviceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryMqttTraceDeviceWithOptions(request, runtime);
     }
 
-    public QueryMqttTraceMessageOfClientResponse queryMqttTraceMessageOfClientWithOptions(QueryMqttTraceMessageOfClientRequest request, RuntimeOptions runtime) throws Exception {
+    public QueryMqttTraceMessageOfClientResponse queryMqttTraceMessageOfClientWithOptions(QueryMqttTraceMessageOfClientRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
@@ -616,10 +680,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Reverse", request.reverse);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryMqttTraceMessageOfClient"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -634,11 +698,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public QueryMqttTraceMessageOfClientResponse queryMqttTraceMessageOfClient(QueryMqttTraceMessageOfClientRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryMqttTraceMessageOfClientWithOptions(request, runtime);
     }
 
-    public QueryMqttTraceMessagePublishResponse queryMqttTraceMessagePublishWithOptions(QueryMqttTraceMessagePublishRequest request, RuntimeOptions runtime) throws Exception {
+    public QueryMqttTraceMessagePublishResponse queryMqttTraceMessagePublishWithOptions(QueryMqttTraceMessagePublishRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
@@ -661,10 +725,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MsgId", request.msgId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryMqttTraceMessagePublish"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -679,11 +743,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public QueryMqttTraceMessagePublishResponse queryMqttTraceMessagePublish(QueryMqttTraceMessagePublishRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryMqttTraceMessagePublishWithOptions(request, runtime);
     }
 
-    public QueryMqttTraceMessageSubscribeResponse queryMqttTraceMessageSubscribeWithOptions(QueryMqttTraceMessageSubscribeRequest request, RuntimeOptions runtime) throws Exception {
+    public QueryMqttTraceMessageSubscribeResponse queryMqttTraceMessageSubscribeWithOptions(QueryMqttTraceMessageSubscribeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
@@ -722,10 +786,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Reverse", request.reverse);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryMqttTraceMessageSubscribe"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -740,11 +804,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public QueryMqttTraceMessageSubscribeResponse queryMqttTraceMessageSubscribe(QueryMqttTraceMessageSubscribeRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryMqttTraceMessageSubscribeWithOptions(request, runtime);
     }
 
-    public QuerySessionByClientIdResponse querySessionByClientIdWithOptions(QuerySessionByClientIdRequest request, RuntimeOptions runtime) throws Exception {
+    public QuerySessionByClientIdResponse querySessionByClientIdWithOptions(QuerySessionByClientIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
@@ -755,10 +819,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QuerySessionByClientId"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -773,11 +837,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public QuerySessionByClientIdResponse querySessionByClientId(QuerySessionByClientIdRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.querySessionByClientIdWithOptions(request, runtime);
     }
 
-    public QueryTokenResponse queryTokenWithOptions(QueryTokenRequest request, RuntimeOptions runtime) throws Exception {
+    public QueryTokenResponse queryTokenWithOptions(QueryTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -788,10 +852,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Token", request.token);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "QueryToken"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -806,11 +870,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public QueryTokenResponse queryToken(QueryTokenRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryTokenWithOptions(request, runtime);
     }
 
-    public RefreshDeviceCredentialResponse refreshDeviceCredentialWithOptions(RefreshDeviceCredentialRequest request, RuntimeOptions runtime) throws Exception {
+    public RefreshDeviceCredentialResponse refreshDeviceCredentialWithOptions(RefreshDeviceCredentialRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
@@ -821,10 +885,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RefreshDeviceCredential"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -839,11 +903,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public RefreshDeviceCredentialResponse refreshDeviceCredential(RefreshDeviceCredentialRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.refreshDeviceCredentialWithOptions(request, runtime);
     }
 
-    public RegisterCaCertificateResponse registerCaCertificateWithOptions(RegisterCaCertificateRequest request, RuntimeOptions runtime) throws Exception {
+    public RegisterCaCertificateResponse registerCaCertificateWithOptions(RegisterCaCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.caContent)) {
@@ -862,10 +926,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VerificationContent", request.verificationContent);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RegisterCaCertificate"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -880,11 +944,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public RegisterCaCertificateResponse registerCaCertificate(RegisterCaCertificateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.registerCaCertificateWithOptions(request, runtime);
     }
 
-    public RegisterDeviceCredentialResponse registerDeviceCredentialWithOptions(RegisterDeviceCredentialRequest request, RuntimeOptions runtime) throws Exception {
+    public RegisterDeviceCredentialResponse registerDeviceCredentialWithOptions(RegisterDeviceCredentialRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
@@ -895,10 +959,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RegisterDeviceCredential"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -913,11 +977,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public RegisterDeviceCredentialResponse registerDeviceCredential(RegisterDeviceCredentialRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.registerDeviceCredentialWithOptions(request, runtime);
     }
 
-    public RevokeTokenResponse revokeTokenWithOptions(RevokeTokenRequest request, RuntimeOptions runtime) throws Exception {
+    public RevokeTokenResponse revokeTokenWithOptions(RevokeTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -928,10 +992,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Token", request.token);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RevokeToken"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -946,11 +1010,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public RevokeTokenResponse revokeToken(RevokeTokenRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.revokeTokenWithOptions(request, runtime);
     }
 
-    public SendMessageResponse sendMessageWithOptions(SendMessageRequest request, RuntimeOptions runtime) throws Exception {
+    public SendMessageResponse sendMessageWithOptions(SendMessageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -965,10 +1029,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Payload", request.payload);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SendMessage"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -983,11 +1047,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public SendMessageResponse sendMessage(SendMessageRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendMessageWithOptions(request, runtime);
     }
 
-    public UnRegisterDeviceCredentialResponse unRegisterDeviceCredentialWithOptions(UnRegisterDeviceCredentialRequest request, RuntimeOptions runtime) throws Exception {
+    public UnRegisterDeviceCredentialResponse unRegisterDeviceCredentialWithOptions(UnRegisterDeviceCredentialRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
@@ -998,10 +1062,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UnRegisterDeviceCredential"),
             new TeaPair("version", "2020-04-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -1016,77 +1080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public UnRegisterDeviceCredentialResponse unRegisterDeviceCredential(UnRegisterDeviceCredentialRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unRegisterDeviceCredentialWithOptions(request, runtime);
-    }
-
-    public UnregisterCaCertificateResponse unregisterCaCertificateWithOptions(UnregisterCaCertificateRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.mqttInstanceId)) {
-            query.put("MqttInstanceId", request.mqttInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sn)) {
-            query.put("Sn", request.sn);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UnregisterCaCertificate"),
-            new TeaPair("version", "2020-04-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UnregisterCaCertificateResponse());
-    }
-
-    public UnregisterCaCertificateResponse unregisterCaCertificate(UnregisterCaCertificateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.unregisterCaCertificateWithOptions(request, runtime);
-    }
-
-    public UnregisterDeviceCertificateResponse unregisterDeviceCertificateWithOptions(UnregisterDeviceCertificateRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.caSn)) {
-            query.put("CaSn", request.caSn);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.deviceSn)) {
-            query.put("DeviceSn", request.deviceSn);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mqttInstanceId)) {
-            query.put("MqttInstanceId", request.mqttInstanceId);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UnregisterDeviceCertificate"),
-            new TeaPair("version", "2020-04-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UnregisterDeviceCertificateResponse());
-    }
-
-    public UnregisterDeviceCertificateResponse unregisterDeviceCertificate(UnregisterDeviceCertificateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.unregisterDeviceCertificateWithOptions(request, runtime);
     }
 }
