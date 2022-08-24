@@ -4,6 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class BatchSetDcdnWafDomainConfigsRequest extends TeaModel {
+    @NameInMap("ClientIpTag")
+    public String clientIpTag;
+
     @NameInMap("DefenseStatus")
     public String defenseStatus;
 
@@ -16,6 +19,14 @@ public class BatchSetDcdnWafDomainConfigsRequest extends TeaModel {
     public static BatchSetDcdnWafDomainConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchSetDcdnWafDomainConfigsRequest self = new BatchSetDcdnWafDomainConfigsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchSetDcdnWafDomainConfigsRequest setClientIpTag(String clientIpTag) {
+        this.clientIpTag = clientIpTag;
+        return this;
+    }
+    public String getClientIpTag() {
+        return this.clientIpTag;
     }
 
     public BatchSetDcdnWafDomainConfigsRequest setDefenseStatus(String defenseStatus) {

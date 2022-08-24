@@ -153,6 +153,9 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DomainId")
+        public Long domainId;
+
         @NameInMap("DomainName")
         public String domainName;
 
@@ -196,6 +199,14 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeDcdnUserDomainsResponseBodyDomainsPageData setDomainId(Long domainId) {
+            this.domainId = domainId;
+            return this;
+        }
+        public Long getDomainId() {
+            return this.domainId;
         }
 
         public DescribeDcdnUserDomainsResponseBodyDomainsPageData setDomainName(String domainName) {
