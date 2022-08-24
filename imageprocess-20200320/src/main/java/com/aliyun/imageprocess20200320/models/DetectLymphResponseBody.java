@@ -7,7 +7,6 @@ public class DetectLymphResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectLymphResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

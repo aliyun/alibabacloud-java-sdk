@@ -7,7 +7,6 @@ public class SegmentOARResponseBody extends TeaModel {
     @NameInMap("Data")
     public SegmentOARResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
