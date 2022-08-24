@@ -4,7 +4,6 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class FeedbackSessionResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

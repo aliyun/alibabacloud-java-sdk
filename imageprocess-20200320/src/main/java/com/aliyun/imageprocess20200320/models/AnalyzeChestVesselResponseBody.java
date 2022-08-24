@@ -7,7 +7,6 @@ public class AnalyzeChestVesselResponseBody extends TeaModel {
     @NameInMap("Data")
     public AnalyzeChestVesselResponseBodyData data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
