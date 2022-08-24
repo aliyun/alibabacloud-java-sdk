@@ -4,11 +4,9 @@ package com.aliyun.viapi_regen20211119.models;
 import com.aliyun.tea.*;
 
 public class DownloadFileNameListRequest extends TeaModel {
-    // 空间id
     @NameInMap("DatasetId")
     public Long datasetId;
 
-    // 数据集名称
     @NameInMap("Identity")
     public String identity;
 

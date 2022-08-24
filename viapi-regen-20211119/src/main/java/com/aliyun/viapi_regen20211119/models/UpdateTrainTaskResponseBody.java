@@ -32,6 +32,9 @@ public class UpdateTrainTaskResponseBody extends TeaModel {
     }
 
     public static class UpdateTrainTaskResponseBodyData extends TeaModel {
+        @NameInMap("AdvancedParameters")
+        public String advancedParameters;
+
         @NameInMap("DatasetId")
         public Long datasetId;
 
@@ -71,6 +74,14 @@ public class UpdateTrainTaskResponseBody extends TeaModel {
         public static UpdateTrainTaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpdateTrainTaskResponseBodyData self = new UpdateTrainTaskResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateTrainTaskResponseBodyData setAdvancedParameters(String advancedParameters) {
+            this.advancedParameters = advancedParameters;
+            return this;
+        }
+        public String getAdvancedParameters() {
+            return this.advancedParameters;
         }
 
         public UpdateTrainTaskResponseBodyData setDatasetId(Long datasetId) {
