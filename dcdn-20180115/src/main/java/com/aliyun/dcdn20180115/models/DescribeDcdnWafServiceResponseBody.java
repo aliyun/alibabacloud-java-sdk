@@ -7,6 +7,9 @@ public class DescribeDcdnWafServiceResponseBody extends TeaModel {
     @NameInMap("Edition")
     public String edition;
 
+    @NameInMap("Enabled")
+    public String enabled;
+
     @NameInMap("OpeningTime")
     public String openingTime;
 
@@ -33,6 +36,14 @@ public class DescribeDcdnWafServiceResponseBody extends TeaModel {
     }
     public String getEdition() {
         return this.edition;
+    }
+
+    public DescribeDcdnWafServiceResponseBody setEnabled(String enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    public String getEnabled() {
+        return this.enabled;
     }
 
     public DescribeDcdnWafServiceResponseBody setOpeningTime(String openingTime) {

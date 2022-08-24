@@ -4,6 +4,12 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnBgpBpsDataRequest extends TeaModel {
+    @NameInMap("DeviceName")
+    public String deviceName;
+
+    @NameInMap("DevicePort")
+    public String devicePort;
+
     @NameInMap("EndTime")
     public String endTime;
 
@@ -22,6 +28,22 @@ public class DescribeDcdnBgpBpsDataRequest extends TeaModel {
     public static DescribeDcdnBgpBpsDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnBgpBpsDataRequest self = new DescribeDcdnBgpBpsDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDcdnBgpBpsDataRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
+    }
+
+    public DescribeDcdnBgpBpsDataRequest setDevicePort(String devicePort) {
+        this.devicePort = devicePort;
+        return this;
+    }
+    public String getDevicePort() {
+        return this.devicePort;
     }
 
     public DescribeDcdnBgpBpsDataRequest setEndTime(String endTime) {

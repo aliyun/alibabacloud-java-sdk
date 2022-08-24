@@ -65,6 +65,9 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafDomainsResponseBodyDomains extends TeaModel {
+        @NameInMap("ClientIpTag")
+        public String clientIpTag;
+
         @NameInMap("DomainName")
         public String domainName;
 
@@ -74,6 +77,14 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
         public static DescribeDcdnWafDomainsResponseBodyDomains build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnWafDomainsResponseBodyDomains self = new DescribeDcdnWafDomainsResponseBodyDomains();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDcdnWafDomainsResponseBodyDomains setClientIpTag(String clientIpTag) {
+            this.clientIpTag = clientIpTag;
+            return this;
+        }
+        public String getClientIpTag() {
+            return this.clientIpTag;
         }
 
         public DescribeDcdnWafDomainsResponseBodyDomains setDomainName(String domainName) {
