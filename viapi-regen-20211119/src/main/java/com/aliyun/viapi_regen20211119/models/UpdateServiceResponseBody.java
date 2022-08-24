@@ -32,6 +32,12 @@ public class UpdateServiceResponseBody extends TeaModel {
     }
 
     public static class UpdateServiceResponseBodyData extends TeaModel {
+        @NameInMap("AuthorizationType")
+        public String authorizationType;
+
+        @NameInMap("AuthorizedAccount")
+        public String authorizedAccount;
+
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
@@ -47,6 +53,22 @@ public class UpdateServiceResponseBody extends TeaModel {
         public static UpdateServiceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpdateServiceResponseBodyData self = new UpdateServiceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateServiceResponseBodyData setAuthorizationType(String authorizationType) {
+            this.authorizationType = authorizationType;
+            return this;
+        }
+        public String getAuthorizationType() {
+            return this.authorizationType;
+        }
+
+        public UpdateServiceResponseBodyData setAuthorizedAccount(String authorizedAccount) {
+            this.authorizedAccount = authorizedAccount;
+            return this;
+        }
+        public String getAuthorizedAccount() {
+            return this.authorizedAccount;
         }
 
         public UpdateServiceResponseBodyData setGmtCreate(Long gmtCreate) {

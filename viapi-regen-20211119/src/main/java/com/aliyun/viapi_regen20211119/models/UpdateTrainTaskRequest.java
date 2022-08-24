@@ -4,6 +4,9 @@ package com.aliyun.viapi_regen20211119.models;
 import com.aliyun.tea.*;
 
 public class UpdateTrainTaskRequest extends TeaModel {
+    @NameInMap("AdvancedParameters")
+    public String advancedParameters;
+
     @NameInMap("Description")
     public String description;
 
@@ -16,6 +19,14 @@ public class UpdateTrainTaskRequest extends TeaModel {
     public static UpdateTrainTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTrainTaskRequest self = new UpdateTrainTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateTrainTaskRequest setAdvancedParameters(String advancedParameters) {
+        this.advancedParameters = advancedParameters;
+        return this;
+    }
+    public String getAdvancedParameters() {
+        return this.advancedParameters;
     }
 
     public UpdateTrainTaskRequest setDescription(String description) {

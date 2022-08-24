@@ -32,6 +32,9 @@ public class StartTrainTaskResponseBody extends TeaModel {
     }
 
     public static class StartTrainTaskResponseBodyData extends TeaModel {
+        @NameInMap("CheckResult")
+        public java.util.Map<String, ?> checkResult;
+
         @NameInMap("DatasetId")
         public Long datasetId;
 
@@ -71,6 +74,14 @@ public class StartTrainTaskResponseBody extends TeaModel {
         public static StartTrainTaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             StartTrainTaskResponseBodyData self = new StartTrainTaskResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public StartTrainTaskResponseBodyData setCheckResult(java.util.Map<String, ?> checkResult) {
+            this.checkResult = checkResult;
+            return this;
+        }
+        public java.util.Map<String, ?> getCheckResult() {
+            return this.checkResult;
         }
 
         public StartTrainTaskResponseBodyData setDatasetId(Long datasetId) {

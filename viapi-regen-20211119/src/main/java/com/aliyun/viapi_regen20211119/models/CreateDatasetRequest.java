@@ -4,19 +4,15 @@ package com.aliyun.viapi_regen20211119.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetRequest extends TeaModel {
-    // 描述
     @NameInMap("Description")
     public String description;
 
-    // 数据集名称
     @NameInMap("Name")
     public String name;
 
-    // 类型
     @NameInMap("Type")
     public String type;
 
-    // 空间id
     @NameInMap("WorkspaceId")
     public Long workspaceId;
 

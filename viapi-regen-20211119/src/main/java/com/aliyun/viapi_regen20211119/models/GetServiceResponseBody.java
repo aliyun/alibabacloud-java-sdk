@@ -32,9 +32,6 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     public static class GetServiceResponseBodyData extends TeaModel {
-        @NameInMap("CurlExample")
-        public String curlExample;
-
         @NameInMap("Errorcodes")
         public String errorcodes;
 
@@ -59,6 +56,9 @@ public class GetServiceResponseBody extends TeaModel {
         @NameInMap("ServiceDescription")
         public String serviceDescription;
 
+        @NameInMap("ServiceId")
+        public String serviceId;
+
         @NameInMap("ServiceName")
         public String serviceName;
 
@@ -68,14 +68,6 @@ public class GetServiceResponseBody extends TeaModel {
         public static GetServiceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetServiceResponseBodyData self = new GetServiceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetServiceResponseBodyData setCurlExample(String curlExample) {
-            this.curlExample = curlExample;
-            return this;
-        }
-        public String getCurlExample() {
-            return this.curlExample;
         }
 
         public GetServiceResponseBodyData setErrorcodes(String errorcodes) {
@@ -140,6 +132,14 @@ public class GetServiceResponseBody extends TeaModel {
         }
         public String getServiceDescription() {
             return this.serviceDescription;
+        }
+
+        public GetServiceResponseBodyData setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
         }
 
         public GetServiceResponseBodyData setServiceName(String serviceName) {
