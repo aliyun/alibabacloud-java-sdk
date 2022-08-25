@@ -10,6 +10,9 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("Channel")
     public StartInstanceRequestChannel channel;
 
+    @NameInMap("CommandRequest")
+    public StartInstanceRequestCommandRequest commandRequest;
+
     @NameInMap("TenantId")
     public Long tenantId;
 
@@ -35,6 +38,14 @@ public class StartInstanceRequest extends TeaModel {
     }
     public StartInstanceRequestChannel getChannel() {
         return this.channel;
+    }
+
+    public StartInstanceRequest setCommandRequest(StartInstanceRequestCommandRequest commandRequest) {
+        this.commandRequest = commandRequest;
+        return this;
+    }
+    public StartInstanceRequestCommandRequest getCommandRequest() {
+        return this.commandRequest;
     }
 
     public StartInstanceRequest setTenantId(Long tenantId) {
@@ -98,6 +109,25 @@ public class StartInstanceRequest extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class StartInstanceRequestCommandRequest extends TeaModel {
+        @NameInMap("AlphaSwitch")
+        public Boolean alphaSwitch;
+
+        public static StartInstanceRequestCommandRequest build(java.util.Map<String, ?> map) throws Exception {
+            StartInstanceRequestCommandRequest self = new StartInstanceRequestCommandRequest();
+            return TeaModel.build(map, self);
+        }
+
+        public StartInstanceRequestCommandRequest setAlphaSwitch(Boolean alphaSwitch) {
+            this.alphaSwitch = alphaSwitch;
+            return this;
+        }
+        public Boolean getAlphaSwitch() {
+            return this.alphaSwitch;
         }
 
     }

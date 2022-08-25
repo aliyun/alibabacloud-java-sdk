@@ -10,6 +10,9 @@ public class StartInstanceShrinkRequest extends TeaModel {
     @NameInMap("Channel")
     public String channelShrink;
 
+    @NameInMap("CommandRequest")
+    public String commandRequestShrink;
+
     @NameInMap("TenantId")
     public Long tenantId;
 
@@ -35,6 +38,14 @@ public class StartInstanceShrinkRequest extends TeaModel {
     }
     public String getChannelShrink() {
         return this.channelShrink;
+    }
+
+    public StartInstanceShrinkRequest setCommandRequestShrink(String commandRequestShrink) {
+        this.commandRequestShrink = commandRequestShrink;
+        return this;
+    }
+    public String getCommandRequestShrink() {
+        return this.commandRequestShrink;
     }
 
     public StartInstanceShrinkRequest setTenantId(Long tenantId) {
