@@ -426,6 +426,36 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDtsJobsResponseBodyDtsJobListErrorDetails extends TeaModel {
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        @NameInMap("HelpUrl")
+        public String helpUrl;
+
+        public static DescribeDtsJobsResponseBodyDtsJobListErrorDetails build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobsResponseBodyDtsJobListErrorDetails self = new DescribeDtsJobsResponseBodyDtsJobListErrorDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListErrorDetails setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListErrorDetails setHelpUrl(String helpUrl) {
+            this.helpUrl = helpUrl;
+            return this;
+        }
+        public String getHelpUrl() {
+            return this.helpUrl;
+        }
+
+    }
+
     public static class DescribeDtsJobsResponseBodyDtsJobListMigrationMode extends TeaModel {
         @NameInMap("DataInitialization")
         public Boolean dataInitialization;
@@ -908,6 +938,36 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobErrorDetails extends TeaModel {
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        @NameInMap("HelpUrl")
+        public String helpUrl;
+
+        public static DescribeDtsJobsResponseBodyDtsJobListReverseJobErrorDetails build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobsResponseBodyDtsJobListReverseJobErrorDetails self = new DescribeDtsJobsResponseBodyDtsJobListReverseJobErrorDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobErrorDetails setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobErrorDetails setHelpUrl(String helpUrl) {
+            this.helpUrl = helpUrl;
+            return this;
+        }
+        public String getHelpUrl() {
+            return this.helpUrl;
+        }
+
+    }
+
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode extends TeaModel {
         @NameInMap("DataInitialization")
         public Boolean dataInitialization;
@@ -1310,6 +1370,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("DuUsage")
         public Long duUsage;
 
+        @NameInMap("ErrorDetails")
+        public java.util.List<DescribeDtsJobsResponseBodyDtsJobListReverseJobErrorDetails> errorDetails;
+
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -1466,6 +1529,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public Long getDuUsage() {
             return this.duUsage;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setErrorDetails(java.util.List<DescribeDtsJobsResponseBodyDtsJobListReverseJobErrorDetails> errorDetails) {
+            this.errorDetails = errorDetails;
+            return this;
+        }
+        public java.util.List<DescribeDtsJobsResponseBodyDtsJobListReverseJobErrorDetails> getErrorDetails() {
+            return this.errorDetails;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setErrorMessage(String errorMessage) {
@@ -1822,6 +1893,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("EndTimestamp")
         public String endTimestamp;
 
+        @NameInMap("ErrorDetails")
+        public java.util.List<DescribeDtsJobsResponseBodyDtsJobListErrorDetails> errorDetails;
+
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -2041,6 +2115,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getEndTimestamp() {
             return this.endTimestamp;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setErrorDetails(java.util.List<DescribeDtsJobsResponseBodyDtsJobListErrorDetails> errorDetails) {
+            this.errorDetails = errorDetails;
+            return this;
+        }
+        public java.util.List<DescribeDtsJobsResponseBodyDtsJobListErrorDetails> getErrorDetails() {
+            return this.errorDetails;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setErrorMessage(String errorMessage) {

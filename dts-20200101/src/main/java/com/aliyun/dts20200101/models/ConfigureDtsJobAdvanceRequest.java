@@ -65,6 +65,9 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("DestinationEndpointUserName")
     public String destinationEndpointUserName;
 
+    @NameInMap("DisasterRecoveryJob")
+    public Boolean disasterRecoveryJob;
+
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
@@ -297,6 +300,14 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     }
     public String getDestinationEndpointUserName() {
         return this.destinationEndpointUserName;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setDisasterRecoveryJob(Boolean disasterRecoveryJob) {
+        this.disasterRecoveryJob = disasterRecoveryJob;
+        return this;
+    }
+    public Boolean getDisasterRecoveryJob() {
+        return this.disasterRecoveryJob;
     }
 
     public ConfigureDtsJobAdvanceRequest setDtsInstanceId(String dtsInstanceId) {

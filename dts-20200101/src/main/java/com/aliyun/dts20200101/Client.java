@@ -3,22 +3,6 @@ package com.aliyun.dts20200101;
 
 import com.aliyun.tea.*;
 import com.aliyun.dts20200101.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.oss.*;
-import com.aliyun.oss.models.*;
-import com.aliyun.tearpc.*;
-import com.aliyun.tearpc.models.*;
-import com.aliyun.openplatform20191219.*;
-import com.aliyun.openplatform20191219.models.*;
-import com.aliyun.ossutil.*;
-import com.aliyun.ossutil.models.*;
-import com.aliyun.fileform.*;
-import com.aliyun.fileform.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
@@ -174,6 +158,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DestinationEndpointUserName", request.destinationEndpointUserName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.disasterRecoveryJob)) {
+            query.put("DisasterRecoveryJob", request.disasterRecoveryJob);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dtsInstanceId)) {
             query.put("DtsInstanceId", request.dtsInstanceId);
         }
@@ -275,11 +263,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Reserve", request.reserve);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ConfigureDtsJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -323,11 +311,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("regionId", _regionId)
         ));
         com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
-        AuthorizeFileUploadRequest authRequest = AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest authRequest = com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
             new TeaPair("product", "Dts"),
             new TeaPair("regionId", _regionId)
         ));
-        AuthorizeFileUploadResponse authResponse = new AuthorizeFileUploadResponse();
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
@@ -335,9 +323,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("regionId", _regionId)
         ));
         com.aliyun.oss.Client ossClient = null;
-        FileField fileObj = new FileField();
-        PostObjectRequest.PostObjectRequestHeader ossHeader = new PostObjectRequest.PostObjectRequestHeader();
-        PostObjectRequest uploadRequest = new PostObjectRequest();
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         ConfigureDtsJobRequest configureDtsJobReq = new ConfigureDtsJobRequest();
@@ -347,12 +335,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             ossConfig.accessKeyId = authResponse.accessKeyId;
             ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
             ossClient = new com.aliyun.oss.Client(ossConfig);
-            fileObj = FileField.build(TeaConverter.buildMap(
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
                 new TeaPair("filename", authResponse.objectKey),
                 new TeaPair("content", request.fileOssUrlObject),
                 new TeaPair("contentType", "")
             ));
-            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+            ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
                 new TeaPair("accessKeyId", authResponse.accessKeyId),
                 new TeaPair("policy", authResponse.encodedPolicy),
                 new TeaPair("signature", authResponse.signature),
@@ -360,7 +348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("successActionStatus", "201")
             ));
-            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+            uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
                 new TeaPair("bucketName", authResponse.bucket),
                 new TeaPair("header", ossHeader)
             ));
@@ -420,11 +408,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("MigrationObject", request.migrationObject);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ConfigureMigrationJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -482,10 +470,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ConfigureMigrationJobAlert"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -627,10 +615,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubscriptionInstanceVSwitchId", request.subscriptionInstanceVSwitchId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ConfigureSubscription"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -693,11 +681,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SubscriptionObject", request.subscriptionObject);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ConfigureSubscriptionInstance"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -755,10 +743,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubscriptionInstanceId", request.subscriptionInstanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ConfigureSubscriptionInstanceAlert"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -837,11 +825,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SynchronizationObjects", request.synchronizationObjects);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ConfigureSynchronizationJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -903,10 +891,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationJobId", request.synchronizationJobId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ConfigureSynchronizationJobAlert"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -956,10 +944,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationReplicatorCompareEnable", request.synchronizationReplicatorCompareEnable);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ConfigureSynchronizationJobReplicatorCompare"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1017,10 +1005,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Type", request.type);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CountJobByCondition"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1066,10 +1054,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateConsumerChannel"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1119,10 +1107,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubscriptionInstanceId", request.subscriptionInstanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateConsumerGroup"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1184,10 +1172,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateDedicatedClusterMonitorRule"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1285,10 +1273,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UsedTime", request.usedTime);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateDtsInstance"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1346,10 +1334,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Type", request.type);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateJobMonitorRule"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1395,10 +1383,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateMigrationJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1456,10 +1444,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceEndpoint", request.sourceEndpoint);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateSubscriptionInstance"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1541,10 +1529,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceEndpoint", request.sourceEndpoint);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateSynchronizationJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1582,10 +1570,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteConsumerChannel"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1627,10 +1615,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubscriptionInstanceId", request.subscriptionInstanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteConsumerGroup"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1668,10 +1656,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationDirection", request.synchronizationDirection);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteDtsJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1701,10 +1689,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteDtsJobs"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1742,10 +1730,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteMigrationJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1783,10 +1771,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubscriptionInstanceId", request.subscriptionInstanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteSubscriptionInstance"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1824,10 +1812,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationJobId", request.synchronizationJobId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteSynchronizationJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1869,10 +1857,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeCheckJobs"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1930,10 +1918,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("StartTime", request.startTime);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeClusterOperateLogs"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -1991,10 +1979,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SecurityToken", request.securityToken);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeClusterUsedUtilization"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2108,10 +2096,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceEndpointUserName", request.sourceEndpointUserName);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeConnectionStatus"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2157,10 +2145,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeConsumerChannel"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2206,10 +2194,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubscriptionInstanceId", request.subscriptionInstanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeConsumerGroup"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2243,10 +2231,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceEndpointRegion", request.sourceEndpointRegion);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeDTSIP"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2280,10 +2268,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TbName", request.tbName);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeDataCheckReportUrl"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2325,10 +2313,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TableName", request.tableName);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeDataCheckTableDetails"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2370,10 +2358,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TbName", request.tbName);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeDataCheckTableDiffDetails"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2407,10 +2395,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeDedicatedCluster"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2444,10 +2432,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeDedicatedClusterMonitorRule"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2489,10 +2477,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeDtsEtlJobVersionInfo"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2534,10 +2522,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationDirection", request.synchronizationDirection);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeDtsJobDetail"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2623,10 +2611,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Type", request.type);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeDtsJobs"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2684,10 +2672,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubJobType", request.subJobType);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeDtsServiceLog"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2729,10 +2717,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeEndpointSwitchStatus"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2762,10 +2750,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeEtlJobLogs"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2811,10 +2799,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationJobId", request.synchronizationJobId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeInitializationStatus"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2844,10 +2832,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeJobMonitorRule"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2913,10 +2901,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("StartTime", request.startTime);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeMetricList"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -2958,10 +2946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeMigrationJobAlert"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3015,10 +3003,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MigrationMode", request.migrationMode);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeMigrationJobDetail"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3060,10 +3048,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeMigrationJobStatus"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3113,10 +3101,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Tag", request.tag);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeMigrationJobs"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3170,10 +3158,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StructType", request.structType);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribePreCheckStatus"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3215,10 +3203,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubscriptionInstanceId", request.subscriptionInstanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeSubscriptionInstanceAlert"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3256,10 +3244,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubscriptionInstanceId", request.subscriptionInstanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeSubscriptionInstanceStatus"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3313,10 +3301,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Tag", request.tag);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeSubscriptionInstances"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3368,10 +3356,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Topics", request.topicsShrink);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeSubscriptionMeta"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3417,10 +3405,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationJobId", request.synchronizationJobId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeSynchronizationJobAlert"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3466,10 +3454,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationJobId", request.synchronizationJobId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeSynchronizationJobReplicatorCompare"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3515,10 +3503,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationJobId", request.synchronizationJobId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeSynchronizationJobStatus"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3560,10 +3548,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationJobIdListJsonStr", request.synchronizationJobIdListJsonStr);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeSynchronizationJobStatusList"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3617,10 +3605,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Tag", request.tag);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeSynchronizationJobs"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3662,10 +3650,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeSynchronizationObjectModifyStatus"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3711,10 +3699,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceType", request.resourceType);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeTagKeys"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3764,10 +3752,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceType", request.resourceType);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeTagValues"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3813,10 +3801,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "InitDtsRdsInstance"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3874,10 +3862,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Type", request.type);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListDedicatedCluster"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3919,10 +3907,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Tag", request.tag);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListTagResources"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -3972,10 +3960,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyConsumerChannel"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4033,10 +4021,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("consumerGroupNewPassword", request.consumerGroupNewPassword);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyConsumerGroupPassword"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4078,10 +4066,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubscriptionInstanceId", request.subscriptionInstanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyConsumptionTimestamp"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4127,10 +4115,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyDedicatedCluster"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4199,11 +4187,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Reserved", request.reserved);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyDtsJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4247,11 +4235,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("regionId", _regionId)
         ));
         com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
-        AuthorizeFileUploadRequest authRequest = AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest authRequest = com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
             new TeaPair("product", "Dts"),
             new TeaPair("regionId", _regionId)
         ));
-        AuthorizeFileUploadResponse authResponse = new AuthorizeFileUploadResponse();
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
@@ -4259,9 +4247,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("regionId", _regionId)
         ));
         com.aliyun.oss.Client ossClient = null;
-        FileField fileObj = new FileField();
-        PostObjectRequest.PostObjectRequestHeader ossHeader = new PostObjectRequest.PostObjectRequestHeader();
-        PostObjectRequest uploadRequest = new PostObjectRequest();
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         ModifyDtsJobRequest modifyDtsJobReq = new ModifyDtsJobRequest();
@@ -4271,12 +4259,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             ossConfig.accessKeyId = authResponse.accessKeyId;
             ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
             ossClient = new com.aliyun.oss.Client(ossConfig);
-            fileObj = FileField.build(TeaConverter.buildMap(
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
                 new TeaPair("filename", authResponse.objectKey),
                 new TeaPair("content", request.fileOssUrlObject),
                 new TeaPair("contentType", "")
             ));
-            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+            ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
                 new TeaPair("accessKeyId", authResponse.accessKeyId),
                 new TeaPair("policy", authResponse.encodedPolicy),
                 new TeaPair("signature", authResponse.signature),
@@ -4284,7 +4272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("file", fileObj),
                 new TeaPair("successActionStatus", "201")
             ));
-            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+            uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
                 new TeaPair("bucketName", authResponse.bucket),
                 new TeaPair("header", ossHeader)
             ));
@@ -4315,10 +4303,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyDtsJobDedicatedCluster"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4356,10 +4344,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyDtsJobDuLimit"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4393,10 +4381,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyDtsJobName"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4438,10 +4426,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UserName", request.userName);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyDtsJobPassword"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4487,10 +4475,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubscriptionDataTypeDML", request.subscriptionDataTypeDML);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifySubscription"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4532,10 +4520,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubscriptionObject", request.subscriptionObject);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifySubscriptionObject"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4582,11 +4570,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SynchronizationObjects", request.synchronizationObjects);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifySynchronizationObject"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4628,10 +4616,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RenewInstance"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4669,10 +4657,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationDirection", request.synchronizationDirection);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ResetDtsJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4714,10 +4702,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationJobId", request.synchronizationJobId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ResetSynchronizationJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4751,10 +4739,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ShieldPrecheck"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4800,10 +4788,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SkipPreCheckNames", request.skipPreCheckNames);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SkipPreCheck"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4841,10 +4829,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationDirection", request.synchronizationDirection);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StartDtsJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4874,10 +4862,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StartDtsJobs"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4915,10 +4903,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StartMigrationJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -4956,10 +4944,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubscriptionInstanceId", request.subscriptionInstanceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StartSubscriptionInstance"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5001,10 +4989,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationJobId", request.synchronizationJobId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StartSynchronizationJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5046,10 +5034,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StopDedicatedCluster"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5087,10 +5075,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationDirection", request.synchronizationDirection);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StopDtsJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5120,10 +5108,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StopDtsJobs"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5165,10 +5153,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StopMigrationJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5214,10 +5202,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationDirection", request.synchronizationDirection);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SummaryJobDetail"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5255,10 +5243,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationDirection", request.synchronizationDirection);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SuspendDtsJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5288,10 +5276,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SuspendDtsJobs"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5333,10 +5321,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SuspendMigrationJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5378,10 +5366,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SynchronizationJobId", request.synchronizationJobId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SuspendSynchronizationJob"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5398,6 +5386,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SuspendSynchronizationJobResponse suspendSynchronizationJob(SuspendSynchronizationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.suspendSynchronizationJobWithOptions(request, runtime);
+    }
+
+    public SwitchPhysicalDtsJobToCloudResponse switchPhysicalDtsJobToCloudWithOptions(SwitchPhysicalDtsJobToCloudRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dtsInstanceId)) {
+            query.put("DtsInstanceId", request.dtsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dtsJobId)) {
+            query.put("DtsJobId", request.dtsJobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.synchronizationDirection)) {
+            query.put("SynchronizationDirection", request.synchronizationDirection);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SwitchPhysicalDtsJobToCloud"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SwitchPhysicalDtsJobToCloudResponse());
+    }
+
+    public SwitchPhysicalDtsJobToCloudResponse switchPhysicalDtsJobToCloud(SwitchPhysicalDtsJobToCloudRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.switchPhysicalDtsJobToCloudWithOptions(request, runtime);
     }
 
     public SwitchSynchronizationEndpointResponse switchSynchronizationEndpointWithOptions(SwitchSynchronizationEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -5431,10 +5460,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceEndpoint", request.sourceEndpoint);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SwitchSynchronizationEndpoint"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5472,10 +5501,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Tag", request.tag);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "TagResources"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5513,10 +5542,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "TransferInstanceClass"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5558,10 +5587,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "TransferPayType"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5603,10 +5632,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TagKey", request.tagKey);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UntagResources"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5640,10 +5669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpgradeTwoWay"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
@@ -5681,10 +5710,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Type", request.type);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "WhiteIpList"),
             new TeaPair("version", "2020-01-01"),
             new TeaPair("protocol", "HTTPS"),
