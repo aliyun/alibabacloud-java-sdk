@@ -22,6 +22,9 @@ public class CreateAccountRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAccountRequest self = new CreateAccountRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class CreateAccountRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateAccountRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

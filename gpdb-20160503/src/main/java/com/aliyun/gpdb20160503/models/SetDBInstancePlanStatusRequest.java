@@ -13,8 +13,8 @@ public class SetDBInstancePlanStatusRequest extends TeaModel {
     @NameInMap("PlanId")
     public String planId;
 
-    @NameInMap("PlanStaus")
-    public String planStaus;
+    @NameInMap("PlanStatus")
+    public String planStatus;
 
     public static SetDBInstancePlanStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDBInstancePlanStatusRequest self = new SetDBInstancePlanStatusRequest();
@@ -45,12 +45,12 @@ public class SetDBInstancePlanStatusRequest extends TeaModel {
         return this.planId;
     }
 
-    public SetDBInstancePlanStatusRequest setPlanStaus(String planStaus) {
-        this.planStaus = planStaus;
+    public SetDBInstancePlanStatusRequest setPlanStatus(String planStatus) {
+        this.planStatus = planStatus;
         return this;
     }
-    public String getPlanStaus() {
-        return this.planStaus;
+    public String getPlanStatus() {
+        return this.planStatus;
     }
 
 }
