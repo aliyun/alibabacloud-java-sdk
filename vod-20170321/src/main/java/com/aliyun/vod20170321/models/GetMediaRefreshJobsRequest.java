@@ -4,11 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetMediaRefreshJobsRequest extends TeaModel {
-    // 媒资ID
     @NameInMap("MediaId")
     public String mediaId;
 
-    // 媒资刷新预热任务ID
     @NameInMap("MediaRefreshJobId")
     public String mediaRefreshJobId;
 

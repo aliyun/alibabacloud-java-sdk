@@ -4,15 +4,12 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
-    // 没有多应用权限的视频ID
     @NameInMap("ForbiddenMediaIds")
     public String forbiddenMediaIds;
 
-    // 刷新预热任务ID
     @NameInMap("MediaRefreshJobId")
     public String mediaRefreshJobId;
 
-    // 不存在的媒资ID
     @NameInMap("NonExistMediaIds")
     public String nonExistMediaIds;
 

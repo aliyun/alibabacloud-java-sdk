@@ -10,7 +10,6 @@ public class UploadStreamByURLRequest extends TeaModel {
     @NameInMap("FileExtension")
     public String fileExtension;
 
-    // 视频流HDR类型
     @NameInMap("HDRType")
     public String HDRType;
 
