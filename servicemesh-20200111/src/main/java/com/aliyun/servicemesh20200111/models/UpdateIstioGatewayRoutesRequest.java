@@ -673,9 +673,31 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
 
     }
 
+    public static class UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort extends TeaModel {
+        @NameInMap("Number")
+        public Integer number;
+
+        public static UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort build(java.util.Map<String, ?> map) throws Exception {
+            UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort self = new UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort setNumber(Integer number) {
+            this.number = number;
+            return this;
+        }
+        public Integer getNumber() {
+            return this.number;
+        }
+
+    }
+
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestination extends TeaModel {
         @NameInMap("Host")
         public String host;
+
+        @NameInMap("Port")
+        public UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort port;
 
         @NameInMap("Subset")
         public String subset;
@@ -691,6 +713,14 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
         }
         public String getHost() {
             return this.host;
+        }
+
+        public UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestination setPort(UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort port) {
+            this.port = port;
+            return this;
+        }
+        public UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort getPort() {
+            return this.port;
         }
 
         public UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestination setSubset(String subset) {
@@ -734,6 +764,9 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRoute extends TeaModel {
+        @NameInMap("Domains")
+        public java.util.List<String> domains;
+
         @NameInMap("HTTPAdvancedOptions")
         public UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptions HTTPAdvancedOptions;
 
@@ -755,6 +788,14 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
         public static UpdateIstioGatewayRoutesRequestGatewayRoute build(java.util.Map<String, ?> map) throws Exception {
             UpdateIstioGatewayRoutesRequestGatewayRoute self = new UpdateIstioGatewayRoutesRequestGatewayRoute();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateIstioGatewayRoutesRequestGatewayRoute setDomains(java.util.List<String> domains) {
+            this.domains = domains;
+            return this;
+        }
+        public java.util.List<String> getDomains() {
+            return this.domains;
         }
 
         public UpdateIstioGatewayRoutesRequestGatewayRoute setHTTPAdvancedOptions(UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptions HTTPAdvancedOptions) {

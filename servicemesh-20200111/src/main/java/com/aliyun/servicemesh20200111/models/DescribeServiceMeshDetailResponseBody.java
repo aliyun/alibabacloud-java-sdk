@@ -414,6 +414,25 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAutoDiagnosis extends TeaModel {
+        @NameInMap("AutoDiagnosisEnabled")
+        public Boolean autoDiagnosisEnabled;
+
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAutoDiagnosis build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAutoDiagnosis self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAutoDiagnosis();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAutoDiagnosis setAutoDiagnosisEnabled(Boolean autoDiagnosisEnabled) {
+            this.autoDiagnosisEnabled = autoDiagnosisEnabled;
+            return this;
+        }
+        public Boolean getAutoDiagnosisEnabled() {
+            return this.autoDiagnosisEnabled;
+        }
+
+    }
+
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration extends TeaModel {
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -988,6 +1007,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         @NameInMap("AccessLogExtraConf")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf accessLogExtraConf;
 
+        @NameInMap("AutoDiagnosis")
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAutoDiagnosis autoDiagnosis;
+
         @NameInMap("CRAggregationConfiguration")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration CRAggregationConfiguration;
 
@@ -1035,6 +1057,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf getAccessLogExtraConf() {
             return this.accessLogExtraConf;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setAutoDiagnosis(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAutoDiagnosis autoDiagnosis) {
+            this.autoDiagnosis = autoDiagnosis;
+            return this;
+        }
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAutoDiagnosis getAutoDiagnosis() {
+            return this.autoDiagnosis;
         }
 
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration setCRAggregationConfiguration(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationCRAggregationConfiguration CRAggregationConfiguration) {

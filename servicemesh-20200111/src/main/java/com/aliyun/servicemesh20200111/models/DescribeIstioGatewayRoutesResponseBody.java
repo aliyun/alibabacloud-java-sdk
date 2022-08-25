@@ -38,6 +38,12 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DestinationHost")
+        public java.util.List<String> destinationHost;
+
+        @NameInMap("DestinationSubSet")
+        public java.util.List<String> destinationSubSet;
+
         @NameInMap("Namespace")
         public String namespace;
 
@@ -72,6 +78,22 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeIstioGatewayRoutesResponseBodyManagementRoutes setDestinationHost(java.util.List<String> destinationHost) {
+            this.destinationHost = destinationHost;
+            return this;
+        }
+        public java.util.List<String> getDestinationHost() {
+            return this.destinationHost;
+        }
+
+        public DescribeIstioGatewayRoutesResponseBodyManagementRoutes setDestinationSubSet(java.util.List<String> destinationSubSet) {
+            this.destinationSubSet = destinationSubSet;
+            return this;
+        }
+        public java.util.List<String> getDestinationSubSet() {
+            return this.destinationSubSet;
         }
 
         public DescribeIstioGatewayRoutesResponseBodyManagementRoutes setNamespace(String namespace) {
