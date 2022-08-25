@@ -246,7 +246,6 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         @NameInMap("Fps")
         public String fps;
 
-        // 视频流HDR类型
         @NameInMap("HDRType")
         public String HDRType;
 

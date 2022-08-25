@@ -43,7 +43,6 @@ public class GetPlayInfoResponseBody extends TeaModel {
     }
 
     public static class GetPlayInfoResponseBodyPlayInfoListPlayInfo extends TeaModel {
-        // 颜色位深
         @NameInMap("BitDepth")
         public Integer bitDepth;
 
@@ -71,7 +70,6 @@ public class GetPlayInfoResponseBody extends TeaModel {
         @NameInMap("Fps")
         public String fps;
 
-        // 视频流HDR类型
         @NameInMap("HDRType")
         public String HDRType;
 
