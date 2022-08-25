@@ -3,7 +3,7 @@ package com.aliyun.gpdb20160503.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDBInstancePlanRequest extends TeaModel {
+public class UpdateDBInstancePlanRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -19,24 +19,21 @@ public class CreateDBInstancePlanRequest extends TeaModel {
     @NameInMap("PlanEndDate")
     public String planEndDate;
 
+    @NameInMap("PlanId")
+    public String planId;
+
     @NameInMap("PlanName")
     public String planName;
-
-    @NameInMap("PlanScheduleType")
-    public String planScheduleType;
 
     @NameInMap("PlanStartDate")
     public String planStartDate;
 
-    @NameInMap("PlanType")
-    public String planType;
-
-    public static CreateDBInstancePlanRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateDBInstancePlanRequest self = new CreateDBInstancePlanRequest();
+    public static UpdateDBInstancePlanRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateDBInstancePlanRequest self = new UpdateDBInstancePlanRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDBInstancePlanRequest setDBInstanceId(String DBInstanceId) {
+    public UpdateDBInstancePlanRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
@@ -44,7 +41,7 @@ public class CreateDBInstancePlanRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public CreateDBInstancePlanRequest setOwnerId(Long ownerId) {
+    public UpdateDBInstancePlanRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -52,7 +49,7 @@ public class CreateDBInstancePlanRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateDBInstancePlanRequest setPlanConfig(String planConfig) {
+    public UpdateDBInstancePlanRequest setPlanConfig(String planConfig) {
         this.planConfig = planConfig;
         return this;
     }
@@ -60,7 +57,7 @@ public class CreateDBInstancePlanRequest extends TeaModel {
         return this.planConfig;
     }
 
-    public CreateDBInstancePlanRequest setPlanDesc(String planDesc) {
+    public UpdateDBInstancePlanRequest setPlanDesc(String planDesc) {
         this.planDesc = planDesc;
         return this;
     }
@@ -68,7 +65,7 @@ public class CreateDBInstancePlanRequest extends TeaModel {
         return this.planDesc;
     }
 
-    public CreateDBInstancePlanRequest setPlanEndDate(String planEndDate) {
+    public UpdateDBInstancePlanRequest setPlanEndDate(String planEndDate) {
         this.planEndDate = planEndDate;
         return this;
     }
@@ -76,7 +73,15 @@ public class CreateDBInstancePlanRequest extends TeaModel {
         return this.planEndDate;
     }
 
-    public CreateDBInstancePlanRequest setPlanName(String planName) {
+    public UpdateDBInstancePlanRequest setPlanId(String planId) {
+        this.planId = planId;
+        return this;
+    }
+    public String getPlanId() {
+        return this.planId;
+    }
+
+    public UpdateDBInstancePlanRequest setPlanName(String planName) {
         this.planName = planName;
         return this;
     }
@@ -84,28 +89,12 @@ public class CreateDBInstancePlanRequest extends TeaModel {
         return this.planName;
     }
 
-    public CreateDBInstancePlanRequest setPlanScheduleType(String planScheduleType) {
-        this.planScheduleType = planScheduleType;
-        return this;
-    }
-    public String getPlanScheduleType() {
-        return this.planScheduleType;
-    }
-
-    public CreateDBInstancePlanRequest setPlanStartDate(String planStartDate) {
+    public UpdateDBInstancePlanRequest setPlanStartDate(String planStartDate) {
         this.planStartDate = planStartDate;
         return this;
     }
     public String getPlanStartDate() {
         return this.planStartDate;
-    }
-
-    public CreateDBInstancePlanRequest setPlanType(String planType) {
-        this.planType = planType;
-        return this;
-    }
-    public String getPlanType() {
-        return this.planType;
     }
 
 }
