@@ -898,6 +898,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetail extends TeaModel {
+        @NameInMap("Domains")
+        public java.util.List<String> domains;
+
         @NameInMap("HTTPAdvancedOptions")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptions HTTPAdvancedOptions;
 
@@ -916,6 +919,14 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         public static DescribeIstioGatewayRouteDetailResponseBodyRouteDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeIstioGatewayRouteDetailResponseBodyRouteDetail self = new DescribeIstioGatewayRouteDetailResponseBodyRouteDetail();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeIstioGatewayRouteDetailResponseBodyRouteDetail setDomains(java.util.List<String> domains) {
+            this.domains = domains;
+            return this;
+        }
+        public java.util.List<String> getDomains() {
+            return this.domains;
         }
 
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetail setHTTPAdvancedOptions(DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptions HTTPAdvancedOptions) {
