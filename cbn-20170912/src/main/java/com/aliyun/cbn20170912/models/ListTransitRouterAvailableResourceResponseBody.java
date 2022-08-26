@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
+    @NameInMap("AvailableZones")
+    public java.util.List<String> availableZones;
+
     @NameInMap("MasterZones")
     public java.util.List<String> masterZones;
 
@@ -16,6 +19,14 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
     public static ListTransitRouterAvailableResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTransitRouterAvailableResourceResponseBody self = new ListTransitRouterAvailableResourceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListTransitRouterAvailableResourceResponseBody setAvailableZones(java.util.List<String> availableZones) {
+        this.availableZones = availableZones;
+        return this;
+    }
+    public java.util.List<String> getAvailableZones() {
+        return this.availableZones;
     }
 
     public ListTransitRouterAvailableResourceResponseBody setMasterZones(java.util.List<String> masterZones) {

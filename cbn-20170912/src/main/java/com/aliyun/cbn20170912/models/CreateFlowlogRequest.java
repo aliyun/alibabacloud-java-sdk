@@ -16,6 +16,9 @@ public class CreateFlowlogRequest extends TeaModel {
     @NameInMap("FlowLogName")
     public String flowLogName;
 
+    @NameInMap("Interval")
+    public Long interval;
+
     @NameInMap("LogStoreName")
     public String logStoreName;
 
@@ -36,6 +39,9 @@ public class CreateFlowlogRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("TransitRouterAttachmentId")
+    public String transitRouterAttachmentId;
 
     public static CreateFlowlogRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFlowlogRequest self = new CreateFlowlogRequest();
@@ -72,6 +78,14 @@ public class CreateFlowlogRequest extends TeaModel {
     }
     public String getFlowLogName() {
         return this.flowLogName;
+    }
+
+    public CreateFlowlogRequest setInterval(Long interval) {
+        this.interval = interval;
+        return this;
+    }
+    public Long getInterval() {
+        return this.interval;
     }
 
     public CreateFlowlogRequest setLogStoreName(String logStoreName) {
@@ -128,6 +142,14 @@ public class CreateFlowlogRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateFlowlogRequest setTransitRouterAttachmentId(String transitRouterAttachmentId) {
+        this.transitRouterAttachmentId = transitRouterAttachmentId;
+        return this;
+    }
+    public String getTransitRouterAttachmentId() {
+        return this.transitRouterAttachmentId;
     }
 
 }
