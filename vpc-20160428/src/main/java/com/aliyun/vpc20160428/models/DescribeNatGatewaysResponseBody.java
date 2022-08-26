@@ -299,6 +299,55 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTagsTag self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTagsTag> tag;
+
+        public static DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTags self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTags setTag(java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGateway extends TeaModel {
         @NameInMap("AutoPay")
         public Boolean autoPay;
@@ -377,6 +426,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTags tags;
 
         @NameInMap("VpcId")
         public String vpcId;
@@ -592,6 +644,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setTags(DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayTags getTags() {
+            return this.tags;
         }
 
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setVpcId(String vpcId) {
