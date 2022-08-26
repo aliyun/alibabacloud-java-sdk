@@ -7,6 +7,12 @@ public class UserQueryRequest extends TeaModel {
     @NameInMap("modified_time_greater_or_equal_than")
     public String modifiedTimeGreaterOrEqualThan;
 
+    @NameInMap("page_size")
+    public Integer pageSize;
+
+    @NameInMap("page_token")
+    public String pageToken;
+
     @NameInMap("third_part_job_no")
     public String thirdPartJobNo;
 
@@ -21,6 +27,22 @@ public class UserQueryRequest extends TeaModel {
     }
     public String getModifiedTimeGreaterOrEqualThan() {
         return this.modifiedTimeGreaterOrEqualThan;
+    }
+
+    public UserQueryRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public UserQueryRequest setPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    public String getPageToken() {
+        return this.pageToken;
     }
 
     public UserQueryRequest setThirdPartJobNo(String thirdPartJobNo) {
