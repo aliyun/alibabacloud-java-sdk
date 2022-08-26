@@ -2608,6 +2608,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextHop", request.nextHop);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nextHopType)) {
+            query.put("NextHopType", request.nextHopType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }

@@ -13,6 +13,9 @@ public class DeleteTransitRouterPrefixListAssociationRequest extends TeaModel {
     @NameInMap("NextHop")
     public String nextHop;
 
+    @NameInMap("NextHopType")
+    public String nextHopType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -64,6 +67,14 @@ public class DeleteTransitRouterPrefixListAssociationRequest extends TeaModel {
     }
     public String getNextHop() {
         return this.nextHop;
+    }
+
+    public DeleteTransitRouterPrefixListAssociationRequest setNextHopType(String nextHopType) {
+        this.nextHopType = nextHopType;
+        return this;
+    }
+    public String getNextHopType() {
+        return this.nextHopType;
     }
 
     public DeleteTransitRouterPrefixListAssociationRequest setOwnerAccount(String ownerAccount) {
