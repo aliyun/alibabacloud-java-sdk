@@ -52,6 +52,9 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeNatGatewaysRequestTag> tag;
+
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -191,6 +194,14 @@ public class DescribeNatGatewaysRequest extends TeaModel {
         return this.status;
     }
 
+    public DescribeNatGatewaysRequest setTag(java.util.List<DescribeNatGatewaysRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeNatGatewaysRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeNatGatewaysRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -205,6 +216,36 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class DescribeNatGatewaysRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeNatGatewaysRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysRequestTag self = new DescribeNatGatewaysRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeNatGatewaysRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -1,3 +1,6 @@
+2022-08-26 Version: 2.0.6
+- Support DescribeNatGateways return Tags.
+
 2022-08-19 Version: 2.0.5
 - Optimize DescribePublicIpAddress API.
 
