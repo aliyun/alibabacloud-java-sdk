@@ -8,6 +8,10 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse extends TeaMo
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public RemoveTraficMatchRuleFromTrafficMarkingPolicyResponseBody body;
@@ -23,6 +27,14 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse extends TeaMo
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public RemoveTraficMatchRuleFromTrafficMarkingPolicyResponse setBody(RemoveTraficMatchRuleFromTrafficMarkingPolicyResponseBody body) {

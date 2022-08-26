@@ -8,6 +8,10 @@ public class RegisterTransitRouterMulticastGroupMembersResponse extends TeaModel
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public RegisterTransitRouterMulticastGroupMembersResponseBody body;
@@ -23,6 +27,14 @@ public class RegisterTransitRouterMulticastGroupMembersResponse extends TeaModel
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public RegisterTransitRouterMulticastGroupMembersResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public RegisterTransitRouterMulticastGroupMembersResponse setBody(RegisterTransitRouterMulticastGroupMembersResponseBody body) {

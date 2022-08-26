@@ -43,6 +43,9 @@ public class CreateCenRouteMapRequest extends TeaModel {
     @NameInMap("MapResult")
     public String mapResult;
 
+    @NameInMap("MatchAddressType")
+    public String matchAddressType;
+
     @NameInMap("MatchAsns")
     public java.util.List<Long> matchAsns;
 
@@ -207,6 +210,14 @@ public class CreateCenRouteMapRequest extends TeaModel {
     }
     public String getMapResult() {
         return this.mapResult;
+    }
+
+    public CreateCenRouteMapRequest setMatchAddressType(String matchAddressType) {
+        this.matchAddressType = matchAddressType;
+        return this;
+    }
+    public String getMatchAddressType() {
+        return this.matchAddressType;
     }
 
     public CreateCenRouteMapRequest setMatchAsns(java.util.List<Long> matchAsns) {

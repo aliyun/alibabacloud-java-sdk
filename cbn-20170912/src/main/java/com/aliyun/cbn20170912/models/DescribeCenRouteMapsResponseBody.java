@@ -351,6 +351,9 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         @NameInMap("MapResult")
         public String mapResult;
 
+        @NameInMap("MatchAddressType")
+        public String matchAddressType;
+
         @NameInMap("MatchAsns")
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns matchAsns;
 
@@ -509,6 +512,14 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         }
         public String getMapResult() {
             return this.mapResult;
+        }
+
+        public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setMatchAddressType(String matchAddressType) {
+            this.matchAddressType = matchAddressType;
+            return this;
+        }
+        public String getMatchAddressType() {
+            return this.matchAddressType;
         }
 
         public DescribeCenRouteMapsResponseBodyRouteMapsRouteMap setMatchAsns(DescribeCenRouteMapsResponseBodyRouteMapsRouteMapMatchAsns matchAsns) {

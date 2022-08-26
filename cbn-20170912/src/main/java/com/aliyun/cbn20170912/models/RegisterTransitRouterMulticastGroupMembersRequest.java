@@ -34,6 +34,9 @@ public class RegisterTransitRouterMulticastGroupMembersRequest extends TeaModel 
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static RegisterTransitRouterMulticastGroupMembersRequest build(java.util.Map<String, ?> map) throws Exception {
         RegisterTransitRouterMulticastGroupMembersRequest self = new RegisterTransitRouterMulticastGroupMembersRequest();
         return TeaModel.build(map, self);
@@ -117,6 +120,14 @@ public class RegisterTransitRouterMulticastGroupMembersRequest extends TeaModel 
     }
     public String getTransitRouterMulticastDomainId() {
         return this.transitRouterMulticastDomainId;
+    }
+
+    public RegisterTransitRouterMulticastGroupMembersRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }
