@@ -7,7 +7,6 @@ public class GetSnapshotUrlsRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
-    // 排列顺序。取值：Asc，Desc
     @NameInMap("OrderBy")
     public String orderBy;
 
@@ -17,7 +16,6 @@ public class GetSnapshotUrlsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 鉴权超时时间
     @NameInMap("Timeout")
     public Long timeout;
 

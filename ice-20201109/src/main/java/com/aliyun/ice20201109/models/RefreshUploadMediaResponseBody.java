@@ -7,7 +7,6 @@ public class RefreshUploadMediaResponseBody extends TeaModel {
     @NameInMap("MediaId")
     public String mediaId;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 

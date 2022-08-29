@@ -7,7 +7,6 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
     @NameInMap("MediaProducingJob")
     public GetMediaProducingJobResponseBodyMediaProducingJob mediaProducingJob;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

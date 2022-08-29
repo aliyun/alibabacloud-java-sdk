@@ -246,7 +246,6 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         @NameInMap("Count")
         public Long count;
 
-        // 截图公共参数
         @NameInMap("FrameType")
         public String frameType;
 
@@ -256,14 +255,12 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         @NameInMap("Interval")
         public Long interval;
 
-        // Webvtt截图配置:是否拼合输出
         @NameInMap("IsSptFrag")
         public Boolean isSptFrag;
 
         @NameInMap("PixelBlackThreshold")
         public Integer pixelBlackThreshold;
 
-        // 雪碧图配置
         @NameInMap("SpriteSnapshotConfig")
         public SubmitSnapshotJobRequestTemplateConfigOverwriteParamsSpriteSnapshotConfig spriteSnapshotConfig;
 

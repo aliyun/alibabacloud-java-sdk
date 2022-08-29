@@ -4,15 +4,12 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateCustomTemplateRequest extends TeaModel {
-    // 模板名称
     @NameInMap("Name")
     public String name;
 
-    // 模板参数
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
-    // 模板ID
     @NameInMap("TemplateId")
     public String templateId;
 

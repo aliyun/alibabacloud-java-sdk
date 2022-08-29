@@ -10,18 +10,15 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // 数组，返回示例目录。
     @NameInMap("RecordTemplateList")
     public java.util.List<ListLiveRecordTemplatesResponseBodyRecordTemplateList> recordTemplateList;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 总记录数。
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -79,52 +76,47 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList extends TeaModel {
-        // 录制周期时长
         @NameInMap("CycleDuration")
-        public byte[] cycleDuration;
+        public Integer cycleDuration;
 
-        // 格式
         @NameInMap("Format")
-        public byte[] format;
+        public String format;
 
-        // Oss对象名
         @NameInMap("OssObjectPrefix")
-        public byte[] ossObjectPrefix;
+        public String ossObjectPrefix;
 
-        // 切片时长
         @NameInMap("SliceDuration")
         public Integer sliceDuration;
 
-        // 切片Oss对象名
         @NameInMap("SliceOssObjectPrefix")
-        public byte[] sliceOssObjectPrefix;
+        public String sliceOssObjectPrefix;
 
         public static ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList build(java.util.Map<String, ?> map) throws Exception {
             ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList self = new ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList();
             return TeaModel.build(map, self);
         }
 
-        public ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList setCycleDuration(byte[] cycleDuration) {
+        public ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList setCycleDuration(Integer cycleDuration) {
             this.cycleDuration = cycleDuration;
             return this;
         }
-        public byte[] getCycleDuration() {
+        public Integer getCycleDuration() {
             return this.cycleDuration;
         }
 
-        public ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList setFormat(byte[] format) {
+        public ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList setFormat(String format) {
             this.format = format;
             return this;
         }
-        public byte[] getFormat() {
+        public String getFormat() {
             return this.format;
         }
 
-        public ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList setOssObjectPrefix(byte[] ossObjectPrefix) {
+        public ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList setOssObjectPrefix(String ossObjectPrefix) {
             this.ossObjectPrefix = ossObjectPrefix;
             return this;
         }
-        public byte[] getOssObjectPrefix() {
+        public String getOssObjectPrefix() {
             return this.ossObjectPrefix;
         }
 
@@ -136,40 +128,34 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             return this.sliceDuration;
         }
 
-        public ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList setSliceOssObjectPrefix(byte[] sliceOssObjectPrefix) {
+        public ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList setSliceOssObjectPrefix(String sliceOssObjectPrefix) {
             this.sliceOssObjectPrefix = sliceOssObjectPrefix;
             return this;
         }
-        public byte[] getSliceOssObjectPrefix() {
+        public String getSliceOssObjectPrefix() {
             return this.sliceOssObjectPrefix;
         }
 
     }
 
     public static class ListLiveRecordTemplatesResponseBodyRecordTemplateList extends TeaModel {
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 最后修改时间
         @NameInMap("LastModified")
         public String lastModified;
 
-        // 资源名称
         @NameInMap("Name")
-        public byte[] name;
+        public String name;
 
-        // 录制格式
         @NameInMap("RecordFormatList")
         public java.util.List<ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList> recordFormatList;
 
-        // 资源一级ID
         @NameInMap("TemplateId")
-        public byte[] templateId;
+        public String templateId;
 
-        // 资源名称
         @NameInMap("Type")
-        public byte[] type;
+        public String type;
 
         public static ListLiveRecordTemplatesResponseBodyRecordTemplateList build(java.util.Map<String, ?> map) throws Exception {
             ListLiveRecordTemplatesResponseBodyRecordTemplateList self = new ListLiveRecordTemplatesResponseBodyRecordTemplateList();
@@ -192,11 +178,11 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             return this.lastModified;
         }
 
-        public ListLiveRecordTemplatesResponseBodyRecordTemplateList setName(byte[] name) {
+        public ListLiveRecordTemplatesResponseBodyRecordTemplateList setName(String name) {
             this.name = name;
             return this;
         }
-        public byte[] getName() {
+        public String getName() {
             return this.name;
         }
 
@@ -208,19 +194,19 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             return this.recordFormatList;
         }
 
-        public ListLiveRecordTemplatesResponseBodyRecordTemplateList setTemplateId(byte[] templateId) {
+        public ListLiveRecordTemplatesResponseBodyRecordTemplateList setTemplateId(String templateId) {
             this.templateId = templateId;
             return this;
         }
-        public byte[] getTemplateId() {
+        public String getTemplateId() {
             return this.templateId;
         }
 
-        public ListLiveRecordTemplatesResponseBodyRecordTemplateList setType(byte[] type) {
+        public ListLiveRecordTemplatesResponseBodyRecordTemplateList setType(String type) {
             this.type = type;
             return this;
         }
-        public byte[] getType() {
+        public String getType() {
             return this.type;
         }
 

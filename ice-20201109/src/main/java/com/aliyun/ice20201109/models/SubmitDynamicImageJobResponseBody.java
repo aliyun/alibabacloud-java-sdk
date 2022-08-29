@@ -7,7 +7,6 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

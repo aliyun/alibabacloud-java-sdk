@@ -22,7 +22,6 @@ public class GetEventCallbackResponseBody extends TeaModel {
     @NameInMap("EventTypeList")
     public String eventTypeList;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,35 +4,27 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
-    // 参见模板Config文档
     @NameInMap("Config")
     public String config;
 
-    // 模板封面
     @NameInMap("CoverUrl")
     public String coverUrl;
 
-    // 模板名称
     @NameInMap("Name")
     public String name;
 
-    // 预览视频媒资id
     @NameInMap("PreviewMedia")
     public String previewMedia;
 
-    // 模板相关素材，模板编辑器使用
     @NameInMap("RelatedMediaids")
     public String relatedMediaids;
 
-    // 修改来源，默认OpenAPI
     @NameInMap("Source")
     public String source;
 
-    // 模板状态
     @NameInMap("Status")
     public String status;
 
-    // 模板ID
     @NameInMap("TemplateId")
     public String templateId;
 

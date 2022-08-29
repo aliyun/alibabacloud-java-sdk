@@ -4,7 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListPipelinesRequest extends TeaModel {
-    // 管道类型。
     @NameInMap("Speed")
     public String speed;
 

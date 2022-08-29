@@ -4,17 +4,26 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteMediaInfosRequest extends TeaModel {
-    // 待注册的媒资在相应系统中的地址
+    @NameInMap("DeletePhysicalFiles")
+    public Boolean deletePhysicalFiles;
+
     @NameInMap("InputURLs")
     public String inputURLs;
 
-    // ICE 媒资ID
     @NameInMap("MediaIds")
     public String mediaIds;
 
     public static DeleteMediaInfosRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMediaInfosRequest self = new DeleteMediaInfosRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMediaInfosRequest setDeletePhysicalFiles(Boolean deletePhysicalFiles) {
+        this.deletePhysicalFiles = deletePhysicalFiles;
+        return this;
+    }
+    public Boolean getDeletePhysicalFiles() {
+        return this.deletePhysicalFiles;
     }
 
     public DeleteMediaInfosRequest setInputURLs(String inputURLs) {

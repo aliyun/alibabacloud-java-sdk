@@ -4,7 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListAllPublicMediaTagsRequest extends TeaModel {
-    // 媒资业务类型
     @NameInMap("BusinessType")
     public String businessType;
 

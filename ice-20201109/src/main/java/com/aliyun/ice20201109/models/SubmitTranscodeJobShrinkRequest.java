@@ -4,23 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitTranscodeJobShrinkRequest extends TeaModel {
-    // 任务输入组 (目前只支持一个)
     @NameInMap("InputGroup")
     public String inputGroupShrink;
 
-    // 任务名字
     @NameInMap("Name")
     public String name;
 
-    // 任务输出组
     @NameInMap("OutputGroup")
     public String outputGroupShrink;
 
-    // 任务调度信息
     @NameInMap("ScheduleConfig")
     public String scheduleConfigShrink;
 
-    // 用户数据
     @NameInMap("UserData")
     public String userData;
 

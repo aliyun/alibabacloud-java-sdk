@@ -4,11 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CreateLiveRecordTemplateRequest extends TeaModel {
-    // 资源名称
     @NameInMap("Name")
-    public byte[] name;
+    public String name;
 
-    // 录制格式
     @NameInMap("RecordFormat")
     public java.util.List<CreateLiveRecordTemplateRequestRecordFormat> recordFormat;
 
@@ -17,11 +15,11 @@ public class CreateLiveRecordTemplateRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateLiveRecordTemplateRequest setName(byte[] name) {
+    public CreateLiveRecordTemplateRequest setName(String name) {
         this.name = name;
         return this;
     }
-    public byte[] getName() {
+    public String getName() {
         return this.name;
     }
 
@@ -37,21 +35,17 @@ public class CreateLiveRecordTemplateRequest extends TeaModel {
         @NameInMap("CycleDuration")
         public Integer cycleDuration;
 
-        // 格式
         @NameInMap("Format")
-        public byte[] format;
+        public String format;
 
-        // Oss对象名
         @NameInMap("OssObjectPrefix")
-        public byte[] ossObjectPrefix;
+        public String ossObjectPrefix;
 
-        // 切片时长
         @NameInMap("SliceDuration")
         public Integer sliceDuration;
 
-        // 切片Oss对象名
         @NameInMap("SliceOssObjectPrefix")
-        public byte[] sliceOssObjectPrefix;
+        public String sliceOssObjectPrefix;
 
         public static CreateLiveRecordTemplateRequestRecordFormat build(java.util.Map<String, ?> map) throws Exception {
             CreateLiveRecordTemplateRequestRecordFormat self = new CreateLiveRecordTemplateRequestRecordFormat();
@@ -66,19 +60,19 @@ public class CreateLiveRecordTemplateRequest extends TeaModel {
             return this.cycleDuration;
         }
 
-        public CreateLiveRecordTemplateRequestRecordFormat setFormat(byte[] format) {
+        public CreateLiveRecordTemplateRequestRecordFormat setFormat(String format) {
             this.format = format;
             return this;
         }
-        public byte[] getFormat() {
+        public String getFormat() {
             return this.format;
         }
 
-        public CreateLiveRecordTemplateRequestRecordFormat setOssObjectPrefix(byte[] ossObjectPrefix) {
+        public CreateLiveRecordTemplateRequestRecordFormat setOssObjectPrefix(String ossObjectPrefix) {
             this.ossObjectPrefix = ossObjectPrefix;
             return this;
         }
-        public byte[] getOssObjectPrefix() {
+        public String getOssObjectPrefix() {
             return this.ossObjectPrefix;
         }
 
@@ -90,11 +84,11 @@ public class CreateLiveRecordTemplateRequest extends TeaModel {
             return this.sliceDuration;
         }
 
-        public CreateLiveRecordTemplateRequestRecordFormat setSliceOssObjectPrefix(byte[] sliceOssObjectPrefix) {
+        public CreateLiveRecordTemplateRequestRecordFormat setSliceOssObjectPrefix(String sliceOssObjectPrefix) {
             this.sliceOssObjectPrefix = sliceOssObjectPrefix;
             return this;
         }
-        public byte[] getSliceOssObjectPrefix() {
+        public String getSliceOssObjectPrefix() {
             return this.sliceOssObjectPrefix;
         }
 

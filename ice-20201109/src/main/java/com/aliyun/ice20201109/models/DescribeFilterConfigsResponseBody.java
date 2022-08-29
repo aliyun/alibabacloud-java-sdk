@@ -7,7 +7,6 @@ public class DescribeFilterConfigsResponseBody extends TeaModel {
     @NameInMap("FilterConfigs")
     public java.util.List<DescribeFilterConfigsResponseBodyFilterConfigs> filterConfigs;
 
-    // Id
     @NameInMap("RequestId")
     public String requestId;
 
@@ -42,6 +41,9 @@ public class DescribeFilterConfigsResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        @NameInMap("UuId")
+        public String uuId;
+
         public static DescribeFilterConfigsResponseBodyFilterConfigs build(java.util.Map<String, ?> map) throws Exception {
             DescribeFilterConfigsResponseBodyFilterConfigs self = new DescribeFilterConfigsResponseBodyFilterConfigs();
             return TeaModel.build(map, self);
@@ -69,6 +71,14 @@ public class DescribeFilterConfigsResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public DescribeFilterConfigsResponseBodyFilterConfigs setUuId(String uuId) {
+            this.uuId = uuId;
+            return this;
+        }
+        public String getUuId() {
+            return this.uuId;
         }
 
     }

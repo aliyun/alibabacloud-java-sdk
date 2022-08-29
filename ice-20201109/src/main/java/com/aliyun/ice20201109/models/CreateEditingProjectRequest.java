@@ -4,39 +4,30 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CreateEditingProjectRequest extends TeaModel {
-    // 工程业务配置。如果是直播剪辑工程必填OutputMediaConfig.StorageLocation,   Path 不填默认合成的直播片段存储在根路径下 OutputMediaTarget 不填默认oss-object，可以填vod-media 表示存储到vod  OutputMediaTarget 为vod-media 时，Path不生效。
     @NameInMap("BusinessConfig")
     public String businessConfig;
 
-    // 模板素材参数
     @NameInMap("ClipsParam")
     public String clipsParam;
 
-    // 云剪辑工程封面
     @NameInMap("CoverURL")
     public String coverURL;
 
-    // 云剪辑工程描述
     @NameInMap("Description")
     public String description;
 
-    // 工程关联素材，多个素材以逗号（,）分隔；每种类型最多支持10个素材ID
     @NameInMap("MaterialMaps")
     public String materialMaps;
 
-    // 剪辑工程类型，EditingProject: 普通剪辑工程；LiveEditingProject: 直播剪辑工程
     @NameInMap("ProjectType")
     public String projectType;
 
-    // 模板Id
     @NameInMap("TemplateId")
     public String templateId;
 
-    // 云剪辑工程时间线，Json格式
     @NameInMap("Timeline")
     public String timeline;
 
-    // 云剪辑工程标题
     @NameInMap("Title")
     public String title;
 

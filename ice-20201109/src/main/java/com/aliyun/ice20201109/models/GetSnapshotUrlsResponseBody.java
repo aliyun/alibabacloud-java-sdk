@@ -7,15 +7,12 @@ public class GetSnapshotUrlsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 截图URL
     @NameInMap("SnapshotUrls")
     public java.util.List<String> snapshotUrls;
 
-    // 截图总数量
     @NameInMap("Total")
     public Integer total;
 
-    // WebVTT文件URL
     @NameInMap("WebVTTUrl")
     public String webVTTUrl;
 

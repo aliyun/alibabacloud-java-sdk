@@ -7,7 +7,6 @@ public class GetMediaInfoResponseBody extends TeaModel {
     @NameInMap("MediaInfo")
     public GetMediaInfoResponseBodyMediaInfo mediaInfo;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,75 +32,57 @@ public class GetMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList extends TeaModel {
-        // 码率
         @NameInMap("Bitrate")
         public String bitrate;
 
-        // 声道输出样式
         @NameInMap("ChannelLayout")
         public String channelLayout;
 
-        // 声道数
         @NameInMap("Channels")
         public String channels;
 
-        // 编码格式长述名
         @NameInMap("CodecLongName")
         public String codecLongName;
 
-        // 编码格式简述名
         @NameInMap("CodecName")
         public String codecName;
 
-        // 编码格式标记
         @NameInMap("CodecTag")
         public String codecTag;
 
-        // 编码格式标记文本
         @NameInMap("CodecTagString")
         public String codecTagString;
 
-        // 编码时基
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
-        // 时长
         @NameInMap("Duration")
         public String duration;
 
-        // 音频帧率
         @NameInMap("Fps")
         public String fps;
 
-        // 音频流序号
         @NameInMap("Index")
         public String index;
 
-        // 语言
         @NameInMap("Lang")
         public String lang;
 
-        // 总帧数
         @NameInMap("NumFrames")
         public String numFrames;
 
-        // 编码预置
         @NameInMap("Profile")
         public String profile;
 
-        // 采样格式
         @NameInMap("SampleFmt")
         public String sampleFmt;
 
-        // 采样率
         @NameInMap("SampleRate")
         public String sampleRate;
 
-        // 起始时间
         @NameInMap("StartTime")
         public String startTime;
 
-        // 时基
         @NameInMap("Timebase")
         public String timebase;
 
@@ -257,53 +238,42 @@ public class GetMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo extends TeaModel {
-        // 码率
         @NameInMap("Bitrate")
         public String bitrate;
 
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 时长
         @NameInMap("Duration")
         public String duration;
 
-        // 文件名
         @NameInMap("FileName")
         public String fileName;
 
-        // 文件大小（字节）
         @NameInMap("FileSize")
         public String fileSize;
 
-        // 文件状态
         @NameInMap("FileStatus")
         public String fileStatus;
 
-        // 文件类型
         @NameInMap("FileType")
         public String fileType;
 
-        // 文件oss地址
         @NameInMap("FileUrl")
         public String fileUrl;
 
-        // 封装格式
         @NameInMap("FormatName")
         public String formatName;
 
-        // 高
         @NameInMap("Height")
         public String height;
 
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        // 文件存储区域
         @NameInMap("Region")
         public String region;
 
-        // 宽
         @NameInMap("Width")
         public String width;
 
@@ -419,43 +389,33 @@ public class GetMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList extends TeaModel {
-        // 编码格式长述名
         @NameInMap("CodecLongName")
         public String codecLongName;
 
-        // 编码格式简述名
         @NameInMap("CodecName")
         public String codecName;
 
-        // 编码格式标记
         @NameInMap("CodecTag")
         public String codecTag;
 
-        // 编码格式标记文本
         @NameInMap("CodecTagString")
         public String codecTagString;
 
-        // 编码时基
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
-        // 时长
         @NameInMap("Duration")
         public String duration;
 
-        // 音频流序号
         @NameInMap("Index")
         public String index;
 
-        // 语言
         @NameInMap("Lang")
         public String lang;
 
-        // 起始时间
         @NameInMap("StartTime")
         public String startTime;
 
-        // 时基
         @NameInMap("Timebase")
         public String timebase;
 
@@ -547,99 +507,75 @@ public class GetMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList extends TeaModel {
-        // 平均帧率
         @NameInMap("AvgFPS")
         public String avgFPS;
 
-        // 码率
         @NameInMap("Bitrate")
         public String bitrate;
 
-        // 编码格式长述名
         @NameInMap("CodecLongName")
         public String codecLongName;
 
-        // 编码格式简述名
         @NameInMap("CodecName")
         public String codecName;
 
-        // 编码格式标记
         @NameInMap("CodecTag")
         public String codecTag;
 
-        // 编码格式标记文本
         @NameInMap("CodecTagString")
         public String codecTagString;
 
-        // 编码时基
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
-        // 编码显示分辨率比
         @NameInMap("Dar")
         public String dar;
 
-        // 时长
         @NameInMap("Duration")
         public String duration;
 
-        // 视频帧率
         @NameInMap("Fps")
         public String fps;
 
-        // 是否有B帧
         @NameInMap("HasBFrames")
         public String hasBFrames;
 
-        // 高
         @NameInMap("Height")
         public String height;
 
-        // 视频流序号
         @NameInMap("Index")
         public String index;
 
-        // 语言
         @NameInMap("Lang")
         public String lang;
 
-        // 编码等级
         @NameInMap("Level")
         public String level;
 
-        // 总帧数
         @NameInMap("Nb_frames")
         public String nbFrames;
 
-        // 总帧数
         @NameInMap("NumFrames")
         public String numFrames;
 
-        // 像素格式
         @NameInMap("PixFmt")
         public String pixFmt;
 
-        // 编码预置
         @NameInMap("Profile")
         public String profile;
 
-        // 旋转
         @NameInMap("Rotate")
         public String rotate;
 
-        // 编码信号分辨率比
         @NameInMap("Sar")
         public String sar;
 
-        // 起始时间
         @NameInMap("StartTime")
         public String startTime;
 
-        // 时基
         @NameInMap("Timebase")
         public String timebase;
 
-        // 宽
         @NameInMap("Width")
         public String width;
 
@@ -843,19 +779,15 @@ public class GetMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetMediaInfoResponseBodyMediaInfoFileInfoList extends TeaModel {
-        // 音频流信息，一个媒资可能有多条音频流
         @NameInMap("AudioStreamInfoList")
         public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList> audioStreamInfoList;
 
-        // 文件基础信息，包含时长，大小等
         @NameInMap("FileBasicInfo")
         public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo fileBasicInfo;
 
-        // 字幕流信息，一个媒资可能有多条字幕流
         @NameInMap("SubtitleStreamInfoList")
         public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList> subtitleStreamInfoList;
 
-        // 视频流信息，一个媒资可能有多条视频流
         @NameInMap("VideoStreamInfoList")
         public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList> videoStreamInfoList;
 
@@ -902,7 +834,6 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("Biz")
         public String biz;
 
-        // 媒资业务类型
         @NameInMap("BusinessType")
         public String businessType;
 
@@ -912,66 +843,51 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("CateName")
         public String cateName;
 
-        // 分类
         @NameInMap("Category")
         public String category;
 
-        // 封面地址
         @NameInMap("CoverURL")
         public String coverURL;
 
-        // 媒资创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 媒资删除时间
         @NameInMap("DeletedTime")
         public String deletedTime;
 
-        // 内容描述
         @NameInMap("Description")
         public String description;
 
-        // 待注册的媒资在相应系统中的地址
         @NameInMap("InputURL")
         public String inputURL;
 
-        // MediaId
         @NameInMap("MediaId")
         public String mediaId;
 
-        // 标签
         @NameInMap("MediaTags")
         public String mediaTags;
 
-        // 媒资媒体类型
         @NameInMap("MediaType")
         public String mediaType;
 
-        // 媒资修改时间
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        // 来源
         @NameInMap("Source")
         public String source;
 
-        // 雪碧图
         @NameInMap("SpriteImages")
         public String spriteImages;
 
-        // 资源状态
         @NameInMap("Status")
         public String status;
 
-        // 标题
         @NameInMap("Title")
         public String title;
 
         @NameInMap("UploadSource")
         public String uploadSource;
 
-        // 用户数据
         @NameInMap("UserData")
         public String userData;
 
@@ -1143,15 +1059,12 @@ public class GetMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetMediaInfoResponseBodyMediaInfo extends TeaModel {
-        // FileInfos
         @NameInMap("FileInfoList")
         public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoList> fileInfoList;
 
-        // BasicInfo
         @NameInMap("MediaBasicInfo")
         public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo mediaBasicInfo;
 
-        // 媒资ID
         @NameInMap("MediaId")
         public String mediaId;
 

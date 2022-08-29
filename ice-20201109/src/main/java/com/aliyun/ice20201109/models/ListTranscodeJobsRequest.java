@@ -4,30 +4,24 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListTranscodeJobsRequest extends TeaModel {
-    // 任务创建时间筛选条件的结束时间
     @NameInMap("EndOfCreateTime")
     public String endOfCreateTime;
 
-    // 按 jobId 筛选
     @NameInMap("JobId")
     public String jobId;
 
-    // 连续分页查询时下一页的标记 (第一页没有)
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
-    // 排序顺序，目前只支持两种：CreateTimeDesc 和 CreateTimeAsc
     @NameInMap("OrderBy")
     public String orderBy;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 任务创建时间筛选条件的起始时间
     @NameInMap("StartOfCreateTime")
     public String startOfCreateTime;
 
-    // 任务状态
     @NameInMap("Status")
     public String status;
 

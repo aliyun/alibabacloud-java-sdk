@@ -4,27 +4,21 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitASRJobRequest extends TeaModel {
-    // 任务描述
     @NameInMap("Description")
     public String description;
 
-    // 持续时间
     @NameInMap("Duration")
     public String duration;
 
-    // 输入配置，支持OSS地址和内容库素材ID
     @NameInMap("InputFile")
     public String inputFile;
 
-    // 开始时间
     @NameInMap("StartTime")
     public String startTime;
 
-    // 任务标题
     @NameInMap("Title")
     public String title;
 
-    // 自定义设置，为JSON字符串
     @NameInMap("UserData")
     public String userData;
 

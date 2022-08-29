@@ -7,18 +7,15 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 符合要求的媒资集合
     @NameInMap("MediaInfos")
     public java.util.List<ListMediaBasicInfosResponseBodyMediaInfos> mediaInfos;
 
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 符合要求的媒资总数
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -68,52 +65,42 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
     }
 
     public static class ListMediaBasicInfosResponseBodyMediaInfosFileInfoListFileBasicInfo extends TeaModel {
-        // 码率
         @NameInMap("Bitrate")
         public String bitrate;
 
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 时长
         @NameInMap("Duration")
         public String duration;
 
-        // 文件名
         @NameInMap("FileName")
         public String fileName;
 
-        // 文件大小（字节）
         @NameInMap("FileSize")
         public String fileSize;
 
-        // 文件状态
         @NameInMap("FileStatus")
         public String fileStatus;
 
         @NameInMap("FileType")
         public String fileType;
 
-        // 文件oss地址
         @NameInMap("FileUrl")
         public String fileUrl;
 
-        // 封装格式
         @NameInMap("FormatName")
         public String formatName;
 
-        // 高
         @NameInMap("Height")
         public String height;
 
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        // 文件存储区域
         @NameInMap("Region")
         public String region;
 
-        // 宽
         @NameInMap("Width")
         public String width;
 
@@ -229,7 +216,6 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
     }
 
     public static class ListMediaBasicInfosResponseBodyMediaInfosFileInfoList extends TeaModel {
-        // 文件基础信息，包含时长，大小等
         @NameInMap("FileBasicInfo")
         public ListMediaBasicInfosResponseBodyMediaInfosFileInfoListFileBasicInfo fileBasicInfo;
 
@@ -252,81 +238,63 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
         @NameInMap("Biz")
         public String biz;
 
-        // 媒资业务类型
         @NameInMap("BusinessType")
         public String businessType;
 
         @NameInMap("CateId")
         public Long cateId;
 
-        // 分类
         @NameInMap("Category")
         public String category;
 
-        // 封面地址
         @NameInMap("CoverURL")
         public String coverURL;
 
-        // 媒资创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 媒资删除时间
         @NameInMap("DeletedTime")
         public String deletedTime;
 
-        // 内容描述
         @NameInMap("Description")
         public String description;
 
-        // 待注册的媒资在相应系统中的地址
         @NameInMap("InputURL")
         public String inputURL;
 
-        // MediaId
         @NameInMap("MediaId")
         public String mediaId;
 
-        // 标签
         @NameInMap("MediaTags")
         public String mediaTags;
 
-        // 媒资媒体类型
         @NameInMap("MediaType")
         public String mediaType;
 
-        // 媒资修改时间
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        // 截图
         @NameInMap("Snapshots")
         public String snapshots;
 
-        // 来源
         @NameInMap("Source")
         public String source;
 
-        // 雪碧图
         @NameInMap("SpriteImages")
         public String spriteImages;
 
-        // 资源状态
         @NameInMap("Status")
         public String status;
 
-        // 标题
         @NameInMap("Title")
         public String title;
 
-        // 转码状态
         @NameInMap("TranscodeStatus")
         public String transcodeStatus;
 
         @NameInMap("UploadSource")
         public String uploadSource;
 
-        // 用户数据
         @NameInMap("UserData")
         public String userData;
 
@@ -506,15 +474,12 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
     }
 
     public static class ListMediaBasicInfosResponseBodyMediaInfos extends TeaModel {
-        // FileInfos
         @NameInMap("FileInfoList")
         public java.util.List<ListMediaBasicInfosResponseBodyMediaInfosFileInfoList> fileInfoList;
 
-        // BasicInfo
         @NameInMap("MediaBasicInfo")
         public ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo mediaBasicInfo;
 
-        // 媒资ID
         @NameInMap("MediaId")
         public String mediaId;
 

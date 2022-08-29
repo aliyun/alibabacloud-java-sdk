@@ -10,11 +10,9 @@ public class ListSnapshotJobsRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
-    // 连续分页查询时下一页的标记
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
-    // 排序顺序：CreateTimeDesc 和 CreateTimeAsc
     @NameInMap("OrderBy")
     public String orderBy;
 

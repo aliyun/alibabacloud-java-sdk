@@ -22,7 +22,6 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
-    // 模板Id
     @NameInMap("Type")
     public String type;
 

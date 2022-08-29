@@ -7,7 +7,6 @@ public class DescribePlayFirstFrameDurationMetricDataResponseBody extends TeaMod
     @NameInMap("Nodes")
     public java.util.List<DescribePlayFirstFrameDurationMetricDataResponseBodyNodes> nodes;
 
-    // Id
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,31 +32,31 @@ public class DescribePlayFirstFrameDurationMetricDataResponseBody extends TeaMod
     }
 
     public static class DescribePlayFirstFrameDurationMetricDataResponseBodyNodes extends TeaModel {
-        @NameInMap("Duration")
-        public Long duration;
+        @NameInMap("X")
+        public Long x;
 
-        @NameInMap("Time")
-        public Long time;
+        @NameInMap("Y")
+        public Long y;
 
         public static DescribePlayFirstFrameDurationMetricDataResponseBodyNodes build(java.util.Map<String, ?> map) throws Exception {
             DescribePlayFirstFrameDurationMetricDataResponseBodyNodes self = new DescribePlayFirstFrameDurationMetricDataResponseBodyNodes();
             return TeaModel.build(map, self);
         }
 
-        public DescribePlayFirstFrameDurationMetricDataResponseBodyNodes setDuration(Long duration) {
-            this.duration = duration;
+        public DescribePlayFirstFrameDurationMetricDataResponseBodyNodes setX(Long x) {
+            this.x = x;
             return this;
         }
-        public Long getDuration() {
-            return this.duration;
+        public Long getX() {
+            return this.x;
         }
 
-        public DescribePlayFirstFrameDurationMetricDataResponseBodyNodes setTime(Long time) {
-            this.time = time;
+        public DescribePlayFirstFrameDurationMetricDataResponseBodyNodes setY(Long y) {
+            this.y = y;
             return this;
         }
-        public Long getTime() {
-            return this.time;
+        public Long getY() {
+            return this.y;
         }
 
     }

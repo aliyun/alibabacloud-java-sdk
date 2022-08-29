@@ -4,7 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteEditingProjectsRequest extends TeaModel {
-    // 云剪辑工程ID。支持多个云剪辑工程，以逗号分隔。
     @NameInMap("ProjectIds")
     public String projectIds;
 

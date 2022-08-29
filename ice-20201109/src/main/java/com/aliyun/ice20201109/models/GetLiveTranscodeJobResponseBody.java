@@ -7,7 +7,6 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
     @NameInMap("Job")
     public GetLiveTranscodeJobResponseBodyJob job;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

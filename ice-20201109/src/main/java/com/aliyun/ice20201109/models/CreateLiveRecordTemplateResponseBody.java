@@ -7,9 +7,8 @@ public class CreateLiveRecordTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 资源一级ID
     @NameInMap("TemplateId")
-    public byte[] templateId;
+    public String templateId;
 
     public static CreateLiveRecordTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateLiveRecordTemplateResponseBody self = new CreateLiveRecordTemplateResponseBody();
@@ -24,11 +23,11 @@ public class CreateLiveRecordTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateLiveRecordTemplateResponseBody setTemplateId(byte[] templateId) {
+    public CreateLiveRecordTemplateResponseBody setTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
-    public byte[] getTemplateId() {
+    public String getTemplateId() {
         return this.templateId;
     }
 

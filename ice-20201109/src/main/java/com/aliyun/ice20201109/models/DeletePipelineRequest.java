@@ -4,7 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeletePipelineRequest extends TeaModel {
-    // 管道ID
     @NameInMap("PipelineId")
     public String pipelineId;
 

@@ -4,7 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetDynamicImageJobResponseBody extends TeaModel {
-    // 截图任务信息
     @NameInMap("DynamicImageJob")
     public GetDynamicImageJobResponseBodyDynamicImageJob dynamicImageJob;
 
@@ -77,7 +76,6 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         @NameInMap("Media")
         public String media;
 
-        // 输入类型为媒资ID时的OSS地址
         @NameInMap("OssFile")
         public GetDynamicImageJobResponseBodyDynamicImageJobInputOssFile ossFile;
 
@@ -160,7 +158,6 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
         @NameInMap("Media")
         public String media;
 
-        // 输出类型为媒资ID时的OSS地址
         @NameInMap("OssFile")
         public GetDynamicImageJobResponseBodyDynamicImageJobOutputOssFile ossFile;
 

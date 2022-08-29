@@ -7,7 +7,6 @@ public class GetLiveEditingIndexFileResponseBody extends TeaModel {
     @NameInMap("IndexFile")
     public String indexFile;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

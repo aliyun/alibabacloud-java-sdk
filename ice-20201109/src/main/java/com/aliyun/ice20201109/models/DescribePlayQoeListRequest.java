@@ -19,11 +19,17 @@ public class DescribePlayQoeListRequest extends TeaModel {
     @NameInMap("ItemConfigs")
     public String itemConfigs;
 
-    @NameInMap("MetricType")
-    public String metricType;
+    @NameInMap("MetricTypes")
+    public java.util.List<String> metricTypes;
 
     @NameInMap("Network")
     public String network;
+
+    @NameInMap("OrderName")
+    public String orderName;
+
+    @NameInMap("OrderType")
+    public String orderType;
 
     @NameInMap("Os")
     public String os;
@@ -82,12 +88,12 @@ public class DescribePlayQoeListRequest extends TeaModel {
         return this.itemConfigs;
     }
 
-    public DescribePlayQoeListRequest setMetricType(String metricType) {
-        this.metricType = metricType;
+    public DescribePlayQoeListRequest setMetricTypes(java.util.List<String> metricTypes) {
+        this.metricTypes = metricTypes;
         return this;
     }
-    public String getMetricType() {
-        return this.metricType;
+    public java.util.List<String> getMetricTypes() {
+        return this.metricTypes;
     }
 
     public DescribePlayQoeListRequest setNetwork(String network) {
@@ -96,6 +102,22 @@ public class DescribePlayQoeListRequest extends TeaModel {
     }
     public String getNetwork() {
         return this.network;
+    }
+
+    public DescribePlayQoeListRequest setOrderName(String orderName) {
+        this.orderName = orderName;
+        return this;
+    }
+    public String getOrderName() {
+        return this.orderName;
+    }
+
+    public DescribePlayQoeListRequest setOrderType(String orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    public String getOrderType() {
+        return this.orderType;
     }
 
     public DescribePlayQoeListRequest setOs(String os) {

@@ -4,15 +4,12 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteEditingProjectMaterialsRequest extends TeaModel {
-    // 素材ID
     @NameInMap("MaterialIds")
     public String materialIds;
 
-    // 素材类型
     @NameInMap("MaterialType")
     public String materialType;
 
-    // 云剪辑工程ID
     @NameInMap("ProjectId")
     public String projectId;
 

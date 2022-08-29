@@ -4,31 +4,27 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AddTemplateRequest extends TeaModel {
-    // 参见Timeline模板Config文档
     @NameInMap("Config")
     public String config;
 
-    // 模板封面
     @NameInMap("CoverUrl")
     public String coverUrl;
 
-    // 模板名称
     @NameInMap("Name")
     public String name;
 
-    // 预览视频媒资id
     @NameInMap("PreviewMedia")
     public String previewMedia;
 
-    // 模板创建来源，默认OpenAPI
+    @NameInMap("RelatedMediaids")
+    public String relatedMediaids;
+
     @NameInMap("Source")
     public String source;
 
-    // 模板状态
     @NameInMap("Status")
     public String status;
 
-    // 模板类型，取值范围：Timeline
     @NameInMap("Type")
     public String type;
 
@@ -67,6 +63,14 @@ public class AddTemplateRequest extends TeaModel {
     }
     public String getPreviewMedia() {
         return this.previewMedia;
+    }
+
+    public AddTemplateRequest setRelatedMediaids(String relatedMediaids) {
+        this.relatedMediaids = relatedMediaids;
+        return this;
+    }
+    public String getRelatedMediaids() {
+        return this.relatedMediaids;
     }
 
     public AddTemplateRequest setSource(String source) {

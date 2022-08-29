@@ -4,46 +4,36 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaInfoRequest extends TeaModel {
-    // 是否以append的形式更新Tags字段
     @NameInMap("AppendTags")
     public Boolean appendTags;
 
-    // 媒资业务类型
     @NameInMap("BusinessType")
     public String businessType;
 
     @NameInMap("CateId")
     public Long cateId;
 
-    // 分类
     @NameInMap("Category")
     public String category;
 
-    // 封面图，仅视频媒资有效
     @NameInMap("CoverURL")
     public String coverURL;
 
-    // 描述
     @NameInMap("Description")
     public String description;
 
-    // 媒资媒体类型
     @NameInMap("InputURL")
     public String inputURL;
 
-    // 媒资Id
     @NameInMap("MediaId")
     public String mediaId;
 
-    // 标签,如果有多个标签用逗号隔开
     @NameInMap("MediaTags")
     public String mediaTags;
 
-    // 标题
     @NameInMap("Title")
     public String title;
 
-    // 用户数据，最大1024字节
     @NameInMap("UserData")
     public String userData;
 

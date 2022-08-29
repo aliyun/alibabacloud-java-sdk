@@ -4,19 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomTemplateRequest extends TeaModel {
-    // 模板名称
     @NameInMap("Name")
     public String name;
 
-    // 模板子类型。
     @NameInMap("Subtype")
     public Integer subtype;
 
-    // 模板参数
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
-    // 模板类型。
     @NameInMap("Type")
     public Integer type;
 

@@ -4,11 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SetEventCallbackResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否设置成功
     @NameInMap("Success")
     public Boolean success;
 

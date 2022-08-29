@@ -7,7 +7,6 @@ public class GetCustomTemplateRequest extends TeaModel {
     @NameInMap("Subtype")
     public Integer subtype;
 
-    // 模板ID
     @NameInMap("TemplateId")
     public String templateId;
 

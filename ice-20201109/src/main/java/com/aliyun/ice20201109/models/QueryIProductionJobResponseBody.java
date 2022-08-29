@@ -34,7 +34,6 @@ public class QueryIProductionJobResponseBody extends TeaModel {
     @NameInMap("OutputUrls")
     public java.util.List<String> outputUrls;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

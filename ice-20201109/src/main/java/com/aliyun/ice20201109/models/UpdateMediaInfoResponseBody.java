@@ -4,11 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaInfoResponseBody extends TeaModel {
-    // ICE媒资ID
     @NameInMap("MediaId")
     public String mediaId;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

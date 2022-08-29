@@ -4,23 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetDefaultStorageLocationResponseBody extends TeaModel {
-    // oss bucket 名称
     @NameInMap("Bucket")
     public String bucket;
 
-    // 路径
     @NameInMap("Path")
     public String path;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 状态
     @NameInMap("Status")
     public String status;
 
-    // 存储类型
     @NameInMap("StorageType")
     public String storageType;
 

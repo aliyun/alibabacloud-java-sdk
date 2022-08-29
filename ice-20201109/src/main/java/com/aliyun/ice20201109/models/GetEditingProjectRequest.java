@@ -4,7 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetEditingProjectRequest extends TeaModel {
-    // 云剪辑工程ID
     @NameInMap("ProjectId")
     public String projectId;
 

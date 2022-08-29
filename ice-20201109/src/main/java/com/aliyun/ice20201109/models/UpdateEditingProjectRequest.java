@@ -7,31 +7,24 @@ public class UpdateEditingProjectRequest extends TeaModel {
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
-    // 模板对应的素材参数
     @NameInMap("ClipsParam")
     public String clipsParam;
 
-    // 云剪辑工程封面
     @NameInMap("CoverURL")
     public String coverURL;
 
-    // 云剪辑工程描述
     @NameInMap("Description")
     public String description;
 
-    // 云剪辑工程ID
     @NameInMap("ProjectId")
     public String projectId;
 
-    // 模板Id
     @NameInMap("TemplateId")
     public String templateId;
 
-    // 云剪辑工程时间线，Json格式
     @NameInMap("Timeline")
     public String timeline;
 
-    // 云剪辑工程标题
     @NameInMap("Title")
     public String title;
 

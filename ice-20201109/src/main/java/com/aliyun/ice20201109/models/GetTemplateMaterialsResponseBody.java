@@ -4,11 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateMaterialsResponseBody extends TeaModel {
-    // 关联素材地址
     @NameInMap("MaterialUrls")
     public String materialUrls;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
