@@ -4,23 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
-    @NameInMap("User")
-    public GetUserResponseBodyUser user;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("User")
+    public GetUserResponseBodyUser user;
 
     public static GetUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetUserResponseBody self = new GetUserResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetUserResponseBody setUser(GetUserResponseBodyUser user) {
-        this.user = user;
-        return this;
-    }
-    public GetUserResponseBodyUser getUser() {
-        return this.user;
     }
 
     public GetUserResponseBody setRequestId(String requestId) {
@@ -31,30 +23,38 @@ public class GetUserResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetUserResponseBody setUser(GetUserResponseBodyUser user) {
+        this.user = user;
+        return this;
+    }
+    public GetUserResponseBodyUser getUser() {
+        return this.user;
+    }
+
     public static class GetUserResponseBodyUser extends TeaModel {
+        @NameInMap("Comments")
+        public String comments;
+
+        @NameInMap("CreateDate")
+        public String createDate;
+
         @NameInMap("DisplayName")
         public String displayName;
 
         @NameInMap("Email")
         public String email;
 
-        @NameInMap("UpdateDate")
-        public String updateDate;
+        @NameInMap("LastLoginDate")
+        public String lastLoginDate;
 
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
+        @NameInMap("UpdateDate")
+        public String updateDate;
+
         @NameInMap("UserId")
         public String userId;
-
-        @NameInMap("Comments")
-        public String comments;
-
-        @NameInMap("LastLoginDate")
-        public String lastLoginDate;
-
-        @NameInMap("CreateDate")
-        public String createDate;
 
         @NameInMap("UserName")
         public String userName;
@@ -62,6 +62,22 @@ public class GetUserResponseBody extends TeaModel {
         public static GetUserResponseBodyUser build(java.util.Map<String, ?> map) throws Exception {
             GetUserResponseBodyUser self = new GetUserResponseBodyUser();
             return TeaModel.build(map, self);
+        }
+
+        public GetUserResponseBodyUser setComments(String comments) {
+            this.comments = comments;
+            return this;
+        }
+        public String getComments() {
+            return this.comments;
+        }
+
+        public GetUserResponseBodyUser setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         public GetUserResponseBodyUser setDisplayName(String displayName) {
@@ -80,12 +96,12 @@ public class GetUserResponseBody extends TeaModel {
             return this.email;
         }
 
-        public GetUserResponseBodyUser setUpdateDate(String updateDate) {
-            this.updateDate = updateDate;
+        public GetUserResponseBodyUser setLastLoginDate(String lastLoginDate) {
+            this.lastLoginDate = lastLoginDate;
             return this;
         }
-        public String getUpdateDate() {
-            return this.updateDate;
+        public String getLastLoginDate() {
+            return this.lastLoginDate;
         }
 
         public GetUserResponseBodyUser setMobilePhone(String mobilePhone) {
@@ -96,36 +112,20 @@ public class GetUserResponseBody extends TeaModel {
             return this.mobilePhone;
         }
 
+        public GetUserResponseBodyUser setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
+            return this;
+        }
+        public String getUpdateDate() {
+            return this.updateDate;
+        }
+
         public GetUserResponseBodyUser setUserId(String userId) {
             this.userId = userId;
             return this;
         }
         public String getUserId() {
             return this.userId;
-        }
-
-        public GetUserResponseBodyUser setComments(String comments) {
-            this.comments = comments;
-            return this;
-        }
-        public String getComments() {
-            return this.comments;
-        }
-
-        public GetUserResponseBodyUser setLastLoginDate(String lastLoginDate) {
-            this.lastLoginDate = lastLoginDate;
-            return this;
-        }
-        public String getLastLoginDate() {
-            return this.lastLoginDate;
-        }
-
-        public GetUserResponseBodyUser setCreateDate(String createDate) {
-            this.createDate = createDate;
-            return this;
-        }
-        public String getCreateDate() {
-            return this.createDate;
         }
 
         public GetUserResponseBodyUser setUserName(String userName) {

@@ -4,23 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class GetRoleResponseBody extends TeaModel {
-    @NameInMap("Role")
-    public GetRoleResponseBodyRole role;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Role")
+    public GetRoleResponseBodyRole role;
 
     public static GetRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRoleResponseBody self = new GetRoleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetRoleResponseBody setRole(GetRoleResponseBodyRole role) {
-        this.role = role;
-        return this;
-    }
-    public GetRoleResponseBodyRole getRole() {
-        return this.role;
     }
 
     public GetRoleResponseBody setRequestId(String requestId) {
@@ -31,12 +23,23 @@ public class GetRoleResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetRoleResponseBody setRole(GetRoleResponseBodyRole role) {
+        this.role = role;
+        return this;
+    }
+    public GetRoleResponseBodyRole getRole() {
+        return this.role;
+    }
+
     public static class GetRoleResponseBodyRole extends TeaModel {
+        @NameInMap("Arn")
+        public String arn;
+
         @NameInMap("AssumeRolePolicyDocument")
         public String assumeRolePolicyDocument;
 
-        @NameInMap("UpdateDate")
-        public String updateDate;
+        @NameInMap("CreateDate")
+        public String createDate;
 
         @NameInMap("Description")
         public String description;
@@ -44,21 +47,26 @@ public class GetRoleResponseBody extends TeaModel {
         @NameInMap("MaxSessionDuration")
         public Long maxSessionDuration;
 
-        @NameInMap("RoleName")
-        public String roleName;
-
-        @NameInMap("CreateDate")
-        public String createDate;
-
         @NameInMap("RoleId")
         public String roleId;
 
-        @NameInMap("Arn")
-        public String arn;
+        @NameInMap("RoleName")
+        public String roleName;
+
+        @NameInMap("UpdateDate")
+        public String updateDate;
 
         public static GetRoleResponseBodyRole build(java.util.Map<String, ?> map) throws Exception {
             GetRoleResponseBodyRole self = new GetRoleResponseBodyRole();
             return TeaModel.build(map, self);
+        }
+
+        public GetRoleResponseBodyRole setArn(String arn) {
+            this.arn = arn;
+            return this;
+        }
+        public String getArn() {
+            return this.arn;
         }
 
         public GetRoleResponseBodyRole setAssumeRolePolicyDocument(String assumeRolePolicyDocument) {
@@ -69,12 +77,12 @@ public class GetRoleResponseBody extends TeaModel {
             return this.assumeRolePolicyDocument;
         }
 
-        public GetRoleResponseBodyRole setUpdateDate(String updateDate) {
-            this.updateDate = updateDate;
+        public GetRoleResponseBodyRole setCreateDate(String createDate) {
+            this.createDate = createDate;
             return this;
         }
-        public String getUpdateDate() {
-            return this.updateDate;
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         public GetRoleResponseBodyRole setDescription(String description) {
@@ -93,22 +101,6 @@ public class GetRoleResponseBody extends TeaModel {
             return this.maxSessionDuration;
         }
 
-        public GetRoleResponseBodyRole setRoleName(String roleName) {
-            this.roleName = roleName;
-            return this;
-        }
-        public String getRoleName() {
-            return this.roleName;
-        }
-
-        public GetRoleResponseBodyRole setCreateDate(String createDate) {
-            this.createDate = createDate;
-            return this;
-        }
-        public String getCreateDate() {
-            return this.createDate;
-        }
-
         public GetRoleResponseBodyRole setRoleId(String roleId) {
             this.roleId = roleId;
             return this;
@@ -117,12 +109,20 @@ public class GetRoleResponseBody extends TeaModel {
             return this.roleId;
         }
 
-        public GetRoleResponseBodyRole setArn(String arn) {
-            this.arn = arn;
+        public GetRoleResponseBodyRole setRoleName(String roleName) {
+            this.roleName = roleName;
             return this;
         }
-        public String getArn() {
-            return this.arn;
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        public GetRoleResponseBodyRole setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
+            return this;
+        }
+        public String getUpdateDate() {
+            return this.updateDate;
         }
 
     }

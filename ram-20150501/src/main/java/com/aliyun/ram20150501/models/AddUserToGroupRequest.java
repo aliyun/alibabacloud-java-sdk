@@ -4,23 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class AddUserToGroupRequest extends TeaModel {
-    @NameInMap("UserName")
-    public String userName;
-
     @NameInMap("GroupName")
     public String groupName;
+
+    @NameInMap("UserName")
+    public String userName;
 
     public static AddUserToGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         AddUserToGroupRequest self = new AddUserToGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddUserToGroupRequest setUserName(String userName) {
-        this.userName = userName;
-        return this;
-    }
-    public String getUserName() {
-        return this.userName;
     }
 
     public AddUserToGroupRequest setGroupName(String groupName) {
@@ -29,6 +21,14 @@ public class AddUserToGroupRequest extends TeaModel {
     }
     public String getGroupName() {
         return this.groupName;
+    }
+
+    public AddUserToGroupRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
     }
 
 }

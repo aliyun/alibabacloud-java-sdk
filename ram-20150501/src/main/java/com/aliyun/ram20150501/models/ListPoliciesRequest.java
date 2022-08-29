@@ -4,26 +4,18 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListPoliciesRequest extends TeaModel {
-    @NameInMap("PolicyType")
-    public String policyType;
-
     @NameInMap("Marker")
     public String marker;
 
     @NameInMap("MaxItems")
     public Integer maxItems;
 
+    @NameInMap("PolicyType")
+    public String policyType;
+
     public static ListPoliciesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPoliciesRequest self = new ListPoliciesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListPoliciesRequest setPolicyType(String policyType) {
-        this.policyType = policyType;
-        return this;
-    }
-    public String getPolicyType() {
-        return this.policyType;
     }
 
     public ListPoliciesRequest setMarker(String marker) {
@@ -40,6 +32,14 @@ public class ListPoliciesRequest extends TeaModel {
     }
     public Integer getMaxItems() {
         return this.maxItems;
+    }
+
+    public ListPoliciesRequest setPolicyType(String policyType) {
+        this.policyType = policyType;
+        return this;
+    }
+    public String getPolicyType() {
+        return this.policyType;
     }
 
 }

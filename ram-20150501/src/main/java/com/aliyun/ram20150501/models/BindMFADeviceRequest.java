@@ -4,37 +4,21 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class BindMFADeviceRequest extends TeaModel {
-    @NameInMap("SerialNumber")
-    public String serialNumber;
-
-    @NameInMap("UserName")
-    public String userName;
-
     @NameInMap("AuthenticationCode1")
     public String authenticationCode1;
 
     @NameInMap("AuthenticationCode2")
     public String authenticationCode2;
 
+    @NameInMap("SerialNumber")
+    public String serialNumber;
+
+    @NameInMap("UserName")
+    public String userName;
+
     public static BindMFADeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         BindMFADeviceRequest self = new BindMFADeviceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BindMFADeviceRequest setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
-        return this;
-    }
-    public String getSerialNumber() {
-        return this.serialNumber;
-    }
-
-    public BindMFADeviceRequest setUserName(String userName) {
-        this.userName = userName;
-        return this;
-    }
-    public String getUserName() {
-        return this.userName;
     }
 
     public BindMFADeviceRequest setAuthenticationCode1(String authenticationCode1) {
@@ -51,6 +35,22 @@ public class BindMFADeviceRequest extends TeaModel {
     }
     public String getAuthenticationCode2() {
         return this.authenticationCode2;
+    }
+
+    public BindMFADeviceRequest setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+        return this;
+    }
+    public String getSerialNumber() {
+        return this.serialNumber;
+    }
+
+    public BindMFADeviceRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
     }
 
 }

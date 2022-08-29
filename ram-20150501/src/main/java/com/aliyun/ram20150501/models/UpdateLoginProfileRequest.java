@@ -4,8 +4,8 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class UpdateLoginProfileRequest extends TeaModel {
-    @NameInMap("UserName")
-    public String userName;
+    @NameInMap("MFABindRequired")
+    public Boolean MFABindRequired;
 
     @NameInMap("Password")
     public String password;
@@ -13,20 +13,20 @@ public class UpdateLoginProfileRequest extends TeaModel {
     @NameInMap("PasswordResetRequired")
     public Boolean passwordResetRequired;
 
-    @NameInMap("MFABindRequired")
-    public Boolean MFABindRequired;
+    @NameInMap("UserName")
+    public String userName;
 
     public static UpdateLoginProfileRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateLoginProfileRequest self = new UpdateLoginProfileRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateLoginProfileRequest setUserName(String userName) {
-        this.userName = userName;
+    public UpdateLoginProfileRequest setMFABindRequired(Boolean MFABindRequired) {
+        this.MFABindRequired = MFABindRequired;
         return this;
     }
-    public String getUserName() {
-        return this.userName;
+    public Boolean getMFABindRequired() {
+        return this.MFABindRequired;
     }
 
     public UpdateLoginProfileRequest setPassword(String password) {
@@ -45,12 +45,12 @@ public class UpdateLoginProfileRequest extends TeaModel {
         return this.passwordResetRequired;
     }
 
-    public UpdateLoginProfileRequest setMFABindRequired(Boolean MFABindRequired) {
-        this.MFABindRequired = MFABindRequired;
+    public UpdateLoginProfileRequest setUserName(String userName) {
+        this.userName = userName;
         return this;
     }
-    public Boolean getMFABindRequired() {
-        return this.MFABindRequired;
+    public String getUserName() {
+        return this.userName;
     }
 
 }

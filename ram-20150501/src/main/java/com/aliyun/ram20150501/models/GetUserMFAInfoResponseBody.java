@@ -35,6 +35,9 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         @NameInMap("SerialNumber")
         public String serialNumber;
 
+        @NameInMap("Type")
+        public String type;
+
         public static GetUserMFAInfoResponseBodyMFADevice build(java.util.Map<String, ?> map) throws Exception {
             GetUserMFAInfoResponseBodyMFADevice self = new GetUserMFAInfoResponseBodyMFADevice();
             return TeaModel.build(map, self);
@@ -46,6 +49,14 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         }
         public String getSerialNumber() {
             return this.serialNumber;
+        }
+
+        public GetUserMFAInfoResponseBodyMFADevice setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

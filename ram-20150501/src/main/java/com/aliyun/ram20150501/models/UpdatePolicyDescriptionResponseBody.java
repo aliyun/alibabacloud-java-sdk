@@ -3,27 +3,27 @@ package com.aliyun.ram20150501.models;
 
 import com.aliyun.tea.*;
 
-public class CreatePolicyResponseBody extends TeaModel {
+public class UpdatePolicyDescriptionResponseBody extends TeaModel {
     @NameInMap("Policy")
-    public CreatePolicyResponseBodyPolicy policy;
+    public UpdatePolicyDescriptionResponseBodyPolicy policy;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreatePolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreatePolicyResponseBody self = new CreatePolicyResponseBody();
+    public static UpdatePolicyDescriptionResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdatePolicyDescriptionResponseBody self = new UpdatePolicyDescriptionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreatePolicyResponseBody setPolicy(CreatePolicyResponseBodyPolicy policy) {
+    public UpdatePolicyDescriptionResponseBody setPolicy(UpdatePolicyDescriptionResponseBodyPolicy policy) {
         this.policy = policy;
         return this;
     }
-    public CreatePolicyResponseBodyPolicy getPolicy() {
+    public UpdatePolicyDescriptionResponseBodyPolicy getPolicy() {
         return this.policy;
     }
 
-    public CreatePolicyResponseBody setRequestId(String requestId) {
+    public UpdatePolicyDescriptionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -31,7 +31,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class CreatePolicyResponseBodyPolicy extends TeaModel {
+    public static class UpdatePolicyDescriptionResponseBodyPolicy extends TeaModel {
         @NameInMap("CreateDate")
         public String createDate;
 
@@ -47,12 +47,15 @@ public class CreatePolicyResponseBody extends TeaModel {
         @NameInMap("PolicyType")
         public String policyType;
 
-        public static CreatePolicyResponseBodyPolicy build(java.util.Map<String, ?> map) throws Exception {
-            CreatePolicyResponseBodyPolicy self = new CreatePolicyResponseBodyPolicy();
+        @NameInMap("UpdateDate")
+        public String updateDate;
+
+        public static UpdatePolicyDescriptionResponseBodyPolicy build(java.util.Map<String, ?> map) throws Exception {
+            UpdatePolicyDescriptionResponseBodyPolicy self = new UpdatePolicyDescriptionResponseBodyPolicy();
             return TeaModel.build(map, self);
         }
 
-        public CreatePolicyResponseBodyPolicy setCreateDate(String createDate) {
+        public UpdatePolicyDescriptionResponseBodyPolicy setCreateDate(String createDate) {
             this.createDate = createDate;
             return this;
         }
@@ -60,7 +63,7 @@ public class CreatePolicyResponseBody extends TeaModel {
             return this.createDate;
         }
 
-        public CreatePolicyResponseBodyPolicy setDefaultVersion(String defaultVersion) {
+        public UpdatePolicyDescriptionResponseBodyPolicy setDefaultVersion(String defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
@@ -68,7 +71,7 @@ public class CreatePolicyResponseBody extends TeaModel {
             return this.defaultVersion;
         }
 
-        public CreatePolicyResponseBodyPolicy setDescription(String description) {
+        public UpdatePolicyDescriptionResponseBodyPolicy setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -76,7 +79,7 @@ public class CreatePolicyResponseBody extends TeaModel {
             return this.description;
         }
 
-        public CreatePolicyResponseBodyPolicy setPolicyName(String policyName) {
+        public UpdatePolicyDescriptionResponseBodyPolicy setPolicyName(String policyName) {
             this.policyName = policyName;
             return this;
         }
@@ -84,12 +87,20 @@ public class CreatePolicyResponseBody extends TeaModel {
             return this.policyName;
         }
 
-        public CreatePolicyResponseBodyPolicy setPolicyType(String policyType) {
+        public UpdatePolicyDescriptionResponseBodyPolicy setPolicyType(String policyType) {
             this.policyType = policyType;
             return this;
         }
         public String getPolicyType() {
             return this.policyType;
+        }
+
+        public UpdatePolicyDescriptionResponseBodyPolicy setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
+            return this;
+        }
+        public String getUpdateDate() {
+            return this.updateDate;
         }
 
     }

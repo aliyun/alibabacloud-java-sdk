@@ -4,23 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class SetSecurityPreferenceResponseBody extends TeaModel {
-    @NameInMap("SecurityPreference")
-    public SetSecurityPreferenceResponseBodySecurityPreference securityPreference;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SecurityPreference")
+    public SetSecurityPreferenceResponseBodySecurityPreference securityPreference;
 
     public static SetSecurityPreferenceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SetSecurityPreferenceResponseBody self = new SetSecurityPreferenceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SetSecurityPreferenceResponseBody setSecurityPreference(SetSecurityPreferenceResponseBodySecurityPreference securityPreference) {
-        this.securityPreference = securityPreference;
-        return this;
-    }
-    public SetSecurityPreferenceResponseBodySecurityPreference getSecurityPreference() {
-        return this.securityPreference;
     }
 
     public SetSecurityPreferenceResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public SetSecurityPreferenceResponseBody setSecurityPreference(SetSecurityPreferenceResponseBodySecurityPreference securityPreference) {
+        this.securityPreference = securityPreference;
+        return this;
+    }
+    public SetSecurityPreferenceResponseBodySecurityPreference getSecurityPreference() {
+        return this.securityPreference;
     }
 
     public static class SetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference extends TeaModel {
@@ -50,6 +50,58 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
 
     }
 
+    public static class SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference extends TeaModel {
+        @NameInMap("AllowUserToChangePassword")
+        public Boolean allowUserToChangePassword;
+
+        @NameInMap("EnableSaveMFATicket")
+        public Boolean enableSaveMFATicket;
+
+        @NameInMap("LoginNetworkMasks")
+        public String loginNetworkMasks;
+
+        @NameInMap("LoginSessionDuration")
+        public Integer loginSessionDuration;
+
+        public static SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference build(java.util.Map<String, ?> map) throws Exception {
+            SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference self = new SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference();
+            return TeaModel.build(map, self);
+        }
+
+        public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference setAllowUserToChangePassword(Boolean allowUserToChangePassword) {
+            this.allowUserToChangePassword = allowUserToChangePassword;
+            return this;
+        }
+        public Boolean getAllowUserToChangePassword() {
+            return this.allowUserToChangePassword;
+        }
+
+        public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference setEnableSaveMFATicket(Boolean enableSaveMFATicket) {
+            this.enableSaveMFATicket = enableSaveMFATicket;
+            return this;
+        }
+        public Boolean getEnableSaveMFATicket() {
+            return this.enableSaveMFATicket;
+        }
+
+        public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference setLoginNetworkMasks(String loginNetworkMasks) {
+            this.loginNetworkMasks = loginNetworkMasks;
+            return this;
+        }
+        public String getLoginNetworkMasks() {
+            return this.loginNetworkMasks;
+        }
+
+        public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference setLoginSessionDuration(Integer loginSessionDuration) {
+            this.loginSessionDuration = loginSessionDuration;
+            return this;
+        }
+        public Integer getLoginSessionDuration() {
+            return this.loginSessionDuration;
+        }
+
+    }
+
     public static class SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference extends TeaModel {
         @NameInMap("AllowUserToManageMFADevices")
         public Boolean allowUserToManageMFADevices;
@@ -65,58 +117,6 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         }
         public Boolean getAllowUserToManageMFADevices() {
             return this.allowUserToManageMFADevices;
-        }
-
-    }
-
-    public static class SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference extends TeaModel {
-        @NameInMap("EnableSaveMFATicket")
-        public Boolean enableSaveMFATicket;
-
-        @NameInMap("LoginSessionDuration")
-        public Integer loginSessionDuration;
-
-        @NameInMap("LoginNetworkMasks")
-        public String loginNetworkMasks;
-
-        @NameInMap("AllowUserToChangePassword")
-        public Boolean allowUserToChangePassword;
-
-        public static SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference build(java.util.Map<String, ?> map) throws Exception {
-            SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference self = new SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference();
-            return TeaModel.build(map, self);
-        }
-
-        public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference setEnableSaveMFATicket(Boolean enableSaveMFATicket) {
-            this.enableSaveMFATicket = enableSaveMFATicket;
-            return this;
-        }
-        public Boolean getEnableSaveMFATicket() {
-            return this.enableSaveMFATicket;
-        }
-
-        public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference setLoginSessionDuration(Integer loginSessionDuration) {
-            this.loginSessionDuration = loginSessionDuration;
-            return this;
-        }
-        public Integer getLoginSessionDuration() {
-            return this.loginSessionDuration;
-        }
-
-        public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference setLoginNetworkMasks(String loginNetworkMasks) {
-            this.loginNetworkMasks = loginNetworkMasks;
-            return this;
-        }
-        public String getLoginNetworkMasks() {
-            return this.loginNetworkMasks;
-        }
-
-        public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference setAllowUserToChangePassword(Boolean allowUserToChangePassword) {
-            this.allowUserToChangePassword = allowUserToChangePassword;
-            return this;
-        }
-        public Boolean getAllowUserToChangePassword() {
-            return this.allowUserToChangePassword;
         }
 
     }
@@ -144,11 +144,11 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         @NameInMap("AccessKeyPreference")
         public SetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference accessKeyPreference;
 
-        @NameInMap("MFAPreference")
-        public SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference MFAPreference;
-
         @NameInMap("LoginProfilePreference")
         public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference loginProfilePreference;
+
+        @NameInMap("MFAPreference")
+        public SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference MFAPreference;
 
         @NameInMap("PublicKeyPreference")
         public SetSecurityPreferenceResponseBodySecurityPreferencePublicKeyPreference publicKeyPreference;
@@ -166,20 +166,20 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
             return this.accessKeyPreference;
         }
 
-        public SetSecurityPreferenceResponseBodySecurityPreference setMFAPreference(SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference MFAPreference) {
-            this.MFAPreference = MFAPreference;
-            return this;
-        }
-        public SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference getMFAPreference() {
-            return this.MFAPreference;
-        }
-
         public SetSecurityPreferenceResponseBodySecurityPreference setLoginProfilePreference(SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference loginProfilePreference) {
             this.loginProfilePreference = loginProfilePreference;
             return this;
         }
         public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference getLoginProfilePreference() {
             return this.loginProfilePreference;
+        }
+
+        public SetSecurityPreferenceResponseBodySecurityPreference setMFAPreference(SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference MFAPreference) {
+            this.MFAPreference = MFAPreference;
+            return this;
+        }
+        public SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference getMFAPreference() {
+            return this.MFAPreference;
         }
 
         public SetSecurityPreferenceResponseBodySecurityPreference setPublicKeyPreference(SetSecurityPreferenceResponseBodySecurityPreferencePublicKeyPreference publicKeyPreference) {

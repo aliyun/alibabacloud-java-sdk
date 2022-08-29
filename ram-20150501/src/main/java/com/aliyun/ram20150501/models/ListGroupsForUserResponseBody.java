@@ -4,23 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsForUserResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Groups")
     public ListGroupsForUserResponseBodyGroups groups;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListGroupsForUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListGroupsForUserResponseBody self = new ListGroupsForUserResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListGroupsForUserResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListGroupsForUserResponseBody setGroups(ListGroupsForUserResponseBodyGroups groups) {
@@ -31,15 +23,23 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         return this.groups;
     }
 
+    public ListGroupsForUserResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListGroupsForUserResponseBodyGroupsGroup extends TeaModel {
+        @NameInMap("Comments")
+        public String comments;
+
         @NameInMap("GroupId")
         public String groupId;
 
         @NameInMap("GroupName")
         public String groupName;
-
-        @NameInMap("Comments")
-        public String comments;
 
         @NameInMap("JoinDate")
         public String joinDate;
@@ -47,6 +47,14 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         public static ListGroupsForUserResponseBodyGroupsGroup build(java.util.Map<String, ?> map) throws Exception {
             ListGroupsForUserResponseBodyGroupsGroup self = new ListGroupsForUserResponseBodyGroupsGroup();
             return TeaModel.build(map, self);
+        }
+
+        public ListGroupsForUserResponseBodyGroupsGroup setComments(String comments) {
+            this.comments = comments;
+            return this;
+        }
+        public String getComments() {
+            return this.comments;
         }
 
         public ListGroupsForUserResponseBodyGroupsGroup setGroupId(String groupId) {
@@ -63,14 +71,6 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         }
         public String getGroupName() {
             return this.groupName;
-        }
-
-        public ListGroupsForUserResponseBodyGroupsGroup setComments(String comments) {
-            this.comments = comments;
-            return this;
-        }
-        public String getComments() {
-            return this.comments;
         }
 
         public ListGroupsForUserResponseBodyGroupsGroup setJoinDate(String joinDate) {

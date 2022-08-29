@@ -4,23 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class GetAccountAliasResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AccountAlias")
     public String accountAlias;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetAccountAliasResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAccountAliasResponseBody self = new GetAccountAliasResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAccountAliasResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetAccountAliasResponseBody setAccountAlias(String accountAlias) {
@@ -29,6 +21,14 @@ public class GetAccountAliasResponseBody extends TeaModel {
     }
     public String getAccountAlias() {
         return this.accountAlias;
+    }
+
+    public GetAccountAliasResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

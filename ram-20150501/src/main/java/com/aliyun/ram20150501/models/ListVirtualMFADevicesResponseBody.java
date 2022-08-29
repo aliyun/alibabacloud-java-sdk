@@ -4,23 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListVirtualMFADevicesResponseBody extends TeaModel {
-    @NameInMap("VirtualMFADevices")
-    public ListVirtualMFADevicesResponseBodyVirtualMFADevices virtualMFADevices;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("VirtualMFADevices")
+    public ListVirtualMFADevicesResponseBodyVirtualMFADevices virtualMFADevices;
 
     public static ListVirtualMFADevicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListVirtualMFADevicesResponseBody self = new ListVirtualMFADevicesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListVirtualMFADevicesResponseBody setVirtualMFADevices(ListVirtualMFADevicesResponseBodyVirtualMFADevices virtualMFADevices) {
-        this.virtualMFADevices = virtualMFADevices;
-        return this;
-    }
-    public ListVirtualMFADevicesResponseBodyVirtualMFADevices getVirtualMFADevices() {
-        return this.virtualMFADevices;
     }
 
     public ListVirtualMFADevicesResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListVirtualMFADevicesResponseBody setVirtualMFADevices(ListVirtualMFADevicesResponseBodyVirtualMFADevices virtualMFADevices) {
+        this.virtualMFADevices = virtualMFADevices;
+        return this;
+    }
+    public ListVirtualMFADevicesResponseBodyVirtualMFADevices getVirtualMFADevices() {
+        return this.virtualMFADevices;
     }
 
     public static class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser extends TeaModel {
@@ -73,18 +73,26 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     }
 
     public static class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice extends TeaModel {
+        @NameInMap("ActivateDate")
+        public String activateDate;
+
         @NameInMap("SerialNumber")
         public String serialNumber;
 
         @NameInMap("User")
         public ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser user;
 
-        @NameInMap("ActivateDate")
-        public String activateDate;
-
         public static ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice build(java.util.Map<String, ?> map) throws Exception {
             ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice self = new ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice();
             return TeaModel.build(map, self);
+        }
+
+        public ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice setActivateDate(String activateDate) {
+            this.activateDate = activateDate;
+            return this;
+        }
+        public String getActivateDate() {
+            return this.activateDate;
         }
 
         public ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice setSerialNumber(String serialNumber) {
@@ -101,14 +109,6 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         }
         public ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser getUser() {
             return this.user;
-        }
-
-        public ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice setActivateDate(String activateDate) {
-            this.activateDate = activateDate;
-            return this;
-        }
-        public String getActivateDate() {
-            return this.activateDate;
         }
 
     }

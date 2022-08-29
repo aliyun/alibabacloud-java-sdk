@@ -4,23 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class CreateUserResponseBody extends TeaModel {
-    @NameInMap("User")
-    public CreateUserResponseBodyUser user;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("User")
+    public CreateUserResponseBodyUser user;
 
     public static CreateUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateUserResponseBody self = new CreateUserResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateUserResponseBody setUser(CreateUserResponseBodyUser user) {
-        this.user = user;
-        return this;
-    }
-    public CreateUserResponseBodyUser getUser() {
-        return this.user;
     }
 
     public CreateUserResponseBody setRequestId(String requestId) {
@@ -31,7 +23,21 @@ public class CreateUserResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public CreateUserResponseBody setUser(CreateUserResponseBodyUser user) {
+        this.user = user;
+        return this;
+    }
+    public CreateUserResponseBodyUser getUser() {
+        return this.user;
+    }
+
     public static class CreateUserResponseBodyUser extends TeaModel {
+        @NameInMap("Comments")
+        public String comments;
+
+        @NameInMap("CreateDate")
+        public String createDate;
+
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -44,18 +50,28 @@ public class CreateUserResponseBody extends TeaModel {
         @NameInMap("UserId")
         public String userId;
 
-        @NameInMap("Comments")
-        public String comments;
-
-        @NameInMap("CreateDate")
-        public String createDate;
-
         @NameInMap("UserName")
         public String userName;
 
         public static CreateUserResponseBodyUser build(java.util.Map<String, ?> map) throws Exception {
             CreateUserResponseBodyUser self = new CreateUserResponseBodyUser();
             return TeaModel.build(map, self);
+        }
+
+        public CreateUserResponseBodyUser setComments(String comments) {
+            this.comments = comments;
+            return this;
+        }
+        public String getComments() {
+            return this.comments;
+        }
+
+        public CreateUserResponseBodyUser setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         public CreateUserResponseBodyUser setDisplayName(String displayName) {
@@ -88,22 +104,6 @@ public class CreateUserResponseBody extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
-        }
-
-        public CreateUserResponseBodyUser setComments(String comments) {
-            this.comments = comments;
-            return this;
-        }
-        public String getComments() {
-            return this.comments;
-        }
-
-        public CreateUserResponseBodyUser setCreateDate(String createDate) {
-            this.createDate = createDate;
-            return this;
-        }
-        public String getCreateDate() {
-            return this.createDate;
         }
 
         public CreateUserResponseBodyUser setUserName(String userName) {

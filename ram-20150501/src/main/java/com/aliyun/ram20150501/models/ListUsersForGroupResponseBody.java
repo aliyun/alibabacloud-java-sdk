@@ -4,14 +4,14 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListUsersForGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     @NameInMap("Marker")
     public String marker;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Users")
     public ListUsersForGroupResponseBodyUsers users;
@@ -19,14 +19,6 @@ public class ListUsersForGroupResponseBody extends TeaModel {
     public static ListUsersForGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListUsersForGroupResponseBody self = new ListUsersForGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListUsersForGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListUsersForGroupResponseBody setIsTruncated(Boolean isTruncated) {
@@ -43,6 +35,14 @@ public class ListUsersForGroupResponseBody extends TeaModel {
     }
     public String getMarker() {
         return this.marker;
+    }
+
+    public ListUsersForGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListUsersForGroupResponseBody setUsers(ListUsersForGroupResponseBodyUsers users) {

@@ -4,23 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class CreateVirtualMFADeviceResponseBody extends TeaModel {
-    @NameInMap("VirtualMFADevice")
-    public CreateVirtualMFADeviceResponseBodyVirtualMFADevice virtualMFADevice;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("VirtualMFADevice")
+    public CreateVirtualMFADeviceResponseBodyVirtualMFADevice virtualMFADevice;
 
     public static CreateVirtualMFADeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateVirtualMFADeviceResponseBody self = new CreateVirtualMFADeviceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateVirtualMFADeviceResponseBody setVirtualMFADevice(CreateVirtualMFADeviceResponseBodyVirtualMFADevice virtualMFADevice) {
-        this.virtualMFADevice = virtualMFADevice;
-        return this;
-    }
-    public CreateVirtualMFADeviceResponseBodyVirtualMFADevice getVirtualMFADevice() {
-        return this.virtualMFADevice;
     }
 
     public CreateVirtualMFADeviceResponseBody setRequestId(String requestId) {
@@ -31,27 +23,35 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public CreateVirtualMFADeviceResponseBody setVirtualMFADevice(CreateVirtualMFADeviceResponseBodyVirtualMFADevice virtualMFADevice) {
+        this.virtualMFADevice = virtualMFADevice;
+        return this;
+    }
+    public CreateVirtualMFADeviceResponseBodyVirtualMFADevice getVirtualMFADevice() {
+        return this.virtualMFADevice;
+    }
+
     public static class CreateVirtualMFADeviceResponseBodyVirtualMFADevice extends TeaModel {
-        @NameInMap("SerialNumber")
-        public String serialNumber;
+        @NameInMap("Base32StringSeed")
+        public String base32StringSeed;
 
         @NameInMap("QRCodePNG")
         public String QRCodePNG;
 
-        @NameInMap("Base32StringSeed")
-        public String base32StringSeed;
+        @NameInMap("SerialNumber")
+        public String serialNumber;
 
         public static CreateVirtualMFADeviceResponseBodyVirtualMFADevice build(java.util.Map<String, ?> map) throws Exception {
             CreateVirtualMFADeviceResponseBodyVirtualMFADevice self = new CreateVirtualMFADeviceResponseBodyVirtualMFADevice();
             return TeaModel.build(map, self);
         }
 
-        public CreateVirtualMFADeviceResponseBodyVirtualMFADevice setSerialNumber(String serialNumber) {
-            this.serialNumber = serialNumber;
+        public CreateVirtualMFADeviceResponseBodyVirtualMFADevice setBase32StringSeed(String base32StringSeed) {
+            this.base32StringSeed = base32StringSeed;
             return this;
         }
-        public String getSerialNumber() {
-            return this.serialNumber;
+        public String getBase32StringSeed() {
+            return this.base32StringSeed;
         }
 
         public CreateVirtualMFADeviceResponseBodyVirtualMFADevice setQRCodePNG(String QRCodePNG) {
@@ -62,12 +62,12 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
             return this.QRCodePNG;
         }
 
-        public CreateVirtualMFADeviceResponseBodyVirtualMFADevice setBase32StringSeed(String base32StringSeed) {
-            this.base32StringSeed = base32StringSeed;
+        public CreateVirtualMFADeviceResponseBodyVirtualMFADevice setSerialNumber(String serialNumber) {
+            this.serialNumber = serialNumber;
             return this;
         }
-        public String getBase32StringSeed() {
-            return this.base32StringSeed;
+        public String getSerialNumber() {
+            return this.serialNumber;
         }
 
     }
