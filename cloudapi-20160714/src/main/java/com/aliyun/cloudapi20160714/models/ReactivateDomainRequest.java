@@ -10,9 +10,6 @@ public class ReactivateDomainRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static ReactivateDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         ReactivateDomainRequest self = new ReactivateDomainRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class ReactivateDomainRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
-    }
-
-    public ReactivateDomainRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

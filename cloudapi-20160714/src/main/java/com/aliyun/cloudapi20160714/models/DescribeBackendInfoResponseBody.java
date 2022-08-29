@@ -228,6 +228,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         @NameInMap("VpcScheme")
         public String vpcScheme;
 
+        @NameInMap("VpcTargetHostName")
+        public String vpcTargetHostName;
+
         public static DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigVpcConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigVpcConfig self = new DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigVpcConfig();
             return TeaModel.build(map, self);
@@ -279,6 +282,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         }
         public String getVpcScheme() {
             return this.vpcScheme;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigVpcConfig setVpcTargetHostName(String vpcTargetHostName) {
+            this.vpcTargetHostName = vpcTargetHostName;
+            return this;
+        }
+        public String getVpcTargetHostName() {
+            return this.vpcTargetHostName;
         }
 
     }

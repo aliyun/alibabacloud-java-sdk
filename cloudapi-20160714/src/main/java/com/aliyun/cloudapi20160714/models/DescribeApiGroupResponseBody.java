@@ -13,6 +13,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     @NameInMap("ClassicVpcSubDomain")
     public String classicVpcSubDomain;
 
+    @NameInMap("CloudMarketCommodity")
+    public Boolean cloudMarketCommodity;
+
     @NameInMap("CmsMonitorGroup")
     public String cmsMonitorGroup;
 
@@ -124,6 +127,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     }
     public String getClassicVpcSubDomain() {
         return this.classicVpcSubDomain;
+    }
+
+    public DescribeApiGroupResponseBody setCloudMarketCommodity(Boolean cloudMarketCommodity) {
+        this.cloudMarketCommodity = cloudMarketCommodity;
+        return this;
+    }
+    public Boolean getCloudMarketCommodity() {
+        return this.cloudMarketCommodity;
     }
 
     public DescribeApiGroupResponseBody setCmsMonitorGroup(String cmsMonitorGroup) {

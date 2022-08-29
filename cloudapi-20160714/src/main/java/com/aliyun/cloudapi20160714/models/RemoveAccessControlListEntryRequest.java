@@ -10,9 +10,6 @@ public class RemoveAccessControlListEntryRequest extends TeaModel {
     @NameInMap("AclId")
     public String aclId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static RemoveAccessControlListEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveAccessControlListEntryRequest self = new RemoveAccessControlListEntryRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class RemoveAccessControlListEntryRequest extends TeaModel {
     }
     public String getAclId() {
         return this.aclId;
-    }
-
-    public RemoveAccessControlListEntryRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

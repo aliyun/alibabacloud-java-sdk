@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifySignatureRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("SignatureId")
     public String signatureId;
 
@@ -22,14 +19,6 @@ public class ModifySignatureRequest extends TeaModel {
     public static ModifySignatureRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySignatureRequest self = new ModifySignatureRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifySignatureRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public ModifySignatureRequest setSignatureId(String signatureId) {

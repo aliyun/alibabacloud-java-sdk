@@ -10,9 +10,6 @@ public class DisableInstanceAccessControlRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static DisableInstanceAccessControlRequest build(java.util.Map<String, ?> map) throws Exception {
         DisableInstanceAccessControlRequest self = new DisableInstanceAccessControlRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class DisableInstanceAccessControlRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public DisableInstanceAccessControlRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }
