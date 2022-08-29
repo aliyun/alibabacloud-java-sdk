@@ -16,6 +16,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("ModifyAction")
     public String modifyAction;
 
+    @NameInMap("SkipWaitSwitch")
+    public Boolean skipWaitSwitch;
+
     @NameInMap("Token")
     public String token;
 
@@ -54,6 +57,14 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     }
     public String getModifyAction() {
         return this.modifyAction;
+    }
+
+    public ModifyInstanceSpecRequest setSkipWaitSwitch(Boolean skipWaitSwitch) {
+        this.skipWaitSwitch = skipWaitSwitch;
+        return this;
+    }
+    public Boolean getSkipWaitSwitch() {
+        return this.skipWaitSwitch;
     }
 
     public ModifyInstanceSpecRequest setToken(String token) {

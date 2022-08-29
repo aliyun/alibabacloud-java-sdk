@@ -7,9 +7,6 @@ public class DescribeUpdateBackendTaskRequest extends TeaModel {
     @NameInMap("OperationUid")
     public String operationUid;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static DescribeUpdateBackendTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUpdateBackendTaskRequest self = new DescribeUpdateBackendTaskRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class DescribeUpdateBackendTaskRequest extends TeaModel {
     }
     public String getOperationUid() {
         return this.operationUid;
-    }
-
-    public DescribeUpdateBackendTaskRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

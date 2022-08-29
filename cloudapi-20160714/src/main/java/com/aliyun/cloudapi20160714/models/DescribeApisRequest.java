@@ -7,8 +7,14 @@ public class DescribeApisRequest extends TeaModel {
     @NameInMap("ApiId")
     public String apiId;
 
+    @NameInMap("ApiMethod")
+    public String apiMethod;
+
     @NameInMap("ApiName")
     public String apiName;
+
+    @NameInMap("ApiPath")
+    public String apiPath;
 
     @NameInMap("CatalogId")
     public String catalogId;
@@ -31,6 +37,9 @@ public class DescribeApisRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<DescribeApisRequestTag> tag;
 
+    @NameInMap("UnDeployed")
+    public Boolean unDeployed;
+
     @NameInMap("Visibility")
     public String visibility;
 
@@ -47,12 +56,28 @@ public class DescribeApisRequest extends TeaModel {
         return this.apiId;
     }
 
+    public DescribeApisRequest setApiMethod(String apiMethod) {
+        this.apiMethod = apiMethod;
+        return this;
+    }
+    public String getApiMethod() {
+        return this.apiMethod;
+    }
+
     public DescribeApisRequest setApiName(String apiName) {
         this.apiName = apiName;
         return this;
     }
     public String getApiName() {
         return this.apiName;
+    }
+
+    public DescribeApisRequest setApiPath(String apiPath) {
+        this.apiPath = apiPath;
+        return this;
+    }
+    public String getApiPath() {
+        return this.apiPath;
     }
 
     public DescribeApisRequest setCatalogId(String catalogId) {
@@ -109,6 +134,14 @@ public class DescribeApisRequest extends TeaModel {
     }
     public java.util.List<DescribeApisRequestTag> getTag() {
         return this.tag;
+    }
+
+    public DescribeApisRequest setUnDeployed(Boolean unDeployed) {
+        this.unDeployed = unDeployed;
+        return this;
+    }
+    public Boolean getUnDeployed() {
+        return this.unDeployed;
     }
 
     public DescribeApisRequest setVisibility(String visibility) {

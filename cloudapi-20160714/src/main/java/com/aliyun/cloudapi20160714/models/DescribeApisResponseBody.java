@@ -68,8 +68,14 @@ public class DescribeApisResponseBody extends TeaModel {
         @NameInMap("ApiId")
         public String apiId;
 
+        @NameInMap("ApiMethod")
+        public String apiMethod;
+
         @NameInMap("ApiName")
         public String apiName;
+
+        @NameInMap("ApiPath")
+        public String apiPath;
 
         @NameInMap("CreatedTime")
         public String createdTime;
@@ -105,12 +111,28 @@ public class DescribeApisResponseBody extends TeaModel {
             return this.apiId;
         }
 
+        public DescribeApisResponseBodyApiSummarysApiSummary setApiMethod(String apiMethod) {
+            this.apiMethod = apiMethod;
+            return this;
+        }
+        public String getApiMethod() {
+            return this.apiMethod;
+        }
+
         public DescribeApisResponseBodyApiSummarysApiSummary setApiName(String apiName) {
             this.apiName = apiName;
             return this;
         }
         public String getApiName() {
             return this.apiName;
+        }
+
+        public DescribeApisResponseBodyApiSummarysApiSummary setApiPath(String apiPath) {
+            this.apiPath = apiPath;
+            return this;
+        }
+        public String getApiPath() {
+            return this.apiPath;
         }
 
         public DescribeApisResponseBodyApiSummarysApiSummary setCreatedTime(String createdTime) {
