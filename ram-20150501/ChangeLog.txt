@@ -1,3 +1,6 @@
+2022-08-29 Version: 1.0.2
+- Fix 44273543.
+
 2021-01-07 Version: 1.0.1
 - AMP Version Change.
 

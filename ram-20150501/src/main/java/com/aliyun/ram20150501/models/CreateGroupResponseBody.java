@@ -32,37 +32,21 @@ public class CreateGroupResponseBody extends TeaModel {
     }
 
     public static class CreateGroupResponseBodyGroup extends TeaModel {
-        @NameInMap("GroupId")
-        public String groupId;
-
-        @NameInMap("GroupName")
-        public String groupName;
-
         @NameInMap("Comments")
         public String comments;
 
         @NameInMap("CreateDate")
         public String createDate;
 
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
         public static CreateGroupResponseBodyGroup build(java.util.Map<String, ?> map) throws Exception {
             CreateGroupResponseBodyGroup self = new CreateGroupResponseBodyGroup();
             return TeaModel.build(map, self);
-        }
-
-        public CreateGroupResponseBodyGroup setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
-        public CreateGroupResponseBodyGroup setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
         }
 
         public CreateGroupResponseBodyGroup setComments(String comments) {
@@ -79,6 +63,22 @@ public class CreateGroupResponseBody extends TeaModel {
         }
         public String getCreateDate() {
             return this.createDate;
+        }
+
+        public CreateGroupResponseBodyGroup setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public CreateGroupResponseBodyGroup setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
         }
 
     }

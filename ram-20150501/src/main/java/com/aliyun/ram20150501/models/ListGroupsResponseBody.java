@@ -4,9 +4,6 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Groups")
     public ListGroupsResponseBodyGroups groups;
 
@@ -16,17 +13,12 @@ public class ListGroupsResponseBody extends TeaModel {
     @NameInMap("Marker")
     public String marker;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ListGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListGroupsResponseBody self = new ListGroupsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListGroupsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListGroupsResponseBody setGroups(ListGroupsResponseBodyGroups groups) {
@@ -53,49 +45,33 @@ public class ListGroupsResponseBody extends TeaModel {
         return this.marker;
     }
 
+    public ListGroupsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListGroupsResponseBodyGroupsGroup extends TeaModel {
-        @NameInMap("GroupId")
-        public String groupId;
-
-        @NameInMap("UpdateDate")
-        public String updateDate;
-
-        @NameInMap("GroupName")
-        public String groupName;
-
         @NameInMap("Comments")
         public String comments;
 
         @NameInMap("CreateDate")
         public String createDate;
 
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("UpdateDate")
+        public String updateDate;
+
         public static ListGroupsResponseBodyGroupsGroup build(java.util.Map<String, ?> map) throws Exception {
             ListGroupsResponseBodyGroupsGroup self = new ListGroupsResponseBodyGroupsGroup();
             return TeaModel.build(map, self);
-        }
-
-        public ListGroupsResponseBodyGroupsGroup setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
-        public ListGroupsResponseBodyGroupsGroup setUpdateDate(String updateDate) {
-            this.updateDate = updateDate;
-            return this;
-        }
-        public String getUpdateDate() {
-            return this.updateDate;
-        }
-
-        public ListGroupsResponseBodyGroupsGroup setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
         }
 
         public ListGroupsResponseBodyGroupsGroup setComments(String comments) {
@@ -112,6 +88,30 @@ public class ListGroupsResponseBody extends TeaModel {
         }
         public String getCreateDate() {
             return this.createDate;
+        }
+
+        public ListGroupsResponseBodyGroupsGroup setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public ListGroupsResponseBodyGroupsGroup setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public ListGroupsResponseBodyGroupsGroup setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
+            return this;
+        }
+        public String getUpdateDate() {
+            return this.updateDate;
         }
 
     }

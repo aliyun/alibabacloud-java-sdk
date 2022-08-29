@@ -4,11 +4,11 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class DetachPolicyFromUserRequest extends TeaModel {
-    @NameInMap("PolicyType")
-    public String policyType;
-
     @NameInMap("PolicyName")
     public String policyName;
+
+    @NameInMap("PolicyType")
+    public String policyType;
 
     @NameInMap("UserName")
     public String userName;
@@ -18,20 +18,20 @@ public class DetachPolicyFromUserRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DetachPolicyFromUserRequest setPolicyType(String policyType) {
-        this.policyType = policyType;
-        return this;
-    }
-    public String getPolicyType() {
-        return this.policyType;
-    }
-
     public DetachPolicyFromUserRequest setPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     public String getPolicyName() {
         return this.policyName;
+    }
+
+    public DetachPolicyFromUserRequest setPolicyType(String policyType) {
+        this.policyType = policyType;
+        return this;
+    }
+    public String getPolicyType() {
+        return this.policyType;
     }
 
     public DetachPolicyFromUserRequest setUserName(String userName) {

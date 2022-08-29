@@ -4,29 +4,21 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class CreatePolicyVersionRequest extends TeaModel {
-    @NameInMap("PolicyName")
-    public String policyName;
-
     @NameInMap("PolicyDocument")
     public String policyDocument;
 
-    @NameInMap("SetAsDefault")
-    public Boolean setAsDefault;
+    @NameInMap("PolicyName")
+    public String policyName;
 
     @NameInMap("RotateStrategy")
     public String rotateStrategy;
 
+    @NameInMap("SetAsDefault")
+    public Boolean setAsDefault;
+
     public static CreatePolicyVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePolicyVersionRequest self = new CreatePolicyVersionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreatePolicyVersionRequest setPolicyName(String policyName) {
-        this.policyName = policyName;
-        return this;
-    }
-    public String getPolicyName() {
-        return this.policyName;
     }
 
     public CreatePolicyVersionRequest setPolicyDocument(String policyDocument) {
@@ -37,12 +29,12 @@ public class CreatePolicyVersionRequest extends TeaModel {
         return this.policyDocument;
     }
 
-    public CreatePolicyVersionRequest setSetAsDefault(Boolean setAsDefault) {
-        this.setAsDefault = setAsDefault;
+    public CreatePolicyVersionRequest setPolicyName(String policyName) {
+        this.policyName = policyName;
         return this;
     }
-    public Boolean getSetAsDefault() {
-        return this.setAsDefault;
+    public String getPolicyName() {
+        return this.policyName;
     }
 
     public CreatePolicyVersionRequest setRotateStrategy(String rotateStrategy) {
@@ -51,6 +43,14 @@ public class CreatePolicyVersionRequest extends TeaModel {
     }
     public String getRotateStrategy() {
         return this.rotateStrategy;
+    }
+
+    public CreatePolicyVersionRequest setSetAsDefault(Boolean setAsDefault) {
+        this.setAsDefault = setAsDefault;
+        return this;
+    }
+    public Boolean getSetAsDefault() {
+        return this.setAsDefault;
     }
 
 }

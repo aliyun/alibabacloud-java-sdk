@@ -32,26 +32,18 @@ public class ListAccessKeysResponseBody extends TeaModel {
     }
 
     public static class ListAccessKeysResponseBodyAccessKeysAccessKey extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
         @NameInMap("CreateDate")
         public String createDate;
 
+        @NameInMap("Status")
+        public String status;
+
         public static ListAccessKeysResponseBodyAccessKeysAccessKey build(java.util.Map<String, ?> map) throws Exception {
             ListAccessKeysResponseBodyAccessKeysAccessKey self = new ListAccessKeysResponseBodyAccessKeysAccessKey();
             return TeaModel.build(map, self);
-        }
-
-        public ListAccessKeysResponseBodyAccessKeysAccessKey setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public ListAccessKeysResponseBodyAccessKeysAccessKey setAccessKeyId(String accessKeyId) {
@@ -68,6 +60,14 @@ public class ListAccessKeysResponseBody extends TeaModel {
         }
         public String getCreateDate() {
             return this.createDate;
+        }
+
+        public ListAccessKeysResponseBodyAccessKeysAccessKey setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

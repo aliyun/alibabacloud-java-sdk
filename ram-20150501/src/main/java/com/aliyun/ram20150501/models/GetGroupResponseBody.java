@@ -32,48 +32,24 @@ public class GetGroupResponseBody extends TeaModel {
     }
 
     public static class GetGroupResponseBodyGroup extends TeaModel {
-        @NameInMap("GroupId")
-        public String groupId;
-
-        @NameInMap("UpdateDate")
-        public String updateDate;
-
-        @NameInMap("GroupName")
-        public String groupName;
-
         @NameInMap("Comments")
         public String comments;
 
         @NameInMap("CreateDate")
         public String createDate;
 
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("UpdateDate")
+        public String updateDate;
+
         public static GetGroupResponseBodyGroup build(java.util.Map<String, ?> map) throws Exception {
             GetGroupResponseBodyGroup self = new GetGroupResponseBodyGroup();
             return TeaModel.build(map, self);
-        }
-
-        public GetGroupResponseBodyGroup setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
-        public GetGroupResponseBodyGroup setUpdateDate(String updateDate) {
-            this.updateDate = updateDate;
-            return this;
-        }
-        public String getUpdateDate() {
-            return this.updateDate;
-        }
-
-        public GetGroupResponseBodyGroup setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
         }
 
         public GetGroupResponseBodyGroup setComments(String comments) {
@@ -90,6 +66,30 @@ public class GetGroupResponseBody extends TeaModel {
         }
         public String getCreateDate() {
             return this.createDate;
+        }
+
+        public GetGroupResponseBodyGroup setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public GetGroupResponseBodyGroup setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public GetGroupResponseBodyGroup setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
+            return this;
+        }
+        public String getUpdateDate() {
+            return this.updateDate;
         }
 
     }

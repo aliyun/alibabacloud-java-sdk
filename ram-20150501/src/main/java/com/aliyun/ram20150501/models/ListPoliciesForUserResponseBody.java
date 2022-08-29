@@ -32,6 +32,9 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
     }
 
     public static class ListPoliciesForUserResponseBodyPoliciesPolicy extends TeaModel {
+        @NameInMap("AttachDate")
+        public String attachDate;
+
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
@@ -41,15 +44,20 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
         @NameInMap("PolicyName")
         public String policyName;
 
-        @NameInMap("AttachDate")
-        public String attachDate;
-
         @NameInMap("PolicyType")
         public String policyType;
 
         public static ListPoliciesForUserResponseBodyPoliciesPolicy build(java.util.Map<String, ?> map) throws Exception {
             ListPoliciesForUserResponseBodyPoliciesPolicy self = new ListPoliciesForUserResponseBodyPoliciesPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public ListPoliciesForUserResponseBodyPoliciesPolicy setAttachDate(String attachDate) {
+            this.attachDate = attachDate;
+            return this;
+        }
+        public String getAttachDate() {
+            return this.attachDate;
         }
 
         public ListPoliciesForUserResponseBodyPoliciesPolicy setDefaultVersion(String defaultVersion) {
@@ -74,14 +82,6 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
         }
         public String getPolicyName() {
             return this.policyName;
-        }
-
-        public ListPoliciesForUserResponseBodyPoliciesPolicy setAttachDate(String attachDate) {
-            this.attachDate = attachDate;
-            return this;
-        }
-        public String getAttachDate() {
-            return this.attachDate;
         }
 
         public ListPoliciesForUserResponseBodyPoliciesPolicy setPolicyType(String policyType) {

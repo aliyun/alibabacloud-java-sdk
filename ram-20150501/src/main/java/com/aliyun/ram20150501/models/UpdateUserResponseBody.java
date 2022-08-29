@@ -4,23 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserResponseBody extends TeaModel {
-    @NameInMap("User")
-    public UpdateUserResponseBodyUser user;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("User")
+    public UpdateUserResponseBodyUser user;
 
     public static UpdateUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateUserResponseBody self = new UpdateUserResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateUserResponseBody setUser(UpdateUserResponseBodyUser user) {
-        this.user = user;
-        return this;
-    }
-    public UpdateUserResponseBodyUser getUser() {
-        return this.user;
     }
 
     public UpdateUserResponseBody setRequestId(String requestId) {
@@ -31,27 +23,35 @@ public class UpdateUserResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public UpdateUserResponseBody setUser(UpdateUserResponseBodyUser user) {
+        this.user = user;
+        return this;
+    }
+    public UpdateUserResponseBodyUser getUser() {
+        return this.user;
+    }
+
     public static class UpdateUserResponseBodyUser extends TeaModel {
+        @NameInMap("Comments")
+        public String comments;
+
+        @NameInMap("CreateDate")
+        public String createDate;
+
         @NameInMap("DisplayName")
         public String displayName;
 
         @NameInMap("Email")
         public String email;
 
-        @NameInMap("UpdateDate")
-        public String updateDate;
-
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
+        @NameInMap("UpdateDate")
+        public String updateDate;
+
         @NameInMap("UserId")
         public String userId;
-
-        @NameInMap("Comments")
-        public String comments;
-
-        @NameInMap("CreateDate")
-        public String createDate;
 
         @NameInMap("UserName")
         public String userName;
@@ -59,6 +59,22 @@ public class UpdateUserResponseBody extends TeaModel {
         public static UpdateUserResponseBodyUser build(java.util.Map<String, ?> map) throws Exception {
             UpdateUserResponseBodyUser self = new UpdateUserResponseBodyUser();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateUserResponseBodyUser setComments(String comments) {
+            this.comments = comments;
+            return this;
+        }
+        public String getComments() {
+            return this.comments;
+        }
+
+        public UpdateUserResponseBodyUser setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         public UpdateUserResponseBodyUser setDisplayName(String displayName) {
@@ -77,14 +93,6 @@ public class UpdateUserResponseBody extends TeaModel {
             return this.email;
         }
 
-        public UpdateUserResponseBodyUser setUpdateDate(String updateDate) {
-            this.updateDate = updateDate;
-            return this;
-        }
-        public String getUpdateDate() {
-            return this.updateDate;
-        }
-
         public UpdateUserResponseBodyUser setMobilePhone(String mobilePhone) {
             this.mobilePhone = mobilePhone;
             return this;
@@ -93,28 +101,20 @@ public class UpdateUserResponseBody extends TeaModel {
             return this.mobilePhone;
         }
 
+        public UpdateUserResponseBodyUser setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
+            return this;
+        }
+        public String getUpdateDate() {
+            return this.updateDate;
+        }
+
         public UpdateUserResponseBodyUser setUserId(String userId) {
             this.userId = userId;
             return this;
         }
         public String getUserId() {
             return this.userId;
-        }
-
-        public UpdateUserResponseBodyUser setComments(String comments) {
-            this.comments = comments;
-            return this;
-        }
-        public String getComments() {
-            return this.comments;
-        }
-
-        public UpdateUserResponseBodyUser setCreateDate(String createDate) {
-            this.createDate = createDate;
-            return this;
-        }
-        public String getCreateDate() {
-            return this.createDate;
         }
 
         public UpdateUserResponseBodyUser setUserName(String userName) {
