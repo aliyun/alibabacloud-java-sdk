@@ -4,30 +4,24 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class GetStatisticsRecordsByFeeIdResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // 数据
     @NameInMap("Data")
     public java.util.List<GetStatisticsRecordsByFeeIdResponseBodyData> data;
 
-    // 错误列表
     @NameInMap("Errors")
     public java.util.List<GetStatisticsRecordsByFeeIdResponseBodyErrors> errors;
 
     @NameInMap("HttpCode")
     public Integer httpCode;
 
-    // 提示
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // 给 pop 使用的
     @NameInMap("Success")
     public Boolean success;
 
@@ -99,7 +93,6 @@ public class GetStatisticsRecordsByFeeIdResponseBody extends TeaModel {
         @NameInMap("BeginAt")
         public String beginAt;
 
-        // 计费时长，min
         @NameInMap("ChargeDuration")
         public Integer chargeDuration;
 
@@ -109,7 +102,6 @@ public class GetStatisticsRecordsByFeeIdResponseBody extends TeaModel {
         @NameInMap("DepartmentId")
         public Long departmentId;
 
-        // 检测时长，s
         @NameInMap("DetectionDuration")
         public Integer detectionDuration;
 
@@ -125,7 +117,6 @@ public class GetStatisticsRecordsByFeeIdResponseBody extends TeaModel {
         @NameInMap("FeeId")
         public String feeId;
 
-        // 2020050811
         @NameInMap("Hour")
         public Integer hour;
 

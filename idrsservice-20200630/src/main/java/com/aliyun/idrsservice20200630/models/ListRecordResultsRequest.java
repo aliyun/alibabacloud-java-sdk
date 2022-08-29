@@ -4,16 +4,17 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class ListRecordResultsRequest extends TeaModel {
-    // yyyy-MM-dd
     @NameInMap("CreateDateFrom")
     public String createDateFrom;
 
-    // yyyy-MM-dd
     @NameInMap("CreateDateTo")
     public String createDateTo;
 
     @NameInMap("DepartmentId")
     public String departmentId;
+
+    @NameInMap("OuterBusinessId")
+    public String outerBusinessId;
 
     @NameInMap("PageIndex")
     public Integer pageIndex;
@@ -54,6 +55,14 @@ public class ListRecordResultsRequest extends TeaModel {
     }
     public String getDepartmentId() {
         return this.departmentId;
+    }
+
+    public ListRecordResultsRequest setOuterBusinessId(String outerBusinessId) {
+        this.outerBusinessId = outerBusinessId;
+        return this;
+    }
+    public String getOuterBusinessId() {
+        return this.outerBusinessId;
     }
 
     public ListRecordResultsRequest setPageIndex(Integer pageIndex) {

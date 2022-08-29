@@ -4,30 +4,24 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class GetRecordsByFeeIdResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // 数据
     @NameInMap("Data")
     public java.util.List<GetRecordsByFeeIdResponseBodyData> data;
 
-    // 错误列表
     @NameInMap("Errors")
     public java.util.List<GetRecordsByFeeIdResponseBodyErrors> errors;
 
     @NameInMap("HttpCode")
     public Integer httpCode;
 
-    // 提示
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // 给 pop 使用的
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,31 +87,27 @@ public class GetRecordsByFeeIdResponseBody extends TeaModel {
     }
 
     public static class GetRecordsByFeeIdResponseBodyDataRecordRoomList extends TeaModel {
-        // 录制视频类型
+        @NameInMap("OuterBusinessId")
+        public String outerBusinessId;
+
         @NameInMap("RecordType")
         public String recordType;
 
-        // 角色
         @NameInMap("Role")
         public String role;
 
-        // meta地址
         @NameInMap("RoomMetaUrl")
         public String roomMetaUrl;
 
-        // 录制时间
         @NameInMap("RoomRecordAt")
         public String roomRecordAt;
 
-        // 结果地址
         @NameInMap("RoomResultUrl")
         public String roomResultUrl;
 
-        // 检测状态
         @NameInMap("RoomStatus")
         public String roomStatus;
 
-        // 视频地址
         @NameInMap("RoomVideoUrl")
         public String roomVideoUrl;
 
@@ -127,6 +117,14 @@ public class GetRecordsByFeeIdResponseBody extends TeaModel {
         public static GetRecordsByFeeIdResponseBodyDataRecordRoomList build(java.util.Map<String, ?> map) throws Exception {
             GetRecordsByFeeIdResponseBodyDataRecordRoomList self = new GetRecordsByFeeIdResponseBodyDataRecordRoomList();
             return TeaModel.build(map, self);
+        }
+
+        public GetRecordsByFeeIdResponseBodyDataRecordRoomList setOuterBusinessId(String outerBusinessId) {
+            this.outerBusinessId = outerBusinessId;
+            return this;
+        }
+        public String getOuterBusinessId() {
+            return this.outerBusinessId;
         }
 
         public GetRecordsByFeeIdResponseBodyDataRecordRoomList setRecordType(String recordType) {
@@ -196,55 +194,45 @@ public class GetRecordsByFeeIdResponseBody extends TeaModel {
     }
 
     public static class GetRecordsByFeeIdResponseBodyData extends TeaModel {
-        // 应用名
         @NameInMap("AppName")
         public String appName;
 
-        // 创建时间
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        // 部门名
         @NameInMap("DepartmentName")
         public String departmentName;
 
-        // 业务检测流程名
         @NameInMap("DetectProcessName")
         public String detectProcessName;
 
-        // 时长
         @NameInMap("Duration")
         public Long duration;
 
-        // 双录记录id
         @NameInMap("Id")
         public String id;
 
-        // meta地址
         @NameInMap("MetaUrl")
         public String metaUrl;
 
-        // 录制时间
+        @NameInMap("OuterBusinessId")
+        public String outerBusinessId;
+
         @NameInMap("RecordAt")
         public String recordAt;
 
-        // 远程双录文件地址列表
         @NameInMap("RecordRoomList")
         public java.util.List<GetRecordsByFeeIdResponseBodyDataRecordRoomList> recordRoomList;
 
-        // 结果地址
         @NameInMap("ResultUrl")
         public String resultUrl;
 
-        // mrtc房间id
         @NameInMap("RoomId")
         public String roomId;
 
-        // 检测状态
         @NameInMap("Status")
         public String status;
 
-        // 视频地址
         @NameInMap("VideoUrl")
         public String videoUrl;
 
@@ -307,6 +295,14 @@ public class GetRecordsByFeeIdResponseBody extends TeaModel {
         }
         public String getMetaUrl() {
             return this.metaUrl;
+        }
+
+        public GetRecordsByFeeIdResponseBodyData setOuterBusinessId(String outerBusinessId) {
+            this.outerBusinessId = outerBusinessId;
+            return this;
+        }
+        public String getOuterBusinessId() {
+            return this.outerBusinessId;
         }
 
         public GetRecordsByFeeIdResponseBodyData setRecordAt(String recordAt) {

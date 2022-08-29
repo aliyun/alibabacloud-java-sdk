@@ -4,30 +4,24 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class UploadReportResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // 数据
     @NameInMap("Data")
     public UploadReportResponseBodyData data;
 
-    // 错误列表
     @NameInMap("Errors")
     public java.util.List<UploadReportResponseBodyErrors> errors;
 
     @NameInMap("HttpCode")
     public Integer httpCode;
 
-    // 提示
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // 给 pop 使用的
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,34 +87,30 @@ public class UploadReportResponseBody extends TeaModel {
     }
 
     public static class UploadReportResponseBodyData extends TeaModel {
-        // 创建时间
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        // 时长
         @NameInMap("Duration")
         public Long duration;
 
-        // 双录记录id
         @NameInMap("Id")
         public String id;
 
-        // meta地址
         @NameInMap("MetaUrl")
         public String metaUrl;
 
-        // 录制时间
+        @NameInMap("OuterBusinessId")
+        public String outerBusinessId;
+
         @NameInMap("RecordAt")
         public String recordAt;
 
-        // 结果地址
         @NameInMap("ResultUrl")
         public String resultUrl;
 
         @NameInMap("RtcRecordId")
         public String rtcRecordId;
 
-        // 视频地址
         @NameInMap("VideoUrl")
         public String videoUrl;
 
@@ -159,6 +149,14 @@ public class UploadReportResponseBody extends TeaModel {
         }
         public String getMetaUrl() {
             return this.metaUrl;
+        }
+
+        public UploadReportResponseBodyData setOuterBusinessId(String outerBusinessId) {
+            this.outerBusinessId = outerBusinessId;
+            return this;
+        }
+        public String getOuterBusinessId() {
+            return this.outerBusinessId;
         }
 
         public UploadReportResponseBodyData setRecordAt(String recordAt) {

@@ -7,7 +7,6 @@ public class ListFilesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 数据
     @NameInMap("Data")
     public String data;
 

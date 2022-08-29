@@ -4,7 +4,6 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class AssociateRoomRequest extends TeaModel {
-    // 质检应用id
     @NameInMap("AppId")
     public String appId;
 
@@ -14,11 +13,9 @@ public class AssociateRoomRequest extends TeaModel {
     @NameInMap("ClientVersion")
     public String clientVersion;
 
-    // 部门id
     @NameInMap("DepartmentId")
     public String departmentId;
 
-    // Mrtc房间id
     @NameInMap("RoomId")
     public String roomId;
 

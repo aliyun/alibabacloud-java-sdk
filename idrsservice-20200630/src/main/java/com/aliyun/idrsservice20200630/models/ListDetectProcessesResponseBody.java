@@ -57,7 +57,6 @@ public class ListDetectProcessesResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
-        // 发布时间
         @NameInMap("ContentAt")
         public String contentAt;
 
@@ -67,7 +66,6 @@ public class ListDetectProcessesResponseBody extends TeaModel {
         @NameInMap("Draft")
         public String draft;
 
-        // 保存时间
         @NameInMap("DraftAt")
         public String draftAt;
 
