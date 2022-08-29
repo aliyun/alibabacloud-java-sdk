@@ -19,7 +19,6 @@ public class TtsCommonResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 给 pop 使用的
     @NameInMap("Success")
     public Boolean success;
 
@@ -77,27 +76,21 @@ public class TtsCommonResponseBody extends TeaModel {
     }
 
     public static class TtsCommonResponseBodyData extends TeaModel {
-        // 智能语音tts任务code
         @NameInMap("Code")
         public Integer code;
 
-        // 双录端处理tts任务ID
         @NameInMap("Id")
         public String id;
 
-        // 智能语音tts任务message
         @NameInMap("Message")
         public String message;
 
-        // 智能语音tts任务名称
         @NameInMap("Name")
         public String name;
 
-        // 双录端语音合成结果可公网下载地址
         @NameInMap("PublicUrl")
         public String publicUrl;
 
-        // 智能语音tts任务ID
         @NameInMap("TaskId")
         public String taskId;
 

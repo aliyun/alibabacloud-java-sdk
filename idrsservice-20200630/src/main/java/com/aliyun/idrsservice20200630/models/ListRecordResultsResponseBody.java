@@ -4,30 +4,24 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class ListRecordResultsResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // 数据
     @NameInMap("Data")
     public ListRecordResultsResponseBodyData data;
 
-    // 错误列表
     @NameInMap("Errors")
     public java.util.List<ListRecordResultsResponseBodyErrors> errors;
 
     @NameInMap("HttpCode")
     public Integer httpCode;
 
-    // 提示
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // 给 pop 使用的
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,54 +87,45 @@ public class ListRecordResultsResponseBody extends TeaModel {
     }
 
     public static class ListRecordResultsResponseBodyDataItems extends TeaModel {
-        // 应用名
         @NameInMap("AppName")
         public String appName;
 
-        // 创建时间
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        // 部门名
         @NameInMap("DepartmentName")
         public String departmentName;
 
-        // 业务检测流程名
         @NameInMap("DetectProcessName")
         public String detectProcessName;
 
-        // 时长
         @NameInMap("Duration")
         public Long duration;
 
-        // 双录记录id
         @NameInMap("Id")
         public String id;
 
-        // meta地址
         @NameInMap("MetaUrl")
         public String metaUrl;
 
-        // 录制时间
+        @NameInMap("OuterBusinessId")
+        public String outerBusinessId;
+
         @NameInMap("RecordAt")
         public String recordAt;
 
-        // 结果地址
         @NameInMap("ResultUrl")
         public String resultUrl;
 
-        // mrtc房间id
         @NameInMap("RoomId")
         public String roomId;
 
         @NameInMap("RtcRecordId")
         public String rtcRecordId;
 
-        // 检测状态
         @NameInMap("Status")
         public String status;
 
-        // 视频地址
         @NameInMap("VideoUrl")
         public String videoUrl;
 
@@ -205,6 +190,14 @@ public class ListRecordResultsResponseBody extends TeaModel {
             return this.metaUrl;
         }
 
+        public ListRecordResultsResponseBodyDataItems setOuterBusinessId(String outerBusinessId) {
+            this.outerBusinessId = outerBusinessId;
+            return this;
+        }
+        public String getOuterBusinessId() {
+            return this.outerBusinessId;
+        }
+
         public ListRecordResultsResponseBodyDataItems setRecordAt(String recordAt) {
             this.recordAt = recordAt;
             return this;
@@ -256,15 +249,12 @@ public class ListRecordResultsResponseBody extends TeaModel {
     }
 
     public static class ListRecordResultsResponseBodyData extends TeaModel {
-        // 当前页面数据项
         @NameInMap("Items")
         public java.util.List<ListRecordResultsResponseBodyDataItems> items;
 
-        // 总数据项数
         @NameInMap("TotalElements")
         public Long totalElements;
 
-        // 总页数
         @NameInMap("TotalPages")
         public Integer totalPages;
 

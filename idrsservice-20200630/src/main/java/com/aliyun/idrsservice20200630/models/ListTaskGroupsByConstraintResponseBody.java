@@ -4,30 +4,24 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class ListTaskGroupsByConstraintResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // 数据
     @NameInMap("Data")
     public ListTaskGroupsByConstraintResponseBodyData data;
 
-    // 错误列表
     @NameInMap("Errors")
     public java.util.List<ListTaskGroupsByConstraintResponseBodyErrors> errors;
 
     @NameInMap("HttpCode")
     public Integer httpCode;
 
-    // 提示
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // 给 pop 使用的
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,39 +87,30 @@ public class ListTaskGroupsByConstraintResponseBody extends TeaModel {
     }
 
     public static class ListTaskGroupsByConstraintResponseBodyDataItems extends TeaModel {
-        // 已经完成任务数
         @NameInMap("CompletedTasks")
         public Integer completedTasks;
 
-        // 创建时间
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        // 任务组id
         @NameInMap("Id")
         public String id;
 
-        // 名称
         @NameInMap("Name")
         public String name;
 
-        // 规则id
         @NameInMap("RuleId")
         public String ruleId;
 
-        // 规则名称
         @NameInMap("RuleName")
         public String ruleName;
 
-        // 状态
         @NameInMap("Status")
         public String status;
 
-        // 任务组下的所有任务id列表
         @NameInMap("TaskIds")
         public java.util.List<String> taskIds;
 
-        // 总任务数
         @NameInMap("TotalTasks")
         public Integer totalTasks;
 
@@ -209,15 +194,12 @@ public class ListTaskGroupsByConstraintResponseBody extends TeaModel {
     }
 
     public static class ListTaskGroupsByConstraintResponseBodyData extends TeaModel {
-        // 当前页面数据项
         @NameInMap("Items")
         public java.util.List<ListTaskGroupsByConstraintResponseBodyDataItems> items;
 
-        // 总数据项数
         @NameInMap("TotalElements")
         public Long totalElements;
 
-        // 总页数
         @NameInMap("TotalPages")
         public Integer totalPages;
 

@@ -21,31 +21,24 @@ public class AsrSentenceRequest extends TeaModel {
     }
 
     public static class AsrSentenceRequestAsrRequest extends TeaModel {
-        // 应用信息
         @NameInMap("AppId")
         public String appId;
 
-        // 是否在后处理中执行ITN。取值：true、false。默认：false（不开启）。
         @NameInMap("EnableInverseTextNormalization")
         public Boolean enableInverseTextNormalization;
 
-        // 是否在后处理中添加标点。取值：true、false。默认：false（不开启）。
         @NameInMap("EnablePunctuationPrediction")
         public Boolean enablePunctuationPrediction;
 
-        // 是否在后处理中执行ITN。取值：true、false。默认：false（不开启）。
         @NameInMap("EnableVoiceDetection")
         public Boolean enableVoiceDetection;
 
-        // 语音文件地址
         @NameInMap("FileUrl")
         public String fileUrl;
 
-        // 音频编码格式
         @NameInMap("Format")
         public String format;
 
-        // 音频采样率
         @NameInMap("SampleRate")
         public Integer sampleRate;
 

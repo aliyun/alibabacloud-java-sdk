@@ -19,7 +19,6 @@ public class AsrSentenceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 给 pop 使用的
     @NameInMap("Success")
     public Boolean success;
 
@@ -77,27 +76,21 @@ public class AsrSentenceResponseBody extends TeaModel {
     }
 
     public static class AsrSentenceResponseBodyData extends TeaModel {
-        // 智能语音asr任务code
         @NameInMap("Code")
         public Integer code;
 
-        // 双录端处理asr任务ID
         @NameInMap("Id")
         public String id;
 
-        // 智能语音asr任务message
         @NameInMap("Message")
         public String message;
 
-        // 智能语音asr任务名称
         @NameInMap("Name")
         public String name;
 
-        // asr识别出的文本
         @NameInMap("Result")
         public String result;
 
-        // 智能语音asr任务ID
         @NameInMap("TaskId")
         public String taskId;
 

@@ -19,7 +19,6 @@ public class FaceCompareResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 给 pop 使用的
     @NameInMap("Success")
     public Boolean success;
 

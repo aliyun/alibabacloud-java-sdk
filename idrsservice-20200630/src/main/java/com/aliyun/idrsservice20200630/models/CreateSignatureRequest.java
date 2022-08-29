@@ -4,7 +4,6 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateSignatureRequest extends TeaModel {
-    // 质检应用Id
     @NameInMap("AppId")
     public String appId;
 
@@ -14,11 +13,9 @@ public class CreateSignatureRequest extends TeaModel {
     @NameInMap("ClientVersion")
     public String clientVersion;
 
-    // 过期时间，单位秒，默认时间300s
     @NameInMap("ExpireTime")
     public Long expireTime;
 
-    // rtc用户id
     @NameInMap("Uid")
     public String uid;
 

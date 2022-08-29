@@ -21,15 +21,12 @@ public class FaceCompareRequest extends TeaModel {
     }
 
     public static class FaceCompareRequestFaceRequest extends TeaModel {
-        // 应用信息
         @NameInMap("AppId")
         public String appId;
 
-        // 人脸照片 base64
         @NameInMap("SourceImage")
         public String sourceImage;
 
-        // 底库照片 base64
         @NameInMap("TargetImage")
         public String targetImage;
 

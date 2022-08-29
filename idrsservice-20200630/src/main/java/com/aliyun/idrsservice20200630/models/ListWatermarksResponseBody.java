@@ -4,30 +4,24 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class ListWatermarksResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // 数据
     @NameInMap("Data")
     public ListWatermarksResponseBodyData data;
 
-    // 错误列表
     @NameInMap("Errors")
     public java.util.List<ListWatermarksResponseBodyErrors> errors;
 
     @NameInMap("HttpCode")
     public Integer httpCode;
 
-    // 提示
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // 给 pop 使用的
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,19 +87,15 @@ public class ListWatermarksResponseBody extends TeaModel {
     }
 
     public static class ListWatermarksResponseBodyDataItems extends TeaModel {
-        // 创建时间
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        // 水印id
         @NameInMap("Id")
         public String id;
 
-        // 水印名称
         @NameInMap("Name")
         public String name;
 
-        // 水印信息
         @NameInMap("Value")
         public String value;
 
@@ -149,15 +139,12 @@ public class ListWatermarksResponseBody extends TeaModel {
     }
 
     public static class ListWatermarksResponseBodyData extends TeaModel {
-        // 当前页面数据项
         @NameInMap("Items")
         public java.util.List<ListWatermarksResponseBodyDataItems> items;
 
-        // 总数据项数
         @NameInMap("TotalElements")
         public Long totalElements;
 
-        // 总页数
         @NameInMap("TotalPages")
         public Integer totalPages;
 

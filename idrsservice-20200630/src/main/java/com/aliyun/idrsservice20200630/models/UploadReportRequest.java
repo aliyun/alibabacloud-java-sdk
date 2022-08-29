@@ -28,7 +28,9 @@ public class UploadReportRequest extends TeaModel {
     @NameInMap("MetaUrl")
     public String metaUrl;
 
-    // yyyy-MM-dd hh:mm:ss
+    @NameInMap("OuterBusinessId")
+    public String outerBusinessId;
+
     @NameInMap("RecordAt")
     public String recordAt;
 
@@ -117,6 +119,14 @@ public class UploadReportRequest extends TeaModel {
     }
     public String getMetaUrl() {
         return this.metaUrl;
+    }
+
+    public UploadReportRequest setOuterBusinessId(String outerBusinessId) {
+        this.outerBusinessId = outerBusinessId;
+        return this;
+    }
+    public String getOuterBusinessId() {
+        return this.outerBusinessId;
     }
 
     public UploadReportRequest setRecordAt(String recordAt) {
