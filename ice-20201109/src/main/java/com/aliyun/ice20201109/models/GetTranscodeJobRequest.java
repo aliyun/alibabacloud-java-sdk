@@ -4,7 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetTranscodeJobRequest extends TeaModel {
-    // 任务 id
     @NameInMap("JobId")
     public String jobId;
 

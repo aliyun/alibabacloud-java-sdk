@@ -4,23 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitMediaProducingJobResponseBody extends TeaModel {
-    // 合成作业Id
     @NameInMap("JobId")
     public String jobId;
 
-    // 合成ICE媒资Id
     @NameInMap("MediaId")
     public String mediaId;
 
-    // 剪辑工程Id
     @NameInMap("ProjectId")
     public String projectId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // vod媒资id
     @NameInMap("VodMediaId")
     public String vodMediaId;
 

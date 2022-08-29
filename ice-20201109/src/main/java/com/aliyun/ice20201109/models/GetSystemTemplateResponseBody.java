@@ -4,11 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetSystemTemplateResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 模板信息
     @NameInMap("SystemTemplate")
     public GetSystemTemplateResponseBodySystemTemplate systemTemplate;
 
@@ -34,35 +32,27 @@ public class GetSystemTemplateResponseBody extends TeaModel {
     }
 
     public static class GetSystemTemplateResponseBodySystemTemplate extends TeaModel {
-        // 模板状态
         @NameInMap("Status")
         public String status;
 
-        // 模板子类型ID
         @NameInMap("Subtype")
         public Integer subtype;
 
-        // 模板子类型名称
         @NameInMap("SubtypeName")
         public String subtypeName;
 
-        // 模板参数
         @NameInMap("TemplateConfig")
         public String templateConfig;
 
-        // 模板Id
         @NameInMap("TemplateId")
         public String templateId;
 
-        // 模板名称
         @NameInMap("TemplateName")
         public String templateName;
 
-        // 模板类型ID
         @NameInMap("Type")
         public Integer type;
 
-        // 模板类型名称
         @NameInMap("TypeName")
         public String typeName;
 

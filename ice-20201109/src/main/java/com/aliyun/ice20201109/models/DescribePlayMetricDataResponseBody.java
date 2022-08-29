@@ -7,9 +7,11 @@ public class DescribePlayMetricDataResponseBody extends TeaModel {
     @NameInMap("Nodes")
     public java.util.List<DescribePlayMetricDataResponseBodyNodes> nodes;
 
-    // Id
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SummaryData")
+    public String summaryData;
 
     public static DescribePlayMetricDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePlayMetricDataResponseBody self = new DescribePlayMetricDataResponseBody();
@@ -32,31 +34,39 @@ public class DescribePlayMetricDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribePlayMetricDataResponseBody setSummaryData(String summaryData) {
+        this.summaryData = summaryData;
+        return this;
+    }
+    public String getSummaryData() {
+        return this.summaryData;
+    }
+
     public static class DescribePlayMetricDataResponseBodyNodes extends TeaModel {
         @NameInMap("X")
-        public Long x;
+        public String x;
 
         @NameInMap("Y")
-        public Long y;
+        public String y;
 
         public static DescribePlayMetricDataResponseBodyNodes build(java.util.Map<String, ?> map) throws Exception {
             DescribePlayMetricDataResponseBodyNodes self = new DescribePlayMetricDataResponseBodyNodes();
             return TeaModel.build(map, self);
         }
 
-        public DescribePlayMetricDataResponseBodyNodes setX(Long x) {
+        public DescribePlayMetricDataResponseBodyNodes setX(String x) {
             this.x = x;
             return this;
         }
-        public Long getX() {
+        public String getX() {
             return this.x;
         }
 
-        public DescribePlayMetricDataResponseBodyNodes setY(Long y) {
+        public DescribePlayMetricDataResponseBodyNodes setY(String y) {
             this.y = y;
             return this;
         }
-        public Long getY() {
+        public String getY() {
             return this.y;
         }
 

@@ -10,7 +10,6 @@ public class ListSnapshotJobsResponseBody extends TeaModel {
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

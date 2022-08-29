@@ -13,7 +13,6 @@ public class CreateUploadMediaResponseBody extends TeaModel {
     @NameInMap("MediaURL")
     public String mediaURL;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 

@@ -13,7 +13,6 @@ public class DescribePlayQoeListResponseBody extends TeaModel {
     @NameInMap("QoeInfoList")
     public java.util.List<DescribePlayQoeListResponseBodyQoeInfoList> qoeInfoList;
 
-    // Id
     @NameInMap("RequestId")
     public String requestId;
 
@@ -90,8 +89,8 @@ public class DescribePlayQoeListResponseBody extends TeaModel {
         @NameInMap("QoeVVDuration")
         public Float qoeVVDuration;
 
-        @NameInMap("Vpsid")
-        public String vpsid;
+        @NameInMap("TraceId")
+        public String traceId;
 
         public static DescribePlayQoeListResponseBodyQoeInfoList build(java.util.Map<String, ?> map) throws Exception {
             DescribePlayQoeListResponseBodyQoeInfoList self = new DescribePlayQoeListResponseBodyQoeInfoList();
@@ -162,12 +161,12 @@ public class DescribePlayQoeListResponseBody extends TeaModel {
             return this.qoeVVDuration;
         }
 
-        public DescribePlayQoeListResponseBodyQoeInfoList setVpsid(String vpsid) {
-            this.vpsid = vpsid;
+        public DescribePlayQoeListResponseBodyQoeInfoList setTraceId(String traceId) {
+            this.traceId = traceId;
             return this;
         }
-        public String getVpsid() {
-            return this.vpsid;
+        public String getTraceId() {
+            return this.traceId;
         }
 
     }

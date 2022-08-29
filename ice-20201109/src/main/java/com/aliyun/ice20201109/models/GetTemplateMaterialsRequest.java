@@ -4,11 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateMaterialsRequest extends TeaModel {
-    // 所需文件列表
     @NameInMap("FileList")
     public String fileList;
 
-    // 模板Id
     @NameInMap("TemplateId")
     public String templateId;
 

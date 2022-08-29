@@ -4,7 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetSmartHandleJobRequest extends TeaModel {
-    // 任务Id
     @NameInMap("JobId")
     public String jobId;
 

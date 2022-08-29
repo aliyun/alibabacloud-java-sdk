@@ -4,11 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListAllPublicMediaTagsResponseBody extends TeaModel {
-    // 公共素材库标签列表
     @NameInMap("MediaTagList")
     public java.util.List<ListAllPublicMediaTagsResponseBodyMediaTagList> mediaTagList;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -75,15 +73,12 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
     }
 
     public static class ListAllPublicMediaTagsResponseBodyMediaTagList extends TeaModel {
-        // 素材标签id
         @NameInMap("MediaTagId")
         public String mediaTagId;
 
-        // 素材标签中文名
         @NameInMap("MediaTagNameChinese")
         public String mediaTagNameChinese;
 
-        // 素材标签英文名
         @NameInMap("MediaTagNameEnglish")
         public String mediaTagNameEnglish;
 

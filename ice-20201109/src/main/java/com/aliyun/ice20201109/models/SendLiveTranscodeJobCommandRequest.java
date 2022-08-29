@@ -7,7 +7,6 @@ public class SendLiveTranscodeJobCommandRequest extends TeaModel {
     @NameInMap("Command")
     public String command;
 
-    // 模板Id
     @NameInMap("JobId")
     public String jobId;
 

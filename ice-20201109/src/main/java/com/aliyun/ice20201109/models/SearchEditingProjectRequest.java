@@ -4,38 +4,30 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SearchEditingProjectRequest extends TeaModel {
-    // 创建来源
     @NameInMap("CreateSource")
     public String createSource;
 
-    // CreationTime（创建时间）的结束时间
     @NameInMap("EndTime")
     public String endTime;
 
-    // 分页参数
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 分页参数
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("ProjectType")
     public String projectType;
 
-    // 结果排序方式
     @NameInMap("SortBy")
     public String sortBy;
 
-    // CreateTime（创建时间）的开始时间
     @NameInMap("StartTime")
     public String startTime;
 
-    // 云剪辑工程状态。多个用逗号分隔
     @NameInMap("Status")
     public String status;
 
-    // 模板类型
     @NameInMap("TemplateType")
     public String templateType;
 

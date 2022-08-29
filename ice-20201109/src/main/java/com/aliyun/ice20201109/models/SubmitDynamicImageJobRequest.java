@@ -222,7 +222,6 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
         @NameInMap("ScanMode")
         public String scanMode;
 
-        // 时间线参数
         @NameInMap("TimeSpan")
         public SubmitDynamicImageJobRequestTemplateConfigOverwriteParamsTimeSpan timeSpan;
 

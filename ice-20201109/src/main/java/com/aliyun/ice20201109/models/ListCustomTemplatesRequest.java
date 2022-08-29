@@ -4,31 +4,24 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListCustomTemplatesRequest extends TeaModel {
-    // 模板名称
     @NameInMap("Name")
     public String name;
 
-    // 排序顺序：CreateTimeDesc 和 CreateTimeAsc
     @NameInMap("OrderBy")
     public String orderBy;
 
-    // 分页数目
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 分页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 模板子类型ID
     @NameInMap("Subtype")
     public String subtype;
 
-    // 模板ID
     @NameInMap("TemplateId")
     public String templateId;
 
-    // 模板类型。逗号分隔
     @NameInMap("Type")
     public String type;
 

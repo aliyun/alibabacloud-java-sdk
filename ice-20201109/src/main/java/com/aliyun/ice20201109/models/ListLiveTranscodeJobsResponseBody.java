@@ -7,7 +7,6 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
     @NameInMap("JobList")
     public java.util.List<ListLiveTranscodeJobsResponseBodyJobList> jobList;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,52 +4,44 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class RegisterMediaInfoRequest extends TeaModel {
-    // 媒资业务类型
     @NameInMap("BusinessType")
     public String businessType;
 
     @NameInMap("CateId")
     public Long cateId;
 
-    // 客户端token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 封面图，仅视频媒资有效
     @NameInMap("CoverURL")
     public String coverURL;
 
-    // 描述
     @NameInMap("Description")
     public String description;
 
-    // 媒资媒体url
     @NameInMap("InputURL")
     public String inputURL;
 
-    // 标签,如果有多个标签用逗号隔开
     @NameInMap("MediaTags")
     public String mediaTags;
 
-    // 媒资媒体类型
     @NameInMap("MediaType")
     public String mediaType;
 
-    // 是否覆盖已有媒资
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
-    // 注册媒资的配置
     @NameInMap("RegisterConfig")
     public String registerConfig;
 
-    // 标题
     @NameInMap("Title")
     public String title;
 
-    // 用户数据，最大1024字节
     @NameInMap("UserData")
     public String userData;
+
+    @NameInMap("WorkflowId")
+    public String workflowId;
 
     public static RegisterMediaInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         RegisterMediaInfoRequest self = new RegisterMediaInfoRequest();
@@ -150,6 +142,14 @@ public class RegisterMediaInfoRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
+    }
+
+    public RegisterMediaInfoRequest setWorkflowId(String workflowId) {
+        this.workflowId = workflowId;
+        return this;
+    }
+    public String getWorkflowId() {
+        return this.workflowId;
     }
 
 }

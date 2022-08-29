@@ -4,11 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AddEditingProjectMaterialsRequest extends TeaModel {
-    // 素材ID
     @NameInMap("MaterialMaps")
     public String materialMaps;
 
-    // 云剪辑工程ID
     @NameInMap("ProjectId")
     public String projectId;
 

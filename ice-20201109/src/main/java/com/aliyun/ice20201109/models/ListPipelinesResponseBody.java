@@ -7,7 +7,6 @@ public class ListPipelinesResponseBody extends TeaModel {
     @NameInMap("PipelineList")
     public java.util.List<ListPipelinesResponseBodyPipelineList> pipelineList;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,31 +32,24 @@ public class ListPipelinesResponseBody extends TeaModel {
     }
 
     public static class ListPipelinesResponseBodyPipelineList extends TeaModel {
-        // 模板创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 模板修改时间
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        // 管道名称
         @NameInMap("Name")
         public String name;
 
-        // 管道Id
         @NameInMap("PipelineId")
         public String pipelineId;
 
-        // 管道优先级
         @NameInMap("Priority")
         public Integer priority;
 
-        // 管道类型
         @NameInMap("Speed")
         public String speed;
 
-        // 管道状态
         @NameInMap("Status")
         public String status;
 

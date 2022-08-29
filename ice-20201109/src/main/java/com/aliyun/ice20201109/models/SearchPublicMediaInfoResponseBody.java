@@ -7,7 +7,6 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
     @NameInMap("PublicMediaInfos")
     public java.util.List<SearchPublicMediaInfoResponseBodyPublicMediaInfos> publicMediaInfos;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -74,63 +73,48 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
     }
 
     public static class SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoMediaBasicInfo extends TeaModel {
-        // 媒资业务类型
         @NameInMap("BusinessType")
         public String businessType;
 
-        // 分类
         @NameInMap("Category")
         public String category;
 
-        // 封面地址
         @NameInMap("CoverURL")
         public String coverURL;
 
-        // 媒资创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 媒资删除时间
         @NameInMap("DeletedTime")
         public String deletedTime;
 
-        // 内容描述
         @NameInMap("Description")
         public String description;
 
-        // MediaId
         @NameInMap("MediaId")
         public String mediaId;
 
-        // 标签
         @NameInMap("MediaTags")
         public String mediaTags;
 
-        // 媒资媒体类型
         @NameInMap("MediaType")
         public String mediaType;
 
-        // 媒资修改时间
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        // 来源
         @NameInMap("Source")
         public String source;
 
-        // 雪碧图
         @NameInMap("SpriteImages")
         public String spriteImages;
 
-        // 资源状态
         @NameInMap("Status")
         public String status;
 
-        // 标题
         @NameInMap("Title")
         public String title;
 
-        // 用户数据
         @NameInMap("UserData")
         public String userData;
 
@@ -265,11 +249,9 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         @NameInMap("DynamicMetaData")
         public SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoDynamicMetaData dynamicMetaData;
 
-        // BasicInfo
         @NameInMap("MediaBasicInfo")
         public SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoMediaBasicInfo mediaBasicInfo;
 
-        // 媒资ID
         @NameInMap("MediaId")
         public String mediaId;
 

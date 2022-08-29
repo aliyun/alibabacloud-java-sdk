@@ -7,7 +7,6 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     @NameInMap("LiveMaterials")
     public java.util.List<AddEditingProjectMaterialsResponseBodyLiveMaterials> liveMaterials;
 
-    // 符合要求的媒资集合
     @NameInMap("MediaInfos")
     public java.util.List<AddEditingProjectMaterialsResponseBodyMediaInfos> mediaInfos;
 
@@ -17,7 +16,6 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     @NameInMap("ProjectMaterials")
     public java.util.List<String> projectMaterials;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -119,47 +117,36 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     }
 
     public static class AddEditingProjectMaterialsResponseBodyMediaInfosFileInfoListFileBasicInfo extends TeaModel {
-        // 码率
         @NameInMap("Bitrate")
         public String bitrate;
 
-        // 时长
         @NameInMap("Duration")
         public String duration;
 
-        // 文件名
         @NameInMap("FileName")
         public String fileName;
 
-        // 文件大小（字节）
         @NameInMap("FileSize")
         public String fileSize;
 
-        // 文件状态
         @NameInMap("FileStatus")
         public String fileStatus;
 
-        // 文件类型
         @NameInMap("FileType")
         public String fileType;
 
-        // 文件oss地址
         @NameInMap("FileUrl")
         public String fileUrl;
 
-        // 封装格式
         @NameInMap("FormatName")
         public String formatName;
 
-        // 高
         @NameInMap("Height")
         public String height;
 
-        // 文件存储区域
         @NameInMap("Region")
         public String region;
 
-        // 宽
         @NameInMap("Width")
         public String width;
 
@@ -259,7 +246,6 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     }
 
     public static class AddEditingProjectMaterialsResponseBodyMediaInfosFileInfoList extends TeaModel {
-        // 文件基础信息，包含时长，大小等
         @NameInMap("FileBasicInfo")
         public AddEditingProjectMaterialsResponseBodyMediaInfosFileInfoListFileBasicInfo fileBasicInfo;
 
@@ -279,75 +265,57 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     }
 
     public static class AddEditingProjectMaterialsResponseBodyMediaInfosMediaBasicInfo extends TeaModel {
-        // 媒资业务类型
         @NameInMap("BusinessType")
         public String businessType;
 
-        // 分类
         @NameInMap("Category")
         public String category;
 
-        // 封面地址
         @NameInMap("CoverURL")
         public String coverURL;
 
-        // 媒资创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 媒资删除时间
         @NameInMap("DeletedTime")
         public String deletedTime;
 
-        // 内容描述
         @NameInMap("Description")
         public String description;
 
-        // 待注册的媒资在相应系统中的地址
         @NameInMap("InputURL")
         public String inputURL;
 
-        // MediaId
         @NameInMap("MediaId")
         public String mediaId;
 
-        // 标签
         @NameInMap("MediaTags")
         public String mediaTags;
 
-        // 媒资媒体类型
         @NameInMap("MediaType")
         public String mediaType;
 
-        // 媒资修改时间
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        // 截图
         @NameInMap("Snapshots")
         public String snapshots;
 
-        // 来源
         @NameInMap("Source")
         public String source;
 
-        // 雪碧图
         @NameInMap("SpriteImages")
         public String spriteImages;
 
-        // 资源状态
         @NameInMap("Status")
         public String status;
 
-        // 标题
         @NameInMap("Title")
         public String title;
 
-        // 转码状态
         @NameInMap("TranscodeStatus")
         public String transcodeStatus;
 
-        // 用户数据
         @NameInMap("UserData")
         public String userData;
 
@@ -503,15 +471,12 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     }
 
     public static class AddEditingProjectMaterialsResponseBodyMediaInfos extends TeaModel {
-        // FileInfos
         @NameInMap("FileInfoList")
         public java.util.List<AddEditingProjectMaterialsResponseBodyMediaInfosFileInfoList> fileInfoList;
 
-        // BasicInfo
         @NameInMap("MediaBasicInfo")
         public AddEditingProjectMaterialsResponseBodyMediaInfosMediaBasicInfo mediaBasicInfo;
 
-        // 媒资ID
         @NameInMap("MediaId")
         public String mediaId;
 

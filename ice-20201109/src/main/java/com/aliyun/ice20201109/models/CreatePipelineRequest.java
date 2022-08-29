@@ -4,15 +4,12 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CreatePipelineRequest extends TeaModel {
-    // 管道名称
     @NameInMap("Name")
     public String name;
 
-    // 优先级，1-10，默认6。数值越大，优先级越高
     @NameInMap("Priority")
     public Integer priority;
 
-    // 管道类型。
     @NameInMap("Speed")
     public String speed;
 

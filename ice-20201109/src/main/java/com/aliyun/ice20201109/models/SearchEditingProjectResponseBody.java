@@ -4,18 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SearchEditingProjectResponseBody extends TeaModel {
-    // 云剪辑工程总数
     @NameInMap("MaxResults")
     public Long maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 云剪辑工程列表
     @NameInMap("ProjectList")
     public java.util.List<SearchEditingProjectResponseBodyProjectList> projectList;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -74,62 +71,48 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
-        // 云剪辑工程封面
         @NameInMap("CoverURL")
         public String coverURL;
 
-        // 创建来源
         @NameInMap("CreateSource")
         public String createSource;
 
-        // 云剪辑工程创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 云剪辑工程描述
         @NameInMap("Description")
         public String description;
 
-        // 云剪辑工程总时长
         @NameInMap("Duration")
         public Long duration;
 
-        // 云剪辑工程合成失败的错误码
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        // 云剪辑工程合成失败的消息
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // 最后一次修改来源
         @NameInMap("ModifiedSource")
         public String modifiedSource;
 
-        // 云剪辑工程最新修改时间
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        // 云剪辑工程ID
         @NameInMap("ProjectId")
         public String projectId;
 
         @NameInMap("ProjectType")
         public String projectType;
 
-        // 云剪辑工程状态
         @NameInMap("Status")
         public String status;
 
-        // 模板类型
         @NameInMap("TemplateType")
         public String templateType;
 
-        // 云剪辑工程时间线
         @NameInMap("Timeline")
         public String timeline;
 
-        // 云剪辑工程标题
         @NameInMap("Title")
         public String title;
 

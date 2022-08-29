@@ -4,47 +4,36 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListMediaBasicInfosRequest extends TeaModel {
-    // 媒资业务类型
     @NameInMap("BusinessType")
     public String businessType;
 
-    // 结束时间
     @NameInMap("EndTime")
     public String endTime;
 
-    // 返回值中是否包含文件基础信息
     @NameInMap("IncludeFileBasicInfo")
     public Boolean includeFileBasicInfo;
 
-    // 分页大小
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 媒资ID，单个媒资ID支持前缀匹配
     @NameInMap("MediaId")
     public String mediaId;
 
-    // 媒资媒体类型
     @NameInMap("MediaType")
     public String mediaType;
 
-    // 页号
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 排序
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 来源
     @NameInMap("Source")
     public String source;
 
-    // 创建时间
     @NameInMap("StartTime")
     public String startTime;
 
-    // 资源状态
     @NameInMap("Status")
     public String status;
 

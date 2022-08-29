@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeletePlayInfoRequest extends TeaModel {
+    @NameInMap("DeletePhysicalFiles")
+    public Boolean deletePhysicalFiles;
+
     @NameInMap("FileURLs")
     public String fileURLs;
 
@@ -13,6 +16,14 @@ public class DeletePlayInfoRequest extends TeaModel {
     public static DeletePlayInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DeletePlayInfoRequest self = new DeletePlayInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeletePlayInfoRequest setDeletePhysicalFiles(Boolean deletePhysicalFiles) {
+        this.deletePhysicalFiles = deletePhysicalFiles;
+        return this;
+    }
+    public Boolean getDeletePhysicalFiles() {
+        return this.deletePhysicalFiles;
     }
 
     public DeletePlayInfoRequest setFileURLs(String fileURLs) {

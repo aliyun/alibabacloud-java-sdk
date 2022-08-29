@@ -19,7 +19,6 @@ public class ListLiveTranscodeTemplatesRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 模板Id
     @NameInMap("Type")
     public String type;
 

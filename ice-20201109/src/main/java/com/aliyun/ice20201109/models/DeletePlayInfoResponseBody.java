@@ -4,13 +4,34 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeletePlayInfoResponseBody extends TeaModel {
-    // RequestId
+    @NameInMap("ForbiddenList")
+    public java.util.List<String> forbiddenList;
+
+    @NameInMap("IgnoredList")
+    public java.util.List<String> ignoredList;
+
     @NameInMap("RequestId")
     public String requestId;
 
     public static DeletePlayInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeletePlayInfoResponseBody self = new DeletePlayInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeletePlayInfoResponseBody setForbiddenList(java.util.List<String> forbiddenList) {
+        this.forbiddenList = forbiddenList;
+        return this;
+    }
+    public java.util.List<String> getForbiddenList() {
+        return this.forbiddenList;
+    }
+
+    public DeletePlayInfoResponseBody setIgnoredList(java.util.List<String> ignoredList) {
+        this.ignoredList = ignoredList;
+        return this;
+    }
+    public java.util.List<String> getIgnoredList() {
+        return this.ignoredList;
     }
 
     public DeletePlayInfoResponseBody setRequestId(String requestId) {

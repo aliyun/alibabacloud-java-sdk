@@ -4,19 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitSyncMediaInfoJobShrinkRequest extends TeaModel {
-    // 任务输入
     @NameInMap("Input")
     public String inputShrink;
 
-    // 任务名字
     @NameInMap("Name")
     public String name;
 
-    // 调度参数
     @NameInMap("ScheduleConfig")
     public String scheduleConfigShrink;
 
-    // 用户数据
     @NameInMap("UserData")
     public String userData;
 

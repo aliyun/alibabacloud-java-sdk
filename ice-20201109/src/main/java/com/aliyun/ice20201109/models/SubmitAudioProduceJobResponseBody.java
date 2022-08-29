@@ -4,15 +4,12 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitAudioProduceJobResponseBody extends TeaModel {
-    // 任务ID
     @NameInMap("JobId")
     public String jobId;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 任务状态
     @NameInMap("State")
     public String state;
 

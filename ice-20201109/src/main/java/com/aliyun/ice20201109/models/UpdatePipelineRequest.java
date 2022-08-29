@@ -4,19 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdatePipelineRequest extends TeaModel {
-    // 管道名称
     @NameInMap("Name")
     public String name;
 
-    // 管道ID
     @NameInMap("PipelineId")
     public String pipelineId;
 
-    // 优先级
     @NameInMap("Priority")
     public Integer priority;
 
-    // 管道状态。
     @NameInMap("Status")
     public String status;
 

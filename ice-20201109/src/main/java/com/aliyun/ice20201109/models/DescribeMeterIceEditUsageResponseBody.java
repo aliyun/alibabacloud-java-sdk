@@ -7,7 +7,6 @@ public class DescribeMeterIceEditUsageResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeMeterIceEditUsageResponseBodyData> data;
 
-    // Id
     @NameInMap("RequestId")
     public String requestId;
 

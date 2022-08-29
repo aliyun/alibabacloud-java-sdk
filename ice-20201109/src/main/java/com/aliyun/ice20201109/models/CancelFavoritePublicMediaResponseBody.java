@@ -7,7 +7,6 @@ public class CancelFavoritePublicMediaResponseBody extends TeaModel {
     @NameInMap("IgnoredList")
     public java.util.List<String> ignoredList;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

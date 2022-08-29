@@ -4,11 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetSnapshotJobResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 截图任务信息
     @NameInMap("SnapshotJob")
     public GetSnapshotJobResponseBodySnapshotJob snapshotJob;
 
@@ -78,7 +76,6 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         @NameInMap("Media")
         public String media;
 
-        // 输入类型为媒资ID时的OSS地址
         @NameInMap("OssFile")
         public GetSnapshotJobResponseBodySnapshotJobInputOssFile ossFile;
 
@@ -161,7 +158,6 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         @NameInMap("Media")
         public String media;
 
-        // 输出类型为媒资ID时的OSS地址
         @NameInMap("OssFile")
         public GetSnapshotJobResponseBodySnapshotJobOutputOssFile ossFile;
 

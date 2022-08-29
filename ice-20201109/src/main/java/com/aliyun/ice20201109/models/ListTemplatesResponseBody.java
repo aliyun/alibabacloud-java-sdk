@@ -4,14 +4,12 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Templates")
     public java.util.List<ListTemplatesResponseBodyTemplates> templates;
 
-    // 本次请求条件下的数据总量。
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -45,55 +43,42 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyTemplates extends TeaModel {
-        // ClipsParam
         @NameInMap("ClipsParam")
         public String clipsParam;
 
-        // 模板配置
         @NameInMap("Config")
         public String config;
 
-        // 封面URL
         @NameInMap("CoverURL")
         public String coverURL;
 
-        // 创建来源
         @NameInMap("CreateSource")
         public String createSource;
 
-        // 创建时间
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // 修改来源
         @NameInMap("ModifiedSource")
         public String modifiedSource;
 
-        // 修改时间
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        // 模板名称
         @NameInMap("Name")
         public String name;
 
-        // 预览素材
         @NameInMap("PreviewMedia")
         public String previewMedia;
 
-        // 预览素材状态
         @NameInMap("PreviewMediaStatus")
         public String previewMediaStatus;
 
-        // 模板状态
         @NameInMap("Status")
         public String status;
 
-        // 模板ID
         @NameInMap("TemplateId")
         public String templateId;
 
-        // 模板类型
         @NameInMap("Type")
         public String type;
 

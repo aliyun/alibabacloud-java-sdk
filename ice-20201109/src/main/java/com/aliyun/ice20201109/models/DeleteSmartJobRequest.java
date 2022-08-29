@@ -4,7 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteSmartJobRequest extends TeaModel {
-    // 任务id，多个任务id用英文逗号分割
     @NameInMap("JobId")
     public String jobId;
 

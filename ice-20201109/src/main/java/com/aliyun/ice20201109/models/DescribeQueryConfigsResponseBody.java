@@ -7,7 +7,6 @@ public class DescribeQueryConfigsResponseBody extends TeaModel {
     @NameInMap("Configs")
     public java.util.List<DescribeQueryConfigsResponseBodyConfigs> configs;
 
-    // Id
     @NameInMap("RequestId")
     public String requestId;
 

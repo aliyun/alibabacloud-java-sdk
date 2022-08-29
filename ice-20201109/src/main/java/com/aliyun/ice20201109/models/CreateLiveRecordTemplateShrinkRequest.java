@@ -4,11 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CreateLiveRecordTemplateShrinkRequest extends TeaModel {
-    // 资源名称
     @NameInMap("Name")
-    public byte[] name;
+    public String name;
 
-    // 录制格式
     @NameInMap("RecordFormat")
     public String recordFormatShrink;
 
@@ -17,11 +15,11 @@ public class CreateLiveRecordTemplateShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateLiveRecordTemplateShrinkRequest setName(byte[] name) {
+    public CreateLiveRecordTemplateShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
-    public byte[] getName() {
+    public String getName() {
         return this.name;
     }
 

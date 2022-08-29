@@ -7,7 +7,6 @@ public class CreateEditingProjectResponseBody extends TeaModel {
     @NameInMap("Project")
     public CreateEditingProjectResponseBodyProject project;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,74 +32,57 @@ public class CreateEditingProjectResponseBody extends TeaModel {
     }
 
     public static class CreateEditingProjectResponseBodyProject extends TeaModel {
-        // 工程业务配置
         @NameInMap("BusinessConfig")
         public String businessConfig;
 
-        // 业务状态，业务状态 /** 预约中 **/ RESERVING(0, "Reserving"), /** 预约取消 **/ RESERVATION_CANCELED(1, "ReservationCanceled"), /** 直播中 **/ BROADCASTING(3, "BroadCasting"), /** 加载失败 **/ LOADING_FAILED(4, "LoadingFailed"), /** 直播结束 **/ LIVE_FINISHED(5, "LiveFinished");
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
-        // 模板素材参数
         @NameInMap("ClipsParam")
         public String clipsParam;
 
-        // 云剪辑工程封面。
         @NameInMap("CoverURL")
         public String coverURL;
 
-        // 云剪辑工程创建方式  -OpenAPI  -AliyunConsole  -WebSDK -LiveEditingOpenAPI -LiveEditingConsole
         @NameInMap("CreateSource")
         public String createSource;
 
-        // 云剪辑工程创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 云剪辑工程描述
         @NameInMap("Description")
         public String description;
 
-        // 云剪辑工程时长
         @NameInMap("Duration")
         public Float duration;
 
-        // 云剪辑工程创建方式  -OpenAPI  -AliyunConsole  -WebSDK -LiveEditingOpenAPI -LiveEditingConsole
         @NameInMap("ModifiedSource")
         public String modifiedSource;
 
-        // 云剪辑工程编辑时间
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        // 云剪辑工程ID
         @NameInMap("ProjectId")
         public String projectId;
 
-        // 剪辑工程类型，EditingProject: 普通剪辑工程；LiveEditingProject: 直播剪辑工程
         @NameInMap("ProjectType")
         public String projectType;
 
-        // 云剪辑工程状态。  所有云剪辑工程状态列表：  -1:Draft  -2:Editing  -3:Producing  -4:Produced  -5:ProduceFailed  -7:Deleted
         @NameInMap("Status")
         public Long status;
 
-        // 云剪辑状态名称，对应状态列表中状态名称。
         @NameInMap("StatusName")
         public String statusName;
 
-        // 模板Id
         @NameInMap("TemplateId")
         public String templateId;
 
         @NameInMap("TemplateType")
         public String templateType;
 
-        // 云剪辑工程时间线，Json格式
         @NameInMap("Timeline")
         public String timeline;
 
-        // 云剪辑工程标题
         @NameInMap("Title")
         public String title;
 

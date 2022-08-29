@@ -4,11 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateRequest extends TeaModel {
-    // 是否返回模板关联素材，1返回，默认0，不返回
     @NameInMap("RelatedMediaidFlag")
     public String relatedMediaidFlag;
 
-    // 模板Id
     @NameInMap("TemplateId")
     public String templateId;
 

@@ -4,17 +4,26 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteMediaInfosResponseBody extends TeaModel {
-    // 出现获取错误的ID或inputUr
+    @NameInMap("ForbiddenList")
+    public java.util.List<String> forbiddenList;
+
     @NameInMap("IgnoredList")
     public java.util.List<String> ignoredList;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
     public static DeleteMediaInfosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMediaInfosResponseBody self = new DeleteMediaInfosResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMediaInfosResponseBody setForbiddenList(java.util.List<String> forbiddenList) {
+        this.forbiddenList = forbiddenList;
+        return this;
+    }
+    public java.util.List<String> getForbiddenList() {
+        return this.forbiddenList;
     }
 
     public DeleteMediaInfosResponseBody setIgnoredList(java.util.List<String> ignoredList) {

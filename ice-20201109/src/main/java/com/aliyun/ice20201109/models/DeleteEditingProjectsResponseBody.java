@@ -4,24 +4,12 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteEditingProjectsResponseBody extends TeaModel {
-    @NameInMap("IgnoredList")
-    public String ignoredList;
-
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
     public static DeleteEditingProjectsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteEditingProjectsResponseBody self = new DeleteEditingProjectsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteEditingProjectsResponseBody setIgnoredList(String ignoredList) {
-        this.ignoredList = ignoredList;
-        return this;
-    }
-    public String getIgnoredList() {
-        return this.ignoredList;
     }
 
     public DeleteEditingProjectsResponseBody setRequestId(String requestId) {

@@ -16,7 +16,6 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

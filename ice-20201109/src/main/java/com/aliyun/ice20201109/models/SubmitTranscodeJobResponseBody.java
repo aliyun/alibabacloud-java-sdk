@@ -4,11 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitTranscodeJobResponseBody extends TeaModel {
-    // 请求 id
     @NameInMap("RequestId")
     public String requestId;
 
-    // TranscodeParentJobWithSubJobDTO
     @NameInMap("TranscodeParentJob")
     public SubmitTranscodeJobResponseBodyTranscodeParentJob transcodeParentJob;
 
@@ -34,13 +32,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobInputGroup extends TeaModel {
-        // 媒体值：
-        //       type 为 OSS 时，为 url, 支持 oss 协议和 http 协议；
-        //       type 为 Media 时，为媒资 id。
         @NameInMap("Media")
         public String media;
 
-        // 媒体对象类型 - OSS: oss文件, Media: 媒资 ID
         @NameInMap("Type")
         public String type;
 
@@ -68,13 +62,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupOutput extends TeaModel {
-        // 媒体值：
-        //       type 为 OSS 时，为 url, 支持 oss 协议和 http 协议；
-        //       type 为 Media 时，为媒资 id。
         @NameInMap("Media")
         public String media;
 
-        // 媒体对象类型 - OSS: oss文件, Media: 媒资 ID
         @NameInMap("Type")
         public String type;
 
@@ -102,13 +92,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParamsFile extends TeaModel {
-        // 媒体值：
-        //       type 为 OSS 时，为 url, 支持 oss 协议和 http 协议；
-        //       type 为 Media 时，为媒资 id。
         @NameInMap("Media")
         public String media;
 
-        // 媒体对象类型 - OSS: oss文件, Media: 媒资 ID
         @NameInMap("Type")
         public String type;
 
@@ -136,11 +122,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParamsTimeline extends TeaModel {
-        // 显示时长，秒数 或者 "ToEND"
         @NameInMap("Duration")
         public String duration;
 
-        // 开始时间
         @NameInMap("Start")
         public String start;
 
@@ -168,31 +152,24 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParams extends TeaModel {
-        // 水印位置，x
         @NameInMap("Dx")
         public String dx;
 
-        // 水印位置，y
         @NameInMap("Dy")
         public String dy;
 
-        // 水印文件oss路径
         @NameInMap("File")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParamsFile file;
 
-        // 高
         @NameInMap("Height")
         public String height;
 
-        // 参考位置: TopLeft, TopRight, BottomLeft, BottomRight  default: TopLeft
         @NameInMap("ReferPos")
         public String referPos;
 
-        // 显示时间设置
         @NameInMap("Timeline")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParamsTimeline timeline;
 
-        // 宽
         @NameInMap("Width")
         public String width;
 
@@ -260,11 +237,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarks extends TeaModel {
-        // 覆盖参数, 若填写会覆盖模板对应参数
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParams overwriteParams;
 
-        // 模板 id
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -292,13 +267,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitlesOverwriteParamsFile extends TeaModel {
-        // 媒体值：
-        //       type 为 OSS 时，为 url, 支持 oss 协议和 http 协议；
-        //       type 为 Media 时，为媒资 id。
         @NameInMap("Media")
         public String media;
 
-        // 媒体对象类型 - OSS: oss文件, Media: 媒资 ID
         @NameInMap("Type")
         public String type;
 
@@ -326,15 +297,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitlesOverwriteParams extends TeaModel {
-        // 文件 encoding 格式
         @NameInMap("CharEnc")
         public String charEnc;
 
-        // 字幕文件
         @NameInMap("File")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitlesOverwriteParamsFile file;
 
-        // 字幕文件格式
         @NameInMap("Format")
         public String format;
 
@@ -370,11 +338,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitles extends TeaModel {
-        // 覆盖参数, 若填写会覆盖模板对应参数
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitlesOverwriteParams overwriteParams;
 
-        // 模板 id
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -402,43 +368,33 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTextWatermarksOverwriteParams extends TeaModel {
-        // 根据输出视频大小调整字体 size。 true / false, default: false
         @NameInMap("Adaptive")
         public String adaptive;
 
-        // 边框颜色
         @NameInMap("BorderColor")
         public String borderColor;
 
-        // 边框宽度
         @NameInMap("BorderWidth")
         public Integer borderWidth;
 
-        // 水印文本，不需要 base64 encode，字符串需要 utf-8 编码
         @NameInMap("Content")
         public String content;
 
-        // 透明度
         @NameInMap("FontAlpha")
         public String fontAlpha;
 
-        // 颜色
         @NameInMap("FontColor")
         public String fontColor;
 
-        // 字体
         @NameInMap("FontName")
         public String fontName;
 
-        // 字体大小
         @NameInMap("FontSize")
         public Integer fontSize;
 
-        // 水印位置，距离左边距离
         @NameInMap("Left")
         public String left;
 
-        // 水印位置，距离上边距离
         @NameInMap("Top")
         public String top;
 
@@ -530,11 +486,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTextWatermarks extends TeaModel {
-        // 覆盖参数, 若填写会覆盖模板对应参数
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTextWatermarksOverwriteParams overwriteParams;
 
-        // 模板 id
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -562,19 +516,15 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsAudioVolume extends TeaModel {
-        // 目标音量
         @NameInMap("IntegratedLoudnessTarget")
         public String integratedLoudnessTarget;
 
-        // 音量范围
         @NameInMap("LoudnessRangeTarget")
         public String loudnessRangeTarget;
 
-        // 音量调整方式
         @NameInMap("Method")
         public String method;
 
-        // 最大峰值
         @NameInMap("TruePeak")
         public String truePeak;
 
@@ -618,31 +568,24 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsAudio extends TeaModel {
-        // 输出文件的音频码率。
         @NameInMap("Bitrate")
         public String bitrate;
 
-        // 声道数。
         @NameInMap("Channels")
         public String channels;
 
-        // 音频编解码格式，AAC、MP3、VORBIS、FLAC。
         @NameInMap("Codec")
         public String codec;
 
-        // 音频编码预置。
         @NameInMap("Profile")
         public String profile;
 
-        // 是否删除音频流。
         @NameInMap("Remove")
         public String remove;
 
-        // 采样率。
         @NameInMap("Samplerate")
         public String samplerate;
 
-        // 音量控制
         @NameInMap("Volume")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsAudioVolume volume;
 
@@ -710,7 +653,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsContainer extends TeaModel {
-        // 容器格式
         @NameInMap("Format")
         public String format;
 
@@ -730,11 +672,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfigSegment extends TeaModel {
-        // 切片时长
         @NameInMap("Duration")
         public String duration;
 
-        // 强制切片时间点
         @NameInMap("ForceSegTime")
         public String forceSegTime;
 
@@ -762,7 +702,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfig extends TeaModel {
-        // 切片设置
         @NameInMap("Segment")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfigSegment segment;
 
@@ -785,71 +724,54 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("AbrMax")
         public String abrMax;
 
-        // 视频平均码率。
         @NameInMap("Bitrate")
         public String bitrate;
 
-        // 缓冲区大小
         @NameInMap("Bufsize")
         public String bufsize;
 
-        // 编码格式
         @NameInMap("Codec")
         public String codec;
 
-        // 码率-质量控制因子。
         @NameInMap("Crf")
         public String crf;
 
-        // 视频画面裁切
         @NameInMap("Crop")
         public String crop;
 
-        // 帧率。
         @NameInMap("Fps")
         public String fps;
 
-        // 关键帧间最大帧数。
         @NameInMap("Gop")
         public String gop;
 
-        // 高。
         @NameInMap("Height")
         public String height;
 
-        // 是否开启横竖屏自适应（即：长短边模式）
         @NameInMap("LongShortMode")
         public String longShortMode;
 
-        // 视频码率峰值
         @NameInMap("Maxrate")
         public String maxrate;
 
-        // 视频贴黑边
         @NameInMap("Pad")
         public String pad;
 
-        // 视频颜色格式。
         @NameInMap("PixFmt")
         public String pixFmt;
 
-        // 只有H264支持该参数
         @NameInMap("Preset")
         public String preset;
 
-        // 编码级别。
         @NameInMap("Profile")
         public String profile;
 
-        // 是否去掉视频
         @NameInMap("Remove")
         public String remove;
 
-        // 扫描模式。
         @NameInMap("ScanMode")
         public String scanMode;
 
-        // 宽。
         @NameInMap("Width")
         public String width;
 
@@ -1005,19 +927,15 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParams extends TeaModel {
-        // audio 设置
         @NameInMap("Audio")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsAudio audio;
 
-        // 封装格式设置
         @NameInMap("Container")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsContainer container;
 
-        // 封装设置
         @NameInMap("MuxConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfig muxConfig;
 
-        // video 设置
         @NameInMap("Video")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsVideo video;
 
@@ -1061,11 +979,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscode extends TeaModel {
-        // 覆盖参数, 若填写会覆盖模板对应参数
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParams overwriteParams;
 
-        // 模板 id
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -1093,19 +1009,15 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfig extends TeaModel {
-        // 图片水印配置
         @NameInMap("ImageWatermarks")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarks> imageWatermarks;
 
-        // 字幕压制配置
         @NameInMap("Subtitles")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitles> subtitles;
 
-        // 文字水印配置
         @NameInMap("TextWatermarks")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTextWatermarks> textWatermarks;
 
-        // 转码配置
         @NameInMap("Transcode")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscode transcode;
 
@@ -1149,11 +1061,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroup extends TeaModel {
-        // 输出媒体配置
         @NameInMap("Output")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupOutput output;
 
-        // 任务处理配置
         @NameInMap("ProcessConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfig processConfig;
 
@@ -1181,11 +1091,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobScheduleConfig extends TeaModel {
-        // 管道 id
         @NameInMap("PipelineId")
         public String pipelineId;
 
-        // 任务优先级，取值范围：1~10
         @NameInMap("Priority")
         public Integer priority;
 
@@ -1213,13 +1121,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListInputGroup extends TeaModel {
-        // 媒体值：
-        //       type 为 OSS 时，为 url, 支持 oss 协议和 http 协议；
-        //       type 为 Media 时，为媒资 id。
         @NameInMap("Media")
         public String media;
 
-        // 媒体对象类型 - OSS: oss文件, Media: 媒资 ID
         @NameInMap("Type")
         public String type;
 
@@ -1247,62 +1151,48 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMetaAudioStreamInfoList extends TeaModel {
-        // 码率
         @NameInMap("Bitrate")
         public String bitrate;
 
-        // 声道布局
         @NameInMap("ChannelLayout")
         public String channelLayout;
 
-        // 声道数
         @NameInMap("Channels")
         public String channels;
 
-        // 编码格式名
         @NameInMap("CodecLongName")
         public String codecLongName;
 
-        // 编码格式
         @NameInMap("CodecName")
         public String codecName;
 
-        // 编码器标签
         @NameInMap("CodecTag")
         public String codecTag;
 
-        // 编码器标签名
         @NameInMap("CodecTagString")
         public String codecTagString;
 
-        // 编码器时间基
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
-        // 时长
         @NameInMap("Duration")
         public String duration;
 
-        // 流序号
         @NameInMap("Index")
         public String index;
 
-        // 语言
         @NameInMap("Lang")
         public String lang;
 
         @NameInMap("SampleFmt")
         public String sampleFmt;
 
-        // 采样率
         @NameInMap("SampleRate")
         public String sampleRate;
 
-        // 开始时间
         @NameInMap("StartTime")
         public String startTime;
 
-        // 时间基
         @NameInMap("Timebase")
         public String timebase;
 
@@ -1434,51 +1324,39 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMetaFileBasicInfo extends TeaModel {
-        // 视频码率
         @NameInMap("Bitrate")
         public String bitrate;
 
-        // 视频时长
         @NameInMap("Duration")
         public String duration;
 
-        // 文件名
         @NameInMap("FileName")
         public String fileName;
 
-        // 文件大小
         @NameInMap("FileSize")
         public String fileSize;
 
-        // 文件状态
         @NameInMap("FileStatus")
         public String fileStatus;
 
-        // 文件类型
         @NameInMap("FileType")
         public String fileType;
 
-        // 文件url
         @NameInMap("FileUrl")
         public String fileUrl;
 
-        // 视频格式名称
         @NameInMap("FormatName")
         public String formatName;
 
-        // 高
         @NameInMap("Height")
         public String height;
 
-        // 媒资ID
         @NameInMap("MediaId")
         public String mediaId;
 
-        // 文件所在区域
         @NameInMap("Region")
         public String region;
 
-        // 宽
         @NameInMap("Width")
         public String width;
 
@@ -1592,84 +1470,66 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("Bit_rate")
         public String bitRate;
 
-        // 编码格式名
         @NameInMap("Codec_long_name")
         public String codecLongName;
 
-        // 编码格式
         @NameInMap("Codec_name")
         public String codecName;
 
-        // 编码格式标记
         @NameInMap("Codec_tag")
         public String codecTag;
 
-        // 编码格式标记文本
         @NameInMap("Codec_tag_string")
         public String codecTagString;
 
         @NameInMap("Codec_time_base")
         public String codecTimeBase;
 
-        // 图像显示宽高比
         @NameInMap("Dar")
         public String dar;
 
-        // 时长
         @NameInMap("Duration")
         public String duration;
 
-        // 帧率
         @NameInMap("Fps")
         public String fps;
 
         @NameInMap("Has_b_frames")
         public String hasBFrames;
 
-        // 高
         @NameInMap("Height")
         public String height;
 
-        // 流序号
         @NameInMap("Index")
         public String index;
 
-        // 语言
         @NameInMap("Lang")
         public String lang;
 
-        // 编码等级
         @NameInMap("Level")
         public String level;
 
-        // 总帧数
         @NameInMap("NumFrames")
         public String numFrames;
 
-        // 颜色存储格式
         @NameInMap("PixFmt")
         public String pixFmt;
 
-        // 编码器预设
         @NameInMap("Profile")
         public String profile;
 
-        // 视频画面旋转角度
         @NameInMap("Rotate")
         public String rotate;
 
-        // 采集点数宽高比
         @NameInMap("Sar")
         public String sar;
 
-        // 起始时间
         @NameInMap("Start_time")
         public String startTime;
 
         @NameInMap("Time_base")
         public String timeBase;
 
-        // 宽
         @NameInMap("Width")
         public String width;
 
@@ -1865,15 +1725,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMeta extends TeaModel {
-        // 音频流信息
         @NameInMap("AudioStreamInfoList")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMetaAudioStreamInfoList> audioStreamInfoList;
 
-        // 基础文件信息
         @NameInMap("FileBasicInfo")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMetaFileBasicInfo fileBasicInfo;
 
-        // 视频流信息
         @NameInMap("VideoStreamInfoList")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMetaVideoStreamInfoList> videoStreamInfoList;
 
@@ -1909,13 +1766,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutput extends TeaModel {
-        // 媒体值：
-        //       type 为 OSS 时，为 url, 支持 oss 协议和 http 协议；
-        //       type 为 Media 时，为媒资 id。
         @NameInMap("Media")
         public String media;
 
-        // 媒体对象类型 - OSS: oss文件, Media: 媒资 ID
         @NameInMap("Type")
         public String type;
 
@@ -1943,13 +1796,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParamsFile extends TeaModel {
-        // 媒体值：
-        //       type 为 OSS 时，为 url, 支持 oss 协议和 http 协议；
-        //       type 为 Media 时，为媒资 id。
         @NameInMap("Media")
         public String media;
 
-        // 媒体对象类型 - OSS: oss文件, Media: 媒资 ID
         @NameInMap("Type")
         public String type;
 
@@ -1977,11 +1826,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParamsTimeline extends TeaModel {
-        // 显示时长，秒数 或者 "ToEND"
         @NameInMap("Duration")
         public String duration;
 
-        // 开始时间
         @NameInMap("Start")
         public String start;
 
@@ -2009,31 +1856,24 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParams extends TeaModel {
-        // 水印位置，x
         @NameInMap("Dx")
         public String dx;
 
-        // 水印位置，y
         @NameInMap("Dy")
         public String dy;
 
-        // 水印文件oss路径
         @NameInMap("File")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParamsFile file;
 
-        // 高
         @NameInMap("Height")
         public String height;
 
-        // 参考位置: TopLeft, TopRight, BottomLeft, BottomRight  default: TopLeft
         @NameInMap("ReferPos")
         public String referPos;
 
-        // 显示时间设置
         @NameInMap("Timeline")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParamsTimeline timeline;
 
-        // 宽
         @NameInMap("Width")
         public String width;
 
@@ -2101,11 +1941,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarks extends TeaModel {
-        // 覆盖参数, 若填写会覆盖模板对应参数
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParams overwriteParams;
 
-        // 模板 id
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -2133,13 +1971,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitlesOverwriteParamsFile extends TeaModel {
-        // 媒体值：
-        //       type 为 OSS 时，为 url, 支持 oss 协议和 http 协议；
-        //       type 为 Media 时，为媒资 id。
         @NameInMap("Media")
         public String media;
 
-        // 媒体对象类型 - OSS: oss文件, Media: 媒资 ID
         @NameInMap("Type")
         public String type;
 
@@ -2167,15 +2001,12 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitlesOverwriteParams extends TeaModel {
-        // 文件 encoding 格式
         @NameInMap("CharEnc")
         public String charEnc;
 
-        // 字幕文件
         @NameInMap("File")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitlesOverwriteParamsFile file;
 
-        // 字幕文件格式
         @NameInMap("Format")
         public String format;
 
@@ -2211,11 +2042,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitles extends TeaModel {
-        // 覆盖参数, 若填写会覆盖模板对应参数
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitlesOverwriteParams overwriteParams;
 
-        // 模板 id
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -2243,43 +2072,33 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTextWatermarksOverwriteParams extends TeaModel {
-        // 根据输出视频大小调整字体 size。 true / false, default: false
         @NameInMap("Adaptive")
         public String adaptive;
 
-        // 边框颜色
         @NameInMap("BorderColor")
         public String borderColor;
 
-        // 边框宽度
         @NameInMap("BorderWidth")
         public Integer borderWidth;
 
-        // 水印文本，不需要 base64 encode，字符串需要 utf-8 编码
         @NameInMap("Content")
         public String content;
 
-        // 透明度
         @NameInMap("FontAlpha")
         public String fontAlpha;
 
-        // 颜色
         @NameInMap("FontColor")
         public String fontColor;
 
-        // 字体
         @NameInMap("FontName")
         public String fontName;
 
-        // 字体大小
         @NameInMap("FontSize")
         public Integer fontSize;
 
-        // 水印位置，距离左边距离
         @NameInMap("Left")
         public String left;
 
-        // 水印位置，距离上边距离
         @NameInMap("Top")
         public String top;
 
@@ -2371,11 +2190,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTextWatermarks extends TeaModel {
-        // 覆盖参数, 若填写会覆盖模板对应参数
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTextWatermarksOverwriteParams overwriteParams;
 
-        // 模板 id
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -2403,19 +2220,15 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsAudioVolume extends TeaModel {
-        // 目标音量
         @NameInMap("IntegratedLoudnessTarget")
         public String integratedLoudnessTarget;
 
-        // 音量范围
         @NameInMap("LoudnessRangeTarget")
         public String loudnessRangeTarget;
 
-        // 音量调整方式
         @NameInMap("Method")
         public String method;
 
-        // 最大峰值
         @NameInMap("TruePeak")
         public String truePeak;
 
@@ -2459,31 +2272,24 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsAudio extends TeaModel {
-        // 输出文件的音频码率。
         @NameInMap("Bitrate")
         public String bitrate;
 
-        // 声道数。
         @NameInMap("Channels")
         public String channels;
 
-        // 音频编解码格式，AAC、MP3、VORBIS、FLAC。
         @NameInMap("Codec")
         public String codec;
 
-        // 音频编码预置。
         @NameInMap("Profile")
         public String profile;
 
-        // 是否删除音频流。
         @NameInMap("Remove")
         public String remove;
 
-        // 采样率。
         @NameInMap("Samplerate")
         public String samplerate;
 
-        // 音量控制
         @NameInMap("Volume")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsAudioVolume volume;
 
@@ -2551,7 +2357,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsContainer extends TeaModel {
-        // 容器格式
         @NameInMap("Format")
         public String format;
 
@@ -2571,11 +2376,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsMuxConfigSegment extends TeaModel {
-        // 切片时长
         @NameInMap("Duration")
         public String duration;
 
-        // 强制切片时间点
         @NameInMap("ForceSegTime")
         public String forceSegTime;
 
@@ -2603,7 +2406,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsMuxConfig extends TeaModel {
-        // 切片设置
         @NameInMap("Segment")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsMuxConfigSegment segment;
 
@@ -2626,71 +2428,54 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("AbrMax")
         public String abrMax;
 
-        // 视频平均码率。
         @NameInMap("Bitrate")
         public String bitrate;
 
-        // 缓冲区大小
         @NameInMap("Bufsize")
         public String bufsize;
 
-        // 编码格式
         @NameInMap("Codec")
         public String codec;
 
-        // 码率-质量控制因子。
         @NameInMap("Crf")
         public String crf;
 
-        // 视频画面裁切
         @NameInMap("Crop")
         public String crop;
 
-        // 帧率。
         @NameInMap("Fps")
         public String fps;
 
-        // 关键帧间最大帧数。
         @NameInMap("Gop")
         public String gop;
 
-        // 高。
         @NameInMap("Height")
         public String height;
 
-        // 是否开启横竖屏自适应（即：长短边模式）
         @NameInMap("LongShortMode")
         public String longShortMode;
 
-        // 视频码率峰值
         @NameInMap("Maxrate")
         public String maxrate;
 
-        // 视频贴黑边
         @NameInMap("Pad")
         public String pad;
 
-        // 视频颜色格式。
         @NameInMap("PixFmt")
         public String pixFmt;
 
-        // 只有H264支持该参数
         @NameInMap("Preset")
         public String preset;
 
-        // 编码级别。
         @NameInMap("Profile")
         public String profile;
 
-        // 是否去掉视频
         @NameInMap("Remove")
         public String remove;
 
-        // 扫描模式。
         @NameInMap("ScanMode")
         public String scanMode;
 
-        // 宽。
         @NameInMap("Width")
         public String width;
 
@@ -2846,19 +2631,15 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParams extends TeaModel {
-        // audio 设置
         @NameInMap("Audio")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsAudio audio;
 
-        // 封装格式设置
         @NameInMap("Container")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsContainer container;
 
-        // 封装设置
         @NameInMap("MuxConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsMuxConfig muxConfig;
 
-        // video 设置
         @NameInMap("Video")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsVideo video;
 
@@ -2902,11 +2683,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscode extends TeaModel {
-        // 覆盖参数, 若填写会覆盖模板对应参数
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParams overwriteParams;
 
-        // 模板 id
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -2934,19 +2713,15 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig extends TeaModel {
-        // 图片水印配置
         @NameInMap("ImageWatermarks")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarks> imageWatermarks;
 
-        // 字幕压制配置
         @NameInMap("Subtitles")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitles> subtitles;
 
-        // 文字水印配置
         @NameInMap("TextWatermarks")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTextWatermarks> textWatermarks;
 
-        // 转码配置
         @NameInMap("Transcode")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscode transcode;
 
@@ -2990,11 +2765,9 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListScheduleConfig extends TeaModel {
-        // 管道 id
         @NameInMap("PipelineId")
         public String pipelineId;
 
-        // 任务优先级，取值范围：1~10
         @NameInMap("Priority")
         public Integer priority;
 
@@ -3022,67 +2795,51 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobList extends TeaModel {
-        // 任务创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 任务结束时间
         @NameInMap("FinishTime")
         public String finishTime;
 
-        // 任务输入组 (目前只支持单个输入)
         @NameInMap("InputGroup")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListInputGroup> inputGroup;
 
-        // 子任务 id
         @NameInMap("JobId")
         public String jobId;
 
-        // 子任务在整个任务中的索引号
         @NameInMap("JobIndex")
         public Integer jobIndex;
 
-        // 任务名
         @NameInMap("Name")
         public String name;
 
-        // 任务生成视频 media 信息
         @NameInMap("OutFileMeta")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMeta outFileMeta;
 
-        // 输出媒体配置
         @NameInMap("Output")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutput output;
 
-        // 主任务 id
         @NameInMap("ParentJobId")
         public String parentJobId;
 
-        // 转码处理配置
         @NameInMap("ProcessConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig processConfig;
 
-        // 请求 id
         @NameInMap("RequestId")
         public String requestId;
 
-        // 任务调度信息
         @NameInMap("ScheduleConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListScheduleConfig scheduleConfig;
 
-        // 转码任务任务状态 - Init: 已提交, Processing: 转码中, Success: 转码成功, Fail: 转码失败, Deleted: 已删除
         @NameInMap("Status")
         public String status;
 
-        // 任务提交结果
         @NameInMap("SubmitResultJson")
         public java.util.Map<String, ?> submitResultJson;
 
-        // 任务提交时间
         @NameInMap("SubmitTime")
         public String submitTime;
 
-        // 用户数据
         @NameInMap("UserData")
         public String userData;
 
@@ -3222,63 +2979,48 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJob extends TeaModel {
-        // 任务创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 任务结束时间
         @NameInMap("FinishTime")
         public String finishTime;
 
-        // 任务输入组 (目前只支持单个输入)
         @NameInMap("InputGroup")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobInputGroup> inputGroup;
 
-        // 子任务数量
         @NameInMap("JobCount")
         public Integer jobCount;
 
-        // 任务名
         @NameInMap("Name")
         public String name;
 
-        // 任务输出组
         @NameInMap("OutputGroup")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroup> outputGroup;
 
-        // 主任务 id
         @NameInMap("ParentJobId")
         public String parentJobId;
 
-        // 任务完成百分比
         @NameInMap("Percent")
         public Integer percent;
 
-        // 提交任务时请求 id
         @NameInMap("RequestId")
         public String requestId;
 
-        // 任务调度配置
         @NameInMap("ScheduleConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobScheduleConfig scheduleConfig;
 
-        // 任务状态 Success: 有子任务成功, Fail: 所有子任务失败
         @NameInMap("Status")
         public String status;
 
-        // 任务提交时间
         @NameInMap("SubmitTime")
         public String submitTime;
 
-        // 子任务列表
         @NameInMap("TranscodeJobList")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobList> transcodeJobList;
 
-        // 任务来源 - API, WorkFlow, Console
         @NameInMap("TriggerSource")
         public String triggerSource;
 
-        // 用户数据
         @NameInMap("UserData")
         public String userData;
 

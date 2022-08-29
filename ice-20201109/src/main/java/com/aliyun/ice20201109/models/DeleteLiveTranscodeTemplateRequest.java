@@ -4,7 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveTranscodeTemplateRequest extends TeaModel {
-    // 模板Id
     @NameInMap("TemplateId")
     public String templateId;
 
