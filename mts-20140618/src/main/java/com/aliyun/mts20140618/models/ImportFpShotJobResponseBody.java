@@ -7,7 +7,6 @@ public class ImportFpShotJobResponseBody extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

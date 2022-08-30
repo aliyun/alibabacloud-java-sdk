@@ -19,6 +19,9 @@ public class SubmitFpFileDeleteJobRequest extends TeaModel {
     @NameInMap("PipelineId")
     public String pipelineId;
 
+    @NameInMap("PrimaryKeys")
+    public String primaryKeys;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -71,6 +74,14 @@ public class SubmitFpFileDeleteJobRequest extends TeaModel {
     }
     public String getPipelineId() {
         return this.pipelineId;
+    }
+
+    public SubmitFpFileDeleteJobRequest setPrimaryKeys(String primaryKeys) {
+        this.primaryKeys = primaryKeys;
+        return this;
+    }
+    public String getPrimaryKeys() {
+        return this.primaryKeys;
     }
 
     public SubmitFpFileDeleteJobRequest setResourceOwnerAccount(String resourceOwnerAccount) {

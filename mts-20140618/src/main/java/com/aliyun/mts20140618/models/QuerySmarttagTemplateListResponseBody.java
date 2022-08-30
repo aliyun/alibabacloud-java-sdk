@@ -59,6 +59,12 @@ public class QuerySmarttagTemplateListResponseBody extends TeaModel {
         @NameInMap("LabelVersion")
         public String labelVersion;
 
+        @NameInMap("LandmarkGroupIds")
+        public String landmarkGroupIds;
+
+        @NameInMap("ObjectGroupIds")
+        public String objectGroupIds;
+
         @NameInMap("Scene")
         public String scene;
 
@@ -143,6 +149,22 @@ public class QuerySmarttagTemplateListResponseBody extends TeaModel {
         }
         public String getLabelVersion() {
             return this.labelVersion;
+        }
+
+        public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setLandmarkGroupIds(String landmarkGroupIds) {
+            this.landmarkGroupIds = landmarkGroupIds;
+            return this;
+        }
+        public String getLandmarkGroupIds() {
+            return this.landmarkGroupIds;
+        }
+
+        public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setObjectGroupIds(String objectGroupIds) {
+            this.objectGroupIds = objectGroupIds;
+            return this;
+        }
+        public String getObjectGroupIds() {
+            return this.objectGroupIds;
         }
 
         public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setScene(String scene) {

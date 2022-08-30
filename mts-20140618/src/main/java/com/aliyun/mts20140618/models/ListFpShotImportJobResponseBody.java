@@ -10,7 +10,6 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
     @NameInMap("NonExistIds")
     public java.util.List<String> nonExistIds;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -10,14 +10,8 @@ public class SubmitSmarttagJobRequest extends TeaModel {
     @NameInMap("ContentAddr")
     public String contentAddr;
 
-    @NameInMap("ContentType")
-    public String contentType;
-
     @NameInMap("Input")
     public String input;
-
-    @NameInMap("NotifyUrl")
-    public String notifyUrl;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -67,28 +61,12 @@ public class SubmitSmarttagJobRequest extends TeaModel {
         return this.contentAddr;
     }
 
-    public SubmitSmarttagJobRequest setContentType(String contentType) {
-        this.contentType = contentType;
-        return this;
-    }
-    public String getContentType() {
-        return this.contentType;
-    }
-
     public SubmitSmarttagJobRequest setInput(String input) {
         this.input = input;
         return this;
     }
     public String getInput() {
         return this.input;
-    }
-
-    public SubmitSmarttagJobRequest setNotifyUrl(String notifyUrl) {
-        this.notifyUrl = notifyUrl;
-        return this;
-    }
-    public String getNotifyUrl() {
-        return this.notifyUrl;
     }
 
     public SubmitSmarttagJobRequest setOwnerAccount(String ownerAccount) {

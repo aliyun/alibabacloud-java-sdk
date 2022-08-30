@@ -93,6 +93,9 @@ public class ListFpShotFilesResponseBody extends TeaModel {
         @NameInMap("PrimaryKey")
         public String primaryKey;
 
+        @NameInMap("StoreTime")
+        public String storeTime;
+
         public static ListFpShotFilesResponseBodyFpShotFileListFpShotFile build(java.util.Map<String, ?> map) throws Exception {
             ListFpShotFilesResponseBodyFpShotFileListFpShotFile self = new ListFpShotFilesResponseBodyFpShotFileListFpShotFile();
             return TeaModel.build(map, self);
@@ -120,6 +123,14 @@ public class ListFpShotFilesResponseBody extends TeaModel {
         }
         public String getPrimaryKey() {
             return this.primaryKey;
+        }
+
+        public ListFpShotFilesResponseBodyFpShotFileListFpShotFile setStoreTime(String storeTime) {
+            this.storeTime = storeTime;
+            return this;
+        }
+        public String getStoreTime() {
+            return this.storeTime;
         }
 
     }
