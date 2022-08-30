@@ -64,6 +64,348 @@ public class ImAuditResponseBody extends TeaModel {
         return this.textResults;
     }
 
+    public static class ImAuditResponseBodyImageResultsResultResultsFrames extends TeaModel {
+        @NameInMap("rate")
+        public Float rate;
+
+        @NameInMap("url")
+        public String url;
+
+        public static ImAuditResponseBodyImageResultsResultResultsFrames build(java.util.Map<String, ?> map) throws Exception {
+            ImAuditResponseBodyImageResultsResultResultsFrames self = new ImAuditResponseBodyImageResultsResultResultsFrames();
+            return TeaModel.build(map, self);
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsFrames setRate(Float rate) {
+            this.rate = rate;
+            return this;
+        }
+        public Float getRate() {
+            return this.rate;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsFrames setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class ImAuditResponseBodyImageResultsResultResultsHintWordsInfo extends TeaModel {
+        @NameInMap("context")
+        public String context;
+
+        public static ImAuditResponseBodyImageResultsResultResultsHintWordsInfo build(java.util.Map<String, ?> map) throws Exception {
+            ImAuditResponseBodyImageResultsResultResultsHintWordsInfo self = new ImAuditResponseBodyImageResultsResultResultsHintWordsInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsHintWordsInfo setContext(String context) {
+            this.context = context;
+            return this;
+        }
+        public String getContext() {
+            return this.context;
+        }
+
+    }
+
+    public static class ImAuditResponseBodyImageResultsResultResultsLogoData extends TeaModel {
+        @NameInMap("h")
+        public Float h;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("w")
+        public Float w;
+
+        @NameInMap("x")
+        public Float x;
+
+        @NameInMap("y")
+        public Float y;
+
+        public static ImAuditResponseBodyImageResultsResultResultsLogoData build(java.util.Map<String, ?> map) throws Exception {
+            ImAuditResponseBodyImageResultsResultResultsLogoData self = new ImAuditResponseBodyImageResultsResultResultsLogoData();
+            return TeaModel.build(map, self);
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsLogoData setH(Float h) {
+            this.h = h;
+            return this;
+        }
+        public Float getH() {
+            return this.h;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsLogoData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsLogoData setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsLogoData setW(Float w) {
+            this.w = w;
+            return this;
+        }
+        public Float getW() {
+            return this.w;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsLogoData setX(Float x) {
+            this.x = x;
+            return this;
+        }
+        public Float getX() {
+            return this.x;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsLogoData setY(Float y) {
+            this.y = y;
+            return this;
+        }
+        public Float getY() {
+            return this.y;
+        }
+
+    }
+
+    public static class ImAuditResponseBodyImageResultsResultResultsProgramCodeData extends TeaModel {
+        @NameInMap("h")
+        public Float h;
+
+        @NameInMap("w")
+        public Float w;
+
+        @NameInMap("x")
+        public Float x;
+
+        @NameInMap("y")
+        public Float y;
+
+        public static ImAuditResponseBodyImageResultsResultResultsProgramCodeData build(java.util.Map<String, ?> map) throws Exception {
+            ImAuditResponseBodyImageResultsResultResultsProgramCodeData self = new ImAuditResponseBodyImageResultsResultResultsProgramCodeData();
+            return TeaModel.build(map, self);
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsProgramCodeData setH(Float h) {
+            this.h = h;
+            return this;
+        }
+        public Float getH() {
+            return this.h;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsProgramCodeData setW(Float w) {
+            this.w = w;
+            return this;
+        }
+        public Float getW() {
+            return this.w;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsProgramCodeData setX(Float x) {
+            this.x = x;
+            return this;
+        }
+        public Float getX() {
+            return this.x;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsProgramCodeData setY(Float y) {
+            this.y = y;
+            return this;
+        }
+        public Float getY() {
+            return this.y;
+        }
+
+    }
+
+    public static class ImAuditResponseBodyImageResultsResultResultsQrcodeLocations extends TeaModel {
+        @NameInMap("h")
+        public Float h;
+
+        @NameInMap("qrcode")
+        public String qrcode;
+
+        @NameInMap("w")
+        public Float w;
+
+        @NameInMap("x")
+        public Float x;
+
+        @NameInMap("y")
+        public Float y;
+
+        public static ImAuditResponseBodyImageResultsResultResultsQrcodeLocations build(java.util.Map<String, ?> map) throws Exception {
+            ImAuditResponseBodyImageResultsResultResultsQrcodeLocations self = new ImAuditResponseBodyImageResultsResultResultsQrcodeLocations();
+            return TeaModel.build(map, self);
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsQrcodeLocations setH(Float h) {
+            this.h = h;
+            return this;
+        }
+        public Float getH() {
+            return this.h;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsQrcodeLocations setQrcode(String qrcode) {
+            this.qrcode = qrcode;
+            return this;
+        }
+        public String getQrcode() {
+            return this.qrcode;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsQrcodeLocations setW(Float w) {
+            this.w = w;
+            return this;
+        }
+        public Float getW() {
+            return this.w;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsQrcodeLocations setX(Float x) {
+            this.x = x;
+            return this;
+        }
+        public Float getX() {
+            return this.x;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsQrcodeLocations setY(Float y) {
+            this.y = y;
+            return this;
+        }
+        public Float getY() {
+            return this.y;
+        }
+
+    }
+
+    public static class ImAuditResponseBodyImageResultsResultResultsSfaceDataFaces extends TeaModel {
+        @NameInMap("idid")
+        public String idid;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("re")
+        public Float re;
+
+        public static ImAuditResponseBodyImageResultsResultResultsSfaceDataFaces build(java.util.Map<String, ?> map) throws Exception {
+            ImAuditResponseBodyImageResultsResultResultsSfaceDataFaces self = new ImAuditResponseBodyImageResultsResultResultsSfaceDataFaces();
+            return TeaModel.build(map, self);
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsSfaceDataFaces setIdid(String idid) {
+            this.idid = idid;
+            return this;
+        }
+        public String getIdid() {
+            return this.idid;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsSfaceDataFaces setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsSfaceDataFaces setRe(Float re) {
+            this.re = re;
+            return this;
+        }
+        public Float getRe() {
+            return this.re;
+        }
+
+    }
+
+    public static class ImAuditResponseBodyImageResultsResultResultsSfaceData extends TeaModel {
+        @NameInMap("faces")
+        public java.util.List<ImAuditResponseBodyImageResultsResultResultsSfaceDataFaces> faces;
+
+        @NameInMap("h")
+        public Float h;
+
+        @NameInMap("w")
+        public Float w;
+
+        @NameInMap("x")
+        public Float x;
+
+        @NameInMap("y")
+        public Float y;
+
+        public static ImAuditResponseBodyImageResultsResultResultsSfaceData build(java.util.Map<String, ?> map) throws Exception {
+            ImAuditResponseBodyImageResultsResultResultsSfaceData self = new ImAuditResponseBodyImageResultsResultResultsSfaceData();
+            return TeaModel.build(map, self);
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsSfaceData setFaces(java.util.List<ImAuditResponseBodyImageResultsResultResultsSfaceDataFaces> faces) {
+            this.faces = faces;
+            return this;
+        }
+        public java.util.List<ImAuditResponseBodyImageResultsResultResultsSfaceDataFaces> getFaces() {
+            return this.faces;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsSfaceData setH(Float h) {
+            this.h = h;
+            return this;
+        }
+        public Float getH() {
+            return this.h;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsSfaceData setW(Float w) {
+            this.w = w;
+            return this;
+        }
+        public Float getW() {
+            return this.w;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsSfaceData setX(Float x) {
+            this.x = x;
+            return this;
+        }
+        public Float getX() {
+            return this.x;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResultsSfaceData setY(Float y) {
+            this.y = y;
+            return this;
+        }
+        public Float getY() {
+            return this.y;
+        }
+
+    }
+
     public static class ImAuditResponseBodyImageResultsResultResults extends TeaModel {
         @NameInMap("Label")
         public String label;
@@ -76,6 +418,30 @@ public class ImAuditResponseBody extends TeaModel {
 
         @NameInMap("Suggestion")
         public String suggestion;
+
+        @NameInMap("frames")
+        public java.util.List<ImAuditResponseBodyImageResultsResultResultsFrames> frames;
+
+        @NameInMap("hintWordsInfo")
+        public java.util.List<ImAuditResponseBodyImageResultsResultResultsHintWordsInfo> hintWordsInfo;
+
+        @NameInMap("logoData")
+        public java.util.List<ImAuditResponseBodyImageResultsResultResultsLogoData> logoData;
+
+        @NameInMap("ocrData")
+        public java.util.List<String> ocrData;
+
+        @NameInMap("programCodeData")
+        public java.util.List<ImAuditResponseBodyImageResultsResultResultsProgramCodeData> programCodeData;
+
+        @NameInMap("qrcodeData")
+        public java.util.List<String> qrcodeData;
+
+        @NameInMap("qrcodeLocations")
+        public java.util.List<ImAuditResponseBodyImageResultsResultResultsQrcodeLocations> qrcodeLocations;
+
+        @NameInMap("sfaceData")
+        public java.util.List<ImAuditResponseBodyImageResultsResultResultsSfaceData> sfaceData;
 
         public static ImAuditResponseBodyImageResultsResultResults build(java.util.Map<String, ?> map) throws Exception {
             ImAuditResponseBodyImageResultsResultResults self = new ImAuditResponseBodyImageResultsResultResults();
@@ -112,6 +478,70 @@ public class ImAuditResponseBody extends TeaModel {
         }
         public String getSuggestion() {
             return this.suggestion;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResults setFrames(java.util.List<ImAuditResponseBodyImageResultsResultResultsFrames> frames) {
+            this.frames = frames;
+            return this;
+        }
+        public java.util.List<ImAuditResponseBodyImageResultsResultResultsFrames> getFrames() {
+            return this.frames;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResults setHintWordsInfo(java.util.List<ImAuditResponseBodyImageResultsResultResultsHintWordsInfo> hintWordsInfo) {
+            this.hintWordsInfo = hintWordsInfo;
+            return this;
+        }
+        public java.util.List<ImAuditResponseBodyImageResultsResultResultsHintWordsInfo> getHintWordsInfo() {
+            return this.hintWordsInfo;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResults setLogoData(java.util.List<ImAuditResponseBodyImageResultsResultResultsLogoData> logoData) {
+            this.logoData = logoData;
+            return this;
+        }
+        public java.util.List<ImAuditResponseBodyImageResultsResultResultsLogoData> getLogoData() {
+            return this.logoData;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResults setOcrData(java.util.List<String> ocrData) {
+            this.ocrData = ocrData;
+            return this;
+        }
+        public java.util.List<String> getOcrData() {
+            return this.ocrData;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResults setProgramCodeData(java.util.List<ImAuditResponseBodyImageResultsResultResultsProgramCodeData> programCodeData) {
+            this.programCodeData = programCodeData;
+            return this;
+        }
+        public java.util.List<ImAuditResponseBodyImageResultsResultResultsProgramCodeData> getProgramCodeData() {
+            return this.programCodeData;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResults setQrcodeData(java.util.List<String> qrcodeData) {
+            this.qrcodeData = qrcodeData;
+            return this;
+        }
+        public java.util.List<String> getQrcodeData() {
+            return this.qrcodeData;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResults setQrcodeLocations(java.util.List<ImAuditResponseBodyImageResultsResultResultsQrcodeLocations> qrcodeLocations) {
+            this.qrcodeLocations = qrcodeLocations;
+            return this;
+        }
+        public java.util.List<ImAuditResponseBodyImageResultsResultResultsQrcodeLocations> getQrcodeLocations() {
+            return this.qrcodeLocations;
+        }
+
+        public ImAuditResponseBodyImageResultsResultResults setSfaceData(java.util.List<ImAuditResponseBodyImageResultsResultResultsSfaceData> sfaceData) {
+            this.sfaceData = sfaceData;
+            return this;
+        }
+        public java.util.List<ImAuditResponseBodyImageResultsResultResultsSfaceData> getSfaceData() {
+            return this.sfaceData;
         }
 
     }
@@ -220,9 +650,75 @@ public class ImAuditResponseBody extends TeaModel {
 
     }
 
+    public static class ImAuditResponseBodyTextResultsResultResultsDetailsContexts extends TeaModel {
+        @NameInMap("context")
+        public String context;
+
+        @NameInMap("libCode")
+        public String libCode;
+
+        @NameInMap("libName")
+        public String libName;
+
+        @NameInMap("positions")
+        public java.util.List<String> positions;
+
+        @NameInMap("ruleType")
+        public String ruleType;
+
+        public static ImAuditResponseBodyTextResultsResultResultsDetailsContexts build(java.util.Map<String, ?> map) throws Exception {
+            ImAuditResponseBodyTextResultsResultResultsDetailsContexts self = new ImAuditResponseBodyTextResultsResultResultsDetailsContexts();
+            return TeaModel.build(map, self);
+        }
+
+        public ImAuditResponseBodyTextResultsResultResultsDetailsContexts setContext(String context) {
+            this.context = context;
+            return this;
+        }
+        public String getContext() {
+            return this.context;
+        }
+
+        public ImAuditResponseBodyTextResultsResultResultsDetailsContexts setLibCode(String libCode) {
+            this.libCode = libCode;
+            return this;
+        }
+        public String getLibCode() {
+            return this.libCode;
+        }
+
+        public ImAuditResponseBodyTextResultsResultResultsDetailsContexts setLibName(String libName) {
+            this.libName = libName;
+            return this;
+        }
+        public String getLibName() {
+            return this.libName;
+        }
+
+        public ImAuditResponseBodyTextResultsResultResultsDetailsContexts setPositions(java.util.List<String> positions) {
+            this.positions = positions;
+            return this;
+        }
+        public java.util.List<String> getPositions() {
+            return this.positions;
+        }
+
+        public ImAuditResponseBodyTextResultsResultResultsDetailsContexts setRuleType(String ruleType) {
+            this.ruleType = ruleType;
+            return this;
+        }
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+    }
+
     public static class ImAuditResponseBodyTextResultsResultResultsDetails extends TeaModel {
         @NameInMap("Label")
         public String label;
+
+        @NameInMap("contexts")
+        public java.util.List<ImAuditResponseBodyTextResultsResultResultsDetailsContexts> contexts;
 
         public static ImAuditResponseBodyTextResultsResultResultsDetails build(java.util.Map<String, ?> map) throws Exception {
             ImAuditResponseBodyTextResultsResultResultsDetails self = new ImAuditResponseBodyTextResultsResultResultsDetails();
@@ -235,6 +731,14 @@ public class ImAuditResponseBody extends TeaModel {
         }
         public String getLabel() {
             return this.label;
+        }
+
+        public ImAuditResponseBodyTextResultsResultResultsDetails setContexts(java.util.List<ImAuditResponseBodyTextResultsResultResultsDetailsContexts> contexts) {
+            this.contexts = contexts;
+            return this;
+        }
+        public java.util.List<ImAuditResponseBodyTextResultsResultResultsDetailsContexts> getContexts() {
+            return this.contexts;
         }
 
     }

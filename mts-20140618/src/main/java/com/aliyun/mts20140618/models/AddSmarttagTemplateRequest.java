@@ -31,6 +31,12 @@ public class AddSmarttagTemplateRequest extends TeaModel {
     @NameInMap("LabelVersion")
     public String labelVersion;
 
+    @NameInMap("LandmarkGroupIds")
+    public String landmarkGroupIds;
+
+    @NameInMap("ObjectGroupIds")
+    public String objectGroupIds;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -124,6 +130,22 @@ public class AddSmarttagTemplateRequest extends TeaModel {
     }
     public String getLabelVersion() {
         return this.labelVersion;
+    }
+
+    public AddSmarttagTemplateRequest setLandmarkGroupIds(String landmarkGroupIds) {
+        this.landmarkGroupIds = landmarkGroupIds;
+        return this;
+    }
+    public String getLandmarkGroupIds() {
+        return this.landmarkGroupIds;
+    }
+
+    public AddSmarttagTemplateRequest setObjectGroupIds(String objectGroupIds) {
+        this.objectGroupIds = objectGroupIds;
+        return this;
+    }
+    public String getObjectGroupIds() {
+        return this.objectGroupIds;
     }
 
     public AddSmarttagTemplateRequest setOwnerAccount(String ownerAccount) {

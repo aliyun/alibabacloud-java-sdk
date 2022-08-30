@@ -2598,7 +2598,6 @@ public class QueryJobListResponseBody extends TeaModel {
         @NameInMap("Encryption")
         public QueryJobListResponseBodyJobListJobOutputEncryption encryption;
 
-        // 扩展字段
         @NameInMap("ExtendData")
         public String extendData;
 
