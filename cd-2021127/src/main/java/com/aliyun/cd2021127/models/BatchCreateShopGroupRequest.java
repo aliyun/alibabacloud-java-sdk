@@ -4,7 +4,6 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class BatchCreateShopGroupRequest extends TeaModel {
-    // 门店组列表
     @NameInMap("ShopGroupList")
     public java.util.List<BatchCreateShopGroupRequestShopGroupList> shopGroupList;
 
@@ -22,11 +21,9 @@ public class BatchCreateShopGroupRequest extends TeaModel {
     }
 
     public static class BatchCreateShopGroupRequestShopGroupList extends TeaModel {
-        // 门店组编号（ID）
         @NameInMap("ShopGroupId")
         public String shopGroupId;
 
-        // 门店组名称
         @NameInMap("ShopGroupName")
         public String shopGroupName;
 

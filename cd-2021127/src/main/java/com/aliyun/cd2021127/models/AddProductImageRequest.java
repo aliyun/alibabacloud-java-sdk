@@ -4,11 +4,9 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class AddProductImageRequest extends TeaModel {
-    // 商品编号(ID)-必填
     @NameInMap("ProductId")
     public String productId;
 
-    // 商品图片列表-必填
     @NameInMap("ProductImageList")
     public java.util.List<AddProductImageRequestProductImageList> productImageList;
 
@@ -54,11 +52,9 @@ public class AddProductImageRequest extends TeaModel {
         @NameInMap("ProductImageLabels")
         public java.util.List<String> productImageLabels;
 
-        // 商品图片类型（默认平拍：horizontal）-选填
         @NameInMap("ProductImageType")
         public String productImageType;
 
-        // 商品图片URL-必填
         @NameInMap("ProductImageUrl")
         public String productImageUrl;
 

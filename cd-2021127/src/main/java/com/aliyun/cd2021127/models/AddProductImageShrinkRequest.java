@@ -4,11 +4,9 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class AddProductImageShrinkRequest extends TeaModel {
-    // 商品编号(ID)-必填
     @NameInMap("ProductId")
     public String productId;
 
-    // 商品图片列表-必填
     @NameInMap("ProductImageList")
     public String productImageListShrink;
 

@@ -4,18 +4,15 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class ListShopGroupResponseBody extends TeaModel {
-    // 状态码
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ListShopGroupResponseBodyData> data;
 
-    // http状态码
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // 说明
     @NameInMap("Message")
     public String message;
 
@@ -25,11 +22,9 @@ public class ListShopGroupResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 成功标志
     @NameInMap("Success")
     public Boolean success;
 
@@ -114,11 +109,9 @@ public class ListShopGroupResponseBody extends TeaModel {
     }
 
     public static class ListShopGroupResponseBodyData extends TeaModel {
-        // 门店组编号（ID）
         @NameInMap("ShopGroupId")
         public String shopGroupId;
 
-        // 门店组名称
         @NameInMap("ShopGroupName")
         public String shopGroupName;
 

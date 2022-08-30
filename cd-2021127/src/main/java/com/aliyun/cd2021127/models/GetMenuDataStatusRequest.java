@@ -4,11 +4,9 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class GetMenuDataStatusRequest extends TeaModel {
-    // 批次ID
     @NameInMap("BatchId")
     public String batchId;
 
-    // 商品容器ID
     @NameInMap("ProductContainerId")
     public String productContainerId;
 

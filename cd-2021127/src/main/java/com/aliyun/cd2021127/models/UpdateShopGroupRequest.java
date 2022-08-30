@@ -4,11 +4,9 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class UpdateShopGroupRequest extends TeaModel {
-    // 门店组编号（ID）
     @NameInMap("ShopGroupId")
     public String shopGroupId;
 
-    // 门店组名称
     @NameInMap("ShopGroupName")
     public String shopGroupName;
 

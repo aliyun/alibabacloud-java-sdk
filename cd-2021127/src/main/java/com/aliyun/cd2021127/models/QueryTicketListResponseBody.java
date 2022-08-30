@@ -4,39 +4,30 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class QueryTicketListResponseBody extends TeaModel {
-    // 状态码
     @NameInMap("Code")
     public String code;
 
-    // 数据
     @NameInMap("Data")
     public java.util.List<QueryTicketListResponseBodyData> data;
 
-    // http状态码
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // 说明
     @NameInMap("Message")
     public String message;
 
-    // 页码序号
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 页码大小
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 成功标志
     @NameInMap("Success")
     public Boolean success;
 
-    // 数据总数
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -118,37 +109,32 @@ public class QueryTicketListResponseBody extends TeaModel {
     }
 
     public static class QueryTicketListResponseBodyData extends TeaModel {
-        // 设备标签-选填
         @NameInMap("DeviceAlias")
         public String deviceAlias;
 
-        // 设备SN-必填
         @NameInMap("DeviceSn")
         public String deviceSn;
 
-        // 门店ID-必填
         @NameInMap("ShopId")
         public String shopId;
 
-        // 门店名称-必填
         @NameInMap("ShopName")
         public String shopName;
 
-        // 工单状态-必填
         @NameInMap("Status")
         public Integer status;
 
-        // 工单提交时间-必填
         @NameInMap("SubmitDate")
         public Long submitDate;
 
-        // 工单ID-必填
         @NameInMap("TicketId")
         public String ticketId;
 
-        // 工单类型-必填
         @NameInMap("TicketType")
         public String ticketType;
+
+        @NameInMap("UpdateDate")
+        public Long updateDate;
 
         public static QueryTicketListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryTicketListResponseBodyData self = new QueryTicketListResponseBodyData();
@@ -217,6 +203,14 @@ public class QueryTicketListResponseBody extends TeaModel {
         }
         public String getTicketType() {
             return this.ticketType;
+        }
+
+        public QueryTicketListResponseBodyData setUpdateDate(Long updateDate) {
+            this.updateDate = updateDate;
+            return this;
+        }
+        public Long getUpdateDate() {
+            return this.updateDate;
         }
 
     }
