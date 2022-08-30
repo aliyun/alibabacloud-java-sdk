@@ -4,11 +4,9 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class AddShopsToGroupRequest extends TeaModel {
-    // 门店组ID
     @NameInMap("ShopGroupId")
     public String shopGroupId;
 
-    // 门店ID列表
     @NameInMap("ShopIdList")
     public java.util.List<String> shopIdList;
 

@@ -4,7 +4,6 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class BatchCreateShopGroupShrinkRequest extends TeaModel {
-    // 门店组列表
     @NameInMap("ShopGroupList")
     public String shopGroupListShrink;
 

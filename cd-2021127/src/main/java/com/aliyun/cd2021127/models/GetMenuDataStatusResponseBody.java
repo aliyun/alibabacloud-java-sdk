@@ -4,43 +4,33 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class GetMenuDataStatusResponseBody extends TeaModel {
-    // 数据批次ID（根据batchId查询）-选填
     @NameInMap("BatchId")
     public String batchId;
 
-    // 状态码
     @NameInMap("Code")
     public String code;
 
-    // 推送失败门店数量
     @NameInMap("Failed")
     public Long failed;
 
-    // 推送失败菜单商品容器数据id
     @NameInMap("FailedProductContainerList")
     public java.util.List<String> failedProductContainerList;
 
-    // http状态码
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // 说明
     @NameInMap("Message")
     public String message;
 
-    // 菜单商品容器数据id-选填
     @NameInMap("ProductContainerId")
     public String productContainerId;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 成功标志
     @NameInMap("Success")
     public Boolean success;
 
-    // 推送门店总数(对于门店组数据，则实时计算当前门店组中门店数)
     @NameInMap("Total")
     public Long total;
 

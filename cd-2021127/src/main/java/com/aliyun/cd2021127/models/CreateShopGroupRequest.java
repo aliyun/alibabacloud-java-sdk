@@ -21,11 +21,9 @@ public class CreateShopGroupRequest extends TeaModel {
     }
 
     public static class BatchCreateShopGroupRequestShopGroupList extends TeaModel {
-        // 门店组编号（ID）
         @NameInMap("ShopGroupId")
         public String shopGroupId;
 
-        // 门店组名称
         @NameInMap("ShopGroupName")
         public String shopGroupName;
 
@@ -53,11 +51,9 @@ public class CreateShopGroupRequest extends TeaModel {
     }
 
     public static class CreateShopGroupRequestShopGroupList extends TeaModel {
-        // 门店组编号（ID）
         @NameInMap("ShopGroupId")
         public String shopGroupId;
 
-        // 门店组名称
         @NameInMap("ShopGroupName")
         public String shopGroupName;
 

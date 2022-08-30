@@ -4,31 +4,24 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class CreateMenuDataRequest extends TeaModel {
-    // 菜单商品容器数据批次id-选填
     @NameInMap("BatchId")
     public String batchId;
 
-    // 数据优先级，数值越高，优先级越大（默认为0）-选填
     @NameInMap("Priority")
     public Integer priority;
 
-    // 菜单商品容器数据-必填
     @NameInMap("ProductCombineList")
     public java.util.List<CreateMenuDataRequestProductCombineList> productCombineList;
 
-    // 菜单商品容器数据id-必填
     @NameInMap("ProductContainerId")
     public String productContainerId;
 
-    // 自定义门店组id（当shopIdList为空才生效）-选填
     @NameInMap("ShopGroupId")
     public String shopGroupId;
 
-    // 自定义门店id列表（shopIdList不为空，shopGroupId无效，shopId=-1表示门店默认数据）-选填
     @NameInMap("ShopIdList")
     public java.util.List<String> shopIdList;
 
-    // 菜单商品容器数据类型（目前支持：top,morning,afternoon）-必填
     @NameInMap("Type")
     public String type;
 
@@ -94,39 +87,30 @@ public class CreateMenuDataRequest extends TeaModel {
     }
 
     public static class CreateMenuDataRequestProductCombineListProductItemListProductInfo extends TeaModel {
-        // 商品中文名称-必填
         @NameInMap("ChineseName")
         public String chineseName;
 
-        // 商品现价-选填
         @NameInMap("CurrentPrice")
         public String currentPrice;
 
-        // 商品描述-选填
         @NameInMap("Description")
         public String description;
 
-        // 商品英文名称-选填
         @NameInMap("EnglishName")
         public String englishName;
 
-        // 商品图标文字-选填
         @NameInMap("IconText")
         public String iconText;
 
-        // 商品原价-选填
         @NameInMap("OriginalPrice")
         public String originalPrice;
 
-        // 商品编号(ID)-必填
         @NameInMap("ProductId")
         public String productId;
 
-        // 商品类型（数据格式：顶层类型-中层类型-底层类型）-选填
         @NameInMap("ProductType")
         public String productType;
 
-        // 商品冷热属性（hot,cold,normal，默认normal，不做特效展示）-选填
         @NameInMap("Temperature")
         public String temperature;
 
@@ -210,11 +194,9 @@ public class CreateMenuDataRequest extends TeaModel {
     }
 
     public static class CreateMenuDataRequestProductCombineListProductItemList extends TeaModel {
-        // 商品顺序-必填
         @NameInMap("Order")
         public Integer order;
 
-        // 商品信息-必填
         @NameInMap("ProductInfo")
         public CreateMenuDataRequestProductCombineListProductItemListProductInfo productInfo;
 
@@ -242,15 +224,12 @@ public class CreateMenuDataRequest extends TeaModel {
     }
 
     public static class CreateMenuDataRequestProductCombineList extends TeaModel {
-        // 商品组名称-选填
         @NameInMap("Name")
         public String name;
 
-        // 组合顺序-必填
         @NameInMap("Order")
         public Integer order;
 
-        // 商品组信息-必填
         @NameInMap("ProductItemList")
         public java.util.List<CreateMenuDataRequestProductCombineListProductItemList> productItemList;
 

@@ -4,35 +4,27 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class QueryTicketListRequest extends TeaModel {
-    // 创建时间-结束时间(毫秒)-可选
     @NameInMap("EndTime")
     public Long endTime;
 
-    // 页码-必填
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页最大记录数-必填
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 问题门店ID列表-可选
     @NameInMap("ShopIdList")
     public java.util.List<String> shopIdList;
 
-    // 创建时间-开始时间(毫秒)-可选
     @NameInMap("StartTime")
     public Long startTime;
 
-    // 工单状态-可选
     @NameInMap("Status")
     public Integer status;
 
-    // 工单ID列表-可选
     @NameInMap("TicketIdList")
     public java.util.List<String> ticketIdList;
 
-    // 工单告警类型列表-必填
     @NameInMap("TicketTypeList")
     public java.util.List<String> ticketTypeList;
 

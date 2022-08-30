@@ -4,27 +4,21 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class CreateShopResponseBody extends TeaModel {
-    // 状态码
     @NameInMap("Code")
     public String code;
 
-    // 业务数据
     @NameInMap("Data")
     public java.util.List<String> data;
 
-    // http状态码
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // 说明
     @NameInMap("Message")
     public String message;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 成功标志
     @NameInMap("Success")
     public Boolean success;
 
@@ -82,15 +76,12 @@ public class CreateShopResponseBody extends TeaModel {
     }
 
     public static class BatchCreateShopResponseBodyData extends TeaModel {
-        // 错误码
         @NameInMap("Code")
         public String code;
 
-        // 错误信息
         @NameInMap("Message")
         public String message;
 
-        // 门店ID
         @NameInMap("ShopId")
         public String shopId;
 
