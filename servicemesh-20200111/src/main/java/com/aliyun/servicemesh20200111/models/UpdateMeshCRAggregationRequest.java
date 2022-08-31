@@ -22,9 +22,6 @@ public class UpdateMeshCRAggregationRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
-    @NameInMap("UpdatePermission")
-    public Boolean updatePermission;
-
     public static UpdateMeshCRAggregationRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMeshCRAggregationRequest self = new UpdateMeshCRAggregationRequest();
         return TeaModel.build(map, self);
@@ -76,14 +73,6 @@ public class UpdateMeshCRAggregationRequest extends TeaModel {
     }
     public String getServiceMeshId() {
         return this.serviceMeshId;
-    }
-
-    public UpdateMeshCRAggregationRequest setUpdatePermission(Boolean updatePermission) {
-        this.updatePermission = updatePermission;
-        return this;
-    }
-    public Boolean getUpdatePermission() {
-        return this.updatePermission;
     }
 
 }
