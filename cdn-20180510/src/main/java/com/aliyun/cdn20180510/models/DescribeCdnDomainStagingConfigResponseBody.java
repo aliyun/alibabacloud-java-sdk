@@ -7,6 +7,9 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
     @NameInMap("DomainConfigs")
     public java.util.List<DescribeCdnDomainStagingConfigResponseBodyDomainConfigs> domainConfigs;
 
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
     }
     public java.util.List<DescribeCdnDomainStagingConfigResponseBodyDomainConfigs> getDomainConfigs() {
         return this.domainConfigs;
+    }
+
+    public DescribeCdnDomainStagingConfigResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DescribeCdnDomainStagingConfigResponseBody setRequestId(String requestId) {
@@ -71,6 +82,9 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
         @NameInMap("FunctionName")
         public String functionName;
 
+        @NameInMap("ParentId")
+        public String parentId;
+
         @NameInMap("Status")
         public String status;
 
@@ -101,6 +115,14 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
         }
         public String getFunctionName() {
             return this.functionName;
+        }
+
+        public DescribeCdnDomainStagingConfigResponseBodyDomainConfigs setParentId(String parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public String getParentId() {
+            return this.parentId;
         }
 
         public DescribeCdnDomainStagingConfigResponseBodyDomainConfigs setStatus(String status) {

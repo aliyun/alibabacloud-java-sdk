@@ -13,9 +13,6 @@ public class SetConfigOfVersionRequest extends TeaModel {
     @NameInMap("FunctionId")
     public Long functionId;
 
-    @NameInMap("FunctionMatches")
-    public String functionMatches;
-
     @NameInMap("FunctionName")
     public String functionName;
 
@@ -58,14 +55,6 @@ public class SetConfigOfVersionRequest extends TeaModel {
     }
     public Long getFunctionId() {
         return this.functionId;
-    }
-
-    public SetConfigOfVersionRequest setFunctionMatches(String functionMatches) {
-        this.functionMatches = functionMatches;
-        return this;
-    }
-    public String getFunctionMatches() {
-        return this.functionMatches;
     }
 
     public SetConfigOfVersionRequest setFunctionName(String functionName) {
