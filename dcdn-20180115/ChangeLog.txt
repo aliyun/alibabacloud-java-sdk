@@ -1,3 +1,6 @@
+2022-08-31 Version: 1.0.17
+- Support STS.
+
 2022-08-24 Version: 1.0.16
 - AMP version.
 
