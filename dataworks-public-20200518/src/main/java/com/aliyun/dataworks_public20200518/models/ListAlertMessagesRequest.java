@@ -13,6 +13,9 @@ public class ListAlertMessagesRequest extends TeaModel {
     @NameInMap("AlertUser")
     public String alertUser;
 
+    @NameInMap("BaselineId")
+    public Long baselineId;
+
     @NameInMap("BeginTime")
     public String beginTime;
 
@@ -55,6 +58,14 @@ public class ListAlertMessagesRequest extends TeaModel {
     }
     public String getAlertUser() {
         return this.alertUser;
+    }
+
+    public ListAlertMessagesRequest setBaselineId(Long baselineId) {
+        this.baselineId = baselineId;
+        return this;
+    }
+    public Long getBaselineId() {
+        return this.baselineId;
     }
 
     public ListAlertMessagesRequest setBeginTime(String beginTime) {
