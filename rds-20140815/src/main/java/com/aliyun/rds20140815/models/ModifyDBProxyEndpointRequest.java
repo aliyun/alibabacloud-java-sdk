@@ -13,6 +13,9 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
 
+    @NameInMap("DBProxyEngineType")
+    public String DBProxyEngineType;
+
     @NameInMap("DbEndpointAliases")
     public String dbEndpointAliases;
 
@@ -73,6 +76,14 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     }
     public String getDBProxyEndpointId() {
         return this.DBProxyEndpointId;
+    }
+
+    public ModifyDBProxyEndpointRequest setDBProxyEngineType(String DBProxyEngineType) {
+        this.DBProxyEngineType = DBProxyEngineType;
+        return this;
+    }
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
     }
 
     public ModifyDBProxyEndpointRequest setDbEndpointAliases(String dbEndpointAliases) {

@@ -58,6 +58,9 @@ public class CloneDBInstanceRequest extends TeaModel {
     @NameInMap("RestoreTime")
     public String restoreTime;
 
+    @NameInMap("ServerlessConfig")
+    public CloneDBInstanceRequestServerlessConfig serverlessConfig;
+
     @NameInMap("TableMeta")
     public String tableMeta;
 
@@ -222,6 +225,14 @@ public class CloneDBInstanceRequest extends TeaModel {
         return this.restoreTime;
     }
 
+    public CloneDBInstanceRequest setServerlessConfig(CloneDBInstanceRequestServerlessConfig serverlessConfig) {
+        this.serverlessConfig = serverlessConfig;
+        return this;
+    }
+    public CloneDBInstanceRequestServerlessConfig getServerlessConfig() {
+        return this.serverlessConfig;
+    }
+
     public CloneDBInstanceRequest setTableMeta(String tableMeta) {
         this.tableMeta = tableMeta;
         return this;
@@ -260,6 +271,58 @@ public class CloneDBInstanceRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CloneDBInstanceRequestServerlessConfig extends TeaModel {
+        @NameInMap("AutoPause")
+        public Boolean autoPause;
+
+        @NameInMap("MaxCapacity")
+        public Double maxCapacity;
+
+        @NameInMap("MinCapacity")
+        public Double minCapacity;
+
+        @NameInMap("SwitchForce")
+        public Boolean switchForce;
+
+        public static CloneDBInstanceRequestServerlessConfig build(java.util.Map<String, ?> map) throws Exception {
+            CloneDBInstanceRequestServerlessConfig self = new CloneDBInstanceRequestServerlessConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CloneDBInstanceRequestServerlessConfig setAutoPause(Boolean autoPause) {
+            this.autoPause = autoPause;
+            return this;
+        }
+        public Boolean getAutoPause() {
+            return this.autoPause;
+        }
+
+        public CloneDBInstanceRequestServerlessConfig setMaxCapacity(Double maxCapacity) {
+            this.maxCapacity = maxCapacity;
+            return this;
+        }
+        public Double getMaxCapacity() {
+            return this.maxCapacity;
+        }
+
+        public CloneDBInstanceRequestServerlessConfig setMinCapacity(Double minCapacity) {
+            this.minCapacity = minCapacity;
+            return this;
+        }
+        public Double getMinCapacity() {
+            return this.minCapacity;
+        }
+
+        public CloneDBInstanceRequestServerlessConfig setSwitchForce(Boolean switchForce) {
+            this.switchForce = switchForce;
+            return this;
+        }
+        public Boolean getSwitchForce() {
+            return this.switchForce;
+        }
+
     }
 
 }

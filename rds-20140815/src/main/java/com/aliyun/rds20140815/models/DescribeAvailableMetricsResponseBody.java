@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableMetricsResponseBody extends TeaModel {
+    @NameInMap("DBInstanceName")
+    public String DBInstanceName;
+
     @NameInMap("Items")
     public java.util.List<DescribeAvailableMetricsResponseBodyItems> items;
 
@@ -16,6 +19,14 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
     public static DescribeAvailableMetricsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableMetricsResponseBody self = new DescribeAvailableMetricsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAvailableMetricsResponseBody setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
     }
 
     public DescribeAvailableMetricsResponseBody setItems(java.util.List<DescribeAvailableMetricsResponseBodyItems> items) {

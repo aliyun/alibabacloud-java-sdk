@@ -138,15 +138,29 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeServerlessConfig extends TeaModel {
+        @NameInMap("AutoPause")
+        public Boolean autoPause;
+
         @NameInMap("ScaleMax")
         public Double scaleMax;
 
         @NameInMap("ScaleMin")
         public Double scaleMin;
 
+        @NameInMap("SwitchForce")
+        public Boolean switchForce;
+
         public static DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeServerlessConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeServerlessConfig self = new DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeServerlessConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeServerlessConfig setAutoPause(Boolean autoPause) {
+            this.autoPause = autoPause;
+            return this;
+        }
+        public Boolean getAutoPause() {
+            return this.autoPause;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeServerlessConfig setScaleMax(Double scaleMax) {
@@ -163,6 +177,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Double getScaleMin() {
             return this.scaleMin;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeServerlessConfig setSwitchForce(Boolean switchForce) {
+            this.switchForce = switchForce;
+            return this;
+        }
+        public Boolean getSwitchForce() {
+            return this.switchForce;
         }
 
     }
@@ -397,6 +419,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @NameInMap("ZoneId")
         public String zoneId;
+
+        @NameInMap("kindCode")
+        public String kindCode;
 
         public static DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute self = new DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute();
@@ -913,6 +938,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setKindCode(String kindCode) {
+            this.kindCode = kindCode;
+            return this;
+        }
+        public String getKindCode() {
+            return this.kindCode;
         }
 
     }

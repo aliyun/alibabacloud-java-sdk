@@ -7,11 +7,17 @@ public class DescribeDBProxyRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DBProxyEngineType")
+    public String DBProxyEngineType;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -32,6 +38,14 @@ public class DescribeDBProxyRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
+    public DescribeDBProxyRequest setDBProxyEngineType(String DBProxyEngineType) {
+        this.DBProxyEngineType = DBProxyEngineType;
+        return this;
+    }
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
+    }
+
     public DescribeDBProxyRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -46,6 +60,14 @@ public class DescribeDBProxyRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDBProxyRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeDBProxyRequest setResourceOwnerAccount(String resourceOwnerAccount) {

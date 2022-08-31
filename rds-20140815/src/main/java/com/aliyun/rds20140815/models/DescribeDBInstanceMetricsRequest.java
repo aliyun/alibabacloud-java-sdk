@@ -7,6 +7,9 @@ public class DescribeDBInstanceMetricsRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -21,6 +24,14 @@ public class DescribeDBInstanceMetricsRequest extends TeaModel {
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public DescribeDBInstanceMetricsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeDBInstanceMetricsRequest setResourceOwnerId(Long resourceOwnerId) {

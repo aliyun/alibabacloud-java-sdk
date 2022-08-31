@@ -16,6 +16,9 @@ public class DescribeReadDBInstanceDelayRequest extends TeaModel {
     @NameInMap("ReadInstanceId")
     public String readInstanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -60,6 +63,14 @@ public class DescribeReadDBInstanceDelayRequest extends TeaModel {
     }
     public String getReadInstanceId() {
         return this.readInstanceId;
+    }
+
+    public DescribeReadDBInstanceDelayRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeReadDBInstanceDelayRequest setResourceOwnerAccount(String resourceOwnerAccount) {

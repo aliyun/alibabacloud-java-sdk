@@ -13,6 +13,9 @@ public class DescribeDBProxyEndpointRequest extends TeaModel {
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
 
+    @NameInMap("DBProxyEngineType")
+    public String DBProxyEngineType;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -52,6 +55,14 @@ public class DescribeDBProxyEndpointRequest extends TeaModel {
     }
     public String getDBProxyEndpointId() {
         return this.DBProxyEndpointId;
+    }
+
+    public DescribeDBProxyEndpointRequest setDBProxyEngineType(String DBProxyEngineType) {
+        this.DBProxyEngineType = DBProxyEngineType;
+        return this;
+    }
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
     }
 
     public DescribeDBProxyEndpointRequest setOwnerId(Long ownerId) {

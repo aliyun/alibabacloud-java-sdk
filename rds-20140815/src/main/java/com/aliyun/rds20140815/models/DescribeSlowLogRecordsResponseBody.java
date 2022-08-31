@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
-    @NameInMap("CPUTime")
-    public Long CPUTime;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -16,50 +13,21 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     @NameInMap("Items")
     public DescribeSlowLogRecordsResponseBodyItems items;
 
-    @NameInMap("LastRowsAffectedCount")
-    public Long lastRowsAffectedCount;
-
-    @NameInMap("LogicalIORead")
-    public Long logicalIORead;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
-    @NameInMap("PhysicalIORead")
-    public Long physicalIORead;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("RowsAffectedCount")
-    public Long rowsAffectedCount;
-
-    @NameInMap("SQLHash")
-    public String SQLHash;
 
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
-    @NameInMap("UserName")
-    public String userName;
-
-    @NameInMap("WritesIOCount")
-    public Long writesIOCount;
-
     public static DescribeSlowLogRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSlowLogRecordsResponseBody self = new DescribeSlowLogRecordsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSlowLogRecordsResponseBody setCPUTime(Long CPUTime) {
-        this.CPUTime = CPUTime;
-        return this;
-    }
-    public Long getCPUTime() {
-        return this.CPUTime;
     }
 
     public DescribeSlowLogRecordsResponseBody setDBInstanceId(String DBInstanceId) {
@@ -86,22 +54,6 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         return this.items;
     }
 
-    public DescribeSlowLogRecordsResponseBody setLastRowsAffectedCount(Long lastRowsAffectedCount) {
-        this.lastRowsAffectedCount = lastRowsAffectedCount;
-        return this;
-    }
-    public Long getLastRowsAffectedCount() {
-        return this.lastRowsAffectedCount;
-    }
-
-    public DescribeSlowLogRecordsResponseBody setLogicalIORead(Long logicalIORead) {
-        this.logicalIORead = logicalIORead;
-        return this;
-    }
-    public Long getLogicalIORead() {
-        return this.logicalIORead;
-    }
-
     public DescribeSlowLogRecordsResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -118,14 +70,6 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         return this.pageRecordCount;
     }
 
-    public DescribeSlowLogRecordsResponseBody setPhysicalIORead(Long physicalIORead) {
-        this.physicalIORead = physicalIORead;
-        return this;
-    }
-    public Long getPhysicalIORead() {
-        return this.physicalIORead;
-    }
-
     public DescribeSlowLogRecordsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -134,44 +78,12 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSlowLogRecordsResponseBody setRowsAffectedCount(Long rowsAffectedCount) {
-        this.rowsAffectedCount = rowsAffectedCount;
-        return this;
-    }
-    public Long getRowsAffectedCount() {
-        return this.rowsAffectedCount;
-    }
-
-    public DescribeSlowLogRecordsResponseBody setSQLHash(String SQLHash) {
-        this.SQLHash = SQLHash;
-        return this;
-    }
-    public String getSQLHash() {
-        return this.SQLHash;
-    }
-
     public DescribeSlowLogRecordsResponseBody setTotalRecordCount(Integer totalRecordCount) {
         this.totalRecordCount = totalRecordCount;
         return this;
     }
     public Integer getTotalRecordCount() {
         return this.totalRecordCount;
-    }
-
-    public DescribeSlowLogRecordsResponseBody setUserName(String userName) {
-        this.userName = userName;
-        return this;
-    }
-    public String getUserName() {
-        return this.userName;
-    }
-
-    public DescribeSlowLogRecordsResponseBody setWritesIOCount(Long writesIOCount) {
-        this.writesIOCount = writesIOCount;
-        return this;
-    }
-    public Long getWritesIOCount() {
-        return this.writesIOCount;
     }
 
     public static class DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord extends TeaModel {
@@ -219,6 +131,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
         @NameInMap("RowsAffectedCount")
         public Long rowsAffectedCount;
+
+        @NameInMap("SQLHash")
+        public String SQLHash;
 
         @NameInMap("SQLText")
         public String SQLText;
@@ -352,6 +267,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
         public Long getRowsAffectedCount() {
             return this.rowsAffectedCount;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setSQLHash(String SQLHash) {
+            this.SQLHash = SQLHash;
+            return this;
+        }
+        public String getSQLHash() {
+            return this.SQLHash;
         }
 
         public DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord setSQLText(String SQLText) {

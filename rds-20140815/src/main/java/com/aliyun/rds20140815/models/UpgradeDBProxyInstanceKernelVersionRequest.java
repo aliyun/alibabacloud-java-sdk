@@ -7,6 +7,9 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DBProxyEngineType")
+    public String DBProxyEngineType;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -33,6 +36,14 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public UpgradeDBProxyInstanceKernelVersionRequest setDBProxyEngineType(String DBProxyEngineType) {
+        this.DBProxyEngineType = DBProxyEngineType;
+        return this;
+    }
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
     }
 
     public UpgradeDBProxyInstanceKernelVersionRequest setOwnerId(Long ownerId) {

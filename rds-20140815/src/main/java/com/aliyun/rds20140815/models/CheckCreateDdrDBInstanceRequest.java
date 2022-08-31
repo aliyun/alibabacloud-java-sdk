@@ -7,15 +7,6 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
     @NameInMap("BackupSetId")
     public String backupSetId;
 
-    @NameInMap("BinlogName")
-    public String binlogName;
-
-    @NameInMap("BinlogPosition")
-    public String binlogPosition;
-
-    @NameInMap("BinlogRole")
-    public String binlogRole;
-
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
@@ -63,30 +54,6 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
     }
     public String getBackupSetId() {
         return this.backupSetId;
-    }
-
-    public CheckCreateDdrDBInstanceRequest setBinlogName(String binlogName) {
-        this.binlogName = binlogName;
-        return this;
-    }
-    public String getBinlogName() {
-        return this.binlogName;
-    }
-
-    public CheckCreateDdrDBInstanceRequest setBinlogPosition(String binlogPosition) {
-        this.binlogPosition = binlogPosition;
-        return this;
-    }
-    public String getBinlogPosition() {
-        return this.binlogPosition;
-    }
-
-    public CheckCreateDdrDBInstanceRequest setBinlogRole(String binlogRole) {
-        this.binlogRole = binlogRole;
-        return this;
-    }
-    public String getBinlogRole() {
-        return this.binlogRole;
     }
 
     public CheckCreateDdrDBInstanceRequest setDBInstanceClass(String DBInstanceClass) {

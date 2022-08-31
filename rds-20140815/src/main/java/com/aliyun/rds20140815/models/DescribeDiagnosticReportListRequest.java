@@ -7,6 +7,9 @@ public class DescribeDiagnosticReportListRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DescribeDiagnosticReportListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDiagnosticReportListRequest self = new DescribeDiagnosticReportListRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DescribeDiagnosticReportListRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeDiagnosticReportListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

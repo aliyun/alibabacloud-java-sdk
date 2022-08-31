@@ -7,7 +7,6 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
     @NameInMap("GadInstances")
     public java.util.List<DescribeGadInstancesResponseBodyGadInstances> gadInstances;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -47,6 +46,9 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("Role")
         public String role;
@@ -97,6 +99,14 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers setRole(String role) {

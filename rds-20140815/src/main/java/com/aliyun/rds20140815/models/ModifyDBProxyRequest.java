@@ -10,6 +10,9 @@ public class ModifyDBProxyRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DBProxyEngineType")
+    public String DBProxyEngineType;
+
     @NameInMap("DBProxyInstanceNum")
     public String DBProxyInstanceNum;
 
@@ -21,6 +24,9 @@ public class ModifyDBProxyRequest extends TeaModel {
 
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -55,6 +61,14 @@ public class ModifyDBProxyRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
+    public ModifyDBProxyRequest setDBProxyEngineType(String DBProxyEngineType) {
+        this.DBProxyEngineType = DBProxyEngineType;
+        return this;
+    }
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
+    }
+
     public ModifyDBProxyRequest setDBProxyInstanceNum(String DBProxyInstanceNum) {
         this.DBProxyInstanceNum = DBProxyInstanceNum;
         return this;
@@ -85,6 +99,14 @@ public class ModifyDBProxyRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyDBProxyRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ModifyDBProxyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
