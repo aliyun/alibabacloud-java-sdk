@@ -10,9 +10,6 @@ public class DescribeScdnDomainLogRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("PageNumber")
     public Long pageNumber;
 
@@ -41,14 +38,6 @@ public class DescribeScdnDomainLogRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeScdnDomainLogRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeScdnDomainLogRequest setPageNumber(Long pageNumber) {

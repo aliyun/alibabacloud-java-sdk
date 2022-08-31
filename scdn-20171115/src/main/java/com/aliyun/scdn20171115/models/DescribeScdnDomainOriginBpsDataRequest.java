@@ -13,9 +13,6 @@ public class DescribeScdnDomainOriginBpsDataRequest extends TeaModel {
     @NameInMap("Interval")
     public String interval;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -46,14 +43,6 @@ public class DescribeScdnDomainOriginBpsDataRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
-    }
-
-    public DescribeScdnDomainOriginBpsDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeScdnDomainOriginBpsDataRequest setStartTime(String startTime) {

@@ -10,9 +10,6 @@ public class DescribeScdnDDoSTrafficInfoRequest extends TeaModel {
     @NameInMap("Line")
     public String line;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -35,14 +32,6 @@ public class DescribeScdnDDoSTrafficInfoRequest extends TeaModel {
     }
     public String getLine() {
         return this.line;
-    }
-
-    public DescribeScdnDDoSTrafficInfoRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeScdnDDoSTrafficInfoRequest setStartTime(String startTime) {
