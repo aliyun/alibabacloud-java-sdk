@@ -10,9 +10,6 @@ public class SetScdnBotInfoRequest extends TeaModel {
     @NameInMap("Enable")
     public String enable;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Status")
     public String status;
 
@@ -35,14 +32,6 @@ public class SetScdnBotInfoRequest extends TeaModel {
     }
     public String getEnable() {
         return this.enable;
-    }
-
-    public SetScdnBotInfoRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public SetScdnBotInfoRequest setStatus(String status) {

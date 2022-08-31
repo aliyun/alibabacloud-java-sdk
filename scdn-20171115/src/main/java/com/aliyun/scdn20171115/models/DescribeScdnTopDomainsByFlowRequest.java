@@ -10,9 +10,6 @@ public class DescribeScdnTopDomainsByFlowRequest extends TeaModel {
     @NameInMap("Limit")
     public Long limit;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("Product")
     public String product;
 
@@ -38,14 +35,6 @@ public class DescribeScdnTopDomainsByFlowRequest extends TeaModel {
     }
     public Long getLimit() {
         return this.limit;
-    }
-
-    public DescribeScdnTopDomainsByFlowRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeScdnTopDomainsByFlowRequest setProduct(String product) {

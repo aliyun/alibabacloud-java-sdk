@@ -7,9 +7,6 @@ public class DescribeScdnDomainTopReferVisitRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("SortBy")
     public String sortBy;
 
@@ -27,14 +24,6 @@ public class DescribeScdnDomainTopReferVisitRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeScdnDomainTopReferVisitRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeScdnDomainTopReferVisitRequest setSortBy(String sortBy) {

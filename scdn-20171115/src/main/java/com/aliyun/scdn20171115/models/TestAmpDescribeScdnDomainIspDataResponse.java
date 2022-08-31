@@ -3,7 +3,7 @@ package com.aliyun.scdn20171115.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeScdnDDoSTrafficInfoResponse extends TeaModel {
+public class TestAmpDescribeScdnDomainIspDataResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeScdnDDoSTrafficInfoResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeScdnDDoSTrafficInfoResponseBody body;
+    public TestAmpDescribeScdnDomainIspDataResponseBody body;
 
-    public static DescribeScdnDDoSTrafficInfoResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeScdnDDoSTrafficInfoResponse self = new DescribeScdnDDoSTrafficInfoResponse();
+    public static TestAmpDescribeScdnDomainIspDataResponse build(java.util.Map<String, ?> map) throws Exception {
+        TestAmpDescribeScdnDomainIspDataResponse self = new TestAmpDescribeScdnDomainIspDataResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeScdnDDoSTrafficInfoResponse setHeaders(java.util.Map<String, String> headers) {
+    public TestAmpDescribeScdnDomainIspDataResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeScdnDDoSTrafficInfoResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeScdnDDoSTrafficInfoResponse setStatusCode(Integer statusCode) {
+    public TestAmpDescribeScdnDomainIspDataResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeScdnDDoSTrafficInfoResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeScdnDDoSTrafficInfoResponse setBody(DescribeScdnDDoSTrafficInfoResponseBody body) {
+    public TestAmpDescribeScdnDomainIspDataResponse setBody(TestAmpDescribeScdnDomainIspDataResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeScdnDDoSTrafficInfoResponseBody getBody() {
+    public TestAmpDescribeScdnDomainIspDataResponseBody getBody() {
         return this.body;
     }
 

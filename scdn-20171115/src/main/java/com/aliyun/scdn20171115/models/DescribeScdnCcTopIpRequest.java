@@ -10,9 +10,6 @@ public class DescribeScdnCcTopIpRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("PageNumber")
     public String pageNumber;
 
@@ -41,14 +38,6 @@ public class DescribeScdnCcTopIpRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeScdnCcTopIpRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeScdnCcTopIpRequest setPageNumber(String pageNumber) {

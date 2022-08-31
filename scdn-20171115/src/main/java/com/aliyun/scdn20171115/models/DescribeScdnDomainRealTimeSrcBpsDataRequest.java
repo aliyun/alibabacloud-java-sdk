@@ -10,9 +10,6 @@ public class DescribeScdnDomainRealTimeSrcBpsDataRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -35,14 +32,6 @@ public class DescribeScdnDomainRealTimeSrcBpsDataRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeScdnDomainRealTimeSrcBpsDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeScdnDomainRealTimeSrcBpsDataRequest setStartTime(String startTime) {

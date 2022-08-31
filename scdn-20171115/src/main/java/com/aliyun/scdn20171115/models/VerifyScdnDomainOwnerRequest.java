@@ -7,9 +7,6 @@ public class VerifyScdnDomainOwnerRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("VerifyType")
     public String verifyType;
 
@@ -24,14 +21,6 @@ public class VerifyScdnDomainOwnerRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public VerifyScdnDomainOwnerRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public VerifyScdnDomainOwnerRequest setVerifyType(String verifyType) {
