@@ -50,7 +50,7 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
         public String totalValue;
 
         @NameInMap("Value")
-        public String value;
+        public java.util.Map<String, ?> value;
 
         public static DescribeDcdnDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule self = new DescribeDcdnDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule();
@@ -73,11 +73,11 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
             return this.totalValue;
         }
 
-        public DescribeDcdnDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule setValue(String value) {
+        public DescribeDcdnDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule setValue(java.util.Map<String, ?> value) {
             this.value = value;
             return this;
         }
-        public String getValue() {
+        public java.util.Map<String, ?> getValue() {
             return this.value;
         }
 
