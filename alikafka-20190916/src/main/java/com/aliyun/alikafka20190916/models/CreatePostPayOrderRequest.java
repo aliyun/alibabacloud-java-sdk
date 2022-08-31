@@ -22,6 +22,9 @@ public class CreatePostPayOrderRequest extends TeaModel {
     @NameInMap("IoMaxSpec")
     public String ioMaxSpec;
 
+    @NameInMap("PartitionNum")
+    public Integer partitionNum;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -85,6 +88,14 @@ public class CreatePostPayOrderRequest extends TeaModel {
     }
     public String getIoMaxSpec() {
         return this.ioMaxSpec;
+    }
+
+    public CreatePostPayOrderRequest setPartitionNum(Integer partitionNum) {
+        this.partitionNum = partitionNum;
+        return this;
+    }
+    public Integer getPartitionNum() {
+        return this.partitionNum;
     }
 
     public CreatePostPayOrderRequest setRegionId(String regionId) {

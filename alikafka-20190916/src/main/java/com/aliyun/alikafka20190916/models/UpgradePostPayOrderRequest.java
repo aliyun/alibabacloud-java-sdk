@@ -22,6 +22,9 @@ public class UpgradePostPayOrderRequest extends TeaModel {
     @NameInMap("IoMaxSpec")
     public String ioMaxSpec;
 
+    @NameInMap("PartitionNum")
+    public Integer partitionNum;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -82,6 +85,14 @@ public class UpgradePostPayOrderRequest extends TeaModel {
     }
     public String getIoMaxSpec() {
         return this.ioMaxSpec;
+    }
+
+    public UpgradePostPayOrderRequest setPartitionNum(Integer partitionNum) {
+        this.partitionNum = partitionNum;
+        return this;
+    }
+    public Integer getPartitionNum() {
+        return this.partitionNum;
     }
 
     public UpgradePostPayOrderRequest setRegionId(String regionId) {

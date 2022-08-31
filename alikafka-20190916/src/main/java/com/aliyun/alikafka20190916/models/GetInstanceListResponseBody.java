@@ -166,6 +166,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("IoMax")
         public Integer ioMax;
 
+        @NameInMap("KmsKeyId")
+        public String kmsKeyId;
+
         @NameInMap("MsgRetain")
         public Integer msgRetain;
 
@@ -317,6 +320,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public Integer getIoMax() {
             return this.ioMax;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setKmsKeyId(String kmsKeyId) {
+            this.kmsKeyId = kmsKeyId;
+            return this;
+        }
+        public String getKmsKeyId() {
+            return this.kmsKeyId;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setMsgRetain(Integer msgRetain) {
