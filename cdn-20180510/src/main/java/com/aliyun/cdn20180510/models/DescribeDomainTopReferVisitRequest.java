@@ -13,9 +13,6 @@ public class DescribeDomainTopReferVisitRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("Percent")
-    public String percent;
-
     @NameInMap("SortBy")
     public String sortBy;
 
@@ -49,14 +46,6 @@ public class DescribeDomainTopReferVisitRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeDomainTopReferVisitRequest setPercent(String percent) {
-        this.percent = percent;
-        return this;
-    }
-    public String getPercent() {
-        return this.percent;
     }
 
     public DescribeDomainTopReferVisitRequest setSortBy(String sortBy) {
