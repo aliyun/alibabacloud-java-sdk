@@ -250,6 +250,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("Details")
         public java.util.List<DescribeSuspEventsResponseBodySuspEventsDetails> details;
 
+        @NameInMap("DisplaySandboxResult")
+        public Boolean displaySandboxResult;
+
         @NameInMap("EventNotes")
         public java.util.List<DescribeSuspEventsResponseBodySuspEventsEventNotes> eventNotes;
 
@@ -485,6 +488,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeSuspEventsResponseBodySuspEventsDetails> getDetails() {
             return this.details;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setDisplaySandboxResult(Boolean displaySandboxResult) {
+            this.displaySandboxResult = displaySandboxResult;
+            return this;
+        }
+        public Boolean getDisplaySandboxResult() {
+            return this.displaySandboxResult;
         }
 
         public DescribeSuspEventsResponseBodySuspEvents setEventNotes(java.util.List<DescribeSuspEventsResponseBodySuspEventsEventNotes> eventNotes) {
