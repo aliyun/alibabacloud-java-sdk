@@ -7,6 +7,9 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DBProxyEngineType")
+    public String DBProxyEngineType;
+
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
@@ -42,6 +45,14 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeDBProxyPerformanceRequest setDBProxyEngineType(String DBProxyEngineType) {
+        this.DBProxyEngineType = DBProxyEngineType;
+        return this;
+    }
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
     }
 
     public DescribeDBProxyPerformanceRequest setDBProxyInstanceType(String DBProxyInstanceType) {

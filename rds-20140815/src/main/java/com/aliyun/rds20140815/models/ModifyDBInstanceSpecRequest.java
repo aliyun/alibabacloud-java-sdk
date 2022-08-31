@@ -40,7 +40,6 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
-    // 资源组名称
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -231,15 +230,29 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     }
 
     public static class ModifyDBInstanceSpecRequestServerlessConfiguration extends TeaModel {
+        @NameInMap("AutoPause")
+        public Boolean autoPause;
+
         @NameInMap("MaxCapacity")
         public Double maxCapacity;
 
         @NameInMap("MinCapacity")
         public Double minCapacity;
 
+        @NameInMap("SwitchForce")
+        public Boolean switchForce;
+
         public static ModifyDBInstanceSpecRequestServerlessConfiguration build(java.util.Map<String, ?> map) throws Exception {
             ModifyDBInstanceSpecRequestServerlessConfiguration self = new ModifyDBInstanceSpecRequestServerlessConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyDBInstanceSpecRequestServerlessConfiguration setAutoPause(Boolean autoPause) {
+            this.autoPause = autoPause;
+            return this;
+        }
+        public Boolean getAutoPause() {
+            return this.autoPause;
         }
 
         public ModifyDBInstanceSpecRequestServerlessConfiguration setMaxCapacity(Double maxCapacity) {
@@ -256,6 +269,14 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
         }
         public Double getMinCapacity() {
             return this.minCapacity;
+        }
+
+        public ModifyDBInstanceSpecRequestServerlessConfiguration setSwitchForce(Boolean switchForce) {
+            this.switchForce = switchForce;
+            return this;
+        }
+        public Boolean getSwitchForce() {
+            return this.switchForce;
         }
 
     }

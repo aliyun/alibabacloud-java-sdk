@@ -28,6 +28,9 @@ public class DescribeMetaListRequest extends TeaModel {
     @NameInMap("Pattern")
     public String pattern;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -107,6 +110,14 @@ public class DescribeMetaListRequest extends TeaModel {
     }
     public String getPattern() {
         return this.pattern;
+    }
+
+    public DescribeMetaListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeMetaListRequest setResourceOwnerAccount(String resourceOwnerAccount) {

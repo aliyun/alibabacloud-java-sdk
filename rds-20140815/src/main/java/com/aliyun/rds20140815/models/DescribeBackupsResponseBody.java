@@ -196,6 +196,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("MetaStatus")
         public String metaStatus;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("StorageClass")
         public String storageClass;
 
@@ -365,6 +368,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getMetaStatus() {
             return this.metaStatus;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeBackupsResponseBodyItemsBackup setStorageClass(String storageClass) {

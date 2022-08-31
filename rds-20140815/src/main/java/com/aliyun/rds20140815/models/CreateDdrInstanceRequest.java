@@ -7,15 +7,6 @@ public class CreateDdrInstanceRequest extends TeaModel {
     @NameInMap("BackupSetId")
     public String backupSetId;
 
-    @NameInMap("BinlogName")
-    public String binlogName;
-
-    @NameInMap("BinlogPosition")
-    public String binlogPosition;
-
-    @NameInMap("BinlogRole")
-    public String binlogRole;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -114,30 +105,6 @@ public class CreateDdrInstanceRequest extends TeaModel {
     }
     public String getBackupSetId() {
         return this.backupSetId;
-    }
-
-    public CreateDdrInstanceRequest setBinlogName(String binlogName) {
-        this.binlogName = binlogName;
-        return this;
-    }
-    public String getBinlogName() {
-        return this.binlogName;
-    }
-
-    public CreateDdrInstanceRequest setBinlogPosition(String binlogPosition) {
-        this.binlogPosition = binlogPosition;
-        return this;
-    }
-    public String getBinlogPosition() {
-        return this.binlogPosition;
-    }
-
-    public CreateDdrInstanceRequest setBinlogRole(String binlogRole) {
-        this.binlogRole = binlogRole;
-        return this;
-    }
-    public String getBinlogRole() {
-        return this.binlogRole;
     }
 
     public CreateDdrInstanceRequest setClientToken(String clientToken) {

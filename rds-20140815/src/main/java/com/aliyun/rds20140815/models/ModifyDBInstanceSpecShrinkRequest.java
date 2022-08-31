@@ -40,7 +40,6 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
-    // 资源组名称
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

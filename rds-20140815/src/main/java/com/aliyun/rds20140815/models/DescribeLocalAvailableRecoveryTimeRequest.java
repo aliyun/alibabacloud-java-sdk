@@ -13,6 +13,9 @@ public class DescribeLocalAvailableRecoveryTimeRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -46,6 +49,14 @@ public class DescribeLocalAvailableRecoveryTimeRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public DescribeLocalAvailableRecoveryTimeRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeLocalAvailableRecoveryTimeRequest setResourceOwnerAccount(String resourceOwnerAccount) {

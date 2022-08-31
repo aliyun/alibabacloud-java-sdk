@@ -538,15 +538,29 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
 
     public static class CreateDBInstanceRequestServerlessConfig extends TeaModel {
+        @NameInMap("AutoPause")
+        public Boolean autoPause;
+
         @NameInMap("MaxCapacity")
         public Double maxCapacity;
 
         @NameInMap("MinCapacity")
         public Double minCapacity;
 
+        @NameInMap("SwitchForce")
+        public Boolean switchForce;
+
         public static CreateDBInstanceRequestServerlessConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateDBInstanceRequestServerlessConfig self = new CreateDBInstanceRequestServerlessConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDBInstanceRequestServerlessConfig setAutoPause(Boolean autoPause) {
+            this.autoPause = autoPause;
+            return this;
+        }
+        public Boolean getAutoPause() {
+            return this.autoPause;
         }
 
         public CreateDBInstanceRequestServerlessConfig setMaxCapacity(Double maxCapacity) {
@@ -563,6 +577,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         }
         public Double getMinCapacity() {
             return this.minCapacity;
+        }
+
+        public CreateDBInstanceRequestServerlessConfig setSwitchForce(Boolean switchForce) {
+            this.switchForce = switchForce;
+            return this;
+        }
+        public Boolean getSwitchForce() {
+            return this.switchForce;
         }
 
     }

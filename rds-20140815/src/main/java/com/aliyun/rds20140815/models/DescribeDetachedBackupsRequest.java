@@ -28,6 +28,9 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -101,6 +104,14 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public DescribeDetachedBackupsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeDetachedBackupsRequest setResourceOwnerId(Long resourceOwnerId) {

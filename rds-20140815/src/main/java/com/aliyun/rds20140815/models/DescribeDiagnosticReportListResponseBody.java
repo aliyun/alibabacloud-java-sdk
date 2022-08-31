@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportListResponseBody extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
     @NameInMap("ReportList")
     public java.util.List<DescribeDiagnosticReportListResponseBodyReportList> reportList;
 
@@ -13,6 +16,14 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
     public static DescribeDiagnosticReportListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDiagnosticReportListResponseBody self = new DescribeDiagnosticReportListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDiagnosticReportListResponseBody setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     public DescribeDiagnosticReportListResponseBody setReportList(java.util.List<DescribeDiagnosticReportListResponseBodyReportList> reportList) {

@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribePGHbaConfigResponseBody extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
     @NameInMap("DefaultHbaItems")
     public DescribePGHbaConfigResponseBodyDefaultHbaItems defaultHbaItems;
 
@@ -25,6 +28,14 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
     public static DescribePGHbaConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePGHbaConfigResponseBody self = new DescribePGHbaConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePGHbaConfigResponseBody setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     public DescribePGHbaConfigResponseBody setDefaultHbaItems(DescribePGHbaConfigResponseBodyDefaultHbaItems defaultHbaItems) {

@@ -41,9 +41,6 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
         @NameInMap("ReadonlyInstanceSQLDelayedTime")
         public String readonlyInstanceSQLDelayedTime;
 
-        @NameInMap("Role")
-        public String role;
-
         @NameInMap("Weight")
         public String weight;
 
@@ -74,14 +71,6 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
         }
         public String getReadonlyInstanceSQLDelayedTime() {
             return this.readonlyInstanceSQLDelayedTime;
-        }
-
-        public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setRole(String role) {
-            this.role = role;
-            return this;
-        }
-        public String getRole() {
-            return this.role;
         }
 
         public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setWeight(String weight) {

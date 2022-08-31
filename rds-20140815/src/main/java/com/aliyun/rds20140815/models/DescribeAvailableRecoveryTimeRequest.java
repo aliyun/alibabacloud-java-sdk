@@ -7,11 +7,17 @@ public class DescribeAvailableRecoveryTimeRequest extends TeaModel {
     @NameInMap("CrossBackupId")
     public Integer crossBackupId;
 
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -32,6 +38,14 @@ public class DescribeAvailableRecoveryTimeRequest extends TeaModel {
         return this.crossBackupId;
     }
 
+    public DescribeAvailableRecoveryTimeRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
     public DescribeAvailableRecoveryTimeRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -46,6 +60,14 @@ public class DescribeAvailableRecoveryTimeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeAvailableRecoveryTimeRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeAvailableRecoveryTimeRequest setResourceOwnerAccount(String resourceOwnerAccount) {

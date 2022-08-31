@@ -13,6 +13,9 @@ public class DescribeBackupsRequest extends TeaModel {
     @NameInMap("BackupStatus")
     public String backupStatus;
 
+    @NameInMap("BackupType")
+    public String backupType;
+
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -24,6 +27,9 @@ public class DescribeBackupsRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
@@ -60,6 +66,14 @@ public class DescribeBackupsRequest extends TeaModel {
         return this.backupStatus;
     }
 
+    public DescribeBackupsRequest setBackupType(String backupType) {
+        this.backupType = backupType;
+        return this;
+    }
+    public String getBackupType() {
+        return this.backupType;
+    }
+
     public DescribeBackupsRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
@@ -90,6 +104,14 @@ public class DescribeBackupsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeBackupsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeBackupsRequest setResourceOwnerId(Long resourceOwnerId) {

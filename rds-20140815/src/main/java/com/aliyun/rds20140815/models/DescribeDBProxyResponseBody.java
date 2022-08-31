@@ -7,6 +7,9 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     @NameInMap("DBProxyConnectStringItems")
     public DescribeDBProxyResponseBodyDBProxyConnectStringItems DBProxyConnectStringItems;
 
+    @NameInMap("DBProxyEngineType")
+    public String DBProxyEngineType;
+
     @NameInMap("DBProxyInstanceCurrentMinorVersion")
     public String DBProxyInstanceCurrentMinorVersion;
 
@@ -37,6 +40,9 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DescribeDBProxyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBProxyResponseBody self = new DescribeDBProxyResponseBody();
         return TeaModel.build(map, self);
@@ -48,6 +54,14 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     }
     public DescribeDBProxyResponseBodyDBProxyConnectStringItems getDBProxyConnectStringItems() {
         return this.DBProxyConnectStringItems;
+    }
+
+    public DescribeDBProxyResponseBody setDBProxyEngineType(String DBProxyEngineType) {
+        this.DBProxyEngineType = DBProxyEngineType;
+        return this;
+    }
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
     }
 
     public DescribeDBProxyResponseBody setDBProxyInstanceCurrentMinorVersion(String DBProxyInstanceCurrentMinorVersion) {
@@ -128,6 +142,14 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDBProxyResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public static class DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems extends TeaModel {

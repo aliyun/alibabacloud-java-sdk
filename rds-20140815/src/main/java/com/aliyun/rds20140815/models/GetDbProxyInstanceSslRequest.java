@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class GetDbProxyInstanceSslRequest extends TeaModel {
+    @NameInMap("DBProxyEngineType")
+    public String DBProxyEngineType;
+
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
@@ -13,6 +16,14 @@ public class GetDbProxyInstanceSslRequest extends TeaModel {
     public static GetDbProxyInstanceSslRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDbProxyInstanceSslRequest self = new GetDbProxyInstanceSslRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetDbProxyInstanceSslRequest setDBProxyEngineType(String DBProxyEngineType) {
+        this.DBProxyEngineType = DBProxyEngineType;
+        return this;
+    }
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
     }
 
     public GetDbProxyInstanceSslRequest setDbInstanceId(String dbInstanceId) {

@@ -16,11 +16,17 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
 
+    @NameInMap("DBProxyEngineType")
+    public String DBProxyEngineType;
+
     @NameInMap("DBProxyNewConnectStringPort")
     public String DBProxyNewConnectStringPort;
 
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("VPCId")
     public String VPCId;
@@ -65,6 +71,14 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
         return this.DBProxyEndpointId;
     }
 
+    public CreateDBProxyEndpointAddressRequest setDBProxyEngineType(String DBProxyEngineType) {
+        this.DBProxyEngineType = DBProxyEngineType;
+        return this;
+    }
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
+    }
+
     public CreateDBProxyEndpointAddressRequest setDBProxyNewConnectStringPort(String DBProxyNewConnectStringPort) {
         this.DBProxyNewConnectStringPort = DBProxyNewConnectStringPort;
         return this;
@@ -79,6 +93,14 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateDBProxyEndpointAddressRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateDBProxyEndpointAddressRequest setVPCId(String VPCId) {

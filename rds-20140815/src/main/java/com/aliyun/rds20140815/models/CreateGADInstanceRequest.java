@@ -22,6 +22,12 @@ public class CreateGADInstanceRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateGADInstanceRequestTag> tag;
+
     @NameInMap("UnitNode")
     public java.util.List<CreateGADInstanceRequestUnitNode> unitNode;
 
@@ -78,12 +84,58 @@ public class CreateGADInstanceRequest extends TeaModel {
         return this.description;
     }
 
+    public CreateGADInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateGADInstanceRequest setTag(java.util.List<CreateGADInstanceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateGADInstanceRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateGADInstanceRequest setUnitNode(java.util.List<CreateGADInstanceRequestUnitNode> unitNode) {
         this.unitNode = unitNode;
         return this;
     }
     public java.util.List<CreateGADInstanceRequestUnitNode> getUnitNode() {
         return this.unitNode;
+    }
+
+    public static class CreateGADInstanceRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateGADInstanceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateGADInstanceRequestTag self = new CreateGADInstanceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateGADInstanceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateGADInstanceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class CreateGADInstanceRequestUnitNode extends TeaModel {

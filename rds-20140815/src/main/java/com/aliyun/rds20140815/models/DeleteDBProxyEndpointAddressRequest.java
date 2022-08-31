@@ -13,6 +13,9 @@ public class DeleteDBProxyEndpointAddressRequest extends TeaModel {
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
 
+    @NameInMap("DBProxyEngineType")
+    public String DBProxyEngineType;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -43,6 +46,14 @@ public class DeleteDBProxyEndpointAddressRequest extends TeaModel {
     }
     public String getDBProxyEndpointId() {
         return this.DBProxyEndpointId;
+    }
+
+    public DeleteDBProxyEndpointAddressRequest setDBProxyEngineType(String DBProxyEngineType) {
+        this.DBProxyEngineType = DBProxyEngineType;
+        return this;
+    }
+    public String getDBProxyEngineType() {
+        return this.DBProxyEngineType;
     }
 
     public DeleteDBProxyEndpointAddressRequest setRegionId(String regionId) {

@@ -7,6 +7,9 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("AutoPay")
     public String autoPay;
 
+    @NameInMap("AutoRenew")
+    public String autoRenew;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -36,6 +39,14 @@ public class RenewInstanceRequest extends TeaModel {
     }
     public String getAutoPay() {
         return this.autoPay;
+    }
+
+    public RenewInstanceRequest setAutoRenew(String autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public String getAutoRenew() {
+        return this.autoRenew;
     }
 
     public RenewInstanceRequest setClientToken(String clientToken) {
