@@ -3,7 +3,7 @@ package com.aliyun.cloudsso20210515.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateAccessConfigurationResponse extends TeaModel {
+public class UpdateMFAAuthenticationSettingsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class UpdateAccessConfigurationResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdateAccessConfigurationResponseBody body;
+    public UpdateMFAAuthenticationSettingsResponseBody body;
 
-    public static UpdateAccessConfigurationResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateAccessConfigurationResponse self = new UpdateAccessConfigurationResponse();
+    public static UpdateMFAAuthenticationSettingsResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateMFAAuthenticationSettingsResponse self = new UpdateMFAAuthenticationSettingsResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateAccessConfigurationResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateMFAAuthenticationSettingsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class UpdateAccessConfigurationResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateAccessConfigurationResponse setStatusCode(Integer statusCode) {
+    public UpdateMFAAuthenticationSettingsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class UpdateAccessConfigurationResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateAccessConfigurationResponse setBody(UpdateAccessConfigurationResponseBody body) {
+    public UpdateMFAAuthenticationSettingsResponse setBody(UpdateMFAAuthenticationSettingsResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateAccessConfigurationResponseBody getBody() {
+    public UpdateMFAAuthenticationSettingsResponseBody getBody() {
         return this.body;
     }
 
