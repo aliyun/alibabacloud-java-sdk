@@ -367,6 +367,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("EcsMetricEnabled")
         public Boolean ecsMetricEnabled;
 
+        @NameInMap("EipBindMode")
+        public String eipBindMode;
+
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
@@ -484,6 +487,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
         public Boolean getEcsMetricEnabled() {
             return this.ecsMetricEnabled;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setEipBindMode(String eipBindMode) {
+            this.eipBindMode = eipBindMode;
+            return this;
+        }
+        public String getEipBindMode() {
+            return this.eipBindMode;
         }
 
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setExpiredTime(String expiredTime) {
