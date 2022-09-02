@@ -22,6 +22,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
+    @NameInMap("ossMountConfig")
+    public OSSMountConfig ossMountConfig;
+
     @NameInMap("role")
     public String role;
 
@@ -88,6 +91,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public NASConfig getNasConfig() {
         return this.nasConfig;
+    }
+
+    public GetServiceResponseBody setOssMountConfig(OSSMountConfig ossMountConfig) {
+        this.ossMountConfig = ossMountConfig;
+        return this;
+    }
+    public OSSMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
     }
 
     public GetServiceResponseBody setRole(String role) {

@@ -47,6 +47,9 @@ public class ListFunctionsResponseBody extends TeaModel {
         @NameInMap("customContainerConfig")
         public CustomContainerConfig customContainerConfig;
 
+        @NameInMap("customHealthCheckConfig")
+        public CustomHealthCheckConfig customHealthCheckConfig;
+
         @NameInMap("description")
         public String description;
 
@@ -138,6 +141,14 @@ public class ListFunctionsResponseBody extends TeaModel {
         }
         public CustomContainerConfig getCustomContainerConfig() {
             return this.customContainerConfig;
+        }
+
+        public ListFunctionsResponseBodyFunctions setCustomHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
+            this.customHealthCheckConfig = customHealthCheckConfig;
+            return this;
+        }
+        public CustomHealthCheckConfig getCustomHealthCheckConfig() {
+            return this.customHealthCheckConfig;
         }
 
         public ListFunctionsResponseBodyFunctions setDescription(String description) {
