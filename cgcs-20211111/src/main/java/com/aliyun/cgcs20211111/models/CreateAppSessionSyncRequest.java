@@ -4,6 +4,9 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppSessionSyncRequest extends TeaModel {
+    @NameInMap("AdapterFileId")
+    public String adapterFileId;
+
     @NameInMap("AppId")
     public String appId;
 
@@ -22,6 +25,9 @@ public class CreateAppSessionSyncRequest extends TeaModel {
     @NameInMap("DistrictId")
     public String districtId;
 
+    @NameInMap("MatchRules")
+    public java.util.List<CreateAppSessionSyncRequestMatchRules> matchRules;
+
     @NameInMap("ProjectId")
     public String projectId;
 
@@ -37,6 +43,14 @@ public class CreateAppSessionSyncRequest extends TeaModel {
     public static CreateAppSessionSyncRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppSessionSyncRequest self = new CreateAppSessionSyncRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAppSessionSyncRequest setAdapterFileId(String adapterFileId) {
+        this.adapterFileId = adapterFileId;
+        return this;
+    }
+    public String getAdapterFileId() {
+        return this.adapterFileId;
     }
 
     public CreateAppSessionSyncRequest setAppId(String appId) {
@@ -87,6 +101,14 @@ public class CreateAppSessionSyncRequest extends TeaModel {
         return this.districtId;
     }
 
+    public CreateAppSessionSyncRequest setMatchRules(java.util.List<CreateAppSessionSyncRequestMatchRules> matchRules) {
+        this.matchRules = matchRules;
+        return this;
+    }
+    public java.util.List<CreateAppSessionSyncRequestMatchRules> getMatchRules() {
+        return this.matchRules;
+    }
+
     public CreateAppSessionSyncRequest setProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -117,6 +139,47 @@ public class CreateAppSessionSyncRequest extends TeaModel {
     }
     public java.util.List<CreateAppSessionSyncRequestTags> getTags() {
         return this.tags;
+    }
+
+    public static class CreateAppSessionSyncRequestMatchRules extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static CreateAppSessionSyncRequestMatchRules build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppSessionSyncRequestMatchRules self = new CreateAppSessionSyncRequestMatchRules();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppSessionSyncRequestMatchRules setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateAppSessionSyncRequestMatchRules setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public CreateAppSessionSyncRequestMatchRules setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
     }
 
     public static class CreateAppSessionSyncRequestStartParameters extends TeaModel {

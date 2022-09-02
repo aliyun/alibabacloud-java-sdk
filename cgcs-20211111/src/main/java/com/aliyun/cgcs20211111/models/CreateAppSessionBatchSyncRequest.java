@@ -31,6 +31,47 @@ public class CreateAppSessionBatchSyncRequest extends TeaModel {
         return this.batchId;
     }
 
+    public static class CreateAppSessionBatchSyncRequestAppInfosMatchRules extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static CreateAppSessionBatchSyncRequestAppInfosMatchRules build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppSessionBatchSyncRequestAppInfosMatchRules self = new CreateAppSessionBatchSyncRequestAppInfosMatchRules();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppSessionBatchSyncRequestAppInfosMatchRules setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateAppSessionBatchSyncRequestAppInfosMatchRules setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public CreateAppSessionBatchSyncRequestAppInfosMatchRules setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
     public static class CreateAppSessionBatchSyncRequestAppInfosStartParameters extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -122,6 +163,9 @@ public class CreateAppSessionBatchSyncRequest extends TeaModel {
     }
 
     public static class CreateAppSessionBatchSyncRequestAppInfos extends TeaModel {
+        @NameInMap("AdapterFileId")
+        public String adapterFileId;
+
         @NameInMap("AppId")
         public String appId;
 
@@ -140,6 +184,9 @@ public class CreateAppSessionBatchSyncRequest extends TeaModel {
         @NameInMap("DistrictId")
         public String districtId;
 
+        @NameInMap("MatchRules")
+        public java.util.List<CreateAppSessionBatchSyncRequestAppInfosMatchRules> matchRules;
+
         @NameInMap("ProjectId")
         public String projectId;
 
@@ -155,6 +202,14 @@ public class CreateAppSessionBatchSyncRequest extends TeaModel {
         public static CreateAppSessionBatchSyncRequestAppInfos build(java.util.Map<String, ?> map) throws Exception {
             CreateAppSessionBatchSyncRequestAppInfos self = new CreateAppSessionBatchSyncRequestAppInfos();
             return TeaModel.build(map, self);
+        }
+
+        public CreateAppSessionBatchSyncRequestAppInfos setAdapterFileId(String adapterFileId) {
+            this.adapterFileId = adapterFileId;
+            return this;
+        }
+        public String getAdapterFileId() {
+            return this.adapterFileId;
         }
 
         public CreateAppSessionBatchSyncRequestAppInfos setAppId(String appId) {
@@ -203,6 +258,14 @@ public class CreateAppSessionBatchSyncRequest extends TeaModel {
         }
         public String getDistrictId() {
             return this.districtId;
+        }
+
+        public CreateAppSessionBatchSyncRequestAppInfos setMatchRules(java.util.List<CreateAppSessionBatchSyncRequestAppInfosMatchRules> matchRules) {
+            this.matchRules = matchRules;
+            return this;
+        }
+        public java.util.List<CreateAppSessionBatchSyncRequestAppInfosMatchRules> getMatchRules() {
+            return this.matchRules;
         }
 
         public CreateAppSessionBatchSyncRequestAppInfos setProjectId(String projectId) {
