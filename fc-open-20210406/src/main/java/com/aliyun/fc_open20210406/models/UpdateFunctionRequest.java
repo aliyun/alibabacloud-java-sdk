@@ -19,6 +19,9 @@ public class UpdateFunctionRequest extends TeaModel {
     @NameInMap("customDNS")
     public CustomDNS customDNS;
 
+    @NameInMap("customHealthCheckConfig")
+    public CustomHealthCheckConfig customHealthCheckConfig;
+
     @NameInMap("customRuntimeConfig")
     public CustomRuntimeConfig customRuntimeConfig;
 
@@ -101,6 +104,14 @@ public class UpdateFunctionRequest extends TeaModel {
     }
     public CustomDNS getCustomDNS() {
         return this.customDNS;
+    }
+
+    public UpdateFunctionRequest setCustomHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
+        this.customHealthCheckConfig = customHealthCheckConfig;
+        return this;
+    }
+    public CustomHealthCheckConfig getCustomHealthCheckConfig() {
+        return this.customHealthCheckConfig;
     }
 
     public UpdateFunctionRequest setCustomRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {
