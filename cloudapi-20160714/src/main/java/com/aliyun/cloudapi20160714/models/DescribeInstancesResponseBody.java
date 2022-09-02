@@ -132,9 +132,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        @NameInMap("EgressAddressChangeNotify")
-        public Boolean egressAddressChangeNotify;
-
         @NameInMap("EgressIpv6Enable")
         public Boolean egressIpv6Enable;
 
@@ -255,14 +252,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getCreatedTime() {
             return this.createdTime;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceAttribute setEgressAddressChangeNotify(Boolean egressAddressChangeNotify) {
-            this.egressAddressChangeNotify = egressAddressChangeNotify;
-            return this;
-        }
-        public Boolean getEgressAddressChangeNotify() {
-            return this.egressAddressChangeNotify;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceAttribute setEgressIpv6Enable(Boolean egressIpv6Enable) {

@@ -10,6 +10,9 @@ public class RemoveIpControlPolicyItemRequest extends TeaModel {
     @NameInMap("PolicyItemIds")
     public String policyItemIds;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static RemoveIpControlPolicyItemRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveIpControlPolicyItemRequest self = new RemoveIpControlPolicyItemRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class RemoveIpControlPolicyItemRequest extends TeaModel {
     }
     public String getPolicyItemIds() {
         return this.policyItemIds;
+    }
+
+    public RemoveIpControlPolicyItemRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

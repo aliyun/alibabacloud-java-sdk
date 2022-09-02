@@ -10,6 +10,9 @@ public class SetSignatureApisRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("SignatureId")
     public String signatureId;
 
@@ -35,6 +38,14 @@ public class SetSignatureApisRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public SetSignatureApisRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public SetSignatureApisRequest setSignatureId(String signatureId) {

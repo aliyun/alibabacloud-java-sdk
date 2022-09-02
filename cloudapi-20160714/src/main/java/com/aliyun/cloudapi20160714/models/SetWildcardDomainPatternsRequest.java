@@ -10,6 +10,9 @@ public class SetWildcardDomainPatternsRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("WildcardDomainPatterns")
     public String wildcardDomainPatterns;
 
@@ -32,6 +35,14 @@ public class SetWildcardDomainPatternsRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public SetWildcardDomainPatternsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public SetWildcardDomainPatternsRequest setWildcardDomainPatterns(String wildcardDomainPatterns) {

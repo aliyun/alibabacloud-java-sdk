@@ -13,6 +13,9 @@ public class ModifyIpControlRequest extends TeaModel {
     @NameInMap("IpControlName")
     public String ipControlName;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static ModifyIpControlRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyIpControlRequest self = new ModifyIpControlRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ModifyIpControlRequest extends TeaModel {
     }
     public String getIpControlName() {
         return this.ipControlName;
+    }
+
+    public ModifyIpControlRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }
