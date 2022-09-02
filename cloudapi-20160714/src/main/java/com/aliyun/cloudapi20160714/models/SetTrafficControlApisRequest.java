@@ -10,6 +10,9 @@ public class SetTrafficControlApisRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("StageName")
     public String stageName;
 
@@ -35,6 +38,14 @@ public class SetTrafficControlApisRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public SetTrafficControlApisRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public SetTrafficControlApisRequest setStageName(String stageName) {
