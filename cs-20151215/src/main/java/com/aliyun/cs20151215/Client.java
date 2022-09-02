@@ -8,10 +8,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._signatureAlgorithm = "v2";
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-2-pop", "cs.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "cs.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-pop", "cs.aliyuncs.com"),
             new TeaPair("cn-beijing-gov-1", "cs.aliyuncs.com"),
             new TeaPair("cn-beijing-nu16-b01", "cs.aliyuncs.com"),
@@ -19,21 +19,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-fujian", "cs.aliyuncs.com"),
             new TeaPair("cn-haidian-cm12-c01", "cs.aliyuncs.com"),
             new TeaPair("cn-hangzhou-bj-b01", "cs.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "cs-vpc.cn-hangzhou-finance.aliyuncs.com"),
             new TeaPair("cn-hangzhou-internal-prod-1", "cs.aliyuncs.com"),
             new TeaPair("cn-hangzhou-internal-test-1", "cs.aliyuncs.com"),
             new TeaPair("cn-hangzhou-internal-test-2", "cs.aliyuncs.com"),
             new TeaPair("cn-hangzhou-internal-test-3", "cs.aliyuncs.com"),
             new TeaPair("cn-hangzhou-test-306", "cs.aliyuncs.com"),
             new TeaPair("cn-hongkong-finance-pop", "cs.aliyuncs.com"),
-            new TeaPair("cn-huhehaote-nebula-1", "cs.aliyuncs.com"),
             new TeaPair("cn-qingdao-nebula", "cs.aliyuncs.com"),
             new TeaPair("cn-shanghai-et15-b01", "cs.aliyuncs.com"),
             new TeaPair("cn-shanghai-et2-b01", "cs.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "cs-vpc.cn-shanghai-finance-1.aliyuncs.com"),
             new TeaPair("cn-shanghai-inner", "cs.aliyuncs.com"),
             new TeaPair("cn-shanghai-internal-test-1", "cs.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "cs-vpc.cn-shenzhen-finance-1.aliyuncs.com"),
             new TeaPair("cn-shenzhen-inner", "cs.aliyuncs.com"),
             new TeaPair("cn-shenzhen-st4-d01", "cs.aliyuncs.com"),
             new TeaPair("cn-shenzhen-su18-b01", "cs.aliyuncs.com"),
