@@ -22,6 +22,12 @@ public class UpdateIntegrationRequest extends TeaModel {
     @NameInMap("FieldRedefineRules")
     public String fieldRedefineRules;
 
+    @NameInMap("InitiativeRecoverField")
+    public String initiativeRecoverField;
+
+    @NameInMap("InitiativeRecoverValue")
+    public String initiativeRecoverValue;
+
     @NameInMap("IntegrationId")
     public Long integrationId;
 
@@ -97,6 +103,22 @@ public class UpdateIntegrationRequest extends TeaModel {
     }
     public String getFieldRedefineRules() {
         return this.fieldRedefineRules;
+    }
+
+    public UpdateIntegrationRequest setInitiativeRecoverField(String initiativeRecoverField) {
+        this.initiativeRecoverField = initiativeRecoverField;
+        return this;
+    }
+    public String getInitiativeRecoverField() {
+        return this.initiativeRecoverField;
+    }
+
+    public UpdateIntegrationRequest setInitiativeRecoverValue(String initiativeRecoverValue) {
+        this.initiativeRecoverValue = initiativeRecoverValue;
+        return this;
+    }
+    public String getInitiativeRecoverValue() {
+        return this.initiativeRecoverValue;
     }
 
     public UpdateIntegrationRequest setIntegrationId(Long integrationId) {

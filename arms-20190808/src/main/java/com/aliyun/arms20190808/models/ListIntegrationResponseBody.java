@@ -31,7 +31,7 @@ public class ListIntegrationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail extends TeaModel {
+    public static class ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail extends TeaModel {
         @NameInMap("AutoRecover")
         public Boolean autoRecover;
 
@@ -47,18 +47,24 @@ public class ListIntegrationResponseBody extends TeaModel {
         @NameInMap("FieldRedefineRules")
         public java.util.List<java.util.Map<String, ?>> fieldRedefineRules;
 
+        @NameInMap("InitiativeRecoverField")
+        public String initiativeRecoverField;
+
+        @NameInMap("InitiativeRecoverValue")
+        public String initiativeRecoverValue;
+
         @NameInMap("RecoverTime")
         public Long recoverTime;
 
         @NameInMap("Stat")
         public java.util.List<Long> stat;
 
-        public static ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail build(java.util.Map<String, ?> map) throws Exception {
-            ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail self = new ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail();
+        public static ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail build(java.util.Map<String, ?> map) throws Exception {
+            ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail self = new ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail();
             return TeaModel.build(map, self);
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail setAutoRecover(Boolean autoRecover) {
+        public ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail setAutoRecover(Boolean autoRecover) {
             this.autoRecover = autoRecover;
             return this;
         }
@@ -66,7 +72,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             return this.autoRecover;
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail setDescription(String description) {
+        public ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -74,7 +80,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail setDuplicateKey(String duplicateKey) {
+        public ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail setDuplicateKey(String duplicateKey) {
             this.duplicateKey = duplicateKey;
             return this;
         }
@@ -82,7 +88,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             return this.duplicateKey;
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail setExtendedFieldRedefineRules(java.util.List<java.util.Map<String, ?>> extendedFieldRedefineRules) {
+        public ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail setExtendedFieldRedefineRules(java.util.List<java.util.Map<String, ?>> extendedFieldRedefineRules) {
             this.extendedFieldRedefineRules = extendedFieldRedefineRules;
             return this;
         }
@@ -90,7 +96,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             return this.extendedFieldRedefineRules;
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail setFieldRedefineRules(java.util.List<java.util.Map<String, ?>> fieldRedefineRules) {
+        public ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail setFieldRedefineRules(java.util.List<java.util.Map<String, ?>> fieldRedefineRules) {
             this.fieldRedefineRules = fieldRedefineRules;
             return this;
         }
@@ -98,7 +104,23 @@ public class ListIntegrationResponseBody extends TeaModel {
             return this.fieldRedefineRules;
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail setRecoverTime(Long recoverTime) {
+        public ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail setInitiativeRecoverField(String initiativeRecoverField) {
+            this.initiativeRecoverField = initiativeRecoverField;
+            return this;
+        }
+        public String getInitiativeRecoverField() {
+            return this.initiativeRecoverField;
+        }
+
+        public ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail setInitiativeRecoverValue(String initiativeRecoverValue) {
+            this.initiativeRecoverValue = initiativeRecoverValue;
+            return this;
+        }
+        public String getInitiativeRecoverValue() {
+            return this.initiativeRecoverValue;
+        }
+
+        public ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail setRecoverTime(Long recoverTime) {
             this.recoverTime = recoverTime;
             return this;
         }
@@ -106,7 +128,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             return this.recoverTime;
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail setStat(java.util.List<Long> stat) {
+        public ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail setStat(java.util.List<Long> stat) {
             this.stat = stat;
             return this;
         }
@@ -116,7 +138,7 @@ public class ListIntegrationResponseBody extends TeaModel {
 
     }
 
-    public static class ListIntegrationResponseBodyPageInfoIintegrations extends TeaModel {
+    public static class ListIntegrationResponseBodyPageInfoIntegrations extends TeaModel {
         @NameInMap("ApiEndpoint")
         public String apiEndpoint;
 
@@ -124,7 +146,7 @@ public class ListIntegrationResponseBody extends TeaModel {
         public String createTime;
 
         @NameInMap("IntegrationDetail")
-        public ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail integrationDetail;
+        public ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail integrationDetail;
 
         @NameInMap("IntegrationId")
         public Long integrationId;
@@ -144,12 +166,12 @@ public class ListIntegrationResponseBody extends TeaModel {
         @NameInMap("State")
         public Boolean state;
 
-        public static ListIntegrationResponseBodyPageInfoIintegrations build(java.util.Map<String, ?> map) throws Exception {
-            ListIntegrationResponseBodyPageInfoIintegrations self = new ListIntegrationResponseBodyPageInfoIintegrations();
+        public static ListIntegrationResponseBodyPageInfoIntegrations build(java.util.Map<String, ?> map) throws Exception {
+            ListIntegrationResponseBodyPageInfoIntegrations self = new ListIntegrationResponseBodyPageInfoIntegrations();
             return TeaModel.build(map, self);
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrations setApiEndpoint(String apiEndpoint) {
+        public ListIntegrationResponseBodyPageInfoIntegrations setApiEndpoint(String apiEndpoint) {
             this.apiEndpoint = apiEndpoint;
             return this;
         }
@@ -157,7 +179,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             return this.apiEndpoint;
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrations setCreateTime(String createTime) {
+        public ListIntegrationResponseBodyPageInfoIntegrations setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -165,15 +187,15 @@ public class ListIntegrationResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrations setIntegrationDetail(ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail integrationDetail) {
+        public ListIntegrationResponseBodyPageInfoIntegrations setIntegrationDetail(ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail integrationDetail) {
             this.integrationDetail = integrationDetail;
             return this;
         }
-        public ListIntegrationResponseBodyPageInfoIintegrationsIntegrationDetail getIntegrationDetail() {
+        public ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail getIntegrationDetail() {
             return this.integrationDetail;
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrations setIntegrationId(Long integrationId) {
+        public ListIntegrationResponseBodyPageInfoIntegrations setIntegrationId(Long integrationId) {
             this.integrationId = integrationId;
             return this;
         }
@@ -181,7 +203,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             return this.integrationId;
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrations setIntegrationName(String integrationName) {
+        public ListIntegrationResponseBodyPageInfoIntegrations setIntegrationName(String integrationName) {
             this.integrationName = integrationName;
             return this;
         }
@@ -189,7 +211,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             return this.integrationName;
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrations setIntegrationProductType(String integrationProductType) {
+        public ListIntegrationResponseBodyPageInfoIntegrations setIntegrationProductType(String integrationProductType) {
             this.integrationProductType = integrationProductType;
             return this;
         }
@@ -197,7 +219,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             return this.integrationProductType;
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrations setLiveness(String liveness) {
+        public ListIntegrationResponseBodyPageInfoIntegrations setLiveness(String liveness) {
             this.liveness = liveness;
             return this;
         }
@@ -205,7 +227,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             return this.liveness;
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrations setShortToken(String shortToken) {
+        public ListIntegrationResponseBodyPageInfoIntegrations setShortToken(String shortToken) {
             this.shortToken = shortToken;
             return this;
         }
@@ -213,7 +235,7 @@ public class ListIntegrationResponseBody extends TeaModel {
             return this.shortToken;
         }
 
-        public ListIntegrationResponseBodyPageInfoIintegrations setState(Boolean state) {
+        public ListIntegrationResponseBodyPageInfoIntegrations setState(Boolean state) {
             this.state = state;
             return this;
         }
@@ -224,8 +246,8 @@ public class ListIntegrationResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationResponseBodyPageInfo extends TeaModel {
-        @NameInMap("Iintegrations")
-        public java.util.List<ListIntegrationResponseBodyPageInfoIintegrations> iintegrations;
+        @NameInMap("Integrations")
+        public java.util.List<ListIntegrationResponseBodyPageInfoIntegrations> integrations;
 
         @NameInMap("Page")
         public Long page;
@@ -241,12 +263,12 @@ public class ListIntegrationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListIntegrationResponseBodyPageInfo setIintegrations(java.util.List<ListIntegrationResponseBodyPageInfoIintegrations> iintegrations) {
-            this.iintegrations = iintegrations;
+        public ListIntegrationResponseBodyPageInfo setIntegrations(java.util.List<ListIntegrationResponseBodyPageInfoIntegrations> integrations) {
+            this.integrations = integrations;
             return this;
         }
-        public java.util.List<ListIntegrationResponseBodyPageInfoIintegrations> getIintegrations() {
-            return this.iintegrations;
+        public java.util.List<ListIntegrationResponseBodyPageInfoIntegrations> getIntegrations() {
+            return this.integrations;
         }
 
         public ListIntegrationResponseBodyPageInfo setPage(Long page) {

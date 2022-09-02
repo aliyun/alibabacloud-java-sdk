@@ -50,6 +50,12 @@ public class UpdateIntegrationResponseBody extends TeaModel {
         @NameInMap("FieldRedefineRules")
         public java.util.List<java.util.Map<String, ?>> fieldRedefineRules;
 
+        @NameInMap("InitiativeRecoverField")
+        public String initiativeRecoverField;
+
+        @NameInMap("InitiativeRecoverValue")
+        public String initiativeRecoverValue;
+
         @NameInMap("IntegrationId")
         public Long integrationId;
 
@@ -125,6 +131,22 @@ public class UpdateIntegrationResponseBody extends TeaModel {
         }
         public java.util.List<java.util.Map<String, ?>> getFieldRedefineRules() {
             return this.fieldRedefineRules;
+        }
+
+        public UpdateIntegrationResponseBodyIntegration setInitiativeRecoverField(String initiativeRecoverField) {
+            this.initiativeRecoverField = initiativeRecoverField;
+            return this;
+        }
+        public String getInitiativeRecoverField() {
+            return this.initiativeRecoverField;
+        }
+
+        public UpdateIntegrationResponseBodyIntegration setInitiativeRecoverValue(String initiativeRecoverValue) {
+            this.initiativeRecoverValue = initiativeRecoverValue;
+            return this;
+        }
+        public String getInitiativeRecoverValue() {
+            return this.initiativeRecoverValue;
         }
 
         public UpdateIntegrationResponseBodyIntegration setIntegrationId(Long integrationId) {

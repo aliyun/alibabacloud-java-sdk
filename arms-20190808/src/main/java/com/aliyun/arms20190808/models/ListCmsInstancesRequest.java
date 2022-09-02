@@ -10,6 +10,9 @@ public class ListCmsInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("TypeFilter")
+    public String typeFilter;
+
     public static ListCmsInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCmsInstancesRequest self = new ListCmsInstancesRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ListCmsInstancesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListCmsInstancesRequest setTypeFilter(String typeFilter) {
+        this.typeFilter = typeFilter;
+        return this;
+    }
+    public String getTypeFilter() {
+        return this.typeFilter;
     }
 
 }
