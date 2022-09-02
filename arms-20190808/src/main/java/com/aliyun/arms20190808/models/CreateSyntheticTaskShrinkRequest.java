@@ -7,6 +7,9 @@ public class CreateSyntheticTaskShrinkRequest extends TeaModel {
     @NameInMap("CommonParam")
     public String commonParamShrink;
 
+    @NameInMap("Download")
+    public String downloadShrink;
+
     @NameInMap("ExtendInterval")
     public String extendIntervalShrink;
 
@@ -22,8 +25,14 @@ public class CreateSyntheticTaskShrinkRequest extends TeaModel {
     @NameInMap("MonitorList")
     public String monitorListShrink;
 
+    @NameInMap("Navigation")
+    public String navigationShrink;
+
     @NameInMap("Net")
     public String netShrink;
+
+    @NameInMap("Protocol")
+    public String protocolShrink;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -33,6 +42,9 @@ public class CreateSyntheticTaskShrinkRequest extends TeaModel {
 
     @NameInMap("TaskType")
     public Long taskType;
+
+    @NameInMap("UpdateTask")
+    public Boolean updateTask;
 
     @NameInMap("Url")
     public String url;
@@ -48,6 +60,14 @@ public class CreateSyntheticTaskShrinkRequest extends TeaModel {
     }
     public String getCommonParamShrink() {
         return this.commonParamShrink;
+    }
+
+    public CreateSyntheticTaskShrinkRequest setDownloadShrink(String downloadShrink) {
+        this.downloadShrink = downloadShrink;
+        return this;
+    }
+    public String getDownloadShrink() {
+        return this.downloadShrink;
     }
 
     public CreateSyntheticTaskShrinkRequest setExtendIntervalShrink(String extendIntervalShrink) {
@@ -90,12 +110,28 @@ public class CreateSyntheticTaskShrinkRequest extends TeaModel {
         return this.monitorListShrink;
     }
 
+    public CreateSyntheticTaskShrinkRequest setNavigationShrink(String navigationShrink) {
+        this.navigationShrink = navigationShrink;
+        return this;
+    }
+    public String getNavigationShrink() {
+        return this.navigationShrink;
+    }
+
     public CreateSyntheticTaskShrinkRequest setNetShrink(String netShrink) {
         this.netShrink = netShrink;
         return this;
     }
     public String getNetShrink() {
         return this.netShrink;
+    }
+
+    public CreateSyntheticTaskShrinkRequest setProtocolShrink(String protocolShrink) {
+        this.protocolShrink = protocolShrink;
+        return this;
+    }
+    public String getProtocolShrink() {
+        return this.protocolShrink;
     }
 
     public CreateSyntheticTaskShrinkRequest setRegionId(String regionId) {
@@ -120,6 +156,14 @@ public class CreateSyntheticTaskShrinkRequest extends TeaModel {
     }
     public Long getTaskType() {
         return this.taskType;
+    }
+
+    public CreateSyntheticTaskShrinkRequest setUpdateTask(Boolean updateTask) {
+        this.updateTask = updateTask;
+        return this;
+    }
+    public Boolean getUpdateTask() {
+        return this.updateTask;
     }
 
     public CreateSyntheticTaskShrinkRequest setUrl(String url) {
