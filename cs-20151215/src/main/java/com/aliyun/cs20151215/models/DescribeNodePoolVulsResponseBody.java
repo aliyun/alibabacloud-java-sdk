@@ -7,6 +7,9 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
     @NameInMap("vul_records")
     public java.util.List<DescribeNodePoolVulsResponseBodyVulRecords> vulRecords;
 
+    @NameInMap("vuls_fix_service_purchased")
+    public Boolean vulsFixServicePurchased;
+
     public static DescribeNodePoolVulsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNodePoolVulsResponseBody self = new DescribeNodePoolVulsResponseBody();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
     }
     public java.util.List<DescribeNodePoolVulsResponseBodyVulRecords> getVulRecords() {
         return this.vulRecords;
+    }
+
+    public DescribeNodePoolVulsResponseBody setVulsFixServicePurchased(Boolean vulsFixServicePurchased) {
+        this.vulsFixServicePurchased = vulsFixServicePurchased;
+        return this;
+    }
+    public Boolean getVulsFixServicePurchased() {
+        return this.vulsFixServicePurchased;
     }
 
     public static class DescribeNodePoolVulsResponseBodyVulRecordsVulList extends TeaModel {
