@@ -1,3 +1,6 @@
+2022-09-05 Version: 1.0.28
+- Support Resource Group.
+
 2022-08-25 Version: 1.0.26
 - Support diagnose instance.
 

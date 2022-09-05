@@ -86,7 +86,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         return this.totalRecordCount;
     }
 
-    public static class DescribeDBInstancePlansResponseBodyItemsPlan extends TeaModel {
+    public static class DescribeDBInstancePlansResponseBodyItemsPlanList extends TeaModel {
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
@@ -96,8 +96,8 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         @NameInMap("PlanDesc")
         public String planDesc;
 
-        @NameInMap("PlanEndTime")
-        public String planEndTime;
+        @NameInMap("PlanEndDate")
+        public String planEndDate;
 
         @NameInMap("PlanId")
         public String planId;
@@ -105,21 +105,24 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         @NameInMap("PlanName")
         public String planName;
 
-        @NameInMap("PlanStartTime")
-        public String planStartTime;
+        @NameInMap("PlanScheduleType")
+        public String planScheduleType;
+
+        @NameInMap("PlanStartDate")
+        public String planStartDate;
+
+        @NameInMap("PlanStatus")
+        public String planStatus;
 
         @NameInMap("PlanType")
         public String planType;
 
-        @NameInMap("PlanscheduleType")
-        public String planscheduleType;
-
-        public static DescribeDBInstancePlansResponseBodyItemsPlan build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBInstancePlansResponseBodyItemsPlan self = new DescribeDBInstancePlansResponseBodyItemsPlan();
+        public static DescribeDBInstancePlansResponseBodyItemsPlanList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstancePlansResponseBodyItemsPlanList self = new DescribeDBInstancePlansResponseBodyItemsPlanList();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDBInstancePlansResponseBodyItemsPlan setDBInstanceId(String DBInstanceId) {
+        public DescribeDBInstancePlansResponseBodyItemsPlanList setDBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
             return this;
         }
@@ -127,7 +130,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             return this.DBInstanceId;
         }
 
-        public DescribeDBInstancePlansResponseBodyItemsPlan setPlanConfig(String planConfig) {
+        public DescribeDBInstancePlansResponseBodyItemsPlanList setPlanConfig(String planConfig) {
             this.planConfig = planConfig;
             return this;
         }
@@ -135,7 +138,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             return this.planConfig;
         }
 
-        public DescribeDBInstancePlansResponseBodyItemsPlan setPlanDesc(String planDesc) {
+        public DescribeDBInstancePlansResponseBodyItemsPlanList setPlanDesc(String planDesc) {
             this.planDesc = planDesc;
             return this;
         }
@@ -143,15 +146,15 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             return this.planDesc;
         }
 
-        public DescribeDBInstancePlansResponseBodyItemsPlan setPlanEndTime(String planEndTime) {
-            this.planEndTime = planEndTime;
+        public DescribeDBInstancePlansResponseBodyItemsPlanList setPlanEndDate(String planEndDate) {
+            this.planEndDate = planEndDate;
             return this;
         }
-        public String getPlanEndTime() {
-            return this.planEndTime;
+        public String getPlanEndDate() {
+            return this.planEndDate;
         }
 
-        public DescribeDBInstancePlansResponseBodyItemsPlan setPlanId(String planId) {
+        public DescribeDBInstancePlansResponseBodyItemsPlanList setPlanId(String planId) {
             this.planId = planId;
             return this;
         }
@@ -159,7 +162,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             return this.planId;
         }
 
-        public DescribeDBInstancePlansResponseBodyItemsPlan setPlanName(String planName) {
+        public DescribeDBInstancePlansResponseBodyItemsPlanList setPlanName(String planName) {
             this.planName = planName;
             return this;
         }
@@ -167,15 +170,31 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             return this.planName;
         }
 
-        public DescribeDBInstancePlansResponseBodyItemsPlan setPlanStartTime(String planStartTime) {
-            this.planStartTime = planStartTime;
+        public DescribeDBInstancePlansResponseBodyItemsPlanList setPlanScheduleType(String planScheduleType) {
+            this.planScheduleType = planScheduleType;
             return this;
         }
-        public String getPlanStartTime() {
-            return this.planStartTime;
+        public String getPlanScheduleType() {
+            return this.planScheduleType;
         }
 
-        public DescribeDBInstancePlansResponseBodyItemsPlan setPlanType(String planType) {
+        public DescribeDBInstancePlansResponseBodyItemsPlanList setPlanStartDate(String planStartDate) {
+            this.planStartDate = planStartDate;
+            return this;
+        }
+        public String getPlanStartDate() {
+            return this.planStartDate;
+        }
+
+        public DescribeDBInstancePlansResponseBodyItemsPlanList setPlanStatus(String planStatus) {
+            this.planStatus = planStatus;
+            return this;
+        }
+        public String getPlanStatus() {
+            return this.planStatus;
+        }
+
+        public DescribeDBInstancePlansResponseBodyItemsPlanList setPlanType(String planType) {
             this.planType = planType;
             return this;
         }
@@ -183,31 +202,23 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             return this.planType;
         }
 
-        public DescribeDBInstancePlansResponseBodyItemsPlan setPlanscheduleType(String planscheduleType) {
-            this.planscheduleType = planscheduleType;
-            return this;
-        }
-        public String getPlanscheduleType() {
-            return this.planscheduleType;
-        }
-
     }
 
     public static class DescribeDBInstancePlansResponseBodyItems extends TeaModel {
-        @NameInMap("Plan")
-        public java.util.List<DescribeDBInstancePlansResponseBodyItemsPlan> plan;
+        @NameInMap("PlanList")
+        public java.util.List<DescribeDBInstancePlansResponseBodyItemsPlanList> planList;
 
         public static DescribeDBInstancePlansResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancePlansResponseBodyItems self = new DescribeDBInstancePlansResponseBodyItems();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDBInstancePlansResponseBodyItems setPlan(java.util.List<DescribeDBInstancePlansResponseBodyItemsPlan> plan) {
-            this.plan = plan;
+        public DescribeDBInstancePlansResponseBodyItems setPlanList(java.util.List<DescribeDBInstancePlansResponseBodyItemsPlanList> planList) {
+            this.planList = planList;
             return this;
         }
-        public java.util.List<DescribeDBInstancePlansResponseBodyItemsPlan> getPlan() {
-            return this.plan;
+        public java.util.List<DescribeDBInstancePlansResponseBodyItemsPlanList> getPlanList() {
+            return this.planList;
         }
 
     }

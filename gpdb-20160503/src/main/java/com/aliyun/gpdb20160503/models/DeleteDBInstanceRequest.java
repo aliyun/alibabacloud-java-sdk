@@ -13,6 +13,9 @@ public class DeleteDBInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DeleteDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDBInstanceRequest self = new DeleteDBInstanceRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class DeleteDBInstanceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteDBInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

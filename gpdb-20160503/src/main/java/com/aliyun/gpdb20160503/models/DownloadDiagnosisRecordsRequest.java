@@ -19,6 +19,9 @@ public class DownloadDiagnosisRecordsRequest extends TeaModel {
     @NameInMap("QueryCondition")
     public String queryCondition;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("StartTime")
     public String startTime;
 
@@ -68,6 +71,14 @@ public class DownloadDiagnosisRecordsRequest extends TeaModel {
     }
     public String getQueryCondition() {
         return this.queryCondition;
+    }
+
+    public DownloadDiagnosisRecordsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DownloadDiagnosisRecordsRequest setStartTime(String startTime) {

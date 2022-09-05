@@ -13,6 +13,9 @@ public class ModifySecurityIpsRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
@@ -43,6 +46,14 @@ public class ModifySecurityIpsRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifySecurityIpsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ModifySecurityIpsRequest setSecurityIPList(String securityIPList) {
