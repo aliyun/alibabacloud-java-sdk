@@ -121,9 +121,64 @@ public class PreviewStackResponseBody extends TeaModel {
 
     }
 
+    public static class PreviewStackResponseBodyStackResourcesConfigRuleEvaluations extends TeaModel {
+        @NameInMap("Annotation")
+        public String annotation;
+
+        @NameInMap("ComplianceType")
+        public String complianceType;
+
+        @NameInMap("HelpUrl")
+        public String helpUrl;
+
+        @NameInMap("Identifier")
+        public String identifier;
+
+        public static PreviewStackResponseBodyStackResourcesConfigRuleEvaluations build(java.util.Map<String, ?> map) throws Exception {
+            PreviewStackResponseBodyStackResourcesConfigRuleEvaluations self = new PreviewStackResponseBodyStackResourcesConfigRuleEvaluations();
+            return TeaModel.build(map, self);
+        }
+
+        public PreviewStackResponseBodyStackResourcesConfigRuleEvaluations setAnnotation(String annotation) {
+            this.annotation = annotation;
+            return this;
+        }
+        public String getAnnotation() {
+            return this.annotation;
+        }
+
+        public PreviewStackResponseBodyStackResourcesConfigRuleEvaluations setComplianceType(String complianceType) {
+            this.complianceType = complianceType;
+            return this;
+        }
+        public String getComplianceType() {
+            return this.complianceType;
+        }
+
+        public PreviewStackResponseBodyStackResourcesConfigRuleEvaluations setHelpUrl(String helpUrl) {
+            this.helpUrl = helpUrl;
+            return this;
+        }
+        public String getHelpUrl() {
+            return this.helpUrl;
+        }
+
+        public PreviewStackResponseBodyStackResourcesConfigRuleEvaluations setIdentifier(String identifier) {
+            this.identifier = identifier;
+            return this;
+        }
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+    }
+
     public static class PreviewStackResponseBodyStackResources extends TeaModel {
         @NameInMap("Action")
         public String action;
+
+        @NameInMap("ConfigRuleEvaluations")
+        public java.util.List<PreviewStackResponseBodyStackResourcesConfigRuleEvaluations> configRuleEvaluations;
 
         @NameInMap("Description")
         public String description;
@@ -157,6 +212,14 @@ public class PreviewStackResponseBody extends TeaModel {
         }
         public String getAction() {
             return this.action;
+        }
+
+        public PreviewStackResponseBodyStackResources setConfigRuleEvaluations(java.util.List<PreviewStackResponseBodyStackResourcesConfigRuleEvaluations> configRuleEvaluations) {
+            this.configRuleEvaluations = configRuleEvaluations;
+            return this;
+        }
+        public java.util.List<PreviewStackResponseBodyStackResourcesConfigRuleEvaluations> getConfigRuleEvaluations() {
+            return this.configRuleEvaluations;
         }
 
         public PreviewStackResponseBodyStackResources setDescription(String description) {
