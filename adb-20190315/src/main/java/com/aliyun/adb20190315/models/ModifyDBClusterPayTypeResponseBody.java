@@ -13,7 +13,6 @@ public class ModifyDBClusterPayTypeResponseBody extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

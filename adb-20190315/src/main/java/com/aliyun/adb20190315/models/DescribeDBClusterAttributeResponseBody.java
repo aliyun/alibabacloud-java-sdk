@@ -153,6 +153,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("Expired")
         public String expired;
 
+        @NameInMap("InnerIp")
+        public String innerIp;
+
+        @NameInMap("InnerPort")
+        public String innerPort;
+
         @NameInMap("KmsId")
         public String kmsId;
 
@@ -399,6 +405,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getExpired() {
             return this.expired;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setInnerIp(String innerIp) {
+            this.innerIp = innerIp;
+            return this;
+        }
+        public String getInnerIp() {
+            return this.innerIp;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setInnerPort(String innerPort) {
+            this.innerPort = innerPort;
+            return this;
+        }
+        public String getInnerPort() {
+            return this.innerPort;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setKmsId(String kmsId) {

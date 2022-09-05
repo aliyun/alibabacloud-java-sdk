@@ -13,6 +13,9 @@ public class DescribeDBClustersRequest extends TeaModel {
     @NameInMap("DBClusterStatus")
     public String DBClusterStatus;
 
+    @NameInMap("DBVersion")
+    public String DBVersion;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -67,6 +70,14 @@ public class DescribeDBClustersRequest extends TeaModel {
     }
     public String getDBClusterStatus() {
         return this.DBClusterStatus;
+    }
+
+    public DescribeDBClustersRequest setDBVersion(String DBVersion) {
+        this.DBVersion = DBVersion;
+        return this;
+    }
+    public String getDBVersion() {
+        return this.DBVersion;
     }
 
     public DescribeDBClustersRequest setOwnerAccount(String ownerAccount) {
