@@ -3,7 +3,7 @@ package com.aliyun.quotas20200510.models;
 
 import com.aliyun.tea.*;
 
-public class GetProductQuotaDimensionResponse extends TeaModel {
+public class DeleteTemplateQuotaItemResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetProductQuotaDimensionResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetProductQuotaDimensionResponseBody body;
+    public DeleteTemplateQuotaItemResponseBody body;
 
-    public static GetProductQuotaDimensionResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetProductQuotaDimensionResponse self = new GetProductQuotaDimensionResponse();
+    public static DeleteTemplateQuotaItemResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteTemplateQuotaItemResponse self = new DeleteTemplateQuotaItemResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetProductQuotaDimensionResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteTemplateQuotaItemResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetProductQuotaDimensionResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetProductQuotaDimensionResponse setStatusCode(Integer statusCode) {
+    public DeleteTemplateQuotaItemResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetProductQuotaDimensionResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetProductQuotaDimensionResponse setBody(GetProductQuotaDimensionResponseBody body) {
+    public DeleteTemplateQuotaItemResponse setBody(DeleteTemplateQuotaItemResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetProductQuotaDimensionResponseBody getBody() {
+    public DeleteTemplateQuotaItemResponseBody getBody() {
         return this.body;
     }
 

@@ -13,6 +13,9 @@ public class CreateQuotaApplicationRequest extends TeaModel {
     @NameInMap("Dimensions")
     public java.util.List<CreateQuotaApplicationRequestDimensions> dimensions;
 
+    @NameInMap("EnvLanguage")
+    public String envLanguage;
+
     @NameInMap("NoticeType")
     public Integer noticeType;
 
@@ -55,6 +58,14 @@ public class CreateQuotaApplicationRequest extends TeaModel {
     }
     public java.util.List<CreateQuotaApplicationRequestDimensions> getDimensions() {
         return this.dimensions;
+    }
+
+    public CreateQuotaApplicationRequest setEnvLanguage(String envLanguage) {
+        this.envLanguage = envLanguage;
+        return this;
+    }
+    public String getEnvLanguage() {
+        return this.envLanguage;
     }
 
     public CreateQuotaApplicationRequest setNoticeType(Integer noticeType) {
