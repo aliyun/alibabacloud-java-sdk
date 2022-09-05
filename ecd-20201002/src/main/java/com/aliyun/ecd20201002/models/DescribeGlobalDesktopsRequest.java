@@ -7,6 +7,9 @@ public class DescribeGlobalDesktopsRequest extends TeaModel {
     @NameInMap("ClientId")
     public String clientId;
 
+    @NameInMap("DesktopAccessType")
+    public String desktopAccessType;
+
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
@@ -51,6 +54,14 @@ public class DescribeGlobalDesktopsRequest extends TeaModel {
     }
     public String getClientId() {
         return this.clientId;
+    }
+
+    public DescribeGlobalDesktopsRequest setDesktopAccessType(String desktopAccessType) {
+        this.desktopAccessType = desktopAccessType;
+        return this;
+    }
+    public String getDesktopAccessType() {
+        return this.desktopAccessType;
     }
 
     public DescribeGlobalDesktopsRequest setDesktopId(java.util.List<String> desktopId) {

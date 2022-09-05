@@ -223,6 +223,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("LastStartTime")
         public String lastStartTime;
 
+        @NameInMap("ManagementFlags")
+        public java.util.List<String> managementFlags;
+
         @NameInMap("Memory")
         public Long memory;
 
@@ -255,6 +258,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
+
+        @NameInMap("UserCustomName")
+        public String userCustomName;
 
         public static DescribeDesktopsResponseBodyDesktops build(java.util.Map<String, ?> map) throws Exception {
             DescribeDesktopsResponseBodyDesktops self = new DescribeDesktopsResponseBodyDesktops();
@@ -413,6 +419,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             return this.lastStartTime;
         }
 
+        public DescribeDesktopsResponseBodyDesktops setManagementFlags(java.util.List<String> managementFlags) {
+            this.managementFlags = managementFlags;
+            return this;
+        }
+        public java.util.List<String> getManagementFlags() {
+            return this.managementFlags;
+        }
+
         public DescribeDesktopsResponseBodyDesktops setMemory(Long memory) {
             this.memory = memory;
             return this;
@@ -499,6 +513,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public Integer getSystemDiskSize() {
             return this.systemDiskSize;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setUserCustomName(String userCustomName) {
+            this.userCustomName = userCustomName;
+            return this;
+        }
+        public String getUserCustomName() {
+            return this.userCustomName;
         }
 
     }

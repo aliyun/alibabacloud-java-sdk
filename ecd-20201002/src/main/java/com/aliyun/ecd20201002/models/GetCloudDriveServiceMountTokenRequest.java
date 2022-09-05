@@ -10,6 +10,9 @@ public class GetCloudDriveServiceMountTokenRequest extends TeaModel {
     @NameInMap("LoginToken")
     public String loginToken;
 
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -35,6 +38,14 @@ public class GetCloudDriveServiceMountTokenRequest extends TeaModel {
     }
     public String getLoginToken() {
         return this.loginToken;
+    }
+
+    public GetCloudDriveServiceMountTokenRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
     }
 
     public GetCloudDriveServiceMountTokenRequest setRegionId(String regionId) {

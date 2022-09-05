@@ -4,7 +4,6 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
