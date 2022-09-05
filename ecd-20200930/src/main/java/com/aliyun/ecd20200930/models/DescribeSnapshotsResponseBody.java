@@ -55,6 +55,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("Progress")
         public String progress;
 
+        @NameInMap("ProtocolType")
+        public String protocolType;
+
         @NameInMap("RemainTime")
         public Integer remainTime;
 
@@ -117,6 +120,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
         public String getProgress() {
             return this.progress;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setProtocolType(String protocolType) {
+            this.protocolType = protocolType;
+            return this;
+        }
+        public String getProtocolType() {
+            return this.protocolType;
         }
 
         public DescribeSnapshotsResponseBodySnapshots setRemainTime(Integer remainTime) {

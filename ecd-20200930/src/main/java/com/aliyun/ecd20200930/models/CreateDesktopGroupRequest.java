@@ -91,6 +91,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("ScaleStrategyId")
     public String scaleStrategyId;
 
+    @NameInMap("StopDuration")
+    public Long stopDuration;
+
     @NameInMap("VolumeEncryptionEnabled")
     public Boolean volumeEncryptionEnabled;
 
@@ -335,6 +338,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
     }
     public String getScaleStrategyId() {
         return this.scaleStrategyId;
+    }
+
+    public CreateDesktopGroupRequest setStopDuration(Long stopDuration) {
+        this.stopDuration = stopDuration;
+        return this;
+    }
+    public Long getStopDuration() {
+        return this.stopDuration;
     }
 
     public CreateDesktopGroupRequest setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {

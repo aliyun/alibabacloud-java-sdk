@@ -273,6 +273,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroups extends TeaModel {
+        @NameInMap("AppContentProtection")
+        public String appContentProtection;
+
         @NameInMap("AuthorizeAccessPolicyRules")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules> authorizeAccessPolicyRules;
 
@@ -330,6 +333,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("PrinterRedirection")
         public String printerRedirection;
 
+        @NameInMap("RecordContent")
+        public String recordContent;
+
+        @NameInMap("RecordContentExpires")
+        public Long recordContentExpires;
+
         @NameInMap("Recording")
         public String recording;
 
@@ -369,6 +378,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public static DescribePolicyGroupsResponseBodyDescribePolicyGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribePolicyGroupsResponseBodyDescribePolicyGroups self = new DescribePolicyGroupsResponseBodyDescribePolicyGroups();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setAppContentProtection(String appContentProtection) {
+            this.appContentProtection = appContentProtection;
+            return this;
+        }
+        public String getAppContentProtection() {
+            return this.appContentProtection;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setAuthorizeAccessPolicyRules(java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules> authorizeAccessPolicyRules) {
@@ -521,6 +538,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getPrinterRedirection() {
             return this.printerRedirection;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordContent(String recordContent) {
+            this.recordContent = recordContent;
+            return this;
+        }
+        public String getRecordContent() {
+            return this.recordContent;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordContentExpires(Long recordContentExpires) {
+            this.recordContentExpires = recordContentExpires;
+            return this;
+        }
+        public Long getRecordContentExpires() {
+            return this.recordContentExpires;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecording(String recording) {

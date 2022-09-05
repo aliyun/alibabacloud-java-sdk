@@ -7,6 +7,9 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    @NameInMap("IgnoreDeleted")
+    public Boolean ignoreDeleted;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -30,6 +33,14 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     }
     public String getDesktopGroupId() {
         return this.desktopGroupId;
+    }
+
+    public DescribeDesktopsInGroupRequest setIgnoreDeleted(Boolean ignoreDeleted) {
+        this.ignoreDeleted = ignoreDeleted;
+        return this;
+    }
+    public Boolean getIgnoreDeleted() {
+        return this.ignoreDeleted;
     }
 
     public DescribeDesktopsInGroupRequest setMaxResults(Integer maxResults) {

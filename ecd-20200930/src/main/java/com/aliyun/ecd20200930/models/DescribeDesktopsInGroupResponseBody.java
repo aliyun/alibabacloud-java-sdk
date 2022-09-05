@@ -159,8 +159,17 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         @NameInMap("ManagementFlag")
         public String managementFlag;
 
+        @NameInMap("ManagementFlags")
+        public java.util.List<String> managementFlags;
+
+        @NameInMap("MemberEniIp")
+        public String memberEniIp;
+
         @NameInMap("OsType")
         public String osType;
+
+        @NameInMap("PrimaryEniIp")
+        public String primaryEniIp;
 
         @NameInMap("ResetTime")
         public String resetTime;
@@ -277,12 +286,36 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             return this.managementFlag;
         }
 
+        public DescribeDesktopsInGroupResponseBodyPaidDesktops setManagementFlags(java.util.List<String> managementFlags) {
+            this.managementFlags = managementFlags;
+            return this;
+        }
+        public java.util.List<String> getManagementFlags() {
+            return this.managementFlags;
+        }
+
+        public DescribeDesktopsInGroupResponseBodyPaidDesktops setMemberEniIp(String memberEniIp) {
+            this.memberEniIp = memberEniIp;
+            return this;
+        }
+        public String getMemberEniIp() {
+            return this.memberEniIp;
+        }
+
         public DescribeDesktopsInGroupResponseBodyPaidDesktops setOsType(String osType) {
             this.osType = osType;
             return this;
         }
         public String getOsType() {
             return this.osType;
+        }
+
+        public DescribeDesktopsInGroupResponseBodyPaidDesktops setPrimaryEniIp(String primaryEniIp) {
+            this.primaryEniIp = primaryEniIp;
+            return this;
+        }
+        public String getPrimaryEniIp() {
+            return this.primaryEniIp;
         }
 
         public DescribeDesktopsInGroupResponseBodyPaidDesktops setResetTime(String resetTime) {
@@ -349,8 +382,17 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         @NameInMap("ManagementFlag")
         public String managementFlag;
 
+        @NameInMap("ManagementFlags")
+        public java.util.List<String> managementFlags;
+
+        @NameInMap("MemberEniIp")
+        public String memberEniIp;
+
         @NameInMap("OsType")
         public String osType;
+
+        @NameInMap("PrimaryEniIp")
+        public String primaryEniIp;
 
         @NameInMap("ReleaseTime")
         public String releaseTime;
@@ -486,12 +528,36 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             return this.managementFlag;
         }
 
+        public DescribeDesktopsInGroupResponseBodyPostPaidDesktops setManagementFlags(java.util.List<String> managementFlags) {
+            this.managementFlags = managementFlags;
+            return this;
+        }
+        public java.util.List<String> getManagementFlags() {
+            return this.managementFlags;
+        }
+
+        public DescribeDesktopsInGroupResponseBodyPostPaidDesktops setMemberEniIp(String memberEniIp) {
+            this.memberEniIp = memberEniIp;
+            return this;
+        }
+        public String getMemberEniIp() {
+            return this.memberEniIp;
+        }
+
         public DescribeDesktopsInGroupResponseBodyPostPaidDesktops setOsType(String osType) {
             this.osType = osType;
             return this;
         }
         public String getOsType() {
             return this.osType;
+        }
+
+        public DescribeDesktopsInGroupResponseBodyPostPaidDesktops setPrimaryEniIp(String primaryEniIp) {
+            this.primaryEniIp = primaryEniIp;
+            return this;
+        }
+        public String getPrimaryEniIp() {
+            return this.primaryEniIp;
         }
 
         public DescribeDesktopsInGroupResponseBodyPostPaidDesktops setReleaseTime(String releaseTime) {

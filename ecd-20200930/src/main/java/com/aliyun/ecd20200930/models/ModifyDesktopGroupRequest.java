@@ -67,6 +67,9 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     @NameInMap("ScaleStrategyId")
     public String scaleStrategyId;
 
+    @NameInMap("StopDuration")
+    public Long stopDuration;
+
     public static ModifyDesktopGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDesktopGroupRequest self = new ModifyDesktopGroupRequest();
         return TeaModel.build(map, self);
@@ -238,6 +241,14 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     }
     public String getScaleStrategyId() {
         return this.scaleStrategyId;
+    }
+
+    public ModifyDesktopGroupRequest setStopDuration(Long stopDuration) {
+        this.stopDuration = stopDuration;
+        return this;
+    }
+    public Long getStopDuration() {
+        return this.stopDuration;
     }
 
 }

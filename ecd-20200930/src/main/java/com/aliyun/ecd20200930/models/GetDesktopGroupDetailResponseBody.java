@@ -192,6 +192,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        @NameInMap("StopDuration")
+        public Long stopDuration;
+
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
@@ -495,6 +498,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktops setStopDuration(Long stopDuration) {
+            this.stopDuration = stopDuration;
+            return this;
+        }
+        public Long getStopDuration() {
+            return this.stopDuration;
         }
 
         public GetDesktopGroupDetailResponseBodyDesktops setSystemDiskCategory(String systemDiskCategory) {
