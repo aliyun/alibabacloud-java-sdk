@@ -4,15 +4,14 @@ package com.aliyun.marketplaceintl20220726.models;
 import com.aliyun.tea.*;
 
 public class UploadFileAdvanceRequest extends TeaModel {
-    @NameInMap("FileUrlObject")
-    @Validation(required = true)
-    public java.io.InputStream fileUrlObject;
-
     @NameInMap("Ak")
     public String ak;
 
     @NameInMap("FileName")
     public String fileName;
+
+    @NameInMap("FileUrl")
+    public java.io.InputStream fileUrlObject;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -31,14 +30,6 @@ public class UploadFileAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UploadFileAdvanceRequest setFileUrlObject(java.io.InputStream fileUrlObject) {
-        this.fileUrlObject = fileUrlObject;
-        return this;
-    }
-    public java.io.InputStream getFileUrlObject() {
-        return this.fileUrlObject;
-    }
-
     public UploadFileAdvanceRequest setAk(String ak) {
         this.ak = ak;
         return this;
@@ -53,6 +44,14 @@ public class UploadFileAdvanceRequest extends TeaModel {
     }
     public String getFileName() {
         return this.fileName;
+    }
+
+    public UploadFileAdvanceRequest setFileUrlObject(java.io.InputStream fileUrlObject) {
+        this.fileUrlObject = fileUrlObject;
+        return this;
+    }
+    public java.io.InputStream getFileUrlObject() {
+        return this.fileUrlObject;
     }
 
     public UploadFileAdvanceRequest setRequestId(String requestId) {
