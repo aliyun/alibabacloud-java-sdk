@@ -63,6 +63,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("InstanceName", request.instanceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
+            body.put("Labels", request.labels);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
             body.put("Priority", request.priority);
         }
