@@ -4,27 +4,21 @@ package com.aliyun.sts20150401.models;
 import com.aliyun.tea.*;
 
 public class AssumeRoleWithOIDCRequest extends TeaModel {
-    // Session过期时间，单位为秒。
     @NameInMap("DurationSeconds")
     public Long durationSeconds;
 
-    // OIDC Provider的ARN
     @NameInMap("OIDCProviderArn")
     public String OIDCProviderArn;
 
-    // OIDC的ID Token，需输入原始Token，无需Base64解码
     @NameInMap("OIDCToken")
     public String OIDCToken;
 
-    // 权限策略。 生成STS Token时可以指定一个额外的权限策略，以进一步限制STS Token的权限。若不指定则返回的Token拥有指定角色的所有权限。
     @NameInMap("Policy")
     public String policy;
 
-    // 需要扮演的角色的ARN
     @NameInMap("RoleArn")
     public String roleArn;
 
-    // 用户自定义参数。此参数用来区分不同的令牌，可用于用户级别的访问审计。
     @NameInMap("RoleSessionName")
     public String roleSessionName;
 
