@@ -65,14 +65,12 @@ public class ListProductsResponseBody extends TeaModel {
     }
 
     public static class ListProductsResponseBodyProductInfo extends TeaModel {
-        // 通用配额是否支持
         @NameInMap("CommonQuotaSupport")
         public String commonQuotaSupport;
 
         @NameInMap("Dynamic")
         public Boolean dynamic;
 
-        // 是否支持流程
         @NameInMap("FlowControlSupport")
         public String flowControlSupport;
 
