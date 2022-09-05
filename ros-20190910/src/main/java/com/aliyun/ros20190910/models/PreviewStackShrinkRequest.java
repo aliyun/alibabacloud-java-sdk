@@ -3,7 +3,7 @@ package com.aliyun.ros20190910.models;
 
 import com.aliyun.tea.*;
 
-public class PreviewStackRequest extends TeaModel {
+public class PreviewStackShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -14,13 +14,13 @@ public class PreviewStackRequest extends TeaModel {
     public Long parallelism;
 
     @NameInMap("Parameters")
-    public java.util.List<PreviewStackRequestParameters> parameters;
+    public java.util.List<PreviewStackShrinkRequestParameters> parameters;
 
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceConfigRules")
-    public java.util.List<PreviewStackRequestResourceConfigRules> resourceConfigRules;
+    public String resourceConfigRulesShrink;
 
     @NameInMap("StackId")
     public String stackId;
@@ -55,12 +55,12 @@ public class PreviewStackRequest extends TeaModel {
     @NameInMap("TimeoutInMinutes")
     public Long timeoutInMinutes;
 
-    public static PreviewStackRequest build(java.util.Map<String, ?> map) throws Exception {
-        PreviewStackRequest self = new PreviewStackRequest();
+    public static PreviewStackShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        PreviewStackShrinkRequest self = new PreviewStackShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public PreviewStackRequest setClientToken(String clientToken) {
+    public PreviewStackShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -68,7 +68,7 @@ public class PreviewStackRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public PreviewStackRequest setDisableRollback(Boolean disableRollback) {
+    public PreviewStackShrinkRequest setDisableRollback(Boolean disableRollback) {
         this.disableRollback = disableRollback;
         return this;
     }
@@ -76,7 +76,7 @@ public class PreviewStackRequest extends TeaModel {
         return this.disableRollback;
     }
 
-    public PreviewStackRequest setParallelism(Long parallelism) {
+    public PreviewStackShrinkRequest setParallelism(Long parallelism) {
         this.parallelism = parallelism;
         return this;
     }
@@ -84,15 +84,15 @@ public class PreviewStackRequest extends TeaModel {
         return this.parallelism;
     }
 
-    public PreviewStackRequest setParameters(java.util.List<PreviewStackRequestParameters> parameters) {
+    public PreviewStackShrinkRequest setParameters(java.util.List<PreviewStackShrinkRequestParameters> parameters) {
         this.parameters = parameters;
         return this;
     }
-    public java.util.List<PreviewStackRequestParameters> getParameters() {
+    public java.util.List<PreviewStackShrinkRequestParameters> getParameters() {
         return this.parameters;
     }
 
-    public PreviewStackRequest setRegionId(String regionId) {
+    public PreviewStackShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -100,15 +100,15 @@ public class PreviewStackRequest extends TeaModel {
         return this.regionId;
     }
 
-    public PreviewStackRequest setResourceConfigRules(java.util.List<PreviewStackRequestResourceConfigRules> resourceConfigRules) {
-        this.resourceConfigRules = resourceConfigRules;
+    public PreviewStackShrinkRequest setResourceConfigRulesShrink(String resourceConfigRulesShrink) {
+        this.resourceConfigRulesShrink = resourceConfigRulesShrink;
         return this;
     }
-    public java.util.List<PreviewStackRequestResourceConfigRules> getResourceConfigRules() {
-        return this.resourceConfigRules;
+    public String getResourceConfigRulesShrink() {
+        return this.resourceConfigRulesShrink;
     }
 
-    public PreviewStackRequest setStackId(String stackId) {
+    public PreviewStackShrinkRequest setStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
@@ -116,7 +116,7 @@ public class PreviewStackRequest extends TeaModel {
         return this.stackId;
     }
 
-    public PreviewStackRequest setStackName(String stackName) {
+    public PreviewStackShrinkRequest setStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
@@ -124,7 +124,7 @@ public class PreviewStackRequest extends TeaModel {
         return this.stackName;
     }
 
-    public PreviewStackRequest setStackPolicyBody(String stackPolicyBody) {
+    public PreviewStackShrinkRequest setStackPolicyBody(String stackPolicyBody) {
         this.stackPolicyBody = stackPolicyBody;
         return this;
     }
@@ -132,7 +132,7 @@ public class PreviewStackRequest extends TeaModel {
         return this.stackPolicyBody;
     }
 
-    public PreviewStackRequest setStackPolicyURL(String stackPolicyURL) {
+    public PreviewStackShrinkRequest setStackPolicyURL(String stackPolicyURL) {
         this.stackPolicyURL = stackPolicyURL;
         return this;
     }
@@ -140,7 +140,7 @@ public class PreviewStackRequest extends TeaModel {
         return this.stackPolicyURL;
     }
 
-    public PreviewStackRequest setTemplateBody(String templateBody) {
+    public PreviewStackShrinkRequest setTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
     }
@@ -148,7 +148,7 @@ public class PreviewStackRequest extends TeaModel {
         return this.templateBody;
     }
 
-    public PreviewStackRequest setTemplateId(String templateId) {
+    public PreviewStackShrinkRequest setTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
@@ -156,7 +156,7 @@ public class PreviewStackRequest extends TeaModel {
         return this.templateId;
     }
 
-    public PreviewStackRequest setTemplateScratchId(String templateScratchId) {
+    public PreviewStackShrinkRequest setTemplateScratchId(String templateScratchId) {
         this.templateScratchId = templateScratchId;
         return this;
     }
@@ -164,7 +164,7 @@ public class PreviewStackRequest extends TeaModel {
         return this.templateScratchId;
     }
 
-    public PreviewStackRequest setTemplateScratchRegionId(String templateScratchRegionId) {
+    public PreviewStackShrinkRequest setTemplateScratchRegionId(String templateScratchRegionId) {
         this.templateScratchRegionId = templateScratchRegionId;
         return this;
     }
@@ -172,7 +172,7 @@ public class PreviewStackRequest extends TeaModel {
         return this.templateScratchRegionId;
     }
 
-    public PreviewStackRequest setTemplateURL(String templateURL) {
+    public PreviewStackShrinkRequest setTemplateURL(String templateURL) {
         this.templateURL = templateURL;
         return this;
     }
@@ -180,7 +180,7 @@ public class PreviewStackRequest extends TeaModel {
         return this.templateURL;
     }
 
-    public PreviewStackRequest setTemplateVersion(String templateVersion) {
+    public PreviewStackShrinkRequest setTemplateVersion(String templateVersion) {
         this.templateVersion = templateVersion;
         return this;
     }
@@ -188,7 +188,7 @@ public class PreviewStackRequest extends TeaModel {
         return this.templateVersion;
     }
 
-    public PreviewStackRequest setTimeoutInMinutes(Long timeoutInMinutes) {
+    public PreviewStackShrinkRequest setTimeoutInMinutes(Long timeoutInMinutes) {
         this.timeoutInMinutes = timeoutInMinutes;
         return this;
     }
@@ -196,19 +196,19 @@ public class PreviewStackRequest extends TeaModel {
         return this.timeoutInMinutes;
     }
 
-    public static class PreviewStackRequestParameters extends TeaModel {
+    public static class PreviewStackShrinkRequestParameters extends TeaModel {
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         @NameInMap("ParameterValue")
         public String parameterValue;
 
-        public static PreviewStackRequestParameters build(java.util.Map<String, ?> map) throws Exception {
-            PreviewStackRequestParameters self = new PreviewStackRequestParameters();
+        public static PreviewStackShrinkRequestParameters build(java.util.Map<String, ?> map) throws Exception {
+            PreviewStackShrinkRequestParameters self = new PreviewStackShrinkRequestParameters();
             return TeaModel.build(map, self);
         }
 
-        public PreviewStackRequestParameters setParameterKey(String parameterKey) {
+        public PreviewStackShrinkRequestParameters setParameterKey(String parameterKey) {
             this.parameterKey = parameterKey;
             return this;
         }
@@ -216,53 +216,12 @@ public class PreviewStackRequest extends TeaModel {
             return this.parameterKey;
         }
 
-        public PreviewStackRequestParameters setParameterValue(String parameterValue) {
+        public PreviewStackShrinkRequestParameters setParameterValue(String parameterValue) {
             this.parameterValue = parameterValue;
             return this;
         }
         public String getParameterValue() {
             return this.parameterValue;
-        }
-
-    }
-
-    public static class PreviewStackRequestResourceConfigRules extends TeaModel {
-        @NameInMap("Identifier")
-        public String identifier;
-
-        @NameInMap("InputParameters")
-        public java.util.Map<String, ?> inputParameters;
-
-        @NameInMap("ResourceType")
-        public String resourceType;
-
-        public static PreviewStackRequestResourceConfigRules build(java.util.Map<String, ?> map) throws Exception {
-            PreviewStackRequestResourceConfigRules self = new PreviewStackRequestResourceConfigRules();
-            return TeaModel.build(map, self);
-        }
-
-        public PreviewStackRequestResourceConfigRules setIdentifier(String identifier) {
-            this.identifier = identifier;
-            return this;
-        }
-        public String getIdentifier() {
-            return this.identifier;
-        }
-
-        public PreviewStackRequestResourceConfigRules setInputParameters(java.util.Map<String, ?> inputParameters) {
-            this.inputParameters = inputParameters;
-            return this;
-        }
-        public java.util.Map<String, ?> getInputParameters() {
-            return this.inputParameters;
-        }
-
-        public PreviewStackRequestResourceConfigRules setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
         }
 
     }
