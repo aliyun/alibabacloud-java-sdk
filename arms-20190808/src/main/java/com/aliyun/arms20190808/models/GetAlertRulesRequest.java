@@ -16,6 +16,9 @@ public class GetAlertRulesRequest extends TeaModel {
     @NameInMap("AlertType")
     public String alertType;
 
+    @NameInMap("ClusterId")
+    public String clusterId;
+
     @NameInMap("Page")
     public Long page;
 
@@ -60,6 +63,14 @@ public class GetAlertRulesRequest extends TeaModel {
     }
     public String getAlertType() {
         return this.alertType;
+    }
+
+    public GetAlertRulesRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public GetAlertRulesRequest setPage(Long page) {

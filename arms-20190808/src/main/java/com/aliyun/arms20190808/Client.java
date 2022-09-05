@@ -2499,6 +2499,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AlertType", request.alertType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.page)) {
             query.put("Page", request.page);
         }
