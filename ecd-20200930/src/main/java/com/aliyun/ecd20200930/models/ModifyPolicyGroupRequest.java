@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyPolicyGroupRequest extends TeaModel {
+    @NameInMap("AppContentProtection")
+    public String appContentProtection;
+
     @NameInMap("AuthorizeAccessPolicyRule")
     public java.util.List<ModifyPolicyGroupRequestAuthorizeAccessPolicyRule> authorizeAccessPolicyRule;
 
@@ -52,6 +55,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("PrinterRedirection")
     public String printerRedirection;
 
+    @NameInMap("RecordContent")
+    public String recordContent;
+
+    @NameInMap("RecordContentExpires")
+    public Long recordContentExpires;
+
     @NameInMap("Recording")
     public String recording;
 
@@ -97,6 +106,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public static ModifyPolicyGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPolicyGroupRequest self = new ModifyPolicyGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyPolicyGroupRequest setAppContentProtection(String appContentProtection) {
+        this.appContentProtection = appContentProtection;
+        return this;
+    }
+    public String getAppContentProtection() {
+        return this.appContentProtection;
     }
 
     public ModifyPolicyGroupRequest setAuthorizeAccessPolicyRule(java.util.List<ModifyPolicyGroupRequestAuthorizeAccessPolicyRule> authorizeAccessPolicyRule) {
@@ -225,6 +242,22 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
     public String getPrinterRedirection() {
         return this.printerRedirection;
+    }
+
+    public ModifyPolicyGroupRequest setRecordContent(String recordContent) {
+        this.recordContent = recordContent;
+        return this;
+    }
+    public String getRecordContent() {
+        return this.recordContent;
+    }
+
+    public ModifyPolicyGroupRequest setRecordContentExpires(Long recordContentExpires) {
+        this.recordContentExpires = recordContentExpires;
+        return this;
+    }
+    public Long getRecordContentExpires() {
+        return this.recordContentExpires;
     }
 
     public ModifyPolicyGroupRequest setRecording(String recording) {
