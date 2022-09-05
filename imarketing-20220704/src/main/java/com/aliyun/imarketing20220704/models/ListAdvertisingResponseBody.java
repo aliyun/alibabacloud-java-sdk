@@ -4,19 +4,15 @@ package com.aliyun.imarketing20220704.models;
 import com.aliyun.tea.*;
 
 public class ListAdvertisingResponseBody extends TeaModel {
-    // errorCode
     @NameInMap("Errorcode")
     public String errorcode;
 
-    // errorMsg
     @NameInMap("Errormsg")
     public String errormsg;
 
-    // ext
     @NameInMap("Ext")
     public java.util.Map<String, String> ext;
 
-    // header
     @NameInMap("Header")
     public ListAdvertisingResponseBodyHeader header;
 
@@ -26,7 +22,6 @@ public class ListAdvertisingResponseBody extends TeaModel {
     @NameInMap("Result")
     public ListAdvertisingResponseBodyResult result;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
@@ -92,19 +87,15 @@ public class ListAdvertisingResponseBody extends TeaModel {
     }
 
     public static class ListAdvertisingResponseBodyHeader extends TeaModel {
-        // costTime
         @NameInMap("CostTime")
         public Long costTime;
 
-        // rpcId
         @NameInMap("RpcId")
         public String rpcId;
 
-        // traceId
         @NameInMap("TraceId")
         public String traceId;
 
-        // version
         @NameInMap("Version")
         public String version;
 

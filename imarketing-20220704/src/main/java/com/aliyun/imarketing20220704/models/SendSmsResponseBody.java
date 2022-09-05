@@ -4,11 +4,17 @@ package com.aliyun.imarketing20220704.models;
 import com.aliyun.tea.*;
 
 public class SendSmsResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public Integer code;
-
     @NameInMap("Data")
     public Boolean data;
+
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("HttpCode")
+    public Integer httpCode;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -21,20 +27,36 @@ public class SendSmsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SendSmsResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public SendSmsResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
     public Boolean getData() {
         return this.data;
+    }
+
+    public SendSmsResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
+    }
+
+    public SendSmsResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public SendSmsResponseBody setHttpCode(Integer httpCode) {
+        this.httpCode = httpCode;
+        return this;
+    }
+    public Integer getHttpCode() {
+        return this.httpCode;
     }
 
     public SendSmsResponseBody setRequestId(String requestId) {

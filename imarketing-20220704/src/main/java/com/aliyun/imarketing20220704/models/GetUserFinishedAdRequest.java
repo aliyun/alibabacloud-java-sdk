@@ -4,27 +4,21 @@ package com.aliyun.imarketing20220704.models;
 import com.aliyun.tea.*;
 
 public class GetUserFinishedAdRequest extends TeaModel {
-    // adid
     @NameInMap("Adid")
     public Long adid;
 
-    // clicklink
     @NameInMap("Clicklink")
     public String clicklink;
 
-    // id
     @NameInMap("Id")
     public String id;
 
-    // mediaid
     @NameInMap("Mediaid")
     public String mediaid;
 
-    // tagid
     @NameInMap("Tagid")
     public String tagid;
 
-    // uid
     @NameInMap("Uid")
     public String uid;
 

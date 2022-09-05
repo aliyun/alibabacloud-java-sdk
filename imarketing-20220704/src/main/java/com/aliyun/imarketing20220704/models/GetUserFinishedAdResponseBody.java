@@ -4,19 +4,15 @@ package com.aliyun.imarketing20220704.models;
 import com.aliyun.tea.*;
 
 public class GetUserFinishedAdResponseBody extends TeaModel {
-    // errorCode
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // errorMsg
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    // ext
     @NameInMap("Ext")
     public java.util.Map<String, String> ext;
 
-    // header
     @NameInMap("Header")
     public GetUserFinishedAdResponseBodyHeader header;
 
@@ -26,7 +22,6 @@ public class GetUserFinishedAdResponseBody extends TeaModel {
     @NameInMap("Result")
     public GetUserFinishedAdResponseBodyResult result;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
@@ -92,19 +87,15 @@ public class GetUserFinishedAdResponseBody extends TeaModel {
     }
 
     public static class GetUserFinishedAdResponseBodyHeader extends TeaModel {
-        // costTime
         @NameInMap("CostTime")
         public Long costTime;
 
-        // rpcId
         @NameInMap("RpcId")
         public String rpcId;
 
-        // traceId
         @NameInMap("TraceId")
         public String traceId;
 
-        // version
         @NameInMap("Version")
         public String version;
 
@@ -151,6 +142,9 @@ public class GetUserFinishedAdResponseBody extends TeaModel {
         @NameInMap("Commission")
         public String commission;
 
+        @NameInMap("Id")
+        public String id;
+
         @NameInMap("MarketingType")
         public String marketingType;
 
@@ -171,6 +165,14 @@ public class GetUserFinishedAdResponseBody extends TeaModel {
         }
         public String getCommission() {
             return this.commission;
+        }
+
+        public GetUserFinishedAdResponseBodyResult setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public GetUserFinishedAdResponseBodyResult setMarketingType(String marketingType) {

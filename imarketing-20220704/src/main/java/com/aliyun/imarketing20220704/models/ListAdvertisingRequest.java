@@ -4,7 +4,6 @@ package com.aliyun.imarketing20220704.models;
 import com.aliyun.tea.*;
 
 public class ListAdvertisingRequest extends TeaModel {
-    // app
     @NameInMap("App")
     public ListAdvertisingRequestApp app;
 
@@ -17,19 +16,15 @@ public class ListAdvertisingRequest extends TeaModel {
     @NameInMap("Ext")
     public java.util.Map<String, ?> ext;
 
-    // id
     @NameInMap("Id")
     public String id;
 
-    // imp
     @NameInMap("Imp")
     public java.util.List<ListAdvertisingRequestImp> imp;
 
-    // test
     @NameInMap("Test")
     public Integer test;
 
-    // user
     @NameInMap("User")
     public ListAdvertisingRequestUser user;
 
@@ -106,11 +101,9 @@ public class ListAdvertisingRequest extends TeaModel {
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
-        // mediaid
         @NameInMap("Mediaid")
         public String mediaid;
 
-        // sn
         @NameInMap("Sn")
         public String sn;
 
@@ -448,11 +441,9 @@ public class ListAdvertisingRequest extends TeaModel {
     }
 
     public static class ListAdvertisingRequestImp extends TeaModel {
-        // id
         @NameInMap("Id")
         public String id;
 
-        // tagid
         @NameInMap("Tagid")
         public String tagid;
 
@@ -480,11 +471,9 @@ public class ListAdvertisingRequest extends TeaModel {
     }
 
     public static class ListAdvertisingRequestUser extends TeaModel {
-        // uid
         @NameInMap("Id")
         public String id;
 
-        // uidtype
         @NameInMap("Usertype")
         public String usertype;
 
