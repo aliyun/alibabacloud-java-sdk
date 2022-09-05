@@ -179,6 +179,36 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class ListInstancesResponseBodyInstancesLabels extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListInstancesResponseBodyInstancesLabels build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstancesLabels self = new ListInstancesResponseBodyInstancesLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstancesLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListInstancesResponseBodyInstancesLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyInstancesLatestSnapshot extends TeaModel {
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
@@ -406,6 +436,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("JupyterlabUrl")
         public String jupyterlabUrl;
 
+        @NameInMap("Labels")
+        public java.util.List<ListInstancesResponseBodyInstancesLabels> labels;
+
         @NameInMap("LatestSnapshot")
         public ListInstancesResponseBodyInstancesLatestSnapshot latestSnapshot;
 
@@ -585,6 +618,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getJupyterlabUrl() {
             return this.jupyterlabUrl;
+        }
+
+        public ListInstancesResponseBodyInstances setLabels(java.util.List<ListInstancesResponseBodyInstancesLabels> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<ListInstancesResponseBodyInstancesLabels> getLabels() {
+            return this.labels;
         }
 
         public ListInstancesResponseBodyInstances setLatestSnapshot(ListInstancesResponseBodyInstancesLatestSnapshot latestSnapshot) {

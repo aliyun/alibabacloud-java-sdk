@@ -25,6 +25,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    @NameInMap("Labels")
+    public java.util.List<CreateInstanceRequestLabels> labels;
+
     @NameInMap("Priority")
     public Long priority;
 
@@ -101,6 +104,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.instanceName;
     }
 
+    public CreateInstanceRequest setLabels(java.util.List<CreateInstanceRequestLabels> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.List<CreateInstanceRequestLabels> getLabels() {
+        return this.labels;
+    }
+
     public CreateInstanceRequest setPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -167,6 +178,36 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public String getMountPath() {
             return this.mountPath;
+        }
+
+    }
+
+    public static class CreateInstanceRequestLabels extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateInstanceRequestLabels build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestLabels self = new CreateInstanceRequestLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateInstanceRequestLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
