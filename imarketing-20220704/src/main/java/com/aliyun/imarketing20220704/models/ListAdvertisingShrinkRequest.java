@@ -4,7 +4,6 @@ package com.aliyun.imarketing20220704.models;
 import com.aliyun.tea.*;
 
 public class ListAdvertisingShrinkRequest extends TeaModel {
-    // app
     @NameInMap("App")
     public String appShrink;
 
@@ -17,19 +16,15 @@ public class ListAdvertisingShrinkRequest extends TeaModel {
     @NameInMap("Ext")
     public String extShrink;
 
-    // id
     @NameInMap("Id")
     public String id;
 
-    // imp
     @NameInMap("Imp")
     public String impShrink;
 
-    // test
     @NameInMap("Test")
     public Integer test;
 
-    // user
     @NameInMap("User")
     public String userShrink;
 

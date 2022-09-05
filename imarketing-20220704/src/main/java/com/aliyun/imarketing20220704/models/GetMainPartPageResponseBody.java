@@ -136,13 +136,13 @@ public class GetMainPartPageResponseBody extends TeaModel {
     }
 
     public static class GetMainPartPageResponseBodyDataPageInfo extends TeaModel {
-        @NameInMap("page")
+        @NameInMap("Page")
         public Integer page;
 
-        @NameInMap("pageSize")
+        @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("totalNumber")
+        @NameInMap("TotalNumber")
         public Integer totalNumber;
 
         public static GetMainPartPageResponseBodyDataPageInfo build(java.util.Map<String, ?> map) throws Exception {

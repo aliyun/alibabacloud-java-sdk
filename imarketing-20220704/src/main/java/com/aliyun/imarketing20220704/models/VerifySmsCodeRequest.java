@@ -3,7 +3,10 @@ package com.aliyun.imarketing20220704.models;
 
 import com.aliyun.tea.*;
 
-public class SendSmsRequest extends TeaModel {
+public class VerifySmsCodeRequest extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("NowStamp")
     public Long nowStamp;
 
@@ -13,12 +16,20 @@ public class SendSmsRequest extends TeaModel {
     @NameInMap("SignKey")
     public String signKey;
 
-    public static SendSmsRequest build(java.util.Map<String, ?> map) throws Exception {
-        SendSmsRequest self = new SendSmsRequest();
+    public static VerifySmsCodeRequest build(java.util.Map<String, ?> map) throws Exception {
+        VerifySmsCodeRequest self = new VerifySmsCodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public SendSmsRequest setNowStamp(Long nowStamp) {
+    public VerifySmsCodeRequest setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public VerifySmsCodeRequest setNowStamp(Long nowStamp) {
         this.nowStamp = nowStamp;
         return this;
     }
@@ -26,7 +37,7 @@ public class SendSmsRequest extends TeaModel {
         return this.nowStamp;
     }
 
-    public SendSmsRequest setPhoneNumbers(String phoneNumbers) {
+    public VerifySmsCodeRequest setPhoneNumbers(String phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
         return this;
     }
@@ -34,7 +45,7 @@ public class SendSmsRequest extends TeaModel {
         return this.phoneNumbers;
     }
 
-    public SendSmsRequest setSignKey(String signKey) {
+    public VerifySmsCodeRequest setSignKey(String signKey) {
         this.signKey = signKey;
         return this;
     }
