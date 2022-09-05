@@ -83,6 +83,91 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate extends TeaModel {
+        @NameInMap("Channel")
+        public String channel;
+
+        @NameInMap("CurrentAppVersion")
+        public String currentAppVersion;
+
+        @NameInMap("Force")
+        public Boolean force;
+
+        @NameInMap("NewAppVersion")
+        public String newAppVersion;
+
+        @NameInMap("Project")
+        public String project;
+
+        @NameInMap("ReleaseNote")
+        public String releaseNote;
+
+        @NameInMap("Size")
+        public String size;
+
+        public static DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate self = new DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate setChannel(String channel) {
+            this.channel = channel;
+            return this;
+        }
+        public String getChannel() {
+            return this.channel;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate setCurrentAppVersion(String currentAppVersion) {
+            this.currentAppVersion = currentAppVersion;
+            return this;
+        }
+        public String getCurrentAppVersion() {
+            return this.currentAppVersion;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate setForce(Boolean force) {
+            this.force = force;
+            return this;
+        }
+        public Boolean getForce() {
+            return this.force;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate setNewAppVersion(String newAppVersion) {
+            this.newAppVersion = newAppVersion;
+            return this;
+        }
+        public String getNewAppVersion() {
+            return this.newAppVersion;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate setProject(String project) {
+            this.project = project;
+            return this;
+        }
+        public String getProject() {
+            return this.project;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate setReleaseNote(String releaseNote) {
+            this.releaseNote = releaseNote;
+            return this;
+        }
+        public String getReleaseNote() {
+            return this.releaseNote;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate setSize(String size) {
+            this.size = size;
+            return this;
+        }
+        public String getSize() {
+            return this.size;
+        }
+
+    }
+
     public static class DescribeGlobalDesktopsResponseBodyDesktopsSessions extends TeaModel {
         @NameInMap("EndUserId")
         public String endUserId;
@@ -150,8 +235,17 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("EndUserId")
         public String endUserId;
 
+        @NameInMap("EndUserIds")
+        public java.util.List<String> endUserIds;
+
         @NameInMap("ExpiredTime")
         public String expiredTime;
+
+        @NameInMap("FotaUpdate")
+        public DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate fotaUpdate;
+
+        @NameInMap("GpuMemory")
+        public Integer gpuMemory;
 
         @NameInMap("HostName")
         public String hostName;
@@ -162,17 +256,35 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("LastStartTime")
         public String lastStartTime;
 
+        @NameInMap("ManagementFlags")
+        public java.util.List<String> managementFlags;
+
         @NameInMap("Memory")
         public Long memory;
 
+        @NameInMap("NetworkInterfaceIp")
+        public String networkInterfaceIp;
+
+        @NameInMap("OfficeSiteId")
+        public String officeSiteId;
+
         @NameInMap("OsType")
         public String osType;
+
+        @NameInMap("PolicyGroupId")
+        public String policyGroupId;
+
+        @NameInMap("ProtocolType")
+        public String protocolType;
 
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("Sessions")
         public java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsSessions> sessions;
+
+        @NameInMap("UserCustomName")
+        public String userCustomName;
 
         public static DescribeGlobalDesktopsResponseBodyDesktops build(java.util.Map<String, ?> map) throws Exception {
             DescribeGlobalDesktopsResponseBodyDesktops self = new DescribeGlobalDesktopsResponseBodyDesktops();
@@ -275,12 +387,36 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             return this.endUserId;
         }
 
+        public DescribeGlobalDesktopsResponseBodyDesktops setEndUserIds(java.util.List<String> endUserIds) {
+            this.endUserIds = endUserIds;
+            return this;
+        }
+        public java.util.List<String> getEndUserIds() {
+            return this.endUserIds;
+        }
+
         public DescribeGlobalDesktopsResponseBodyDesktops setExpiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
             return this;
         }
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktops setFotaUpdate(DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate fotaUpdate) {
+            this.fotaUpdate = fotaUpdate;
+            return this;
+        }
+        public DescribeGlobalDesktopsResponseBodyDesktopsFotaUpdate getFotaUpdate() {
+            return this.fotaUpdate;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktops setGpuMemory(Integer gpuMemory) {
+            this.gpuMemory = gpuMemory;
+            return this;
+        }
+        public Integer getGpuMemory() {
+            return this.gpuMemory;
         }
 
         public DescribeGlobalDesktopsResponseBodyDesktops setHostName(String hostName) {
@@ -307,6 +443,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             return this.lastStartTime;
         }
 
+        public DescribeGlobalDesktopsResponseBodyDesktops setManagementFlags(java.util.List<String> managementFlags) {
+            this.managementFlags = managementFlags;
+            return this;
+        }
+        public java.util.List<String> getManagementFlags() {
+            return this.managementFlags;
+        }
+
         public DescribeGlobalDesktopsResponseBodyDesktops setMemory(Long memory) {
             this.memory = memory;
             return this;
@@ -315,12 +459,44 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             return this.memory;
         }
 
+        public DescribeGlobalDesktopsResponseBodyDesktops setNetworkInterfaceIp(String networkInterfaceIp) {
+            this.networkInterfaceIp = networkInterfaceIp;
+            return this;
+        }
+        public String getNetworkInterfaceIp() {
+            return this.networkInterfaceIp;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktops setOfficeSiteId(String officeSiteId) {
+            this.officeSiteId = officeSiteId;
+            return this;
+        }
+        public String getOfficeSiteId() {
+            return this.officeSiteId;
+        }
+
         public DescribeGlobalDesktopsResponseBodyDesktops setOsType(String osType) {
             this.osType = osType;
             return this;
         }
         public String getOsType() {
             return this.osType;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktops setPolicyGroupId(String policyGroupId) {
+            this.policyGroupId = policyGroupId;
+            return this;
+        }
+        public String getPolicyGroupId() {
+            return this.policyGroupId;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktops setProtocolType(String protocolType) {
+            this.protocolType = protocolType;
+            return this;
+        }
+        public String getProtocolType() {
+            return this.protocolType;
         }
 
         public DescribeGlobalDesktopsResponseBodyDesktops setRegionId(String regionId) {
@@ -337,6 +513,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsSessions> getSessions() {
             return this.sessions;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktops setUserCustomName(String userCustomName) {
+            this.userCustomName = userCustomName;
+            return this;
+        }
+        public String getUserCustomName() {
+            return this.userCustomName;
         }
 
     }

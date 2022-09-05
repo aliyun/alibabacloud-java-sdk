@@ -25,23 +25,8 @@ public class GetLoginTokenRequest extends TeaModel {
     @NameInMap("DirectoryId")
     public String directoryId;
 
-    @NameInMap("EncryptedFingerPrintData")
-    public String encryptedFingerPrintData;
-
-    @NameInMap("EncryptedKey")
-    public String encryptedKey;
-
-    @NameInMap("EncryptedPassword")
-    public String encryptedPassword;
-
     @NameInMap("EndUserId")
     public String endUserId;
-
-    @NameInMap("FingerPrintData")
-    public String fingerPrintData;
-
-    @NameInMap("ImageUrl")
-    public String imageUrl;
 
     @NameInMap("KeepAlive")
     public Boolean keepAlive;
@@ -67,17 +52,8 @@ public class GetLoginTokenRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
-    @NameInMap("SsoExtendsCookies")
-    public String ssoExtendsCookies;
-
-    @NameInMap("SsoSessionToken")
-    public String ssoSessionToken;
-
     @NameInMap("TokenCode")
     public String tokenCode;
-
-    @NameInMap("UmidToken")
-    public String umidToken;
 
     @NameInMap("Uuid")
     public String uuid;
@@ -143,52 +119,12 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.directoryId;
     }
 
-    public GetLoginTokenRequest setEncryptedFingerPrintData(String encryptedFingerPrintData) {
-        this.encryptedFingerPrintData = encryptedFingerPrintData;
-        return this;
-    }
-    public String getEncryptedFingerPrintData() {
-        return this.encryptedFingerPrintData;
-    }
-
-    public GetLoginTokenRequest setEncryptedKey(String encryptedKey) {
-        this.encryptedKey = encryptedKey;
-        return this;
-    }
-    public String getEncryptedKey() {
-        return this.encryptedKey;
-    }
-
-    public GetLoginTokenRequest setEncryptedPassword(String encryptedPassword) {
-        this.encryptedPassword = encryptedPassword;
-        return this;
-    }
-    public String getEncryptedPassword() {
-        return this.encryptedPassword;
-    }
-
     public GetLoginTokenRequest setEndUserId(String endUserId) {
         this.endUserId = endUserId;
         return this;
     }
     public String getEndUserId() {
         return this.endUserId;
-    }
-
-    public GetLoginTokenRequest setFingerPrintData(String fingerPrintData) {
-        this.fingerPrintData = fingerPrintData;
-        return this;
-    }
-    public String getFingerPrintData() {
-        return this.fingerPrintData;
-    }
-
-    public GetLoginTokenRequest setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-        return this;
-    }
-    public String getImageUrl() {
-        return this.imageUrl;
     }
 
     public GetLoginTokenRequest setKeepAlive(Boolean keepAlive) {
@@ -255,36 +191,12 @@ public class GetLoginTokenRequest extends TeaModel {
         return this.sessionId;
     }
 
-    public GetLoginTokenRequest setSsoExtendsCookies(String ssoExtendsCookies) {
-        this.ssoExtendsCookies = ssoExtendsCookies;
-        return this;
-    }
-    public String getSsoExtendsCookies() {
-        return this.ssoExtendsCookies;
-    }
-
-    public GetLoginTokenRequest setSsoSessionToken(String ssoSessionToken) {
-        this.ssoSessionToken = ssoSessionToken;
-        return this;
-    }
-    public String getSsoSessionToken() {
-        return this.ssoSessionToken;
-    }
-
     public GetLoginTokenRequest setTokenCode(String tokenCode) {
         this.tokenCode = tokenCode;
         return this;
     }
     public String getTokenCode() {
         return this.tokenCode;
-    }
-
-    public GetLoginTokenRequest setUmidToken(String umidToken) {
-        this.umidToken = umidToken;
-        return this;
-    }
-    public String getUmidToken() {
-        return this.umidToken;
     }
 
     public GetLoginTokenRequest setUuid(String uuid) {
