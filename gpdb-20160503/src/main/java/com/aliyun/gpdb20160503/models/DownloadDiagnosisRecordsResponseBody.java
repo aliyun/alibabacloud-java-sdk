@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DownloadDiagnosisRecordsResponseBody extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
     @NameInMap("DownloadId")
     public String downloadId;
 
@@ -13,6 +16,14 @@ public class DownloadDiagnosisRecordsResponseBody extends TeaModel {
     public static DownloadDiagnosisRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DownloadDiagnosisRecordsResponseBody self = new DownloadDiagnosisRecordsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DownloadDiagnosisRecordsResponseBody setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     public DownloadDiagnosisRecordsResponseBody setDownloadId(String downloadId) {

@@ -70,6 +70,9 @@ public class CreateECSDBInstanceRequest extends TeaModel {
     @NameInMap("StorageSize")
     public Integer storageSize;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateECSDBInstanceRequestTag> tag;
+
     @NameInMap("UsedTime")
     public String usedTime;
 
@@ -263,6 +266,14 @@ public class CreateECSDBInstanceRequest extends TeaModel {
         return this.storageSize;
     }
 
+    public CreateECSDBInstanceRequest setTag(java.util.List<CreateECSDBInstanceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateECSDBInstanceRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateECSDBInstanceRequest setUsedTime(String usedTime) {
         this.usedTime = usedTime;
         return this;
@@ -293,6 +304,36 @@ public class CreateECSDBInstanceRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateECSDBInstanceRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateECSDBInstanceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateECSDBInstanceRequestTag self = new CreateECSDBInstanceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateECSDBInstanceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateECSDBInstanceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

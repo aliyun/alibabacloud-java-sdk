@@ -10,6 +10,9 @@ public class ModifyDBInstanceDescriptionRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static ModifyDBInstanceDescriptionRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceDescriptionRequest self = new ModifyDBInstanceDescriptionRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ModifyDBInstanceDescriptionRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifyDBInstanceDescriptionRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

@@ -13,6 +13,9 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     @NameInMap("Key")
     public String key;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("StartTime")
     public String startTime;
 
@@ -43,6 +46,14 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     }
     public String getKey() {
         return this.key;
+    }
+
+    public DescribeDBInstancePerformanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeDBInstancePerformanceRequest setStartTime(String startTime) {

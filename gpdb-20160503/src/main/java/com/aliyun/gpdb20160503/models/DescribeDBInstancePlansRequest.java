@@ -19,8 +19,8 @@ public class DescribeDBInstancePlansRequest extends TeaModel {
     @NameInMap("PlanId")
     public String planId;
 
-    @NameInMap("PlanSchedulerType")
-    public String planSchedulerType;
+    @NameInMap("PlanScheduleType")
+    public String planScheduleType;
 
     @NameInMap("PlanType")
     public String planType;
@@ -70,12 +70,12 @@ public class DescribeDBInstancePlansRequest extends TeaModel {
         return this.planId;
     }
 
-    public DescribeDBInstancePlansRequest setPlanSchedulerType(String planSchedulerType) {
-        this.planSchedulerType = planSchedulerType;
+    public DescribeDBInstancePlansRequest setPlanScheduleType(String planScheduleType) {
+        this.planScheduleType = planScheduleType;
         return this;
     }
-    public String getPlanSchedulerType() {
-        return this.planSchedulerType;
+    public String getPlanScheduleType() {
+        return this.planScheduleType;
     }
 
     public DescribeDBInstancePlansRequest setPlanType(String planType) {

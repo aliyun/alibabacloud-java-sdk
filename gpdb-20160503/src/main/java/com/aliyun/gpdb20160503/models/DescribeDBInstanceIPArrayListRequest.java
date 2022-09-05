@@ -7,6 +7,9 @@ public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DescribeDBInstanceIPArrayListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceIPArrayListRequest self = new DescribeDBInstanceIPArrayListRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeDBInstanceIPArrayListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

@@ -10,6 +10,9 @@ public class ModifyDBInstanceMaintainTimeRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("StartTime")
     public String startTime;
 
@@ -32,6 +35,14 @@ public class ModifyDBInstanceMaintainTimeRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public ModifyDBInstanceMaintainTimeRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ModifyDBInstanceMaintainTimeRequest setStartTime(String startTime) {
