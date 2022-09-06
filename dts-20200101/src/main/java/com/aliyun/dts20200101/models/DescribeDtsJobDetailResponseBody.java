@@ -10,6 +10,18 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @NameInMap("BeginTimestamp")
     public String beginTimestamp;
 
+    @NameInMap("Binlog")
+    public String binlog;
+
+    @NameInMap("BinlogSite")
+    public String binlogSite;
+
+    @NameInMap("BinlogTime")
+    public String binlogTime;
+
+    @NameInMap("BootTime")
+    public String bootTime;
+
     @NameInMap("Checkpoint")
     public Long checkpoint;
 
@@ -97,6 +109,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @NameInMap("JobType")
     public String jobType;
 
+    @NameInMap("LastUpdateTime")
+    public String lastUpdateTime;
+
     @NameInMap("MigrationMode")
     public DescribeDtsJobDetailResponseBodyMigrationMode migrationMode;
 
@@ -158,6 +173,38 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
     public String getBeginTimestamp() {
         return this.beginTimestamp;
+    }
+
+    public DescribeDtsJobDetailResponseBody setBinlog(String binlog) {
+        this.binlog = binlog;
+        return this;
+    }
+    public String getBinlog() {
+        return this.binlog;
+    }
+
+    public DescribeDtsJobDetailResponseBody setBinlogSite(String binlogSite) {
+        this.binlogSite = binlogSite;
+        return this;
+    }
+    public String getBinlogSite() {
+        return this.binlogSite;
+    }
+
+    public DescribeDtsJobDetailResponseBody setBinlogTime(String binlogTime) {
+        this.binlogTime = binlogTime;
+        return this;
+    }
+    public String getBinlogTime() {
+        return this.binlogTime;
+    }
+
+    public DescribeDtsJobDetailResponseBody setBootTime(String bootTime) {
+        this.bootTime = bootTime;
+        return this;
+    }
+    public String getBootTime() {
+        return this.bootTime;
     }
 
     public DescribeDtsJobDetailResponseBody setCheckpoint(Long checkpoint) {
@@ -390,6 +437,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
     public String getJobType() {
         return this.jobType;
+    }
+
+    public DescribeDtsJobDetailResponseBody setLastUpdateTime(String lastUpdateTime) {
+        this.lastUpdateTime = lastUpdateTime;
+        return this;
+    }
+    public String getLastUpdateTime() {
+        return this.lastUpdateTime;
     }
 
     public DescribeDtsJobDetailResponseBody setMigrationMode(DescribeDtsJobDetailResponseBodyMigrationMode migrationMode) {

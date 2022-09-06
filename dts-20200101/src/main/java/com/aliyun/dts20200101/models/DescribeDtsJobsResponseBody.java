@@ -1926,6 +1926,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("Reserved")
         public String reserved;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("RetryState")
         public DescribeDtsJobsResponseBodyDtsJobListRetryState retryState;
 
@@ -2203,6 +2206,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getReserved() {
             return this.reserved;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setRetryState(DescribeDtsJobsResponseBodyDtsJobListRetryState retryState) {
@@ -3910,6 +3921,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("Reserved")
         public String reserved;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("RetryState")
         public DescribeDtsJobsResponseBodyEtlDemoListRetryState retryState;
 
@@ -4147,6 +4161,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getReserved() {
             return this.reserved;
+        }
+
+        public DescribeDtsJobsResponseBodyEtlDemoList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeDtsJobsResponseBodyEtlDemoList setRetryState(DescribeDtsJobsResponseBodyEtlDemoListRetryState retryState) {
