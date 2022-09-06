@@ -12,10 +12,6 @@ public class PutLayerACLResponse extends TeaModel {
     @Validation(required = true)
     public Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    public String body;
-
     public static PutLayerACLResponse build(java.util.Map<String, ?> map) throws Exception {
         PutLayerACLResponse self = new PutLayerACLResponse();
         return TeaModel.build(map, self);
@@ -35,14 +31,6 @@ public class PutLayerACLResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
-    }
-
-    public PutLayerACLResponse setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
 }
