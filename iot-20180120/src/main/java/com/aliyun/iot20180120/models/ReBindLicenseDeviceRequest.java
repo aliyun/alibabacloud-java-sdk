@@ -3,12 +3,9 @@ package com.aliyun.iot20180120.models;
 
 import com.aliyun.tea.*;
 
-public class BindLicenseDeviceRequest extends TeaModel {
+public class ReBindLicenseDeviceRequest extends TeaModel {
     @NameInMap("DeviceNameList")
     public java.util.List<String> deviceNameList;
-
-    @NameInMap("IotIdList")
-    public java.util.List<String> iotIdList;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
@@ -19,12 +16,12 @@ public class BindLicenseDeviceRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
-    public static BindLicenseDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
-        BindLicenseDeviceRequest self = new BindLicenseDeviceRequest();
+    public static ReBindLicenseDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
+        ReBindLicenseDeviceRequest self = new ReBindLicenseDeviceRequest();
         return TeaModel.build(map, self);
     }
 
-    public BindLicenseDeviceRequest setDeviceNameList(java.util.List<String> deviceNameList) {
+    public ReBindLicenseDeviceRequest setDeviceNameList(java.util.List<String> deviceNameList) {
         this.deviceNameList = deviceNameList;
         return this;
     }
@@ -32,15 +29,7 @@ public class BindLicenseDeviceRequest extends TeaModel {
         return this.deviceNameList;
     }
 
-    public BindLicenseDeviceRequest setIotIdList(java.util.List<String> iotIdList) {
-        this.iotIdList = iotIdList;
-        return this;
-    }
-    public java.util.List<String> getIotIdList() {
-        return this.iotIdList;
-    }
-
-    public BindLicenseDeviceRequest setIotInstanceId(String iotInstanceId) {
+    public ReBindLicenseDeviceRequest setIotInstanceId(String iotInstanceId) {
         this.iotInstanceId = iotInstanceId;
         return this;
     }
@@ -48,7 +37,7 @@ public class BindLicenseDeviceRequest extends TeaModel {
         return this.iotInstanceId;
     }
 
-    public BindLicenseDeviceRequest setLicenseCode(String licenseCode) {
+    public ReBindLicenseDeviceRequest setLicenseCode(String licenseCode) {
         this.licenseCode = licenseCode;
         return this;
     }
@@ -56,7 +45,7 @@ public class BindLicenseDeviceRequest extends TeaModel {
         return this.licenseCode;
     }
 
-    public BindLicenseDeviceRequest setProductKey(String productKey) {
+    public ReBindLicenseDeviceRequest setProductKey(String productKey) {
         this.productKey = productKey;
         return this;
     }
