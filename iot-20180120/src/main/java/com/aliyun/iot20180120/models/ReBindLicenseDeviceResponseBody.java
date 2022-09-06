@@ -3,12 +3,12 @@ package com.aliyun.iot20180120.models;
 
 import com.aliyun.tea.*;
 
-public class BindLicenseDeviceResponseBody extends TeaModel {
+public class ReBindLicenseDeviceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
-    public BindLicenseDeviceResponseBodyData data;
+    public ReBindLicenseDeviceResponseBodyData data;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -19,12 +19,12 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static BindLicenseDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        BindLicenseDeviceResponseBody self = new BindLicenseDeviceResponseBody();
+    public static ReBindLicenseDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ReBindLicenseDeviceResponseBody self = new ReBindLicenseDeviceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public BindLicenseDeviceResponseBody setCode(String code) {
+    public ReBindLicenseDeviceResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,15 +32,15 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BindLicenseDeviceResponseBody setData(BindLicenseDeviceResponseBodyData data) {
+    public ReBindLicenseDeviceResponseBody setData(ReBindLicenseDeviceResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public BindLicenseDeviceResponseBodyData getData() {
+    public ReBindLicenseDeviceResponseBodyData getData() {
         return this.data;
     }
 
-    public BindLicenseDeviceResponseBody setErrorMessage(String errorMessage) {
+    public ReBindLicenseDeviceResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -48,7 +48,7 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public BindLicenseDeviceResponseBody setRequestId(String requestId) {
+    public ReBindLicenseDeviceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,75 +56,12 @@ public class BindLicenseDeviceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BindLicenseDeviceResponseBody setSuccess(Boolean success) {
+    public ReBindLicenseDeviceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class BindLicenseDeviceResponseBodyData extends TeaModel {
-        @NameInMap("CheckProgressId")
-        public String checkProgressId;
-
-        @NameInMap("FailSum")
-        public Long failSum;
-
-        @NameInMap("Progress")
-        public Integer progress;
-
-        @NameInMap("ResultCsvFile")
-        public String resultCsvFile;
-
-        @NameInMap("SuccessSum")
-        public Long successSum;
-
-        public static BindLicenseDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            BindLicenseDeviceResponseBodyData self = new BindLicenseDeviceResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public BindLicenseDeviceResponseBodyData setCheckProgressId(String checkProgressId) {
-            this.checkProgressId = checkProgressId;
-            return this;
-        }
-        public String getCheckProgressId() {
-            return this.checkProgressId;
-        }
-
-        public BindLicenseDeviceResponseBodyData setFailSum(Long failSum) {
-            this.failSum = failSum;
-            return this;
-        }
-        public Long getFailSum() {
-            return this.failSum;
-        }
-
-        public BindLicenseDeviceResponseBodyData setProgress(Integer progress) {
-            this.progress = progress;
-            return this;
-        }
-        public Integer getProgress() {
-            return this.progress;
-        }
-
-        public BindLicenseDeviceResponseBodyData setResultCsvFile(String resultCsvFile) {
-            this.resultCsvFile = resultCsvFile;
-            return this;
-        }
-        public String getResultCsvFile() {
-            return this.resultCsvFile;
-        }
-
-        public BindLicenseDeviceResponseBodyData setSuccessSum(Long successSum) {
-            this.successSum = successSum;
-            return this;
-        }
-        public Long getSuccessSum() {
-            return this.successSum;
-        }
-
     }
 
     public static class ReBindLicenseDeviceResponseBodyData extends TeaModel {

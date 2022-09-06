@@ -13,6 +13,9 @@ public class SyncSpeechByCombinationRequest extends TeaModel {
     @NameInMap("DeviceName")
     public String deviceName;
 
+    @NameInMap("EnforceFlag")
+    public Boolean enforceFlag;
+
     @NameInMap("IotId")
     public String iotId;
 
@@ -52,6 +55,14 @@ public class SyncSpeechByCombinationRequest extends TeaModel {
     }
     public String getDeviceName() {
         return this.deviceName;
+    }
+
+    public SyncSpeechByCombinationRequest setEnforceFlag(Boolean enforceFlag) {
+        this.enforceFlag = enforceFlag;
+        return this;
+    }
+    public Boolean getEnforceFlag() {
+        return this.enforceFlag;
     }
 
     public SyncSpeechByCombinationRequest setIotId(String iotId) {

@@ -3,7 +3,7 @@ package com.aliyun.iot20180120.models;
 
 import com.aliyun.tea.*;
 
-public class SpeechByCombinationRequest extends TeaModel {
+public class ShareSpeechByCombinationRequest extends TeaModel {
     @NameInMap("AudioFormat")
     public String audioFormat;
 
@@ -12,9 +12,6 @@ public class SpeechByCombinationRequest extends TeaModel {
 
     @NameInMap("DeviceName")
     public String deviceName;
-
-    @NameInMap("EnforceFlag")
-    public Boolean enforceFlag;
 
     @NameInMap("IotId")
     public String iotId;
@@ -28,12 +25,12 @@ public class SpeechByCombinationRequest extends TeaModel {
     @NameInMap("SpeechId")
     public String speechId;
 
-    public static SpeechByCombinationRequest build(java.util.Map<String, ?> map) throws Exception {
-        SpeechByCombinationRequest self = new SpeechByCombinationRequest();
+    public static ShareSpeechByCombinationRequest build(java.util.Map<String, ?> map) throws Exception {
+        ShareSpeechByCombinationRequest self = new ShareSpeechByCombinationRequest();
         return TeaModel.build(map, self);
     }
 
-    public SpeechByCombinationRequest setAudioFormat(String audioFormat) {
+    public ShareSpeechByCombinationRequest setAudioFormat(String audioFormat) {
         this.audioFormat = audioFormat;
         return this;
     }
@@ -41,7 +38,7 @@ public class SpeechByCombinationRequest extends TeaModel {
         return this.audioFormat;
     }
 
-    public SpeechByCombinationRequest setCombinationList(java.util.List<String> combinationList) {
+    public ShareSpeechByCombinationRequest setCombinationList(java.util.List<String> combinationList) {
         this.combinationList = combinationList;
         return this;
     }
@@ -49,7 +46,7 @@ public class SpeechByCombinationRequest extends TeaModel {
         return this.combinationList;
     }
 
-    public SpeechByCombinationRequest setDeviceName(String deviceName) {
+    public ShareSpeechByCombinationRequest setDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
     }
@@ -57,15 +54,7 @@ public class SpeechByCombinationRequest extends TeaModel {
         return this.deviceName;
     }
 
-    public SpeechByCombinationRequest setEnforceFlag(Boolean enforceFlag) {
-        this.enforceFlag = enforceFlag;
-        return this;
-    }
-    public Boolean getEnforceFlag() {
-        return this.enforceFlag;
-    }
-
-    public SpeechByCombinationRequest setIotId(String iotId) {
+    public ShareSpeechByCombinationRequest setIotId(String iotId) {
         this.iotId = iotId;
         return this;
     }
@@ -73,7 +62,7 @@ public class SpeechByCombinationRequest extends TeaModel {
         return this.iotId;
     }
 
-    public SpeechByCombinationRequest setIotInstanceId(String iotInstanceId) {
+    public ShareSpeechByCombinationRequest setIotInstanceId(String iotInstanceId) {
         this.iotInstanceId = iotInstanceId;
         return this;
     }
@@ -81,7 +70,7 @@ public class SpeechByCombinationRequest extends TeaModel {
         return this.iotInstanceId;
     }
 
-    public SpeechByCombinationRequest setProductKey(String productKey) {
+    public ShareSpeechByCombinationRequest setProductKey(String productKey) {
         this.productKey = productKey;
         return this;
     }
@@ -89,7 +78,7 @@ public class SpeechByCombinationRequest extends TeaModel {
         return this.productKey;
     }
 
-    public SpeechByCombinationRequest setSpeechId(String speechId) {
+    public ShareSpeechByCombinationRequest setSpeechId(String speechId) {
         this.speechId = speechId;
         return this;
     }
