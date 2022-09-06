@@ -4,10 +4,6 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyDtsJobAdvanceRequest extends TeaModel {
-    @NameInMap("FileOssUrlObject")
-    @Validation(required = true)
-    public java.io.InputStream fileOssUrlObject;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -19,6 +15,9 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
 
     @NameInMap("EtlOperatorColumnReference")
     public String etlOperatorColumnReference;
+
+    @NameInMap("FileOssUrl")
+    public java.io.InputStream fileOssUrlObject;
 
     @NameInMap("FilterTableName")
     public String filterTableName;
@@ -38,14 +37,6 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     public static ModifyDtsJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDtsJobAdvanceRequest self = new ModifyDtsJobAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDtsJobAdvanceRequest setFileOssUrlObject(java.io.InputStream fileOssUrlObject) {
-        this.fileOssUrlObject = fileOssUrlObject;
-        return this;
-    }
-    public java.io.InputStream getFileOssUrlObject() {
-        return this.fileOssUrlObject;
     }
 
     public ModifyDtsJobAdvanceRequest setClientToken(String clientToken) {
@@ -78,6 +69,14 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     }
     public String getEtlOperatorColumnReference() {
         return this.etlOperatorColumnReference;
+    }
+
+    public ModifyDtsJobAdvanceRequest setFileOssUrlObject(java.io.InputStream fileOssUrlObject) {
+        this.fileOssUrlObject = fileOssUrlObject;
+        return this;
+    }
+    public java.io.InputStream getFileOssUrlObject() {
+        return this.fileOssUrlObject;
     }
 
     public ModifyDtsJobAdvanceRequest setFilterTableName(String filterTableName) {

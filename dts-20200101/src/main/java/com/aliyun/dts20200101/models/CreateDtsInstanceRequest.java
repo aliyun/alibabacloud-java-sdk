@@ -46,6 +46,9 @@ public class CreateDtsInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("SourceEndpointEngineName")
     public String sourceEndpointEngineName;
 
@@ -176,6 +179,14 @@ public class CreateDtsInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateDtsInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateDtsInstanceRequest setSourceEndpointEngineName(String sourceEndpointEngineName) {

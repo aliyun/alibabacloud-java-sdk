@@ -3,12 +3,9 @@ package com.aliyun.dts20200101.models;
 
 import com.aliyun.tea.*;
 
-public class ConfigureDtsJobAdvanceRequest extends TeaModel {
+public class ConfigureEtlJobRequest extends TeaModel {
     @NameInMap("Checkpoint")
     public String checkpoint;
-
-    @NameInMap("DataCheckConfigure")
-    public String dataCheckConfigure;
 
     @NameInMap("DataInitialization")
     public Boolean dataInitialization;
@@ -18,9 +15,6 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
 
     @NameInMap("DbList")
     public String dbList;
-
-    @NameInMap("DedicatedClusterId")
-    public String dedicatedClusterId;
 
     @NameInMap("DelayNotice")
     public Boolean delayNotice;
@@ -61,9 +55,6 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("DestinationEndpointUserName")
     public String destinationEndpointUserName;
 
-    @NameInMap("DisasterRecoveryJob")
-    public Boolean disasterRecoveryJob;
-
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
@@ -79,8 +70,8 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("ErrorPhone")
     public String errorPhone;
 
-    @NameInMap("FileOssUrl")
-    public java.io.InputStream fileOssUrlObject;
+    @NameInMap("EtlCalculator")
+    public String etlCalculator;
 
     @NameInMap("JobType")
     public String jobType;
@@ -133,15 +124,12 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("StructureInitialization")
     public Boolean structureInitialization;
 
-    @NameInMap("SynchronizationDirection")
-    public String synchronizationDirection;
-
-    public static ConfigureDtsJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        ConfigureDtsJobAdvanceRequest self = new ConfigureDtsJobAdvanceRequest();
+    public static ConfigureEtlJobRequest build(java.util.Map<String, ?> map) throws Exception {
+        ConfigureEtlJobRequest self = new ConfigureEtlJobRequest();
         return TeaModel.build(map, self);
     }
 
-    public ConfigureDtsJobAdvanceRequest setCheckpoint(String checkpoint) {
+    public ConfigureEtlJobRequest setCheckpoint(String checkpoint) {
         this.checkpoint = checkpoint;
         return this;
     }
@@ -149,15 +137,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.checkpoint;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDataCheckConfigure(String dataCheckConfigure) {
-        this.dataCheckConfigure = dataCheckConfigure;
-        return this;
-    }
-    public String getDataCheckConfigure() {
-        return this.dataCheckConfigure;
-    }
-
-    public ConfigureDtsJobAdvanceRequest setDataInitialization(Boolean dataInitialization) {
+    public ConfigureEtlJobRequest setDataInitialization(Boolean dataInitialization) {
         this.dataInitialization = dataInitialization;
         return this;
     }
@@ -165,7 +145,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.dataInitialization;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDataSynchronization(Boolean dataSynchronization) {
+    public ConfigureEtlJobRequest setDataSynchronization(Boolean dataSynchronization) {
         this.dataSynchronization = dataSynchronization;
         return this;
     }
@@ -173,7 +153,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.dataSynchronization;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDbList(String dbList) {
+    public ConfigureEtlJobRequest setDbList(String dbList) {
         this.dbList = dbList;
         return this;
     }
@@ -181,15 +161,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.dbList;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDedicatedClusterId(String dedicatedClusterId) {
-        this.dedicatedClusterId = dedicatedClusterId;
-        return this;
-    }
-    public String getDedicatedClusterId() {
-        return this.dedicatedClusterId;
-    }
-
-    public ConfigureDtsJobAdvanceRequest setDelayNotice(Boolean delayNotice) {
+    public ConfigureEtlJobRequest setDelayNotice(Boolean delayNotice) {
         this.delayNotice = delayNotice;
         return this;
     }
@@ -197,7 +169,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.delayNotice;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDelayPhone(String delayPhone) {
+    public ConfigureEtlJobRequest setDelayPhone(String delayPhone) {
         this.delayPhone = delayPhone;
         return this;
     }
@@ -205,7 +177,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.delayPhone;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDelayRuleTime(Long delayRuleTime) {
+    public ConfigureEtlJobRequest setDelayRuleTime(Long delayRuleTime) {
         this.delayRuleTime = delayRuleTime;
         return this;
     }
@@ -213,7 +185,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.delayRuleTime;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDestinationEndpointDataBaseName(String destinationEndpointDataBaseName) {
+    public ConfigureEtlJobRequest setDestinationEndpointDataBaseName(String destinationEndpointDataBaseName) {
         this.destinationEndpointDataBaseName = destinationEndpointDataBaseName;
         return this;
     }
@@ -221,7 +193,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.destinationEndpointDataBaseName;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDestinationEndpointEngineName(String destinationEndpointEngineName) {
+    public ConfigureEtlJobRequest setDestinationEndpointEngineName(String destinationEndpointEngineName) {
         this.destinationEndpointEngineName = destinationEndpointEngineName;
         return this;
     }
@@ -229,7 +201,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.destinationEndpointEngineName;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDestinationEndpointIP(String destinationEndpointIP) {
+    public ConfigureEtlJobRequest setDestinationEndpointIP(String destinationEndpointIP) {
         this.destinationEndpointIP = destinationEndpointIP;
         return this;
     }
@@ -237,7 +209,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.destinationEndpointIP;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDestinationEndpointInstanceID(String destinationEndpointInstanceID) {
+    public ConfigureEtlJobRequest setDestinationEndpointInstanceID(String destinationEndpointInstanceID) {
         this.destinationEndpointInstanceID = destinationEndpointInstanceID;
         return this;
     }
@@ -245,7 +217,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.destinationEndpointInstanceID;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDestinationEndpointInstanceType(String destinationEndpointInstanceType) {
+    public ConfigureEtlJobRequest setDestinationEndpointInstanceType(String destinationEndpointInstanceType) {
         this.destinationEndpointInstanceType = destinationEndpointInstanceType;
         return this;
     }
@@ -253,7 +225,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.destinationEndpointInstanceType;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDestinationEndpointOracleSID(String destinationEndpointOracleSID) {
+    public ConfigureEtlJobRequest setDestinationEndpointOracleSID(String destinationEndpointOracleSID) {
         this.destinationEndpointOracleSID = destinationEndpointOracleSID;
         return this;
     }
@@ -261,7 +233,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.destinationEndpointOracleSID;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDestinationEndpointPassword(String destinationEndpointPassword) {
+    public ConfigureEtlJobRequest setDestinationEndpointPassword(String destinationEndpointPassword) {
         this.destinationEndpointPassword = destinationEndpointPassword;
         return this;
     }
@@ -269,7 +241,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.destinationEndpointPassword;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDestinationEndpointPort(String destinationEndpointPort) {
+    public ConfigureEtlJobRequest setDestinationEndpointPort(String destinationEndpointPort) {
         this.destinationEndpointPort = destinationEndpointPort;
         return this;
     }
@@ -277,7 +249,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.destinationEndpointPort;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDestinationEndpointRegion(String destinationEndpointRegion) {
+    public ConfigureEtlJobRequest setDestinationEndpointRegion(String destinationEndpointRegion) {
         this.destinationEndpointRegion = destinationEndpointRegion;
         return this;
     }
@@ -285,7 +257,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.destinationEndpointRegion;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDestinationEndpointUserName(String destinationEndpointUserName) {
+    public ConfigureEtlJobRequest setDestinationEndpointUserName(String destinationEndpointUserName) {
         this.destinationEndpointUserName = destinationEndpointUserName;
         return this;
     }
@@ -293,15 +265,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.destinationEndpointUserName;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDisasterRecoveryJob(Boolean disasterRecoveryJob) {
-        this.disasterRecoveryJob = disasterRecoveryJob;
-        return this;
-    }
-    public Boolean getDisasterRecoveryJob() {
-        return this.disasterRecoveryJob;
-    }
-
-    public ConfigureDtsJobAdvanceRequest setDtsInstanceId(String dtsInstanceId) {
+    public ConfigureEtlJobRequest setDtsInstanceId(String dtsInstanceId) {
         this.dtsInstanceId = dtsInstanceId;
         return this;
     }
@@ -309,7 +273,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.dtsInstanceId;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDtsJobId(String dtsJobId) {
+    public ConfigureEtlJobRequest setDtsJobId(String dtsJobId) {
         this.dtsJobId = dtsJobId;
         return this;
     }
@@ -317,7 +281,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.dtsJobId;
     }
 
-    public ConfigureDtsJobAdvanceRequest setDtsJobName(String dtsJobName) {
+    public ConfigureEtlJobRequest setDtsJobName(String dtsJobName) {
         this.dtsJobName = dtsJobName;
         return this;
     }
@@ -325,7 +289,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.dtsJobName;
     }
 
-    public ConfigureDtsJobAdvanceRequest setErrorNotice(Boolean errorNotice) {
+    public ConfigureEtlJobRequest setErrorNotice(Boolean errorNotice) {
         this.errorNotice = errorNotice;
         return this;
     }
@@ -333,7 +297,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.errorNotice;
     }
 
-    public ConfigureDtsJobAdvanceRequest setErrorPhone(String errorPhone) {
+    public ConfigureEtlJobRequest setErrorPhone(String errorPhone) {
         this.errorPhone = errorPhone;
         return this;
     }
@@ -341,15 +305,15 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.errorPhone;
     }
 
-    public ConfigureDtsJobAdvanceRequest setFileOssUrlObject(java.io.InputStream fileOssUrlObject) {
-        this.fileOssUrlObject = fileOssUrlObject;
+    public ConfigureEtlJobRequest setEtlCalculator(String etlCalculator) {
+        this.etlCalculator = etlCalculator;
         return this;
     }
-    public java.io.InputStream getFileOssUrlObject() {
-        return this.fileOssUrlObject;
+    public String getEtlCalculator() {
+        return this.etlCalculator;
     }
 
-    public ConfigureDtsJobAdvanceRequest setJobType(String jobType) {
+    public ConfigureEtlJobRequest setJobType(String jobType) {
         this.jobType = jobType;
         return this;
     }
@@ -357,7 +321,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.jobType;
     }
 
-    public ConfigureDtsJobAdvanceRequest setOwnerId(String ownerId) {
+    public ConfigureEtlJobRequest setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -365,7 +329,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ConfigureDtsJobAdvanceRequest setRegionId(String regionId) {
+    public ConfigureEtlJobRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -373,7 +337,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ConfigureDtsJobAdvanceRequest setReserve(String reserve) {
+    public ConfigureEtlJobRequest setReserve(String reserve) {
         this.reserve = reserve;
         return this;
     }
@@ -381,7 +345,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.reserve;
     }
 
-    public ConfigureDtsJobAdvanceRequest setSourceEndpointDatabaseName(String sourceEndpointDatabaseName) {
+    public ConfigureEtlJobRequest setSourceEndpointDatabaseName(String sourceEndpointDatabaseName) {
         this.sourceEndpointDatabaseName = sourceEndpointDatabaseName;
         return this;
     }
@@ -389,7 +353,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.sourceEndpointDatabaseName;
     }
 
-    public ConfigureDtsJobAdvanceRequest setSourceEndpointEngineName(String sourceEndpointEngineName) {
+    public ConfigureEtlJobRequest setSourceEndpointEngineName(String sourceEndpointEngineName) {
         this.sourceEndpointEngineName = sourceEndpointEngineName;
         return this;
     }
@@ -397,7 +361,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.sourceEndpointEngineName;
     }
 
-    public ConfigureDtsJobAdvanceRequest setSourceEndpointIP(String sourceEndpointIP) {
+    public ConfigureEtlJobRequest setSourceEndpointIP(String sourceEndpointIP) {
         this.sourceEndpointIP = sourceEndpointIP;
         return this;
     }
@@ -405,7 +369,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.sourceEndpointIP;
     }
 
-    public ConfigureDtsJobAdvanceRequest setSourceEndpointInstanceID(String sourceEndpointInstanceID) {
+    public ConfigureEtlJobRequest setSourceEndpointInstanceID(String sourceEndpointInstanceID) {
         this.sourceEndpointInstanceID = sourceEndpointInstanceID;
         return this;
     }
@@ -413,7 +377,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.sourceEndpointInstanceID;
     }
 
-    public ConfigureDtsJobAdvanceRequest setSourceEndpointInstanceType(String sourceEndpointInstanceType) {
+    public ConfigureEtlJobRequest setSourceEndpointInstanceType(String sourceEndpointInstanceType) {
         this.sourceEndpointInstanceType = sourceEndpointInstanceType;
         return this;
     }
@@ -421,7 +385,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.sourceEndpointInstanceType;
     }
 
-    public ConfigureDtsJobAdvanceRequest setSourceEndpointOracleSID(String sourceEndpointOracleSID) {
+    public ConfigureEtlJobRequest setSourceEndpointOracleSID(String sourceEndpointOracleSID) {
         this.sourceEndpointOracleSID = sourceEndpointOracleSID;
         return this;
     }
@@ -429,7 +393,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.sourceEndpointOracleSID;
     }
 
-    public ConfigureDtsJobAdvanceRequest setSourceEndpointOwnerID(String sourceEndpointOwnerID) {
+    public ConfigureEtlJobRequest setSourceEndpointOwnerID(String sourceEndpointOwnerID) {
         this.sourceEndpointOwnerID = sourceEndpointOwnerID;
         return this;
     }
@@ -437,7 +401,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.sourceEndpointOwnerID;
     }
 
-    public ConfigureDtsJobAdvanceRequest setSourceEndpointPassword(String sourceEndpointPassword) {
+    public ConfigureEtlJobRequest setSourceEndpointPassword(String sourceEndpointPassword) {
         this.sourceEndpointPassword = sourceEndpointPassword;
         return this;
     }
@@ -445,7 +409,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.sourceEndpointPassword;
     }
 
-    public ConfigureDtsJobAdvanceRequest setSourceEndpointPort(String sourceEndpointPort) {
+    public ConfigureEtlJobRequest setSourceEndpointPort(String sourceEndpointPort) {
         this.sourceEndpointPort = sourceEndpointPort;
         return this;
     }
@@ -453,7 +417,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.sourceEndpointPort;
     }
 
-    public ConfigureDtsJobAdvanceRequest setSourceEndpointRegion(String sourceEndpointRegion) {
+    public ConfigureEtlJobRequest setSourceEndpointRegion(String sourceEndpointRegion) {
         this.sourceEndpointRegion = sourceEndpointRegion;
         return this;
     }
@@ -461,7 +425,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.sourceEndpointRegion;
     }
 
-    public ConfigureDtsJobAdvanceRequest setSourceEndpointRole(String sourceEndpointRole) {
+    public ConfigureEtlJobRequest setSourceEndpointRole(String sourceEndpointRole) {
         this.sourceEndpointRole = sourceEndpointRole;
         return this;
     }
@@ -469,7 +433,7 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.sourceEndpointRole;
     }
 
-    public ConfigureDtsJobAdvanceRequest setSourceEndpointUserName(String sourceEndpointUserName) {
+    public ConfigureEtlJobRequest setSourceEndpointUserName(String sourceEndpointUserName) {
         this.sourceEndpointUserName = sourceEndpointUserName;
         return this;
     }
@@ -477,20 +441,12 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
         return this.sourceEndpointUserName;
     }
 
-    public ConfigureDtsJobAdvanceRequest setStructureInitialization(Boolean structureInitialization) {
+    public ConfigureEtlJobRequest setStructureInitialization(Boolean structureInitialization) {
         this.structureInitialization = structureInitialization;
         return this;
     }
     public Boolean getStructureInitialization() {
         return this.structureInitialization;
-    }
-
-    public ConfigureDtsJobAdvanceRequest setSynchronizationDirection(String synchronizationDirection) {
-        this.synchronizationDirection = synchronizationDirection;
-        return this;
-    }
-    public String getSynchronizationDirection() {
-        return this.synchronizationDirection;
     }
 
 }
