@@ -71,6 +71,9 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("GrantAliUid")
+        public String grantAliUid;
+
         @NameInMap("ISP")
         public String ISP;
 
@@ -104,6 +107,9 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
         @NameInMap("RateLimit")
         public Long rateLimit;
 
+        @NameInMap("ServiceType")
+        public String serviceType;
+
         @NameInMap("Type")
         public String type;
 
@@ -135,6 +141,14 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public ListIoTCloudConnectorsResponseBodyIoTCloudConnectors setGrantAliUid(String grantAliUid) {
+            this.grantAliUid = grantAliUid;
+            return this;
+        }
+        public String getGrantAliUid() {
+            return this.grantAliUid;
         }
 
         public ListIoTCloudConnectorsResponseBodyIoTCloudConnectors setISP(String ISP) {
@@ -223,6 +237,14 @@ public class ListIoTCloudConnectorsResponseBody extends TeaModel {
         }
         public Long getRateLimit() {
             return this.rateLimit;
+        }
+
+        public ListIoTCloudConnectorsResponseBodyIoTCloudConnectors setServiceType(String serviceType) {
+            this.serviceType = serviceType;
+            return this;
+        }
+        public String getServiceType() {
+            return this.serviceType;
         }
 
         public ListIoTCloudConnectorsResponseBodyIoTCloudConnectors setType(String type) {

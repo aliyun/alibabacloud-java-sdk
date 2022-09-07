@@ -86,6 +86,9 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
         @NameInMap("IoTCloudConnectorStatus")
         public String ioTCloudConnectorStatus;
 
+        @NameInMap("ServiceType")
+        public String serviceType;
+
         public static ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroupsIoTCloudConnectors build(java.util.Map<String, ?> map) throws Exception {
             ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroupsIoTCloudConnectors self = new ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroupsIoTCloudConnectors();
             return TeaModel.build(map, self);
@@ -147,6 +150,14 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
             return this.ioTCloudConnectorStatus;
         }
 
+        public ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroupsIoTCloudConnectors setServiceType(String serviceType) {
+            this.serviceType = serviceType;
+            return this;
+        }
+        public String getServiceType() {
+            return this.serviceType;
+        }
+
     }
 
     public static class ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroups extends TeaModel {
@@ -167,6 +178,9 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("ServiceType")
+        public String serviceType;
 
         @NameInMap("Type")
         public String type;
@@ -222,6 +236,14 @@ public class ListIoTCloudConnectorGroupsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroups setServiceType(String serviceType) {
+            this.serviceType = serviceType;
+            return this;
+        }
+        public String getServiceType() {
+            return this.serviceType;
         }
 
         public ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroups setType(String type) {

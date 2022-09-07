@@ -80,6 +80,9 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
         @NameInMap("Destination")
         public String destination;
 
+        @NameInMap("DestinationPort")
+        public String destinationPort;
+
         @NameInMap("DestinationType")
         public String destinationType;
 
@@ -88,6 +91,9 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
 
         @NameInMap("Policy")
         public String policy;
+
+        @NameInMap("Protocol")
+        public String protocol;
 
         @NameInMap("SourceCidrs")
         public java.util.List<String> sourceCidrs;
@@ -140,6 +146,14 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
             return this.destination;
         }
 
+        public ListGroupAuthorizationRulesResponseBodyGroupAuthorizationRules setDestinationPort(String destinationPort) {
+            this.destinationPort = destinationPort;
+            return this;
+        }
+        public String getDestinationPort() {
+            return this.destinationPort;
+        }
+
         public ListGroupAuthorizationRulesResponseBodyGroupAuthorizationRules setDestinationType(String destinationType) {
             this.destinationType = destinationType;
             return this;
@@ -162,6 +176,14 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
         }
         public String getPolicy() {
             return this.policy;
+        }
+
+        public ListGroupAuthorizationRulesResponseBodyGroupAuthorizationRules setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
         }
 
         public ListGroupAuthorizationRulesResponseBodyGroupAuthorizationRules setSourceCidrs(java.util.List<String> sourceCidrs) {
