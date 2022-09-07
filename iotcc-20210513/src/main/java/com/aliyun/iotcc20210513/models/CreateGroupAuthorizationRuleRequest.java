@@ -16,6 +16,9 @@ public class CreateGroupAuthorizationRuleRequest extends TeaModel {
     @NameInMap("Destination")
     public String destination;
 
+    @NameInMap("DestinationPort")
+    public String destinationPort;
+
     @NameInMap("DestinationType")
     public String destinationType;
 
@@ -27,6 +30,9 @@ public class CreateGroupAuthorizationRuleRequest extends TeaModel {
 
     @NameInMap("Policy")
     public String policy;
+
+    @NameInMap("Protocol")
+    public String protocol;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -74,6 +80,14 @@ public class CreateGroupAuthorizationRuleRequest extends TeaModel {
         return this.destination;
     }
 
+    public CreateGroupAuthorizationRuleRequest setDestinationPort(String destinationPort) {
+        this.destinationPort = destinationPort;
+        return this;
+    }
+    public String getDestinationPort() {
+        return this.destinationPort;
+    }
+
     public CreateGroupAuthorizationRuleRequest setDestinationType(String destinationType) {
         this.destinationType = destinationType;
         return this;
@@ -104,6 +118,14 @@ public class CreateGroupAuthorizationRuleRequest extends TeaModel {
     }
     public String getPolicy() {
         return this.policy;
+    }
+
+    public CreateGroupAuthorizationRuleRequest setProtocol(String protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+    public String getProtocol() {
+        return this.protocol;
     }
 
     public CreateGroupAuthorizationRuleRequest setRegionId(String regionId) {
