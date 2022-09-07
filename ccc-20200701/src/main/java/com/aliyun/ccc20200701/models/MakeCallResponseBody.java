@@ -76,9 +76,6 @@ public class MakeCallResponseBody extends TeaModel {
     }
 
     public static class MakeCallResponseBodyDataCallContextChannelContexts extends TeaModel {
-        @NameInMap("AssociatedData")
-        public java.util.Map<String, ?> associatedData;
-
         @NameInMap("CallType")
         public String callType;
 
@@ -118,14 +115,6 @@ public class MakeCallResponseBody extends TeaModel {
         public static MakeCallResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
             MakeCallResponseBodyDataCallContextChannelContexts self = new MakeCallResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
-        }
-
-        public MakeCallResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
-            this.associatedData = associatedData;
-            return this;
-        }
-        public java.util.Map<String, ?> getAssociatedData() {
-            return this.associatedData;
         }
 
         public MakeCallResponseBodyDataCallContextChannelContexts setCallType(String callType) {

@@ -19,9 +19,6 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     public static GetAudioFileUploadParametersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAudioFileUploadParametersResponseBody self = new GetAudioFileUploadParametersResponseBody();
         return TeaModel.build(map, self);
@@ -65,14 +62,6 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetAudioFileUploadParametersResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class GetAudioFileUploadParametersResponseBodyData extends TeaModel {

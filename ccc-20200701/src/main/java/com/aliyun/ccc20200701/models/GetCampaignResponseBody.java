@@ -16,9 +16,6 @@ public class GetCampaignResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     public static GetCampaignResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCampaignResponseBody self = new GetCampaignResponseBody();
         return TeaModel.build(map, self);
@@ -56,14 +53,6 @@ public class GetCampaignResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetCampaignResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static class GetCampaignResponseBodyData extends TeaModel {
         @NameInMap("ActualEndTime")
         public Long actualEndTime;
@@ -71,7 +60,6 @@ public class GetCampaignResponseBody extends TeaModel {
         @NameInMap("ActualStartTime")
         public Long actualStartTime;
 
-        // id
         @NameInMap("CampaignId")
         public String campaignId;
 

@@ -76,9 +76,6 @@ public class StartConferenceResponseBody extends TeaModel {
     }
 
     public static class StartConferenceResponseBodyDataCallContextChannelContexts extends TeaModel {
-        @NameInMap("AssociatedData")
-        public java.util.Map<String, ?> associatedData;
-
         @NameInMap("CallType")
         public String callType;
 
@@ -118,14 +115,6 @@ public class StartConferenceResponseBody extends TeaModel {
         public static StartConferenceResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
             StartConferenceResponseBodyDataCallContextChannelContexts self = new StartConferenceResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
-        }
-
-        public StartConferenceResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
-            this.associatedData = associatedData;
-            return this;
-        }
-        public java.util.Map<String, ?> getAssociatedData() {
-            return this.associatedData;
         }
 
         public StartConferenceResponseBodyDataCallContextChannelContexts setCallType(String callType) {
@@ -312,9 +301,6 @@ public class StartConferenceResponseBody extends TeaModel {
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
-        @NameInMap("Uri")
-        public String uri;
-
         @NameInMap("UserId")
         public String userId;
 
@@ -415,14 +401,6 @@ public class StartConferenceResponseBody extends TeaModel {
         }
         public java.util.List<String> getSignedSkillGroupIdList() {
             return this.signedSkillGroupIdList;
-        }
-
-        public StartConferenceResponseBodyDataUserContext setUri(String uri) {
-            this.uri = uri;
-            return this;
-        }
-        public String getUri() {
-            return this.uri;
         }
 
         public StartConferenceResponseBodyDataUserContext setUserId(String userId) {

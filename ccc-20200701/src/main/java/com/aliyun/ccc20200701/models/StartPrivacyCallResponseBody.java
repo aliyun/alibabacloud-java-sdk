@@ -3,7 +3,7 @@ package com.aliyun.ccc20200701.models;
 
 import com.aliyun.tea.*;
 
-public class ExportCustomCallTaggingResponseBody extends TeaModel {
+public class StartPrivacyCallResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -16,15 +16,18 @@ public class ExportCustomCallTaggingResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("Params")
+    public java.util.List<String> params;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ExportCustomCallTaggingResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ExportCustomCallTaggingResponseBody self = new ExportCustomCallTaggingResponseBody();
+    public static StartPrivacyCallResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        StartPrivacyCallResponseBody self = new StartPrivacyCallResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ExportCustomCallTaggingResponseBody setCode(String code) {
+    public StartPrivacyCallResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,7 +35,7 @@ public class ExportCustomCallTaggingResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ExportCustomCallTaggingResponseBody setData(String data) {
+    public StartPrivacyCallResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -40,7 +43,7 @@ public class ExportCustomCallTaggingResponseBody extends TeaModel {
         return this.data;
     }
 
-    public ExportCustomCallTaggingResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public StartPrivacyCallResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -48,7 +51,7 @@ public class ExportCustomCallTaggingResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public ExportCustomCallTaggingResponseBody setMessage(String message) {
+    public StartPrivacyCallResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -56,7 +59,15 @@ public class ExportCustomCallTaggingResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ExportCustomCallTaggingResponseBody setRequestId(String requestId) {
+    public StartPrivacyCallResponseBody setParams(java.util.List<String> params) {
+        this.params = params;
+        return this;
+    }
+    public java.util.List<String> getParams() {
+        return this.params;
+    }
+
+    public StartPrivacyCallResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

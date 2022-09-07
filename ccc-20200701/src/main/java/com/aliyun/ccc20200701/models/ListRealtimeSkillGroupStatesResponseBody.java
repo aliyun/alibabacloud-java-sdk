@@ -77,6 +77,9 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         @NameInMap("LongestWaitingTime")
         public Long longestWaitingTime;
 
+        @NameInMap("OutboundScenarioReadyAgents")
+        public Long outboundScenarioReadyAgents;
+
         @NameInMap("ReadyAgents")
         public Long readyAgents;
 
@@ -130,6 +133,14 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         }
         public Long getLongestWaitingTime() {
             return this.longestWaitingTime;
+        }
+
+        public ListRealtimeSkillGroupStatesResponseBodyDataList setOutboundScenarioReadyAgents(Long outboundScenarioReadyAgents) {
+            this.outboundScenarioReadyAgents = outboundScenarioReadyAgents;
+            return this;
+        }
+        public Long getOutboundScenarioReadyAgents() {
+            return this.outboundScenarioReadyAgents;
         }
 
         public ListRealtimeSkillGroupStatesResponseBodyDataList setReadyAgents(Long readyAgents) {

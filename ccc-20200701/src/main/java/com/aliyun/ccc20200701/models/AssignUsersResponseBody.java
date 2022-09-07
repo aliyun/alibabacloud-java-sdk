@@ -19,9 +19,6 @@ public class AssignUsersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Sync")
-    public String sync;
-
     @NameInMap("WorkflowId")
     public String workflowId;
 
@@ -68,14 +65,6 @@ public class AssignUsersResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public AssignUsersResponseBody setSync(String sync) {
-        this.sync = sync;
-        return this;
-    }
-    public String getSync() {
-        return this.sync;
     }
 
     public AssignUsersResponseBody setWorkflowId(String workflowId) {

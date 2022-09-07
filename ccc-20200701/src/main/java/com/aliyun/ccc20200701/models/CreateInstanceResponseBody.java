@@ -16,9 +16,6 @@ public class CreateInstanceResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Params")
-    public java.util.List<String> params;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,14 +54,6 @@ public class CreateInstanceResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
-    }
-
-    public CreateInstanceResponseBody setParams(java.util.List<String> params) {
-        this.params = params;
-        return this;
-    }
-    public java.util.List<String> getParams() {
-        return this.params;
     }
 
     public CreateInstanceResponseBody setRequestId(String requestId) {

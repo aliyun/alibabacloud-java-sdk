@@ -76,9 +76,6 @@ public class StartPredictiveCallResponseBody extends TeaModel {
     }
 
     public static class StartPredictiveCallResponseBodyDataCallContextChannelContexts extends TeaModel {
-        @NameInMap("AssociatedData")
-        public java.util.Map<String, ?> associatedData;
-
         @NameInMap("CallType")
         public String callType;
 
@@ -118,14 +115,6 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         public static StartPredictiveCallResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
             StartPredictiveCallResponseBodyDataCallContextChannelContexts self = new StartPredictiveCallResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
-        }
-
-        public StartPredictiveCallResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
-            this.associatedData = associatedData;
-            return this;
-        }
-        public java.util.Map<String, ?> getAssociatedData() {
-            return this.associatedData;
         }
 
         public StartPredictiveCallResponseBodyDataCallContextChannelContexts setCallType(String callType) {

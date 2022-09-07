@@ -16,9 +16,6 @@ public class ListRamUsersResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Params")
-    public java.util.List<String> params;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,14 +54,6 @@ public class ListRamUsersResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
-    }
-
-    public ListRamUsersResponseBody setParams(java.util.List<String> params) {
-        this.params = params;
-        return this;
-    }
-    public java.util.List<String> getParams() {
-        return this.params;
     }
 
     public ListRamUsersResponseBody setRequestId(String requestId) {

@@ -4,22 +4,18 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class CreateCampaignResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // campaign id
     @NameInMap("Data")
     public String data;
 
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -82,7 +82,6 @@ public class ListCampaignsResponseBody extends TeaModel {
         @NameInMap("ActualStartTime")
         public Long actualStartTime;
 
-        // id
         @NameInMap("CampaignId")
         public String campaignId;
 
@@ -119,7 +118,6 @@ public class ListCampaignsResponseBody extends TeaModel {
         @NameInMap("Simulation")
         public Boolean simulation;
 
-        // state
         @NameInMap("State")
         public String state;
 

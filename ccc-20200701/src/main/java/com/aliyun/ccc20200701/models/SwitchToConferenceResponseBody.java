@@ -3,12 +3,12 @@ package com.aliyun.ccc20200701.models;
 
 import com.aliyun.tea.*;
 
-public class HoldCallResponseBody extends TeaModel {
+public class SwitchToConferenceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
-    public HoldCallResponseBodyData data;
+    public SwitchToConferenceResponseBodyData data;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -22,12 +22,12 @@ public class HoldCallResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static HoldCallResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        HoldCallResponseBody self = new HoldCallResponseBody();
+    public static SwitchToConferenceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SwitchToConferenceResponseBody self = new SwitchToConferenceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public HoldCallResponseBody setCode(String code) {
+    public SwitchToConferenceResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -35,15 +35,15 @@ public class HoldCallResponseBody extends TeaModel {
         return this.code;
     }
 
-    public HoldCallResponseBody setData(HoldCallResponseBodyData data) {
+    public SwitchToConferenceResponseBody setData(SwitchToConferenceResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public HoldCallResponseBodyData getData() {
+    public SwitchToConferenceResponseBodyData getData() {
         return this.data;
     }
 
-    public HoldCallResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public SwitchToConferenceResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -51,7 +51,7 @@ public class HoldCallResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public HoldCallResponseBody setMessage(String message) {
+    public SwitchToConferenceResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -59,7 +59,7 @@ public class HoldCallResponseBody extends TeaModel {
         return this.message;
     }
 
-    public HoldCallResponseBody setParams(java.util.List<String> params) {
+    public SwitchToConferenceResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
     }
@@ -67,7 +67,7 @@ public class HoldCallResponseBody extends TeaModel {
         return this.params;
     }
 
-    public HoldCallResponseBody setRequestId(String requestId) {
+    public SwitchToConferenceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -75,9 +75,12 @@ public class HoldCallResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class HoldCallResponseBodyDataCallContextChannelContexts extends TeaModel {
+    public static class SwitchToConferenceResponseBodyDataCallContextChannelContexts extends TeaModel {
         @NameInMap("CallType")
         public String callType;
+
+        @NameInMap("ChannelFlags")
+        public String channelFlags;
 
         @NameInMap("ChannelId")
         public String channelId;
@@ -87,6 +90,9 @@ public class HoldCallResponseBody extends TeaModel {
 
         @NameInMap("Destination")
         public String destination;
+
+        @NameInMap("Index")
+        public Integer index;
 
         @NameInMap("JobId")
         public String jobId;
@@ -112,12 +118,12 @@ public class HoldCallResponseBody extends TeaModel {
         @NameInMap("UserId")
         public String userId;
 
-        public static HoldCallResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
-            HoldCallResponseBodyDataCallContextChannelContexts self = new HoldCallResponseBodyDataCallContextChannelContexts();
+        public static SwitchToConferenceResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
+            SwitchToConferenceResponseBodyDataCallContextChannelContexts self = new SwitchToConferenceResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
         }
 
-        public HoldCallResponseBodyDataCallContextChannelContexts setCallType(String callType) {
+        public SwitchToConferenceResponseBodyDataCallContextChannelContexts setCallType(String callType) {
             this.callType = callType;
             return this;
         }
@@ -125,7 +131,15 @@ public class HoldCallResponseBody extends TeaModel {
             return this.callType;
         }
 
-        public HoldCallResponseBodyDataCallContextChannelContexts setChannelId(String channelId) {
+        public SwitchToConferenceResponseBodyDataCallContextChannelContexts setChannelFlags(String channelFlags) {
+            this.channelFlags = channelFlags;
+            return this;
+        }
+        public String getChannelFlags() {
+            return this.channelFlags;
+        }
+
+        public SwitchToConferenceResponseBodyDataCallContextChannelContexts setChannelId(String channelId) {
             this.channelId = channelId;
             return this;
         }
@@ -133,7 +147,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.channelId;
         }
 
-        public HoldCallResponseBodyDataCallContextChannelContexts setChannelState(String channelState) {
+        public SwitchToConferenceResponseBodyDataCallContextChannelContexts setChannelState(String channelState) {
             this.channelState = channelState;
             return this;
         }
@@ -141,7 +155,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.channelState;
         }
 
-        public HoldCallResponseBodyDataCallContextChannelContexts setDestination(String destination) {
+        public SwitchToConferenceResponseBodyDataCallContextChannelContexts setDestination(String destination) {
             this.destination = destination;
             return this;
         }
@@ -149,7 +163,15 @@ public class HoldCallResponseBody extends TeaModel {
             return this.destination;
         }
 
-        public HoldCallResponseBodyDataCallContextChannelContexts setJobId(String jobId) {
+        public SwitchToConferenceResponseBodyDataCallContextChannelContexts setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        public SwitchToConferenceResponseBodyDataCallContextChannelContexts setJobId(String jobId) {
             this.jobId = jobId;
             return this;
         }
@@ -157,7 +179,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public HoldCallResponseBodyDataCallContextChannelContexts setOriginator(String originator) {
+        public SwitchToConferenceResponseBodyDataCallContextChannelContexts setOriginator(String originator) {
             this.originator = originator;
             return this;
         }
@@ -165,7 +187,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.originator;
         }
 
-        public HoldCallResponseBodyDataCallContextChannelContexts setReleaseInitiator(String releaseInitiator) {
+        public SwitchToConferenceResponseBodyDataCallContextChannelContexts setReleaseInitiator(String releaseInitiator) {
             this.releaseInitiator = releaseInitiator;
             return this;
         }
@@ -173,7 +195,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.releaseInitiator;
         }
 
-        public HoldCallResponseBodyDataCallContextChannelContexts setReleaseReason(String releaseReason) {
+        public SwitchToConferenceResponseBodyDataCallContextChannelContexts setReleaseReason(String releaseReason) {
             this.releaseReason = releaseReason;
             return this;
         }
@@ -181,7 +203,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.releaseReason;
         }
 
-        public HoldCallResponseBodyDataCallContextChannelContexts setSkillGroupId(String skillGroupId) {
+        public SwitchToConferenceResponseBodyDataCallContextChannelContexts setSkillGroupId(String skillGroupId) {
             this.skillGroupId = skillGroupId;
             return this;
         }
@@ -189,7 +211,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.skillGroupId;
         }
 
-        public HoldCallResponseBodyDataCallContextChannelContexts setTimestamp(Long timestamp) {
+        public SwitchToConferenceResponseBodyDataCallContextChannelContexts setTimestamp(Long timestamp) {
             this.timestamp = timestamp;
             return this;
         }
@@ -197,7 +219,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.timestamp;
         }
 
-        public HoldCallResponseBodyDataCallContextChannelContexts setUserExtension(String userExtension) {
+        public SwitchToConferenceResponseBodyDataCallContextChannelContexts setUserExtension(String userExtension) {
             this.userExtension = userExtension;
             return this;
         }
@@ -205,7 +227,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.userExtension;
         }
 
-        public HoldCallResponseBodyDataCallContextChannelContexts setUserId(String userId) {
+        public SwitchToConferenceResponseBodyDataCallContextChannelContexts setUserId(String userId) {
             this.userId = userId;
             return this;
         }
@@ -215,12 +237,12 @@ public class HoldCallResponseBody extends TeaModel {
 
     }
 
-    public static class HoldCallResponseBodyDataCallContext extends TeaModel {
+    public static class SwitchToConferenceResponseBodyDataCallContext extends TeaModel {
         @NameInMap("CallType")
         public String callType;
 
         @NameInMap("ChannelContexts")
-        public java.util.List<HoldCallResponseBodyDataCallContextChannelContexts> channelContexts;
+        public java.util.List<SwitchToConferenceResponseBodyDataCallContextChannelContexts> channelContexts;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -228,12 +250,12 @@ public class HoldCallResponseBody extends TeaModel {
         @NameInMap("JobId")
         public String jobId;
 
-        public static HoldCallResponseBodyDataCallContext build(java.util.Map<String, ?> map) throws Exception {
-            HoldCallResponseBodyDataCallContext self = new HoldCallResponseBodyDataCallContext();
+        public static SwitchToConferenceResponseBodyDataCallContext build(java.util.Map<String, ?> map) throws Exception {
+            SwitchToConferenceResponseBodyDataCallContext self = new SwitchToConferenceResponseBodyDataCallContext();
             return TeaModel.build(map, self);
         }
 
-        public HoldCallResponseBodyDataCallContext setCallType(String callType) {
+        public SwitchToConferenceResponseBodyDataCallContext setCallType(String callType) {
             this.callType = callType;
             return this;
         }
@@ -241,15 +263,15 @@ public class HoldCallResponseBody extends TeaModel {
             return this.callType;
         }
 
-        public HoldCallResponseBodyDataCallContext setChannelContexts(java.util.List<HoldCallResponseBodyDataCallContextChannelContexts> channelContexts) {
+        public SwitchToConferenceResponseBodyDataCallContext setChannelContexts(java.util.List<SwitchToConferenceResponseBodyDataCallContextChannelContexts> channelContexts) {
             this.channelContexts = channelContexts;
             return this;
         }
-        public java.util.List<HoldCallResponseBodyDataCallContextChannelContexts> getChannelContexts() {
+        public java.util.List<SwitchToConferenceResponseBodyDataCallContextChannelContexts> getChannelContexts() {
             return this.channelContexts;
         }
 
-        public HoldCallResponseBodyDataCallContext setInstanceId(String instanceId) {
+        public SwitchToConferenceResponseBodyDataCallContext setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -257,7 +279,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public HoldCallResponseBodyDataCallContext setJobId(String jobId) {
+        public SwitchToConferenceResponseBodyDataCallContext setJobId(String jobId) {
             this.jobId = jobId;
             return this;
         }
@@ -267,12 +289,15 @@ public class HoldCallResponseBody extends TeaModel {
 
     }
 
-    public static class HoldCallResponseBodyDataUserContext extends TeaModel {
+    public static class SwitchToConferenceResponseBodyDataUserContext extends TeaModel {
         @NameInMap("BreakCode")
         public String breakCode;
 
         @NameInMap("DeviceId")
         public String deviceId;
+
+        @NameInMap("DeviceState")
+        public String deviceState;
 
         @NameInMap("Extension")
         public String extension;
@@ -292,9 +317,6 @@ public class HoldCallResponseBody extends TeaModel {
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
-        @NameInMap("Reserved")
-        public Long reserved;
-
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
@@ -307,12 +329,12 @@ public class HoldCallResponseBody extends TeaModel {
         @NameInMap("WorkMode")
         public String workMode;
 
-        public static HoldCallResponseBodyDataUserContext build(java.util.Map<String, ?> map) throws Exception {
-            HoldCallResponseBodyDataUserContext self = new HoldCallResponseBodyDataUserContext();
+        public static SwitchToConferenceResponseBodyDataUserContext build(java.util.Map<String, ?> map) throws Exception {
+            SwitchToConferenceResponseBodyDataUserContext self = new SwitchToConferenceResponseBodyDataUserContext();
             return TeaModel.build(map, self);
         }
 
-        public HoldCallResponseBodyDataUserContext setBreakCode(String breakCode) {
+        public SwitchToConferenceResponseBodyDataUserContext setBreakCode(String breakCode) {
             this.breakCode = breakCode;
             return this;
         }
@@ -320,7 +342,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.breakCode;
         }
 
-        public HoldCallResponseBodyDataUserContext setDeviceId(String deviceId) {
+        public SwitchToConferenceResponseBodyDataUserContext setDeviceId(String deviceId) {
             this.deviceId = deviceId;
             return this;
         }
@@ -328,7 +350,15 @@ public class HoldCallResponseBody extends TeaModel {
             return this.deviceId;
         }
 
-        public HoldCallResponseBodyDataUserContext setExtension(String extension) {
+        public SwitchToConferenceResponseBodyDataUserContext setDeviceState(String deviceState) {
+            this.deviceState = deviceState;
+            return this;
+        }
+        public String getDeviceState() {
+            return this.deviceState;
+        }
+
+        public SwitchToConferenceResponseBodyDataUserContext setExtension(String extension) {
             this.extension = extension;
             return this;
         }
@@ -336,7 +366,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.extension;
         }
 
-        public HoldCallResponseBodyDataUserContext setHeartbeat(Long heartbeat) {
+        public SwitchToConferenceResponseBodyDataUserContext setHeartbeat(Long heartbeat) {
             this.heartbeat = heartbeat;
             return this;
         }
@@ -344,7 +374,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.heartbeat;
         }
 
-        public HoldCallResponseBodyDataUserContext setInstanceId(String instanceId) {
+        public SwitchToConferenceResponseBodyDataUserContext setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -352,7 +382,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public HoldCallResponseBodyDataUserContext setJobId(String jobId) {
+        public SwitchToConferenceResponseBodyDataUserContext setJobId(String jobId) {
             this.jobId = jobId;
             return this;
         }
@@ -360,7 +390,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public HoldCallResponseBodyDataUserContext setMobile(String mobile) {
+        public SwitchToConferenceResponseBodyDataUserContext setMobile(String mobile) {
             this.mobile = mobile;
             return this;
         }
@@ -368,7 +398,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.mobile;
         }
 
-        public HoldCallResponseBodyDataUserContext setOutboundScenario(Boolean outboundScenario) {
+        public SwitchToConferenceResponseBodyDataUserContext setOutboundScenario(Boolean outboundScenario) {
             this.outboundScenario = outboundScenario;
             return this;
         }
@@ -376,15 +406,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.outboundScenario;
         }
 
-        public HoldCallResponseBodyDataUserContext setReserved(Long reserved) {
-            this.reserved = reserved;
-            return this;
-        }
-        public Long getReserved() {
-            return this.reserved;
-        }
-
-        public HoldCallResponseBodyDataUserContext setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
+        public SwitchToConferenceResponseBodyDataUserContext setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
             this.signedSkillGroupIdList = signedSkillGroupIdList;
             return this;
         }
@@ -392,7 +414,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.signedSkillGroupIdList;
         }
 
-        public HoldCallResponseBodyDataUserContext setUserId(String userId) {
+        public SwitchToConferenceResponseBodyDataUserContext setUserId(String userId) {
             this.userId = userId;
             return this;
         }
@@ -400,7 +422,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.userId;
         }
 
-        public HoldCallResponseBodyDataUserContext setUserState(String userState) {
+        public SwitchToConferenceResponseBodyDataUserContext setUserState(String userState) {
             this.userState = userState;
             return this;
         }
@@ -408,7 +430,7 @@ public class HoldCallResponseBody extends TeaModel {
             return this.userState;
         }
 
-        public HoldCallResponseBodyDataUserContext setWorkMode(String workMode) {
+        public SwitchToConferenceResponseBodyDataUserContext setWorkMode(String workMode) {
             this.workMode = workMode;
             return this;
         }
@@ -418,31 +440,31 @@ public class HoldCallResponseBody extends TeaModel {
 
     }
 
-    public static class HoldCallResponseBodyData extends TeaModel {
+    public static class SwitchToConferenceResponseBodyData extends TeaModel {
         @NameInMap("CallContext")
-        public HoldCallResponseBodyDataCallContext callContext;
+        public SwitchToConferenceResponseBodyDataCallContext callContext;
 
         @NameInMap("UserContext")
-        public HoldCallResponseBodyDataUserContext userContext;
+        public SwitchToConferenceResponseBodyDataUserContext userContext;
 
-        public static HoldCallResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            HoldCallResponseBodyData self = new HoldCallResponseBodyData();
+        public static SwitchToConferenceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            SwitchToConferenceResponseBodyData self = new SwitchToConferenceResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public HoldCallResponseBodyData setCallContext(HoldCallResponseBodyDataCallContext callContext) {
+        public SwitchToConferenceResponseBodyData setCallContext(SwitchToConferenceResponseBodyDataCallContext callContext) {
             this.callContext = callContext;
             return this;
         }
-        public HoldCallResponseBodyDataCallContext getCallContext() {
+        public SwitchToConferenceResponseBodyDataCallContext getCallContext() {
             return this.callContext;
         }
 
-        public HoldCallResponseBodyData setUserContext(HoldCallResponseBodyDataUserContext userContext) {
+        public SwitchToConferenceResponseBodyData setUserContext(SwitchToConferenceResponseBodyDataUserContext userContext) {
             this.userContext = userContext;
             return this;
         }
-        public HoldCallResponseBodyDataUserContext getUserContext() {
+        public SwitchToConferenceResponseBodyDataUserContext getUserContext() {
             return this.userContext;
         }
 

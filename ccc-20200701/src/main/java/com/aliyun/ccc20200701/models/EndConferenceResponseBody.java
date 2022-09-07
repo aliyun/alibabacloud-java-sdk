@@ -76,9 +76,6 @@ public class EndConferenceResponseBody extends TeaModel {
     }
 
     public static class EndConferenceResponseBodyDataCallContextChannelContexts extends TeaModel {
-        @NameInMap("AssociatedData")
-        public java.util.Map<String, ?> associatedData;
-
         @NameInMap("CallType")
         public String callType;
 
@@ -115,14 +112,6 @@ public class EndConferenceResponseBody extends TeaModel {
         public static EndConferenceResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
             EndConferenceResponseBodyDataCallContextChannelContexts self = new EndConferenceResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
-        }
-
-        public EndConferenceResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
-            this.associatedData = associatedData;
-            return this;
-        }
-        public java.util.Map<String, ?> getAssociatedData() {
-            return this.associatedData;
         }
 
         public EndConferenceResponseBodyDataCallContextChannelContexts setCallType(String callType) {
@@ -281,9 +270,6 @@ public class EndConferenceResponseBody extends TeaModel {
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
-        @NameInMap("Uri")
-        public String uri;
-
         @NameInMap("UserId")
         public String userId;
 
@@ -360,14 +346,6 @@ public class EndConferenceResponseBody extends TeaModel {
         }
         public java.util.List<String> getSignedSkillGroupIdList() {
             return this.signedSkillGroupIdList;
-        }
-
-        public EndConferenceResponseBodyDataUserContext setUri(String uri) {
-            this.uri = uri;
-            return this;
-        }
-        public String getUri() {
-            return this.uri;
         }
 
         public EndConferenceResponseBodyDataUserContext setUserId(String userId) {

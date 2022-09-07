@@ -3,7 +3,10 @@ package com.aliyun.ccc20200701.models;
 
 import com.aliyun.tea.*;
 
-public class EndConferenceRequest extends TeaModel {
+public class SwitchToConferenceRequest extends TeaModel {
+    @NameInMap("DeviceId")
+    public String deviceId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,12 +16,20 @@ public class EndConferenceRequest extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
-    public static EndConferenceRequest build(java.util.Map<String, ?> map) throws Exception {
-        EndConferenceRequest self = new EndConferenceRequest();
+    public static SwitchToConferenceRequest build(java.util.Map<String, ?> map) throws Exception {
+        SwitchToConferenceRequest self = new SwitchToConferenceRequest();
         return TeaModel.build(map, self);
     }
 
-    public EndConferenceRequest setInstanceId(String instanceId) {
+    public SwitchToConferenceRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
+    }
+
+    public SwitchToConferenceRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -26,7 +37,7 @@ public class EndConferenceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public EndConferenceRequest setJobId(String jobId) {
+    public SwitchToConferenceRequest setJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
@@ -34,7 +45,7 @@ public class EndConferenceRequest extends TeaModel {
         return this.jobId;
     }
 
-    public EndConferenceRequest setUserId(String userId) {
+    public SwitchToConferenceRequest setUserId(String userId) {
         this.userId = userId;
         return this;
     }

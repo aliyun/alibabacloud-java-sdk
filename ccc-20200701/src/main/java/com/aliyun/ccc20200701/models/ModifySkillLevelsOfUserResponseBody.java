@@ -13,9 +13,6 @@ public class ModifySkillLevelsOfUserResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Params")
-    public java.util.List<String> params;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,14 +43,6 @@ public class ModifySkillLevelsOfUserResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
-    }
-
-    public ModifySkillLevelsOfUserResponseBody setParams(java.util.List<String> params) {
-        this.params = params;
-        return this;
-    }
-    public java.util.List<String> getParams() {
-        return this.params;
     }
 
     public ModifySkillLevelsOfUserResponseBody setRequestId(String requestId) {
