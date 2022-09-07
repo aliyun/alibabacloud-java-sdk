@@ -4,8 +4,11 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ModifyAdvanceConfigFileRequest extends TeaModel {
-    @NameInMap("body")
-    public java.util.Map<String, ?> body;
+    @NameInMap("content")
+    public String content;
+
+    @NameInMap("variables")
+    public java.util.Map<String, VariablesValue> variables;
 
     @NameInMap("fileName")
     public String fileName;
@@ -15,12 +18,20 @@ public class ModifyAdvanceConfigFileRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyAdvanceConfigFileRequest setBody(java.util.Map<String, ?> body) {
-        this.body = body;
+    public ModifyAdvanceConfigFileRequest setContent(String content) {
+        this.content = content;
         return this;
     }
-    public java.util.Map<String, ?> getBody() {
-        return this.body;
+    public String getContent() {
+        return this.content;
+    }
+
+    public ModifyAdvanceConfigFileRequest setVariables(java.util.Map<String, VariablesValue> variables) {
+        this.variables = variables;
+        return this;
+    }
+    public java.util.Map<String, VariablesValue> getVariables() {
+        return this.variables;
     }
 
     public ModifyAdvanceConfigFileRequest setFileName(String fileName) {

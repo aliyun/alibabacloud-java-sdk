@@ -35,11 +35,14 @@ public class GetIndexVersionResponseBody extends TeaModel {
         @NameInMap("buildDeployId")
         public String buildDeployId;
 
+        @NameInMap("currentVersion")
+        public Long currentVersion;
+
         @NameInMap("indexName")
         public String indexName;
 
         @NameInMap("versions")
-        public java.util.List<String> versions;
+        public java.util.List<Long> versions;
 
         public static GetIndexVersionResponseBodyResultIndexVersions build(java.util.Map<String, ?> map) throws Exception {
             GetIndexVersionResponseBodyResultIndexVersions self = new GetIndexVersionResponseBodyResultIndexVersions();
@@ -54,6 +57,14 @@ public class GetIndexVersionResponseBody extends TeaModel {
             return this.buildDeployId;
         }
 
+        public GetIndexVersionResponseBodyResultIndexVersions setCurrentVersion(Long currentVersion) {
+            this.currentVersion = currentVersion;
+            return this;
+        }
+        public Long getCurrentVersion() {
+            return this.currentVersion;
+        }
+
         public GetIndexVersionResponseBodyResultIndexVersions setIndexName(String indexName) {
             this.indexName = indexName;
             return this;
@@ -62,11 +73,11 @@ public class GetIndexVersionResponseBody extends TeaModel {
             return this.indexName;
         }
 
-        public GetIndexVersionResponseBodyResultIndexVersions setVersions(java.util.List<String> versions) {
+        public GetIndexVersionResponseBodyResultIndexVersions setVersions(java.util.List<Long> versions) {
             this.versions = versions;
             return this;
         }
-        public java.util.List<String> getVersions() {
+        public java.util.List<Long> getVersions() {
             return this.versions;
         }
 

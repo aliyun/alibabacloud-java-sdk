@@ -41,8 +41,8 @@ public class GetIndexResponseBody extends TeaModel {
         @NameInMap("isTemplate")
         public Boolean isTemplate;
 
-        @NameInMap("nam")
-        public String nam;
+        @NameInMap("name")
+        public String name;
 
         public static GetIndexResponseBodyResultVersionsFiles build(java.util.Map<String, ?> map) throws Exception {
             GetIndexResponseBodyResultVersionsFiles self = new GetIndexResponseBodyResultVersionsFiles();
@@ -73,12 +73,12 @@ public class GetIndexResponseBody extends TeaModel {
             return this.isTemplate;
         }
 
-        public GetIndexResponseBodyResultVersionsFiles setNam(String nam) {
-            this.nam = nam;
+        public GetIndexResponseBodyResultVersionsFiles setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getNam() {
-            return this.nam;
+        public String getName() {
+            return this.name;
         }
 
     }
@@ -97,10 +97,10 @@ public class GetIndexResponseBody extends TeaModel {
         public String status;
 
         @NameInMap("updateTime")
-        public String updateTime;
+        public Long updateTime;
 
         @NameInMap("versionId")
-        public Long versionId;
+        public Integer versionId;
 
         public static GetIndexResponseBodyResultVersions build(java.util.Map<String, ?> map) throws Exception {
             GetIndexResponseBodyResultVersions self = new GetIndexResponseBodyResultVersions();
@@ -139,19 +139,19 @@ public class GetIndexResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetIndexResponseBodyResultVersions setUpdateTime(String updateTime) {
+        public GetIndexResponseBodyResultVersions setUpdateTime(Long updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-        public String getUpdateTime() {
+        public Long getUpdateTime() {
             return this.updateTime;
         }
 
-        public GetIndexResponseBodyResultVersions setVersionId(Long versionId) {
+        public GetIndexResponseBodyResultVersions setVersionId(Integer versionId) {
             this.versionId = versionId;
             return this;
         }
-        public Long getVersionId() {
+        public Integer getVersionId() {
             return this.versionId;
         }
 
@@ -160,6 +160,12 @@ public class GetIndexResponseBody extends TeaModel {
     public static class GetIndexResponseBodyResult extends TeaModel {
         @NameInMap("dataSource")
         public String dataSource;
+
+        @NameInMap("domain")
+        public String domain;
+
+        @NameInMap("indexStatus")
+        public String indexStatus;
 
         @NameInMap("name")
         public String name;
@@ -178,6 +184,22 @@ public class GetIndexResponseBody extends TeaModel {
         }
         public String getDataSource() {
             return this.dataSource;
+        }
+
+        public GetIndexResponseBodyResult setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public GetIndexResponseBodyResult setIndexStatus(String indexStatus) {
+            this.indexStatus = indexStatus;
+            return this;
+        }
+        public String getIndexStatus() {
+            return this.indexStatus;
         }
 
         public GetIndexResponseBodyResult setName(String name) {
