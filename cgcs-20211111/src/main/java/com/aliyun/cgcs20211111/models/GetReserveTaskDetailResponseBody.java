@@ -28,6 +28,9 @@ public class GetReserveTaskDetailResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResBatchList")
+    public java.util.List<GetReserveTaskDetailResponseBodyResBatchList> resBatchList;
+
     @NameInMap("TaskId")
     public String taskId;
 
@@ -103,6 +106,14 @@ public class GetReserveTaskDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetReserveTaskDetailResponseBody setResBatchList(java.util.List<GetReserveTaskDetailResponseBodyResBatchList> resBatchList) {
+        this.resBatchList = resBatchList;
+        return this;
+    }
+    public java.util.List<GetReserveTaskDetailResponseBodyResBatchList> getResBatchList() {
+        return this.resBatchList;
+    }
+
     public GetReserveTaskDetailResponseBody setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -117,6 +128,36 @@ public class GetReserveTaskDetailResponseBody extends TeaModel {
     }
     public String getTaskStatus() {
         return this.taskStatus;
+    }
+
+    public static class GetReserveTaskDetailResponseBodyResBatchList extends TeaModel {
+        @NameInMap("ResBatchId")
+        public String resBatchId;
+
+        @NameInMap("ResBatchTagName")
+        public String resBatchTagName;
+
+        public static GetReserveTaskDetailResponseBodyResBatchList build(java.util.Map<String, ?> map) throws Exception {
+            GetReserveTaskDetailResponseBodyResBatchList self = new GetReserveTaskDetailResponseBodyResBatchList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetReserveTaskDetailResponseBodyResBatchList setResBatchId(String resBatchId) {
+            this.resBatchId = resBatchId;
+            return this;
+        }
+        public String getResBatchId() {
+            return this.resBatchId;
+        }
+
+        public GetReserveTaskDetailResponseBodyResBatchList setResBatchTagName(String resBatchTagName) {
+            this.resBatchTagName = resBatchTagName;
+            return this;
+        }
+        public String getResBatchTagName() {
+            return this.resBatchTagName;
+        }
+
     }
 
 }
