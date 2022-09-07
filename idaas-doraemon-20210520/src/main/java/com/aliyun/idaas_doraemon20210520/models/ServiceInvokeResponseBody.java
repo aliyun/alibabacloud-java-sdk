@@ -10,6 +10,9 @@ public class ServiceInvokeResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("EventId")
+    public String eventId;
+
     @NameInMap("IdToken")
     public String idToken;
 
@@ -41,6 +44,14 @@ public class ServiceInvokeResponseBody extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public ServiceInvokeResponseBody setEventId(String eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    public String getEventId() {
+        return this.eventId;
     }
 
     public ServiceInvokeResponseBody setIdToken(String idToken) {
