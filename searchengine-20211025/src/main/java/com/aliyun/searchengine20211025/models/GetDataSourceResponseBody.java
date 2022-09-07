@@ -107,8 +107,8 @@ public class GetDataSourceResponseBody extends TeaModel {
         @NameInMap("indexes")
         public java.util.List<String> indexes;
 
-        @NameInMap("lastFullTime")
-        public Long lastFullTime;
+        @NameInMap("lastFulTime")
+        public Long lastFulTime;
 
         @NameInMap("name")
         public String name;
@@ -159,12 +159,12 @@ public class GetDataSourceResponseBody extends TeaModel {
             return this.indexes;
         }
 
-        public GetDataSourceResponseBodyResult setLastFullTime(Long lastFullTime) {
-            this.lastFullTime = lastFullTime;
+        public GetDataSourceResponseBodyResult setLastFulTime(Long lastFulTime) {
+            this.lastFulTime = lastFulTime;
             return this;
         }
-        public Long getLastFullTime() {
-            return this.lastFullTime;
+        public Long getLastFulTime() {
+            return this.lastFulTime;
         }
 
         public GetDataSourceResponseBodyResult setName(String name) {

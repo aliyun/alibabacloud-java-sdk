@@ -7,6 +7,9 @@ public class ModifyClusterDescResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("result")
+    public java.util.Map<String, ?> result;
+
     public static ModifyClusterDescResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterDescResponseBody self = new ModifyClusterDescResponseBody();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class ModifyClusterDescResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifyClusterDescResponseBody setResult(java.util.Map<String, ?> result) {
+        this.result = result;
+        return this;
+    }
+    public java.util.Map<String, ?> getResult() {
+        return this.result;
     }
 
 }

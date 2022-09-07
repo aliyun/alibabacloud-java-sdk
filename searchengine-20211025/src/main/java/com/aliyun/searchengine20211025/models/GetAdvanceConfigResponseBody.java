@@ -97,7 +97,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
         public String status;
 
         @NameInMap("updateTime")
-        public String updateTime;
+        public Long updateTime;
 
         public static GetAdvanceConfigResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetAdvanceConfigResponseBodyResult self = new GetAdvanceConfigResponseBodyResult();
@@ -136,11 +136,11 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetAdvanceConfigResponseBodyResult setUpdateTime(String updateTime) {
+        public GetAdvanceConfigResponseBodyResult setUpdateTime(Long updateTime) {
             this.updateTime = updateTime;
             return this;
         }
-        public String getUpdateTime() {
+        public Long getUpdateTime() {
             return this.updateTime;
         }
 
