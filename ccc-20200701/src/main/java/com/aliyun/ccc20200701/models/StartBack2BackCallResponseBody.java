@@ -76,9 +76,6 @@ public class StartBack2BackCallResponseBody extends TeaModel {
     }
 
     public static class StartBack2BackCallResponseBodyDataCallContextChannelContexts extends TeaModel {
-        @NameInMap("AssociatedData")
-        public java.util.Map<String, ?> associatedData;
-
         @NameInMap("CallType")
         public String callType;
 
@@ -118,14 +115,6 @@ public class StartBack2BackCallResponseBody extends TeaModel {
         public static StartBack2BackCallResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
             StartBack2BackCallResponseBodyDataCallContextChannelContexts self = new StartBack2BackCallResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
-        }
-
-        public StartBack2BackCallResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
-            this.associatedData = associatedData;
-            return this;
-        }
-        public java.util.Map<String, ?> getAssociatedData() {
-            return this.associatedData;
         }
 
         public StartBack2BackCallResponseBodyDataCallContextChannelContexts setCallType(String callType) {
@@ -312,9 +301,6 @@ public class StartBack2BackCallResponseBody extends TeaModel {
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
-        @NameInMap("Uri")
-        public String uri;
-
         @NameInMap("UserId")
         public String userId;
 
@@ -415,14 +401,6 @@ public class StartBack2BackCallResponseBody extends TeaModel {
         }
         public java.util.List<String> getSignedSkillGroupIdList() {
             return this.signedSkillGroupIdList;
-        }
-
-        public StartBack2BackCallResponseBodyDataUserContext setUri(String uri) {
-            this.uri = uri;
-            return this;
-        }
-        public String getUri() {
-            return this.uri;
         }
 
         public StartBack2BackCallResponseBodyDataUserContext setUserId(String userId) {

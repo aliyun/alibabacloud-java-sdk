@@ -76,9 +76,6 @@ public class BlindTransferResponseBody extends TeaModel {
     }
 
     public static class BlindTransferResponseBodyDataCallContextChannelContexts extends TeaModel {
-        @NameInMap("AssociatedData")
-        public java.util.Map<String, ?> associatedData;
-
         @NameInMap("CallType")
         public String callType;
 
@@ -118,14 +115,6 @@ public class BlindTransferResponseBody extends TeaModel {
         public static BlindTransferResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
             BlindTransferResponseBodyDataCallContextChannelContexts self = new BlindTransferResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
-        }
-
-        public BlindTransferResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
-            this.associatedData = associatedData;
-            return this;
-        }
-        public java.util.Map<String, ?> getAssociatedData() {
-            return this.associatedData;
         }
 
         public BlindTransferResponseBodyDataCallContextChannelContexts setCallType(String callType) {

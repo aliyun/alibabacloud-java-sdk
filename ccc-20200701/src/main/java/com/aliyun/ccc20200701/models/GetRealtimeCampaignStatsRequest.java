@@ -4,11 +4,9 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetRealtimeCampaignStatsRequest extends TeaModel {
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 活动ID
     @NameInMap("QueueId")
     public String queueId;
 

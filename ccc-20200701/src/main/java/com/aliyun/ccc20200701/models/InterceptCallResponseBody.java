@@ -76,9 +76,6 @@ public class InterceptCallResponseBody extends TeaModel {
     }
 
     public static class InterceptCallResponseBodyDataCallContextChannelContexts extends TeaModel {
-        @NameInMap("AssociatedData")
-        public java.util.Map<String, ?> associatedData;
-
         @NameInMap("CallType")
         public String callType;
 
@@ -124,14 +121,6 @@ public class InterceptCallResponseBody extends TeaModel {
         public static InterceptCallResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
             InterceptCallResponseBodyDataCallContextChannelContexts self = new InterceptCallResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
-        }
-
-        public InterceptCallResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
-            this.associatedData = associatedData;
-            return this;
-        }
-        public java.util.Map<String, ?> getAssociatedData() {
-            return this.associatedData;
         }
 
         public InterceptCallResponseBodyDataCallContextChannelContexts setCallType(String callType) {

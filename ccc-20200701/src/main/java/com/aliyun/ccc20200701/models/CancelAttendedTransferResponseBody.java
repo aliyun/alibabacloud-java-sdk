@@ -76,9 +76,6 @@ public class CancelAttendedTransferResponseBody extends TeaModel {
     }
 
     public static class CancelAttendedTransferResponseBodyDataCallContextChannelContexts extends TeaModel {
-        @NameInMap("AssociatedData")
-        public java.util.Map<String, ?> associatedData;
-
         @NameInMap("CallType")
         public String callType;
 
@@ -121,14 +118,6 @@ public class CancelAttendedTransferResponseBody extends TeaModel {
         public static CancelAttendedTransferResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
             CancelAttendedTransferResponseBodyDataCallContextChannelContexts self = new CancelAttendedTransferResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
-        }
-
-        public CancelAttendedTransferResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
-            this.associatedData = associatedData;
-            return this;
-        }
-        public java.util.Map<String, ?> getAssociatedData() {
-            return this.associatedData;
         }
 
         public CancelAttendedTransferResponseBodyDataCallContextChannelContexts setCallType(String callType) {

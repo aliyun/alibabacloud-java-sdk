@@ -4,11 +4,9 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetHistoricalCampaignReportRequest extends TeaModel {
-    // 活动ID
     @NameInMap("CampaignId")
     public String campaignId;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 

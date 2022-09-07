@@ -76,9 +76,6 @@ public class MuteCallResponseBody extends TeaModel {
     }
 
     public static class MuteCallResponseBodyDataCallContextChannelContexts extends TeaModel {
-        @NameInMap("AssociatedData")
-        public java.util.Map<String, ?> associatedData;
-
         @NameInMap("CallType")
         public String callType;
 
@@ -121,14 +118,6 @@ public class MuteCallResponseBody extends TeaModel {
         public static MuteCallResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
             MuteCallResponseBodyDataCallContextChannelContexts self = new MuteCallResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
-        }
-
-        public MuteCallResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
-            this.associatedData = associatedData;
-            return this;
-        }
-        public java.util.Map<String, ?> getAssociatedData() {
-            return this.associatedData;
         }
 
         public MuteCallResponseBodyDataCallContextChannelContexts setCallType(String callType) {

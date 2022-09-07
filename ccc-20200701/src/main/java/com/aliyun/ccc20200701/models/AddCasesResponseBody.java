@@ -4,19 +4,15 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class AddCasesResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // httpStatusCode
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

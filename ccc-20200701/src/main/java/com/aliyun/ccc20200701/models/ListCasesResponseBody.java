@@ -7,7 +7,6 @@ public class ListCasesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // data
     @NameInMap("Data")
     public ListCasesResponseBodyData data;
 
@@ -19,9 +18,6 @@ public class ListCasesResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static ListCasesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCasesResponseBody self = new ListCasesResponseBody();
@@ -68,14 +64,6 @@ public class ListCasesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListCasesResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static class ListCasesResponseBodyDataList extends TeaModel {
         @NameInMap("AbandonType")
         public String abandonType;
@@ -88,9 +76,6 @@ public class ListCasesResponseBody extends TeaModel {
 
         @NameInMap("CustomVariables")
         public String customVariables;
-
-        @NameInMap("ExpandInfo")
-        public String expandInfo;
 
         @NameInMap("FailureReason")
         public String failureReason;
@@ -136,14 +121,6 @@ public class ListCasesResponseBody extends TeaModel {
         }
         public String getCustomVariables() {
             return this.customVariables;
-        }
-
-        public ListCasesResponseBodyDataList setExpandInfo(String expandInfo) {
-            this.expandInfo = expandInfo;
-            return this;
-        }
-        public String getExpandInfo() {
-            return this.expandInfo;
         }
 
         public ListCasesResponseBodyDataList setFailureReason(String failureReason) {

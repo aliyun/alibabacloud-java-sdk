@@ -4,55 +4,42 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListAttemptsRequest extends TeaModel {
-    // 坐席ID
     @NameInMap("AgentId")
     public String agentId;
 
-    // 记录ID
     @NameInMap("AttemptId")
     public String attemptId;
 
-    // 被叫
     @NameInMap("Callee")
     public String callee;
 
-    // 主叫
     @NameInMap("Caller")
     public String caller;
 
-    // 活动ID
     @NameInMap("CampaignId")
     public String campaignId;
 
-    // CaseID
     @NameInMap("CaseId")
     public String caseId;
 
-    // 话务ID
     @NameInMap("ContactId")
     public String contactId;
 
-    // 结束时间
     @NameInMap("EndTime")
     public Long endTime;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 队列ID
     @NameInMap("QueueId")
     public String queueId;
 
-    // 开始时间
     @NameInMap("StartTime")
     public Long startTime;
 
