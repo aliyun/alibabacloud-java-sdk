@@ -324,12 +324,6 @@ public class ListAlarmsResponseBody extends TeaModel {
         @NameInMap("TriggerTimeDesc")
         public String triggerTimeDesc;
 
-        @NameInMap("UserId")
-        public Long userId;
-
-        @NameInMap("Uuid")
-        public String uuid;
-
         @NameInMap("Volume")
         public Integer volume;
 
@@ -392,22 +386,6 @@ public class ListAlarmsResponseBody extends TeaModel {
         }
         public String getTriggerTimeDesc() {
             return this.triggerTimeDesc;
-        }
-
-        public ListAlarmsResponseBodyResultModel setUserId(Long userId) {
-            this.userId = userId;
-            return this;
-        }
-        public Long getUserId() {
-            return this.userId;
-        }
-
-        public ListAlarmsResponseBodyResultModel setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
         }
 
         public ListAlarmsResponseBodyResultModel setVolume(Integer volume) {
