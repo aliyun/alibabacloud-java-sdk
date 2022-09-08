@@ -2549,6 +2549,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ServiceMeshId", request.serviceMeshId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.usePublicApiServer)) {
+            body.put("UsePublicApiServer", request.usePublicApiServer);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
