@@ -64,6 +64,80 @@ public class ListStacksResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListStacksResponseBodyStacksOperationInfo extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("LogicalResourceId")
+        public String logicalResourceId;
+
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("RequestId")
+        public String requestId;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        public static ListStacksResponseBodyStacksOperationInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListStacksResponseBodyStacksOperationInfo self = new ListStacksResponseBodyStacksOperationInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListStacksResponseBodyStacksOperationInfo setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public ListStacksResponseBodyStacksOperationInfo setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public ListStacksResponseBodyStacksOperationInfo setLogicalResourceId(String logicalResourceId) {
+            this.logicalResourceId = logicalResourceId;
+            return this;
+        }
+        public String getLogicalResourceId() {
+            return this.logicalResourceId;
+        }
+
+        public ListStacksResponseBodyStacksOperationInfo setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public ListStacksResponseBodyStacksOperationInfo setRequestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+        public String getRequestId() {
+            return this.requestId;
+        }
+
+        public ListStacksResponseBodyStacksOperationInfo setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+    }
+
     public static class ListStacksResponseBodyStacksTags extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -103,6 +177,9 @@ public class ListStacksResponseBody extends TeaModel {
 
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
+
+        @NameInMap("OperationInfo")
+        public ListStacksResponseBodyStacksOperationInfo operationInfo;
 
         @NameInMap("ParentStackId")
         public String parentStackId;
@@ -173,6 +250,14 @@ public class ListStacksResponseBody extends TeaModel {
         }
         public String getDriftDetectionTime() {
             return this.driftDetectionTime;
+        }
+
+        public ListStacksResponseBodyStacks setOperationInfo(ListStacksResponseBodyStacksOperationInfo operationInfo) {
+            this.operationInfo = operationInfo;
+            return this;
+        }
+        public ListStacksResponseBodyStacksOperationInfo getOperationInfo() {
+            return this.operationInfo;
         }
 
         public ListStacksResponseBodyStacks setParentStackId(String parentStackId) {
