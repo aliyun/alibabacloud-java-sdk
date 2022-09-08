@@ -7,7 +7,6 @@ public class QueryWorksResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // QueryWorksModel
     @NameInMap("Result")
     public QueryWorksResponseBodyResult result;
 
@@ -44,19 +43,15 @@ public class QueryWorksResponseBody extends TeaModel {
     }
 
     public static class QueryWorksResponseBodyResultDirectory extends TeaModel {
-        // 目录ID
         @NameInMap("Id")
         public String id;
 
-        // 目录名称
         @NameInMap("Name")
         public String name;
 
-        // 目录ID的路径，例如：aa/bb/cc/dd
         @NameInMap("PathId")
         public String pathId;
 
-        // 目录ID的路径名称，例如：一层目录/二层目录
         @NameInMap("PathName")
         public String pathName;
 
@@ -100,63 +95,48 @@ public class QueryWorksResponseBody extends TeaModel {
     }
 
     public static class QueryWorksResponseBodyResult extends TeaModel {
-        // 第三方嵌入状态
         @NameInMap("Auth3rdFlag")
         public Integer auth3rdFlag;
 
-        // 描述
         @NameInMap("Description")
         public String description;
 
-        // 所属空间目录信息
         @NameInMap("Directory")
         public QueryWorksResponseBodyResultDirectory directory;
 
-        // 创建时间d
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // 修改时间
         @NameInMap("GmtModify")
         public String gmtModify;
 
-        // 修改显示名称
         @NameInMap("ModifyName")
         public String modifyName;
 
-        // 所有者Id
         @NameInMap("OwnerId")
         public String ownerId;
 
-        // 所有者显示名称
         @NameInMap("OwnerName")
         public String ownerName;
 
-        // 安全策略：0 私有 1 协同编辑。 （
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
-        // 报表发布状态 @PublishStatusEnum
         @NameInMap("Status")
         public Integer status;
 
-        // 作品名称
         @NameInMap("WorkName")
         public String workName;
 
-        // 作品类型
         @NameInMap("WorkType")
         public String workType;
 
-        // 作品ID
         @NameInMap("WorksId")
         public String worksId;
 
-        // 所属工作空间
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
-        // 所属空间名称
         @NameInMap("WorkspaceName")
         public String workspaceName;
 

@@ -4,15 +4,12 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class AddUserGroupMembersResponseBody extends TeaModel {
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 接口执行结果。取值范围：true：请求成功false：请求失败
     @NameInMap("Result")
     public Boolean result;
 
-    // 是否请求成功。取值范围：true：请求成功false：请求失败
     @NameInMap("Success")
     public Boolean success;
 

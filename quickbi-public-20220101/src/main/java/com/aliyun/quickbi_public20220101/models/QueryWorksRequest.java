@@ -4,7 +4,6 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryWorksRequest extends TeaModel {
-    // 报表ID
     @NameInMap("WorksId")
     public String worksId;
 
