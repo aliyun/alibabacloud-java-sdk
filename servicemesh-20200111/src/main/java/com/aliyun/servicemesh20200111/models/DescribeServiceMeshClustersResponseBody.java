@@ -61,6 +61,9 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
         @NameInMap("ForbiddenFlag")
         public Long forbiddenFlag;
 
+        @NameInMap("ForbiddenInfo")
+        public String forbiddenInfo;
+
         @NameInMap("Name")
         public String name;
 
@@ -136,6 +139,14 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
         }
         public Long getForbiddenFlag() {
             return this.forbiddenFlag;
+        }
+
+        public DescribeServiceMeshClustersResponseBodyClusters setForbiddenInfo(String forbiddenInfo) {
+            this.forbiddenInfo = forbiddenInfo;
+            return this;
+        }
+        public String getForbiddenInfo() {
+            return this.forbiddenInfo;
         }
 
         public DescribeServiceMeshClustersResponseBodyClusters setName(String name) {

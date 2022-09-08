@@ -22,6 +22,9 @@ public class UpdateMeshCRAggregationRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
+    @NameInMap("UsePublicApiServer")
+    public Boolean usePublicApiServer;
+
     public static UpdateMeshCRAggregationRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMeshCRAggregationRequest self = new UpdateMeshCRAggregationRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class UpdateMeshCRAggregationRequest extends TeaModel {
     }
     public String getServiceMeshId() {
         return this.serviceMeshId;
+    }
+
+    public UpdateMeshCRAggregationRequest setUsePublicApiServer(Boolean usePublicApiServer) {
+        this.usePublicApiServer = usePublicApiServer;
+        return this;
+    }
+    public Boolean getUsePublicApiServer() {
+        return this.usePublicApiServer;
     }
 
 }
