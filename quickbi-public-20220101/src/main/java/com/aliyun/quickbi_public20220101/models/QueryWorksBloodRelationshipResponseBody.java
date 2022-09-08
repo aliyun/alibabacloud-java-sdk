@@ -43,30 +43,24 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
     }
 
     public static class QueryWorksBloodRelationshipResponseBodyResultQueryParams extends TeaModel {
-        // 所属位置：
         @NameInMap("AreaId")
         public String areaId;
 
         @NameInMap("AreaName")
         public String areaName;
 
-        // 字段显示名称
         @NameInMap("Caption")
         public String caption;
 
-        // 字段类型
         @NameInMap("DataType")
         public String dataType;
 
-        // 是否是度量
         @NameInMap("IsMeasure")
         public Boolean isMeasure;
 
-        // 全局唯一的PathId。位于cube的level中pathId
         @NameInMap("PathId")
         public String pathId;
 
-        // 字段唯一ID。即cube中的name
         @NameInMap("Uid")
         public String uid;
 
@@ -134,25 +128,21 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
     }
 
     public static class QueryWorksBloodRelationshipResponseBodyResult extends TeaModel {
-        // 组件ID or  sheetId
         @NameInMap("ComponentId")
         public String componentId;
 
         @NameInMap("ComponentName")
         public String componentName;
 
-        // 组件类型
         @NameInMap("ComponentType")
         public Integer componentType;
 
         @NameInMap("ComponentTypeName")
         public String componentTypeName;
 
-        // 数据集ID
         @NameInMap("DatasetId")
         public String datasetId;
 
-        // 查询参数引用的列信息
         @NameInMap("QueryParams")
         public java.util.List<QueryWorksBloodRelationshipResponseBodyResultQueryParams> queryParams;
 
