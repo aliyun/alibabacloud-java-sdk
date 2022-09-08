@@ -4,49 +4,36 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationIPRequest extends TeaModel {
-    // 当前页
     @NameInMap("CurrentPage")
     public String currentPage;
 
-    // 目的IP
     @NameInMap("DstIP")
     public String dstIP;
 
-    // 结束时间
     @NameInMap("EndTime")
     public String endTime;
 
-    // 语言
     @NameInMap("Lang")
     public String lang;
 
-    // 排序字段, 枚举值.
-    // 默认值: SessionCount
-    // 可选值: InBytes, OutBytes,TotalBytes,SessionCount
     @NameInMap("Order")
     public String order;
 
-    // 每页大小
     @NameInMap("PageSize")
     public String pageSize;
 
-    // 端口号
     @NameInMap("Port")
     public String port;
 
-    // 私网IP
     @NameInMap("PrivateIP")
     public String privateIP;
 
-    // 公网IP
     @NameInMap("PublicIP")
     public String publicIP;
 
-    // 顺序, 枚举值, 可选:asc, desc
     @NameInMap("Sort")
     public String sort;
 
-    // 开始时间,Unix timestamp, 精确到秒
     @NameInMap("StartTime")
     public String startTime;
 

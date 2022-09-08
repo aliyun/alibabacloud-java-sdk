@@ -4,7 +4,6 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
-    // 结束时间
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -23,14 +22,12 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
     @NameInMap("OutPps")
     public Long outPps;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SessionCount")
     public Long sessionCount;
 
-    // 开始时间
     @NameInMap("StartTime")
     public Long startTime;
 

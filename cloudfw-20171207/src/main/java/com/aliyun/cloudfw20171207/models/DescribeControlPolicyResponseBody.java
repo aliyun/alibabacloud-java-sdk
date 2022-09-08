@@ -80,6 +80,9 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         @NameInMap("ApplicationNameList")
         public java.util.List<String> applicationNameList;
 
+        @NameInMap("CreateTime")
+        public Long createTime;
+
         @NameInMap("Description")
         public String description;
 
@@ -125,6 +128,9 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         @NameInMap("IpVersion")
         public Integer ipVersion;
 
+        @NameInMap("ModifyTime")
+        public Long modifyTime;
+
         @NameInMap("Order")
         public Integer order;
 
@@ -145,6 +151,9 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
 
         @NameInMap("SourceType")
         public String sourceType;
+
+        @NameInMap("SpreadCnt")
+        public Integer spreadCnt;
 
         public static DescribeControlPolicyResponseBodyPolicys build(java.util.Map<String, ?> map) throws Exception {
             DescribeControlPolicyResponseBodyPolicys self = new DescribeControlPolicyResponseBodyPolicys();
@@ -189,6 +198,14 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         }
         public java.util.List<String> getApplicationNameList() {
             return this.applicationNameList;
+        }
+
+        public DescribeControlPolicyResponseBodyPolicys setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeControlPolicyResponseBodyPolicys setDescription(String description) {
@@ -311,6 +328,14 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             return this.ipVersion;
         }
 
+        public DescribeControlPolicyResponseBodyPolicys setModifyTime(Long modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public Long getModifyTime() {
+            return this.modifyTime;
+        }
+
         public DescribeControlPolicyResponseBodyPolicys setOrder(Integer order) {
             this.order = order;
             return this;
@@ -365,6 +390,14 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         }
         public String getSourceType() {
             return this.sourceType;
+        }
+
+        public DescribeControlPolicyResponseBodyPolicys setSpreadCnt(Integer spreadCnt) {
+            this.spreadCnt = spreadCnt;
+            return this;
+        }
+        public Integer getSpreadCnt() {
+            return this.spreadCnt;
         }
 
     }
