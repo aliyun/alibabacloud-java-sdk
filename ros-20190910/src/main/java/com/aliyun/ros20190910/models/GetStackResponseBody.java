@@ -28,6 +28,9 @@ public class GetStackResponseBody extends TeaModel {
     @NameInMap("NotificationURLs")
     public java.util.List<String> notificationURLs;
 
+    @NameInMap("OperationInfo")
+    public GetStackResponseBodyOperationInfo operationInfo;
+
     @NameInMap("Outputs")
     public java.util.List<java.util.Map<String, ?>> outputs;
 
@@ -170,6 +173,14 @@ public class GetStackResponseBody extends TeaModel {
     }
     public java.util.List<String> getNotificationURLs() {
         return this.notificationURLs;
+    }
+
+    public GetStackResponseBody setOperationInfo(GetStackResponseBodyOperationInfo operationInfo) {
+        this.operationInfo = operationInfo;
+        return this;
+    }
+    public GetStackResponseBodyOperationInfo getOperationInfo() {
+        return this.operationInfo;
     }
 
     public GetStackResponseBody setOutputs(java.util.List<java.util.Map<String, ?>> outputs) {
@@ -499,6 +510,80 @@ public class GetStackResponseBody extends TeaModel {
         }
         public java.util.List<GetStackResponseBodyLogTerraformLogs> getTerraformLogs() {
             return this.terraformLogs;
+        }
+
+    }
+
+    public static class GetStackResponseBodyOperationInfo extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("LogicalResourceId")
+        public String logicalResourceId;
+
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("RequestId")
+        public String requestId;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        public static GetStackResponseBodyOperationInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetStackResponseBodyOperationInfo self = new GetStackResponseBodyOperationInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetStackResponseBodyOperationInfo setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public GetStackResponseBodyOperationInfo setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public GetStackResponseBodyOperationInfo setLogicalResourceId(String logicalResourceId) {
+            this.logicalResourceId = logicalResourceId;
+            return this;
+        }
+        public String getLogicalResourceId() {
+            return this.logicalResourceId;
+        }
+
+        public GetStackResponseBodyOperationInfo setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public GetStackResponseBodyOperationInfo setRequestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+        public String getRequestId() {
+            return this.requestId;
+        }
+
+        public GetStackResponseBodyOperationInfo setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
         }
 
     }
