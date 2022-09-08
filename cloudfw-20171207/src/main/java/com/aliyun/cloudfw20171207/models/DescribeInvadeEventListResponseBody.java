@@ -4,23 +4,18 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInvadeEventListResponseBody extends TeaModel {
-    // 事件列表
     @NameInMap("EventList")
     public java.util.List<DescribeInvadeEventListResponseBodyEventList> eventList;
 
-    // 高风险等级比例
     @NameInMap("HighLevelPercent")
     public Integer highLevelPercent;
 
-    // 低风险等级比例
     @NameInMap("LowLevelPercent")
     public Integer lowLevelPercent;
 
-    // 中风险等级比例
     @NameInMap("MiddleLevelPercent")
     public Integer middleLevelPercent;
 
-    // 分页信息
     @NameInMap("PageInfo")
     public DescribeInvadeEventListResponseBodyPageInfo pageInfo;
 
@@ -81,67 +76,51 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeInvadeEventListResponseBodyEventList extends TeaModel {
-        // 资产实例ID
         @NameInMap("AssetsInstanceId")
         public String assetsInstanceId;
 
-        // 资产名称
         @NameInMap("AssetsInstanceName")
         public String assetsInstanceName;
 
-        // 资产类型
         @NameInMap("AssetsType")
         public String assetsType;
 
-        // CVE编号
         @NameInMap("EventKey")
         public String eventKey;
 
-        // 事件名称
         @NameInMap("EventName")
         public String eventName;
 
-        // 事件来源
         @NameInMap("EventSrc")
         public String eventSrc;
 
-        // 事件UUID
         @NameInMap("EventUuid")
         public String eventUuid;
 
-        // 首次出现时间
         @NameInMap("FirstTime")
         public Integer firstTime;
 
-        // 是否忽略
         @NameInMap("IsIgnore")
         public Boolean isIgnore;
 
-        // 最近一次时间
         @NameInMap("LastTime")
         public Integer lastTime;
 
-        // 成员账号UID
         @NameInMap("MemberUid")
         public String memberUid;
 
-        // 私网IP
         @NameInMap("PrivateIP")
         public String privateIP;
 
-        // 处理状态
         @NameInMap("ProcessStatus")
         public Integer processStatus;
 
-        // 公网IP
         @NameInMap("PublicIP")
         public String publicIP;
 
-        // 公开类型
         @NameInMap("PublicIpType")
         public String publicIpType;
 
-        // 风险等级
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
@@ -281,15 +260,12 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeInvadeEventListResponseBodyPageInfo extends TeaModel {
-        // 当前页
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // 每页大小
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 总数
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,67 +4,51 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInvadeEventListRequest extends TeaModel {
-    // 资产IP
     @NameInMap("AssetsIP")
     public String assetsIP;
 
-    // 实例ID
     @NameInMap("AssetsInstanceId")
     public String assetsInstanceId;
 
-    // 实例名称
     @NameInMap("AssetsInstanceName")
     public String assetsInstanceName;
 
-    // 当前页
     @NameInMap("CurrentPage")
     public String currentPage;
 
-    // 结束时间
     @NameInMap("EndTime")
     public String endTime;
 
-    // 事件key
     @NameInMap("EventKey")
     public String eventKey;
 
-    // 事件名称
     @NameInMap("EventName")
     public String eventName;
 
-    // 事件UUID
     @NameInMap("EventUuid")
     public String eventUuid;
 
-    // 是否忽略
     @NameInMap("IsIgnore")
     public String isIgnore;
 
-    // 语言
     @NameInMap("Lang")
     public String lang;
 
-    // 成员账号UID
     @NameInMap("MemberUid")
     public Long memberUid;
 
-    // 每页多少条
     @NameInMap("PageSize")
     public String pageSize;
 
-    // 处理状态列表
     @NameInMap("ProcessStatusList")
     public java.util.List<Integer> processStatusList;
 
-    // 风险等级
     @NameInMap("RiskLevel")
     public java.util.List<Integer> riskLevel;
 
-    // 源IP
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // 开始时间
     @NameInMap("StartTime")
     public String startTime;
 

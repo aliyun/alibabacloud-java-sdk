@@ -34,6 +34,9 @@ public class DescribeVpcFirewallCenListRequest extends TeaModel {
     @NameInMap("RouteMode")
     public String routeMode;
 
+    @NameInMap("TransitRouterType")
+    public String transitRouterType;
+
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 
@@ -123,6 +126,14 @@ public class DescribeVpcFirewallCenListRequest extends TeaModel {
     }
     public String getRouteMode() {
         return this.routeMode;
+    }
+
+    public DescribeVpcFirewallCenListRequest setTransitRouterType(String transitRouterType) {
+        this.transitRouterType = transitRouterType;
+        return this;
+    }
+    public String getTransitRouterType() {
+        return this.transitRouterType;
     }
 
     public DescribeVpcFirewallCenListRequest setVpcFirewallId(String vpcFirewallId) {

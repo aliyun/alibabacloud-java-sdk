@@ -10,7 +10,6 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总数
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -44,19 +43,15 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
     }
 
     public static class DescribeOutgoingDomainResponseBodyDomainListTagList extends TeaModel {
-        // 风险等级
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
-        // 标签描述
         @NameInMap("TagDescribe")
         public String tagDescribe;
 
-        // 标签ID
         @NameInMap("TagId")
         public String tagId;
 
-        // 标签名称
         @NameInMap("TagName")
         public String tagName;
 
@@ -100,71 +95,54 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
     }
 
     public static class DescribeOutgoingDomainResponseBodyDomainList extends TeaModel {
-        // ACL覆盖
         @NameInMap("AclCoverage")
         public String aclCoverage;
 
-        // ACL推荐内容
         @NameInMap("AclRecommendDetail")
         public String aclRecommendDetail;
 
-        // ACL状态
         @NameInMap("AclStatus")
         public String aclStatus;
 
-        // 地址簿名称
         @NameInMap("AddressGroupName")
         public String addressGroupName;
 
-        // 地址簿UUID
         @NameInMap("AddressGroupUUID")
         public String addressGroupUUID;
 
-        // 分类ID
         @NameInMap("CategoryId")
         public String categoryId;
 
-        // 分类名称
         @NameInMap("CategoryName")
         public String categoryName;
 
-        // 域名
         @NameInMap("Domain")
         public String domain;
 
-        // 规则中的组名称
         @NameInMap("GroupName")
         public String groupName;
 
-        // 是否有ACL推荐规则
         @NameInMap("HasAclRecommend")
         public Boolean hasAclRecommend;
 
-        // 入流量
         @NameInMap("InBytes")
         public Long inBytes;
 
-        // 是否正常
         @NameInMap("IsMarkNormal")
         public Boolean isMarkNormal;
 
-        // 出流量
         @NameInMap("OutBytes")
         public Long outBytes;
 
-        // ACL规则ID
         @NameInMap("RuleId")
         public String ruleId;
 
-        // 规则名称
         @NameInMap("RuleName")
         public String ruleName;
 
-        // 安全建议
         @NameInMap("SecuritySuggest")
         public String securitySuggest;
 
-        // 会话数
         @NameInMap("SessionCount")
         public Long sessionCount;
 

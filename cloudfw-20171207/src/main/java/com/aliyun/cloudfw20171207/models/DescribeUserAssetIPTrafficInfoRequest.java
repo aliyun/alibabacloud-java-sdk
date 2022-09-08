@@ -4,15 +4,12 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserAssetIPTrafficInfoRequest extends TeaModel {
-    // 资产IP
     @NameInMap("AssetIP")
     public String assetIP;
 
-    // 语言
     @NameInMap("Lang")
     public String lang;
 
-    // 时间
     @NameInMap("TrafficTime")
     public String trafficTime;
 
