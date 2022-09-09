@@ -7,6 +7,12 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     @NameInMap("CommandId")
     public String commandId;
 
+    @NameInMap("ContainerId")
+    public String containerId;
+
+    @NameInMap("ContainerName")
+    public String containerName;
+
     @NameInMap("Frequency")
     public String frequency;
 
@@ -54,6 +60,22 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     }
     public String getCommandId() {
         return this.commandId;
+    }
+
+    public InvokeCommandShrinkRequest setContainerId(String containerId) {
+        this.containerId = containerId;
+        return this;
+    }
+    public String getContainerId() {
+        return this.containerId;
+    }
+
+    public InvokeCommandShrinkRequest setContainerName(String containerName) {
+        this.containerName = containerName;
+        return this;
+    }
+    public String getContainerName() {
+        return this.containerName;
     }
 
     public InvokeCommandShrinkRequest setFrequency(String frequency) {

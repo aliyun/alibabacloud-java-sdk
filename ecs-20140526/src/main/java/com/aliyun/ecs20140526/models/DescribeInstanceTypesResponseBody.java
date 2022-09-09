@@ -46,8 +46,17 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("BaselineCredit")
         public Integer baselineCredit;
 
+        @NameInMap("CpuArchitecture")
+        public String cpuArchitecture;
+
         @NameInMap("CpuCoreCount")
         public Integer cpuCoreCount;
+
+        @NameInMap("CpuSpeedFrequency")
+        public Float cpuSpeedFrequency;
+
+        @NameInMap("CpuTurboFrequency")
+        public Float cpuTurboFrequency;
 
         @NameInMap("DiskQuantity")
         public Integer diskQuantity;
@@ -85,6 +94,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("InstanceBandwidthTx")
         public Integer instanceBandwidthTx;
 
+        @NameInMap("InstanceCategory")
+        public String instanceCategory;
+
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
 
@@ -115,8 +127,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("MemorySize")
         public Float memorySize;
 
+        @NameInMap("NetworkEncryptionSupport")
+        public Boolean networkEncryptionSupport;
+
         @NameInMap("NvmeSupport")
         public String nvmeSupport;
+
+        @NameInMap("PhysicalProcessorModel")
+        public String physicalProcessorModel;
 
         @NameInMap("PrimaryEniQueueNumber")
         public Integer primaryEniQueueNumber;
@@ -143,12 +161,36 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.baselineCredit;
         }
 
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setCpuArchitecture(String cpuArchitecture) {
+            this.cpuArchitecture = cpuArchitecture;
+            return this;
+        }
+        public String getCpuArchitecture() {
+            return this.cpuArchitecture;
+        }
+
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setCpuCoreCount(Integer cpuCoreCount) {
             this.cpuCoreCount = cpuCoreCount;
             return this;
         }
         public Integer getCpuCoreCount() {
             return this.cpuCoreCount;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setCpuSpeedFrequency(Float cpuSpeedFrequency) {
+            this.cpuSpeedFrequency = cpuSpeedFrequency;
+            return this;
+        }
+        public Float getCpuSpeedFrequency() {
+            return this.cpuSpeedFrequency;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setCpuTurboFrequency(Float cpuTurboFrequency) {
+            this.cpuTurboFrequency = cpuTurboFrequency;
+            return this;
+        }
+        public Float getCpuTurboFrequency() {
+            return this.cpuTurboFrequency;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setDiskQuantity(Integer diskQuantity) {
@@ -247,6 +289,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.instanceBandwidthTx;
         }
 
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceCategory(String instanceCategory) {
+            this.instanceCategory = instanceCategory;
+            return this;
+        }
+        public String getInstanceCategory() {
+            return this.instanceCategory;
+        }
+
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceFamilyLevel(String instanceFamilyLevel) {
             this.instanceFamilyLevel = instanceFamilyLevel;
             return this;
@@ -327,12 +377,28 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.memorySize;
         }
 
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setNetworkEncryptionSupport(Boolean networkEncryptionSupport) {
+            this.networkEncryptionSupport = networkEncryptionSupport;
+            return this;
+        }
+        public Boolean getNetworkEncryptionSupport() {
+            return this.networkEncryptionSupport;
+        }
+
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setNvmeSupport(String nvmeSupport) {
             this.nvmeSupport = nvmeSupport;
             return this;
         }
         public String getNvmeSupport() {
             return this.nvmeSupport;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setPhysicalProcessorModel(String physicalProcessorModel) {
+            this.physicalProcessorModel = physicalProcessorModel;
+            return this;
+        }
+        public String getPhysicalProcessorModel() {
+            return this.physicalProcessorModel;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setPrimaryEniQueueNumber(Integer primaryEniQueueNumber) {

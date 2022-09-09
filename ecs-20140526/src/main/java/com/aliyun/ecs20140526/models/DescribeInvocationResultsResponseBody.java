@@ -31,9 +31,64 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag self = new DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag> tag;
+
+        public static DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags self = new DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags setTag(java.util.List<DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult extends TeaModel {
         @NameInMap("CommandId")
         public String commandId;
+
+        @NameInMap("ContainerId")
+        public String containerId;
+
+        @NameInMap("ContainerName")
+        public String containerName;
 
         @NameInMap("Dropped")
         public Integer dropped;
@@ -74,6 +129,9 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         @NameInMap("StopTime")
         public String stopTime;
 
+        @NameInMap("Tags")
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags tags;
+
         @NameInMap("Username")
         public String username;
 
@@ -88,6 +146,22 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
         public String getCommandId() {
             return this.commandId;
+        }
+
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setContainerId(String containerId) {
+            this.containerId = containerId;
+            return this;
+        }
+        public String getContainerId() {
+            return this.containerId;
+        }
+
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setContainerName(String containerName) {
+            this.containerName = containerName;
+            return this;
+        }
+        public String getContainerName() {
+            return this.containerName;
         }
 
         public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setDropped(Integer dropped) {
@@ -192,6 +266,14 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
         public String getStopTime() {
             return this.stopTime;
+        }
+
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setTags(DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags getTags() {
+            return this.tags;
         }
 
         public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setUsername(String username) {

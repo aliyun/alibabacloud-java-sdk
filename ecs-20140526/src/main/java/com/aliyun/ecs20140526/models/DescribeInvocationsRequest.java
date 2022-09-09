@@ -52,6 +52,9 @@ public class DescribeInvocationsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeInvocationsRequestTag> tag;
+
     @NameInMap("Timed")
     public Boolean timed;
 
@@ -188,12 +191,50 @@ public class DescribeInvocationsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public DescribeInvocationsRequest setTag(java.util.List<DescribeInvocationsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeInvocationsRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeInvocationsRequest setTimed(Boolean timed) {
         this.timed = timed;
         return this;
     }
     public Boolean getTimed() {
         return this.timed;
+    }
+
+    public static class DescribeInvocationsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeInvocationsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInvocationsRequestTag self = new DescribeInvocationsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInvocationsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeInvocationsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

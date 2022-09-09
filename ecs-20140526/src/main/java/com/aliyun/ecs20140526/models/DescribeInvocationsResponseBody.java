@@ -256,6 +256,55 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInvocationsResponseBodyInvocationsInvocationTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeInvocationsResponseBodyInvocationsInvocationTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInvocationsResponseBodyInvocationsInvocationTagsTag self = new DescribeInvocationsResponseBodyInvocationsInvocationTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocationTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocationTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeInvocationsResponseBodyInvocationsInvocationTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeInvocationsResponseBodyInvocationsInvocationTagsTag> tag;
+
+        public static DescribeInvocationsResponseBodyInvocationsInvocationTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInvocationsResponseBodyInvocationsInvocationTags self = new DescribeInvocationsResponseBodyInvocationsInvocationTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocationTags setTag(java.util.List<DescribeInvocationsResponseBodyInvocationsInvocationTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeInvocationsResponseBodyInvocationsInvocationTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeInvocationsResponseBodyInvocationsInvocation extends TeaModel {
         @NameInMap("CommandContent")
         public String commandContent;
@@ -271,6 +320,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
         @NameInMap("CommandType")
         public String commandType;
+
+        @NameInMap("ContainerId")
+        public String containerId;
+
+        @NameInMap("ContainerName")
+        public String containerName;
 
         @NameInMap("CreationTime")
         public String creationTime;
@@ -295,6 +350,9 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
         @NameInMap("RepeatMode")
         public String repeatMode;
+
+        @NameInMap("Tags")
+        public DescribeInvocationsResponseBodyInvocationsInvocationTags tags;
 
         @NameInMap("Timed")
         public Boolean timed;
@@ -351,6 +409,22 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
         public String getCommandType() {
             return this.commandType;
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocation setContainerId(String containerId) {
+            this.containerId = containerId;
+            return this;
+        }
+        public String getContainerId() {
+            return this.containerId;
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocation setContainerName(String containerName) {
+            this.containerName = containerName;
+            return this;
+        }
+        public String getContainerName() {
+            return this.containerName;
         }
 
         public DescribeInvocationsResponseBodyInvocationsInvocation setCreationTime(String creationTime) {
@@ -415,6 +489,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
         public String getRepeatMode() {
             return this.repeatMode;
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocation setTags(DescribeInvocationsResponseBodyInvocationsInvocationTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeInvocationsResponseBodyInvocationsInvocationTags getTags() {
+            return this.tags;
         }
 
         public DescribeInvocationsResponseBodyInvocationsInvocation setTimed(Boolean timed) {

@@ -184,6 +184,55 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeCommandsResponseBodyCommandsCommandTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeCommandsResponseBodyCommandsCommandTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCommandsResponseBodyCommandsCommandTagsTag self = new DescribeCommandsResponseBodyCommandsCommandTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommandTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommandTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeCommandsResponseBodyCommandsCommandTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeCommandsResponseBodyCommandsCommandTagsTag> tag;
+
+        public static DescribeCommandsResponseBodyCommandsCommandTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCommandsResponseBodyCommandsCommandTags self = new DescribeCommandsResponseBodyCommandsCommandTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommandTags setTag(java.util.List<DescribeCommandsResponseBodyCommandsCommandTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeCommandsResponseBodyCommandsCommandTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeCommandsResponseBodyCommandsCommand extends TeaModel {
         @NameInMap("Category")
         public String category;
@@ -220,6 +269,9 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
         @NameInMap("Provider")
         public String provider;
+
+        @NameInMap("Tags")
+        public DescribeCommandsResponseBodyCommandsCommandTags tags;
 
         @NameInMap("Timeout")
         public Long timeout;
@@ -332,6 +384,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
         public String getProvider() {
             return this.provider;
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommand setTags(DescribeCommandsResponseBodyCommandsCommandTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeCommandsResponseBodyCommandsCommandTags getTags() {
+            return this.tags;
         }
 
         public DescribeCommandsResponseBodyCommandsCommand setTimeout(Long timeout) {

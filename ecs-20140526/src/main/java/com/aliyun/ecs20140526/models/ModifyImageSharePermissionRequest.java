@@ -10,7 +10,6 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
-    // 发布为社区镜像
     @NameInMap("IsPublic")
     public Boolean isPublic;
 

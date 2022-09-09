@@ -185,11 +185,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
-        // 源快照地域
         @NameInMap("SourceRegionId")
         public String sourceRegionId;
 
-        // 源快照
         @NameInMap("SourceSnapshotId")
         public String sourceSnapshotId;
 
