@@ -19,6 +19,9 @@ public class DescribeDBClustersRequest extends TeaModel {
     @NameInMap("DBType")
     public String DBType;
 
+    @NameInMap("Expired")
+    public Boolean expired;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -33,6 +36,12 @@ public class DescribeDBClustersRequest extends TeaModel {
 
     @NameInMap("PayType")
     public String payType;
+
+    @NameInMap("RecentCreationInterval")
+    public Integer recentCreationInterval;
+
+    @NameInMap("RecentExpirationInterval")
+    public Integer recentExpirationInterval;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -94,6 +103,14 @@ public class DescribeDBClustersRequest extends TeaModel {
         return this.DBType;
     }
 
+    public DescribeDBClustersRequest setExpired(Boolean expired) {
+        this.expired = expired;
+        return this;
+    }
+    public Boolean getExpired() {
+        return this.expired;
+    }
+
     public DescribeDBClustersRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -132,6 +149,22 @@ public class DescribeDBClustersRequest extends TeaModel {
     }
     public String getPayType() {
         return this.payType;
+    }
+
+    public DescribeDBClustersRequest setRecentCreationInterval(Integer recentCreationInterval) {
+        this.recentCreationInterval = recentCreationInterval;
+        return this;
+    }
+    public Integer getRecentCreationInterval() {
+        return this.recentCreationInterval;
+    }
+
+    public DescribeDBClustersRequest setRecentExpirationInterval(Integer recentExpirationInterval) {
+        this.recentExpirationInterval = recentExpirationInterval;
+        return this;
+    }
+    public Integer getRecentExpirationInterval() {
+        return this.recentExpirationInterval;
     }
 
     public DescribeDBClustersRequest setRegionId(String regionId) {

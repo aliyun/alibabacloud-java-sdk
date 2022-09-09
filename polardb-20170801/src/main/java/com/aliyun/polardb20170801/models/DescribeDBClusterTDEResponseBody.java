@@ -16,6 +16,9 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TDERegion")
+    public String TDERegion;
+
     @NameInMap("TDEStatus")
     public String TDEStatus;
 
@@ -54,6 +57,14 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDBClusterTDEResponseBody setTDERegion(String TDERegion) {
+        this.TDERegion = TDERegion;
+        return this;
+    }
+    public String getTDERegion() {
+        return this.TDERegion;
     }
 
     public DescribeDBClusterTDEResponseBody setTDEStatus(String TDEStatus) {

@@ -13,6 +13,9 @@ public class DeleteGlobalDatabaseNetworkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -49,6 +52,14 @@ public class DeleteGlobalDatabaseNetworkRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteGlobalDatabaseNetworkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DeleteGlobalDatabaseNetworkRequest setResourceOwnerAccount(String resourceOwnerAccount) {

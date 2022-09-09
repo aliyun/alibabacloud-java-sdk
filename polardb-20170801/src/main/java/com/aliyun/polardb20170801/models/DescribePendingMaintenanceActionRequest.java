@@ -22,6 +22,9 @@ public class DescribePendingMaintenanceActionRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -85,6 +88,14 @@ public class DescribePendingMaintenanceActionRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public DescribePendingMaintenanceActionRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribePendingMaintenanceActionRequest setResourceOwnerAccount(String resourceOwnerAccount) {

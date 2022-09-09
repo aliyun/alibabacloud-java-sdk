@@ -134,6 +134,9 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @NameInMap("AutoAddNewNodes")
         public String autoAddNewNodes;
 
+        @NameInMap("DBClusterId")
+        public String DBClusterId;
+
         @NameInMap("DBEndpointDescription")
         public String DBEndpointDescription;
 
@@ -174,6 +177,14 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         }
         public String getAutoAddNewNodes() {
             return this.autoAddNewNodes;
+        }
+
+        public DescribeDBClusterEndpointsResponseBodyItems setDBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+        public String getDBClusterId() {
+            return this.DBClusterId;
         }
 
         public DescribeDBClusterEndpointsResponseBodyItems setDBEndpointDescription(String DBEndpointDescription) {

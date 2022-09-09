@@ -93,6 +93,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
+        @NameInMap("AccountPassword")
+        public String accountPassword;
+
         @NameInMap("AccountPasswordValidTime")
         public String accountPasswordValidTime;
 
@@ -132,6 +135,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
         public String getAccountName() {
             return this.accountName;
+        }
+
+        public DescribeAccountsResponseBodyAccounts setAccountPassword(String accountPassword) {
+            this.accountPassword = accountPassword;
+            return this;
+        }
+        public String getAccountPassword() {
+            return this.accountPassword;
         }
 
         public DescribeAccountsResponseBodyAccounts setAccountPasswordValidTime(String accountPasswordValidTime) {

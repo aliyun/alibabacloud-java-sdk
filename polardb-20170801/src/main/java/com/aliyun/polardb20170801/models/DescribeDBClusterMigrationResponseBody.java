@@ -165,6 +165,9 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         @NameInMap("Port")
         public String port;
 
+        @NameInMap("SSLEnabled")
+        public String SSLEnabled;
+
         @NameInMap("VPCId")
         public String VPCId;
 
@@ -206,6 +209,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
         public String getPort() {
             return this.port;
+        }
+
+        public DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems setSSLEnabled(String SSLEnabled) {
+            this.SSLEnabled = SSLEnabled;
+            return this;
+        }
+        public String getSSLEnabled() {
+            return this.SSLEnabled;
         }
 
         public DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems setVPCId(String VPCId) {
@@ -280,6 +291,9 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         @NameInMap("Port")
         public String port;
 
+        @NameInMap("SSLEnabled")
+        public String SSLEnabled;
+
         @NameInMap("VPCId")
         public String VPCId;
 
@@ -321,6 +335,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
         public String getPort() {
             return this.port;
+        }
+
+        public DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems setSSLEnabled(String SSLEnabled) {
+            this.SSLEnabled = SSLEnabled;
+            return this;
+        }
+        public String getSSLEnabled() {
+            return this.SSLEnabled;
         }
 
         public DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems setVPCId(String VPCId) {

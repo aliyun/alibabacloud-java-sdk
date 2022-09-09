@@ -3,9 +3,12 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class DescribePendingMaintenanceActionsRequest extends TeaModel {
-    @NameInMap("IsHistory")
-    public Integer isHistory;
+public class DescribeClassListRequest extends TeaModel {
+    @NameInMap("CommodityCode")
+    public String commodityCode;
+
+    @NameInMap("OrderType")
+    public String orderType;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -25,23 +28,28 @@ public class DescribePendingMaintenanceActionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    public static DescribePendingMaintenanceActionsRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribePendingMaintenanceActionsRequest self = new DescribePendingMaintenanceActionsRequest();
+    public static DescribeClassListRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeClassListRequest self = new DescribeClassListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribePendingMaintenanceActionsRequest setIsHistory(Integer isHistory) {
-        this.isHistory = isHistory;
+    public DescribeClassListRequest setCommodityCode(String commodityCode) {
+        this.commodityCode = commodityCode;
         return this;
     }
-    public Integer getIsHistory() {
-        return this.isHistory;
+    public String getCommodityCode() {
+        return this.commodityCode;
     }
 
-    public DescribePendingMaintenanceActionsRequest setOwnerAccount(String ownerAccount) {
+    public DescribeClassListRequest setOrderType(String orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    public String getOrderType() {
+        return this.orderType;
+    }
+
+    public DescribeClassListRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -49,7 +57,7 @@ public class DescribePendingMaintenanceActionsRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribePendingMaintenanceActionsRequest setOwnerId(Long ownerId) {
+    public DescribeClassListRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -57,7 +65,7 @@ public class DescribePendingMaintenanceActionsRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribePendingMaintenanceActionsRequest setRegionId(String regionId) {
+    public DescribeClassListRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -65,7 +73,7 @@ public class DescribePendingMaintenanceActionsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribePendingMaintenanceActionsRequest setResourceGroupId(String resourceGroupId) {
+    public DescribeClassListRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -73,7 +81,7 @@ public class DescribePendingMaintenanceActionsRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribePendingMaintenanceActionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DescribeClassListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -81,20 +89,12 @@ public class DescribePendingMaintenanceActionsRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribePendingMaintenanceActionsRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DescribeClassListRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribePendingMaintenanceActionsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }
