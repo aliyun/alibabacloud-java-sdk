@@ -165,6 +165,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("InternetEgressAddress")
         public String internetEgressAddress;
 
+        @NameInMap("IntranetSegments")
+        public String intranetSegments;
+
         @NameInMap("RegionId")
         public String regionId;
 
@@ -340,6 +343,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getInternetEgressAddress() {
             return this.internetEgressAddress;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setIntranetSegments(String intranetSegments) {
+            this.intranetSegments = intranetSegments;
+            return this;
+        }
+        public String getIntranetSegments() {
+            return this.intranetSegments;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceAttribute setRegionId(String regionId) {

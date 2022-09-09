@@ -16,6 +16,9 @@ public class SetDomainWebSocketStatusRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("WSSEnable")
+    public String WSSEnable;
+
     public static SetDomainWebSocketStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDomainWebSocketStatusRequest self = new SetDomainWebSocketStatusRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class SetDomainWebSocketStatusRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public SetDomainWebSocketStatusRequest setWSSEnable(String WSSEnable) {
+        this.WSSEnable = WSSEnable;
+        return this;
+    }
+    public String getWSSEnable() {
+        return this.WSSEnable;
     }
 
 }
