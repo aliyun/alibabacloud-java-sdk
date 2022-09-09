@@ -25,6 +25,9 @@ public class DescribeClientEventsRequest extends TeaModel {
     @NameInMap("EventType")
     public String eventType;
 
+    @NameInMap("EventTypes")
+    public java.util.List<String> eventTypes;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -102,6 +105,14 @@ public class DescribeClientEventsRequest extends TeaModel {
     }
     public String getEventType() {
         return this.eventType;
+    }
+
+    public DescribeClientEventsRequest setEventTypes(java.util.List<String> eventTypes) {
+        this.eventTypes = eventTypes;
+        return this;
+    }
+    public java.util.List<String> getEventTypes() {
+        return this.eventTypes;
     }
 
     public DescribeClientEventsRequest setMaxResults(Integer maxResults) {

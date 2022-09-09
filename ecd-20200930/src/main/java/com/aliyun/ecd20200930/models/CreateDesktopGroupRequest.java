@@ -49,6 +49,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
+    @NameInMap("FileSystemId")
+    public String fileSystemId;
+
     @NameInMap("IdleDisconnectDuration")
     public Long idleDisconnectDuration;
 
@@ -78,6 +81,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
 
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
+
+    @NameInMap("ProfileFollowSwitch")
+    public Boolean profileFollowSwitch;
 
     @NameInMap("RatioThreshold")
     public Float ratioThreshold;
@@ -228,6 +234,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
         return this.endUserIds;
     }
 
+    public CreateDesktopGroupRequest setFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
+        return this;
+    }
+    public String getFileSystemId() {
+        return this.fileSystemId;
+    }
+
     public CreateDesktopGroupRequest setIdleDisconnectDuration(Long idleDisconnectDuration) {
         this.idleDisconnectDuration = idleDisconnectDuration;
         return this;
@@ -306,6 +320,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
     }
     public String getPolicyGroupId() {
         return this.policyGroupId;
+    }
+
+    public CreateDesktopGroupRequest setProfileFollowSwitch(Boolean profileFollowSwitch) {
+        this.profileFollowSwitch = profileFollowSwitch;
+        return this;
+    }
+    public Boolean getProfileFollowSwitch() {
+        return this.profileFollowSwitch;
     }
 
     public CreateDesktopGroupRequest setRatioThreshold(Float ratioThreshold) {

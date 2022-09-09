@@ -1,3 +1,6 @@
+2022-09-09 Version: 2.0.12
+- Support user customized desktop list.
+
 2022-09-05 Version: 2.0.11
 - PolicyGroup support appContentProtection and recordContent.
 
