@@ -16,6 +16,9 @@ public class CreateGlobalDatabaseNetworkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -60,6 +63,14 @@ public class CreateGlobalDatabaseNetworkRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateGlobalDatabaseNetworkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateGlobalDatabaseNetworkRequest setResourceOwnerAccount(String resourceOwnerAccount) {

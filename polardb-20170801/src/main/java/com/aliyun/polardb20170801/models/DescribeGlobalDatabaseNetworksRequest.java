@@ -25,6 +25,9 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -93,6 +96,14 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeGlobalDatabaseNetworksRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeGlobalDatabaseNetworksRequest setResourceOwnerAccount(String resourceOwnerAccount) {

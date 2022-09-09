@@ -100,6 +100,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("SQLSize")
     public Long SQLSize;
 
+    @NameInMap("ServerlessType")
+    public String serverlessType;
+
     @NameInMap("StorageMax")
     public Long storageMax;
 
@@ -391,6 +394,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         return this.SQLSize;
     }
 
+    public DescribeDBClusterAttributeResponseBody setServerlessType(String serverlessType) {
+        this.serverlessType = serverlessType;
+        return this;
+    }
+    public String getServerlessType() {
+        return this.serverlessType;
+    }
+
     public DescribeDBClusterAttributeResponseBody setStorageMax(Long storageMax) {
         this.storageMax = storageMax;
         return this;
@@ -508,6 +519,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
 
+        @NameInMap("SccMode")
+        public String sccMode;
+
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -610,6 +624,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public Integer getMaxIOPS() {
             return this.maxIOPS;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBNodes setSccMode(String sccMode) {
+            this.sccMode = sccMode;
+            return this;
+        }
+        public String getSccMode() {
+            return this.sccMode;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBNodes setZoneId(String zoneId) {

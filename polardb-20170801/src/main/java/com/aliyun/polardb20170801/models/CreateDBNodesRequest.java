@@ -31,6 +31,9 @@ public class CreateDBNodesRequest extends TeaModel {
     @NameInMap("PlannedStartTime")
     public String plannedStartTime;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -112,6 +115,14 @@ public class CreateDBNodesRequest extends TeaModel {
     }
     public String getPlannedStartTime() {
         return this.plannedStartTime;
+    }
+
+    public CreateDBNodesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateDBNodesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
