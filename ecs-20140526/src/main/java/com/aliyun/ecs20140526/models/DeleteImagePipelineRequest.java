@@ -22,9 +22,6 @@ public class DeleteImagePipelineRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("TemplateTag")
-    public java.util.List<DeleteImagePipelineRequestTemplateTag> templateTag;
-
     public static DeleteImagePipelineRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteImagePipelineRequest self = new DeleteImagePipelineRequest();
         return TeaModel.build(map, self);
@@ -76,44 +73,6 @@ public class DeleteImagePipelineRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteImagePipelineRequest setTemplateTag(java.util.List<DeleteImagePipelineRequestTemplateTag> templateTag) {
-        this.templateTag = templateTag;
-        return this;
-    }
-    public java.util.List<DeleteImagePipelineRequestTemplateTag> getTemplateTag() {
-        return this.templateTag;
-    }
-
-    public static class DeleteImagePipelineRequestTemplateTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static DeleteImagePipelineRequestTemplateTag build(java.util.Map<String, ?> map) throws Exception {
-            DeleteImagePipelineRequestTemplateTag self = new DeleteImagePipelineRequestTemplateTag();
-            return TeaModel.build(map, self);
-        }
-
-        public DeleteImagePipelineRequestTemplateTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public DeleteImagePipelineRequestTemplateTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
     }
 
 }

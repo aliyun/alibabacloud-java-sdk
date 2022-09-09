@@ -7,6 +7,12 @@ public class RunCommandShrinkRequest extends TeaModel {
     @NameInMap("CommandContent")
     public String commandContent;
 
+    @NameInMap("ContainerId")
+    public String containerId;
+
+    @NameInMap("ContainerName")
+    public String containerName;
+
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
@@ -49,6 +55,9 @@ public class RunCommandShrinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<RunCommandShrinkRequestTag> tag;
+
     @NameInMap("Timed")
     public Boolean timed;
 
@@ -78,6 +87,22 @@ public class RunCommandShrinkRequest extends TeaModel {
     }
     public String getCommandContent() {
         return this.commandContent;
+    }
+
+    public RunCommandShrinkRequest setContainerId(String containerId) {
+        this.containerId = containerId;
+        return this;
+    }
+    public String getContainerId() {
+        return this.containerId;
+    }
+
+    public RunCommandShrinkRequest setContainerName(String containerName) {
+        this.containerName = containerName;
+        return this;
+    }
+    public String getContainerName() {
+        return this.containerName;
     }
 
     public RunCommandShrinkRequest setContentEncoding(String contentEncoding) {
@@ -192,6 +217,14 @@ public class RunCommandShrinkRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public RunCommandShrinkRequest setTag(java.util.List<RunCommandShrinkRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<RunCommandShrinkRequestTag> getTag() {
+        return this.tag;
+    }
+
     public RunCommandShrinkRequest setTimed(Boolean timed) {
         this.timed = timed;
         return this;
@@ -238,6 +271,36 @@ public class RunCommandShrinkRequest extends TeaModel {
     }
     public String getWorkingDir() {
         return this.workingDir;
+    }
+
+    public static class RunCommandShrinkRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static RunCommandShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            RunCommandShrinkRequestTag self = new RunCommandShrinkRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public RunCommandShrinkRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public RunCommandShrinkRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

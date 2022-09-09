@@ -43,6 +43,9 @@ public class DescribeCommandsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeCommandsRequestTag> tag;
+
     @NameInMap("Type")
     public String type;
 
@@ -155,12 +158,50 @@ public class DescribeCommandsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public DescribeCommandsRequest setTag(java.util.List<DescribeCommandsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeCommandsRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeCommandsRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class DescribeCommandsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeCommandsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCommandsRequestTag self = new DescribeCommandsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCommandsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeCommandsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

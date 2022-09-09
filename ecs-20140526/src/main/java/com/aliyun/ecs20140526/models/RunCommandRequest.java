@@ -7,6 +7,12 @@ public class RunCommandRequest extends TeaModel {
     @NameInMap("CommandContent")
     public String commandContent;
 
+    @NameInMap("ContainerId")
+    public String containerId;
+
+    @NameInMap("ContainerName")
+    public String containerName;
+
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
@@ -49,6 +55,9 @@ public class RunCommandRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<RunCommandRequestTag> tag;
+
     @NameInMap("Timed")
     public Boolean timed;
 
@@ -78,6 +87,22 @@ public class RunCommandRequest extends TeaModel {
     }
     public String getCommandContent() {
         return this.commandContent;
+    }
+
+    public RunCommandRequest setContainerId(String containerId) {
+        this.containerId = containerId;
+        return this;
+    }
+    public String getContainerId() {
+        return this.containerId;
+    }
+
+    public RunCommandRequest setContainerName(String containerName) {
+        this.containerName = containerName;
+        return this;
+    }
+    public String getContainerName() {
+        return this.containerName;
     }
 
     public RunCommandRequest setContentEncoding(String contentEncoding) {
@@ -192,6 +217,14 @@ public class RunCommandRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public RunCommandRequest setTag(java.util.List<RunCommandRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<RunCommandRequestTag> getTag() {
+        return this.tag;
+    }
+
     public RunCommandRequest setTimed(Boolean timed) {
         this.timed = timed;
         return this;
@@ -238,6 +271,36 @@ public class RunCommandRequest extends TeaModel {
     }
     public String getWorkingDir() {
         return this.workingDir;
+    }
+
+    public static class RunCommandRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static RunCommandRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            RunCommandRequestTag self = new RunCommandRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public RunCommandRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public RunCommandRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

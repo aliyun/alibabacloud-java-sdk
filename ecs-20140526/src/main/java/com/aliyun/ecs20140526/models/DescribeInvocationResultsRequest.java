@@ -43,6 +43,9 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeInvocationResultsRequestTag> tag;
+
     public static DescribeInvocationResultsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInvocationResultsRequest self = new DescribeInvocationResultsRequest();
         return TeaModel.build(map, self);
@@ -150,6 +153,44 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeInvocationResultsRequest setTag(java.util.List<DescribeInvocationResultsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeInvocationResultsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeInvocationResultsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeInvocationResultsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInvocationResultsRequestTag self = new DescribeInvocationResultsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInvocationResultsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeInvocationResultsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
