@@ -153,6 +153,12 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("MinDesktopsCount")
         public Integer minDesktopsCount;
 
+        @NameInMap("NasFileSystemID")
+        public String nasFileSystemID;
+
+        @NameInMap("NasFileSystemName")
+        public String nasFileSystemName;
+
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
@@ -179,6 +185,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
+
+        @NameInMap("ProfileFollowSwitch")
+        public Boolean profileFollowSwitch;
 
         @NameInMap("RatioThreshold")
         public Float ratioThreshold;
@@ -396,6 +405,22 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             return this.minDesktopsCount;
         }
 
+        public GetDesktopGroupDetailResponseBodyDesktops setNasFileSystemID(String nasFileSystemID) {
+            this.nasFileSystemID = nasFileSystemID;
+            return this;
+        }
+        public String getNasFileSystemID() {
+            return this.nasFileSystemID;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktops setNasFileSystemName(String nasFileSystemName) {
+            this.nasFileSystemName = nasFileSystemName;
+            return this;
+        }
+        public String getNasFileSystemName() {
+            return this.nasFileSystemName;
+        }
+
         public GetDesktopGroupDetailResponseBodyDesktops setOfficeSiteId(String officeSiteId) {
             this.officeSiteId = officeSiteId;
             return this;
@@ -466,6 +491,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
         public String getPolicyGroupName() {
             return this.policyGroupName;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktops setProfileFollowSwitch(Boolean profileFollowSwitch) {
+            this.profileFollowSwitch = profileFollowSwitch;
+            return this;
+        }
+        public Boolean getProfileFollowSwitch() {
+            return this.profileFollowSwitch;
         }
 
         public GetDesktopGroupDetailResponseBodyDesktops setRatioThreshold(Float ratioThreshold) {
