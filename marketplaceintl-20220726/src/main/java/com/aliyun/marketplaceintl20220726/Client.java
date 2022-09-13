@@ -26,8 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public AddIntlImageProductVersionResponse addIntlImageProductVersionWithOptions(AddIntlImageProductVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public AddIntlImageProductVersionResponse addIntlImageProductVersionWithOptions(AddIntlImageProductVersionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddIntlImageProductVersionShrinkRequest request = new AddIntlImageProductVersionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.imageConstraint))) {
+            request.imageConstraintShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.imageConstraint), "ImageConstraint", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.accessDetail))) {
@@ -42,8 +48,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CommodityCode", request.commodityCode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.imageConstraint))) {
-            bodyFlat.put("ImageConstraint", request.imageConstraint);
+        if (!com.aliyun.teautil.Common.isUnset(request.imageConstraintShrink)) {
+            body.put("ImageConstraint", request.imageConstraintShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.releaseRegion)) {
@@ -88,18 +94,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addIntlImageProductVersionWithOptions(request, runtime);
     }
 
-    public CreateOrUpdateIntlImageResponse createOrUpdateIntlImageWithOptions(CreateOrUpdateIntlImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateOrUpdateIntlImageResponse createOrUpdateIntlImageWithOptions(CreateOrUpdateIntlImageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateOrUpdateIntlImageShrinkRequest request = new CreateOrUpdateIntlImageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.accessInfo))) {
+            request.accessInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.accessInfo), "AccessInfo", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.accessInfo))) {
-            bodyFlat.put("AccessInfo", request.accessInfo);
+        if (!com.aliyun.teautil.Common.isUnset(request.accessInfoShrink)) {
+            body.put("AccessInfo", request.accessInfoShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ak)) {
             body.put("Ak", request.ak);
         }
 
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.basicInfo))) {
             bodyFlat.put("BasicInfo", request.basicInfo);
         }
