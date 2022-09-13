@@ -13,9 +13,6 @@ public class ListConsumerGroupsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    @NameInMap("resourceGroupId")
-    public String resourceGroupId;
-
     public static ListConsumerGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListConsumerGroupsRequest self = new ListConsumerGroupsRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class ListConsumerGroupsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListConsumerGroupsRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
 }

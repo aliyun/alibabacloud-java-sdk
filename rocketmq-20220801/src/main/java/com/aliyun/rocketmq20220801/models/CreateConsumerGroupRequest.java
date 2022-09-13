@@ -13,9 +13,6 @@ public class CreateConsumerGroupRequest extends TeaModel {
     @NameInMap("remark")
     public String remark;
 
-    @NameInMap("resourceGroupId")
-    public String resourceGroupId;
-
     public static CreateConsumerGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateConsumerGroupRequest self = new CreateConsumerGroupRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class CreateConsumerGroupRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
-    }
-
-    public CreateConsumerGroupRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public static class CreateConsumerGroupRequestConsumeRetryPolicy extends TeaModel {

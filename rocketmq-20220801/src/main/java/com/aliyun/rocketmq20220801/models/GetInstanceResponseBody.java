@@ -98,23 +98,12 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataAccountInfo extends TeaModel {
-        @NameInMap("password")
-        public String password;
-
         @NameInMap("username")
         public String username;
 
         public static GetInstanceResponseBodyDataAccountInfo build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyDataAccountInfo self = new GetInstanceResponseBodyDataAccountInfo();
             return TeaModel.build(map, self);
-        }
-
-        public GetInstanceResponseBodyDataAccountInfo setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-        public String getPassword() {
-            return this.password;
         }
 
         public GetInstanceResponseBodyDataAccountInfo setUsername(String username) {
@@ -406,6 +395,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("extConfig")
         public GetInstanceResponseBodyDataExtConfig extConfig;
 
+        @NameInMap("groupCount")
+        public Long groupCount;
+
         @NameInMap("instanceId")
         public String instanceId;
 
@@ -430,9 +422,6 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("remark")
         public String remark;
 
-        @NameInMap("resourceGroupId")
-        public String resourceGroupId;
-
         @NameInMap("seriesCode")
         public String seriesCode;
 
@@ -447,6 +436,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
         @NameInMap("subSeriesCode")
         public String subSeriesCode;
+
+        @NameInMap("topicCount")
+        public Long topicCount;
 
         @NameInMap("updateTime")
         public String updateTime;
@@ -505,6 +497,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public GetInstanceResponseBodyDataExtConfig getExtConfig() {
             return this.extConfig;
+        }
+
+        public GetInstanceResponseBodyData setGroupCount(Long groupCount) {
+            this.groupCount = groupCount;
+            return this;
+        }
+        public Long getGroupCount() {
+            return this.groupCount;
         }
 
         public GetInstanceResponseBodyData setInstanceId(String instanceId) {
@@ -571,14 +571,6 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.remark;
         }
 
-        public GetInstanceResponseBodyData setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
         public GetInstanceResponseBodyData setSeriesCode(String seriesCode) {
             this.seriesCode = seriesCode;
             return this;
@@ -617,6 +609,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getSubSeriesCode() {
             return this.subSeriesCode;
+        }
+
+        public GetInstanceResponseBodyData setTopicCount(Long topicCount) {
+            this.topicCount = topicCount;
+            return this;
+        }
+        public Long getTopicCount() {
+            return this.topicCount;
         }
 
         public GetInstanceResponseBodyData setUpdateTime(String updateTime) {

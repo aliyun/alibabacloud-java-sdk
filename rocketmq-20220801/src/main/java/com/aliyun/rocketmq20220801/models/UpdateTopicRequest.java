@@ -7,9 +7,6 @@ public class UpdateTopicRequest extends TeaModel {
     @NameInMap("remark")
     public String remark;
 
-    @NameInMap("resourceGroupId")
-    public String resourceGroupId;
-
     public static UpdateTopicRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTopicRequest self = new UpdateTopicRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class UpdateTopicRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
-    }
-
-    public UpdateTopicRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
 }
