@@ -10,9 +10,6 @@ public class CreateTopicRequest extends TeaModel {
     @NameInMap("remark")
     public String remark;
 
-    @NameInMap("resourceGroupId")
-    public String resourceGroupId;
-
     public static CreateTopicRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTopicRequest self = new CreateTopicRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class CreateTopicRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
-    }
-
-    public CreateTopicRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
 }

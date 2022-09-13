@@ -13,9 +13,6 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    @NameInMap("resourceGroupId")
-    public String resourceGroupId;
-
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class ListInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListInstancesRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
 }

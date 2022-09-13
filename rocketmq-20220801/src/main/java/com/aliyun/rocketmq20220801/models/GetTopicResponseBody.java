@@ -113,9 +113,6 @@ public class GetTopicResponseBody extends TeaModel {
         @NameInMap("remark")
         public String remark;
 
-        @NameInMap("resourceGroupId")
-        public String resourceGroupId;
-
         @NameInMap("status")
         public String status;
 
@@ -168,14 +165,6 @@ public class GetTopicResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
-        }
-
-        public GetTopicResponseBodyData setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
         }
 
         public GetTopicResponseBodyData setStatus(String status) {

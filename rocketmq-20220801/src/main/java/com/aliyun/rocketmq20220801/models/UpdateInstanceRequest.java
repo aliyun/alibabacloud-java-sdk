@@ -16,9 +16,6 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("remark")
     public String remark;
 
-    @NameInMap("resourceGroupId")
-    public String resourceGroupId;
-
     public static UpdateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInstanceRequest self = new UpdateInstanceRequest();
         return TeaModel.build(map, self);
@@ -54,14 +51,6 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
-    }
-
-    public UpdateInstanceRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public static class UpdateInstanceRequestExtConfig extends TeaModel {

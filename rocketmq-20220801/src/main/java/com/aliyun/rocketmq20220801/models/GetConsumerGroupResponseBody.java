@@ -149,9 +149,6 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         @NameInMap("remark")
         public String remark;
 
-        @NameInMap("resourceGroupId")
-        public String resourceGroupId;
-
         @NameInMap("status")
         public String status;
 
@@ -217,14 +214,6 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
-        }
-
-        public GetConsumerGroupResponseBodyData setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
         }
 
         public GetConsumerGroupResponseBodyData setStatus(String status) {
