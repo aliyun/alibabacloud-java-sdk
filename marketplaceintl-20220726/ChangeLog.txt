@@ -1,3 +1,6 @@
+2022-09-13 Version: 1.0.8
+- Modify  field type.
+
 2022-09-05 Version: 1.0.7
 - InteMarketPlace add  releaseRegion  field.
 

@@ -327,7 +327,7 @@ public class CreateOrUpdateIntlImageRequest extends TeaModel {
         public CreateOrUpdateIntlImageRequestAccessInfoImageConstraintBaseConfig baseConfig;
 
         @NameInMap("CustomizeFamilyConstraints")
-        public java.util.Map<String, ?> customizeFamilyConstraints;
+        public java.util.Map<String, java.util.List<String>> customizeFamilyConstraints;
 
         @NameInMap("SupportMoreNetworkCards")
         public Boolean supportMoreNetworkCards;
@@ -351,11 +351,11 @@ public class CreateOrUpdateIntlImageRequest extends TeaModel {
             return this.baseConfig;
         }
 
-        public CreateOrUpdateIntlImageRequestAccessInfoImageConstraint setCustomizeFamilyConstraints(java.util.Map<String, ?> customizeFamilyConstraints) {
+        public CreateOrUpdateIntlImageRequestAccessInfoImageConstraint setCustomizeFamilyConstraints(java.util.Map<String, java.util.List<String>> customizeFamilyConstraints) {
             this.customizeFamilyConstraints = customizeFamilyConstraints;
             return this;
         }
-        public java.util.Map<String, ?> getCustomizeFamilyConstraints() {
+        public java.util.Map<String, java.util.List<String>> getCustomizeFamilyConstraints() {
             return this.customizeFamilyConstraints;
         }
 
