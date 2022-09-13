@@ -125,9 +125,6 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainDetailResponseBodyDomainDetail extends TeaModel {
-        @NameInMap("CertName")
-        public String certName;
-
         @NameInMap("Cname")
         public String cname;
 
@@ -164,14 +161,6 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
         public static DescribeDcdnDomainDetailResponseBodyDomainDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnDomainDetailResponseBodyDomainDetail self = new DescribeDcdnDomainDetailResponseBodyDomainDetail();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnDomainDetailResponseBodyDomainDetail setCertName(String certName) {
-            this.certName = certName;
-            return this;
-        }
-        public String getCertName() {
-            return this.certName;
         }
 
         public DescribeDcdnDomainDetailResponseBodyDomainDetail setCname(String cname) {
