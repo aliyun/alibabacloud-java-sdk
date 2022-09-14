@@ -1834,6 +1834,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListFpShotFilesResponse listFpShotFilesWithOptions(ListFpShotFilesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fpDBId)) {
             query.put("FpDBId", request.fpDBId);
         }
@@ -1860,6 +1864,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3516,6 +3524,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.submitAnalysisJobWithOptions(request, runtime);
     }
 
+    public SubmitEditingJobsResponse submitEditingJobsWithOptions(SubmitEditingJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.editingInputs)) {
+            query.put("EditingInputs", request.editingInputs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.editingJobOssFileRoleArn)) {
+            query.put("EditingJobOssFileRoleArn", request.editingJobOssFileRoleArn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.editingJobOssFileUid)) {
+            query.put("EditingJobOssFileUid", request.editingJobOssFileUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.editingJobOutputs)) {
+            query.put("EditingJobOutputs", request.editingJobOutputs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.editingJobURL)) {
+            query.put("EditingJobURL", request.editingJobURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputBucket)) {
+            query.put("OutputBucket", request.outputBucket);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputLocation)) {
+            query.put("OutputLocation", request.outputLocation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineId)) {
+            query.put("PipelineId", request.pipelineId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitEditingJobs"),
+            new TeaPair("version", "2014-06-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitEditingJobsResponse());
+    }
+
+    public SubmitEditingJobsResponse submitEditingJobs(SubmitEditingJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitEditingJobsWithOptions(request, runtime);
+    }
+
     public SubmitFpDBDeleteJobResponse submitFpDBDeleteJobWithOptions(SubmitFpDBDeleteJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3974,8 +4055,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ContentAddr", request.contentAddr);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.contentType)) {
+            query.put("ContentType", request.contentType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.input)) {
             query.put("Input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyUrl)) {
+            query.put("NotifyUrl", request.notifyUrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {

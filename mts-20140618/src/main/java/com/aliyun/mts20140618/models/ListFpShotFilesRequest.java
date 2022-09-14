@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListFpShotFilesRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("FpDBId")
     public String fpDBId;
 
@@ -25,9 +28,20 @@ public class ListFpShotFilesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static ListFpShotFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFpShotFilesRequest self = new ListFpShotFilesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListFpShotFilesRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public ListFpShotFilesRequest setFpDBId(String fpDBId) {
@@ -84,6 +98,14 @@ public class ListFpShotFilesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ListFpShotFilesRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }
