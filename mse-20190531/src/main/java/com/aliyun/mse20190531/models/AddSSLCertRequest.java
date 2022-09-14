@@ -16,6 +16,9 @@ public class AddSSLCertRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static AddSSLCertRequest build(java.util.Map<String, ?> map) throws Exception {
         AddSSLCertRequest self = new AddSSLCertRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class AddSSLCertRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    public AddSSLCertRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

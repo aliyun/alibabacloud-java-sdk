@@ -10,11 +10,29 @@ public class AddGatewaySlbRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("HttpPort")
+    public Integer httpPort;
+
+    @NameInMap("HttpsPort")
+    public Integer httpsPort;
+
+    @NameInMap("HttpsVServerGroupId")
+    public String httpsVServerGroupId;
+
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
+    @NameInMap("ServiceWeight")
+    public Integer serviceWeight;
+
     @NameInMap("SlbId")
     public String slbId;
 
     @NameInMap("Type")
     public String type;
+
+    @NameInMap("VServerGroupId")
+    public String VServerGroupId;
 
     public static AddGatewaySlbRequest build(java.util.Map<String, ?> map) throws Exception {
         AddGatewaySlbRequest self = new AddGatewaySlbRequest();
@@ -37,6 +55,46 @@ public class AddGatewaySlbRequest extends TeaModel {
         return this.gatewayUniqueId;
     }
 
+    public AddGatewaySlbRequest setHttpPort(Integer httpPort) {
+        this.httpPort = httpPort;
+        return this;
+    }
+    public Integer getHttpPort() {
+        return this.httpPort;
+    }
+
+    public AddGatewaySlbRequest setHttpsPort(Integer httpsPort) {
+        this.httpsPort = httpsPort;
+        return this;
+    }
+    public Integer getHttpsPort() {
+        return this.httpsPort;
+    }
+
+    public AddGatewaySlbRequest setHttpsVServerGroupId(String httpsVServerGroupId) {
+        this.httpsVServerGroupId = httpsVServerGroupId;
+        return this;
+    }
+    public String getHttpsVServerGroupId() {
+        return this.httpsVServerGroupId;
+    }
+
+    public AddGatewaySlbRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    public AddGatewaySlbRequest setServiceWeight(Integer serviceWeight) {
+        this.serviceWeight = serviceWeight;
+        return this;
+    }
+    public Integer getServiceWeight() {
+        return this.serviceWeight;
+    }
+
     public AddGatewaySlbRequest setSlbId(String slbId) {
         this.slbId = slbId;
         return this;
@@ -51,6 +109,14 @@ public class AddGatewaySlbRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public AddGatewaySlbRequest setVServerGroupId(String VServerGroupId) {
+        this.VServerGroupId = VServerGroupId;
+        return this;
+    }
+    public String getVServerGroupId() {
+        return this.VServerGroupId;
     }
 
 }

@@ -7,6 +7,9 @@ public class ListClusterConnectionTypesRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static ListClusterConnectionTypesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListClusterConnectionTypesRequest self = new ListClusterConnectionTypesRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class ListClusterConnectionTypesRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public ListClusterConnectionTypesRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

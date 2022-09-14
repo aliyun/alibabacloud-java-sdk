@@ -10,6 +10,9 @@ public class DeleteClusterRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static DeleteClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteClusterRequest self = new DeleteClusterRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DeleteClusterRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DeleteClusterRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

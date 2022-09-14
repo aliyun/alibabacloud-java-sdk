@@ -16,7 +16,6 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -113,6 +112,9 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        @NameInMap("Http2")
+        public String http2;
+
         @NameInMap("Id")
         public Long id;
 
@@ -130,6 +132,12 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
 
         @NameInMap("Sans")
         public String sans;
+
+        @NameInMap("TlsMax")
+        public String tlsMax;
+
+        @NameInMap("TlsMin")
+        public String tlsMin;
 
         public static GetGatewayDomainDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetGatewayDomainDetailResponseBodyData self = new GetGatewayDomainDetailResponseBodyData();
@@ -232,6 +240,14 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
+        public GetGatewayDomainDetailResponseBodyData setHttp2(String http2) {
+            this.http2 = http2;
+            return this;
+        }
+        public String getHttp2() {
+            return this.http2;
+        }
+
         public GetGatewayDomainDetailResponseBodyData setId(Long id) {
             this.id = id;
             return this;
@@ -278,6 +294,22 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
         public String getSans() {
             return this.sans;
+        }
+
+        public GetGatewayDomainDetailResponseBodyData setTlsMax(String tlsMax) {
+            this.tlsMax = tlsMax;
+            return this;
+        }
+        public String getTlsMax() {
+            return this.tlsMax;
+        }
+
+        public GetGatewayDomainDetailResponseBodyData setTlsMin(String tlsMin) {
+            this.tlsMin = tlsMin;
+            return this;
+        }
+        public String getTlsMin() {
+            return this.tlsMin;
         }
 
     }

@@ -7,6 +7,9 @@ public class QueryAllSwimmingLaneGroupRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static QueryAllSwimmingLaneGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAllSwimmingLaneGroupRequest self = new QueryAllSwimmingLaneGroupRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class QueryAllSwimmingLaneGroupRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public QueryAllSwimmingLaneGroupRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

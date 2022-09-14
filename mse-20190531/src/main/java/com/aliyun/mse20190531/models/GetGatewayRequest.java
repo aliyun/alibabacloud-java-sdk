@@ -10,6 +10,9 @@ public class GetGatewayRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static GetGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         GetGatewayRequest self = new GetGatewayRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GetGatewayRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    public GetGatewayRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

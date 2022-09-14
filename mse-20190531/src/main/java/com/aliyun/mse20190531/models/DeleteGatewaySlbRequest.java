@@ -16,6 +16,9 @@ public class DeleteGatewaySlbRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static DeleteGatewaySlbRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteGatewaySlbRequest self = new DeleteGatewaySlbRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class DeleteGatewaySlbRequest extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public DeleteGatewaySlbRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

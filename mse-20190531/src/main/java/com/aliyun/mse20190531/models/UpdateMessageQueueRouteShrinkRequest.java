@@ -13,6 +13,12 @@ public class UpdateMessageQueueRouteShrinkRequest extends TeaModel {
     @NameInMap("Enable")
     public Boolean enable;
 
+    @NameInMap("FilterSide")
+    public String filterSide;
+
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("Region")
     public String region;
 
@@ -46,6 +52,22 @@ public class UpdateMessageQueueRouteShrinkRequest extends TeaModel {
     }
     public Boolean getEnable() {
         return this.enable;
+    }
+
+    public UpdateMessageQueueRouteShrinkRequest setFilterSide(String filterSide) {
+        this.filterSide = filterSide;
+        return this;
+    }
+    public String getFilterSide() {
+        return this.filterSide;
+    }
+
+    public UpdateMessageQueueRouteShrinkRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public UpdateMessageQueueRouteShrinkRequest setRegion(String region) {

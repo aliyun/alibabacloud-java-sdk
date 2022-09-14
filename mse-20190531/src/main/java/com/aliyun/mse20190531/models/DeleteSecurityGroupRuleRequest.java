@@ -13,6 +13,9 @@ public class DeleteSecurityGroupRuleRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static DeleteSecurityGroupRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSecurityGroupRuleRequest self = new DeleteSecurityGroupRuleRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class DeleteSecurityGroupRuleRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public DeleteSecurityGroupRuleRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

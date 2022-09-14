@@ -22,6 +22,9 @@ public class DeleteNacosInstanceRequest extends TeaModel {
     @NameInMap("Ip")
     public String ip;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("NamespaceId")
     public String namespaceId;
 
@@ -82,6 +85,14 @@ public class DeleteNacosInstanceRequest extends TeaModel {
     }
     public String getIp() {
         return this.ip;
+    }
+
+    public DeleteNacosInstanceRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public DeleteNacosInstanceRequest setNamespaceId(String namespaceId) {

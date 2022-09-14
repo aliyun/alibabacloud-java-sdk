@@ -10,6 +10,9 @@ public class OfflineGatewayRouteRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("RouteId")
     public String routeId;
 
@@ -32,6 +35,14 @@ public class OfflineGatewayRouteRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    public OfflineGatewayRouteRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public OfflineGatewayRouteRequest setRouteId(String routeId) {

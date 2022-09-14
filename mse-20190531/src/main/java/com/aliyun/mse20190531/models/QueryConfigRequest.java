@@ -16,6 +16,9 @@ public class QueryConfigRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("RequestPars")
     public String requestPars;
 
@@ -54,6 +57,14 @@ public class QueryConfigRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public QueryConfigRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public QueryConfigRequest setRequestPars(String requestPars) {

@@ -16,7 +16,6 @@ public class ListGatewaySlbResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -77,6 +76,9 @@ public class ListGatewaySlbResponseBody extends TeaModel {
     }
 
     public static class ListGatewaySlbResponseBodyData extends TeaModel {
+        @NameInMap("EditEnable")
+        public Boolean editEnable;
+
         @NameInMap("GatewayId")
         public String gatewayId;
 
@@ -89,8 +91,20 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        @NameInMap("HttpPort")
+        public Integer httpPort;
+
+        @NameInMap("HttpsPort")
+        public Integer httpsPort;
+
+        @NameInMap("HttpsVServerGroupId")
+        public String httpsVServerGroupId;
+
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("ServiceWeight")
+        public Integer serviceWeight;
 
         @NameInMap("SlbId")
         public String slbId;
@@ -107,9 +121,20 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        @NameInMap("VServerGroupId")
+        public String VServerGroupId;
+
         public static ListGatewaySlbResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListGatewaySlbResponseBodyData self = new ListGatewaySlbResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListGatewaySlbResponseBodyData setEditEnable(Boolean editEnable) {
+            this.editEnable = editEnable;
+            return this;
+        }
+        public Boolean getEditEnable() {
+            return this.editEnable;
         }
 
         public ListGatewaySlbResponseBodyData setGatewayId(String gatewayId) {
@@ -144,12 +169,44 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
+        public ListGatewaySlbResponseBodyData setHttpPort(Integer httpPort) {
+            this.httpPort = httpPort;
+            return this;
+        }
+        public Integer getHttpPort() {
+            return this.httpPort;
+        }
+
+        public ListGatewaySlbResponseBodyData setHttpsPort(Integer httpsPort) {
+            this.httpsPort = httpsPort;
+            return this;
+        }
+        public Integer getHttpsPort() {
+            return this.httpsPort;
+        }
+
+        public ListGatewaySlbResponseBodyData setHttpsVServerGroupId(String httpsVServerGroupId) {
+            this.httpsVServerGroupId = httpsVServerGroupId;
+            return this;
+        }
+        public String getHttpsVServerGroupId() {
+            return this.httpsVServerGroupId;
+        }
+
         public ListGatewaySlbResponseBodyData setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public ListGatewaySlbResponseBodyData setServiceWeight(Integer serviceWeight) {
+            this.serviceWeight = serviceWeight;
+            return this;
+        }
+        public Integer getServiceWeight() {
+            return this.serviceWeight;
         }
 
         public ListGatewaySlbResponseBodyData setSlbId(String slbId) {
@@ -190,6 +247,14 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public ListGatewaySlbResponseBodyData setVServerGroupId(String VServerGroupId) {
+            this.VServerGroupId = VServerGroupId;
+            return this;
+        }
+        public String getVServerGroupId() {
+            return this.VServerGroupId;
         }
 
     }

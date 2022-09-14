@@ -7,15 +7,15 @@ public class UpdateGatewaySpecRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // 网关名称
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // 节点数量
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("Replica")
     public Integer replica;
 
-    // 节点规格
     @NameInMap("Spec")
     public String spec;
 
@@ -38,6 +38,14 @@ public class UpdateGatewaySpecRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    public UpdateGatewaySpecRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public UpdateGatewaySpecRequest setReplica(Integer replica) {

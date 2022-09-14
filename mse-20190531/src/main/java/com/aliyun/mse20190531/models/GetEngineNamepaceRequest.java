@@ -16,6 +16,9 @@ public class GetEngineNamepaceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static GetEngineNamepaceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetEngineNamepaceRequest self = new GetEngineNamepaceRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class GetEngineNamepaceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetEngineNamepaceRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

@@ -13,6 +13,12 @@ public class AddGatewayDomainRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("Http2")
+    public String http2;
+
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("MustHttps")
     public Boolean mustHttps;
 
@@ -21,6 +27,12 @@ public class AddGatewayDomainRequest extends TeaModel {
 
     @NameInMap("Protocol")
     public String protocol;
+
+    @NameInMap("TlsMax")
+    public String tlsMax;
+
+    @NameInMap("TlsMin")
+    public String tlsMin;
 
     public static AddGatewayDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         AddGatewayDomainRequest self = new AddGatewayDomainRequest();
@@ -51,6 +63,22 @@ public class AddGatewayDomainRequest extends TeaModel {
         return this.gatewayUniqueId;
     }
 
+    public AddGatewayDomainRequest setHttp2(String http2) {
+        this.http2 = http2;
+        return this;
+    }
+    public String getHttp2() {
+        return this.http2;
+    }
+
+    public AddGatewayDomainRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
     public AddGatewayDomainRequest setMustHttps(Boolean mustHttps) {
         this.mustHttps = mustHttps;
         return this;
@@ -73,6 +101,22 @@ public class AddGatewayDomainRequest extends TeaModel {
     }
     public String getProtocol() {
         return this.protocol;
+    }
+
+    public AddGatewayDomainRequest setTlsMax(String tlsMax) {
+        this.tlsMax = tlsMax;
+        return this;
+    }
+    public String getTlsMax() {
+        return this.tlsMax;
+    }
+
+    public AddGatewayDomainRequest setTlsMin(String tlsMin) {
+        this.tlsMin = tlsMin;
+        return this;
+    }
+    public String getTlsMin() {
+        return this.tlsMin;
     }
 
 }

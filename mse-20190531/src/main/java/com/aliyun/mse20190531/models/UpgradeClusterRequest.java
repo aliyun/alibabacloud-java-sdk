@@ -10,6 +10,9 @@ public class UpgradeClusterRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("RequestPars")
     public String requestPars;
 
@@ -35,6 +38,14 @@ public class UpgradeClusterRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UpgradeClusterRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public UpgradeClusterRequest setRequestPars(String requestPars) {

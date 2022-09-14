@@ -260,6 +260,12 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -533,6 +539,22 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public QueryClusterDetailResponseBodyData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public QueryClusterDetailResponseBodyData setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
         }
 
         public QueryClusterDetailResponseBodyData setVSwitchId(String vSwitchId) {

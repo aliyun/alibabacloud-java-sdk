@@ -10,6 +10,9 @@ public class GetTagsBySwimmingLaneGroupIdRequest extends TeaModel {
     @NameInMap("GroupId")
     public Long groupId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static GetTagsBySwimmingLaneGroupIdRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTagsBySwimmingLaneGroupIdRequest self = new GetTagsBySwimmingLaneGroupIdRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GetTagsBySwimmingLaneGroupIdRequest extends TeaModel {
     }
     public Long getGroupId() {
         return this.groupId;
+    }
+
+    public GetTagsBySwimmingLaneGroupIdRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

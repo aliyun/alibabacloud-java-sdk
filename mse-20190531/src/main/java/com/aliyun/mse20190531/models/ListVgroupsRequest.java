@@ -7,6 +7,9 @@ public class ListVgroupsRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("Region")
     public String region;
 
@@ -24,6 +27,14 @@ public class ListVgroupsRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public ListVgroupsRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public ListVgroupsRequest setRegion(String region) {

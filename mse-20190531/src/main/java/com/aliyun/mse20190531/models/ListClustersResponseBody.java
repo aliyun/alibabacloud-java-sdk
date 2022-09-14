@@ -157,6 +157,12 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("MseVersion")
         public String mseVersion;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
         @NameInMap("VersionCode")
         public String versionCode;
 
@@ -291,6 +297,22 @@ public class ListClustersResponseBody extends TeaModel {
         }
         public String getMseVersion() {
             return this.mseVersion;
+        }
+
+        public ListClustersResponseBodyData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public ListClustersResponseBodyData setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
         }
 
         public ListClustersResponseBodyData setVersionCode(String versionCode) {

@@ -4,35 +4,27 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GatewayService extends TeaModel {
-    // 服务的策略
     @NameInMap("GatewayTrafficPolicy")
     public TrafficPolicy gatewayTrafficPolicy;
 
-    // 网关uniqueId
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // 服务所属group
     @NameInMap("GroupName")
     public String groupName;
 
-    // 服务id
     @NameInMap("Id")
     public Long id;
 
-    // 元信息
     @NameInMap("MetaInfo")
     public String metaInfo;
 
-    // 服务名
     @NameInMap("Name")
     public String name;
 
-    // 服务所属namesapce
     @NameInMap("Namespace")
     public String namespace;
 
-    // 服务来源
     @NameInMap("SourceType")
     public String sourceType;
 

@@ -16,7 +16,6 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -267,6 +266,12 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
+        @NameInMap("HealthCheck")
+        public String healthCheck;
+
+        @NameInMap("HealthStatus")
+        public String healthStatus;
+
         @NameInMap("Id")
         public Long id;
 
@@ -287,6 +292,9 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
         @NameInMap("ServiceNameInRegistry")
         public String serviceNameInRegistry;
+
+        @NameInMap("ServiceProtocol")
+        public String serviceProtocol;
 
         @NameInMap("SourceId")
         public Long sourceId;
@@ -353,6 +361,22 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             return this.groupName;
         }
 
+        public GetGatewayServiceDetailResponseBodyData setHealthCheck(String healthCheck) {
+            this.healthCheck = healthCheck;
+            return this;
+        }
+        public String getHealthCheck() {
+            return this.healthCheck;
+        }
+
+        public GetGatewayServiceDetailResponseBodyData setHealthStatus(String healthStatus) {
+            this.healthStatus = healthStatus;
+            return this;
+        }
+        public String getHealthStatus() {
+            return this.healthStatus;
+        }
+
         public GetGatewayServiceDetailResponseBodyData setId(Long id) {
             this.id = id;
             return this;
@@ -407,6 +431,14 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
         public String getServiceNameInRegistry() {
             return this.serviceNameInRegistry;
+        }
+
+        public GetGatewayServiceDetailResponseBodyData setServiceProtocol(String serviceProtocol) {
+            this.serviceProtocol = serviceProtocol;
+            return this;
+        }
+        public String getServiceProtocol() {
+            return this.serviceProtocol;
         }
 
         public GetGatewayServiceDetailResponseBodyData setSourceId(Long sourceId) {

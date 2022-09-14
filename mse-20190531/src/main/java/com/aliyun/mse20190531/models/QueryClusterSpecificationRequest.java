@@ -7,9 +7,11 @@ public class QueryClusterSpecificationRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // 网络连接类型
     @NameInMap("ConnectType")
     public String connectType;
+
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
 
     public static QueryClusterSpecificationRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryClusterSpecificationRequest self = new QueryClusterSpecificationRequest();
@@ -30,6 +32,14 @@ public class QueryClusterSpecificationRequest extends TeaModel {
     }
     public String getConnectType() {
         return this.connectType;
+    }
+
+    public QueryClusterSpecificationRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

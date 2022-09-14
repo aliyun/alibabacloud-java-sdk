@@ -22,6 +22,9 @@ public class UpdateServiceSourceRequest extends TeaModel {
     @NameInMap("IngressOptionsRequest")
     public UpdateServiceSourceRequestIngressOptionsRequest ingressOptionsRequest;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("Name")
     public String name;
 
@@ -82,6 +85,14 @@ public class UpdateServiceSourceRequest extends TeaModel {
     }
     public UpdateServiceSourceRequestIngressOptionsRequest getIngressOptionsRequest() {
         return this.ingressOptionsRequest;
+    }
+
+    public UpdateServiceSourceRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public UpdateServiceSourceRequest setName(String name) {

@@ -7,9 +7,11 @@ public class ListClusterTypesRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // 网络连接类型
     @NameInMap("ConnectType")
     public String connectType;
+
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -33,6 +35,14 @@ public class ListClusterTypesRequest extends TeaModel {
     }
     public String getConnectType() {
         return this.connectType;
+    }
+
+    public ListClusterTypesRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public ListClusterTypesRequest setRegionId(String regionId) {

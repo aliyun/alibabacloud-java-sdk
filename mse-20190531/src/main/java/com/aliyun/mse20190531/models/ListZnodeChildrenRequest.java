@@ -10,6 +10,9 @@ public class ListZnodeChildrenRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("Path")
     public String path;
 
@@ -32,6 +35,14 @@ public class ListZnodeChildrenRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public ListZnodeChildrenRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public ListZnodeChildrenRequest setPath(String path) {

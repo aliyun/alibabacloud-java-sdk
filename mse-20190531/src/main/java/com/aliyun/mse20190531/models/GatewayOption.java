@@ -4,23 +4,18 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GatewayOption extends TeaModel {
-    // 是否禁用http
     @NameInMap("DisableHttp2Alpn")
     public Boolean disableHttp2Alpn;
 
-    // 是否开启硬件加速
     @NameInMap("EnableHardwareAcceleration")
     public Boolean enableHardwareAcceleration;
 
-    // 是否开启waf
     @NameInMap("EnableWaf")
     public Boolean enableWaf;
 
-    // 日志配置详情
     @NameInMap("LogConfigDetails")
     public GatewayOptionLogConfigDetails logConfigDetails;
 
-    // xtrace config option
     @NameInMap("TraceDetails")
     public GatewayOptionTraceDetails traceDetails;
 
@@ -70,15 +65,12 @@ public class GatewayOption extends TeaModel {
     }
 
     public static class GatewayOptionLogConfigDetails extends TeaModel {
-        // 是否开启日志投递
         @NameInMap("LogEnabled")
         public Boolean logEnabled;
 
-        // 投递的目标logstore
         @NameInMap("LogStoreName")
         public String logStoreName;
 
-        // 投递的目标project
         @NameInMap("ProjectName")
         public String projectName;
 
@@ -114,11 +106,9 @@ public class GatewayOption extends TeaModel {
     }
 
     public static class GatewayOptionTraceDetails extends TeaModel {
-        // trace 采样率
         @NameInMap("Sample")
         public Long sample;
 
-        // trace是否开启
         @NameInMap("TraceEnabled")
         public Boolean traceEnabled;
 

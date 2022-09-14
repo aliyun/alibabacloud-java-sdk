@@ -10,6 +10,9 @@ public class ListClustersRequest extends TeaModel {
     @NameInMap("ClusterAliasName")
     public String clusterAliasName;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("PageNum")
     public Integer pageNum;
 
@@ -21,6 +24,12 @@ public class ListClustersRequest extends TeaModel {
 
     @NameInMap("RequestPars")
     public String requestPars;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tag")
+    public java.util.List<ListClustersRequestTag> tag;
 
     public static ListClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListClustersRequest self = new ListClustersRequest();
@@ -41,6 +50,14 @@ public class ListClustersRequest extends TeaModel {
     }
     public String getClusterAliasName() {
         return this.clusterAliasName;
+    }
+
+    public ListClustersRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public ListClustersRequest setPageNum(Integer pageNum) {
@@ -73,6 +90,52 @@ public class ListClustersRequest extends TeaModel {
     }
     public String getRequestPars() {
         return this.requestPars;
+    }
+
+    public ListClustersRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public ListClustersRequest setTag(java.util.List<ListClustersRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListClustersRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListClustersRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListClustersRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListClustersRequestTag self = new ListClustersRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListClustersRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListClustersRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

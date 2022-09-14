@@ -40,13 +40,17 @@ public class UpdateConfigRequest extends TeaModel {
     @NameInMap("MaxClientCnxns")
     public String maxClientCnxns;
 
-    // 最大超时时间
     @NameInMap("MaxSessionTimeout")
     public String maxSessionTimeout;
 
-    // 最小超时时间
     @NameInMap("MinSessionTimeout")
     public String minSessionTimeout;
+
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
+    @NameInMap("NamingAuthEnabled")
+    public Boolean namingAuthEnabled;
 
     @NameInMap("OpenSuperAcl")
     public String openSuperAcl;
@@ -56,6 +60,9 @@ public class UpdateConfigRequest extends TeaModel {
 
     @NameInMap("RequestPars")
     public String requestPars;
+
+    @NameInMap("SnapshotCount")
+    public String snapshotCount;
 
     @NameInMap("SyncLimit")
     public String syncLimit;
@@ -183,6 +190,22 @@ public class UpdateConfigRequest extends TeaModel {
         return this.minSessionTimeout;
     }
 
+    public UpdateConfigRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    public UpdateConfigRequest setNamingAuthEnabled(Boolean namingAuthEnabled) {
+        this.namingAuthEnabled = namingAuthEnabled;
+        return this;
+    }
+    public Boolean getNamingAuthEnabled() {
+        return this.namingAuthEnabled;
+    }
+
     public UpdateConfigRequest setOpenSuperAcl(String openSuperAcl) {
         this.openSuperAcl = openSuperAcl;
         return this;
@@ -205,6 +228,14 @@ public class UpdateConfigRequest extends TeaModel {
     }
     public String getRequestPars() {
         return this.requestPars;
+    }
+
+    public UpdateConfigRequest setSnapshotCount(String snapshotCount) {
+        this.snapshotCount = snapshotCount;
+        return this;
+    }
+    public String getSnapshotCount() {
+        return this.snapshotCount;
     }
 
     public UpdateConfigRequest setSyncLimit(String syncLimit) {

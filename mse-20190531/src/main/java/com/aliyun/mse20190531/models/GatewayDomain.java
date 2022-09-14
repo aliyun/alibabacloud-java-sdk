@@ -4,43 +4,33 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GatewayDomain extends TeaModel {
-    // 使用的证书Id
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
-    // 网关ID
     @NameInMap("GatewayId")
     public Long gatewayId;
 
-    // 网关名称
     @NameInMap("GatewayName")
     public String gatewayName;
 
-    // 网关唯一标识
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 修改时间
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    // Domain Id
     @NameInMap("Id")
     public Long id;
 
-    // 是否强制跳转
     @NameInMap("MustHttps")
     public String mustHttps;
 
-    // Domain Name
     @NameInMap("Name")
     public String name;
 
-    // domainn的协议
     @NameInMap("Protocol")
     public String protocol;
 

@@ -16,7 +16,6 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -198,6 +197,113 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
         public Integer getCode() {
             return this.code;
+        }
+
+    }
+
+    public static class GetGatewayRouteDetailResponseBodyDataFallbackServices extends TeaModel {
+        @NameInMap("AgreementType")
+        public String agreementType;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Namespace")
+        public String namespace;
+
+        @NameInMap("Percent")
+        public Integer percent;
+
+        @NameInMap("ServiceId")
+        public Long serviceId;
+
+        @NameInMap("ServiceName")
+        public String serviceName;
+
+        @NameInMap("SourceType")
+        public String sourceType;
+
+        @NameInMap("Version")
+        public String version;
+
+        public static GetGatewayRouteDetailResponseBodyDataFallbackServices build(java.util.Map<String, ?> map) throws Exception {
+            GetGatewayRouteDetailResponseBodyDataFallbackServices self = new GetGatewayRouteDetailResponseBodyDataFallbackServices();
+            return TeaModel.build(map, self);
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataFallbackServices setAgreementType(String agreementType) {
+            this.agreementType = agreementType;
+            return this;
+        }
+        public String getAgreementType() {
+            return this.agreementType;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataFallbackServices setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataFallbackServices setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataFallbackServices setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataFallbackServices setPercent(Integer percent) {
+            this.percent = percent;
+            return this;
+        }
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataFallbackServices setServiceId(Long serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public Long getServiceId() {
+            return this.serviceId;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataFallbackServices setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataFallbackServices setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataFallbackServices setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }
@@ -627,6 +733,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayRouteDetailResponseBodyDataRouteServices extends TeaModel {
+        @NameInMap("AgreementType")
+        public String agreementType;
+
         @NameInMap("GroupName")
         public String groupName;
 
@@ -654,6 +763,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public static GetGatewayRouteDetailResponseBodyDataRouteServices build(java.util.Map<String, ?> map) throws Exception {
             GetGatewayRouteDetailResponseBodyDataRouteServices self = new GetGatewayRouteDetailResponseBodyDataRouteServices();
             return TeaModel.build(map, self);
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServices setAgreementType(String agreementType) {
+            this.agreementType = agreementType;
+            return this;
+        }
+        public String getAgreementType() {
+            return this.agreementType;
         }
 
         public GetGatewayRouteDetailResponseBodyDataRouteServices setGroupName(String groupName) {
@@ -797,6 +914,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("EnableWaf")
         public Boolean enableWaf;
 
+        @NameInMap("Fallback")
+        public Boolean fallback;
+
+        @NameInMap("FallbackServices")
+        public java.util.List<GetGatewayRouteDetailResponseBodyDataFallbackServices> fallbackServices;
+
         @NameInMap("GatewayId")
         public Long gatewayId;
 
@@ -939,6 +1062,22 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
         public Boolean getEnableWaf() {
             return this.enableWaf;
+        }
+
+        public GetGatewayRouteDetailResponseBodyData setFallback(Boolean fallback) {
+            this.fallback = fallback;
+            return this;
+        }
+        public Boolean getFallback() {
+            return this.fallback;
+        }
+
+        public GetGatewayRouteDetailResponseBodyData setFallbackServices(java.util.List<GetGatewayRouteDetailResponseBodyDataFallbackServices> fallbackServices) {
+            this.fallbackServices = fallbackServices;
+            return this;
+        }
+        public java.util.List<GetGatewayRouteDetailResponseBodyDataFallbackServices> getFallbackServices() {
+            return this.fallbackServices;
         }
 
         public GetGatewayRouteDetailResponseBodyData setGatewayId(Long gatewayId) {

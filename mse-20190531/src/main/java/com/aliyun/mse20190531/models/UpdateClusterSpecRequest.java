@@ -7,20 +7,20 @@ public class UpdateClusterSpecRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // 网关名称
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("ClusterSpecification")
     public String clusterSpecification;
 
-    // 节点数量
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
-    // 节点规格
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
 
     public static UpdateClusterSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateClusterSpecRequest self = new UpdateClusterSpecRequest();
@@ -65,6 +65,14 @@ public class UpdateClusterSpecRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UpdateClusterSpecRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

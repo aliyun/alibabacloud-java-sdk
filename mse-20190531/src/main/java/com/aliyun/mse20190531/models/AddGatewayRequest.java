@@ -7,59 +7,48 @@ public class AddGatewayRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // 是否开启硬件加速
     @NameInMap("EnableHardwareAcceleration")
     public Boolean enableHardwareAcceleration;
 
-    // 是否开启SLS日志投递
     @NameInMap("EnableSls")
     public Boolean enableSls;
 
-    // 是否开启xtrace
     @NameInMap("EnableXtrace")
     public Boolean enableXtrace;
 
-    // 是否企业安全组类型
     @NameInMap("EnterpriseSecurityGroup")
     public Boolean enterpriseSecurityGroup;
 
-    // 外网SLB规格
     @NameInMap("InternetSlbSpec")
     public String internetSlbSpec;
 
-    // 网关名称
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("Name")
     public String name;
 
-    // 地域
     @NameInMap("Region")
     public String region;
 
-    // 节点数量
     @NameInMap("Replica")
     public Integer replica;
 
-    // 内网SLB规格
     @NameInMap("SlbSpec")
     public String slbSpec;
 
-    // 节点规格
     @NameInMap("Spec")
     public String spec;
 
-    // 主交换机ID
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    // 备交换机ID
     @NameInMap("VSwitchId2")
     public String vSwitchId2;
 
-    // 专有网络ID
     @NameInMap("Vpc")
     public String vpc;
 
-    // xtrace采样率，取值[0,100]
     @NameInMap("XtraceRatio")
     public String xtraceRatio;
 
@@ -114,6 +103,14 @@ public class AddGatewayRequest extends TeaModel {
     }
     public String getInternetSlbSpec() {
         return this.internetSlbSpec;
+    }
+
+    public AddGatewayRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public AddGatewayRequest setName(String name) {

@@ -22,11 +22,20 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     @NameInMap("EnableWaf")
     public Boolean enableWaf;
 
+    @NameInMap("Fallback")
+    public Boolean fallback;
+
+    @NameInMap("FallbackServices")
+    public String fallbackServicesShrink;
+
     @NameInMap("GatewayId")
     public Long gatewayId;
 
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
+
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
 
     @NameInMap("Name")
     public String name;
@@ -96,6 +105,22 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
         return this.enableWaf;
     }
 
+    public AddGatewayRouteShrinkRequest setFallback(Boolean fallback) {
+        this.fallback = fallback;
+        return this;
+    }
+    public Boolean getFallback() {
+        return this.fallback;
+    }
+
+    public AddGatewayRouteShrinkRequest setFallbackServicesShrink(String fallbackServicesShrink) {
+        this.fallbackServicesShrink = fallbackServicesShrink;
+        return this;
+    }
+    public String getFallbackServicesShrink() {
+        return this.fallbackServicesShrink;
+    }
+
     public AddGatewayRouteShrinkRequest setGatewayId(Long gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -110,6 +135,14 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    public AddGatewayRouteShrinkRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public AddGatewayRouteShrinkRequest setName(String name) {

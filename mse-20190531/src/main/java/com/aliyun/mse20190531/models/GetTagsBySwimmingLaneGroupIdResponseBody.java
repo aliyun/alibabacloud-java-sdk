@@ -4,14 +4,12 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
-    // code仅仅用来和success同步
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public Object data;
 
-    // 动态错误信息中的占位符
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 

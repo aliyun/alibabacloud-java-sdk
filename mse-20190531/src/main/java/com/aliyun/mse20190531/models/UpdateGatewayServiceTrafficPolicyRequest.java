@@ -16,6 +16,9 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("ServiceId")
     public Long serviceId;
 
@@ -54,6 +57,14 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    public UpdateGatewayServiceTrafficPolicyRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public UpdateGatewayServiceTrafficPolicyRequest setServiceId(Long serviceId) {
