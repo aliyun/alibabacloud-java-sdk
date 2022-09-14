@@ -7,6 +7,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("CreateSampleData")
+    public Boolean createSampleData;
+
     @NameInMap("DBInstanceCategory")
     public String DBInstanceCategory;
 
@@ -93,6 +96,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateDBInstanceRequest setCreateSampleData(Boolean createSampleData) {
+        this.createSampleData = createSampleData;
+        return this;
+    }
+    public Boolean getCreateSampleData() {
+        return this.createSampleData;
     }
 
     public CreateDBInstanceRequest setDBInstanceCategory(String DBInstanceCategory) {
