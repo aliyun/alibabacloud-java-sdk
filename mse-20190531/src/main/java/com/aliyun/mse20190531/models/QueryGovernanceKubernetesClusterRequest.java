@@ -7,19 +7,18 @@ public class QueryGovernanceKubernetesClusterRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // Kubernetes集群Id
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // Kubernetes集群名
     @NameInMap("ClusterName")
     public String clusterName;
 
-    // 当前页码
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // 每页元素数量
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -50,6 +49,14 @@ public class QueryGovernanceKubernetesClusterRequest extends TeaModel {
     }
     public String getClusterName() {
         return this.clusterName;
+    }
+
+    public QueryGovernanceKubernetesClusterRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public QueryGovernanceKubernetesClusterRequest setPageNumber(Integer pageNumber) {

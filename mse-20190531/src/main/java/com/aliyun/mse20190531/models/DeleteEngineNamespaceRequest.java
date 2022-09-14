@@ -16,6 +16,9 @@ public class DeleteEngineNamespaceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static DeleteEngineNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteEngineNamespaceRequest self = new DeleteEngineNamespaceRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class DeleteEngineNamespaceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DeleteEngineNamespaceRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

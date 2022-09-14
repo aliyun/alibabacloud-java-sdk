@@ -13,6 +13,9 @@ public class GetGatewayDomainDetailRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static GetGatewayDomainDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetGatewayDomainDetailRequest self = new GetGatewayDomainDetailRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class GetGatewayDomainDetailRequest extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public GetGatewayDomainDetailRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

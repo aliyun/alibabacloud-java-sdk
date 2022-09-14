@@ -16,6 +16,9 @@ public class UpdateGatewayRouteTimeoutRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("TimeoutJSON")
     public UpdateGatewayRouteTimeoutRequestTimeoutJSON timeoutJSON;
 
@@ -54,6 +57,14 @@ public class UpdateGatewayRouteTimeoutRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public UpdateGatewayRouteTimeoutRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public UpdateGatewayRouteTimeoutRequest setTimeoutJSON(UpdateGatewayRouteTimeoutRequestTimeoutJSON timeoutJSON) {

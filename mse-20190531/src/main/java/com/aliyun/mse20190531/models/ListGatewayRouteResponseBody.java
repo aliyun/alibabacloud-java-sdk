@@ -16,7 +16,6 @@ public class ListGatewayRouteResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -121,6 +120,113 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
         public Integer getCode() {
             return this.code;
+        }
+
+    }
+
+    public static class ListGatewayRouteResponseBodyDataResultFallbackServices extends TeaModel {
+        @NameInMap("AgreementType")
+        public String agreementType;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Namespace")
+        public String namespace;
+
+        @NameInMap("Percent")
+        public Integer percent;
+
+        @NameInMap("ServiceId")
+        public Long serviceId;
+
+        @NameInMap("ServiceName")
+        public String serviceName;
+
+        @NameInMap("SourceType")
+        public String sourceType;
+
+        @NameInMap("Version")
+        public String version;
+
+        public static ListGatewayRouteResponseBodyDataResultFallbackServices build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayRouteResponseBodyDataResultFallbackServices self = new ListGatewayRouteResponseBodyDataResultFallbackServices();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayRouteResponseBodyDataResultFallbackServices setAgreementType(String agreementType) {
+            this.agreementType = agreementType;
+            return this;
+        }
+        public String getAgreementType() {
+            return this.agreementType;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultFallbackServices setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultFallbackServices setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultFallbackServices setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultFallbackServices setPercent(Integer percent) {
+            this.percent = percent;
+            return this;
+        }
+        public Integer getPercent() {
+            return this.percent;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultFallbackServices setServiceId(Long serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public Long getServiceId() {
+            return this.serviceId;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultFallbackServices setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultFallbackServices setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultFallbackServices setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }
@@ -341,9 +447,171 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
     }
 
+    public static class ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapListParamMapsList extends TeaModel {
+        @NameInMap("ExtractKey")
+        public String extractKey;
+
+        @NameInMap("ExtractKeySpec")
+        public String extractKeySpec;
+
+        @NameInMap("MappingType")
+        public String mappingType;
+
+        public static ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapListParamMapsList build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapListParamMapsList self = new ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapListParamMapsList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapListParamMapsList setExtractKey(String extractKey) {
+            this.extractKey = extractKey;
+            return this;
+        }
+        public String getExtractKey() {
+            return this.extractKey;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapListParamMapsList setExtractKeySpec(String extractKeySpec) {
+            this.extractKeySpec = extractKeySpec;
+            return this;
+        }
+        public String getExtractKeySpec() {
+            return this.extractKeySpec;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapListParamMapsList setMappingType(String mappingType) {
+            this.mappingType = mappingType;
+            return this;
+        }
+        public String getMappingType() {
+            return this.mappingType;
+        }
+
+    }
+
+    public static class ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList extends TeaModel {
+        @NameInMap("DubboMothedName")
+        public String dubboMothedName;
+
+        @NameInMap("HttpMothed")
+        public String httpMothed;
+
+        @NameInMap("Mothedpath")
+        public String mothedpath;
+
+        @NameInMap("ParamMapsList")
+        public java.util.List<ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapListParamMapsList> paramMapsList;
+
+        @NameInMap("PassThroughAllHeaders")
+        public String passThroughAllHeaders;
+
+        @NameInMap("PassThroughList")
+        public java.util.List<String> passThroughList;
+
+        public static ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList self = new ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList setDubboMothedName(String dubboMothedName) {
+            this.dubboMothedName = dubboMothedName;
+            return this;
+        }
+        public String getDubboMothedName() {
+            return this.dubboMothedName;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList setHttpMothed(String httpMothed) {
+            this.httpMothed = httpMothed;
+            return this;
+        }
+        public String getHttpMothed() {
+            return this.httpMothed;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList setMothedpath(String mothedpath) {
+            this.mothedpath = mothedpath;
+            return this;
+        }
+        public String getMothedpath() {
+            return this.mothedpath;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList setParamMapsList(java.util.List<ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapListParamMapsList> paramMapsList) {
+            this.paramMapsList = paramMapsList;
+            return this;
+        }
+        public java.util.List<ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapListParamMapsList> getParamMapsList() {
+            return this.paramMapsList;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList setPassThroughAllHeaders(String passThroughAllHeaders) {
+            this.passThroughAllHeaders = passThroughAllHeaders;
+            return this;
+        }
+        public String getPassThroughAllHeaders() {
+            return this.passThroughAllHeaders;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList setPassThroughList(java.util.List<String> passThroughList) {
+            this.passThroughList = passThroughList;
+            return this;
+        }
+        public java.util.List<String> getPassThroughList() {
+            return this.passThroughList;
+        }
+
+    }
+
+    public static class ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder extends TeaModel {
+        @NameInMap("DubboServiceName")
+        public String dubboServiceName;
+
+        @NameInMap("DubboServiceVersion")
+        public String dubboServiceVersion;
+
+        @NameInMap("MothedMapList")
+        public java.util.List<ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList> mothedMapList;
+
+        public static ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder self = new ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder setDubboServiceName(String dubboServiceName) {
+            this.dubboServiceName = dubboServiceName;
+            return this;
+        }
+        public String getDubboServiceName() {
+            return this.dubboServiceName;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder setDubboServiceVersion(String dubboServiceVersion) {
+            this.dubboServiceVersion = dubboServiceVersion;
+            return this;
+        }
+        public String getDubboServiceVersion() {
+            return this.dubboServiceVersion;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder setMothedMapList(java.util.List<ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList> mothedMapList) {
+            this.mothedMapList = mothedMapList;
+            return this;
+        }
+        public java.util.List<ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList> getMothedMapList() {
+            return this.mothedMapList;
+        }
+
+    }
+
     public static class ListGatewayRouteResponseBodyDataResultRouteServices extends TeaModel {
+        @NameInMap("AgreementType")
+        public String agreementType;
+
         @NameInMap("GroupName")
         public String groupName;
+
+        @NameInMap("HttpDubboTranscoder")
+        public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder httpDubboTranscoder;
 
         @NameInMap("Name")
         public String name;
@@ -371,12 +639,28 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListGatewayRouteResponseBodyDataResultRouteServices setAgreementType(String agreementType) {
+            this.agreementType = agreementType;
+            return this;
+        }
+        public String getAgreementType() {
+            return this.agreementType;
+        }
+
         public ListGatewayRouteResponseBodyDataResultRouteServices setGroupName(String groupName) {
             this.groupName = groupName;
             return this;
         }
         public String getGroupName() {
             return this.groupName;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServices setHttpDubboTranscoder(ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder httpDubboTranscoder) {
+            this.httpDubboTranscoder = httpDubboTranscoder;
+            return this;
+        }
+        public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder getHttpDubboTranscoder() {
+            return this.httpDubboTranscoder;
         }
 
         public ListGatewayRouteResponseBodyDataResultRouteServices setName(String name) {
@@ -467,6 +751,12 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
         @NameInMap("EnableWaf")
         public String enableWaf;
+
+        @NameInMap("Fallback")
+        public Boolean fallback;
+
+        @NameInMap("FallbackServices")
+        public java.util.List<ListGatewayRouteResponseBodyDataResultFallbackServices> fallbackServices;
 
         @NameInMap("GatewayId")
         public Long gatewayId;
@@ -593,6 +883,22 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
         public String getEnableWaf() {
             return this.enableWaf;
+        }
+
+        public ListGatewayRouteResponseBodyDataResult setFallback(Boolean fallback) {
+            this.fallback = fallback;
+            return this;
+        }
+        public Boolean getFallback() {
+            return this.fallback;
+        }
+
+        public ListGatewayRouteResponseBodyDataResult setFallbackServices(java.util.List<ListGatewayRouteResponseBodyDataResultFallbackServices> fallbackServices) {
+            this.fallbackServices = fallbackServices;
+            return this;
+        }
+        public java.util.List<ListGatewayRouteResponseBodyDataResultFallbackServices> getFallbackServices() {
+            return this.fallbackServices;
         }
 
         public ListGatewayRouteResponseBodyDataResult setGatewayId(Long gatewayId) {

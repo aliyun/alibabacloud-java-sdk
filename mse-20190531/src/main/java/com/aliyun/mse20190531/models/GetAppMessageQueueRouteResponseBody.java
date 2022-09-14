@@ -82,6 +82,9 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         @NameInMap("Enable")
         public Boolean enable;
 
+        @NameInMap("FilterSide")
+        public String filterSide;
+
         @NameInMap("Region")
         public String region;
 
@@ -107,6 +110,14 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
         public Boolean getEnable() {
             return this.enable;
+        }
+
+        public GetAppMessageQueueRouteResponseBodyData setFilterSide(String filterSide) {
+            this.filterSide = filterSide;
+            return this;
+        }
+        public String getFilterSide() {
+            return this.filterSide;
         }
 
         public GetAppMessageQueueRouteResponseBodyData setRegion(String region) {

@@ -19,6 +19,9 @@ public class UpdateEngineNamespaceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("Name")
     public String name;
 
@@ -68,6 +71,14 @@ public class UpdateEngineNamespaceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UpdateEngineNamespaceRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public UpdateEngineNamespaceRequest setName(String name) {

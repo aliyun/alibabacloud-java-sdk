@@ -10,6 +10,9 @@ public class GetGovernanceKubernetesClusterRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,6 +35,14 @@ public class GetGovernanceKubernetesClusterRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public GetGovernanceKubernetesClusterRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public GetGovernanceKubernetesClusterRequest setRegionId(String regionId) {

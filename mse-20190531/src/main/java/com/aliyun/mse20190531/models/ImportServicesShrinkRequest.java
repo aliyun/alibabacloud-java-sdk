@@ -10,15 +10,17 @@ public class ImportServicesShrinkRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("ServiceList")
     public String serviceListShrink;
 
-    @NameInMap("SourceId")
-    public String sourceId;
-
-    // 服务来源
     @NameInMap("SourceType")
     public String sourceType;
+
+    @NameInMap("TlsSetting")
+    public String tlsSetting;
 
     public static ImportServicesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportServicesShrinkRequest self = new ImportServicesShrinkRequest();
@@ -41,6 +43,14 @@ public class ImportServicesShrinkRequest extends TeaModel {
         return this.gatewayUniqueId;
     }
 
+    public ImportServicesShrinkRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
     public ImportServicesShrinkRequest setServiceListShrink(String serviceListShrink) {
         this.serviceListShrink = serviceListShrink;
         return this;
@@ -49,20 +59,20 @@ public class ImportServicesShrinkRequest extends TeaModel {
         return this.serviceListShrink;
     }
 
-    public ImportServicesShrinkRequest setSourceId(String sourceId) {
-        this.sourceId = sourceId;
-        return this;
-    }
-    public String getSourceId() {
-        return this.sourceId;
-    }
-
     public ImportServicesShrinkRequest setSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     public String getSourceType() {
         return this.sourceType;
+    }
+
+    public ImportServicesShrinkRequest setTlsSetting(String tlsSetting) {
+        this.tlsSetting = tlsSetting;
+        return this;
+    }
+    public String getTlsSetting() {
+        return this.tlsSetting;
     }
 
 }

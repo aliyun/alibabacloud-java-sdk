@@ -1,3 +1,8 @@
+2022-09-14 Version: 3.0.30
+- UpdatePluginConfig.
+- GetPlugins.
+- GetPluginConfig.
+
 2022-06-21 Version: 3.0.24
 - Add Seata List Cluster open.
 - Add Seata List Vgroups.

@@ -16,6 +16,9 @@ public class UpdateGatewayOptionRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static UpdateGatewayOptionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateGatewayOptionRequest self = new UpdateGatewayOptionRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class UpdateGatewayOptionRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    public UpdateGatewayOptionRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

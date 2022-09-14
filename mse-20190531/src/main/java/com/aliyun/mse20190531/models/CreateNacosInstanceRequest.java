@@ -7,47 +7,39 @@ public class CreateNacosInstanceRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // Nacos集群名
     @NameInMap("ClusterName")
     public String clusterName;
 
-    // 服务禁用标志
     @NameInMap("Enabled")
     public Boolean enabled;
 
-    // 临时节点标志
     @NameInMap("Ephemeral")
     public Boolean ephemeral;
 
-    // 分组名
     @NameInMap("GroupName")
     public String groupName;
 
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // Nacos实例ip
     @NameInMap("Ip")
     public String ip;
 
-    // 节点元数据
     @NameInMap("Metadata")
     public String metadata;
 
-    // 命名空间id
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // Nacos实例端口
     @NameInMap("Port")
     public Integer port;
 
-    // 服务名
     @NameInMap("ServiceName")
     public String serviceName;
 
-    // 权重
     @NameInMap("Weight")
     public String weight;
 
@@ -118,6 +110,14 @@ public class CreateNacosInstanceRequest extends TeaModel {
     }
     public String getMetadata() {
         return this.metadata;
+    }
+
+    public CreateNacosInstanceRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public CreateNacosInstanceRequest setNamespaceId(String namespaceId) {

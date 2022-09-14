@@ -4,11 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class TrafficPolicy extends TeaModel {
-    // 负载均衡相关配置
     @NameInMap("LoadBalancerSettings")
     public TrafficPolicyLoadBalancerSettings loadBalancerSettings;
 
-    // tls相关配置
     @NameInMap("TlsSetting")
     public TrafficPolicyTlsSetting tlsSetting;
 
@@ -34,15 +32,12 @@ public class TrafficPolicy extends TeaModel {
     }
 
     public static class TrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie extends TeaModel {
-        // cookie名
         @NameInMap("Name")
         public String name;
 
-        // cookie path
         @NameInMap("Path")
         public String path;
 
-        // cookie生命周期
         @NameInMap("TTL")
         public String TTL;
 
@@ -78,15 +73,12 @@ public class TrafficPolicy extends TeaModel {
     }
 
     public static class TrafficPolicyLoadBalancerSettingsConsistentHashLBConfig extends TeaModel {
-        // HEADER, COOKIE, SOURCE_IP, QUERY_PARAMETER
         @NameInMap("ConsistentHashLBType")
         public String consistentHashLBType;
 
-        // 使用cookie时配置
         @NameInMap("HttpCookie")
         public TrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie httpCookie;
 
-        // 使用根据header和参数路由时生效
         @NameInMap("ParameterName")
         public String parameterName;
 
@@ -122,15 +114,12 @@ public class TrafficPolicy extends TeaModel {
     }
 
     public static class TrafficPolicyLoadBalancerSettings extends TeaModel {
-        // 一致性hash相关配置
         @NameInMap("ConsistentHashLBConfig")
         public TrafficPolicyLoadBalancerSettingsConsistentHashLBConfig consistentHashLBConfig;
 
-        // 负载均衡类型，枚举类可为ROUND_ROBIN, LEAST_CONN,RANDOM, CONSISTENT_HASH
         @NameInMap("LoadbalancerType")
         public String loadbalancerType;
 
-        // 预热时间(单位/s)
         @NameInMap("WarmupDuration")
         public Long warmupDuration;
 
@@ -166,19 +155,15 @@ public class TrafficPolicy extends TeaModel {
     }
 
     public static class TrafficPolicyTlsSetting extends TeaModel {
-        // ca证书内容
         @NameInMap("CaCertContent")
         public String caCertContent;
 
-        // 使用的证书id，仅当为mutual时需要填写
         @NameInMap("CertId")
         public String certId;
 
-        // 到后端服务些带
         @NameInMap("Sni")
         public String sni;
 
-        // tls模式。为枚举类，可为NONE, SIMPLE, MUITUAL
         @NameInMap("TlsMode")
         public String tlsMode;
 
@@ -217,6 +202,214 @@ public class TrafficPolicy extends TeaModel {
         }
         public String getTlsMode() {
             return this.tlsMode;
+        }
+
+    }
+
+    public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Path")
+        public String path;
+
+        @NameInMap("Ttl")
+        public String ttl;
+
+        public static ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie self = new ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie setTtl(String ttl) {
+            this.ttl = ttl;
+            return this;
+        }
+        public String getTtl() {
+            return this.ttl;
+        }
+
+    }
+
+    public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig extends TeaModel {
+        @NameInMap("ConsistentHashLBType")
+        public String consistentHashLBType;
+
+        @NameInMap("HttpCookie")
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie httpCookie;
+
+        @NameInMap("MinimumRingSize")
+        public Long minimumRingSize;
+
+        @NameInMap("ParameterName")
+        public String parameterName;
+
+        public static ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig self = new ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig setConsistentHashLBType(String consistentHashLBType) {
+            this.consistentHashLBType = consistentHashLBType;
+            return this;
+        }
+        public String getConsistentHashLBType() {
+            return this.consistentHashLBType;
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig setHttpCookie(ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie httpCookie) {
+            this.httpCookie = httpCookie;
+            return this;
+        }
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie getHttpCookie() {
+            return this.httpCookie;
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig setMinimumRingSize(Long minimumRingSize) {
+            this.minimumRingSize = minimumRingSize;
+            return this;
+        }
+        public Long getMinimumRingSize() {
+            return this.minimumRingSize;
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig setParameterName(String parameterName) {
+            this.parameterName = parameterName;
+            return this;
+        }
+        public String getParameterName() {
+            return this.parameterName;
+        }
+
+    }
+
+    public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettings extends TeaModel {
+        @NameInMap("ConsistentHashLBConfig")
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig consistentHashLBConfig;
+
+        @NameInMap("LoadbalancerType")
+        public String loadbalancerType;
+
+        @NameInMap("WarmupDuration")
+        public Integer warmupDuration;
+
+        public static ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettings build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettings self = new ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettings();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettings setConsistentHashLBConfig(ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig consistentHashLBConfig) {
+            this.consistentHashLBConfig = consistentHashLBConfig;
+            return this;
+        }
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig getConsistentHashLBConfig() {
+            return this.consistentHashLBConfig;
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettings setLoadbalancerType(String loadbalancerType) {
+            this.loadbalancerType = loadbalancerType;
+            return this;
+        }
+        public String getLoadbalancerType() {
+            return this.loadbalancerType;
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettings setWarmupDuration(Integer warmupDuration) {
+            this.warmupDuration = warmupDuration;
+            return this;
+        }
+        public Integer getWarmupDuration() {
+            return this.warmupDuration;
+        }
+
+    }
+
+    public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls extends TeaModel {
+        @NameInMap("CaCertContent")
+        public String caCertContent;
+
+        @NameInMap("CaCertId")
+        public String caCertId;
+
+        @NameInMap("CertId")
+        public String certId;
+
+        @NameInMap("Mode")
+        public String mode;
+
+        @NameInMap("Sni")
+        public String sni;
+
+        @NameInMap("SubjectAltNames")
+        public java.util.List<String> subjectAltNames;
+
+        public static ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls self = new ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls setCaCertContent(String caCertContent) {
+            this.caCertContent = caCertContent;
+            return this;
+        }
+        public String getCaCertContent() {
+            return this.caCertContent;
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls setCaCertId(String caCertId) {
+            this.caCertId = caCertId;
+            return this;
+        }
+        public String getCaCertId() {
+            return this.caCertId;
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls setCertId(String certId) {
+            this.certId = certId;
+            return this;
+        }
+        public String getCertId() {
+            return this.certId;
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls setSni(String sni) {
+            this.sni = sni;
+            return this;
+        }
+        public String getSni() {
+            return this.sni;
+        }
+
+        public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls setSubjectAltNames(java.util.List<String> subjectAltNames) {
+            this.subjectAltNames = subjectAltNames;
+            return this;
+        }
+        public java.util.List<String> getSubjectAltNames() {
+            return this.subjectAltNames;
         }
 
     }

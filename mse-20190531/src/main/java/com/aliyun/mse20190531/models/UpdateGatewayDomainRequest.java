@@ -13,14 +13,26 @@ public class UpdateGatewayDomainRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("Http2")
+    public String http2;
+
     @NameInMap("Id")
     public Long id;
+
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
 
     @NameInMap("MustHttps")
     public Boolean mustHttps;
 
     @NameInMap("Protocol")
     public String protocol;
+
+    @NameInMap("TlsMax")
+    public String tlsMax;
+
+    @NameInMap("TlsMin")
+    public String tlsMin;
 
     public static UpdateGatewayDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateGatewayDomainRequest self = new UpdateGatewayDomainRequest();
@@ -51,12 +63,28 @@ public class UpdateGatewayDomainRequest extends TeaModel {
         return this.gatewayUniqueId;
     }
 
+    public UpdateGatewayDomainRequest setHttp2(String http2) {
+        this.http2 = http2;
+        return this;
+    }
+    public String getHttp2() {
+        return this.http2;
+    }
+
     public UpdateGatewayDomainRequest setId(Long id) {
         this.id = id;
         return this;
     }
     public Long getId() {
         return this.id;
+    }
+
+    public UpdateGatewayDomainRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public UpdateGatewayDomainRequest setMustHttps(Boolean mustHttps) {
@@ -73,6 +101,22 @@ public class UpdateGatewayDomainRequest extends TeaModel {
     }
     public String getProtocol() {
         return this.protocol;
+    }
+
+    public UpdateGatewayDomainRequest setTlsMax(String tlsMax) {
+        this.tlsMax = tlsMax;
+        return this;
+    }
+    public String getTlsMax() {
+        return this.tlsMax;
+    }
+
+    public UpdateGatewayDomainRequest setTlsMin(String tlsMin) {
+        this.tlsMin = tlsMin;
+        return this;
+    }
+    public String getTlsMin() {
+        return this.tlsMin;
     }
 
 }

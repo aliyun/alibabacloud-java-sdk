@@ -16,6 +16,9 @@ public class UpdateGatewayRouteTimeoutShrinkRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("TimeoutJSON")
     public String timeoutJSONShrink;
 
@@ -54,6 +57,14 @@ public class UpdateGatewayRouteTimeoutShrinkRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public UpdateGatewayRouteTimeoutShrinkRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public UpdateGatewayRouteTimeoutShrinkRequest setTimeoutJSONShrink(String timeoutJSONShrink) {

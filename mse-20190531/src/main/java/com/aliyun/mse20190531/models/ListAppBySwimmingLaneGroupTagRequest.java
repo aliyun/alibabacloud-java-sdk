@@ -10,6 +10,9 @@ public class ListAppBySwimmingLaneGroupTagRequest extends TeaModel {
     @NameInMap("GroupId")
     public Long groupId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("Tag")
     public String tag;
 
@@ -32,6 +35,14 @@ public class ListAppBySwimmingLaneGroupTagRequest extends TeaModel {
     }
     public Long getGroupId() {
         return this.groupId;
+    }
+
+    public ListAppBySwimmingLaneGroupTagRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public ListAppBySwimmingLaneGroupTagRequest setTag(String tag) {

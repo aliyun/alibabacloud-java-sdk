@@ -13,6 +13,9 @@ public class ListGatewayRouteShrinkRequest extends TeaModel {
     @NameInMap("FilterParams")
     public String filterParamsShrink;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("OrderItem")
     public String orderItem;
 
@@ -49,6 +52,14 @@ public class ListGatewayRouteShrinkRequest extends TeaModel {
     }
     public String getFilterParamsShrink() {
         return this.filterParamsShrink;
+    }
+
+    public ListGatewayRouteShrinkRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public ListGatewayRouteShrinkRequest setOrderItem(String orderItem) {

@@ -10,15 +10,15 @@ public class AddSecurityGroupRuleRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    // 网关ID
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
-    // 端口范围
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("PortRange")
     public String portRange;
 
-    // 安全组ID
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
@@ -49,6 +49,14 @@ public class AddSecurityGroupRuleRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    public AddSecurityGroupRuleRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public AddSecurityGroupRuleRequest setPortRange(String portRange) {

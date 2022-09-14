@@ -7,6 +7,9 @@ public class GetMseFeatureSwitchRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static GetMseFeatureSwitchRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMseFeatureSwitchRequest self = new GetMseFeatureSwitchRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class GetMseFeatureSwitchRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public GetMseFeatureSwitchRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

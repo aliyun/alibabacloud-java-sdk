@@ -10,6 +10,9 @@ public class ListGatewayDomainRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("Type")
     public String type;
 
@@ -32,6 +35,14 @@ public class ListGatewayDomainRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    public ListGatewayDomainRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public ListGatewayDomainRequest setType(String type) {

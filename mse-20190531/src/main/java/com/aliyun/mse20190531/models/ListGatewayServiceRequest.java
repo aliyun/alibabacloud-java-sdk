@@ -13,6 +13,9 @@ public class ListGatewayServiceRequest extends TeaModel {
     @NameInMap("FilterParams")
     public ListGatewayServiceRequestFilterParams filterParams;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("OrderItem")
     public String orderItem;
 
@@ -49,6 +52,14 @@ public class ListGatewayServiceRequest extends TeaModel {
     }
     public ListGatewayServiceRequestFilterParams getFilterParams() {
         return this.filterParams;
+    }
+
+    public ListGatewayServiceRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public ListGatewayServiceRequest setOrderItem(String orderItem) {
@@ -88,6 +99,9 @@ public class ListGatewayServiceRequest extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
+        @NameInMap("ServiceProtocol")
+        public String serviceProtocol;
+
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -126,6 +140,14 @@ public class ListGatewayServiceRequest extends TeaModel {
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public ListGatewayServiceRequestFilterParams setServiceProtocol(String serviceProtocol) {
+            this.serviceProtocol = serviceProtocol;
+            return this;
+        }
+        public String getServiceProtocol() {
+            return this.serviceProtocol;
         }
 
         public ListGatewayServiceRequestFilterParams setSourceType(String sourceType) {

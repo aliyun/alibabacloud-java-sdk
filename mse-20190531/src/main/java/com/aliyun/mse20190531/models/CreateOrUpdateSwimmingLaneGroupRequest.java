@@ -7,51 +7,48 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // 应用集合。以 "," 分割应用 id
     @NameInMap("AppIds")
     public String appIds;
 
-    // 是否开启。
     @NameInMap("Enable")
     public Boolean enable;
 
-    // 入口应用。格式 "来源系统:id"，比如 EDAS:UUID 或者 CSB:UUID
     @NameInMap("EntryApp")
     public String entryApp;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 更新时间
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    // 主键ID。由SP生成(数据库自增主键)。
     @NameInMap("Id")
     public Long id;
 
-    // mse licenseKey
     @NameInMap("LicenseKey")
     public String licenseKey;
 
-    // 名称
+    @NameInMap("MessageQueueFilterSide")
+    public String messageQueueFilterSide;
+
+    @NameInMap("MessageQueueGrayEnable")
+    public Boolean messageQueueGrayEnable;
+
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("Name")
     public String name;
 
-    // region
     @NameInMap("Region")
     public String region;
 
-    // 来源。可选值为: EDAS。
     @NameInMap("Source")
     public String source;
 
-    // 0 未生效
     @NameInMap("Status")
     public Integer status;
 
-    // 阿里云账号。格式为数字，比如1362469756373809。
     @NameInMap("UserId")
     public String userId;
 
@@ -122,6 +119,30 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     }
     public String getLicenseKey() {
         return this.licenseKey;
+    }
+
+    public CreateOrUpdateSwimmingLaneGroupRequest setMessageQueueFilterSide(String messageQueueFilterSide) {
+        this.messageQueueFilterSide = messageQueueFilterSide;
+        return this;
+    }
+    public String getMessageQueueFilterSide() {
+        return this.messageQueueFilterSide;
+    }
+
+    public CreateOrUpdateSwimmingLaneGroupRequest setMessageQueueGrayEnable(Boolean messageQueueGrayEnable) {
+        this.messageQueueGrayEnable = messageQueueGrayEnable;
+        return this;
+    }
+    public Boolean getMessageQueueGrayEnable() {
+        return this.messageQueueGrayEnable;
+    }
+
+    public CreateOrUpdateSwimmingLaneGroupRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public CreateOrUpdateSwimmingLaneGroupRequest setName(String name) {

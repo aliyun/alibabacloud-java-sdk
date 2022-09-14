@@ -16,6 +16,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("Region")
     public String region;
 
@@ -63,6 +66,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public CreateApplicationRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public CreateApplicationRequest setRegion(String region) {

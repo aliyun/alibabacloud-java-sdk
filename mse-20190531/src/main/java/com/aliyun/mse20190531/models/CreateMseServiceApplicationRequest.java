@@ -16,6 +16,12 @@ public class CreateMseServiceApplicationRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
+    @NameInMap("MseVersion")
+    public String mseVersion;
+
     @NameInMap("Region")
     public String region;
 
@@ -63,6 +69,22 @@ public class CreateMseServiceApplicationRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public CreateMseServiceApplicationRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
+    public CreateMseServiceApplicationRequest setMseVersion(String mseVersion) {
+        this.mseVersion = mseVersion;
+        return this;
+    }
+    public String getMseVersion() {
+        return this.mseVersion;
     }
 
     public CreateMseServiceApplicationRequest setRegion(String region) {

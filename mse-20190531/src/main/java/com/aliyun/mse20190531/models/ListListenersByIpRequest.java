@@ -13,6 +13,9 @@ public class ListListenersByIpRequest extends TeaModel {
     @NameInMap("Ip")
     public String ip;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("NamespaceId")
     public String namespaceId;
 
@@ -46,6 +49,14 @@ public class ListListenersByIpRequest extends TeaModel {
     }
     public String getIp() {
         return this.ip;
+    }
+
+    public ListListenersByIpRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public ListListenersByIpRequest setNamespaceId(String namespaceId) {

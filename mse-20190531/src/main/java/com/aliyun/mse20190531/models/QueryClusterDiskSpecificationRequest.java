@@ -10,6 +10,9 @@ public class QueryClusterDiskSpecificationRequest extends TeaModel {
     @NameInMap("ClusterType")
     public String clusterType;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static QueryClusterDiskSpecificationRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryClusterDiskSpecificationRequest self = new QueryClusterDiskSpecificationRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class QueryClusterDiskSpecificationRequest extends TeaModel {
     }
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    public QueryClusterDiskSpecificationRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

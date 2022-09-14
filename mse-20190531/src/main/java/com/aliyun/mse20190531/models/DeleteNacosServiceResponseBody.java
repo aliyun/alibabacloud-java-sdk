@@ -4,27 +4,21 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteNacosServiceResponseBody extends TeaModel {
-    // 响应码
     @NameInMap("Code")
     public Integer code;
 
-    // 删除服务的结果
     @NameInMap("Data")
     public String data;
 
-    // http状态码
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // 响应信息
     @NameInMap("Message")
     public String message;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 成功标志
     @NameInMap("Success")
     public Boolean success;
 

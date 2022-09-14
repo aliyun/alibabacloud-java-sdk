@@ -16,6 +16,9 @@ public class QueryMonitorRequest extends TeaModel {
     @NameInMap("MonitorType")
     public String monitorType;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("RequestPars")
     public String requestPars;
 
@@ -60,6 +63,14 @@ public class QueryMonitorRequest extends TeaModel {
     }
     public String getMonitorType() {
         return this.monitorType;
+    }
+
+    public QueryMonitorRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public QueryMonitorRequest setRequestPars(String requestPars) {

@@ -115,13 +115,17 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("MaxClientCnxns")
         public String maxClientCnxns;
 
-        // 最大超时时间
         @NameInMap("MaxSessionTimeout")
         public String maxSessionTimeout;
 
-        // 最小超时时间
         @NameInMap("MinSessionTimeout")
         public String minSessionTimeout;
+
+        @NameInMap("NamingAuthEnabled")
+        public Boolean namingAuthEnabled;
+
+        @NameInMap("NamingAuthSupported")
+        public Boolean namingAuthSupported;
 
         @NameInMap("NamingCreateServiceSupported")
         public Boolean namingCreateServiceSupported;
@@ -134,6 +138,9 @@ public class QueryConfigResponseBody extends TeaModel {
 
         @NameInMap("RestartFlag")
         public Boolean restartFlag;
+
+        @NameInMap("SnapshotCount")
+        public String snapshotCount;
 
         @NameInMap("SyncLimit")
         public String syncLimit;
@@ -269,6 +276,22 @@ public class QueryConfigResponseBody extends TeaModel {
             return this.minSessionTimeout;
         }
 
+        public QueryConfigResponseBodyData setNamingAuthEnabled(Boolean namingAuthEnabled) {
+            this.namingAuthEnabled = namingAuthEnabled;
+            return this;
+        }
+        public Boolean getNamingAuthEnabled() {
+            return this.namingAuthEnabled;
+        }
+
+        public QueryConfigResponseBodyData setNamingAuthSupported(Boolean namingAuthSupported) {
+            this.namingAuthSupported = namingAuthSupported;
+            return this;
+        }
+        public Boolean getNamingAuthSupported() {
+            return this.namingAuthSupported;
+        }
+
         public QueryConfigResponseBodyData setNamingCreateServiceSupported(Boolean namingCreateServiceSupported) {
             this.namingCreateServiceSupported = namingCreateServiceSupported;
             return this;
@@ -299,6 +322,14 @@ public class QueryConfigResponseBody extends TeaModel {
         }
         public Boolean getRestartFlag() {
             return this.restartFlag;
+        }
+
+        public QueryConfigResponseBodyData setSnapshotCount(String snapshotCount) {
+            this.snapshotCount = snapshotCount;
+            return this;
+        }
+        public String getSnapshotCount() {
+            return this.snapshotCount;
         }
 
         public QueryConfigResponseBodyData setSyncLimit(String syncLimit) {

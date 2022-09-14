@@ -13,8 +13,14 @@ public class AddServiceSourceRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("GroupList")
+    public java.util.List<String> groupList;
+
     @NameInMap("IngressOptionsRequest")
     public AddServiceSourceRequestIngressOptionsRequest ingressOptionsRequest;
+
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
 
     @NameInMap("Name")
     public String name;
@@ -54,12 +60,28 @@ public class AddServiceSourceRequest extends TeaModel {
         return this.gatewayUniqueId;
     }
 
+    public AddServiceSourceRequest setGroupList(java.util.List<String> groupList) {
+        this.groupList = groupList;
+        return this;
+    }
+    public java.util.List<String> getGroupList() {
+        return this.groupList;
+    }
+
     public AddServiceSourceRequest setIngressOptionsRequest(AddServiceSourceRequestIngressOptionsRequest ingressOptionsRequest) {
         this.ingressOptionsRequest = ingressOptionsRequest;
         return this;
     }
     public AddServiceSourceRequestIngressOptionsRequest getIngressOptionsRequest() {
         return this.ingressOptionsRequest;
+    }
+
+    public AddServiceSourceRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public AddServiceSourceRequest setName(String name) {

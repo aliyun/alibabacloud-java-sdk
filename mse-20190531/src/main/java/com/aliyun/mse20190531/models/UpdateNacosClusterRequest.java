@@ -7,35 +7,30 @@ public class UpdateNacosClusterRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // 健康检查端口
     @NameInMap("CheckPort")
     public Integer checkPort;
 
-    // Nacos集群名
     @NameInMap("ClusterName")
     public String clusterName;
 
-    // 分组名
     @NameInMap("GroupName")
     public String groupName;
 
-    // 健康检查类型
     @NameInMap("HealthChecker")
     public String healthChecker;
 
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 命名空间id
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    // 服务名
     @NameInMap("ServiceName")
     public String serviceName;
 
-    // 是否使用实例端口进行健康检查
     @NameInMap("UseInstancePortForCheck")
     public Boolean useInstancePortForCheck;
 
@@ -90,6 +85,14 @@ public class UpdateNacosClusterRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UpdateNacosClusterRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public UpdateNacosClusterRequest setNamespaceId(String namespaceId) {

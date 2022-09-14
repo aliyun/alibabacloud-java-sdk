@@ -16,7 +16,6 @@ public class GetImageResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -77,19 +76,15 @@ public class GetImageResponseBody extends TeaModel {
     }
 
     public static class GetImageResponseBodyData extends TeaModel {
-        // 当前集群镜像版本的4位全名
         @NameInMap("CurrentVersionFullShowName")
         public String currentVersionFullShowName;
 
-        // 可升级的最大版本变更日志url
         @NameInMap("MaxVersionChangelogUrl")
         public String maxVersionChangelogUrl;
 
-        // 可升级的增量版本Code
         @NameInMap("MaxVersionCode")
         public String maxVersionCode;
 
-        // 可升级的增量版本全名
         @NameInMap("MaxVersionFullShowName")
         public String maxVersionFullShowName;
 

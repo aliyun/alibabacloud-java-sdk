@@ -13,6 +13,9 @@ public class ListGatewayRouteRequest extends TeaModel {
     @NameInMap("FilterParams")
     public ListGatewayRouteRequestFilterParams filterParams;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("OrderItem")
     public String orderItem;
 
@@ -49,6 +52,14 @@ public class ListGatewayRouteRequest extends TeaModel {
     }
     public ListGatewayRouteRequestFilterParams getFilterParams() {
         return this.filterParams;
+    }
+
+    public ListGatewayRouteRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public ListGatewayRouteRequest setOrderItem(String orderItem) {

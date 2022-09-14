@@ -7,62 +7,51 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // 是否开启。
     @NameInMap("Enable")
     public Boolean enable;
 
     @NameInMap("EnableRules")
     public Boolean enableRules;
 
-    // json string
     @NameInMap("EntryRule")
     public String entryRule;
 
-    // SwimmingLane
     @NameInMap("EntryRules")
     public java.util.List<CreateOrUpdateSwimmingLaneRequestEntryRules> entryRules;
 
-    // 创建时间
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // 更新时间
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    // 所属泳道组
     @NameInMap("GroupId")
     public Long groupId;
 
-    // 主键ID。由SP生成(数据库自增主键)。
     @NameInMap("Id")
     public Long id;
 
-    // 格式为UUID。比如48bd91e9-41d5-4dae-8a9a-439611742b45
     @NameInMap("LicenseKey")
     public String licenseKey;
 
-    // 名称
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("Name")
     public String name;
 
-    // region
     @NameInMap("RegionId")
     public String regionId;
 
-    // 来源。可选值为: EDAS。
     @NameInMap("Source")
     public String source;
 
-    // 0 未生效
     @NameInMap("Status")
     public Integer status;
 
-    // 标识
     @NameInMap("Tag")
     public String tag;
 
-    // EDAS账号。格式为数字，比如1362469756373809。
     @NameInMap("UserId")
     public String userId;
 
@@ -149,6 +138,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     }
     public String getLicenseKey() {
         return this.licenseKey;
+    }
+
+    public CreateOrUpdateSwimmingLaneRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public CreateOrUpdateSwimmingLaneRequest setName(String name) {
@@ -327,6 +324,9 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         @NameInMap("Path")
         public String path;
 
+        @NameInMap("Paths")
+        public java.util.List<String> paths;
+
         @NameInMap("Priority")
         public Integer priority;
 
@@ -360,6 +360,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         }
         public String getPath() {
             return this.path;
+        }
+
+        public CreateOrUpdateSwimmingLaneRequestEntryRules setPaths(java.util.List<String> paths) {
+            this.paths = paths;
+            return this;
+        }
+        public java.util.List<String> getPaths() {
+            return this.paths;
         }
 
         public CreateOrUpdateSwimmingLaneRequestEntryRules setPriority(Integer priority) {

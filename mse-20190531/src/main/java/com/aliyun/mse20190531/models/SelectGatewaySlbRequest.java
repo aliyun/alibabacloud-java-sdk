@@ -10,6 +10,9 @@ public class SelectGatewaySlbRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("Name")
     public String name;
 
@@ -35,6 +38,14 @@ public class SelectGatewaySlbRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    public SelectGatewaySlbRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public SelectGatewaySlbRequest setName(String name) {

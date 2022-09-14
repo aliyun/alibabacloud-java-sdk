@@ -13,6 +13,9 @@ public class DeleteAuthResourceRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static DeleteAuthResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAuthResourceRequest self = new DeleteAuthResourceRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class DeleteAuthResourceRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public DeleteAuthResourceRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

@@ -13,6 +13,9 @@ public class ApplyTagPoliciesRequest extends TeaModel {
     @NameInMap("Enable")
     public Boolean enable;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("NamespaceId")
     public String namespaceId;
 
@@ -52,6 +55,14 @@ public class ApplyTagPoliciesRequest extends TeaModel {
     }
     public Boolean getEnable() {
         return this.enable;
+    }
+
+    public ApplyTagPoliciesRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
     public ApplyTagPoliciesRequest setNamespaceId(String namespaceId) {

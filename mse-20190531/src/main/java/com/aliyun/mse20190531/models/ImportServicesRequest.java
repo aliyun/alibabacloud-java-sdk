@@ -10,15 +10,17 @@ public class ImportServicesRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("ServiceList")
     public java.util.List<ImportServicesRequestServiceList> serviceList;
 
-    @NameInMap("SourceId")
-    public String sourceId;
-
-    // 服务来源
     @NameInMap("SourceType")
     public String sourceType;
+
+    @NameInMap("TlsSetting")
+    public String tlsSetting;
 
     public static ImportServicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportServicesRequest self = new ImportServicesRequest();
@@ -41,6 +43,14 @@ public class ImportServicesRequest extends TeaModel {
         return this.gatewayUniqueId;
     }
 
+    public ImportServicesRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
     public ImportServicesRequest setServiceList(java.util.List<ImportServicesRequestServiceList> serviceList) {
         this.serviceList = serviceList;
         return this;
@@ -49,20 +59,20 @@ public class ImportServicesRequest extends TeaModel {
         return this.serviceList;
     }
 
-    public ImportServicesRequest setSourceId(String sourceId) {
-        this.sourceId = sourceId;
-        return this;
-    }
-    public String getSourceId() {
-        return this.sourceId;
-    }
-
     public ImportServicesRequest setSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     public String getSourceType() {
         return this.sourceType;
+    }
+
+    public ImportServicesRequest setTlsSetting(String tlsSetting) {
+        this.tlsSetting = tlsSetting;
+        return this;
+    }
+    public String getTlsSetting() {
+        return this.tlsSetting;
     }
 
     public static class ImportServicesRequestServiceList extends TeaModel {
@@ -78,11 +88,9 @@ public class ImportServicesRequest extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
-        // 服务的端口
         @NameInMap("ServicePort")
         public Long servicePort;
 
-        // 服务的协议版本
         @NameInMap("ServiceProtocol")
         public String serviceProtocol;
 

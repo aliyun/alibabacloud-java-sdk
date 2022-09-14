@@ -19,6 +19,9 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     public static UpdateGatewayRouteHTTPRewriteRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateGatewayRouteHTTPRewriteRequest self = new UpdateGatewayRouteHTTPRewriteRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public UpdateGatewayRouteHTTPRewriteRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
     }
 
 }

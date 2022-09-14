@@ -25,7 +25,12 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
-    // 用于区分基础/专业版本
+    @NameInMap("InstanceName")
+    public String instanceName;
+
+    @NameInMap("MseSessionId")
+    public String mseSessionId;
+
     @NameInMap("MseVersion")
     public String mseVersion;
 
@@ -46,6 +51,9 @@ public class CreateClusterRequest extends TeaModel {
 
     @NameInMap("RequestPars")
     public String requestPars;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -114,6 +122,22 @@ public class CreateClusterRequest extends TeaModel {
         return this.instanceCount;
     }
 
+    public CreateClusterRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    public CreateClusterRequest setMseSessionId(String mseSessionId) {
+        this.mseSessionId = mseSessionId;
+        return this;
+    }
+    public String getMseSessionId() {
+        return this.mseSessionId;
+    }
+
     public CreateClusterRequest setMseVersion(String mseVersion) {
         this.mseVersion = mseVersion;
         return this;
@@ -168,6 +192,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getRequestPars() {
         return this.requestPars;
+    }
+
+    public CreateClusterRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateClusterRequest setVSwitchId(String vSwitchId) {
