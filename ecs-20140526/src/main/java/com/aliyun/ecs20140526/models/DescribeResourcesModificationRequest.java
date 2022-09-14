@@ -40,6 +40,9 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ZoneId")
+    public String zoneId;
+
     public static DescribeResourcesModificationRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourcesModificationRequest self = new DescribeResourcesModificationRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeResourcesModificationRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }
