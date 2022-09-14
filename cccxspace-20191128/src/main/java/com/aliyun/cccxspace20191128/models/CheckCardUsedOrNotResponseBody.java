@@ -10,7 +10,6 @@ public class CheckCardUsedOrNotResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -66,23 +65,18 @@ public class CheckCardUsedOrNotResponseBody extends TeaModel {
     }
 
     public static class CheckCardUsedOrNotResponseBodyDataSopList extends TeaModel {
-        // xflow id
         @NameInMap("FlowId")
         public Long flowId;
 
-        // sop code
         @NameInMap("SopCode")
         public String sopCode;
 
-        // sop名称
         @NameInMap("SopName")
         public String sopName;
 
-        // 状态
         @NameInMap("Status")
         public String status;
 
-        // 状态描述
         @NameInMap("StatusDesc")
         public String statusDesc;
 
@@ -134,11 +128,9 @@ public class CheckCardUsedOrNotResponseBody extends TeaModel {
     }
 
     public static class CheckCardUsedOrNotResponseBodyData extends TeaModel {
-        // 卡片是否被使用
         @NameInMap("CheckResult")
         public Boolean checkResult;
 
-        // 使用该卡片的sop
         @NameInMap("SopList")
         public java.util.List<CheckCardUsedOrNotResponseBodyDataSopList> sopList;
 

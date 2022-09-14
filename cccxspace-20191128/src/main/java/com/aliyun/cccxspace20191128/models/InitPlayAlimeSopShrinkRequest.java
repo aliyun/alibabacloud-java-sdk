@@ -3,44 +3,44 @@ package com.aliyun.cccxspace20191128.models;
 
 import com.aliyun.tea.*;
 
-public class InitPlayAlimeSopRequest extends TeaModel {
+public class InitPlayAlimeSopShrinkRequest extends TeaModel {
     @NameInMap("App")
-    public InitPlayAlimeSopRequestApp app;
+    public InitPlayAlimeSopShrinkRequestApp app;
 
     @NameInMap("ExtParams")
-    public java.util.Map<String, String> extParams;
+    public String extParamsShrink;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("Member")
-    public InitPlayAlimeSopRequestMember member;
+    public InitPlayAlimeSopShrinkRequestMember member;
 
     @NameInMap("SopFlowId")
     public String sopFlowId;
 
-    public static InitPlayAlimeSopRequest build(java.util.Map<String, ?> map) throws Exception {
-        InitPlayAlimeSopRequest self = new InitPlayAlimeSopRequest();
+    public static InitPlayAlimeSopShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        InitPlayAlimeSopShrinkRequest self = new InitPlayAlimeSopShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public InitPlayAlimeSopRequest setApp(InitPlayAlimeSopRequestApp app) {
+    public InitPlayAlimeSopShrinkRequest setApp(InitPlayAlimeSopShrinkRequestApp app) {
         this.app = app;
         return this;
     }
-    public InitPlayAlimeSopRequestApp getApp() {
+    public InitPlayAlimeSopShrinkRequestApp getApp() {
         return this.app;
     }
 
-    public InitPlayAlimeSopRequest setExtParams(java.util.Map<String, String> extParams) {
-        this.extParams = extParams;
+    public InitPlayAlimeSopShrinkRequest setExtParamsShrink(String extParamsShrink) {
+        this.extParamsShrink = extParamsShrink;
         return this;
     }
-    public java.util.Map<String, String> getExtParams() {
-        return this.extParams;
+    public String getExtParamsShrink() {
+        return this.extParamsShrink;
     }
 
-    public InitPlayAlimeSopRequest setInstanceId(String instanceId) {
+    public InitPlayAlimeSopShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -48,15 +48,15 @@ public class InitPlayAlimeSopRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public InitPlayAlimeSopRequest setMember(InitPlayAlimeSopRequestMember member) {
+    public InitPlayAlimeSopShrinkRequest setMember(InitPlayAlimeSopShrinkRequestMember member) {
         this.member = member;
         return this;
     }
-    public InitPlayAlimeSopRequestMember getMember() {
+    public InitPlayAlimeSopShrinkRequestMember getMember() {
         return this.member;
     }
 
-    public InitPlayAlimeSopRequest setSopFlowId(String sopFlowId) {
+    public InitPlayAlimeSopShrinkRequest setSopFlowId(String sopFlowId) {
         this.sopFlowId = sopFlowId;
         return this;
     }
@@ -64,7 +64,7 @@ public class InitPlayAlimeSopRequest extends TeaModel {
         return this.sopFlowId;
     }
 
-    public static class InitPlayAlimeSopRequestApp extends TeaModel {
+    public static class InitPlayAlimeSopShrinkRequestApp extends TeaModel {
         @NameInMap("Locale")
         public String locale;
 
@@ -77,12 +77,12 @@ public class InitPlayAlimeSopRequest extends TeaModel {
         @NameInMap("TerminalType")
         public String terminalType;
 
-        public static InitPlayAlimeSopRequestApp build(java.util.Map<String, ?> map) throws Exception {
-            InitPlayAlimeSopRequestApp self = new InitPlayAlimeSopRequestApp();
+        public static InitPlayAlimeSopShrinkRequestApp build(java.util.Map<String, ?> map) throws Exception {
+            InitPlayAlimeSopShrinkRequestApp self = new InitPlayAlimeSopShrinkRequestApp();
             return TeaModel.build(map, self);
         }
 
-        public InitPlayAlimeSopRequestApp setLocale(String locale) {
+        public InitPlayAlimeSopShrinkRequestApp setLocale(String locale) {
             this.locale = locale;
             return this;
         }
@@ -90,7 +90,7 @@ public class InitPlayAlimeSopRequest extends TeaModel {
             return this.locale;
         }
 
-        public InitPlayAlimeSopRequestApp setName(String name) {
+        public InitPlayAlimeSopShrinkRequestApp setName(String name) {
             this.name = name;
             return this;
         }
@@ -98,7 +98,7 @@ public class InitPlayAlimeSopRequest extends TeaModel {
             return this.name;
         }
 
-        public InitPlayAlimeSopRequestApp setPlatform(String platform) {
+        public InitPlayAlimeSopShrinkRequestApp setPlatform(String platform) {
             this.platform = platform;
             return this;
         }
@@ -106,7 +106,7 @@ public class InitPlayAlimeSopRequest extends TeaModel {
             return this.platform;
         }
 
-        public InitPlayAlimeSopRequestApp setTerminalType(String terminalType) {
+        public InitPlayAlimeSopShrinkRequestApp setTerminalType(String terminalType) {
             this.terminalType = terminalType;
             return this;
         }
@@ -116,19 +116,19 @@ public class InitPlayAlimeSopRequest extends TeaModel {
 
     }
 
-    public static class InitPlayAlimeSopRequestMember extends TeaModel {
+    public static class InitPlayAlimeSopShrinkRequestMember extends TeaModel {
         @NameInMap("Id")
         public String id;
 
         @NameInMap("Nick")
         public String nick;
 
-        public static InitPlayAlimeSopRequestMember build(java.util.Map<String, ?> map) throws Exception {
-            InitPlayAlimeSopRequestMember self = new InitPlayAlimeSopRequestMember();
+        public static InitPlayAlimeSopShrinkRequestMember build(java.util.Map<String, ?> map) throws Exception {
+            InitPlayAlimeSopShrinkRequestMember self = new InitPlayAlimeSopShrinkRequestMember();
             return TeaModel.build(map, self);
         }
 
-        public InitPlayAlimeSopRequestMember setId(String id) {
+        public InitPlayAlimeSopShrinkRequestMember setId(String id) {
             this.id = id;
             return this;
         }
@@ -136,7 +136,7 @@ public class InitPlayAlimeSopRequest extends TeaModel {
             return this.id;
         }
 
-        public InitPlayAlimeSopRequestMember setNick(String nick) {
+        public InitPlayAlimeSopShrinkRequestMember setNick(String nick) {
             this.nick = nick;
             return this;
         }

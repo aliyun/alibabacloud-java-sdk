@@ -13,7 +13,6 @@ public class TestGetUserByIdResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -87,6 +86,9 @@ public class TestGetUserByIdResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        @NameInMap("extraInfo")
+        public String extraInfo;
+
         public static TestGetUserByIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             TestGetUserByIdResponseBodyData self = new TestGetUserByIdResponseBodyData();
             return TeaModel.build(map, self);
@@ -146,6 +148,14 @@ public class TestGetUserByIdResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public TestGetUserByIdResponseBodyData setExtraInfo(String extraInfo) {
+            this.extraInfo = extraInfo;
+            return this;
+        }
+        public String getExtraInfo() {
+            return this.extraInfo;
         }
 
     }

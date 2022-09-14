@@ -3,7 +3,7 @@ package com.aliyun.cccxspace20191128.models;
 
 import com.aliyun.tea.*;
 
-public class GetInstanceListResponse extends TeaModel {
+public class FullSyncResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetInstanceListResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetInstanceListResponseBody body;
+    public FullSyncResponseBody body;
 
-    public static GetInstanceListResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetInstanceListResponse self = new GetInstanceListResponse();
+    public static FullSyncResponse build(java.util.Map<String, ?> map) throws Exception {
+        FullSyncResponse self = new FullSyncResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetInstanceListResponse setHeaders(java.util.Map<String, String> headers) {
+    public FullSyncResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetInstanceListResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetInstanceListResponse setStatusCode(Integer statusCode) {
+    public FullSyncResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetInstanceListResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetInstanceListResponse setBody(GetInstanceListResponseBody body) {
+    public FullSyncResponse setBody(FullSyncResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetInstanceListResponseBody getBody() {
+    public FullSyncResponseBody getBody() {
         return this.body;
     }
 

@@ -7,18 +7,15 @@ public class ListSopFlowsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 返回结果
     @NameInMap("Data")
     public ListSopFlowsResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,47 +65,36 @@ public class ListSopFlowsResponseBody extends TeaModel {
     }
 
     public static class ListSopFlowsResponseBodyDataDataList extends TeaModel {
-        // 类目ID
         @NameInMap("CateId")
         public Long cateId;
 
-        // 类目名称
         @NameInMap("CateName")
         public String cateName;
 
-        // 对应的xflow的ID
         @NameInMap("FlowId")
         public Long flowId;
 
-        // 对应的xflow的场景Code
         @NameInMap("FlowSceneCode")
         public String flowSceneCode;
 
-        // 最后修改时间
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        // 最后修改时间
         @NameInMap("GmtModifiedStr")
         public String gmtModifiedStr;
 
-        // 最后修改人
         @NameInMap("ModifierName")
         public String modifierName;
 
-        // SOP编码
         @NameInMap("SopCode")
         public String sopCode;
 
-        // SOP名称
         @NameInMap("SopName")
         public String sopName;
 
-        // 状态，如released
         @NameInMap("Status")
         public String status;
 
-        // 状态名称，如已发布
         @NameInMap("StatusDesc")
         public String statusDesc;
 
@@ -208,19 +194,15 @@ public class ListSopFlowsResponseBody extends TeaModel {
     }
 
     public static class ListSopFlowsResponseBodyData extends TeaModel {
-        // 当前页码
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // 结果集
         @NameInMap("DataList")
         public java.util.List<ListSopFlowsResponseBodyDataDataList> dataList;
 
-        // 当前页码查询数
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 总页数
         @NameInMap("TotalSize")
         public Integer totalSize;
 

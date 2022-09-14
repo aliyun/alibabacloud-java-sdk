@@ -8,6 +8,10 @@ public class XspaceCancelCfServiceResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public XspaceCancelCfServiceResponseBody body;
@@ -23,6 +27,14 @@ public class XspaceCancelCfServiceResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public XspaceCancelCfServiceResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public XspaceCancelCfServiceResponse setBody(XspaceCancelCfServiceResponseBody body) {

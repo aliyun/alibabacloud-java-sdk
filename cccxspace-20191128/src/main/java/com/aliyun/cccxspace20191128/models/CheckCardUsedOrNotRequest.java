@@ -4,11 +4,9 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class CheckCardUsedOrNotRequest extends TeaModel {
-    // 卡片id
     @NameInMap("CardId")
     public Long cardId;
 
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
