@@ -13,7 +13,6 @@ public class PlayAlimeSopResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -66,7 +65,6 @@ public class PlayAlimeSopResponseBody extends TeaModel {
     }
 
     public static class InitPlayAlimeSopResponseBodyData extends TeaModel {
-        // 请求的uuid
         @NameInMap("Uuid")
         public String uuid;
 
@@ -86,11 +84,9 @@ public class PlayAlimeSopResponseBody extends TeaModel {
     }
 
     public static class PlayAlimeSopResponseBodyDataNodesBodyCards extends TeaModel {
-        // 卡片id
         @NameInMap("CardId")
         public String cardId;
 
-        // 卡片类型
         @NameInMap("Type")
         public String type;
 
@@ -118,19 +114,15 @@ public class PlayAlimeSopResponseBody extends TeaModel {
     }
 
     public static class PlayAlimeSopResponseBodyDataNodesBodyOptions extends TeaModel {
-        // 选项是否默认选中
         @NameInMap("Checked")
         public Boolean checked;
 
-        // 选项id
         @NameInMap("OptionId")
         public String optionId;
 
-        // 选项标题
         @NameInMap("Title")
         public String title;
 
-        // 选项值
         @NameInMap("Value")
         public String value;
 
@@ -174,27 +166,21 @@ public class PlayAlimeSopResponseBody extends TeaModel {
     }
 
     public static class PlayAlimeSopResponseBodyDataNodesBodySections extends TeaModel {
-        // 是否折叠答案
         @NameInMap("CollapseContent")
         public Boolean collapseContent;
 
-        // 答案内容（可以是html结构体）
         @NameInMap("Content")
         public String content;
 
-        // 是否隐藏标题
         @NameInMap("HideTitle")
         public Boolean hideTitle;
 
-        // 区块id
         @NameInMap("Id")
         public Long id;
 
-        // 知识标题
         @NameInMap("KnowledgeTitle")
         public String knowledgeTitle;
 
-        // 区块标题
         @NameInMap("Title")
         public String title;
 
@@ -254,27 +240,21 @@ public class PlayAlimeSopResponseBody extends TeaModel {
     }
 
     public static class PlayAlimeSopResponseBodyDataNodesBody extends TeaModel {
-        // 选择器关键单据号
         @NameInMap("BizCode")
         public String bizCode;
 
-        // 卡片列表
         @NameInMap("Cards")
         public java.util.List<PlayAlimeSopResponseBodyDataNodesBodyCards> cards;
 
-        // 节点code
         @NameInMap("Code")
         public String code;
 
-        // 选择器扩展参数
         @NameInMap("ExtraParams")
         public String extraParams;
 
-        // 单选器选项列表
         @NameInMap("Options")
         public java.util.List<PlayAlimeSopResponseBodyDataNodesBodyOptions> options;
 
-        // 答案区块
         @NameInMap("Sections")
         public java.util.List<PlayAlimeSopResponseBodyDataNodesBodySections> sections;
 
@@ -334,19 +314,15 @@ public class PlayAlimeSopResponseBody extends TeaModel {
     }
 
     public static class PlayAlimeSopResponseBodyDataNodes extends TeaModel {
-        // 节点内容
         @NameInMap("Body")
         public PlayAlimeSopResponseBodyDataNodesBody body;
 
-        // 节点id
         @NameInMap("Id")
         public String id;
 
-        // 节点标题
         @NameInMap("Title")
         public String title;
 
-        // 节点类别
         @NameInMap("Type")
         public String type;
 
@@ -390,11 +366,9 @@ public class PlayAlimeSopResponseBody extends TeaModel {
     }
 
     public static class PlayAlimeSopResponseBodyData extends TeaModel {
-        // 整个流程是否结束
         @NameInMap("End")
         public Boolean end;
 
-        // 展示节点
         @NameInMap("Nodes")
         public java.util.List<PlayAlimeSopResponseBodyDataNodes> nodes;
 

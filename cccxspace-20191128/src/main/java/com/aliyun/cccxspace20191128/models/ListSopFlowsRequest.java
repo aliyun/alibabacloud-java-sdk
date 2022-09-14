@@ -4,23 +4,18 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class ListSopFlowsRequest extends TeaModel {
-    // 当前页
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // 对应的xflow的ID
     @NameInMap("FlowId")
     public Long flowId;
 
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // SOP名称查询
     @NameInMap("Keyword")
     public String keyword;
 
-    // 分页大小
     @NameInMap("PageSize")
     public Integer pageSize;
 

@@ -4,15 +4,12 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class PlayAlimeSopRequest extends TeaModel {
-    // 请求数据
     @NameInMap("Data")
     public PlayAlimeSopRequestData data;
 
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 请求uuid
     @NameInMap("Uuid")
     public String uuid;
 
@@ -46,19 +43,15 @@ public class PlayAlimeSopRequest extends TeaModel {
     }
 
     public static class InitPlayAlimeSopRequestApp extends TeaModel {
-        // 语言（默认zh）
         @NameInMap("Locale")
         public String locale;
 
-        // app名称
         @NameInMap("Name")
         public String name;
 
-        // 平台类型（默认xspace）
         @NameInMap("Platform")
         public String platform;
 
-        // 终端类型
         @NameInMap("TerminalType")
         public String terminalType;
 
@@ -102,11 +95,9 @@ public class PlayAlimeSopRequest extends TeaModel {
     }
 
     public static class InitPlayAlimeSopRequestMember extends TeaModel {
-        // 会员id
         @NameInMap("Id")
         public String id;
 
-        // 昵称
         @NameInMap("Nick")
         public String nick;
 
@@ -134,15 +125,12 @@ public class PlayAlimeSopRequest extends TeaModel {
     }
 
     public static class PlayAlimeSopRequestData extends TeaModel {
-        // 节点数据json
         @NameInMap("Data")
         public String data;
 
-        // 节点id
         @NameInMap("NodeId")
         public String nodeId;
 
-        // 节点类别
         @NameInMap("NodeType")
         public String nodeType;
 

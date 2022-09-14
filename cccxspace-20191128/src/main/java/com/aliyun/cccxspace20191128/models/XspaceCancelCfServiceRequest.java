@@ -4,7 +4,6 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class XspaceCancelCfServiceRequest extends TeaModel {
-    // A short description of struct
     @NameInMap("SourceOrderId")
     public String sourceOrderId;
 

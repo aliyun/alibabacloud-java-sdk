@@ -4,7 +4,6 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class SubmitRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 

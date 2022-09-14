@@ -4,7 +4,6 @@ package com.aliyun.cccxspace20191128.models;
 import com.aliyun.tea.*;
 
 public class SubmitResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

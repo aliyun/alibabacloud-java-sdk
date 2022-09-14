@@ -3,12 +3,12 @@ package com.aliyun.cccxspace20191128.models;
 
 import com.aliyun.tea.*;
 
-public class GetByForeignIdResponseBody extends TeaModel {
+public class FullSyncResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public String data;
+    @NameInMap("HttpStatusCode")
+    public Float httpStatusCode;
 
     @NameInMap("Message")
     public String message;
@@ -19,12 +19,12 @@ public class GetByForeignIdResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static GetByForeignIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetByForeignIdResponseBody self = new GetByForeignIdResponseBody();
+    public static FullSyncResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        FullSyncResponseBody self = new FullSyncResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetByForeignIdResponseBody setCode(String code) {
+    public FullSyncResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,15 +32,15 @@ public class GetByForeignIdResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetByForeignIdResponseBody setData(String data) {
-        this.data = data;
+    public FullSyncResponseBody setHttpStatusCode(Float httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public Float getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
-    public GetByForeignIdResponseBody setMessage(String message) {
+    public FullSyncResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -48,7 +48,7 @@ public class GetByForeignIdResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetByForeignIdResponseBody setRequestId(String requestId) {
+    public FullSyncResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +56,7 @@ public class GetByForeignIdResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetByForeignIdResponseBody setSuccess(Boolean success) {
+    public FullSyncResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

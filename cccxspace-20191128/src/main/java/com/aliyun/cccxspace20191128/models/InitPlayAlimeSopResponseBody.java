@@ -13,7 +13,6 @@ public class InitPlayAlimeSopResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -66,7 +65,6 @@ public class InitPlayAlimeSopResponseBody extends TeaModel {
     }
 
     public static class InitPlayAlimeSopResponseBodyData extends TeaModel {
-        // 请求的uuid
         @NameInMap("Uuid")
         public String uuid;
 
