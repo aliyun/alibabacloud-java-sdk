@@ -53,6 +53,36 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         return this.services;
     }
 
+    public static class ListVpcEndpointServicesResponseBodyServicesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListVpcEndpointServicesResponseBodyServicesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListVpcEndpointServicesResponseBodyServicesTags self = new ListVpcEndpointServicesResponseBodyServicesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVpcEndpointServicesResponseBodyServicesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListVpcEndpointServicesResponseBodyServicesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListVpcEndpointServicesResponseBodyServices extends TeaModel {
         @NameInMap("AutoAcceptEnabled")
         public Boolean autoAcceptEnabled;
@@ -101,6 +131,9 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
 
         @NameInMap("ServiceType")
         public String serviceType;
+
+        @NameInMap("Tags")
+        public java.util.List<ListVpcEndpointServicesResponseBodyServicesTags> tags;
 
         @NameInMap("ZoneAffinityEnabled")
         public Boolean zoneAffinityEnabled;
@@ -236,6 +269,14 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         }
         public String getServiceType() {
             return this.serviceType;
+        }
+
+        public ListVpcEndpointServicesResponseBodyServices setTags(java.util.List<ListVpcEndpointServicesResponseBodyServicesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListVpcEndpointServicesResponseBodyServicesTags> getTags() {
+            return this.tags;
         }
 
         public ListVpcEndpointServicesResponseBodyServices setZoneAffinityEnabled(Boolean zoneAffinityEnabled) {

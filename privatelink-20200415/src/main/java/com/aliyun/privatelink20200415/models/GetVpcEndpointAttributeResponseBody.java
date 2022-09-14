@@ -34,12 +34,6 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     @NameInMap("EndpointType")
     public String endpointType;
 
-    @NameInMap("NsiIndex")
-    public Long nsiIndex;
-
-    @NameInMap("NsiIndexString")
-    public String nsiIndexString;
-
     @NameInMap("Payer")
     public String payer;
 
@@ -150,22 +144,6 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     }
     public String getEndpointType() {
         return this.endpointType;
-    }
-
-    public GetVpcEndpointAttributeResponseBody setNsiIndex(Long nsiIndex) {
-        this.nsiIndex = nsiIndex;
-        return this;
-    }
-    public Long getNsiIndex() {
-        return this.nsiIndex;
-    }
-
-    public GetVpcEndpointAttributeResponseBody setNsiIndexString(String nsiIndexString) {
-        this.nsiIndexString = nsiIndexString;
-        return this;
-    }
-    public String getNsiIndexString() {
-        return this.nsiIndexString;
     }
 
     public GetVpcEndpointAttributeResponseBody setPayer(String payer) {

@@ -28,7 +28,6 @@ public class GetEndpointAttributeByNsiAndServiceIdResponseBody extends TeaModel 
     @NameInMap("RegionId")
     public String regionId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
