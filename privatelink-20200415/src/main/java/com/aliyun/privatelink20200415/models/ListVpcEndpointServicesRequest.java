@@ -31,6 +31,9 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
     @NameInMap("ServiceStatus")
     public String serviceStatus;
 
+    @NameInMap("Tag")
+    public java.util.List<ListVpcEndpointServicesRequestTag> tag;
+
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;
 
@@ -111,12 +114,50 @@ public class ListVpcEndpointServicesRequest extends TeaModel {
         return this.serviceStatus;
     }
 
+    public ListVpcEndpointServicesRequest setTag(java.util.List<ListVpcEndpointServicesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListVpcEndpointServicesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public ListVpcEndpointServicesRequest setZoneAffinityEnabled(Boolean zoneAffinityEnabled) {
         this.zoneAffinityEnabled = zoneAffinityEnabled;
         return this;
     }
     public Boolean getZoneAffinityEnabled() {
         return this.zoneAffinityEnabled;
+    }
+
+    public static class ListVpcEndpointServicesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListVpcEndpointServicesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListVpcEndpointServicesRequestTag self = new ListVpcEndpointServicesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVpcEndpointServicesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListVpcEndpointServicesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

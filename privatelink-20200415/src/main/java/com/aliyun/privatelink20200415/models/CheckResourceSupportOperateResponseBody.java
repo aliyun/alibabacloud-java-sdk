@@ -4,15 +4,14 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class CheckResourceSupportOperateResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ResourceSupportDowngrade")
-    public Boolean resourceSupportDowngrade;
+    @NameInMap("ResourceCanBeDowngraded")
+    public Boolean resourceCanBeDowngraded;
 
-    @NameInMap("ResourceZoneSupportDeleted")
-    public Boolean resourceZoneSupportDeleted;
+    @NameInMap("ResourceZoneCanBeDeleted")
+    public Boolean resourceZoneCanBeDeleted;
 
     public static CheckResourceSupportOperateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CheckResourceSupportOperateResponseBody self = new CheckResourceSupportOperateResponseBody();
@@ -27,20 +26,20 @@ public class CheckResourceSupportOperateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CheckResourceSupportOperateResponseBody setResourceSupportDowngrade(Boolean resourceSupportDowngrade) {
-        this.resourceSupportDowngrade = resourceSupportDowngrade;
+    public CheckResourceSupportOperateResponseBody setResourceCanBeDowngraded(Boolean resourceCanBeDowngraded) {
+        this.resourceCanBeDowngraded = resourceCanBeDowngraded;
         return this;
     }
-    public Boolean getResourceSupportDowngrade() {
-        return this.resourceSupportDowngrade;
+    public Boolean getResourceCanBeDowngraded() {
+        return this.resourceCanBeDowngraded;
     }
 
-    public CheckResourceSupportOperateResponseBody setResourceZoneSupportDeleted(Boolean resourceZoneSupportDeleted) {
-        this.resourceZoneSupportDeleted = resourceZoneSupportDeleted;
+    public CheckResourceSupportOperateResponseBody setResourceZoneCanBeDeleted(Boolean resourceZoneCanBeDeleted) {
+        this.resourceZoneCanBeDeleted = resourceZoneCanBeDeleted;
         return this;
     }
-    public Boolean getResourceZoneSupportDeleted() {
-        return this.resourceZoneSupportDeleted;
+    public Boolean getResourceZoneCanBeDeleted() {
+        return this.resourceZoneCanBeDeleted;
     }
 
 }

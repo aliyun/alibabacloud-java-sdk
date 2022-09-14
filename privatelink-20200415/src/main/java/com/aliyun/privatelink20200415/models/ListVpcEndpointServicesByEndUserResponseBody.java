@@ -53,6 +53,36 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         return this.services;
     }
 
+    public static class ListVpcEndpointServicesByEndUserResponseBodyServicesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListVpcEndpointServicesByEndUserResponseBodyServicesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListVpcEndpointServicesByEndUserResponseBodyServicesTags self = new ListVpcEndpointServicesByEndUserResponseBodyServicesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVpcEndpointServicesByEndUserResponseBodyServicesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListVpcEndpointServicesByEndUserResponseBodyServicesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListVpcEndpointServicesByEndUserResponseBodyServices extends TeaModel {
         @NameInMap("Payer")
         public String payer;
@@ -71,6 +101,9 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
 
         @NameInMap("ServiceType")
         public String serviceType;
+
+        @NameInMap("Tags")
+        public java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServicesTags> tags;
 
         @NameInMap("Zones")
         public java.util.List<String> zones;
@@ -126,6 +159,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
         public String getServiceType() {
             return this.serviceType;
+        }
+
+        public ListVpcEndpointServicesByEndUserResponseBodyServices setTags(java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServicesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServicesTags> getTags() {
+            return this.tags;
         }
 
         public ListVpcEndpointServicesByEndUserResponseBodyServices setZones(java.util.List<String> zones) {

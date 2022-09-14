@@ -22,6 +22,9 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     @NameInMap("ServiceType")
     public String serviceType;
 
+    @NameInMap("Tag")
+    public java.util.List<ListVpcEndpointServicesByEndUserRequestTag> tag;
+
     public static ListVpcEndpointServicesByEndUserRequest build(java.util.Map<String, ?> map) throws Exception {
         ListVpcEndpointServicesByEndUserRequest self = new ListVpcEndpointServicesByEndUserRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,44 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     }
     public String getServiceType() {
         return this.serviceType;
+    }
+
+    public ListVpcEndpointServicesByEndUserRequest setTag(java.util.List<ListVpcEndpointServicesByEndUserRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListVpcEndpointServicesByEndUserRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListVpcEndpointServicesByEndUserRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListVpcEndpointServicesByEndUserRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListVpcEndpointServicesByEndUserRequestTag self = new ListVpcEndpointServicesByEndUserRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVpcEndpointServicesByEndUserRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListVpcEndpointServicesByEndUserRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

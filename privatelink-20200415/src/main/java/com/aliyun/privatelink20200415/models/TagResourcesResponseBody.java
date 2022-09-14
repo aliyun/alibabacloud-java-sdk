@@ -3,16 +3,16 @@ package com.aliyun.privatelink20200415.models;
 
 import com.aliyun.tea.*;
 
-public class NotifyResourceAddressFamilyResponseBody extends TeaModel {
+public class TagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static NotifyResourceAddressFamilyResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        NotifyResourceAddressFamilyResponseBody self = new NotifyResourceAddressFamilyResponseBody();
+    public static TagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        TagResourcesResponseBody self = new TagResourcesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public NotifyResourceAddressFamilyResponseBody setRequestId(String requestId) {
+    public TagResourcesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
