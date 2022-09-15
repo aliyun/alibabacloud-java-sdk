@@ -25,6 +25,9 @@ public class CreateLogStoreRequest extends TeaModel {
     @NameInMap("maxSplitShard")
     public Integer maxSplitShard;
 
+    @NameInMap("mode")
+    public String mode;
+
     @NameInMap("shardCount")
     public Integer shardCount;
 
@@ -93,6 +96,14 @@ public class CreateLogStoreRequest extends TeaModel {
     }
     public Integer getMaxSplitShard() {
         return this.maxSplitShard;
+    }
+
+    public CreateLogStoreRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
     }
 
     public CreateLogStoreRequest setShardCount(Integer shardCount) {

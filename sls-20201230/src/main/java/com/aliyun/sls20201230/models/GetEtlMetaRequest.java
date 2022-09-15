@@ -4,11 +4,11 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetEtlMetaRequest extends TeaModel {
-    @NameInMap("elMetaName")
-    public String elMetaName;
-
     @NameInMap("etlMetaKey")
     public String etlMetaKey;
+
+    @NameInMap("etlMetaName")
+    public String etlMetaName;
 
     @NameInMap("etlMetaTag")
     public String etlMetaTag;
@@ -18,20 +18,20 @@ public class GetEtlMetaRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetEtlMetaRequest setElMetaName(String elMetaName) {
-        this.elMetaName = elMetaName;
-        return this;
-    }
-    public String getElMetaName() {
-        return this.elMetaName;
-    }
-
     public GetEtlMetaRequest setEtlMetaKey(String etlMetaKey) {
         this.etlMetaKey = etlMetaKey;
         return this;
     }
     public String getEtlMetaKey() {
         return this.etlMetaKey;
+    }
+
+    public GetEtlMetaRequest setEtlMetaName(String etlMetaName) {
+        this.etlMetaName = etlMetaName;
+        return this;
+    }
+    public String getEtlMetaName() {
+        return this.etlMetaName;
     }
 
     public GetEtlMetaRequest setEtlMetaTag(String etlMetaTag) {
