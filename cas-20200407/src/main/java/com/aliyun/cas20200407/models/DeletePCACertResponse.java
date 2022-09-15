@@ -3,7 +3,7 @@ package com.aliyun.cas20200407.models;
 
 import com.aliyun.tea.*;
 
-public class CreateCertificateRequestResponse extends TeaModel {
+public class DeletePCACertResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CreateCertificateRequestResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateCertificateRequestResponseBody body;
+    public DeletePCACertResponseBody body;
 
-    public static CreateCertificateRequestResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateCertificateRequestResponse self = new CreateCertificateRequestResponse();
+    public static DeletePCACertResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeletePCACertResponse self = new DeletePCACertResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateCertificateRequestResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeletePCACertResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CreateCertificateRequestResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateCertificateRequestResponse setStatusCode(Integer statusCode) {
+    public DeletePCACertResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CreateCertificateRequestResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateCertificateRequestResponse setBody(CreateCertificateRequestResponseBody body) {
+    public DeletePCACertResponse setBody(DeletePCACertResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateCertificateRequestResponseBody getBody() {
+    public DeletePCACertResponseBody getBody() {
         return this.body;
     }
 

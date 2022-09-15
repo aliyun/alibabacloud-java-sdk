@@ -3,7 +3,7 @@ package com.aliyun.cas20200407.models;
 
 import com.aliyun.tea.*;
 
-public class CreateCertificateRequestResponse extends TeaModel {
+public class SignResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CreateCertificateRequestResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateCertificateRequestResponseBody body;
+    public SignResponseBody body;
 
-    public static CreateCertificateRequestResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateCertificateRequestResponse self = new CreateCertificateRequestResponse();
+    public static SignResponse build(java.util.Map<String, ?> map) throws Exception {
+        SignResponse self = new SignResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateCertificateRequestResponse setHeaders(java.util.Map<String, String> headers) {
+    public SignResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CreateCertificateRequestResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateCertificateRequestResponse setStatusCode(Integer statusCode) {
+    public SignResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CreateCertificateRequestResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateCertificateRequestResponse setBody(CreateCertificateRequestResponseBody body) {
+    public SignResponse setBody(SignResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateCertificateRequestResponseBody getBody() {
+    public SignResponseBody getBody() {
         return this.body;
     }
 
