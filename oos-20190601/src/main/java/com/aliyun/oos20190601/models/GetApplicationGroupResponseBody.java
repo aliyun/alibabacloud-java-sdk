@@ -62,6 +62,9 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Progress")
+        public String progress;
+
         @NameInMap("Status")
         public String status;
 
@@ -154,6 +157,14 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetApplicationGroupResponseBodyApplicationGroup setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
         }
 
         public GetApplicationGroupResponseBodyApplicationGroup setStatus(String status) {
