@@ -646,8 +646,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("ErrMessage")
         public String errMessage;
 
+        @NameInMap("JobId")
+        public String jobId;
+
         @NameInMap("MaxRetryTime")
         public Integer maxRetryTime;
+
+        @NameInMap("Module")
+        public String module;
 
         @NameInMap("RetryCount")
         public Integer retryCount;
@@ -657,6 +663,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         @NameInMap("RetryTime")
         public Integer retryTime;
+
+        @NameInMap("Retrying")
+        public Boolean retrying;
 
         public static DescribeDtsJobsResponseBodyDtsJobListRetryState build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListRetryState self = new DescribeDtsJobsResponseBodyDtsJobListRetryState();
@@ -671,12 +680,28 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.errMessage;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListRetryState setMaxRetryTime(Integer maxRetryTime) {
             this.maxRetryTime = maxRetryTime;
             return this;
         }
         public Integer getMaxRetryTime() {
             return this.maxRetryTime;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState setModule(String module) {
+            this.module = module;
+            return this;
+        }
+        public String getModule() {
+            return this.module;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListRetryState setRetryCount(Integer retryCount) {
@@ -701,6 +726,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public Integer getRetryTime() {
             return this.retryTime;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState setRetrying(Boolean retrying) {
+            this.retrying = retrying;
+            return this;
+        }
+        public Boolean getRetrying() {
+            return this.retrying;
         }
 
     }
@@ -1926,6 +1959,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("Reserved")
         public String reserved;
 
+        @NameInMap("ResourceGroupDisplayName")
+        public String resourceGroupDisplayName;
+
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -2206,6 +2242,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getReserved() {
             return this.reserved;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setResourceGroupDisplayName(String resourceGroupDisplayName) {
+            this.resourceGroupDisplayName = resourceGroupDisplayName;
+            return this;
+        }
+        public String getResourceGroupDisplayName() {
+            return this.resourceGroupDisplayName;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setResourceGroupId(String resourceGroupId) {
@@ -2741,8 +2785,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("ErrMessage")
         public String errMessage;
 
+        @NameInMap("JobId")
+        public String jobId;
+
         @NameInMap("MaxRetryTime")
         public Integer maxRetryTime;
+
+        @NameInMap("Module")
+        public String module;
 
         @NameInMap("RetryCount")
         public Integer retryCount;
@@ -2752,6 +2802,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         @NameInMap("RetryTime")
         public Integer retryTime;
+
+        @NameInMap("Retrying")
+        public Boolean retrying;
 
         public static DescribeDtsJobsResponseBodyEtlDemoListRetryState build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyEtlDemoListRetryState self = new DescribeDtsJobsResponseBodyEtlDemoListRetryState();
@@ -2766,12 +2819,28 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.errMessage;
         }
 
+        public DescribeDtsJobsResponseBodyEtlDemoListRetryState setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
         public DescribeDtsJobsResponseBodyEtlDemoListRetryState setMaxRetryTime(Integer maxRetryTime) {
             this.maxRetryTime = maxRetryTime;
             return this;
         }
         public Integer getMaxRetryTime() {
             return this.maxRetryTime;
+        }
+
+        public DescribeDtsJobsResponseBodyEtlDemoListRetryState setModule(String module) {
+            this.module = module;
+            return this;
+        }
+        public String getModule() {
+            return this.module;
         }
 
         public DescribeDtsJobsResponseBodyEtlDemoListRetryState setRetryCount(Integer retryCount) {
@@ -2796,6 +2865,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public Integer getRetryTime() {
             return this.retryTime;
+        }
+
+        public DescribeDtsJobsResponseBodyEtlDemoListRetryState setRetrying(Boolean retrying) {
+            this.retrying = retrying;
+            return this;
+        }
+        public Boolean getRetrying() {
+            return this.retrying;
         }
 
     }
@@ -3921,6 +3998,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("Reserved")
         public String reserved;
 
+        @NameInMap("ResourceGroupDisplayName")
+        public String resourceGroupDisplayName;
+
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -4161,6 +4241,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getReserved() {
             return this.reserved;
+        }
+
+        public DescribeDtsJobsResponseBodyEtlDemoList setResourceGroupDisplayName(String resourceGroupDisplayName) {
+            this.resourceGroupDisplayName = resourceGroupDisplayName;
+            return this;
+        }
+        public String getResourceGroupDisplayName() {
+            return this.resourceGroupDisplayName;
         }
 
         public DescribeDtsJobsResponseBodyEtlDemoList setResourceGroupId(String resourceGroupId) {

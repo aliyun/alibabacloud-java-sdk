@@ -8,7 +8,7 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("DbList")
-    public java.util.Map<String, ?> dbList;
+    public String dbList;
 
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
@@ -47,11 +47,11 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public ModifyDtsJobAdvanceRequest setDbList(java.util.Map<String, ?> dbList) {
+    public ModifyDtsJobAdvanceRequest setDbList(String dbList) {
         this.dbList = dbList;
         return this;
     }
-    public java.util.Map<String, ?> getDbList() {
+    public String getDbList() {
         return this.dbList;
     }
 
