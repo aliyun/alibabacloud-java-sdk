@@ -10,6 +10,9 @@ public class GetSubtaskItemResponseBody extends TeaModel {
     @NameInMap("Details")
     public String details;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Item")
     public SubtaskItemDetail item;
 
@@ -41,6 +44,14 @@ public class GetSubtaskItemResponseBody extends TeaModel {
     }
     public String getDetails() {
         return this.details;
+    }
+
+    public GetSubtaskItemResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetSubtaskItemResponseBody setItem(SubtaskItemDetail item) {

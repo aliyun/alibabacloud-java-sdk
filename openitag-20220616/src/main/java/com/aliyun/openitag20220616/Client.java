@@ -34,9 +34,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public AddWorkNodeWorkforceResponse addWorkNodeWorkforceWithOptions(String TenantId, String TaskId, String WorkNodeId, AddWorkNodeWorkforceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskId = com.aliyun.openapiutil.Client.getEncodeParam(TaskId);
-        WorkNodeId = com.aliyun.openapiutil.Client.getEncodeParam(WorkNodeId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.userIds)) {
             body.put("UserIds", request.userIds);
@@ -50,7 +47,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "AddWorkNodeWorkforce"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskId + "/worknodes/" + WorkNodeId + "/workforce"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + "/worknodes/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkNodeId) + "/workforce"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -68,7 +65,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateTaskResponse createTaskWithOptions(String TenantId, CreateTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.body)))
@@ -77,7 +73,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateTask"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -95,7 +91,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateTemplateResponse createTemplateWithOptions(String TenantId, CreateTemplateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.body)))
@@ -104,7 +99,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateTemplate"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/templates"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/templates"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -122,7 +117,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateUserResponse createUserWithOptions(String TenantId, CreateUserRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accountNo)) {
             body.put("AccountNo", request.accountNo);
@@ -148,7 +142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateUser"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/users"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/users"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -165,8 +159,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteTaskResponse deleteTaskWithOptions(String TenantId, String TaskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskId = com.aliyun.openapiutil.Client.getEncodeParam(TaskId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -174,7 +166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteTask"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskId + ""),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -191,8 +183,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteTemplateResponse deleteTemplateWithOptions(String TenantId, String TemplateId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TemplateId = com.aliyun.openapiutil.Client.getEncodeParam(TemplateId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -200,7 +190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteTemplate"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/templates/" + TemplateId + ""),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/templates/" + com.aliyun.openapiutil.Client.getEncodeParam(TemplateId) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -217,8 +207,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteUserResponse deleteUserWithOptions(String TenantId, String UserId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        UserId = com.aliyun.openapiutil.Client.getEncodeParam(UserId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -226,7 +214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteUser"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/users/" + UserId + ""),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/users/" + com.aliyun.openapiutil.Client.getEncodeParam(UserId) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -244,8 +232,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ExportAnnotationsResponse exportAnnotationsWithOptions(String TenantId, String TaskId, ExportAnnotationsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskId = com.aliyun.openapiutil.Client.getEncodeParam(TaskId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ossPath)) {
             query.put("OssPath", request.ossPath);
@@ -267,7 +253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ExportAnnotations"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskId + "/annotations/export"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + "/annotations/export"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -285,8 +271,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetJobResponse getJobWithOptions(String TenantId, String JobId, GetJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        JobId = com.aliyun.openapiutil.Client.getEncodeParam(JobId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.jobType)) {
             query.put("JobType", request.jobType);
@@ -300,7 +284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetJob"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/jobs/" + JobId + ""),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -317,9 +301,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetSubtaskResponse getSubtaskWithOptions(String TenantId, String TaskID, String SubtaskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskID = com.aliyun.openapiutil.Client.getEncodeParam(TaskID);
-        SubtaskId = com.aliyun.openapiutil.Client.getEncodeParam(SubtaskId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -327,7 +308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetSubtask"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskID + "/subtasks/" + SubtaskId + ""),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskID) + "/subtasks/" + com.aliyun.openapiutil.Client.getEncodeParam(SubtaskId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -344,10 +325,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetSubtaskItemResponse getSubtaskItemWithOptions(String TenantId, String TaskId, String SubtaskId, String ItemId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskId = com.aliyun.openapiutil.Client.getEncodeParam(TaskId);
-        SubtaskId = com.aliyun.openapiutil.Client.getEncodeParam(SubtaskId);
-        ItemId = com.aliyun.openapiutil.Client.getEncodeParam(ItemId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -355,7 +332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetSubtaskItem"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskId + "/subtasks/" + SubtaskId + "/items/" + ItemId + ""),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + "/subtasks/" + com.aliyun.openapiutil.Client.getEncodeParam(SubtaskId) + "/items/" + com.aliyun.openapiutil.Client.getEncodeParam(ItemId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -372,8 +349,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetTaskResponse getTaskWithOptions(String TenantId, String TaskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskId = com.aliyun.openapiutil.Client.getEncodeParam(TaskId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -381,7 +356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetTask"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskId + ""),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -399,8 +374,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetTaskStatisticsResponse getTaskStatisticsWithOptions(String TenantId, String TaskId, GetTaskStatisticsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskId = com.aliyun.openapiutil.Client.getEncodeParam(TaskId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.statType)) {
             query.put("StatType", request.statType);
@@ -414,7 +387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetTaskStatistics"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskId + "/statistics"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + "/statistics"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -431,8 +404,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetTaskStatusResponse getTaskStatusWithOptions(String TenantId, String TaskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskId = com.aliyun.openapiutil.Client.getEncodeParam(TaskId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -440,7 +411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetTaskStatus"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskId + "/status"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + "/status"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -457,8 +428,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetTaskTemplateResponse getTaskTemplateWithOptions(String TenantId, String TaskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskId = com.aliyun.openapiutil.Client.getEncodeParam(TaskId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -466,7 +435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetTaskTemplate"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskId + "/template"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + "/template"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -483,8 +452,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetTaskTemplateQuestionsResponse getTaskTemplateQuestionsWithOptions(String TenantId, String TaskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskId = com.aliyun.openapiutil.Client.getEncodeParam(TaskId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -492,7 +459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetTaskTemplateQuestions"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskId + "/template/questions"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + "/template/questions"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -509,8 +476,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetTaskTemplateViewsResponse getTaskTemplateViewsWithOptions(String TenantId, String TaskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskId = com.aliyun.openapiutil.Client.getEncodeParam(TaskId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -518,7 +483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetTaskTemplateViews"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskId + "/template/views"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + "/template/views"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -535,8 +500,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetTaskWorkforceResponse getTaskWorkforceWithOptions(String TenantId, String TaskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskId = com.aliyun.openapiutil.Client.getEncodeParam(TaskId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -544,7 +507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetTaskWorkforce"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskId + "/workforce"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + "/workforce"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -562,8 +525,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetTaskWorkforceStatisticResponse getTaskWorkforceStatisticWithOptions(String TenantId, String TaskId, GetTaskWorkforceStatisticRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskId = com.aliyun.openapiutil.Client.getEncodeParam(TaskId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
@@ -585,7 +546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetTaskWorkforceStatistic"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskId + "/workforce/statistic"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + "/workforce/statistic"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -602,8 +563,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetTemplateResponse getTemplateWithOptions(String TenantId, String TemplateId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TemplateId = com.aliyun.openapiutil.Client.getEncodeParam(TemplateId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -611,7 +570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetTemplate"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/templates/" + TemplateId + ""),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/templates/" + com.aliyun.openapiutil.Client.getEncodeParam(TemplateId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -628,8 +587,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetTemplateQuestionsResponse getTemplateQuestionsWithOptions(String TenantId, String TemplateId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TemplateId = com.aliyun.openapiutil.Client.getEncodeParam(TemplateId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -637,7 +594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetTemplateQuestions"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/templates/" + TemplateId + "/questions"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/templates/" + com.aliyun.openapiutil.Client.getEncodeParam(TemplateId) + "/questions"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -654,8 +611,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetTemplateViewResponse getTemplateViewWithOptions(String TenantId, String TemplateId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TemplateId = com.aliyun.openapiutil.Client.getEncodeParam(TemplateId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -663,7 +618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetTemplateView"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/templates/" + TemplateId + "/views"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/templates/" + com.aliyun.openapiutil.Client.getEncodeParam(TemplateId) + "/views"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -680,7 +635,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetTenantResponse getTenantWithOptions(String TenantId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -688,7 +642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetTenant"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + ""),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -705,8 +659,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetUserResponse getUserWithOptions(String TenantId, String UserId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        UserId = com.aliyun.openapiutil.Client.getEncodeParam(UserId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -714,7 +666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetUser"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/users/" + UserId + ""),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/users/" + com.aliyun.openapiutil.Client.getEncodeParam(UserId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -732,7 +684,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListJobsResponse listJobsWithOptions(String TenantId, ListJobsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.jobType)) {
             query.put("JobType", request.jobType);
@@ -754,7 +705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListJobs"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/jobs"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/jobs"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -772,9 +723,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListSubtaskItemsResponse listSubtaskItemsWithOptions(String TenantId, String TaskID, String SubtaskId, ListSubtaskItemsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskID = com.aliyun.openapiutil.Client.getEncodeParam(TaskID);
-        SubtaskId = com.aliyun.openapiutil.Client.getEncodeParam(SubtaskId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
@@ -792,7 +740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListSubtaskItems"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskID + "/subtasks/" + SubtaskId + "/items"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskID) + "/subtasks/" + com.aliyun.openapiutil.Client.getEncodeParam(SubtaskId) + "/items"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -810,8 +758,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListSubtasksResponse listSubtasksWithOptions(String TenantId, String TaskID, ListSubtasksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskID = com.aliyun.openapiutil.Client.getEncodeParam(TaskID);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
@@ -829,7 +775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListSubtasks"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskID + "/subtasks"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskID) + "/subtasks"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -847,7 +793,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListTasksResponse listTasksWithOptions(String TenantId, ListTasksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
@@ -865,7 +810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListTasks"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -881,9 +826,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTemplatesWithOptions(TenantId, request, headers, runtime);
     }
 
-    public ListTemplatesResponse listTemplatesWithOptions(String TenantId, ListTemplatesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
+    public ListTemplatesResponse listTemplatesWithOptions(String TenantId, ListTemplatesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListTemplatesShrinkRequest request = new ListTemplatesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.types)) {
+            request.typesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.types, "Types", "simple");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
@@ -897,6 +847,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SearchKey", request.searchKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.typesShrink)) {
+            query.put("Types", request.typesShrink);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -905,7 +859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListTemplates"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/templates"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/templates"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -958,7 +912,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListUsersResponse listUsersWithOptions(String TenantId, ListUsersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
@@ -976,7 +929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListUsers"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/users"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/users"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -994,9 +947,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public RemoveWorkNodeWorkforceResponse removeWorkNodeWorkforceWithOptions(String TenantId, String TaskId, String WorkNodeId, RemoveWorkNodeWorkforceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskId = com.aliyun.openapiutil.Client.getEncodeParam(TaskId);
-        WorkNodeId = com.aliyun.openapiutil.Client.getEncodeParam(WorkNodeId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.userIds)) {
             body.put("UserIds", request.userIds);
@@ -1010,7 +960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "RemoveWorkNodeWorkforce"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskId + "/worknodes/" + WorkNodeId + "/workforce"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + "/worknodes/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkNodeId) + "/workforce"),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1028,8 +978,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateTaskResponse updateTaskWithOptions(String TenantId, String TaskId, UpdateTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskId = com.aliyun.openapiutil.Client.getEncodeParam(TaskId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.body)))
@@ -1038,7 +986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateTask"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskId + ""),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1056,8 +1004,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateTaskWorkforceResponse updateTaskWorkforceWithOptions(String TenantId, String TaskId, UpdateTaskWorkforceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TaskId = com.aliyun.openapiutil.Client.getEncodeParam(TaskId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.workforce)) {
             body.put("Workforce", request.workforce);
@@ -1071,7 +1017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateTaskWorkforce"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/tasks/" + TaskId + "/workforce"),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TaskId) + "/workforce"),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1089,8 +1035,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateTemplateResponse updateTemplateWithOptions(String TenantId, String TemplateId, UpdateTemplateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        TemplateId = com.aliyun.openapiutil.Client.getEncodeParam(TemplateId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.body)))
@@ -1099,7 +1043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateTemplate"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/templates/" + TemplateId + ""),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/templates/" + com.aliyun.openapiutil.Client.getEncodeParam(TemplateId) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1117,7 +1061,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateTenantResponse updateTenantWithOptions(String TenantId, UpdateTenantRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
@@ -1135,7 +1078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateTenant"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + ""),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1153,8 +1096,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateUserResponse updateUserWithOptions(String TenantId, String UserId, UpdateUserRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TenantId = com.aliyun.openapiutil.Client.getEncodeParam(TenantId);
-        UserId = com.aliyun.openapiutil.Client.getEncodeParam(UserId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.role)) {
             body.put("Role", request.role);
@@ -1172,7 +1113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateUser"),
             new TeaPair("version", "2022-06-16"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/api/v1/tenants/" + TenantId + "/users/" + UserId + ""),
+            new TeaPair("pathname", "/openapi/api/v1/tenants/" + com.aliyun.openapiutil.Client.getEncodeParam(TenantId) + "/users/" + com.aliyun.openapiutil.Client.getEncodeParam(UserId) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),

@@ -10,6 +10,9 @@ public class CreateUserResponseBody extends TeaModel {
     @NameInMap("Details")
     public String details;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Message")
     public String message;
 
@@ -41,6 +44,14 @@ public class CreateUserResponseBody extends TeaModel {
     }
     public String getDetails() {
         return this.details;
+    }
+
+    public CreateUserResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public CreateUserResponseBody setMessage(String message) {

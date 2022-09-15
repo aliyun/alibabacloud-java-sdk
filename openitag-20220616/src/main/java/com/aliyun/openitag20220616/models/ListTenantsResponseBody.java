@@ -10,6 +10,9 @@ public class ListTenantsResponseBody extends TeaModel {
     @NameInMap("Details")
     public String details;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Message")
     public String message;
 
@@ -53,6 +56,14 @@ public class ListTenantsResponseBody extends TeaModel {
     }
     public String getDetails() {
         return this.details;
+    }
+
+    public ListTenantsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListTenantsResponseBody setMessage(String message) {

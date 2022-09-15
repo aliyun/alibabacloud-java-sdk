@@ -3,7 +3,7 @@ package com.aliyun.openitag20220616.models;
 
 import com.aliyun.tea.*;
 
-public class ListTemplatesRequest extends TeaModel {
+public class ListTemplatesShrinkRequest extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -14,14 +14,14 @@ public class ListTemplatesRequest extends TeaModel {
     public String searchKey;
 
     @NameInMap("Types")
-    public java.util.List<String> types;
+    public String typesShrink;
 
-    public static ListTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListTemplatesRequest self = new ListTemplatesRequest();
+    public static ListTemplatesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListTemplatesShrinkRequest self = new ListTemplatesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListTemplatesRequest setPageNumber(Integer pageNumber) {
+    public ListTemplatesShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListTemplatesRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListTemplatesRequest setPageSize(Integer pageSize) {
+    public ListTemplatesShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -37,7 +37,7 @@ public class ListTemplatesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListTemplatesRequest setSearchKey(String searchKey) {
+    public ListTemplatesShrinkRequest setSearchKey(String searchKey) {
         this.searchKey = searchKey;
         return this;
     }
@@ -45,12 +45,12 @@ public class ListTemplatesRequest extends TeaModel {
         return this.searchKey;
     }
 
-    public ListTemplatesRequest setTypes(java.util.List<String> types) {
-        this.types = types;
+    public ListTemplatesShrinkRequest setTypesShrink(String typesShrink) {
+        this.typesShrink = typesShrink;
         return this;
     }
-    public java.util.List<String> getTypes() {
-        return this.types;
+    public String getTypesShrink() {
+        return this.typesShrink;
     }
 
 }

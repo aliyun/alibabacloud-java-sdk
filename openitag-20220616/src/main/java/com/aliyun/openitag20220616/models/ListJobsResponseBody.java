@@ -10,6 +10,9 @@ public class ListJobsResponseBody extends TeaModel {
     @NameInMap("Details")
     public String details;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Jobs")
     public java.util.List<Job> jobs;
 
@@ -53,6 +56,14 @@ public class ListJobsResponseBody extends TeaModel {
     }
     public String getDetails() {
         return this.details;
+    }
+
+    public ListJobsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListJobsResponseBody setJobs(java.util.List<Job> jobs) {

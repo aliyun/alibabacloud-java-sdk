@@ -10,6 +10,9 @@ public class ListTemplatesResponseBody extends TeaModel {
     @NameInMap("Details")
     public String details;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Message")
     public String message;
 
@@ -53,6 +56,14 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
     public String getDetails() {
         return this.details;
+    }
+
+    public ListTemplatesResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListTemplatesResponseBody setMessage(String message) {
