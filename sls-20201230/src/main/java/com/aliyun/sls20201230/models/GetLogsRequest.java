@@ -28,9 +28,6 @@ public class GetLogsRequest extends TeaModel {
     @NameInMap("topic")
     public String topic;
 
-    @NameInMap("type")
-    public String type;
-
     public static GetLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLogsRequest self = new GetLogsRequest();
         return TeaModel.build(map, self);
@@ -98,14 +95,6 @@ public class GetLogsRequest extends TeaModel {
     }
     public String getTopic() {
         return this.topic;
-    }
-
-    public GetLogsRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
 }

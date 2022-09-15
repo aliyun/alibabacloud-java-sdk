@@ -16,9 +16,6 @@ public class GetHistogramsRequest extends TeaModel {
     @NameInMap("topic")
     public String topic;
 
-    @NameInMap("type")
-    public String type;
-
     public static GetHistogramsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHistogramsRequest self = new GetHistogramsRequest();
         return TeaModel.build(map, self);
@@ -54,14 +51,6 @@ public class GetHistogramsRequest extends TeaModel {
     }
     public String getTopic() {
         return this.topic;
-    }
-
-    public GetHistogramsRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
 }

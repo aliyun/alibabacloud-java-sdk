@@ -7,6 +7,9 @@ public class ListLogStoresRequest extends TeaModel {
     @NameInMap("logstoreName")
     public String logstoreName;
 
+    @NameInMap("mode")
+    public String mode;
+
     @NameInMap("offset")
     public Integer offset;
 
@@ -27,6 +30,14 @@ public class ListLogStoresRequest extends TeaModel {
     }
     public String getLogstoreName() {
         return this.logstoreName;
+    }
+
+    public ListLogStoresRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
     }
 
     public ListLogStoresRequest setOffset(Integer offset) {
