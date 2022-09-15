@@ -13,6 +13,9 @@ public class GenerateProductInstanceDeploymentConfigRequest extends TeaModel {
     @NameInMap("productVersionUID")
     public String productVersionUID;
 
+    @NameInMap("productVersionUIDList")
+    public java.util.List<String> productVersionUIDList;
+
     public static GenerateProductInstanceDeploymentConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateProductInstanceDeploymentConfigRequest self = new GenerateProductInstanceDeploymentConfigRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class GenerateProductInstanceDeploymentConfigRequest extends TeaModel {
     }
     public String getProductVersionUID() {
         return this.productVersionUID;
+    }
+
+    public GenerateProductInstanceDeploymentConfigRequest setProductVersionUIDList(java.util.List<String> productVersionUIDList) {
+        this.productVersionUIDList = productVersionUIDList;
+        return this;
+    }
+    public java.util.List<String> getProductVersionUIDList() {
+        return this.productVersionUIDList;
     }
 
 }

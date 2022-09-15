@@ -13,6 +13,9 @@ public class UpdateProductComponentVersionRequest extends TeaModel {
     @NameInMap("newComponentVersionUID")
     public String newComponentVersionUID;
 
+    @NameInMap("policy")
+    public UpdateProductComponentVersionRequestPolicy policy;
+
     @NameInMap("releaseName")
     public String releaseName;
 
@@ -45,12 +48,69 @@ public class UpdateProductComponentVersionRequest extends TeaModel {
         return this.newComponentVersionUID;
     }
 
+    public UpdateProductComponentVersionRequest setPolicy(UpdateProductComponentVersionRequestPolicy policy) {
+        this.policy = policy;
+        return this;
+    }
+    public UpdateProductComponentVersionRequestPolicy getPolicy() {
+        return this.policy;
+    }
+
     public UpdateProductComponentVersionRequest setReleaseName(String releaseName) {
         this.releaseName = releaseName;
         return this;
     }
     public String getReleaseName() {
         return this.releaseName;
+    }
+
+    public static class UpdateProductComponentVersionRequestPolicyMultiCluster extends TeaModel {
+        @NameInMap("autoInstall")
+        public Boolean autoInstall;
+
+        @NameInMap("targetClusters")
+        public java.util.List<String> targetClusters;
+
+        public static UpdateProductComponentVersionRequestPolicyMultiCluster build(java.util.Map<String, ?> map) throws Exception {
+            UpdateProductComponentVersionRequestPolicyMultiCluster self = new UpdateProductComponentVersionRequestPolicyMultiCluster();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateProductComponentVersionRequestPolicyMultiCluster setAutoInstall(Boolean autoInstall) {
+            this.autoInstall = autoInstall;
+            return this;
+        }
+        public Boolean getAutoInstall() {
+            return this.autoInstall;
+        }
+
+        public UpdateProductComponentVersionRequestPolicyMultiCluster setTargetClusters(java.util.List<String> targetClusters) {
+            this.targetClusters = targetClusters;
+            return this;
+        }
+        public java.util.List<String> getTargetClusters() {
+            return this.targetClusters;
+        }
+
+    }
+
+    public static class UpdateProductComponentVersionRequestPolicy extends TeaModel {
+        @NameInMap("multiCluster")
+        public UpdateProductComponentVersionRequestPolicyMultiCluster multiCluster;
+
+        public static UpdateProductComponentVersionRequestPolicy build(java.util.Map<String, ?> map) throws Exception {
+            UpdateProductComponentVersionRequestPolicy self = new UpdateProductComponentVersionRequestPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateProductComponentVersionRequestPolicy setMultiCluster(UpdateProductComponentVersionRequestPolicyMultiCluster multiCluster) {
+            this.multiCluster = multiCluster;
+            return this;
+        }
+        public UpdateProductComponentVersionRequestPolicyMultiCluster getMultiCluster() {
+            return this.multiCluster;
+        }
+
     }
 
 }

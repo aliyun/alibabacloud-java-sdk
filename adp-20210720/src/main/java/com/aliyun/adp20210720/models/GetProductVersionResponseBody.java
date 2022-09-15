@@ -42,12 +42,100 @@ public class GetProductVersionResponseBody extends TeaModel {
         return this.msg;
     }
 
+    public static class GetProductVersionResponseBodyDataDocumentations extends TeaModel {
+        @NameInMap("description")
+        public String description;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("url")
+        public String url;
+
+        public static GetProductVersionResponseBodyDataDocumentations build(java.util.Map<String, ?> map) throws Exception {
+            GetProductVersionResponseBodyDataDocumentations self = new GetProductVersionResponseBodyDataDocumentations();
+            return TeaModel.build(map, self);
+        }
+
+        public GetProductVersionResponseBodyDataDocumentations setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetProductVersionResponseBodyDataDocumentations setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetProductVersionResponseBodyDataDocumentations setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class GetProductVersionResponseBodyDataExtendedResources extends TeaModel {
+        @NameInMap("description")
+        public String description;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("url")
+        public String url;
+
+        public static GetProductVersionResponseBodyDataExtendedResources build(java.util.Map<String, ?> map) throws Exception {
+            GetProductVersionResponseBodyDataExtendedResources self = new GetProductVersionResponseBodyDataExtendedResources();
+            return TeaModel.build(map, self);
+        }
+
+        public GetProductVersionResponseBodyDataExtendedResources setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetProductVersionResponseBodyDataExtendedResources setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetProductVersionResponseBodyDataExtendedResources setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
     public static class GetProductVersionResponseBodyData extends TeaModel {
         @NameInMap("continuousIntegration")
         public Boolean continuousIntegration;
 
         @NameInMap("description")
         public String description;
+
+        @NameInMap("documentations")
+        public java.util.List<GetProductVersionResponseBodyDataDocumentations> documentations;
+
+        @NameInMap("extendedResources")
+        public java.util.List<GetProductVersionResponseBodyDataExtendedResources> extendedResources;
 
         @NameInMap("foundationVersionUID")
         public String foundationVersionUID;
@@ -92,6 +180,22 @@ public class GetProductVersionResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetProductVersionResponseBodyData setDocumentations(java.util.List<GetProductVersionResponseBodyDataDocumentations> documentations) {
+            this.documentations = documentations;
+            return this;
+        }
+        public java.util.List<GetProductVersionResponseBodyDataDocumentations> getDocumentations() {
+            return this.documentations;
+        }
+
+        public GetProductVersionResponseBodyData setExtendedResources(java.util.List<GetProductVersionResponseBodyDataExtendedResources> extendedResources) {
+            this.extendedResources = extendedResources;
+            return this;
+        }
+        public java.util.List<GetProductVersionResponseBodyDataExtendedResources> getExtendedResources() {
+            return this.extendedResources;
         }
 
         public GetProductVersionResponseBodyData setFoundationVersionUID(String foundationVersionUID) {

@@ -42,6 +42,36 @@ public class GetEnvironmentResponseBody extends TeaModel {
         return this.msg;
     }
 
+    public static class GetEnvironmentResponseBodyDataAdvancedConfigs extends TeaModel {
+        @NameInMap("enableDeploySimulation")
+        public Boolean enableDeploySimulation;
+
+        @NameInMap("enableSiteSurvey")
+        public Boolean enableSiteSurvey;
+
+        public static GetEnvironmentResponseBodyDataAdvancedConfigs build(java.util.Map<String, ?> map) throws Exception {
+            GetEnvironmentResponseBodyDataAdvancedConfigs self = new GetEnvironmentResponseBodyDataAdvancedConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEnvironmentResponseBodyDataAdvancedConfigs setEnableDeploySimulation(Boolean enableDeploySimulation) {
+            this.enableDeploySimulation = enableDeploySimulation;
+            return this;
+        }
+        public Boolean getEnableDeploySimulation() {
+            return this.enableDeploySimulation;
+        }
+
+        public GetEnvironmentResponseBodyDataAdvancedConfigs setEnableSiteSurvey(Boolean enableSiteSurvey) {
+            this.enableSiteSurvey = enableSiteSurvey;
+            return this;
+        }
+        public Boolean getEnableSiteSurvey() {
+            return this.enableSiteSurvey;
+        }
+
+    }
+
     public static class GetEnvironmentResponseBodyDataPlatform extends TeaModel {
         @NameInMap("architecture")
         public String architecture;
@@ -196,8 +226,14 @@ public class GetEnvironmentResponseBody extends TeaModel {
     }
 
     public static class GetEnvironmentResponseBodyData extends TeaModel {
+        @NameInMap("advancedConfigs")
+        public GetEnvironmentResponseBodyDataAdvancedConfigs advancedConfigs;
+
         @NameInMap("clusterId")
         public String clusterId;
+
+        @NameInMap("clusterUID")
+        public String clusterUID;
 
         @NameInMap("createdAt")
         public String createdAt;
@@ -261,12 +297,28 @@ public class GetEnvironmentResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetEnvironmentResponseBodyData setAdvancedConfigs(GetEnvironmentResponseBodyDataAdvancedConfigs advancedConfigs) {
+            this.advancedConfigs = advancedConfigs;
+            return this;
+        }
+        public GetEnvironmentResponseBodyDataAdvancedConfigs getAdvancedConfigs() {
+            return this.advancedConfigs;
+        }
+
         public GetEnvironmentResponseBodyData setClusterId(String clusterId) {
             this.clusterId = clusterId;
             return this;
         }
         public String getClusterId() {
             return this.clusterId;
+        }
+
+        public GetEnvironmentResponseBodyData setClusterUID(String clusterUID) {
+            this.clusterUID = clusterUID;
+            return this;
+        }
+        public String getClusterUID() {
+            return this.clusterUID;
         }
 
         public GetEnvironmentResponseBodyData setCreatedAt(String createdAt) {

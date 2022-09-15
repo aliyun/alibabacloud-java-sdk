@@ -4,6 +4,9 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class AddResourceSnapshotRequest extends TeaModel {
+    @NameInMap("name")
+    public String name;
+
     @NameInMap("clusterUID")
     public String clusterUID;
 
@@ -13,6 +16,14 @@ public class AddResourceSnapshotRequest extends TeaModel {
     public static AddResourceSnapshotRequest build(java.util.Map<String, ?> map) throws Exception {
         AddResourceSnapshotRequest self = new AddResourceSnapshotRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddResourceSnapshotRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public AddResourceSnapshotRequest setClusterUID(String clusterUID) {
