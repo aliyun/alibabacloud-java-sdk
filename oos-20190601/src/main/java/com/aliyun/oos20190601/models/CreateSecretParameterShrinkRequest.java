@@ -3,7 +3,7 @@ package com.aliyun.oos20190601.models;
 
 import com.aliyun.tea.*;
 
-public class CreateSecretParameterRequest extends TeaModel {
+public class CreateSecretParameterShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -26,7 +26,7 @@ public class CreateSecretParameterRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("Tags")
-    public java.util.Map<String, ?> tags;
+    public String tagsShrink;
 
     @NameInMap("Type")
     public String type;
@@ -34,12 +34,12 @@ public class CreateSecretParameterRequest extends TeaModel {
     @NameInMap("Value")
     public String value;
 
-    public static CreateSecretParameterRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateSecretParameterRequest self = new CreateSecretParameterRequest();
+    public static CreateSecretParameterShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateSecretParameterShrinkRequest self = new CreateSecretParameterShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateSecretParameterRequest setClientToken(String clientToken) {
+    public CreateSecretParameterShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -47,7 +47,7 @@ public class CreateSecretParameterRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateSecretParameterRequest setConstraints(String constraints) {
+    public CreateSecretParameterShrinkRequest setConstraints(String constraints) {
         this.constraints = constraints;
         return this;
     }
@@ -55,7 +55,7 @@ public class CreateSecretParameterRequest extends TeaModel {
         return this.constraints;
     }
 
-    public CreateSecretParameterRequest setDescription(String description) {
+    public CreateSecretParameterShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -63,7 +63,7 @@ public class CreateSecretParameterRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateSecretParameterRequest setKeyId(String keyId) {
+    public CreateSecretParameterShrinkRequest setKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
@@ -71,7 +71,7 @@ public class CreateSecretParameterRequest extends TeaModel {
         return this.keyId;
     }
 
-    public CreateSecretParameterRequest setName(String name) {
+    public CreateSecretParameterShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -79,7 +79,7 @@ public class CreateSecretParameterRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateSecretParameterRequest setRegionId(String regionId) {
+    public CreateSecretParameterShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -87,7 +87,7 @@ public class CreateSecretParameterRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateSecretParameterRequest setResourceGroupId(String resourceGroupId) {
+    public CreateSecretParameterShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -95,15 +95,15 @@ public class CreateSecretParameterRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateSecretParameterRequest setTags(java.util.Map<String, ?> tags) {
-        this.tags = tags;
+    public CreateSecretParameterShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.Map<String, ?> getTags() {
-        return this.tags;
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
-    public CreateSecretParameterRequest setType(String type) {
+    public CreateSecretParameterShrinkRequest setType(String type) {
         this.type = type;
         return this;
     }
@@ -111,7 +111,7 @@ public class CreateSecretParameterRequest extends TeaModel {
         return this.type;
     }
 
-    public CreateSecretParameterRequest setValue(String value) {
+    public CreateSecretParameterShrinkRequest setValue(String value) {
         this.value = value;
         return this;
     }

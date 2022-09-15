@@ -16,8 +16,17 @@ public class ListApplicationGroupsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("Product")
+    public String product;
+
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceId")
+    public String resourceId;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     public static ListApplicationGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListApplicationGroupsRequest self = new ListApplicationGroupsRequest();
@@ -56,12 +65,36 @@ public class ListApplicationGroupsRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public ListApplicationGroupsRequest setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
+    }
+
     public ListApplicationGroupsRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListApplicationGroupsRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    public ListApplicationGroupsRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }
