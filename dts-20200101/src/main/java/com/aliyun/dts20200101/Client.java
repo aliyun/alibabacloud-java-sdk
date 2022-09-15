@@ -4332,14 +4332,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDedicatedClusterWithOptions(request, runtime);
     }
 
-    public ModifyDtsJobResponse modifyDtsJobWithOptions(ModifyDtsJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        ModifyDtsJobShrinkRequest request = new ModifyDtsJobShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dbList)) {
-            request.dbListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dbList, "DbList", "json");
-        }
-
+    public ModifyDtsJobResponse modifyDtsJobWithOptions(ModifyDtsJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
@@ -4362,8 +4356,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.dbListShrink)) {
-            body.put("DbList", request.dbListShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.dbList)) {
+            body.put("DbList", request.dbList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.etlOperatorColumnReference)) {

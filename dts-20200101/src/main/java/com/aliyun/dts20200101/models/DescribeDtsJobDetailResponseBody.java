@@ -10,18 +10,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @NameInMap("BeginTimestamp")
     public String beginTimestamp;
 
-    @NameInMap("Binlog")
-    public String binlog;
-
-    @NameInMap("BinlogSite")
-    public String binlogSite;
-
-    @NameInMap("BinlogTime")
-    public String binlogTime;
-
-    @NameInMap("BootTime")
-    public String bootTime;
-
     @NameInMap("Checkpoint")
     public Long checkpoint;
 
@@ -109,9 +97,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @NameInMap("JobType")
     public String jobType;
 
-    @NameInMap("LastUpdateTime")
-    public String lastUpdateTime;
-
     @NameInMap("MigrationMode")
     public DescribeDtsJobDetailResponseBodyMigrationMode migrationMode;
 
@@ -123,6 +108,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
 
     @NameInMap("Reserved")
     public String reserved;
+
+    @NameInMap("RetryState")
+    public DescribeDtsJobDetailResponseBodyRetryState retryState;
 
     @NameInMap("SourceEndpoint")
     public DescribeDtsJobDetailResponseBodySourceEndpoint sourceEndpoint;
@@ -173,38 +161,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
     public String getBeginTimestamp() {
         return this.beginTimestamp;
-    }
-
-    public DescribeDtsJobDetailResponseBody setBinlog(String binlog) {
-        this.binlog = binlog;
-        return this;
-    }
-    public String getBinlog() {
-        return this.binlog;
-    }
-
-    public DescribeDtsJobDetailResponseBody setBinlogSite(String binlogSite) {
-        this.binlogSite = binlogSite;
-        return this;
-    }
-    public String getBinlogSite() {
-        return this.binlogSite;
-    }
-
-    public DescribeDtsJobDetailResponseBody setBinlogTime(String binlogTime) {
-        this.binlogTime = binlogTime;
-        return this;
-    }
-    public String getBinlogTime() {
-        return this.binlogTime;
-    }
-
-    public DescribeDtsJobDetailResponseBody setBootTime(String bootTime) {
-        this.bootTime = bootTime;
-        return this;
-    }
-    public String getBootTime() {
-        return this.bootTime;
     }
 
     public DescribeDtsJobDetailResponseBody setCheckpoint(Long checkpoint) {
@@ -439,14 +395,6 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         return this.jobType;
     }
 
-    public DescribeDtsJobDetailResponseBody setLastUpdateTime(String lastUpdateTime) {
-        this.lastUpdateTime = lastUpdateTime;
-        return this;
-    }
-    public String getLastUpdateTime() {
-        return this.lastUpdateTime;
-    }
-
     public DescribeDtsJobDetailResponseBody setMigrationMode(DescribeDtsJobDetailResponseBodyMigrationMode migrationMode) {
         this.migrationMode = migrationMode;
         return this;
@@ -477,6 +425,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
     public String getReserved() {
         return this.reserved;
+    }
+
+    public DescribeDtsJobDetailResponseBody setRetryState(DescribeDtsJobDetailResponseBodyRetryState retryState) {
+        this.retryState = retryState;
+        return this;
+    }
+    public DescribeDtsJobDetailResponseBodyRetryState getRetryState() {
+        return this.retryState;
     }
 
     public DescribeDtsJobDetailResponseBody setSourceEndpoint(DescribeDtsJobDetailResponseBodySourceEndpoint sourceEndpoint) {
@@ -788,6 +744,102 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
         public Boolean getStructureInitialization() {
             return this.structureInitialization;
+        }
+
+    }
+
+    public static class DescribeDtsJobDetailResponseBodyRetryState extends TeaModel {
+        @NameInMap("ErrMessage")
+        public String errMessage;
+
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("MaxRetryTime")
+        public Integer maxRetryTime;
+
+        @NameInMap("Module")
+        public String module;
+
+        @NameInMap("RetryCount")
+        public Integer retryCount;
+
+        @NameInMap("RetryTarget")
+        public String retryTarget;
+
+        @NameInMap("RetryTime")
+        public Integer retryTime;
+
+        @NameInMap("Retrying")
+        public Boolean retrying;
+
+        public static DescribeDtsJobDetailResponseBodyRetryState build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobDetailResponseBodyRetryState self = new DescribeDtsJobDetailResponseBodyRetryState();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDtsJobDetailResponseBodyRetryState setErrMessage(String errMessage) {
+            this.errMessage = errMessage;
+            return this;
+        }
+        public String getErrMessage() {
+            return this.errMessage;
+        }
+
+        public DescribeDtsJobDetailResponseBodyRetryState setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public DescribeDtsJobDetailResponseBodyRetryState setMaxRetryTime(Integer maxRetryTime) {
+            this.maxRetryTime = maxRetryTime;
+            return this;
+        }
+        public Integer getMaxRetryTime() {
+            return this.maxRetryTime;
+        }
+
+        public DescribeDtsJobDetailResponseBodyRetryState setModule(String module) {
+            this.module = module;
+            return this;
+        }
+        public String getModule() {
+            return this.module;
+        }
+
+        public DescribeDtsJobDetailResponseBodyRetryState setRetryCount(Integer retryCount) {
+            this.retryCount = retryCount;
+            return this;
+        }
+        public Integer getRetryCount() {
+            return this.retryCount;
+        }
+
+        public DescribeDtsJobDetailResponseBodyRetryState setRetryTarget(String retryTarget) {
+            this.retryTarget = retryTarget;
+            return this;
+        }
+        public String getRetryTarget() {
+            return this.retryTarget;
+        }
+
+        public DescribeDtsJobDetailResponseBodyRetryState setRetryTime(Integer retryTime) {
+            this.retryTime = retryTime;
+            return this;
+        }
+        public Integer getRetryTime() {
+            return this.retryTime;
+        }
+
+        public DescribeDtsJobDetailResponseBodyRetryState setRetrying(Boolean retrying) {
+            this.retrying = retrying;
+            return this;
+        }
+        public Boolean getRetrying() {
+            return this.retrying;
         }
 
     }
