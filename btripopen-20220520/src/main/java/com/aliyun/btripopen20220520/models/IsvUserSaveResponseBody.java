@@ -4,17 +4,17 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IsvUserSaveResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("code")
+    public Integer code;
+
+    @NameInMap("message")
+    public String message;
 
     @NameInMap("module")
     public String module;
 
-    @NameInMap("result_code")
-    public Integer resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
@@ -27,12 +27,20 @@ public class IsvUserSaveResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public IsvUserSaveResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public IsvUserSaveResponseBody setCode(Integer code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public IsvUserSaveResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public IsvUserSaveResponseBody setModule(String module) {
@@ -43,20 +51,12 @@ public class IsvUserSaveResponseBody extends TeaModel {
         return this.module;
     }
 
-    public IsvUserSaveResponseBody setResultCode(Integer resultCode) {
-        this.resultCode = resultCode;
+    public IsvUserSaveResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getResultCode() {
-        return this.resultCode;
-    }
-
-    public IsvUserSaveResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public IsvUserSaveResponseBody setSuccess(Boolean success) {
