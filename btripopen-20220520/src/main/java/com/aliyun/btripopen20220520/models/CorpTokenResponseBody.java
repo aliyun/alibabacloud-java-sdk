@@ -4,9 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CorpTokenResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("code")
     public String code;
 
@@ -16,20 +13,15 @@ public class CorpTokenResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     @NameInMap("traceId")
     public String traceId;
 
     public static CorpTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CorpTokenResponseBody self = new CorpTokenResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CorpTokenResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CorpTokenResponseBody setCode(String code) {
@@ -54,6 +46,14 @@ public class CorpTokenResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public CorpTokenResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CorpTokenResponseBody setTraceId(String traceId) {

@@ -8,7 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._signatureAlgorithm = "v2";
         this._endpointRule = "";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("btripopen", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -54,7 +53,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/btrip-open-auth/v1/access-token/action/take"),
             new TeaPair("method", "GET"),
-            new TeaPair("authType", "Anonymous"),
+            new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
