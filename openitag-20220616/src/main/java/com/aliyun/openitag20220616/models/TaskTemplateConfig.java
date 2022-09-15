@@ -14,7 +14,7 @@ public class TaskTemplateConfig extends TeaModel {
     public java.util.List<String> selectQuestions;
 
     @NameInMap("TemplateOptionMap")
-    public java.util.Map<String, String> templateOptionMap;
+    public java.util.Map<String, TaskTemplateOptionConfig> templateOptionMap;
 
     @NameInMap("TemplateRelationId")
     public String templateRelationId;
@@ -48,11 +48,11 @@ public class TaskTemplateConfig extends TeaModel {
         return this.selectQuestions;
     }
 
-    public TaskTemplateConfig setTemplateOptionMap(java.util.Map<String, String> templateOptionMap) {
+    public TaskTemplateConfig setTemplateOptionMap(java.util.Map<String, TaskTemplateOptionConfig> templateOptionMap) {
         this.templateOptionMap = templateOptionMap;
         return this;
     }
-    public java.util.Map<String, String> getTemplateOptionMap() {
+    public java.util.Map<String, TaskTemplateOptionConfig> getTemplateOptionMap() {
         return this.templateOptionMap;
     }
 

@@ -10,6 +10,9 @@ public class ListSubtaskItemsResponseBody extends TeaModel {
     @NameInMap("Details")
     public String details;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Items")
     public java.util.List<SubtaskItemDetail> items;
 
@@ -53,6 +56,14 @@ public class ListSubtaskItemsResponseBody extends TeaModel {
     }
     public String getDetails() {
         return this.details;
+    }
+
+    public ListSubtaskItemsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListSubtaskItemsResponseBody setItems(java.util.List<SubtaskItemDetail> items) {

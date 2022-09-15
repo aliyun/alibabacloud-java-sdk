@@ -10,6 +10,9 @@ public class ExportAnnotationsResponseBody extends TeaModel {
     @NameInMap("Details")
     public String details;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("FlowJob")
     public FlowJobInfo flowJob;
 
@@ -41,6 +44,14 @@ public class ExportAnnotationsResponseBody extends TeaModel {
     }
     public String getDetails() {
         return this.details;
+    }
+
+    public ExportAnnotationsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ExportAnnotationsResponseBody setFlowJob(FlowJobInfo flowJob) {
