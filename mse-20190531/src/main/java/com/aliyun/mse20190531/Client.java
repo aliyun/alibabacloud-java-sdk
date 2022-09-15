@@ -46,6 +46,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GatewayUniqueId", request.gatewayUniqueId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.matchType)) {
+            query.put("MatchType", request.matchType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mseSessionId)) {
             query.put("MseSessionId", request.mseSessionId);
         }
