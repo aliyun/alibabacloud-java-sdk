@@ -3,7 +3,7 @@ package com.aliyun.cas20200407.models;
 
 import com.aliyun.tea.*;
 
-public class CreateCertificateRequestResponse extends TeaModel {
+public class ListCertWarehouseResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CreateCertificateRequestResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateCertificateRequestResponseBody body;
+    public ListCertWarehouseResponseBody body;
 
-    public static CreateCertificateRequestResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateCertificateRequestResponse self = new CreateCertificateRequestResponse();
+    public static ListCertWarehouseResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListCertWarehouseResponse self = new ListCertWarehouseResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateCertificateRequestResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListCertWarehouseResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CreateCertificateRequestResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateCertificateRequestResponse setStatusCode(Integer statusCode) {
+    public ListCertWarehouseResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CreateCertificateRequestResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateCertificateRequestResponse setBody(CreateCertificateRequestResponseBody body) {
+    public ListCertWarehouseResponse setBody(ListCertWarehouseResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateCertificateRequestResponseBody getBody() {
+    public ListCertWarehouseResponseBody getBody() {
         return this.body;
     }
 
