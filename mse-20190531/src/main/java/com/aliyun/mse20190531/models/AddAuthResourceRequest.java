@@ -16,6 +16,9 @@ public class AddAuthResourceRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("MatchType")
+    public String matchType;
+
     @NameInMap("MseSessionId")
     public String mseSessionId;
 
@@ -57,6 +60,14 @@ public class AddAuthResourceRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    public AddAuthResourceRequest setMatchType(String matchType) {
+        this.matchType = matchType;
+        return this;
+    }
+    public String getMatchType() {
+        return this.matchType;
     }
 
     public AddAuthResourceRequest setMseSessionId(String mseSessionId) {
