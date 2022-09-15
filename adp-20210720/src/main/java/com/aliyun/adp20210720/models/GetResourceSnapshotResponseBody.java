@@ -22,6 +22,9 @@ public class GetResourceSnapshotResponseBody extends TeaModel {
     @NameInMap("productInfo")
     public GetResourceSnapshotResponseBodyProductInfo productInfo;
 
+    @NameInMap("specParamConfigs")
+    public java.util.List<GetResourceSnapshotResponseBodySpecParamConfigs> specParamConfigs;
+
     @NameInMap("storageRequest")
     public String storageRequest;
 
@@ -76,6 +79,14 @@ public class GetResourceSnapshotResponseBody extends TeaModel {
     }
     public GetResourceSnapshotResponseBodyProductInfo getProductInfo() {
         return this.productInfo;
+    }
+
+    public GetResourceSnapshotResponseBody setSpecParamConfigs(java.util.List<GetResourceSnapshotResponseBodySpecParamConfigs> specParamConfigs) {
+        this.specParamConfigs = specParamConfigs;
+        return this;
+    }
+    public java.util.List<GetResourceSnapshotResponseBodySpecParamConfigs> getSpecParamConfigs() {
+        return this.specParamConfigs;
     }
 
     public GetResourceSnapshotResponseBody setStorageRequest(String storageRequest) {
@@ -488,6 +499,135 @@ public class GetResourceSnapshotResponseBody extends TeaModel {
         }
         public Integer getWorkloadNum() {
             return this.workloadNum;
+        }
+
+    }
+
+    public static class GetResourceSnapshotResponseBodySpecParamConfigs extends TeaModel {
+        @NameInMap("componentName")
+        public String componentName;
+
+        @NameInMap("componentReleaseName")
+        public String componentReleaseName;
+
+        @NameInMap("componentSource")
+        public String componentSource;
+
+        @NameInMap("componentVersion")
+        public String componentVersion;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("paramType")
+        public String paramType;
+
+        @NameInMap("parentComponentName")
+        public String parentComponentName;
+
+        @NameInMap("parentComponentReleaseName")
+        public String parentComponentReleaseName;
+
+        @NameInMap("parentComponentVersion")
+        public String parentComponentVersion;
+
+        @NameInMap("value")
+        public String value;
+
+        @NameInMap("valueType")
+        public String valueType;
+
+        public static GetResourceSnapshotResponseBodySpecParamConfigs build(java.util.Map<String, ?> map) throws Exception {
+            GetResourceSnapshotResponseBodySpecParamConfigs self = new GetResourceSnapshotResponseBodySpecParamConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResourceSnapshotResponseBodySpecParamConfigs setComponentName(String componentName) {
+            this.componentName = componentName;
+            return this;
+        }
+        public String getComponentName() {
+            return this.componentName;
+        }
+
+        public GetResourceSnapshotResponseBodySpecParamConfigs setComponentReleaseName(String componentReleaseName) {
+            this.componentReleaseName = componentReleaseName;
+            return this;
+        }
+        public String getComponentReleaseName() {
+            return this.componentReleaseName;
+        }
+
+        public GetResourceSnapshotResponseBodySpecParamConfigs setComponentSource(String componentSource) {
+            this.componentSource = componentSource;
+            return this;
+        }
+        public String getComponentSource() {
+            return this.componentSource;
+        }
+
+        public GetResourceSnapshotResponseBodySpecParamConfigs setComponentVersion(String componentVersion) {
+            this.componentVersion = componentVersion;
+            return this;
+        }
+        public String getComponentVersion() {
+            return this.componentVersion;
+        }
+
+        public GetResourceSnapshotResponseBodySpecParamConfigs setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetResourceSnapshotResponseBodySpecParamConfigs setParamType(String paramType) {
+            this.paramType = paramType;
+            return this;
+        }
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        public GetResourceSnapshotResponseBodySpecParamConfigs setParentComponentName(String parentComponentName) {
+            this.parentComponentName = parentComponentName;
+            return this;
+        }
+        public String getParentComponentName() {
+            return this.parentComponentName;
+        }
+
+        public GetResourceSnapshotResponseBodySpecParamConfigs setParentComponentReleaseName(String parentComponentReleaseName) {
+            this.parentComponentReleaseName = parentComponentReleaseName;
+            return this;
+        }
+        public String getParentComponentReleaseName() {
+            return this.parentComponentReleaseName;
+        }
+
+        public GetResourceSnapshotResponseBodySpecParamConfigs setParentComponentVersion(String parentComponentVersion) {
+            this.parentComponentVersion = parentComponentVersion;
+            return this;
+        }
+        public String getParentComponentVersion() {
+            return this.parentComponentVersion;
+        }
+
+        public GetResourceSnapshotResponseBodySpecParamConfigs setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public GetResourceSnapshotResponseBodySpecParamConfigs setValueType(String valueType) {
+            this.valueType = valueType;
+            return this;
+        }
+        public String getValueType() {
+            return this.valueType;
         }
 
     }

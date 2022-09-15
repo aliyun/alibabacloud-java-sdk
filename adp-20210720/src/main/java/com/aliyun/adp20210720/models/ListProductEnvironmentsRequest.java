@@ -10,8 +10,14 @@ public class ListProductEnvironmentsRequest extends TeaModel {
     @NameInMap("envType")
     public String envType;
 
+    @NameInMap("options")
+    public ListProductEnvironmentsRequestOptions options;
+
     @NameInMap("platforms")
     public java.util.List<ListProductEnvironmentsRequestPlatforms> platforms;
+
+    @NameInMap("productVersionSpecUID")
+    public String productVersionSpecUID;
 
     @NameInMap("productVersionUID")
     public String productVersionUID;
@@ -37,6 +43,14 @@ public class ListProductEnvironmentsRequest extends TeaModel {
         return this.envType;
     }
 
+    public ListProductEnvironmentsRequest setOptions(ListProductEnvironmentsRequestOptions options) {
+        this.options = options;
+        return this;
+    }
+    public ListProductEnvironmentsRequestOptions getOptions() {
+        return this.options;
+    }
+
     public ListProductEnvironmentsRequest setPlatforms(java.util.List<ListProductEnvironmentsRequestPlatforms> platforms) {
         this.platforms = platforms;
         return this;
@@ -45,12 +59,50 @@ public class ListProductEnvironmentsRequest extends TeaModel {
         return this.platforms;
     }
 
+    public ListProductEnvironmentsRequest setProductVersionSpecUID(String productVersionSpecUID) {
+        this.productVersionSpecUID = productVersionSpecUID;
+        return this;
+    }
+    public String getProductVersionSpecUID() {
+        return this.productVersionSpecUID;
+    }
+
     public ListProductEnvironmentsRequest setProductVersionUID(String productVersionUID) {
         this.productVersionUID = productVersionUID;
         return this;
     }
     public String getProductVersionUID() {
         return this.productVersionUID;
+    }
+
+    public static class ListProductEnvironmentsRequestOptions extends TeaModel {
+        @NameInMap("filterWithSpecUID")
+        public Boolean filterWithSpecUID;
+
+        @NameInMap("specUID")
+        public String specUID;
+
+        public static ListProductEnvironmentsRequestOptions build(java.util.Map<String, ?> map) throws Exception {
+            ListProductEnvironmentsRequestOptions self = new ListProductEnvironmentsRequestOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public ListProductEnvironmentsRequestOptions setFilterWithSpecUID(Boolean filterWithSpecUID) {
+            this.filterWithSpecUID = filterWithSpecUID;
+            return this;
+        }
+        public Boolean getFilterWithSpecUID() {
+            return this.filterWithSpecUID;
+        }
+
+        public ListProductEnvironmentsRequestOptions setSpecUID(String specUID) {
+            this.specUID = specUID;
+            return this;
+        }
+        public String getSpecUID() {
+            return this.specUID;
+        }
+
     }
 
     public static class ListProductEnvironmentsRequestPlatforms extends TeaModel {

@@ -1,3 +1,6 @@
+2022-09-15 Version: 1.15.0
+- Public new version.
+
 2022-08-18 Version: 1.14.0
 - Public new version.
 

@@ -16,6 +16,9 @@ public class ListProductVersionConfigsRequest extends TeaModel {
     @NameInMap("parameter")
     public String parameter;
 
+    @NameInMap("scope")
+    public String scope;
+
     public static ListProductVersionConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProductVersionConfigsRequest self = new ListProductVersionConfigsRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ListProductVersionConfigsRequest extends TeaModel {
     }
     public String getParameter() {
         return this.parameter;
+    }
+
+    public ListProductVersionConfigsRequest setScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    public String getScope() {
+        return this.scope;
     }
 
 }
