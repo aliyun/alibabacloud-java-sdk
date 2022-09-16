@@ -208,6 +208,9 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         @NameInMap("DesktopName")
         public String desktopName;
 
+        @NameInMap("DisplayName")
+        public String displayName;
+
         @NameInMap("EndUserEmail")
         public String endUserEmail;
 
@@ -219,6 +222,9 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
 
         @NameInMap("EndUserPhone")
         public String endUserPhone;
+
+        @NameInMap("EndUserRemark")
+        public String endUserRemark;
 
         @NameInMap("EndUserType")
         public String endUserType;
@@ -261,6 +267,14 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             return this.desktopName;
         }
 
+        public DescribeUsersInGroupResponseBodyEndUsers setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
         public DescribeUsersInGroupResponseBodyEndUsers setEndUserEmail(String endUserEmail) {
             this.endUserEmail = endUserEmail;
             return this;
@@ -291,6 +305,14 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
         public String getEndUserPhone() {
             return this.endUserPhone;
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsers setEndUserRemark(String endUserRemark) {
+            this.endUserRemark = endUserRemark;
+            return this;
+        }
+        public String getEndUserRemark() {
+            return this.endUserRemark;
         }
 
         public DescribeUsersInGroupResponseBodyEndUsers setEndUserType(String endUserType) {

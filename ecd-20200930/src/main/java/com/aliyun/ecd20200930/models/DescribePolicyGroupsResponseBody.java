@@ -354,6 +354,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("RecordingStartTime")
         public String recordingStartTime;
 
+        @NameInMap("RemoteCoordinate")
+        public String remoteCoordinate;
+
         @NameInMap("UsbRedirect")
         public String usbRedirect;
 
@@ -594,6 +597,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getRecordingStartTime() {
             return this.recordingStartTime;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRemoteCoordinate(String remoteCoordinate) {
+            this.remoteCoordinate = remoteCoordinate;
+            return this;
+        }
+        public String getRemoteCoordinate() {
+            return this.remoteCoordinate;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setUsbRedirect(String usbRedirect) {
