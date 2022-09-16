@@ -76,6 +76,9 @@ public class CreatePolicyGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RemoteCoordinate")
+    public String remoteCoordinate;
+
     @NameInMap("UsbRedirect")
     public String usbRedirect;
 
@@ -289,6 +292,14 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreatePolicyGroupRequest setRemoteCoordinate(String remoteCoordinate) {
+        this.remoteCoordinate = remoteCoordinate;
+        return this;
+    }
+    public String getRemoteCoordinate() {
+        return this.remoteCoordinate;
     }
 
     public CreatePolicyGroupRequest setUsbRedirect(String usbRedirect) {

@@ -79,6 +79,9 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RemoteCoordinate")
+    public String remoteCoordinate;
+
     @NameInMap("RevokeAccessPolicyRule")
     public java.util.List<ModifyPolicyGroupRequestRevokeAccessPolicyRule> revokeAccessPolicyRule;
 
@@ -306,6 +309,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyPolicyGroupRequest setRemoteCoordinate(String remoteCoordinate) {
+        this.remoteCoordinate = remoteCoordinate;
+        return this;
+    }
+    public String getRemoteCoordinate() {
+        return this.remoteCoordinate;
     }
 
     public ModifyPolicyGroupRequest setRevokeAccessPolicyRule(java.util.List<ModifyPolicyGroupRequestRevokeAccessPolicyRule> revokeAccessPolicyRule) {

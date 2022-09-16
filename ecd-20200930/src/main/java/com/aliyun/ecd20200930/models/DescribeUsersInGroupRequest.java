@@ -22,6 +22,9 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("OrgId")
+    public String orgId;
+
     @NameInMap("QueryUserDetail")
     public Boolean queryUserDetail;
 
@@ -79,6 +82,14 @@ public class DescribeUsersInGroupRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeUsersInGroupRequest setOrgId(String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+    public String getOrgId() {
+        return this.orgId;
     }
 
     public DescribeUsersInGroupRequest setQueryUserDetail(Boolean queryUserDetail) {

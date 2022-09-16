@@ -104,6 +104,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addUserToDesktopGroupWithOptions(request, runtime);
     }
 
+    public ApplyCoordinatePrivilegeResponse applyCoordinatePrivilegeWithOptions(ApplyCoordinatePrivilegeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.coId)) {
+            query.put("CoId", request.coId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userType)) {
+            query.put("UserType", request.userType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ApplyCoordinatePrivilege"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyCoordinatePrivilegeResponse());
+    }
+
+    public ApplyCoordinatePrivilegeResponse applyCoordinatePrivilege(ApplyCoordinatePrivilegeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.applyCoordinatePrivilegeWithOptions(request, runtime);
+    }
+
     public ApplyCoordinationForMonitoringResponse applyCoordinationForMonitoringWithOptions(ApplyCoordinationForMonitoringRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1470,6 +1515,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remoteCoordinate)) {
+            query.put("RemoteCoordinate", request.remoteCoordinate);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.usbRedirect)) {
@@ -3990,6 +4039,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
+            query.put("OrgId", request.orgId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.queryUserDetail)) {
             query.put("QueryUserDetail", request.queryUserDetail);
         }
@@ -6236,6 +6289,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.remoteCoordinate)) {
+            query.put("RemoteCoordinate", request.remoteCoordinate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.revokeAccessPolicyRule)) {
             query.put("RevokeAccessPolicyRule", request.revokeAccessPolicyRule);
         }
@@ -6747,6 +6804,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResetSnapshotResponse resetSnapshot(ResetSnapshotRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetSnapshotWithOptions(request, runtime);
+    }
+
+    public RevokeCoordinatePrivilegeResponse revokeCoordinatePrivilegeWithOptions(RevokeCoordinatePrivilegeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.coId)) {
+            query.put("CoId", request.coId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userType)) {
+            query.put("UserType", request.userType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeCoordinatePrivilege"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeCoordinatePrivilegeResponse());
+    }
+
+    public RevokeCoordinatePrivilegeResponse revokeCoordinatePrivilege(RevokeCoordinatePrivilegeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.revokeCoordinatePrivilegeWithOptions(request, runtime);
     }
 
     public RollbackSuspEventQuaraFileResponse rollbackSuspEventQuaraFileWithOptions(RollbackSuspEventQuaraFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

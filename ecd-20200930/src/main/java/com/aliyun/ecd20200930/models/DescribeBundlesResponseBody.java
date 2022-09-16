@@ -175,6 +175,9 @@ public class DescribeBundlesResponseBody extends TeaModel {
         @NameInMap("OsType")
         public String osType;
 
+        @NameInMap("Platform")
+        public String platform;
+
         @NameInMap("ProtocolType")
         public String protocolType;
 
@@ -297,6 +300,14 @@ public class DescribeBundlesResponseBody extends TeaModel {
         }
         public String getOsType() {
             return this.osType;
+        }
+
+        public DescribeBundlesResponseBodyBundles setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
         }
 
         public DescribeBundlesResponseBodyBundles setProtocolType(String protocolType) {
