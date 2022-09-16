@@ -10,6 +10,9 @@ public class DescribeCdnDomainByCertificateRequest extends TeaModel {
     @NameInMap("SSLPub")
     public String SSLPub;
 
+    @NameInMap("SSLStatus")
+    public Boolean SSLStatus;
+
     public static DescribeCdnDomainByCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnDomainByCertificateRequest self = new DescribeCdnDomainByCertificateRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DescribeCdnDomainByCertificateRequest extends TeaModel {
     }
     public String getSSLPub() {
         return this.SSLPub;
+    }
+
+    public DescribeCdnDomainByCertificateRequest setSSLStatus(Boolean SSLStatus) {
+        this.SSLStatus = SSLStatus;
+        return this;
+    }
+    public Boolean getSSLStatus() {
+        return this.SSLStatus;
     }
 
 }

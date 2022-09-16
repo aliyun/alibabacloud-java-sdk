@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnReportResponseBody extends TeaModel {
     @NameInMap("Content")
-    public String content;
+    public java.util.Map<String, ?> content;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -15,11 +15,11 @@ public class DescribeCdnReportResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeCdnReportResponseBody setContent(String content) {
+    public DescribeCdnReportResponseBody setContent(java.util.Map<String, ?> content) {
         this.content = content;
         return this;
     }
-    public String getContent() {
+    public java.util.Map<String, ?> getContent() {
         return this.content;
     }
 
