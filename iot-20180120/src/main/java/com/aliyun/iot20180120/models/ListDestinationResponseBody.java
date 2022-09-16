@@ -113,6 +113,9 @@ public class ListDestinationResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("Type")
         public String type;
 
@@ -162,6 +165,14 @@ public class ListDestinationResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListDestinationResponseBodyDestinationsDestinations setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public ListDestinationResponseBodyDestinationsDestinations setType(String type) {
