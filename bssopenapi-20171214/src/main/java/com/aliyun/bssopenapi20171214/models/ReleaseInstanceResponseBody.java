@@ -4,22 +4,18 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstanceResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ReleaseInstanceResponseBodyData data;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
@@ -69,11 +65,9 @@ public class ReleaseInstanceResponseBody extends TeaModel {
     }
 
     public static class ReleaseInstanceResponseBodyData extends TeaModel {
-        // hostId
         @NameInMap("HostId")
         public String hostId;
 
-        // releaseResult
         @NameInMap("ReleaseResult")
         public Boolean releaseResult;
 

@@ -4,31 +4,24 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstanceRequest extends TeaModel {
-    // instanceIds
     @NameInMap("InstanceIds")
     public String instanceIds;
 
-    // ownerId
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // productCode
     @NameInMap("ProductCode")
     public String productCode;
 
-    // productType
     @NameInMap("ProductType")
     public String productType;
 
-    // region
     @NameInMap("Region")
     public String region;
 
-    // renewStatus
     @NameInMap("RenewStatus")
     public String renewStatus;
 
-    // subscriptionType
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 

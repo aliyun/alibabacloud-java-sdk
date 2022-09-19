@@ -4,23 +4,18 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CreateSavingsPlansInstanceResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // data
     @NameInMap("Data")
     public CreateSavingsPlansInstanceResponseBodyData data;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,7 +65,6 @@ public class CreateSavingsPlansInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateSavingsPlansInstanceResponseBodyData extends TeaModel {
-        // orderId
         @NameInMap("OrderId")
         public Long orderId;
 

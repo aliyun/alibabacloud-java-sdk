@@ -4,23 +4,18 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class RefundInstanceRequest extends TeaModel {
-    // clientToken
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // immediatelyRelease
     @NameInMap("ImmediatelyRelease")
     public String immediatelyRelease;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // productCode
     @NameInMap("ProductCode")
     public String productCode;
 
-    // productType
     @NameInMap("ProductType")
     public String productType;
 

@@ -4,43 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CreateSavingsPlansInstanceRequest extends TeaModel {
-    // commodityCode
     @NameInMap("CommodityCode")
     public String commodityCode;
 
-    // duration
     @NameInMap("Duration")
     public String duration;
 
-    // effectiveDate
     @NameInMap("EffectiveDate")
     public String effectiveDate;
 
-    // payMode
     @NameInMap("PayMode")
     public String payMode;
 
-    // poolValue
     @NameInMap("PoolValue")
     public String poolValue;
 
-    // pricingCycle
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
-    // region
     @NameInMap("Region")
     public String region;
 
-    // specType
     @NameInMap("SpecType")
     public String specType;
 
-    // specification
     @NameInMap("Specification")
     public String specification;
 
-    // type
     @NameInMap("Type")
     public String type;
 

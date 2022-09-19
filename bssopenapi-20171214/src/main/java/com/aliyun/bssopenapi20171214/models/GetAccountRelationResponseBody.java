@@ -4,23 +4,18 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetAccountRelationResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // data
     @NameInMap("Data")
     public GetAccountRelationResponseBodyData data;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
@@ -79,11 +74,9 @@ public class GetAccountRelationResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        // id
         @NameInMap("Id")
         public Long id;
 
-        // parentUserId
         @NameInMap("ParentUserId")
         public Long parentUserId;
 
@@ -93,7 +86,6 @@ public class GetAccountRelationResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        // type
         @NameInMap("Type")
         public String type;
 
