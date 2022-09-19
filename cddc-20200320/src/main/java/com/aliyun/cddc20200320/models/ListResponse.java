@@ -3,7 +3,7 @@ package com.aliyun.cddc20200320.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyDedicatedHostAccountResponse extends TeaModel {
+public class ListResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ModifyDedicatedHostAccountResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ModifyDedicatedHostAccountResponseBody body;
+    public ListResponseBody body;
 
-    public static ModifyDedicatedHostAccountResponse build(java.util.Map<String, ?> map) throws Exception {
-        ModifyDedicatedHostAccountResponse self = new ModifyDedicatedHostAccountResponse();
+    public static ListResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListResponse self = new ListResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDedicatedHostAccountResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ModifyDedicatedHostAccountResponse extends TeaModel {
         return this.headers;
     }
 
-    public ModifyDedicatedHostAccountResponse setStatusCode(Integer statusCode) {
+    public ListResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ModifyDedicatedHostAccountResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ModifyDedicatedHostAccountResponse setBody(ModifyDedicatedHostAccountResponseBody body) {
+    public ListResponse setBody(ListResponseBody body) {
         this.body = body;
         return this;
     }
-    public ModifyDedicatedHostAccountResponseBody getBody() {
+    public ListResponseBody getBody() {
         return this.body;
     }
 

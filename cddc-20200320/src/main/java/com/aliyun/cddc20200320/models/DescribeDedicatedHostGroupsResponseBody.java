@@ -57,6 +57,9 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         @NameInMap("BastionInstanceId")
         public String bastionInstanceId;
 
+        @NameInMap("Category")
+        public String category;
+
         @NameInMap("CpuAllocateRation")
         public Float cpuAllocateRation;
 
@@ -154,6 +157,14 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         }
         public String getBastionInstanceId() {
             return this.bastionInstanceId;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setCpuAllocateRation(Float cpuAllocateRation) {

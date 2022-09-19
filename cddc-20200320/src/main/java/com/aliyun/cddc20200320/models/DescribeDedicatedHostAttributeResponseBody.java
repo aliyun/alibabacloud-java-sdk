@@ -34,6 +34,9 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
     @NameInMap("DiskAllocationRatio")
     public String diskAllocationRatio;
 
+    @NameInMap("DistributionTag")
+    public String distributionTag;
+
     @NameInMap("EcsClassCode")
     public String ecsClassCode;
 
@@ -192,6 +195,14 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
     }
     public String getDiskAllocationRatio() {
         return this.diskAllocationRatio;
+    }
+
+    public DescribeDedicatedHostAttributeResponseBody setDistributionTag(String distributionTag) {
+        this.distributionTag = distributionTag;
+        return this;
+    }
+    public String getDistributionTag() {
+        return this.distributionTag;
     }
 
     public DescribeDedicatedHostAttributeResponseBody setEcsClassCode(String ecsClassCode) {

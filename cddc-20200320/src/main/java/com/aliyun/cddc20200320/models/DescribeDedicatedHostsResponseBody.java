@@ -90,6 +90,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
+        @NameInMap("AccountType")
+        public String accountType;
+
         @NameInMap("AllocationStatus")
         public String allocationStatus;
 
@@ -98,6 +101,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
         @NameInMap("CPUAllocationRatio")
         public String CPUAllocationRatio;
+
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("ChargeType")
+        public String chargeType;
 
         @NameInMap("CpuUsed")
         public String cpuUsed;
@@ -111,17 +120,23 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
-        @NameInMap("DeployType")
-        public String deployType;
-
         @NameInMap("DiskAllocationRatio")
         public String diskAllocationRatio;
+
+        @NameInMap("DiskInfo")
+        public String diskInfo;
 
         @NameInMap("DistributionSymbol")
         public String distributionSymbol;
 
+        @NameInMap("DistributionTag")
+        public String distributionTag;
+
         @NameInMap("EcsClassCode")
         public String ecsClassCode;
+
+        @NameInMap("EcsId")
+        public String ecsId;
 
         @NameInMap("EndTime")
         public String endTime;
@@ -165,6 +180,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @NameInMap("MemoryUsed")
         public String memoryUsed;
 
+        @NameInMap("MssqlSupportVersion")
+        public String mssqlSupportVersion;
+
         @NameInMap("OpenPermission")
         public String openPermission;
 
@@ -193,6 +211,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.accountName;
         }
 
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setAccountType(String accountType) {
+            this.accountType = accountType;
+            return this;
+        }
+        public String getAccountType() {
+            return this.accountType;
+        }
+
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setAllocationStatus(String allocationStatus) {
             this.allocationStatus = allocationStatus;
             return this;
@@ -215,6 +241,22 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
         public String getCPUAllocationRatio() {
             return this.CPUAllocationRatio;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setCpuUsed(String cpuUsed) {
@@ -249,20 +291,20 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.dedicatedHostId;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setDeployType(String deployType) {
-            this.deployType = deployType;
-            return this;
-        }
-        public String getDeployType() {
-            return this.deployType;
-        }
-
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setDiskAllocationRatio(String diskAllocationRatio) {
             this.diskAllocationRatio = diskAllocationRatio;
             return this;
         }
         public String getDiskAllocationRatio() {
             return this.diskAllocationRatio;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setDiskInfo(String diskInfo) {
+            this.diskInfo = diskInfo;
+            return this;
+        }
+        public String getDiskInfo() {
+            return this.diskInfo;
         }
 
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setDistributionSymbol(String distributionSymbol) {
@@ -273,12 +315,28 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.distributionSymbol;
         }
 
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setDistributionTag(String distributionTag) {
+            this.distributionTag = distributionTag;
+            return this;
+        }
+        public String getDistributionTag() {
+            return this.distributionTag;
+        }
+
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setEcsClassCode(String ecsClassCode) {
             this.ecsClassCode = ecsClassCode;
             return this;
         }
         public String getEcsClassCode() {
             return this.ecsClassCode;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setEcsId(String ecsId) {
+            this.ecsId = ecsId;
+            return this;
+        }
+        public String getEcsId() {
+            return this.ecsId;
         }
 
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setEndTime(String endTime) {
@@ -391,6 +449,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
         public String getMemoryUsed() {
             return this.memoryUsed;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setMssqlSupportVersion(String mssqlSupportVersion) {
+            this.mssqlSupportVersion = mssqlSupportVersion;
+            return this;
+        }
+        public String getMssqlSupportVersion() {
+            return this.mssqlSupportVersion;
         }
 
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts setOpenPermission(String openPermission) {
