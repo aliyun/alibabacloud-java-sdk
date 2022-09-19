@@ -94,6 +94,9 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         @NameInMap("change_service_fee")
         public Double changeServiceFee;
 
+        @NameInMap("change_train_no")
+        public String changeTrainNo;
+
         @NameInMap("change_train_type_name")
         public String changeTrainTypeName;
 
@@ -105,6 +108,9 @@ public class TrainOrderQueryResponseBody extends TeaModel {
 
         @NameInMap("end_time")
         public String endTime;
+
+        @NameInMap("from_station_name")
+        public String fromStationName;
 
         @NameInMap("gmt_create")
         public String gmtCreate;
@@ -123,6 +129,9 @@ public class TrainOrderQueryResponseBody extends TeaModel {
 
         @NameInMap("ticket_no")
         public String ticketNo;
+
+        @NameInMap("to_station_name")
+        public String toStationName;
 
         public static TrainOrderQueryResponseBodyModuleChangeTicketInfoList build(java.util.Map<String, ?> map) throws Exception {
             TrainOrderQueryResponseBodyModuleChangeTicketInfoList self = new TrainOrderQueryResponseBodyModuleChangeTicketInfoList();
@@ -177,6 +186,14 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             return this.changeServiceFee;
         }
 
+        public TrainOrderQueryResponseBodyModuleChangeTicketInfoList setChangeTrainNo(String changeTrainNo) {
+            this.changeTrainNo = changeTrainNo;
+            return this;
+        }
+        public String getChangeTrainNo() {
+            return this.changeTrainNo;
+        }
+
         public TrainOrderQueryResponseBodyModuleChangeTicketInfoList setChangeTrainTypeName(String changeTrainTypeName) {
             this.changeTrainTypeName = changeTrainTypeName;
             return this;
@@ -207,6 +224,14 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public TrainOrderQueryResponseBodyModuleChangeTicketInfoList setFromStationName(String fromStationName) {
+            this.fromStationName = fromStationName;
+            return this;
+        }
+        public String getFromStationName() {
+            return this.fromStationName;
         }
 
         public TrainOrderQueryResponseBodyModuleChangeTicketInfoList setGmtCreate(String gmtCreate) {
@@ -255,6 +280,14 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         }
         public String getTicketNo() {
             return this.ticketNo;
+        }
+
+        public TrainOrderQueryResponseBodyModuleChangeTicketInfoList setToStationName(String toStationName) {
+            this.toStationName = toStationName;
+            return this;
+        }
+        public String getToStationName() {
+            return this.toStationName;
         }
 
     }
