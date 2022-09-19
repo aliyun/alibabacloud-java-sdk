@@ -16,8 +16,11 @@ public class CreateDedicatedHostRequest extends TeaModel {
     @NameInMap("HostClass")
     public String hostClass;
 
-    @NameInMap("HostName")
-    public String hostName;
+    @NameInMap("HostStorage")
+    public String hostStorage;
+
+    @NameInMap("HostStorageType")
+    public String hostStorageType;
 
     @NameInMap("ImageCategory")
     public String imageCategory;
@@ -89,12 +92,20 @@ public class CreateDedicatedHostRequest extends TeaModel {
         return this.hostClass;
     }
 
-    public CreateDedicatedHostRequest setHostName(String hostName) {
-        this.hostName = hostName;
+    public CreateDedicatedHostRequest setHostStorage(String hostStorage) {
+        this.hostStorage = hostStorage;
         return this;
     }
-    public String getHostName() {
-        return this.hostName;
+    public String getHostStorage() {
+        return this.hostStorage;
+    }
+
+    public CreateDedicatedHostRequest setHostStorageType(String hostStorageType) {
+        this.hostStorageType = hostStorageType;
+        return this;
+    }
+    public String getHostStorageType() {
+        return this.hostStorageType;
     }
 
     public CreateDedicatedHostRequest setImageCategory(String imageCategory) {
