@@ -4,23 +4,15 @@ package com.aliyun.goodstech20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeFurnitureAttributeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeFurnitureAttributeResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeFurnitureAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeFurnitureAttributeResponseBody self = new RecognizeFurnitureAttributeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeFurnitureAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeFurnitureAttributeResponseBody setData(RecognizeFurnitureAttributeResponseBodyData data) {
@@ -31,12 +23,20 @@ public class RecognizeFurnitureAttributeResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class RecognizeFurnitureAttributeResponseBodyData extends TeaModel {
-        @NameInMap("PredStyle")
-        public String predStyle;
+    public RecognizeFurnitureAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class RecognizeFurnitureAttributeResponseBodyData extends TeaModel {
         @NameInMap("PredProbability")
         public Float predProbability;
+
+        @NameInMap("PredStyle")
+        public String predStyle;
 
         @NameInMap("PredStyleId")
         public String predStyleId;
@@ -46,20 +46,20 @@ public class RecognizeFurnitureAttributeResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public RecognizeFurnitureAttributeResponseBodyData setPredStyle(String predStyle) {
-            this.predStyle = predStyle;
-            return this;
-        }
-        public String getPredStyle() {
-            return this.predStyle;
-        }
-
         public RecognizeFurnitureAttributeResponseBodyData setPredProbability(Float predProbability) {
             this.predProbability = predProbability;
             return this;
         }
         public Float getPredProbability() {
             return this.predProbability;
+        }
+
+        public RecognizeFurnitureAttributeResponseBodyData setPredStyle(String predStyle) {
+            this.predStyle = predStyle;
+            return this;
+        }
+        public String getPredStyle() {
+            return this.predStyle;
         }
 
         public RecognizeFurnitureAttributeResponseBodyData setPredStyleId(String predStyleId) {
