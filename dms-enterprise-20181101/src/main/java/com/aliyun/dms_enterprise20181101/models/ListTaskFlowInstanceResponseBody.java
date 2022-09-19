@@ -85,6 +85,9 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         @NameInMap("DagName")
         public String dagName;
 
+        @NameInMap("DagVersion")
+        public String dagVersion;
+
         @NameInMap("EndTime")
         public String endTime;
 
@@ -133,6 +136,14 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
         }
         public String getDagName() {
             return this.dagName;
+        }
+
+        public ListTaskFlowInstanceResponseBodyDAGInstanceListDAGInstance setDagVersion(String dagVersion) {
+            this.dagVersion = dagVersion;
+            return this;
+        }
+        public String getDagVersion() {
+            return this.dagVersion;
         }
 
         public ListTaskFlowInstanceResponseBodyDAGInstanceListDAGInstance setEndTime(String endTime) {
