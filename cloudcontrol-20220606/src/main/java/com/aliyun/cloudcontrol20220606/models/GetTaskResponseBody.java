@@ -71,6 +71,9 @@ public class GetTaskResponseBody extends TeaModel {
         @NameInMap("product")
         public String product;
 
+        @NameInMap("regionId")
+        public String regionId;
+
         @NameInMap("resourceId")
         public String resourceId;
 
@@ -113,6 +116,14 @@ public class GetTaskResponseBody extends TeaModel {
         }
         public String getProduct() {
             return this.product;
+        }
+
+        public GetTaskResponseBodyTask setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public GetTaskResponseBodyTask setResourceId(String resourceId) {

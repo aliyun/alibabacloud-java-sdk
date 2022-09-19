@@ -7,8 +7,11 @@ public class CreateResourceRequest extends TeaModel {
     @NameInMap("body")
     public String body;
 
-    @NameInMap("resourceTypeVersion")
-    public String resourceTypeVersion;
+    @NameInMap("clientToken")
+    public String clientToken;
+
+    @NameInMap("regionId")
+    public String regionId;
 
     public static CreateResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateResourceRequest self = new CreateResourceRequest();
@@ -23,12 +26,20 @@ public class CreateResourceRequest extends TeaModel {
         return this.body;
     }
 
-    public CreateResourceRequest setResourceTypeVersion(String resourceTypeVersion) {
-        this.resourceTypeVersion = resourceTypeVersion;
+    public CreateResourceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getResourceTypeVersion() {
-        return this.resourceTypeVersion;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateResourceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }
