@@ -43,6 +43,15 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse extends TeaModel {
+        @NameInMap("ClusterId")
+        public String clusterId;
+
+        @NameInMap("ClusterName")
+        public String clusterName;
+
+        @NameInMap("ContainerId")
+        public String containerId;
+
         @NameInMap("Digest")
         public String digest;
 
@@ -57,6 +66,9 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
 
         @NameInMap("HighLight")
         public String highLight;
+
+        @NameInMap("Image")
+        public String image;
 
         @NameInMap("ImageUuid")
         public String imageUuid;
@@ -76,8 +88,14 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         @NameInMap("MaliciousMd5")
         public String maliciousMd5;
 
+        @NameInMap("MaliciousSource")
+        public String maliciousSource;
+
         @NameInMap("Namespace")
         public String namespace;
+
+        @NameInMap("Pod")
+        public String pod;
 
         @NameInMap("RepoId")
         public String repoId;
@@ -100,6 +118,30 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         public static DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse build(java.util.Map<String, ?> map) throws Exception {
             DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse self = new DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setClusterName(String clusterName) {
+            this.clusterName = clusterName;
+            return this;
+        }
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
+        public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setContainerId(String containerId) {
+            this.containerId = containerId;
+            return this;
+        }
+        public String getContainerId() {
+            return this.containerId;
         }
 
         public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setDigest(String digest) {
@@ -140,6 +182,14 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         }
         public String getHighLight() {
             return this.highLight;
+        }
+
+        public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setImage(String image) {
+            this.image = image;
+            return this;
+        }
+        public String getImage() {
+            return this.image;
         }
 
         public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setImageUuid(String imageUuid) {
@@ -190,12 +240,28 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             return this.maliciousMd5;
         }
 
+        public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setMaliciousSource(String maliciousSource) {
+            this.maliciousSource = maliciousSource;
+            return this;
+        }
+        public String getMaliciousSource() {
+            return this.maliciousSource;
+        }
+
         public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setNamespace(String namespace) {
             this.namespace = namespace;
             return this;
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setPod(String pod) {
+            this.pod = pod;
+            return this;
+        }
+        public String getPod() {
+            return this.pod;
         }
 
         public DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse setRepoId(String repoId) {

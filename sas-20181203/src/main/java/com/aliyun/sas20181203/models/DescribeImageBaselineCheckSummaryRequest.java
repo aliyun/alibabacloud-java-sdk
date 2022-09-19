@@ -25,6 +25,9 @@ public class DescribeImageBaselineCheckSummaryRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public String riskLevel;
 
+    @NameInMap("ScanRange")
+    public java.util.List<String> scanRange;
+
     public static DescribeImageBaselineCheckSummaryRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageBaselineCheckSummaryRequest self = new DescribeImageBaselineCheckSummaryRequest();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class DescribeImageBaselineCheckSummaryRequest extends TeaModel {
     }
     public String getRiskLevel() {
         return this.riskLevel;
+    }
+
+    public DescribeImageBaselineCheckSummaryRequest setScanRange(java.util.List<String> scanRange) {
+        this.scanRange = scanRange;
+        return this;
+    }
+    public java.util.List<String> getScanRange() {
+        return this.scanRange;
     }
 
 }

@@ -211,11 +211,23 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         @NameInMap("CanUpdate")
         public Boolean canUpdate;
 
+        @NameInMap("ClusterId")
+        public String clusterId;
+
+        @NameInMap("ClusterName")
+        public String clusterName;
+
+        @NameInMap("ContainerId")
+        public String containerId;
+
         @NameInMap("ExtendContentJson")
         public DescribeImageVulListResponseBodyVulRecordsExtendContentJson extendContentJson;
 
         @NameInMap("FirstTs")
         public Long firstTs;
+
+        @NameInMap("Image")
+        public String image;
 
         @NameInMap("ImageDigest")
         public String imageDigest;
@@ -232,8 +244,14 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Namespace")
+        public String namespace;
+
         @NameInMap("Necessity")
         public String necessity;
+
+        @NameInMap("Pod")
+        public String pod;
 
         @NameInMap("PrimaryId")
         public Long primaryId;
@@ -288,6 +306,30 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             return this.canUpdate;
         }
 
+        public DescribeImageVulListResponseBodyVulRecords setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setClusterName(String clusterName) {
+            this.clusterName = clusterName;
+            return this;
+        }
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setContainerId(String containerId) {
+            this.containerId = containerId;
+            return this;
+        }
+        public String getContainerId() {
+            return this.containerId;
+        }
+
         public DescribeImageVulListResponseBodyVulRecords setExtendContentJson(DescribeImageVulListResponseBodyVulRecordsExtendContentJson extendContentJson) {
             this.extendContentJson = extendContentJson;
             return this;
@@ -302,6 +344,14 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
         public Long getFirstTs() {
             return this.firstTs;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setImage(String image) {
+            this.image = image;
+            return this;
+        }
+        public String getImage() {
+            return this.image;
         }
 
         public DescribeImageVulListResponseBodyVulRecords setImageDigest(String imageDigest) {
@@ -344,12 +394,28 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             return this.name;
         }
 
+        public DescribeImageVulListResponseBodyVulRecords setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
         public DescribeImageVulListResponseBodyVulRecords setNecessity(String necessity) {
             this.necessity = necessity;
             return this;
         }
         public String getNecessity() {
             return this.necessity;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setPod(String pod) {
+            this.pod = pod;
+            return this;
+        }
+        public String getPod() {
+            return this.pod;
         }
 
         public DescribeImageVulListResponseBodyVulRecords setPrimaryId(Long primaryId) {

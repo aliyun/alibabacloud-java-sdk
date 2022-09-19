@@ -10,6 +10,12 @@ public class DescribeImageVulListRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("ClusterName")
+    public String clusterName;
+
+    @NameInMap("ContainerId")
+    public String containerId;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -18,6 +24,9 @@ public class DescribeImageVulListRequest extends TeaModel {
 
     @NameInMap("Digest")
     public String digest;
+
+    @NameInMap("Image")
+    public String image;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -28,11 +37,17 @@ public class DescribeImageVulListRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     @NameInMap("Necessity")
     public String necessity;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("Pod")
+    public String pod;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -51,6 +66,9 @@ public class DescribeImageVulListRequest extends TeaModel {
 
     @NameInMap("RepoRegionId")
     public String repoRegionId;
+
+    @NameInMap("ScanRange")
+    public java.util.List<String> scanRange;
 
     @NameInMap("StatusList")
     public String statusList;
@@ -85,6 +103,22 @@ public class DescribeImageVulListRequest extends TeaModel {
         return this.clusterId;
     }
 
+    public DescribeImageVulListRequest setClusterName(String clusterName) {
+        this.clusterName = clusterName;
+        return this;
+    }
+    public String getClusterName() {
+        return this.clusterName;
+    }
+
+    public DescribeImageVulListRequest setContainerId(String containerId) {
+        this.containerId = containerId;
+        return this;
+    }
+    public String getContainerId() {
+        return this.containerId;
+    }
+
     public DescribeImageVulListRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
@@ -107,6 +141,14 @@ public class DescribeImageVulListRequest extends TeaModel {
     }
     public String getDigest() {
         return this.digest;
+    }
+
+    public DescribeImageVulListRequest setImage(String image) {
+        this.image = image;
+        return this;
+    }
+    public String getImage() {
+        return this.image;
     }
 
     public DescribeImageVulListRequest setInstanceId(String instanceId) {
@@ -133,6 +175,14 @@ public class DescribeImageVulListRequest extends TeaModel {
         return this.name;
     }
 
+    public DescribeImageVulListRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
     public DescribeImageVulListRequest setNecessity(String necessity) {
         this.necessity = necessity;
         return this;
@@ -147,6 +197,14 @@ public class DescribeImageVulListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeImageVulListRequest setPod(String pod) {
+        this.pod = pod;
+        return this;
+    }
+    public String getPod() {
+        return this.pod;
     }
 
     public DescribeImageVulListRequest setRegionId(String regionId) {
@@ -195,6 +253,14 @@ public class DescribeImageVulListRequest extends TeaModel {
     }
     public String getRepoRegionId() {
         return this.repoRegionId;
+    }
+
+    public DescribeImageVulListRequest setScanRange(java.util.List<String> scanRange) {
+        this.scanRange = scanRange;
+        return this;
+    }
+    public java.util.List<String> getScanRange() {
+        return this.scanRange;
     }
 
     public DescribeImageVulListRequest setStatusList(String statusList) {

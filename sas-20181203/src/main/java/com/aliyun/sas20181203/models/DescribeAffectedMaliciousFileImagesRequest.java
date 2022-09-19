@@ -7,8 +7,17 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("ClusterName")
+    public String clusterName;
+
+    @NameInMap("ContainerId")
+    public String containerId;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
+
+    @NameInMap("Image")
+    public String image;
 
     @NameInMap("ImageDigest")
     public String imageDigest;
@@ -22,11 +31,20 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("Levels")
+    public String levels;
+
     @NameInMap("MaliciousMd5")
     public String maliciousMd5;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     @NameInMap("PageSize")
     public String pageSize;
+
+    @NameInMap("Pod")
+    public String pod;
 
     @NameInMap("RepoId")
     public String repoId;
@@ -43,6 +61,9 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     @NameInMap("RepoRegionId")
     public String repoRegionId;
 
+    @NameInMap("ScanRange")
+    public java.util.List<String> scanRange;
+
     public static DescribeAffectedMaliciousFileImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAffectedMaliciousFileImagesRequest self = new DescribeAffectedMaliciousFileImagesRequest();
         return TeaModel.build(map, self);
@@ -56,12 +77,36 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
         return this.clusterId;
     }
 
+    public DescribeAffectedMaliciousFileImagesRequest setClusterName(String clusterName) {
+        this.clusterName = clusterName;
+        return this;
+    }
+    public String getClusterName() {
+        return this.clusterName;
+    }
+
+    public DescribeAffectedMaliciousFileImagesRequest setContainerId(String containerId) {
+        this.containerId = containerId;
+        return this;
+    }
+    public String getContainerId() {
+        return this.containerId;
+    }
+
     public DescribeAffectedMaliciousFileImagesRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeAffectedMaliciousFileImagesRequest setImage(String image) {
+        this.image = image;
+        return this;
+    }
+    public String getImage() {
+        return this.image;
     }
 
     public DescribeAffectedMaliciousFileImagesRequest setImageDigest(String imageDigest) {
@@ -96,6 +141,14 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
         return this.lang;
     }
 
+    public DescribeAffectedMaliciousFileImagesRequest setLevels(String levels) {
+        this.levels = levels;
+        return this;
+    }
+    public String getLevels() {
+        return this.levels;
+    }
+
     public DescribeAffectedMaliciousFileImagesRequest setMaliciousMd5(String maliciousMd5) {
         this.maliciousMd5 = maliciousMd5;
         return this;
@@ -104,12 +157,28 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
         return this.maliciousMd5;
     }
 
+    public DescribeAffectedMaliciousFileImagesRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
     public DescribeAffectedMaliciousFileImagesRequest setPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeAffectedMaliciousFileImagesRequest setPod(String pod) {
+        this.pod = pod;
+        return this;
+    }
+    public String getPod() {
+        return this.pod;
     }
 
     public DescribeAffectedMaliciousFileImagesRequest setRepoId(String repoId) {
@@ -150,6 +219,14 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     }
     public String getRepoRegionId() {
         return this.repoRegionId;
+    }
+
+    public DescribeAffectedMaliciousFileImagesRequest setScanRange(java.util.List<String> scanRange) {
+        this.scanRange = scanRange;
+        return this;
+    }
+    public java.util.List<String> getScanRange() {
+        return this.scanRange;
     }
 
 }

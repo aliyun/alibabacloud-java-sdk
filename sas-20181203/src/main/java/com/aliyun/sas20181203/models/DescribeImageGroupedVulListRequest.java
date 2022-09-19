@@ -61,6 +61,9 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     @NameInMap("RepoRegionId")
     public String repoRegionId;
 
+    @NameInMap("ScanRange")
+    public java.util.List<String> scanRange;
+
     @NameInMap("Type")
     public String type;
 
@@ -222,6 +225,14 @@ public class DescribeImageGroupedVulListRequest extends TeaModel {
     }
     public String getRepoRegionId() {
         return this.repoRegionId;
+    }
+
+    public DescribeImageGroupedVulListRequest setScanRange(java.util.List<String> scanRange) {
+        this.scanRange = scanRange;
+        return this;
+    }
+    public java.util.List<String> getScanRange() {
+        return this.scanRange;
     }
 
     public DescribeImageGroupedVulListRequest setType(String type) {
