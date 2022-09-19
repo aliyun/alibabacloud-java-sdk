@@ -10,7 +10,6 @@ public class SubscribeBillToOSSRequest extends TeaModel {
     @NameInMap("BucketOwnerId")
     public Long bucketOwnerId;
 
-    // OSS Bucket存储路径
     @NameInMap("BucketPath")
     public String bucketPath;
 

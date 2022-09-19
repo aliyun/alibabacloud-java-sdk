@@ -4,11 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetAccountRelationRequest extends TeaModel {
-    // relationId
     @NameInMap("RelationId")
     public Long relationId;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 

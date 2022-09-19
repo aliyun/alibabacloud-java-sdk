@@ -120,6 +120,9 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         @NameInMap("ApplicableProducts")
         public QueryResourcePackageInstancesResponseBodyDataInstancesInstanceApplicableProducts applicableProducts;
 
+        @NameInMap("CommodityCode")
+        public String commodityCode;
+
         @NameInMap("DeductType")
         public String deductType;
 
@@ -167,6 +170,14 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         }
         public QueryResourcePackageInstancesResponseBodyDataInstancesInstanceApplicableProducts getApplicableProducts() {
             return this.applicableProducts;
+        }
+
+        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setCommodityCode(String commodityCode) {
+            this.commodityCode = commodityCode;
+            return this;
+        }
+        public String getCommodityCode() {
+            return this.commodityCode;
         }
 
         public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setDeductType(String deductType) {

@@ -4,23 +4,18 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // data
     @NameInMap("Data")
     public InquiryPriceRefundInstanceResponseBodyData data;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,19 +65,15 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
     }
 
     public static class InquiryPriceRefundInstanceResponseBodyData extends TeaModel {
-        // currency
         @NameInMap("Currency")
         public String currency;
 
-        // hostId
         @NameInMap("HostId")
         public String hostId;
 
-        // instanceId
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // refundAmount
         @NameInMap("RefundAmount")
         public Double refundAmount;
 

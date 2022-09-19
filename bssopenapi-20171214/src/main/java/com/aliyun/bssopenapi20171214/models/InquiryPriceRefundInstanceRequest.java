@@ -4,19 +4,15 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class InquiryPriceRefundInstanceRequest extends TeaModel {
-    // clientToken
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // productCode
     @NameInMap("ProductCode")
     public String productCode;
 
-    // productType
     @NameInMap("ProductType")
     public String productType;
 
