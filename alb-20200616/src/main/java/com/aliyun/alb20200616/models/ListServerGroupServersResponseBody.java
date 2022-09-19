@@ -71,6 +71,9 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
+        @NameInMap("RemoteIpEnabled")
+        public Boolean remoteIpEnabled;
+
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
@@ -108,6 +111,14 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         }
         public Integer getPort() {
             return this.port;
+        }
+
+        public ListServerGroupServersResponseBodyServers setRemoteIpEnabled(Boolean remoteIpEnabled) {
+            this.remoteIpEnabled = remoteIpEnabled;
+            return this;
+        }
+        public Boolean getRemoteIpEnabled() {
+            return this.remoteIpEnabled;
         }
 
         public ListServerGroupServersResponseBodyServers setServerGroupId(String serverGroupId) {

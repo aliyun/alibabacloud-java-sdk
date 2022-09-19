@@ -60,6 +60,9 @@ public class AddServersToServerGroupRequest extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
+        @NameInMap("RemoteIpEnabled")
+        public Boolean remoteIpEnabled;
+
         @NameInMap("ServerId")
         public String serverId;
 
@@ -91,6 +94,14 @@ public class AddServersToServerGroupRequest extends TeaModel {
         }
         public Integer getPort() {
             return this.port;
+        }
+
+        public AddServersToServerGroupRequestServers setRemoteIpEnabled(Boolean remoteIpEnabled) {
+            this.remoteIpEnabled = remoteIpEnabled;
+            return this;
+        }
+        public Boolean getRemoteIpEnabled() {
+            return this.remoteIpEnabled;
         }
 
         public AddServersToServerGroupRequestServers setServerId(String serverId) {
