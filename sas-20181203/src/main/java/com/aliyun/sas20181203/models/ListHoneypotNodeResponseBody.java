@@ -114,9 +114,6 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         @NameInMap("NodeName")
         public String nodeName;
 
-        @NameInMap("NodeVersion")
-        public String nodeVersion;
-
         @NameInMap("ProbeTotalCount")
         public Integer probeTotalCount;
 
@@ -204,14 +201,6 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         }
         public String getNodeName() {
             return this.nodeName;
-        }
-
-        public ListHoneypotNodeResponseBodyHoneypotNodeList setNodeVersion(String nodeVersion) {
-            this.nodeVersion = nodeVersion;
-            return this;
-        }
-        public String getNodeVersion() {
-            return this.nodeVersion;
         }
 
         public ListHoneypotNodeResponseBodyHoneypotNodeList setProbeTotalCount(Integer probeTotalCount) {

@@ -46,6 +46,9 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     @NameInMap("RepoRegionId")
     public String repoRegionId;
 
+    @NameInMap("ScanRange")
+    public java.util.List<String> scanRange;
+
     public static DescribeGroupedMaliciousFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGroupedMaliciousFilesRequest self = new DescribeGroupedMaliciousFilesRequest();
         return TeaModel.build(map, self);
@@ -161,6 +164,14 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     }
     public String getRepoRegionId() {
         return this.repoRegionId;
+    }
+
+    public DescribeGroupedMaliciousFilesRequest setScanRange(java.util.List<String> scanRange) {
+        this.scanRange = scanRange;
+        return this;
+    }
+    public java.util.List<String> getScanRange() {
+        return this.scanRange;
     }
 
 }

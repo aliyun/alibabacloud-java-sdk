@@ -10,6 +10,12 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("ClusterName")
+    public String clusterName;
+
+    @NameInMap("ContainerId")
+    public String containerId;
+
     @NameInMap("Criteria")
     public String criteria;
 
@@ -19,14 +25,23 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("Image")
+    public String image;
+
     @NameInMap("ImageDigest")
     public String imageDigest;
 
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("Pod")
+    public String pod;
 
     @NameInMap("RepoInstanceId")
     public String repoInstanceId;
@@ -36,6 +51,9 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
 
     @NameInMap("RepoNamespace")
     public String repoNamespace;
+
+    @NameInMap("ScanRange")
+    public java.util.List<String> scanRange;
 
     public static DescribeImageListWithBaselineNameRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageListWithBaselineNameRequest self = new DescribeImageListWithBaselineNameRequest();
@@ -56,6 +74,22 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public DescribeImageListWithBaselineNameRequest setClusterName(String clusterName) {
+        this.clusterName = clusterName;
+        return this;
+    }
+    public String getClusterName() {
+        return this.clusterName;
+    }
+
+    public DescribeImageListWithBaselineNameRequest setContainerId(String containerId) {
+        this.containerId = containerId;
+        return this;
+    }
+    public String getContainerId() {
+        return this.containerId;
     }
 
     public DescribeImageListWithBaselineNameRequest setCriteria(String criteria) {
@@ -82,6 +116,14 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
         return this.currentPage;
     }
 
+    public DescribeImageListWithBaselineNameRequest setImage(String image) {
+        this.image = image;
+        return this;
+    }
+    public String getImage() {
+        return this.image;
+    }
+
     public DescribeImageListWithBaselineNameRequest setImageDigest(String imageDigest) {
         this.imageDigest = imageDigest;
         return this;
@@ -98,12 +140,28 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
         return this.lang;
     }
 
+    public DescribeImageListWithBaselineNameRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
     public DescribeImageListWithBaselineNameRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeImageListWithBaselineNameRequest setPod(String pod) {
+        this.pod = pod;
+        return this;
+    }
+    public String getPod() {
+        return this.pod;
     }
 
     public DescribeImageListWithBaselineNameRequest setRepoInstanceId(String repoInstanceId) {
@@ -128,6 +186,14 @@ public class DescribeImageListWithBaselineNameRequest extends TeaModel {
     }
     public String getRepoNamespace() {
         return this.repoNamespace;
+    }
+
+    public DescribeImageListWithBaselineNameRequest setScanRange(java.util.List<String> scanRange) {
+        this.scanRange = scanRange;
+        return this;
+    }
+    public java.util.List<String> getScanRange() {
+        return this.scanRange;
     }
 
 }

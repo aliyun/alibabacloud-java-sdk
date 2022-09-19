@@ -43,11 +43,26 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
     }
 
     public static class DescribeImageListWithBaselineNameResponseBodyImageInfos extends TeaModel {
+        @NameInMap("BaselineType")
+        public String baselineType;
+
+        @NameInMap("ClusterId")
+        public String clusterId;
+
+        @NameInMap("ClusterName")
+        public String clusterName;
+
+        @NameInMap("ContainerId")
+        public String containerId;
+
         @NameInMap("Digest")
         public String digest;
 
         @NameInMap("HighRiskImage")
         public Integer highRiskImage;
+
+        @NameInMap("Image")
+        public String image;
 
         @NameInMap("ImageCreate")
         public Long imageCreate;
@@ -70,8 +85,14 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         @NameInMap("MiddleRiskImage")
         public Integer middleRiskImage;
 
+        @NameInMap("Namespace")
+        public String namespace;
+
         @NameInMap("NoRiskImage")
         public Integer noRiskImage;
+
+        @NameInMap("Pod")
+        public String pod;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -105,6 +126,38 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeImageListWithBaselineNameResponseBodyImageInfos setBaselineType(String baselineType) {
+            this.baselineType = baselineType;
+            return this;
+        }
+        public String getBaselineType() {
+            return this.baselineType;
+        }
+
+        public DescribeImageListWithBaselineNameResponseBodyImageInfos setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public DescribeImageListWithBaselineNameResponseBodyImageInfos setClusterName(String clusterName) {
+            this.clusterName = clusterName;
+            return this;
+        }
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
+        public DescribeImageListWithBaselineNameResponseBodyImageInfos setContainerId(String containerId) {
+            this.containerId = containerId;
+            return this;
+        }
+        public String getContainerId() {
+            return this.containerId;
+        }
+
         public DescribeImageListWithBaselineNameResponseBodyImageInfos setDigest(String digest) {
             this.digest = digest;
             return this;
@@ -119,6 +172,14 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         }
         public Integer getHighRiskImage() {
             return this.highRiskImage;
+        }
+
+        public DescribeImageListWithBaselineNameResponseBodyImageInfos setImage(String image) {
+            this.image = image;
+            return this;
+        }
+        public String getImage() {
+            return this.image;
         }
 
         public DescribeImageListWithBaselineNameResponseBodyImageInfos setImageCreate(Long imageCreate) {
@@ -177,12 +238,28 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             return this.middleRiskImage;
         }
 
+        public DescribeImageListWithBaselineNameResponseBodyImageInfos setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
         public DescribeImageListWithBaselineNameResponseBodyImageInfos setNoRiskImage(Integer noRiskImage) {
             this.noRiskImage = noRiskImage;
             return this;
         }
         public Integer getNoRiskImage() {
             return this.noRiskImage;
+        }
+
+        public DescribeImageListWithBaselineNameResponseBodyImageInfos setPod(String pod) {
+            this.pod = pod;
+            return this;
+        }
+        public String getPod() {
+            return this.pod;
         }
 
         public DescribeImageListWithBaselineNameResponseBodyImageInfos setRegionId(String regionId) {

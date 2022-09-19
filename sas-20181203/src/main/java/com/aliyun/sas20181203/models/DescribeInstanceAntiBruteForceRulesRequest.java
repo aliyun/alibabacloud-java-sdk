@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAntiBruteForceRulesRequest extends TeaModel {
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -16,6 +22,22 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends TeaModel {
     public static DescribeInstanceAntiBruteForceRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceAntiBruteForceRulesRequest self = new DescribeInstanceAntiBruteForceRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceAntiBruteForceRulesRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public DescribeInstanceAntiBruteForceRulesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeInstanceAntiBruteForceRulesRequest setResourceOwnerId(Long resourceOwnerId) {

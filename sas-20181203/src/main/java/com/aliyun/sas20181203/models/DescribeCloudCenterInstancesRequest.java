@@ -13,6 +13,9 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     @NameInMap("Importance")
     public Integer importance;
 
+    @NameInMap("Lang")
+    public String lang;
+
     @NameInMap("LogicalExp")
     public String logicalExp;
 
@@ -55,6 +58,14 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     }
     public Integer getImportance() {
         return this.importance;
+    }
+
+    public DescribeCloudCenterInstancesRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeCloudCenterInstancesRequest setLogicalExp(String logicalExp) {

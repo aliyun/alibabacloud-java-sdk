@@ -7,6 +7,9 @@ public class DescribeFrontVulPatchListRequest extends TeaModel {
     @NameInMap("Info")
     public String info;
 
+    @NameInMap("Lang")
+    public String lang;
+
     @NameInMap("OperateType")
     public String operateType;
 
@@ -24,6 +27,14 @@ public class DescribeFrontVulPatchListRequest extends TeaModel {
     }
     public String getInfo() {
         return this.info;
+    }
+
+    public DescribeFrontVulPatchListRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeFrontVulPatchListRequest setOperateType(String operateType) {
