@@ -19,6 +19,9 @@ public class GetInstanceInspectionsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("SearchMap")
     public String searchMap;
 
@@ -68,6 +71,14 @@ public class GetInstanceInspectionsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public GetInstanceInspectionsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public GetInstanceInspectionsRequest setSearchMap(String searchMap) {
