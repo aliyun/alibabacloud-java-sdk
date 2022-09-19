@@ -7,7 +7,6 @@ public class GetAnalysisTaskResultResponseBody extends TeaModel {
     @NameInMap("analysisId")
     public Long analysisId;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 

@@ -4,263 +4,198 @@ package com.aliyun.yuqing20220301.models;
 import com.aliyun.tea.*;
 
 public class YuqingMessage extends TeaModel {
-    // 应用名称
     @NameInMap("appName")
     public String appName;
 
-    // 应用市场评分
     @NameInMap("appScore")
     public Long appScore;
 
-    // 应用市场名称
     @NameInMap("appStoreName")
     public String appStoreName;
 
-    // 提及到的用户列表
     @NameInMap("atAuthorNames")
     public java.util.List<String> atAuthorNames;
 
-    // 音频数
     @NameInMap("audioCount")
     public Integer audioCount;
 
-    // 作者头像地址
     @NameInMap("authorAvatarUrl")
     public String authorAvatarUrl;
 
-    // 粉丝数
     @NameInMap("authorFollowersCount")
     public Long authorFollowersCount;
 
-    // 好友数
     @NameInMap("authorFriendsCount")
     public Long authorFriendsCount;
 
-    // 性别,f:女，m:男
     @NameInMap("authorGender")
     public String authorGender;
 
-    // 作者id
     @NameInMap("authorId")
     public String authorId;
 
-    // 作者收到的点赞数
     @NameInMap("authorLikesCount")
     public Long authorLikesCount;
 
-    // 作者名称
     @NameInMap("authorName")
     public String authorName;
 
-    // 作者主页地址
     @NameInMap("authorProfileUrl")
     public String authorProfileUrl;
 
-    // 发文数
     @NameInMap("authorStatusesCount")
     public Long authorStatusesCount;
 
-    // 作者是否认证
     @NameInMap("authorVerified")
     public Boolean authorVerified;
 
-    // 作者认证等级，0:黄V，>0:蓝V
     @NameInMap("authorVerifyType")
     public Integer authorVerifyType;
 
-    // 音频识别出来的文本
     @NameInMap("contentAudioText")
     public String contentAudioText;
 
-    // 音频列表地址
     @NameInMap("contentAudioUrls")
     public String contentAudioUrls;
 
-    // 图片识别出来的文本
     @NameInMap("contentImageText")
     public String contentImageText;
 
-    // 图片列表地址
     @NameInMap("contentImageUrls")
     public String contentImageUrls;
 
-    // 语种
     @NameInMap("contentLang")
     public String contentLang;
 
-    // 文本长度
     @NameInMap("contentLen")
     public Long contentLen;
 
-    // 视频识别出来的文本
     @NameInMap("contentVideoText")
     public String contentVideoText;
 
-    // 视频列表地址
     @NameInMap("contentVideoUrls")
     public String contentVideoUrls;
 
-    // 舆情文章被抓取的时间戳
     @NameInMap("createTime")
     public Long createTime;
 
-    // 回答数
     @NameInMap("docAnswersCount")
     public Long docAnswersCount;
 
-    // 提级地域列表
     @NameInMap("docAreas")
     public java.util.List<String> docAreas;
 
-    // 投币数
     @NameInMap("docCoinCount")
     public Long docCoinCount;
 
-    // 文章评论数
     @NameInMap("docCommentsCount")
     public Long docCommentsCount;
 
-    // 文章正文内容
     @NameInMap("docContent")
     public String docContent;
 
-    // 文章摘要
     @NameInMap("docContentBrief")
     public String docContentBrief;
 
-    // 文章内容签名，如果是转发微博或者其他有父内容的doc，计算的是父文章的得分。一般用于去重，相同的doc_content_sign说明内容相同
     @NameInMap("docContentSign")
     public String docContentSign;
 
-    // 文章唯一docId
     @NameInMap("docId")
     public String docId;
 
-    // 文章点赞数
     @NameInMap("docLikesCount")
     public Long docLikesCount;
 
-    // 播放数
     @NameInMap("docPlayCount")
     public Long docPlayCount;
 
-    // 在读数
     @NameInMap("docReadingCount")
     public Long docReadingCount;
 
-    // 文章阅读数
     @NameInMap("docReadsCount")
     public Long docReadsCount;
 
-    // 文章点赞数
     @NameInMap("docRepostsCount")
     public Long docRepostsCount;
 
-    // 文章转载自
     @NameInMap("docReprintName")
     public String docReprintName;
 
-    // 文章自身的内容签名，转发微博计算的是转发内容的contentSign，与父微博无关
     @NameInMap("docSelfContentSign")
     public String docSelfContentSign;
 
-    // 文章标题
     @NameInMap("docTitle")
     public String docTitle;
 
-    // 原文地址
     @NameInMap("docUrl")
     public String docUrl;
 
-    // 情感得分
     @NameInMap("emotionScore")
     public Double emotionScore;
 
-    // 情感的正负面，-1代表负面，1代表非负面
     @NameInMap("emotionType")
     public Integer emotionType;
 
-    // 扩展字段值
     @NameInMap("extInfo")
     public java.util.Map<String, String> extInfo;
 
-    // 企业事件数
     @NameInMap("finEventCount")
     public Integer finEventCount;
 
-    // 命中的关键词列表
     @NameInMap("highlightKeywords")
     public java.util.List<String> highlightKeywords;
 
-    // 图片数
     @NameInMap("imageCount")
     public Integer imageCount;
 
-    // 影响力得分，0-10
     @NameInMap("influenceScore")
     public Double influenceScore;
 
-    // 站点列表
     @NameInMap("mediaHosts")
     public java.util.List<String> mediaHosts;
 
-    // 影响力等级
     @NameInMap("mediaInfluenceLevel")
     public Integer mediaInfluenceLevel;
 
-    // 媒体名称
     @NameInMap("mediaName")
     public String mediaName;
 
-    // 传播等级
     @NameInMap("mediaPropagationLevel")
     public Integer mediaPropagationLevel;
 
-    // 媒体类型，枚举值
     @NameInMap("mediaType")
     public String mediaType;
 
-    // 舆情消息类型:转发,评论/回复, 原文,群聊等
     @NameInMap("messageType")
     public String messageType;
 
-    // 文章的父docId，如被转发的文章docId
     @NameInMap("parentDocId")
     public String parentDocId;
 
-    // 传播得分，0-10
     @NameInMap("propagationScore")
     public Double propagationScore;
 
-    // 舆情文章的发布时间戳
     @NameInMap("publishTime")
     public Long publishTime;
 
-    // 相关性得分
     @NameInMap("relevanceScore")
     public Double relevanceScore;
 
-    // 疑似首发列表
     @NameInMap("repostList")
     public java.util.List<String> repostList;
 
-    // 相似文章数
     @NameInMap("similarNumber")
     public Integer similarNumber;
 
-    // 话题列表
     @NameInMap("topics")
     public java.util.List<String> topics;
 
-    // 视频数
     @NameInMap("videoCount")
     public Integer videoCount;
 
-    // 微博评论id
     @NameInMap("weiboCommentId")
     public String weiboCommentId;
 
-    // 微博消息id
     @NameInMap("weiboMid")
     public String weiboMid;
 

@@ -7,7 +7,6 @@ public class CloseProductRequest extends TeaModel {
     @NameInMap("productInstance")
     public ProductInstance productInstance;
 
-    // A short description of struct
     @NameInMap("requestId")
     public String requestId;
 

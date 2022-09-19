@@ -13,7 +13,6 @@ public class ConsoleProxyRequest extends TeaModel {
     @NameInMap("paramJson")
     public String paramJson;
 
-    // A short description of struct
     @NameInMap("requestId")
     public String requestId;
 

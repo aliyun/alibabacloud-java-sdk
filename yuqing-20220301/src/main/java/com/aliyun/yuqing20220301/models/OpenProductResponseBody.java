@@ -7,7 +7,6 @@ public class OpenProductResponseBody extends TeaModel {
     @NameInMap("id")
     public Long id;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 

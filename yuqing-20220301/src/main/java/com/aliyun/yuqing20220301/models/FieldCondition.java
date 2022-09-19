@@ -4,23 +4,18 @@ package com.aliyun.yuqing20220301.models;
 import com.aliyun.tea.*;
 
 public class FieldCondition extends TeaModel {
-    // 字段名称
     @NameInMap("fieldName")
     public String fieldName;
 
-    // 复杂查询下，嵌套子条件字段jsonPath
     @NameInMap("nestFieldPath")
     public String nestFieldPath;
 
-    // 复杂查询下，嵌套子条件字段值
     @NameInMap("nestFieldValue")
     public java.util.List<Long> nestFieldValue;
 
-    // 操作符，枚举值
     @NameInMap("operateType")
     public String operateType;
 
-    // 字段值，不同字段值类型不一样
     @NameInMap("value")
     public String value;
 
