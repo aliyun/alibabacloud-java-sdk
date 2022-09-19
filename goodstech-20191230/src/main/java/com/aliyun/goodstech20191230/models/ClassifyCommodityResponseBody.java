@@ -4,23 +4,15 @@ package com.aliyun.goodstech20191230.models;
 import com.aliyun.tea.*;
 
 public class ClassifyCommodityResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ClassifyCommodityResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ClassifyCommodityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ClassifyCommodityResponseBody self = new ClassifyCommodityResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ClassifyCommodityResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ClassifyCommodityResponseBody setData(ClassifyCommodityResponseBodyData data) {
@@ -31,27 +23,27 @@ public class ClassifyCommodityResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class ClassifyCommodityResponseBodyDataCategories extends TeaModel {
-        @NameInMap("Score")
-        public Float score;
+    public ClassifyCommodityResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ClassifyCommodityResponseBodyDataCategories extends TeaModel {
         @NameInMap("CategoryId")
         public String categoryId;
 
         @NameInMap("CategoryName")
         public String categoryName;
 
+        @NameInMap("Score")
+        public Float score;
+
         public static ClassifyCommodityResponseBodyDataCategories build(java.util.Map<String, ?> map) throws Exception {
             ClassifyCommodityResponseBodyDataCategories self = new ClassifyCommodityResponseBodyDataCategories();
             return TeaModel.build(map, self);
-        }
-
-        public ClassifyCommodityResponseBodyDataCategories setScore(Float score) {
-            this.score = score;
-            return this;
-        }
-        public Float getScore() {
-            return this.score;
         }
 
         public ClassifyCommodityResponseBodyDataCategories setCategoryId(String categoryId) {
@@ -68,6 +60,14 @@ public class ClassifyCommodityResponseBody extends TeaModel {
         }
         public String getCategoryName() {
             return this.categoryName;
+        }
+
+        public ClassifyCommodityResponseBodyDataCategories setScore(Float score) {
+            this.score = score;
+            return this;
+        }
+        public Float getScore() {
+            return this.score;
         }
 
     }
