@@ -7,11 +7,11 @@ public class UpdateResourceRequest extends TeaModel {
     @NameInMap("body")
     public String body;
 
+    @NameInMap("clientToken")
+    public String clientToken;
+
     @NameInMap("regionId")
     public String regionId;
-
-    @NameInMap("resourceTypeVersion")
-    public String resourceTypeVersion;
 
     public static UpdateResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateResourceRequest self = new UpdateResourceRequest();
@@ -26,20 +26,20 @@ public class UpdateResourceRequest extends TeaModel {
         return this.body;
     }
 
+    public UpdateResourceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public UpdateResourceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public UpdateResourceRequest setResourceTypeVersion(String resourceTypeVersion) {
-        this.resourceTypeVersion = resourceTypeVersion;
-        return this;
-    }
-    public String getResourceTypeVersion() {
-        return this.resourceTypeVersion;
     }
 
 }

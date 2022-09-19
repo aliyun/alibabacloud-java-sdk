@@ -7,6 +7,9 @@ public class UpdateResourceResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("retryTimeout")
+    public Integer retryTimeout;
+
     @NameInMap("taskId")
     public String taskId;
 
@@ -21,6 +24,14 @@ public class UpdateResourceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpdateResourceResponseBody setRetryTimeout(Integer retryTimeout) {
+        this.retryTimeout = retryTimeout;
+        return this;
+    }
+    public Integer getRetryTimeout() {
+        return this.retryTimeout;
     }
 
     public UpdateResourceResponseBody setTaskId(String taskId) {

@@ -10,6 +10,9 @@ public class CreateResourceResponseBody extends TeaModel {
     @NameInMap("resourceId")
     public String resourceId;
 
+    @NameInMap("retryTimeout")
+    public Integer retryTimeout;
+
     @NameInMap("taskId")
     public String taskId;
 
@@ -32,6 +35,14 @@ public class CreateResourceResponseBody extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public CreateResourceResponseBody setRetryTimeout(Integer retryTimeout) {
+        this.retryTimeout = retryTimeout;
+        return this;
+    }
+    public Integer getRetryTimeout() {
+        return this.retryTimeout;
     }
 
     public CreateResourceResponseBody setTaskId(String taskId) {

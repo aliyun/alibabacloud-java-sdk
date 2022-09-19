@@ -7,6 +7,9 @@ public class DeleteResourceResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("retryTimeout")
+    public Integer retryTimeout;
+
     @NameInMap("taskId")
     public String taskId;
 
@@ -21,6 +24,14 @@ public class DeleteResourceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DeleteResourceResponseBody setRetryTimeout(Integer retryTimeout) {
+        this.retryTimeout = retryTimeout;
+        return this;
+    }
+    public Integer getRetryTimeout() {
+        return this.retryTimeout;
     }
 
     public DeleteResourceResponseBody setTaskId(String taskId) {
