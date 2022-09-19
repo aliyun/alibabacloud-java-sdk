@@ -4,14 +4,12 @@ package com.aliyun.yuqing20220301.models;
 import com.aliyun.tea.*;
 
 public class OpenProductRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("productInstance")
     public ProductInstance productInstance;
 
-    // A short description of struct
     @NameInMap("requestId")
     public String requestId;
 

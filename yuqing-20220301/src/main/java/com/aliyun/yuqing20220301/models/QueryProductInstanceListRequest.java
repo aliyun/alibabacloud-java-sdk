@@ -10,7 +10,6 @@ public class QueryProductInstanceListRequest extends TeaModel {
     @NameInMap("fromTime")
     public Long fromTime;
 
-    // A short description of struct
     @NameInMap("requestId")
     public String requestId;
 

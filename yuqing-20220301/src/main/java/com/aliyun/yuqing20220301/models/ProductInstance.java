@@ -4,55 +4,42 @@ package com.aliyun.yuqing20220301.models;
 import com.aliyun.tea.*;
 
 public class ProductInstance extends TeaModel {
-    // 应用码
     @NameInMap("appCode")
     public String appCode;
 
-    // 购买者名称
     @NameInMap("buyerName")
     public String buyerName;
 
-    // 购买者账号uid
     @NameInMap("buyerUid")
     public String buyerUid;
 
-    // 商业化渠道码
     @NameInMap("channel")
     public String channel;
 
-    // 购买配置信息
     @NameInMap("config")
     public String config;
 
-    // 生效结束时间
     @NameInMap("end")
     public Long end;
 
-    // 实例id
     @NameInMap("instanceId")
     public String instanceId;
 
-    // 订单号，幂等使用
     @NameInMap("orderNo")
     public String orderNo;
 
-    // 产品码
     @NameInMap("productCode")
     public String productCode;
 
-    // 规格码
     @NameInMap("productSpecCode")
     public String productSpecCode;
 
-    // 生效开始时间
     @NameInMap("start")
     public Long start;
 
-    // 租户名称
     @NameInMap("tenantName")
     public String tenantName;
 
-    // 租户uid
     @NameInMap("tenantUid")
     public String tenantUid;
 

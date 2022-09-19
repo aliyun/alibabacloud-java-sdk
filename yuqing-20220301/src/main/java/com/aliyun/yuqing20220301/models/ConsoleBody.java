@@ -4,23 +4,18 @@ package com.aliyun.yuqing20220301.models;
 import com.aliyun.tea.*;
 
 public class ConsoleBody extends TeaModel {
-    // appCode
     @NameInMap("appCode")
     public String appCode;
 
-    // interfaceName
     @NameInMap("interfaceName")
     public String interfaceName;
 
-    // paramJson
     @NameInMap("paramJson")
     public String paramJson;
 
-    // requestId
     @NameInMap("requestId")
     public String requestId;
 
-    // teamHashId
     @NameInMap("teamHashId")
     public String teamHashId;
 

@@ -7,7 +7,6 @@ public class QueryProductInstanceListResponseBody extends TeaModel {
     @NameInMap("instanceList")
     public java.util.List<ProductInstance> instanceList;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 

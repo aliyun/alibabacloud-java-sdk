@@ -7,7 +7,6 @@ public class CloseProductResponseBody extends TeaModel {
     @NameInMap("data")
     public Long data;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 

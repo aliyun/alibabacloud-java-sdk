@@ -7,7 +7,6 @@ public class SubmitAnalysisTaskRequest extends TeaModel {
     @NameInMap("analyseType")
     public String analyseType;
 
-    // A short description of struct
     @NameInMap("requestId")
     public String requestId;
 

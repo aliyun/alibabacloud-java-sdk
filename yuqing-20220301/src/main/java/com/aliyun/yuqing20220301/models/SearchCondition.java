@@ -4,211 +4,165 @@ package com.aliyun.yuqing20220301.models;
 import com.aliyun.tea.*;
 
 public class SearchCondition extends TeaModel {
-    // 搭配词
     @NameInMap("assKeywordList")
     public java.util.List<String> assKeywordList;
 
-    // 被@的用户名称
     @NameInMap("atAuthorNameList")
     public java.util.List<String> atAuthorNameList;
 
-    // 作者名称
     @NameInMap("authorNameList")
     public java.util.List<String> authorNameList;
 
-    // 评论级别，1：100以内，2：100-1k，3：1k-1w以内，4：1w-10w，5，10w+
     @NameInMap("commentsLevel")
     public Integer commentsLevel;
 
-    // 内容长度级别，1：100以内，2：100-1k，3：1k-1w以内，4：1w-10w，5，10w+
     @NameInMap("contentLenLevel")
     public Integer contentLenLevel;
 
-    // 抓取截止时间
     @NameInMap("createTimeEnd")
     public Long createTimeEnd;
 
-    // 抓取起始时间
     @NameInMap("createTimeStart")
     public Long createTimeStart;
 
-    // 文章签名
     @NameInMap("docContentSign")
     public String docContentSign;
 
-    // 舆情文章唯一docId
     @NameInMap("docIdList")
     public java.util.List<String> docIdList;
 
-    // 是否去重
     @NameInMap("duplicateRemoval")
     public Boolean duplicateRemoval;
 
-    // 情感类型，1非负，-1负面
     @NameInMap("emotionType")
     public Integer emotionType;
 
-    // 是否高亮关键词
     @NameInMap("enableKeywordHighlight")
     public Boolean enableKeywordHighlight;
 
-    // 排除被@的用户名称
     @NameInMap("excludeAtAuthorNameList")
     public java.util.List<String> excludeAtAuthorNameList;
 
-    // 排除作者名称
     @NameInMap("excludeAuthorNameList")
     public java.util.List<String> excludeAuthorNameList;
 
-    // 排除网站域名
     @NameInMap("excludeHostNameList")
     public java.util.List<String> excludeHostNameList;
 
-    // 排除词
     @NameInMap("excludeKeywordList")
     public java.util.List<String> excludeKeywordList;
 
-    // 标题排除词
     @NameInMap("excludeKeywordListInTitle")
     public java.util.List<String> excludeKeywordListInTitle;
 
-    // 排除关键词标签Id列表
     @NameInMap("excludeKeywordTagIds")
     public java.util.List<Long> excludeKeywordTagIds;
 
-    // 排除媒体库id列表
+    @NameInMap("excludeMaterialTagList")
+    public java.util.List<String> excludeMaterialTagList;
+
     @NameInMap("excludeMediaLibraryIdList")
     public java.util.List<String> excludeMediaLibraryIdList;
 
-    // 排除媒体名称
     @NameInMap("excludeMediaNameList")
     public java.util.List<String> excludeMediaNameList;
 
-    // 排除媒体类型，枚举值
     @NameInMap("excludeMediaTypeList")
     public java.util.List<String> excludeMediaTypeList;
 
-    // 排除消息类型，枚举值
     @NameInMap("excludeMessageTypeList")
     public java.util.List<String> excludeMessageTypeList;
 
-    // 其他过滤条件
     @NameInMap("fieldConditions")
     public java.util.List<FieldCondition> fieldConditions;
 
-    // 高级筛选模板id
     @NameInMap("filterId")
     public Long filterId;
 
-    // 是否含有音频
     @NameInMap("hasAudio")
     public Boolean hasAudio;
 
-    // 文章是否含有图片
     @NameInMap("hasImage")
     public Boolean hasImage;
 
-    // 是否含有视频
     @NameInMap("hasVideo")
     public Boolean hasVideo;
 
-    // 网站域名
     @NameInMap("hostNameList")
     public java.util.List<String> hostNameList;
 
-    // 影响力等级，1：低，2：中，3：高，4：低级别以上
     @NameInMap("influenceLevel")
     public Long influenceLevel;
 
-    // 关键词标签Id列表
     @NameInMap("keywordTagIds")
     public java.util.List<Long> keywordTagIds;
 
-    // 点赞级别，1：100以内，2：100-1k，3：1k-1w以内，4：1w-10w，5，10w+
     @NameInMap("likesLevel")
     public Integer likesLevel;
 
-    // 媒体库id列表
+    @NameInMap("materialTagList")
+    public java.util.List<String> materialTagList;
+
     @NameInMap("mediaLibraryIdList")
     public java.util.List<String> mediaLibraryIdList;
 
-    // 媒体名称
     @NameInMap("mediaNameList")
     public java.util.List<String> mediaNameList;
 
-    // 媒体类型，枚举值
     @NameInMap("mediaTypeList")
     public java.util.List<String> mediaTypeList;
 
-    // 消息类型，枚举值
     @NameInMap("messageTypeList")
     public java.util.List<String> messageTypeList;
 
-    // 当前页
     @NameInMap("pageNow")
     public Integer pageNow;
 
-    // 页大小
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    // 舆情父文章的docId，一般用于查看某篇文章的评论
     @NameInMap("parentDocId")
     public String parentDocId;
 
-    // 关键词
     @NameInMap("posKeywordList")
     public java.util.List<String> posKeywordList;
 
-    // 标题关键词
     @NameInMap("posKeywordListInTitle")
     public java.util.List<String> posKeywordListInTitle;
 
-    // 舆情项目id
     @NameInMap("projectId")
     public Long projectId;
 
-    // 传播度等级，1：低，2：中，3：高，4：低级别以上
     @NameInMap("propagationLevel")
     public Long propagationLevel;
 
-    // 截止发布时间
     @NameInMap("publishTimeEnd")
     public Long publishTimeEnd;
 
-    // 起始发布时间
     @NameInMap("publishTimeStart")
     public Long publishTimeStart;
 
-    // 阅读级别，1：100以内，2：100-1k，3：1k-1w以内，4：1w-10w，5，10w+
     @NameInMap("readsLevel")
     public Integer readsLevel;
 
-    // 相关性等级，1：低，2：中，3：高，4：低级别以上
     @NameInMap("relevanceLevel")
     public Integer relevanceLevel;
 
-    // 转发级别，1：100以内，2：100-1k，3：1k-1w以内，4：1w-10w，5，10w+
     @NameInMap("repostLevel")
     public Integer repostLevel;
 
-    // 排序字段
     @NameInMap("sortBy")
     public String sortBy;
 
-    // 指定正反向排序
     @NameInMap("sortByDirection")
     public String sortByDirection;
 
-    // #话题
     @NameInMap("topicList")
     public java.util.List<String> topicList;
 
-    // 舆情文章截止更新时间
     @NameInMap("updateTimeEnd")
     public Long updateTimeEnd;
 
-    // 舆情文章起始更新时间
     @NameInMap("updateTimeStart")
     public Long updateTimeStart;
 
@@ -361,6 +315,14 @@ public class SearchCondition extends TeaModel {
         return this.excludeKeywordTagIds;
     }
 
+    public SearchCondition setExcludeMaterialTagList(java.util.List<String> excludeMaterialTagList) {
+        this.excludeMaterialTagList = excludeMaterialTagList;
+        return this;
+    }
+    public java.util.List<String> getExcludeMaterialTagList() {
+        return this.excludeMaterialTagList;
+    }
+
     public SearchCondition setExcludeMediaLibraryIdList(java.util.List<String> excludeMediaLibraryIdList) {
         this.excludeMediaLibraryIdList = excludeMediaLibraryIdList;
         return this;
@@ -463,6 +425,14 @@ public class SearchCondition extends TeaModel {
     }
     public Integer getLikesLevel() {
         return this.likesLevel;
+    }
+
+    public SearchCondition setMaterialTagList(java.util.List<String> materialTagList) {
+        this.materialTagList = materialTagList;
+        return this;
+    }
+    public java.util.List<String> getMaterialTagList() {
+        return this.materialTagList;
     }
 
     public SearchCondition setMediaLibraryIdList(java.util.List<String> mediaLibraryIdList) {

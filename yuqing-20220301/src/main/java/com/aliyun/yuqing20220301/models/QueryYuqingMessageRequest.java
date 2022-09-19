@@ -4,7 +4,6 @@ package com.aliyun.yuqing20220301.models;
 import com.aliyun.tea.*;
 
 public class QueryYuqingMessageRequest extends TeaModel {
-    // A short description of struct
     @NameInMap("requestId")
     public String requestId;
 
