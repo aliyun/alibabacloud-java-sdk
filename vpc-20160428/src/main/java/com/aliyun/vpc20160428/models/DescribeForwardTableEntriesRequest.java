@@ -28,6 +28,9 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -116,6 +119,14 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     }
     public String getIpProtocol() {
         return this.ipProtocol;
+    }
+
+    public DescribeForwardTableEntriesRequest setNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    public String getNatGatewayId() {
+        return this.natGatewayId;
     }
 
     public DescribeForwardTableEntriesRequest setOwnerAccount(String ownerAccount) {

@@ -19,6 +19,9 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Tags")
+    public java.util.List<ListVirtualPhysicalConnectionsRequestTags> tags;
+
     @NameInMap("VirtualPhysicalConnectionAliUids")
     public java.util.List<String> virtualPhysicalConnectionAliUids;
 
@@ -79,6 +82,14 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ListVirtualPhysicalConnectionsRequest setTags(java.util.List<ListVirtualPhysicalConnectionsRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListVirtualPhysicalConnectionsRequestTags> getTags() {
+        return this.tags;
+    }
+
     public ListVirtualPhysicalConnectionsRequest setVirtualPhysicalConnectionAliUids(java.util.List<String> virtualPhysicalConnectionAliUids) {
         this.virtualPhysicalConnectionAliUids = virtualPhysicalConnectionAliUids;
         return this;
@@ -117,6 +128,36 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     }
     public java.util.List<String> getVlanIds() {
         return this.vlanIds;
+    }
+
+    public static class ListVirtualPhysicalConnectionsRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListVirtualPhysicalConnectionsRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListVirtualPhysicalConnectionsRequestTags self = new ListVirtualPhysicalConnectionsRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVirtualPhysicalConnectionsRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListVirtualPhysicalConnectionsRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
