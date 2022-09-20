@@ -7,6 +7,9 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     @NameInMap("CustWabaId")
     public String custWabaId;
 
+    @NameInMap("IsvCode")
+    public String isvCode;
+
     @NameInMap("TemplateCode")
     public String templateCode;
 
@@ -21,6 +24,14 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     }
     public String getCustWabaId() {
         return this.custWabaId;
+    }
+
+    public DeleteChatappTemplateRequest setIsvCode(String isvCode) {
+        this.isvCode = isvCode;
+        return this;
+    }
+    public String getIsvCode() {
+        return this.isvCode;
     }
 
     public DeleteChatappTemplateRequest setTemplateCode(String templateCode) {

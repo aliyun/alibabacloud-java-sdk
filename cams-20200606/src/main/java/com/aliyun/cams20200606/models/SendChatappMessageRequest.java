@@ -22,6 +22,9 @@ public class SendChatappMessageRequest extends TeaModel {
     @NameInMap("From")
     public String from;
 
+    @NameInMap("IsvCode")
+    public String isvCode;
+
     @NameInMap("Language")
     public String language;
 
@@ -94,6 +97,14 @@ public class SendChatappMessageRequest extends TeaModel {
     }
     public String getFrom() {
         return this.from;
+    }
+
+    public SendChatappMessageRequest setIsvCode(String isvCode) {
+        this.isvCode = isvCode;
+        return this;
+    }
+    public String getIsvCode() {
+        return this.isvCode;
     }
 
     public SendChatappMessageRequest setLanguage(String language) {

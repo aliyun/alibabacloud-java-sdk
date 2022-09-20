@@ -16,6 +16,9 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     @NameInMap("Example")
     public String exampleShrink;
 
+    @NameInMap("IsvCode")
+    public String isvCode;
+
     @NameInMap("Language")
     public String language;
 
@@ -60,6 +63,14 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     }
     public String getExampleShrink() {
         return this.exampleShrink;
+    }
+
+    public CreateChatappTemplateShrinkRequest setIsvCode(String isvCode) {
+        this.isvCode = isvCode;
+        return this;
+    }
+    public String getIsvCode() {
+        return this.isvCode;
     }
 
     public CreateChatappTemplateShrinkRequest setLanguage(String language) {

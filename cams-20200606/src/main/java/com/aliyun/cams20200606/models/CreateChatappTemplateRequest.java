@@ -16,6 +16,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
     @NameInMap("Example")
     public java.util.Map<String, String> example;
 
+    @NameInMap("IsvCode")
+    public String isvCode;
+
     @NameInMap("Language")
     public String language;
 
@@ -60,6 +63,14 @@ public class CreateChatappTemplateRequest extends TeaModel {
     }
     public java.util.Map<String, String> getExample() {
         return this.example;
+    }
+
+    public CreateChatappTemplateRequest setIsvCode(String isvCode) {
+        this.isvCode = isvCode;
+        return this;
+    }
+    public String getIsvCode() {
+        return this.isvCode;
     }
 
     public CreateChatappTemplateRequest setLanguage(String language) {

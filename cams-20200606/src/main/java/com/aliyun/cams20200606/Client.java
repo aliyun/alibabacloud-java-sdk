@@ -3,16 +3,10 @@ package com.aliyun.cams20200606;
 
 import com.aliyun.tea.*;
 import com.aliyun.cams20200606.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
         this.checkConfig(config);
@@ -32,54 +26,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public CheckChatappContactsResponse checkChatappContactsWithOptions(CheckChatappContactsRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        CheckChatappContactsShrinkRequest request = new CheckChatappContactsShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.contacts)) {
-            request.contactsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.contacts, "Contacts", "json");
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.channelType)) {
-            body.put("ChannelType", request.channelType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.contactsShrink)) {
-            body.put("Contacts", request.contactsShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
-            body.put("CustWabaId", request.custWabaId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
-            body.put("From", request.from);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CheckChatappContacts"),
-            new TeaPair("version", "2020-06-06"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckChatappContactsResponse());
-    }
-
-    public CheckChatappContactsResponse checkChatappContacts(CheckChatappContactsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.checkChatappContactsWithOptions(request, runtime);
-    }
-
-    public CreateChatappTemplateResponse createChatappTemplateWithOptions(CreateChatappTemplateRequest tmpReq, RuntimeOptions runtime) throws Exception {
+    public CreateChatappTemplateResponse createChatappTemplateWithOptions(CreateChatappTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateChatappTemplateShrinkRequest request = new CreateChatappTemplateShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
@@ -108,6 +55,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Example", request.exampleShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
+            body.put("IsvCode", request.isvCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
             body.put("Language", request.language);
         }
@@ -120,10 +71,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TemplateType", request.templateType);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateChatappTemplate"),
             new TeaPair("version", "2020-06-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -138,25 +89,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public CreateChatappTemplateResponse createChatappTemplate(CreateChatappTemplateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createChatappTemplateWithOptions(request, runtime);
     }
 
-    public DeleteChatappTemplateResponse deleteChatappTemplateWithOptions(DeleteChatappTemplateRequest request, RuntimeOptions runtime) throws Exception {
+    public DeleteChatappTemplateResponse deleteChatappTemplateWithOptions(DeleteChatappTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
             query.put("CustWabaId", request.custWabaId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
+            query.put("IsvCode", request.isvCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
             query.put("TemplateCode", request.templateCode);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteChatappTemplate"),
             new TeaPair("version", "2020-06-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -171,15 +126,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteChatappTemplateResponse deleteChatappTemplate(DeleteChatappTemplateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteChatappTemplateWithOptions(request, runtime);
     }
 
-    public GetChatappTemplateDetailResponse getChatappTemplateDetailWithOptions(GetChatappTemplateDetailRequest request, RuntimeOptions runtime) throws Exception {
+    public GetChatappTemplateDetailResponse getChatappTemplateDetailWithOptions(GetChatappTemplateDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
             query.put("CustWabaId", request.custWabaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
+            query.put("IsvCode", request.isvCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
@@ -190,10 +149,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TemplateCode", request.templateCode);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetChatappTemplateDetail"),
             new TeaPair("version", "2020-06-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -208,11 +167,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetChatappTemplateDetailResponse getChatappTemplateDetail(GetChatappTemplateDetailRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getChatappTemplateDetailWithOptions(request, runtime);
     }
 
-    public ListChatappTemplateResponse listChatappTemplateWithOptions(ListChatappTemplateRequest tmpReq, RuntimeOptions runtime) throws Exception {
+    public ListChatappTemplateResponse listChatappTemplateWithOptions(ListChatappTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListChatappTemplateShrinkRequest request = new ListChatappTemplateShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
@@ -229,6 +188,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CustWabaId", request.custWabaId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
+            query.put("IsvCode", request.isvCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
             query.put("Language", request.language);
         }
@@ -241,10 +204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Page", request.pageShrink);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListChatappTemplate"),
             new TeaPair("version", "2020-06-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -259,11 +222,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public ListChatappTemplateResponse listChatappTemplate(ListChatappTemplateRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listChatappTemplateWithOptions(request, runtime);
     }
 
-    public SendChatappMassMessageResponse sendChatappMassMessageWithOptions(SendChatappMassMessageRequest tmpReq, RuntimeOptions runtime) throws Exception {
+    public SendChatappMassMessageResponse sendChatappMassMessageWithOptions(SendChatappMassMessageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendChatappMassMessageShrinkRequest request = new SendChatappMassMessageShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
@@ -292,6 +255,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("From", request.from);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
+            body.put("IsvCode", request.isvCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
             body.put("Language", request.language);
         }
@@ -308,10 +275,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TemplateCode", request.templateCode);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SendChatappMassMessage"),
             new TeaPair("version", "2020-06-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -326,11 +293,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public SendChatappMassMessageResponse sendChatappMassMessage(SendChatappMassMessageRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendChatappMassMessageWithOptions(request, runtime);
     }
 
-    public SendChatappMessageResponse sendChatappMessageWithOptions(SendChatappMessageRequest tmpReq, RuntimeOptions runtime) throws Exception {
+    public SendChatappMessageResponse sendChatappMessageWithOptions(SendChatappMessageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendChatappMessageShrinkRequest request = new SendChatappMessageShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
@@ -372,6 +339,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("From", request.from);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
+            body.put("IsvCode", request.isvCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
             body.put("Language", request.language);
         }
@@ -396,11 +367,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Type", request.type);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SendChatappMessage"),
             new TeaPair("version", "2020-06-06"),
             new TeaPair("protocol", "HTTPS"),
@@ -415,7 +386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public SendChatappMessageResponse sendChatappMessage(SendChatappMessageRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendChatappMessageWithOptions(request, runtime);
     }
 }
