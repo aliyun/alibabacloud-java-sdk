@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnatTableEntriesRequest extends TeaModel {
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -46,6 +49,14 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     public static DescribeSnatTableEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnatTableEntriesRequest self = new DescribeSnatTableEntriesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSnatTableEntriesRequest setNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    public String getNatGatewayId() {
+        return this.natGatewayId;
     }
 
     public DescribeSnatTableEntriesRequest setOwnerAccount(String ownerAccount) {

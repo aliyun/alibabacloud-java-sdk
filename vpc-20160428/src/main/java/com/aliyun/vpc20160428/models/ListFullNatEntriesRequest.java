@@ -22,6 +22,9 @@ public class ListFullNatEntriesRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
+
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
 
@@ -94,6 +97,14 @@ public class ListFullNatEntriesRequest extends TeaModel {
     }
     public Long getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListFullNatEntriesRequest setNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    public String getNatGatewayId() {
+        return this.natGatewayId;
     }
 
     public ListFullNatEntriesRequest setNetworkInterfaceIds(java.util.List<String> networkInterfaceIds) {

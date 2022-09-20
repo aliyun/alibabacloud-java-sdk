@@ -92,6 +92,9 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("FastLinkMode")
+        public Boolean fastLinkMode;
+
         @NameInMap("HasReservationData")
         public String hasReservationData;
 
@@ -254,6 +257,14 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setFastLinkMode(Boolean fastLinkMode) {
+            this.fastLinkMode = fastLinkMode;
+            return this;
+        }
+        public Boolean getFastLinkMode() {
+            return this.fastLinkMode;
         }
 
         public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setHasReservationData(String hasReservationData) {

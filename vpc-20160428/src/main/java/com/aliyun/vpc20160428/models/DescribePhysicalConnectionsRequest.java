@@ -34,6 +34,9 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tags")
+    public java.util.List<DescribePhysicalConnectionsRequestTags> tags;
+
     public static DescribePhysicalConnectionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePhysicalConnectionsRequest self = new DescribePhysicalConnectionsRequest();
         return TeaModel.build(map, self);
@@ -119,6 +122,14 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public DescribePhysicalConnectionsRequest setTags(java.util.List<DescribePhysicalConnectionsRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribePhysicalConnectionsRequestTags> getTags() {
+        return this.tags;
+    }
+
     public static class DescribePhysicalConnectionsRequestFilter extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -144,6 +155,36 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
             return this;
         }
         public java.util.List<String> getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribePhysicalConnectionsRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribePhysicalConnectionsRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribePhysicalConnectionsRequestTags self = new DescribePhysicalConnectionsRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePhysicalConnectionsRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribePhysicalConnectionsRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
             return this.value;
         }
 
