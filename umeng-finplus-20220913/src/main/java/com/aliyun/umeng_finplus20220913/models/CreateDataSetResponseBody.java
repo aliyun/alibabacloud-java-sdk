@@ -1,0 +1,67 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.umeng_finplus20220913.models;
+
+import com.aliyun.tea.*;
+
+public class CreateDataSetResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public Long data;
+
+    @NameInMap("Msg")
+    public String msg;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    public static CreateDataSetResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateDataSetResponseBody self = new CreateDataSetResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateDataSetResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateDataSetResponseBody setData(Long data) {
+        this.data = data;
+        return this;
+    }
+    public Long getData() {
+        return this.data;
+    }
+
+    public CreateDataSetResponseBody setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+    public String getMsg() {
+        return this.msg;
+    }
+
+    public CreateDataSetResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateDataSetResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+}
