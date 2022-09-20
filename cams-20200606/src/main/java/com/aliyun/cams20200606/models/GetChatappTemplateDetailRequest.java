@@ -7,6 +7,9 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     @NameInMap("CustWabaId")
     public String custWabaId;
 
+    @NameInMap("IsvCode")
+    public String isvCode;
+
     @NameInMap("Language")
     public String language;
 
@@ -24,6 +27,14 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     }
     public String getCustWabaId() {
         return this.custWabaId;
+    }
+
+    public GetChatappTemplateDetailRequest setIsvCode(String isvCode) {
+        this.isvCode = isvCode;
+        return this;
+    }
+    public String getIsvCode() {
+        return this.isvCode;
     }
 
     public GetChatappTemplateDetailRequest setLanguage(String language) {
