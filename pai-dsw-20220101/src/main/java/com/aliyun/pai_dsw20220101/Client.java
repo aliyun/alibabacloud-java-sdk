@@ -26,6 +26,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public CreateIdleInstanceCullerResponse createIdleInstanceCuller(String InstanceId, CreateIdleInstanceCullerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createIdleInstanceCullerWithOptions(InstanceId, request, headers, runtime);
+    }
+
+    public CreateIdleInstanceCullerResponse createIdleInstanceCullerWithOptions(String InstanceId, CreateIdleInstanceCullerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuPercentThreshold)) {
+            body.put("CpuPercentThreshold", request.cpuPercentThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuPercentThreshold)) {
+            body.put("GpuPercentThreshold", request.gpuPercentThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxIdleTimeInMinutes)) {
+            body.put("MaxIdleTimeInMinutes", request.maxIdleTimeInMinutes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateIdleInstanceCuller"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/idleinstanceculler"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIdleInstanceCullerResponse());
+    }
+
     public CreateInstanceResponse createInstance(CreateInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -179,6 +218,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceSnapshotResponse());
     }
 
+    public DeleteIdleInstanceCullerResponse deleteIdleInstanceCuller(String InstanceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteIdleInstanceCullerWithOptions(InstanceId, headers, runtime);
+    }
+
+    public DeleteIdleInstanceCullerResponse deleteIdleInstanceCullerWithOptions(String InstanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteIdleInstanceCuller"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/idleinstanceculler"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIdleInstanceCullerResponse());
+    }
+
     public DeleteInstanceResponse deleteInstance(String InstanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -249,6 +312,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceSnapshotResponse());
+    }
+
+    public GetIdleInstanceCullerResponse getIdleInstanceCuller(String InstanceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getIdleInstanceCullerWithOptions(InstanceId, headers, runtime);
+    }
+
+    public GetIdleInstanceCullerResponse getIdleInstanceCullerWithOptions(String InstanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetIdleInstanceCuller"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/idleinstanceculler"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIdleInstanceCullerResponse());
     }
 
     public GetInstanceResponse getInstance(String InstanceId) throws Exception {
