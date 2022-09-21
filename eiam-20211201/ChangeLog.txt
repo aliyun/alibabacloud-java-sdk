@@ -1,3 +1,6 @@
+2022-09-21 Version: 1.0.1
+- Support OIDC RP-initiated Logout Config.
+
 2022-08-18 Version: 1.0.0
 - Support Application authorization manage.
 - Support User and Organizational Unit resource query operation.

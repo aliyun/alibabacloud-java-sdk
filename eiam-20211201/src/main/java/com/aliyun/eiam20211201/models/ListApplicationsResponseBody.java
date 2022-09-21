@@ -70,6 +70,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("LogoUrl")
         public String logoUrl;
 
+        @NameInMap("ManagedServiceCode")
+        public String managedServiceCode;
+
+        @NameInMap("ServiceManaged")
+        public Boolean serviceManaged;
+
         @NameInMap("SsoType")
         public String ssoType;
 
@@ -154,6 +160,22 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public String getLogoUrl() {
             return this.logoUrl;
+        }
+
+        public ListApplicationsResponseBodyApplications setManagedServiceCode(String managedServiceCode) {
+            this.managedServiceCode = managedServiceCode;
+            return this;
+        }
+        public String getManagedServiceCode() {
+            return this.managedServiceCode;
+        }
+
+        public ListApplicationsResponseBodyApplications setServiceManaged(Boolean serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+        public Boolean getServiceManaged() {
+            return this.serviceManaged;
         }
 
         public ListApplicationsResponseBodyApplications setSsoType(String ssoType) {

@@ -130,6 +130,9 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         @NameInMap("PkceRequired")
         public Boolean pkceRequired;
 
+        @NameInMap("PostLogoutRedirectUris")
+        public java.util.List<String> postLogoutRedirectUris;
+
         @NameInMap("RedirectUris")
         public java.util.List<String> redirectUris;
 
@@ -209,6 +212,14 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         }
         public Boolean getPkceRequired() {
             return this.pkceRequired;
+        }
+
+        public SetApplicationSsoConfigRequestOidcSsoConfig setPostLogoutRedirectUris(java.util.List<String> postLogoutRedirectUris) {
+            this.postLogoutRedirectUris = postLogoutRedirectUris;
+            return this;
+        }
+        public java.util.List<String> getPostLogoutRedirectUris() {
+            return this.postLogoutRedirectUris;
         }
 
         public SetApplicationSsoConfigRequestOidcSsoConfig setRedirectUris(java.util.List<String> redirectUris) {

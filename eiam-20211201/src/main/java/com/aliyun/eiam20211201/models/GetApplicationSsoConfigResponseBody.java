@@ -86,6 +86,9 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         @NameInMap("PkceRequired")
         public Boolean pkceRequired;
 
+        @NameInMap("PostLogoutRedirectUris")
+        public java.util.List<String> postLogoutRedirectUris;
+
         @NameInMap("RedirectUris")
         public java.util.List<String> redirectUris;
 
@@ -167,6 +170,14 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             return this.pkceRequired;
         }
 
+        public GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfig setPostLogoutRedirectUris(java.util.List<String> postLogoutRedirectUris) {
+            this.postLogoutRedirectUris = postLogoutRedirectUris;
+            return this;
+        }
+        public java.util.List<String> getPostLogoutRedirectUris() {
+            return this.postLogoutRedirectUris;
+        }
+
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfig setRedirectUris(java.util.List<String> redirectUris) {
             this.redirectUris = redirectUris;
             return this;
@@ -222,6 +233,9 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
         @NameInMap("OidcJwksEndpoint")
         public String oidcJwksEndpoint;
+
+        @NameInMap("OidcLogoutEndpoint")
+        public String oidcLogoutEndpoint;
 
         @NameInMap("SamlMetaEndpoint")
         public String samlMetaEndpoint;
@@ -288,6 +302,14 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         }
         public String getOidcJwksEndpoint() {
             return this.oidcJwksEndpoint;
+        }
+
+        public GetApplicationSsoConfigResponseBodyApplicationSsoConfigProtocolEndpointDomain setOidcLogoutEndpoint(String oidcLogoutEndpoint) {
+            this.oidcLogoutEndpoint = oidcLogoutEndpoint;
+            return this;
+        }
+        public String getOidcLogoutEndpoint() {
+            return this.oidcLogoutEndpoint;
         }
 
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigProtocolEndpointDomain setSamlMetaEndpoint(String samlMetaEndpoint) {
