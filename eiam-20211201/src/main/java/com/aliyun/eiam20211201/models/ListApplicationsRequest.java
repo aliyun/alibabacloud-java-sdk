@@ -10,6 +10,9 @@ public class ListApplicationsRequest extends TeaModel {
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    @NameInMap("AuthorizationType")
+    public String authorizationType;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -41,6 +44,14 @@ public class ListApplicationsRequest extends TeaModel {
     }
     public String getApplicationName() {
         return this.applicationName;
+    }
+
+    public ListApplicationsRequest setAuthorizationType(String authorizationType) {
+        this.authorizationType = authorizationType;
+        return this;
+    }
+    public String getAuthorizationType() {
+        return this.authorizationType;
     }
 
     public ListApplicationsRequest setInstanceId(String instanceId) {

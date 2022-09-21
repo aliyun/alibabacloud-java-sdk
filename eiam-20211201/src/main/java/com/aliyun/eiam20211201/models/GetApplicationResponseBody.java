@@ -65,6 +65,12 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("LogoUrl")
         public String logoUrl;
 
+        @NameInMap("ManagedServiceCode")
+        public String managedServiceCode;
+
+        @NameInMap("ServiceManaged")
+        public Boolean serviceManaged;
+
         @NameInMap("SsoType")
         public String ssoType;
 
@@ -165,6 +171,22 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getLogoUrl() {
             return this.logoUrl;
+        }
+
+        public GetApplicationResponseBodyApplication setManagedServiceCode(String managedServiceCode) {
+            this.managedServiceCode = managedServiceCode;
+            return this;
+        }
+        public String getManagedServiceCode() {
+            return this.managedServiceCode;
+        }
+
+        public GetApplicationResponseBodyApplication setServiceManaged(Boolean serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+        public Boolean getServiceManaged() {
+            return this.serviceManaged;
         }
 
         public GetApplicationResponseBodyApplication setSsoType(String ssoType) {
