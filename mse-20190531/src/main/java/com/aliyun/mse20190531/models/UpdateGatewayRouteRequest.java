@@ -654,6 +654,9 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     }
 
     public static class UpdateGatewayRouteRequestServicesHttpDubboTranscoder extends TeaModel {
+        @NameInMap("DubboServiceGroup")
+        public String dubboServiceGroup;
+
         @NameInMap("DubboServiceName")
         public String dubboServiceName;
 
@@ -666,6 +669,14 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public static UpdateGatewayRouteRequestServicesHttpDubboTranscoder build(java.util.Map<String, ?> map) throws Exception {
             UpdateGatewayRouteRequestServicesHttpDubboTranscoder self = new UpdateGatewayRouteRequestServicesHttpDubboTranscoder();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateGatewayRouteRequestServicesHttpDubboTranscoder setDubboServiceGroup(String dubboServiceGroup) {
+            this.dubboServiceGroup = dubboServiceGroup;
+            return this;
+        }
+        public String getDubboServiceGroup() {
+            return this.dubboServiceGroup;
         }
 
         public UpdateGatewayRouteRequestServicesHttpDubboTranscoder setDubboServiceName(String dubboServiceName) {

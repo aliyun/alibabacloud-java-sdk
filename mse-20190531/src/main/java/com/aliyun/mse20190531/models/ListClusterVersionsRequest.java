@@ -13,6 +13,9 @@ public class ListClusterVersionsRequest extends TeaModel {
     @NameInMap("MseSessionId")
     public String mseSessionId;
 
+    @NameInMap("MseVersion")
+    public String mseVersion;
+
     public static ListClusterVersionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListClusterVersionsRequest self = new ListClusterVersionsRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ListClusterVersionsRequest extends TeaModel {
     }
     public String getMseSessionId() {
         return this.mseSessionId;
+    }
+
+    public ListClusterVersionsRequest setMseVersion(String mseVersion) {
+        this.mseVersion = mseVersion;
+        return this;
+    }
+    public String getMseVersion() {
+        return this.mseVersion;
     }
 
 }
