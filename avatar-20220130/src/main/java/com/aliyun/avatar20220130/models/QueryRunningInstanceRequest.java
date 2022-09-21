@@ -7,6 +7,9 @@ public class QueryRunningInstanceRequest extends TeaModel {
     @NameInMap("App")
     public QueryRunningInstanceRequestApp app;
 
+    @NameInMap("SessionId")
+    public String sessionId;
+
     @NameInMap("TenantId")
     public Long tenantId;
 
@@ -21,6 +24,14 @@ public class QueryRunningInstanceRequest extends TeaModel {
     }
     public QueryRunningInstanceRequestApp getApp() {
         return this.app;
+    }
+
+    public QueryRunningInstanceRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public QueryRunningInstanceRequest setTenantId(Long tenantId) {

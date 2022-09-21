@@ -7,6 +7,9 @@ public class QueryRunningInstanceShrinkRequest extends TeaModel {
     @NameInMap("App")
     public String appShrink;
 
+    @NameInMap("SessionId")
+    public String sessionId;
+
     @NameInMap("TenantId")
     public Long tenantId;
 
@@ -21,6 +24,14 @@ public class QueryRunningInstanceShrinkRequest extends TeaModel {
     }
     public String getAppShrink() {
         return this.appShrink;
+    }
+
+    public QueryRunningInstanceShrinkRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public QueryRunningInstanceShrinkRequest setTenantId(Long tenantId) {
