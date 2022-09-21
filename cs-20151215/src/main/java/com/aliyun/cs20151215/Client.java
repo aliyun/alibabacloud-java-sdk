@@ -67,7 +67,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public AttachInstancesResponse attachInstancesWithOptions(String ClusterId, AttachInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.cpuPolicy)) {
             body.put("cpu_policy", request.cpuPolicy);
@@ -129,7 +128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "AttachInstances"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/attach"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/attach"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -146,7 +145,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public CancelClusterUpgradeResponse cancelClusterUpgradeWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -154,7 +152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CancelClusterUpgrade"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/clusters/" + ClusterId + "/upgrade/cancel"),
+            new TeaPair("pathname", "/api/v2/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/upgrade/cancel"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -171,8 +169,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public CancelComponentUpgradeResponse cancelComponentUpgradeWithOptions(String clusterId, String componentId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
-        componentId = com.aliyun.openapiutil.Client.getEncodeParam(componentId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -180,7 +176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CancelComponentUpgrade"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterId + "/components/" + componentId + "/cancel"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/components/" + com.aliyun.openapiutil.Client.getEncodeParam(componentId) + "/cancel"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -197,7 +193,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public CancelTaskResponse cancelTaskWithOptions(String taskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        taskId = com.aliyun.openapiutil.Client.getEncodeParam(taskId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -205,7 +200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CancelTask"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/tasks/" + taskId + "/cancel"),
+            new TeaPair("pathname", "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + "/cancel"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -223,7 +218,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CancelWorkflowResponse cancelWorkflowWithOptions(String workflowName, CancelWorkflowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        workflowName = com.aliyun.openapiutil.Client.getEncodeParam(workflowName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.action)) {
             body.put("action", request.action);
@@ -237,7 +231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CancelWorkflow"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/gs/workflow/" + workflowName + ""),
+            new TeaPair("pathname", "/gs/workflow/" + com.aliyun.openapiutil.Client.getEncodeParam(workflowName) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -255,7 +249,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateAutoscalingConfigResponse createAutoscalingConfigWithOptions(String ClusterId, CreateAutoscalingConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.coolDownDuration)) {
             body.put("cool_down_duration", request.coolDownDuration);
@@ -293,7 +286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateAutoscalingConfig"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/cluster/" + ClusterId + "/autoscale/config/"),
+            new TeaPair("pathname", "/cluster/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/autoscale/config/"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -686,7 +679,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateClusterNodePoolResponse createClusterNodePoolWithOptions(String ClusterId, CreateClusterNodePoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.autoScaling))) {
             body.put("auto_scaling", request.autoScaling);
@@ -736,7 +728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateClusterNodePool"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/nodepools"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/nodepools"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -883,7 +875,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateTriggerResponse createTriggerWithOptions(String clusterId, CreateTriggerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.action)) {
             body.put("action", request.action);
@@ -909,7 +900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateTrigger"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterId + "/triggers"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/triggers"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -975,7 +966,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteClusterResponse deleteClusterWithOptions(String ClusterId, DeleteClusterRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         DeleteClusterShrinkRequest request = new DeleteClusterShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.retainResources)) {
@@ -1003,7 +993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteCluster"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + ""),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1021,8 +1011,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteClusterNodepoolResponse deleteClusterNodepoolWithOptions(String ClusterId, String NodepoolId, DeleteClusterNodepoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        NodepoolId = com.aliyun.openapiutil.Client.getEncodeParam(NodepoolId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.force)) {
             query.put("force", request.force);
@@ -1036,7 +1024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteClusterNodepool"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/nodepools/" + NodepoolId + ""),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(NodepoolId) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1054,7 +1042,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteClusterNodesResponse deleteClusterNodesWithOptions(String ClusterId, DeleteClusterNodesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.drainNode)) {
             body.put("drain_node", request.drainNode);
@@ -1076,7 +1063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteClusterNodes"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/nodes"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/nodes"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1094,7 +1081,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteEdgeMachineResponse deleteEdgeMachineWithOptions(String edgeMachineid, DeleteEdgeMachineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        edgeMachineid = com.aliyun.openapiutil.Client.getEncodeParam(edgeMachineid);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.force)) {
             query.put("force", request.force);
@@ -1108,7 +1094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteEdgeMachine"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/edge_machines/[edge_machineid]"),
+            new TeaPair("pathname", "/edge_machines/%5Bedge_machineid%5D"),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1125,7 +1111,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteKubernetesTriggerResponse deleteKubernetesTriggerWithOptions(String Id, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        Id = com.aliyun.openapiutil.Client.getEncodeParam(Id);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1133,7 +1118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteKubernetesTrigger"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/triggers/revoke/" + Id + ""),
+            new TeaPair("pathname", "/triggers/revoke/" + com.aliyun.openapiutil.Client.getEncodeParam(Id) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1151,8 +1136,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeletePolicyInstanceResponse deletePolicyInstanceWithOptions(String clusterId, String policyName, DeletePolicyInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
-        policyName = com.aliyun.openapiutil.Client.getEncodeParam(policyName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             query.put("instance_name", request.instanceName);
@@ -1166,7 +1149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeletePolicyInstance"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterId + "/policies/" + policyName + ""),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyName) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1183,7 +1166,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteTemplateResponse deleteTemplateWithOptions(String TemplateId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        TemplateId = com.aliyun.openapiutil.Client.getEncodeParam(TemplateId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1191,7 +1173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteTemplate"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/templates/" + TemplateId + ""),
+            new TeaPair("pathname", "/templates/" + com.aliyun.openapiutil.Client.getEncodeParam(TemplateId) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1208,8 +1190,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteTriggerResponse deleteTriggerWithOptions(String clusterId, String Id, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
-        Id = com.aliyun.openapiutil.Client.getEncodeParam(Id);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1217,7 +1197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteTrigger"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/[cluster_id]/triggers/[Id]"),
+            new TeaPair("pathname", "/clusters/%5Bcluster_id%5D/triggers/%5BId%5D"),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1235,8 +1215,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeployPolicyInstanceResponse deployPolicyInstanceWithOptions(String clusterId, String policyName, DeployPolicyInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
-        policyName = com.aliyun.openapiutil.Client.getEncodeParam(policyName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.action)) {
             body.put("action", request.action);
@@ -1258,7 +1236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeployPolicyInstance"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterId + "/policies/" + policyName + ""),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyName) + ""),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1275,7 +1253,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescirbeWorkflowResponse descirbeWorkflowWithOptions(String workflowName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        workflowName = com.aliyun.openapiutil.Client.getEncodeParam(workflowName);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1283,7 +1260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescirbeWorkflow"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/gs/workflow/" + workflowName + ""),
+            new TeaPair("pathname", "/gs/workflow/" + com.aliyun.openapiutil.Client.getEncodeParam(workflowName) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1335,9 +1312,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeClusterAddonMetadataResponse describeClusterAddonMetadataWithOptions(String clusterId, String componentId, String version, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
-        componentId = com.aliyun.openapiutil.Client.getEncodeParam(componentId);
-        version = com.aliyun.openapiutil.Client.getEncodeParam(version);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1345,7 +1319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeClusterAddonMetadata"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterId + "/components/" + componentId + "/metadata"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/components/" + com.aliyun.openapiutil.Client.getEncodeParam(componentId) + "/metadata"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1362,8 +1336,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeClusterAddonUpgradeStatusResponse describeClusterAddonUpgradeStatusWithOptions(String ClusterId, String ComponentId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        ComponentId = com.aliyun.openapiutil.Client.getEncodeParam(ComponentId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1371,7 +1343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeClusterAddonUpgradeStatus"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/components/" + ComponentId + "/upgradestatus"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/components/" + com.aliyun.openapiutil.Client.getEncodeParam(ComponentId) + "/upgradestatus"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1389,7 +1361,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeClusterAddonsUpgradeStatusResponse describeClusterAddonsUpgradeStatusWithOptions(String ClusterId, DescribeClusterAddonsUpgradeStatusRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         DescribeClusterAddonsUpgradeStatusShrinkRequest request = new DescribeClusterAddonsUpgradeStatusShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.componentIds)) {
@@ -1409,7 +1380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeClusterAddonsUpgradeStatus"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/components/upgradestatus"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/components/upgradestatus"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1426,7 +1397,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeClusterAddonsVersionResponse describeClusterAddonsVersionWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1434,7 +1404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeClusterAddonsVersion"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/components/version"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/components/version"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1452,7 +1422,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeClusterAttachScriptsResponse describeClusterAttachScriptsWithOptions(String ClusterId, DescribeClusterAttachScriptsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.arch)) {
             body.put("arch", request.arch);
@@ -1486,7 +1455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeClusterAttachScripts"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/attachscript"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/attachscript"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1503,7 +1472,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeClusterDetailResponse describeClusterDetailWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1511,7 +1479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeClusterDetail"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + ""),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1529,7 +1497,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeClusterEventsResponse describeClusterEventsWithOptions(String ClusterId, DescribeClusterEventsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("page_number", request.pageNumber);
@@ -1551,7 +1518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeClusterEvents"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/events"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/events"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1568,7 +1535,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeClusterLogsResponse describeClusterLogsWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1576,7 +1542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeClusterLogs"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/logs"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/logs"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1593,8 +1559,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeClusterNodePoolDetailResponse describeClusterNodePoolDetailWithOptions(String ClusterId, String NodepoolId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        NodepoolId = com.aliyun.openapiutil.Client.getEncodeParam(NodepoolId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1602,7 +1566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeClusterNodePoolDetail"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/nodepools/" + NodepoolId + ""),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(NodepoolId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1619,7 +1583,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeClusterNodePoolsResponse describeClusterNodePoolsWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1627,7 +1590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeClusterNodePools"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/nodepools"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/nodepools"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1645,7 +1608,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeClusterNodesResponse describeClusterNodesWithOptions(String ClusterId, DescribeClusterNodesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
             query.put("instanceIds", request.instanceIds);
@@ -1675,7 +1637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeClusterNodes"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/nodes"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/nodes"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1692,7 +1654,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeClusterResourcesResponse describeClusterResourcesWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1700,7 +1661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeClusterResources"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/resources"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/resources"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1717,7 +1678,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeClusterTasksResponse describeClusterTasksWithOptions(String clusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1725,7 +1685,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeClusterTasks"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterId + "/tasks"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/tasks"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1743,7 +1703,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeClusterUserKubeconfigResponse describeClusterUserKubeconfigWithOptions(String ClusterId, DescribeClusterUserKubeconfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.privateIpAddress)) {
             query.put("PrivateIpAddress", request.privateIpAddress);
@@ -1761,7 +1720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeClusterUserKubeconfig"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/k8s/" + ClusterId + "/user_config"),
+            new TeaPair("pathname", "/k8s/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/user_config"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1779,7 +1738,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeClusterV2UserKubeconfigResponse describeClusterV2UserKubeconfigWithOptions(String ClusterId, DescribeClusterV2UserKubeconfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.privateIpAddress)) {
             query.put("PrivateIpAddress", request.privateIpAddress);
@@ -1793,7 +1751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeClusterV2UserKubeconfig"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/k8s/" + ClusterId + "/user_config"),
+            new TeaPair("pathname", "/api/v2/k8s/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/user_config"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1900,7 +1858,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeEdgeMachineActiveProcessResponse describeEdgeMachineActiveProcessWithOptions(String edgeMachineid, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        edgeMachineid = com.aliyun.openapiutil.Client.getEncodeParam(edgeMachineid);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1908,7 +1865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeEdgeMachineActiveProcess"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/edge_machines/[edge_machineid]/activeprocess"),
+            new TeaPair("pathname", "/edge_machines/%5Bedge_machineid%5D/activeprocess"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1949,7 +1906,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeEdgeMachineTunnelConfigDetailResponse describeEdgeMachineTunnelConfigDetailWithOptions(String edgeMachineid, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        edgeMachineid = com.aliyun.openapiutil.Client.getEncodeParam(edgeMachineid);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1957,7 +1913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeEdgeMachineTunnelConfigDetail"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/edge_machines/[edge_machineid]/tunnelconfig"),
+            new TeaPair("pathname", "/edge_machines/%5Bedge_machineid%5D/tunnelconfig"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2069,7 +2025,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeExternalAgentResponse describeExternalAgentWithOptions(String ClusterId, DescribeExternalAgentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.privateIpAddress)) {
             query.put("PrivateIpAddress", request.privateIpAddress);
@@ -2083,7 +2038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeExternalAgent"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/k8s/" + ClusterId + "/external/agent/deployment"),
+            new TeaPair("pathname", "/k8s/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/external/agent/deployment"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2147,8 +2102,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeNodePoolVulsResponse describeNodePoolVulsWithOptions(String clusterId, String nodepoolId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
-        nodepoolId = com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -2156,7 +2109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeNodePoolVuls"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterId + "/nodepools/" + nodepoolId + "/vuls"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId) + "/vuls"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2197,7 +2150,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribePolicyDetailsResponse describePolicyDetailsWithOptions(String policyName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        policyName = com.aliyun.openapiutil.Client.getEncodeParam(policyName);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -2205,7 +2157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribePolicyDetails"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/policies/" + policyName + ""),
+            new TeaPair("pathname", "/policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyName) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2222,7 +2174,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribePolicyGovernanceInClusterResponse describePolicyGovernanceInClusterWithOptions(String clusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -2230,7 +2181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribePolicyGovernanceInCluster"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterId + "/policygovernance"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/policygovernance"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2248,7 +2199,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribePolicyInstancesResponse describePolicyInstancesWithOptions(String clusterId, DescribePolicyInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             query.put("instance_name", request.instanceName);
@@ -2266,7 +2216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribePolicyInstances"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterId + "/policies"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/policies"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2283,7 +2233,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribePolicyInstancesStatusResponse describePolicyInstancesStatusWithOptions(String clusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -2291,7 +2240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribePolicyInstancesStatus"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterId + "/policies/status"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/policies/status"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2308,7 +2257,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeTaskInfoResponse describeTaskInfoWithOptions(String taskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        taskId = com.aliyun.openapiutil.Client.getEncodeParam(taskId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -2316,7 +2264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeTaskInfo"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/tasks/" + taskId + ""),
+            new TeaPair("pathname", "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2334,7 +2282,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeTemplateAttributeResponse describeTemplateAttributeWithOptions(String TemplateId, DescribeTemplateAttributeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TemplateId = com.aliyun.openapiutil.Client.getEncodeParam(TemplateId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
             query.put("template_type", request.templateType);
@@ -2348,7 +2295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeTemplateAttribute"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/templates/" + TemplateId + ""),
+            new TeaPair("pathname", "/templates/" + com.aliyun.openapiutil.Client.getEncodeParam(TemplateId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2405,7 +2352,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeTriggerResponse describeTriggerWithOptions(String clusterId, DescribeTriggerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
@@ -2431,7 +2377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeTrigger"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/[cluster_id]/triggers"),
+            new TeaPair("pathname", "/clusters/%5Bcluster_id%5D/triggers"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2448,7 +2394,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DescribeUserPermissionResponse describeUserPermissionWithOptions(String uid, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        uid = com.aliyun.openapiutil.Client.getEncodeParam(uid);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -2456,7 +2401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DescribeUserPermission"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/permissions/users/" + uid + ""),
+            new TeaPair("pathname", "/permissions/users/" + com.aliyun.openapiutil.Client.getEncodeParam(uid) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2522,8 +2467,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public EdgeClusterAddEdgeMachineResponse edgeClusterAddEdgeMachineWithOptions(String clusterid, String edgeMachineid, EdgeClusterAddEdgeMachineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        clusterid = com.aliyun.openapiutil.Client.getEncodeParam(clusterid);
-        edgeMachineid = com.aliyun.openapiutil.Client.getEncodeParam(edgeMachineid);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.expired)) {
             body.put("expired", request.expired);
@@ -2545,7 +2488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "EdgeClusterAddEdgeMachine"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/[clusterid]/attachedgemachine/[edge_machineid]"),
+            new TeaPair("pathname", "/clusters/%5Bclusterid%5D/attachedgemachine/%5Bedge_machineid%5D"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2563,8 +2506,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public FixNodePoolVulsResponse fixNodePoolVulsWithOptions(String clusterId, String nodepoolId, FixNodePoolVulsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
-        nodepoolId = com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.nodes)) {
             body.put("nodes", request.nodes);
@@ -2586,7 +2527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "FixNodePoolVuls"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterId + "/nodepools/" + nodepoolId + "/vuls/fix"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId) + "/vuls/fix"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2604,7 +2545,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetKubernetesTriggerResponse getKubernetesTriggerWithOptions(String ClusterId, GetKubernetesTriggerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
@@ -2630,7 +2570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetKubernetesTrigger"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/triggers/" + ClusterId + ""),
+            new TeaPair("pathname", "/triggers/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2647,7 +2587,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetUpgradeStatusResponse getUpgradeStatusWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -2655,7 +2594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetUpgradeStatus"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/clusters/" + ClusterId + "/upgrade/status"),
+            new TeaPair("pathname", "/api/v2/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/upgrade/status"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2673,7 +2612,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GrantPermissionsResponse grantPermissionsWithOptions(String uid, GrantPermissionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        uid = com.aliyun.openapiutil.Client.getEncodeParam(uid);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.teautil.Common.toArray(request.body))
@@ -2682,7 +2620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GrantPermissions"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/permissions/users/" + uid + ""),
+            new TeaPair("pathname", "/permissions/users/" + com.aliyun.openapiutil.Client.getEncodeParam(uid) + ""),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2700,7 +2638,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public InstallClusterAddonsResponse installClusterAddonsWithOptions(String ClusterId, InstallClusterAddonsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.teautil.Common.toArray(request.body))
@@ -2709,7 +2646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "InstallClusterAddons"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/components/install"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/components/install"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2784,7 +2721,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public MigrateClusterResponse migrateClusterWithOptions(String clusterId, MigrateClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ossBucketEndpoint)) {
             body.put("oss_bucket_endpoint", request.ossBucketEndpoint);
@@ -2802,7 +2738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "MigrateCluster"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterId + "/migrate"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/migrate"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2820,7 +2756,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ModifyClusterResponse modifyClusterWithOptions(String ClusterId, ModifyClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.apiServerEip)) {
             body.put("api_server_eip", request.apiServerEip);
@@ -2866,7 +2801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ModifyCluster"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/clusters/" + ClusterId + ""),
+            new TeaPair("pathname", "/api/v2/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2884,8 +2819,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ModifyClusterAddonResponse modifyClusterAddonWithOptions(String clusterId, String componentId, ModifyClusterAddonRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
-        componentId = com.aliyun.openapiutil.Client.getEncodeParam(componentId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.config)) {
             body.put("config", request.config);
@@ -2899,7 +2832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ModifyClusterAddon"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterId + "/components/" + componentId + "/config"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/components/" + com.aliyun.openapiutil.Client.getEncodeParam(componentId) + "/config"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2917,7 +2850,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ModifyClusterConfigurationResponse modifyClusterConfigurationWithOptions(String ClusterId, ModifyClusterConfigurationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.customizeConfig)) {
             body.put("customize_config", request.customizeConfig);
@@ -2931,7 +2863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ModifyClusterConfiguration"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/configuration"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/configuration"),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2949,8 +2881,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ModifyClusterNodePoolResponse modifyClusterNodePoolWithOptions(String ClusterId, String NodepoolId, ModifyClusterNodePoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        NodepoolId = com.aliyun.openapiutil.Client.getEncodeParam(NodepoolId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.autoScaling))) {
             body.put("auto_scaling", request.autoScaling);
@@ -2988,7 +2918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ModifyClusterNodePool"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/nodepools/" + NodepoolId + ""),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(NodepoolId) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3006,7 +2936,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ModifyClusterTagsResponse modifyClusterTagsWithOptions(String ClusterId, ModifyClusterTagsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.teautil.Common.toArray(request.body))
@@ -3015,7 +2944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ModifyClusterTags"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/tags"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/tags"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3033,8 +2962,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ModifyNodePoolNodeConfigResponse modifyNodePoolNodeConfigWithOptions(String ClusterId, String NodepoolId, ModifyNodePoolNodeConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        NodepoolId = com.aliyun.openapiutil.Client.getEncodeParam(NodepoolId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.kubeletConfig))) {
             body.put("kubelet_config", request.kubeletConfig);
@@ -3052,7 +2979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ModifyNodePoolNodeConfig"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/nodepools/" + NodepoolId + "/node_config"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(NodepoolId) + "/node_config"),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3070,8 +2997,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ModifyPolicyInstanceResponse modifyPolicyInstanceWithOptions(String clusterId, String policyName, ModifyPolicyInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
-        policyName = com.aliyun.openapiutil.Client.getEncodeParam(policyName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.action)) {
             body.put("action", request.action);
@@ -3097,7 +3022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ModifyPolicyInstance"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterId + "/policies/" + policyName + ""),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyName) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3145,7 +3070,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public PauseClusterUpgradeResponse pauseClusterUpgradeWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -3153,7 +3077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "PauseClusterUpgrade"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/clusters/" + ClusterId + "/upgrade/pause"),
+            new TeaPair("pathname", "/api/v2/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/upgrade/pause"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3170,8 +3094,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public PauseComponentUpgradeResponse pauseComponentUpgradeWithOptions(String clusterid, String componentid, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        clusterid = com.aliyun.openapiutil.Client.getEncodeParam(clusterid);
-        componentid = com.aliyun.openapiutil.Client.getEncodeParam(componentid);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -3179,7 +3101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "PauseComponentUpgrade"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterid + "/components/" + componentid + "/pause"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterid) + "/components/" + com.aliyun.openapiutil.Client.getEncodeParam(componentid) + "/pause"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3196,7 +3118,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public PauseTaskResponse pauseTaskWithOptions(String taskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        taskId = com.aliyun.openapiutil.Client.getEncodeParam(taskId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -3204,7 +3125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "PauseTask"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/tasks/" + taskId + "/pause"),
+            new TeaPair("pathname", "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + "/pause"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3222,7 +3143,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public RemoveClusterNodesResponse removeClusterNodesWithOptions(String ClusterId, RemoveClusterNodesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.drainNode)) {
             body.put("drain_node", request.drainNode);
@@ -3244,7 +3164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "RemoveClusterNodes"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/clusters/" + ClusterId + "/nodes/remove"),
+            new TeaPair("pathname", "/api/v2/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/nodes/remove"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3254,6 +3174,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveClusterNodesResponse());
     }
 
+    public RemoveNodePoolNodesResponse removeNodePoolNodes(String ClusterId, String NodepoolId, RemoveNodePoolNodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.removeNodePoolNodesWithOptions(ClusterId, NodepoolId, request, headers, runtime);
+    }
+
+    public RemoveNodePoolNodesResponse removeNodePoolNodesWithOptions(String ClusterId, String NodepoolId, RemoveNodePoolNodesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RemoveNodePoolNodesShrinkRequest request = new RemoveNodePoolNodesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodes)) {
+            request.nodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodes, "nodes", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.drainNode)) {
+            query.put("drain_node", request.drainNode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodesShrink)) {
+            query.put("nodes", request.nodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.releaseNode)) {
+            query.put("release_node", request.releaseNode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveNodePoolNodes"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(NodepoolId) + "/nodes"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveNodePoolNodesResponse());
+    }
+
     public RemoveWorkflowResponse removeWorkflow(String workflowName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3261,7 +3226,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public RemoveWorkflowResponse removeWorkflowWithOptions(String workflowName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        workflowName = com.aliyun.openapiutil.Client.getEncodeParam(workflowName);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -3269,7 +3233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "RemoveWorkflow"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/gs/workflow/" + workflowName + ""),
+            new TeaPair("pathname", "/gs/workflow/" + com.aliyun.openapiutil.Client.getEncodeParam(workflowName) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3287,8 +3251,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public RepairClusterNodePoolResponse repairClusterNodePoolWithOptions(String clusterId, String nodepoolId, RepairClusterNodePoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        clusterId = com.aliyun.openapiutil.Client.getEncodeParam(clusterId);
-        nodepoolId = com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.nodes)) {
             body.put("nodes", request.nodes);
@@ -3302,7 +3264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "RepairClusterNodePool"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterId + "/nodepools/" + nodepoolId + "/repair"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(nodepoolId) + "/repair"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3319,8 +3281,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public ResumeComponentUpgradeResponse resumeComponentUpgradeWithOptions(String clusterid, String componentid, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        clusterid = com.aliyun.openapiutil.Client.getEncodeParam(clusterid);
-        componentid = com.aliyun.openapiutil.Client.getEncodeParam(componentid);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -3328,7 +3288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ResumeComponentUpgrade"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + clusterid + "/components/" + componentid + "/resume"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterid) + "/components/" + com.aliyun.openapiutil.Client.getEncodeParam(componentid) + "/resume"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3345,7 +3305,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public ResumeTaskResponse resumeTaskWithOptions(String taskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        taskId = com.aliyun.openapiutil.Client.getEncodeParam(taskId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -3353,7 +3312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ResumeTask"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/tasks/" + taskId + "/resume"),
+            new TeaPair("pathname", "/tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + "/resume"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3370,7 +3329,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public ResumeUpgradeClusterResponse resumeUpgradeClusterWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -3378,7 +3336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ResumeUpgradeCluster"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/clusters/" + ClusterId + "/upgrade/resume"),
+            new TeaPair("pathname", "/api/v2/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/upgrade/resume"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3396,7 +3354,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ScaleClusterResponse scaleClusterWithOptions(String ClusterId, ScaleClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.cloudMonitorFlags)) {
             body.put("cloud_monitor_flags", request.cloudMonitorFlags);
@@ -3482,7 +3439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ScaleCluster"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + ""),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3500,8 +3457,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ScaleClusterNodePoolResponse scaleClusterNodePoolWithOptions(String ClusterId, String NodepoolId, ScaleClusterNodePoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
-        NodepoolId = com.aliyun.openapiutil.Client.getEncodeParam(NodepoolId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.count)) {
             body.put("count", request.count);
@@ -3515,7 +3470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ScaleClusterNodePool"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/nodepools/" + NodepoolId + ""),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/nodepools/" + com.aliyun.openapiutil.Client.getEncodeParam(NodepoolId) + ""),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3533,7 +3488,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ScaleOutClusterResponse scaleOutClusterWithOptions(String ClusterId, ScaleOutClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.cloudMonitorFlags)) {
             body.put("cloud_monitor_flags", request.cloudMonitorFlags);
@@ -3627,7 +3581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ScaleOutCluster"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/clusters/" + ClusterId + ""),
+            new TeaPair("pathname", "/api/v2/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + ""),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3791,7 +3745,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UnInstallClusterAddonsResponse unInstallClusterAddonsWithOptions(String ClusterId, UnInstallClusterAddonsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.teautil.Common.toArray(request.addons))
@@ -3800,7 +3753,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UnInstallClusterAddons"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/components/uninstall"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/components/uninstall"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3864,7 +3817,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public UpdateContactGroupForAlertResponse updateContactGroupForAlertWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -3872,7 +3824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateContactGroupForAlert"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/alert/" + ClusterId + "/alert_rule/contact_groups"),
+            new TeaPair("pathname", "/alert/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/alert_rule/contact_groups"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3890,7 +3842,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateK8sClusterUserConfigExpireResponse updateK8sClusterUserConfigExpireWithOptions(String ClusterId, UpdateK8sClusterUserConfigExpireRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.expireHour)) {
             body.put("expire_hour", request.expireHour);
@@ -3908,7 +3859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateK8sClusterUserConfigExpire"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/k8s/" + ClusterId + "/user_config/expire"),
+            new TeaPair("pathname", "/k8s/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/user_config/expire"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3926,7 +3877,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateTemplateResponse updateTemplateWithOptions(String TemplateId, UpdateTemplateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        TemplateId = com.aliyun.openapiutil.Client.getEncodeParam(TemplateId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
@@ -3956,7 +3906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateTemplate"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/templates/" + TemplateId + ""),
+            new TeaPair("pathname", "/templates/" + com.aliyun.openapiutil.Client.getEncodeParam(TemplateId) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3974,7 +3924,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpgradeClusterResponse upgradeClusterWithOptions(String ClusterId, UpgradeClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.componentName)) {
             body.put("component_name", request.componentName);
@@ -3996,7 +3945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpgradeCluster"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/clusters/" + ClusterId + "/upgrade"),
+            new TeaPair("pathname", "/api/v2/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/upgrade"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -4014,7 +3963,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpgradeClusterAddonsResponse upgradeClusterAddonsWithOptions(String ClusterId, UpgradeClusterAddonsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        ClusterId = com.aliyun.openapiutil.Client.getEncodeParam(ClusterId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.teautil.Common.toArray(request.body))
@@ -4023,7 +3971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpgradeClusterAddons"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/" + ClusterId + "/components/upgrade"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/components/upgrade"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
