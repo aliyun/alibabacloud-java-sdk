@@ -2004,6 +2004,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ExcessCapacityTerminationPolicy", request.excessCapacityTerminationPolicy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hibernationOptionsConfigured)) {
+            query.put("HibernationOptionsConfigured", request.hibernationOptionsConfigured);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.launchTemplateConfig)) {
             query.put("LaunchTemplateConfig", request.launchTemplateConfig);
         }
