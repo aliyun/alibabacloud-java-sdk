@@ -297,6 +297,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("Parameters")
         public String parameters;
 
+        @NameInMap("PayType")
+        public String payType;
+
         @NameInMap("Progress")
         public Long progress;
 
@@ -389,6 +392,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
         public String getParameters() {
             return this.parameters;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
         }
 
         public ListServiceInstancesResponseBodyServiceInstances setProgress(Long progress) {

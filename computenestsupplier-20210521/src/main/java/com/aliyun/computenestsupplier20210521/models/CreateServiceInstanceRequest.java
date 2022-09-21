@@ -13,9 +13,6 @@ public class CreateServiceInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("RequestTag")
-    public java.util.List<CreateServiceInstanceRequestRequestTag> requestTag;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -61,14 +58,6 @@ public class CreateServiceInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public CreateServiceInstanceRequest setRequestTag(java.util.List<CreateServiceInstanceRequestRequestTag> requestTag) {
-        this.requestTag = requestTag;
-        return this;
-    }
-    public java.util.List<CreateServiceInstanceRequestRequestTag> getRequestTag() {
-        return this.requestTag;
     }
 
     public CreateServiceInstanceRequest setResourceGroupId(String resourceGroupId) {
@@ -117,36 +106,6 @@ public class CreateServiceInstanceRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public static class CreateServiceInstanceRequestRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static CreateServiceInstanceRequestRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateServiceInstanceRequestRequestTag self = new CreateServiceInstanceRequestRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateServiceInstanceRequestRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateServiceInstanceRequestRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
     }
 
     public static class CreateServiceInstanceRequestTag extends TeaModel {
