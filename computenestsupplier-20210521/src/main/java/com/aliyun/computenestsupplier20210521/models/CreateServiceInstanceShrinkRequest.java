@@ -13,9 +13,6 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("RequestTag")
-    public java.util.List<CreateServiceInstanceShrinkRequestRequestTag> requestTag;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -61,14 +58,6 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public CreateServiceInstanceShrinkRequest setRequestTag(java.util.List<CreateServiceInstanceShrinkRequestRequestTag> requestTag) {
-        this.requestTag = requestTag;
-        return this;
-    }
-    public java.util.List<CreateServiceInstanceShrinkRequestRequestTag> getRequestTag() {
-        return this.requestTag;
     }
 
     public CreateServiceInstanceShrinkRequest setResourceGroupId(String resourceGroupId) {
@@ -117,36 +106,6 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public static class CreateServiceInstanceShrinkRequestRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static CreateServiceInstanceShrinkRequestRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateServiceInstanceShrinkRequestRequestTag self = new CreateServiceInstanceShrinkRequestRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateServiceInstanceShrinkRequestRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateServiceInstanceShrinkRequestRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
     }
 
     public static class CreateServiceInstanceShrinkRequestTag extends TeaModel {

@@ -22,14 +22,14 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("IsSupportOperated")
     public Boolean isSupportOperated;
 
+    @NameInMap("LicenseMetadata")
+    public String licenseMetadata;
+
     @NameInMap("PolicyNames")
     public String policyNames;
 
     @NameInMap("RegionId")
     public String regionId;
-
-    @NameInMap("RequestTag")
-    public java.util.List<CreateServiceRequestRequestTag> requestTag;
 
     @NameInMap("SaleMetadata")
     public String saleMetadata;
@@ -114,6 +114,14 @@ public class CreateServiceRequest extends TeaModel {
         return this.isSupportOperated;
     }
 
+    public CreateServiceRequest setLicenseMetadata(String licenseMetadata) {
+        this.licenseMetadata = licenseMetadata;
+        return this;
+    }
+    public String getLicenseMetadata() {
+        return this.licenseMetadata;
+    }
+
     public CreateServiceRequest setPolicyNames(String policyNames) {
         this.policyNames = policyNames;
         return this;
@@ -128,14 +136,6 @@ public class CreateServiceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public CreateServiceRequest setRequestTag(java.util.List<CreateServiceRequestRequestTag> requestTag) {
-        this.requestTag = requestTag;
-        return this;
-    }
-    public java.util.List<CreateServiceRequestRequestTag> getRequestTag() {
-        return this.requestTag;
     }
 
     public CreateServiceRequest setSaleMetadata(String saleMetadata) {
@@ -216,36 +216,6 @@ public class CreateServiceRequest extends TeaModel {
     }
     public String getVersionName() {
         return this.versionName;
-    }
-
-    public static class CreateServiceRequestRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static CreateServiceRequestRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateServiceRequestRequestTag self = new CreateServiceRequestRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateServiceRequestRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateServiceRequestRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
     }
 
     public static class CreateServiceRequestServiceInfo extends TeaModel {
