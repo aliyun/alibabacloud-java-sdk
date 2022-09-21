@@ -28,6 +28,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     @NameInMap("ExcessCapacityTerminationPolicy")
     public String excessCapacityTerminationPolicy;
 
+    @NameInMap("HibernationOptionsConfigured")
+    public Boolean hibernationOptionsConfigured;
+
     @NameInMap("LaunchTemplateConfig")
     public java.util.List<CreateAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig;
 
@@ -164,6 +167,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     }
     public String getExcessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy;
+    }
+
+    public CreateAutoProvisioningGroupRequest setHibernationOptionsConfigured(Boolean hibernationOptionsConfigured) {
+        this.hibernationOptionsConfigured = hibernationOptionsConfigured;
+        return this;
+    }
+    public Boolean getHibernationOptionsConfigured() {
+        return this.hibernationOptionsConfigured;
     }
 
     public CreateAutoProvisioningGroupRequest setLaunchTemplateConfig(java.util.List<CreateAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig) {
