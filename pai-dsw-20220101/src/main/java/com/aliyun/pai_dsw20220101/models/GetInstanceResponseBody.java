@@ -34,6 +34,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    @NameInMap("IdleInstanceCuller")
+    public GetInstanceResponseBodyIdleInstanceCuller idleInstanceCuller;
+
     @NameInMap("ImageId")
     public String imageId;
 
@@ -57,6 +60,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
     @NameInMap("JupyterlabUrl")
     public String jupyterlabUrl;
+
+    @NameInMap("Labels")
+    public java.util.List<GetInstanceResponseBodyLabels> labels;
 
     @NameInMap("LatestSnapshot")
     public GetInstanceResponseBodyLatestSnapshot latestSnapshot;
@@ -200,6 +206,14 @@ public class GetInstanceResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
+    public GetInstanceResponseBody setIdleInstanceCuller(GetInstanceResponseBodyIdleInstanceCuller idleInstanceCuller) {
+        this.idleInstanceCuller = idleInstanceCuller;
+        return this;
+    }
+    public GetInstanceResponseBodyIdleInstanceCuller getIdleInstanceCuller() {
+        return this.idleInstanceCuller;
+    }
+
     public GetInstanceResponseBody setImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -262,6 +276,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getJupyterlabUrl() {
         return this.jupyterlabUrl;
+    }
+
+    public GetInstanceResponseBody setLabels(java.util.List<GetInstanceResponseBodyLabels> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.List<GetInstanceResponseBodyLabels> getLabels() {
+        return this.labels;
     }
 
     public GetInstanceResponseBody setLatestSnapshot(GetInstanceResponseBodyLatestSnapshot latestSnapshot) {
@@ -446,6 +468,69 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceResponseBodyIdleInstanceCuller extends TeaModel {
+        @NameInMap("CpuPercentThreshold")
+        public Integer cpuPercentThreshold;
+
+        @NameInMap("GpuPercentThreshold")
+        public Integer gpuPercentThreshold;
+
+        @NameInMap("IdleTimeInMinutes")
+        public Integer idleTimeInMinutes;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("MaxIdleTimeInMinutes")
+        public Integer maxIdleTimeInMinutes;
+
+        public static GetInstanceResponseBodyIdleInstanceCuller build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyIdleInstanceCuller self = new GetInstanceResponseBodyIdleInstanceCuller();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyIdleInstanceCuller setCpuPercentThreshold(Integer cpuPercentThreshold) {
+            this.cpuPercentThreshold = cpuPercentThreshold;
+            return this;
+        }
+        public Integer getCpuPercentThreshold() {
+            return this.cpuPercentThreshold;
+        }
+
+        public GetInstanceResponseBodyIdleInstanceCuller setGpuPercentThreshold(Integer gpuPercentThreshold) {
+            this.gpuPercentThreshold = gpuPercentThreshold;
+            return this;
+        }
+        public Integer getGpuPercentThreshold() {
+            return this.gpuPercentThreshold;
+        }
+
+        public GetInstanceResponseBodyIdleInstanceCuller setIdleTimeInMinutes(Integer idleTimeInMinutes) {
+            this.idleTimeInMinutes = idleTimeInMinutes;
+            return this;
+        }
+        public Integer getIdleTimeInMinutes() {
+            return this.idleTimeInMinutes;
+        }
+
+        public GetInstanceResponseBodyIdleInstanceCuller setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public GetInstanceResponseBodyIdleInstanceCuller setMaxIdleTimeInMinutes(Integer maxIdleTimeInMinutes) {
+            this.maxIdleTimeInMinutes = maxIdleTimeInMinutes;
+            return this;
+        }
+        public Integer getMaxIdleTimeInMinutes() {
+            return this.maxIdleTimeInMinutes;
+        }
+
+    }
+
     public static class GetInstanceResponseBodyInstanceShutdownTimer extends TeaModel {
         @NameInMap("DueTime")
         public String dueTime;
@@ -505,6 +590,36 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public Long getRemainingTimeInMs() {
             return this.remainingTimeInMs;
+        }
+
+    }
+
+    public static class GetInstanceResponseBodyLabels extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetInstanceResponseBodyLabels build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyLabels self = new GetInstanceResponseBodyLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetInstanceResponseBodyLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

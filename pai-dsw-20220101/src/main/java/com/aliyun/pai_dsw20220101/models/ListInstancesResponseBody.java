@@ -116,6 +116,69 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class ListInstancesResponseBodyInstancesIdleInstanceCuller extends TeaModel {
+        @NameInMap("CpuPercentThreshold")
+        public Integer cpuPercentThreshold;
+
+        @NameInMap("GpuPercentThreshold")
+        public Integer gpuPercentThreshold;
+
+        @NameInMap("IdleTimeInMinutes")
+        public Integer idleTimeInMinutes;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("MaxIdleTimeInMinutes")
+        public Integer maxIdleTimeInMinutes;
+
+        public static ListInstancesResponseBodyInstancesIdleInstanceCuller build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstancesIdleInstanceCuller self = new ListInstancesResponseBodyInstancesIdleInstanceCuller();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstancesIdleInstanceCuller setCpuPercentThreshold(Integer cpuPercentThreshold) {
+            this.cpuPercentThreshold = cpuPercentThreshold;
+            return this;
+        }
+        public Integer getCpuPercentThreshold() {
+            return this.cpuPercentThreshold;
+        }
+
+        public ListInstancesResponseBodyInstancesIdleInstanceCuller setGpuPercentThreshold(Integer gpuPercentThreshold) {
+            this.gpuPercentThreshold = gpuPercentThreshold;
+            return this;
+        }
+        public Integer getGpuPercentThreshold() {
+            return this.gpuPercentThreshold;
+        }
+
+        public ListInstancesResponseBodyInstancesIdleInstanceCuller setIdleTimeInMinutes(Integer idleTimeInMinutes) {
+            this.idleTimeInMinutes = idleTimeInMinutes;
+            return this;
+        }
+        public Integer getIdleTimeInMinutes() {
+            return this.idleTimeInMinutes;
+        }
+
+        public ListInstancesResponseBodyInstancesIdleInstanceCuller setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListInstancesResponseBodyInstancesIdleInstanceCuller setMaxIdleTimeInMinutes(Integer maxIdleTimeInMinutes) {
+            this.maxIdleTimeInMinutes = maxIdleTimeInMinutes;
+            return this;
+        }
+        public Integer getMaxIdleTimeInMinutes() {
+            return this.maxIdleTimeInMinutes;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyInstancesInstanceShutdownTimer extends TeaModel {
         @NameInMap("DueTime")
         public String dueTime;
@@ -412,6 +475,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        @NameInMap("IdleInstanceCuller")
+        public ListInstancesResponseBodyInstancesIdleInstanceCuller idleInstanceCuller;
+
         @NameInMap("ImageId")
         public String imageId;
 
@@ -554,6 +620,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getGmtModifiedTime() {
             return this.gmtModifiedTime;
+        }
+
+        public ListInstancesResponseBodyInstances setIdleInstanceCuller(ListInstancesResponseBodyInstancesIdleInstanceCuller idleInstanceCuller) {
+            this.idleInstanceCuller = idleInstanceCuller;
+            return this;
+        }
+        public ListInstancesResponseBodyInstancesIdleInstanceCuller getIdleInstanceCuller() {
+            return this.idleInstanceCuller;
         }
 
         public ListInstancesResponseBodyInstances setImageId(String imageId) {

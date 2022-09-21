@@ -113,7 +113,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateInstanceShutdownTimerResponse createInstanceShutdownTimerWithOptions(String InstanceId, CreateInstanceShutdownTimerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        InstanceId = com.aliyun.openapiutil.Client.getEncodeParam(InstanceId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.dueTime)) {
             body.put("DueTime", request.dueTime);
@@ -131,7 +130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateInstanceShutdownTimer"),
             new TeaPair("version", "2022-01-01"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/instances/" + InstanceId + "/shutdowntimer"),
+            new TeaPair("pathname", "/api/v2/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/shutdowntimer"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -149,7 +148,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateInstanceSnapshotResponse createInstanceSnapshotWithOptions(String InstanceId, CreateInstanceSnapshotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        InstanceId = com.aliyun.openapiutil.Client.getEncodeParam(InstanceId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
             body.put("ImageUrl", request.imageUrl);
@@ -171,7 +169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateInstanceSnapshot"),
             new TeaPair("version", "2022-01-01"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/instances/" + InstanceId + "/snapshots"),
+            new TeaPair("pathname", "/api/v2/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/snapshots"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -188,7 +186,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteInstanceResponse deleteInstanceWithOptions(String InstanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        InstanceId = com.aliyun.openapiutil.Client.getEncodeParam(InstanceId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -196,7 +193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteInstance"),
             new TeaPair("version", "2022-01-01"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/instances/" + InstanceId + ""),
+            new TeaPair("pathname", "/api/v2/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -213,7 +210,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteInstanceShutdownTimerResponse deleteInstanceShutdownTimerWithOptions(String InstanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        InstanceId = com.aliyun.openapiutil.Client.getEncodeParam(InstanceId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -221,7 +217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteInstanceShutdownTimer"),
             new TeaPair("version", "2022-01-01"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/instances/" + InstanceId + "/shutdowntimer"),
+            new TeaPair("pathname", "/api/v2/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/shutdowntimer"),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -238,8 +234,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteInstanceSnapshotResponse deleteInstanceSnapshotWithOptions(String InstanceId, String SnapshotId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        InstanceId = com.aliyun.openapiutil.Client.getEncodeParam(InstanceId);
-        SnapshotId = com.aliyun.openapiutil.Client.getEncodeParam(SnapshotId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -247,7 +241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteInstanceSnapshot"),
             new TeaPair("version", "2022-01-01"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/instances/" + InstanceId + "/snapshots/" + SnapshotId + ""),
+            new TeaPair("pathname", "/api/v2/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/snapshots/" + com.aliyun.openapiutil.Client.getEncodeParam(SnapshotId) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -264,7 +258,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetInstanceResponse getInstanceWithOptions(String InstanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        InstanceId = com.aliyun.openapiutil.Client.getEncodeParam(InstanceId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -272,7 +265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetInstance"),
             new TeaPair("version", "2022-01-01"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/instances/" + InstanceId + ""),
+            new TeaPair("pathname", "/api/v2/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -290,7 +283,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetInstanceMetricsResponse getInstanceMetricsWithOptions(String InstanceId, GetInstanceMetricsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        InstanceId = com.aliyun.openapiutil.Client.getEncodeParam(InstanceId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
@@ -316,7 +308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetInstanceMetrics"),
             new TeaPair("version", "2022-01-01"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/instance/" + InstanceId + "/metrics"),
+            new TeaPair("pathname", "/api/v2/instance/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/metrics"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -333,7 +325,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetInstanceShutdownTimerResponse getInstanceShutdownTimerWithOptions(String InstanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        InstanceId = com.aliyun.openapiutil.Client.getEncodeParam(InstanceId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -341,7 +332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetInstanceShutdownTimer"),
             new TeaPair("version", "2022-01-01"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/instances/" + InstanceId + "/shutdowntimer"),
+            new TeaPair("pathname", "/api/v2/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/shutdowntimer"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -358,8 +349,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetInstanceSnapshotResponse getInstanceSnapshotWithOptions(String InstanceId, String SnapshotId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        InstanceId = com.aliyun.openapiutil.Client.getEncodeParam(InstanceId);
-        SnapshotId = com.aliyun.openapiutil.Client.getEncodeParam(SnapshotId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -367,7 +356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetInstanceSnapshot"),
             new TeaPair("version", "2022-01-01"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/instances/" + InstanceId + "/snapshots/" + SnapshotId + ""),
+            new TeaPair("pathname", "/api/v2/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/snapshots/" + com.aliyun.openapiutil.Client.getEncodeParam(SnapshotId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -558,7 +547,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListInstanceSnapshotResponse listInstanceSnapshotWithOptions(String InstanceId, ListInstanceSnapshotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        InstanceId = com.aliyun.openapiutil.Client.getEncodeParam(InstanceId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.order)) {
             query.put("Order", request.order);
@@ -584,7 +572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListInstanceSnapshot"),
             new TeaPair("version", "2022-01-01"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/instances/" + InstanceId + "/snapshots"),
+            new TeaPair("pathname", "/api/v2/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/snapshots"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -703,7 +691,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public StartInstanceResponse startInstanceWithOptions(String InstanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        InstanceId = com.aliyun.openapiutil.Client.getEncodeParam(InstanceId);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -711,7 +698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "StartInstance"),
             new TeaPair("version", "2022-01-01"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/instances/" + InstanceId + "/start"),
+            new TeaPair("pathname", "/api/v2/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/start"),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -729,7 +716,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public StopInstanceResponse stopInstanceWithOptions(String InstanceId, StopInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        InstanceId = com.aliyun.openapiutil.Client.getEncodeParam(InstanceId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.saveImage)) {
             query.put("SaveImage", request.saveImage);
@@ -743,7 +729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "StopInstance"),
             new TeaPair("version", "2022-01-01"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/instances/" + InstanceId + "/stop"),
+            new TeaPair("pathname", "/api/v2/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/stop"),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -761,7 +747,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateInstanceResponse updateInstanceWithOptions(String InstanceId, UpdateInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        InstanceId = com.aliyun.openapiutil.Client.getEncodeParam(InstanceId);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             body.put("InstanceName", request.instanceName);
@@ -775,7 +760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "UpdateInstance"),
             new TeaPair("version", "2022-01-01"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/instances/" + InstanceId + ""),
+            new TeaPair("pathname", "/api/v2/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
