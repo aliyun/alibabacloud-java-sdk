@@ -13,6 +13,9 @@ public class ListClusterTypesRequest extends TeaModel {
     @NameInMap("MseSessionId")
     public String mseSessionId;
 
+    @NameInMap("MseVersion")
+    public String mseVersion;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -43,6 +46,14 @@ public class ListClusterTypesRequest extends TeaModel {
     }
     public String getMseSessionId() {
         return this.mseSessionId;
+    }
+
+    public ListClusterTypesRequest setMseVersion(String mseVersion) {
+        this.mseVersion = mseVersion;
+        return this;
+    }
+    public String getMseVersion() {
+        return this.mseVersion;
     }
 
     public ListClusterTypesRequest setRegionId(String regionId) {
