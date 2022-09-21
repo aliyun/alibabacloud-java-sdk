@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class AuthorizeFileUploadRequest extends TeaModel {
     @NameInMap("Product")
-    @Validation(required = true)
     public String product;
 
     @NameInMap("RegionId")
