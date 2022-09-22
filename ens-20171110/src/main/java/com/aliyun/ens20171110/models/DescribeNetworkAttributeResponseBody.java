@@ -19,6 +19,9 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    @NameInMap("NetworkAclId")
+    public String networkAclId;
+
     @NameInMap("NetworkId")
     public String networkId;
 
@@ -80,6 +83,14 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    public DescribeNetworkAttributeResponseBody setNetworkAclId(String networkAclId) {
+        this.networkAclId = networkAclId;
+        return this;
+    }
+    public String getNetworkAclId() {
+        return this.networkAclId;
     }
 
     public DescribeNetworkAttributeResponseBody setNetworkId(String networkId) {

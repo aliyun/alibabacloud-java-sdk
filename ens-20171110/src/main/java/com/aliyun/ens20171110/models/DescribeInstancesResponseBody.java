@@ -582,6 +582,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceResourceType")
         public String instanceResourceType;
 
+        @NameInMap("InstanceTypeFamily")
+        public String instanceTypeFamily;
+
         @NameInMap("InternetMaxBandwidthIn")
         public Integer internetMaxBandwidthIn;
 
@@ -717,6 +720,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getInstanceResourceType() {
             return this.instanceResourceType;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setInstanceTypeFamily(String instanceTypeFamily) {
+            this.instanceTypeFamily = instanceTypeFamily;
+            return this;
+        }
+        public String getInstanceTypeFamily() {
+            return this.instanceTypeFamily;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setInternetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
