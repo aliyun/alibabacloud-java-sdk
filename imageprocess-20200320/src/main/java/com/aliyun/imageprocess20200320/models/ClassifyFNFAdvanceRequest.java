@@ -4,12 +4,11 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class ClassifyFNFAdvanceRequest extends TeaModel {
-    @NameInMap("ImageUrlObject")
-    @Validation(required = true)
-    public java.io.InputStream imageUrlObject;
-
     @NameInMap("DataFormat")
     public String dataFormat;
+
+    @NameInMap("ImageUrl")
+    public java.io.InputStream imageUrlObject;
 
     @NameInMap("OrgId")
     public String orgId;
@@ -25,20 +24,20 @@ public class ClassifyFNFAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ClassifyFNFAdvanceRequest setImageUrlObject(java.io.InputStream imageUrlObject) {
-        this.imageUrlObject = imageUrlObject;
-        return this;
-    }
-    public java.io.InputStream getImageUrlObject() {
-        return this.imageUrlObject;
-    }
-
     public ClassifyFNFAdvanceRequest setDataFormat(String dataFormat) {
         this.dataFormat = dataFormat;
         return this;
     }
     public String getDataFormat() {
         return this.dataFormat;
+    }
+
+    public ClassifyFNFAdvanceRequest setImageUrlObject(java.io.InputStream imageUrlObject) {
+        this.imageUrlObject = imageUrlObject;
+        return this;
+    }
+    public java.io.InputStream getImageUrlObject() {
+        return this.imageUrlObject;
     }
 
     public ClassifyFNFAdvanceRequest setOrgId(String orgId) {

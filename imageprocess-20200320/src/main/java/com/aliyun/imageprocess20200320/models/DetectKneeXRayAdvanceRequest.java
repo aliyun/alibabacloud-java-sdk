@@ -4,10 +4,6 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectKneeXRayAdvanceRequest extends TeaModel {
-    @NameInMap("UrlObject")
-    @Validation(required = true)
-    public java.io.InputStream urlObject;
-
     @NameInMap("DataFormat")
     public String dataFormat;
 
@@ -17,17 +13,12 @@ public class DetectKneeXRayAdvanceRequest extends TeaModel {
     @NameInMap("OrgName")
     public String orgName;
 
+    @NameInMap("Url")
+    public java.io.InputStream urlObject;
+
     public static DetectKneeXRayAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectKneeXRayAdvanceRequest self = new DetectKneeXRayAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DetectKneeXRayAdvanceRequest setUrlObject(java.io.InputStream urlObject) {
-        this.urlObject = urlObject;
-        return this;
-    }
-    public java.io.InputStream getUrlObject() {
-        return this.urlObject;
     }
 
     public DetectKneeXRayAdvanceRequest setDataFormat(String dataFormat) {
@@ -52,6 +43,14 @@ public class DetectKneeXRayAdvanceRequest extends TeaModel {
     }
     public String getOrgName() {
         return this.orgName;
+    }
+
+    public DetectKneeXRayAdvanceRequest setUrlObject(java.io.InputStream urlObject) {
+        this.urlObject = urlObject;
+        return this;
+    }
+    public java.io.InputStream getUrlObject() {
+        return this.urlObject;
     }
 
 }
