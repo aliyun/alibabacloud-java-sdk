@@ -13,6 +13,9 @@ public class DetailSceneResponseBody extends TeaModel {
     @NameInMap("CoverUrl")
     public String coverUrl;
 
+    @NameInMap("FloorPlans")
+    public java.util.List<DetailSceneResponseBodyFloorPlans> floorPlans;
+
     @NameInMap("GmtCreate")
     public Long gmtCreate;
 
@@ -82,6 +85,14 @@ public class DetailSceneResponseBody extends TeaModel {
     }
     public String getCoverUrl() {
         return this.coverUrl;
+    }
+
+    public DetailSceneResponseBody setFloorPlans(java.util.List<DetailSceneResponseBodyFloorPlans> floorPlans) {
+        this.floorPlans = floorPlans;
+        return this;
+    }
+    public java.util.List<DetailSceneResponseBodyFloorPlans> getFloorPlans() {
+        return this.floorPlans;
     }
 
     public DetailSceneResponseBody setGmtCreate(Long gmtCreate) {
@@ -222,6 +233,58 @@ public class DetailSceneResponseBody extends TeaModel {
         }
         public String getUrl() {
             return this.url;
+        }
+
+    }
+
+    public static class DetailSceneResponseBodyFloorPlans extends TeaModel {
+        @NameInMap("ColorMapUrl")
+        public String colorMapUrl;
+
+        @NameInMap("FloorLabel")
+        public String floorLabel;
+
+        @NameInMap("FloorName")
+        public String floorName;
+
+        @NameInMap("MiniMapUrl")
+        public String miniMapUrl;
+
+        public static DetailSceneResponseBodyFloorPlans build(java.util.Map<String, ?> map) throws Exception {
+            DetailSceneResponseBodyFloorPlans self = new DetailSceneResponseBodyFloorPlans();
+            return TeaModel.build(map, self);
+        }
+
+        public DetailSceneResponseBodyFloorPlans setColorMapUrl(String colorMapUrl) {
+            this.colorMapUrl = colorMapUrl;
+            return this;
+        }
+        public String getColorMapUrl() {
+            return this.colorMapUrl;
+        }
+
+        public DetailSceneResponseBodyFloorPlans setFloorLabel(String floorLabel) {
+            this.floorLabel = floorLabel;
+            return this;
+        }
+        public String getFloorLabel() {
+            return this.floorLabel;
+        }
+
+        public DetailSceneResponseBodyFloorPlans setFloorName(String floorName) {
+            this.floorName = floorName;
+            return this;
+        }
+        public String getFloorName() {
+            return this.floorName;
+        }
+
+        public DetailSceneResponseBodyFloorPlans setMiniMapUrl(String miniMapUrl) {
+            this.miniMapUrl = miniMapUrl;
+            return this;
+        }
+        public String getMiniMapUrl() {
+            return this.miniMapUrl;
         }
 
     }
