@@ -7,7 +7,6 @@ public class DescribeLiveSubExperienceMetricDataResponseBody extends TeaModel {
     @NameInMap("MetricList")
     public java.util.List<DescribeLiveSubExperienceMetricDataResponseBodyMetricList> metricList;
 
-    // Id
     @NameInMap("RequestId")
     public String requestId;
 

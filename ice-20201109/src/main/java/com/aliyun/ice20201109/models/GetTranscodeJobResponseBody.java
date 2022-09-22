@@ -91,6 +91,99 @@ public class GetTranscodeJobResponseBody extends TeaModel {
 
     }
 
+    public static class GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs extends TeaModel {
+        @NameInMap("AudioIndex")
+        public String audioIndex;
+
+        @NameInMap("Duration")
+        public Double duration;
+
+        @NameInMap("Start")
+        public Double start;
+
+        @NameInMap("VideoIndex")
+        public String videoIndex;
+
+        public static GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs build(java.util.Map<String, ?> map) throws Exception {
+            GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs self = new GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs setAudioIndex(String audioIndex) {
+            this.audioIndex = audioIndex;
+            return this;
+        }
+        public String getAudioIndex() {
+            return this.audioIndex;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs setDuration(Double duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Double getDuration() {
+            return this.duration;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs setStart(Double start) {
+            this.start = start;
+            return this;
+        }
+        public Double getStart() {
+            return this.start;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs setVideoIndex(String videoIndex) {
+            this.videoIndex = videoIndex;
+            return this;
+        }
+        public String getVideoIndex() {
+            return this.videoIndex;
+        }
+
+    }
+
+    public static class GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption extends TeaModel {
+        @NameInMap("CipherText")
+        public String cipherText;
+
+        @NameInMap("DecryptKeyUri")
+        public String decryptKeyUri;
+
+        @NameInMap("EncryptType")
+        public String encryptType;
+
+        public static GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption build(java.util.Map<String, ?> map) throws Exception {
+            GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption self = new GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption setCipherText(String cipherText) {
+            this.cipherText = cipherText;
+            return this;
+        }
+        public String getCipherText() {
+            return this.cipherText;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption setDecryptKeyUri(String decryptKeyUri) {
+            this.decryptKeyUri = decryptKeyUri;
+            return this;
+        }
+        public String getDecryptKeyUri() {
+            return this.decryptKeyUri;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption setEncryptType(String encryptType) {
+            this.encryptType = encryptType;
+            return this;
+        }
+        public String getEncryptType() {
+            return this.encryptType;
+        }
+
+    }
+
     public static class GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParamsFile extends TeaModel {
         @NameInMap("Media")
         public String media;
@@ -1009,6 +1102,12 @@ public class GetTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfig extends TeaModel {
+        @NameInMap("CombineConfigs")
+        public java.util.List<GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs> combineConfigs;
+
+        @NameInMap("Encryption")
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption encryption;
+
         @NameInMap("ImageWatermarks")
         public java.util.List<GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarks> imageWatermarks;
 
@@ -1024,6 +1123,22 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfig build(java.util.Map<String, ?> map) throws Exception {
             GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfig self = new GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfig();
             return TeaModel.build(map, self);
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfig setCombineConfigs(java.util.List<GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs> combineConfigs) {
+            this.combineConfigs = combineConfigs;
+            return this;
+        }
+        public java.util.List<GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs> getCombineConfigs() {
+            return this.combineConfigs;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfig setEncryption(GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption encryption) {
+            this.encryption = encryption;
+            return this;
+        }
+        public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption getEncryption() {
+            return this.encryption;
         }
 
         public GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfig setImageWatermarks(java.util.List<GetTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarks> imageWatermarks) {
@@ -1791,6 +1906,99 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs extends TeaModel {
+        @NameInMap("AudioIndex")
+        public String audioIndex;
+
+        @NameInMap("Duration")
+        public Double duration;
+
+        @NameInMap("Start")
+        public Double start;
+
+        @NameInMap("VideoIndex")
+        public String videoIndex;
+
+        public static GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs build(java.util.Map<String, ?> map) throws Exception {
+            GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs self = new GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs setAudioIndex(String audioIndex) {
+            this.audioIndex = audioIndex;
+            return this;
+        }
+        public String getAudioIndex() {
+            return this.audioIndex;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs setDuration(Double duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Double getDuration() {
+            return this.duration;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs setStart(Double start) {
+            this.start = start;
+            return this;
+        }
+        public Double getStart() {
+            return this.start;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs setVideoIndex(String videoIndex) {
+            this.videoIndex = videoIndex;
+            return this;
+        }
+        public String getVideoIndex() {
+            return this.videoIndex;
+        }
+
+    }
+
+    public static class GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption extends TeaModel {
+        @NameInMap("CipherText")
+        public String cipherText;
+
+        @NameInMap("DecryptKeyUri")
+        public String decryptKeyUri;
+
+        @NameInMap("EncryptType")
+        public String encryptType;
+
+        public static GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption build(java.util.Map<String, ?> map) throws Exception {
+            GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption self = new GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption setCipherText(String cipherText) {
+            this.cipherText = cipherText;
+            return this;
+        }
+        public String getCipherText() {
+            return this.cipherText;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption setDecryptKeyUri(String decryptKeyUri) {
+            this.decryptKeyUri = decryptKeyUri;
+            return this;
+        }
+        public String getDecryptKeyUri() {
+            return this.decryptKeyUri;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption setEncryptType(String encryptType) {
+            this.encryptType = encryptType;
+            return this;
+        }
+        public String getEncryptType() {
+            return this.encryptType;
         }
 
     }
@@ -2713,6 +2921,12 @@ public class GetTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig extends TeaModel {
+        @NameInMap("CombineConfigs")
+        public java.util.List<GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs> combineConfigs;
+
+        @NameInMap("Encryption")
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption encryption;
+
         @NameInMap("ImageWatermarks")
         public java.util.List<GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarks> imageWatermarks;
 
@@ -2728,6 +2942,22 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig build(java.util.Map<String, ?> map) throws Exception {
             GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig self = new GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig();
             return TeaModel.build(map, self);
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig setCombineConfigs(java.util.List<GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs> combineConfigs) {
+            this.combineConfigs = combineConfigs;
+            return this;
+        }
+        public java.util.List<GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs> getCombineConfigs() {
+            return this.combineConfigs;
+        }
+
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig setEncryption(GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption encryption) {
+            this.encryption = encryption;
+            return this;
+        }
+        public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption getEncryption() {
+            return this.encryption;
         }
 
         public GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig setImageWatermarks(java.util.List<GetTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarks> imageWatermarks) {

@@ -124,6 +124,99 @@ public class SubmitTranscodeJobRequest extends TeaModel {
 
     }
 
+    public static class SubmitTranscodeJobRequestOutputGroupProcessConfigCombineConfigs extends TeaModel {
+        @NameInMap("AudioIndex")
+        public String audioIndex;
+
+        @NameInMap("Duration")
+        public Double duration;
+
+        @NameInMap("Start")
+        public Double start;
+
+        @NameInMap("VideoIndex")
+        public String videoIndex;
+
+        public static SubmitTranscodeJobRequestOutputGroupProcessConfigCombineConfigs build(java.util.Map<String, ?> map) throws Exception {
+            SubmitTranscodeJobRequestOutputGroupProcessConfigCombineConfigs self = new SubmitTranscodeJobRequestOutputGroupProcessConfigCombineConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigCombineConfigs setAudioIndex(String audioIndex) {
+            this.audioIndex = audioIndex;
+            return this;
+        }
+        public String getAudioIndex() {
+            return this.audioIndex;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigCombineConfigs setDuration(Double duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Double getDuration() {
+            return this.duration;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigCombineConfigs setStart(Double start) {
+            this.start = start;
+            return this;
+        }
+        public Double getStart() {
+            return this.start;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigCombineConfigs setVideoIndex(String videoIndex) {
+            this.videoIndex = videoIndex;
+            return this;
+        }
+        public String getVideoIndex() {
+            return this.videoIndex;
+        }
+
+    }
+
+    public static class SubmitTranscodeJobRequestOutputGroupProcessConfigEncryption extends TeaModel {
+        @NameInMap("CipherText")
+        public String cipherText;
+
+        @NameInMap("DecryptKeyUri")
+        public String decryptKeyUri;
+
+        @NameInMap("EncryptType")
+        public String encryptType;
+
+        public static SubmitTranscodeJobRequestOutputGroupProcessConfigEncryption build(java.util.Map<String, ?> map) throws Exception {
+            SubmitTranscodeJobRequestOutputGroupProcessConfigEncryption self = new SubmitTranscodeJobRequestOutputGroupProcessConfigEncryption();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigEncryption setCipherText(String cipherText) {
+            this.cipherText = cipherText;
+            return this;
+        }
+        public String getCipherText() {
+            return this.cipherText;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigEncryption setDecryptKeyUri(String decryptKeyUri) {
+            this.decryptKeyUri = decryptKeyUri;
+            return this;
+        }
+        public String getDecryptKeyUri() {
+            return this.decryptKeyUri;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigEncryption setEncryptType(String encryptType) {
+            this.encryptType = encryptType;
+            return this;
+        }
+        public String getEncryptType() {
+            return this.encryptType;
+        }
+
+    }
+
     public static class SubmitTranscodeJobRequestOutputGroupProcessConfigImageWatermarksOverwriteParamsFile extends TeaModel {
         @NameInMap("Media")
         public String media;
@@ -1042,6 +1135,12 @@ public class SubmitTranscodeJobRequest extends TeaModel {
     }
 
     public static class SubmitTranscodeJobRequestOutputGroupProcessConfig extends TeaModel {
+        @NameInMap("CombineConfigs")
+        public java.util.List<SubmitTranscodeJobRequestOutputGroupProcessConfigCombineConfigs> combineConfigs;
+
+        @NameInMap("Encryption")
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigEncryption encryption;
+
         @NameInMap("ImageWatermarks")
         public java.util.List<SubmitTranscodeJobRequestOutputGroupProcessConfigImageWatermarks> imageWatermarks;
 
@@ -1057,6 +1156,22 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         public static SubmitTranscodeJobRequestOutputGroupProcessConfig build(java.util.Map<String, ?> map) throws Exception {
             SubmitTranscodeJobRequestOutputGroupProcessConfig self = new SubmitTranscodeJobRequestOutputGroupProcessConfig();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfig setCombineConfigs(java.util.List<SubmitTranscodeJobRequestOutputGroupProcessConfigCombineConfigs> combineConfigs) {
+            this.combineConfigs = combineConfigs;
+            return this;
+        }
+        public java.util.List<SubmitTranscodeJobRequestOutputGroupProcessConfigCombineConfigs> getCombineConfigs() {
+            return this.combineConfigs;
+        }
+
+        public SubmitTranscodeJobRequestOutputGroupProcessConfig setEncryption(SubmitTranscodeJobRequestOutputGroupProcessConfigEncryption encryption) {
+            this.encryption = encryption;
+            return this;
+        }
+        public SubmitTranscodeJobRequestOutputGroupProcessConfigEncryption getEncryption() {
+            return this.encryption;
         }
 
         public SubmitTranscodeJobRequestOutputGroupProcessConfig setImageWatermarks(java.util.List<SubmitTranscodeJobRequestOutputGroupProcessConfigImageWatermarks> imageWatermarks) {

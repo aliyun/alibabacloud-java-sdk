@@ -10,7 +10,6 @@ public class DescribeLiveSubListResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // Id
     @NameInMap("RequestId")
     public String requestId;
 

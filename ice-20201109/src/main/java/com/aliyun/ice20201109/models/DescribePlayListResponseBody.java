@@ -71,6 +71,9 @@ public class DescribePlayListResponseBody extends TeaModel {
         @NameInMap("PlayDuration")
         public String playDuration;
 
+        @NameInMap("PlayTs")
+        public String playTs;
+
         @NameInMap("PlayType")
         public String playType;
 
@@ -111,6 +114,14 @@ public class DescribePlayListResponseBody extends TeaModel {
         }
         public String getPlayDuration() {
             return this.playDuration;
+        }
+
+        public DescribePlayListResponseBodyPlayList setPlayTs(String playTs) {
+            this.playTs = playTs;
+            return this;
+        }
+        public String getPlayTs() {
+            return this.playTs;
         }
 
         public DescribePlayListResponseBodyPlayList setPlayType(String playType) {

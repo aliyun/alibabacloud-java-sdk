@@ -7,7 +7,6 @@ public class DeleteMediaProducingJobsResponseBody extends TeaModel {
     @NameInMap("IgnoreList")
     public String ignoreList;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

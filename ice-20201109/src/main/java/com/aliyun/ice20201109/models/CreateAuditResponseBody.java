@@ -4,7 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CreateAuditResponseBody extends TeaModel {
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 

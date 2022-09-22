@@ -4,15 +4,12 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DownloadResourceByResourceIdsResponseBody extends TeaModel {
-    // 过期时间
     @NameInMap("ExpireTime")
     public Long expireTime;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 资源地址
     @NameInMap("ResourcePackageUrl")
     public String resourcePackageUrl;
 

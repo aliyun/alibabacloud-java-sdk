@@ -7,7 +7,6 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
     @NameInMap("AuditResultDetails")
     public java.util.List<GetMediaAuditResultDetailResponseBodyAuditResultDetails> auditResultDetails;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
