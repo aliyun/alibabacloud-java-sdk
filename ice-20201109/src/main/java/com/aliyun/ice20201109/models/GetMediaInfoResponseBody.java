@@ -873,6 +873,9 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        @NameInMap("ReferenceId")
+        public String referenceId;
+
         @NameInMap("Source")
         public String source;
 
@@ -1006,6 +1009,14 @@ public class GetMediaInfoResponseBody extends TeaModel {
         }
         public String getModifiedTime() {
             return this.modifiedTime;
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setReferenceId(String referenceId) {
+            this.referenceId = referenceId;
+            return this;
+        }
+        public String getReferenceId() {
+            return this.referenceId;
         }
 
         public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setSource(String source) {

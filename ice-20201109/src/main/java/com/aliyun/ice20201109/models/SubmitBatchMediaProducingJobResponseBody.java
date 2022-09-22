@@ -4,11 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitBatchMediaProducingJobResponseBody extends TeaModel {
-    // 批量混剪任务jobId
     @NameInMap("JobId")
     public String jobId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

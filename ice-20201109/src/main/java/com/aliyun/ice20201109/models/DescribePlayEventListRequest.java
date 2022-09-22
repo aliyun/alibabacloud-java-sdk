@@ -10,6 +10,9 @@ public class DescribePlayEventListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PlayTs")
+    public String playTs;
+
     @NameInMap("SessionId")
     public String sessionId;
 
@@ -32,6 +35,14 @@ public class DescribePlayEventListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribePlayEventListRequest setPlayTs(String playTs) {
+        this.playTs = playTs;
+        return this;
+    }
+    public String getPlayTs() {
+        return this.playTs;
     }
 
     public DescribePlayEventListRequest setSessionId(String sessionId) {

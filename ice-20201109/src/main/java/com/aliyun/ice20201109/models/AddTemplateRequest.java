@@ -16,9 +16,6 @@ public class AddTemplateRequest extends TeaModel {
     @NameInMap("PreviewMedia")
     public String previewMedia;
 
-    @NameInMap("RelatedMediaids")
-    public String relatedMediaids;
-
     @NameInMap("Source")
     public String source;
 
@@ -63,14 +60,6 @@ public class AddTemplateRequest extends TeaModel {
     }
     public String getPreviewMedia() {
         return this.previewMedia;
-    }
-
-    public AddTemplateRequest setRelatedMediaids(String relatedMediaids) {
-        this.relatedMediaids = relatedMediaids;
-        return this;
-    }
-    public String getRelatedMediaids() {
-        return this.relatedMediaids;
     }
 
     public AddTemplateRequest setSource(String source) {

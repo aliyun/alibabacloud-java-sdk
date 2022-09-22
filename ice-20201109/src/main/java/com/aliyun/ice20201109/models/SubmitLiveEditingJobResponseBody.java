@@ -19,6 +19,9 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("VodMediaId")
+    public String vodMediaId;
+
     public static SubmitLiveEditingJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitLiveEditingJobResponseBody self = new SubmitLiveEditingJobResponseBody();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public SubmitLiveEditingJobResponseBody setVodMediaId(String vodMediaId) {
+        this.vodMediaId = vodMediaId;
+        return this;
+    }
+    public String getVodMediaId() {
+        return this.vodMediaId;
     }
 
 }

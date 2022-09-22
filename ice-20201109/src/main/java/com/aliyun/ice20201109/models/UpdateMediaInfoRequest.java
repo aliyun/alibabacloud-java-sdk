@@ -31,6 +31,9 @@ public class UpdateMediaInfoRequest extends TeaModel {
     @NameInMap("MediaTags")
     public String mediaTags;
 
+    @NameInMap("ReferenceId")
+    public String referenceId;
+
     @NameInMap("Title")
     public String title;
 
@@ -112,6 +115,14 @@ public class UpdateMediaInfoRequest extends TeaModel {
     }
     public String getMediaTags() {
         return this.mediaTags;
+    }
+
+    public UpdateMediaInfoRequest setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+        return this;
+    }
+    public String getReferenceId() {
+        return this.referenceId;
     }
 
     public UpdateMediaInfoRequest setTitle(String title) {

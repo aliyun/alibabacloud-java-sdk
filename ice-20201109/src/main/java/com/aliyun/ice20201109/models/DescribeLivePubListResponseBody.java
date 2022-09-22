@@ -13,7 +13,6 @@ public class DescribeLivePubListResponseBody extends TeaModel {
     @NameInMap("PubInfoList")
     public java.util.List<DescribeLivePubListResponseBodyPubInfoList> pubInfoList;
 
-    // Id
     @NameInMap("RequestId")
     public String requestId;
 

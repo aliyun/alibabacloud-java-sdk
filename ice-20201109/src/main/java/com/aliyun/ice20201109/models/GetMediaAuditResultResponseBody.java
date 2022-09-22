@@ -16,7 +16,6 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     @NameInMap("MediaAuditResult")
     public GetMediaAuditResultResponseBodyMediaAuditResult mediaAuditResult;
 
-    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 

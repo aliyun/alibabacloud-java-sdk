@@ -7,7 +7,6 @@ public class DescribeLivePubMetricDataResponseBody extends TeaModel {
     @NameInMap("Nodes")
     public java.util.List<DescribeLivePubMetricDataResponseBodyNodes> nodes;
 
-    // Id
     @NameInMap("RequestId")
     public String requestId;
 

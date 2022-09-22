@@ -4,7 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DownloadResourceByResourceIdsRequest extends TeaModel {
-    // 资源id号
     @NameInMap("ResourceIds")
     public String resourceIds;
 

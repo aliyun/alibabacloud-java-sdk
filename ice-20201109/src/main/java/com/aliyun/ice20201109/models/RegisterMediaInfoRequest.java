@@ -31,6 +31,9 @@ public class RegisterMediaInfoRequest extends TeaModel {
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
+    @NameInMap("ReferenceId")
+    public String referenceId;
+
     @NameInMap("RegisterConfig")
     public String registerConfig;
 
@@ -118,6 +121,14 @@ public class RegisterMediaInfoRequest extends TeaModel {
     }
     public Boolean getOverwrite() {
         return this.overwrite;
+    }
+
+    public RegisterMediaInfoRequest setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+        return this;
+    }
+    public String getReferenceId() {
+        return this.referenceId;
     }
 
     public RegisterMediaInfoRequest setRegisterConfig(String registerConfig) {

@@ -4,51 +4,39 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitBatchMediaProducingJobRequest extends TeaModel {
-    // 调用方保证请求幂等性Client Token
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 批量混剪ClipsParam
     @NameInMap("ClipsParam")
     public String clipsParam;
 
-    // 剪辑合成配置
     @NameInMap("EditingProduceConfig")
     public String editingProduceConfig;
 
-    // 任务名称
     @NameInMap("JobTitle")
     public String jobTitle;
 
-    // 用户合成输出配置
     @NameInMap("OutputMediaConfig")
     public String outputMediaConfig;
 
-    // 用户合成输出目标
     @NameInMap("OutputMediaTarget")
     public String outputMediaTarget;
 
-    // 批量混剪下合成成片的个数
     @NameInMap("OutputNum")
     public Integer outputNum;
 
-    // 剪辑任务工程信息
     @NameInMap("ProjectMetadata")
     public String projectMetadata;
 
-    // 任务来源
     @NameInMap("Source")
     public String source;
 
-    // 提交任务类型
     @NameInMap("SubmitBy")
     public String submitBy;
 
-    // 批量混剪模版id
     @NameInMap("TemplateId")
     public String templateId;
 
-    // 用户配置UserData
     @NameInMap("UserData")
     public String userData;
 
