@@ -7,6 +7,9 @@ public class CreateFunctionRequest extends TeaModel {
     @NameInMap("Desc")
     public String desc;
 
+    @NameInMap("Memory")
+    public Integer memory;
+
     @NameInMap("Name")
     public String name;
 
@@ -15,6 +18,9 @@ public class CreateFunctionRequest extends TeaModel {
 
     @NameInMap("SpaceId")
     public String spaceId;
+
+    @NameInMap("Timeout")
+    public Integer timeout;
 
     public static CreateFunctionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFunctionRequest self = new CreateFunctionRequest();
@@ -27,6 +33,14 @@ public class CreateFunctionRequest extends TeaModel {
     }
     public String getDesc() {
         return this.desc;
+    }
+
+    public CreateFunctionRequest setMemory(Integer memory) {
+        this.memory = memory;
+        return this;
+    }
+    public Integer getMemory() {
+        return this.memory;
     }
 
     public CreateFunctionRequest setName(String name) {
@@ -51,6 +65,14 @@ public class CreateFunctionRequest extends TeaModel {
     }
     public String getSpaceId() {
         return this.spaceId;
+    }
+
+    public CreateFunctionRequest setTimeout(Integer timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Integer getTimeout() {
+        return this.timeout;
     }
 
 }

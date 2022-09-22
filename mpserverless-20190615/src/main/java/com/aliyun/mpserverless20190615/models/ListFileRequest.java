@@ -10,8 +10,8 @@ public class ListFileRequest extends TeaModel {
     @NameInMap("Keyword")
     public String keyword;
 
-    @NameInMap("PageNum")
-    public Integer pageNum;
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -40,12 +40,12 @@ public class ListFileRequest extends TeaModel {
         return this.keyword;
     }
 
-    public ListFileRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
+    public ListFileRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public Integer getPageNum() {
-        return this.pageNum;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListFileRequest setPageSize(Integer pageSize) {
