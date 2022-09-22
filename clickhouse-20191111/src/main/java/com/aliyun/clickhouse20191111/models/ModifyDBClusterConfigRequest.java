@@ -13,6 +13,9 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("Reason")
+    public String reason;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -52,6 +55,14 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyDBClusterConfigRequest setReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    public String getReason() {
+        return this.reason;
     }
 
     public ModifyDBClusterConfigRequest setRegionId(String regionId) {

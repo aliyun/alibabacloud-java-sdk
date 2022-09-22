@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>clickhouse20191111</artifactId>
-  <version>3.1.5</version>
+  <version>3.1.6</version>
   <packaging>jar</packaging>
   <name>clickhouse20191111</name>
   <description>Alibaba Cloud ClickHouse (20191111) SDK for Java
@@ -67,7 +67,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.5</version>
+      <version>0.2.6</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

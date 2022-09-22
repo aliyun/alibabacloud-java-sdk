@@ -3,16 +3,16 @@ package com.aliyun.clickhouse20191111.models;
 
 import com.aliyun.tea.*;
 
-public class TransferVersionResponseBody extends TeaModel {
+public class ModifyDBClusterConfigInXMLResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static TransferVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        TransferVersionResponseBody self = new TransferVersionResponseBody();
+    public static ModifyDBClusterConfigInXMLResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifyDBClusterConfigInXMLResponseBody self = new ModifyDBClusterConfigInXMLResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public TransferVersionResponseBody setRequestId(String requestId) {
+    public ModifyDBClusterConfigInXMLResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
