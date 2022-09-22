@@ -180,9 +180,6 @@ public class GetRelationResponseBody extends TeaModel {
     }
 
     public static class GetRelationResponseBodyData extends TeaModel {
-        // 是否可登陆官网
-        // true：可登录
-        // false：不可登陆
         @NameInMap("CanLoginOfficial")
         public Boolean canLoginOfficial;
 
