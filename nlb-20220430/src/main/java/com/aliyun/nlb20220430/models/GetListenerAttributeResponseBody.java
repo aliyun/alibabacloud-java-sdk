@@ -50,7 +50,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     public Integer mss;
 
     @NameInMap("ProxyProtocolEnabled")
-    public String proxyProtocolEnabled;
+    public Boolean proxyProtocolEnabled;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -59,7 +59,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("SecSensorEnabled")
-    public String secSensorEnabled;
+    public Boolean secSensorEnabled;
 
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
@@ -195,11 +195,11 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         return this.mss;
     }
 
-    public GetListenerAttributeResponseBody setProxyProtocolEnabled(String proxyProtocolEnabled) {
+    public GetListenerAttributeResponseBody setProxyProtocolEnabled(Boolean proxyProtocolEnabled) {
         this.proxyProtocolEnabled = proxyProtocolEnabled;
         return this;
     }
-    public String getProxyProtocolEnabled() {
+    public Boolean getProxyProtocolEnabled() {
         return this.proxyProtocolEnabled;
     }
 
@@ -219,11 +219,11 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetListenerAttributeResponseBody setSecSensorEnabled(String secSensorEnabled) {
+    public GetListenerAttributeResponseBody setSecSensorEnabled(Boolean secSensorEnabled) {
         this.secSensorEnabled = secSensorEnabled;
         return this;
     }
-    public String getSecSensorEnabled() {
+    public Boolean getSecSensorEnabled() {
         return this.secSensorEnabled;
     }
 
