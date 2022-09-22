@@ -13,6 +13,9 @@ public class QueryClusterSpecificationRequest extends TeaModel {
     @NameInMap("MseSessionId")
     public String mseSessionId;
 
+    @NameInMap("MseVersion")
+    public String mseVersion;
+
     public static QueryClusterSpecificationRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryClusterSpecificationRequest self = new QueryClusterSpecificationRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class QueryClusterSpecificationRequest extends TeaModel {
     }
     public String getMseSessionId() {
         return this.mseSessionId;
+    }
+
+    public QueryClusterSpecificationRequest setMseVersion(String mseVersion) {
+        this.mseVersion = mseVersion;
+        return this;
+    }
+    public String getMseVersion() {
+        return this.mseVersion;
     }
 
 }
