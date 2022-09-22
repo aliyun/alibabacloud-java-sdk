@@ -28,6 +28,9 @@ public class UpdateFunctionResponseBody extends TeaModel {
     @NameInMap("TimingTriggerConfig")
     public String timingTriggerConfig;
 
+    @NameInMap("TimingTriggerUserPayload")
+    public String timingTriggerUserPayload;
+
     public static UpdateFunctionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateFunctionResponseBody self = new UpdateFunctionResponseBody();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class UpdateFunctionResponseBody extends TeaModel {
     }
     public String getTimingTriggerConfig() {
         return this.timingTriggerConfig;
+    }
+
+    public UpdateFunctionResponseBody setTimingTriggerUserPayload(String timingTriggerUserPayload) {
+        this.timingTriggerUserPayload = timingTriggerUserPayload;
+        return this;
+    }
+    public String getTimingTriggerUserPayload() {
+        return this.timingTriggerUserPayload;
     }
 
     public static class UpdateFunctionResponseBodySpec extends TeaModel {

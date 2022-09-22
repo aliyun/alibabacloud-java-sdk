@@ -4,7 +4,6 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class SaveWebHostingCustomDomainCorsConfigResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("Code")
     public String code;
 

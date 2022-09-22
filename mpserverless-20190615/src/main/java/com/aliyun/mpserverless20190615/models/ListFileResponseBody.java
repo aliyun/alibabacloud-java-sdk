@@ -128,37 +128,23 @@ public class ListFileResponseBody extends TeaModel {
     }
 
     public static class ListFileResponseBodyPaginator extends TeaModel {
-        @NameInMap("PageCount")
-        public Integer pageCount;
-
-        @NameInMap("PageNum")
-        public Integer pageNum;
+        @NameInMap("NextToken")
+        public String nextToken;
 
         @NameInMap("PageSize")
         public Integer pageSize;
-
-        @NameInMap("Total")
-        public Integer total;
 
         public static ListFileResponseBodyPaginator build(java.util.Map<String, ?> map) throws Exception {
             ListFileResponseBodyPaginator self = new ListFileResponseBodyPaginator();
             return TeaModel.build(map, self);
         }
 
-        public ListFileResponseBodyPaginator setPageCount(Integer pageCount) {
-            this.pageCount = pageCount;
+        public ListFileResponseBodyPaginator setNextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
-        public Integer getPageCount() {
-            return this.pageCount;
-        }
-
-        public ListFileResponseBodyPaginator setPageNum(Integer pageNum) {
-            this.pageNum = pageNum;
-            return this;
-        }
-        public Integer getPageNum() {
-            return this.pageNum;
+        public String getNextToken() {
+            return this.nextToken;
         }
 
         public ListFileResponseBodyPaginator setPageSize(Integer pageSize) {
@@ -167,14 +153,6 @@ public class ListFileResponseBody extends TeaModel {
         }
         public Integer getPageSize() {
             return this.pageSize;
-        }
-
-        public ListFileResponseBodyPaginator setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
         }
 
     }

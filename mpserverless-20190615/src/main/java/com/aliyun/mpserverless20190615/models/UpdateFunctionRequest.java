@@ -31,6 +31,9 @@ public class UpdateFunctionRequest extends TeaModel {
     @NameInMap("TimingTriggerConfig")
     public String timingTriggerConfig;
 
+    @NameInMap("TimingTriggerUserPayload")
+    public String timingTriggerUserPayload;
+
     public static UpdateFunctionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFunctionRequest self = new UpdateFunctionRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class UpdateFunctionRequest extends TeaModel {
     }
     public String getTimingTriggerConfig() {
         return this.timingTriggerConfig;
+    }
+
+    public UpdateFunctionRequest setTimingTriggerUserPayload(String timingTriggerUserPayload) {
+        this.timingTriggerUserPayload = timingTriggerUserPayload;
+        return this;
+    }
+    public String getTimingTriggerUserPayload() {
+        return this.timingTriggerUserPayload;
     }
 
 }

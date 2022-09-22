@@ -4,6 +4,9 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class ListSpaceShrinkRequest extends TeaModel {
+    @NameInMap("EmasWorkspaceId")
+    public String emasWorkspaceId;
+
     @NameInMap("PageNum")
     public Integer pageNum;
 
@@ -16,6 +19,14 @@ public class ListSpaceShrinkRequest extends TeaModel {
     public static ListSpaceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSpaceShrinkRequest self = new ListSpaceShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListSpaceShrinkRequest setEmasWorkspaceId(String emasWorkspaceId) {
+        this.emasWorkspaceId = emasWorkspaceId;
+        return this;
+    }
+    public String getEmasWorkspaceId() {
+        return this.emasWorkspaceId;
     }
 
     public ListSpaceShrinkRequest setPageNum(Integer pageNum) {
