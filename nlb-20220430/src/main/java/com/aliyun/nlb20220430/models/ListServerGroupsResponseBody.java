@@ -230,6 +230,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("AliUid")
         public Long aliUid;
 
+        @NameInMap("AnyPortEnabled")
+        public Boolean anyPortEnabled;
+
         @NameInMap("ConnectionDrainEnabled")
         public Boolean connectionDrainEnabled;
 
@@ -297,6 +300,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public Long getAliUid() {
             return this.aliUid;
+        }
+
+        public ListServerGroupsResponseBodyServerGroups setAnyPortEnabled(Boolean anyPortEnabled) {
+            this.anyPortEnabled = anyPortEnabled;
+            return this;
+        }
+        public Boolean getAnyPortEnabled() {
+            return this.anyPortEnabled;
         }
 
         public ListServerGroupsResponseBodyServerGroups setConnectionDrainEnabled(Boolean connectionDrainEnabled) {

@@ -7,6 +7,9 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
+    @NameInMap("AnyPortEnabled")
+    public Boolean anyPortEnabled;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -57,6 +60,14 @@ public class CreateServerGroupRequest extends TeaModel {
     }
     public String getAddressIPVersion() {
         return this.addressIPVersion;
+    }
+
+    public CreateServerGroupRequest setAnyPortEnabled(Boolean anyPortEnabled) {
+        this.anyPortEnabled = anyPortEnabled;
+        return this;
+    }
+    public Boolean getAnyPortEnabled() {
+        return this.anyPortEnabled;
     }
 
     public CreateServerGroupRequest setClientToken(String clientToken) {

@@ -4,9 +4,6 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class CreateLoadBalancerResponseBody extends TeaModel {
-    @NameInMap("JobId")
-    public String jobId;
-
     @NameInMap("LoadbalancerId")
     public String loadbalancerId;
 
@@ -19,14 +16,6 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
     public static CreateLoadBalancerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateLoadBalancerResponseBody self = new CreateLoadBalancerResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateLoadBalancerResponseBody setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
     }
 
     public CreateLoadBalancerResponseBody setLoadbalancerId(String loadbalancerId) {
